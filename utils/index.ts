@@ -1,4 +1,5 @@
 import { AjvError, FormValidation } from "@rjsf/core";
+import { randomBytes } from "crypto";
 import { FromSchema, JSONSchema7 } from "json-schema-to-ts";
 import { z } from "zod";
 import {
@@ -9,7 +10,6 @@ import {
   redisSchema,
   templateSchema,
 } from "./schema";
-
 export { randomPassword } from "./schema";
 
 export type AppService = z.input<typeof appSchema>;
@@ -30,3 +30,6 @@ export function createTemplate<Schema extends JSONSchema7>(props: {
 }) {
   return props;
 }
+
+export const randomString = (length: number = 10) =>
+  randomBytes(Math.round(length / 2)).toString("hex");
