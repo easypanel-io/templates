@@ -112,7 +112,11 @@ Templates are written in Typescript. We try to infer as much as possible from th
   selectField: {
     type: "string",
     title: "Select Field",
-    enum: ["First", "Second", "Third"],
-  }
+    oneOf: [
+      { enum: ["first"], title: "First Option" },
+      { enum: ["second"], title: "Second Option" },
+      { enum: ["third"], title: "Third Option" },
+    ],
+  },
 }
 ```
