@@ -20,6 +20,7 @@ const Home: NextPage = () => {
   const template = selected ? templates[selected] : null;
 
   useEffect(() => {
+    setFormData(null);
     setOutput("");
   }, [selected]);
 
