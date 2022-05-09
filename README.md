@@ -101,3 +101,18 @@ Templates are written in Typescript. We try to infer as much as possible from th
   }
 }
 ```
+
+## Form Fields
+
+### Select
+
+```ts
+{
+  // ...
+  selectField: {
+    type: "string",
+    title: "Select Field",
+    enum: ["First", "Second", "Third"],
+  }
+}
+```
