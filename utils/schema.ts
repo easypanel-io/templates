@@ -69,12 +69,14 @@ export const appSchema = z.object({
 export const mongoSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
+  image: z.string().optional(),
   password: passwordRule,
 });
 
 export const mysqlSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
+  image: z.string().optional(),
   password: passwordRule,
   rootPassword: passwordRule,
 });
@@ -82,12 +84,14 @@ export const mysqlSchema = z.object({
 export const postgresSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
+  image: z.string().optional(),
   password: passwordRule,
 });
 
 export const redisSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
+  image: z.string().optional(),
   password: passwordRule,
 });
 
