@@ -2,6 +2,10 @@
 
 In this repository, you will find the templates available in Easypanel.
 
+[Playground URL](https://easypanel-templates.netlify.app/)
+
+## Template Definition Example
+
 Here is how you define a template.
 
 ```ts
