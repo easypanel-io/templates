@@ -9,7 +9,7 @@ export default createTemplate({
   name: "Ackee",
   schema: {
     type: "object",
-    required: ["projectName", "domain", "ackeeUsername" ,"appServiceName", "mongoServiceName"],
+    required: ["projectName", "domain", "ackeeUsername", "ackeePassword", "appServiceName", "mongoServiceName"],
     properties: {
       projectName: {
         type: "string",
@@ -26,7 +26,6 @@ export default createTemplate({
       ackeePassword: {
         type: "string",
         title: "Ackee Password",
-        description: "Leave empty to generate a random one. (Needs to be copied from the 'Environment' tab)",
       },
       appServiceName: {
         type: "string",
@@ -38,22 +37,18 @@ export default createTemplate({
         title: "MongoDB Service Name",
         default: "mongodb",
       },
-      mongoPassword: {
-        type: "string",
-        title: "MongoDB Password",
-        description: "Leave empty to generate a random one.",
-      },
     },
   } as const,
   generate({
     projectName,
     domain,
     ackeeUsername,
-    ackeePassword = randomPassword(),
+    ackeePassword,
     appServiceName,
     mongoServiceName,
-    mongoPassword = randomPassword(),
   }) {
+    let mongoPassword = randomPassword();
+
     const appService: AppService = {
       projectName,
       serviceName: appServiceName,
