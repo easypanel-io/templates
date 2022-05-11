@@ -47,9 +47,9 @@ export default createTemplate({
     databaseType,
     databaseServiceName,
   }) {
-    let databasePassword = randomPassword();
-    let databaseUsername = databaseType == "postgres" ? "postgres" : "mysql";
-    let databasePort = databaseType == "postgres" ? "5432" : "3306";
+    const databasePassword = randomPassword();
+    const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
+    const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
     const appService: AppService = {
       projectName,
@@ -80,12 +80,12 @@ export default createTemplate({
           target: "/data",
         },
         {
-          type: "volume",
+          type: "bind",
           source: "/etc/timezone",
           target: "/etc/timezone:ro",
         },
         {
-          type: "volume",
+          type: "bind",
           source: "/etc/localtime",
           target: "/etc/localtime:ro",
         },
@@ -110,7 +110,7 @@ export default createTemplate({
       password: databasePassword,
     };
 
-    let databaseService = databaseType == "postgres" ? postgresService : mysqlService;
+    const databaseService = databaseType === "postgres" ? postgresService : mysqlService;
 
     return {
       services: [
