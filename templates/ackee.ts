@@ -72,7 +72,7 @@ export default createTemplate({
     const mongoService: MongoService = {
       projectName,
       serviceName: mongoServiceName,
-      image: "mongo:4.4.13",
+      image: "mongo:4",
       password: mongoPassword,
     };
 
