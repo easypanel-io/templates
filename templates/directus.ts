@@ -12,7 +12,7 @@ export default createTemplate({
   name: "Directus",
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "adminEmail", "databaseType", "databaseServiceName", "redisServiceName"],
+    required: ["projectName", "domain", "appServiceName", "adminEmail", "adminPassword", "databaseType", "databaseServiceName", "redisServiceName"],
     properties: {
       projectName: {
         type: "string",
@@ -35,7 +35,6 @@ export default createTemplate({
       adminPassword: {
         type: "string",
         title: "Admin Password",
-        description: "Leave empty to generate a random one. (Needs to be copied from the 'Environment' tab)",
       },
       databaseType: {
         type: "string",
@@ -50,30 +49,10 @@ export default createTemplate({
         title: "Database Service Name",
         default: "db",
       },
-      databasePassword: {
-        type: "string",
-        title: "Database Password",
-        description: "Leave empty to generate a random one.",
-      },
-      appKey: {
-        type: "string",
-        title: "App Key",
-        description: "Leave empty to generate a random one.",
-      },
-      appSecret: {
-        type: "string",
-        title: "App Secret",
-        description: "Leave empty to generate a random one.",
-      },
       redisServiceName: {
         type: "string",
         title: "Redis Service Name",
         default: "redis",
-      },
-      redisPassword: {
-        type: "string",
-        title: "Redis Password",
-        description: "Leave empty to generate a random one.",
       },
     },
   } as const,
@@ -85,12 +64,12 @@ export default createTemplate({
     adminPassword = randomPassword(),
     databaseType,
     databaseServiceName,
-    databasePassword = randomPassword(),
     appKey = randomString(48),
     appSecret = randomString(48),
     redisServiceName,
-    redisPassword = randomPassword(),
   }) {
+    let databasePassword = randomPassword();
+    let redisPassword = randomPassword();
     let databaseUsername = databaseType == "postgres" ? "postgres" : "mysql";
     let databasePort = databaseType == "postgres" ? "5432" : "3306";
 
