@@ -29,7 +29,7 @@ export default createTemplate({
       },
       adminEmail: {
         type: "string",
-        title: "Admin E-Mail",
+        title: "Admin Email",
         description: "admin@example.com",
       },
       adminPassword: {
@@ -68,10 +68,10 @@ export default createTemplate({
     appSecret = randomString(48),
     redisServiceName,
   }) {
-    let databasePassword = randomPassword();
-    let redisPassword = randomPassword();
-    let databaseUsername = databaseType == "postgres" ? "postgres" : "mysql";
-    let databasePort = databaseType == "postgres" ? "5432" : "3306";
+    const databasePassword = randomPassword();
+    const redisPassword = randomPassword();
+    const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
+    const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
     const appService: AppService = {
       projectName,
@@ -106,6 +106,11 @@ export default createTemplate({
           source: "uploads",
           target: "/directus/uploads",
         },
+        {
+          type: "volume",
+          source: "extensions",
+          target: "/directus/extensions",
+        },
       ],
     };
 
@@ -128,7 +133,7 @@ export default createTemplate({
       password: redisPassword,
     };
 
-    let databaseService = databaseType == "postgres" ? postgresService : mysqlService;
+    const databaseService = databaseType === "postgres" ? postgresService : mysqlService;
 
     return {
       services: [
