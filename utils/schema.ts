@@ -38,6 +38,8 @@ export const appSchema = z.object({
   deploy: z
     .object({
       replicas: z.number().default(1),
+      command: z.string().optional(),
+      args: z.string().optional(),
     })
     .default({}),
   domains: z
