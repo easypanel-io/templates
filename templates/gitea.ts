@@ -38,11 +38,6 @@ export default createTemplate({
         title: "Database Service Name",
         default: "db",
       },
-      databasePassword: {
-        type: "string",
-        title: "Database Password",
-        description: "Leave empty to generate a random one.",
-      },
     },
   } as const,
   generate({
@@ -51,8 +46,8 @@ export default createTemplate({
     appServiceName,
     databaseType,
     databaseServiceName,
-    databasePassword = randomPassword(),
   }) {
+    let databasePassword = randomPassword();
     let databaseUsername = databaseType == "postgres" ? "postgres" : "mysql";
     let databasePort = databaseType == "postgres" ? "5432" : "3306";
 
