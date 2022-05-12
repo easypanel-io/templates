@@ -27,7 +27,7 @@ export default createTemplate({
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "statping-ng_db",
+        default: "db",
       },
     },
   } as const,
