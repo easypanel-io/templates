@@ -17,11 +17,13 @@ export type MySQLService = z.input<typeof mysqlSchema>;
 export type MongoService = z.input<typeof mongoSchema>;
 export type PostgresService = z.input<typeof postgresSchema>;
 export type RedisService = z.input<typeof redisSchema>;
+export type Template = z.input<typeof templateSchema>;
+export type Services = Template["services"];
 
 export function createTemplate<Schema extends JSONSchema7>(props: {
   name: string;
   schema: Schema;
-  generate: (input: FromSchema<Schema>) => z.input<typeof templateSchema>;
+  generate: (input: FromSchema<Schema>) => Template;
   validate?: (
     formData: FromSchema<Schema>,
     error: FormValidation
