@@ -1,8 +1,6 @@
 import {
-  AppService,
+  Services,
   createTemplate,
-  PostgresService,
-  MySQLService,
   randomPassword,
 } from "~templates-utils";
 
@@ -10,7 +8,13 @@ export default createTemplate({
   name: "Wiki.js",
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "databaseType", "databaseServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "databaseType",
+      "databaseServiceName"
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -28,6 +32,7 @@ export default createTemplate({
       databaseType: {
         type: "string",
         title: "Database Type",
+        default: "postgres",
         oneOf: [
           { enum: ["postgres"], title: "Postgres" },
           { enum: ["mysql"], title: "MySQL" },
@@ -47,11 +52,12 @@ export default createTemplate({
     databaseType,
     databaseServiceName,
   }) {
+    const services: Services = [];
     const databasePassword = randomPassword();
     const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
     const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
-    const appService: AppService = {
+    services.push({
       projectName,
       serviceName: appServiceName,
       env: [
@@ -71,28 +77,30 @@ export default createTemplate({
         secure: true,
       },
       domains: [{ name: domain }],
-    };
+    });
 
-    const postgresService: PostgresService = {
-      projectName,
-      serviceName: databaseServiceName,
-      image: "postgres:alpine",
-      password: databasePassword,
-    };
+    if (databaseType === "postgres") {
+      services.push({
+        type: "postgres",
+        data: {
+          projectName,
+          serviceName: databaseServiceName,
+          password: databasePassword,
+        },
+      });
+    }
 
-    const mysqlService: MySQLService = {
-      projectName,
-      serviceName: databaseServiceName,
-      password: databasePassword,
-    };
+    if (databaseType === "mysql") {
+      services.push({
+        type: "mysql",
+        data: {
+          projectName,
+          serviceName: databaseServiceName,
+          password: databasePassword,
+        },
+      });
+    }
 
-    const databaseService = databaseType === "postgres" ? postgresService : mysqlService;
-
-    return {
-      services: [
-        { type: "app", data: appService },
-        { type: databaseType, data: databaseService },
-      ],
-    };
+    return { services };
   },
 });
