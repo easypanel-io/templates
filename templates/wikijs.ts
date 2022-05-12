@@ -58,25 +58,28 @@ export default createTemplate({
     const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
     services.push({
-      projectName,
-      serviceName: appServiceName,
-      env: [
-      `DB_TYPE=${databaseType}`,
-      `DB_HOST=${projectName}_${databaseServiceName}`,
-      `DB_PORT=${databasePort}`,
-      `DB_USER=${databaseUsername}`,
-      `DB_PASS=${databasePassword}`,
-      `DB_NAME=${projectName}`,
-      ].join("\n"),
-      source: {
-        type: "image",
-        image: "ghcr.io/requarks/wiki:2",
-      },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
-      domains: [{ name: domain }],
+      type: "app",
+      data: {
+        projectName,
+        serviceName: appServiceName,
+        env: [
+          `DB_TYPE=${databaseType}`,
+          `DB_HOST=${projectName}_${databaseServiceName}`,
+          `DB_PORT=${databasePort}`,
+          `DB_USER=${databaseUsername}`,
+          `DB_PASS=${databasePassword}`,
+          `DB_NAME=${projectName}`,
+        ].join("\n"),
+        source: {
+          type: "image",
+          image: "ghcr.io/requarks/wiki:2",
+        },
+        proxy: {
+          port: 3000,
+          secure: true,
+        },
+        domains: [{ name: domain }],
+      }
     });
 
     if (databaseType === "postgres") {
