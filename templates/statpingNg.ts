@@ -1,15 +1,16 @@
-import {
-  AppService,
-  createTemplate,
-  PostgresService,
-  randomPassword,
-} from "~templates-utils";
+import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Statping-ng",
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "databaseServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "databaseType",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -24,6 +25,16 @@ export default createTemplate({
         title: "App Service Name",
         default: "statping-ng",
       },
+      databaseType: {
+        type: "string",
+        title: "Database Type",
+        default: "sqlite",
+        oneOf: [
+          { enum: ["sqlite"], title: "SQLite" },
+          { enum: ["postgres"], title: "Postgres" },
+          { enum: ["mysql"], title: "MySQL" },
+        ],
+      },
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
@@ -35,50 +46,67 @@ export default createTemplate({
     projectName,
     domain,
     appServiceName,
+    databaseType,
     databaseServiceName,
   }) {
+    const services: Services = [];
     const databasePassword = randomPassword();
+    const databaseUsername = databaseType;
 
-    const appService: AppService = {
-      projectName,
-      serviceName: appServiceName,
-      env: [
-        `DB_CONN=postgres`,
-        `DB_HOST=${projectName}_${databaseServiceName}`,
-        `DB_USER=postgres`,
-        `DB_PASS=${databasePassword}`,
-        `DB_DATABASE=${projectName}`,
-      ].join("\n"),
-      source: {
-        type: "image",
-        image: "adamboutcher/statping-ng:latest",
-      },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
-      domains: [{ name: domain }],
-      volumes: [
-        {
-          type: "volume",
-          source: "statping_data",
-          target: "/app",
+    services.push({
+      type: "app",
+      data: {
+        projectName,
+        serviceName: appServiceName,
+        env: [
+          `DB_CONN=${databaseType}`,
+          `DB_HOST=${projectName}_${databaseServiceName}`,
+          `DB_USER=${databaseUsername}`,
+          `DB_PASS=${databasePassword}`,
+          `DB_DATABASE=${projectName}`,
+        ].join("\n"),
+        source: {
+          type: "image",
+          image: "adamboutcher/statping-ng:latest",
         },
-      ],
-    };
+        proxy: {
+          port: 8080,
+          secure: true,
+        },
+        domains: [{ name: domain }],
+        volumes: [
+          {
+            type: "volume",
+            source: "statping_data",
+            target: "/app",
+          },
+        ],
+      },
+    });
 
-    const postgresService: PostgresService = {
-      projectName,
-      serviceName: databaseServiceName,
-      image: "postgres:alpine",
-      password: databasePassword,
-    };
+    if (databaseType === "postgres") {
+      services.push({
+        type: "postgres",
+        data: {
+          projectName,
+          serviceName: databaseServiceName,
+          password: databasePassword,
+        },
+      });
+    }
 
-    return {
-      services: [
-        { type: "app", data: appService },
-        { type: "postgres", data: postgresService },
-      ],
-    };
+    if (databaseType === "mysql") {
+      services.push({
+        type: "mysql",
+        data: {
+          projectName,
+          serviceName: databaseServiceName,
+          image: "mysql:5",
+          password: databasePassword,
+        },
+      });
+    }
+
+    return { services };
   },
 });
