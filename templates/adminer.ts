@@ -1,11 +1,17 @@
-import type { AppService } from "~templates-utils";
-import { createTemplate } from "~templates-utils";
+import {
+  Services,
+  createTemplate,
+} from "~templates-utils";
 
 export default createTemplate({
   name: "Adminer",
   schema: {
     type: "object",
-    required: ["projectName", "serviceName", "domain"],
+    required: [
+      "projectName",
+      "serviceName",
+      "domain"
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -22,23 +28,30 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({ projectName, serviceName, domain }) {
-    const appService: AppService = {
-      projectName,
-      serviceName,
-      source: {
-        type: "image",
-        image: "adminer",
-      },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
-      domains: [{ name: domain }],
-    };
+  generate({
+    projectName,
+    serviceName,
+    domain
+  }) {
+    const services: Services = [];
 
-    return {
-      services: [{ type: "app", data: appService }],
-    };
+    services.push({
+      type: "app",
+      data: {
+        projectName,
+        serviceName: serviceName,
+        source: {
+          type: "image",
+          image: "adminer",
+        },
+        proxy: {
+          port: 8080,
+          secure: true,
+        },
+        domains: [{ name: domain }],
+      }
+    });
+
+    return { services };
   },
 });
