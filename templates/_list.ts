@@ -3,6 +3,7 @@ export { default as adminer } from "./adminer";
 export { default as directus } from "./directus";
 export { default as gitea } from "./gitea";
 export { default as heimdall } from "./heimdall";
+export { default as phpMyAdmin } from "./phpMyAdmin";
 export { default as portainer } from "./portainer";
 export { default as statpingNg } from "./statpingNg";
 export { default as wikijs } from "./wikijs";
