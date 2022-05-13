@@ -33,7 +33,6 @@ export default createTemplate({
           type: "image",
           image: "n8nio/n8n",
         },
-        env: "PMA_ARBITRARY=1",
         proxy: {
           port: 5678,
           secure: true,
