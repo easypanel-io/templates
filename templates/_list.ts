@@ -1,5 +1,6 @@
 export { default as ackee } from "./ackee";
 export { default as adminer } from "./adminer";
+export { default as appsmith } from "./appsmith";
 export { default as directus } from "./directus";
 export { default as ghost } from "./ghost";
 export { default as gitea } from "./gitea";
