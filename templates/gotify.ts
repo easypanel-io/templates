@@ -31,6 +31,11 @@ export default createTemplate({
         type: "string",
         title: "Password",
       },
+      serviceTimezone: {
+        type: "string",
+        title: "Timezone",
+        default: "Europe/London",
+      },
     },
   } as const,
   generate({
@@ -38,6 +43,7 @@ export default createTemplate({
     serviceName,
     domain,
     password,
+    serviceTimezone,
   }) {
     const services: Services = [];
 
@@ -50,7 +56,10 @@ export default createTemplate({
           type: "image",
           image: "gotify/server",
         },
-        env: `GOTIFY_DEFAULTUSER_PASS=${password}`,
+        env: [
+          `GOTIFY_DEFAULTUSER_PASS=${password}`,
+          `TZ=${serviceTimezone}`,
+        ].join("\n"),
         proxy: {
           port: 80,
           secure: true,
