@@ -2,6 +2,7 @@ export { default as ackee } from "./ackee";
 export { default as adminer } from "./adminer";
 export { default as appsmith } from "./appsmith";
 export { default as directus } from "./directus";
+export { default as flame } from "./flame";
 export { default as ghost } from "./ghost";
 export { default as gitea } from "./gitea";
 export { default as heimdall } from "./heimdall";
