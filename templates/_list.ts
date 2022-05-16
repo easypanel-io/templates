@@ -5,6 +5,7 @@ export { default as directus } from "./directus";
 export { default as ghost } from "./ghost";
 export { default as gitea } from "./gitea";
 export { default as heimdall } from "./heimdall";
+export { default as metube } from "./metube";
 export { default as miniflux } from "./miniflux";
 export { default as n8n } from "./n8n";
 export { default as phpMyAdmin } from "./phpMyAdmin";
