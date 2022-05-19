@@ -6,6 +6,7 @@ export { default as directus } from "./directus";
 export { default as flame } from "./flame";
 export { default as ghost } from "./ghost";
 export { default as gitea } from "./gitea";
+export { default as gotify } from "./gotify";
 export { default as heimdall } from "./heimdall";
 export { default as miniflux } from "./miniflux";
 export { default as n8n } from "./n8n";
