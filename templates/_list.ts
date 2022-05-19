@@ -10,6 +10,7 @@ export { default as gotify } from "./gotify";
 export { default as heimdall } from "./heimdall";
 export { default as miniflux } from "./miniflux";
 export { default as n8n } from "./n8n";
+export { default as nzbget } from "./nzbget";
 export { default as phpMyAdmin } from "./phpMyAdmin";
 export { default as portainer } from "./portainer";
 export { default as statpingNg } from "./statpingNg";
