@@ -13,6 +13,7 @@ export { default as n8n } from "./n8n";
 export { default as nzbget } from "./nzbget";
 export { default as phpMyAdmin } from "./phpMyAdmin";
 export { default as portainer } from "./portainer";
+export { default as psitransfer } from "./psitransfer";
 export { default as statpingNg } from "./statpingNg";
 export { default as strapi } from "./strapi";
 export { default as wikijs } from "./wikijs";
