@@ -29,7 +29,7 @@ export default createTemplate({
       },
       downloadPath: {
         type: "string",
-        title: "Download Path",
+        title: "Downloads Volume Name",
         default: "downloads",
       },
     },
