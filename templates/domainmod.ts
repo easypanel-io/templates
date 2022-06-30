@@ -1,7 +1,6 @@
 import {
   AppService,
   createTemplate,
-  PostgresService,
   MySQLService,
   randomPassword,
 } from "~templates-utils";
