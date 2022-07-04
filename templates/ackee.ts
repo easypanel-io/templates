@@ -1,15 +1,35 @@
 import {
   AppService,
   createTemplate,
-  randomPassword,
   MongoService,
+  randomPassword,
 } from "~templates-utils";
 
 export default createTemplate({
   name: "Ackee",
+  meta: {
+    description:
+      "Self-hosted, Node.js based analytics tool for those who care about privacy. Ackee runs on your own server, analyzes the traffic of your websites and provides useful statistics in a minimal interface.",
+    instructions: "",
+    changeLog: [{ date: "2022-06-04", description: "first release" }],
+    links: [
+      { label: "Website", url: "https://ackee.electerious.com/" },
+      { label: "Documentation", url: "https://docs.ackee.electerious.com/" },
+      { label: "Github", url: "https://github.com/electerious/Ackee" },
+    ],
+    contributors: [{ name: "Ponky", url: "https://github.com/Ponkhy" }],
+    screenshots: [{ alt: "Dashboard", url: "https://i.imgur.com/Nawj0pp.png" }],
+  },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "ackeeUsername", "ackeePassword", "appServiceName", "mongoServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "ackeeUsername",
+      "ackeePassword",
+      "appServiceName",
+      "mongoServiceName",
+    ],
     properties: {
       projectName: {
         type: "string",

@@ -22,6 +22,26 @@ export type Services = Template["services"];
 
 export function createTemplate<Schema extends JSONSchema7>(props: {
   name: string;
+  meta?: {
+    description?: string;
+    instructions?: string;
+    changeLog?: {
+      date: string;
+      description: string;
+    }[];
+    links?: {
+      label: string;
+      url: string;
+    }[];
+    contributors?: {
+      name: string;
+      url: string;
+    }[];
+    screenshots?: {
+      alt: string;
+      url: string;
+    }[];
+  };
   schema: Schema;
   generate: (input: FromSchema<Schema>) => Template;
   validate?: (
