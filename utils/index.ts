@@ -37,10 +37,6 @@ export function createTemplate<Schema extends JSONSchema7>(props: {
       name: string;
       url: string;
     }[];
-    screenshots?: {
-      alt: string;
-      url: string;
-    }[];
   };
   schema: Schema;
   generate: (input: FromSchema<Schema>) => Template;

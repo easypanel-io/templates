@@ -1,23 +1,35 @@
-import { mkdir, rmdir, writeFile } from "fs/promises";
+import { existsSync } from "fs";
+import { copyFile, mkdir, rm, writeFile } from "fs/promises";
 import * as path from "path";
-import * as templates from "../templates/_list";
+import * as templates from "../templates";
 
-const dirPath = path.resolve(__dirname, "../docs");
+const docsPath = path.resolve(__dirname, "../docs");
+const templatesPath = path.resolve(__dirname, "../templates");
 
 async function run() {
   try {
-    await rmdir(dirPath);
-    await mkdir(dirPath);
+    await rm(docsPath, { recursive: true, force: true });
   } catch {}
+  await mkdir(docsPath);
 
+  const list = [];
+
+  // create a folder for each template
   for (let [key, template] of Object.entries(templates)) {
+    await mkdir(path.resolve(docsPath, key), { recursive: true });
+
+    const logo = getTemplateLogo(path.resolve(templatesPath, key));
+    const screenshot = getTemplateScreenshot(path.resolve(templatesPath, key));
+
     const lines: string[] = [
       "---",
       `sidebar_label: ${template.name}`,
       `title: ${template.name}`,
       `description: How to install ${template.name} on Easypanel? 1-Click installation template for ${template.name} on Easypanel`,
       "---",
+      "",
       "<!-- generated -->",
+      "",
     ];
 
     lines.push(
@@ -60,12 +72,13 @@ async function run() {
       lines.push("");
     }
 
-    if (template.meta?.screenshots?.length) {
-      lines.push("## Screenshots", "");
-      template.meta.screenshots.forEach((entry) => {
-        lines.push(`![${entry.alt}](${entry.url})`);
-      });
-      lines.push("");
+    if (screenshot) {
+      lines.push(
+        "## Screenshot",
+        "",
+        `![${template.name} Screenshot](./${screenshot})`,
+        ""
+      );
     }
 
     if (template.meta?.changeLog?.length) {
@@ -84,12 +97,65 @@ async function run() {
       lines.push("");
     }
 
-    const filePath = path.resolve(dirPath, `${key}.md`);
+    const filePath = path.resolve(docsPath, key, "index.md");
     const content = lines.join("\n");
-    console.log(filePath);
 
     await writeFile(filePath, content);
+
+    if (logo) {
+      await copyFile(
+        path.resolve(templatesPath, key, logo),
+        path.resolve(docsPath, key, logo)
+      );
+    }
+
+    if (screenshot) {
+      await copyFile(
+        path.resolve(templatesPath, key, screenshot),
+        path.resolve(docsPath, key, screenshot)
+      );
+    }
+
+    list.push({ name: key, label: template.name, logo });
   }
+
+  await writeFile(
+    path.resolve(docsPath, "templates.json"),
+    JSON.stringify(list, null, 2)
+  );
+
+  await writeFile(
+    path.resolve(docsPath, "_category_.json"),
+    JSON.stringify({ label: "Templates" }, null, 2)
+  );
+}
+
+function fileExists(path: string) {
+  try {
+    return existsSync(path);
+  } catch {
+    return false;
+  }
+}
+
+function getTemplateLogo(dir: string) {
+  if (fileExists(path.resolve(dir, "logo.svg"))) {
+    return "logo.svg";
+  }
+  if (fileExists(path.resolve(dir, "logo.png"))) {
+    return "logo.png";
+  }
+  return null;
+}
+
+function getTemplateScreenshot(dir: string) {
+  if (fileExists(path.resolve(dir, "screenshot.jpg"))) {
+    return "screenshot.jpg";
+  }
+  if (fileExists(path.resolve(dir, "screenshot.png"))) {
+    return "screenshot.png";
+  }
+  return null;
 }
 
 run().catch(console.error);

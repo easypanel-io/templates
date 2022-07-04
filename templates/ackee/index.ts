@@ -2,7 +2,7 @@ import {
   AppService,
   createTemplate,
   MongoService,
-  randomPassword,
+  randomPassword
 } from "~templates-utils";
 
 export default createTemplate({
@@ -18,7 +18,6 @@ export default createTemplate({
       { label: "Github", url: "https://github.com/electerious/Ackee" },
     ],
     contributors: [{ name: "Ponky", url: "https://github.com/Ponkhy" }],
-    screenshots: [{ alt: "Dashboard", url: "https://i.imgur.com/Nawj0pp.png" }],
   },
   schema: {
     type: "object",

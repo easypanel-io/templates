@@ -10,7 +10,7 @@ import {
 import Form from "@rjsf/chakra-ui";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import * as templates from "../templates/_list";
+import * as templates from "../templates";
 
 const Home: NextPage = () => {
   const [selected, setSelected] = useState<keyof typeof templates | "">("");

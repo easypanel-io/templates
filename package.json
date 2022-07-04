@@ -7,9 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-list": "ts-node -r tsconfig-paths/register ./scripts/generate-list.ts",
     "generate-docs": "ts-node -r tsconfig-paths/register ./scripts/generate-docs.ts",
-    "move-docs": "rm ../website/docs/05-templates/*.md && cp ./docs/* ../website/docs/05-templates/"
+    "move-docs": "rm -rf ../website/docs/05-templates/* && cp -r ./docs/* ../website/docs/05-templates/"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
