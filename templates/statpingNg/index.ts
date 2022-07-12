@@ -2,6 +2,20 @@ import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Statping-ng",
+  meta: {
+    description:
+      "An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page. This Status Page generator allows you to use MySQL, Postgres, or SQLite on multiple operating systems.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://github.com/statping/statping" },
+      { label: "Documentation", url: "https://github.com/statping/statping" },
+      { label: "Github", url: "https://github.com/statping/statping" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [

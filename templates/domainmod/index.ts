@@ -7,6 +7,20 @@ import {
 
 export default createTemplate({
   name: "DomainMod",
+  meta: {
+    description:
+      "DomainMOD is an open source application written in PHP used to manage your domains and other internet assets in a central location. DomainMOD also includes a Data Warehouse framework that allows you to import your web server data so that you can view, export, and report on your live data. Currently the Data Warehouse only supports servers running WHM/cPanel.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://domainmod.org/" },
+      { label: "Documentation", url: "https://domainmod.org/docs/" },
+      { label: "Github", url: "https://github.com/domainmod/domainmod/" },
+    ],
+    contributors: [
+      { name: "Mark Topper", url: "https://github.com/marktopper" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName", "databaseServiceName", "timezone"],

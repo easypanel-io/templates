@@ -2,6 +2,19 @@ import { AppService, createTemplate } from "~templates-utils";
 
 export default createTemplate({
   name: "Portainer",
+  meta: {
+    description:
+      "Easily configure, monitor and secure containers in minutes, with support for Docker, Kubernetes, Swarm and Nomad on any cloud, datacenter or device.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://www.portainer.io/" },
+      { label: "Documentation", url: "https://docs.portainer.io/" },
+      { label: "Github", url: "https://github.com/portainer/portainer#readme" },
+    ],
+    contributors: [
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName"],

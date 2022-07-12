@@ -8,6 +8,20 @@ import {
 
 export default createTemplate({
   name: "Gitea",
+  meta: {
+    description:
+      "Gitea is a community managed lightweight code hosting solution written in Go. It is published under the MIT license.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://gitea.io/en-us/" },
+      { label: "Documentation", url: "https://docs.gitea.io/en-us/" },
+      { label: "Github", url: "https://github.com/go-gitea/" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName", "databaseType", "databaseServiceName"],

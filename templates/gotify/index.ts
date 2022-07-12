@@ -5,6 +5,20 @@ import {
 
 export default createTemplate({
   name: "Gotify",
+  meta: {
+    description:
+      "Gotify is a simple server for sending and receiving messages",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://gotify.net/" },
+      { label: "Documentation", url: "https://gotify.net/docs/" },
+      { label: "Github", url: "https://github.com/gotify" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [

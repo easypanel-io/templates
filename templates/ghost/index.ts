@@ -2,6 +2,19 @@ import { createTemplate, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Ghost",
+  meta: {
+    description:
+      "Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters & offer paid subscriptions to members.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://ghost.org/" },
+      { label: "Documentation", url: "https://ghost.org/resources/" },
+      { label: "Github", url: "https://github.com/docker-library/ghost" },
+    ],
+    contributors: [
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "serviceName", "domain"],

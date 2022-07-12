@@ -6,6 +6,20 @@ import {
 
 export default createTemplate({
   name: "Strapi",
+  meta: {
+    description:
+      "Strapi enables content-rich experiences to be created, managed and exposed to any digital product, channel or device.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://strapi.io/" },
+      { label: "Documentation", url: "https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html" },
+      { label: "Github", url: "https://github.com/strapi" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [

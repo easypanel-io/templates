@@ -5,6 +5,20 @@ import {
 
 export default createTemplate({
   name: "Nzbget",
+  meta: {
+    description:
+      "NZBGet is a binary downloader, which downloads files from Usenet based on information given in nzb-files.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://nzbget.net/" },
+      { label: "Documentation", url: "https://nzbget.net/documentation" },
+      { label: "Github", url: "https://github.com/nzbget/nzbget" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [
