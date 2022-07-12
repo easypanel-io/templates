@@ -7,6 +7,19 @@ import {
 
 export default createTemplate({
   name: "Wordpress",
+  meta: {
+    description:
+      "WordPress powers nearly a third of the world’s websites. With tools for everyone from personal bloggers to large corporations, this powerful site builder and content management system (cms) aims to make it possible for anyone to create an online presence in minutes.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://wordpress.org/" },
+      { label: "Documentation", url: "https://learn.wordpress.org" },
+      { label: "Github", url: "https://github.com/WordPress/WordPress" },
+    ],
+    contributors: [
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName", "mysqlServiceName"],

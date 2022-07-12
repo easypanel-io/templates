@@ -6,6 +6,20 @@ import {
 
 export default createTemplate({
   name: "Miniflux",
+  meta: {
+    description:
+      "Miniflux is a minimalist and opinionated feed reader.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://miniflux.app/" },
+      { label: "Documentation", url: "https://miniflux.app/docs/" },
+      { label: "Github", url: "https://github.com/miniflux" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [

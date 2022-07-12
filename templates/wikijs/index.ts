@@ -6,6 +6,19 @@ import {
 
 export default createTemplate({
   name: "Wiki.js",
+  meta: {
+    description:
+      "Extensible open source Wiki software.Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://js.wiki/" },
+      { label: "Documentation", url: "https://docs.requarks.io/" },
+      { label: "Github", url: "https://github.com/Requarks/wiki" },
+    ],
+    contributors: [
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [

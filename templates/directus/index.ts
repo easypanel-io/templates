@@ -10,6 +10,20 @@ import {
 
 export default createTemplate({
   name: "Directus",
+  meta: {
+    description:
+      "Directus is the world's first Open Data Platform for instantly turning any SQL database into an API and beautiful no-code app.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website",  url: "https://directus.io/" },
+      { label: "Documentation", url: "https://docs.directus.io/" },
+      { label: "Github", url: "https://github.com/directus/docs" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName", "adminEmail", "adminPassword", "databaseType", "databaseServiceName", "redisServiceName"],

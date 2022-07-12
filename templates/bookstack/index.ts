@@ -6,6 +6,20 @@ import {
 
 export default createTemplate({
   name: "Bookstack",
+  meta: {
+    description:
+      "BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.",
+    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    links: [
+      { label: "Website", url: "https://www.bookstackapp.com/" },
+      { label: "Documentation", url: "https://www.bookstackapp.com/docs/" },
+      { label: "Github", url: "https://github.com/BookStackApp/BookStack" },
+    ],
+    contributors: [
+      { name: "Ponky", url: "https://github.com/Ponkhy" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+    ],
+  },
   schema: {
     type: "object",
     required: [
