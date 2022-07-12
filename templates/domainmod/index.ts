@@ -17,7 +17,7 @@ export default createTemplate({
       { label: "Github", url: "https://github.com/domainmod/domainmod/" },
     ],
     contributors: [
-      { name: "marktopper", url: "https://github.com/marktopper" },
+      { name: "Mark Topper", url: "https://github.com/marktopper" },
       { name: "Andrei Canta", url: "https://github.com/deiucanta" }
     ],
   },
