@@ -8,7 +8,7 @@ export default createTemplate({
   name: "Miniflux",
   meta: {
     description:
-      "Miniflux is a minimalist and opinionated feed reader.",
+      "Miniflux is a minimalist and opinionated feed reader written in GO.Supports multiple enclosures/attachments (Podcasts, videos, music, and images).Save articles to third-party services.Play videos from YouTube channels directly inside Miniflux.Send articles to Telegram, Pinboard, Instapaper, Pocket, Wallabag, Linkding, Espial, or Nunux Keeper",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://miniflux.app/" },

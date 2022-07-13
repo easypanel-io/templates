@@ -8,7 +8,7 @@ export default createTemplate({
   name: "Bookstack",
   meta: {
     description:
-      "BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.",
+      "BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.The content in BookStack is fully searchable. You are able to search at book level or across all books, chapters & pages.BookStack is built using PHP, on top of the Laravel framework and it uses MySQL to store data.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website", url: "https://www.bookstackapp.com/" },

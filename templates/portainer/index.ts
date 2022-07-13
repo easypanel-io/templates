@@ -4,7 +4,7 @@ export default createTemplate({
   name: "Portainer",
   meta: {
     description:
-      "Easily configure, monitor and secure containers in minutes, with support for Docker, Kubernetes, Swarm and Nomad on any cloud, datacenter or device.",
+      "Easily configure, monitor and secure containers in minutes, with support for Docker, Kubernetes, Swarm and Nomad on any cloud, datacenter or device.Portainer allows to manage Docker containers and Swarm orchestration.Reduces the operational complexity associated with multi-cluster management.Bridge the skills gap and facilitate feature discovery and learning with an intuitive UI.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://www.portainer.io/" },
