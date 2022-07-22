@@ -7,7 +7,7 @@ export default createTemplate({
   name: "Gotify",
   meta: {
     description:
-      "Gotify is a simple server for sending and receiving messages",
+      "Gotify is a simple server for sending and receiving messages.Both Gotify's API and user interface are designed to be as simple as possible.Gotify is written in Go and can be easily compiled for different platforms.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://gotify.net/" },

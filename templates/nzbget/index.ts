@@ -7,7 +7,7 @@ export default createTemplate({
   name: "Nzbget",
   meta: {
     description:
-      "NZBGet is a binary downloader, which downloads files from Usenet based on information given in nzb-files.",
+      "NZBGet is a binary downloader, which downloads files from Usenet based on information given in nzb-files.NZBGet is written in C++ and is known for its performance and efficiency.NZBGet can run on almost any device - classic PC, NAS, media player, SAT-receiver, WLAN-router, etc. The download area provides precompiled binaries for Windows, macOS, Linux (compatible with many CPUs and platform variants), FreeBSD and Android.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://nzbget.net/" },
