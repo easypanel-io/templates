@@ -20,3 +20,4 @@ export { default as statpingNg } from "./statpingNg";
 export { default as strapi } from "./strapi";
 export { default as wikijs } from "./wikijs";
 export { default as wordpress } from "./wordpress";
+export { default as nextcloud } from "./nextcloud";
