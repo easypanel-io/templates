@@ -8,7 +8,7 @@ export default createTemplate({
   name: "Strapi",
   meta: {
     description:
-      "Strapi enables content-rich experiences to be created, managed and exposed to any digital product, channel or device.",
+      "Strapi enables content-rich experiences to be created, managed and exposed to any digital product, channel or device.Connect your favorite databases, frontend frameworks, or static site generators. Choose where you want to host your websites. Integrate with your favorite tools, and work with the best of each world. No vendor lock-in.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://strapi.io/" },

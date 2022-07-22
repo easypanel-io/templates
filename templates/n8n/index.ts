@@ -4,7 +4,7 @@ export default createTemplate({
   name: "n8n",
   meta: {
     description:
-      "Build complex workflows, really fast",
+      "n8n helps you to connect any app with an API with any other, and manipulate its data with little or no code.Has highly flexible workflows and the option to build custom nodes.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://n8n.io/" },

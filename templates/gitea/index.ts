@@ -10,7 +10,7 @@ export default createTemplate({
   name: "Gitea",
   meta: {
     description:
-      "Gitea is a community managed lightweight code hosting solution written in Go. It is published under the MIT license.",
+        "Gitea is a community managed lightweight code hosting solution written in Go. Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc.Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
       { label: "Website",  url: "https://gitea.io/en-us/" },
