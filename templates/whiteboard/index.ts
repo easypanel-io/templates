@@ -52,13 +52,6 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
-          {
-            type: "volume",
-            source: "data",
-            target: "/app",
-          },
-        ],
       },
     });
 
