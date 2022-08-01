@@ -5,15 +5,14 @@ export default createTemplate({
   meta: {
     description:
       "Lightweight collaborative Whiteboard / Sketchboard ",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
+    changeLog: [{ date: "2022-08-01", description: "first release" }],
     links: [
       { label: "Website",  url: "https://github.com/cracker0dks/whiteboard" },
       { label: "Documentation", url: "https://github.com/cracker0dks/whiteboard" },
       { label: "Github", url: "https://github.com/cracker0dks/whiteboard" },
     ],
     contributors: [
-      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta"},
+      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" }
     ],
   },
   schema: {
