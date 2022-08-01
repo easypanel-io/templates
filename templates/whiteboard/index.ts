@@ -12,7 +12,8 @@ export default createTemplate({
       { label: "Github", url: "https://github.com/cracker0dks/whiteboard" },
     ],
     contributors: [
-      { name: "cracker0dks", url: "https://github.com/cracker0dks" }
+      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" },
+      { name: "Andrei Canta", url: "https://github.com/deiucanta"},
     ],
   },
   schema: {
