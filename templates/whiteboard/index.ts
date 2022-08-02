@@ -1,18 +1,20 @@
 import { createTemplate, Services } from "~templates-utils";
 
 export default createTemplate({
-  name: "whiteboard",
+  name: "Whiteboard",
   meta: {
-    description:
-      "Lightweight collaborative Whiteboard / Sketchboard ",
+    description: "Lightweight collaborative Whiteboard / Sketchboard ",
     changeLog: [{ date: "2022-08-01", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://github.com/cracker0dks/whiteboard" },
-      { label: "Documentation", url: "https://github.com/cracker0dks/whiteboard" },
+      { label: "Website", url: "https://github.com/cracker0dks/whiteboard" },
+      {
+        label: "Documentation",
+        url: "https://github.com/cracker0dks/whiteboard",
+      },
       { label: "Github", url: "https://github.com/cracker0dks/whiteboard" },
     ],
     contributors: [
-      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" }
+      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" },
     ],
   },
   schema: {
