@@ -13,7 +13,7 @@ export default createTemplate({
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -52,11 +52,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "stacks",
-            target: "/appsmith-stacks",
+            name: "stacks",
+            mountPath: "/appsmith-stacks",
           },
         ],
       },

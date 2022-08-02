@@ -7,12 +7,12 @@ export default createTemplate({
       "Easily configure, monitor and secure containers in minutes, with support for Docker, Kubernetes, Swarm and Nomad on any cloud, datacenter or device.Portainer allows to manage Docker containers and Swarm orchestration.Reduces the operational complexity associated with multi-cluster management.Bridge the skills gap and facilitate feature discovery and learning with an intuitive UI.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://www.portainer.io/" },
+      { label: "Website", url: "https://www.portainer.io/" },
       { label: "Documentation", url: "https://docs.portainer.io/" },
       { label: "Github", url: "https://github.com/portainer/portainer#readme" },
     ],
     contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -47,16 +47,16 @@ export default createTemplate({
         secure: true,
       },
       domains: [{ name: domain }],
-      volumes: [
+      mounts: [
         {
           type: "bind",
-          source: "/var/run/docker.sock",
-          target: "/var/run/docker.sock",
+          hostPath: "/var/run/docker.sock",
+          mountPath: "/var/run/docker.sock",
         },
         {
           type: "volume",
-          source: "portainer_data",
-          target: "/data",
+          name: "data",
+          mountPath: "/data",
         },
       ],
     };

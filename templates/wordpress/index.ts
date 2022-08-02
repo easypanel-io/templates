@@ -12,12 +12,12 @@ export default createTemplate({
       "WordPress powers nearly a third of the world’s websites. With tools for everyone from personal bloggers to large corporations, this powerful site builder and content management system (cms) aims to make it possible for anyone to create an online presence in minutes.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://wordpress.org/" },
+      { label: "Website", url: "https://wordpress.org/" },
       { label: "Documentation", url: "https://learn.wordpress.org" },
       { label: "Github", url: "https://github.com/WordPress/WordPress" },
     ],
     contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -80,11 +80,20 @@ export default createTemplate({
         secure: true,
       },
       domains: [{ name: domain }],
-      volumes: [
+      mounts: [
         {
           type: "volume",
-          source: "wp-content",
-          target: "/var/www/html/wp-content",
+          name: "data",
+          mountPath: "/var/www/html",
+        },
+        {
+          type: "file",
+          content: [
+            "upload_max_filesize = 100M",
+            "post_max_size = 100M",
+            "",
+          ].join("\n"),
+          mountPath: "/usr/local/etc/php/conf.d/custom.ini",
         },
       ],
     };

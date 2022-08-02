@@ -1,7 +1,4 @@
-import {
-  createTemplate,
-  Services,
-} from "~templates-utils";
+import { createTemplate, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "MeTube",
@@ -15,17 +12,12 @@ export default createTemplate({
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "serviceName",
-      "domain",
-      "downloadPath",
-    ],
+    required: ["projectName", "serviceName", "domain", "downloadPath"],
     properties: {
       projectName: {
         type: "string",
@@ -47,12 +39,7 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({
-    projectName,
-    serviceName,
-    domain,
-    downloadPath,
-  }) {
+  generate({ projectName, serviceName, domain, downloadPath }) {
     const services: Services = [];
 
     services.push({
@@ -69,11 +56,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: downloadPath,
-            target: "/downloads",
+            name: downloadPath,
+            mountPath: "/downloads",
           },
         ],
       },

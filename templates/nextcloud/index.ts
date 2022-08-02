@@ -1,4 +1,4 @@
-import { Services, createTemplate, randomPassword } from "~templates-utils";
+import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Nextcloud",
@@ -123,11 +123,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "data",
-            target: "/var/www/html",
+            name: "data",
+            mountPath: "/var/www/html",
           },
         ],
       },

@@ -7,12 +7,12 @@ export default createTemplate({
       "Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. It comes with modern tools to build a website, publish content, send newsletters & offer paid subscriptions to members.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://ghost.org/" },
+      { label: "Website", url: "https://ghost.org/" },
       { label: "Documentation", url: "https://ghost.org/resources/" },
       { label: "Github", url: "https://github.com/docker-library/ghost" },
     ],
     contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -52,11 +52,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "content",
-            target: "/var/lib/ghost/content",
+            name: "content",
+            mountPath: "/var/lib/ghost/content",
           },
         ],
       },

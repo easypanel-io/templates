@@ -1,7 +1,4 @@
-import {
-  createTemplate,
-  Services,
-} from "~templates-utils";
+import { createTemplate, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Gotify",
@@ -10,23 +7,18 @@ export default createTemplate({
       "Gotify is a simple server for sending and receiving messages.Both Gotify's API and user interface are designed to be as simple as possible.Gotify is written in Go and can be easily compiled for different platforms.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://gotify.net/" },
+      { label: "Website", url: "https://gotify.net/" },
       { label: "Documentation", url: "https://gotify.net/docs/" },
       { label: "Github", url: "https://github.com/gotify" },
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "serviceName",
-      "domain",
-      "password",
-    ],
+    required: ["projectName", "serviceName", "domain", "password"],
     properties: {
       projectName: {
         type: "string",
@@ -52,13 +44,7 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({
-    projectName,
-    serviceName,
-    domain,
-    password,
-    serviceTimezone,
-  }) {
+  generate({ projectName, serviceName, domain, password, serviceTimezone }) {
     const services: Services = [];
 
     services.push({
@@ -79,11 +65,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "data",
-            target: "/app/data",
+            name: "data",
+            mountPath: "/app/data",
           },
         ],
       },

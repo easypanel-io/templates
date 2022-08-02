@@ -1,8 +1,4 @@
-import {
-  Services,
-  createTemplate,
-  randomPassword,
-} from "~templates-utils";
+import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Strapi",
@@ -11,13 +7,16 @@ export default createTemplate({
       "Strapi enables content-rich experiences to be created, managed and exposed to any digital product, channel or device.Connect your favorite databases, frontend frameworks, or static site generators. Choose where you want to host your websites. Integrate with your favorite tools, and work with the best of each world. No vendor lock-in.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://strapi.io/" },
-      { label: "Documentation", url: "https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html" },
+      { label: "Website", url: "https://strapi.io/" },
+      {
+        label: "Documentation",
+        url: "https://docs.strapi.io/developer-docs/latest/getting-started/introduction.html",
+      },
       { label: "Github", url: "https://github.com/strapi" },
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -65,7 +64,7 @@ export default createTemplate({
     domain,
     appServiceName,
     databaseType,
-    databaseServiceName
+    databaseServiceName,
   }) {
     const services: Services = [];
     const databasePassword = randomPassword();
@@ -95,14 +94,14 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "app",
-            target: "/srv/app",
+            name: "app",
+            mountPath: "/srv/app",
           },
         ],
-      }
+      },
     });
 
     if (databaseType === "postgres") {

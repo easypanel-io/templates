@@ -1,11 +1,11 @@
 import {
   AppService,
   createTemplate,
-  PostgresService,
   MySQLService,
-  RedisService,
+  PostgresService,
   randomPassword,
   randomString,
+  RedisService,
 } from "~templates-utils";
 
 export default createTemplate({
@@ -15,18 +15,27 @@ export default createTemplate({
       "Directus is the world's first Open Data Platform for instantly turning any SQL database into an API and beautiful no-code app.Directus Flows are extremely flexible and easy to configure. Using a simple no-code interface, you can connect any number of operations to create simple or complex workflows that execute automatically in response to a trigger.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://directus.io/" },
+      { label: "Website", url: "https://directus.io/" },
       { label: "Documentation", url: "https://docs.directus.io/" },
       { label: "Github", url: "https://github.com/directus/docs" },
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "adminEmail", "adminPassword", "databaseType", "databaseServiceName", "redisServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "adminEmail",
+      "adminPassword",
+      "databaseType",
+      "databaseServiceName",
+      "redisServiceName",
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -103,7 +112,7 @@ export default createTemplate({
         `CACHE_STORE=redis`,
         `CACHE_REDIS=redis://default:${redisPassword}@${projectName}_${redisServiceName}:6379`,
         `ADMIN_EMAIL=${adminEmail}`,
-        `ADMIN_PASSWORD=${adminPassword}`
+        `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -114,16 +123,16 @@ export default createTemplate({
         secure: true,
       },
       domains: [{ name: domain }],
-      volumes: [
+      mounts: [
         {
           type: "volume",
-          source: "uploads",
-          target: "/directus/uploads",
+          name: "uploads",
+          mountPath: "/directus/uploads",
         },
         {
           type: "volume",
-          source: "extensions",
-          target: "/directus/extensions",
+          name: "extensions",
+          mountPath: "/directus/extensions",
         },
       ],
     };
@@ -147,7 +156,8 @@ export default createTemplate({
       password: redisPassword,
     };
 
-    const databaseService = databaseType === "postgres" ? postgresService : mysqlService;
+    const databaseService =
+      databaseType === "postgres" ? postgresService : mysqlService;
 
     return {
       services: [

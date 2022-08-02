@@ -3,11 +3,49 @@ import { z } from "zod";
 
 export const randomPassword = () => randomBytes(10).toString("hex");
 
-export const projectNameRule = z.string().regex(/^[a-z0-9-_.]+$/);
-export const serviceNameRule = projectNameRule;
+export const projectNameRule = z
+  .string()
+  .regex(
+    /^[a-z0-9-_]+$/,
+    "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
+  );
+export const serviceNameRule = z
+  .string()
+  .regex(
+    /^[a-z0-9-_]+$/,
+    "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
+  );
+export const volumeNameRule = z
+  .string()
+  .regex(
+    /^[a-z0-9-_]+$/,
+    "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
+  );
 export const domainRule = z.string().regex(/^[a-z0-9.-]+$/);
-export const portRule = z.number().min(1);
+export const portRule = z.number().min(0).max(65535);
 export const passwordRule = z.string().default(randomPassword);
+
+export const appMountsSchema = z
+  .array(
+    z.union([
+      z.object({
+        type: z.literal("bind"),
+        hostPath: z.string().min(1),
+        mountPath: z.string().min(1),
+      }),
+      z.object({
+        type: z.literal("volume"),
+        name: volumeNameRule,
+        mountPath: z.string().min(1),
+      }),
+      z.object({
+        type: z.literal("file"),
+        content: z.string(),
+        mountPath: z.string().min(1),
+      }),
+    ])
+  )
+  .default([]);
 
 export const appSchema = z.object({
   projectName: projectNameRule,
@@ -49,15 +87,7 @@ export const appSchema = z.object({
       })
     )
     .default([]),
-  volumes: z
-    .array(
-      z.object({
-        type: z.union([z.literal("bind"), z.literal("volume")]),
-        source: z.string().min(1),
-        target: z.string().min(1),
-      })
-    )
-    .default([]),
+  mounts: appMountsSchema,
   ports: z
     .array(
       z.object({

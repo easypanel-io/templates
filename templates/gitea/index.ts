@@ -1,8 +1,8 @@
 import {
   AppService,
   createTemplate,
-  PostgresService,
   MySQLService,
+  PostgresService,
   randomPassword,
 } from "~templates-utils";
 
@@ -10,21 +10,27 @@ export default createTemplate({
   name: "Gitea",
   meta: {
     description:
-        "Gitea is a community managed lightweight code hosting solution written in Go. Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc.Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi",
+      "Gitea is a community managed lightweight code hosting solution written in Go. Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc.Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://gitea.io/en-us/" },
+      { label: "Website", url: "https://gitea.io/en-us/" },
       { label: "Documentation", url: "https://docs.gitea.io/en-us/" },
       { label: "Github", url: "https://github.com/go-gitea/" },
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "databaseType", "databaseServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "databaseType",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -87,21 +93,21 @@ export default createTemplate({
         secure: true,
       },
       domains: [{ name: domain }],
-      volumes: [
+      mounts: [
         {
           type: "volume",
-          source: "gitea",
-          target: "/data",
+          name: "data",
+          mountPath: "/data",
         },
         {
           type: "bind",
-          source: "/etc/timezone",
-          target: "/etc/timezone:ro",
+          hostPath: "/etc/timezone",
+          mountPath: "/etc/timezone",
         },
         {
           type: "bind",
-          source: "/etc/localtime",
-          target: "/etc/localtime:ro",
+          hostPath: "/etc/localtime",
+          mountPath: "/etc/localtime",
         },
       ],
       ports: [
@@ -124,7 +130,8 @@ export default createTemplate({
       password: databasePassword,
     };
 
-    const databaseService = databaseType === "postgres" ? postgresService : mysqlService;
+    const databaseService =
+      databaseType === "postgres" ? postgresService : mysqlService;
 
     return {
       services: [

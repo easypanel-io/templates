@@ -1,8 +1,4 @@
-import {
-  createTemplate,
-  Services,
-  randomPassword
-} from "~templates-utils";
+import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Bookstack",
@@ -17,17 +13,12 @@ export default createTemplate({
     ],
     contributors: [
       { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "serviceName",
-      "domain",
-      "databaseServiceName",
-    ],
+    required: ["projectName", "serviceName", "domain", "databaseServiceName"],
     properties: {
       projectName: {
         type: "string",
@@ -49,12 +40,7 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({
-    projectName,
-    serviceName,
-    domain,
-    databaseServiceName,
-  }) {
+  generate({ projectName, serviceName, domain, databaseServiceName }) {
     const services: Services = [];
     const databasePassword = randomPassword();
 
@@ -79,11 +65,11 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-        volumes: [
+        mounts: [
           {
             type: "volume",
-            source: "config",
-            target: "/config",
+            name: "config",
+            mountPath: "/config",
           },
         ],
       },
