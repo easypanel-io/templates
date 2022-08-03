@@ -19,7 +19,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName", "RPCHost", "RPCSECRET", "RunnerCapacity"],
+    required: ["projectName", "domain", "serviceName", "rpcHost", "rpcSecret", "runnerCapacity"],
     properties: {
       projectName: {
         type: "string",
@@ -34,17 +34,17 @@ export default createTemplate({
         title: "App Service Name",
         default: "drone-runner",
       },
-      RPCHost: {
+      rpcHost: {
         type: "string",
         title: "Drone Server Hostname",
         default: "drone.company.com",
       },
-      RPCSECRET: {
+      rpcSecret: {
         type: "string",
         title: "RPC Secret",
         default: "Secret",
       },
-      RunnerCapacity: {
+      runnerCapacity: {
         type: "string",
         title: "Runner Capacity",
         default: "2",
@@ -55,9 +55,9 @@ export default createTemplate({
       projectName,
       domain,
       serviceName,
-      RPCHost,
-      RPCSECRET,
-      RunnerCapacity,
+      rpcHost,
+      rpcSecret,
+      runnerCapacity,
     }) {
       const services: Services = [];
 
@@ -67,10 +67,11 @@ export default createTemplate({
           projectName,
           serviceName: serviceName,
           env: [
-            `DRONE_RPC_HOST=${RPCHost}`,
+            `DRONE_RPC_HOST=${rpcHost}`,
             `DRONE_RPC_PROTO= https` ,
-            `DRONE_RUNNER_CAPACITY=${RunnerCapacity}`,
-            `DRONE_RPC_SECRET=${RPCSECRET}`].join("\n"),
+            `DRONE_RUNNER_CAPACITY=${runnerCapacity}`,
+            `DRONE_RPC_SECRET=${rpcSecret}`
+          ].join("\n"),
           source: {
             type: "image",
             image: "drone/drone-runner-docker:1",

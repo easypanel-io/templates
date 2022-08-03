@@ -1,4 +1,8 @@
-import { Services, createTemplate, randomString } from "~templates-utils";
+import { 
+  Services,
+  createTemplate,
+  randomString 
+} from "~templates-utils";
 
 export default createTemplate({
   name: "Drone",
@@ -19,7 +23,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName", "ClientID", "ClientSecret"],
+    required: ["projectName", "domain", "serviceName", "clientID", "clientSecret"],
     properties: {
       projectName: {
         type: "string",
@@ -34,12 +38,12 @@ export default createTemplate({
         title: "App Service Name",
         default: "drone",
       },
-      ClientID: {
+      clientID: {
         type: "string",
         title: "GitHub Oauth Client ID",
         default: "ID",
       },
-      ClientSecret: {
+      clientSecret: {
         type: "string",
         title: "GitHub Oauth Client Secret",
         default: "Secret",
@@ -50,9 +54,9 @@ export default createTemplate({
       projectName,
       domain,
       serviceName,
-      ClientID,
-      ClientSecret,
-      rpcSecret = randomString(16),
+      clientID,
+      clientSecret,
+      RPCsecret = randomString(16),
     }) {
     const services: Services = [];
 
@@ -62,11 +66,12 @@ export default createTemplate({
           projectName,
           serviceName: serviceName,
           env: [
-            `DRONE_GITHUB_CLIENT_ID=${ClientID}`,
-            `DRONE_GITHUB_CLIENT_SECRET=${ClientSecret}`,
+            `DRONE_GITHUB_CLIENT_ID=${clientID}`,
+            `DRONE_GITHUB_CLIENT_SECRET=${clientSecret}`,
             `DRONE_SERVER_HOST=${domain}`,
             `DRONE_SERVER_PROTO= https` ,
-            `DRONE_RPC_SECRET=${rpcSecret}`].join("\n"),
+            `DRONE_RPC_SECRET=${RPCsecret}`
+          ].join("\n"),
           source: {
             type: "image",
             image: "drone/drone:2",
