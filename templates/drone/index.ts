@@ -70,7 +70,7 @@ export default createTemplate({
             `DRONE_GITHUB_CLIENT_SECRET=${clientSecret}`,
             `DRONE_SERVER_HOST=${domain}`,
             `DRONE_SERVER_PROTO= https` ,
-            `DRONE_RPC_SECRET=${RPCsecret}`
+            `DRONE_RPC_SECRET=${RPCsecret}`,
           ].join("\n"),
           source: {
             type: "image",

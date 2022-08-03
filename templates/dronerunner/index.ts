@@ -70,7 +70,7 @@ export default createTemplate({
             `DRONE_RPC_HOST=${rpcHost}`,
             `DRONE_RPC_PROTO= https` ,
             `DRONE_RUNNER_CAPACITY=${runnerCapacity}`,
-            `DRONE_RPC_SECRET=${rpcSecret}`
+            `DRONE_RPC_SECRET=${rpcSecret}`,
           ].join("\n"),
           source: {
             type: "image",
