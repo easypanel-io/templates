@@ -1,8 +1,4 @@
-import {
-  Services,
-  createTemplate,
-  randomPassword,
-} from "~templates-utils";
+import { createTemplate, randomPassword, Services } from "~templates-utils";
 
 export default createTemplate({
   name: "Wiki.js",
@@ -11,12 +7,12 @@ export default createTemplate({
       "Extensible open source Wiki software.Make documentation a joy to write using Wiki.js's beautiful and intuitive interface! Works on virtually any platform and is compatible with either PostgreSQL, MySQL, MariaDB, MS SQL Server or SQLite! Running on the blazing fast Node.js engine, Wiki.js is built with performance in mind.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://js.wiki/" },
+      { label: "Website", url: "https://js.wiki/" },
       { label: "Documentation", url: "https://docs.requarks.io/" },
       { label: "Github", url: "https://github.com/Requarks/wiki" },
     ],
     contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -26,7 +22,7 @@ export default createTemplate({
       "domain",
       "appServiceName",
       "databaseType",
-      "databaseServiceName"
+      "databaseServiceName",
     ],
     properties: {
       projectName: {
@@ -49,6 +45,7 @@ export default createTemplate({
         oneOf: [
           { enum: ["postgres"], title: "Postgres" },
           { enum: ["mysql"], title: "MySQL" },
+          { enum: ["mariadb"], title: "MariaDB" },
         ],
       },
       databaseServiceName: {
@@ -67,7 +64,7 @@ export default createTemplate({
   }) {
     const services: Services = [];
     const databasePassword = randomPassword();
-    const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
+    const databaseUsername = databaseType;
     const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
     services.push({
@@ -92,7 +89,7 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-      }
+      },
     });
 
     if (databaseType === "postgres") {
@@ -109,6 +106,17 @@ export default createTemplate({
     if (databaseType === "mysql") {
       services.push({
         type: "mysql",
+        data: {
+          projectName,
+          serviceName: databaseServiceName,
+          password: databasePassword,
+        },
+      });
+    }
+
+    if (databaseType === "mariadb") {
+      services.push({
+        type: "mariadb",
         data: {
           projectName,
           serviceName: databaseServiceName,

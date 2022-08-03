@@ -49,7 +49,7 @@ export default createTemplate({
         oneOf: [
           { enum: ["sqlite"], title: "SQLite" },
           { enum: ["postgres"], title: "Postgres" },
-          { enum: ["mysql"], title: "MariaDB" },
+          { enum: ["mariadb"], title: "MariaDB" },
         ],
       },
       databaseServiceName: {
@@ -68,7 +68,9 @@ export default createTemplate({
   }) {
     const services: Services = [];
     const databasePassword = randomPassword();
-    const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
+    const databaseClient = databaseType === "mariadb" ? "mysql" : databaseType;
+    const databaseUsername =
+      databaseType === "postgres" ? "postgres" : "mariadb";
     const databasePort = databaseType === "postgres" ? "5432" : "3306";
 
     services.push({
@@ -77,7 +79,7 @@ export default createTemplate({
         projectName,
         serviceName: appServiceName,
         env: [
-          `DATABASE_CLIENT=${databaseType}`,
+          `DATABASE_CLIENT=${databaseClient}`,
           `DATABASE_HOST=${projectName}_${databaseServiceName}`,
           `DATABASE_PORT=${databasePort}`,
           `DATABASE_NAME=${projectName}`,
@@ -115,13 +117,12 @@ export default createTemplate({
       });
     }
 
-    if (databaseType === "mysql") {
+    if (databaseType === "mariadb") {
       services.push({
-        type: "mysql",
+        type: "mariadb",
         data: {
           projectName,
           serviceName: databaseServiceName,
-          image: "mariadb:latest",
           password: databasePassword,
         },
       });
