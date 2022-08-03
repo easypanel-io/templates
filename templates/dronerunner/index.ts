@@ -3,7 +3,7 @@ import { AppService, createTemplate } from "~templates-utils";
 export default createTemplate({
   name: "Drone Runner",
   meta: {
-    description: "Drone is a Container-Native, Continuous Delivery Platform",
+    description: "Runner for Drone.io",
     changeLog: [{ date: "2022-08-03", description: "first release" }],
     links: [
       { label: "Website", url: "https://drone.io/" },
@@ -85,11 +85,6 @@ export default createTemplate({
             type: "bind",
             hostPath: "/var/run/docker.sock",
             mountPath: "/var/run/docker.sock",
-            },
-            {
-              type: "volume",
-              name: "data",
-              mountPath: "/data",
             },
           ],
         },
