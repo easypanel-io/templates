@@ -82,9 +82,14 @@ export default createTemplate({
           domains: [{ name: domain }],
           mounts: [
             {
+            type: "bind",
+            hostPath: "/var/run/docker.sock",
+            mountPath: "/var/run/docker.sock",
+            },
+            {
               type: "volume",
               name: "data",
-              mountPath: "/var/run/docker.sock",
+              mountPath: "/data",
             },
           ],
         },
