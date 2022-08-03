@@ -1,4 +1,4 @@
-import { AppService, createTemplate, randomString } from "~templates-utils";
+import { Services, createTemplate, randomString } from "~templates-utils";
 
 export default createTemplate({
   name: "Drone",
@@ -19,7 +19,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "ClientID", "ClientSecret"],
+    required: ["projectName", "domain", "serviceName", "ClientID", "ClientSecret"],
     properties: {
       projectName: {
         type: "string",
@@ -29,7 +29,7 @@ export default createTemplate({
         type: "string",
         title: "Domain",
       },
-      appServiceName: {
+      serviceName: {
         type: "string",
         title: "App Service Name",
         default: "drone",
@@ -49,7 +49,7 @@ export default createTemplate({
     generate({
       projectName,
       domain,
-      appServiceName,
+      serviceName,
       ClientID,
       ClientSecret,
       rpcSecret = randomString(16),
@@ -60,7 +60,7 @@ export default createTemplate({
         type: "app",
         data: {
           projectName,
-          serviceName: appServiceName,
+          serviceName: serviceName,
           env: [
             `DRONE_GITHUB_CLIENT_ID=${ClientID}`,
             `DRONE_GITHUB_CLIENT_SECRET=${ClientSecret}`,

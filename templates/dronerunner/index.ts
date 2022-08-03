@@ -1,4 +1,4 @@
-import { AppService, createTemplate } from "~templates-utils";
+import { Services, createTemplate } from "~templates-utils";
 
 export default createTemplate({
   name: "Drone Runner",
@@ -19,7 +19,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "RPCHost", "RPCSECRET", "RunnerCapacity"],
+    required: ["projectName", "domain", "serviceName", "RPCHost", "RPCSECRET", "RunnerCapacity"],
     properties: {
       projectName: {
         type: "string",
@@ -29,7 +29,7 @@ export default createTemplate({
         type: "string",
         title: "Domain",
       },
-      appServiceName: {
+      serviceName: {
         type: "string",
         title: "App Service Name",
         default: "drone-runner",
@@ -54,18 +54,18 @@ export default createTemplate({
     generate({
       projectName,
       domain,
-      appServiceName,
+      serviceName,
       RPCHost,
       RPCSECRET,
       RunnerCapacity,
     }) {
-    const services: Services = [];
+      const services: Services = [];
 
       services.push({
         type: "app",
         data: {
           projectName,
-          serviceName: appServiceName,
+          serviceName: serviceName,
           env: [
             `DRONE_RPC_HOST=${RPCHost}`,
             `DRONE_RPC_PROTO= https` ,
