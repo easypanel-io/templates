@@ -52,7 +52,7 @@ export default createTemplate({
         env: [
           `APP_URL=https://${domain}`,
           `DB_HOST=${projectName}_${databaseServiceName}`,
-          `DB_USER=mysql`,
+          `DB_USER=mariadb`,
           `DB_PASS=${databasePassword}`,
           `DB_DATABASE=${projectName}`,
         ].join("\n"),
@@ -76,11 +76,10 @@ export default createTemplate({
     });
 
     services.push({
-      type: "mysql",
+      type: "mariadb",
       data: {
         projectName,
         serviceName: databaseServiceName,
-        image: "mariadb:latest",
         password: databasePassword,
       },
     });

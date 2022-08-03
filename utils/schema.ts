@@ -113,6 +113,14 @@ export const mysqlSchema = z.object({
   rootPassword: passwordRule,
 });
 
+export const mariadbSchema = z.object({
+  projectName: projectNameRule,
+  serviceName: serviceNameRule,
+  image: z.string().optional(),
+  password: passwordRule,
+  rootPassword: passwordRule,
+});
+
 export const postgresSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
@@ -137,6 +145,10 @@ export const templateSchema = z.object({
       z.object({
         type: z.literal("mysql"),
         data: mysqlSchema,
+      }),
+      z.object({
+        type: z.literal("mariadb"),
+        data: mariadbSchema,
       }),
       z.object({
         type: z.literal("mongo"),
