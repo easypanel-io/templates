@@ -23,4 +23,3 @@ export { default as uptimekuma } from "./uptimekuma";
 export { default as wikijs } from "./wikijs";
 export { default as wordpress } from "./wordpress";
 export { default as whiteboard } from "./whiteboard";
-
