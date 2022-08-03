@@ -4,6 +4,8 @@ export { default as appsmith } from "./appsmith";
 export { default as bookstack } from "./bookstack";
 export { default as directus } from "./directus";
 export { default as domainmod } from "./domainmod";
+export { default as drone } from "./drone";
+export { default as dronerunner } from "./dronerunner";
 export { default as flame } from "./flame";
 export { default as ghost } from "./ghost";
 export { default as gitea } from "./gitea";
