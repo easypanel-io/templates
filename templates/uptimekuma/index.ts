@@ -53,15 +53,15 @@ export default createTemplate({
           secure: true,
         },
         domains: [{ name: domain }],
-      },
-      volumes: [
+      mounts: [
           {
             type: "volume",
-            source: "uptimekuma",
-            target: "/app/data",
+            name: "uptimekuma",
+            mountPath: "/app/data",
           },
         ],
-    });
+      }     
+  });
 
     return { services };
   },
