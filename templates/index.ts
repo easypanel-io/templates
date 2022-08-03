@@ -22,3 +22,4 @@ export { default as strapi } from "./strapi";
 export { default as wikijs } from "./wikijs";
 export { default as wordpress } from "./wordpress";
 export { default as whiteboard } from "./whiteboard";
+export { default as uptimekuma } from "./uptimekuma";
