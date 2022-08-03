@@ -19,7 +19,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName"],
+    required: ["projectName", "domain", "appServiceName", "RPCHost", "RPCSECRET", "RunnerCapacity"],
     properties: {
       projectName: {
         type: "string",
