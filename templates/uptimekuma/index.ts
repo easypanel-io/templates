@@ -56,7 +56,7 @@ export default createTemplate({
       mounts: [
           {
             type: "volume",
-            name: "uptimekuma",
+            name: "data",
             mountPath: "/app/data",
           },
         ],
