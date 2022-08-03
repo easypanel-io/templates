@@ -68,6 +68,7 @@ export default createTemplate({
   }) {
     const services: Services = [];
     const databasePassword = randomPassword();
+    const databaseClient = databaseType === "mariadb" ? "mysql" : databaseType;
     const databaseUsername =
       databaseType === "postgres" ? "postgres" : "mariadb";
     const databasePort = databaseType === "postgres" ? "5432" : "3306";
@@ -78,7 +79,7 @@ export default createTemplate({
         projectName,
         serviceName: appServiceName,
         env: [
-          `DATABASE_CLIENT=${databaseType}`,
+          `DATABASE_CLIENT=${databaseClient}`,
           `DATABASE_HOST=${projectName}_${databaseServiceName}`,
           `DATABASE_PORT=${databasePort}`,
           `DATABASE_NAME=${projectName}`,
