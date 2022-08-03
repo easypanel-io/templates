@@ -48,6 +48,15 @@ export default createTemplate({
         title: "GitHub Oauth Client Secret",
         default: "Secret",
       },
+      RPCprotocol: {
+        type: "string",
+        title: "RPC Protocol",
+        default: "https",
+        oneOf: [
+          { enum: ["https"], title: "https" },
+          { enum: ["http"], title: "http" },
+        ],
+      },
     },
   } as const,
     generate({
@@ -57,6 +66,7 @@ export default createTemplate({
       clientID,
       clientSecret,
       RPCsecret = randomString(16),
+      RPCprotocol,
     }) {
     const services: Services = [];
 
@@ -69,7 +79,7 @@ export default createTemplate({
             `DRONE_GITHUB_CLIENT_ID=${clientID}`,
             `DRONE_GITHUB_CLIENT_SECRET=${clientSecret}`,
             `DRONE_SERVER_HOST=${domain}`,
-            `DRONE_SERVER_PROTO= https` ,
+            `DRONE_SERVER_PROTO=${RPCprotocol}`,
             `DRONE_RPC_SECRET=${RPCsecret}`,
           ].join("\n"),
           source: {

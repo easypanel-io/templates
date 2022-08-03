@@ -44,6 +44,15 @@ export default createTemplate({
         title: "RPC Secret",
         default: "Secret",
       },
+      RPCprotocol: {
+        type: "string",
+        title: "RPC Protocol",
+        default: "https",
+        oneOf: [
+          { enum: ["https"], title: "https" },
+          { enum: ["http"], title: "http" },
+        ],
+      },
       runnerCapacity: {
         type: "string",
         title: "Runner Capacity",
@@ -57,6 +66,7 @@ export default createTemplate({
       serviceName,
       rpcHost,
       rpcSecret,
+      RPCprotocol,
       runnerCapacity,
     }) {
       const services: Services = [];
@@ -68,7 +78,7 @@ export default createTemplate({
           serviceName: serviceName,
           env: [
             `DRONE_RPC_HOST=${rpcHost}`,
-            `DRONE_RPC_PROTO= https` ,
+            `DRONE_RPC_PROTO=${RPCprotocol}`,
             `DRONE_RUNNER_CAPACITY=${runnerCapacity}`,
             `DRONE_RPC_SECRET=${rpcSecret}`,
           ].join("\n"),
