@@ -42,7 +42,7 @@ export default createTemplate({
         title: "Service Name",
         default: "drone",
       },
-      appServiceName: {
+      runnerService: {
         type: "string",
         title: "Runner Service Name",
         default: "drone-runner",
@@ -50,7 +50,6 @@ export default createTemplate({
       clientID: {
         type: "string",
         title: "GitHub Oauth Client ID",
-        default: "ID",
       },
       clientSecret: {
         type: "string",
@@ -66,12 +65,12 @@ export default createTemplate({
           { enum: ["http"], title: "http" },
         ],
       },
-      runner: {
+      installrunner: {
         type: "boolean",
         title: "Install Runner Service",
         default: false,
       },
-      capacity: {
+      runnerCapacity: {
         type: "number",
         title: "Capacity for runner if enabled",
         default: 2,
@@ -82,28 +81,27 @@ export default createTemplate({
     projectName,
     domain,
     serviceName,
-    appServiceName,
+    runnerService,
     clientID,
     clientSecret,
     rpcProtocol,
     runner,
-    capacity,
+    runnerCapacity,
   }) {
     const services: Services = [];
-    const appEnv = [];
-    const Secret = randomString(16);
+    const secret = randomString(16);
 
     if (runner === true) {
       services.push({
         type: "app",
         data: {
           projectName,
-          serviceName: `${appServiceName}`,
+          serviceName: `${runnerService}`,
           env: [
             `DRONE_RPC_HOST=${domain}`,
             `DRONE_RPC_PROTO=${rpcProtocol}`,
-            `DRONE_RUNNER_CAPACITY=${capacity}`,
-            `DRONE_RPC_SECRET=${Secret}`,
+            `DRONE_RUNNER_CAPACITY=${runnerCapacity}`,
+            `DRONE_RPC_SECRET=${secret}`,
           ].join("\n"),
           source: {
             type: "image",
@@ -134,7 +132,7 @@ export default createTemplate({
           `DRONE_GITHUB_CLIENT_SECRET=${clientSecret}`,
           `DRONE_SERVER_HOST=${domain}`,
           `DRONE_SERVER_PROTO=${rpcProtocol}`,
-          `DRONE_RPC_SECRET=${Secret}`,
+          `DRONE_RPC_SECRET=${secret}`,
         ].join("\n"),
         source: {
           type: "image",
