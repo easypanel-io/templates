@@ -85,13 +85,13 @@ export default createTemplate({
     clientID,
     clientSecret,
     rpcProtocol,
-    runner,
+    installrunner,
     runnerCapacity,
   }) {
     const services: Services = [];
     const secret = randomString(16);
 
-    if (runner === true) {
+    if (installrunner === true) {
       services.push({
         type: "app",
         data: {
