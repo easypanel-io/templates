@@ -49,11 +49,11 @@ export default createTemplate({
       },
       clientID: {
         type: "string",
-        title: "GitHub Oauth Client ID",
+        title: "GitHub OAuth Client ID",
       },
       clientSecret: {
         type: "string",
-        title: "GitHub Oauth Client Secret",
+        title: "GitHub OAuth Client Secret",
         default: "Secret",
       },
       rpcProtocol: {
