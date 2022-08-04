@@ -4,7 +4,7 @@ export default createTemplate({
   name: "Drone Runner",
   meta: {
     description: "Runner for Drone.io",
-    changeLog: [{ date: "2022-08-03", description: "first release" }],
+    changeLog: [{ date: "2022-08-04", description: "first release" }],
     links: [
       { label: "Website", url: "https://drone.io/" },
       {
@@ -19,7 +19,14 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName", "rpcHost", "rpcSecret", "runnerCapacity"],
+    required: [
+      "projectName",
+      "domain",
+      "serviceName",
+      "host",
+      "secret",
+      "runners",
+    ],
     properties: {
       projectName: {
         type: "string",
@@ -34,17 +41,17 @@ export default createTemplate({
         title: "App Service Name",
         default: "drone-runner",
       },
-      rpcHost: {
+      host: {
         type: "string",
         title: "Drone Server Hostname",
         default: "drone.company.com",
       },
-      rpcSecret: {
+      secret: {
         type: "string",
         title: "RPC Secret",
         default: "Secret",
       },
-      RPCprotocol: {
+      rpcProtocol: {
         type: "string",
         title: "RPC Protocol",
         default: "https",
@@ -53,54 +60,54 @@ export default createTemplate({
           { enum: ["http"], title: "http" },
         ],
       },
-      runnerCapacity: {
+      runners: {
         type: "string",
         title: "Runner Capacity",
         default: "2",
       },
     },
   } as const,
-    generate({
-      projectName,
-      domain,
-      serviceName,
-      rpcHost,
-      rpcSecret,
-      RPCprotocol,
-      runnerCapacity,
-    }) {
-      const services: Services = [];
+  generate({
+    projectName,
+    domain,
+    serviceName,
+    host,
+    secret,
+    rpcProtocol,
+    runners,
+  }) {
+    const services: Services = [];
 
-      services.push({
-        type: "app",
-        data: {
-          projectName,
-          serviceName: serviceName,
-          env: [
-            `DRONE_RPC_HOST=${rpcHost}`,
-            `DRONE_RPC_PROTO=${RPCprotocol}`,
-            `DRONE_RUNNER_CAPACITY=${runnerCapacity}`,
-            `DRONE_RPC_SECRET=${rpcSecret}`,
-          ].join("\n"),
-          source: {
-            type: "image",
-            image: "drone/drone-runner-docker:1",
-          },
-          proxy: {
-            port: 3000,
-            secure: true,
-          },
-          domains: [{ name: domain }],
-          mounts: [
-            {
+    services.push({
+      type: "app",
+      data: {
+        projectName,
+        serviceName: serviceName,
+        env: [
+          `DRONE_RPC_HOST=${host}`,
+          `DRONE_RPC_PROTO=${rpcProtocol}`,
+          `DRONE_RUNNER_CAPACITY=${runners}`,
+          `DRONE_RPC_SECRET=${secret}`,
+        ].join("\n"),
+        source: {
+          type: "image",
+          image: "drone/drone-runner-docker:1",
+        },
+        proxy: {
+          port: 3000,
+          secure: true,
+        },
+        domains: [{ name: domain }],
+        mounts: [
+          {
             type: "bind",
             hostPath: "/var/run/docker.sock",
             mountPath: "/var/run/docker.sock",
-            },
-          ],
-        },
-      });
+          },
+        ],
+      },
+    });
 
-      return { services };
+    return { services };
   },
 });
