@@ -26,7 +26,7 @@ export default createTemplate({
       "clientID",
       "clientSecret",
       "rpcProtocol",
-      "runner",
+      "runnerService",
     ],
     properties: {
       projectName: {
@@ -54,7 +54,7 @@ export default createTemplate({
       clientSecret: {
         type: "string",
         title: "GitHub OAuth Client Secret",
-        default: "Secret",
+        default: "secret",
       },
       rpcProtocol: {
         type: "string",
