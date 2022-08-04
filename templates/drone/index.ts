@@ -44,7 +44,7 @@ export default createTemplate({
       },
       appServiceName: {
         type: "string",
-        title: "Service Name",
+        title: "Runner Service Name",
         default: "drone",
       },
       clientID: {
@@ -68,7 +68,7 @@ export default createTemplate({
       },
       runner: {
         type: "boolean",
-        title: "Runner",
+        title: "Install Runner Service",
         default: false,
       },
       capacity: {
