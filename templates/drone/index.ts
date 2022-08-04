@@ -42,11 +42,6 @@ export default createTemplate({
         title: "Service Name",
         default: "drone",
       },
-      appServiceName: {
-        type: "string",
-        title: "Runner Service Name",
-        default: "drone",
-      },
       clientID: {
         type: "string",
         title: "GitHub Oauth Client ID",
@@ -82,7 +77,6 @@ export default createTemplate({
     projectName,
     domain,
     serviceName,
-    appServiceName,
     clientID,
     clientSecret,
     rpcProtocol,
@@ -98,7 +92,7 @@ export default createTemplate({
         type: "app",
         data: {
           projectName,
-          serviceName: appServiceName,
+          serviceName: `${serviceName}-runner`,
           env: [
             `DRONE_RPC_HOST=${domain}`,
             `DRONE_RPC_PROTO=${rpcProtocol}`,
