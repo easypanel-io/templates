@@ -42,7 +42,7 @@ export default createTemplate({
         title: "Service Name",
         default: "drone",
       },
-      runnerService: {
+      runnerServiceName: {
         type: "string",
         title: "Runner Service Name",
         default: "drone-runner",
@@ -81,7 +81,7 @@ export default createTemplate({
     projectName,
     domain,
     serviceName,
-    runnerService,
+    runnerServiceName,
     clientID,
     clientSecret,
     rpcProtocol,
@@ -96,7 +96,7 @@ export default createTemplate({
         type: "app",
         data: {
           projectName,
-          serviceName: `${runnerService}`,
+          serviceName: `${runnerServiceName}`,
           env: [
             `DRONE_RPC_HOST=${domain}`,
             `DRONE_RPC_PROTO=${rpcProtocol}`,
