@@ -10,19 +10,20 @@ import {
 import Form from "@rjsf/chakra-ui";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import * as templates from "../templates";
+import templates from "../templates";
 
 const Home: NextPage = () => {
-  const [selected, setSelected] = useState<keyof typeof templates | "">("");
+  const [slug, setSlug] = useState<string>("");
   const [formData, setFormData] = useState<any>();
   const [output, setOutput] = useState<string>("");
   const { hasCopied, onCopy } = useClipboard(output);
-  const template = selected ? templates[selected] : null;
+  const selected = templates.find((item) => item.slug === slug);
+  const template = selected ? selected.template : null;
 
   useEffect(() => {
     setFormData(null);
     setOutput("");
-  }, [selected]);
+  }, [slug]);
 
   return (
     <Box
@@ -47,15 +48,15 @@ const Home: NextPage = () => {
           </Text>
           <Select
             width="64"
-            value={selected}
+            value={slug}
             onChange={(e) => {
-              setSelected(e.target.value as any);
+              setSlug(e.target.value as any);
             }}
           >
             <option value="">Select Template</option>
-            {Object.entries(templates).map(([key, value]) => (
-              <option key={key} value={key}>
-                {value.name}
+            {templates.map((item) => (
+              <option key={item.slug} value={item.slug}>
+                {item.template.name}
               </option>
             ))}
           </Select>

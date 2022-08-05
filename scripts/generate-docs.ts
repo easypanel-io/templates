@@ -1,7 +1,7 @@
 import { existsSync } from "fs";
 import { copyFile, mkdir, rm, writeFile } from "fs/promises";
 import * as path from "path";
-import * as templates from "../templates";
+import templates from "../templates";
 
 const docsPath = path.resolve(__dirname, "../docs");
 const templatesPath = path.resolve(__dirname, "../templates");
@@ -15,11 +15,11 @@ async function run() {
   const list = [];
 
   // create a folder for each template
-  for (let [key, template] of Object.entries(templates)) {
-    await mkdir(path.resolve(docsPath, key), { recursive: true });
+  for (let { slug, template } of templates) {
+    await mkdir(path.resolve(docsPath, slug), { recursive: true });
 
-    const logo = getTemplateLogo(path.resolve(templatesPath, key));
-    const screenshot = getTemplateScreenshot(path.resolve(templatesPath, key));
+    const logo = getTemplateLogo(path.resolve(templatesPath, slug));
+    const screenshot = getTemplateScreenshot(path.resolve(templatesPath, slug));
 
     const lines: string[] = [
       "---",
@@ -97,26 +97,26 @@ async function run() {
       lines.push("");
     }
 
-    const filePath = path.resolve(docsPath, key, "index.md");
+    const filePath = path.resolve(docsPath, slug, "index.md");
     const content = lines.join("\n");
 
     await writeFile(filePath, content);
 
     if (logo) {
       await copyFile(
-        path.resolve(templatesPath, key, logo),
-        path.resolve(docsPath, key, logo)
+        path.resolve(templatesPath, slug, logo),
+        path.resolve(docsPath, slug, logo)
       );
     }
 
     if (screenshot) {
       await copyFile(
-        path.resolve(templatesPath, key, screenshot),
-        path.resolve(docsPath, key, screenshot)
+        path.resolve(templatesPath, slug, screenshot),
+        path.resolve(docsPath, slug, screenshot)
       );
     }
 
-    list.push({ name: key, label: template.name, logo });
+    list.push({ slug, logo, name: template.name });
   }
 
   await writeFile(
