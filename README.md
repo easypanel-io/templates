@@ -66,7 +66,7 @@ export default createTemplate({
 ## Defining Templates
 
 1. Duplicate any template from the `/templates` directory
-2. Re-export the newly created template from `/templates/_list.ts`
+2. Run `yarn generate-index`
 3. Run `yarn dev` to open the testing playground
 4. Customize your template.
 5. Test your template. Inside an Easypanel instance, you can create a template from JSON. Use that feature to test the output of your template.
