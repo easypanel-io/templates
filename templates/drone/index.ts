@@ -65,7 +65,7 @@ export default createTemplate({
           { enum: ["http"], title: "http" },
         ],
       },
-      installrunner: {
+      installRunner: {
         type: "boolean",
         title: "Install Runner Service",
         default: false,
@@ -85,13 +85,13 @@ export default createTemplate({
     clientID,
     clientSecret,
     rpcProtocol,
-    installrunner,
+    installRunner,
     runnerCapacity,
   }) {
     const services: Services = [];
     const secret = randomString(16);
 
-    if (installrunner === true) {
+    if (installRunner) {
       services.push({
         type: "app",
         data: {
