@@ -7,12 +7,12 @@ export default createTemplate({
       "phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web. phpMyAdmin supports a wide range of operations on MySQL and MariaDB.",
     changeLog: [{ date: "2022-07-12", description: "first release" }],
     links: [
-      { label: "Website",  url: "https://www.phpmyadmin.net/" },
+      { label: "Website", url: "https://www.phpmyadmin.net/" },
       { label: "Documentation", url: "https://www.phpmyadmin.net/docs/" },
       { label: "Github", url: "https://github.com/phpmyadmin/phpmyadmin" },
     ],
     contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" }
+      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
     ],
   },
   schema: {
@@ -41,7 +41,7 @@ export default createTemplate({
       type: "app",
       data: {
         projectName,
-        serviceName: serviceName,
+        serviceName,
         source: {
           type: "image",
           image: "phpmyadmin",
