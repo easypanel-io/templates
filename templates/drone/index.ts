@@ -26,7 +26,7 @@ export default createTemplate({
       "clientID",
       "clientSecret",
       "rpcProtocol",
-      "runnerService",
+      "runnerServiceName",
     ],
     properties: {
       projectName: {
