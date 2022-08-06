@@ -39,13 +39,7 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({
-    projectName,
-    serviceName,
-    domain,
-    salt = randomString(18),
-    key = randomString(18),
-  }) {
+  generate({ projectName, serviceName, domain }) {
     const services: Services = [];
 
     services.push({
@@ -53,7 +47,10 @@ export default createTemplate({
       data: {
         projectName,
         serviceName: serviceName,
-        env: [`IMGPROXY_KEY=${salt}`, `IMGPROXY_SALT=${key}`].join("\n"),
+        env: [
+          `IMGPROXY_KEY=${randomString(18)}`,
+          `IMGPROXY_SALT=${randomString(18)}`,
+        ].join("\n"),
         source: {
           type: "image",
           image: "darthsim/imgproxy",
