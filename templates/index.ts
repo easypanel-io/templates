@@ -14,22 +14,23 @@ import template_10 from "./ghost";
 import template_11 from "./gitea";
 import template_12 from "./gotify";
 import template_13 from "./heimdall";
-import template_14 from "./metube";
-import template_15 from "./miniflux";
-import template_16 from "./mysql-backup";
-import template_17 from "./n8n";
-import template_18 from "./nextcloud";
-import template_19 from "./nzbget";
-import template_20 from "./phpmyadmin";
-import template_21 from "./portainer";
-import template_22 from "./postgres-backup";
-import template_23 from "./psitransfer";
-import template_24 from "./statping-ng";
-import template_25 from "./strapi";
-import template_26 from "./uptimekuma";
-import template_27 from "./whiteboard";
-import template_28 from "./wikijs";
-import template_29 from "./wordpress";
+import template_14 from "./imgproxy";
+import template_15 from "./metube";
+import template_16 from "./miniflux";
+import template_17 from "./mysql-backup";
+import template_18 from "./n8n";
+import template_19 from "./nextcloud";
+import template_20 from "./nzbget";
+import template_21 from "./phpmyadmin";
+import template_22 from "./portainer";
+import template_23 from "./postgres-backup";
+import template_24 from "./psitransfer";
+import template_25 from "./statping-ng";
+import template_26 from "./strapi";
+import template_27 from "./uptimekuma";
+import template_28 from "./whiteboard";
+import template_29 from "./wikijs";
+import template_30 from "./wordpress";
 
 const templates = [
   { slug: "ackee", template: template_0 },
@@ -46,22 +47,23 @@ const templates = [
   { slug: "gitea", template: template_11 },
   { slug: "gotify", template: template_12 },
   { slug: "heimdall", template: template_13 },
-  { slug: "metube", template: template_14 },
-  { slug: "miniflux", template: template_15 },
-  { slug: "mysql-backup", template: template_16 },
-  { slug: "n8n", template: template_17 },
-  { slug: "nextcloud", template: template_18 },
-  { slug: "nzbget", template: template_19 },
-  { slug: "phpmyadmin", template: template_20 },
-  { slug: "portainer", template: template_21 },
-  { slug: "postgres-backup", template: template_22 },
-  { slug: "psitransfer", template: template_23 },
-  { slug: "statping-ng", template: template_24 },
-  { slug: "strapi", template: template_25 },
-  { slug: "uptimekuma", template: template_26 },
-  { slug: "whiteboard", template: template_27 },
-  { slug: "wikijs", template: template_28 },
-  { slug: "wordpress", template: template_29 },
+  { slug: "imgproxy", template: template_14 },
+  { slug: "metube", template: template_15 },
+  { slug: "miniflux", template: template_16 },
+  { slug: "mysql-backup", template: template_17 },
+  { slug: "n8n", template: template_18 },
+  { slug: "nextcloud", template: template_19 },
+  { slug: "nzbget", template: template_20 },
+  { slug: "phpmyadmin", template: template_21 },
+  { slug: "portainer", template: template_22 },
+  { slug: "postgres-backup", template: template_23 },
+  { slug: "psitransfer", template: template_24 },
+  { slug: "statping-ng", template: template_25 },
+  { slug: "strapi", template: template_26 },
+  { slug: "uptimekuma", template: template_27 },
+  { slug: "whiteboard", template: template_28 },
+  { slug: "wikijs", template: template_29 },
+  { slug: "wordpress", template: template_30 },
 ];
 
 export default templates;
