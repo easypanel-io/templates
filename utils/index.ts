@@ -1,4 +1,5 @@
 import { AjvError, FormValidation } from "@rjsf/core";
+import { hashSync } from "bcryptjs";
 import { randomBytes } from "crypto";
 import { FromSchema, JSONSchema7 } from "json-schema-to-ts";
 import { z } from "zod";
@@ -51,3 +52,5 @@ export function createTemplate<Schema extends JSONSchema7>(props: {
 
 export const randomString = (length: number = 10) =>
   randomBytes(Math.round(length / 2)).toString("hex");
+
+export const bcryptHash = (input: string ) => hashSync(input)

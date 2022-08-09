@@ -18,6 +18,7 @@
     "@emotion/styled": "^11",
     "@rjsf/chakra-ui": "^4.1.1",
     "@rjsf/core": "^4.1.1",
+    "bcryptjs": "^2.4.3",
     "framer-motion": "^6",
     "glob": "^8.0.3",
     "json-schema-to-ts": "^2.3.0",
@@ -28,6 +29,7 @@
     "zod": "^3.14.4"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/glob": "^7.2.0",
     "@types/node": "17.0.31",
     "@types/react": "18.0.8",

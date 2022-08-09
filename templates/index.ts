@@ -26,12 +26,13 @@ import template_22 from "./phpmyadmin";
 import template_23 from "./portainer";
 import template_24 from "./postgres-backup";
 import template_25 from "./psitransfer";
-import template_26 from "./statping-ng";
-import template_27 from "./strapi";
-import template_28 from "./uptimekuma";
-import template_29 from "./whiteboard";
-import template_30 from "./wikijs";
-import template_31 from "./wordpress";
+import template_26 from "./registry";
+import template_27 from "./statping-ng";
+import template_28 from "./strapi";
+import template_29 from "./uptimekuma";
+import template_30 from "./whiteboard";
+import template_31 from "./wikijs";
+import template_32 from "./wordpress";
 
 const templates = [
   { slug: "ackee", template: template_0 },
@@ -60,12 +61,13 @@ const templates = [
   { slug: "portainer", template: template_23 },
   { slug: "postgres-backup", template: template_24 },
   { slug: "psitransfer", template: template_25 },
-  { slug: "statping-ng", template: template_26 },
-  { slug: "strapi", template: template_27 },
-  { slug: "uptimekuma", template: template_28 },
-  { slug: "whiteboard", template: template_29 },
-  { slug: "wikijs", template: template_30 },
-  { slug: "wordpress", template: template_31 },
+  { slug: "registry", template: template_26 },
+  { slug: "statping-ng", template: template_27 },
+  { slug: "strapi", template: template_28 },
+  { slug: "uptimekuma", template: template_29 },
+  { slug: "whiteboard", template: template_30 },
+  { slug: "wikijs", template: template_31 },
+  { slug: "wordpress", template: template_32 },
 ];
 
 export default templates;
