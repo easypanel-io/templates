@@ -1,7 +1,7 @@
 import { createTemplate, Services, bcryptHash } from "~templates-utils";
 
 export default createTemplate({
-  name: "Rocket.chat",
+  name: "Rocket.Chat",
   meta: {
     description: "Rocket.Chat is an open-source fully customizable communications platform developed in JavaScript for organizations with high standards of data protection. Real-time conversations between colleagues, with other companies or with your customers, regardless of how they connect with you. The result is an increase in productivity and customer satisfaction rates.Every day, tens of millions of users in over 150 countries and in organizations such as Deutsche Bahn, The US Navy, and Credit Suisse trust Rocket.Chat to keep their communications completely private and secure.",
     changeLog: [{ date: "2022-08-10", description: "first release" }],
