@@ -52,8 +52,20 @@ export const appDeploySchema = z
     replicas: z.number().default(1),
     command: z.string().nullable().default(null),
     zeroDowntime: z.boolean().default(true),
+    capAdd: z.array(z.string()).optional(),
+    capDrop: z.array(z.string()).optional(),
+    sysctls: z.record(z.string(), z.string()).optional(),
   })
   .default({});
+
+export const appBasicAuthSchema = z
+  .array(
+    z.object({
+      username: z.string(),
+      password: z.string(),
+    })
+  )
+  .optional();
 
 export const appSchema = z.object({
   projectName: projectNameRule,
@@ -81,6 +93,7 @@ export const appSchema = z.object({
       secure: z.boolean().default(true),
     })
     .default({}),
+  basicAuth: appBasicAuthSchema,
   deploy: appDeploySchema,
   domains: z
     .array(
