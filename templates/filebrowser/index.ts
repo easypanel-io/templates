@@ -1,10 +1,4 @@
-import {
-  AppService,
-  createTemplate,
-  MongoService,
-  randomPassword,
-  Services
-} from "~templates-utils";
+import { createTemplate, Services } from "~templates-utils"
 
 export default createTemplate({
   name: "Filebrowser",
@@ -24,11 +18,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "domain",
-      "serviceName",
-    ],
+    required: ["projectName", "domain", "serviceName"],
     properties: {
       projectName: {
         type: "string",
@@ -42,14 +32,10 @@ export default createTemplate({
         type: "string",
         title: "Service Name",
         default: "filebrowser",
-      }
+      },
     },
   } as const,
-  generate({
-    projectName,
-    domain,
-    serviceName,
-  }) {
+  generate({ projectName, domain, serviceName }) {
     const services: Services = []
 
     services.push({
@@ -67,23 +53,31 @@ export default createTemplate({
         },
         domains: [{ name: domain }],
         mounts: [
-          {type: 'bind', hostPath: '/', mountPath: '/srv'},
-          {type: 'volume', name: 'database', mountPath: '/database'},
-          {type: 'file', content: JSON.stringify({
-            "port": 80,
-            "baseURL": "",
-            "address": "",
-            "log": "stdout",
-            "database": "/database/database.db",
-            "root": "/srv"
-          }, null, 2), mountPath: '/.filebrowser.json'},
+          { type: "bind", hostPath: "/", mountPath: "/srv" },
+          { type: "volume", name: "database", mountPath: "/database" },
+          {
+            type: "file",
+            content: JSON.stringify(
+              {
+                port: 80,
+                baseURL: "",
+                address: "",
+                log: "stdout",
+                database: "/database/database.db",
+                root: "/srv",
+              },
+              null,
+              2
+            ),
+            mountPath: "/.filebrowser.json",
+          },
         ],
         deploy: {
-          zeroDowntime: false
-        }
-      }
+          zeroDowntime: false,
+        },
+      },
     })
 
-    return { services };
+    return { services }
   },
-});
+})

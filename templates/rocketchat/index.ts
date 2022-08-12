@@ -1,9 +1,10 @@
-import { createTemplate, Services, bcryptHash } from "~templates-utils";
+import { createTemplate, Services } from "~templates-utils"
 
 export default createTemplate({
   name: "Rocket.Chat",
   meta: {
-    description: "Rocket.Chat is an open-source fully customizable communications platform developed in JavaScript for organizations with high standards of data protection. Real-time conversations between colleagues, with other companies or with your customers, regardless of how they connect with you. The result is an increase in productivity and customer satisfaction rates.Every day, tens of millions of users in over 150 countries and in organizations such as Deutsche Bahn, The US Navy, and Credit Suisse trust Rocket.Chat to keep their communications completely private and secure.",
+    description:
+      "Rocket.Chat is an open-source fully customizable communications platform developed in JavaScript for organizations with high standards of data protection. Real-time conversations between colleagues, with other companies or with your customers, regardless of how they connect with you. The result is an increase in productivity and customer satisfaction rates.Every day, tens of millions of users in over 150 countries and in organizations such as Deutsche Bahn, The US Navy, and Credit Suisse trust Rocket.Chat to keep their communications completely private and secure.",
     changeLog: [{ date: "2022-08-10", description: "first release" }],
     links: [
       { label: "Website", url: "https://rocket.chat/" },
@@ -26,12 +27,12 @@ export default createTemplate({
       serviceName: {
         type: "string",
         title: "Service Name",
-        default: 'rocketchat'
+        default: "rocketchat",
       },
       dbServiceName: {
         type: "string",
         title: "DB Service Name",
-        default: 'rocketchatdb'
+        default: "rocketchatdb",
       },
       domain: {
         type: "string",
@@ -39,8 +40,8 @@ export default createTemplate({
       },
     },
   } as const,
-  generate({ projectName, serviceName,dbServiceName, domain }) {
-    const services: Services = [];
+  generate({ projectName, serviceName, dbServiceName, domain }) {
+    const services: Services = []
 
     services.push({
       type: "app",
@@ -68,7 +69,7 @@ export default createTemplate({
           `ALLOW_EMPTY_PASSWORD=true`,
         ].join("\n"),
       },
-    });
+    })
     services.push({
       type: "app",
       data: {
@@ -83,7 +84,7 @@ export default createTemplate({
           `MONGO_OPLOG_URL=mongodb://${projectName}_${dbServiceName}:27017/local?replicaSet=rs0`,
         ].join("\n"),
       },
-    });
-    return { services };
+    })
+    return { services }
   },
-});
+})
