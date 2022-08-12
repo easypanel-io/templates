@@ -53,4 +53,4 @@ export function createTemplate<Schema extends JSONSchema7>(props: {
 export const randomString = (length: number = 10) =>
   randomBytes(Math.round(length / 2)).toString("hex");
 
-export const bcryptHash = (input: string ) => hashSync(input)
+export const bcryptHash = (input: string) => hashSync(input);
