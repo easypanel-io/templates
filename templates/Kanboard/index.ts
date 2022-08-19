@@ -4,7 +4,7 @@ export default createTemplate({
   name: "Kanboard",
   meta: {
     description:
-      "Kanboard is project management software that focuses on the Kanban methodology.There is no fancy user interface, Kanboard focuses on simplicity and minimalism. The number of features is voluntarily limited.",
+      "Kanboard is project management software that focuses on the Kanban methodology. There is no fancy user interface, Kanboard focuses on simplicity and minimalism. The number of features is voluntarily limited.",
     changeLog: [{ date: "2022-08-16", description: "first release" }],
     links: [
       { label: "Website", url: "https://kanboard.org/" },
@@ -61,10 +61,8 @@ export default createTemplate({
             mountPath: "/etc/nginx/ssl",
           },
         ],
-        deploy: { replicas: 1, command: null, zeroDowntime: true },
         domains: [{ name: domain }],
-        proxy: { port: 80, secure: true },
-        env: "",
+        proxy: { port: 80 },
       },
     });
     return { services };
