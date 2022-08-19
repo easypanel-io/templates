@@ -4,9 +4,9 @@ export default createTemplate({
   name: "Dashy",
   meta: {
     description:
-      "Dashy helps you organize your self-hosted services by making them accessible from a single place      ",
+      "Dashy helps you organize your self-hosted services by making them accessible from a single place",
     instructions:
-      "After deploying the project, it may take a while before the app is available(5 min)",
+      "After deploying the project, it may take a while before the app is available (5 minutes).",
     changeLog: [{ date: "2022-08-18", description: "first release" }],
     links: [
       { label: "Website", url: "https://dashy.to/" },
@@ -47,11 +47,11 @@ export default createTemplate({
         serviceName,
         source: { type: "image", image: "lissy93/dashy" },
         domains: [{ name: domain }],
-        proxy: { port: 80, secure: true },
-        deploy: { replicas: 1, command: null, zeroDowntime: true },
-        env: [`NODE_ENV=production`].join("\n"),
+        proxy: { port: 80 },
+        env: `NODE_ENV=production`,
       },
     });
+
     return { services };
   },
 });
