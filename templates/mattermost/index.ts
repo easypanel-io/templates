@@ -17,7 +17,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName"],
+    required: ["projectName", "domain", "serviceName", "dbName"],
     properties: {
       projectName: {
         type: "string",
@@ -29,12 +29,16 @@ export default createTemplate({
       },
       serviceName: {
         type: "string",
-        title: "App Service Name",
+        title: "Service Name",
         default: "mattermost",
+      },
+      dbName: {
+        type: "string",
+        title: "Postgres Database Name",
       },
     },
   } as const,
-  generate({ projectName, serviceName, domain }) {
+  generate({ projectName, serviceName, domain, dbName }) {
     const services: Services = [];
     const databasePassword = randomPassword();
 
@@ -42,10 +46,11 @@ export default createTemplate({
       type: "postgres",
       data: {
         projectName,
-        serviceName: "db",
+        serviceName: dbName,
         password: databasePassword,
       },
     });
+
     services.push({
       type: "app",
       data: {
@@ -63,7 +68,7 @@ export default createTemplate({
         deploy: { replicas: 1, command: null, zeroDowntime: true },
         env: [
           `MM_SQLSETTINGS_DRIVERNAME=postgres`,
-          `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${projectName}_db:5432/${projectName}?sslmode=disable`,
+          `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${projectName}_${dbName}:5432/${projectName}?sslmode=disable`,
         ].join("\n"),
       },
     });
