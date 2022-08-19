@@ -4,7 +4,7 @@ export default createTemplate({
   name: "Change Detection",
   meta: {
     description:
-      "Web Site Change Detection, Monitoring and Notification - Self-Hosted or SaaS.Know when web pages change! Stay ontop of new information! get notifications when important website content changes",
+      "The best and simplest self-hosted free open source website change detection tracking, monitoring, and notification service. An alternative to Visualping, Watchtower etc. Designed for simplicity - the main goal is to simply monitor which websites had a text change for free.",
     changeLog: [{ date: "2022-08-15", description: "first release" }],
     links: [
       { label: "Website", url: "https://changedetection.io" },
@@ -49,10 +49,8 @@ export default createTemplate({
         mounts: [
           { type: "volume", name: "datastore", mountPath: "/datastore" },
         ],
-        domains: [{ name: "ch.test.rezervari.app" }],
-        proxy: { port: 5000, secure: true },
-        deploy: { replicas: 1, command: null, zeroDowntime: true },
-        env: [``].join("\n"),
+        domains: [{ name: domain }],
+        proxy: { port: 5000 },
       },
     });
     return { services };
