@@ -17,7 +17,7 @@ export default createTemplate({
   },
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName", "dbName"],
+    required: ["projectName", "domain", "appServiceName", "dbServiceName"],
     properties: {
       projectName: {
         type: "string",
@@ -27,18 +27,19 @@ export default createTemplate({
         type: "string",
         title: "Domain",
       },
-      serviceName: {
+      appServiceName: {
         type: "string",
         title: "Service Name",
         default: "mattermost",
       },
-      dbName: {
+      dbServiceName: {
         type: "string",
         title: "Postgres Database Name",
+        default: "mattermost-db",
       },
     },
   } as const,
-  generate({ projectName, serviceName, domain, dbName }) {
+  generate({ projectName, domain, appServiceName, dbServiceName }) {
     const services: Services = [];
     const databasePassword = randomPassword();
 
@@ -46,7 +47,7 @@ export default createTemplate({
       type: "postgres",
       data: {
         projectName,
-        serviceName: dbName,
+        serviceName: dbServiceName,
         password: databasePassword,
       },
     });
@@ -55,7 +56,7 @@ export default createTemplate({
       type: "app",
       data: {
         projectName,
-        serviceName,
+        serviceName: appServiceName,
         source: {
           type: "image",
           image: "mattermost/mattermost-team-edition:7.1",
@@ -68,10 +69,11 @@ export default createTemplate({
         deploy: { replicas: 1, command: null, zeroDowntime: true },
         env: [
           `MM_SQLSETTINGS_DRIVERNAME=postgres`,
-          `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${projectName}_${dbName}:5432/${projectName}?sslmode=disable`,
+          `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${projectName}_${dbServiceName}:5432/${projectName}?sslmode=disable`,
         ].join("\n"),
       },
     });
+
     return { services };
   },
 });
