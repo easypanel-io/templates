@@ -27,7 +27,7 @@ schema:
   required:
     - projectName
     - domain
-    - serviceName
+    - appServiceName
     - user
     - password
   properties:
@@ -37,10 +37,10 @@ schema:
     domain:
       type: string
       title: Domain
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
-      default: Registry
+      title: App Service Name
+      default: registry
     user:
       type: string
       title: User

@@ -9,7 +9,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.serviceName,
+      serviceName: input.appServiceName,
       env: [
         `APP_URL=https://${input.domain}`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,

@@ -19,7 +19,7 @@ export const meta = {
     required: [
       "projectName",
       "domain",
-      "serviceName",
+      "appServiceName",
       "host",
       "secret",
       "runners",
@@ -27,7 +27,7 @@ export const meta = {
     properties: {
       projectName: { type: "string", title: "Project Name" },
       domain: { type: "string", title: "Domain" },
-      serviceName: {
+      appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "drone-runner",
@@ -67,7 +67,7 @@ export type RunnerCapacity = string;
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
-  serviceName: AppServiceName;
+  appServiceName: AppServiceName;
   host: DroneServerHostname;
   secret: RPCSecret;
   rpcProtocol?: RPCProtocol;

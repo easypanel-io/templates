@@ -38,7 +38,7 @@ export const meta = {
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "db",
+        default: "miniflux-db",
       },
     },
   },

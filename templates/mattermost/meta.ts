@@ -16,18 +16,23 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "dbServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
-        title: "Service Name",
+        title: "App Service Name",
         default: "mattermost",
       },
-      dbServiceName: {
+      databaseServiceName: {
         type: "string",
-        title: "Postgres Database Name",
+        title: "Database Service Name",
         default: "mattermost-db",
       },
     },
@@ -36,12 +41,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type Domain = string;
-export type ServiceName = string;
-export type PostgresDatabaseName = string;
+export type AppServiceName = string;
+export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
-  appServiceName: ServiceName;
-  dbServiceName: PostgresDatabaseName;
+  appServiceName: AppServiceName;
+  databaseServiceName: DatabaseServiceName;
 }

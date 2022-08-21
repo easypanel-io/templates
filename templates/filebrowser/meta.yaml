@@ -22,7 +22,7 @@ schema:
   required:
     - projectName
     - domain
-    - serviceName
+    - appServiceName
   properties:
     projectName:
       type: string
@@ -30,7 +30,7 @@ schema:
     domain:
       type: string
       title: Domain
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
+      title: App Service Name
       default: filebrowser

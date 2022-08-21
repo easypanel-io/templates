@@ -16,13 +16,13 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "serviceName", "domain"],
+    required: ["projectName", "appServiceName", "domain"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      serviceName: {
+      appServiceName: {
         type: "string",
-        title: "Service Name",
-        default: "Changedetection",
+        title: "App Service Name",
+        default: "changedetection",
       },
       domain: { type: "string", title: "Domain" },
     },
@@ -30,11 +30,11 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type ServiceName = string;
+export type AppServiceName = string;
 export type Domain = string;
 
 export interface Input {
   projectName: ProjectName;
-  serviceName: ServiceName;
+  appServiceName: AppServiceName;
   domain: Domain;
 }

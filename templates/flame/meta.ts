@@ -17,10 +17,10 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "serviceName", "domain", "password"],
+    required: ["projectName", "appServiceName", "domain", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      serviceName: {
+      appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "flame",
@@ -38,7 +38,7 @@ export type Password = string;
 
 export interface Input {
   projectName: ProjectName;
-  serviceName: AppServiceName;
+  appServiceName: AppServiceName;
   domain: Domain;
   password: Password;
 }

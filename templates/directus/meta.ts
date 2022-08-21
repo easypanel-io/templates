@@ -52,12 +52,12 @@ export const meta = {
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "db",
+        default: "directus-db",
       },
       redisServiceName: {
         type: "string",
         title: "Redis Service Name",
-        default: "redis",
+        default: "directus-redis",
       },
     },
   },

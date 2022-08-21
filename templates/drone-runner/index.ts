@@ -8,7 +8,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.serviceName,
+      serviceName: input.appServiceName,
       env: [
         `DRONE_RPC_HOST=${input.host}`,
         `DRONE_RPC_PROTO=${input.rpcProtocol}`,

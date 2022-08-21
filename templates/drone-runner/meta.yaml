@@ -19,7 +19,7 @@ schema:
   required:
     - projectName
     - domain
-    - serviceName
+    - appServiceName
     - host
     - secret
     - runners
@@ -30,7 +30,7 @@ schema:
     domain:
       type: string
       title: Domain
-    serviceName:
+    appServiceName:
       type: string
       title: App Service Name
       default: drone-runner

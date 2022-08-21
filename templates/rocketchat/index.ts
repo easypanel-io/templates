@@ -8,7 +8,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.dbServiceName,
+      serviceName: input.databaseServiceName,
       source: { type: "image", image: "docker.io/bitnami/mongodb:4.4" },
       mounts: [
         {
@@ -23,9 +23,9 @@ export function generate(input: Input): Output {
         `MONGODB_REPLICA_SET_MODE=primary`,
         `MONGODB_REPLICA_SET_NAME=rs0`,
         `MONGODB_PORT_NUMBER=27017`,
-        `MONGODB_INITIAL_PRIMARY_HOST=${input.projectName}_${input.dbServiceName}`,
+        `MONGODB_INITIAL_PRIMARY_HOST=${input.projectName}_${input.databaseServiceName}`,
         `MONGODB_INITIAL_PRIMARY_PORT_NUMBER=27017`,
-        `MONGODB_ADVERTISED_HOSTNAME=${input.projectName}_${input.dbServiceName}`,
+        `MONGODB_ADVERTISED_HOSTNAME=${input.projectName}_${input.databaseServiceName}`,
         `MONGODB_ENABLE_JOURNAL=true`,
         `ALLOW_EMPTY_PASSWORD=true`,
       ].join("\n"),
@@ -36,14 +36,14 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.serviceName,
+      serviceName: input.appServiceName,
       source: { type: "image", image: "rocket.chat" },
       domains: [{ name: input.domain }],
       proxy: { port: 80, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
-        `MONGO_URL=mongodb://${input.projectName}_${input.dbServiceName}:27017/rocketchat?replicaSet=rs0`,
-        `MONGO_OPLOG_URL=mongodb://${input.projectName}_${input.dbServiceName}:27017/local?replicaSet=rs0`,
+        `MONGO_URL=mongodb://${input.projectName}_${input.databaseServiceName}:27017/rocketchat?replicaSet=rs0`,
+        `MONGO_OPLOG_URL=mongodb://${input.projectName}_${input.databaseServiceName}:27017/local?replicaSet=rs0`,
       ].join("\n"),
     },
   });

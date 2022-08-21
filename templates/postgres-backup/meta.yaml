@@ -20,7 +20,7 @@ schema:
   type: object
   required:
     - projectName
-    - serviceName
+    - appServiceName
     - host
     - port
     - user
@@ -36,9 +36,9 @@ schema:
     projectName:
       type: string
       title: Project Name
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
+      title: App Service Name
       default: postgres-backup
     host:
       type: string

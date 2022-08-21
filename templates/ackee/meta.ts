@@ -20,7 +20,7 @@ export const meta = {
       "ackeeUsername",
       "ackeePassword",
       "appServiceName",
-      "mongoServiceName",
+      "databaseServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -32,10 +32,10 @@ export const meta = {
         title: "App Service Name",
         default: "ackee",
       },
-      mongoServiceName: {
+      databaseServiceName: {
         type: "string",
-        title: "MongoDB Service Name",
-        default: "mongodb",
+        title: "Database Service Name",
+        default: "ackee-db",
       },
     },
   },
@@ -46,7 +46,7 @@ export type Domain = string;
 export type AckeeUsername = string;
 export type AckeePassword = string;
 export type AppServiceName = string;
-export type MongoDBServiceName = string;
+export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
@@ -54,5 +54,5 @@ export interface Input {
   ackeeUsername: AckeeUsername;
   ackeePassword: AckeePassword;
   appServiceName: AppServiceName;
-  mongoServiceName: MongoDBServiceName;
+  databaseServiceName: DatabaseServiceName;
 }

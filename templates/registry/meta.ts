@@ -17,14 +17,14 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "domain", "serviceName", "user", "password"],
+    required: ["projectName", "domain", "appServiceName", "user", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       domain: { type: "string", title: "Domain" },
-      serviceName: {
+      appServiceName: {
         type: "string",
-        title: "Service Name",
-        default: "Registry",
+        title: "App Service Name",
+        default: "registry",
       },
       user: { type: "string", title: "User", default: "admin" },
       password: { type: "string", title: "Password", default: "admin" },
@@ -34,14 +34,14 @@ export const meta = {
 
 export type ProjectName = string;
 export type Domain = string;
-export type ServiceName = string;
+export type AppServiceName = string;
 export type User = string;
 export type Password = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
-  serviceName: ServiceName;
+  appServiceName: AppServiceName;
   user: User;
   password: Password;
 }

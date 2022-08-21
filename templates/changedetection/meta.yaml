@@ -21,16 +21,16 @@ schema:
   type: object
   required:
     - projectName
-    - serviceName
+    - appServiceName
     - domain
   properties:
     projectName:
       type: string
       title: Project Name
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
-      default: Changedetection
+      title: App Service Name
+      default: changedetection
     domain:
       type: string
       title: Domain

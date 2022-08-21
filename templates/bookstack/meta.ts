@@ -17,19 +17,24 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "serviceName", "domain", "databaseServiceName"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "domain",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       domain: { type: "string", title: "Domain" },
-      serviceName: {
+      appServiceName: {
         type: "string",
-        title: "Service Name",
+        title: "App Service Name",
         default: "bookstack",
       },
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "db",
+        default: "bookstack-db",
       },
     },
   },
@@ -37,12 +42,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type Domain = string;
-export type ServiceName = string;
+export type AppServiceName = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
-  serviceName: ServiceName;
+  appServiceName: AppServiceName;
   databaseServiceName: DatabaseServiceName;
 }

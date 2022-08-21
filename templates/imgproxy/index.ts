@@ -8,7 +8,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.serviceName,
+      serviceName: input.appServiceName,
       env: [
         `IMGPROXY_KEY=${randomString(18)}`,
         `IMGPROXY_SALT=${randomString(18)}`,

@@ -40,7 +40,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.serviceName,
+      serviceName: input.appServiceName,
       env: [
         `DRONE_GITHUB_CLIENT_ID=${input.clientID}`,
         `DRONE_GITHUB_CLIENT_SECRET=${input.clientSecret}`,

@@ -24,7 +24,7 @@ schema:
     - ackeeUsername
     - ackeePassword
     - appServiceName
-    - mongoServiceName
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -42,7 +42,7 @@ schema:
       type: string
       title: App Service Name
       default: ackee
-    mongoServiceName:
+    databaseServiceName:
       type: string
-      title: MongoDB Service Name
-      default: mongodb
+      title: Database Service Name
+      default: ackee-db

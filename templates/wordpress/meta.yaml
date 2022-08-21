@@ -23,7 +23,7 @@ schema:
     - projectName
     - domain
     - appServiceName
-    - mysqlServiceName
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -34,8 +34,8 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: web
-    mysqlServiceName:
+      default: wordpress
+    databaseServiceName:
       type: string
-      title: MySQL Service Name
-      default: db
+      title: Database Service Name
+      default: wordpress-db

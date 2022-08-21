@@ -17,18 +17,23 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "serviceName", "dbServiceName", "domain"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "databaseServiceName",
+      "domain",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      serviceName: {
+      appServiceName: {
         type: "string",
-        title: "Service Name",
+        title: "App Service Name",
         default: "rocketchat",
       },
-      dbServiceName: {
+      databaseServiceName: {
         type: "string",
-        title: "DB Service Name",
-        default: "rocketchatdb",
+        title: "Database Service Name",
+        default: "rocketchat-db",
       },
       domain: { type: "string", title: "Domain" },
     },
@@ -36,13 +41,13 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type ServiceName = string;
-export type DBServiceName = string;
+export type AppServiceName = string;
+export type DatabaseServiceName = string;
 export type Domain = string;
 
 export interface Input {
   projectName: ProjectName;
-  serviceName: ServiceName;
-  dbServiceName: DBServiceName;
+  appServiceName: AppServiceName;
+  databaseServiceName: DatabaseServiceName;
   domain: Domain;
 }

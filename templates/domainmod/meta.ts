@@ -35,7 +35,7 @@ export const meta = {
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "db",
+        default: "domainmod-db",
       },
       timezone: {
         type: "string",

@@ -19,7 +19,7 @@ schema:
   required:
     - projectName
     - domain
-    - serviceName
+    - appServiceName
     - clientID
     - clientSecret
     - rpcProtocol
@@ -31,9 +31,9 @@ schema:
     domain:
       type: string
       title: Domain
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
+      title: App Service Name
       default: drone
     runnerServiceName:
       type: string

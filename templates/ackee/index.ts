@@ -11,8 +11,8 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `WAIT_HOSTS=${input.projectName}_${input.mongoServiceName}:27017`,
-        `ACKEE_MONGODB=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.mongoServiceName}:27017`,
+        `WAIT_HOSTS=${input.projectName}_${input.databaseServiceName}:27017`,
+        `ACKEE_MONGODB=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.databaseServiceName}:27017`,
         `ACKEE_USERNAME=${input.ackeeUsername}`,
         `ACKEE_PASSWORD=${input.ackeePassword}`,
       ].join("\n"),
@@ -32,7 +32,7 @@ export function generate(input: Input): Output {
     type: "mongo",
     data: {
       projectName: input.projectName,
-      serviceName: input.mongoServiceName,
+      serviceName: input.databaseServiceName,
       image: "mongo:4",
       password: mongoPassword,
     },

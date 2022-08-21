@@ -21,7 +21,7 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "serviceName",
+      "appServiceName",
       "host",
       "port",
       "user",
@@ -36,9 +36,9 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      serviceName: {
+      appServiceName: {
         type: "string",
-        title: "Service Name",
+        title: "App Service Name",
         default: "mysql-backup",
       },
       host: { type: "string", title: "MySQL Host" },
@@ -62,7 +62,7 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type ServiceName = string;
+export type AppServiceName = string;
 export type MySQLHost = string;
 export type MySQLPort = string;
 export type MySQLUser = string;
@@ -80,7 +80,7 @@ export type Schedule = string;
 
 export interface Input {
   projectName: ProjectName;
-  serviceName: ServiceName;
+  appServiceName: AppServiceName;
   host: MySQLHost;
   port: MySQLPort;
   user: MySQLUser;

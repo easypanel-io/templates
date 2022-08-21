@@ -21,14 +21,14 @@ schema:
   type: object
   required:
     - projectName
-    - serviceName
+    - appServiceName
     - domain
     - downloadPath
   properties:
     projectName:
       type: string
       title: Project Name
-    serviceName:
+    appServiceName:
       type: string
       title: App Service Name
       default: metube

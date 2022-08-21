@@ -22,15 +22,15 @@ schema:
   type: object
   required:
     - projectName
-    - serviceName
+    - appServiceName
     - domain
   properties:
     projectName:
       type: string
       title: Project Name
-    serviceName:
+    appServiceName:
       type: string
-      title: Service Name
+      title: App Service Name
       default: adminer
     domain:
       type: string

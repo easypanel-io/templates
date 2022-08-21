@@ -21,7 +21,7 @@ schema:
     - projectName
     - domain
     - appServiceName
-    - dbServiceName
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -31,9 +31,9 @@ schema:
       title: Domain
     appServiceName:
       type: string
-      title: Service Name
+      title: App Service Name
       default: mattermost
-    dbServiceName:
+    databaseServiceName:
       type: string
-      title: Postgres Database Name
+      title: Database Service Name
       default: mattermost-db

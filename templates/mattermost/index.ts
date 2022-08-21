@@ -9,7 +9,7 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       projectName: input.projectName,
-      serviceName: input.dbServiceName,
+      serviceName: input.databaseServiceName,
       password: databasePassword,
     },
   });
@@ -31,7 +31,7 @@ export function generate(input: Input): Output {
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
         `MM_SQLSETTINGS_DRIVERNAME=postgres`,
-        `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${input.projectName}_${input.dbServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
       ].join("\n"),
     },
   });
