@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         `USER_UID=1000`,
         `USER_GID=1000`,
         `TZ=${input.timezone}`,
-        `ROOT_URL=https://${domain}`,
+        `ROOT_URL=https://${input.domain}`,
         `DOMAINMOD_WEB_ROOT=`,
         `DOMAINMOD_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
         `DOMAINMOD_DATABASE=domainmod`,

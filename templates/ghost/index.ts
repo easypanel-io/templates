@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: "ghost",
       },
-      env: `url=https://${domain}`,
+      env: `url=https://${input.domain}`,
       proxy: {
         port: 2368,
         secure: true,

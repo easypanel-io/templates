@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
       env: [
         `USER_UID=1000`,
         `USER_GID=1000`,
-        `ROOT_URL=https://${domain}`,
+        `ROOT_URL=https://${input.domain}`,
         `GITEA__database__DB_TYPE=${input.databaseType}`,
         `GITEA__database__HOST=${input.projectName}_${input.databaseServiceName}:${databasePort}`,
         `GITEA__database__NAME=${input.projectName}`,
