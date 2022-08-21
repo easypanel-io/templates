@@ -1,86 +1,25 @@
-import {
-  AppService,
-  createTemplate,
-  MySQLService,
-  PostgresService,
-  randomPassword,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Gitea",
-  meta: {
-    description:
-      "Gitea is a community managed lightweight code hosting solution written in Go. Gitea runs anywhere Go can compile for: Windows, macOS, Linux, ARM, etc.Gitea has low minimal requirements and can run on an inexpensive Raspberry Pi",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://gitea.io/en-us/" },
-      { label: "Documentation", url: "https://docs.gitea.io/en-us/" },
-      { label: "Github", url: "https://github.com/go-gitea/" },
-    ],
-    contributors: [
-      { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: [
-      "projectName",
-      "domain",
-      "appServiceName",
-      "databaseType",
-      "databaseServiceName",
-    ],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
-      },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
-      appServiceName: {
-        type: "string",
-        title: "App Service Name",
-        default: "gitea",
-      },
-      databaseType: {
-        type: "string",
-        title: "Database Type",
-        oneOf: [
-          { enum: ["postgres"], title: "Postgres" },
-          { enum: ["mysql"], title: "MySQL" },
-        ],
-      },
-      databaseServiceName: {
-        type: "string",
-        title: "Database Service Name",
-        default: "db",
-      },
-    },
-  } as const,
-  generate({
-    projectName,
-    domain,
-    appServiceName,
-    databaseType,
-    databaseServiceName,
-  }) {
-    const databasePassword = randomPassword();
-    const databaseUsername = databaseType === "postgres" ? "postgres" : "mysql";
-    const databasePort = databaseType === "postgres" ? "5432" : "3306";
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const databasePassword = randomPassword();
+  const databaseUsername =
+    input.databaseType === "postgres" ? "postgres" : "mysql";
+  const databasePort = input.databaseType === "postgres" ? "5432" : "3306";
 
-    const appService: AppService = {
-      projectName,
-      serviceName: appServiceName,
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
       env: [
         `USER_UID=1000`,
         `USER_GID=1000`,
         `ROOT_URL=https://${domain}`,
-        `GITEA__database__DB_TYPE=${databaseType}`,
-        `GITEA__database__HOST=${projectName}_${databaseServiceName}:${databasePort}`,
-        `GITEA__database__NAME=${projectName}`,
+        `GITEA__database__DB_TYPE=${input.databaseType}`,
+        `GITEA__database__HOST=${input.projectName}_${input.databaseServiceName}:${databasePort}`,
+        `GITEA__database__NAME=${input.projectName}`,
         `GITEA__database__USER=${databaseUsername}`,
         `GITEA__database__PASSWD=${databasePassword}`,
       ].join("\n"),
@@ -92,7 +31,7 @@ export default createTemplate({
         port: 3000,
         secure: true,
       },
-      domains: [{ name: domain }],
+      domains: [{ name: input.domain }],
       mounts: [
         {
           type: "volume",
@@ -116,28 +55,30 @@ export default createTemplate({
           target: 22,
         },
       ],
-    };
+    },
+  });
 
-    const postgresService: PostgresService = {
-      projectName,
-      serviceName: databaseServiceName,
-      password: databasePassword,
-    };
+  if (input.databaseType === "postgres") {
+    services.push({
+      type: "postgres",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
+      },
+    });
+  }
 
-    const mysqlService: MySQLService = {
-      projectName,
-      serviceName: databaseServiceName,
-      password: databasePassword,
-    };
+  if (input.databaseType === "mysql") {
+    services.push({
+      type: "mysql",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
+      },
+    });
+  }
 
-    const databaseService =
-      databaseType === "postgres" ? postgresService : mysqlService;
-
-    return {
-      services: [
-        { type: "app", data: appService },
-        { type: databaseType, data: databaseService },
-      ],
-    };
-  },
-});
+  return { services };
+}

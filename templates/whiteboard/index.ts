@@ -1,61 +1,25 @@
-import { createTemplate, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Whiteboard",
-  meta: {
-    description: "Lightweight collaborative Whiteboard / Sketchboard ",
-    changeLog: [{ date: "2022-08-01", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://github.com/cracker0dks/whiteboard" },
-      {
-        label: "Documentation",
-        url: "https://github.com/cracker0dks/whiteboard",
+export function generate(input: Input): Output {
+  const services: Services = [];
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.serviceName,
+      source: {
+        type: "image",
+        image: "rofl256/whiteboard",
       },
-      { label: "Github", url: "https://github.com/cracker0dks/whiteboard" },
-    ],
-    contributors: [
-      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: ["projectName", "serviceName", "domain"],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
+      proxy: {
+        port: 8080,
+        secure: true,
       },
-      serviceName: {
-        type: "string",
-        title: "Service Name",
-        default: "whiteboard",
-      },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
+      domains: [{ name: input.domain }],
     },
-  } as const,
-  generate({ projectName, serviceName, domain }) {
-    const services: Services = [];
+  });
 
-    services.push({
-      type: "app",
-      data: {
-        projectName,
-        serviceName: serviceName,
-        source: {
-          type: "image",
-          image: "rofl256/whiteboard",
-        },
-        proxy: {
-          port: 8080,
-          secure: true,
-        },
-        domains: [{ name: domain }],
-      },
-    });
-
-    return { services };
-  },
-});
+  return { services };
+}

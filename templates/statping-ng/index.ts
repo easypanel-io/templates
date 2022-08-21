@@ -1,126 +1,64 @@
-import { createTemplate, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Statping-ng",
-  meta: {
-    description:
-      "An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page. This Status Page generator allows you to use MySQL, Postgres, or SQLite on multiple operating systems.",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://github.com/statping/statping" },
-      { label: "Documentation", url: "https://github.com/statping/statping" },
-      { label: "Github", url: "https://github.com/statping/statping" },
-    ],
-    contributors: [
-      { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: [
-      "projectName",
-      "domain",
-      "appServiceName",
-      "databaseType",
-      "databaseServiceName",
-    ],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const databasePassword = randomPassword();
+  const databaseUsername = input.databaseType;
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
+      env: [
+        `DB_CONN=${input.databaseType}`,
+        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_USER=${databaseUsername}`,
+        `DB_PASS=${databasePassword}`,
+        `DB_DATABASE=${input.projectName}`,
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: "adamboutcher/statping-ng:latest",
       },
-      domain: {
-        type: "string",
-        title: "Domain",
+      proxy: {
+        port: 8080,
+        secure: true,
       },
-      appServiceName: {
-        type: "string",
-        title: "App Service Name",
-        default: "statping-ng",
-      },
-      databaseType: {
-        type: "string",
-        title: "Database Type",
-        default: "sqlite",
-        oneOf: [
-          { enum: ["sqlite"], title: "SQLite" },
-          { enum: ["postgres"], title: "Postgres" },
-          { enum: ["mysql"], title: "MySQL" },
-        ],
-      },
-      databaseServiceName: {
-        type: "string",
-        title: "Database Service Name",
-        default: "db",
-      },
+      domains: [{ name: input.domain }],
+      mounts: [
+        {
+          type: "volume",
+          name: "app",
+          mountPath: "/app",
+        },
+      ],
     },
-  } as const,
-  generate({
-    projectName,
-    domain,
-    appServiceName,
-    databaseType,
-    databaseServiceName,
-  }) {
-    const services: Services = [];
-    const databasePassword = randomPassword();
-    const databaseUsername = databaseType;
+  });
 
+  if (input.databaseType === "postgres") {
     services.push({
-      type: "app",
+      type: "postgres",
       data: {
-        projectName,
-        serviceName: appServiceName,
-        env: [
-          `DB_CONN=${databaseType}`,
-          `DB_HOST=${projectName}_${databaseServiceName}`,
-          `DB_USER=${databaseUsername}`,
-          `DB_PASS=${databasePassword}`,
-          `DB_DATABASE=${projectName}`,
-        ].join("\n"),
-        source: {
-          type: "image",
-          image: "adamboutcher/statping-ng:latest",
-        },
-        proxy: {
-          port: 8080,
-          secure: true,
-        },
-        domains: [{ name: domain }],
-        mounts: [
-          {
-            type: "volume",
-            name: "app",
-            mountPath: "/app",
-          },
-        ],
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
       },
     });
+  }
 
-    if (databaseType === "postgres") {
-      services.push({
-        type: "postgres",
-        data: {
-          projectName,
-          serviceName: databaseServiceName,
-          password: databasePassword,
-        },
-      });
-    }
+  if (input.databaseType === "mysql") {
+    services.push({
+      type: "mysql",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        image: "mysql:5",
+        password: databasePassword,
+      },
+    });
+  }
 
-    if (databaseType === "mysql") {
-      services.push({
-        type: "mysql",
-        data: {
-          projectName,
-          serviceName: databaseServiceName,
-          image: "mysql:5",
-          password: databasePassword,
-        },
-      });
-    }
-
-    return { services };
-  },
-});
+  return { services };
+}

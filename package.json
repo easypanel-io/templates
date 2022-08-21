@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-docs": "ts-node -r tsconfig-paths/register ./scripts/generate-docs.ts",
-    "generate-index": "ts-node -r tsconfig-paths/register ./scripts/generate-index.ts",
+    "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
+    "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "move-docs": "rm -rf ../website/docs/05-templates/* && cp -r ./docs/* ../website/docs/05-templates/"
   },
   "dependencies": {
@@ -22,10 +22,13 @@
     "framer-motion": "^6",
     "glob": "^8.0.3",
     "json-schema-to-ts": "^2.3.0",
+    "json-schema-to-typescript": "^11.0.2",
     "lodash": "^4.17.21",
     "next": "12.1.6",
+    "prettier": "^2.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "yaml": "^2.1.1",
     "zod": "^3.14.4"
   },
   "devDependencies": {

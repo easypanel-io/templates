@@ -1,83 +1,121 @@
-// Generated using "yarn generate-index"
+// Generated using "yarn build-templates"
 
-import template_0 from "./ackee";
-import template_1 from "./adminer";
-import template_2 from "./appsmith";
-import template_3 from "./bookstack";
-import template_4 from "./changedetection";
-import template_5 from "./dashy";
-import template_6 from "./directus";
-import template_7 from "./domainmod";
-import template_8 from "./drone-runner";
-import template_9 from "./drone";
-import template_10 from "./duplicati";
-import template_11 from "./filebrowser";
-import template_12 from "./flame";
-import template_13 from "./ghost";
-import template_14 from "./gitea";
-import template_15 from "./gotify";
-import template_16 from "./heimdall";
-import template_17 from "./imgproxy";
-import template_18 from "./Kanboard";
-import template_19 from "./mattermost";
-import template_20 from "./metube";
-import template_21 from "./miniflux";
-import template_22 from "./mysql-backup";
-import template_23 from "./n8n";
-import template_24 from "./nextcloud";
-import template_25 from "./nzbget";
-import template_26 from "./phpmyadmin";
-import template_27 from "./portainer";
-import template_28 from "./postgres-backup";
-import template_29 from "./psitransfer";
-import template_30 from "./registry";
-import template_31 from "./rocketchat";
-import template_32 from "./statping-ng";
-import template_33 from "./strapi";
-import template_34 from "./uptimekuma";
-import template_35 from "./whiteboard";
-import template_36 from "./wikijs";
-import template_37 from "./wordpress";
+import { meta as meta_0 } from "./ackee/meta";
+import { generate as generate_0 } from "./ackee";
+import { meta as meta_1 } from "./adminer/meta";
+import { generate as generate_1 } from "./adminer";
+import { meta as meta_2 } from "./appsmith/meta";
+import { generate as generate_2 } from "./appsmith";
+import { meta as meta_3 } from "./bookstack/meta";
+import { generate as generate_3 } from "./bookstack";
+import { meta as meta_4 } from "./changedetection/meta";
+import { generate as generate_4 } from "./changedetection";
+import { meta as meta_5 } from "./dashy/meta";
+import { generate as generate_5 } from "./dashy";
+import { meta as meta_6 } from "./directus/meta";
+import { generate as generate_6 } from "./directus";
+import { meta as meta_7 } from "./domainmod/meta";
+import { generate as generate_7 } from "./domainmod";
+import { meta as meta_8 } from "./drone-runner/meta";
+import { generate as generate_8 } from "./drone-runner";
+import { meta as meta_9 } from "./drone/meta";
+import { generate as generate_9 } from "./drone";
+import { meta as meta_10 } from "./duplicati/meta";
+import { generate as generate_10 } from "./duplicati";
+import { meta as meta_11 } from "./filebrowser/meta";
+import { generate as generate_11 } from "./filebrowser";
+import { meta as meta_12 } from "./flame/meta";
+import { generate as generate_12 } from "./flame";
+import { meta as meta_13 } from "./ghost/meta";
+import { generate as generate_13 } from "./ghost";
+import { meta as meta_14 } from "./gitea/meta";
+import { generate as generate_14 } from "./gitea";
+import { meta as meta_15 } from "./gotify/meta";
+import { generate as generate_15 } from "./gotify";
+import { meta as meta_16 } from "./heimdall/meta";
+import { generate as generate_16 } from "./heimdall";
+import { meta as meta_17 } from "./imgproxy/meta";
+import { generate as generate_17 } from "./imgproxy";
+import { meta as meta_18 } from "./kanboard/meta";
+import { generate as generate_18 } from "./kanboard";
+import { meta as meta_19 } from "./mattermost/meta";
+import { generate as generate_19 } from "./mattermost";
+import { meta as meta_20 } from "./metube/meta";
+import { generate as generate_20 } from "./metube";
+import { meta as meta_21 } from "./miniflux/meta";
+import { generate as generate_21 } from "./miniflux";
+import { meta as meta_22 } from "./mysql-backup/meta";
+import { generate as generate_22 } from "./mysql-backup";
+import { meta as meta_23 } from "./n8n/meta";
+import { generate as generate_23 } from "./n8n";
+import { meta as meta_24 } from "./nextcloud/meta";
+import { generate as generate_24 } from "./nextcloud";
+import { meta as meta_25 } from "./nzbget/meta";
+import { generate as generate_25 } from "./nzbget";
+import { meta as meta_26 } from "./phpmyadmin/meta";
+import { generate as generate_26 } from "./phpmyadmin";
+import { meta as meta_27 } from "./portainer/meta";
+import { generate as generate_27 } from "./portainer";
+import { meta as meta_28 } from "./postgres-backup/meta";
+import { generate as generate_28 } from "./postgres-backup";
+import { meta as meta_29 } from "./psitransfer/meta";
+import { generate as generate_29 } from "./psitransfer";
+import { meta as meta_30 } from "./registry/meta";
+import { generate as generate_30 } from "./registry";
+import { meta as meta_31 } from "./rocketchat/meta";
+import { generate as generate_31 } from "./rocketchat";
+import { meta as meta_32 } from "./statping-ng/meta";
+import { generate as generate_32 } from "./statping-ng";
+import { meta as meta_33 } from "./strapi/meta";
+import { generate as generate_33 } from "./strapi";
+import { meta as meta_34 } from "./uptimekuma/meta";
+import { generate as generate_34 } from "./uptimekuma";
+import { meta as meta_35 } from "./whiteboard/meta";
+import { generate as generate_35 } from "./whiteboard";
+import { meta as meta_36 } from "./wikijs/meta";
+import { generate as generate_36 } from "./wikijs";
+import { meta as meta_37 } from "./wordpress/meta";
+import { generate as generate_37 } from "./wordpress";
 
 const templates = [
-  { slug: "ackee", template: template_0 },
-  { slug: "adminer", template: template_1 },
-  { slug: "appsmith", template: template_2 },
-  { slug: "bookstack", template: template_3 },
-  { slug: "changedetection", template: template_4 },
-  { slug: "dashy", template: template_5 },
-  { slug: "directus", template: template_6 },
-  { slug: "domainmod", template: template_7 },
-  { slug: "drone-runner", template: template_8 },
-  { slug: "drone", template: template_9 },
-  { slug: "duplicati", template: template_10 },
-  { slug: "filebrowser", template: template_11 },
-  { slug: "flame", template: template_12 },
-  { slug: "ghost", template: template_13 },
-  { slug: "gitea", template: template_14 },
-  { slug: "gotify", template: template_15 },
-  { slug: "heimdall", template: template_16 },
-  { slug: "imgproxy", template: template_17 },
-  { slug: "Kanboard", template: template_18 },
-  { slug: "mattermost", template: template_19 },
-  { slug: "metube", template: template_20 },
-  { slug: "miniflux", template: template_21 },
-  { slug: "mysql-backup", template: template_22 },
-  { slug: "n8n", template: template_23 },
-  { slug: "nextcloud", template: template_24 },
-  { slug: "nzbget", template: template_25 },
-  { slug: "phpmyadmin", template: template_26 },
-  { slug: "portainer", template: template_27 },
-  { slug: "postgres-backup", template: template_28 },
-  { slug: "psitransfer", template: template_29 },
-  { slug: "registry", template: template_30 },
-  { slug: "rocketchat", template: template_31 },
-  { slug: "statping-ng", template: template_32 },
-  { slug: "strapi", template: template_33 },
-  { slug: "uptimekuma", template: template_34 },
-  { slug: "whiteboard", template: template_35 },
-  { slug: "wikijs", template: template_36 },
-  { slug: "wordpress", template: template_37 },
+  { slug: "ackee", meta: meta_0, generate: generate_0 },
+  { slug: "adminer", meta: meta_1, generate: generate_1 },
+  { slug: "appsmith", meta: meta_2, generate: generate_2 },
+  { slug: "bookstack", meta: meta_3, generate: generate_3 },
+  { slug: "changedetection", meta: meta_4, generate: generate_4 },
+  { slug: "dashy", meta: meta_5, generate: generate_5 },
+  { slug: "directus", meta: meta_6, generate: generate_6 },
+  { slug: "domainmod", meta: meta_7, generate: generate_7 },
+  { slug: "drone-runner", meta: meta_8, generate: generate_8 },
+  { slug: "drone", meta: meta_9, generate: generate_9 },
+  { slug: "duplicati", meta: meta_10, generate: generate_10 },
+  { slug: "filebrowser", meta: meta_11, generate: generate_11 },
+  { slug: "flame", meta: meta_12, generate: generate_12 },
+  { slug: "ghost", meta: meta_13, generate: generate_13 },
+  { slug: "gitea", meta: meta_14, generate: generate_14 },
+  { slug: "gotify", meta: meta_15, generate: generate_15 },
+  { slug: "heimdall", meta: meta_16, generate: generate_16 },
+  { slug: "imgproxy", meta: meta_17, generate: generate_17 },
+  { slug: "kanboard", meta: meta_18, generate: generate_18 },
+  { slug: "mattermost", meta: meta_19, generate: generate_19 },
+  { slug: "metube", meta: meta_20, generate: generate_20 },
+  { slug: "miniflux", meta: meta_21, generate: generate_21 },
+  { slug: "mysql-backup", meta: meta_22, generate: generate_22 },
+  { slug: "n8n", meta: meta_23, generate: generate_23 },
+  { slug: "nextcloud", meta: meta_24, generate: generate_24 },
+  { slug: "nzbget", meta: meta_25, generate: generate_25 },
+  { slug: "phpmyadmin", meta: meta_26, generate: generate_26 },
+  { slug: "portainer", meta: meta_27, generate: generate_27 },
+  { slug: "postgres-backup", meta: meta_28, generate: generate_28 },
+  { slug: "psitransfer", meta: meta_29, generate: generate_29 },
+  { slug: "registry", meta: meta_30, generate: generate_30 },
+  { slug: "rocketchat", meta: meta_31, generate: generate_31 },
+  { slug: "statping-ng", meta: meta_32, generate: generate_32 },
+  { slug: "strapi", meta: meta_33, generate: generate_33 },
+  { slug: "uptimekuma", meta: meta_34, generate: generate_34 },
+  { slug: "whiteboard", meta: meta_35, generate: generate_35 },
+  { slug: "wikijs", meta: meta_36, generate: generate_36 },
+  { slug: "wordpress", meta: meta_37, generate: generate_37 },
 ];
 
 export default templates;

@@ -1,67 +1,32 @@
-import { createTemplate, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "n8n",
-  meta: {
-    description:
-      "n8n helps you to connect any app with an API with any other, and manipulate its data with little or no code.Has highly flexible workflows and the option to build custom nodes.",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://n8n.io/" },
-      { label: "Documentation", url: "https://docs.n8n.io/" },
-      { label: "Github", url: "https://github.com/n8n-io/n8n" },
-    ],
-    contributors: [
-      { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: ["projectName", "serviceName", "domain"],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
+export function generate(input: Input): Output {
+  const services: Services = [];
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.serviceName,
+      source: {
+        type: "image",
+        image: "n8nio/n8n",
       },
-      serviceName: {
-        type: "string",
-        title: "Service Name",
-        default: "n8n",
+      proxy: {
+        port: 5678,
+        secure: true,
       },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
+      domains: [{ name: input.domain }],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/home/node/.n8n",
+        },
+      ],
     },
-  } as const,
-  generate({ projectName, serviceName, domain }) {
-    const services: Services = [];
+  });
 
-    services.push({
-      type: "app",
-      data: {
-        projectName,
-        serviceName: serviceName,
-        source: {
-          type: "image",
-          image: "n8nio/n8n",
-        },
-        proxy: {
-          port: 5678,
-          secure: true,
-        },
-        domains: [{ name: domain }],
-        mounts: [
-          {
-            type: "volume",
-            name: "data",
-            mountPath: "/home/node/.n8n",
-          },
-        ],
-      },
-    });
-
-    return { services };
-  },
-});
+  return { services };
+}

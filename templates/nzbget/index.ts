@@ -1,99 +1,42 @@
-import { createTemplate, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Nzbget",
-  meta: {
-    description:
-      "NZBGet is a binary downloader, which downloads files from Usenet based on information given in nzb-files.NZBGet is written in C++ and is known for its performance and efficiency.NZBGet can run on almost any device - classic PC, NAS, media player, SAT-receiver, WLAN-router, etc. The download area provides precompiled binaries for Windows, macOS, Linux (compatible with many CPUs and platform variants), FreeBSD and Android.",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://nzbget.net/" },
-      { label: "Documentation", url: "https://nzbget.net/documentation" },
-      { label: "Github", url: "https://github.com/nzbget/nzbget" },
-    ],
-    contributors: [
-      { name: "Ponky", url: "https://github.com/Ponkhy" },
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: ["projectName", "serviceName", "domain", "username", "password"],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
+export function generate(input: Input): Output {
+  const services: Services = [];
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.serviceName,
+      source: {
+        type: "image",
+        image: "lscr.io/linuxserver/nzbget:latest",
       },
-      serviceName: {
-        type: "string",
-        title: "App Service Name",
-        default: "nzbget",
+      env: [
+        `NZBGET_USER=${input.username}`,
+        `NZBGET_PASS=${input.password}`,
+        `TZ=${input.serviceTimezone}`,
+      ].join("\n"),
+      proxy: {
+        port: 6789,
+        secure: true,
       },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
-      username: {
-        type: "string",
-        title: "Username",
-        default: "nzbget",
-      },
-      password: {
-        type: "string",
-        title: "Password",
-        default: "tegbzn6789",
-      },
-      serviceTimezone: {
-        type: "string",
-        title: "Timezone",
-        default: "Europe/London",
-      },
+      domains: [{ name: input.domain }],
+      mounts: [
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/config",
+        },
+        {
+          type: "volume",
+          name: "downloads",
+          mountPath: "/downloads",
+        },
+      ],
     },
-  } as const,
-  generate({
-    projectName,
-    serviceName,
-    domain,
-    username,
-    password,
-    serviceTimezone,
-  }) {
-    const services: Services = [];
+  });
 
-    services.push({
-      type: "app",
-      data: {
-        projectName,
-        serviceName: serviceName,
-        source: {
-          type: "image",
-          image: "lscr.io/linuxserver/nzbget:latest",
-        },
-        env: [
-          `NZBGET_USER=${username}`,
-          `NZBGET_PASS=${password}`,
-          `TZ=${serviceTimezone}`,
-        ].join("\n"),
-        proxy: {
-          port: 6789,
-          secure: true,
-        },
-        domains: [{ name: domain }],
-        mounts: [
-          {
-            type: "volume",
-            name: "config",
-            mountPath: "/config",
-          },
-          {
-            type: "volume",
-            name: "downloads",
-            mountPath: "/downloads",
-          },
-        ],
-      },
-    });
-
-    return { services };
-  },
-});
+  return { services };
+}

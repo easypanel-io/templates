@@ -15,7 +15,7 @@ async function run() {
   const list = [];
 
   // create a folder for each template
-  for (let { slug, template } of templates) {
+  for (let { slug, meta } of templates) {
     await mkdir(path.resolve(docsPath, slug), { recursive: true });
 
     const logo = getTemplateLogo(path.resolve(templatesPath, slug));
@@ -23,9 +23,9 @@ async function run() {
 
     const lines: string[] = [
       "---",
-      `sidebar_label: ${template.name}`,
-      `title: ${template.name}`,
-      `description: How to install ${template.name} on Easypanel? 1-Click installation template for ${template.name} on Easypanel`,
+      `sidebar_label: ${meta.name}`,
+      `title: ${meta.name}`,
+      `description: How to install ${meta.name} on Easypanel? 1-Click installation template for ${meta.name} on Easypanel`,
       "---",
       "",
       "<!-- generated -->",
@@ -33,21 +33,21 @@ async function run() {
     ];
 
     lines.push(
-      `1-Click installation template for ${template.name} on Easypanel`,
+      `1-Click installation template for ${meta.name} on Easypanel`,
       ""
     );
 
-    if (template.meta?.description) {
-      lines.push("## Description", "", template.meta.description, "");
+    if (meta?.description) {
+      lines.push("## Description", "", meta.description, "");
     }
 
-    if (template.meta?.instructions) {
-      lines.push("## Instructions", "", template.meta.instructions, "");
+    if (meta?.instructions) {
+      lines.push("## Instructions", "", meta.instructions, "");
     }
 
-    if (template.meta?.links?.length) {
+    if (meta?.links?.length) {
       lines.push("## Links", "");
-      template.meta.links.forEach((entry) => {
+      meta.links.forEach((entry) => {
         lines.push(`- [${entry.label}](${entry.url})`);
       });
       lines.push("");
@@ -60,12 +60,12 @@ async function run() {
         "Name | Description | Required | Default Value",
         "-|-|-|-"
       );
-      Object.entries(template.schema.properties).forEach((entry) => {
+      Object.entries(meta.schema.properties).forEach((entry: any) => {
         const [key, value] = entry;
         if (key === "projectName") return;
         lines.push(
           `${value.title ?? key} | ${value.description ?? "-"} | ${
-            template.schema.required.includes(key as any) ? "yes" : "no"
+            meta.schema.required.includes(key as any) ? "yes" : "no"
           } | ${value.default ?? ""}`
         );
       });
@@ -76,22 +76,22 @@ async function run() {
       lines.push(
         "## Screenshot",
         "",
-        `![${template.name} Screenshot](./${screenshot})`,
+        `![${meta.name} Screenshot](./${screenshot})`,
         ""
       );
     }
 
-    if (template.meta?.changeLog?.length) {
+    if (meta?.changeLog?.length) {
       lines.push("## Change Log", "");
-      template.meta.changeLog.forEach((entry) => {
+      meta.changeLog.forEach((entry) => {
         lines.push(`- ${entry.date} – ${entry.description}`);
       });
       lines.push("");
     }
 
-    if (template.meta?.contributors?.length) {
+    if (meta?.contributors?.length) {
       lines.push("## Contributors", "");
-      template.meta.contributors.forEach((entry) => {
+      meta.contributors.forEach((entry) => {
         lines.push(`- [${entry.name}](${entry.url})`);
       });
       lines.push("");
@@ -116,7 +116,7 @@ async function run() {
       );
     }
 
-    list.push({ slug, logo, name: template.name });
+    list.push({ slug, logo, name: meta.name });
   }
 
   await writeFile(

@@ -1,75 +1,20 @@
-import {
-  AppService,
-  createTemplate,
-  MySQLService,
-  randomPassword,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Wordpress",
-  meta: {
-    description:
-      "WordPress powers nearly a third of the world’s websites. With tools for everyone from personal bloggers to large corporations, this powerful site builder and content management system (cms) aims to make it possible for anyone to create an online presence in minutes.",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://wordpress.org/" },
-      { label: "Documentation", url: "https://learn.wordpress.org" },
-      { label: "Github", url: "https://github.com/WordPress/WordPress" },
-    ],
-    contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: ["projectName", "domain", "appServiceName", "mysqlServiceName"],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
-      },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
-      appServiceName: {
-        type: "string",
-        title: "App Service Name",
-        default: "web",
-      },
-      mysqlServiceName: {
-        type: "string",
-        title: "MySQL Service Name",
-        default: "db",
-      },
-      mysqlPassword: {
-        type: "string",
-        title: "MySQL Password",
-        description: "Leave empty to generate a random one.",
-      },
-      mysqlRootPassword: {
-        type: "string",
-        title: "MySQL Root Password",
-        description: "Leave empty to generate a random one.",
-      },
-    },
-  } as const,
-  generate({
-    projectName,
-    domain,
-    appServiceName,
-    mysqlServiceName,
-    mysqlPassword = randomPassword(),
-    mysqlRootPassword = randomPassword(),
-  }) {
-    const appService: AppService = {
-      projectName,
-      serviceName: appServiceName,
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const mysqlPassword = randomPassword();
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
       env: [
-        `WORDPRESS_DB_HOST=${projectName}_${mysqlServiceName}`,
+        `WORDPRESS_DB_HOST=${input.projectName}_${input.mysqlServiceName}`,
         `WORDPRESS_DB_USER=mysql`,
         `WORDPRESS_DB_PASSWORD=${mysqlPassword}`,
-        `WORDPRESS_DB_NAME=${projectName}`,
+        `WORDPRESS_DB_NAME=${input.projectName}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -79,7 +24,7 @@ export default createTemplate({
         port: 80,
         secure: true,
       },
-      domains: [{ name: domain }],
+      domains: [{ name: input.domain }],
       mounts: [
         {
           type: "volume",
@@ -96,20 +41,17 @@ export default createTemplate({
           mountPath: "/usr/local/etc/php/conf.d/custom.ini",
         },
       ],
-    };
+    },
+  });
 
-    const mysqlService: MySQLService = {
-      projectName,
-      serviceName: mysqlServiceName,
+  services.push({
+    type: "mysql",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.mysqlServiceName,
       password: mysqlPassword,
-      rootPassword: mysqlRootPassword,
-    };
+    },
+  });
 
-    return {
-      services: [
-        { type: "app", data: appService },
-        { type: "mysql", data: mysqlService },
-      ],
-    };
-  },
-});
+  return { services };
+}

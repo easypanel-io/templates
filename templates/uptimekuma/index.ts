@@ -1,68 +1,32 @@
-import { createTemplate, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "UptimeKuma",
-  meta: {
-    description: "A fancy self-hosted monitoring tool",
-    changeLog: [{ date: "2022-08-02", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://uptime.kuma.pet" },
-      {
-        label: "Documentation",
-        url: "https://github.com/louislam/uptime-kuma/wiki",
-      },
-      { label: "Github", url: "https://github.com/louislam/uptime-kuma" },
-    ],
-    contributors: [
-      { name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: ["projectName", "serviceName", "domain"],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
-      },
-      serviceName: {
-        type: "string",
-        title: "Service Name",
-        default: "uptimekuma",
-      },
-      domain: {
-        type: "string",
-        title: "Domain",
-      },
-    },
-  } as const,
-  generate({ projectName, serviceName, domain }) {
-    const services: Services = [];
+export function generate(input: Input): Output {
+  const services: Services = [];
 
-    services.push({
-      type: "app",
-      data: {
-        projectName,
-        serviceName: serviceName,
-        source: {
-          type: "image",
-          image: "louislam/uptime-kuma:1",
-        },
-        proxy: {
-          port: 3001,
-          secure: true,
-        },
-        domains: [{ name: domain }],
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.serviceName,
+      source: {
+        type: "image",
+        image: "louislam/uptime-kuma:1",
+      },
+      proxy: {
+        port: 3001,
+        secure: true,
+      },
+      domains: [{ name: input.domain }],
       mounts: [
-          {
-            type: "volume",
-            name: "data",
-            mountPath: "/app/data",
-          },
-        ],
-      }     
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/app/data",
+        },
+      ],
+    },
   });
 
-    return { services };
-  },
-});
+  return { services };
+}

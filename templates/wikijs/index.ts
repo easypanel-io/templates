@@ -1,130 +1,69 @@
-import { createTemplate, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
 
-export default createTemplate({
-  name: "Wiki.js",
-  meta: {
-    description:
-      "Extensible open source Wiki software.Make documentation a joy to write using Wiki.js's beautiful and intuitive interface! Works on virtually any platform and is compatible with either PostgreSQL, MySQL, MariaDB, MS SQL Server or SQLite! Running on the blazing fast Node.js engine, Wiki.js is built with performance in mind.",
-    changeLog: [{ date: "2022-07-12", description: "first release" }],
-    links: [
-      { label: "Website", url: "https://js.wiki/" },
-      { label: "Documentation", url: "https://docs.requarks.io/" },
-      { label: "Github", url: "https://github.com/Requarks/wiki" },
-    ],
-    contributors: [
-      { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-    ],
-  },
-  schema: {
-    type: "object",
-    required: [
-      "projectName",
-      "domain",
-      "appServiceName",
-      "databaseType",
-      "databaseServiceName",
-    ],
-    properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const databasePassword = randomPassword();
+  const databaseUsername = input.databaseType;
+  const databasePort = input.databaseType === "postgres" ? "5432" : "3306";
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
+      env: [
+        `DB_TYPE=${input.databaseType}`,
+        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_PORT=${databasePort}`,
+        `DB_USER=${databaseUsername}`,
+        `DB_PASS=${databasePassword}`,
+        `DB_NAME=${input.projectName}`,
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: "ghcr.io/requarks/wiki:2",
       },
-      domain: {
-        type: "string",
-        title: "Domain",
+      proxy: {
+        port: 3000,
+        secure: true,
       },
-      appServiceName: {
-        type: "string",
-        title: "App Service Name",
-        default: "wikijs",
-      },
-      databaseType: {
-        type: "string",
-        title: "Database Type",
-        default: "postgres",
-        oneOf: [
-          { enum: ["postgres"], title: "Postgres" },
-          { enum: ["mysql"], title: "MySQL" },
-          { enum: ["mariadb"], title: "MariaDB" },
-        ],
-      },
-      databaseServiceName: {
-        type: "string",
-        title: "Database Service Name",
-        default: "db",
-      },
+      domains: [{ name: input.domain }],
     },
-  } as const,
-  generate({
-    projectName,
-    domain,
-    appServiceName,
-    databaseType,
-    databaseServiceName,
-  }) {
-    const services: Services = [];
-    const databasePassword = randomPassword();
-    const databaseUsername = databaseType;
-    const databasePort = databaseType === "postgres" ? "5432" : "3306";
+  });
 
+  if (input.databaseType === "postgres") {
     services.push({
-      type: "app",
+      type: "postgres",
       data: {
-        projectName,
-        serviceName: appServiceName,
-        env: [
-          `DB_TYPE=${databaseType}`,
-          `DB_HOST=${projectName}_${databaseServiceName}`,
-          `DB_PORT=${databasePort}`,
-          `DB_USER=${databaseUsername}`,
-          `DB_PASS=${databasePassword}`,
-          `DB_NAME=${projectName}`,
-        ].join("\n"),
-        source: {
-          type: "image",
-          image: "ghcr.io/requarks/wiki:2",
-        },
-        proxy: {
-          port: 3000,
-          secure: true,
-        },
-        domains: [{ name: domain }],
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
       },
     });
+  }
 
-    if (databaseType === "postgres") {
-      services.push({
-        type: "postgres",
-        data: {
-          projectName,
-          serviceName: databaseServiceName,
-          password: databasePassword,
-        },
-      });
-    }
+  if (input.databaseType === "mysql") {
+    services.push({
+      type: "mysql",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
+      },
+    });
+  }
 
-    if (databaseType === "mysql") {
-      services.push({
-        type: "mysql",
-        data: {
-          projectName,
-          serviceName: databaseServiceName,
-          password: databasePassword,
-        },
-      });
-    }
+  if (input.databaseType === "mariadb") {
+    services.push({
+      type: "mariadb",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.databaseServiceName,
+        password: databasePassword,
+      },
+    });
+  }
 
-    if (databaseType === "mariadb") {
-      services.push({
-        type: "mariadb",
-        data: {
-          projectName,
-          serviceName: databaseServiceName,
-          password: databasePassword,
-        },
-      });
-    }
-
-    return { services };
-  },
-});
+  return { services };
+}

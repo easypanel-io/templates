@@ -9,16 +9,18 @@ import {
 } from "@chakra-ui/react";
 import Form from "@rjsf/chakra-ui";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import templates from "../templates";
 
 const Home: NextPage = () => {
-  const [slug, setSlug] = useState<string>("");
+  const router = useRouter();
+  const { slug } = router.query;
+  const template = templates.find((item) => item.slug === slug);
+
   const [formData, setFormData] = useState<any>();
   const [output, setOutput] = useState<string>("");
   const { hasCopied, onCopy } = useClipboard(output);
-  const selected = templates.find((item) => item.slug === slug);
-  const template = selected ? selected.template : null;
 
   useEffect(() => {
     setFormData(null);
@@ -50,13 +52,13 @@ const Home: NextPage = () => {
             width="64"
             value={slug}
             onChange={(e) => {
-              setSlug(e.target.value as any);
+              router.push(e.target.value);
             }}
           >
             <option value="">Select Template</option>
             {templates.map((item) => (
               <option key={item.slug} value={item.slug}>
-                {item.template.name}
+                {item.meta.name}
               </option>
             ))}
           </Select>
@@ -71,7 +73,7 @@ const Home: NextPage = () => {
           bg="white"
         >
           <Form
-            schema={template.schema as any}
+            schema={template.meta.schema as any}
             formData={formData}
             onChange={(event) => setFormData(event.formData)}
             onSubmit={({ formData }) => {
@@ -84,8 +86,6 @@ const Home: NextPage = () => {
             }}
             noHtml5Validate
             showErrorList={false}
-            validate={template.validate}
-            transformErrors={template.transformErrors}
           >
             <Button type="submit" colorScheme="brand">
               Generate
