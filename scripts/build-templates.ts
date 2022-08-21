@@ -1,4 +1,6 @@
 import { readFile, writeFile } from "fs/promises";
+import * as path from "path";
+
 import glob from "glob";
 import { compile } from "json-schema-to-typescript";
 import prettier from "prettier";
@@ -19,13 +21,20 @@ async function run() {
       bannerComment: "",
     });
 
+    const logo = getLogo(`./templates/${item}/assets`);
+    const screenshots = getScreenshots(`./templates/${item}/assets`);
+
     await writeFile(
       `./templates/${item}/meta.ts`,
       prettier.format(
         [
           `// Generated using "yarn build-templates"`,
           ``,
-          `export const meta = ${JSON.stringify(meta)}`,
+          `export const meta = ${JSON.stringify({
+            ...meta,
+            logo,
+            screenshots,
+          })}`,
           ``,
           types,
         ].join("\n"),
@@ -58,4 +67,14 @@ async function generateIndex(items: string[]) {
   output.push("];", "", "export default templates;", "");
 
   await writeFile("./templates/index.ts", output.join("\n"));
+}
+
+function getLogo(dir: string) {
+  const files = glob.sync(path.resolve(dir, "logo.{png,svg}"));
+  return files[0]?.split("/").pop() ?? null;
+}
+
+function getScreenshots(dir: string) {
+  const files = glob.sync(path.resolve(dir, "screenshot*.{png,jpg}"));
+  return files.map((file) => file.split("/").pop());
 }

@@ -30,6 +30,8 @@ export const meta = {
       password: { type: "string", title: "Password", default: "admin" },
     },
   },
+  logo: "logo.png",
+  screenshots: [],
 };
 
 export type ProjectName = string;

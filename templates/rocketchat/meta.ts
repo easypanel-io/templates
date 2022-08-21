@@ -38,6 +38,8 @@ export const meta = {
       domain: { type: "string", title: "Domain" },
     },
   },
+  logo: "logo.png",
+  screenshots: ["screenshot.jpg"],
 };
 
 export type ProjectName = string;

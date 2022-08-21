@@ -1,5 +1,5 @@
-import { existsSync } from "fs";
-import { copyFile, mkdir, rm, writeFile } from "fs/promises";
+import { copy } from "fs-extra";
+import { mkdir, rm, writeFile } from "fs/promises";
 import * as path from "path";
 import templates from "../templates";
 
@@ -17,9 +17,6 @@ async function run() {
   // create a folder for each template
   for (let { slug, meta } of templates) {
     await mkdir(path.resolve(docsPath, slug), { recursive: true });
-
-    const logo = getTemplateLogo(path.resolve(templatesPath, slug));
-    const screenshot = getTemplateScreenshot(path.resolve(templatesPath, slug));
 
     const lines: string[] = [
       "---",
@@ -72,13 +69,12 @@ async function run() {
       lines.push("");
     }
 
-    if (screenshot) {
-      lines.push(
-        "## Screenshot",
-        "",
-        `![${meta.name} Screenshot](./${screenshot})`,
-        ""
-      );
+    if (meta.screenshots) {
+      lines.push("## Screenshots", "");
+      meta.screenshots.forEach((screenshot) => {
+        lines.push(`![${meta.name} Screenshot](./assets/${screenshot})`);
+      });
+      lines.push("");
     }
 
     if (meta?.changeLog?.length) {
@@ -102,21 +98,12 @@ async function run() {
 
     await writeFile(filePath, content);
 
-    if (logo) {
-      await copyFile(
-        path.resolve(templatesPath, slug, logo),
-        path.resolve(docsPath, slug, logo)
-      );
-    }
+    await copy(
+      path.resolve(templatesPath, slug, "assets"),
+      path.resolve(docsPath, slug, "assets")
+    );
 
-    if (screenshot) {
-      await copyFile(
-        path.resolve(templatesPath, slug, screenshot),
-        path.resolve(docsPath, slug, screenshot)
-      );
-    }
-
-    list.push({ slug, logo, name: meta.name });
+    list.push({ slug, logo: meta.logo, name: meta.name });
   }
 
   await writeFile(
@@ -128,34 +115,6 @@ async function run() {
     path.resolve(docsPath, "_category_.json"),
     JSON.stringify({ label: "Templates" }, null, 2)
   );
-}
-
-function fileExists(path: string) {
-  try {
-    return existsSync(path);
-  } catch {
-    return false;
-  }
-}
-
-function getTemplateLogo(dir: string) {
-  if (fileExists(path.resolve(dir, "logo.svg"))) {
-    return "logo.svg";
-  }
-  if (fileExists(path.resolve(dir, "logo.png"))) {
-    return "logo.png";
-  }
-  return null;
-}
-
-function getTemplateScreenshot(dir: string) {
-  if (fileExists(path.resolve(dir, "screenshot.jpg"))) {
-    return "screenshot.jpg";
-  }
-  if (fileExists(path.resolve(dir, "screenshot.png"))) {
-    return "screenshot.png";
-  }
-  return null;
 }
 
 run().catch(console.error);

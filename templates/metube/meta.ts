@@ -32,6 +32,8 @@ export const meta = {
       },
     },
   },
+  logo: "logo.svg",
+  screenshots: ["screenshot.png"],
 };
 
 export type ProjectName = string;

@@ -50,6 +50,8 @@ export const meta = {
       runners: { type: "string", title: "Runner Capacity", default: "2" },
     },
   },
+  logo: "logo.svg",
+  screenshots: [],
 };
 
 export type ProjectName = string;

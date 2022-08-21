@@ -26,6 +26,8 @@ export const meta = {
       domain: { type: "string", title: "Domain" },
     },
   },
+  logo: "logo.svg",
+  screenshots: [],
 };
 
 export type ProjectName = string;

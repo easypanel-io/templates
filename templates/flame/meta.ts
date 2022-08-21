@@ -29,6 +29,8 @@ export const meta = {
       password: { type: "string", title: "Password" },
     },
   },
+  logo: null,
+  screenshots: ["screenshot.png"],
 };
 
 export type ProjectName = string;
