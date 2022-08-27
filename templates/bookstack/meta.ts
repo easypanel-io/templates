@@ -3,7 +3,7 @@
 export const meta = {
   name: "Bookstack",
   description:
-    "BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information.The content in BookStack is fully searchable. You are able to search at book level or across all books, chapters & pages.BookStack is built using PHP, on top of the Laravel framework and it uses MySQL to store data.",
+    "BookStack is a simple, self-hosted, easy-to-use platform for organising and storing information. The content in BookStack is fully searchable. You are able to search at book level or across all books, chapters & pages. BookStack is built using PHP, on top of the Laravel framework and it uses MySQL to store data.",
   instructions: null,
   changeLog: [{ date: "2022-07-12", description: "first release" }],
   links: [
