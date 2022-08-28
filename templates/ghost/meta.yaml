@@ -21,16 +21,21 @@ schema:
   type: object
   required:
     - projectName
-    - appServiceName
     - domain
+    - appServiceName
+    - databaseServiceName
   properties:
     projectName:
       type: string
       title: Project Name
+    domain:
+      type: string
+      title: Domain
     appServiceName:
       type: string
       title: App Service Name
       default: ghost
-    domain:
+    databaseServiceName:
       type: string
-      title: Domain
+      title: Database Service Name
+      default: ghost-db
