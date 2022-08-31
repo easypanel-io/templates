@@ -67,25 +67,46 @@ export const appBasicAuthSchema = z
   )
   .optional();
 
+export const appSourceSchema = z
+  .union([
+    z.object({
+      type: z.literal("image"),
+      image: z.string(),
+    }),
+    z.object({
+      type: z.literal("github"),
+      owner: z.string().min(1),
+      repo: z.string().min(1),
+      ref: z.string().min(1),
+      path: z.string().regex(/^\//),
+      autoDeploy: z.boolean(),
+    }),
+  ])
+  .optional();
+
+export const appBuildSchema = z
+  .union([
+    z.object({
+      type: z.literal("dockerfile"),
+      file: z.string().optional(),
+    }),
+    z.object({
+      type: z.literal("heroku-buildpacks"),
+    }),
+    z.object({
+      type: z.literal("paketo-buildpacks"),
+    }),
+    z.object({
+      type: z.literal("nixpacks"),
+    }),
+  ])
+  .optional();
+
 export const appSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  source: z
-    .union([
-      z.object({
-        type: z.literal("image"),
-        image: z.string(),
-      }),
-      z.object({
-        type: z.literal("github"),
-        owner: z.string(),
-        repo: z.string(),
-        ref: z.string(),
-        path: z.string(),
-        autoDeploy: z.boolean(),
-      }),
-    ])
-    .optional(),
+  source: appSourceSchema,
+  build: appBuildSchema,
   env: z.string().default(""),
   proxy: z
     .object({
