@@ -18,6 +18,7 @@ export const meta = {
       "projectName",
       "domain",
       "appServiceName",
+      "databaseType",
       "databaseServiceName",
     ],
     properties: {
@@ -27,6 +28,15 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "wordpress",
+      },
+      databaseType: {
+        type: "string",
+        title: "Database Type",
+        default: "mariadb",
+        oneOf: [
+          { enum: ["mariadb"], title: "MariaDB" },
+          { enum: ["mysql"], title: "MySQL" },
+        ],
       },
       databaseServiceName: {
         type: "string",
@@ -42,11 +52,17 @@ export const meta = {
 export type ProjectName = string;
 export type Domain = string;
 export type AppServiceName = string;
+export type DatabaseType = DatabaseType1 & DatabaseType2;
+export type DatabaseType1 = MariaDB | MySQL;
+export type MariaDB = "mariadb";
+export type MySQL = "mysql";
+export type DatabaseType2 = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
   appServiceName: AppServiceName;
+  databaseType: DatabaseType;
   databaseServiceName: DatabaseServiceName;
 }

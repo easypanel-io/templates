@@ -23,6 +23,7 @@ schema:
     - projectName
     - domain
     - appServiceName
+    - databaseType
     - databaseServiceName
   properties:
     projectName:
@@ -35,6 +36,17 @@ schema:
       type: string
       title: App Service Name
       default: wordpress
+    databaseType:
+      type: string
+      title: Database Type
+      default: mariadb
+      oneOf:
+        - enum:
+            - mariadb
+          title: MariaDB
+        - enum:
+            - mysql
+          title: MySQL
     databaseServiceName:
       type: string
       title: Database Service Name

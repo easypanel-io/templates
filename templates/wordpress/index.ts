@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `WORDPRESS_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `WORDPRESS_DB_USER=mysql`,
+        `WORDPRESS_DB_USER=${input.databaseType}`,
         `WORDPRESS_DB_PASSWORD=${mysqlPassword}`,
         `WORDPRESS_DB_NAME=${input.projectName}`,
       ].join("\n"),
@@ -45,7 +45,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: "mysql",
+    type: input.databaseType,
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
