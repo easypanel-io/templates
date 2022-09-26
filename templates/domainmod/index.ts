@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
         `ROOT_URL=https://${input.domain}`,
         `DOMAINMOD_WEB_ROOT=`,
         `DOMAINMOD_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DOMAINMOD_DATABASE=domainmod`,
+        `DOMAINMOD_DATABASE=${input.projectName}`,
         `DOMAINMOD_USER=mysql`,
         `DOMAINMOD_PASSWORD=${databasePassword}`,
       ].join("\n"),
