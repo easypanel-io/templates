@@ -68,14 +68,16 @@ import { meta as meta_32 } from "./statping-ng/meta";
 import { generate as generate_32 } from "./statping-ng";
 import { meta as meta_33 } from "./strapi/meta";
 import { generate as generate_33 } from "./strapi";
-import { meta as meta_34 } from "./uptimekuma/meta";
-import { generate as generate_34 } from "./uptimekuma";
-import { meta as meta_35 } from "./whiteboard/meta";
-import { generate as generate_35 } from "./whiteboard";
-import { meta as meta_36 } from "./wikijs/meta";
-import { generate as generate_36 } from "./wikijs";
-import { meta as meta_37 } from "./wordpress/meta";
-import { generate as generate_37 } from "./wordpress";
+import { meta as meta_34 } from "./umami/meta";
+import { generate as generate_34 } from "./umami";
+import { meta as meta_35 } from "./uptimekuma/meta";
+import { generate as generate_35 } from "./uptimekuma";
+import { meta as meta_36 } from "./whiteboard/meta";
+import { generate as generate_36 } from "./whiteboard";
+import { meta as meta_37 } from "./wikijs/meta";
+import { generate as generate_37 } from "./wikijs";
+import { meta as meta_38 } from "./wordpress/meta";
+import { generate as generate_38 } from "./wordpress";
 
 const templates = [
   { slug: "ackee", meta: meta_0, generate: generate_0 },
@@ -112,10 +114,11 @@ const templates = [
   { slug: "rocketchat", meta: meta_31, generate: generate_31 },
   { slug: "statping-ng", meta: meta_32, generate: generate_32 },
   { slug: "strapi", meta: meta_33, generate: generate_33 },
-  { slug: "uptimekuma", meta: meta_34, generate: generate_34 },
-  { slug: "whiteboard", meta: meta_35, generate: generate_35 },
-  { slug: "wikijs", meta: meta_36, generate: generate_36 },
-  { slug: "wordpress", meta: meta_37, generate: generate_37 },
+  { slug: "umami", meta: meta_34, generate: generate_34 },
+  { slug: "uptimekuma", meta: meta_35, generate: generate_35 },
+  { slug: "whiteboard", meta: meta_36, generate: generate_36 },
+  { slug: "wikijs", meta: meta_37, generate: generate_37 },
+  { slug: "wordpress", meta: meta_38, generate: generate_38 },
 ];
 
 export default templates;
