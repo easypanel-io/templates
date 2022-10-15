@@ -20,7 +20,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - databaseType
     - databaseServiceName
@@ -28,9 +27,7 @@ schema:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
+
     appServiceName:
       type: string
       title: App Service Name

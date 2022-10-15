@@ -19,14 +19,12 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "appServiceName",
       "databaseServiceName",
       "timezone",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -49,14 +47,12 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type DatabaseServiceName = string;
 export type Timezone = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   databaseServiceName: DatabaseServiceName;
   timezone: Timezone;

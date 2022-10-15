@@ -18,7 +18,6 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "appServiceName",
       "clientID",
       "clientSecret",
@@ -27,7 +26,6 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -70,7 +68,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type RunnerServiceName = string;
 export type GitHubOAuthClientID = string;
@@ -85,7 +82,6 @@ export type CapacityForRunnerIfEnabled = number;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   runnerServiceName: RunnerServiceName;
   clientID: GitHubOAuthClientID;

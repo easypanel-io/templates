@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
         port: 9000,
         secure: true,
       },
-      domains: [{ name: input.domain }],
       mounts: [
         {
           type: "bind",

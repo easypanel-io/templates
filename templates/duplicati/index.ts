@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
         port: 8200,
         secure: true,
       },
-      domains: [{ name: input.domain }],
       env: "TZ=Europe/London",
       mounts: [
         {

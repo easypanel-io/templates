@@ -17,7 +17,7 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "domain", "password"],
+    required: ["projectName", "appServiceName", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
@@ -25,7 +25,6 @@ export const meta = {
         title: "App Service Name",
         default: "gotify",
       },
-      domain: { type: "string", title: "Domain" },
       password: { type: "string", title: "Password" },
       serviceTimezone: {
         type: "string",
@@ -40,14 +39,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
-export type Domain = string;
 export type Password = string;
 export type Timezone = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
-  domain: Domain;
   password: Password;
   serviceTimezone?: Timezone;
 }

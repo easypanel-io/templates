@@ -16,14 +16,12 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "appServiceName",
       "databaseType",
       "databaseServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -50,7 +48,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type DatabaseType = DatabaseType1 & DatabaseType2;
 export type DatabaseType1 = MariaDB | MySQL;
@@ -61,7 +58,6 @@ export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   databaseType: DatabaseType;
   databaseServiceName: DatabaseServiceName;

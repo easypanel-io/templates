@@ -10,7 +10,6 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: "lissy93/dashy" },
-      domains: [{ name: input.domain }],
       proxy: { port: 80 },
       env: `NODE_ENV=production`,
     },

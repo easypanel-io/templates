@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
         port: 8080,
         secure: true,
       },
-      domains: [{ name: input.domain }],
     },
   });
 

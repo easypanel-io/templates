@@ -29,7 +29,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: "ghcr.io/umami-software/umami:postgresql-latest",
       },
-      domains: [{ name: input.domain }],
       proxy: { port: 3000, secure: true },
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,

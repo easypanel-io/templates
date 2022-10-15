@@ -21,7 +21,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
   properties:
     projectName:
       type: string
@@ -30,6 +29,3 @@ schema:
       type: string
       title: App Service Name
       default: phpmyadmin
-    domain:
-      type: string
-      title: Domain

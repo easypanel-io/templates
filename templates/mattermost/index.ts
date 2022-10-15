@@ -26,7 +26,6 @@ export function generate(input: Input): Output {
       mounts: [
         { type: "volume", name: "mattermost", mountPath: "/mattermost" },
       ],
-      domains: [{ name: input.domain }],
       proxy: { port: 8065, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [

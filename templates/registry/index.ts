@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
         port: 5000,
         secure: true,
       },
-      domains: [{ name: input.domain }],
       mounts: [
         { type: "volume", name: "data", mountPath: "/var/lib/registry" },
       ],

@@ -22,7 +22,6 @@ export function generate(input: Input): Output {
         port: 6789,
         secure: true,
       },
-      domains: [{ name: input.domain }],
       mounts: [
         {
           type: "volume",

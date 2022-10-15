@@ -20,7 +20,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - ackeeUsername
     - ackeePassword
     - appServiceName
@@ -29,9 +28,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     ackeeUsername:
       type: string
       title: Ackee Username

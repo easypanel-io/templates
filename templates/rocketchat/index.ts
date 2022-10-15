@@ -38,7 +38,6 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: "rocket.chat" },
-      domains: [{ name: input.domain }],
       proxy: { port: 80, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [

@@ -22,7 +22,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
     - downloadPath
   properties:
     projectName:
@@ -32,9 +31,7 @@ schema:
       type: string
       title: App Service Name
       default: metube
-    domain:
-      type: string
-      title: Domain
+
     downloadPath:
       type: string
       title: Downloads Volume Name

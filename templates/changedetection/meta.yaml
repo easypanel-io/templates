@@ -22,7 +22,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
   properties:
     projectName:
       type: string
@@ -31,6 +30,3 @@ schema:
       type: string
       title: App Service Name
       default: changedetection
-    domain:
-      type: string
-      title: Domain

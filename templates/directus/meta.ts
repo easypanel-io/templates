@@ -19,7 +19,6 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "appServiceName",
       "adminEmail",
       "adminPassword",
@@ -29,7 +28,6 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -66,7 +64,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 /**
  * admin@example.com
@@ -83,7 +80,6 @@ export type RedisServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   adminEmail: AdminEmail;
   adminPassword: AdminPassword;

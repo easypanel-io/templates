@@ -24,7 +24,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
     - password
   properties:
     projectName:
@@ -34,9 +33,7 @@ schema:
       type: string
       title: App Service Name
       default: flame
-    domain:
-      type: string
-      title: Domain
+
     password:
       type: string
       title: Password

@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
-      domains: [{ name: input.domain }],
       mounts: [
         { type: "bind", hostPath: "/", mountPath: "/srv" },
         { type: "volume", name: "database", mountPath: "/database" },

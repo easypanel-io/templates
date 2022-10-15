@@ -26,7 +26,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
     - username
     - password
   properties:
@@ -37,9 +36,7 @@ schema:
       type: string
       title: App Service Name
       default: nzbget
-    domain:
-      type: string
-      title: Domain
+
     username:
       type: string
       title: Username

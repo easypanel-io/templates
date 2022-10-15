@@ -19,7 +19,6 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "adminUsername",
       "adminPassword",
       "appServiceName",
@@ -27,7 +26,6 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       adminUsername: { type: "string", title: "Admin Username" },
       adminPassword: { type: "string", title: "Admin Password" },
       appServiceName: {
@@ -47,7 +45,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AdminUsername = string;
 export type AdminPassword = string;
 export type AppServiceName = string;
@@ -55,7 +52,6 @@ export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   adminUsername: AdminUsername;
   adminPassword: AdminPassword;
   appServiceName: AppServiceName;

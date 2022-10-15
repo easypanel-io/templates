@@ -24,7 +24,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
   properties:
     projectName:
       type: string
@@ -33,6 +32,3 @@ schema:
       type: string
       title: App Service Name
       default: imgproxy
-    domain:
-      type: string
-      title: Domain

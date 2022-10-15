@@ -27,7 +27,6 @@ export function generate(input: Input): Output {
           mountPath: "/etc/nginx/ssl",
         },
       ],
-      domains: [{ name: input.domain }],
       proxy: { port: 80 },
     },
   });

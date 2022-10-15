@@ -16,17 +16,9 @@ export const meta = {
   contributors: [{ name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" }],
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "domain",
-      "appServiceName",
-      "host",
-      "secret",
-      "runners",
-    ],
+    required: ["projectName", "appServiceName", "host", "secret", "runners"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -55,7 +47,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type DroneServerHostname = string;
 export type RPCSecret = string;
@@ -68,7 +59,6 @@ export type RunnerCapacity = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   host: DroneServerHostname;
   secret: RPCSecret;

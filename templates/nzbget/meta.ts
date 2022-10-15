@@ -17,13 +17,7 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "appServiceName",
-      "domain",
-      "username",
-      "password",
-    ],
+    required: ["projectName", "appServiceName", "username", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
@@ -31,7 +25,6 @@ export const meta = {
         title: "App Service Name",
         default: "nzbget",
       },
-      domain: { type: "string", title: "Domain" },
       username: { type: "string", title: "Username", default: "nzbget" },
       password: { type: "string", title: "Password", default: "tegbzn6789" },
       serviceTimezone: {
@@ -47,7 +40,6 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
-export type Domain = string;
 export type Username = string;
 export type Password = string;
 export type Timezone = string;
@@ -55,7 +47,6 @@ export type Timezone = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
-  domain: Domain;
   username: Username;
   password: Password;
   serviceTimezone?: Timezone;

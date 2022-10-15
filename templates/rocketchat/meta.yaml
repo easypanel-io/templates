@@ -29,7 +29,6 @@ schema:
     - projectName
     - appServiceName
     - databaseServiceName
-    - domain
   properties:
     projectName:
       type: string
@@ -42,6 +41,3 @@ schema:
       type: string
       title: Database Service Name
       default: rocketchat-db
-    domain:
-      type: string
-      title: Domain

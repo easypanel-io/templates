@@ -16,7 +16,6 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "ackeeUsername",
       "ackeePassword",
       "appServiceName",
@@ -24,7 +23,6 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       ackeeUsername: { type: "string", title: "Ackee Username" },
       ackeePassword: { type: "string", title: "Ackee Password" },
       appServiceName: {
@@ -44,7 +42,6 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AckeeUsername = string;
 export type AckeePassword = string;
 export type AppServiceName = string;
@@ -52,7 +49,6 @@ export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   ackeeUsername: AckeeUsername;
   ackeePassword: AckeePassword;
   appServiceName: AppServiceName;
