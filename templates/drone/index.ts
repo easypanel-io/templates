@@ -10,16 +10,16 @@ export function generate(input: Input): Output {
       type: "app",
       data: {
         projectName: input.projectName,
-        serviceName: `${input.runnerServiceName}`,
+        serviceName: input.runnerServiceName,
         env: [
-          `DRONE_RPC_HOST=${input.domain}`,
+          `DRONE_RPC_HOST=${input.rpcHost}`,
           `DRONE_RPC_PROTO=${input.rpcProtocol}`,
           `DRONE_RUNNER_CAPACITY=${input.runnerCapacity}`,
           `DRONE_RPC_SECRET=${secret}`,
         ].join("\n"),
         source: {
           type: "image",
-          image: "drone/drone-runner-docker:1",
+          image: input.runnerServiceImage,
         },
         proxy: {
           port: 3000,
@@ -44,13 +44,13 @@ export function generate(input: Input): Output {
       env: [
         `DRONE_GITHUB_CLIENT_ID=${input.clientID}`,
         `DRONE_GITHUB_CLIENT_SECRET=${input.clientSecret}`,
-        `DRONE_SERVER_HOST=${input.domain}`,
+        `DRONE_SERVER_HOST=${input.rpcHost}`,
         `DRONE_SERVER_PROTO=${input.rpcProtocol}`,
         `DRONE_RPC_SECRET=${secret}`,
       ].join("\n"),
       source: {
         type: "image",
-        image: "drone/drone:2",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

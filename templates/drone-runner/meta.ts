@@ -16,13 +16,25 @@ export const meta = {
   contributors: [{ name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" }],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "host", "secret", "runners"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "appServiceImage",
+      "host",
+      "secret",
+      "runners",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "drone-runner",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "drone/drone-runner-docker:1.8.2",
       },
       host: {
         type: "string",
@@ -48,6 +60,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DroneServerHostname = string;
 export type RPCSecret = string;
 export type RPCProtocol = RPCProtocol1 & RPCProtocol2;
@@ -60,6 +73,7 @@ export type RunnerCapacity = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   host: DroneServerHostname;
   secret: RPCSecret;
   rpcProtocol?: RPCProtocol;

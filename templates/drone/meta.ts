@@ -19,10 +19,13 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
+      "runnerServiceName",
+      "runnerServiceImage",
       "clientID",
       "clientSecret",
+      "rpcHost",
       "rpcProtocol",
-      "runnerServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -31,10 +34,20 @@ export const meta = {
         title: "App Service Name",
         default: "drone",
       },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "drone/drone:2.13.0",
+      },
       runnerServiceName: {
         type: "string",
         title: "Runner Service Name",
         default: "drone-runner",
+      },
+      runnerServiceImage: {
+        type: "string",
+        title: "Runner Service Image",
+        default: "drone/drone-runner-docker:1.8.2",
       },
       clientID: { type: "string", title: "GitHub OAuth Client ID" },
       clientSecret: {
@@ -42,6 +55,7 @@ export const meta = {
         title: "GitHub OAuth Client Secret",
         default: "secret",
       },
+      rpcHost: { type: "string,", title: "RPC Host" },
       rpcProtocol: {
         type: "string",
         title: "RPC Protocol",
@@ -69,7 +83,9 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type RunnerServiceName = string;
+export type RunnerServiceImage = string;
 export type GitHubOAuthClientID = string;
 export type GitHubOAuthClientSecret = string;
 export type RPCProtocol = RPCProtocol1 & RPCProtocol2;
@@ -83,10 +99,16 @@ export type CapacityForRunnerIfEnabled = number;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   runnerServiceName: RunnerServiceName;
+  runnerServiceImage: RunnerServiceImage;
   clientID: GitHubOAuthClientID;
   clientSecret: GitHubOAuthClientSecret;
+  rpcHost: RPCHost;
   rpcProtocol: RPCProtocol;
   installRunner?: InstallRunnerService;
   runnerCapacity?: CapacityForRunnerIfEnabled;
+}
+export interface RPCHost {
+  [k: string]: unknown;
 }

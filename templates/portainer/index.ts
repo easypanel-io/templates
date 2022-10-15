@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "portainer/portainer-ce",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 9000,

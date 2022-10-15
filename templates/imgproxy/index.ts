@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "darthsim/imgproxy",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 8080,

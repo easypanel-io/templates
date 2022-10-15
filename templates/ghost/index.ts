@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "ghost",
+        image: input.appServiceImage,
       },
       env: [
         `url=https://${input.domain}`,

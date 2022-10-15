@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "filebrowser/filebrowser:latest",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

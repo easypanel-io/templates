@@ -24,12 +24,16 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: portainer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: portainer/portainer-ce:2.15.1-alpine

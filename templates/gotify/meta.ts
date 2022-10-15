@@ -17,13 +17,18 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "password"],
+    required: ["projectName", "appServiceName", "appServiceImage", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "gotify",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "gotify/server:2.1.7",
       },
       password: { type: "string", title: "Password" },
       serviceTimezone: {
@@ -39,12 +44,14 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type Password = string;
 export type Timezone = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   password: Password;
   serviceTimezone?: Timezone;
 }

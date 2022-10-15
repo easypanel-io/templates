@@ -9,8 +9,13 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: { type: "image", image: "lissy93/dashy" },
-      proxy: { port: 80 },
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      proxy: {
+        port: 80,
+      },
       env: `NODE_ENV=production`,
     },
   });

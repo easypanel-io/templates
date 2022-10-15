@@ -19,6 +19,7 @@ export const meta = {
       "ackeeUsername",
       "ackeePassword",
       "appServiceName",
+      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {
@@ -29,6 +30,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "ackee",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "electerious/ackee:3.4.1",
       },
       databaseServiceName: {
         type: "string",
@@ -45,6 +51,7 @@ export type ProjectName = string;
 export type AckeeUsername = string;
 export type AckeePassword = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
@@ -52,5 +59,6 @@ export interface Input {
   ackeeUsername: AckeeUsername;
   ackeePassword: AckeePassword;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

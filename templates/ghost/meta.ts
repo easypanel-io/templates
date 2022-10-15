@@ -14,13 +14,25 @@ export const meta = {
   contributors: [{ name: "Andrei Canta", url: "https://github.com/deiucanta" }],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "databaseServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "appServiceImage",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
+      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "ghost",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "ghost:5.19.0-alpine",
       },
       databaseServiceName: {
         type: "string",
@@ -34,11 +46,15 @@ export const meta = {
 };
 
 export type ProjectName = string;
+export type Domain = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
+  domain: Domain;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

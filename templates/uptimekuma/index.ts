@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "louislam/uptime-kuma:1",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 3001,

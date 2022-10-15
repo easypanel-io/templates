@@ -17,13 +17,18 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "password"],
+    required: ["projectName", "appServiceName", "appServiceImage", "password"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "flame",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "pawelmalak/flame:multiarch2.3.0",
       },
       password: { type: "string", title: "Password" },
     },
@@ -34,10 +39,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type Password = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   password: Password;
 }

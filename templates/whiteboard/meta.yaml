@@ -19,6 +19,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
@@ -27,3 +28,7 @@ schema:
       type: string
       title: App Service Name
       default: whiteboard
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: rofl256/whiteboard:latest

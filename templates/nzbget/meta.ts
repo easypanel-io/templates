@@ -17,13 +17,24 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "username", "password"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "appServiceImage",
+      "username",
+      "password",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "nzbget",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "lscr.io/linuxserver/nzbget:21.1.20220922",
       },
       username: { type: "string", title: "Username", default: "nzbget" },
       password: { type: "string", title: "Password", default: "tegbzn6789" },
@@ -40,6 +51,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type Username = string;
 export type Password = string;
 export type Timezone = string;
@@ -47,6 +59,7 @@ export type Timezone = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   username: Username;
   password: Password;
   serviceTimezone?: Timezone;

@@ -22,6 +22,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
@@ -31,3 +32,7 @@ schema:
       type: string
       title: App Service Name
       default: filebrowser
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: filebrowser/filebrowser:v2.22.4

@@ -16,13 +16,21 @@ schema:
   type: object
   required:
     - projectName
+    - domain
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-
+    domain:
+      type: string
+      title: Domain
     appServiceName:
       type: string
       title: App Service Name
       default: baserow
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: baserow/baserow:1.12.1

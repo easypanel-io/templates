@@ -9,9 +9,20 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: { type: "image", image: "ghcr.io/dgtlmoon/changedetection.io" },
-      mounts: [{ type: "volume", name: "datastore", mountPath: "/datastore" }],
-      proxy: { port: 5000 },
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "datastore",
+          mountPath: "/datastore",
+        },
+      ],
+      proxy: {
+        port: 5000,
+      },
     },
   });
   return { services };

@@ -23,18 +23,26 @@ schema:
   type: object
   required:
     - projectName
+    - domain
     - appServiceName
+    - appServiceImage
     - databaseType
     - databaseServiceName
   properties:
     projectName:
       type: string
       title: Project Name
-
+    domain:
+      type: string
+      title: Domain
     appServiceName:
       type: string
       title: App Service Name
       default: gitea
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gitea/gitea:1.17.2
     databaseType:
       type: string
       title: Database Type

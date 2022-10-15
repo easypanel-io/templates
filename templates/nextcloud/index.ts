@@ -54,7 +54,7 @@ export function generate(input: Input): Output {
       env: appEnv.join("\n"),
       source: {
         type: "image",
-        image: "nextcloud",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

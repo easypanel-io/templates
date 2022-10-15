@@ -17,13 +17,18 @@ export const meta = {
   contributors: [{ name: "Andrei Canta", url: "https://github.com/deiucanta" }],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName"],
+    required: ["projectName", "appServiceName", "appServiceImage"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "duplicati",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "lscr.io/linuxserver/duplicati:2.0.6",
       },
     },
   },
@@ -33,8 +38,10 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
 }

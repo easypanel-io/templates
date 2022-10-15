@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "easypanel/mysql-backup-s3",
+        image: input.appServiceImage,
       },
       env: [
         `MYSQL_HOST=${input.host}`,

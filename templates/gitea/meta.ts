@@ -19,16 +19,24 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
+      "domain",
       "appServiceName",
+      "appServiceImage",
       "databaseType",
       "databaseServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
+      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "gitea",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "gitea/gitea:1.17.2",
       },
       databaseType: {
         type: "string",
@@ -50,7 +58,9 @@ export const meta = {
 };
 
 export type ProjectName = string;
+export type Domain = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseType = DatabaseType1 & DatabaseType2;
 export type DatabaseType1 = Postgres | MySQL;
 export type Postgres = "postgres";
@@ -60,7 +70,9 @@ export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
+  domain: Domain;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseType: DatabaseType;
   databaseServiceName: DatabaseServiceName;
 }

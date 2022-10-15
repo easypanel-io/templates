@@ -25,15 +25,19 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: heimdall
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/heimdall:2.4.13
     serviceTimezone:
       type: string
       title: Timezone

@@ -25,17 +25,21 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - databaseType
     - databaseServiceName
   properties:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: strapi
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: strapi/strapi:3.6.8-alpine
     databaseType:
       type: string
       title: Database Type

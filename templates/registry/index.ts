@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "registry:2",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 5000,

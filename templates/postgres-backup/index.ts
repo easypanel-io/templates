@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "easypanel/postgres-backup-s3",
+        image: input.appServiceImage,
       },
       env: [
         `POSTGRES_HOST=${input.host}`,

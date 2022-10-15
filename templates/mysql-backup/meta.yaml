@@ -21,6 +21,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - host
     - port
     - user
@@ -40,6 +41,10 @@ schema:
       type: string
       title: App Service Name
       default: mysql-backup
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: easypanel/mysql-backup-s3
     host:
       type: string
       title: MySQL Host

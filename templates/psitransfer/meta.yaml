@@ -21,12 +21,16 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: psitransfer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: psitrax/psitransfer:v2.1.1

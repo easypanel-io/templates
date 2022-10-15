@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       env: [`PUID=1000`, `PGID=1000`, `TZ=${input.serviceTimezone}`].join("\n"),
       source: {
         type: "image",
-        image: "lscr.io/linuxserver/heimdall:latest",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

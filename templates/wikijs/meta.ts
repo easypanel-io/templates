@@ -17,6 +17,7 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
       "databaseType",
       "databaseServiceName",
     ],
@@ -26,6 +27,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "wikijs",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "ghcr.io/requarks/wiki:2",
       },
       databaseType: {
         type: "string",
@@ -50,6 +56,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseType = DatabaseType1 & DatabaseType2;
 export type DatabaseType1 = Postgres | MySQL | MariaDB;
 export type Postgres = "postgres";
@@ -61,6 +68,7 @@ export type DatabaseServiceName = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseType: DatabaseType;
   databaseServiceName: DatabaseServiceName;
 }

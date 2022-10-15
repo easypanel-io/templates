@@ -22,6 +22,7 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
       "host",
       "port",
       "user",
@@ -40,6 +41,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "mysql-backup",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "easypanel/mysql-backup-s3",
       },
       host: { type: "string", title: "MySQL Host" },
       port: { type: "string", title: "MySQL Port", default: "3306" },
@@ -65,6 +71,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type MySQLHost = string;
 export type MySQLPort = string;
 export type MySQLUser = string;
@@ -83,6 +90,7 @@ export type Schedule = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   host: MySQLHost;
   port: MySQLPort;
   user: MySQLUser;

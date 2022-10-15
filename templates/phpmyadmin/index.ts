@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "phpmyadmin",
+        image: input.appServiceImage,
       },
       env: "PMA_ARBITRARY=1",
       proxy: {

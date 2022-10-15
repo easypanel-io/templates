@@ -9,7 +9,10 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: { type: "image", image: "kanboard/kanboard:latest" },
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
       mounts: [
         {
           type: "volume",

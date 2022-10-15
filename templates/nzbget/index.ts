@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "lscr.io/linuxserver/nzbget:latest",
+        image: input.appServiceImage,
       },
       env: [
         `NZBGET_USER=${input.username}`,

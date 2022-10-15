@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "baserow/baserow:latest",
+        image: input.appServiceImage,
       },
       env: `BASEROW_PUBLIC_URL=https://${input.domain}`,
       proxy: {

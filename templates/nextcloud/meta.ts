@@ -20,6 +20,7 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
       "databaseType",
       "databaseServiceName",
     ],
@@ -29,6 +30,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "nextcloud",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "nextcloud:24.0.6",
       },
       databaseType: {
         type: "string",
@@ -53,6 +59,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseType = DatabaseType1 & DatabaseType2;
 export type DatabaseType1 = SQLite | Postgres | MariaDB;
 export type SQLite = "sqlite";
@@ -64,6 +71,7 @@ export type DatabaseServiceName = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseType: DatabaseType;
   databaseServiceName: DatabaseServiceName;
 }

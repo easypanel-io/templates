@@ -9,7 +9,10 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
-      source: { type: "image", image: "docker.io/bitnami/mongodb:4.4" },
+      source: {
+        type: "image",
+        image: "docker.io/bitnami/mongodb:4.4",
+      },
       mounts: [
         {
           type: "volume",
@@ -37,7 +40,10 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: { type: "image", image: "rocket.chat" },
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
       proxy: { port: 80, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [

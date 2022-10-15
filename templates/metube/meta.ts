@@ -16,13 +16,23 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "downloadPath"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "appServiceImage",
+      "downloadPath",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "metube",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "alexta69/metube:2022-10-05",
       },
       downloadPath: {
         type: "string",
@@ -37,10 +47,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DownloadsVolumeName = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   downloadPath: DownloadsVolumeName;
 }

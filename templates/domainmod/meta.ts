@@ -19,16 +19,24 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
+      "domain",
       "appServiceName",
+      "appServiceImage",
       "databaseServiceName",
       "timezone",
     ],
     properties: {
-      projectName: { type: "string", title: "Project Name" },
+      projectName: { type: "string", title: "Project" },
+      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "domainmod",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "domainmod/domainmod",
       },
       databaseServiceName: {
         type: "string",
@@ -46,14 +54,18 @@ export const meta = {
   screenshots: ["screenshot.png"],
 };
 
-export type ProjectName = string;
+export type Project = string;
+export type Domain = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 export type Timezone = string;
 
 export interface Input {
-  projectName: ProjectName;
+  projectName: Project;
+  domain: Domain;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
   timezone: Timezone;
 }

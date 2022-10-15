@@ -19,6 +19,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - host
     - secret
     - runners
@@ -26,11 +27,14 @@ schema:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: drone-runner
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: drone/drone-runner-docker:1.8.2
     host:
       type: string
       title: Drone Server Hostname

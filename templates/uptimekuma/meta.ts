@@ -16,13 +16,18 @@ export const meta = {
   contributors: [{ name: "Ivan Ryan", url: "https://github.com/ivanonpc-22" }],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName"],
+    required: ["projectName", "appServiceName", "appServiceImage"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "uptimekuma",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "louislam/uptime-kuma:1.18.5-alpine",
       },
     },
   },
@@ -32,8 +37,10 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
 }

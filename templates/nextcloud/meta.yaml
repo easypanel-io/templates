@@ -21,17 +21,21 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - databaseType
     - databaseServiceName
   properties:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
       default: nextcloud
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nextcloud:24.0.6
     databaseType:
       type: string
       title: Database Type

@@ -27,7 +27,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "ghcr.io/umami-software/umami:postgresql-latest",
+        image: input.appServiceImage,
       },
       proxy: { port: 3000, secure: true },
       env: [

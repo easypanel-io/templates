@@ -19,6 +19,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
@@ -27,3 +28,7 @@ schema:
       type: string
       title: App Service Name
       default: uptimekuma
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: louislam/uptime-kuma:1.18.5-alpine

@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "matomo",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

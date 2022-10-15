@@ -27,6 +27,7 @@ export const meta = {
       "projectName",
       "appServiceName",
       "appServiceImage",
+      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {

@@ -17,13 +17,25 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "databaseServiceName"],
+    required: [
+      "projectName",
+      "domain",
+      "appServiceName",
+      "appServiceImage",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
+      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "bookstack",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "lscr.io/linuxserver/bookstack:22.09.1",
       },
       databaseServiceName: {
         type: "string",
@@ -37,11 +49,15 @@ export const meta = {
 };
 
 export type ProjectName = string;
+export type Domain = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
+  domain: Domain;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

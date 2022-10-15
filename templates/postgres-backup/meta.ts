@@ -23,6 +23,7 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
       "host",
       "port",
       "user",
@@ -41,6 +42,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "postgres-backup",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "easypanel/postgres-backup-s3",
       },
       host: { type: "string", title: "Postgres Host" },
       port: { type: "string", title: "Postgres Port", default: "5432" },
@@ -66,6 +72,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type PostgresHost = string;
 export type PostgresPort = string;
 export type PostgresUser = string;
@@ -84,6 +91,7 @@ export type Schedule = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   host: PostgresHost;
   port: PostgresPort;
   user: PostgresUser;

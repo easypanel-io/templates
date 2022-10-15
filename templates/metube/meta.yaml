@@ -22,6 +22,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - downloadPath
   properties:
     projectName:
@@ -31,7 +32,10 @@ schema:
       type: string
       title: App Service Name
       default: metube
-
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: alexta69/metube:2022-10-05
     downloadPath:
       type: string
       title: Downloads Volume Name

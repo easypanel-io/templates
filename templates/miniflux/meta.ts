@@ -22,6 +22,7 @@ export const meta = {
       "adminUsername",
       "adminPassword",
       "appServiceName",
+      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {
@@ -32,6 +33,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "miniflux",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "miniflux/miniflux:2.0.38",
       },
       databaseServiceName: {
         type: "string",
@@ -48,6 +54,7 @@ export type ProjectName = string;
 export type AdminUsername = string;
 export type AdminPassword = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
@@ -55,5 +62,6 @@ export interface Input {
   adminUsername: AdminUsername;
   adminPassword: AdminPassword;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "ghcr.io/requarks/wiki:2",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 3000,

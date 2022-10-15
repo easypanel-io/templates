@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "strapi/strapi",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 1337,

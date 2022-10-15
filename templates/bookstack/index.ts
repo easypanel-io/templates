@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "lscr.io/linuxserver/bookstack",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

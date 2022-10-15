@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "rofl256/whiteboard",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 8080,

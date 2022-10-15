@@ -22,6 +22,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
   properties:
     projectName:
       type: string
@@ -30,3 +31,7 @@ schema:
       type: string
       title: App Service Name
       default: changedetection
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/dgtlmoon/changedetection.io:0.39.19

@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "pawelmalak/flame",
+        image: input.appServiceImage,
       },
       env: `PASSWORD=${input.password}`,
       proxy: {

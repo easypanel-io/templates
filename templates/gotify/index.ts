@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "gotify/server",
+        image: input.appServiceImage,
       },
       env: [
         `GOTIFY_DEFAULTUSER_PASS=${input.password}`,

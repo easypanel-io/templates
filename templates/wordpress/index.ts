@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "wordpress",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

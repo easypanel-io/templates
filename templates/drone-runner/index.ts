@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "drone/drone-runner-docker:1",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 3000,

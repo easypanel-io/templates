@@ -14,13 +14,23 @@ export const meta = {
   contributors: [{ name: "Andrei Canta", url: "https://github.com/deiucanta" }],
   schema: {
     type: "object",
-    required: ["projectName", "appServiceName", "databaseServiceName"],
+    required: [
+      "projectName",
+      "appServiceName",
+      "appServiceImage",
+      "databaseServiceName",
+    ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "umami",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "ghcr.io/umami-software/umami:postgresql-latest",
       },
       databaseServiceName: {
         type: "string",
@@ -35,10 +45,12 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

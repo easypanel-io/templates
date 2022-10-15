@@ -20,6 +20,7 @@ export const meta = {
     required: [
       "projectName",
       "appServiceName",
+      "appServiceImage",
       "adminEmail",
       "adminPassword",
       "databaseType",
@@ -32,6 +33,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "directus",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "directus/directus:9.18.1",
       },
       adminEmail: {
         type: "string",
@@ -65,6 +71,7 @@ export const meta = {
 
 export type ProjectName = string;
 export type AppServiceName = string;
+export type AppServiceImage = string;
 /**
  * admin@example.com
  */
@@ -81,6 +88,7 @@ export type RedisServiceName = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
   adminEmail: AdminEmail;
   adminPassword: AdminPassword;
   databaseType: DatabaseType;

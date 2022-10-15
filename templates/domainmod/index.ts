@@ -23,7 +23,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "domainmod/domainmod",
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,
