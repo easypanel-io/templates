@@ -25,7 +25,7 @@ schema:
     - projectName
     - domain
     - appServiceName
-    - dockerImageName
+    - appServiceImage
     - databaseServiceName
   properties:
     projectName:
@@ -38,9 +38,9 @@ schema:
       type: string
       title: App Service Name
       default: mattermost
-    dockerImageName:
+    appServiceImage:
       type: string
-      title: Docker Image Name
+      title: App Service Image
       default: mattermost/mattermost-team-edition:release-7.4
     databaseServiceName:
       type: string

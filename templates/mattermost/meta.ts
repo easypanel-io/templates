@@ -27,7 +27,7 @@ export const meta = {
       "projectName",
       "domain",
       "appServiceName",
-      "dockerImageName",
+      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {
@@ -38,9 +38,9 @@ export const meta = {
         title: "App Service Name",
         default: "mattermost",
       },
-      dockerImageName: {
+      appServiceImage: {
         type: "string",
-        title: "Docker Image Name",
+        title: "App Service Image",
         default: "mattermost/mattermost-team-edition:release-7.4",
       },
       databaseServiceName: {
@@ -57,13 +57,13 @@ export const meta = {
 export type ProjectName = string;
 export type Domain = string;
 export type AppServiceName = string;
-export type DockerImageName = string;
+export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
   appServiceName: AppServiceName;
-  dockerImageName: DockerImageName;
+  appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
 }

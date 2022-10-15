@@ -21,7 +21,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.dockerImageName,
+        image: input.appServiceImage,
       },
       mounts: [
         { type: "volume", name: "mattermost", mountPath: "/mattermost" },
