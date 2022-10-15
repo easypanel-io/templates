@@ -5,6 +5,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2022-10-12
+    description: ablity to define custom docker image version
 links:
   - label: Website
     url: https://mattermost.com/
@@ -15,12 +17,15 @@ contributors:
     url: https://github.com/bedeoan
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Peter Fodor
+    url: https://github.com/fodurrr
 schema:
   type: object
   required:
     - projectName
     - domain
     - appServiceName
+    - dockerImageName
     - databaseServiceName
   properties:
     projectName:
@@ -33,6 +38,10 @@ schema:
       type: string
       title: App Service Name
       default: mattermost
+    dockerImageName:
+      type: string
+      title: Docker Image Name
+      default: mattermost/mattermost-team-edition:release-7.4
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -5,7 +5,13 @@ export const meta = {
   description:
     "Open source platform for developer collaboration. Secure, flexible, and integrated with the tools you love.",
   instructions: null,
-  changeLog: [{ date: "2022-07-12", description: "first release" }],
+  changeLog: [
+    { date: "2022-07-12", description: "first release" },
+    {
+      date: "2022-10-12",
+      description: "ablity to define custom docker image version",
+    },
+  ],
   links: [
     { label: "Website", url: "https://mattermost.com/" },
     { label: "Github", url: "https://github.com/mattermost/" },
@@ -13,6 +19,7 @@ export const meta = {
   contributors: [
     { name: "Bedeoan Raul", url: "https://github.com/bedeoan" },
     { name: "Andrei Canta", url: "https://github.com/deiucanta" },
+    { name: "Peter Fodor", url: "https://github.com/fodurrr" },
   ],
   schema: {
     type: "object",
@@ -20,6 +27,7 @@ export const meta = {
       "projectName",
       "domain",
       "appServiceName",
+      "dockerImageName",
       "databaseServiceName",
     ],
     properties: {
@@ -29,6 +37,11 @@ export const meta = {
         type: "string",
         title: "App Service Name",
         default: "mattermost",
+      },
+      dockerImageName: {
+        type: "string",
+        title: "Docker Image Name",
+        default: "mattermost/mattermost-team-edition:release-7.4",
       },
       databaseServiceName: {
         type: "string",
@@ -44,11 +57,13 @@ export const meta = {
 export type ProjectName = string;
 export type Domain = string;
 export type AppServiceName = string;
+export type DockerImageName = string;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   domain: Domain;
   appServiceName: AppServiceName;
+  dockerImageName: DockerImageName;
   databaseServiceName: DatabaseServiceName;
 }
