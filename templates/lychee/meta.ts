@@ -62,5 +62,3 @@ export interface Input {
   appServiceImage: AppServiceImage;
   databaseType: DatabaseType;
 }
-
-// okay so this is NOT possible to see on easypanel but this is a secret message :) - feel free to remove me when needed, I am harmless!
