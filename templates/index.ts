@@ -90,12 +90,14 @@ import { meta as meta_43 } from "./umami/meta";
 import { generate as generate_43 } from "./umami";
 import { meta as meta_44 } from "./uptimekuma/meta";
 import { generate as generate_44 } from "./uptimekuma";
-import { meta as meta_45 } from "./whiteboard/meta";
-import { generate as generate_45 } from "./whiteboard";
-import { meta as meta_46 } from "./wikijs/meta";
-import { generate as generate_46 } from "./wikijs";
-import { meta as meta_47 } from "./wordpress/meta";
-import { generate as generate_47 } from "./wordpress";
+import { meta as meta_45 } from "./visualstudiocodeserver/meta";
+import { generate as generate_45 } from "./visualstudiocodeserver";
+import { meta as meta_46 } from "./whiteboard/meta";
+import { generate as generate_46 } from "./whiteboard";
+import { meta as meta_47 } from "./wikijs/meta";
+import { generate as generate_47 } from "./wikijs";
+import { meta as meta_48 } from "./wordpress/meta";
+import { generate as generate_48 } from "./wordpress";
 
 const templates = [
   { slug: "ackee", meta: meta_0, generate: generate_0 },
@@ -143,9 +145,10 @@ const templates = [
   { slug: "strapi", meta: meta_42, generate: generate_42 },
   { slug: "umami", meta: meta_43, generate: generate_43 },
   { slug: "uptimekuma", meta: meta_44, generate: generate_44 },
-  { slug: "whiteboard", meta: meta_45, generate: generate_45 },
-  { slug: "wikijs", meta: meta_46, generate: generate_46 },
-  { slug: "wordpress", meta: meta_47, generate: generate_47 },
+  { slug: "visualstudiocodeserver", meta: meta_45, generate: generate_45 },
+  { slug: "whiteboard", meta: meta_46, generate: generate_46 },
+  { slug: "wikijs", meta: meta_47, generate: generate_47 },
+  { slug: "wordpress", meta: meta_48, generate: generate_48 },
 ];
 
 export default templates;
