@@ -60,34 +60,36 @@ import { meta as meta_28 } from "./n8n/meta";
 import { generate as generate_28 } from "./n8n";
 import { meta as meta_29 } from "./nextcloud/meta";
 import { generate as generate_29 } from "./nextcloud";
-import { meta as meta_30 } from "./nzbget/meta";
-import { generate as generate_30 } from "./nzbget";
-import { meta as meta_31 } from "./phpmyadmin/meta";
-import { generate as generate_31 } from "./phpmyadmin";
-import { meta as meta_32 } from "./portainer/meta";
-import { generate as generate_32 } from "./portainer";
-import { meta as meta_33 } from "./postgres-backup/meta";
-import { generate as generate_33 } from "./postgres-backup";
-import { meta as meta_34 } from "./psitransfer/meta";
-import { generate as generate_34 } from "./psitransfer";
-import { meta as meta_35 } from "./registry/meta";
-import { generate as generate_35 } from "./registry";
-import { meta as meta_36 } from "./rocketchat/meta";
-import { generate as generate_36 } from "./rocketchat";
-import { meta as meta_37 } from "./statping-ng/meta";
-import { generate as generate_37 } from "./statping-ng";
-import { meta as meta_38 } from "./strapi/meta";
-import { generate as generate_38 } from "./strapi";
-import { meta as meta_39 } from "./umami/meta";
-import { generate as generate_39 } from "./umami";
-import { meta as meta_40 } from "./uptimekuma/meta";
-import { generate as generate_40 } from "./uptimekuma";
-import { meta as meta_41 } from "./whiteboard/meta";
-import { generate as generate_41 } from "./whiteboard";
-import { meta as meta_42 } from "./wikijs/meta";
-import { generate as generate_42 } from "./wikijs";
-import { meta as meta_43 } from "./wordpress/meta";
-import { generate as generate_43 } from "./wordpress";
+import { meta as meta_30 } from "./nginxproxymanager/meta";
+import { generate as generate_30 } from "./nginxproxymanager";
+import { meta as meta_31 } from "./nzbget/meta";
+import { generate as generate_31 } from "./nzbget";
+import { meta as meta_32 } from "./phpmyadmin/meta";
+import { generate as generate_32 } from "./phpmyadmin";
+import { meta as meta_33 } from "./portainer/meta";
+import { generate as generate_33 } from "./portainer";
+import { meta as meta_34 } from "./postgres-backup/meta";
+import { generate as generate_34 } from "./postgres-backup";
+import { meta as meta_35 } from "./psitransfer/meta";
+import { generate as generate_35 } from "./psitransfer";
+import { meta as meta_36 } from "./registry/meta";
+import { generate as generate_36 } from "./registry";
+import { meta as meta_37 } from "./rocketchat/meta";
+import { generate as generate_37 } from "./rocketchat";
+import { meta as meta_38 } from "./statping-ng/meta";
+import { generate as generate_38 } from "./statping-ng";
+import { meta as meta_39 } from "./strapi/meta";
+import { generate as generate_39 } from "./strapi";
+import { meta as meta_40 } from "./umami/meta";
+import { generate as generate_40 } from "./umami";
+import { meta as meta_41 } from "./uptimekuma/meta";
+import { generate as generate_41 } from "./uptimekuma";
+import { meta as meta_42 } from "./whiteboard/meta";
+import { generate as generate_42 } from "./whiteboard";
+import { meta as meta_43 } from "./wikijs/meta";
+import { generate as generate_43 } from "./wikijs";
+import { meta as meta_44 } from "./wordpress/meta";
+import { generate as generate_44 } from "./wordpress";
 
 const templates = [
   { slug: "ackee", meta: meta_0, generate: generate_0 },
@@ -120,20 +122,21 @@ const templates = [
   { slug: "mysql-backup", meta: meta_27, generate: generate_27 },
   { slug: "n8n", meta: meta_28, generate: generate_28 },
   { slug: "nextcloud", meta: meta_29, generate: generate_29 },
-  { slug: "nzbget", meta: meta_30, generate: generate_30 },
-  { slug: "phpmyadmin", meta: meta_31, generate: generate_31 },
-  { slug: "portainer", meta: meta_32, generate: generate_32 },
-  { slug: "postgres-backup", meta: meta_33, generate: generate_33 },
-  { slug: "psitransfer", meta: meta_34, generate: generate_34 },
-  { slug: "registry", meta: meta_35, generate: generate_35 },
-  { slug: "rocketchat", meta: meta_36, generate: generate_36 },
-  { slug: "statping-ng", meta: meta_37, generate: generate_37 },
-  { slug: "strapi", meta: meta_38, generate: generate_38 },
-  { slug: "umami", meta: meta_39, generate: generate_39 },
-  { slug: "uptimekuma", meta: meta_40, generate: generate_40 },
-  { slug: "whiteboard", meta: meta_41, generate: generate_41 },
-  { slug: "wikijs", meta: meta_42, generate: generate_42 },
-  { slug: "wordpress", meta: meta_43, generate: generate_43 },
+  { slug: "nginxproxymanager", meta: meta_30, generate: generate_30 },
+  { slug: "nzbget", meta: meta_31, generate: generate_31 },
+  { slug: "phpmyadmin", meta: meta_32, generate: generate_32 },
+  { slug: "portainer", meta: meta_33, generate: generate_33 },
+  { slug: "postgres-backup", meta: meta_34, generate: generate_34 },
+  { slug: "psitransfer", meta: meta_35, generate: generate_35 },
+  { slug: "registry", meta: meta_36, generate: generate_36 },
+  { slug: "rocketchat", meta: meta_37, generate: generate_37 },
+  { slug: "statping-ng", meta: meta_38, generate: generate_38 },
+  { slug: "strapi", meta: meta_39, generate: generate_39 },
+  { slug: "umami", meta: meta_40, generate: generate_40 },
+  { slug: "uptimekuma", meta: meta_41, generate: generate_41 },
+  { slug: "whiteboard", meta: meta_42, generate: generate_42 },
+  { slug: "wikijs", meta: meta_43, generate: generate_43 },
+  { slug: "wordpress", meta: meta_44, generate: generate_44 },
 ];
 
 export default templates;
