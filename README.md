@@ -8,7 +8,7 @@ In this repository, you will find the templates available in Easypanel.
 
 1. Run `npm i` to install all dependencies.
 2. Install yarn => [windows](https://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-1.22.4.msi) [mac](https://tecadmin.net/install-yarn-macos) [linux](https://classic.yarnpkg.com/lang/en/docs/install/)
-3. Run `yarn dev` in project directory to check if installed.
+3. Run `yarn --version` in project directory to check if installed.
 4. Go to `xxx.xxx.xxx.xxx:3000`
 
 ## Defining Templates
