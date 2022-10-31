@@ -1,5 +1,5 @@
 name: adguardhome
-description: adguard/adguardhome:0.107.16
+description: Free and open source, powerful network-wide ads & trackers blocking DNS server.
 instructions: null
 changeLog:
   - date: 2022-10-30
@@ -16,16 +16,12 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     appServiceName:
       type: string
       title: App Service Name
@@ -33,4 +29,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: adguard/adguardhome:0.107.16
+      default: adguard/adguardhome:v0.107.16
