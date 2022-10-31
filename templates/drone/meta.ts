@@ -55,7 +55,7 @@ export const meta = {
         title: "GitHub OAuth Client Secret",
         default: "secret",
       },
-      rpcHost: { type: "string,", title: "RPC Host" },
+      rpcHost: { type: "string", title: "RPC Host" },
       rpcProtocol: {
         type: "string",
         title: "RPC Protocol",
@@ -88,6 +88,7 @@ export type RunnerServiceName = string;
 export type RunnerServiceImage = string;
 export type GitHubOAuthClientID = string;
 export type GitHubOAuthClientSecret = string;
+export type RPCHost = string;
 export type RPCProtocol = RPCProtocol1 & RPCProtocol2;
 export type RPCProtocol1 = Https | Http;
 export type Https = "https";
@@ -108,7 +109,4 @@ export interface Input {
   rpcProtocol: RPCProtocol;
   installRunner?: InstallRunnerService;
   runnerCapacity?: CapacityForRunnerIfEnabled;
-}
-export interface RPCHost {
-  [k: string]: unknown;
 }
