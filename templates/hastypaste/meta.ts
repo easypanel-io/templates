@@ -16,7 +16,6 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
-      "domain",
       "appServiceName",
       "appServiceImage",
       "redisServiceName",
@@ -41,19 +40,17 @@ export const meta = {
       },
     },
   },
-  logo: null,
+  logo: "logo.png",
   screenshots: [],
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 export type RedisServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
   redisServiceName: RedisServiceName;
