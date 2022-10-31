@@ -1,7 +1,7 @@
 // Generated using "yarn build-templates"
 
 export const meta = {
-  name: "Hasty Paste",
+  name: "adguardhome",
   description: "adguard/adguardhome:0.107.16",
   instructions: null,
   changeLog: [{ date: "2022-10-30", description: "first release" }],
