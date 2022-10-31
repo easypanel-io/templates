@@ -6,7 +6,7 @@ export const meta = {
   instructions: "Hasty Paste takes a minute or two on first launch.",
   changeLog: [{ date: "2022-10-30", description: "first release" }],
   links: [
-    { label: "Documentation", url: "ttps://enchantedcode.co.uk/hasty-paste/" },
+    { label: "Documentation", url: "https://enchantedcode.co.uk/hasty-paste/" },
     { label: "Github", url: "https://github.com/enchant97/hasty-paste" },
   ],
   contributors: [
