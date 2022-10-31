@@ -68,20 +68,22 @@ import { meta as meta_32 } from "./registry/meta";
 import { generate as generate_32 } from "./registry";
 import { meta as meta_33 } from "./rocketchat/meta";
 import { generate as generate_33 } from "./rocketchat";
-import { meta as meta_34 } from "./statping-ng/meta";
-import { generate as generate_34 } from "./statping-ng";
-import { meta as meta_35 } from "./strapi/meta";
-import { generate as generate_35 } from "./strapi";
-import { meta as meta_36 } from "./umami/meta";
-import { generate as generate_36 } from "./umami";
-import { meta as meta_37 } from "./uptimekuma/meta";
-import { generate as generate_37 } from "./uptimekuma";
-import { meta as meta_38 } from "./whiteboard/meta";
-import { generate as generate_38 } from "./whiteboard";
-import { meta as meta_39 } from "./wikijs/meta";
-import { generate as generate_39 } from "./wikijs";
-import { meta as meta_40 } from "./wordpress/meta";
-import { generate as generate_40 } from "./wordpress";
+import { meta as meta_34 } from "./soketi/meta";
+import { generate as generate_34 } from "./soketi";
+import { meta as meta_35 } from "./statping-ng/meta";
+import { generate as generate_35 } from "./statping-ng";
+import { meta as meta_36 } from "./strapi/meta";
+import { generate as generate_36 } from "./strapi";
+import { meta as meta_37 } from "./umami/meta";
+import { generate as generate_37 } from "./umami";
+import { meta as meta_38 } from "./uptimekuma/meta";
+import { generate as generate_38 } from "./uptimekuma";
+import { meta as meta_39 } from "./whiteboard/meta";
+import { generate as generate_39 } from "./whiteboard";
+import { meta as meta_40 } from "./wikijs/meta";
+import { generate as generate_40 } from "./wikijs";
+import { meta as meta_41 } from "./wordpress/meta";
+import { generate as generate_41 } from "./wordpress";
 
 const templates = [
   { slug: "ackee", meta: meta_0, generate: generate_0 },
@@ -118,13 +120,14 @@ const templates = [
   { slug: "psitransfer", meta: meta_31, generate: generate_31 },
   { slug: "registry", meta: meta_32, generate: generate_32 },
   { slug: "rocketchat", meta: meta_33, generate: generate_33 },
-  { slug: "statping-ng", meta: meta_34, generate: generate_34 },
-  { slug: "strapi", meta: meta_35, generate: generate_35 },
-  { slug: "umami", meta: meta_36, generate: generate_36 },
-  { slug: "uptimekuma", meta: meta_37, generate: generate_37 },
-  { slug: "whiteboard", meta: meta_38, generate: generate_38 },
-  { slug: "wikijs", meta: meta_39, generate: generate_39 },
-  { slug: "wordpress", meta: meta_40, generate: generate_40 },
+  { slug: "soketi", meta: meta_34, generate: generate_34 },
+  { slug: "statping-ng", meta: meta_35, generate: generate_35 },
+  { slug: "strapi", meta: meta_36, generate: generate_36 },
+  { slug: "umami", meta: meta_37, generate: generate_37 },
+  { slug: "uptimekuma", meta: meta_38, generate: generate_38 },
+  { slug: "whiteboard", meta: meta_39, generate: generate_39 },
+  { slug: "wikijs", meta: meta_40, generate: generate_40 },
+  { slug: "wordpress", meta: meta_41, generate: generate_41 },
 ];
 
 export default templates;
