@@ -2,8 +2,8 @@
 
 export const meta = {
   name: "adguardhome",
-  description: "Free and open source, powerful network-wide ads & trackers blocking DNS server.v",
-  instructions: "In installation wizard, please set the port to 3000"
+  description: "Free and open source, powerful network-wide ads & trackers blocking DNS server.",
+  instructions: "In installation wizard, please set the port to 3000",
   changeLog: [{ date: "2022-10-30", description: "first release" }],
   links: [
     {
