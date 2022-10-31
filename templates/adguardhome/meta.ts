@@ -2,7 +2,7 @@
 
 export const meta = {
   name: "adguardhome",
-  description: "adguard/adguardhome:0.107.16",
+  description: "Free and open source, powerful network-wide ads & trackers blocking DNS server.v",
   instructions: null,
   changeLog: [{ date: "2022-10-30", description: "first release" }],
   links: [
@@ -17,10 +17,9 @@ export const meta = {
   ],
   schema: {
     type: "object",
-    required: ["projectName", "domain", "appServiceName", "appServiceImage"],
+    required: ["projectName", "appServiceName", "appServiceImage"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -29,7 +28,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "adguard/adguardhome:0.107.16",
+        default: "adguard/adguardhome:v0.107.16",
       },
     },
   },
@@ -38,13 +37,11 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
 }
