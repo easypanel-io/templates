@@ -22,7 +22,6 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
@@ -40,8 +39,8 @@ export const meta = {
       },
     },
   },
-  logo: "icon.png",
-  screenshots: [],
+  logo: "logo.png",
+  screenshots: ["screenshot.png"],
 };
 
 export type ProjectName = string;

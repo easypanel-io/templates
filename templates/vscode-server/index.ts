@@ -9,7 +9,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`PASSWORD=${input.vscsPassword}`].join("\n"),
+      env: [`PASSWORD=${input.password}`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,

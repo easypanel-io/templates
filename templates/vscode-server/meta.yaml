@@ -16,15 +16,16 @@ schema:
   type: object
   required:
     - projectName
+    - password
     - appServiceName
     - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-    vscsPassword:
+    password:
       type: string
-      title: Visual Studio Code Server Password
+      title: VS Code Server Password
     appServiceName:
       type: string
       title: App Service Name
