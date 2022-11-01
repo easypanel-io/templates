@@ -1,12 +1,16 @@
-import { Output, Services } from "~templates-utils";
-import { randomPassword, randomString } from "../../utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const redisRandomPassword = randomPassword()
-  const defaultAppKey = input.defaultAppKey || `pk_${randomString(12)}`
-  const defaultAppSecret = input.defaultAppSecret || `ps_${randomString(12)}`
+  const redisRandomPassword = randomPassword();
+  const defaultAppKey = input.defaultAppKey || `pk_${randomString(12)}`;
+  const defaultAppSecret = input.defaultAppSecret || `ps_${randomString(12)}`;
 
   const serviceVariables = [
     `SOKETI_DB_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
@@ -24,7 +28,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: serviceVariables.join('\n'),
+      env: serviceVariables.join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -36,14 +40,14 @@ export function generate(input: Input): Output {
       ports: [
         {
           published: 6001,
-          target: 6001
-        }
+          target: 6001,
+        },
       ],
     },
   });
 
   services.push({
-    type: 'redis',
+    type: "redis",
     data: {
       projectName: input.projectName,
       serviceName: input.redisServiceName,
