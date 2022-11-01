@@ -31,7 +31,7 @@ export const meta = {
       },
     },
   },
-  logo: null,
+  logo: "icon.png",
   screenshots: [],
 };
 
