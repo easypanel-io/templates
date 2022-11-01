@@ -3,6 +3,7 @@
 export const meta = {
   name: "Verdaccio",
   description: "A lightweight Node.js private proxy registry",
+  instructions: null,
   changeLog: [{ date: "2022-10-31", description: "first release" }],
   links: [
     { label: "Website", url: "https://verdaccio.org/" },
