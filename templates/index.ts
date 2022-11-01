@@ -100,14 +100,16 @@ import { meta as meta_48 } from "./umami/meta";
 import { generate as generate_48 } from "./umami";
 import { meta as meta_49 } from "./uptimekuma/meta";
 import { generate as generate_49 } from "./uptimekuma";
-import { meta as meta_50 } from "./visualstudiocodeserver/meta";
-import { generate as generate_50 } from "./visualstudiocodeserver";
-import { meta as meta_51 } from "./whiteboard/meta";
-import { generate as generate_51 } from "./whiteboard";
-import { meta as meta_52 } from "./wikijs/meta";
-import { generate as generate_52 } from "./wikijs";
-import { meta as meta_53 } from "./wordpress/meta";
-import { generate as generate_53 } from "./wordpress";
+import { meta as meta_50 } from "./verdaccio/meta";
+import { generate as generate_50 } from "./verdaccio";
+import { meta as meta_51 } from "./visualstudiocodeserver/meta";
+import { generate as generate_51 } from "./visualstudiocodeserver";
+import { meta as meta_52 } from "./whiteboard/meta";
+import { generate as generate_52 } from "./whiteboard";
+import { meta as meta_53 } from "./wikijs/meta";
+import { generate as generate_53 } from "./wikijs";
+import { meta as meta_54 } from "./wordpress/meta";
+import { generate as generate_54 } from "./wordpress";
 
 const templates = [
   { slug: "ackee", meta: meta_0, generate: generate_0 },
@@ -160,10 +162,11 @@ const templates = [
   { slug: "strapi", meta: meta_47, generate: generate_47 },
   { slug: "umami", meta: meta_48, generate: generate_48 },
   { slug: "uptimekuma", meta: meta_49, generate: generate_49 },
-  { slug: "visualstudiocodeserver", meta: meta_50, generate: generate_50 },
-  { slug: "whiteboard", meta: meta_51, generate: generate_51 },
-  { slug: "wikijs", meta: meta_52, generate: generate_52 },
-  { slug: "wordpress", meta: meta_53, generate: generate_53 },
+  { slug: "verdaccio", meta: meta_50, generate: generate_50 },
+  { slug: "visualstudiocodeserver", meta: meta_51, generate: generate_51 },
+  { slug: "whiteboard", meta: meta_52, generate: generate_52 },
+  { slug: "wikijs", meta: meta_53, generate: generate_53 },
+  { slug: "wordpress", meta: meta_54, generate: generate_54 },
 ];
 
 export default templates;
