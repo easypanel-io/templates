@@ -40,3 +40,11 @@ selectField:
         - third
       title: Third Option
 ```
+
+### Checkbox
+
+```yaml
+type: "boolean",
+        title: "Checkbox Field",
+        default: false,
+```
