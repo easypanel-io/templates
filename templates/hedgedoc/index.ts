@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
             env: [
-        `CMD_DOMAIN=https://${input.domain}`,
+        `CMD_DOMAIN=${input.domain}`,
       ].join("\n"),
       source: {
         type: "image",
