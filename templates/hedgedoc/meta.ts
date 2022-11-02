@@ -19,6 +19,7 @@ export const meta = {
     required: ["projectName", "appServiceName", "domain", "appServiceImage"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
+      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
