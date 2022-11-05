@@ -9,6 +9,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
+      env: [`CMD_DOMAIN=${input.domain}`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
