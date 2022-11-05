@@ -4,14 +4,17 @@ export const meta = {
   name: "Flarum",
   description:
     "Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free.",
-  instructions: null,
+  instructions: "Please use the credentials flarum:flarum to login.",
   changeLog: [{ date: "2022-10-31", description: "first release" }],
   links: [
     { label: "Website", url: "https://flarum.org/" },
     { label: "Documentation", url: "https://docs.flarum.org/" },
     { label: "Github", url: "https://github.com/flarum/flarum" },
   ],
-  contributors: [{ name: "Rubén Robles", url: "https://github.com/D8vjork" }],
+  contributors: [
+    { name: "Rubén Robles", url: "https://github.com/D8vjork" },
+    { name: "Supernova3339", url: "https://github.com/Supernova3339" },
+  ],
   schema: {
     type: "object",
     required: [

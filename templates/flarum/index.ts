@@ -14,7 +14,8 @@ export function generate(input: Input): Output {
   const dbRandomPassword = input.databaseUserPassword || randomPassword();
 
   const serviceVariables = [
-    `FLARUM_BASE_URL=${input.appDomain}`,
+    `FLARUM_BASE_URL=https://${input.appDomain}`,
+    `FLARUM_FORUM_TITLE=Flarum`,
     `DB_HOST=${dbHost}`,
     `DB_PORT=${dbPort}`,
     `DB_NAME=${dbName}`,
