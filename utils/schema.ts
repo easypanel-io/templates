@@ -72,6 +72,8 @@ export const appSourceSchema = z
     z.object({
       type: z.literal("image"),
       image: z.string(),
+      username: z.string().optional(),
+      password: z.string().optional(),
     }),
     z.object({
       type: z.literal("github"),
@@ -102,6 +104,25 @@ export const appBuildSchema = z
   ])
   .optional();
 
+export const resourcesSchema = z
+  .object({
+    memoryReservation: z.number(),
+    memoryLimit: z.number(),
+    cpuReservation: z.number(),
+    cpuLimit: z.number(),
+  })
+  .optional();
+
+export const appPortsSchema = z
+  .array(
+    z.object({
+      published: z.number(),
+      target: z.number(),
+      protocol: z.union([z.literal("tcp"), z.literal("udp")]).default("tcp"),
+    })
+  )
+  .default([]);
+
 export const appSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
@@ -124,14 +145,8 @@ export const appSchema = z.object({
     )
     .default([]),
   mounts: appMountsSchema,
-  ports: z
-    .array(
-      z.object({
-        published: z.number(),
-        target: z.number(),
-      })
-    )
-    .default([]),
+  ports: appPortsSchema,
+  resources: resourcesSchema,
 });
 
 export const mongoSchema = z.object({
@@ -139,6 +154,7 @@ export const mongoSchema = z.object({
   serviceName: serviceNameRule,
   image: z.string().optional(),
   password: passwordRule,
+  resources: resourcesSchema,
 });
 
 export const mysqlSchema = z.object({
@@ -147,6 +163,7 @@ export const mysqlSchema = z.object({
   image: z.string().optional(),
   password: passwordRule,
   rootPassword: passwordRule,
+  resources: resourcesSchema,
 });
 
 export const mariadbSchema = z.object({
@@ -155,6 +172,7 @@ export const mariadbSchema = z.object({
   image: z.string().optional(),
   password: passwordRule,
   rootPassword: passwordRule,
+  resources: resourcesSchema,
 });
 
 export const postgresSchema = z.object({
@@ -162,6 +180,7 @@ export const postgresSchema = z.object({
   serviceName: serviceNameRule,
   image: z.string().optional(),
   password: passwordRule,
+  resources: resourcesSchema,
 });
 
 export const redisSchema = z.object({
@@ -169,6 +188,7 @@ export const redisSchema = z.object({
   serviceName: serviceNameRule,
   image: z.string().optional(),
   password: passwordRule,
+  resources: resourcesSchema,
 });
 
 export const templateSchema = z.object({
