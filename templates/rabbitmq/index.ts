@@ -34,7 +34,9 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.enableManagementUI ? 'rabbitmq:3-management' : input.appServiceImage,
+        image: input.enableManagementUI && !input.appServiceImage
+          ? 'rabbitmq:3-management'
+          : (input.appServiceImage || 'rabbitmq:3'),
       },
       proxy: {
         port: input.enableManagementUI ? 15672 : 5672,

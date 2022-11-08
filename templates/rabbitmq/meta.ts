@@ -17,12 +17,7 @@ export const meta = {
   contributors: [{ name: "Rubén Robles", url: "https://github.com/D8vjork" }],
   schema: {
     type: "object",
-    required: [
-      "projectName",
-      "appServiceName",
-      "appServiceImage",
-      "totalMemory",
-    ],
+    required: ["projectName", "appServiceName", "totalMemory"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
       appServiceName: {
@@ -30,11 +25,7 @@ export const meta = {
         title: "App Service Name",
         default: "rabbitmq",
       },
-      appServiceImage: {
-        type: "string",
-        title: "App Service Image",
-        default: "rabbitmq:3",
-      },
+      appServiceImage: { type: "string", title: "App Service Image" },
       enableManagementUI: {
         type: "boolean",
         title: "Enable RabbitMQ Management UI Plugin (modifies image)",
@@ -63,7 +54,7 @@ export type RAMMemoryLimitRecommended = string;
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
-  appServiceImage: AppServiceImage;
+  appServiceImage?: AppServiceImage;
   enableManagementUI?: EnableRabbitMQManagementUIPluginModifiesImage;
   defaultUserName?: DefaultUserName;
   defaultUserPassword?: DefaultUserPassword;
