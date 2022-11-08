@@ -1,0 +1,37 @@
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
+
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const siteName = input.projectName || input.metabaseSiteName;
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
+      env: [
+        `MB_SITE_NAME=${siteName}`,
+        `MB_APPLICATION_NAME=${siteName}`,
+        `MB_DB_FILE=/metabase-data/metabase.db`,
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      proxy: {
+        port: 3000,
+        secure: true,
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/metabase-data",
+        },
+      ],
+    },
+  });
+
+  return { services };
+}
