@@ -13,6 +13,13 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/config",
+        },
+      ],
       proxy: {
         port: 3000,
         secure: true,
