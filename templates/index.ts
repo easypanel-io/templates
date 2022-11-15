@@ -102,6 +102,8 @@ import { meta as meta_radarr } from "./radarr/meta";
 import { generate as generate_radarr } from "./radarr";
 import { meta as meta_registry } from "./registry/meta";
 import { generate as generate_registry } from "./registry";
+import { meta as meta_remmina } from "./remmina/meta";
+import { generate as generate_remmina } from "./remmina";
 import { meta as meta_restreamer } from "./restreamer/meta";
 import { generate as generate_restreamer } from "./restreamer";
 import { meta as meta_rocketchat } from "./rocketchat/meta";
@@ -181,6 +183,7 @@ const templates = [
   { slug: "rabbitmq", meta: meta_rabbitmq, generate: generate_rabbitmq },
   { slug: "radarr", meta: meta_radarr, generate: generate_radarr },
   { slug: "registry", meta: meta_registry, generate: generate_registry },
+  { slug: "remmina", meta: meta_remmina, generate: generate_remmina },
   { slug: "restreamer", meta: meta_restreamer, generate: generate_restreamer },
   { slug: "rocketchat", meta: meta_rocketchat, generate: generate_rocketchat },
   { slug: "simpletorrent", meta: meta_simpletorrent, generate: generate_simpletorrent },
