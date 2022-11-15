@@ -1,8 +1,8 @@
 import { readFile, writeFile } from "fs/promises";
-import * as path from "path";
-
 import glob from "glob";
 import { compile } from "json-schema-to-typescript";
+import { snakeCase } from "lodash";
+import * as path from "path";
 import prettier from "prettier";
 import YAML from "yaml";
 
@@ -51,16 +51,22 @@ run().catch(console.error);
 async function generateIndex(items: string[]) {
   const output: string[] = [`// Generated using "yarn build-templates"`, ""];
 
-  items.forEach((item, index) => {
-    output.push(`import { meta as meta_${index} } from "./${item}/meta";`);
-    output.push(`import { generate as generate_${index} } from "./${item}";`);
+  items.forEach((item) => {
+    output.push(
+      `import { meta as meta_${snakeCase(item)} } from "./${item}/meta";`
+    );
+    output.push(
+      `import { generate as generate_${snakeCase(item)} } from "./${item}";`
+    );
   });
 
   output.push("", "const templates = [");
 
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     output.push(
-      `  { slug: "${item}", meta: meta_${index}, generate: generate_${index} },`
+      `  { slug: "${item}", meta: meta_${snakeCase(
+        item
+      )}, generate: generate_${snakeCase(item)} },`
     );
   });
 
