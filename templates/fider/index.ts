@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `BASE_URL=https://${input.domain}`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.databaseServiceName}?sslmode=disable`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
         `JWT_SECRET=${secret}`,
         `EMAIL_NOREPLY=${input.emailNoReply}`,
         `EMAIL_SMTP_HOST=${input.emailHost}`,
