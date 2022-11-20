@@ -46,6 +46,11 @@ export function generate(input: Input): Output {
           mountPath: "/web-vault",
         },
       ],
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
     },
   });
 

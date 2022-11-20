@@ -5,7 +5,7 @@ export const meta = {
   description:
     "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
   instructions:
-    'To access the administration interface, please go to /admin on your installation url. The admin token is in your "Enviroment Variables" tab.',
+    'To access the administration interface, please go to /admin on your installation url. The admin token is in your "Environment" tab.',
   changeLog: [{ date: "2022-11-19", description: "first release" }],
   links: [
     {
