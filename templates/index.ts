@@ -84,6 +84,8 @@ import { meta as meta_nextcloud } from "./nextcloud/meta";
 import { generate as generate_nextcloud } from "./nextcloud";
 import { meta as meta_nodered } from "./nodered/meta";
 import { generate as generate_nodered } from "./nodered";
+import { meta as meta_ntfy } from "./ntfy/meta";
+import { generate as generate_ntfy } from "./ntfy";
 import { meta as meta_nzbget } from "./nzbget/meta";
 import { generate as generate_nzbget } from "./nzbget";
 import { meta as meta_paperlessngx } from "./paperlessngx/meta";
@@ -174,6 +176,7 @@ const templates = [
   { slug: "n8n", meta: meta_n_8_n, generate: generate_n_8_n },
   { slug: "nextcloud", meta: meta_nextcloud, generate: generate_nextcloud },
   { slug: "nodered", meta: meta_nodered, generate: generate_nodered },
+  { slug: "ntfy", meta: meta_ntfy, generate: generate_ntfy },
   { slug: "nzbget", meta: meta_nzbget, generate: generate_nzbget },
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
