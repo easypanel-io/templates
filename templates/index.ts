@@ -30,6 +30,8 @@ import { meta as meta_element } from "./element/meta";
 import { generate as generate_element } from "./element";
 import { meta as meta_filebrowser } from "./filebrowser/meta";
 import { generate as generate_filebrowser } from "./filebrowser";
+import { meta as meta_filezilla } from "./filezilla/meta";
+import { generate as generate_filezilla } from "./filezilla";
 import { meta as meta_firefox } from "./firefox/meta";
 import { generate as generate_firefox } from "./firefox";
 import { meta as meta_flame } from "./flame/meta";
@@ -147,6 +149,7 @@ const templates = [
   { slug: "duplicati", meta: meta_duplicati, generate: generate_duplicati },
   { slug: "element", meta: meta_element, generate: generate_element },
   { slug: "filebrowser", meta: meta_filebrowser, generate: generate_filebrowser },
+  { slug: "filezilla", meta: meta_filezilla, generate: generate_filezilla },
   { slug: "firefox", meta: meta_firefox, generate: generate_firefox },
   { slug: "flame", meta: meta_flame, generate: generate_flame },
   { slug: "flarum", meta: meta_flarum, generate: generate_flarum },
