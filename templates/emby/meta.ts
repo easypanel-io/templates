@@ -4,6 +4,7 @@ export const meta = {
   name: "Emby",
   description:
     "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.",
+  instructions: null,
   changeLog: [{ date: "2022-11-21", description: "first release" }],
   links: [
     { label: "Documentation", url: "https://support.emby.media/support/home" },
@@ -20,7 +21,7 @@ export const meta = {
       appServiceName: {
         type: "string",
         title: "App Service Name",
-        default: "vsc-server",
+        default: "emby",
       },
       appServiceImage: {
         type: "string",
