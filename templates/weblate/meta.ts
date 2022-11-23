@@ -46,7 +46,7 @@ export const meta = {
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "weblate-redisy",
+        default: "weblate-db",
       },
       redisServiceName: {
         type: "string",
@@ -79,7 +79,7 @@ export interface Input {
   domain: Domain;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
-  databaseServiceName: DatabaseServiceName;
+  databaseServiceName?: DatabaseServiceName;
   redisServiceName: RedisServiceName;
   emailNoReply: NoReplyEmail;
   emailHost: EmailHost;
