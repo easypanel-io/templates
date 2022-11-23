@@ -90,6 +90,8 @@ import { meta as meta_paperlessngx } from "./paperlessngx/meta";
 import { generate as generate_paperlessngx } from "./paperlessngx";
 import { meta as meta_phpmyadmin } from "./phpmyadmin/meta";
 import { generate as generate_phpmyadmin } from "./phpmyadmin";
+import { meta as meta_pidgin } from "./pidgin/meta";
+import { generate as generate_pidgin } from "./pidgin";
 import { meta as meta_portainer } from "./portainer/meta";
 import { generate as generate_portainer } from "./portainer";
 import { meta as meta_postgres_backup } from "./postgres-backup/meta";
@@ -177,6 +179,7 @@ const templates = [
   { slug: "nzbget", meta: meta_nzbget, generate: generate_nzbget },
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
+  { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
   { slug: "postgres-backup", meta: meta_postgres_backup, generate: generate_postgres_backup },
   { slug: "psitransfer", meta: meta_psitransfer, generate: generate_psitransfer },
