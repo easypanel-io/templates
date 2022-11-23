@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+        `REDIS_HOST=${input.redisServiceName}`,
         `REDIS_PORT=6379`,
         `REDIS_DB=1`,
         `REDIS_PASSWORD=${redisPassword}`,
