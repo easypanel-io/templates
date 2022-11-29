@@ -30,7 +30,7 @@ export const meta = {
       },
     },
   },
-  logo: null,
+  logo: "logo.png",
   screenshots: ["screenshot.png"],
 };
 

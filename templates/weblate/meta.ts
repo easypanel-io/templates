@@ -79,7 +79,7 @@ export interface Input {
   domain: Domain;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
-  databaseServiceName: DatabaseServiceName;
+  databaseServiceName?: DatabaseServiceName;
   redisServiceName: RedisServiceName;
   emailNoReply: NoReplyEmail;
   emailHost: EmailHost;
