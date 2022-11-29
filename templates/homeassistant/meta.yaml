@@ -1,0 +1,32 @@
+name: Home Assistant
+description: Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. 
+instructions: null
+changeLog:
+  - date: 2022-11-21
+    description: first release
+links:
+  - label: Documentation
+    url: https://www.home-assistant.io/docs/
+  - label: Github
+    url: https://github.com/home-assistant
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: homeassistant
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/homeassistant:latest
