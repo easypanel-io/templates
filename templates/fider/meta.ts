@@ -29,12 +29,12 @@ export const meta = {
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      domain: { type: "string", title: "Domain" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
         default: "fider",
       },
+      domain: { type: "string", title: "Domain" },
       appServiceImage: {
         type: "string",
         title: "App Service Image",
@@ -57,8 +57,8 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type Domain = string;
 export type AppServiceName = string;
+export type Domain = string;
 export type AppServiceImage = string;
 export type DatabaseServiceName = string;
 export type NoReplyEmail = string;
@@ -69,10 +69,10 @@ export type EmailPassword = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain: Domain;
   appServiceName: AppServiceName;
+  domain: Domain;
   appServiceImage: AppServiceImage;
-  databaseServiceName?: DatabaseServiceName;
+  databaseServiceName: DatabaseServiceName;
   emailNoReply: NoReplyEmail;
   emailHost: EmailHost;
   emailPort: EmailPort;
