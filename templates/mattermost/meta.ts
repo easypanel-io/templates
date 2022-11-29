@@ -27,6 +27,7 @@ export const meta = {
     type: "object",
     required: [
       "projectName",
+      "domain",
       "appServiceName",
       "appServiceImage",
       "appServiceImage",
@@ -64,7 +65,7 @@ export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
-  domain?: Domain;
+  domain: Domain;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
