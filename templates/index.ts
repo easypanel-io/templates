@@ -60,6 +60,8 @@ import { meta as meta_imgproxy } from "./imgproxy/meta";
 import { generate as generate_imgproxy } from "./imgproxy";
 import { meta as meta_jellyfin } from "./jellyfin/meta";
 import { generate as generate_jellyfin } from "./jellyfin";
+import { meta as meta_jirafeau } from "./jirafeau/meta";
+import { generate as generate_jirafeau } from "./jirafeau";
 import { meta as meta_kanboard } from "./kanboard/meta";
 import { generate as generate_kanboard } from "./kanboard";
 import { meta as meta_libreoffice } from "./libreoffice/meta";
@@ -174,6 +176,7 @@ const templates = [
   { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
+  { slug: "jirafeau", meta: meta_jirafeau, generate: generate_jirafeau },
   { slug: "kanboard", meta: meta_kanboard, generate: generate_kanboard },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
