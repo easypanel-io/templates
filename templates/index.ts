@@ -120,6 +120,8 @@ import { meta as meta_umami } from "./umami/meta";
 import { generate as generate_umami } from "./umami";
 import { meta as meta_uptimekuma } from "./uptimekuma/meta";
 import { generate as generate_uptimekuma } from "./uptimekuma";
+import { meta as meta_vaultwarden } from "./vaultwarden/meta";
+import { generate as generate_vaultwarden } from "./vaultwarden";
 import { meta as meta_verdaccio } from "./verdaccio/meta";
 import { generate as generate_verdaccio } from "./verdaccio";
 import { meta as meta_vscode_server } from "./vscode-server/meta";
@@ -192,6 +194,7 @@ const templates = [
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
   { slug: "uptimekuma", meta: meta_uptimekuma, generate: generate_uptimekuma },
+  { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
