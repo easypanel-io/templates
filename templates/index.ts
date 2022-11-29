@@ -28,6 +28,8 @@ import { meta as meta_duplicati } from "./duplicati/meta";
 import { generate as generate_duplicati } from "./duplicati";
 import { meta as meta_element } from "./element/meta";
 import { generate as generate_element } from "./element";
+import { meta as meta_emby } from "./emby/meta";
+import { generate as generate_emby } from "./emby";
 import { meta as meta_fider } from "./fider/meta";
 import { generate as generate_fider } from "./fider";
 import { meta as meta_filebrowser } from "./filebrowser/meta";
@@ -164,6 +166,7 @@ const templates = [
   { slug: "drone", meta: meta_drone, generate: generate_drone },
   { slug: "duplicati", meta: meta_duplicati, generate: generate_duplicati },
   { slug: "element", meta: meta_element, generate: generate_element },
+  { slug: "emby", meta: meta_emby, generate: generate_emby },
   { slug: "fider", meta: meta_fider, generate: generate_fider },
   { slug: "filebrowser", meta: meta_filebrowser, generate: generate_filebrowser },
   { slug: "filezilla", meta: meta_filezilla, generate: generate_filezilla },
