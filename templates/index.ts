@@ -28,8 +28,14 @@ import { generate as generate_duplicati } from "./duplicati";
 import { meta as meta_duplicati } from "./duplicati/meta";
 import { generate as generate_element } from "./element";
 import { meta as meta_element } from "./element/meta";
+import { generate as generate_emby } from "./emby";
+import { meta as meta_emby } from "./emby/meta";
+import { generate as generate_fider } from "./fider";
+import { meta as meta_fider } from "./fider/meta";
 import { generate as generate_filebrowser } from "./filebrowser";
 import { meta as meta_filebrowser } from "./filebrowser/meta";
+import { generate as generate_filezilla } from "./filezilla";
+import { meta as meta_filezilla } from "./filezilla/meta";
 import { generate as generate_firefox } from "./firefox";
 import { meta as meta_firefox } from "./firefox/meta";
 import { generate as generate_flame } from "./flame";
@@ -50,10 +56,14 @@ import { generate as generate_hedgedoc } from "./hedgedoc";
 import { meta as meta_hedgedoc } from "./hedgedoc/meta";
 import { generate as generate_heimdall } from "./heimdall";
 import { meta as meta_heimdall } from "./heimdall/meta";
+import { generate as generate_homeassistant } from "./homeassistant";
+import { meta as meta_homeassistant } from "./homeassistant/meta";
 import { generate as generate_imgproxy } from "./imgproxy";
 import { meta as meta_imgproxy } from "./imgproxy/meta";
 import { generate as generate_jellyfin } from "./jellyfin";
 import { meta as meta_jellyfin } from "./jellyfin/meta";
+import { generate as generate_jirafeau } from "./jirafeau";
+import { meta as meta_jirafeau } from "./jirafeau/meta";
 import { generate as generate_kanboard } from "./kanboard";
 import { meta as meta_kanboard } from "./kanboard/meta";
 import { generate as generate_libreoffice } from "./libreoffice";
@@ -84,12 +94,18 @@ import { generate as generate_nextcloud } from "./nextcloud";
 import { meta as meta_nextcloud } from "./nextcloud/meta";
 import { generate as generate_nodered } from "./nodered";
 import { meta as meta_nodered } from "./nodered/meta";
+import { generate as generate_ntfy } from "./ntfy";
+import { meta as meta_ntfy } from "./ntfy/meta";
 import { generate as generate_nzbget } from "./nzbget";
 import { meta as meta_nzbget } from "./nzbget/meta";
 import { generate as generate_paperlessngx } from "./paperlessngx";
 import { meta as meta_paperlessngx } from "./paperlessngx/meta";
 import { generate as generate_phpmyadmin } from "./phpmyadmin";
 import { meta as meta_phpmyadmin } from "./phpmyadmin/meta";
+import { generate as generate_pidgin } from "./pidgin";
+import { meta as meta_pidgin } from "./pidgin/meta";
+import { generate as generate_plex } from "./plex";
+import { meta as meta_plex } from "./plex/meta";
 import { generate as generate_portainer } from "./portainer";
 import { meta as meta_portainer } from "./portainer/meta";
 import { generate as generate_postgres_backup } from "./postgres-backup";
@@ -111,6 +127,8 @@ import { meta as meta_restreamer } from "./restreamer/meta";
 import { generate as generate_rocketchat } from "./rocketchat";
 import { meta as meta_rocketchat } from "./rocketchat/meta";
 import { generate as generate_simpletorrent } from "./simpletorrent";
+import { generate as generate_simpletorrent_copy } from "./simpletorrent copy";
+import { meta as meta_simpletorrent_copy } from "./simpletorrent copy/meta";
 import { meta as meta_simpletorrent } from "./simpletorrent/meta";
 import { generate as generate_soketi } from "./soketi";
 import { meta as meta_soketi } from "./soketi/meta";
@@ -122,10 +140,14 @@ import { generate as generate_umami } from "./umami";
 import { meta as meta_umami } from "./umami/meta";
 import { generate as generate_uptimekuma } from "./uptimekuma";
 import { meta as meta_uptimekuma } from "./uptimekuma/meta";
+import { generate as generate_vaultwarden } from "./vaultwarden";
+import { meta as meta_vaultwarden } from "./vaultwarden/meta";
 import { generate as generate_verdaccio } from "./verdaccio";
 import { meta as meta_verdaccio } from "./verdaccio/meta";
 import { generate as generate_vscode_server } from "./vscode-server";
 import { meta as meta_vscode_server } from "./vscode-server/meta";
+import { generate as generate_weblate } from "./weblate";
+import { meta as meta_weblate } from "./weblate/meta";
 import { generate as generate_whiteboard } from "./whiteboard";
 import { meta as meta_whiteboard } from "./whiteboard/meta";
 import { generate as generate_wikijs } from "./wikijs";
@@ -148,7 +170,10 @@ const templates = [
   { slug: "drone", meta: meta_drone, generate: generate_drone },
   { slug: "duplicati", meta: meta_duplicati, generate: generate_duplicati },
   { slug: "element", meta: meta_element, generate: generate_element },
+  { slug: "emby", meta: meta_emby, generate: generate_emby },
+  { slug: "fider", meta: meta_fider, generate: generate_fider },
   { slug: "filebrowser", meta: meta_filebrowser, generate: generate_filebrowser },
+  { slug: "filezilla", meta: meta_filezilla, generate: generate_filezilla },
   { slug: "firefox", meta: meta_firefox, generate: generate_firefox },
   { slug: "flame", meta: meta_flame, generate: generate_flame },
   { slug: "flarum", meta: meta_flarum, generate: generate_flarum },
@@ -159,8 +184,10 @@ const templates = [
   { slug: "hastypaste", meta: meta_hastypaste, generate: generate_hastypaste },
   { slug: "hedgedoc", meta: meta_hedgedoc, generate: generate_hedgedoc },
   { slug: "heimdall", meta: meta_heimdall, generate: generate_heimdall },
+  { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
+  { slug: "jirafeau", meta: meta_jirafeau, generate: generate_jirafeau },
   { slug: "kanboard", meta: meta_kanboard, generate: generate_kanboard },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
@@ -176,9 +203,12 @@ const templates = [
   { slug: "n8n", meta: meta_n_8_n, generate: generate_n_8_n },
   { slug: "nextcloud", meta: meta_nextcloud, generate: generate_nextcloud },
   { slug: "nodered", meta: meta_nodered, generate: generate_nodered },
+  { slug: "ntfy", meta: meta_ntfy, generate: generate_ntfy },
   { slug: "nzbget", meta: meta_nzbget, generate: generate_nzbget },
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
+  { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
+  { slug: "plex", meta: meta_plex, generate: generate_plex },
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
   { slug: "postgres-backup", meta: meta_postgres_backup, generate: generate_postgres_backup },
   { slug: "powerdns-admin", meta: meta_powerdns_admin, generate: generate_powerdns_admin },
@@ -189,14 +219,17 @@ const templates = [
   { slug: "remmina", meta: meta_remmina, generate: generate_remmina },
   { slug: "restreamer", meta: meta_restreamer, generate: generate_restreamer },
   { slug: "rocketchat", meta: meta_rocketchat, generate: generate_rocketchat },
+  { slug: "simpletorrent copy", meta: meta_simpletorrent_copy, generate: generate_simpletorrent_copy },
   { slug: "simpletorrent", meta: meta_simpletorrent, generate: generate_simpletorrent },
   { slug: "soketi", meta: meta_soketi, generate: generate_soketi },
   { slug: "statping-ng", meta: meta_statping_ng, generate: generate_statping_ng },
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
   { slug: "uptimekuma", meta: meta_uptimekuma, generate: generate_uptimekuma },
+  { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
+  { slug: "weblate", meta: meta_weblate, generate: generate_weblate },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
   { slug: "wikijs", meta: meta_wikijs, generate: generate_wikijs },
   { slug: "wordpress", meta: meta_wordpress, generate: generate_wordpress },
