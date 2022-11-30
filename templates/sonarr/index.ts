@@ -23,6 +23,16 @@ export function generate(input: Input): Output {
           name: "config",
           mountPath: "/config",
         },
+        {
+          type: "volume",
+          name: "tv",
+          mountPath: "/tv",
+        },
+        {
+          type: "volume",
+          name: "downloads",
+          mountPath: "/downloads",
+        },
       ],
     },
   });
