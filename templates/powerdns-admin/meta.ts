@@ -31,11 +31,6 @@ export const meta = {
         title: "App Service Image",
         default: "ngoduykhanh/powerdns-admin:latest",
       },
-      serviceTimezone: {
-        type: "string",
-        title: "Timezone",
-        default: "Europe/London",
-      },
     },
   },
   logo: "logo.png",
