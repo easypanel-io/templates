@@ -98,6 +98,8 @@ import { meta as meta_ntfy } from "./ntfy/meta";
 import { generate as generate_ntfy } from "./ntfy";
 import { meta as meta_nzbget } from "./nzbget/meta";
 import { generate as generate_nzbget } from "./nzbget";
+import { meta as meta_openspeedtest } from "./openspeedtest/meta";
+import { generate as generate_openspeedtest } from "./openspeedtest";
 import { meta as meta_paperlessngx } from "./paperlessngx/meta";
 import { generate as generate_paperlessngx } from "./paperlessngx";
 import { meta as meta_phpmyadmin } from "./phpmyadmin/meta";
@@ -205,6 +207,7 @@ const templates = [
   { slug: "nodered", meta: meta_nodered, generate: generate_nodered },
   { slug: "ntfy", meta: meta_ntfy, generate: generate_ntfy },
   { slug: "nzbget", meta: meta_nzbget, generate: generate_nzbget },
+  { slug: "openspeedtest", meta: meta_openspeedtest, generate: generate_openspeedtest },
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
   { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
