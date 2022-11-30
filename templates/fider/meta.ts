@@ -21,6 +21,7 @@ export const meta = {
       "domain",
       "appServiceName",
       "appServiceImage",
+      "databaseServiceName",
       "emailNoReply",
       "emailHost",
       "emailPort",
