@@ -11,7 +11,7 @@ export const meta = {
     { label: "Documentation", url: "https://docs.ackee.electerious.com/" },
     { label: "Github", url: "https://github.com/electerious/Ackee" },
   ],
-  contributors: [{ name: "Ponky", url: "https://github.com/Ponkhy" }],
+  contributors: [{ name: "Ponkhy", url: "https://github.com/Ponkhy" }],
   schema: {
     type: "object",
     required: [
