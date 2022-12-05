@@ -106,6 +106,8 @@ import { meta as meta_pidgin } from "./pidgin/meta";
 import { generate as generate_pidgin } from "./pidgin";
 import { meta as meta_plex } from "./plex/meta";
 import { generate as generate_plex } from "./plex";
+import { meta as meta_pocketbase } from "./pocketbase/meta";
+import { generate as generate_pocketbase } from "./pocketbase";
 import { meta as meta_portainer } from "./portainer/meta";
 import { generate as generate_portainer } from "./portainer";
 import { meta as meta_postgres_backup } from "./postgres-backup/meta";
@@ -209,6 +211,7 @@ const templates = [
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
   { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
   { slug: "plex", meta: meta_plex, generate: generate_plex },
+  { slug: "pocketbase", meta: meta_pocketbase, generate: generate_pocketbase },
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
   { slug: "postgres-backup", meta: meta_postgres_backup, generate: generate_postgres_backup },
   { slug: "powerdns-admin", meta: meta_powerdns_admin, generate: generate_powerdns_admin },
