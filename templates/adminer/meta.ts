@@ -11,7 +11,7 @@ export const meta = {
     { label: "Github", url: "https://github.com/vrana/adminer/" },
   ],
   contributors: [
-    { name: "Ponky", url: "https://github.com/Ponkhy" },
+    { name: "Ponkhy", url: "https://github.com/Ponkhy" },
     { name: "Andrei Canta", url: "https://github.com/deiucanta" },
   ],
   schema: {
