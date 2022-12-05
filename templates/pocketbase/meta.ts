@@ -11,10 +11,7 @@ export const meta = {
     { label: "Documentation", url: "https://pocketbase.io/docs" },
     { label: "Github", url: "https://github.com/pocketbase/pocketbase" },
   ],
-  contributors: [
-    { name: "Ponkhy", url: "https://github.com/Ponkhy" },
-    { name: "Andrei Canta", url: "https://github.com/deiucanta" },
-  ],
+  contributors: [{ name: "Ponkhy", url: "https://github.com/Ponkhy" }],
   schema: {
     type: "object",
     required: ["projectName", "domain", "appServiceName", "appServiceImage"],
@@ -29,7 +26,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "augustodelg/pocketbase:latest",
+        default: "augustodelg/pocketbase:0.8.0",
       },
     },
   },
