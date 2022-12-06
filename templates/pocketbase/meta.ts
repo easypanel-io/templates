@@ -4,7 +4,7 @@ export const meta = {
   name: "PocketBase",
   description:
     "PocketBase is an open source backend consisting of embedded database (SQLite) with realtime subscriptions, built-in auth management, convenient dashboard UI and simple REST-ish API.",
-  instructions: null,
+  instructions: 'Admin Dashboard can be accessed via "DOMAIN/_/""',
   changeLog: [{ date: "2022-12-03", description: "First Release" }],
   links: [
     { label: "Website", url: "https://pocketbase.io" },
