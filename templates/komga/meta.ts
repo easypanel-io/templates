@@ -1,12 +1,15 @@
 // Generated using "yarn build-templates"
 
 export const meta = {
-  name: "Jirafeau",
+  name: "Komga",
   description:
-    "Jirafeau is a one-click-filesharing Select your file, upload, share a link. That's it.",
+    "Komga is a media server for your comics, mangas, BDs and magazines.",
   instructions: null,
-  changeLog: [{ date: "2022-11-22", description: "first release" }],
-  links: [{ label: "Github", url: "https://gitlab.com/mojo42/Jirafeau" }],
+  changeLog: [{ date: "2022-12-11", description: "first release" }],
+  links: [
+    { label: "Github", url: "https://github.com/gotson/komga" },
+    { label: "Website", url: "https://komga.org" },
+  ],
   contributors: [
     { name: "Supernova3339", url: "https://github.com/Supernova3339" },
   ],
@@ -18,12 +21,12 @@ export const meta = {
       appServiceName: {
         type: "string",
         title: "App Service Name",
-        default: "jirafeau",
+        default: "komga",
       },
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "jgeusebroek/jirafeau:20221008",
+        default: "gotson/komga:0.157.5",
       },
     },
   },
