@@ -80,6 +80,8 @@ import { meta as meta_matomo } from "./matomo/meta";
 import { generate as generate_matomo } from "./matomo";
 import { meta as meta_mattermost } from "./mattermost/meta";
 import { generate as generate_mattermost } from "./mattermost";
+import { meta as meta_mealie } from "./mealie/meta";
+import { generate as generate_mealie } from "./mealie";
 import { meta as meta_meilisearch } from "./meilisearch/meta";
 import { generate as generate_meilisearch } from "./meilisearch";
 import { meta as meta_metabase } from "./metabase/meta";
@@ -200,6 +202,7 @@ const templates = [
   { slug: "mailhog", meta: meta_mailhog, generate: generate_mailhog },
   { slug: "matomo", meta: meta_matomo, generate: generate_matomo },
   { slug: "mattermost", meta: meta_mattermost, generate: generate_mattermost },
+  { slug: "mealie", meta: meta_mealie, generate: generate_mealie },
   { slug: "meilisearch", meta: meta_meilisearch, generate: generate_meilisearch },
   { slug: "metabase", meta: meta_metabase, generate: generate_metabase },
   { slug: "metube", meta: meta_metube, generate: generate_metube },
