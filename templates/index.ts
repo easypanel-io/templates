@@ -12,6 +12,8 @@ import { meta as meta_bookstack } from "./bookstack/meta";
 import { generate as generate_bookstack } from "./bookstack";
 import { meta as meta_budibase } from "./budibase/meta";
 import { generate as generate_budibase } from "./budibase";
+import { meta as meta_bytemarksmtp } from "./bytemarksmtp/meta";
+import { generate as generate_bytemarksmtp } from "./bytemarksmtp";
 import { meta as meta_changedetection } from "./changedetection/meta";
 import { generate as generate_changedetection } from "./changedetection";
 import { meta as meta_dashy } from "./dashy/meta";
@@ -166,6 +168,7 @@ const templates = [
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
   { slug: "budibase", meta: meta_budibase, generate: generate_budibase },
+  { slug: "bytemarksmtp", meta: meta_bytemarksmtp, generate: generate_bytemarksmtp },
   { slug: "changedetection", meta: meta_changedetection, generate: generate_changedetection },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
