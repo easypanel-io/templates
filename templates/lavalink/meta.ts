@@ -18,7 +18,7 @@ export const meta = {
     required: ["projectName", "password", "appServiceName", "appServiceImage"],
     properties: {
       projectName: { type: "string", title: "Project Name" },
-      password: { type: "string", title: "Server connection password" },
+      password: { type: "string", title: "Auth server password" },
       appServiceName: {
         type: "string",
         title: "App Service Name",
