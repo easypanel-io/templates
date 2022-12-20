@@ -152,6 +152,8 @@ import { meta as meta_vscode_server } from "./vscode-server/meta";
 import { generate as generate_vscode_server } from "./vscode-server";
 import { meta as meta_weblate } from "./weblate/meta";
 import { generate as generate_weblate } from "./weblate";
+import { meta as meta_wg_easy } from "./wg-easy/meta";
+import { generate as generate_wg_easy } from "./wg-easy";
 import { meta as meta_whiteboard } from "./whiteboard/meta";
 import { generate as generate_whiteboard } from "./whiteboard";
 import { meta as meta_wikijs } from "./wikijs/meta";
@@ -236,6 +238,7 @@ const templates = [
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
   { slug: "weblate", meta: meta_weblate, generate: generate_weblate },
+  { slug: "wg-easy", meta: meta_wg_easy, generate: generate_wg_easy },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
   { slug: "wikijs", meta: meta_wikijs, generate: generate_wikijs },
   { slug: "wordpress", meta: meta_wordpress, generate: generate_wordpress },
