@@ -22,7 +22,6 @@ schema:
     - projectName
     - domain
     - appServiceName
-    - appServiceImage
     - databaseServiceName
   properties:
     projectName:
@@ -38,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      enableCommentoPlusPlus:
+    enableCommentoPlusPlus:
       type: boolean
       title: Enable Commento++ (modifies image)
     databaseServiceName:

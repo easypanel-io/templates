@@ -21,7 +21,6 @@ export const meta = {
       "projectName",
       "domain",
       "appServiceName",
-      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {
@@ -32,10 +31,10 @@ export const meta = {
         default: "commento",
       },
       domain: { type: "string", title: "Domain" },
-      appServiceImage: {
-        type: "string",
-        title: "App Service Image",
-        default: "registry.gitlab.com/commento/commento",
+      appServiceImage: { type: "string", title: "App Service Image" },
+      enableCommentoPlusPlus: {
+        type: "boolean",
+        title: "Enable Commento++ (modifies image)",
       },
       databaseServiceName: {
         type: "string",
@@ -52,12 +51,14 @@ export type ProjectName = string;
 export type AppServiceName = string;
 export type Domain = string;
 export type AppServiceImage = string;
+export type EnableCommentoModifiesImage = boolean;
 export type DatabaseServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
   domain: Domain;
-  appServiceImage: AppServiceImage;
+  appServiceImage?: AppServiceImage;
+  enableCommentoPlusPlus?: EnableCommentoModifiesImage;
   databaseServiceName: DatabaseServiceName;
 }

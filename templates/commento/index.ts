@@ -18,7 +18,9 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.enableCommentoPlusPlus && !input.appServiceImage
+          ? 'ghcr.io/souramoo/commentoplusplus:v1.8.7'
+          : (input.appServiceImage || 'registry.gitlab.com/commento/commento:latest'),
       },
       proxy: {
         port: 8080,
