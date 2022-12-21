@@ -1,0 +1,32 @@
+name: Answer
+description: An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+instructions: Go to /install and select sqlite database
+changeLog:
+  - date: 2022-12-21
+    description: first release
+links:
+  - label: Documentation
+    url: https://answer.dev/docs
+  - label: Github
+    url: https://github.com/answerdev/answer
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: answer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: answerdev/answer:1.0.0
