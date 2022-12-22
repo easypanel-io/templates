@@ -8,6 +8,8 @@ import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
 import { meta as meta_baserow } from "./baserow/meta";
 import { generate as generate_baserow } from "./baserow";
+import { meta as meta_blog } from "./blog/meta";
+import { generate as generate_blog } from "./blog";
 import { meta as meta_bookstack } from "./bookstack/meta";
 import { generate as generate_bookstack } from "./bookstack";
 import { meta as meta_budibase } from "./budibase/meta";
@@ -164,6 +166,7 @@ const templates = [
   { slug: "adminer", meta: meta_adminer, generate: generate_adminer },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
+  { slug: "blog", meta: meta_blog, generate: generate_blog },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
   { slug: "budibase", meta: meta_budibase, generate: generate_budibase },
   { slug: "changedetection", meta: meta_changedetection, generate: generate_changedetection },
