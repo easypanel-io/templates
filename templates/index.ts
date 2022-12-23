@@ -4,6 +4,8 @@ import { meta as meta_ackee } from "./ackee/meta";
 import { generate as generate_ackee } from "./ackee";
 import { meta as meta_adminer } from "./adminer/meta";
 import { generate as generate_adminer } from "./adminer";
+import { meta as meta_anonfiles } from "./anonfiles/meta";
+import { generate as generate_anonfiles } from "./anonfiles";
 import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
 import { meta as meta_baserow } from "./baserow/meta";
@@ -162,6 +164,7 @@ import { generate as generate_wordpress } from "./wordpress";
 const templates = [
   { slug: "ackee", meta: meta_ackee, generate: generate_ackee },
   { slug: "adminer", meta: meta_adminer, generate: generate_adminer },
+  { slug: "anonfiles", meta: meta_anonfiles, generate: generate_anonfiles },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
