@@ -118,6 +118,8 @@ import { meta as meta_postgres_backup } from "./postgres-backup/meta";
 import { generate as generate_postgres_backup } from "./postgres-backup";
 import { meta as meta_powerdns_admin } from "./powerdns-admin/meta";
 import { generate as generate_powerdns_admin } from "./powerdns-admin";
+import { meta as meta_prowlarr } from "./prowlarr/meta";
+import { generate as generate_prowlarr } from "./prowlarr";
 import { meta as meta_psitransfer } from "./psitransfer/meta";
 import { generate as generate_psitransfer } from "./psitransfer";
 import { meta as meta_rabbitmq } from "./rabbitmq/meta";
@@ -219,6 +221,7 @@ const templates = [
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
   { slug: "postgres-backup", meta: meta_postgres_backup, generate: generate_postgres_backup },
   { slug: "powerdns-admin", meta: meta_powerdns_admin, generate: generate_powerdns_admin },
+  { slug: "prowlarr", meta: meta_prowlarr, generate: generate_prowlarr },
   { slug: "psitransfer", meta: meta_psitransfer, generate: generate_psitransfer },
   { slug: "rabbitmq", meta: meta_rabbitmq, generate: generate_rabbitmq },
   { slug: "radarr", meta: meta_radarr, generate: generate_radarr },
