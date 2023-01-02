@@ -68,6 +68,8 @@ import { meta as meta_jirafeau } from "./jirafeau/meta";
 import { generate as generate_jirafeau } from "./jirafeau";
 import { meta as meta_kanboard } from "./kanboard/meta";
 import { generate as generate_kanboard } from "./kanboard";
+import { meta as meta_lavalink } from "./lavalink/meta";
+import { generate as generate_lavalink } from "./lavalink";
 import { meta as meta_lenpaste } from "./lenpaste/meta";
 import { generate as generate_lenpaste } from "./lenpaste";
 import { meta as meta_libreoffice } from "./libreoffice/meta";
@@ -198,6 +200,7 @@ const templates = [
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
   { slug: "jirafeau", meta: meta_jirafeau, generate: generate_jirafeau },
   { slug: "kanboard", meta: meta_kanboard, generate: generate_kanboard },
+  { slug: "lavalink", meta: meta_lavalink, generate: generate_lavalink },
   { slug: "lenpaste", meta: meta_lenpaste, generate: generate_lenpaste },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
