@@ -64,12 +64,18 @@ import { meta as meta_imgproxy } from "./imgproxy/meta";
 import { generate as generate_imgproxy } from "./imgproxy";
 import { meta as meta_jellyfin } from "./jellyfin/meta";
 import { generate as generate_jellyfin } from "./jellyfin";
+import { meta as meta_jellyseerr } from "./jellyseerr/meta";
+import { generate as generate_jellyseerr } from "./jellyseerr";
 import { meta as meta_jirafeau } from "./jirafeau/meta";
 import { generate as generate_jirafeau } from "./jirafeau";
 import { meta as meta_kanboard } from "./kanboard/meta";
 import { generate as generate_kanboard } from "./kanboard";
 import { meta as meta_kavita } from "./kavita/meta";
 import { generate as generate_kavita } from "./kavita";
+import { meta as meta_lavalink } from "./lavalink/meta";
+import { generate as generate_lavalink } from "./lavalink";
+import { meta as meta_lenpaste } from "./lenpaste/meta";
+import { generate as generate_lenpaste } from "./lenpaste";
 import { meta as meta_libreoffice } from "./libreoffice/meta";
 import { generate as generate_libreoffice } from "./libreoffice";
 import { meta as meta_lychee } from "./lychee/meta";
@@ -154,6 +160,8 @@ import { meta as meta_vscode_server } from "./vscode-server/meta";
 import { generate as generate_vscode_server } from "./vscode-server";
 import { meta as meta_weblate } from "./weblate/meta";
 import { generate as generate_weblate } from "./weblate";
+import { meta as meta_wg_easy } from "./wg-easy/meta";
+import { generate as generate_wg_easy } from "./wg-easy";
 import { meta as meta_whiteboard } from "./whiteboard/meta";
 import { generate as generate_whiteboard } from "./whiteboard";
 import { meta as meta_wikijs } from "./wikijs/meta";
@@ -194,9 +202,12 @@ const templates = [
   { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
+  { slug: "jellyseerr", meta: meta_jellyseerr, generate: generate_jellyseerr },
   { slug: "jirafeau", meta: meta_jirafeau, generate: generate_jirafeau },
   { slug: "kanboard", meta: meta_kanboard, generate: generate_kanboard },
   { slug: "kavita", meta: meta_kavita, generate: generate_kavita },
+  { slug: "lavalink", meta: meta_lavalink, generate: generate_lavalink },
+  { slug: "lenpaste", meta: meta_lenpaste, generate: generate_lenpaste },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
   { slug: "mailcrab", meta: meta_mailcrab, generate: generate_mailcrab },
@@ -239,6 +250,7 @@ const templates = [
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
   { slug: "weblate", meta: meta_weblate, generate: generate_weblate },
+  { slug: "wg-easy", meta: meta_wg_easy, generate: generate_wg_easy },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
   { slug: "wikijs", meta: meta_wikijs, generate: generate_wikijs },
   { slug: "wordpress", meta: meta_wordpress, generate: generate_wordpress },
