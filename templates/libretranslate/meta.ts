@@ -28,7 +28,7 @@ export const meta = {
       "reqLimit",
       "bachLimit",
       "suggestions",
-      "webUI",
+      "disableWebUI",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -64,7 +64,7 @@ export const meta = {
         title: "Translation suggestions",
         default: false,
       },
-      webUI: { type: "boolean", title: "Disable Web UI", default: false },
+      disableWebUI: { type: "boolean", title: "Disable Web UI", default: false },
     },
   },
   logo: "logo.png",
@@ -80,7 +80,7 @@ export type RateRequestLimit = number;
 export type BachTranslationLimit = number;
 export type GoogleAnalytics = string;
 export type TranslationSuggestions = boolean;
-export type WebUI = boolean;
+export type DisableWebUI = boolean;
 
 export interface Input {
   projectName: ProjectName;
@@ -92,5 +92,5 @@ export interface Input {
   bachLimit: BachTranslationLimit;
   googleAnalytics?: GoogleAnalytics;
   suggestions: TranslationSuggestions;
-  webUI: WebUI;
+  disableWebUI: DisableWebUI;
 }
