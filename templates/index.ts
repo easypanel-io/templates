@@ -80,6 +80,8 @@ import { meta as meta_lenpaste } from "./lenpaste/meta";
 import { generate as generate_lenpaste } from "./lenpaste";
 import { meta as meta_libreoffice } from "./libreoffice/meta";
 import { generate as generate_libreoffice } from "./libreoffice";
+import { meta as meta_libretranslate } from "./libretranslate/meta";
+import { generate as generate_libretranslate } from "./libretranslate";
 import { meta as meta_lychee } from "./lychee/meta";
 import { generate as generate_lychee } from "./lychee";
 import { meta as meta_mailcrab } from "./mailcrab/meta";
@@ -216,6 +218,7 @@ const templates = [
   { slug: "lavalink", meta: meta_lavalink, generate: generate_lavalink },
   { slug: "lenpaste", meta: meta_lenpaste, generate: generate_lenpaste },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
+  { slug: "libretranslate", meta: meta_libretranslate, generate: generate_libretranslate },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
   { slug: "mailcrab", meta: meta_mailcrab, generate: generate_mailcrab },
   { slug: "mailhog", meta: meta_mailhog, generate: generate_mailhog },
