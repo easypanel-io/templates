@@ -90,6 +90,8 @@ import { meta as meta_mattermost } from "./mattermost/meta";
 import { generate as generate_mattermost } from "./mattermost";
 import { meta as meta_meilisearch } from "./meilisearch/meta";
 import { generate as generate_meilisearch } from "./meilisearch";
+import { meta as meta_memos } from "./memos/meta";
+import { generate as generate_memos } from "./memos";
 import { meta as meta_metabase } from "./metabase/meta";
 import { generate as generate_metabase } from "./metabase";
 import { meta as meta_metube } from "./metube/meta";
@@ -215,6 +217,7 @@ const templates = [
   { slug: "matomo", meta: meta_matomo, generate: generate_matomo },
   { slug: "mattermost", meta: meta_mattermost, generate: generate_mattermost },
   { slug: "meilisearch", meta: meta_meilisearch, generate: generate_meilisearch },
+  { slug: "memos", meta: meta_memos, generate: generate_memos },
   { slug: "metabase", meta: meta_metabase, generate: generate_metabase },
   { slug: "metube", meta: meta_metube, generate: generate_metube },
   { slug: "miniflux", meta: meta_miniflux, generate: generate_miniflux },
