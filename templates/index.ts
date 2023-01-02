@@ -60,6 +60,8 @@ import { meta as meta_hedgedoc } from "./hedgedoc/meta";
 import { generate as generate_hedgedoc } from "./hedgedoc";
 import { meta as meta_heimdall } from "./heimdall/meta";
 import { generate as generate_heimdall } from "./heimdall";
+import { meta as meta_homarr } from "./homarr/meta";
+import { generate as generate_homarr } from "./homarr";
 import { meta as meta_homeassistant } from "./homeassistant/meta";
 import { generate as generate_homeassistant } from "./homeassistant";
 import { meta as meta_imgproxy } from "./imgproxy/meta";
@@ -208,6 +210,7 @@ const templates = [
   { slug: "hastypaste", meta: meta_hastypaste, generate: generate_hastypaste },
   { slug: "hedgedoc", meta: meta_hedgedoc, generate: generate_hedgedoc },
   { slug: "heimdall", meta: meta_heimdall, generate: generate_heimdall },
+  { slug: "homarr", meta: meta_homarr, generate: generate_homarr },
   { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
