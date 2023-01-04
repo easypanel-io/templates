@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
         `DB_TYPE=mysql`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
         `DB_PORT=3306`,
-        `DB_USER=${input.databaseType}`,
+        `DB_USER=mysql`,
         `DB_PASS=${mysqlPassword}`,
         `DB_NAME=${input.projectName}`,
         `SITE_URL=https://${input.domain},`
@@ -53,7 +53,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: input.databaseType,
+    type: "mysql",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
