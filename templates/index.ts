@@ -44,6 +44,8 @@ import { meta as meta_flame } from "./flame/meta";
 import { generate as generate_flame } from "./flame";
 import { meta as meta_flarum } from "./flarum/meta";
 import { generate as generate_flarum } from "./flarum";
+import { meta as meta_freescout } from "./freescout/meta";
+import { generate as generate_freescout } from "./freescout";
 import { meta as meta_freshrss } from "./freshrss/meta";
 import { generate as generate_freshrss } from "./freshrss";
 import { meta as meta_ghost } from "./ghost/meta";
@@ -202,6 +204,7 @@ const templates = [
   { slug: "firefox", meta: meta_firefox, generate: generate_firefox },
   { slug: "flame", meta: meta_flame, generate: generate_flame },
   { slug: "flarum", meta: meta_flarum, generate: generate_flarum },
+  { slug: "freescout", meta: meta_freescout, generate: generate_freescout },
   { slug: "freshrss", meta: meta_freshrss, generate: generate_freshrss },
   { slug: "ghost", meta: meta_ghost, generate: generate_ghost },
   { slug: "gitea", meta: meta_gitea, generate: generate_gitea },

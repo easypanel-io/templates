@@ -1,15 +1,15 @@
 // Generated using "yarn build-templates"
 
 export const meta = {
-  name: "AnonFiles",
-  description: "AnonFiles is a simple, databaseless PHP file uploader.",
+  name: "AnonUpload",
+  description: "AnonUpload is a simple, databaseless PHP file uploader.",
   instructions: "visit /admin for the administration interface",
   changeLog: [{ date: "2022-12-22", description: "first release" }],
   links: [
-    { label: "Github", url: "https://github.com/supernova3339/anonfiles" },
+    { label: "Github", url: "https://github.com/supernova3339/anonupload" },
     {
       label: "Enviroment Variables",
-      url: "https://github.com/Supernova3339/anonfiles/blob/main/env.md",
+      url: "https://github.com/Supernova3339/anonupload/blob/main/env.md",
     },
   ],
   contributors: [
@@ -31,7 +31,7 @@ export const meta = {
       appServiceName: {
         type: "string",
         title: "App Service Name",
-        default: "anonfiles",
+        default: "anonupload",
       },
       domain: { type: "string", title: "Domain" },
       appServiceImage: {

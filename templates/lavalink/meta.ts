@@ -36,13 +36,13 @@ export const meta = {
 };
 
 export type ProjectName = string;
-export type ServerConnectionPassword = string;
+export type AuthServerPassword = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 
 export interface Input {
   projectName: ProjectName;
-  password: ServerConnectionPassword;
+  password: AuthServerPassword;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
 }
