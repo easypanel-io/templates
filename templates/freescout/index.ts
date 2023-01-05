@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         `DB_USER=mysql`,
         `DB_PASS=${mysqlPassword}`,
         `DB_NAME=${input.projectName}`,
-        `SITE_URL=https://${input.domain},`
+        `SITE_URL=https://${input.domain}`,
       ].join("\n"),
       source: {
         type: "image",
