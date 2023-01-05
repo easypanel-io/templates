@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
         `LT_REQ_LIMIT=${input.reqLimit}`,
         `LT_BATCH_LIMIT=${input.bachLimit}`,
         `LT_GA_ID=${input.googleAnalytics}`,
-        `LT_DISABLE_WEB_UI=${input.disableWebUI}`,
+        `LT_DISABLE_WEB_UI=${input.webUI}`,
       ].join("\n"),
       source: {
         type: "image",
