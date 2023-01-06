@@ -108,6 +108,8 @@ import { meta as meta_phpmyadmin } from "./phpmyadmin/meta";
 import { generate as generate_phpmyadmin } from "./phpmyadmin";
 import { meta as meta_pidgin } from "./pidgin/meta";
 import { generate as generate_pidgin } from "./pidgin";
+import { meta as meta_plausible } from "./plausible/meta";
+import { generate as generate_plausible } from "./plausible";
 import { meta as meta_plex } from "./plex/meta";
 import { generate as generate_plex } from "./plex";
 import { meta as meta_pocketbase } from "./pocketbase/meta";
@@ -214,6 +216,7 @@ const templates = [
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
   { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
+  { slug: "plausible", meta: meta_plausible, generate: generate_plausible },
   { slug: "plex", meta: meta_plex, generate: generate_plex },
   { slug: "pocketbase", meta: meta_pocketbase, generate: generate_pocketbase },
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
