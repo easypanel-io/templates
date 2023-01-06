@@ -4,7 +4,8 @@ export const meta = {
   name: "Plausible",
   description:
     "Plausible Analytics is an open-source project dedicated to making web analytics more privacy-friendly. Our mission is to reduce corporate surveillance by providing an alternative web analytics tool which does not come from the AdTech world.",
-  changeLog: [{ date: "2022-12-13", description: "first release" }],
+  instructions: null,
+  changeLog: [{ date: "2023-1-5", description: "first release" }],
   links: [
     { label: "Website", url: "https://plausible.io" },
     { label: "Documentation", url: "https://plausible.io/docs" },
