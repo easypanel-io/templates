@@ -6,13 +6,7 @@ export const meta = {
     "Welcome to Roadmap, the open-source software for your roadmapping needs.",
   instructions: null,
   changeLog: [{ date: "2023-1-6", description: "first release" }],
-  links: [
-    {
-      label: "Documentation",
-      url: "https://github.com/boypt/simple-torrent/wiki",
-    },
-    { label: "Github", url: "https://github.com/boypt/simple-torrent" },
-  ],
+  links: [{ label: "Github", url: "https://github.com/ploi-deploy/roadmap" }],
   contributors: [
     { name: "Supernova3339", url: "https://github.com/Supernova3339" },
     { name: "Mxrcy", url: "https://github.com/DrMxrcy" },
