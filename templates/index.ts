@@ -148,6 +148,8 @@ import { meta as meta_restreamer } from "./restreamer/meta";
 import { generate as generate_restreamer } from "./restreamer";
 import { meta as meta_rocketchat } from "./rocketchat/meta";
 import { generate as generate_rocketchat } from "./rocketchat";
+import { meta as meta_serpbear } from "./serpbear/meta";
+import { generate as generate_serpbear } from "./serpbear";
 import { meta as meta_simpletorrent } from "./simpletorrent/meta";
 import { generate as generate_simpletorrent } from "./simpletorrent";
 import { meta as meta_soketi } from "./soketi/meta";
@@ -254,6 +256,7 @@ const templates = [
   { slug: "remmina", meta: meta_remmina, generate: generate_remmina },
   { slug: "restreamer", meta: meta_restreamer, generate: generate_restreamer },
   { slug: "rocketchat", meta: meta_rocketchat, generate: generate_rocketchat },
+  { slug: "serpbear", meta: meta_serpbear, generate: generate_serpbear },
   { slug: "simpletorrent", meta: meta_simpletorrent, generate: generate_simpletorrent },
   { slug: "soketi", meta: meta_soketi, generate: generate_soketi },
   { slug: "sonarr", meta: meta_sonarr, generate: generate_sonarr },
