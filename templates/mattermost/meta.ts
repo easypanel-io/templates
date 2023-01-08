@@ -12,6 +12,7 @@ export const meta = {
       description: "ablity to define custom docker image version",
     },
     { date: "2022-11-29", description: "Update mattermost to 7.5.1" },
+    { date: "2023-1-8", description: "Update mattermost to 7.7" },
   ],
   links: [
     { label: "Website", url: "https://mattermost.com/" },
@@ -30,7 +31,6 @@ export const meta = {
       "domain",
       "appServiceName",
       "appServiceImage",
-      "appServiceImage",
       "databaseServiceName",
     ],
     properties: {
@@ -44,7 +44,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "mattermost/mattermost-team-edition:release-7.5.1",
+        default: "mattermost/mattermost-team-edition:release-7.7",
       },
       databaseServiceName: {
         type: "string",

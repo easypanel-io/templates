@@ -30,7 +30,6 @@ export const meta = {
       "databaseServiceName",
       "adminEmail",
       "adminPassword",
-      "displayErrors",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
