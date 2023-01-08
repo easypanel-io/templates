@@ -18,6 +18,9 @@ export const meta = {
       "appServiceName",
       "appServiceImage",
       "databaseServiceName",
+      "adminNotifications",
+      "appLanguage",
+      "appTimezone",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -36,6 +39,13 @@ export const meta = {
         title: "Database Service Name",
         default: "ploi-roadmap-db",
       },
+      adminNotifications: {
+        type: "boolean",
+        title: "Admin Notifications",
+        default: true,
+      },
+      appLanguage: { type: "string", title: "Language", default: "en" },
+      appTimezone: { type: "string", title: "Timezone", default: "utc" },
     },
   },
   logo: null,
@@ -46,10 +56,16 @@ export type ProjectName = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 export type DatabaseServiceName = string;
+export type AdminNotifications = boolean;
+export type Language = string;
+export type Timezone = string;
 
 export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
+  adminNotifications: AdminNotifications;
+  appLanguage: Language;
+  appTimezone: Timezone;
 }

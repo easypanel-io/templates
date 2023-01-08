@@ -19,6 +19,9 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - adminNotifications
+    - appLanguage
+    - appTimezone
   properties:
     projectName:
       type: string
@@ -35,3 +38,15 @@ schema:
       type: string
       title: Database Service Name
       default: ploi-roadmap-db
+    adminNotifications:
+      type: boolean
+      title: Admin Notifications
+      default: true
+    appLanguage:
+      type: string
+      title: Language
+      default: en
+    appTimezone:
+      type: string
+      title: Timezone
+      default: utc
