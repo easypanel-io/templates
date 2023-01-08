@@ -5,10 +5,10 @@ export const meta = {
   description:
     "Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place. It integrates with the services you use to display information on the homepage (E.g. Show upcoming Sonarr/Radarr releases).For a full list of integrations, head over to our documentation",
   instructions: null,
-  changeLog: [{ date: "2022-12-20", description: "first release" }],
+  changeLog: [{ date: "2022-12-20", description: "First Release" }],
   links: [
     { label: "Website", url: "https://homarr.dev/" },
-    { label: "Documentation", url: "https://homarr.dev/docs/" },
+    { label: "Documentation", url: "https://homarr.dev/docs" },
     { label: "Github", url: "https://github.com/ajnart/homarr" },
   ],
   contributors: [{ name: "DrMxrcy", url: "https://github.com/DrMxrcy" }],

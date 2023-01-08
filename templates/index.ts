@@ -76,6 +76,8 @@ import { meta as meta_kanboard } from "./kanboard/meta";
 import { generate as generate_kanboard } from "./kanboard";
 import { meta as meta_kavita } from "./kavita/meta";
 import { generate as generate_kavita } from "./kavita";
+import { meta as meta_komga } from "./komga/meta";
+import { generate as generate_komga } from "./komga";
 import { meta as meta_lavalink } from "./lavalink/meta";
 import { generate as generate_lavalink } from "./lavalink";
 import { meta as meta_lenpaste } from "./lenpaste/meta";
@@ -220,6 +222,7 @@ const templates = [
   { slug: "jirafeau", meta: meta_jirafeau, generate: generate_jirafeau },
   { slug: "kanboard", meta: meta_kanboard, generate: generate_kanboard },
   { slug: "kavita", meta: meta_kavita, generate: generate_kavita },
+  { slug: "komga", meta: meta_komga, generate: generate_komga },
   { slug: "lavalink", meta: meta_lavalink, generate: generate_lavalink },
   { slug: "lenpaste", meta: meta_lenpaste, generate: generate_lenpaste },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },

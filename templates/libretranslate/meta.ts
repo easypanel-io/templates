@@ -64,7 +64,11 @@ export const meta = {
         title: "Translation suggestions",
         default: false,
       },
-      disableWebUI: { type: "boolean", title: "Disable Web UI", default: false },
+      disableWebUI: {
+        type: "boolean",
+        title: "Disable Web UI",
+        default: false,
+      },
     },
   },
   logo: "logo.png",
