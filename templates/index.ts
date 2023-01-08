@@ -16,6 +16,8 @@ import { meta as meta_budibase } from "./budibase/meta";
 import { generate as generate_budibase } from "./budibase";
 import { meta as meta_changedetection } from "./changedetection/meta";
 import { generate as generate_changedetection } from "./changedetection";
+import { meta as meta_commento } from "./commento/meta";
+import { generate as generate_commento } from "./commento";
 import { meta as meta_dashy } from "./dashy/meta";
 import { generate as generate_dashy } from "./dashy";
 import { meta as meta_directus } from "./directus/meta";
@@ -196,6 +198,7 @@ const templates = [
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
   { slug: "budibase", meta: meta_budibase, generate: generate_budibase },
   { slug: "changedetection", meta: meta_changedetection, generate: generate_changedetection },
+  { slug: "commento", meta: meta_commento, generate: generate_commento },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
   { slug: "domainmod", meta: meta_domainmod, generate: generate_domainmod },
