@@ -23,7 +23,7 @@ schema:
     - reqLimit
     - bachLimit
     - suggestions
-    - webUI
+    - disableWebUI
   properties:
     projectName:
       type: string
@@ -59,7 +59,7 @@ schema:
       type: boolean
       title: Translation suggestions
       default: false
-    webUI:
+    disableWebUI:
       type: boolean
       title: Disable Web UI
       default: false      
