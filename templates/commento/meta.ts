@@ -32,7 +32,11 @@ export const meta = {
         default: "commento",
       },
       domain: { type: "string", title: "Domain" },
-      appServiceImage: { type: "string", title: "App Service Image" },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "registry.gitlab.com/commento/commento",
+      },
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
