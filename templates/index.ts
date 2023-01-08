@@ -158,6 +158,8 @@ import { meta as meta_soketi } from "./soketi/meta";
 import { generate as generate_soketi } from "./soketi";
 import { meta as meta_sonarr } from "./sonarr/meta";
 import { generate as generate_sonarr } from "./sonarr";
+import { meta as meta_sshwifty } from "./sshwifty/meta";
+import { generate as generate_sshwifty } from "./sshwifty";
 import { meta as meta_statping_ng } from "./statping-ng/meta";
 import { generate as generate_statping_ng } from "./statping-ng";
 import { meta as meta_strapi } from "./strapi/meta";
@@ -263,6 +265,7 @@ const templates = [
   { slug: "simpletorrent", meta: meta_simpletorrent, generate: generate_simpletorrent },
   { slug: "soketi", meta: meta_soketi, generate: generate_soketi },
   { slug: "sonarr", meta: meta_sonarr, generate: generate_sonarr },
+  { slug: "sshwifty", meta: meta_sshwifty, generate: generate_sshwifty },
   { slug: "statping-ng", meta: meta_statping_ng, generate: generate_statping_ng },
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
