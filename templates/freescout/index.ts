@@ -11,11 +11,11 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `ADMIN_EMAIL=changeme@easypanel.io`,
-        `ADMIN_FIRST_NAME=Admin`,
+        `ADMIN_EMAIL=${input.adminEmail}`,
+        `ADMIN_FIRST_NAME=${input.appServiceName}`,
         `ADMIN_LAST_NAME=User`,
-        `ADMIN_PASS=changeme`,
-        `APPLICATION_NAME=Freescout`,
+        `ADMIN_PASS=${input.adminPassword}`,
+        `APPLICATION_NAME=${input.appServiceName}`,
         `DB_TYPE=mysql`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
         `DB_PORT=3306`,
@@ -23,6 +23,9 @@ export function generate(input: Input): Output {
         `DB_PASS=${mysqlPassword}`,
         `DB_NAME=${input.projectName}`,
         `SITE_URL=https://${input.domain}`,
+        `APP_FORCE_HTTPS=true`,
+        `ENABLE_SSL_PROXY=true`,
+        `DISPLAY_ERRORS=false`
       ].join("\n"),
       source: {
         type: "image",
@@ -42,6 +45,11 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "data",
           mountPath: "/data",
+        },
+        {
+          type: "volume",
+          name: "modules",
+          mountPath: "/assets/modules"
         },
       ],
           domains: [

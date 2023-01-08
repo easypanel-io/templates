@@ -22,6 +22,9 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - adminEmail
+    - adminPassword
+    - displayErrors
   properties:
     projectName:
       type: string
@@ -41,3 +44,11 @@ schema:
       type: string
       title: Database Service Name
       default: freescout-db
+    adminEmail:
+      type: string
+      title: Email
+      default: changeme@easypanel.io
+    adminPassword:
+      type: string
+      title: Password
+      default: changeme

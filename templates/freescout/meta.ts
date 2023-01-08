@@ -28,6 +28,9 @@ export const meta = {
       "appServiceName",
       "appServiceImage",
       "databaseServiceName",
+      "adminEmail",
+      "adminPassword",
+      "displayErrors",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -47,6 +50,12 @@ export const meta = {
         title: "Database Service Name",
         default: "freescout-db",
       },
+      adminEmail: {
+        type: "string",
+        title: "Email",
+        default: "changeme@easypanel.io",
+      },
+      adminPassword: { type: "string", title: "Password", default: "changeme" },
     },
   },
   logo: "logo.png",
@@ -58,6 +67,8 @@ export type Domain = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 export type DatabaseServiceName = string;
+export type Email = string;
+export type Password = string;
 
 export interface Input {
   projectName: ProjectName;
@@ -65,4 +76,6 @@ export interface Input {
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
+  adminEmail: Email;
+  adminPassword: Password;
 }
