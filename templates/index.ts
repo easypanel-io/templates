@@ -136,6 +136,8 @@ import { meta as meta_plausible } from "./plausible/meta";
 import { generate as generate_plausible } from "./plausible";
 import { meta as meta_plex } from "./plex/meta";
 import { generate as generate_plex } from "./plex";
+import { meta as meta_ploi_roadmap } from "./ploi-roadmap/meta";
+import { generate as generate_ploi_roadmap } from "./ploi-roadmap";
 import { meta as meta_pocketbase } from "./pocketbase/meta";
 import { generate as generate_pocketbase } from "./pocketbase";
 import { meta as meta_portainer } from "./portainer/meta";
@@ -264,6 +266,7 @@ const templates = [
   { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
   { slug: "plausible", meta: meta_plausible, generate: generate_plausible },
   { slug: "plex", meta: meta_plex, generate: generate_plex },
+  { slug: "ploi-roadmap", meta: meta_ploi_roadmap, generate: generate_ploi_roadmap },
   { slug: "pocketbase", meta: meta_pocketbase, generate: generate_pocketbase },
   { slug: "portainer", meta: meta_portainer, generate: generate_portainer },
   { slug: "postgres-backup", meta: meta_postgres_backup, generate: generate_postgres_backup },
