@@ -22,7 +22,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "answer-data",
           mountPath: "/data",
-
         }
       ]
     },

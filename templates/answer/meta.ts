@@ -9,6 +9,7 @@ export const meta = {
   links: [
     { label: "Documentation", url: "https://answer.dev/docs" },
     { label: "Github", url: "https://github.com/answerdev/answer" },
+    { label: "Website", url: "https://answer.dev/" },
   ],
   contributors: [
     { name: "Supernova3339", url: "https://github.com/Supernova3339" },
@@ -30,7 +31,7 @@ export const meta = {
       },
     },
   },
-  logo: null,
+  logo: "logo.png",
   screenshots: ["screenshot.png"],
 };
 
