@@ -29,7 +29,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       proxy: {
-        port: 8443,
+        port: 8080,
         secure: true,
       },
       mounts: [
