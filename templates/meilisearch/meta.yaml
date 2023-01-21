@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getmeili/meilisearch:v0.29
+      default: getmeili/meilisearch:v0.30
     dataVolumeName:
       type: string
       title: Meilisearch Database Volume Name

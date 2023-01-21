@@ -10,6 +10,7 @@ export const meta = {
     { label: "Website", url: "https://meilisearch.com/" },
     { label: "Documentation", url: "https://docs.meilisearch.com/" },
     { label: "Github", url: "https://github.com/meilisearch/meilisearch/" },
+    { label: "Discord", url: "https://discord.gg/meilisearch" },
   ],
   contributors: [{ name: "Rubén Robles", url: "https://github.com/D8vjork" }],
   schema: {
@@ -31,7 +32,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "getmeili/meilisearch:v0.29",
+        default: "getmeili/meilisearch:v0.30",
       },
       dataVolumeName: {
         type: "string",
