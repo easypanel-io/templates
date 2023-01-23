@@ -28,7 +28,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "linuxserver/hedgedoc:1.9.4",
+        default: "linuxserver/hedgedoc:1.9.6",
       },
     },
   },
