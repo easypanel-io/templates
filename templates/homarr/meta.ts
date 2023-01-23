@@ -25,7 +25,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "ghcr.io/ajnart/homarr:0.11.1",
+        default: "ghcr.io/ajnart/homarr:0.11.2",
       },
       serviceTimezone: {
         type: "string",
