@@ -24,6 +24,7 @@ export const meta = {
       "googleClientSecret",
       "databaseServiceName",
       "redisServiceName",
+      "minioServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -52,12 +53,23 @@ export const meta = {
         title: "Redis Service Name",
         default: "outline-redis",
       },
-      googleClient: { type: "string", title: "Google Client ID" },
-      googleClientSecret: { type: "string", title: "Google Client Secret" },
+      googleClient: {
+        type: "string",
+        title: "Google Client ID",
+      },
+      googleClientSecret: {
+        type: "string",
+        title: "Google Client Secret",
+      },
+      minioServiceName: {
+        type: "string",
+        title: "Minio Service Name",
+        default: "outline-minio",
+      },
     },
   },
   logo: "logo.png",
-  screenshots: [],
+  screenshots: ["screenshot.png"],
 };
 
 export type ProjectName = string;
@@ -71,6 +83,7 @@ export type DatabaseServiceName = string;
 export type RedisServiceName = string;
 export type GoogleClientID = string;
 export type GoogleClientSecret = string;
+export type MinioServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
@@ -81,4 +94,5 @@ export interface Input {
   redisServiceName: RedisServiceName;
   googleClient: GoogleClientID;
   googleClientSecret: GoogleClientSecret;
+  minioServiceName: MinioServiceName;
 }

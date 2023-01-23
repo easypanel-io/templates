@@ -75,7 +75,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: "outline-minio",
+      serviceName: input.minioServiceName,
       env: [
         `MINIO_ROOT_USER=minio`,
         `MINIO_ROOT_PASSWORD=${minioPassword}`,

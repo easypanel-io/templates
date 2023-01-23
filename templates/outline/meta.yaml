@@ -25,6 +25,7 @@ schema:
     - googleClientSecret
     - databaseServiceName
     - redisServiceName
+    - minioServiceName
 
   properties:
     projectName:
@@ -56,3 +57,7 @@ schema:
     googleClientSecret:
       type: string
       title: Google Client Secret
+    minioServiceName:
+      type: string
+      title: Minio Service Name
+      default: outline-minio
