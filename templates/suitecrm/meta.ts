@@ -6,7 +6,14 @@ export const meta = {
     "SuiteCRM is a completely open source, enterprise-grade Customer Relationship Management (CRM) application.",
   instructions: null,
   changeLog: [{ date: "2023-1-12", description: "first release" }],
-  links: [{ label: "Github", url: "https://github.com/salesagility/SuiteCRM" }],
+  links: [
+    { label: "Website", url: "https://suitecrm.com/" },
+    {
+      label: "Documentation",
+      url: "https://docs.suitecrm.com/",
+    },
+    { label: "Github", url: "https://github.com/salesagility/SuiteCRM" },
+  ],
   contributors: [{ name: "Mxrcy", url: "https://github.com/DrMxrcy" }],
   schema: {
     type: "object",
@@ -31,7 +38,7 @@ export const meta = {
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "suitecrm-roadmap-db",
+        default: "suitecrm-db",
       },
     },
   },
