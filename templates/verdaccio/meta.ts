@@ -29,7 +29,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "verdaccio/verdaccio:5.15",
+        default: "verdaccio/verdaccio:5.19.1",
       },
     },
   },

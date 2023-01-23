@@ -42,7 +42,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "weblate/weblate:4.14.2-1",
+        default: "weblate/weblate:4.15.1-1",
       },
       databaseServiceName: {
         type: "string",
