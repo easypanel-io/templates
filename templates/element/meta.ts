@@ -30,7 +30,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "vectorim/element-web:v1.11.12",
+        default: "vectorim/element-web:v1.11.20",
       },
     },
   },
