@@ -59,7 +59,15 @@ export function generate(input: Input): Output {
         `POSTGRES_DB=postgres`,
         `POSTGRES_PASSWORD=${databasePassword}`,
         `POSTGRES_USER=odoo`,
+        `PGDATA=/var/lib/postgresql/data/pgdata`,
       ].join("\n"),
+      mounts: [
+        {
+          type: "volume",
+          name: "odoo-db-data",
+          mountPath: "/var/lib/postgresql/data/pgdata",
+        },
+      ],
     },
   });
 
