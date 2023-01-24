@@ -26,7 +26,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "datarhei/restreamer:2.3.0",
+        default: "datarhei/restreamer:2.4.2",
       },
     },
   },

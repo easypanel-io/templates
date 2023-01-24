@@ -27,7 +27,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "linuxserver/sonarr:3.0.9.1549",
+        default: "linuxserver/sonarr:version-3.0.9.1549",
       },
     },
   },

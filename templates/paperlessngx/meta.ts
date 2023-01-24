@@ -36,7 +36,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "paperlessngx/paperless-ngx:1.9.2",
+        default: "paperlessngx/paperless-ngx:1.11.3",
       },
       redisServiceName: {
         type: "string",
