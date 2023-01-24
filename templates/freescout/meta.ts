@@ -43,7 +43,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "tiredofit/freescout:php8.1-1.16.15",
+        default: "tiredofit/freescout:php8.1-1.16.21",
       },
       databaseServiceName: {
         type: "string",
