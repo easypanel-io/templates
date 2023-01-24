@@ -72,6 +72,8 @@ import { meta as meta_homarr } from "./homarr/meta";
 import { generate as generate_homarr } from "./homarr";
 import { meta as meta_homeassistant } from "./homeassistant/meta";
 import { generate as generate_homeassistant } from "./homeassistant";
+import { meta as meta_humhub } from "./humhub/meta";
+import { generate as generate_humhub } from "./humhub";
 import { meta as meta_imgproxy } from "./imgproxy/meta";
 import { generate as generate_imgproxy } from "./imgproxy";
 import { meta as meta_jellyfin } from "./jellyfin/meta";
@@ -238,6 +240,7 @@ const templates = [
   { slug: "heimdall", meta: meta_heimdall, generate: generate_heimdall },
   { slug: "homarr", meta: meta_homarr, generate: generate_homarr },
   { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
+  { slug: "humhub", meta: meta_humhub, generate: generate_humhub },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
   { slug: "jellyseerr", meta: meta_jellyseerr, generate: generate_jellyseerr },
