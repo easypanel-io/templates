@@ -194,6 +194,8 @@ import { meta as meta_verdaccio } from "./verdaccio/meta";
 import { generate as generate_verdaccio } from "./verdaccio";
 import { meta as meta_vscode_server } from "./vscode-server/meta";
 import { generate as generate_vscode_server } from "./vscode-server";
+import { meta as meta_wakatime } from "./wakatime/meta";
+import { generate as generate_wakatime } from "./wakatime";
 import { meta as meta_weblate } from "./weblate/meta";
 import { generate as generate_weblate } from "./weblate";
 import { meta as meta_wg_easy } from "./wg-easy/meta";
@@ -305,6 +307,7 @@ const templates = [
   { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
+  { slug: "wakatime", meta: meta_wakatime, generate: generate_wakatime },
   { slug: "weblate", meta: meta_weblate, generate: generate_weblate },
   { slug: "wg-easy", meta: meta_wg_easy, generate: generate_wg_easy },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
