@@ -26,6 +26,8 @@ import { meta as meta_dashy } from "./dashy/meta";
 import { generate as generate_dashy } from "./dashy";
 import { meta as meta_directus } from "./directus/meta";
 import { generate as generate_directus } from "./directus";
+import { meta as meta_documize } from "./documize/meta";
+import { generate as generate_documize } from "./documize";
 import { meta as meta_domainmod } from "./domainmod/meta";
 import { generate as generate_domainmod } from "./domainmod";
 import { meta as meta_drone_runner } from "./drone-runner/meta";
@@ -221,6 +223,7 @@ const templates = [
   { slug: "commento", meta: meta_commento, generate: generate_commento },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
+  { slug: "documize", meta: meta_documize, generate: generate_documize },
   { slug: "domainmod", meta: meta_domainmod, generate: generate_domainmod },
   { slug: "drone-runner", meta: meta_drone_runner, generate: generate_drone_runner },
   { slug: "drone", meta: meta_drone, generate: generate_drone },
