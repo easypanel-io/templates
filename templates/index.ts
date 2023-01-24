@@ -204,6 +204,8 @@ import { meta as meta_wikijs } from "./wikijs/meta";
 import { generate as generate_wikijs } from "./wikijs";
 import { meta as meta_wordpress } from "./wordpress/meta";
 import { generate as generate_wordpress } from "./wordpress";
+import { meta as meta_zipline } from "./zipline/meta";
+import { generate as generate_zipline } from "./zipline";
 
 const templates = [
   { slug: "ackee", meta: meta_ackee, generate: generate_ackee },
@@ -308,6 +310,7 @@ const templates = [
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
   { slug: "wikijs", meta: meta_wikijs, generate: generate_wikijs },
   { slug: "wordpress", meta: meta_wordpress, generate: generate_wordpress },
+  { slug: "zipline", meta: meta_zipline, generate: generate_zipline },
 ];
 
 export default templates;
