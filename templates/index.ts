@@ -26,6 +26,8 @@ import { meta as meta_commento } from "./commento/meta";
 import { generate as generate_commento } from "./commento";
 import { meta as meta_dashy } from "./dashy/meta";
 import { generate as generate_dashy } from "./dashy";
+import { meta as meta_deluge } from "./deluge/meta";
+import { generate as generate_deluge } from "./deluge";
 import { meta as meta_directus } from "./directus/meta";
 import { generate as generate_directus } from "./directus";
 import { meta as meta_documize } from "./documize/meta";
@@ -229,6 +231,7 @@ const templates = [
   { slug: "codex-docs", meta: meta_codex_docs, generate: generate_codex_docs },
   { slug: "commento", meta: meta_commento, generate: generate_commento },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
+  { slug: "deluge", meta: meta_deluge, generate: generate_deluge },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
   { slug: "documize", meta: meta_documize, generate: generate_documize },
   { slug: "domainmod", meta: meta_domainmod, generate: generate_domainmod },
