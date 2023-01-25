@@ -10,21 +10,21 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [
-        `NEXTAUTH_SECRET=${appkey}`,
-        `NEXTAUTH_URL=${input.domain}`,
-        `DELUGEURL=${input.delugeUrl}`,
-        `DELUGE_PASSWORD=${input.delugePassword}`,
-        `BARRAGE_PASSWORD=${input.barragePassword}`,
-      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
       proxy: {
-        port: 3000,
+        port: 5006,
         secure: true,
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/data",
+        },
+      ],
     },
   });
 
