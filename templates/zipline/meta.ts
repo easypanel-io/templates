@@ -4,7 +4,8 @@ export const meta = {
   name: "Zipline",
   description:
     "A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!",
-  instructions: `After installing Zipline for the first time, you may login to the dashboard with the username "administrator" and the password "password".`,
+  instructions:
+    'After installing Zipline for the first time, you may login to the dashboard with the username "administrator" and the password "password".',
   changeLog: [{ date: "2023-01-20", description: "First Release" }],
   links: [
     { label: "Website", url: "https://zipline.diced.tech/" },

@@ -29,6 +29,18 @@ export function generate(input: Input): Output {
           target: 6881,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/config",
+        },
+        {
+          type: "volume",
+          name: "downloads",
+          mountPath: "/downloads",
+        },
+      ]
     },
   });
 
