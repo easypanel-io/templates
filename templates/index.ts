@@ -186,6 +186,8 @@ import { meta as meta_statping_ng } from "./statping-ng/meta";
 import { generate as generate_statping_ng } from "./statping-ng";
 import { meta as meta_strapi } from "./strapi/meta";
 import { generate as generate_strapi } from "./strapi";
+import { meta as meta_typesense } from "./typesense/meta";
+import { generate as generate_typesense } from "./typesense";
 import { meta as meta_umami } from "./umami/meta";
 import { generate as generate_umami } from "./umami";
 import { meta as meta_uptimekuma } from "./uptimekuma/meta";
@@ -305,6 +307,7 @@ const templates = [
   { slug: "sshwifty", meta: meta_sshwifty, generate: generate_sshwifty },
   { slug: "statping-ng", meta: meta_statping_ng, generate: generate_statping_ng },
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
+  { slug: "typesense", meta: meta_typesense, generate: generate_typesense },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
   { slug: "uptimekuma", meta: meta_uptimekuma, generate: generate_uptimekuma },
   { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
