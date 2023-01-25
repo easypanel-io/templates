@@ -25,7 +25,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "baserow/baserow:1.12.1",
+        default: "baserow/baserow:1.14.0",
       },
     },
   },

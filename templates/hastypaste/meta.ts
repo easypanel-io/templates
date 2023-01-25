@@ -30,7 +30,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "ghcr.io/enchant97/hasty-paste:1.7.0",
+        default: "ghcr.io/enchant97/hasty-paste:1.8.0",
       },
       redisServiceName: {
         type: "string",

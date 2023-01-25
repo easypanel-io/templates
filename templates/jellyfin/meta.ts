@@ -28,7 +28,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "jellyfin/jellyfin:10.8.5",
+        default: "jellyfin/jellyfin:10.8.9",
       },
     },
   },
