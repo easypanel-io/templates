@@ -8,6 +8,8 @@ import { meta as meta_anonupload } from "./anonupload/meta";
 import { generate as generate_anonupload } from "./anonupload";
 import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
+import { meta as meta_authorizer } from "./authorizer/meta";
+import { generate as generate_authorizer } from "./authorizer";
 import { meta as meta_barrage } from "./barrage/meta";
 import { generate as generate_barrage } from "./barrage";
 import { meta as meta_baserow } from "./baserow/meta";
@@ -222,6 +224,7 @@ const templates = [
   { slug: "adminer", meta: meta_adminer, generate: generate_adminer },
   { slug: "anonupload", meta: meta_anonupload, generate: generate_anonupload },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
+  { slug: "authorizer", meta: meta_authorizer, generate: generate_authorizer },
   { slug: "barrage", meta: meta_barrage, generate: generate_barrage },
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
