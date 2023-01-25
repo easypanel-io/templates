@@ -27,7 +27,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "binwiederhier/ntfy:v1.29.1",
+        default: "binwiederhier/ntfy:v1.30.1",
       },
     },
   },

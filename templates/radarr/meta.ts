@@ -27,7 +27,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "linuxserver/radarr:4.2.4.6635-ls153",
+        default: "linuxserver/radarr:version-4.3.2.6857",
       },
     },
   },

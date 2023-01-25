@@ -23,7 +23,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "niruix/sshwifty:0.2.31-beta-release",
+        default: "niruix/sshwifty:0.2.32-beta-release",
       },
     },
   },

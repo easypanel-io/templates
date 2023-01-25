@@ -1,0 +1,73 @@
+// Generated using "yarn build-templates"
+
+export const meta = {
+  name: "Chatwoot",
+  description:
+    "Customer engagement suite, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.",
+  instructions: null,
+  changeLog: [{ date: "2023-1-22", description: "first release" }],
+  links: [
+    { label: "Documentation", url: "https://www.chatwoot.com/help-center" },
+    { label: "Github", url: "https://github.com/chatwoot/" },
+  ],
+  contributors: [
+    { name: "Supernova3339", url: "https://github.com/Supernova3339" },
+  ],
+  schema: {
+    type: "object",
+    required: [
+      "projectName",
+      "domain",
+      "defaultLocale",
+      "appServiceName",
+      "appServiceImage",
+      "databaseServiceName",
+      "redisServiceName",
+    ],
+    properties: {
+      projectName: { type: "string", title: "Project Name" },
+      domain: { type: "string", title: "Domain" },
+      defaultLocale: { type: "string", title: "Default Locale", default: "en" },
+      appServiceName: {
+        type: "string",
+        title: "App Service Name",
+        default: "chatwoot",
+      },
+      appServiceImage: {
+        type: "string",
+        title: "App Service Image",
+        default: "chatwoot/chatwoot:v2.13.0-ce",
+      },
+      databaseServiceName: {
+        type: "string",
+        title: "Database Service Name",
+        default: "chatwoot-db",
+      },
+      redisServiceName: {
+        type: "string",
+        title: "Redis Service Name",
+        default: "chatwoot-redis",
+      },
+    },
+  },
+  logo: "logo.svg",
+  screenshots: ["screenshot.png"],
+};
+
+export type ProjectName = string;
+export type Domain = string;
+export type DefaultLocale = string;
+export type AppServiceName = string;
+export type AppServiceImage = string;
+export type DatabaseServiceName = string;
+export type RedisServiceName = string;
+
+export interface Input {
+  projectName: ProjectName;
+  domain: Domain;
+  defaultLocale: DefaultLocale;
+  appServiceName: AppServiceName;
+  appServiceImage: AppServiceImage;
+  databaseServiceName: DatabaseServiceName;
+  redisServiceName: RedisServiceName;
+}

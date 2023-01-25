@@ -29,7 +29,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "fallenbagel/jellyseerr:1.2.1",
+        default: "fallenbagel/jellyseerr:1.3.0",
       },
     },
   },

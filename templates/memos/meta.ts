@@ -28,7 +28,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "neosmemo/memos:0.8.3",
+        default: "neosmemo/memos:0.10.2",
       },
       serviceTimezone: {
         type: "string",

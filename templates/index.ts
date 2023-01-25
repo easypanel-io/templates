@@ -8,6 +8,10 @@ import { meta as meta_anonupload } from "./anonupload/meta";
 import { generate as generate_anonupload } from "./anonupload";
 import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
+import { meta as meta_authorizer } from "./authorizer/meta";
+import { generate as generate_authorizer } from "./authorizer";
+import { meta as meta_barrage } from "./barrage/meta";
+import { generate as generate_barrage } from "./barrage";
 import { meta as meta_baserow } from "./baserow/meta";
 import { generate as generate_baserow } from "./baserow";
 import { meta as meta_bookstack } from "./bookstack/meta";
@@ -16,12 +20,20 @@ import { meta as meta_budibase } from "./budibase/meta";
 import { generate as generate_budibase } from "./budibase";
 import { meta as meta_changedetection } from "./changedetection/meta";
 import { generate as generate_changedetection } from "./changedetection";
+import { meta as meta_chatwoot } from "./chatwoot/meta";
+import { generate as generate_chatwoot } from "./chatwoot";
+import { meta as meta_codex_docs } from "./codex-docs/meta";
+import { generate as generate_codex_docs } from "./codex-docs";
 import { meta as meta_commento } from "./commento/meta";
 import { generate as generate_commento } from "./commento";
 import { meta as meta_dashy } from "./dashy/meta";
 import { generate as generate_dashy } from "./dashy";
+import { meta as meta_deluge } from "./deluge/meta";
+import { generate as generate_deluge } from "./deluge";
 import { meta as meta_directus } from "./directus/meta";
 import { generate as generate_directus } from "./directus";
+import { meta as meta_documize } from "./documize/meta";
+import { generate as generate_documize } from "./documize";
 import { meta as meta_domainmod } from "./domainmod/meta";
 import { generate as generate_domainmod } from "./domainmod";
 import { meta as meta_drone_runner } from "./drone-runner/meta";
@@ -68,6 +80,8 @@ import { meta as meta_homarr } from "./homarr/meta";
 import { generate as generate_homarr } from "./homarr";
 import { meta as meta_homeassistant } from "./homeassistant/meta";
 import { generate as generate_homeassistant } from "./homeassistant";
+import { meta as meta_humhub } from "./humhub/meta";
+import { generate as generate_humhub } from "./humhub";
 import { meta as meta_imgproxy } from "./imgproxy/meta";
 import { generate as generate_imgproxy } from "./imgproxy";
 import { meta as meta_jellyfin } from "./jellyfin/meta";
@@ -90,6 +104,8 @@ import { meta as meta_libreoffice } from "./libreoffice/meta";
 import { generate as generate_libreoffice } from "./libreoffice";
 import { meta as meta_libretranslate } from "./libretranslate/meta";
 import { generate as generate_libretranslate } from "./libretranslate";
+import { meta as meta_limesurvey } from "./limesurvey/meta";
+import { generate as generate_limesurvey } from "./limesurvey";
 import { meta as meta_lychee } from "./lychee/meta";
 import { generate as generate_lychee } from "./lychee";
 import { meta as meta_mailcrab } from "./mailcrab/meta";
@@ -126,6 +142,10 @@ import { meta as meta_nzbget } from "./nzbget/meta";
 import { generate as generate_nzbget } from "./nzbget";
 import { meta as meta_openspeedtest } from "./openspeedtest/meta";
 import { generate as generate_openspeedtest } from "./openspeedtest";
+import { meta as meta_outline } from "./outline/meta";
+import { generate as generate_outline } from "./outline";
+import { meta as meta_oxigen } from "./oxigen/meta";
+import { generate as generate_oxigen } from "./oxigen";
 import { meta as meta_paperlessngx } from "./paperlessngx/meta";
 import { generate as generate_paperlessngx } from "./paperlessngx";
 import { meta as meta_phpmyadmin } from "./phpmyadmin/meta";
@@ -178,6 +198,8 @@ import { meta as meta_strapi } from "./strapi/meta";
 import { generate as generate_strapi } from "./strapi";
 import { meta as meta_suitecrm } from "./suitecrm/meta";
 import { generate as generate_suitecrm } from "./suitecrm";
+import { meta as meta_typesense } from "./typesense/meta";
+import { generate as generate_typesense } from "./typesense";
 import { meta as meta_umami } from "./umami/meta";
 import { generate as generate_umami } from "./umami";
 import { meta as meta_uptimekuma } from "./uptimekuma/meta";
@@ -188,6 +210,8 @@ import { meta as meta_verdaccio } from "./verdaccio/meta";
 import { generate as generate_verdaccio } from "./verdaccio";
 import { meta as meta_vscode_server } from "./vscode-server/meta";
 import { generate as generate_vscode_server } from "./vscode-server";
+import { meta as meta_wakatime } from "./wakatime/meta";
+import { generate as generate_wakatime } from "./wakatime";
 import { meta as meta_weblate } from "./weblate/meta";
 import { generate as generate_weblate } from "./weblate";
 import { meta as meta_wg_easy } from "./wg-easy/meta";
@@ -198,19 +222,27 @@ import { meta as meta_wikijs } from "./wikijs/meta";
 import { generate as generate_wikijs } from "./wikijs";
 import { meta as meta_wordpress } from "./wordpress/meta";
 import { generate as generate_wordpress } from "./wordpress";
+import { meta as meta_zipline } from "./zipline/meta";
+import { generate as generate_zipline } from "./zipline";
 
 const templates = [
   { slug: "ackee", meta: meta_ackee, generate: generate_ackee },
   { slug: "adminer", meta: meta_adminer, generate: generate_adminer },
   { slug: "anonupload", meta: meta_anonupload, generate: generate_anonupload },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
+  { slug: "authorizer", meta: meta_authorizer, generate: generate_authorizer },
+  { slug: "barrage", meta: meta_barrage, generate: generate_barrage },
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
   { slug: "budibase", meta: meta_budibase, generate: generate_budibase },
   { slug: "changedetection", meta: meta_changedetection, generate: generate_changedetection },
+  { slug: "chatwoot", meta: meta_chatwoot, generate: generate_chatwoot },
+  { slug: "codex-docs", meta: meta_codex_docs, generate: generate_codex_docs },
   { slug: "commento", meta: meta_commento, generate: generate_commento },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
+  { slug: "deluge", meta: meta_deluge, generate: generate_deluge },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
+  { slug: "documize", meta: meta_documize, generate: generate_documize },
   { slug: "domainmod", meta: meta_domainmod, generate: generate_domainmod },
   { slug: "drone-runner", meta: meta_drone_runner, generate: generate_drone_runner },
   { slug: "drone", meta: meta_drone, generate: generate_drone },
@@ -234,6 +266,7 @@ const templates = [
   { slug: "heimdall", meta: meta_heimdall, generate: generate_heimdall },
   { slug: "homarr", meta: meta_homarr, generate: generate_homarr },
   { slug: "homeassistant", meta: meta_homeassistant, generate: generate_homeassistant },
+  { slug: "humhub", meta: meta_humhub, generate: generate_humhub },
   { slug: "imgproxy", meta: meta_imgproxy, generate: generate_imgproxy },
   { slug: "jellyfin", meta: meta_jellyfin, generate: generate_jellyfin },
   { slug: "jellyseerr", meta: meta_jellyseerr, generate: generate_jellyseerr },
@@ -245,6 +278,7 @@ const templates = [
   { slug: "lenpaste", meta: meta_lenpaste, generate: generate_lenpaste },
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "libretranslate", meta: meta_libretranslate, generate: generate_libretranslate },
+  { slug: "limesurvey", meta: meta_limesurvey, generate: generate_limesurvey },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
   { slug: "mailcrab", meta: meta_mailcrab, generate: generate_mailcrab },
   { slug: "mailhog", meta: meta_mailhog, generate: generate_mailhog },
@@ -263,6 +297,8 @@ const templates = [
   { slug: "ntfy", meta: meta_ntfy, generate: generate_ntfy },
   { slug: "nzbget", meta: meta_nzbget, generate: generate_nzbget },
   { slug: "openspeedtest", meta: meta_openspeedtest, generate: generate_openspeedtest },
+  { slug: "outline", meta: meta_outline, generate: generate_outline },
+  { slug: "oxigen", meta: meta_oxigen, generate: generate_oxigen },
   { slug: "paperlessngx", meta: meta_paperlessngx, generate: generate_paperlessngx },
   { slug: "phpmyadmin", meta: meta_phpmyadmin, generate: generate_phpmyadmin },
   { slug: "pidgin", meta: meta_pidgin, generate: generate_pidgin },
@@ -289,16 +325,19 @@ const templates = [
   { slug: "statping-ng", meta: meta_statping_ng, generate: generate_statping_ng },
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
   { slug: "suitecrm", meta: meta_suitecrm, generate: generate_suitecrm },
+  { slug: "typesense", meta: meta_typesense, generate: generate_typesense },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
   { slug: "uptimekuma", meta: meta_uptimekuma, generate: generate_uptimekuma },
   { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
   { slug: "verdaccio", meta: meta_verdaccio, generate: generate_verdaccio },
   { slug: "vscode-server", meta: meta_vscode_server, generate: generate_vscode_server },
+  { slug: "wakatime", meta: meta_wakatime, generate: generate_wakatime },
   { slug: "weblate", meta: meta_weblate, generate: generate_weblate },
   { slug: "wg-easy", meta: meta_wg_easy, generate: generate_wg_easy },
   { slug: "whiteboard", meta: meta_whiteboard, generate: generate_whiteboard },
   { slug: "wikijs", meta: meta_wikijs, generate: generate_wikijs },
   { slug: "wordpress", meta: meta_wordpress, generate: generate_wordpress },
+  { slug: "zipline", meta: meta_zipline, generate: generate_zipline },
 ];
 
 export default templates;

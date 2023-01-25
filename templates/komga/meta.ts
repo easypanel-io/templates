@@ -26,7 +26,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "gotson/komga:0.157.5",
+        default: "gotson/komga:0.160.0",
       },
     },
   },

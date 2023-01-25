@@ -33,7 +33,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "lscr.io/linuxserver/code-server:4.8.1-ls138",
+        default: "lscr.io/linuxserver/code-server:4.9.1-ls148",
       },
     },
   },

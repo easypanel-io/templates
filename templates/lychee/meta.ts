@@ -34,7 +34,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "lycheeorg/lychee:v4.6.1",
+        default: "lycheeorg/lychee:v4.7.0",
       },
       databaseType: {
         type: "string",
