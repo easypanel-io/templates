@@ -2,12 +2,14 @@
 
 import { meta as meta_ackee } from "./ackee/meta";
 import { generate as generate_ackee } from "./ackee";
+import { meta as meta_actualbudget } from "./actualbudget/meta";
+import { generate as generate_actualbudget } from "./actualbudget";
 import { meta as meta_adminer } from "./adminer/meta";
 import { generate as generate_adminer } from "./adminer";
-import { meta as meta_answer } from "./answer/meta";
-import { generate as generate_answer } from "./answer";
 import { meta as meta_anonupload } from "./anonupload/meta";
 import { generate as generate_anonupload } from "./anonupload";
+import { meta as meta_answer } from "./answer/meta";
+import { generate as generate_answer } from "./answer";
 import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
 import { meta as meta_authorizer } from "./authorizer/meta";
@@ -231,9 +233,10 @@ import { generate as generate_zipline } from "./zipline";
 
 const templates = [
   { slug: "ackee", meta: meta_ackee, generate: generate_ackee },
+  { slug: "actualbudget", meta: meta_actualbudget, generate: generate_actualbudget },
   { slug: "adminer", meta: meta_adminer, generate: generate_adminer },
-  { slug: "answer", meta: meta_answer, generate: generate_answer },
   { slug: "anonupload", meta: meta_anonupload, generate: generate_anonupload },
+  { slug: "answer", meta: meta_answer, generate: generate_answer },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
   { slug: "authorizer", meta: meta_authorizer, generate: generate_authorizer },
   { slug: "barrage", meta: meta_barrage, generate: generate_barrage },
