@@ -28,7 +28,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "kanboard/kanboard:v1.2.24",
+        default: "kanboard/kanboard:v1.2.26",
       },
     },
   },

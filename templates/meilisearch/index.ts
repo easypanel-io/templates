@@ -10,11 +10,11 @@ export function generate(input: Input): Output {
   ];
 
   if (input.meiliNoAnalytics) {
-    serviceVariables.push('MEILI_NO_ANALYTICS=');
+    serviceVariables.push('MEILI_NO_ANALYTICS=true');
   }
   
   if (input.meiliScheduleSnapshot) {
-    serviceVariables.push('MEILI_SCHEDULE_SNAPSHOT=');
+    serviceVariables.push('MEILI_SCHEDULE_SNAPSHOT=true');
     serviceVariables.push(`MEILI_SNAPSHOT_INTERVAL_SEC=${input.meiliSnapshotInterval}`);
   }
 
