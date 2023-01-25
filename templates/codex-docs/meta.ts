@@ -23,14 +23,8 @@ export const meta = {
       "databaseServiceName",
     ],
     properties: {
-      projectName: {
-        type: "string",
-        title: "Project Name",
-      },
-      codexAuthPassword: {
-        type: "string",
-        title: "CodeX Auth Password",
-      },
+      projectName: { type: "string", title: "Project Name" },
+      codexAuthPassword: { type: "string", title: "CodeX Auth Password" },
       appServiceName: {
         type: "string",
         title: "App Service Name",

@@ -10,6 +10,8 @@ import { meta as meta_appsmith } from "./appsmith/meta";
 import { generate as generate_appsmith } from "./appsmith";
 import { meta as meta_authorizer } from "./authorizer/meta";
 import { generate as generate_authorizer } from "./authorizer";
+import { meta as meta_barrage } from "./barrage/meta";
+import { generate as generate_barrage } from "./barrage";
 import { meta as meta_baserow } from "./baserow/meta";
 import { generate as generate_baserow } from "./baserow";
 import { meta as meta_bookstack } from "./bookstack/meta";
@@ -26,6 +28,8 @@ import { meta as meta_commento } from "./commento/meta";
 import { generate as generate_commento } from "./commento";
 import { meta as meta_dashy } from "./dashy/meta";
 import { generate as generate_dashy } from "./dashy";
+import { meta as meta_deluge } from "./deluge/meta";
+import { generate as generate_deluge } from "./deluge";
 import { meta as meta_directus } from "./directus/meta";
 import { generate as generate_directus } from "./directus";
 import { meta as meta_documize } from "./documize/meta";
@@ -188,6 +192,8 @@ import { meta as meta_statping_ng } from "./statping-ng/meta";
 import { generate as generate_statping_ng } from "./statping-ng";
 import { meta as meta_strapi } from "./strapi/meta";
 import { generate as generate_strapi } from "./strapi";
+import { meta as meta_typesense } from "./typesense/meta";
+import { generate as generate_typesense } from "./typesense";
 import { meta as meta_umami } from "./umami/meta";
 import { generate as generate_umami } from "./umami";
 import { meta as meta_uptimekuma } from "./uptimekuma/meta";
@@ -219,6 +225,7 @@ const templates = [
   { slug: "anonupload", meta: meta_anonupload, generate: generate_anonupload },
   { slug: "appsmith", meta: meta_appsmith, generate: generate_appsmith },
   { slug: "authorizer", meta: meta_authorizer, generate: generate_authorizer },
+  { slug: "barrage", meta: meta_barrage, generate: generate_barrage },
   { slug: "baserow", meta: meta_baserow, generate: generate_baserow },
   { slug: "bookstack", meta: meta_bookstack, generate: generate_bookstack },
   { slug: "budibase", meta: meta_budibase, generate: generate_budibase },
@@ -227,6 +234,7 @@ const templates = [
   { slug: "codex-docs", meta: meta_codex_docs, generate: generate_codex_docs },
   { slug: "commento", meta: meta_commento, generate: generate_commento },
   { slug: "dashy", meta: meta_dashy, generate: generate_dashy },
+  { slug: "deluge", meta: meta_deluge, generate: generate_deluge },
   { slug: "directus", meta: meta_directus, generate: generate_directus },
   { slug: "documize", meta: meta_documize, generate: generate_documize },
   { slug: "domainmod", meta: meta_domainmod, generate: generate_domainmod },
@@ -308,6 +316,7 @@ const templates = [
   { slug: "sshwifty", meta: meta_sshwifty, generate: generate_sshwifty },
   { slug: "statping-ng", meta: meta_statping_ng, generate: generate_statping_ng },
   { slug: "strapi", meta: meta_strapi, generate: generate_strapi },
+  { slug: "typesense", meta: meta_typesense, generate: generate_typesense },
   { slug: "umami", meta: meta_umami, generate: generate_umami },
   { slug: "uptimekuma", meta: meta_uptimekuma, generate: generate_uptimekuma },
   { slug: "vaultwarden", meta: meta_vaultwarden, generate: generate_vaultwarden },
