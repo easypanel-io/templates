@@ -5,13 +5,16 @@ export const meta = {
   description:
     "Supabase is an open source Firebase alternative. Start your project with a Postgres Database, Authentication, instant APIs, Realtime subscriptions and Storage.",
   instructions: null,
-  changeLog: [{ date: "2022-08-25", description: "first release" }],
+  changeLog: [{ date: "2023-1-26", description: "first release" }],
   links: [
     { label: "Website", url: "https://supabase.com/" },
     { label: "Documentation", url: "https://supabase.com/docs/" },
     { label: "Github", url: "https://github.com/supabase/supabase" },
   ],
-  contributors: [{ name: "Ciprian", url: "https://github.com/cipiloosh" }],
+  contributors: [
+    { name: "Ciprian", url: "https://github.com/cipiloosh" },
+    { name: "Supernova3339", url: "https://github.com/supernova3339" },
+  ],
   schema: {
     type: "object",
     required: [
@@ -77,8 +80,8 @@ export const meta = {
       },
     },
   },
-  logo: null,
-  screenshots: [],
+  logo: "logo.svg",
+  screenshots: ["screenshot.png"],
 };
 
 export type ProjectName = string;
