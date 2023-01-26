@@ -1,0 +1,68 @@
+name: Supabase
+description: Supabase is an open source Firebase alternative. Start your project with a Postgres Database, Authentication, instant APIs, Realtime subscriptions and Storage.
+instructions: null
+changeLog:
+  - date: 2022-08-25
+    description: first release
+links:
+  - label: Website
+    url: https://supabase.com/
+  - label: Documentation
+    url: https://supabase.com/docs/
+  - label: Github
+    url: https://github.com/supabase/supabase
+contributors:
+  - name: Ciprian
+    url: https://github.com/cipiloosh
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - domain
+    - studioServiceName
+    - metaDatabaseServiceName
+    - storageServiceName
+    - realtimeServiceName
+    - restServiceName
+    - authServiceName
+    - kongServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: supabase
+    domain:
+      type: string
+      title: Domain
+    studioServiceName:
+      type: string
+      title: Studio Service Name
+      default: supabase-studio
+    metaDatabaseServiceName:
+      type: string
+      title: Meta Database Service Name
+      defult: supabase-meta
+    storageServiceName:
+      type: string
+      title: Storage Service Name
+      default: supabase-storage
+    realtimeServiceName:
+      type: string
+      title: Realtime Service Name
+      default: supabase-realtime
+    restServiceName:
+      type: string
+      title: Rest Service Name
+      default: supabase-rest
+    authServiceName:
+      type: string
+      title: Auth Service Name
+      default: supabase-auth
+    kongServiceName:
+      type: string
+      title: Kong Service Name
+      default: supabase-kong
