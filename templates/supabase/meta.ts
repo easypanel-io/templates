@@ -18,6 +18,7 @@ export const meta = {
       "projectName",
       "appServiceName",
       "domain",
+      "databaseServiceName",
       "studioServiceName",
       "metaDatabaseServiceName",
       "storageServiceName",
@@ -34,6 +35,11 @@ export const meta = {
         default: "supabase",
       },
       domain: { type: "string", title: "Domain" },
+      databaseServiceName: {
+        type: "string",
+        title: "Database Service Name",
+        default: "supabase-db",
+      },
       studioServiceName: {
         type: "string",
         title: "Studio Service Name",
@@ -78,6 +84,7 @@ export const meta = {
 export type ProjectName = string;
 export type AppServiceName = string;
 export type Domain = string;
+export type DatabaseServiceName = string;
 export type StudioServiceName = string;
 export type MetaDatabaseServiceName = string;
 export type StorageServiceName = string;
@@ -90,6 +97,7 @@ export interface Input {
   projectName: ProjectName;
   appServiceName: AppServiceName;
   domain: Domain;
+  databaseServiceName: DatabaseServiceName;
   studioServiceName: StudioServiceName;
   metaDatabaseServiceName: MetaDatabaseServiceName;
   storageServiceName: StorageServiceName;

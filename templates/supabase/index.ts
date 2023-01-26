@@ -1,10 +1,13 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
     const services: Services = [];
     const databasePassword = randomPassword();
     const databaseUsername = 'postgres';
+    const ANON_KEY = randomString(32);
+    const SERVICE_ROLE_KEY = randomString(32);
+    const JWT_SECRET = randomString(32);
 
     services.push({
         type: 'app',
@@ -13,7 +16,7 @@ export function generate(input: Input): Output {
             serviceName: input.studioServiceName,
             source: {
                 type: 'image',
-                image: 'supabase/studio:latest',
+                image: 'supabase/studio:20221214-4eecc99',
             },
             ports: [
                 {
@@ -24,10 +27,11 @@ export function generate(input: Input): Output {
             env: [
                 `STUDIO_PG_META_URL=http://meta:8080`,
                 `POSTGRES_PASSWORD=${databasePassword}`,
-                `SUPABASE_URL=http://kong:8000`,
-                `SUPABASE_REST_URL=${PUBLIC_REST_URL}`,
+                `SUPABASE_URL=http://${input.kongServiceName}8000`,
+                `SUPABASE_REST_URL=$http://${input.restServiceName}`,
                 `SUPABASE_ANON_KEY=${ANON_KEY}`,
                 `SUPABASE_SERVICE_KEY=${SERVICE_ROLE_KEY}`,
+                `STUDIO_PORT=3000`
             ].join('\n'),
         },
     });
@@ -78,31 +82,31 @@ export function generate(input: Input): Output {
             env: [
                 `GOTRUE_API_HOST=0.0.0.0`,
                 `GOTRUE_API_PORT=9999`,
-                `API_EXTERNAL_URL=${API_EXTERNAL_URL}`,
+                `API_EXTERNAL_URL=${input.kongServiceName}:8000`,
                 `GOTRUE_DB_DRIVER=postgres`,
-                `GOTRUE_DB_DATABASE_URL=postgres://${databaseUsername}:${databasePassword}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}?search_path=auth`,
-                `GOTRUE_SITE_URL=${SITE_URL}`,
-                `GOTRUE_URI_ALLOW_LIST=${ADDITIONAL_REDIRECT_URLS}`,
-                `GOTRUE_DISABLE_SIGNUP=${DISABLE_SIGNUP}`,
+                `GOTRUE_DB_DATABASE_URL=postgres://${databaseUsername}:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?search_path=auth`,
+                `GOTRUE_SITE_URL=${input.restServiceName}:3000`,
+                `GOTRUE_URI_ALLOW_LIST=https://${input.restServiceName}:3000`,
+                `GOTRUE_DISABLE_SIGNUP=false`,
                 `GOTRUE_JWT_ADMIN_ROLES=service_role`,
                 `GOTRUE_JWT_AUD=authenticated`,
                 `GOTRUE_JWT_DEFAULT_GROUP_NAME=authenticated`,
-                `GOTRUE_JWT_EXP=${JWT_EXPIRY}`,
+                `GOTRUE_JWT_EXP=16000`,
                 `GOTRUE_JWT_SECRET=${JWT_SECRET}`,
-                `GOTRUE_EXTERNAL_EMAIL_ENABLED=${ENABLE_EMAIL_SIGNUP}`,
-                `GOTRUE_MAILER_AUTOCONFIRM=${ENABLE_EMAIL_AUTOCONFIRM}`,
-                `GOTRUE_SMTP_ADMIN_EMAIL=${SMTP_ADMIN_EMAIL}`,
-                `GOTRUE_SMTP_HOST=${SMTP_HOST}`,
-                `GOTRUE_SMTP_PORT=${SMTP_PORT}`,
-                `GOTRUE_SMTP_USER=${SMTP_USER}`,
-                `GOTRUE_SMTP_PASS=${SMTP_PASS}`,
-                `GOTRUE_SMTP_SENDER_NAME=${SMTP_SENDER_NAME}`,
-                `GOTRUE_MAILER_URLPATHS_INVITE=${MAILER_URLPATHS_INVITE}`,
-                `GOTRUE_MAILER_URLPATHS_CONFIRMATION=${MAILER_URLPATHS_CONFIRMATION}`,
-                `GOTRUE_MAILER_URLPATHS_RECOVERY=${MAILER_URLPATHS_RECOVERY}`,
-                `GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE=${MAILER_URLPATHS_EMAIL_CHANGE}`,
-                `GOTRUE_EXTERNAL_PHONE_ENABLED=${ENABLE_PHONE_SIGNUP}`,
-                `GOTRUE_SMS_AUTOCONFIRM=${ENABLE_PHONE_AUTOCONFIRM}`,
+                `GOTRUE_EXTERNAL_EMAIL_ENABLED=false`,
+                `GOTRUE_MAILER_AUTOCONFIRM=false`,
+                `GOTRUE_SMTP_ADMIN_EMAIL=false`,
+                `GOTRUE_SMTP_HOST=`,
+                `GOTRUE_SMTP_PORT=`,
+                `GOTRUE_SMTP_USER=`,
+                `GOTRUE_SMTP_PASS=`,
+                `GOTRUE_SMTP_SENDER_NAME=`,
+                `GOTRUE_MAILER_URLPATHS_INVITE=false`,
+                `GOTRUE_MAILER_URLPATHS_CONFIRMATION=false`,
+                `GOTRUE_MAILER_URLPATHS_RECOVERY=false`,
+                `GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE=false`,
+                `GOTRUE_EXTERNAL_PHONE_ENABLED=false`,
+                `GOTRUE_SMS_AUTOCONFIRM=false`,
             ].join('\n'),
         },
     });
@@ -116,8 +120,7 @@ export function generate(input: Input): Output {
                 image: 'postgrest/postgrest:v9.0.1',
             },
             env: [
-                `PGRST_DB_URI=postgres://${databaseUsername}:${databasePassword}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}`,
-                `PGRST_DB_SCHEMAS=${PGRST_DB_SCHEMAS}`,
+                `PGRST_DB_URI=postgres://${databaseUsername}:${databasePassword}@${input.projectName}_${input.metaDatabaseServiceName}:5432/${input.projectName}`,
                 `PGRST_DB_ANON_ROLE=anon`,
                 `PGRST_JWT_SECRET=${JWT_SECRET}`,
                 `PGRST_DB_USE_LEGACY_GUCS=false`,
@@ -138,9 +141,9 @@ export function generate(input: Input): Output {
                     'bash -c "./prod/rel/realtime/bin/realtime eval Realtime.Release.migrate && ./prod/rel/realtime/bin/realtime start"\n',
             },
             env: [
-                `DB_HOST=${POSTGRES_HOST}`,
-                `DB_PORT=${POSTGRES_PORT}`,
-                `DB_NAME=${POSTGRES_DB}`,
+                `DB_HOST=${input.projectName}_${input.metaDatabaseServiceName}`,
+                `DB_PORT=5432`,
+                `DB_NAME=${input.projectName}`,
                 `DB_USER=${databaseUsername}`,
                 `DB_PASSWORD=${databasePassword}`,
                 `DB_SSL=false`,
@@ -168,7 +171,7 @@ export function generate(input: Input): Output {
                 `SERVICE_KEY=${SERVICE_ROLE_KEY}`,
                 `POSTGREST_URL=http://rest:3000`,
                 `PGRST_JWT_SECRET=${JWT_SECRET}`,
-                `DATABASE_URL=postgres://${databaseUsername}:${databasePassword}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}`,
+                `DATABASE_URL=postgres://${databaseUsername}:${databasePassword}@$${input.projectName}_${input.databaseServiceName}/${input.projectName}`,
                 `PGOPTIONS=-c search_path=storage,public`,
                 `FILE_SIZE_LIMIT=52428800`,
                 `STORAGE_BACKEND=file`,
@@ -198,9 +201,9 @@ export function generate(input: Input): Output {
             },
             env: [
                 `PG_META_PORT=8080`,
-                `PG_META_DB_HOST=${POSTGRES_HOST}`,
-                `PG_META_DB_PORT=${POSTGRES_PORT}`,
-                `PG_META_DB_NAME=${POSTGRES_DB}`,
+                `PG_META_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+                `PG_META_DB_PORT=5432`,
+                `PG_META_DB_NAME=${input.projectName}`,
                 `PG_META_DB_USER=${databaseUsername}`,
                 `PG_META_DB_PASSWORD=${databasePassword}`,
             ].join('\n'),

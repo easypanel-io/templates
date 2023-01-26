@@ -20,6 +20,7 @@ schema:
     - projectName
     - appServiceName
     - domain
+    - databaseServiceName
     - studioServiceName
     - metaDatabaseServiceName
     - storageServiceName
@@ -38,6 +39,10 @@ schema:
     domain:
       type: string
       title: Domain
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: supabase-db
     studioServiceName:
       type: string
       title: Studio Service Name
