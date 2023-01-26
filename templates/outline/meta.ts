@@ -53,14 +53,8 @@ export const meta = {
         title: "Redis Service Name",
         default: "outline-redis",
       },
-      googleClient: {
-        type: "string",
-        title: "Google Client ID",
-      },
-      googleClientSecret: {
-        type: "string",
-        title: "Google Client Secret",
-      },
+      googleClient: { type: "string", title: "Google Client ID" },
+      googleClientSecret: { type: "string", title: "Google Client Secret" },
       minioServiceName: {
         type: "string",
         title: "Minio Service Name",
