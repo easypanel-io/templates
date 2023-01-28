@@ -4,8 +4,11 @@ export const meta = {
   name: "Ploi Roadmap",
   description:
     "Welcome to Roadmap, the open-source software for your roadmapping needs.",
-  instructions: null,
-  changeLog: [{ date: "2023-1-6", description: "first release" }],
+  instructions: `After First Deployment, run "php artisan roadmap:install" to setup the inital user account.`,
+  changeLog: [
+    { date: "2023-1-6", description: "first release" },
+    { date: "2023-01-27", description: "Package and Image Fix" },
+  ],
   links: [{ label: "Github", url: "https://github.com/ploi-deploy/roadmap" }],
   contributors: [
     { name: "Supernova3339", url: "https://github.com/Supernova3339" },
@@ -32,7 +35,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "jphj/ploi-roadmap:1.33",
+        default: "ghcr.io/easypanel-community/docker-ploi-roadmap:1.36",
       },
       databaseServiceName: {
         type: "string",
