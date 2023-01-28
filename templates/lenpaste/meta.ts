@@ -4,7 +4,10 @@ export const meta = {
   name: "Lenpaste",
   description: "https://github.com/boypt/simple-torrent/wiki",
   instructions: null,
-  changeLog: [{ date: "2022-12-20", description: "first release" }],
+  changeLog: [
+  	{ date: "2023-1-28", description: "update to v1.3" },
+  	{ date: "2022-12-20", description: "first release" },
+  ],
   links: [
     {
       label: "Documentation",
@@ -14,6 +17,7 @@ export const meta = {
   ],
   contributors: [
     { name: "Supernova3339", url: "https://github.com/Supernova3339" },
+    { name: "Leonid Maslakov", url: "https://lcomrade.su" },
   ],
   schema: {
     type: "object",
@@ -28,12 +32,12 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "git.lcomrade.su/root/lenpaste:1.2",
+        default: "git.lcomrade.su/root/lenpaste:1.3",
       },
     },
   },
   logo: null,
-  screenshots: ["screenshot.png"],
+  screenshots: ["screenshot1.png", "screenshot2.png", "screenshot3.png"],
 };
 
 export type ProjectName = string;
