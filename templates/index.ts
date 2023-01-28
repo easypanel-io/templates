@@ -110,6 +110,8 @@ import { meta as meta_libretranslate } from "./libretranslate/meta";
 import { generate as generate_libretranslate } from "./libretranslate";
 import { meta as meta_limesurvey } from "./limesurvey/meta";
 import { generate as generate_limesurvey } from "./limesurvey";
+import { meta as meta_logchimp } from "./logchimp/meta";
+import { generate as generate_logchimp } from "./logchimp";
 import { meta as meta_lychee } from "./lychee/meta";
 import { generate as generate_lychee } from "./lychee";
 import { meta as meta_mailcrab } from "./mailcrab/meta";
@@ -289,6 +291,7 @@ const templates = [
   { slug: "libreoffice", meta: meta_libreoffice, generate: generate_libreoffice },
   { slug: "libretranslate", meta: meta_libretranslate, generate: generate_libretranslate },
   { slug: "limesurvey", meta: meta_limesurvey, generate: generate_limesurvey },
+  { slug: "logchimp", meta: meta_logchimp, generate: generate_logchimp },
   { slug: "lychee", meta: meta_lychee, generate: generate_lychee },
   { slug: "mailcrab", meta: meta_mailcrab, generate: generate_mailcrab },
   { slug: "mailhog", meta: meta_mailhog, generate: generate_mailhog },
