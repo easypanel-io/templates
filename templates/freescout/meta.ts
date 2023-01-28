@@ -30,7 +30,6 @@ export const meta = {
       "databaseServiceName",
       "adminEmail",
       "adminPassword",
-      "displayErrors",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -43,7 +42,7 @@ export const meta = {
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "tiredofit/freescout:php8.1-1.16.21",
+        default: "tiredofit/freescout:php8.1-1.16.22",
       },
       databaseServiceName: {
         type: "string",
