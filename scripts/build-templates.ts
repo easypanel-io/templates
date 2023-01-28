@@ -28,7 +28,7 @@ async function run() {
       `./templates/${item}/meta.ts`,
       prettier.format(
         [
-          `// Generated using "yarn build-templates"`,
+          `// Generated using "npm run build-templates"`,
           ``,
           `export const meta = ${JSON.stringify({
             ...meta,
@@ -49,7 +49,7 @@ async function run() {
 run().catch(console.error);
 
 async function generateIndex(items: string[]) {
-  const output: string[] = [`// Generated using "yarn build-templates"`, ""];
+  const output: string[] = [`// Generated using "npm run build-templates"`, ""];
 
   items.forEach((item) => {
     output.push(

@@ -3,10 +3,12 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "run-p watch-templates dev:next",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "watch-templates": "nodemon",
     "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
     "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "move-docs": "rm -rf ../website/docs/04-templates/* && cp -r ./docs/* ../website/docs/04-templates/"
@@ -41,8 +43,21 @@
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.6",
     "fs-extra": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
     "ts-node": "^10.8.2",
     "tsconfig-paths": "^4.0.0",
     "typescript": "4.6.4"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "templates"
+    ],
+    "ignore": [
+      "templates/index.ts",
+      "templates/*/meta.ts"
+    ],
+    "ext": "*",
+    "exec": "npm run build-templates"
   }
 }
