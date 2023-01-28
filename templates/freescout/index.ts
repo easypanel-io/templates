@@ -25,7 +25,7 @@ export function generate(input: Input): Output {
         `SITE_URL=https://${input.domain}`,
         `APP_FORCE_HTTPS=true`,
         `ENABLE_SSL_PROXY=true`,
-        `DISPLAY_ERRORS=false`
+        `DISPLAY_ERRORS=false`,
       ].join("\n"),
       source: {
         type: "image",
@@ -49,10 +49,10 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "modules",
-          mountPath: "/assets/modules"
+          mountPath: "/assets/modules",
         },
       ],
-          domains: [
+      domains: [
         {
           name: input.domain,
         },

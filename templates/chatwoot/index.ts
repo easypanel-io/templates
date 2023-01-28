@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -39,7 +44,8 @@ export function generate(input: Input): Output {
         secure: true,
       },
       deploy: {
-        command: "bundle exec rails db:chatwoot_prepare && bundle exec rails s -p 3000 -b 0.0.0.0",
+        command:
+          "bundle exec rails db:chatwoot_prepare && bundle exec rails s -p 3000 -b 0.0.0.0",
       },
       mounts: [
         {

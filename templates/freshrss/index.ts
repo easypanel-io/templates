@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
-            mounts: [
+      mounts: [
         {
           type: "volume",
           name: "data",

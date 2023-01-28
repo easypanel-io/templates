@@ -20,8 +20,8 @@ export function generate(input: Input): Output {
       ports: [
         {
           published: 1025,
-          target: 1025
-        }
+          target: 1025,
+        },
       ],
     },
   });

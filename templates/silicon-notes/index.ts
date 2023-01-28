@@ -19,11 +19,11 @@ export function generate(input: Input): Output {
       },
       mounts: [
         {
-          type: 'volume',
-          name: 'data',
-          mountPath: '/home/silicon/instance',
-        }
-      ]
+          type: "volume",
+          name: "data",
+          mountPath: "/home/silicon/instance",
+        },
+      ],
     },
   });
 

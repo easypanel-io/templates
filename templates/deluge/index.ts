@@ -40,7 +40,7 @@ export function generate(input: Input): Output {
           name: "downloads",
           mountPath: "/downloads",
         },
-      ]
+      ],
     },
   });
 

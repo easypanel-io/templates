@@ -48,7 +48,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: 'mariadb',
+    type: "mariadb",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,

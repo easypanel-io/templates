@@ -1,4 +1,9 @@
-import { Output, Services, randomString, randomPassword } from "~templates-utils";
+import {
+  Output,
+  Services,
+  randomString,
+  randomPassword,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -18,9 +23,7 @@ export function generate(input: Input): Output {
         port: 3000,
         secure: true,
       },
-      env: [
-        `WAKAPI_PASSWORD_SALT=${passwordSalt}`,
-      ].join("\n"),
+      env: [`WAKAPI_PASSWORD_SALT=${passwordSalt}`].join("\n"),
     },
   });
 

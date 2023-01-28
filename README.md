@@ -16,6 +16,8 @@ In this repository, you will find the templates available in Easypanel.
 4. Test your template. Inside an Easypanel instance, you can create a template from JSON. Use that feature to test the output of your template.
 5. Send a PR.
 
+Use `npm run build` to make sure the project is building succesfully, and `npm run prettier` to format the files.
+
 ## Form Fields
 
 ### Select
