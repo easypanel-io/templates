@@ -27,4 +27,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/voxelin/ghost:latest
+      default: ghcr.io/voxelin/ghost@sha256:0fbe8815abe1f4f296a5cbc8adb99d2839232dfa86920e01941adbe98f4c9a5d
