@@ -1,9 +1,4 @@
-import {
-  Output,
-  randomPassword,
-  randomString,
-  Services
-} from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -21,11 +16,10 @@ export function generate(input: Input): Output {
         `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
         `SECRET_PASSWORD=${secret}`,
         `SUPPORT_EMAIL=${input.emailSupport}`,
-        `_SMTP_HOST=${input.emailHost}`,
+        `SMTP_HOST=${input.emailHost}`,
         `SMTP_PORT=${input.emailPort}`,
         `SMTP_USER=${input.emailUsername}`,
         `SMTP_PWD=${input.emailPassword}`,
-        `EMAIL_SMTP_ENABLE_STARTTLS=true`,
       ].join("\n"),
       source: {
         type: "image",
@@ -46,6 +40,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
+      image: 'postgres:14.2',
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
