@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "run-p watch-templates dev:next",
     "dev:next": "next dev",
-    "build": "next build",
+    "build": "npm run build-templates && next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
