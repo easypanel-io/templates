@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
         `DB_USER=mariadb`,
         `DB_PASS=${databasePassword}`,
         `DB_NAME=${input.projectName}`,
-        `ADMIN_USER=${input.limesurveyUser}`,
+        `ADMIN_USER=${input.limesurveyUsername}`,
         `ADMIN_PASS=${input.limesurveyPassword}`,
         `DEBUG=FALSE`,
       ].join("\n"),
