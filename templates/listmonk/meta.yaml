@@ -21,6 +21,8 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - adminUsername
+    - adminPassword
   properties:
     projectName:
       type: string
@@ -38,10 +40,9 @@ schema:
       type: string
       title: Database Service Name
       default: listmonk-db
-    databaseUser:
+    adminUsername:
       type: string
-      title: Database User
-      default: postgres
-    databasePassword:
+      title: Admin Username
+    adminPassword:
       type: string
-      title: Database Password
+      title: Admin Password
