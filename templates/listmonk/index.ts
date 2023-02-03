@@ -3,8 +3,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  // const secretkey = randomString(32);
-  // const randomPasswordRedis = randomPassword();
   const randomPasswordPostgres = randomPassword();
 
   services.push({
