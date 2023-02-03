@@ -1,9 +1,8 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const randomPasswordPostgres = randomPassword();
 
   services.push({
     type: "app",
@@ -13,10 +12,10 @@ export function generate(input: Input): Output {
       env: [
         `LISTMONK_app__address=0.0.0.0:9000`,
         `LISTMONK_db__host=${input.appServiceName}_${input.databaseServiceName}`,
-        `LISTMONK_db__user=postgres`,
-        `LISTMONK_db__password=${randomPasswordPostgres}`,
+        `LISTMONK_db__user=${input.databaseUser}`,
+        `LISTMONK_db__password=${input.databasePassword}`,
         `LISTMONK_db__port=5432`,
-        `LISTMONK_db__database=listmonk`
+        `LISTMONK_db__database=listmonk`,
       ].join("\n"),
       source: {
         type: "image",
@@ -26,6 +25,13 @@ export function generate(input: Input): Output {
         port: 9000,
         secure: true,
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/listmonk/uploads",
+        },
+      ],
       deploy: {
         command: `echo "y" | ./listmonk --install && ./listmonk`
       }
@@ -38,7 +44,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "postgres:14",
-      password: randomPasswordPostgres,
+      password: input.databasePassword,
     },
   });
 

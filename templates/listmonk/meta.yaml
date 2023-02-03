@@ -5,12 +5,14 @@ changeLog:
   - date: 2023-2-3
     description: first release
 links:
+  - label: Website
+    url: https://listmonk.app/
   - label: Documentation
     url: https://listmonk.app/docs/
   - label: Github
     url: https://github.com/knadh/listmonk
 contributors:
-  - name: serban-alexandru
+  - name: SerbanAlexandru
     url: https://github.com/serban-alexandru
 schema:
   type: object
@@ -36,3 +38,10 @@ schema:
       type: string
       title: Database Service Name
       default: listmonk-db
+    databaseUser:
+      type: string
+      title: Database User
+      default: postgres
+    databasePassword:
+      type: string
+      title: Database Password
