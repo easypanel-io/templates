@@ -10,7 +10,7 @@ links:
   - label: Documentation
     url: https://manual.limesurvey.org
   - label: Github
-    url: https://github.com/WordPress/WordPress
+    url: https://github.com/LimeSurvey/LimeSurvey
 contributors:
   - name: Supernova3339
     url: https://github.com/supernova3339
@@ -21,8 +21,8 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
-    - limesurveyUser
-    - limesurveyPass
+    - limesurveyUsername
+    - limesurveyPassword
   properties:
     projectName:
       type: string
@@ -30,7 +30,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: wordpress
+      default: limesurvey
     appServiceImage:
       type: string
       title: App Service Image
@@ -39,7 +39,7 @@ schema:
       type: string
       title: Database Service Name
       default: limesurvey-db
-    limesurveyUser:
+    limesurveyUsername:
       type: string
       title: Username
     limesurveyPassword:

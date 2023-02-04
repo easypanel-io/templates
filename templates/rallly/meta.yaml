@@ -1,0 +1,65 @@
+name: Rallly
+description: Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
+instructions: null
+armSupport: true
+changeLog:
+  - date: 2023-1-29
+    description: first release
+links:
+  - label: Website
+    url: https://fider.io
+  - label: Documentation
+    url: https://fider.io/docs
+  - label: Github
+    url: https://github.com/getfider/fider
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - emailSupport
+    - emailHost
+    - emailPort
+    - emailUsername
+    - emailPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rallly
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lukevella/rallly:b554f52f5a5069d800969d18cce63aad332a706a
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: rallly-db
+    emailSupport:
+      type: string
+      title: Support Email
+    emailHost:
+      type: string
+      title: Email Host
+    emailPort:
+      type: number
+      title: Email Port
+      default: 587
+    emailUsername:
+      type: string
+      title: Email Username
+    emailPassword:
+      type: string
+      title: Email Password

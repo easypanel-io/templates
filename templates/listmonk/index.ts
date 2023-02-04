@@ -3,7 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const databasePassword = randomPassword();
+  const randomPasswordPostgres = randomPassword();
 
   services.push({
     type: "app",
@@ -11,48 +11,44 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DB_USER=mariadb`,
-        `DB_PASS=${databasePassword}`,
-        `DB_NAME=${input.projectName}`,
-        `ADMIN_USER=${input.limesurveyUsername}`,
-        `ADMIN_PASS=${input.limesurveyPassword}`,
-        `DEBUG=FALSE`,
+        `LISTMONK_app__address=0.0.0.0:9000`,
+        `LISTMONK_db__host=${input.appServiceName}_${input.databaseServiceName}`,
+        `LISTMONK_db__user=postgres`,
+        `LISTMONK_db__password=${randomPasswordPostgres}`,
+        `LISTMONK_db__port=5432`,
+        `LISTMONK_db__database=listmonk`,
+        `LISTMONK_app__admin_username=${input.adminUsername}`,
+        `LISTMONK_app__admin_password=${input.adminPassword}`,
+        
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
       proxy: {
-        port: 80,
+        port: 9000,
         secure: true,
       },
       mounts: [
         {
           type: "volume",
           name: "data",
-          mountPath: "/www/html/upload",
-        },
-        {
-          type: "volume",
-          name: "logs",
-          mountPath: "/www/logs",
-        },
-        {
-          type: "volume",
-          name: "custom-assets",
-          mountPath: "/assets/custom",
+          mountPath: "/listmonk/uploads",
         },
       ],
+      deploy: {
+        command: `echo "y" | ./listmonk --install && ./listmonk`
+      }
     },
   });
-
+  
   services.push({
-    type: "mariadb",
+    type: "postgres",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
-      password: databasePassword,
+      image: "postgres:14",
+      password: randomPasswordPostgres,
     },
   });
 
