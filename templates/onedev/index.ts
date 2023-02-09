@@ -28,7 +28,7 @@ export function generate(input: Input): Output {
       env: [
         `HIBERNATE_DIALECT=io.onedev.server.persistence.PostgreSQLDialect`,
         `HIBERNATE_CONNECTION_DRIVER_CLASS=org.postgresql.Driver`,
-        `HIBERNATE_CONNECTION_URL=jdbc:postgresql://${input.databaseServiceName}:5432/onedev`,
+        `HIBERNATE_CONNECTION_URL=jdbc:postgresql://${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
         `HIBERNATE_CONNECTION_USERNAME=${input.databaseServiceName}`,
         `HIBERNATE_CONNECTION_PASSWORD=${passwordPostgres}`,
         `INITIAL_SERVER_URL=https://${input.domain}`,
