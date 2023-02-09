@@ -1,20 +1,16 @@
 // Generated using "npm run build-templates"
 
 export const meta = {
-  name: "NocoDB",
-  description:
-    "NocoDB is an open source Airtable alternative and no code platform that turns any database into a smart spreadsheet.",
+  name: "OneDev",
+  description: "OneDev is a self-hosted git server with kanban and CI/CD",
   instructions: null,
-  changeLog: [{ date: "2023-02-8", description: "first release" }],
+  changeLog: [{ date: "2023-02-9", description: "first release" }],
   links: [
-    { label: "Website", url: "https://www.nocodb.com/" },
-    {
-      label: "Documentation",
-      url: "https://docs.nocodb.com/getting-started/installation/",
-    },
-    { label: "Github", url: "https://github.com/nocodb/nocodb" },
+    { label: "Website", url: "https://code.onedev.io/" },
+    { label: "Documentation", url: "https://docs.onedev.io/" },
+    { label: "Github", url: "https://code.onedev.io/onedev/server" },
   ],
-  contributors: [{ name: "spacec0de", url: "https://github.com/spacec0de" }],
+  contributors: [{ name: "spaceb0t", url: "https://github.com/spacec0de" }],
   schema: {
     type: "object",
     required: [
@@ -22,7 +18,6 @@ export const meta = {
       "appServiceName",
       "appServiceImage",
       "databaseServiceName",
-      "redisServiceName",
     ],
     properties: {
       projectName: { type: "string", title: "Project Name" },
@@ -30,26 +25,21 @@ export const meta = {
       appServiceName: {
         type: "string",
         title: "App Service Name",
-        default: "nocodb",
+        default: "onedev",
       },
       appServiceImage: {
         type: "string",
         title: "App Service Image",
-        default: "nocodb/nocodb:0.104.3",
+        default: "1dev/server:7.9.12",
       },
       databaseServiceName: {
         type: "string",
         title: "Database Service Name",
-        default: "nocodb-db",
-      },
-      redisServiceName: {
-        type: "string",
-        title: "Redis Service Name",
-        default: "nocodb-redis",
+        default: "onedev-db",
       },
     },
   },
-  logo: "logo.png",
+  logo: null,
   screenshots: [],
 };
 
@@ -58,7 +48,6 @@ export type Domain = string;
 export type AppServiceName = string;
 export type AppServiceImage = string;
 export type DatabaseServiceName = string;
-export type RedisServiceName = string;
 
 export interface Input {
   projectName: ProjectName;
@@ -66,5 +55,4 @@ export interface Input {
   appServiceName: AppServiceName;
   appServiceImage: AppServiceImage;
   databaseServiceName: DatabaseServiceName;
-  redisServiceName: RedisServiceName;
 }
