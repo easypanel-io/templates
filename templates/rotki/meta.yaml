@@ -1,0 +1,34 @@
+name: Rotki
+description: Rotki is an open source portfolio tracking, analytics, accounting, and tax reporting tool that protects your privacy.
+instructions: null
+changeLog:
+  - date: 2023-2-9
+    description: first release
+links:
+  - label: Documentation
+    url: https://rotki.readthedocs.io/en/latest/
+  - label: Github
+    url: https://github.com/rotki/rotki
+  - label: Website
+    url: https://rotki.com/
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rotki
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: rotki/rotki:v1.27.0
