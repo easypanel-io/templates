@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
         `LISTMONK_db__user=postgres`,
         `LISTMONK_db__password=${randomPasswordPostgres}`,
         `LISTMONK_db__port=5432`,
-        `LISTMONK_db__database=listmonk`,
+        `LISTMONK_db__database=${input.projectName}`,
         `LISTMONK_app__admin_username=${input.adminUsername}`,
         `LISTMONK_app__admin_password=${input.adminPassword}`,
         
