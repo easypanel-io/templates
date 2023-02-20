@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `LISTMONK_app__address=0.0.0.0:9000`,
-        `LISTMONK_db__host=${input.appServiceName}_${input.databaseServiceName}`,
+        `LISTMONK_db__host=${input.projectName}_${input.databaseServiceName}`,
         `LISTMONK_db__user=postgres`,
         `LISTMONK_db__password=${randomPasswordPostgres}`,
         `LISTMONK_db__port=5432`,
