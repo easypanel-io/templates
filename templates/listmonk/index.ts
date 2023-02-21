@@ -37,7 +37,7 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        command: `echo "y" | ./listmonk --install && ./listmonk`
+        command: `echo "y" | ./listmonk --install --idempotent --yes && ./listmonk`
       }
     },
   });
