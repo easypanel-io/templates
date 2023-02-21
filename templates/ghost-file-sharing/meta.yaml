@@ -3,7 +3,7 @@ description: Ghost File Sharing Service is a simple Golang clone of 0x0.st CDN.
 instructions: null
 changeLog:
   - date: 2023-01-28
-    description: Welcome, Easypanel!
+    description: Stable build. Hello, Easypanel!
 links:
   - label: Github
     url: https://github.com/voxelin/gh0.st
@@ -27,4 +27,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/voxelin/ghost@sha256:0fbe8815abe1f4f296a5cbc8adb99d2839232dfa86920e01941adbe98f4c9a5d
+      default: ghcr.io/voxelin/ghost:stable
