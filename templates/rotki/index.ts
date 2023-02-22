@@ -13,8 +13,11 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: [
+        `ROTKI_ACCEPT_DOCKER_RISK=1`,
+      ].join("\n"),
       proxy: {
-        port: 5006,
+        port: 80,
         secure: true,
       },
       mounts: [
@@ -22,6 +25,11 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "data",
           mountPath: "/data",
+        },
+        {
+          type: "volume",
+          name: "logs",
+          mountPath: "/logs",
         },
       ],
     },

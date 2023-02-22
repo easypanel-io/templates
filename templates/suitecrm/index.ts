@@ -1,15 +1,9 @@
-import {
-  Output,
-  randomPassword,
-  randomString,
-  Services,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const mariaPassword = randomPassword();
-  const appKey = Buffer.from(randomString(32)).toString("base64");
 
   services.push({
     type: "app",

@@ -14,16 +14,9 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       proxy: {
-        port: 5006,
+        port: 8000,
         secure: true,
       },
-      mounts: [
-        {
-          type: "volume",
-          name: "data",
-          mountPath: "/data",
-        },
-      ],
     },
   });
 
