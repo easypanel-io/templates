@@ -1,0 +1,54 @@
+name: Ploi Roadmap
+description: Welcome to Roadmap, the open-source software for your roadmapping needs.
+instructions: After First Deployment, run "php artisan roadmap:install" to setup the inital user account.
+changeLog:
+  - date: 2023-1-6
+    description: first release
+  - date: 2023-01-27
+    description: Package and Image Fix
+links:
+  - label: Github
+    url: https://github.com/ploi-deploy/roadmap
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+  - name: Mxrcy
+    url: https://github.com/DrMxrcy
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - adminNotifications
+    - appLanguage
+    - appTimezone
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ploi-roadmap
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/easypanel-community/docker-ploi-roadmap:1.36
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: ploi-roadmap-db
+    adminNotifications:
+      type: boolean
+      title: Admin Notifications
+      default: true
+    appLanguage:
+      type: string
+      title: Language
+      default: en
+    appTimezone:
+      type: string
+      title: Timezone
+      default: utc

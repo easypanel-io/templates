@@ -1,0 +1,44 @@
+name: Coral
+description: Coral improves community on your website through smart technology, effective design, and strategies that work.
+instructions: null
+changeLog:
+  - date: 2023-2-19
+    description: first release
+links:
+  - label: Website
+    url: https://coralproject.net/
+  - label: Documentation
+    url: https://docs.coralproject.net/
+  - label: Github
+    url: https://github.com/coralproject/talk
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - redisServiceName
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: coral
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: coralproject/talk:7.4.6
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: coral-redis
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: coral-db

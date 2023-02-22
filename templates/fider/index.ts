@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -21,8 +26,6 @@ export function generate(input: Input): Output {
         `EMAIL_SMTP_USERNAME=${input.emailUsername}`,
         `EMAIL_SMTP_PASSWORD=${input.emailPassword}`,
         `EMAIL_SMTP_ENABLE_STARTTLS=true`,
-
-
       ].join("\n"),
       source: {
         type: "image",
@@ -32,7 +35,7 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
-          domains: [
+      domains: [
         {
           name: input.domain,
         },
@@ -40,14 +43,14 @@ export function generate(input: Input): Output {
     },
   });
 
-    services.push({
-      type: "postgres",
-      data: {
-        projectName: input.projectName,
-        serviceName: input.databaseServiceName,
-        password: databasePassword,
-      },
-    });
+  services.push({
+    type: "postgres",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.databaseServiceName,
+      password: databasePassword,
+    },
+  });
 
   return { services };
 }

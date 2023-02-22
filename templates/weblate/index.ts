@@ -29,7 +29,6 @@ export function generate(input: Input): Output {
         `POSTGRES_DATABASE=${input.projectName}`,
         `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
         `POSTGRES_SSL_MODE=disable`,
-
       ].join("\n"),
       source: {
         type: "image",
@@ -64,13 +63,13 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-      type: "postgres",
-      data: {
-        projectName: input.projectName,
-        serviceName: input.databaseServiceName,
-        password: databasePassword,
-      },
-    });
+    type: "postgres",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.databaseServiceName,
+      password: databasePassword,
+    },
+  });
 
   return { services };
 }
