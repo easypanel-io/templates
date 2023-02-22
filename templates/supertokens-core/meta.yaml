@@ -1,0 +1,39 @@
+name: Supertokens Core
+description: Open source alternative to Auth0 / Firebase Auth / AWS Cognito - Backend Server
+instructions: Check environment tab for your API key
+changeLog:
+  - date: 2023-2-22
+    description: first release
+links:
+  - label: Website
+    url: https://supertokens.com/
+  - label: Documentation
+    url: https://supertokens.com/docs
+  - label: Github
+    url: https://github.com/supertokens
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: supertokens-core
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: supertokens/supertokens-postgresql:4.3
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: supertokens-core-db
