@@ -33,7 +33,6 @@ export function generate(input: Input): Output {
           name: "tmp",
           mountPath: "/tmp",
         },
-        // pay attention to this - this is how to add additional file content ( works for any template )
         {
           type: "file",
           content: [
