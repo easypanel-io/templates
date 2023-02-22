@@ -3,9 +3,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  // variables
-  const commentsDomain = "host = https://" + input.commentsDomain + "/";
-  const adminPassword = "password = " + input.adminPassword;
 
   services.push({
     type: "app",
@@ -41,7 +38,7 @@ export function generate(input: Input): Output {
           type: "file",
           content: [
             "[general]",
-            commentsDomain, // var commentsDomain
+            `host = https://${input.commentsDomain}/`,
             "max-age = 15m",
             "notify = stdout",
             "gravatar = true",
@@ -49,7 +46,7 @@ export function generate(input: Input): Output {
             "latest-enabled = false",
             "[admin]",
             "enabled = true",
-            adminPassword, // var adminPassword
+            `password = ${input.adminPassword}`,
             "[moderation]",
             "enabled = false",
             "approve-if-email-previously-approved = false",
