@@ -1,0 +1,32 @@
+name: Gotenberg
+description: Gotenberg is a Docker-powered stateless API for PDF files.
+instructions: null
+changeLog:
+  - date: 2023-02-21
+    description: first release
+links:
+  - label: Website
+    url: https://gotenberg.dev/
+  - label: Documentation
+    url: https://gotenberg.dev/docs/get-started/live-demo
+  - label: Github
+    url: https://github.com/gotenberg/gotenberg
+contributors: null
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gotenberg
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gotenberg/gotenberg:7.8.0
