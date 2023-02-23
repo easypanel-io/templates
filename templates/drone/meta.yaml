@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: drone/drone:2.13.0
+      default: drone/drone:2.16.0
     runnerServiceName:
       type: string
       title: Runner Service Name
@@ -45,7 +45,7 @@ schema:
     runnerServiceImage:
       type: string
       title: Runner Service Image
-      default: drone/drone-runner-docker:1.8.2
+      default: drone/drone-runner-docker:1.8.3
     clientID:
       type: string
       title: GitHub OAuth Client ID
