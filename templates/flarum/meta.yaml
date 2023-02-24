@@ -4,6 +4,8 @@ instructions: Please use the credentials flarum:flarum to login.
 changeLog:
   - date: 2022-10-31
     description: first release
+  - date: 2023-2-24
+    description: Update to v1.6.2
 links:
   - label: Website
     url: https://flarum.org/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: crazymax/flarum:1.5.0
+      default: crazymax/flarum:1.6.2
     appDomain:
       type: string
       title: App Domain

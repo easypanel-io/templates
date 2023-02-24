@@ -7,6 +7,8 @@ instructions: 'Default credentials: User:"admin" Password:"admin"'
 changeLog:
   - date: 2022-08-09
     description: first release
+  - date: 2023-2-24
+    description: Update to v2.23.0
 links:
   - label: Website
     url: https://filebrowser.org/
@@ -17,6 +19,8 @@ contributors:
     url: https://github.com/bedeoan
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Supernova3339
+    url: https://github.com/supernova3339
 schema:
   type: object
   required:
@@ -35,4 +39,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filebrowser/filebrowser:v2.22.4
+      default: filebrowser/filebrowser:v2.23.0

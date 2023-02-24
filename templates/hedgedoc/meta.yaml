@@ -4,6 +4,8 @@ instructions: null
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2023-2-24
+    description: Update to v1.9.7
 links:
   - label: Documentation
     url: https://docs.hedgedoc.org/
@@ -35,4 +37,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/hedgedoc:1.9.6
+      default: linuxserver/hedgedoc:1.9.7
