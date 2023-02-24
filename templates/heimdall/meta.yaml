@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2023-2-24
+    description: Update to v2.5.5
 links:
   - label: Website
     url: https://heimdall.site/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/heimdall:2.4.13
+      default: linuxserver/heimdall:v2.5.5-ls203
     serviceTimezone:
       type: string
       title: Timezone

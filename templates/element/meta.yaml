@@ -4,6 +4,8 @@ instructions: null
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2023-2-24
+    description: Update to v1.11.23
 links:
   - label: Website
     url: https://element.io/
@@ -31,4 +33,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.11.20
+      default: vectorim/element-web:v1.11.23
