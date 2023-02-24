@@ -45,7 +45,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: `sh -c "yarn sequelize:migrate --env=production-ssl-disabled && yarn start --env=production-ssl-disabled"`,
+        command: `sh -c "yarn db:migrate --env=production-ssl-disabled && yarn start --env=production-ssl-disabled"`,
       },
       proxy: {
         port: 3000,
