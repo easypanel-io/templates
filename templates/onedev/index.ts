@@ -36,7 +36,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "onedev_data",
+          name: "data",
           mountPath: "/opt/onedev",
         },
         {
