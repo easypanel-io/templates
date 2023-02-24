@@ -7,6 +7,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2023-2-24
+    description: Update to v2.2.4
 links:
   - label: Website
     url: https://gotify.net/
@@ -19,6 +21,8 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Supernova3339
+    url: https://github.com/supernova3339
 schema:
   type: object
   required:
@@ -37,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotify/server:2.1.7
+      default: gotify/server:2.2.4
     password:
       type: string
       title: Password

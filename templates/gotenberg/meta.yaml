@@ -11,7 +11,11 @@ links:
     url: https://gotenberg.dev/docs/get-started/live-demo
   - label: Github
     url: https://github.com/gotenberg/gotenberg
-contributors: null
+contributors:
+  - name: TheoCouss
+    url: https://github.com/TheoCouss
+  - name: Supernova3339
+    url: https://github.com/supernova3339
 schema:
   type: object
   required:
@@ -29,4 +33,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:7.8.0
+      default: gotenberg/gotenberg:7.8.1

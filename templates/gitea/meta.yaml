@@ -7,6 +7,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2023-2-24
+    description: Update to v1.18.4
 links:
   - label: Website
     url: https://gitea.io/en-us/
@@ -19,6 +21,8 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Supernova3339
+    url: https://github.com/supernova3339
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gitea/gitea:1.17.2
+      default: gitea/gitea:1.18.4
     databaseType:
       type: string
       title: Database Type
