@@ -1,0 +1,32 @@
+name: Languagetool
+description: LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages. It finds many errors that a simple spell checker cannot detect.
+instructions: null
+changeLog:
+  - date: 2023-2-24
+    description: first release
+links:
+  - label: Website
+    url: https://languagetool.org
+  - label: Github
+    url: https://github.com/languagetool-org/languagetool
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: languagetool
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: silviof/docker-languagetool:6.0
