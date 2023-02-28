@@ -1,0 +1,68 @@
+name: Owncloud
+description: ownCloud is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device. 
+instructions: null
+changeLog:
+  - date: 2023-2-28
+    description: first release
+links:
+  - label: Website
+    url: https://owncloud.com/
+  - label: Documentation
+    url: https://doc.owncloud.com/
+  - label: Github
+    url: https://github.com/owncloud/core
+contributors:
+  - name: Supernova3339
+    url: https://github.com/supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - domain
+    - appServiceImage
+    - databaseType
+    - databaseServiceName
+    - redisServiceName
+    - adminUsername
+    - adminPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: owncloud
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: owncloud/server:10.11.0
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgres
+      oneOf:
+        - enum:
+            - postgres
+          title: Postgres
+        - enum:
+            - mariadb
+          title: MariaDB
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: owncloud-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: owncloud-redis
+    adminUsername:
+      type: string
+      title: Username
+    adminPassword:
+      type: string
+      title: Password
