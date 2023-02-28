@@ -4,6 +4,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const redisPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -14,6 +15,7 @@ export function generate(input: Input): Output {
         `ENV=production`,
         `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
         `DATABASE_TYPE=postgres`,
+        `REDIS_URL=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
       ].join("\n"),
       source: {
         type: "image",
@@ -32,6 +34,15 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.redisServiceName,
+      password: redisPassword,
     },
   });
 
