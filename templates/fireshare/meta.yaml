@@ -1,0 +1,40 @@
+name: Fireshare
+description: Share your game clips, videos, or other media via unique links.
+instructions: null
+changeLog:
+  - date: 2023-2-24
+    description: first release
+links:
+  - label: Website
+    url: https://v.fireshare.net
+  - label: Github
+    url: https://github.com/ShaneIsrael/fireshare
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fireshare
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: shaneisrael/fireshare:v1.2.8
+    adminUsername:
+      type: string
+      title: Username
+    adminPassword:
+      type: string
+      title: Password
