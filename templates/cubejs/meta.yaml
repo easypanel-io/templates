@@ -1,12 +1,16 @@
-name: Silicon Notes
-description: A somewhat lightweight, low-friction personal knowledge base.
+name: CubeJS
+description: Cube — The Semantic Layer for Building Data Applications
 instructions: null
 changeLog:
-  - date: 2023-1-28
+  - date: 2023-2-27
     description: first release
 links:
+  - label: Website
+    url: https://cube.dev
+  - label: Documentation
+    url: https://cube.dev/docs
   - label: Github
-    url: https://github.com/cu/silicon
+    url: https://github.com/cube-js/cube.js
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
@@ -16,6 +20,7 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -23,8 +28,12 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: silicon
+      default: cubejs
     appServiceImage:
       type: string
       title: App Service Image
-      default: bityard/silicon:619334fb58a09c4208008316062c0ded0caefb5b
+      default: cubejs/cube:v0.31.66
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: cubejs-db
