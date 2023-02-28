@@ -23,7 +23,6 @@ export function generate(input: Input): Output {
           name: "event-data",
           mountPath: "/var/lib/clickhouse",
         },
-        // pay attention to this - this is how to add additional file content ( works for any template )
         {
           type: "file",
           content: [
