@@ -1,0 +1,48 @@
+name: Activepieces
+description: No-code Business Automation Tool. An open source alternative to Zapier.
+instructions: null
+changeLog:
+  - date: 2023-2-27
+    description: first release
+links:
+  - label: Website
+    url: https://activepieces.com
+  - label: Documentation
+    url: https://activepieces.com/docs
+  - label: Github
+    url: https://github.com/activepieces/activepieces
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: activepieces
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: activepieces/activepieces:0.3.3
+    databaseServiceName:
+      type: string
+      title: Redis Service Name
+      default: activepieces-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: activepieces-redis
