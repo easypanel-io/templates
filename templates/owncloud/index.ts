@@ -80,13 +80,13 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-      type: "redis",
-      data: {
-        projectName: input.projectName,
-        serviceName: input.redisServiceName,
-        password: redisPassword,
-      },
-    });
+    type: "redis",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.redisServiceName,
+      password: redisPassword,
+    },
+  });
 
   return { services };
 }
