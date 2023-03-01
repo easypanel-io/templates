@@ -5,7 +5,16 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
-  const appEnv = [];
+  const appEnv = [
+    `OWNCLOUD_DOMAIN=https://${input.domain}`,
+    `OWNCLOUD_TRUSTED_DOMAINS=${input.domain}`,
+    `OWNCLOUD_TRUSTED_PROXIES=0.0.0.0/0`,
+    `OWNCLOUD_REDIS_ENABLED=true`,
+    `OWNCLOUD_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+    `OWNCLOUD_REDIS_PASSWORD=${redisPassword}`,
+    `OWNCLOUD_ADMIN_USERNAME=${input.adminUsername}`,
+    `OWNCLOUD_ADMIN_PASSWORD=${input.adminPassword}`,
+  ];
 
   if (input.databaseType === "mariadb") {
     appEnv.push(
@@ -15,14 +24,6 @@ export function generate(input: Input): Output {
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
       `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
       `OWNCLOUD_MYSQL_UTF8MB4=true`,
-      `OWNCLOUD_DOMAIN=https://${input.domain}`,
-      `OWNCLOUD_TRUSTED_DOMAINS=${input.domain}`,
-      `OWNCLOUD_TRUSTED_PROXIES=0.0.0.0/0`,
-      `OWNCLOUD_REDIS_ENABLED=true`,
-      `OWNCLOUD_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
-      `OWNCLOUD_REDIS_PASSWORD=${redisPassword}`,
-      `OWNCLOUD_ADMIN_USERNAME=${input.adminUsername}`,
-      `OWNCLOUD_ADMIN_PASSWORD=${input.adminPassword}`,
     );
 
     services.push({
@@ -42,14 +43,6 @@ export function generate(input: Input): Output {
       `OWNCLOUD_DB_USERNAME=postgres`,
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
       `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-      `OWNCLOUD_DOMAIN=https://${input.domain}`,
-      `OWNCLOUD_TRUSTED_DOMAINS=${input.domain}`,
-      `OWNCLOUD_TRUSTED_PROXIES=0.0.0.0/0`,
-      `OWNCLOUD_REDIS_ENABLED=true`,
-      `OWNCLOUD_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
-      `OWNCLOUD_REDIS_PASSWORD=${redisPassword}`,
-      `OWNCLOUD_ADMIN_USERNAME=${input.adminUsername}`,
-      `OWNCLOUD_ADMIN_PASSWORD=${input.adminPassword}`,
     );
 
     services.push({
