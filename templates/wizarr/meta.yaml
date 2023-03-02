@@ -6,7 +6,7 @@ changeLog:
     description: first release
 links:
   - label: Website
-    url: https://windmill.dev
+    url: https://wizarr.dev
   - label: Documentation
     url: https://docs.wizarr.dev
   - label: Github
@@ -21,7 +21,6 @@ schema:
     - domain
     - appServiceName
     - appServiceImage
-
   properties:
     projectName:
       type: string
