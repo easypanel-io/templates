@@ -3,19 +3,15 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const sysctl = ["hi"];
-
-  const serviceVariables = [
-    `WG_HOST=${input.appDomain}`,
-    `PASSWORD=${input.appPassword}`,
-  ];
 
   services.push({
     type: "app",
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: serviceVariables.join("\n"),
+      env: [`WG_HOST=${input.appDomain}`, `PASSWORD=${input.appPassword}`].join(
+        "\n"
+      ),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -42,12 +38,10 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        // this is how to use sysctls
         sysctls: {
-          a: "net.ipv4.conf.all.src_valid_mark=1",
-          b: "net.ipv4.ip_forward=1",
+          "net.ipv4.conf.all.src_valid_mark": "1",
+          "net.ipv4.ip_forward": "1",
         },
-        // this is how to use capadd
         capAdd: ["NET_ADMIN", "SYS_MODULE"],
       },
     },
