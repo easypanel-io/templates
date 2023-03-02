@@ -40,14 +40,5 @@ export function generate(input: Input): Output {
     },
   });
 
-  services.push({
-    type: "postgres",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      password: databasePassword,
-    },
-  });
-
   return { services };
 }
