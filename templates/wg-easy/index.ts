@@ -3,6 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const sysctl = ["hi"];
 
   const serviceVariables = [
     `WG_HOST=${input.appDomain}`,
@@ -26,8 +27,13 @@ export function generate(input: Input): Output {
       ports: [
         {
           protocol: "udp",
-          published: 50920,
-          target: 50920,
+          published: 51820,
+          target: 51820,
+        },
+        {
+          protocol: "tcp",
+          published: 51821,
+          target: 51821,
         },
       ],
       domains: [
@@ -35,6 +41,15 @@ export function generate(input: Input): Output {
           name: input.appDomain,
         },
       ],
+      deploy: {
+        // this is how to use sysctls
+        sysctls: {
+          a: "net.ipv4.conf.all.src_valid_mark=1",
+          b: "net.ipv4.ip_forward=1",
+        },
+        // this is how to use capadd
+        capAdd: ["NET_ADMIN", "SYS_MODULE"],
+      },
     },
   });
 
