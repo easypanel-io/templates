@@ -1,0 +1,59 @@
+name: Keila
+description: Keila is an Open Source alternative to newsletter tools like Mailchimp or Sendinblue.
+instructions: Login with changeme@easypanel.io:password123 - change this from the administraton panel
+changeLog:
+  - date: 2023-3-3
+    description: first release
+links:
+  - label: Website
+    url: https://keila.io
+  - label: Documentation
+    url: https://keila.io/docs
+  - label: Github
+    url: https://github.com/pentacent/keila
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - databaseServiceName
+    - emailFrom
+    - emailHost
+    - emailPort
+    - emailUsername
+    - emailPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: keila
+    domain:
+      type: string
+      title: Domain
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: keila-db
+    emailFrom:
+      type: string
+      title: System From Email
+    emailHost:
+      type: string
+      title: System Email Host
+    emailPort:
+      type: number
+      title: System Email Port
+      default: 587
+    emailUsername:
+      type: string
+      title: System Email Username
+    emailPassword:
+      type: string
+      title: System Email Password
