@@ -27,7 +27,7 @@ export function generate(input: Input): Output {
         `DISABLE_REGISTRATION=false`,
         `DISABLE_PRECEDENCE_HEADER=false`,
         `USER_CONTENT_DIR=/uploads`,
-        `MAILER_SMTP_FROM_EMAIL=${input.emailNoReply}`,
+        `MAILER_SMTP_FROM_EMAIL=${input.emailFrom}`,
         `MAILER_SMTP_HOST=${input.emailHost}`,
         `MAILER_SMTP_PORT=${input.emailPort}`,
         `MAILER_SMTP_USER=${input.emailUsername}`,
