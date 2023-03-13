@@ -1,0 +1,51 @@
+name: Nango
+description: Get OAuth tokens for APIs - fast & secure
+instructions: Check the environment tab for your API key. Follow the instructions in the FILE mount.
+changeLog:
+  - date: 2023-3-13
+    description: first release
+links:
+  - label: Website
+    url: https://nango.dev
+  - label: Documentation
+    url: https://docs.nango.dev
+  - label: Github
+    url: https://github.com/NangoHQ/nango
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - webUsername
+    - webPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nango
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nango.docker.scarf.sh/nangohq/nango-server:0.10.3
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: nango-db
+    webUsername:
+      type: string
+      title: Username
+    webPassword:
+      type: string
+      title: Password
