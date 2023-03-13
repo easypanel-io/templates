@@ -39,11 +39,6 @@ export function generate(input: Input): Output {
           mountPath: "/music",
         },
       ],
-      domains: [
-        {
-          name: input.domain,
-        },
-      ],
     },
   });
 
