@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
       env: [
         `FR_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
         `FR_DB_PORT=3306`,
-        `FR_DB_USER=${input.databaseType}`,
+        `FR_DB_USER=mysql`,
         `FR_DB_PASS=${mysqlPassword}`,
         `FR_DB_NAME=${input.projectName}`,
         `APACHE_RUN_USER=www-data`,
