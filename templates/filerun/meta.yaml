@@ -1,0 +1,37 @@
+name: Filerun
+description: Share files with your clients and colleagues
+instructions: null
+changeLog:
+  - date: 2023-3-14
+    description: first release
+links:
+  - label: Website
+    url: https://filerun.com/
+  - label: Documentation
+    url: https://docs.filerun.com
+contributors:
+  - name: Supernova3339
+    url: https://github.com/supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: filerun
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: filerun/filerun # no versioned images
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: filerun-db
