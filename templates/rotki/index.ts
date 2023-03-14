@@ -13,9 +13,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [
-        `ROTKI_ACCEPT_DOCKER_RISK=1`,
-      ].join("\n"),
+      env: [`ROTKI_ACCEPT_DOCKER_RISK=1`].join("\n"),
       proxy: {
         port: 80,
         secure: true,
