@@ -43,7 +43,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: input.databaseType,
+    type: "mysql",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
