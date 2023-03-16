@@ -1,0 +1,42 @@
+name: Gogs
+description: Gogs is a painless self-hosted Git service
+instructions: null
+changeLog:
+  - date: 2023-3-16
+    description: first release
+links:
+  - label: Website
+    url: https://gogs.io/
+  - label: Documentation
+    url: https://gogs.io/docs
+  - label: Github
+    url: https://github.com/gogs/gogs
+contributors:
+  - name: Supernova3339
+    url: https://github.com/supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - sshPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gogs
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gogs/gogs:0.13.0
+    sshPort:
+      type: number
+      title: SSH Port
+      default: 2222
