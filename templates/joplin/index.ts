@@ -14,10 +14,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 80, secure: input.secure },
+      proxy: { port: 80, secure: true },
       domains: [{ name: input.domain }],
       env: [
-        `APP_BASE_URL=${input.secure ? "https" : "http"}://${input.domain}`,
+        `APP_BASE_URL=https://${input.domain}`,
         `APP_PORT=80`,
         `DB_CLIENT=pg`,
         `POSTGRES_PASSWORD=${databasePassword}`,

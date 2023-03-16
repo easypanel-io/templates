@@ -19,7 +19,6 @@ schema:
   required:
     - projectName
     - domain
-    - secure
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -30,10 +29,6 @@ schema:
     domain:
       type: string
       title: Domain
-    secure:
-      type: boolean
-      title: Secure Connection
-      default: true
     appServiceName:
       type: string
       title: App Service Name
