@@ -1,0 +1,73 @@
+name: Hasura
+description: The Hasura GraphQL Engine makes your data instantly accessible over a real-time GraphQL API, so you can build and ship modern, performant apps and APIs 10x faster.
+instructions: null
+changeLog:
+  - date: 2023-03-16
+    description: first release
+links:
+  - label: Website
+    url: https://hasura.io/
+  - label: Documentation
+    url: https://hasura.io/docs/latest/deployment/deployment-guides/kubernetes
+  - label: Github
+    url: https://github.com/hasura/graphql-engine
+contributors:
+  - name: Amit Gadhia
+    url: https://github.com/amitoo7
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - enableConsole
+    - devMode
+    - hasuraDomain
+    - hasuraAdminSecret
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hasura
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hasura/graphql-engine:v2.20.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: hasura-db
+    hasuraAdminSecret:
+      type: string
+      title: Hasura Admin Secret Key
+      default: mysecretkey
+    enableConsole:
+      type: string
+      title: Console Enable
+      default: "true"
+      oneOf:
+        - enum:
+            - "true"
+          title: "true"
+        - enum:
+            - "false"
+          title: "false"
+    devMode:
+      type: string
+      title: Dev mode Enable
+      default: "true"
+      oneOf:
+        - enum:
+            - "true"
+          title: "true"
+        - enum:
+            - "false"
+          title: "false"
+    hasuraDomain:
+      type: string
+      title: Hasura Domain name
+      default: Hasura domain
