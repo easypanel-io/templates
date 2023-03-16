@@ -54,6 +54,13 @@ export function generate(input: Input): Output {
       },
       proxy: { port: 80, secure: true },
       env: appEnv.join("\n"),
+      mounts: [
+        {
+          type: "volume",
+          name: "app",
+          mountPath: "/app",
+        },
+      ],
     },
   });
 
