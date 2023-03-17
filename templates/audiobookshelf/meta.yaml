@@ -1,0 +1,42 @@
+name: Audiobookshelf
+description: Audiobookshelf is a self-hosted audiobook and podcast server.
+instructions: Starter Host Path will be bind to "/audiobooks" inside the container. You can bind any other directories you want to use for your book and podcast collections.
+changeLog:
+  - date: 2023-03-17
+    description: Template created (v2.2.16)
+links:
+  - label: Website
+    url: https://www.audiobookshelf.org
+  - label: Documentation
+    url: https://www.audiobookshelf.org/docs
+  - label: Github
+    url: https://github.com/advplyr/audiobookshelf
+contributors:
+  - name: Ponkhy
+    url: https://github.com/Ponkhy
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - hostPath
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: audiobookshelf
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/advplyr/audiobookshelf:2.2.16
+    hostPath:
+      type: string
+      title: Starter Host Path
