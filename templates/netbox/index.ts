@@ -1,14 +1,12 @@
 import {
   Output,
-  randomPassword,
-  randomString,
-  Services,
+  randomPassword, Services
 } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secret = randomString(512);
+  const redisPassword = randomPassword();
   const databasePassword = randomPassword();
 
   services.push({
@@ -17,27 +15,36 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `BASE_URL=https://${input.domain}`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
-        `JWT_SECRET=${secret}`,
-        `EMAIL_NOREPLY=${input.emailNoReply}`,
-        `EMAIL_SMTP_HOST=${input.emailHost}`,
-        `EMAIL_SMTP_PORT=${input.emailPort}`,
-        `EMAIL_SMTP_USERNAME=${input.emailUsername}`,
-        `EMAIL_SMTP_PASSWORD=${input.emailPassword}`,
-        `EMAIL_SMTP_ENABLE_STARTTLS=true`,
+        `SUPERUSER_EMAIL=${input.netboxUsername}`,
+        `SUPERUSER_PASSWORD=${input.netboxPassword}`,
+        `ALLOWED_HOST=${input.domain}`,
+        `DB_NAME=${input.projectName}`,
+        `DB_USER=postgres`,
+        `DB_PORT=5432`,
+        `DB_PASSWORD=${databasePassword}`,
+        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+        `REDIS_PORT=6379`,
+        `REDIS_PASSWORD=${redisPassword}`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
       proxy: {
-        port: 80,
+        port: 8000,
         secure: true,
       },
       domains: [
         {
           name: input.domain,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/config",
         },
       ],
     },
@@ -49,6 +56,15 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.redisServiceName,
+      password: redisPassword,
     },
   });
 

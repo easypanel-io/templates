@@ -1,4 +1,4 @@
-name: Fider
+name: Netbox
 description: The premiere source of truth powering network automation.
 instructions: null
 changeLog:
@@ -22,6 +22,9 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - redisServiceName
+    - netboxUsername
+    - netboxPassword
   properties:
     projectName:
       type: string
@@ -29,31 +32,25 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: fider
+      default: netbox
     domain:
       type: string
       title: Domain
     appServiceImage:
       type: string
       title: App Service Image
-      default: getfider/fider:stable
+      default: lscr.io/linuxserver/netbox:3.4.6
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: fider-db
-    emailNoReply:
+      default: netbox-db
+    redisServiceName:
       type: string
-      title: No Reply Email
-    emailHost:
+      title: Database Service Name
+      default: netbox-redis
+    netboxUsername:
       type: string
-      title: Email Host
-    emailPort:
-      type: number
-      title: Email Port
-      default: 587
-    emailUsername:
+      title: Username
+    netboxPassword:
       type: string
-      title: Email Username
-    emailPassword:
-      type: string
-      title: Email Password
+      title: Password
