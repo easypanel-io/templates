@@ -25,6 +25,11 @@ export function generate(input: Input): Output {
           mountPath: "/www/assets",
         },
       ],
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
     },
   });
 
