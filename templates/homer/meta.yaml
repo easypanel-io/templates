@@ -1,0 +1,32 @@
+name: Homer
+description: A very simple static homepage for your server.
+instructions: The config files can be found under "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
+changeLog:
+  - date: 2023-03-17
+    description: Template created (v23.02.2)
+links:
+  - label: Github
+    url: https://github.com/bastienwirtz/homer
+  - label: Demo
+    url: https://homer-demo.netlify.app
+contributors:
+  - name: Ponkhy
+    url: https://github.com/Ponkhy
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: homer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: b4bz/homer:v23.02.2
