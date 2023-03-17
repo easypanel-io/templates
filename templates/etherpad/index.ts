@@ -1,7 +1,6 @@
 import {
   Output,
   randomPassword,
-  randomString,
   Services
 } from "~templates-utils";
 import { Input } from "./meta";
@@ -9,7 +8,6 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const etherpadApiKey = randomString(32);
 
   services.push({
     type: "app",
@@ -23,7 +21,6 @@ export function generate(input: Input): Output {
         `DB_PORT=5432`,
         `DB_USER=postgres`,
         `DB_PASS=${databasePassword}`,
-        `ETHERPAD_API_KEY=${etherpadApiKey}`,
         `ETHERPAD_PORT=9001`,
       ].join("\n"),
       source: {
