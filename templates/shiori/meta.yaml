@@ -1,0 +1,41 @@
+name: Shiori
+description: Shiori is a simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket. You can use it as a command line application or as a web application. This application is distributed as a single binary, which means it can be installed and used easily.
+instructions: The default account is "shiori" with password "gopher". It is removed once another "owner" account is created.
+changeLog:
+  - date: 2023-03-17
+    description: Template created (v1.5.4)
+links:
+  - label: Github
+    url: https://github.com/go-shiori/shiori
+  - label: Web Extension
+    url: https://github.com/go-shiori/shiori-web-ext
+contributors:
+  - name: Ponkhy
+    url: https://github.com/Ponkhy
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shiori
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/go-shiori/shiori:v1.5.4
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: shiori-db
