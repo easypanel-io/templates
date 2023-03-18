@@ -16,6 +16,9 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
+      source: { type: "image", image: input.appServiceImage },
+      proxy: { port: 80, secure: true },
+      domains: input.monicaAppUrl ? [{ name: input.monicaAppUrl }] : [],
       env: [
         `APP_ENV=production`,
         `APP_DEBUG=false`,
@@ -37,14 +40,6 @@ export function generate(input: Input): Output {
         `APP_DISABLE_SIGNUP=${input.monicaAppDisableSignup}`,
         `CHECK_VERSION=${input.monicaCheckVersion}`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       mounts: [
         {
           type: "volume",
