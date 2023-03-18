@@ -18,7 +18,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - serverPort
   properties:
     projectName:
       type: string
@@ -31,22 +30,111 @@ schema:
       type: string
       title: App Service Image
       default: itzg/minecraft-server:2023.2.0
+    serverName:
+      type: string
+      title: Server Name
+      default: MyServer
+    version:
+      type: string
+      title: Version
+      default: LATEST
+    type:
+      type: string
+      title: Server Types
+      default: VANILLA
+    motd:
+      type: string
+      title: Message of the Day
+      default: Minecraft Server powered by §aEasypanel§r
+    iconUrl:
+      type: string
+      title: Icon URL
+      default: https://cdn.berksmbl.com/easypanel-icon.png
+    difficulty:
+      type: string
+      title: Difficulty
+      default: easy
+      oneOf:
+        - enum:
+            - peaceful
+          title: Peaceful
+        - enum:
+            - easy
+          title: Easy
+        - enum:
+            - normal
+          title: Normal
+        - enum:
+            - hard
+          title: Hard
+    maxPlayers:
+      type: number
+      title: Max Players
+      default: 20
+    maxWorldSize:
+      type: number
+      title: Max World Size
+      default: 10000
     eula:
       type: boolean
       title: Please accept the Minecraft EULA
       default: true
+    allowNether:
+      type: boolean
+      title: Allow Nether
+      default: true
+    announcePlayerAchievements:
+      type: boolean
+      title: Announce Player Achievements
+      default: true
+    enableCommandBlock:
+      type: boolean
+      title: Enable Command Block
+      default: true
+    hardcore:
+      type: boolean
+      title: Hardcore
+      default: false
+    spawnAnimals:
+      type: boolean
+      title: Spawn Animals
+      default: true
+    spawnMonsters:
+      type: boolean
+      title: Spawn Monsters
+      default: true
+    spawnNpcs:
+      type: boolean
+      title: Spawn NPCs
+      default: true
+    snooperEnabled:
+      type: boolean
+      title: Snooper Enabled
+      default: false
+    onlineMode:
+      type: boolean
+      title: Online Mode
+      default: false
     enableRcon:
       type: boolean
       title: Enable RCON
       default: false
-    rconPassword:
-      type: string
-      title: RCON Password
-    rconPort:
-      type: number
-      title: RCON Port
-      default: 25575
+    enableQuery:
+      type: boolean
+      title: Enable Query
+      default: false
     serverPort:
       type: number
       title: Server Port
       default: 25565
+    queryPort:
+      type: number
+      title: Query Port
+      default: 25565
+    rconPort:
+      type: number
+      title: RCON Port
+      default: 25575
+    rconPassword:
+      type: string
+      title: RCON Password
