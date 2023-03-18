@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
     {
       published: input.serverPort || 25565,
       target: input.serverPort || 25565,
-      protocol: "tcp",
     },
   ];
   const appEnv = [
@@ -17,14 +16,21 @@ export function generate(input: Input): Output {
     `SERVER_NAME=${input.serverName || ""}`,
     `MOTD=${input.motd || ""}`,
     `ICON=${input.iconUrl || ""}`,
+    `MODE=${input.gameMode || ""}`,
     `DIFFICULTY=${input.difficulty || ""}`,
     `MAX_PLAYERS=${input.maxPlayers || ""}`,
     `MAX_WORLD_SIZE=${input.maxWorldSize || ""}`,
+    `VIEW_DISTANCE=${input.viewDistance || ""}`,
+    `MAX_BUILD_HEIGHT=${input.maxBuildHeight || ""}`,
+    `MAX_TICK_TIME=${input.maxTickTime || ""}`,
     `EULA=${input.eula}`,
     `ALLOW_NETHER=${input.allowNether}`,
     `ANNOUNCE_PLAYER_ACHIEVEMENTS=${input.announcePlayerAchievements}`,
-    `ENABLE_COMMAND_BLOCK=${input.enableCommandBlock}`,
+    `GENERATE_STRUCTURES=${input.generateStructures}`,
+    `PVP=${input.pvp}`,
+    `FORCE_GAMEMODE=${input.forceGamemode}`,
     `HARDCORE=${input.hardcore}`,
+    `ENABLE_COMMAND_BLOCK=${input.enableCommandBlock}`,
     `SPAWN_ANIMALS=${input.spawnAnimals}`,
     `SPAWN_MONSTERS=${input.spawnMonsters}`,
     `SPAWN_NPCS=${input.spawnNpcs}`,
@@ -40,7 +46,6 @@ export function generate(input: Input): Output {
     appPorts.push({
       published: input.queryPort || 25565,
       target: input.queryPort || 25565,
-      protocol: "udp",
     });
   }
 
@@ -52,7 +57,6 @@ export function generate(input: Input): Output {
     appPorts.push({
       published: input.rconPort || 25575,
       target: input.rconPort || 25575,
-      protocol: "tcp",
     });
   }
 

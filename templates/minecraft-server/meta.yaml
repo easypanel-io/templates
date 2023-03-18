@@ -50,6 +50,23 @@ schema:
       type: string
       title: Icon URL
       default: https://cdn.berksmbl.com/easypanel-icon.png
+    gameMode:
+      type: string
+      title: Game Mode
+      default: survival
+      oneOf:
+        - enum:
+            - creative
+          title: Creative
+        - enum:
+            - survival
+          title: Survival
+        - enum:
+            - adventure
+          title: Adventure
+        - enum:
+            - spectator
+          title: Spectator
     difficulty:
       type: string
       title: Difficulty
@@ -75,6 +92,18 @@ schema:
       type: number
       title: Max World Size
       default: 10000
+    viewDistance:
+      type: number
+      title: View Distance
+      default: 10
+    maxBuildHeight:
+      type: number
+      title: Max Build Height
+      default: 256
+    maxTickTime:
+      type: number
+      title: Max Tick Time
+      default: 60000
     eula:
       type: boolean
       title: Please accept the Minecraft EULA
@@ -87,14 +116,26 @@ schema:
       type: boolean
       title: Announce Player Achievements
       default: true
-    enableCommandBlock:
+    generateStructures:
       type: boolean
-      title: Enable Command Block
+      title: Generate Structures
       default: true
+    pvp:
+      type: boolean
+      title: PVP Mode
+      default: true
+    forceGamemode:
+      type: boolean
+      title: Force Gamemode
+      default: false
     hardcore:
       type: boolean
       title: Hardcore
       default: false
+    enableCommandBlock:
+      type: boolean
+      title: Enable Command Block
+      default: true
     spawnAnimals:
       type: boolean
       title: Spawn Animals
