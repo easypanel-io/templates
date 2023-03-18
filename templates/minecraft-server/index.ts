@@ -8,6 +8,7 @@ export function generate(input: Input): Output {
     {
       published: input.serverPort || 25565,
       target: input.serverPort || 25565,
+      protocol: "tcp",
     },
   ];
   const appEnv = [
@@ -46,6 +47,7 @@ export function generate(input: Input): Output {
     appPorts.push({
       published: input.queryPort || 25565,
       target: input.queryPort || 25565,
+      protocol: "udp",
     });
   }
 
@@ -57,6 +59,7 @@ export function generate(input: Input): Output {
     appPorts.push({
       published: input.rconPort || 25575,
       target: input.rconPort || 25575,
+      protocol: "tcp",
     });
   }
 
