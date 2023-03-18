@@ -37,15 +37,9 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
+      source: { type: "image", image: input.appServiceImage },
       env: appEnv.join("\n"),
-      proxy: {
-        port: 9090,
-        secure: true,
-      },
+      proxy: { port: 9090, secure: true },
       domains: input.domain ? [{ name: input.domain }] : [],
       mounts: [
         {
