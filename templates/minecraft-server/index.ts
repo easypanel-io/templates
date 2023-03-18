@@ -3,8 +3,8 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-
-  const appPorts = [
+  type Port = { published: number; target: number; protocol: "tcp" | "udp" };
+  const appPorts: Port[] = [
     {
       published: input.serverPort || 25565,
       target: input.serverPort || 25565,
