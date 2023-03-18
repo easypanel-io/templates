@@ -5,7 +5,11 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   const appPorts = [
-    { published: input.serverPort || 25565, target: input.serverPort || 25565 },
+    {
+      published: input.serverPort || 25565,
+      target: input.serverPort || 25565,
+      protocol: "tcp",
+    },
   ];
   const appEnv = [
     `VERSION=${input.version || ""}`,
@@ -48,6 +52,7 @@ export function generate(input: Input): Output {
     appPorts.push({
       published: input.rconPort || 25575,
       target: input.rconPort || 25575,
+      protocol: "tcp",
     });
   }
 
