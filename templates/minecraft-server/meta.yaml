@@ -1,0 +1,52 @@
+name: Minecraft Server
+description: Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.
+instructions: null
+changeLog:
+  - date: 2023-03-18
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/itzg/docker-minecraft-server
+  - label: Docker
+    url: https://hub.docker.com/r/itzg/minecraft-server
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - serverPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: minecraft-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: itzg/minecraft-server:2023.2.0
+    eula:
+      type: boolean
+      title: Please accept the Minecraft EULA
+      default: true
+    enableRcon:
+      type: boolean
+      title: Enable RCON
+      default: false
+    rconPassword:
+      type: string
+      title: RCON Password
+    rconPort:
+      type: number
+      title: RCON Port
+      default: 25575
+    serverPort:
+      type: number
+      title: Server Port
+      default: 25565
