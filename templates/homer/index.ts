@@ -10,24 +10,14 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: ["INIT_ASSETS=1"].join("\n"),
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      source: { type: "image", image: input.appServiceImage },
+      proxy: { port: 8080, secure: true },
+      domains: input.domain ? [{ name: input.domain }] : [],
       mounts: [
         {
           type: "volume",
           name: "assets",
           mountPath: "/www/assets",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },
