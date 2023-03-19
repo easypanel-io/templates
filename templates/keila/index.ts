@@ -34,16 +34,8 @@ export function generate(input: Input): Output {
         `MAILER_SMTP_PASSWORD=${input.emailPassword}`,
       ].join("\n"),
       source: {
-        type: "github",
-        owner: "pentacent",
-        repo: "keila",
-        ref: "main",
-        path: "/",
-        autoDeploy: false,
-      },
-      build: {
-        type: "dockerfile",
-        file: "ops/Dockerfile",
+        type: "image",
+        image: input.appServiceImage
       },
       proxy: {
         port: 80,

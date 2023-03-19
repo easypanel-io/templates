@@ -20,6 +20,7 @@ schema:
     - projectName
     - domain
     - appServiceName
+    - appServiceImage
     - databaseServiceName
     - emailFrom
     - emailHost
@@ -34,6 +35,10 @@ schema:
       type: string
       title: App Service Name
       default: keila
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pentacent/keila:0.11.2
     domain:
       type: string
       title: Domain
@@ -46,14 +51,14 @@ schema:
       title: System From Email
     emailHost:
       type: string
-      title: System Email Host
+      title: SMTP Email Host
     emailPort:
       type: number
-      title: System Email Port
+      title: SMTP Email Port
       default: 587
     emailUsername:
       type: string
-      title: System Email Username
+      title: SMTP Email Username
     emailPassword:
       type: string
-      title: System Email Password
+      title: SMTP Email Password
