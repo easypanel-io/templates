@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
         `KEYCLOAK_ADMIN_PASSWORD=${input.keycloakPassword}`,
         `KC_HOSTNAME_STRICT_HTTPS=false`,
-        `KC_HOSTNAME=${input.domain}`,,
+        `KC_HOSTNAME=${input.domain}`,
         `KC_HOSTNAME_ADMIN=${input.domain}`,
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
