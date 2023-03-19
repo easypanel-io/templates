@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `SUPERUSER_EMAIL=${input.netboxUsername}`,
+        `SUPERUSER_EMAIL=${input.netboxEmail}`,
         `SUPERUSER_PASSWORD=${input.netboxPassword}`,
         `ALLOWED_HOST=${input.domain}`,
         `DB_NAME=${input.projectName}`,
