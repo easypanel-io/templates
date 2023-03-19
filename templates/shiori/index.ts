@@ -19,10 +19,9 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
+      source: { type: "image", image: input.appServiceImage },
+      proxy: { port: 8080, secure: true },
+      domains: input.domain ? [{ name: input.domain }] : [],
       env: [
         "SHIORI_DIR=/src/shiori",
         `SHIORI_DBMS=postgresql`,
@@ -37,12 +36,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "data",
           mountPath: "/src/shiori",
-        },
-      ],
-      proxy: { port: 8080, secure: true },
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },
