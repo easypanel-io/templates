@@ -9,10 +9,9 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
+      source: { type: "image", image: input.appServiceImage },
+      proxy: { port: 80, secure: true },
+      domains: input.domain ? [{ name: input.domain }] : [],
       mounts: [
         {
           type: "volume",
@@ -28,15 +27,6 @@ export function generate(input: Input): Output {
           type: "bind",
           hostPath: input.hostPath,
           mountPath: "/audiobooks",
-        },
-      ],
-      proxy: {
-        port: 80,
-        secure: true,
-      },
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },
