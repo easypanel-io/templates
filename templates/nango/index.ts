@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
         `NANGO_DB_USER=postgres`,
         `NANGO_DB_PASSWORD=${databasePassword}`,
         `NANGO_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `NANGO_DB_NAME=${input.projectName}`,
         `NANGO_DB_PORT=5432`,
         'NANGO_DB_SSL=FALSE',
         `SERVER_PORT=3003`,
