@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
       source: { type: "image", image: input.appServiceImage },
       proxy: { port: 80, secure: true },
       domains: input.domain ? [{ name: input.domain }] : [],
+      env: ["PUID=1000", `PGID=1000`, `TZ=${input.timezone}`].join("\n"),
       mounts: [
         {
           type: "volume",
