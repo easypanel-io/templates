@@ -48,7 +48,7 @@ schema:
       type: string
       title: Database Service Name
       default: netbox-redis
-    netboxUsername:
+    netboxEmail:
       type: string
       title: E-Mail Address
     netboxPassword:
