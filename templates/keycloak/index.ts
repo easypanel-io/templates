@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `KEYCLOAK_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `KEYCLOAK_DATABASE_NAME=${input.databaseServiceName}`,
+        `KEYCLOAK_DATABASE_NAME=${input.projectName}`,
         `KEYCLOAK_DATABASE_USER=postgres`,
         `KEYCLOAK_DATABASE_PASSWORD=${databasePassword}`,
         `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
