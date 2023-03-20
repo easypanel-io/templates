@@ -16,12 +16,12 @@ export function generate(input: Input): Output {
         password: databasePassword,
       },
     });
-    if (input.databaseType != "postgres") {
-      dbtype = "mysql";
-      dbConfig = `${input.databaseType}:${databasePassword}@tcp(${input.projectName}_${input.databaseServiceName}:3306)/${input.projectName}`;
-    } else {
+    if (input.databaseType === "postgres") {
       dbtype = "postgres";
       dbConfig = `postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}/${input.projectName}?sslmode=disable&connect_timeout=10`;
+    } else {
+      dbtype = "mysql";
+      dbConfig = `${input.databaseType}:${databasePassword}@tcp(${input.projectName}_${input.databaseServiceName}:3306)/${input.projectName}`;
     }
   }
 
