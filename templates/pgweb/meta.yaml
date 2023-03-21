@@ -1,0 +1,32 @@
+name: pgweb
+description: Cross-platform client for PostgreSQL databases
+instructions: null
+changeLog:
+  - date: 2023-3-15
+    description: first release
+links:
+  - label: Documentation
+    url: https://github.com/sosedoff/pgweb/wiki
+  - label: Github
+    url: https://github.com/sosedoff/pgweb
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pgweb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sosedoff/pgweb:0.14.0
