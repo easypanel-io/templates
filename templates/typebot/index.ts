@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -47,7 +47,7 @@ export function generate(input: Input): Output {
     },
   });
 
-services.push({
+  services.push({
     type: "app",
     data: {
       projectName: input.projectName,
@@ -88,7 +88,7 @@ services.push({
       ].join("\n"),
       source: {
         type: "image",
-        image: input.storageServiceImage
+        image: input.storageServiceImage,
       },
       mounts: [
         {

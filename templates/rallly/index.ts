@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -40,7 +45,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      image: 'postgres:14.2',
+      image: "postgres:14.2",
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
