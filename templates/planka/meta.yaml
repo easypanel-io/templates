@@ -1,0 +1,43 @@
+name: Planka
+description: The realtime kanban board for workgroups built with React and Redux.
+instructions: Login with demo@demo.demo:demo
+changeLog:
+  - date: 2023-3-21
+    description: first release
+links:
+  - label: Website
+    url: https://planka.app
+  - label: Documentation
+    url: https://docs.planka.cloud
+  - label: Github
+    url: https://github.com/plankanban/planka
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: planka
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/plankanban/planka:1.11.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: planka-db
