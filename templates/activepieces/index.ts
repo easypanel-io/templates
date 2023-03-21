@@ -9,7 +9,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const encryptionKey = randomString(32);
-  const jwtKey = randomString(32);
+  const jwtKey = randomString(64);
   const redisPassword = randomPassword();
   const databasePassword = randomPassword();
 
@@ -19,10 +19,11 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
+        `AP_ENVIRONMENT=prod`,
         `AP_ENCRYPTION_KEY=${encryptionKey}`,
         `AP_JWT_SECRET=${jwtKey}`,
-        `AP_FRONTEND_URL=https:/${input.domain}:8080`,
-        `AP_POSTGRES_DATABASE=${input.databaseServiceName}`,
+        `AP_FRONTEND_URL=https:/${input.domain}`,
+        `AP_POSTGRES_DATABASE=${input.projectName}`,
         `AP_POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
         `AP_POSTGRES_PORT=5432`,
         `AP_POSTGRES_USERNAME=postgres`,
@@ -42,6 +43,11 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
     },
   });
 
