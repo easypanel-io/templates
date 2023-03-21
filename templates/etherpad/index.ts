@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       env: [
         `DB_TYPE=postgres`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DB_NAME=${input.databaseServiceName}`,
+        `DB_NAME=${input.projectName}`,
         `DB_PORT=5432`,
         `DB_USER=postgres`,
         `DB_PASS=${databasePassword}`,
