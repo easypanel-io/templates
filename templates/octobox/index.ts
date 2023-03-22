@@ -16,14 +16,14 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `RAILS_ENV=production`,
+        `RAILS_ENV=development`,
         `GITHUB_CLIENT_ID=${input.githubClient}`,
         `GITHUB_CLIENT_SECRET=${input.githubSecret}`,
         `OCTOBOX_DATABASE_NAME=${input.projectName}`,
         `OCTOBOX_DATABASE_USERNAME=postgres`,
         `OCTOBOX_DATABASE_PASSWORD=${databasePassword}`,
         `OCTOBOX_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `REDIS_URL=PAPERLESS_REDIS=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
+        `REDIS_URL=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
       ].join("\n"),
       source: {
         type: "image",
@@ -42,6 +42,15 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
+    },
+  });
+  
+  services.push({
+    type: "redis",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.redisServiceName,
+      password: redisPassword,
     },
   });
 
