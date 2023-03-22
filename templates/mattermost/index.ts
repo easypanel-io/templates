@@ -50,6 +50,11 @@ export function generate(input: Input): Output {
           mountPath: "/mattermost/client/plugins" 
         },
       ],
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
       proxy: { port: 8065, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
