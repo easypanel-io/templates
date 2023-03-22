@@ -2,8 +2,10 @@ name: Windmill
 description: Open-source developer platform to turn scripts into workflows and UIs.
 instructions: Login using admin@windmill.dev:changeme
 changeLog:
-  - date: 2023-3-1
+  - date: 2023-03-1
     description: first release
+  - date: 2023-03-22
+    description: Update to v.1.80.1
 links:
   - label: Website
     url: https://windmill.dev
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/windmill-labs/windmill:1.71
+      default: ghcr.io/windmill-labs/windmill:1.80.1
     databaseServiceName:
       type: string
       title: Database Service Name
