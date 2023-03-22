@@ -35,6 +35,11 @@ export function generate(input: Input): Output {
           name: "base",
           mountPath: "/var/lib/pufferpanel",
         },
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/etc/pufferpanel",
+        },
       ],
     },
   });
