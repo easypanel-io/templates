@@ -1,0 +1,33 @@
+name: Trilium Notes
+description: Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
+instructions: null
+changeLog:
+  - date: 2023-3-22
+    description: first release
+links:
+  - label: Website
+  - label: Documentation
+    url: https://github.com/zadam/trilium/wiki
+  - label: Github
+    url: https://github.com/zadam/trilium
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trilium
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zadam/trilium:0.59.2
