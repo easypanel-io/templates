@@ -33,6 +33,9 @@ export function generate(input: Input): Output {
         port: 3000,
         secure: true,
       },
+      deploy: {
+        command: "sh -c 'sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && echo 'running' && /entrypoint.sh run'",
+      },
       domains: [
         {
           name: input.domain,
