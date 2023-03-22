@@ -1,0 +1,67 @@
+name: Rallly
+description: Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
+instructions: null
+armSupport: true
+changeLog:
+  - date: 2023-1-29
+    description: first release
+links:
+  - label: Website
+    url: https://rallly.co
+  - label: Documentation
+    url: https://support.rallly.co/
+  - label: Selfhosting Instructions
+    url: https://github.com/lukevella/rallly-selfhosted
+  - label: Github
+    url: https://github.com/lukevella/rallly
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - emailSupport
+    - emailHost
+    - emailPort
+    - emailUsername
+    - emailPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rallly
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lukevella/rallly:2.1.1
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: rallly-db
+    emailSupport:
+      type: string
+      title: Support Email
+    emailHost:
+      type: string
+      title: Email Host
+    emailPort:
+      type: number
+      title: Email Port
+      default: 587
+    emailUsername:
+      type: string
+      title: Email Username
+    emailPassword:
+      type: string
+      title: Email Password

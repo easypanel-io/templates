@@ -1,0 +1,38 @@
+name: Wizarr
+description: Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby, etc
+instructions: null
+changeLog:
+  - date: 2023-3-1
+    description: first release
+links:
+  - label: Website
+    url: https://wizarr.dev
+  - label: Documentation
+    url: https://docs.wizarr.dev
+  - label: Github
+    url: https://github.com/Wizarrrr/wizarr
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wizarr
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/wizarrrr/wizarr:2.1.0

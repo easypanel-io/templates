@@ -23,7 +23,7 @@ schema:
     - reqLimit
     - bachLimit
     - suggestions
-    - webUI
+    - disableWebUI
   properties:
     projectName:
       type: string
@@ -43,11 +43,11 @@ schema:
       type: number
       title: Character limit for each translation
       default: 5000
-    reqLimit: 
+    reqLimit:
       type: number
       title: Rate request limit
       default: 500
-    bachLimit: 
+    bachLimit:
       type: number
       title: Bach translation limit
       default: 100
@@ -59,10 +59,7 @@ schema:
       type: boolean
       title: Translation suggestions
       default: false
-    webUI:
+    disableWebUI:
       type: boolean
       title: Disable Web UI
-      default: false      
-    
-    
-    
+      default: false

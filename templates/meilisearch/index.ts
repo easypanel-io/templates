@@ -10,12 +10,14 @@ export function generate(input: Input): Output {
   ];
 
   if (input.meiliNoAnalytics) {
-    serviceVariables.push('MEILI_NO_ANALYTICS=');
+    serviceVariables.push("MEILI_NO_ANALYTICS=true");
   }
-  
+
   if (input.meiliScheduleSnapshot) {
-    serviceVariables.push('MEILI_SCHEDULE_SNAPSHOT=');
-    serviceVariables.push(`MEILI_SNAPSHOT_INTERVAL_SEC=${input.meiliSnapshotInterval}`);
+    serviceVariables.push("MEILI_SCHEDULE_SNAPSHOT=true");
+    serviceVariables.push(
+      `MEILI_SNAPSHOT_INTERVAL_SEC=${input.meiliSnapshotInterval}`
+    );
   }
 
   services.push({
@@ -23,7 +25,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: serviceVariables.join('\n'),
+      env: serviceVariables.join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,

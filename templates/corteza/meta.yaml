@@ -1,0 +1,44 @@
+name: Corteza
+description: The Corteza low-code platform lets you build and iterate CRM, business process and other structured data apps fast, create intelligent business process workflows and connect with almost any data source.
+instructions: Create an account to login. The first account created will have administrator priviledges. Go to /admin for the admijnistration interface
+changeLog:
+  - date: 2023-3-2
+    description: first release
+links:
+  - label: Website
+    url: https://cortezaproject.org
+  - label: Documentation
+    url: https://docs.cortezaproject.org
+  - label: Github
+    url: https://github.com/cortezaproject/corteza
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - domain
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: corteza
+    appServiceImage:
+      type: string
+      title: App Service Image
+      ## when updating corteza template please change the version in index.ts AND the one below
+      default: cortezaproject/corteza:2022.9.8
+    domain:
+      type: string
+      title: Domain
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: corteza-db

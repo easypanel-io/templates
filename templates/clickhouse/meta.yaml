@@ -1,0 +1,34 @@
+name: Clickhouse
+description: ClickHouse is an open-source column-oriented DBMS for online analytical processing that allows users to generate analytical reports using SQL queries in real-time.
+instructions: null
+changeLog:
+  - date: 2022-10-28
+    description: first release
+links:
+  - label: Website
+    url: https://clickhouse.com/
+  - label: Documentation
+    url: https://clickhouse.com/docs
+  - label: Github
+    url: https://github.com/ClickHouse/ClickHouse
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: clickhouse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: clickhouse/clickhouse-server:22.6-alpine

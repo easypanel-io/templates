@@ -1,0 +1,81 @@
+name: Typebot
+description: The open-source conversational forms builder
+instructions: Open the builder URL to access typebot.
+changeLog:
+  - date: 2023-2-27
+    description: first release
+  - date: 2023-3-13
+    description: Update to v2.11.4
+links:
+  - label: Website
+    url: https://typebot.io
+  - label: Documentation
+    url: https://docs.typebot.io/
+  - label: Github
+    url: https://github.com/baptisteArno/typebot.io/
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - builderServiceName
+    - viewerServiceName
+    - builderDomain
+    - viewerDomain
+    - builderServiceImage
+    - viewerServiceImage
+    - storageServiceImage
+    - databaseServiceName
+    - storageServiceName
+    - githubClientId
+    - githubClientSecret
+    - adminEmail
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    viewerServiceName:
+      type: string
+      title: Viewer Service Name
+      default: typebot-viewer
+    builderServiceName:
+      type: string
+      title: Builder Service Name
+      default: typebot-builder
+    builderDomain:
+      type: string
+      title: Builder Domain
+    viewerDomain:
+      type: string
+      title: Viewer Domain
+    builderServiceImage:
+      type: string
+      title: Builder Service Image
+      default: baptistearno/typebot-builder:2.11.4
+    viewerServiceImage:
+      type: string
+      title: Viewer Service Image
+      default: baptistearno/typebot-viewer:2.11.4
+    storageServiceImage:
+      type: string
+      title: Storage Service Image
+      default: bitnami/minio:2022.12.12
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: typebot-db
+    storageServiceName:
+      type: string
+      title: Storage Service Name
+      default: typebot-minio
+    githubClientId:
+      type: string
+      title: Github Client ID
+    githubClientSecret:
+      type: string
+      title: Github Client Secret
+    adminEmail:
+      type: string
+      title: Email to make administrator

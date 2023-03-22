@@ -3,10 +3,13 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "run-p watch-templates dev:next",
+    "dev:next": "next dev",
+    "build": "npm run build-templates && next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write .",
+    "watch-templates": "nodemon",
     "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
     "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "move-docs": "rm -rf ../website/docs/04-templates/* && cp -r ./docs/* ../website/docs/04-templates/"
@@ -25,7 +28,6 @@
     "json-schema-to-typescript": "^11.0.2",
     "lodash": "^4.17.21",
     "next": "12.1.6",
-    "prettier": "^2.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "yaml": "^2.1.1",
@@ -41,6 +43,9 @@
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.6",
     "fs-extra": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.3",
     "ts-node": "^10.8.2",
     "tsconfig-paths": "^4.0.0",
     "typescript": "4.6.4"

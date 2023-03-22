@@ -103,7 +103,12 @@ async function run() {
       path.resolve(docsPath, slug, "assets")
     );
 
-    list.push({ slug, logo: meta.logo, name: meta.name, description: meta.description });
+    list.push({
+      slug,
+      logo: meta.logo,
+      name: meta.name,
+      description: meta.description,
+    });
   }
 
   await writeFile(

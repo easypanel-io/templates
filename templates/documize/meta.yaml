@@ -1,0 +1,41 @@
+name: Documize
+description: Documize Community is an open source, self-hosted, modern, lightweight alternative to Confluence and other similar solutions.
+instructions: null
+changeLog:
+  - date: 2023-1-24
+    description: first release
+  - date: 2023-2-24
+    description: Update to 5.5.0
+links:
+  - label: Website
+    url: https://documize.com
+  - label: Documentation
+    url: https://docs.documize.com/docs
+  - label: Github
+    url: https://github.com/documize/community
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: documize
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/easypanel-community/docker-documize:5.5.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: documize-db

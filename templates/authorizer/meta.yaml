@@ -1,0 +1,46 @@
+name: Authorizer
+description: Your data, your control. Fully open source, authentication and authorization.
+instructions: null
+changeLog:
+  - date: 2023-1-25
+    description: first release
+  - date: 2023-3-14
+    description: Update to v1.1.41
+links:
+  - label: Website
+    url: https://authorizer.dev
+  - label: Documentation
+    url: https://docs.authorizer.dev/
+  - label: Github
+    url: https://github.com/authorizerdev/authorizer
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: authorizer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lakhansamani/authorizer:1.1.41
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: authorizer-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: authorizer-redis
