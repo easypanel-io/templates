@@ -1,0 +1,39 @@
+name: Gladys Assistant
+description: A  privacy-first, open-source home assistant
+instructions: null
+changeLog:
+  - date: 2023-3-22
+    description: first release
+links:
+  - label: Website
+    url: https://gladysassistant.com/
+  - label: Documentation
+    url: https://gladysassistant.com/docs
+  - label: Github
+    url: https://github.com/gladysassistant/gladys
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gladysassistant
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gladysassistant/gladys:v4.17.1
+    timezone:
+      type: string
+      title: App Timezone
+      default: America/New_York
