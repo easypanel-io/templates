@@ -4,9 +4,10 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  var dbtype = "sqlite3";
-  var dbConfig = "./data/focalboard.db";
-  if (input.databaseType != "sqlite3") {
+  let dbtype = "sqlite3";
+  let dbConfig = "./data/focalboard.db";
+  
+  if (input.databaseType !== "sqlite3") {
     const databasePassword = randomPassword();
     services.push({
       type: input.databaseType,
