@@ -1,0 +1,68 @@
+name: linkding
+description: linkding is a simple bookmark service that you can host yourself. It's designed be to be minimal, fast, and easy to set up using Docker.
+instructions: If the login fails with a error 500, please restart the "linkding" app service. This can be caused by the database not being properly reachable at linkding's first start.
+changeLog:
+  - date: 2023-03-18
+    description: Template created (v1.17.2)
+links:
+  - label: Github
+    url: https://github.com/sissbruecker/linkding
+  - label: Demo
+    url: https://demo.linkding.link/
+contributors:
+  - name: Ponkhy
+    url: https://github.com/Ponkhy
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - linkdingSuperuserName
+    - linkdingSuperuserPassword
+    - databaseType
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: linkding
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sissbruecker/linkding:1.17.2
+    linkdingSuperuserName:
+      type: string
+      title: Superuser Name
+    linkdingSuperuserPassword:
+      type: string
+      title: Superuser Password
+    linkdingDisableBackgroundTasks:
+      type: boolean
+      title: Disable background tasks
+      default: false
+    linkdingDisableURLValidation:
+      type: boolean
+      title: Disable URL validation
+      default: false
+    databaseType:
+      type: string
+      title: Database Type
+      default: sqlite
+      oneOf:
+        - enum:
+            - sqlite
+          title: SQLite
+        - enum:
+            - postgres
+          title: PostgreSQL
+    databaseServiceName:
+      type: string
+      title: Database Service Name (Can be ignored if SQLite)
+      default: linkding-db
