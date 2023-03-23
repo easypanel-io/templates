@@ -1,0 +1,43 @@
+name: Papercups
+description: Papercups is an open source live customer support tool web app written in Elixir.
+instructions: null
+changeLog:
+  - date: 2023-3-20
+    description: first release
+links:
+  - label: Website
+    url: https://papercups.io
+  - label: Documentation
+    url: https://docs.papercups.io/
+  - label: Github
+    url: https://github.com/papercups-io/papercups
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: papercups
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: papercups/papercups:1.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: papercups-db
