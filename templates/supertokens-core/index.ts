@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
         `POSTGRESQL_USER=postgres`,
         `POSTGRESQL_PORT=5432`,
         `POSTGRESQL_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `POSTGRESQL_DATABASE_NAME=${input.databaseServiceName}`,
+        `POSTGRESQL_DATABASE_NAME=${input.projectName}`,
         `POSTGRESQL_PASSWORD=${databasePassword}`,
         `API_KEYS=${apikey}`,
       ].join("\n"),
