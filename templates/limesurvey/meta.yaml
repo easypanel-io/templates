@@ -1,9 +1,11 @@
 name: Limesurvey
 description: The most popular FOSS online survey tool on the web.
-instructions: null
+instructions: Visit /admin for the administration interface
 changeLog:
   - date: 2023-01-24
     description: first release
+  - date: 2023-01-24
+    description: Update instructions
 links:
   - label: Website
     url: https://limesurvey.org/
@@ -14,6 +16,9 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/supernova3339
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
 schema:
   type: object
   required:
