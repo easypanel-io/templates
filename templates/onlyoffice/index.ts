@@ -62,8 +62,10 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.rabbitmqServiceName,
       source: { type: "image", image: "rabbitmq:3" },
+      proxy: { port: 15692, secure: true },
       mounts: [
         { type: "volume", name: "data", mountPath: "/var/lib/rabbitmq" },
+        { type: "volume", name: "logs", mountPath: "/var/log/rabbitmq" },
         { type: "volume", name: "config", mountPath: "/etc/rabbitmq" },
       ],
       env: [
