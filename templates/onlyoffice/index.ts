@@ -62,6 +62,10 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.rabbitmqServiceName,
       source: { type: "image", image: "rabbitmq" },
+      mounts: [
+        { type: "volume", name: "data", mountPath: "/var/lib/rabbitmq" },
+        { type: "volume", name: "config", mountPath: "/etc/rabbitmq/" },
+      ],
       env: [
         `RABBITMQ_DEFAULT_USER=rabbitmq`,
         `RABBITMQ_DEFAULT_PASS=${rabbitmqPassword}`,
