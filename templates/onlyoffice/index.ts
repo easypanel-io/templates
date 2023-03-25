@@ -25,9 +25,8 @@ export function generate(input: Input): Output {
         { type: "volume", name: "rabbitmq", mountPath: "/var/lib/rabbitmq" },
       ],
       env: [
-        `DB_TYPE=${input.databaseType === "postgres" ? "postgres" : "mysql"}`,
+        `DB_TYPE=${input.databaseType}`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DB_PORT=${input.databaseType === "postgres" ? "5432" : "3306"}`,
         `DB_NAME=${input.projectName}`,
         `DB_USER=${input.databaseType}`,
         `DB_PWD=${databasePassword}`,
