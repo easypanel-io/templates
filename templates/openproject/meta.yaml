@@ -1,0 +1,39 @@
+name: OpenProject
+description: OpenProject is the leading open source project management software.
+instructions: null
+changeLog:
+  - date: 2023-03-26
+    description: First Release
+links:
+  - label: Website
+    url: https://openproject.org/
+  - label: Docs
+    url: https://openproject.org/docs/
+  - label: Github
+    url: https://github.com/opf/openproject
+  - label: Docker
+    url: https://hub.docker.com/r/openproject/community
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openproject
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: openproject/community:12
