@@ -61,10 +61,10 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.rabbitmqServiceName,
-      source: { type: "image", image: "rabbitmq" },
+      source: { type: "image", image: "rabbitmq:3" },
       mounts: [
         { type: "volume", name: "data", mountPath: "/var/lib/rabbitmq" },
-        { type: "volume", name: "config", mountPath: "/etc/rabbitmq/" },
+        { type: "volume", name: "config", mountPath: "/etc/rabbitmq" },
       ],
       env: [
         `RABBITMQ_DEFAULT_USER=rabbitmq`,
