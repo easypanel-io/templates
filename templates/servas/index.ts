@@ -1,4 +1,4 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
         `APP_URL=https://${input.domain}`,
         `APP_ENV=production`,
         `APP_DEBUG=false`,
-        `APP_KEY=base64:Nnpxajg4aHgyZTR4cXpmNTV6eGcyOGQ1cjM4YWZibXA=`,
+        `APP_KEY=base64:${btoa(randomString(32))}`,
         `SERVAS_ENABLE_REGISTRATION=true`,
         `DB_CONNECTION=mysql`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,

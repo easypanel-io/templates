@@ -1,4 +1,4 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
         `ASSET_URL=https://${input.domain}`,
         `APP_ENV=production`,
         `APP_DEBUG=false`,
-        `APP_KEY=base64:YzRhdzY1aWUxa3Q4bDJhbWJ6ajdycmUya3h5MzdrcmM=`,
+        `APP_KEY=base64:${btoa(randomString(32))}`,
         ``,
         `# Configuration`,
         `EASYSHORTENER_ENABLE_REGISTRATION=true`,
@@ -43,6 +43,11 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "data",
           mountPath: "/var/www/html",
+        },
+      ],
+      domains: [
+        {
+          name: input.domain,
         },
       ],
     },
