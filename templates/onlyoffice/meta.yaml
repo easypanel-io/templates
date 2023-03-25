@@ -34,6 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
+      description: For the Enterprise version e.g. onlyoffice/documentserver-ee:7.3
       default: onlyoffice/documentserver:7.3
     databaseType:
       type: string
