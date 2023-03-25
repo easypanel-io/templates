@@ -23,6 +23,7 @@ schema:
     - databaseType
     - databaseServiceName
     - redisServiceName
+    - rabbitmqServiceName
   properties:
     projectName:
       type: string
@@ -58,3 +59,7 @@ schema:
       type: string
       title: Redis Service Name
       default: onlyoffice-redis
+    rabbitmqServiceName:
+      type: string
+      title: RabbitMQ Service Name
+      default: onlyoffice-rabbitmq

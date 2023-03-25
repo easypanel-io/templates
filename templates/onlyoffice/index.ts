@@ -10,6 +10,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
+  const rabbitmqPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -22,7 +23,6 @@ export function generate(input: Input): Output {
         { type: "volume", name: "logs", mountPath: "/var/log/onlyoffice" },
         { type: "volume", name: "data", mountPath: "/var/www/onlyoffice/Data" },
         { type: "volume", name: "lib", mountPath: "/var/lib/onlyoffice" },
-        { type: "volume", name: "rabbitmq", mountPath: "/var/lib/rabbitmq" },
       ],
       env: [
         `DB_TYPE=${input.databaseType}`,
@@ -32,6 +32,7 @@ export function generate(input: Input): Output {
         `DB_PWD=${databasePassword}`,
         `REDIS_SERVER_HOST=${input.projectName}_${input.redisServiceName}`,
         `REDIS_SERVER_PASS=${redisPassword}`,
+        `AMQP_URI=amqp://rabbitmq:${rabbitmqPassword}@${input.projectName}_${input.rabbitmqServiceName}`,
         `JWT_SECRET=${randomString(64)}`,
       ].join("\n"),
     },
@@ -52,6 +53,19 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.redisServiceName,
       password: redisPassword,
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.rabbitmqServiceName,
+      source: { type: "image", image: "rabbitmq" },
+      env: [
+        `RABBITMQ_DEFAULT_USER=rabbitmq`,
+        `RABBITMQ_DEFAULT_PASS=${rabbitmqPassword}`,
+      ].join("\n"),
     },
   });
 
