@@ -1,0 +1,59 @@
+name: OnlyOffice
+description: "OnlyOffice Document Server is an online office suite comprising viewers and editors for texts, spreadsheets and presentations, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time."
+instructions: null
+changeLog:
+  - date: 2023-03-25
+    description: First Release
+links:
+  - label: Website
+    url: https://onlyoffice.com/
+  - label: Github
+    url: https://github.com/ONLYOFFICE
+  - label: Docker
+    url: https://hub.docker.com/r/onlyoffice/documentserver/
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseType
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: onlyoffice
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: onlyoffice/documentserver:7.3
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgres
+      oneOf:
+        - enum:
+            - postgres
+          title: PostgreSQL
+        - enum:
+            - mariadb
+          title: MariaDB
+        - enum:
+            - mysql
+          title: MySQL
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: onlyoffice-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: onlyoffice-redis
