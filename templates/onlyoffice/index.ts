@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
       proxy: { port: 80, secure: true },
       mounts: [
         { type: "volume", name: "logs", mountPath: "/var/log/onlyoffice" },
-        { type: "volume", name: "www", mountPath: "/var/www/onlyoffice" },
+        { type: "volume", name: "data", mountPath: "/var/www/onlyoffice/Data" },
         { type: "volume", name: "lib", mountPath: "/var/lib/onlyoffice" },
         { type: "volume", name: "rabbitmq", mountPath: "/var/lib/rabbitmq" },
       ],
