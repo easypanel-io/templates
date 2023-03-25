@@ -4,6 +4,8 @@ instructions: Go to /install and select sqlite database
 changeLog:
   - date: 2022-12-21
     description: first release
+  - date: 2023-3-24
+    description: Update to 1.0.7
 links:
   - label: Documentation
     url: https://answer.dev/docs
@@ -31,4 +33,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: answerdev/answer:1.0.4
+      default: answerdev/answer:1.0.7
