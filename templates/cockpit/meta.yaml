@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/easypanel-community/docker-cockpit-cms:2.4.2
+      default: cockpithq/cockpit:core-2.4.1
     databaseServiceName:
       type: string
       title: Database Service Name
