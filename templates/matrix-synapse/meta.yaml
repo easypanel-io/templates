@@ -1,0 +1,43 @@
+name: Matrix Synapse
+description: "Synapse: Matrix homeserver written in Python/Twisted."
+instructions: null
+changeLog:
+  - date: 2023-03-26
+    description: First Release
+links:
+  - label: Website
+    url: https://matrix.org
+  - label: Docs
+    url: https://matrix-org.github.io/synapse
+  - label: Github
+    url: https://github.com/matrix-org/synapse
+  - label: Docker
+    url: https://hub.docker.com/r/matrixdotorg/synapse
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    reportStats:
+      type: boolean
+      title: Report Stats
+      default: true
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: synapse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: matrixdotorg/synapse:v1.79.0
