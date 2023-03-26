@@ -29,7 +29,7 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "html",
-          mountPath: "/var/ww/html"
+          mountPath: "/var/www/html"
         }
       ]
     },
