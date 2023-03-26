@@ -37,6 +37,7 @@ export function generate(input: Input): Output {
             : input.projectName
         }`,
       ].join("\n"),
+      mounts: [{ type: "volume", name: "app", mountPath: "/usr/src/app" }],
     },
   });
 
