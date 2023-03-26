@@ -59,6 +59,11 @@ export function generate(input: Input): Output {
           mountPath: "/app/storage",
         },
       ],
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
     },
   });
 
