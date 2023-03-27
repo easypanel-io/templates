@@ -17,13 +17,6 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
-      mounts: [
-        {
-          type: "volume",
-          name: "html",
-          mountPath: "/usr/src/nginx/html",
-        },
-      ],
     },
   });
 
