@@ -1,0 +1,32 @@
+name: Excalidraw
+description: Online whiteboard collaboration made easy
+instructions: null
+changeLog:
+  - date: 2023-3-27
+    description: first release
+links:
+  - label: Website
+    url: https://excalidraw.com/
+  - label: Github
+    url: https://github.com/excalidraw/excalidraw
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: simpletorrent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: excalidraw/excalidraw:sha-4bfc5bb
