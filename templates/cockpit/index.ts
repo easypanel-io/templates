@@ -30,8 +30,13 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "html",
           mountPath: "/var/www/html"
-        }
-      ]
+        },
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/var/www/html/storage/data",
+        },
+      ],
     },
   });
 
