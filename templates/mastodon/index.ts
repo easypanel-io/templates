@@ -1,4 +1,9 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -6,46 +11,94 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
 
+  const crypto = require("crypto");
+  const ecdh = crypto.createECDH("prime256v1");
+  ecdh.generateKeys();
+
   const appEnv = [
-    `LOCAL_DOMAIN=${
-      input.mastodonDomain || input.projectName + "_" + input.appServiceName
-    }`,
-    `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-    `DB_NAME=${input.projectName}`,
-    `DB_USER=postgres`,
-    `DB_PASS=${databasePassword}`,
-    `REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+    `LOCAL_DOMAIN=${input.domain}`,
+    `REDIS_HOST=${input.projectName}_${input.appServiceName}-redis`,
     `REDIS_PASSWORD=${redisPassword}`,
-    `SMTP_SERVER=${input.smtpServer || "mail.example.com"}`,
-    `SMTP_PORT=${input.smtpPort || 25}`,
+    `REDIS_PORT=6379`,
+    `DB_HOST=${input.projectName}_${input.appServiceName}-db`,
+    `DB_USER=postgres`,
+    `DB_NAME=${input.projectName}`,
+    `DB_PASS=${databasePassword}`,
+    `DB_PORT=5432`,
+    `ES_ENABLED=false`,
+    `ES_HOST=localhost`,
+    `ES_PORT=9200`,
+    `ES_USER=elastic`,
+    `ES_PASS=password`,
+    `SECRET_KEY_BASE=${randomString(64)}`,
+    `OTP_SECRET=${randomString(64)}`,
+    `VAPID_PRIVATE_KEY=${ecdh.getPrivateKey("base64")}`,
+    `VAPID_PUBLIC_KEY=${ecdh.getPublicKey("base64")}`,
+    `SMTP_SERVER=${input.smtpServer || ""}`,
+    `SMTP_PORT=${input.smtpPort || 587}`,
     `SMTP_LOGIN=${input.smtpLogin || ""}`,
     `SMTP_PASSWORD=${input.smtpPassword || ""}`,
     `SMTP_FROM_ADDRESS=${input.smtpFromAddress || "notifications@example.com"}`,
-    `ES_ENABLED=false`,
     `S3_ENABLED=false`,
-    `WEB_DOMAIN=${
-      input.domain || input.projectName + "_" + input.appServiceName
-    }`,
-    `MASTODON_HTTPS_ENABLED=true`,
-    `MASTODON_ADMIN_USERNAME=${input.adminUsername || "user"}`,
-    `MASTODON_ADMIN_PASSWORD=${input.adminPassword || randomPassword()}`,
-    `MASTODON_ADMIN_EMAIL=${input.adminEmail || "user@joinmastodon.org"}`,
+    `S3_BUCKET=files.example.com`,
+    `AWS_ACCESS_KEY_ID=`,
+    `AWS_SECRET_ACCESS_KEY=`,
+    `S3_ALIAS_HOST=files.example.com`,
+    `IP_RETENTION_PERIOD=31556952`,
+    `SESSION_RETENTION_PERIOD=31556952`,
   ];
+
+  if (input.enableStreaming) {
+    appEnv.push(`STREAMING_API_BASE_URL=${input.streamingDomain}`);
+    services.push({
+      type: "app",
+      data: {
+        projectName: input.projectName,
+        serviceName: input.appServiceName + "-streaming",
+        source: { type: "image", image: input.appServiceImage },
+        domains: input.streamingDomain ? [{ name: input.streamingDomain }] : [],
+        proxy: { port: 4000, secure: true },
+        env: appEnv.join("\n"),
+        deploy: { command: `node ./streaming` },
+      },
+    });
+  }
 
   services.push({
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.appServiceName,
+      serviceName: input.appServiceName + "-web",
       source: { type: "image", image: input.appServiceImage },
       domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 80, secure: true },
+      proxy: { port: 3000, secure: true },
       env: appEnv.join("\n"),
+      deploy: {
+        command: `bash -c "rm -f /mastodon/tmp/pids/server.pid; bundle exec rails db:migrate; bundle exec rails s -p 3000"`,
+      },
       mounts: [
         {
           type: "volume",
-          name: "data",
-          mountPath: "/bitnami/mastodon",
+          name: "public",
+          mountPath: "/mastodon/public",
+        },
+      ],
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName + "-sidekiq",
+      source: { type: "image", image: input.appServiceImage },
+      env: appEnv.join("\n"),
+      deploy: { command: `bundle exec sidekiq` },
+      mounts: [
+        {
+          type: "bind",
+          hostPath: `/etc/easypanel/projects/${input.projectName}/${input.appServiceName}-web/volumes/public`,
+          mountPath: "/mastodon/public",
         },
       ],
     },
@@ -55,7 +108,7 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       projectName: input.projectName,
-      serviceName: input.databaseServiceName,
+      serviceName: input.appServiceName + "-db",
       password: databasePassword,
     },
   });
@@ -64,7 +117,7 @@ export function generate(input: Input): Output {
     type: "redis",
     data: {
       projectName: input.projectName,
-      serviceName: input.redisServiceName,
+      serviceName: input.appServiceName + "-redis",
       password: redisPassword,
     },
   });

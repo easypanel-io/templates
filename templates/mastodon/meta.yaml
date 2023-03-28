@@ -1,6 +1,6 @@
 name: Mastodon
 description: Your self-hosted, globally interconnected microblogging community
-instructions: null
+instructions: To create an admin account, type "tootctl accounts create username --email user@example.com --confirmed --role Owner" on the console.
 changeLog:
   - date: 2023-03-26
     description: First Release
@@ -18,10 +18,9 @@ schema:
   type: object
   required:
     - projectName
+    - domain
     - appServiceName
     - appServiceImage
-    - databaseServiceName
-    - redisServiceName
   properties:
     projectName:
       type: string
@@ -29,28 +28,20 @@ schema:
     domain:
       type: string
       title: Domain
-    mastodonDomain:
+    enableStreaming:
+      type: boolean
+      title: Enable Streaming Service
+      default: false
+    streamingDomain:
       type: string
-      title: Mastodon Domain
-    adminUsername:
-      type: string
-      title: Admin Username
-      default: user
-    adminPassword:
-      type: string
-      title: Admin Password
-      minLength: 8
-    adminEmail:
-      type: string
-      title: Admin Email
-      default: user@joinmastodon.org
+      title: Streaming Domain
     smtpServer:
       type: string
       title: SMTP Server
     smtpPort:
       type: number
       title: SMTP Port
-      default: 25
+      default: 587
     smtpLogin:
       type: string
       title: SMTP Login
@@ -68,12 +59,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnami/mastodon:4
-    databaseServiceName:
-      type: string
-      title: App Service Name
-      default: mastodon-db
-    redisServiceName:
-      type: string
-      title: App Service Name
-      default: mastodon-redis
+      default: ghcr.io/mastodon/mastodon:v4.1
