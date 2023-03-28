@@ -1,8 +1,8 @@
 name: Matrix Synapse
 description: "Synapse: Matrix homeserver written in Python/Twisted."
-instructions: null
+instructions: To create a user, simply execute the command "register_new_matrix_user -c data/homeserver.yaml" via console connection.
 changeLog:
-  - date: 2023-03-26
+  - date: 2023-03-28
     description: First Release
 links:
   - label: Website
@@ -20,8 +20,11 @@ schema:
   type: object
   required:
     - projectName
+    - domain
     - appServiceName
     - appServiceImage
+    - databaseType
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -41,3 +44,18 @@ schema:
       type: string
       title: App Service Image
       default: matrixdotorg/synapse:v1.79.0
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgres
+      oneOf:
+        - enum:
+            - postgres
+          title: PostgreSQL
+        - enum:
+            - sqlite
+          title: SQLite
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: synapse-db
