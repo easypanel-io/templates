@@ -49,7 +49,7 @@ export function generate(input: Input): Output {
   ];
 
   if (input.enableStreaming) {
-    appEnv.push(`STREAMING_API_BASE_URL=${input.streamingDomain}`);
+    appEnv.push(`STREAMING_API_BASE_URL=https://${input.streamingDomain}`);
     services.push({
       type: "app",
       data: {
