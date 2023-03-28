@@ -74,7 +74,7 @@ export function generate(input: Input): Output {
       proxy: { port: 3000, secure: true },
       env: appEnv.join("\n"),
       deploy: {
-        command: `bash -c "rm -f /mastodon/tmp/pids/server.pid; bundle exec rails db:migrate; bundle exec rails s -p 3000"`,
+        command: `bash -c "bundle exec rails db:migrate; bundle exec rails db:seed; rm -f /mastodon/tmp/pids/server.pid; bundle exec rails s -p 3000"`,
       },
       mounts: [
         {
