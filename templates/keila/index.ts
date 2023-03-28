@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -35,7 +35,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.appServiceImage
+        image: input.appServiceImage,
       },
       proxy: {
         port: 80,

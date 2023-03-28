@@ -1,7 +1,4 @@
-import {
-  Output,
-  Services
-} from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -26,7 +23,7 @@ export function generate(input: Input): Output {
         `WEB_ONLY=0`,
         `WEB_UNSUBSCRIBE=1`,
         `WEB_USE_HTTPS=1`,
-        `WEB_EXTERNAL_URL=${input.domain}`
+        `WEB_EXTERNAL_URL=${input.domain}`,
       ].join("\n"),
       mounts: [
         {

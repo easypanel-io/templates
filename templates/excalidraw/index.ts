@@ -9,7 +9,6 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`TZ=Etc/UTC`, `PUID=1000`, `PGID=1000`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -18,13 +17,6 @@ export function generate(input: Input): Output {
         port: 80,
         secure: true,
       },
-      mounts: [
-        {
-          type: "volume",
-          name: "config",
-          mountPath: "/config",
-        },
-      ],
     },
   });
 

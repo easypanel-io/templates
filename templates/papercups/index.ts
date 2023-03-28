@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -34,7 +34,8 @@ export function generate(input: Input): Output {
         secure: true,
       },
       deploy: {
-        command: "sh -c 'sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && echo 'running' && /entrypoint.sh run'",
+        command:
+          "sh -c 'sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && echo 'running' && /entrypoint.sh run'",
       },
       domains: [
         {

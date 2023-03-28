@@ -1,26 +1,23 @@
-name: Gogs
-description: Gogs is a painless self-hosted Git service
+name: Chatpad
+description: Not just another ChatGPT user-interface!
 instructions: null
 changeLog:
-  - date: 2023-3-16
+  - date: 2023-3-26
     description: first release
 links:
   - label: Website
-    url: https://gogs.io/
-  - label: Documentation
-    url: https://gogs.io/docs
+    url: https://chatpad.ai
   - label: Github
-    url: https://github.com/gogs/gogs
+    url: https://github.com/deiucanta/chatpad
 contributors:
   - name: Supernova3339
-    url: https://github.com/supernova3339
+    url: https://github.com/Supernova3339
 schema:
   type: object
   required:
     - projectName
     - appServiceName
     - appServiceImage
-    - sshPort
   properties:
     projectName:
       type: string
@@ -28,12 +25,8 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: gogs
+      default: chatpad
     appServiceImage:
       type: string
       title: App Service Image
-      default: gogs/gogs:0.13.0
-    sshPort:
-      type: number
-      title: SSH Port
-      default: 2222
+      default: ghcr.io/deiucanta/chatpad

@@ -6,7 +6,7 @@ export function generate(input: Input): Output {
 
   let dbtype = "sqlite3";
   let dbConfig = "./data/focalboard.db";
-  
+
   if (input.databaseType !== "sqlite3") {
     const databasePassword = randomPassword();
     services.push({

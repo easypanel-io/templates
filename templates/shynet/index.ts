@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
