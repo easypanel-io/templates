@@ -1,0 +1,47 @@
+name: Tolgee
+description: Developer & translator friendly web-based localization platform
+instructions: null
+changeLog:
+  - date: 2023-3-28
+    description: first release
+links:
+  - label: Website
+    url: https://tolgee.io
+  - label: Documentation
+    url: https://tolgee.io/platform
+  - label: Github
+    url: https://github.com/tolgee/tolgee-platform
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - userUsername
+    - userPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tolgee
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tolgee/tolgee:v3.11.4
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: tolgee-db
+    userUsername:
+      type: string
+      title: Username
+    userPassword:
+      type: string
+      title: Password
