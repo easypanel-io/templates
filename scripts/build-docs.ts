@@ -1,5 +1,6 @@
 import { copy } from "fs-extra";
 import { mkdir, rm, writeFile } from "fs/promises";
+import { escape } from "lodash";
 import * as path from "path";
 import templates from "../templates";
 
@@ -35,11 +36,11 @@ async function run() {
     );
 
     if (meta?.description) {
-      lines.push("## Description", "", meta.description, "");
+      lines.push("## Description", "", escape(meta.description), "");
     }
 
     if (meta?.instructions) {
-      lines.push("## Instructions", "", meta.instructions, "");
+      lines.push("## Instructions", "", escape(meta.instructions), "");
     }
 
     if (meta?.links?.length) {
