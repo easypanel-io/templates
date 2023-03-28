@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         `NANGO_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
         `NANGO_DB_NAME=${input.projectName}`,
         `NANGO_DB_PORT=5432`,
-        'NANGO_DB_SSL=FALSE',
+        "NANGO_DB_SSL=FALSE",
         `SERVER_PORT=3003`,
         `NANGO_SERVER_URL=https://${input.domain}`,
         `NANGO_DASHBOARD_USERNAME=${input.webUsername}`,
@@ -43,7 +43,8 @@ export function generate(input: Input): Output {
         {
           type: "file",
           mountPath: "/usr/nango-server/src/packages/server/providers.yaml",
-          content: "# Overwrite this file with this content: https://github.com/NangoHQ/nango/blob/master/packages/server/providers.yaml",
+          content:
+            "# Overwrite this file with this content: https://github.com/NangoHQ/nango/blob/master/packages/server/providers.yaml",
         },
       ],
       domains: [

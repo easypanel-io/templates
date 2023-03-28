@@ -24,30 +24,30 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       mounts: [
-        {  
-          type: "volume", 
-          name: "data", 
-          mountPath: "/mattermost/data" 
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/mattermost/data",
         },
-        {  
-          type: "volume", 
-          name: "logs", 
-          mountPath: "/mattermost/logs" 
+        {
+          type: "volume",
+          name: "logs",
+          mountPath: "/mattermost/logs",
         },
-        {  
-          type: "volume", 
-          name: "config", 
-          mountPath: "/mattermost/config" 
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/mattermost/config",
         },
-        {  
-          type: "volume", 
-          name: "plugins", 
-          mountPath: "/mattermost/plugins" 
+        {
+          type: "volume",
+          name: "plugins",
+          mountPath: "/mattermost/plugins",
         },
-        {  
-          type: "volume", 
-          name: "client-plugins", 
-          mountPath: "/mattermost/client/plugins" 
+        {
+          type: "volume",
+          name: "client-plugins",
+          mountPath: "/mattermost/client/plugins",
         },
       ],
       domains: [

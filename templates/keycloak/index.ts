@@ -1,8 +1,4 @@
-import {
-  Output,
-  randomPassword,
-  Services
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -45,9 +41,9 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/opt/keycloak"
-        }
-      ]
+          mountPath: "/opt/keycloak",
+        },
+      ],
     },
   });
 

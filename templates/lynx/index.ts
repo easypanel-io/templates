@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -25,7 +30,7 @@ export function generate(input: Input): Output {
         `FORCE_FRONTEND_REDIRECT=false`,
         `ENABLE_REGISTRATION=false`,
         `DOMAIN=https://${input.domain}`,
-        `DEMO=false`
+        `DEMO=false`,
       ].join("\n"),
       source: {
         type: "image",

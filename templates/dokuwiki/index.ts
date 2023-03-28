@@ -1,7 +1,4 @@
-import {
-  Output,
-  Services
-} from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -12,11 +9,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [
-        `TZ=Etc/UTC`,
-        `PUID=1000`,
-        `PGID=1000`,
-      ].join("\n"),
+      env: [`TZ=Etc/UTC`, `PUID=1000`, `PGID=1000`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
