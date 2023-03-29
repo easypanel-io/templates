@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       proxy: {
-        port: 81,
+        port: 80,
         secure: true,
       },
     },
