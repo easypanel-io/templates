@@ -1,9 +1,8 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const passwordSalt = randomPassword();
 
   services.push({
     type: "app",
@@ -18,7 +17,15 @@ export function generate(input: Input): Output {
         port: 3001,
         secure: true,
       },
-      env: [`WAKAPI_PASSWORD_SALT=${passwordSalt}`].join("\n"),
+      env: [
+        `DASHDOT_SHOW_HOST=false`,
+        `DASHDOT_SHOW_DASH_VERSION=true`,
+        `DASHDOT_ENABLE_CPU_TEMPS=false`,
+        `DASHDOT_USE_IMPERIAL=false`,
+        `DASHDOT_ALWAYS_SHOW_PERCENTAGES=false`,
+        `DASHDOT_PAGE_TITLE=dashdot`,
+        `DASHDOT_ACCEPT_OOKLA_EULA=true`,
+      ].join("\n"),
     },
   });
 
