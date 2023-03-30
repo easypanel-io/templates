@@ -1,0 +1,46 @@
+name: Muse
+description: Muse is a highly-opinionated midwestern self-hosted Discord music bot that doesn't suck. It's made for small to medium-sized Discord servers/guilds (think about a group the size of you, your friends, and your friend's friends).
+instructions: null
+changeLog:
+  - date: 2023-03-30
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/codetheweb/muse
+  - label: Documentation
+    url: https://github.com/codetheweb/muse#running
+contributors:
+  - name: Rubén Robles
+    url: https://github.com/D8vjork
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - discordToken
+    - youtubeApiKey
+    - spotifyClientId
+    - spotifyClientSecret
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: discordbot
+    appServiceImage:
+      type: string
+      title: App Service Image
+    discordToken:
+      type: string
+      title: Discord Token
+    youtubeApiKey:
+      type: string
+      title: Youtube API Key
+    spotifyClientId:
+      type: string
+      title: Spotify Client ID
+    spotifyClientSecret:
+      type: string
+      title: Spotify Client Secret
