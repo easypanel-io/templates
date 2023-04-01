@@ -17,6 +17,7 @@ schema:
   required:
     - projectName
     - appServiceName
+    - appServiceImage
     - discordToken
     - youtubeApiKey
     - spotifyClientId
@@ -32,6 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
+      default: codetheweb/muse:2.2.2
     discordToken:
       type: string
       title: Discord Token

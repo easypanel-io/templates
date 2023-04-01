@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "codetheweb/muse:2.1"
+        image: input.appServiceImage
       },
     },
   });
