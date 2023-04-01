@@ -19,6 +19,13 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/data",
+        },
+      ],
     },
   });
 
