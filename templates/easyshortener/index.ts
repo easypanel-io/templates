@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
         `APP_ENV=production`,
         `APP_DEBUG=false`,
         `APP_KEY=base64:${btoa(randomString(32))}`,
-        `FORCE_HTTPS=true`
+        `FORCE_HTTPS=true`,
         `EASYSHORTENER_ALLOW_REGISTRATION=true`,
         `EASYSHORTENER_INSALLATION_ENV=easypanel`,
         `EASYSHORTENER_ALLOW_ANALYTICS=true`,
