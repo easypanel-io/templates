@@ -1,0 +1,53 @@
+name: EvoBot
+description: EvoBot is a Discord Music Bot built with TypeScript + Discord.js, includes Docker builds & localization in 20+ languages
+instructions: null
+changeLog:
+  - date: 2023-04-05
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/eritislami/evobot
+  - label: Documentation
+    url: https://github.com/eritislami/evobot#%EF%B8%8F-configuration
+contributors:
+  - name: Rubén Robles
+    url: https://github.com/D8vjork
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - discordToken
+    - maxPlaylistSize
+    - locale
+    - defaultVolume
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: discord_music_bot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eritislami/evobot:2.7.0
+    discordToken:
+      type: string
+      title: Discord Token
+    maxPlaylistSize:
+      type: number
+      title: Maximum Playlist Size
+      default: 10
+    locale:
+      type: string
+      title: Bot Locale
+      default: en
+    defaultVolume:
+      type: number
+      title: Default Music Volume
+      default: 100
+      minimum: 0
+      maximum: 100
