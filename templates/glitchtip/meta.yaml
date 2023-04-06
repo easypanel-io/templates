@@ -1,0 +1,57 @@
+name: GlitchTip
+description: An open source reimplementation of Sentry error tracking platform.
+instructions: To create an admin user, run the command ./manage.py createsuperuser
+changeLog:
+  - date: 2023-04-06
+    description: First Release
+links:
+  - label: Website
+    url: https://glitchtip.com/
+  - label: Gitlab
+    url: https://gitlab.com/glitchtip
+  - label: Docker
+    url: https://hub.docker.com/r/glitchtip/glitchtip
+  - label: Documentation
+    url: https://glitchtip.com/documentation
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    enableUserRegistration:
+      type: boolean
+      title: Enable User Registration
+      default: false
+    enableOrganizationCreation:
+      type: boolean
+      title: Enable Organization Creation
+      default: false
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glitchtip
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: glitchtip/glitchtip:v3.1.0
+    databaseServiceName:
+      type: string
+      title: Redis Service Name
+      default: glitchtip-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: glitchtip-redis
