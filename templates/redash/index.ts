@@ -14,24 +14,6 @@ export function generate(input: Input): Output {
   const randomPasswordPostgres = randomPassword();
 
   services.push({
-    type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: randomPasswordRedis,
-    },
-  });
-
-  services.push({
-    type: "postgres",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      image: "postgres:14",
-      password: randomPasswordPostgres,
-    },
-  });
-  services.push({
     type: "app",
     data: {
       projectName: input.projectName,
@@ -47,7 +29,7 @@ export function generate(input: Input): Output {
         `REDASH_WEB_WORKERS=4`,
         `REDASH_MAIL_SERVER=${input.mailServer}`,
         `REDASH_MAIL_PORT=${input.mailPort}`,
-        `REDASH_MAIL_USE_${input.transport}=true`,
+        `REDASH_MAIL_USE_${input.mailTransport}=true`,
         `REDASH_MAIL_USERNAME=${input.mailUser}`,
         `REDASH_MAIL_PASSWORD=${input.mailPassword}`,
       ].join("\n"),
@@ -70,6 +52,25 @@ export function generate(input: Input): Output {
         command:
           "/usr/local/bin/python /app/manage.py database create_tables ; /app/bin/docker-entrypoint server",
       },
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.redisServiceName,
+      password: randomPasswordRedis,
+    },
+  });
+
+  services.push({
+    type: "postgres",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.databaseServiceName,
+      image: "postgres:14",
+      password: randomPasswordPostgres,
     },
   });
 

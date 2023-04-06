@@ -66,7 +66,7 @@ schema:
       type: integer
       title: Mail server port
       default: 587
-    transport:
+    mailTransport:
       type: string
       title: Mail transport
       oneOf:
@@ -75,5 +75,5 @@ schema:
           title: Use SSL transport
         - enum:
             - TLS
-          title: User TLS transport
+          title: Use TLS transport
       default: TLS
