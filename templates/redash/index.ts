@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
   const cookieSecretkey = randomString(32);
   const randomPasswordRedis = randomPassword();
   const randomPasswordPostgres = randomPassword();
-  const transportValue = input.mailTransport
+  const transportValue = input.mailTransport !== "None"
     ? `REDASH_MAIL_USE_${input.mailTransport}=true`
     : "";
 
