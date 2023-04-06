@@ -33,7 +33,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-      default: redash
     domain:
       type: string
       title: Domain
@@ -70,6 +69,9 @@ schema:
       type: string
       title: Mail transport
       oneOf:
+        - enum:
+            - None
+          title: No transport
         - enum:
             - SSL
           title: Use SSL transport
