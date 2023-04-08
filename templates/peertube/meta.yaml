@@ -18,11 +18,8 @@ schema:
   type: object
   required:
     - projectName
+    - domain
     - peertubeAdminMail
-    - peertubeHostname
-    - peertubeSmtpHostname
-    - peertubeSmtpPort
-    - peertubeSmtpFrom
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -31,18 +28,15 @@ schema:
     projectName:
       type: string
       title: Project Name
+    domain:
+      type: string
+      title: Domain
     peertubeAdminMail:
       type: string
       title: Admin Mail
-      default: admin@example.com
-    peertubeHostname:
-      type: string
-      title: Hostname
-      default: localhost
     peertubeSmtpHostname:
       type: string
       title: SMTP Hostname
-      default: postfix
     peertubeSmtpPort:
       type: number
       title: SMTP Port
@@ -60,7 +54,7 @@ schema:
     peertubeSmtpTls:
       type: boolean
       title: SMTP TLS
-      default: true
+      default: false
     peertubeSmtpDisableStarttls:
       type: boolean
       title: SMTP Disable STARTTLS
@@ -84,7 +78,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chocobozzz/peertube:v5.1.0-bullseye
+      default: chocobozzz/peertube:develop-bullseye
     databaseServiceName:
       type: string
       title: Database Service Name
