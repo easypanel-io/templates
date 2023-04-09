@@ -1,0 +1,38 @@
+name: Calibre
+description: Calibre is th one stop solution to all your ebook needs
+instructions: Login using user ABC with your set password
+changeLog:
+  - date: 2023-3-1
+    description: first release
+links:
+  - label: Website
+    url: https://calibre-ebook.com/
+  - label: Documentation
+    url: https://manual.calibre-ebook.com/
+  - label: Github
+    url: https://github.com/kovidgoyal/calibre
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - password
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: calibre
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/calibre:6.14.0
+    password:
+      type: string
+      title: Password

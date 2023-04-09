@@ -1,0 +1,64 @@
+name: Roundcube
+description: This project is a free and open source webmail solution with a desktop-like user interface which is easy to install/configure and that runs on a standard LAMPP server. The skins use the latest web standards to render a functional and customizable UI. Roundcube includes other sophisticated open-source libraries such as PEAR, an IMAP library derived from IlohaMail, the TinyMCE rich text editor, Googiespell library for spell checking and the HTML5-PHP sanitizer by Masterminds.
+instructions: After Roundcube is installed, you can log in to the mail accounts on the service where you entered the "SMTP" information.
+changeLog:
+  - date: 2023-03-15
+    description: First Release
+links:
+  - label: Website
+    url: https://roundcube.net/
+  - label: Github
+    url: https://github.com/roundcube/roundcubemail/
+  - label: Docker
+    url: https://hub.docker.com/r/roundcube/roundcubemail/
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - roundcubeDefaultHost
+    - roundcubeSmtpServer
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: roundcube
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: roundcube/roundcubemail:1.5.3-apache
+    roundcubeDefaultHost:
+      type: string
+      title: Default Host
+      description: Hostname of the IMAP server to connect to. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+    roundcubeDefaultPort:
+      type: number
+      title: Default Port
+      description: IMAP port number.
+      default: 143
+    roundcubeSmtpServer:
+      type: string
+      title: SMTP Server
+      description: Hostname of the SMTP server to send mails. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+    roundcubeSmtpPort:
+      type: number
+      title: SMTP Port
+      description: SMTP port number.
+      default: 587
+    roundcubePlugins:
+      type: string
+      title: Plugins
+      description: List of built-in plugins to activate.
+      default: archive,zipdownload
+    roundcubeUploadMaxFilesize:
+      type: string
+      title: Upload Max File Size
+      description: File upload size limit.
+      default: 5M

@@ -19,7 +19,6 @@ export function generate(input: Input): Output {
         `LISTMONK_db__database=${input.projectName}`,
         `LISTMONK_app__admin_username=${input.adminUsername}`,
         `LISTMONK_app__admin_password=${input.adminPassword}`,
-        
       ].join("\n"),
       source: {
         type: "image",
@@ -37,11 +36,11 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        command: `./listmonk --install --idempotent --yes && ./listmonk --upgrade --yes && ./listmonk`
-      }
+        command: `./listmonk --install --idempotent --yes && ./listmonk --upgrade --yes && ./listmonk`,
+      },
     },
   });
-  
+
   services.push({
     type: "postgres",
     data: {

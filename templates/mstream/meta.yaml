@@ -1,0 +1,32 @@
+name: Mstream
+description: The easiest music streaming server available
+instructions: null
+changeLog:
+  - date: 2023-3-20
+    description: first release
+links:
+  - label: Website
+    url: https://mstream.io
+  - label: Github
+    url: https://github.com/IrosTheBeggar/mStream
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mstream
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/mstream:5.11.4

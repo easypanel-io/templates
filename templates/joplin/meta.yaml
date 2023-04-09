@@ -1,0 +1,43 @@
+name: Joplin
+description: Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.
+instructions: null
+changeLog:
+  - date: 2023-03-16
+    description: First Release
+links:
+  - label: Website
+    url: https://joplinapp.org/
+  - label: Github
+    url: https://github.com/laurent22/joplin/
+  - label: Docker
+    url: https://hub.docker.com/r/joplin/server
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: joplin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: joplin/server:2.10.10-beta
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: joplin-db

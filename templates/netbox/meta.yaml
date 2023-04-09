@@ -1,0 +1,56 @@
+name: Netbox
+description: The premiere source of truth powering network automation.
+instructions: null
+changeLog:
+  - date: 2023-3-17
+    description: first release
+links:
+  - label: Website
+    url: https://netbox.dev
+  - label: Documentation
+    url: https://docs.netbox.dev/
+  - label: Github
+    url: https://github.com/netbox-community/netbox
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - netboxEmail
+    - netboxPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: netbox
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/netbox:3.4.6
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: netbox-db
+    redisServiceName:
+      type: string
+      title: Database Service Name
+      default: netbox-redis
+    netboxEmail:
+      type: string
+      title: E-Mail Address
+    netboxPassword:
+      type: string
+      title: Password
