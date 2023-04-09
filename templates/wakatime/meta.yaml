@@ -2,8 +2,10 @@ name: Wakapi
 description: A minimalist, self-hosted WakaTime-compatible backend for coding statistics
 instructions: null
 changeLog:
-  - date: 2023-1-24
+  - date: 2023-01-24
     description: first release
+  - date: 2023-03-22
+    description: Update to v2.6.2
 links:
   - label: Website
     url: https://wakapi.dev/
@@ -29,4 +31,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n1try/wakapi:2.6.1
+      default: n1try/wakapi:2.6.2

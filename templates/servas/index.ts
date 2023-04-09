@@ -47,7 +47,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
-      image: 'mariadb:10.7.3',
+      image: "mariadb:10.7.3",
       password: mariadbPassword,
     },
   });

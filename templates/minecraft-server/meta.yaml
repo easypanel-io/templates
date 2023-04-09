@@ -1,0 +1,181 @@
+name: Minecraft Server
+description: Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.
+instructions: null
+changeLog:
+  - date: 2023-03-18
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/itzg/docker-minecraft-server
+  - label: Docker
+    url: https://hub.docker.com/r/itzg/minecraft-server
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: minecraft-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: itzg/minecraft-server:2023.2.0
+    serverName:
+      type: string
+      title: Server Name
+      default: MyServer
+    version:
+      type: string
+      title: Version
+      default: LATEST
+    type:
+      type: string
+      title: Server Types
+      default: VANILLA
+    motd:
+      type: string
+      title: Message of the Day
+      default: Minecraft Server powered by §aEasypanel§r
+    iconUrl:
+      type: string
+      title: Icon URL
+      default: https://cdn.berksmbl.com/easypanel-icon.png
+    gameMode:
+      type: string
+      title: Game Mode
+      default: survival
+      oneOf:
+        - enum:
+            - creative
+          title: Creative
+        - enum:
+            - survival
+          title: Survival
+        - enum:
+            - adventure
+          title: Adventure
+        - enum:
+            - spectator
+          title: Spectator
+    difficulty:
+      type: string
+      title: Difficulty
+      default: easy
+      oneOf:
+        - enum:
+            - peaceful
+          title: Peaceful
+        - enum:
+            - easy
+          title: Easy
+        - enum:
+            - normal
+          title: Normal
+        - enum:
+            - hard
+          title: Hard
+    maxPlayers:
+      type: number
+      title: Max Players
+      default: 20
+    maxWorldSize:
+      type: number
+      title: Max World Size
+      default: 10000
+    viewDistance:
+      type: number
+      title: View Distance
+      default: 10
+    maxBuildHeight:
+      type: number
+      title: Max Build Height
+      default: 256
+    maxTickTime:
+      type: number
+      title: Max Tick Time
+      default: 60000
+    eula:
+      type: boolean
+      title: Please accept the Minecraft EULA
+      default: true
+    allowNether:
+      type: boolean
+      title: Allow Nether
+      default: true
+    announcePlayerAchievements:
+      type: boolean
+      title: Announce Player Achievements
+      default: true
+    generateStructures:
+      type: boolean
+      title: Generate Structures
+      default: true
+    pvp:
+      type: boolean
+      title: PVP Mode
+      default: true
+    forceGamemode:
+      type: boolean
+      title: Force Gamemode
+      default: false
+    hardcore:
+      type: boolean
+      title: Hardcore
+      default: false
+    enableCommandBlock:
+      type: boolean
+      title: Enable Command Block
+      default: true
+    spawnAnimals:
+      type: boolean
+      title: Spawn Animals
+      default: true
+    spawnMonsters:
+      type: boolean
+      title: Spawn Monsters
+      default: true
+    spawnNpcs:
+      type: boolean
+      title: Spawn NPCs
+      default: true
+    snooperEnabled:
+      type: boolean
+      title: Snooper Enabled
+      default: false
+    onlineMode:
+      type: boolean
+      title: Online Mode
+      default: false
+    enableRcon:
+      type: boolean
+      title: Enable RCON
+      default: false
+    enableQuery:
+      type: boolean
+      title: Enable Query
+      default: false
+    serverPort:
+      type: number
+      title: Server Port
+      default: 25565
+    queryPort:
+      type: number
+      title: Query Port
+      default: 25565
+    rconPort:
+      type: number
+      title: RCON Port
+      default: 25575
+    rconPassword:
+      type: string
+      title: RCON Password

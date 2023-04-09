@@ -14,9 +14,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [
-        `JWT_SECRET=${secret}`,
-      ].join("\n"),
+      env: [`JWT_SECRET=${secret}`].join("\n"),
       proxy: {
         port: 3000,
         secure: true,

@@ -24,7 +24,36 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       mounts: [
-        { type: "volume", name: "mattermost", mountPath: "/mattermost" },
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/mattermost/data",
+        },
+        {
+          type: "volume",
+          name: "logs",
+          mountPath: "/mattermost/logs",
+        },
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/mattermost/config",
+        },
+        {
+          type: "volume",
+          name: "plugins",
+          mountPath: "/mattermost/plugins",
+        },
+        {
+          type: "volume",
+          name: "client-plugins",
+          mountPath: "/mattermost/client/plugins",
+        },
+      ],
+      domains: [
+        {
+          name: input.domain,
+        },
       ],
       proxy: { port: 8065, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },

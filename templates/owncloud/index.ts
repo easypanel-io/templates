@@ -23,7 +23,7 @@ export function generate(input: Input): Output {
       `OWNCLOUD_DB_USERNAME=mariadb`,
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
       `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-      `OWNCLOUD_MYSQL_UTF8MB4=true`,
+      `OWNCLOUD_MYSQL_UTF8MB4=true`
     );
 
     services.push({
@@ -42,7 +42,7 @@ export function generate(input: Input): Output {
       `OWNCLOUD_DB_NAME=${input.projectName}`,
       `OWNCLOUD_DB_USERNAME=postgres`,
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
-      `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+      `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`
     );
 
     services.push({

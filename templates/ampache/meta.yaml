@@ -1,0 +1,43 @@
+name: Ampache
+description: A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
+instructions: MySQL Username is "admin". The logs will show a line that says "mysql -uadmin -pjnzYXLz7cMzq -h<host> -P<port>"". The password is everything after "-p", in this case "jnzYXLz7cMzq".
+changeLog:
+  - date: 2023-03-19
+    description: Template created (v5.5.7)
+links:
+  - label: Website
+    url: http://ampache.org/
+  - label: Github
+    url: https://github.com/ampache/ampache
+  - label: Github Docker
+    url: https://github.com/ampache/ampache-docker
+  - label: DockerHub
+    url: https://hub.docker.com/r/ampache/ampache
+contributors:
+  - name: Ponkhy
+    url: https://github.com/Ponkhy
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - appMediaHostPath
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ampache
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ampache/ampache:5.5.7
+    appMediaHostPath:
+      type: string
+      title: Media Host Path

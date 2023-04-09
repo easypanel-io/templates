@@ -1,0 +1,41 @@
+name: Shynet
+description: Modern, privacy-friendly, and detailed web analytics that works without cookies or JS.
+instructions: Open a console session and run ./manage.py createsuperuser to create your administrator account
+changeLog:
+  - date: 2023-3-20
+    description: first release
+links:
+  - label: Documentation
+    url: https://github.com/milesmcc/shynet/blob/master/GUIDE.md
+  - label: Github
+    url: https://github.com/milesmcc/shynet/
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shynet
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: milesmcc/shynet:v0.12.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: shynet-db
