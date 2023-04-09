@@ -24,7 +24,6 @@ schema:
     - adminUsername
     - adminEmail
     - adminPassword
-    - supersetSecretKey
     - supersetDomain
   properties:
     projectName:
@@ -54,10 +53,6 @@ schema:
       type: string
       title: Admin Password 
       default: password
-    supersetSecretKey:
-      type: string
-      title: superset Secret Key
-      default: oBhjrSikACrb4oU18saw1POy3OcTyji7NsvfUY2ZM4qXIv17I59hszaK
     supersetDomain:
       type: string
       title: superset Domain name

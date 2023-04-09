@@ -1,9 +1,12 @@
 import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
+import crypto from "crypto";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const buffer = crypto.randomBytes(32);
+  const base64Key = buffer.toString("base64");
 
   services.push({
     type: "app",
@@ -15,7 +18,7 @@ export function generate(input: Input): Output {
         `ADMIN_USERNAME=${input.adminUsername}`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `ADMIN_PASSWORD=${input.adminPassword}`,
-        `SECRET_KEY=${input.supersetSecretKey}`,
+        `SECRET_KEY=${base64Key}`,
       ].join("\n"),
       source: {
         type: "image",
