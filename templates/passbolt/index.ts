@@ -29,7 +29,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "sleep 10 && ./docker-entrypoint.sh"
+        command: "sleep 10 && /docker-entrypoint.sh"
       },
       proxy: {
         port: 80,
