@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
       env: [
         `APP_FULL_BASE_URL=https://${input.domain}`,
         `DATASOURCES_DEFAULT_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DATASOURCES_DEFAULT_USERNAME=postgres`,
+        `DATASOURCES_DEFAULT_USERNAME=mysql`,
         `DATASOURCES_DEFAULT_PASSWORD=${databasePassword}`,
         `DATASOURCES_DEFAULT_DATABASE=${input.projectName}`,
         `PASSBOLT_REGISTRATION_PUBLIC=false`,
