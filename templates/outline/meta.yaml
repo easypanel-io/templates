@@ -1,10 +1,6 @@
 name: Outline Wiki
 description: "A fast, collaborative, knowledge base for your team built using React and Node.js"
-instructions: "Notice, Auththenication Method is Required to use Outline. Default is email login via Magic Link using SMTP. To use Other Login Methods, Just leave the SMTP section blank and edit the environment variables after install! 
-
-Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! 
-
-Check the environment variables here: https://github.com/outline/outline/blob/main/.env.sample"
+instructions: "Notice, Auththenication Method is Required to use Outline. Default is email login via Magic Link using SMTP. To use Other Login Methods, Just leave the SMTP section blank and edit the environment variables after install! Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! Check the environment variables here: https://github.com/outline/outline/blob/main/.env.sample"
 changeLog:
   - date: 2023-04-11
     description: update to v0.68.1 and enable SMTP auth
@@ -87,6 +83,10 @@ schema:
       title: SMTP Secure
       default: TRUE
       description: "Optional. If false the connection to the mail server will no use TLS, defaults to `TRUE`"
+    smtpName:
+      type: string
+      title: SMTP Name
+      description: "Optional. hostname to send to the server, sometimes required (eg Gmail)"
     minioServiceName:
       type: string
       title: Minio Service Name
