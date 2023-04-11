@@ -12,7 +12,7 @@ links:
   - label: Github
     url: https://code.onedev.io/onedev/server
 contributors:
-  - name: spaceb0t
+  - name: spacec0de
     url: https://github.com/spacec0de
 schema:
   type: object
@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 1dev/server:8.0.3
+      default: 1dev/server:8.0.15
     databaseServiceName:
       type: string
       title: Database Service Name
