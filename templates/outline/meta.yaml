@@ -2,7 +2,9 @@ name: Outline Wiki
 description: "A fast, collaborative, knowledge base for your team built using React and Node.js"
 instructions: "Notice, Auththenication Method is Required to use Outline. Default is email login via Magic Link using SMTP. To use Other Login Methods, Just leave the SMTP section blank and edit the environment variables after install! 
 
-Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! Notice, Some sort of SMTP is Optional! Check the env Here https://github.com/outline/outline/blob/main/.env.sample"
+Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! 
+
+Check the environment variables here: https://github.com/outline/outline/blob/main/.env.sample"
 changeLog:
   - date: 2023-01-15
     description: first release
@@ -16,6 +18,8 @@ links:
 contributors:
   - name: DrMxrcy
     url: https://github.com/DrMxrcy
+  - name: spacec0de
+    url: https://github.com/spacec0de
 schema:
   type: object
   required:
