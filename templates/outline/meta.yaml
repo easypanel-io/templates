@@ -52,12 +52,12 @@ schema:
       default: outline-redis
     smtpHost:
       type: string
-      title: Domain Url
-      description: "Hostname of your mail server, e.g. mail.mycompany.com"
+      title: SMTP Host
+      description: "Hostname of your mail server, (ex: mail.mycompany.com)"
     smtpPort:
       type: string
       title: SMTP Port
-      description: "Port of your mail server, SSL: 465, TLS: 587"
+      description: "Port of your mail server (ex: SSL:465, TLS:587)"
     smtpUsername:
       type: string
       title: SMTP Username
@@ -69,24 +69,24 @@ schema:
     smtpFromEmail:
       type: string
       title: SMTP From Email
-      description: "You can also use the mailbox format, `Outline <noreply@mycompany.com>`"
+      description: "You can also use the mailbox format, Outline <noreply@mycompany.com>"
     smtpReplyEmail:
       type: string
       title: SMTP Reply Email
-      description: "Optional. You can also use the mailbox format, `Outline <reply@mycompany.com>`"
+      description: "[Optional] You can also use the mailbox format, Outline <reply@mycompany.com>"
+    smtpSecure:
+      type: boolean
+      title: SMTP Secure
+      default: TRUE
+      description: "[Optional] If false the connection to the mail server will no use TLS, defaults to TRUE"
     smtpTlsCiphers:
       type: string
       title: SMTP TLS Ciphers
-      description: "Optional. Allows passing the ciphers to use with TLS (eg TLSv1.2)"
-    smtpSecure:
-      type: string
-      title: SMTP Secure
-      default: TRUE
-      description: "Optional. If false the connection to the mail server will no use TLS, defaults to `TRUE`"
+      description: "[Optional] Allows passing the ciphers to use with TLS (ex: TLSv1.2)"
     smtpName:
       type: string
       title: SMTP Name
-      description: "Optional. hostname to send to the server, sometimes required (eg Gmail)"
+      description: "[Optional] hostname to send to the server, sometimes required (ex: Gmail)"
     minioServiceName:
       type: string
       title: Minio Service Name
