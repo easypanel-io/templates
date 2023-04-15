@@ -23,6 +23,10 @@ export function generate(input: Input): Output {
         `DB_TYPE=pgsql`,
         `DB_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
         `JWT_SECRET=${secret}`,
+        `IS_HOSTED=true`,
+        `NODE_ENV=production`,
+        `HOST=https://${input.domain}`,
+        `SMTP_SENDER=Cusdis Notification<notification@${input.domain}>`,
       ].join("\n"),
       source: {
         type: "image",
