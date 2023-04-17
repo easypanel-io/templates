@@ -14,8 +14,8 @@ export function generate(input: Input): Output {
       env: [
         `COCKPIT_SESSION_NAME=cockpit`,
         `COCKPIT_SALT=${databaseSalt}`,
-        `COCKPIT_DATABASE_SERVER=mongodb://mongo:${mongoPassword}:27017`,
-        `COCKPIT_DATABASE_NAME=${input.projectName}_${input.databaseServiceName}`
+        `COCKPIT_DATABASE_SERVER=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.databaseServiceName}:27017`,
+        `COCKPIT_DATABASE_NAME=${input.projectName}`
       ].join("\n"),
       source: {
         type: "image",
