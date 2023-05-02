@@ -27,7 +27,7 @@ export function generate(input: Input): Output {
         `AP_POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
         `AP_POSTGRES_PORT=5432`,
         // TODO: When privileged support becomes available, switch this to a sandboxed mode.
-        `AP_EXECUTION_METHOD=UNSANDBOXED`,
+        `AP_EXECUTION_MODE=UNSANDBOXED`,
         `AP_POSTGRES_USERNAME=postgres`,
         `AP_POSTGRES_PASSWORD=${databasePassword}`,
         `AP_SANDBOX_RUN_TIME_SECONDS=600`,
