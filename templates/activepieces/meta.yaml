@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: activepieces/activepieces:0.3.6
+      default: activepieces/activepieces:0.3.11
     databaseServiceName:
       type: string
       title: Redis Service Name
