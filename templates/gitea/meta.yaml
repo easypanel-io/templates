@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gitea/gitea:1.18.4
+      default: gitea/gitea:1.19.2
     databaseType:
       type: string
       title: Database Type
