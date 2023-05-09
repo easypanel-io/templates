@@ -28,11 +28,6 @@ export function generate(input: Input): Output {
           name: "appdata",
           mountPath: "/app/data",
         },
-        {
-          type: "volume",
-          name: "mealie",
-          mountPath: "./mealie/data",
-        },
       ],
       domains: [
         {
