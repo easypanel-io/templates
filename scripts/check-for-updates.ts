@@ -23,7 +23,16 @@ async function run() {
           continue;
         }
         const [image, tag] = defaultImage.split(":");
-        const [namespace, repository] = image.split("/");
+        const splitImage = image.split("/");
+
+        let namespace, repository;
+        if (splitImage.length === 1) {
+          namespace = "library";
+          repository = splitImage[0];
+        } else {
+          [namespace, repository] = splitImage;
+        }
+
         await getLatestUpdate(namespace, repository, tag);
         console.log("\n");
       }
@@ -70,37 +79,13 @@ async function checkForUpdates(
   const currentVersion = currentTagData.name;
 
   if (currentTagDigest !== latestTagDigest) {
-    await findMatchingTags(
-      namespace,
-      repository,
-      latestTagDigest,
-      currentVersion
-    );
-  }
-}
-async function findMatchingTags(
-  namespace: string,
-  repository: string,
-  latestTagDigest: string,
-  currentVersion: string
-) {
-  const url = `https://hub.docker.com/v2/namespaces/${namespace}/repositories/${repository}/tags?page_size=100`;
-
-  try {
-    const response = await axios.get(url);
-
-    if (response.status === 200) {
-      const tags = response.data.results;
-      console.log(`${namespace}/${repository} can be updated to:`);
-      tags.forEach(async (tag: Record<string, any>) => {
-        if (tag.digest === latestTagDigest) {
-          console.log(tag.name);
-        }
-      });
-      await findMatchingTagsInImages(namespace, repository);
-    }
-  } catch (error) {
-    console.error("Error fetching data: TAGS");
+    await findMatchingTagsInImages(namespace, repository);
+    // await findMatchingTags(
+    //   namespace,
+    //   repository,
+    //   latestTagDigest,
+    //   currentVersion
+    // );
   }
 }
 async function findMatchingTagsInImages(namespace: string, repository: string) {
@@ -122,6 +107,7 @@ async function findMatchingTagsInImages(namespace: string, repository: string) {
         (image: any) => image.digest
       );
 
+      console.log(`${namespace}/${repository} can be updated to:`);
       currentTagsData.forEach((tagData: any) => {
         const tagImageDigests = tagData.images.map(
           (image: any) => image.digest
