@@ -1,0 +1,88 @@
+name: ownCloud Infinite Scale
+description: ownCloud Infinite Scale is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device.
+instructions: null
+changeLog:
+  - date: 2023-5-11
+    description: first release
+links:
+  - label: Website
+    url: https://owncloud.com/
+  - label: Documentation
+    url: https://doc.owncloud.com/ocis/next
+  - label: Github
+    url: https://github.com/owncloud/ocis
+contributors:
+  - name: Andrei Canta
+    url: https://github.com/deiucanta
+schema:
+  type: object
+  required:
+    - projectName
+    - servicePrefix
+    - ocisDomain
+    - ocisAdminPassword
+    - ocisImage
+    - wopiDomain
+    - wopiSecret
+    - wopiImage
+    - collaboraImage
+    - onlyofficeImage
+    - tikaImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    servicePrefix:
+      type: string
+      title: Service Prefix
+      default: ocis
+
+    ocisDomain:
+      type: string
+      title: oCIS Domain
+    ocisAdminPassword:
+      type: string
+      title: oCIS Admin Password
+    ocisImage:
+      type: string
+      title: oCIS Image
+      default: owncloud/ocis:latest
+
+    wopiDomain:
+      type: string
+      title: WOPI Domain
+    wopiSecret:
+      type: string
+      title: WOPI Secret
+      default: LoremIpsum567
+    wopiImage:
+      type: string
+      title: WOPI Image
+      default: cs3org/wopiserver:v9.4.0
+
+    collaboraDomain:
+      type: string
+      title: Collabora Domain
+    collaboraImage:
+      type: string
+      title: Collabora Image
+      default: collabora/code:22.05.10.1.1
+    collaboraUsername:
+      type: string
+      title: Collabora Username
+    collaboraPassword:
+      type: string
+      title: Collabora Password
+
+    onlyofficeDomain:
+      type: string
+      title: OnlyOffice Domain
+    onlyofficeImage:
+      type: string
+      title: OnlyOffice Image
+      default: onlyoffice/documentserver:7.3.0
+
+    tikaImage:
+      type: string
+      title: Tika Image
+      default: apache/tika:latest-full
