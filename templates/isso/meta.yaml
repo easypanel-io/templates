@@ -1,5 +1,7 @@
 name: Isso
-description: Isso – Ich schrei sonst – is a lightweight commenting server written in Python and JavaScript. It aims to be a drop-in replacement for Disqus.
+description: Isso – Ich schrei sonst – is a lightweight commenting server
+  written in Python and JavaScript. It aims to be a drop-in replacement for
+  Disqus.
 instructions: Go to /admin for administration interface
 changeLog:
   - date: 2023-2-9
@@ -38,3 +40,6 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
+tags:
+  - Developer Tools
+  - CMS

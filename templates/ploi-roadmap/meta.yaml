@@ -1,6 +1,7 @@
 name: Ploi Roadmap
 description: Welcome to Roadmap, the open-source software for your roadmapping needs.
-instructions: After First Deployment, run "php artisan roadmap:install" to setup the inital user account.
+instructions: After First Deployment, run "php artisan roadmap:install" to setup
+  the inital user account.
 changeLog:
   - date: 2023-1-6
     description: first release
@@ -52,3 +53,6 @@ schema:
       type: string
       title: Timezone
       default: utc
+tags:
+  - Documentation
+  - Developer Tools

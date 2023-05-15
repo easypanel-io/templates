@@ -1,5 +1,6 @@
 name: NocoDB
-description: NocoDB is an open source Airtable alternative and no code platform that turns any database into a smart spreadsheet.
+description: NocoDB is an open source Airtable alternative and no code platform
+  that turns any database into a smart spreadsheet.
 instructions: null
 changeLog:
   - date: 2023-02-8
@@ -45,3 +46,6 @@ schema:
       type: string
       title: Redis Service Name
       default: nocodb-redis
+tags:
+  - Database
+  - Productivity

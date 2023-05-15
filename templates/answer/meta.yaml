@@ -1,5 +1,6 @@
 name: Answer
-description: An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+description: An open-source knowledge-based community software. You can use it
+  quickly to build Q&A community for your products, customers, teams, and more.
 instructions: Go to /install and select sqlite database
 changeLog:
   - date: 2022-12-21
@@ -32,3 +33,6 @@ schema:
       type: string
       title: App Service Image
       default: answerdev/answer:1.0.9
+tags:
+  - Discussion
+  - Social Networking

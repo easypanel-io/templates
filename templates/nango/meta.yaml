@@ -1,6 +1,7 @@
 name: Nango
 description: Get OAuth tokens for APIs - fast & secure
-instructions: Check the environment tab for your API key. Follow the instructions in the FILE mount.
+instructions: Check the environment tab for your API key. Follow the
+  instructions in the FILE mount.
 changeLog:
   - date: 2023-3-13
     description: first release
@@ -49,3 +50,6 @@ schema:
     webPassword:
       type: string
       title: Password
+tags:
+  - API
+  - Security

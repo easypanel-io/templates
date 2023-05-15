@@ -1,5 +1,7 @@
 name: Mealie
-description: Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+description: Mealie is a self hosted recipe manager and meal planner with a
+  RestAPI backend and a reactive frontend application built in Vue for a
+  pleasant user experience for the whole family.
 instructions: Please use the following credentials to login. changeme@easypanel.io|MyPassword
 changeLog:
   - date: 2022-12-11
@@ -34,3 +36,6 @@ schema:
       type: string
       title: App Service Image
       default: hkotel/mealie:v0.5.6
+tags:
+  - Productivity
+  - Web Hosting

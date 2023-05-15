@@ -1,5 +1,6 @@
 name: HedgeDoc
-description: HedgeDoc (formerly known as CodiMD) is an open-source, web-based, self-hosted, collaborative markdown editor.
+description: HedgeDoc (formerly known as CodiMD) is an open-source, web-based,
+  self-hosted, collaborative markdown editor.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -38,3 +39,6 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/hedgedoc:1.9.7
+tags:
+  - Collaboration
+  - Documents

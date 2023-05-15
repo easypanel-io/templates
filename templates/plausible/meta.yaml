@@ -1,5 +1,8 @@
 name: Plausible
-description: Plausible Analytics is an open-source project dedicated to making web analytics more privacy-friendly. Our mission is to reduce corporate surveillance by providing an alternative web analytics tool which does not come from the AdTech world.
+description: Plausible Analytics is an open-source project dedicated to making
+  web analytics more privacy-friendly. Our mission is to reduce corporate
+  surveillance by providing an alternative web analytics tool which does not
+  come from the AdTech world.
 instructions: null
 changeLog:
   - date: 2023-1-5
@@ -48,3 +51,6 @@ schema:
       type: string
       title: Database Service Name
       default: plausible-clickhouse
+tags:
+  - Analytics
+  - Privacy

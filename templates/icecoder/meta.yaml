@@ -1,5 +1,6 @@
 name: ICEcoder
-description: ICEcoder is a browser based code editor, which provides a modern approach to building websites.
+description: ICEcoder is a browser based code editor, which provides a modern
+  approach to building websites.
 instructions: null
 armSupport: true
 changeLog:
@@ -33,3 +34,6 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/easypanel-community/docker-icecoder:8.1
+tags:
+  - Developer Tools
+  - Web Hosting

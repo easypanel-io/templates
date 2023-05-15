@@ -1,6 +1,9 @@
 name: linkding
-description: linkding is a simple bookmark service that you can host yourself. It's designed be to be minimal, fast, and easy to set up using Docker.
-instructions: If the login fails with a error 500, please restart the "linkding" app service. This can be caused by the database not being properly reachable at linkding's first start.
+description: linkding is a simple bookmark service that you can host yourself.
+  It's designed be to be minimal, fast, and easy to set up using Docker.
+instructions: If the login fails with a error 500, please restart the "linkding"
+  app service. This can be caused by the database not being properly reachable
+  at linkding's first start.
 changeLog:
   - date: 2023-03-18
     description: Template created (v1.17.2)
@@ -66,3 +69,6 @@ schema:
       type: string
       title: Database Service Name (Can be ignored if SQLite)
       default: linkding-db
+tags:
+  - Bookmark
+  - Web Hosting

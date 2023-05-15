@@ -1,5 +1,6 @@
 name: Element
-description: Element (formerly known as Vector and Riot) is a Matrix web client built using the Matrix React SDK.
+description: Element (formerly known as Vector and Riot) is a Matrix web client
+  built using the Matrix React SDK.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -34,3 +35,6 @@ schema:
       type: string
       title: App Service Image
       default: vectorim/element-web:v1.11.30
+tags:
+  - Communication
+  - Developer Tools

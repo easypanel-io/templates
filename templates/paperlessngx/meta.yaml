@@ -1,5 +1,7 @@
 name: Paperless-ngx
-description: Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
+description: Paperless-ngx is a document management system that transforms your
+  physical documents into a searchable online archive so you can keep, well,
+  less paper.
 instructions: Please use the following credentials to login. admin|password
 changeLog:
   - date: 2022-10-28
@@ -39,3 +41,6 @@ schema:
       type: string
       title: Redis Service Name
       default: paperlessngx-redis
+tags:
+  - Documents
+  - Productivity

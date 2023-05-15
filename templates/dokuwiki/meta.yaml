@@ -1,6 +1,8 @@
 name: Dokuwiki
-description: DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
-instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install then restart your container when finished to remove install.php
+description: DokuWiki is a simple to use and highly versatile Open Source wiki
+  software that doesn't require a database.
+instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install
+  then restart your container when finished to remove install.php
 changeLog:
   - date: 2023-3-16
     description: first release
@@ -32,3 +34,6 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/dokuwiki:version-2022-07-31a
+tags:
+  - Wiki
+  - Documentation

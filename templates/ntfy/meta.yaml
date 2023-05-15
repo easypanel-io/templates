@@ -1,5 +1,6 @@
 name: Ntfy
-description: ntfy lets you send push notifications to your phone or desktop via scripts from any computer, using simple HTTP PUT or POST requests.
+description: ntfy lets you send push notifications to your phone or desktop via
+  scripts from any computer, using simple HTTP PUT or POST requests.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -34,3 +35,6 @@ schema:
       type: string
       title: App Service Image
       default: binwiederhier/ntfy:v2.4.0
+tags:
+  - Web Hosting
+  - Developer Tools

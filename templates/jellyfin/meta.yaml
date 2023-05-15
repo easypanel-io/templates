@@ -1,6 +1,9 @@
 name: Jellyfin
-description: Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
-instructions: Jellyfin takes a few minutes to get ready. Sit back, relax, and get some popcorn!
+description: Jellyfin is the volunteer-built media solution that puts you in
+  control of your media. Stream to any device from your own server, with no
+  strings attached. Your media, your server, your way.
+instructions: Jellyfin takes a few minutes to get ready. Sit back, relax, and
+  get some popcorn!
 changeLog:
   - date: 2022-10-28
     description: first release
@@ -32,3 +35,6 @@ schema:
       type: string
       title: App Service Image
       default: jellyfin/jellyfin:10.8.9
+tags:
+  - Media
+  - Streaming

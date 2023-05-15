@@ -1,6 +1,7 @@
 name: Photoview
 description: Photo gallery for self-hosted personal servers
-instructions: You will need to mount the location where your photos are to complete the installation.
+instructions: You will need to mount the location where your photos are to
+  complete the installation.
 changeLog:
   - date: 2023-03-16
     description: First Release
@@ -55,3 +56,6 @@ schema:
       type: string
       title: Database Service Name
       default: photoview-db
+tags:
+  - Gallery
+  - Self-hosted

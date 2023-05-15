@@ -1,6 +1,7 @@
 name: RabbitMQ
 description: RabbitMQ is an open source multi-protocol messaging broker.
-instructions: Default user/pass is guest/guest (if you use the -management version of the image)
+instructions: Default user/pass is guest/guest (if you use the -management
+  version of the image)
 changeLog:
   - date: 2022-11-08
     description: first release
@@ -31,8 +32,6 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      # TODO: Need to pass this to the json schema form builder of Chakra UI
-      # placeholder: rabbitmq:3
     enableManagementUI:
       type: boolean
       title: Enable RabbitMQ Management UI Plugin (modifies image)
@@ -46,3 +45,6 @@ schema:
       type: string
       title: RAM Memory Limit (recommended)
       default: 512MB
+tags:
+  - Communication
+  - Developer Tools

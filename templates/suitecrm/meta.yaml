@@ -1,5 +1,6 @@
 name: SuiteCRM
-description: SuiteCRM is a completely open source, enterprise-grade Customer Relationship Management (CRM) application.
+description: SuiteCRM is a completely open source, enterprise-grade Customer
+  Relationship Management (CRM) application.
 instructions: null
 changeLog:
   - date: 2023-1-12
@@ -37,3 +38,6 @@ schema:
       type: string
       title: Database Service Name
       default: suitecrm-db
+tags:
+  - CRM
+  - Business Apps

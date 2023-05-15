@@ -1,5 +1,6 @@
 name: Metabase
-description: The simplest, fastest way to get business intelligence and analytics to everyone in your company
+description: The simplest, fastest way to get business intelligence and
+  analytics to everyone in your company
 instructions: null
 changeLog:
   - date: 2022-11-08
@@ -35,3 +36,6 @@ schema:
     metabaseSiteName:
       type: string
       title: Metabase Site Name (Title)
+tags:
+  - Analytics
+  - Dashboard

@@ -1,6 +1,8 @@
 name: Budibase
-description: Budibase is an open source low-code platform, and the easiest way to build internal apps that improve productivity.
-instructions: Budibase takes a few minutes to get ready. Sit back, relax, and have a cup of tea!
+description: Budibase is an open source low-code platform, and the easiest way
+  to build internal apps that improve productivity.
+instructions: Budibase takes a few minutes to get ready. Sit back, relax, and
+  have a cup of tea!
 changeLog:
   - date: 2022-10-30
     description: first release
@@ -32,3 +34,6 @@ schema:
       type: string
       title: App Service Image
       default: budibase/budibase:v2.5.6
+tags:
+  - Low-code
+  - Productivity

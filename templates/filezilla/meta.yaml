@@ -1,6 +1,9 @@
 name: Filezilla Client
-description: FIleZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: FIleZilla Client is a fast and reliable cross-platform FTP, FTPS
+  and SFTP client with lots of useful features and an intuitive graphical user
+  interface.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-21
     description: first release
@@ -30,3 +33,6 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/filezilla:latest
+tags:
+  - FTP
+  - Developer Tools

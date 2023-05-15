@@ -1,5 +1,8 @@
 name: Tautuilli
-description: Tautulli is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched.
+description: Tautulli is a 3rd party application that you can run alongside your
+  Plex Media Server to monitor activity and track various statistics. Most
+  importantly, these statistics include what has been watched, who watched it,
+  when and where they watched it, and how it was watched.
 instructions: null
 changeLog:
   - date: 2023-1-26
@@ -30,3 +33,6 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/tautulli:2.11.1
+tags:
+  - Media
+  - Monitoring
