@@ -1,5 +1,7 @@
 name: Hasura
-description: The Hasura GraphQL Engine makes your data instantly accessible over a real-time GraphQL API, so you can build and ship modern, performant apps and APIs 10x faster.
+description: The Hasura GraphQL Engine makes your data instantly accessible over
+  a real-time GraphQL API, so you can build and ship modern, performant apps and
+  APIs 10x faster.
 instructions: null
 changeLog:
   - date: 2023-03-16
@@ -70,3 +72,6 @@ schema:
     hasuraDomain:
       type: string
       title: Hasura Domain name
+tags:
+  - GraphQL
+  - Developer Tools

@@ -1,5 +1,7 @@
 name: Freescout
-description: FreeScout is the super lightweight and powerful free open source help desk and shared inbox written in PHP (Laravel framework). It is a self hosted clone of HelpScout.
+description: FreeScout is the super lightweight and powerful free open source
+  help desk and shared inbox written in PHP (Laravel framework). It is a self
+  hosted clone of HelpScout.
 instructions: null
 changeLog:
   - date: 2023-1-4
@@ -53,3 +55,6 @@ schema:
       type: string
       title: Password
       default: changeme
+tags:
+  - Customer Support
+  - CRM

@@ -1,5 +1,6 @@
 name: Flarum
-description: Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free.
+description: Flarum is the next-generation forum software that makes online
+  discussion fun. It's simple, fast, and free.
 instructions: Please use the credentials flarum:flarum to login.
 changeLog:
   - date: 2022-10-31
@@ -53,10 +54,6 @@ schema:
         - enum:
             - mariadb
           title: MariaDB
-        # TODO: Track progress on https://github.com/flarum/issue-archive/issues/411
-        # - enum:
-        #     - postgres
-        #   title: PostgreSQL
         - enum:
             - external
           title: External
@@ -76,3 +73,6 @@ schema:
     databaseUserPassword:
       type: string
       title: Database User Password (blank to randomly generated)
+tags:
+  - Forums
+  - Productivity

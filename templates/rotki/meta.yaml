@@ -1,5 +1,6 @@
 name: Rotki
-description: Rotki is an open source portfolio tracking, analytics, accounting, and tax reporting tool that protects your privacy.
+description: Rotki is an open source portfolio tracking, analytics, accounting,
+  and tax reporting tool that protects your privacy.
 instructions: null
 changeLog:
   - date: 2023-2-9
@@ -32,3 +33,6 @@ schema:
       type: string
       title: App Service Image
       default: rotki/rotki:v1.27.0
+tags:
+  - Analytics
+  - Finance

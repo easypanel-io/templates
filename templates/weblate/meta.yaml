@@ -1,5 +1,6 @@
 name: Weblate
-description: Weblate is a libre software web-based continuous localization system. Weblate requires 2GB of ram and 2CPUs.
+description: Weblate is a libre software web-based continuous localization
+  system. Weblate requires 2GB of ram and 2CPUs.
 instructions: Please use the following credentials to login. changeme@easypanel.io|changeme
 changeLog:
   - date: 2022-11-23
@@ -62,3 +63,6 @@ schema:
     emailPassword:
       type: string
       title: Email Password
+tags:
+  - Developer Tools
+  - Localization

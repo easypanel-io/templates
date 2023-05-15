@@ -1,5 +1,8 @@
 name: PhotoPrism
-description: PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
+description: PhotoPrism® is an AI-Powered Photos App for the Decentralized Web.
+  It makes use of the latest technologies to tag and find pictures automatically
+  without getting in your way. You can run it at home, on a private server, or
+  in the cloud.
 instructions: null
 changeLog:
   - date: 2023-03-16
@@ -59,3 +62,6 @@ schema:
       type: string
       title: Database Service Name
       default: photoprism-db
+tags:
+  - AI
+  - Media

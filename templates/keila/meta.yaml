@@ -1,6 +1,8 @@
 name: Keila
-description: Keila is an Open Source alternative to newsletter tools like Mailchimp or Sendinblue.
-instructions: Login with changeme@easypanel.io:password123 - change this from the administraton panel
+description: Keila is an Open Source alternative to newsletter tools like
+  Mailchimp or Sendinblue.
+instructions: Login with changeme@easypanel.io:password123 - change this from
+  the administraton panel
 changeLog:
   - date: 2023-3-3
     description: first release
@@ -62,3 +64,6 @@ schema:
     emailPassword:
       type: string
       title: SMTP Email Password
+tags:
+  - Email
+  - Marketing

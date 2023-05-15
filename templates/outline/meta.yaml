@@ -1,6 +1,12 @@
 name: Outline Wiki
-description: A fast, collaborative, knowledge base for your team built using React and Node.js.
-instructions: Notice, Auththenication Method is Required to use Outline. To use Other Login Methods, Just fill in dummy Cridentials and edit the env! Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! Notice, Some sort of SMTP is Optinal! Check the env Here https://github.com/outline/outline/blob/main/.env.sample
+description: A fast, collaborative, knowledge base for your team built using
+  React and Node.js.
+instructions: Notice, Auththenication Method is Required to use Outline. To use
+  Other Login Methods, Just fill in dummy Cridentials and edit the env! Check
+  out the Docs
+  https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o!
+  Notice, Some sort of SMTP is Optinal! Check the env Here
+  https://github.com/outline/outline/blob/main/.env.sample
 changeLog:
   - date: 2023-01-15
     description: first release
@@ -26,7 +32,6 @@ schema:
     - databaseServiceName
     - redisServiceName
     - minioServiceName
-
   properties:
     projectName:
       type: string
@@ -61,3 +66,6 @@ schema:
       type: string
       title: Minio Service Name
       default: outline-minio
+tags:
+  - Collaboration
+  - Wiki

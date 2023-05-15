@@ -31,7 +31,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
@@ -40,3 +39,6 @@ schema:
       type: string
       title: App Service Image
       default: filebrowser/filebrowser:v2-s6
+tags:
+  - File Management
+  - CMS

@@ -1,5 +1,6 @@
 name: LibreTranslate
-description: Free and Open Source Machine Translation API. 100% self-hosted, offline capable and easy to setup.
+description: Free and Open Source Machine Translation API. 100% self-hosted,
+  offline capable and easy to setup.
 instructions: null
 changeLog:
   - date: 2020-12-20
@@ -63,3 +64,6 @@ schema:
       type: boolean
       title: Disable Web UI
       default: false
+tags:
+  - Translation
+  - Developer Tools

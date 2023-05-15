@@ -1,5 +1,7 @@
 name: Matomo
-description: Google Analytics alternative that protects your data and your customers' privacy. Take back control with Matomo – a powerful web analytics platform that gives you 100% data ownership.
+description: Google Analytics alternative that protects your data and your
+  customers' privacy. Take back control with Matomo – a powerful web analytics
+  platform that gives you 100% data ownership.
 instructions: null
 changeLog:
   - date: 2022-09-28
@@ -37,3 +39,6 @@ schema:
       type: string
       title: Database Service Name
       default: matomo-db
+tags:
+  - Analytics
+  - Security

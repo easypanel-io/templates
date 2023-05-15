@@ -1,5 +1,6 @@
 name: Odoo
-description: Odoo, formerly known as OpenERP, is a suite of open-source business apps written in Python and released under the LGPL license.
+description: Odoo, formerly known as OpenERP, is a suite of open-source business
+  apps written in Python and released under the LGPL license.
 instructions: You can login with username "admin" and password "umami".
 changeLog:
   - date: 2023
@@ -37,3 +38,6 @@ schema:
       type: string
       title: Database Service Name
       default: odoo-db
+tags:
+  - Business Apps
+  - ERP

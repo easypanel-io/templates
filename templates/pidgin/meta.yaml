@@ -1,6 +1,8 @@
 name: Pidgin
-description: Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: Pidgin is a chat program which lets you log into accounts on
+  multiple chat networks simultaneously.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-23
     description: first release
@@ -30,3 +32,6 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/pidgin:latest
+tags:
+  - Chat
+  - Communication

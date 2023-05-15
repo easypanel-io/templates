@@ -1,5 +1,6 @@
 name: CodeX Docs
-description: CodeX Docs is a free docs application. It's based on Editor.js ecosystem which gives all modern opportunities for working with content.
+description: CodeX Docs is a free docs application. It's based on Editor.js
+  ecosystem which gives all modern opportunities for working with content.
 instructions: View All Configuation on the Docs site - https://docs.codex.so/configuration
 changeLog:
   - date: 2023-01-23
@@ -41,3 +42,6 @@ schema:
       type: string
       title: Database Service Name
       default: codex-db
+tags:
+  - Documentation
+  - Productivity

@@ -1,5 +1,6 @@
 name: Papercups
-description: Papercups is an open source live customer support tool web app written in Elixir.
+description: Papercups is an open source live customer support tool web app
+  written in Elixir.
 instructions: null
 changeLog:
   - date: 2023-3-20
@@ -41,3 +42,6 @@ schema:
       type: string
       title: Database Service Name
       default: papercups-db
+tags:
+  - Customer Support
+  - Developer Tools

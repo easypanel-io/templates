@@ -1,5 +1,7 @@
 name: Rallly
-description: Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
+description: Schedule group meetings with friends, colleagues and teams. Create
+  meeting polls to find the best date and time to organize an event based on
+  your participants' availability. Save time and avoid back-and-forth emails.
 instructions: null
 armSupport: true
 changeLog:
@@ -65,3 +67,6 @@ schema:
     emailPassword:
       type: string
       title: Email Password
+tags:
+  - Calendars
+  - Productivity

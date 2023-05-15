@@ -1,5 +1,7 @@
 name: Jellyseerr
-description: Jellyseerr is a free and open source software application for managing requests for your media library. It is a a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
+description: Jellyseerr is a free and open source software application for
+  managing requests for your media library. It is a a fork of Overseerr built to
+  bring support for Jellyfin & Emby media servers!
 instructions: none
 changeLog:
   - date: 2022-12-20
@@ -30,3 +32,6 @@ schema:
       type: string
       title: App Service Image
       default: fallenbagel/jellyseerr:1.3.0
+tags:
+  - Media
+  - Developer Tools

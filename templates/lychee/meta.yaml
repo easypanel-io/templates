@@ -1,5 +1,8 @@
 name: Lychee
-description: Lychee is a free photo-management tool, which runs on your server or web-space. Installing is a matter of seconds. Upload, manage and share photos like from a native application. Lychee comes with everything you need and all your photos are stored securely.
+description: Lychee is a free photo-management tool, which runs on your server
+  or web-space. Installing is a matter of seconds. Upload, manage and share
+  photos like from a native application. Lychee comes with everything you need
+  and all your photos are stored securely.
 instructions: Lychee takes a few minutes to get ready. Sit back, relax, and have a coffee!
 changeLog:
   - date: 2022-10-28
@@ -43,3 +46,6 @@ schema:
         - enum:
             - sqlite
           title: SQLite
+tags:
+  - File Management
+  - Media

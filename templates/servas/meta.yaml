@@ -1,5 +1,6 @@
 name: Servas
-description: A self-hosted bookmark management tool. Servas is based on Laravel and Inertia.js and uses Tailwind CSS and Svelte for the frontend.
+description: A self-hosted bookmark management tool. Servas is based on Laravel
+  and Inertia.js and uses Tailwind CSS and Svelte for the frontend.
 instructions: Visit /register to create an account
 changeLog:
   - date: 2023-1-30
@@ -37,3 +38,6 @@ schema:
       type: string
       title: Database Service Name
       default: servas-db
+tags:
+  - Bookmarks
+  - CMS

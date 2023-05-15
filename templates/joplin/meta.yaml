@@ -1,5 +1,6 @@
 name: Joplin
-description: Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.
+description: Joplin is an open source note-taking app. Capture your thoughts and
+  securely access them from any device.
 instructions: null
 changeLog:
   - date: 2023-03-16
@@ -41,3 +42,6 @@ schema:
       type: string
       title: Database Service Name
       default: joplin-db
+tags:
+  - Notes
+  - Productivity

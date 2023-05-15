@@ -1,5 +1,7 @@
 name: Listmonk
-description: Listmonk is a self-hosted, high performance mailing list and newsletter manager. It comes as a standalone binary and the only dependency is a Postgres database.
+description: Listmonk is a self-hosted, high performance mailing list and
+  newsletter manager. It comes as a standalone binary and the only dependency is
+  a Postgres database.
 instructions: null
 changeLog:
   - date: 2023-2-3
@@ -48,3 +50,6 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
+tags:
+  - Email
+  - Productivity

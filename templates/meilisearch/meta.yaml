@@ -1,5 +1,6 @@
 name: Meilisearch
-description: Meilisearch is a lightning-fast search engine that fits effortlessly into your apps, websites, and workflow.
+description: Meilisearch is a lightning-fast search engine that fits
+  effortlessly into your apps, websites, and workflow.
 instructions: null
 changeLog:
   - date: 2022-10-31
@@ -66,3 +67,6 @@ schema:
       type: string
       title: Scheduled Snapshots Interval (in seconds)
       default: "86400"
+tags:
+  - Search
+  - Developer Tools

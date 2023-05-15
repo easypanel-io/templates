@@ -1,5 +1,6 @@
 name: Jirafeau
-description: Jirafeau is a one-click-filesharing Select your file, upload, share a link. That's it.
+description: Jirafeau is a one-click-filesharing Select your file, upload, share
+  a link. That's it.
 instructions: null
 changeLog:
   - date: 2022-11-22
@@ -28,3 +29,6 @@ schema:
       type: string
       title: App Service Image
       default: jgeusebroek/jirafeau:20221008
+tags:
+  - File Management
+  - Web Hosting

@@ -1,5 +1,7 @@
 name: Clickhouse
-description: ClickHouse is an open-source column-oriented DBMS for online analytical processing that allows users to generate analytical reports using SQL queries in real-time.
+description: ClickHouse is an open-source column-oriented DBMS for online
+  analytical processing that allows users to generate analytical reports using
+  SQL queries in real-time.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -32,3 +34,6 @@ schema:
       type: string
       title: App Service Image
       default: clickhouse/clickhouse-server:22.6-alpine
+tags:
+  - Data Science
+  - Databases

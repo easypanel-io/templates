@@ -1,5 +1,6 @@
 name: Visual Studio Code Server
-description: Code-server is VS Code running on a remote server, accessible through the browser.
+description: Code-server is VS Code running on a remote server, accessible
+  through the browser.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -34,3 +35,6 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/code-server:4.9.1-ls148
+tags:
+  - Developer Tools
+  - Web Hosting

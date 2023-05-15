@@ -1,6 +1,8 @@
 name: Shynet
-description: Modern, privacy-friendly, and detailed web analytics that works without cookies or JS.
-instructions: Open a console session and run ./manage.py createsuperuser to create your administrator account
+description: Modern, privacy-friendly, and detailed web analytics that works
+  without cookies or JS.
+instructions: Open a console session and run ./manage.py createsuperuser to
+  create your administrator account
 changeLog:
   - date: 2023-3-20
     description: first release
@@ -39,3 +41,6 @@ schema:
       type: string
       title: Database Service Name
       default: shynet-db
+tags:
+  - Analytics
+  - Privacy

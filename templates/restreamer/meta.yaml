@@ -1,5 +1,7 @@
 name: Restreamer
-description: Self-hosting solution to stream live to your website and publish to many like YouTube-Live, Twitter, Twitch, Vimeo, and other platforms or services.
+description: Self-hosting solution to stream live to your website and publish to
+  many like YouTube-Live, Twitter, Twitch, Vimeo, and other platforms or
+  services.
 instructions: null
 changeLog:
   - date: 2022-10-29
@@ -30,3 +32,6 @@ schema:
       type: string
       title: App Service Image
       default: datarhei/restreamer:2.4.2
+tags:
+  - "Streaming "
+  - Web Hosting

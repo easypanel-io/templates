@@ -1,5 +1,6 @@
 name: Documize
-description: Documize Community is an open source, self-hosted, modern, lightweight alternative to Confluence and other similar solutions.
+description: Documize Community is an open source, self-hosted, modern,
+  lightweight alternative to Confluence and other similar solutions.
 instructions: null
 changeLog:
   - date: 2023-1-24
@@ -39,3 +40,6 @@ schema:
       type: string
       title: Database Service Name
       default: documize-db
+tags:
+  - Documentation
+  - CMS

@@ -1,5 +1,6 @@
 name: Fider
-description: Fider is a feedback portal that helps teams collect and prioritize customer feedback in one place, based on votes and ideas submitted.
+description: Fider is a feedback portal that helps teams collect and prioritize
+  customer feedback in one place, based on votes and ideas submitted.
 instructions: Fider REQUIRES email in order for installation to work!
 changeLog:
   - date: 2022-11-19
@@ -62,3 +63,6 @@ schema:
     emailPassword:
       type: string
       title: Email Password
+tags:
+  - "Feedback "
+  - Productivity

@@ -1,5 +1,6 @@
 name: Chatwoot
-description: Customer engagement suite, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.
+description: Customer engagement suite, an open-source alternative to Intercom,
+  Zendesk, Salesforce Service Cloud etc.
 instructions: null
 changeLog:
   - date: 2023-1-22
@@ -49,3 +50,6 @@ schema:
       type: string
       title: Redis Service Name
       default: chatwoot-redis
+tags:
+  - Customer Support
+  - Open Source

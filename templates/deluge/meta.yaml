@@ -1,5 +1,7 @@
 name: Deluge
-description: Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.
+description: Deluge is a BitTorrent client that utilizes a daemon/client model.
+  It has various user interfaces available such as the GTK-UI, Web-UI and
+  Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.
 instructions: null
 changeLog:
   - date: 2023-1-25
@@ -30,3 +32,6 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/deluge:2.1.1
+tags:
+  - Developer Tools
+  - Networking

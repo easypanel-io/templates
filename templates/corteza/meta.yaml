@@ -1,6 +1,9 @@
 name: Corteza
-description: The Corteza low-code platform lets you build and iterate CRM, business process and other structured data apps fast, create intelligent business process workflows and connect with almost any data source.
-instructions: Create an account to login. The first account created will have administrator priviledges. Go to /admin for the admijnistration interface
+description: The Corteza low-code platform lets you build and iterate CRM,
+  business process and other structured data apps fast, create intelligent
+  business process workflows and connect with almost any data source.
+instructions: Create an account to login. The first account created will have
+  administrator priviledges. Go to /admin for the admijnistration interface
 changeLog:
   - date: 2023-3-2
     description: first release
@@ -33,7 +36,6 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      ## when updating corteza template please change the version in index.ts AND the one below
       default: cortezaproject/corteza:2022.9.8
     domain:
       type: string
@@ -42,3 +44,6 @@ schema:
       type: string
       title: Database Service Name
       default: corteza-db
+tags:
+  - CRM
+  - Developer Tools

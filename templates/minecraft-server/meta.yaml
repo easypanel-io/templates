@@ -1,5 +1,7 @@
 name: Minecraft Server
-description: Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.
+description: Minecraft Server that will automatically download the latest stable
+  version at startup. You can also run/upgrade to any specific version or the
+  latest snapshot.
 instructions: null
 changeLog:
   - date: 2023-03-18
@@ -179,3 +181,6 @@ schema:
     rconPassword:
       type: string
       title: RCON Password
+tags:
+  - Gaming
+  - Developer Tools
