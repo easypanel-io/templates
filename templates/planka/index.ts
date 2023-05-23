@@ -35,6 +35,23 @@ export function generate(input: Input): Output {
           name: input.domain,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "user-avatars",
+          mountPath: "/app/public/user-avatars",
+        },
+        {
+          type: "volume",
+          name: "project-background-images",
+          mountPath: "/app/public/project-background-images",
+        },
+        {
+          type: "volume",
+          name: "attachments",
+          mountPath: "/app/private/attachments"
+        }
+      ],
     },
   });
 
