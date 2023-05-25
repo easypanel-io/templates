@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
         `KEEP_JOB_DIR=false`,
         `DENO_PATH=/usr/bin/deno`,
         `PYTHON_PATH=/usr/local/bin/python3`,
+        ...(input.licenseKey && input.licenseKey != "" ? [`LICENSE_KEY=${input.licenseKey}`] : [])
       ].join("\n"),
       source: {
         type: "image",
