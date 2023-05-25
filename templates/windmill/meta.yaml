@@ -6,6 +6,8 @@ changeLog:
     description: first release
   - date: 2023-03-22
     description: Update to v.1.80.1
+  - date: 2023-05-25
+    description: Update to latest + EE
 links:
   - label: Website
     url: https://windmill.dev
@@ -38,7 +40,10 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/windmill-labs/windmill:1.80.1
+      default: ghcr.io/windmill-labs/windmill:main
+    licenseKey:
+      type: string
+      title: EE License Key
     databaseServiceName:
       type: string
       title: Database Service Name
