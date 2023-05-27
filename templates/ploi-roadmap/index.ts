@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `APP_ENV=staging`,
+        `APP_ENV=production`,
         `APP_NAME=Ploi Roadmap`,
         `APP_KEY=base64:${appKey}`,
         `APP_ENV=local`,
@@ -36,7 +36,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       proxy: {
-        port: 9000,
+        port: 80,
         secure: true,
       },
       mounts: [
