@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "data",
+          name: "config",
           mountPath: "/config",
         },
       ],
