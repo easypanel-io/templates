@@ -1,0 +1,43 @@
+name: Passbolt
+description: The open source password manager for teams
+instructions: In order to create the first admin account, the following needs to be executed inside the passpolt container "su -m -c "bin/cake passbolt register_user -u YOUR@EMAIL.COM -f YOURNAME -l SURNAME -r admin" -s /bin/sh www-data". Please follow further instructions of the command output.
+changeLog:
+  - date: 2023-04-03
+    description: first release
+links:
+  - label: Website
+    url: https://passbolt.com
+  - label: Documentation
+    url: https://help.passbolt.com
+  - label: Github
+    url: https://github.com/passbolt/
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: passbolt
+    domain:
+      type: string
+      title: Domain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: passbolt/passbolt:3.12.0-3-ce
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: passbolt-db
