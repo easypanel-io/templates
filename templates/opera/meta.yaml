@@ -1,0 +1,32 @@
+name: Opera
+description: Opera is a multi-platform web browser developed by its namesake company Opera. The browser is based on Chromium, but distinguishes itself from other Chromium-based browsers (Chrome, Edge, etc.) through its user interface and other features.
+instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+changeLog:
+  - date: 2023-5-7
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-opera
+  - label: Github
+    url: https://github.com/linuxserver/docker-opera
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: opera
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/opera:latest
