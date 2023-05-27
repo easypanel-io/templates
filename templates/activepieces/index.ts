@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         `AP_ENVIRONMENT=prod`,
         `AP_ENCRYPTION_KEY=${encryptionKey}`,
         `AP_JWT_SECRET=${jwtKey}`,
-        `AP_FRONTEND_URL=https:/${input.domain}`,
+        `AP_FRONTEND_URL=https://${input.domain}`,
         `AP_POSTGRES_DATABASE=${input.projectName}`,
         `AP_POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
         `AP_POSTGRES_PORT=5432`,
