@@ -1,14 +1,9 @@
-import {
-  Output,
-  randomPassword,
-  randomString,
-  Services,
-} from "~templates-utils";
-import { Input } from "./meta";
+import { Output, randomPassword, Services } from "~templates-utils"
+import { Input } from "./meta"
 
 export function generate(input: Input): Output {
-  const services: Services = [];
-  const databasePassword = randomPassword();
+  const services: Services = []
+  const databasePassword = randomPassword()
 
   services.push({
     type: "app",
@@ -29,7 +24,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "sleep 10 && /docker-entrypoint.sh"
+        command: "sleep 10 && /docker-entrypoint.sh",
       },
       proxy: {
         port: 80,
@@ -50,10 +45,10 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "jwt",
           mountPath: "/etc/passbolt/jwt",
-        }
+        },
       ],
     },
-  });
+  })
 
   services.push({
     type: "mysql",
@@ -62,7 +57,7 @@ export function generate(input: Input): Output {
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
-  });
+  })
 
-  return { services };
+  return { services }
 }
