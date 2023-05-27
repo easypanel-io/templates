@@ -1,0 +1,40 @@
+name: SearXNG
+description: SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.
+instructions: null
+changeLog:
+  - date: 2023-03-30
+    description: First Release
+links:
+  - label: Docs
+    url: https://docs.searxng.org/
+  - label: Github
+    url: https://github.com/searxng/searxng
+  - label: Docker
+    url: https://hub.docker.com/r/searxng/searxng
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    enableRedis:
+      type: boolean
+      title: Enable Redis
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: searxng
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: searxng/searxng:latest
