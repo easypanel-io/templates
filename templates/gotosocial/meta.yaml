@@ -1,0 +1,38 @@
+name: GoToSocial
+description: "GoToSocial is an ActivityPub social network server, written in Golang. It doesn't provide a client interface. Instead, you can use any Mastodon client."
+instructions: null
+changeLog:
+  - date: 2023-5-26
+    description: First release
+links:
+  - label: Website
+    url: https://gotosocial.org/
+  - label: Documentation
+    url: https://docs.gotosocial.org/en/latest/
+  - label: Github
+    url: https://github.com/superseriousbusiness/gotosocial/
+contributors:
+  - name: Michael Kinder
+    url: https://github.com/ressonix
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gotosocial
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: superseriousbusiness/gotosocial:0.9.0
