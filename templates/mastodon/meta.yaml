@@ -1,0 +1,62 @@
+name: Mastodon
+description: Your self-hosted, globally interconnected microblogging community
+instructions: To create an admin account, type "tootctl accounts create username --email user@example.com --confirmed --role Owner" on the console.
+changeLog:
+  - date: 2023-03-26
+    description: First Release
+links:
+  - label: Website
+    url: https://joinmastodon.org
+  - label: Docs
+    url: https://docs.joinmastodon.org
+  - label: Github
+    url: https://github.com/mastodon/mastodon
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    enableStreaming:
+      type: boolean
+      title: Enable Streaming Service
+      default: false
+    streamingDomain:
+      type: string
+      title: Streaming Domain
+    smtpServer:
+      type: string
+      title: SMTP Server
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpLogin:
+      type: string
+      title: SMTP Login
+    smtpPassword:
+      type: string
+      title: SMTP Password
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      default: notifications@example.com
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mastodon
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/mastodon/mastodon:v4.1
