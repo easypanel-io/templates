@@ -78,7 +78,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chocobozzz/peertube:v5.1.0-bullseye
+      default: chocobozzz/peertube:v5.2.0-bullseye
     databaseServiceName:
       type: string
       title: Database Service Name
