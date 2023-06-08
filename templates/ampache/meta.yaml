@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ampache/ampache:5.5.7
+      default: ampache/ampache:5.6.0
     appMediaHostPath:
       type: string
       title: Media Host Path

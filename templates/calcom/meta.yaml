@@ -1,0 +1,46 @@
+name: Calcom
+description: Scheduling infrastructure for absolutely everyone.
+instructions: null
+changeLog:
+  - date: 2023-04-03
+    description: First Release
+links:
+  - label: Website
+    url: https://cal.com
+  - label: Github
+    url: https://github.com/calcom/cal.com
+  - label: Docker
+    url: https://hub.docker.com/r/calcom/cal.com
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    enableStudio:
+      type: boolean
+      title: Enable Prisma Studio
+      default: false
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: calcom
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: calcom/cal.com:v2.7.6
+    databaseServiceName:
+      type: string
+      title: App Service Name
+      default: calcom-db

@@ -1,0 +1,68 @@
+name: NodeBB
+description: Node.js based forum software built for the modern web
+instructions: null
+changeLog:
+  - date: 2023-03-24
+    description: First Release
+links:
+  - label: Website
+    url: https://nodebb.org/
+  - label: Documentation
+    url: https://docs.nodebb.org/
+  - label: Github
+    url: https://github.com/NodeBB/NodeBB
+  - label: Demo
+    url: https://try.nodebb.org/
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceType
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    nodebbAdminUsername:
+      type: string
+      title: Admin Username
+    nodebbAdminMail:
+      type: string
+      title: Admin Mail
+    nodebbAdminPassword:
+      type: string
+      title: Admin Password
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nodebb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nodebb/docker:2.8.9
+    databaseServiceType:
+      type: string
+      title: Database Service Type
+      default: mongo
+      oneOf:
+        - enum:
+            - mongo
+          title: MongoDB
+        - enum:
+            - redis
+          title: Redis
+        - enum:
+            - postgres
+          title: Postgres
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: nodebb-db

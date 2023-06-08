@@ -1,0 +1,77 @@
+name: Kutt
+description: Free Modern URL Shortener.
+instructions: null
+changeLog:
+  - date: 2023-03-24
+    description: First Release
+links:
+  - label: Website
+    url: https://kutt.it/
+  - label: Documentation
+    url: https://docs.kutt.it/
+  - label: Github
+    url: https://github.com/thedevs-network/kutt
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    siteName:
+      type: string
+      title: Site Name
+    adminEmails:
+      type: string
+      title: Admin Emails
+      description: Comma seperated
+    reportEmail:
+      type: string
+      title: Report Email
+    mailHost:
+      type: string
+      title: Mail Host
+    mailPort:
+      type: number
+      title: Mail Port
+    mailSecure:
+      type: boolean
+      title: Mail Secure
+      default: true
+    mailUser:
+      type: string
+      title: Mail User
+    mailPassword:
+      type: string
+      title: Mail Password
+    mailFrom:
+      type: string
+      title: Mail From
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kutt
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kutt/kutt:v2.7.4
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: kutt-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: kutt-redis

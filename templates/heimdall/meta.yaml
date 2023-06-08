@@ -39,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/heimdall:v2.5.5-ls203
+      default: linuxserver/heimdall:2.5.6
     serviceTimezone:
       type: string
       title: Timezone
