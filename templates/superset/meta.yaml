@@ -1,0 +1,59 @@
+name: Superset
+description: Superset is a modern data exploration and data visualization platform. Superset can replace or augment proprietary business intelligence tools for many teams.
+instructions: null
+changeLog:
+  - date: 2023-03-25
+    description: first release
+links:
+  - label: Website
+    url: https://superset.apache.org/
+  - label: Documentation
+    url: https://hub.docker.com/r/apache/superset
+  - label: Github
+    url: https://github.com/apache/superset
+contributors:
+  - name: Amit Gadhia
+    url: https://github.com/amitoo7
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - adminUsername
+    - adminEmail
+    - adminPassword
+    - supersetDomain
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: superset
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: amitgadhia/apache-superset
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: superset-db
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminPassword:
+      type: string
+      title: Admin Password 
+      default: password
+    supersetDomain:
+      type: string
+      title: superset Domain name
+      default: 
