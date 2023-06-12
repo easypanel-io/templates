@@ -33,6 +33,11 @@ export function generate(input: Input): Output {
           mountPath: "/var/opt/bytebase",
         }
       ],
+      domains: [
+        {
+          name: input.domain,
+        },
+      ],
     },
   });
 
