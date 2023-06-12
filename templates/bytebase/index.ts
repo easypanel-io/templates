@@ -23,12 +23,8 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       proxy: {
-        port: 8080,
+        port: 80,
         secure: true,
-      },
-      deploy: {
-        command:
-          "bytebase --data /var/opt/bytebase --port 8080",
       },
       mounts: [
         {
