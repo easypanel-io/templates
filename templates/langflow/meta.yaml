@@ -1,0 +1,35 @@
+name: Langflow
+description: An effortless way to experiment and prototype LangChain pipelines
+instructions: null
+changeLog:
+  - date: 2023-06-22
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/logspace-ai/langflow
+contributors:
+  - name: AlexSerban
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - username
+    - password
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: langflow
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: password
