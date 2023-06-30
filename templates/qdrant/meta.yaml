@@ -30,4 +30,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: qdrant/qdrant
+      default: qdrant/qdrant:v1.3.0

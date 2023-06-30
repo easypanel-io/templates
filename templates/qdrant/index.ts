@@ -13,11 +13,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      deploy: {
-        replicas: 1,
-        command: null,
-        zeroDowntime: true,
-      },
       proxy: {
         port: 80,
         secure: true,
