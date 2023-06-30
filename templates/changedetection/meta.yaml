@@ -19,6 +19,8 @@ contributors:
     url: https://github.com/deiucanta
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: BerkSMBL
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -36,4 +38,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/dgtlmoon/changedetection.io:0.40.2
+      default: ghcr.io/dgtlmoon/changedetection.io:0.42.2
