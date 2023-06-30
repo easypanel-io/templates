@@ -1,0 +1,33 @@
+name: Pgvector
+description: Open-source vector similarity search for Postgres
+instructions: null
+changeLog:
+  - date: 2023-06-30
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/pgvector/pgvector
+contributors:
+  - name: AlexSerban
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - postgresPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ankane/pgvector
+    postgresPassword:
+      type: string
+      title: Postgres Password
