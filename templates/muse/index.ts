@@ -10,6 +10,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
+        `DATA_DIR=./data`,
         `DISCORD_TOKEN=${input.discordToken}`,
         `YOUTUBE_API_KEY=${input.youtubeApiKey}`,
         `SPOTIFY_CLIENT_ID=${input.spotifyClientId}`,
