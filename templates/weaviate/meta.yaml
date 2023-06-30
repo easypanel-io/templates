@@ -20,8 +20,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - authApiKeysAllowed
-    - authApiKeysUsers
   properties:
     projectName:
       type: string
@@ -32,10 +30,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: semitechnologies/weaviate
-    authApiKeysAllowed:
-      type: string
-      title: Authentication Apikey Allowed Keys
-    authApiKeysUsers:
-      type: string
-      title: Authentication Apikey Users
+      default: semitechnologies/weaviate:1.19.8

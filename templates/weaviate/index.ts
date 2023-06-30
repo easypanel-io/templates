@@ -16,21 +16,13 @@ export function generate(input: Input): Output {
         `DEFAULT_VECTORIZER_MODULE='none'`,
         `ENABLE_MODULES=''`,
         `CLUSTER_HOSTNAME='node1'`,
-        `AUTHENTICATION_APIKEY_ENABLED='true'`,
-        `AUTHENTICATION_APIKEY_ALLOWED_KEYS='${input.authApiKeysAllowed}'`,
-        `AUTHENTICATION_APIKEY_USERS='${input.authApiKeysUsers}'`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      deploy: {
-        replicas: 1,
-        command: null,
-        zeroDowntime: true,
-      },
       proxy: {
-        port: 80,
+        port: 8080,
         secure: true,
       },
       mounts: [
