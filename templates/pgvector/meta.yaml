@@ -1,4 +1,4 @@
-name: Pgvector
+name: pgvector
 description: Open-source vector similarity search for Postgres
 instructions: null
 changeLog:
@@ -14,20 +14,16 @@ schema:
   type: object
   required:
     - projectName
-    - appServiceName
-    - appServiceImage
-    - postgresPassword
+    - serviceName
+    - serviceImage
   properties:
     projectName:
       type: string
       title: Project Name
-    appServiceName:
+    serviceName:
       type: string
-      title: App Service Name
-    appServiceImage:
+      title: Service Name
+    serviceImage:
       type: string
-      title: App Service Image
-      default: ankane/pgvector
-    postgresPassword:
-      type: string
-      title: Postgres Password
+      title: Service Image
+      default: ankane/pgvector:v0.4.4
