@@ -26,7 +26,7 @@ schema:
     - appServiceImage
     - redisServiceName
     - databaseServiceName
-    - metricsPortEnable
+    - enableMetricsPort
   properties:
     projectName:
       type: string
@@ -47,7 +47,7 @@ schema:
       type: string
       title: Database Service Name
       default: coral-db
-    metricsPortEnable:
+    enableMetricsPort:
       type: boolean
       title: Metrics Port Enable
       default: false

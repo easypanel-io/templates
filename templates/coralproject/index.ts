@@ -30,7 +30,7 @@ export function generate(input: Input): Output {
         port: 3000,
         secure: true,
       },
-      ports: input.metricsPortEnable
+      ports: input.enableMetricsPort
         ? [{ protocol: "tcp", published: 9000, target: 9000 }]
         : [],
     },
