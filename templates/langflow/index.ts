@@ -25,11 +25,6 @@ export function generate(input: Input): Output {
         port: 7860,
         secure: true,
       },
-      deploy: {
-        replicas: 1,
-        command: null,
-        zeroDowntime: true,
-      },
       basicAuth: [
         {
           username: input.username,

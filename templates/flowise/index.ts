@@ -3,19 +3,16 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const username = input.username;
-  const password = input.password;
-
-  const serviceVariables = [
-    `env: FLOWISE_USERNAME=${username}\nFLOWISE_PASSWORD=${password}`,
-  ];
 
   services.push({
     type: "app",
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: serviceVariables.join("\n"),
+      env: [
+        `FLOWISE_USERNAME=${input.username}`,
+        `FLOWISE_PASSWORD=${input.password}`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -32,15 +29,8 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        replicas: 1,
         command: "sleep 3; flowise start",
-        zeroDowntime: true,
       },
-      domains: [
-        {
-          name: input.appDomain,
-        },
-      ],
     },
   });
 
