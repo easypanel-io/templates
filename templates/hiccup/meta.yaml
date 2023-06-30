@@ -1,0 +1,30 @@
+name: Hiccup
+description: A static start page to get to your most important links, FAST
+instructions: null
+changeLog:
+  - date: 2023-3-21
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/ashwin-pc/hiccup
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hiccup
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bleckbeard/hiccup:v0.4.3
