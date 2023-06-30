@@ -1,0 +1,39 @@
+name: Easyshortener
+description: A dead simple URL shortening tool
+instructions: null
+changeLog:
+  - date: 2023-3-23
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/easypanel-community/easyshortener
+contributors:
+  - name: Supernova3339
+    url: https://github.com/supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - domain
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: easyshortener
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/easypanel-community/easyshortener:1.1.2
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: easyshortener-db
