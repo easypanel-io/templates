@@ -8,7 +8,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secretkey = randomString(32);
   const redisPassword = randomPassword();
   const mongoPassword = randomPassword();
 
@@ -20,9 +19,8 @@ export function generate(input: Input): Output {
       env: [
         `MONGODB_URI=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.databaseServiceName}:27017`,
         `REDIS_URI=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
-        `SIGINING_SECRET=${secretkey}`,
+        `SIGNING_SECRET=${btoa(randomString(45))}`,
         `NODE_ENV=production`,
-        `PORT=3000`,
       ].join("\n"),
       source: {
         type: "image",
@@ -32,6 +30,9 @@ export function generate(input: Input): Output {
         port: 3000,
         secure: true,
       },
+      ports: input.enableMetricsPort
+        ? [{ protocol: "tcp", published: 9000, target: 9000 }]
+        : [],
     },
   });
 
