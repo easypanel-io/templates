@@ -17,6 +17,9 @@ export function generate(input: Input): Output {
         port: 6333,
         secure: true,
       },
+      mounts: [
+        { type: "volume", name: "storage", mountPath: "/qdrant/storage" },
+      ],
     },
   });
 
