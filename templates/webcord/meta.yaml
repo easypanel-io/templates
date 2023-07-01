@@ -1,4 +1,4 @@
-name: Discord
+name: Webcord
 description: Discord is a voice, video, and text chat app that's used by tens of millions of people ages 13+ to talk and hang out with their communities and friends.
 instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
 changeLog:
@@ -6,7 +6,7 @@ changeLog:
     description: first release
 links:
   - label: Documentation
-    url: https://docs.linuxserver.io/images/docker-firefox
+    url: https://docs.linuxserver.io/images/docker-webcord
   - label: Github
     url: https://github.com/SpacingBat3/WebCord
 contributors:
@@ -25,7 +25,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: discord
+      default: webcord
     appServiceImage:
       type: string
       title: App Service Image
