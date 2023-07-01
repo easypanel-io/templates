@@ -22,6 +22,7 @@ export function generate(input: Input): Output {
         `DB_PASSWORD=${databasePassword}`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
         `DB_PORT=5432`,
+        `DB_DATABASE=${input.projectName}`,
         `APP_ENV=production`,
         `DOCKER=true`,
         `TRUSTED_PROXIES=*`,
