@@ -1,0 +1,32 @@
+name: Webcord
+description: Discord is a voice, video, and text chat app that's used by tens of millions of people ages 13+ to talk and hang out with their communities and friends.
+instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+changeLog:
+  - date: 2023-5-7
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-webcord
+  - label: Github
+    url: https://github.com/SpacingBat3/WebCord
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: webcord
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/webcord:latest
