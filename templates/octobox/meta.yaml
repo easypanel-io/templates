@@ -1,0 +1,52 @@
+name: Octobox
+description: Octobox helps you manage your GitHub notifications efficiently so you can spend less time managing and more time getting things done.
+instructions: null
+changeLog:
+  - date: 2023-3-22
+    description: first release
+links:
+  - label: Website
+    url: https://octobox.io
+  - label: Documentation
+    url: https://octobox.io/documentation
+  - label: Github
+    url: https://github.com/octobox/octobox
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - githubClient
+    - githubSecret
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: octobox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: octoboxio/octobox:ruby-3
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: octobox-db
+    redisServiceName:
+      type: string
+      title: Database Service Name
+      default: octobox-redis
+    githubClient:
+      type: string
+      title: Github Client ID
+    githubSecret:
+      type: string
+      title: Github Client Secret
