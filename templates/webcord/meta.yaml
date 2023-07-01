@@ -1,5 +1,5 @@
 name: Webcord
-description: Discord is a voice, video, and text chat app that's used by tens of millions of people ages 13+ to talk and hang out with their communities and friends.
+description: WebCord can be summarized as a pack of security and privacy hardenings, Discord features reimplementations, Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages and wrapped https://discord.com/ page, designed to conform with ToS as much as it is possible (or hide the changes that might violate it from Discord's eyes).
 instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
 changeLog:
   - date: 2023-5-7
@@ -12,6 +12,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: BerkSMBL
+    url: https://berksmbl.com/
 schema:
   type: object
   required:
