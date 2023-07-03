@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
         `url=https://${input.domain}`,
         `database__client=mysql`,
         `database__connection__host=${input.projectName}_${input.databaseServiceName}`,
-        `database__connection__user=${input.projectName}`,
+        `database__connection__user=mysql`,
         `database__connection__password=${databasePassword}`,
         `database__connection__database=${input.projectName}`,
       ].join("\n"),
