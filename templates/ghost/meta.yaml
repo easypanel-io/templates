@@ -33,7 +33,6 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
-    - databaseType
   properties:
     projectName:
       type: string
