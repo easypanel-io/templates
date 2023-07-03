@@ -57,3 +57,10 @@ schema:
       type: string
       title: Database Type
       default: mysql
+      oneOf:
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - mariadb
+          title: MariaDB
