@@ -99,10 +99,12 @@ async function run() {
 
     await writeFile(filePath, content);
 
-    await copy(
-      path.resolve(templatesPath, slug, "assets"),
-      path.resolve(docsPath, slug, "assets")
-    );
+    try {
+      await copy(
+        path.resolve(templatesPath, slug, "assets"),
+        path.resolve(docsPath, slug, "assets")
+      );
+    } catch {}
 
     list.push({
       slug,
