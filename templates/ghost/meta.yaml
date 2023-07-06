@@ -33,6 +33,7 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - databaseType
   properties:
     projectName:
       type: string
@@ -56,10 +57,3 @@ schema:
       type: string
       title: Database Type
       default: mysql
-      oneOf:
-        - enum:
-            - mysql
-          title: MySQL
-        - enum:
-            - mariadb
-          title: MariaDB
