@@ -13,7 +13,7 @@
     "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
     "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "check-for-updates": "ts-node -r tsconfig-paths/register ./scripts/check-for-updates.ts",
-    "move-docs": "rm -rf ../website/docs/04-templates/* && cp -r ./docs/* ../website/docs/04-templates/"
+    "move-docs": "rm -rf ../website/docs/04-templates/* && cp -r ./docs/* ../website/docs/05-templates/"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
