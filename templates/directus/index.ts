@@ -22,26 +22,29 @@ export function generate(input: Input): Output {
       env: [
         `KEY=${appKey}`,
         `SECRET=${appSecret}`,
-        `DB_CLIENT=${input.databaseType}`,
+        `DB_CLIENT=${
+          input.databaseType === "postgres" || input.databaseType === "postgis"
+            ? "pg"
+            : "mysql"
+        }`,
         `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DB_PORT=${input.databaseType === "postgres" ? "5432" : "3306"}`,
+        `DB_PORT=${
+          input.databaseType === "postgres" || input.databaseType === "postgis"
+            ? "5432"
+            : "3306"
+        }`,
         `DB_DATABASE=${input.projectName}`,
-        `DB_USER=${input.databaseType === "postgres" ? "postgres" : "mysql"}`,
+        `DB_USER=${input.databaseType}`,
         `DB_PASSWORD=${databasePassword}`,
         `CACHE_ENABLED=true`,
         `CACHE_STORE=redis`,
-        `CACHE_REDIS=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
+        `REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+        `REDIS_PASSWORD=${redisPassword}`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      proxy: {
-        port: 8055,
-        secure: true,
-      },
+      source: { type: "image", image: input.appServiceImage },
+      proxy: { port: 8055, secure: true },
       mounts: [
         {
           type: "volume",
@@ -57,24 +60,58 @@ export function generate(input: Input): Output {
     },
   });
 
-  if (input.databaseType === "postgres") {
+  if (input.databaseType === "postgis" || input.databaseType === "mysql") {
+    const appEnv = [];
+    if (input.databaseType === "postgis") {
+      appEnv.push(
+        `POSTGRES_USER=${input.databaseType}`,
+        `POSTGRES_PASSWORD=${databasePassword}`,
+        `POSTGRES_DB=${input.projectName}`
+      );
+    } else {
+      appEnv.push(
+        `MYSQL_ROOT_PASSWORD=${randomPassword()}`,
+        `MYSQL_USER=${input.databaseType}`,
+        `MYSQL_PASSWORD=${databasePassword}`,
+        `MYSQL_DATABASE=${input.projectName}`
+      );
+    }
     services.push({
-      type: "postgres",
+      type: "app",
       data: {
         projectName: input.projectName,
         serviceName: input.databaseServiceName,
-        password: databasePassword,
+        source: {
+          type: "image",
+          image:
+            input.databaseType === "postgis"
+              ? "postgis/postgis:15-master"
+              : "mysql:8",
+        },
+        env: appEnv.join("\n"),
+        mounts: [
+          {
+            type: "volume",
+            name: "data",
+            mountPath: `/var/lib/${
+              input.databaseType === "postgis" ? "postgresql/data" : "mysql"
+            }`,
+          },
+        ],
+        deploy: {
+          command:
+            input.databaseType === "postgis"
+              ? ""
+              : "docker-entrypoint.sh --default-authentication-plugin=mysql_native_password",
+        },
       },
     });
-  }
-
-  if (input.databaseType === "mysql") {
+  } else {
     services.push({
-      type: "mysql",
+      type: input.databaseType,
       data: {
         projectName: input.projectName,
         serviceName: input.databaseServiceName,
-        image: "mysql:5",
         password: databasePassword,
       },
     });
