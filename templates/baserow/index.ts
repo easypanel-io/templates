@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
+      domains: [{ name: input.domain }],
       proxy: { port: 80, secure: true },
       mounts: [{ type: "volume", name: "data", mountPath: "/baserow/data" }],
       env: [
