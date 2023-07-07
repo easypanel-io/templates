@@ -1,0 +1,67 @@
+name: EspoCRM
+description: EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type. People, companies, projects or opportunities — all in an easy and intuitive interface.
+instructions: null
+changeLog:
+  - date: 2023-07-03
+    description: First Release
+links:
+  - label: Website
+    url: https://espocrm.com
+  - label: Demo
+    url: https://demo.espocrm.com
+  - label: Documentation
+    url:  https://docs.espocrm.com
+  - label: Github
+    url: https://github.com/espocrm
+contributors:
+  - name: BerkSMBL
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - adminUsername
+    - adminPassword
+    - appServiceName
+    - appServiceImage
+    - databaseServiceType
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    wsDomain:
+      type: string
+      title: WebSocket Domain
+    adminUsername:
+      type: string
+      title: Admin Username
+    adminPassword:
+      type: string
+      title: Admin Password
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: espocrm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: espocrm/espocrm:7-apache
+    databaseServiceType:
+      type: string
+      title: Database Service Type
+      default: mariadb
+      oneOf:
+        - enum:
+            - mariadb
+          title: MariaDB
+        - enum:
+            - mysql
+          title: MySQL
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: espocrm-db
