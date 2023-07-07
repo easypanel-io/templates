@@ -4,6 +4,8 @@ instructions: It may take several minutes for Baserow to boot up.
 changeLog:
   - date: 2022-10-05
     description: first release
+  - date: 2023-07-07
+    description: Version update and external redis and database support
 links:
   - label: Website
     url: https://baserow.io/
@@ -21,6 +23,8 @@ schema:
     - domain
     - appServiceName
     - appServiceImage
+    - databaseServiceName
+    - redisServiceName
   properties:
     projectName:
       type: string
@@ -36,3 +40,11 @@ schema:
       type: string
       title: App Service Image
       default: baserow/baserow:1.18.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: baserow-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: baserow-redis
