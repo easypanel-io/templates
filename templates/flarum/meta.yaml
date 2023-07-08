@@ -24,7 +24,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - appDomain
     - databaseType
     - databaseServiceName
   properties:
@@ -39,9 +38,6 @@ schema:
       type: string
       title: App Service Image
       default: crazymax/flarum:1.6.2
-    appDomain:
-      type: string
-      title: App Domain
     databaseType:
       type: string
       title: Database Type

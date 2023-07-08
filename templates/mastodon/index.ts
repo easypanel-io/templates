@@ -16,13 +16,13 @@ export function generate(input: Input): Output {
   ecdh.generateKeys();
 
   const appEnv = [
-    `LOCAL_DOMAIN=${input.domain}`,
-    `REDIS_HOST=${input.projectName}_${input.appServiceName}-redis`,
+    `LOCAL_DOMAIN=$(PRIMARY_DOMAIN)`,
+    `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
     `REDIS_PASSWORD=${redisPassword}`,
     `REDIS_PORT=6379`,
-    `DB_HOST=${input.projectName}_${input.appServiceName}-db`,
+    `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
     `DB_USER=postgres`,
-    `DB_NAME=${input.projectName}`,
+    `DB_NAME=$(PROJECT_NAME)`,
     `DB_PASS=${databasePassword}`,
     `DB_PORT=5432`,
     `ES_ENABLED=false`,
@@ -49,15 +49,19 @@ export function generate(input: Input): Output {
   ];
 
   if (input.enableStreaming) {
-    appEnv.push(`STREAMING_API_BASE_URL=https://${input.streamingDomain}`);
+    appEnv.push(`STREAMING_API_BASE_URL=https://$(PRIMARY_DOMAIN)`);
     services.push({
       type: "app",
       data: {
         projectName: input.projectName,
         serviceName: input.appServiceName + "-streaming",
         source: { type: "image", image: input.appServiceImage },
-        domains: input.streamingDomain ? [{ name: input.streamingDomain }] : [],
-        proxy: { port: 4000, secure: true },
+        domains: [
+          {
+            host: "$(EASYPANEL_DOMAIN)",
+            port: 4000,
+          },
+        ],
         env: appEnv.join("\n"),
         deploy: { command: `node ./streaming` },
       },
@@ -70,8 +74,12 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName + "-web",
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 3000, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
       env: appEnv.join("\n"),
       deploy: {
         command: `bash -c "bundle exec rails db:migrate; bundle exec rails db:seed; rm -f /mastodon/tmp/pids/server.pid; bundle exec rails s -p 3000"`,
@@ -97,7 +105,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "bind",
-          hostPath: `/etc/easypanel/projects/${input.projectName}/${input.appServiceName}-web/volumes/public`,
+          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}-web/volumes/public`,
           mountPath: "/mastodon/public",
         },
       ],

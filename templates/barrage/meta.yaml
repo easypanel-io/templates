@@ -28,9 +28,6 @@ schema:
       type: string
       title: App Service Name
       default: barrage
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image

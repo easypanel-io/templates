@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
         `NODE_ENV=production`,
         `DB_USER=mongo`,
         `DB_PASSWORD=${mongoPassword}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_PORT=27017`,
         `JWT_KEY=${jwtKey}`,
         `URL_LENGTH=8`,
@@ -29,17 +29,19 @@ export function generate(input: Input): Output {
         `HOME_REDIRECT=/dash/overview`,
         `FORCE_FRONTEND_REDIRECT=false`,
         `ENABLE_REGISTRATION=false`,
-        `DOMAIN=https://${input.domain}`,
+        `DOMAIN=https://$(PRIMARY_DOMAIN)`,
         `DEMO=false`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
     },
   });
 

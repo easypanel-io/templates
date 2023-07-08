@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.appServiceImage
+        image: input.appServiceImage,
       },
       mounts: [
         {

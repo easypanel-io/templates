@@ -4,7 +4,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const appEnv = [
-    `SYNAPSE_SERVER_NAME=${input.domain}`,
+    `SYNAPSE_SERVER_NAME=$(PRIMARY_DOMAIN)`,
     `SYNAPSE_REPORT_STATS=${input.reportStats ? "yes" : "no"}`,
     `SYNAPSE_NO_TLS=yes`,
   ];
@@ -33,7 +33,7 @@ export function generate(input: Input): Output {
     });
     appEnv.push(
       `POSTGRES_PASSWORD=${databasePassword}`,
-      `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`
+      `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`
     );
   }
 
@@ -43,8 +43,12 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: [{ name: input.domain }],
-      proxy: { port: 8008, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8008,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [{ type: "volume", name: "data", mountPath: "/data" }],
       deploy: { command: `/start.py migrate_config && /start.py` },

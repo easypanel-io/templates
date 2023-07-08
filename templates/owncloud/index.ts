@@ -6,11 +6,11 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
   const appEnv = [
-    `OWNCLOUD_DOMAIN=https://${input.domain}`,
-    `OWNCLOUD_TRUSTED_DOMAINS=${input.domain}`,
+    `OWNCLOUD_DOMAIN=https://$(PRIMARY_DOMAIN)`,
+    `OWNCLOUD_TRUSTED_DOMAINS=$(PRIMARY_DOMAIN)`,
     `OWNCLOUD_TRUSTED_PROXIES=0.0.0.0/0`,
     `OWNCLOUD_REDIS_ENABLED=true`,
-    `OWNCLOUD_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+    `OWNCLOUD_REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
     `OWNCLOUD_REDIS_PASSWORD=${redisPassword}`,
     `OWNCLOUD_ADMIN_USERNAME=${input.adminUsername}`,
     `OWNCLOUD_ADMIN_PASSWORD=${input.adminPassword}`,
@@ -19,10 +19,10 @@ export function generate(input: Input): Output {
   if (input.databaseType === "mariadb") {
     appEnv.push(
       `OWNCLOUD_DB_TYPE=mysql`,
-      `OWNCLOUD_DB_NAME=${input.projectName}`,
+      `OWNCLOUD_DB_NAME=$(PROJECT_NAME)`,
       `OWNCLOUD_DB_USERNAME=mariadb`,
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
-      `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+      `OWNCLOUD_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
       `OWNCLOUD_MYSQL_UTF8MB4=true`
     );
 
@@ -39,10 +39,10 @@ export function generate(input: Input): Output {
   if (input.databaseType === "postgres") {
     appEnv.push(
       `OWNCLOUD_DB_TYPE=pgsql`,
-      `OWNCLOUD_DB_NAME=${input.projectName}`,
+      `OWNCLOUD_DB_NAME=$(PROJECT_NAME)`,
       `OWNCLOUD_DB_USERNAME=postgres`,
       `OWNCLOUD_DB_PASSWORD=${databasePassword}`,
-      `OWNCLOUD_DB_HOST=${input.projectName}_${input.databaseServiceName}`
+      `OWNCLOUD_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`
     );
 
     services.push({
@@ -65,10 +65,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -24,9 +24,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     enableRedis:
       type: boolean
       title: Enable Redis

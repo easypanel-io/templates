@@ -19,10 +19,10 @@ export function generate(input: Input): Output {
     });
     if (input.databaseType === "postgres") {
       dbtype = "postgres";
-      dbConfig = `postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}/${input.projectName}?sslmode=disable&connect_timeout=10`;
+      dbConfig = `postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}/$(PROJECT_NAME)?sslmode=disable&connect_timeout=10`;
     } else {
       dbtype = "mysql";
-      dbConfig = `${input.databaseType}:${databasePassword}@tcp(${input.projectName}_${input.databaseServiceName}:3306)/${input.projectName}`;
+      dbConfig = `${input.databaseType}:${databasePassword}@tcp($(PROJECT_NAME)_${input.databaseServiceName}:3306)/$(PROJECT_NAME)`;
     }
   }
 
@@ -32,15 +32,19 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 8000, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
+        },
+      ],
       mounts: [
         { type: "volume", name: "fbdata", mountPath: "/opt/focalboard/data" },
         {
           type: "file",
           content: JSON.stringify(
             {
-              serverRoot: `https://${input.domain || "localhost:8000"}`,
+              serverRoot: `https://$(PRIMARY_DOMAIN)`,
               port: 8000,
               dbtype: dbtype,
               dbconfig: dbConfig,

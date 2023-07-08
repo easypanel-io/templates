@@ -17,28 +17,25 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `BASE_URL=https://${input.domain}`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
-        `CLICKHOUSE_DATABASE_URL=http://${input.projectName}_${input.clickhouseServiceName}:8123/default`,
+        `BASE_URL=https://$(PRIMARY_DOMAIN)`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `CLICKHOUSE_DATABASE_URL=http://$(PROJECT_NAME)_${input.clickhouseServiceName}:8123/default`,
         `SECRET_KEY_BASE=${secret}`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       deploy: {
         command:
           "sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh db init-admin && /entrypoint.sh run",
       },
-      domains: [
-        {
-          name: input.domain,
-        },
-      ],
     },
   });
 
@@ -51,10 +48,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: "clickhouse/clickhouse-server:22.6-alpine",
       },
-      proxy: {
-        port: 8123,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8123,
+        },
+      ],
       mounts: [
         {
           type: "volume",

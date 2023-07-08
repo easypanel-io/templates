@@ -24,14 +24,19 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 6610, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 6610,
+        },
+      ],
       env: [
         `HIBERNATE_DIALECT=io.onedev.server.persistence.PostgreSQLDialect`,
         `HIBERNATE_CONNECTION_DRIVER_CLASS=org.postgresql.Driver`,
-        `HIBERNATE_CONNECTION_URL=jdbc:postgresql://${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
+        `HIBERNATE_CONNECTION_URL=jdbc:postgresql://$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `HIBERNATE_CONNECTION_USERNAME=${input.databaseServiceName}`,
         `HIBERNATE_CONNECTION_PASSWORD=${passwordPostgres}`,
-        `INITIAL_SERVER_URL=https://${input.domain}`,
+        `INITIAL_SERVER_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       mounts: [
         {

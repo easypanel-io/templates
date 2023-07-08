@@ -3,9 +3,8 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const appEnv = [];
+  const appEnv = [`SEARXNG_BASE_URL=https://$(PRIMARY_DOMAIN)`];
 
-  if (input.domain) appEnv.push(`SEARXNG_BASE_URL=https://${input.domain}`);
   if (input.enableRedis) {
     const redisPassword = randomPassword();
     services.push({
@@ -17,7 +16,7 @@ export function generate(input: Input): Output {
       },
     });
     appEnv.push(
-      `SEARXNG_REDIS_URL=redis://default:${redisPassword}@${input.projectName}_${input.appServiceName}-redis:6379`
+      `SEARXNG_REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`
     );
   }
 
@@ -26,9 +25,13 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      domains: input.domain ? [{ name: input.domain }] : [],
       source: { type: "image", image: input.appServiceImage },
-      proxy: { port: 8080, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [{ type: "volume", name: "data", mountPath: "/etc/searxng" }],
     },

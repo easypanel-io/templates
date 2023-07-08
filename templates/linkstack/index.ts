@@ -11,18 +11,20 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `SERVER_ADMIN=${input.serverAdmin}`,
-        `HTTPS_SERVER_NAME=${input.domain}`,
-        `HTTP_SERVER_NAME=${input.domain}`,
+        `HTTPS_SERVER_NAME=$(PRIMARY_DOMAIN)`,
+        `HTTP_SERVER_NAME=$(PRIMARY_DOMAIN)`,
         `FORCE_HTTPS=true`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

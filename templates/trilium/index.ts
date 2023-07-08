@@ -9,17 +9,17 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [
-        `TRILIUM_DATA_DIR=/home/node/trilium-data`,
-      ].join("\n"),
+      env: [`TRILIUM_DATA_DIR=/home/node/trilium-data`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

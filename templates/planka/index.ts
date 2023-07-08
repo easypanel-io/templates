@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -18,21 +18,18 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `TRUST_PROXY=0`,
-        `BASE_URL=https://${input.domain}`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `BASE_URL=https://$(PRIMARY_DOMAIN)`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `SECRET_KEY=${secret}`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
         },
       ],
       mounts: [
@@ -49,8 +46,8 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "attachments",
-          mountPath: "/app/private/attachments"
-        }
+          mountPath: "/app/private/attachments",
+        },
       ],
     },
   });

@@ -11,21 +11,18 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `COMMENTO_ORIGIN=https://${input.domain}`,
-        `COMMENTO_POSTGRES=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `COMMENTO_ORIGIN=https://$(PRIMARY_DOMAIN)`,
+        `COMMENTO_POSTGRES=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `COMMENTO_ENABLE_WILDCARDS=true`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
         },
       ],
     },

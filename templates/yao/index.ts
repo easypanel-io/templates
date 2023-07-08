@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -21,17 +26,19 @@ export function generate(input: Input): Output {
         `YAO_LOG_MODE=TEXT`,
         `YAO_JWT_SECRET=${jwtSecret}`,
         `YAO_DB_DRIVER=mysql`,
-        `YAO_DB_PRIMARY=mysql://mysql:${mysqlPassword}@${input.projectName}_${input.databaseServiceName}:3306/${input.projectName}?charset=utf8mb4&parseTime=True&loc=Local`,
-        `YAO_DB_AESKEY=${aesKey}`
+        `YAO_DB_PRIMARY=mysql://mysql:${mysqlPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:3306/$(PROJECT_NAME)?charset=utf8mb4&parseTime=True&loc=Local`,
+        `YAO_DB_AESKEY=${aesKey}`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 5099,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 5099,
+        },
+      ],
       mounts: [
         {
           type: "volume",

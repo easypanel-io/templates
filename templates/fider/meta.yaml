@@ -18,7 +18,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -35,9 +34,6 @@ schema:
       type: string
       title: App Service Name
       default: fider
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image

@@ -13,10 +13,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         { type: "bind", hostPath: "/", mountPath: "/srv" },
         { type: "volume", name: "database", mountPath: "/database" },

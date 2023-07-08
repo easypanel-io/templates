@@ -20,7 +20,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - appDomain
     - appPassword
   properties:
     projectName:
@@ -34,9 +33,6 @@ schema:
       type: string
       title: App Service Image
       default: weejewel/wg-easy:7
-    appDomain:
-      type: string
-      title: App Domain
     appPassword:
       type: string
       title: Admin Password

@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `spring_datasource_url=jdbc:postgresql://${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
+        `spring_datasource_url=jdbc:postgresql://$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `spring_datasource_username=postgres`,
         `spring_datasource_password=${databasePassword}`,
         `tolgee_rate-limits=false`,
@@ -36,10 +36,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
     },
   });
 

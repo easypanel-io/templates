@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `GTS_HOST=${input.domain}`,
+        `GTS_HOST=$(PRIMARY_DOMAIN)`,
         `GTS_DB_TYPE=sqlite`,
         `GTS_DB_ADDRESS=/gotosocial/storage/sqlite.db`,
         `GTS_LETSENCRYPT_ENABLED=false`,
@@ -20,10 +20,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

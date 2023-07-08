@@ -13,11 +13,13 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: `BASEROW_PUBLIC_URL=https://${input.domain}`,
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      env: `BASEROW_PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [{ type: "volume", name: "data", mountPath: "/baserow/data" }],
     },
   });

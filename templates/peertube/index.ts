@@ -12,13 +12,13 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
 
   const appEnv = [
-    `PEERTUBE_WEBSERVER_HOSTNAME=${input.domain}`,
+    `PEERTUBE_WEBSERVER_HOSTNAME=$(PRIMARY_DOMAIN)`,
     `PEERTUBE_SECRET=${randomString(32)}`,
-    `PEERTUBE_DB_NAME=${input.projectName}`,
-    `PEERTUBE_DB_HOSTNAME=${input.projectName}_${input.databaseServiceName}`,
+    `PEERTUBE_DB_NAME=$(PROJECT_NAME)`,
+    `PEERTUBE_DB_HOSTNAME=$(PROJECT_NAME)_${input.databaseServiceName}`,
     `PEERTUBE_DB_USERNAME=postgres`,
     `PEERTUBE_DB_PASSWORD=${databasePassword}`,
-    `PEERTUBE_REDIS_HOSTNAME=${input.projectName}_${input.redisServiceName}`,
+    `PEERTUBE_REDIS_HOSTNAME=$(PROJECT_NAME)_${input.redisServiceName}`,
     `PEERTUBE_REDIS_AUTH=${redisPassword}`,
     `PEERTUBE_ADMIN_EMAIL=${input.peertubeAdminMail}`,
     `PEERTUBE_SIGNUP_ENABLED=${input.peertubeSignupEnabled}`,
@@ -44,8 +44,12 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      proxy: { port: 9000, secure: true },
-      domains: [{ name: input.domain }],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9000,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [
         { type: "volume", name: "assets", mountPath: "/app/client/dist" },

@@ -11,20 +11,22 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `APP_URL=https://${input.domain}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `APP_URL=https://$(PRIMARY_DOMAIN)`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_USER=mariadb`,
         `DB_PASS=${databasePassword}`,
-        `DB_DATABASE=${input.projectName}`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

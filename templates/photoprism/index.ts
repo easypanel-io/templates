@@ -13,8 +13,8 @@ export function generate(input: Input): Output {
   if (input.databaseType === "mariadb") {
     appEnv.push(
       `PHOTOPRISM_DATABASE_DRIVER=mysql`,
-      `PHOTOPRISM_DATABASE_NAME=${input.projectName}`,
-      `PHOTOPRISM_DATABASE_SERVER=${input.projectName}_${input.databaseServiceName}:3306`,
+      `PHOTOPRISM_DATABASE_NAME=$(PROJECT_NAME)`,
+      `PHOTOPRISM_DATABASE_SERVER=$(PROJECT_NAME)_${input.databaseServiceName}:3306`,
       `PHOTOPRISM_DATABASE_USER=${input.databaseType}`,
       `PHOTOPRISM_DATABASE_PASSWORD=${databasePassword}`
     );
@@ -38,7 +38,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 2342, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 2342,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [
         {

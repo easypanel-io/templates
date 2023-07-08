@@ -14,9 +14,14 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 8069, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8069,
+        },
+      ],
       env: [
-        `HOST=${input.projectName}_${input.databaseServiceName}`,
+        `HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `USER=odoo`,
         `PASSWORD=${databasePassword}`,
         `PORT=5432`,

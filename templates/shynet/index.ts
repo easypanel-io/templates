@@ -17,14 +17,14 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `DB_NAME=${input.projectName}`,
+        `DB_NAME=$(PROJECT_NAME)`,
         `DB_USER=postgres`,
         `DB_PASSWORD=${databasePassword}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_PORT=5432`,
         `DJANGO_SECRET_KEY=${secret}`,
-        `ALLOWED_HOSTS=${input.domain}`,
-        `CSRF_TRUSTED_ORIGINS=https://${input.domain}`,
+        `ALLOWED_HOSTS=$(PRIMARY_DOMAIN)`,
+        `CSRF_TRUSTED_ORIGINS=https://$(PRIMARY_DOMAIN)`,
         `LANGUAGE_CODE=en-us`, // required to boot
         `ACCOUNT_SIGNUPS_ENABLED=False`,
         `TIME_ZONE=America/New_York`, // required to boot
@@ -40,13 +40,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
         },
       ],
     },

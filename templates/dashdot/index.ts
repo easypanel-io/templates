@@ -13,10 +13,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3001,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3001,
+        },
+      ],
       env: [
         `DASHDOT_SHOW_HOST=false`,
         `DASHDOT_SHOW_DASH_VERSION=true`,

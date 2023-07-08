@@ -35,13 +35,6 @@ schema:
       type: string
       title: App Service Image
       default: monica:4.0.0
-    monicaAppUrl:
-      type: string
-      title: App URL
-    monicaAppForceUrl:
-      type: boolean
-      title: App Force URL
-      default: false
     redisServiceName:
       type: string
       title: Redis Service Name

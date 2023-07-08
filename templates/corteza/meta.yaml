@@ -20,7 +20,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - domain
     - databaseServiceName
   properties:
     projectName:
@@ -35,9 +34,6 @@ schema:
       title: App Service Image
       ## when updating corteza template please change the version in index.ts AND the one below
       default: cortezaproject/corteza:2022.9.8
-    domain:
-      type: string
-      title: Domain
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -10,7 +10,7 @@ links:
   - label: Demo
     url: https://demo.espocrm.com
   - label: Documentation
-    url:  https://docs.espocrm.com
+    url: https://docs.espocrm.com
   - label: Github
     url: https://github.com/espocrm
 contributors:
@@ -30,12 +30,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
-    wsDomain:
-      type: string
-      title: WebSocket Domain
     adminUsername:
       type: string
       title: Admin Username

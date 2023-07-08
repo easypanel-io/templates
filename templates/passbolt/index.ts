@@ -1,9 +1,9 @@
-import { Output, randomPassword, Services } from "~templates-utils"
-import { Input } from "./meta"
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
 
 export function generate(input: Input): Output {
-  const services: Services = []
-  const databasePassword = randomPassword()
+  const services: Services = [];
+  const databasePassword = randomPassword();
 
   services.push({
     type: "app",
@@ -11,11 +11,11 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `APP_FULL_BASE_URL=https://${input.domain}`,
-        `DATASOURCES_DEFAULT_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `APP_FULL_BASE_URL=https://$(PRIMARY_DOMAIN)`,
+        `DATASOURCES_DEFAULT_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DATASOURCES_DEFAULT_USERNAME=mysql`,
         `DATASOURCES_DEFAULT_PASSWORD=${databasePassword}`,
-        `DATASOURCES_DEFAULT_DATABASE=${input.projectName}`,
+        `DATASOURCES_DEFAULT_DATABASE=$(PROJECT_NAME)`,
         `PASSBOLT_REGISTRATION_PUBLIC=false`,
         `PASSBOLT_SSL_FORCE=true`,
       ].join("\n"),
@@ -26,13 +26,10 @@ export function generate(input: Input): Output {
       deploy: {
         command: "sleep 10 && /docker-entrypoint.sh",
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
       mounts: [
@@ -48,7 +45,7 @@ export function generate(input: Input): Output {
         },
       ],
     },
-  })
+  });
 
   services.push({
     type: "mysql",
@@ -57,7 +54,7 @@ export function generate(input: Input): Output {
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
-  })
+  });
 
-  return { services }
+  return { services };
 }

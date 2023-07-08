@@ -9,15 +9,17 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`CMD_DOMAIN=${input.domain}`].join("\n"),
+      env: [`CMD_DOMAIN=$(PRIMARY_DOMAIN)`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
     },
   });
 

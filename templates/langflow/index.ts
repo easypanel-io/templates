@@ -21,10 +21,12 @@ export function generate(input: Input): Output {
         type: "dockerfile",
         file: "Dockerfile",
       },
-      proxy: {
-        port: 7860,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 7860,
+        },
+      ],
       basicAuth: [
         {
           username: input.username,

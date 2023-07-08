@@ -18,23 +18,16 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
   properties:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     enableStreaming:
       type: boolean
       title: Enable Streaming Service
       default: false
-    streamingDomain:
-      type: string
-      title: Streaming Domain
     smtpServer:
       type: string
       title: SMTP Server

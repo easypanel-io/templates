@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
         `APP_FILELIST=jpeg,jpg,gif,png,zip,xls,doc,mp3,mp4,mpeg,wav,avi,rar,7z,txt`,
         `APP_SIZE_VERIFICATION=true`,
         `APP_FILE_DESTINATION=files`,
-        `APP_BASE_URL=https://${input.domain}/`,
+        `APP_BASE_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_MAX_SIZE=10000000000`,
         `APP_MIN_SIZE=0`,
         `APP_CONTACT_EMAIL=${input.appContactEmail}`,
@@ -25,13 +25,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
       mounts: [

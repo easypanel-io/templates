@@ -2,7 +2,7 @@ import {
   Output,
   randomPassword,
   randomString,
-  Services
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -20,9 +20,9 @@ export function generate(input: Input): Output {
         `DB_DRIVER=pgsql`,
         `DB_USERNAME=postgres`,
         `DB_PASSWORD=${databasePassword}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_PORT=5432`,
-        `DB_DATABASE=${input.projectName}`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
         `APP_ENV=production`,
         `DOCKER=true`,
         `TRUSTED_PROXIES=*`,
@@ -34,10 +34,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
+        },
+      ],
     },
   });
 

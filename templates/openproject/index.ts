@@ -7,10 +7,8 @@ export function generate(input: Input): Output {
   const appEnv = [
     `OPENPROJECT_SECRET_KEY_BASE=${randomString(64)}`,
     `OPENPROJECT_HTTPS=true`,
+    `OPENPROJECT_HOST__NAME=$(PRIMARY_DOMAIN)`,
   ];
-  if (input.domain) {
-    appEnv.push(`OPENPROJECT_HOST__NAME=${input.domain}`);
-  }
 
   services.push({
     type: "app",
@@ -18,8 +16,12 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 3000, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [
         {

@@ -1,8 +1,4 @@
-import {
-  Output,
-  randomPassword,
-  Services
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -16,8 +12,8 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `DB_TYPE=postgres`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DB_NAME=${input.projectName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `DB_NAME=$(PROJECT_NAME)`,
         `DB_PORT=5432`,
         `DB_USER=postgres`,
         `DB_PASS=${databasePassword}`,
@@ -27,10 +23,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 9001,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9001,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -20,15 +20,19 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      proxy: { port: 8080, secure: true },
-      domains: input.domain ? [{ name: input.domain }] : [],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       env: [
         "SHIORI_DIR=/src/shiori",
         `SHIORI_DBMS=postgresql`,
         `SHIORI_PG_USER=postgres`,
         `SHIORI_PG_PASS=${databasePassword}`,
-        `SHIORI_PG_NAME=${input.projectName}`,
-        `SHIORI_PG_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `SHIORI_PG_NAME=$(PROJECT_NAME)`,
+        `SHIORI_PG_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `SHIORI_PG_PORT=5432`,
       ].join("\n"),
       mounts: [

@@ -17,10 +17,10 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `DOMAIN=https://${input.domain}`,
-        `AUTH_BASE_URL=https://${input.domain}/auth`,
+        `DOMAIN=https://$(PRIMARY_DOMAIN)`,
+        `AUTH_BASE_URL=https://$(PRIMARY_DOMAIN)/auth`,
         `VERSION=2022.9.8`,
-        `DB_DSN=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `DB_DSN=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `AUTH_JWT_SECRET=${secret}`,
         `HTTP_WEBAPP_ENABLED=true`,
       ].join("\n"),
@@ -28,20 +28,17 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",
           name: "data",
           mountPath: "/data",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },

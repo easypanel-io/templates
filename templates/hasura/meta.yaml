@@ -23,7 +23,6 @@ schema:
     - databaseServiceName
     - enableConsole
     - devMode
-    - hasuraDomain
     - hasuraAdminSecret
   properties:
     projectName:
@@ -67,6 +66,3 @@ schema:
         - enum:
             - "false"
           title: "false"
-    hasuraDomain:
-      type: string
-      title: Hasura Domain name

@@ -17,9 +17,9 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
-        `MCAPTCHA_REDIS_URL=redis://default@${input.projectName}_${input.redisServiceName}:6379`,
-        `MCAPTCHA_SERVER_DOMAIN=${input.domain}`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `MCAPTCHA_REDIS_URL=redis://default@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `MCAPTCHA_SERVER_DOMAIN=$(PRIMARY_DOMAIN)`,
         `MCAPTCHA_ALLOW_REGISTRATION=false`,
         `MCAPTCHA_ALLOW_DEMO=false`,
         `MCAPTCHA_COMMERCIAL=false`,
@@ -33,13 +33,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
     },
@@ -54,10 +51,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: "mcaptcha/cache",
       },
-      proxy: {
-        port: 6379,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 6379,
+        },
+      ],
     },
   });
 

@@ -8,10 +8,10 @@ export function generate(input: Input): Output {
 
   if (input.databaseType === "mariadb") {
     appEnv.push(
-      `MYSQL_DATABASE=${input.projectName}`,
+      `MYSQL_DATABASE=$(PROJECT_NAME)`,
       `MYSQL_USER=mariadb`,
       `MYSQL_PASSWORD=${databasePassword}`,
-      `MYSQL_HOST=${input.projectName}_${input.databaseServiceName}`
+      `MYSQL_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`
     );
 
     services.push({
@@ -26,10 +26,10 @@ export function generate(input: Input): Output {
 
   if (input.databaseType === "postgres") {
     appEnv.push(
-      `POSTGRES_DB=${input.projectName}`,
+      `POSTGRES_DB=$(PROJECT_NAME)`,
       `POSTGRES_USER=postgres`,
       `POSTGRES_PASSWORD=${databasePassword}`,
-      `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`
+      `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`
     );
 
     services.push({
@@ -43,7 +43,7 @@ export function generate(input: Input): Output {
   }
 
   if (input.databaseType === "sqlite") {
-    appEnv.push(`SQLITE_DATABASE=${input.projectName}`);
+    appEnv.push(`SQLITE_DATABASE=$(PROJECT_NAME)`);
   }
 
   services.push({
@@ -56,10 +56,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",
