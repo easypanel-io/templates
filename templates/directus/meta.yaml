@@ -7,19 +7,23 @@ description: Directus is the world's first Open Data Platform for instantly
 instructions: null
 changeLog:
   - date: 2022-07-12
-    description: first release
+    description: First Release
+  - date: 2023-07-23
+    description: Bug fixing, version update and new database options (PostGIS and MariaDB)
 links:
   - label: Website
     url: https://directus.io/
   - label: Documentation
     url: https://docs.directus.io/
   - label: Github
-    url: https://github.com/directus/docs
+    url: https://github.com/directus/directus
 contributors:
   - name: Ponkhy
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:9.18.1
+      default: directus/directus:10
     adminEmail:
       type: string
       title: Admin Email
@@ -53,10 +57,17 @@ schema:
     databaseType:
       type: string
       title: Database Type
+      default: postgis
       oneOf:
         - enum:
+            - postgis
+          title: PostGIS
+        - enum:
             - postgres
-          title: Postgres
+          title: PostgreSQL
+        - enum:
+            - mariadb
+          title: MariaDB
         - enum:
             - mysql
           title: MySQL
