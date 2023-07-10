@@ -23,7 +23,7 @@ export function generate(input: Input): Output {
 
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_DATABASE=$(PROJECT_NAME)`,
-        `DB_USERNAME=mysql`,
+        `DB_USERNAME=mariadb`,
         `DB_PASSWORD=${databasePassword}`,
 
         `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
@@ -68,7 +68,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: "mysql",
+    type: "mariadb",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
