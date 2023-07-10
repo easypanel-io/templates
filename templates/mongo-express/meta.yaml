@@ -36,8 +36,9 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mongo-express:0.54
+      default: mongo-express:1.0.0-alpha
     databaseServiceName:
       type: string
       title: App Service Name
       default: mongo-express-db
+      
