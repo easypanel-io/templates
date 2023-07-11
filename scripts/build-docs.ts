@@ -21,7 +21,6 @@ async function run() {
 
     const lines: string[] = [
       "---",
-      `hide_title: true`,
       `sidebar_label: ${meta.name}`,
       `title: ${meta.name}`,
       `description: How to install ${meta.name} on Easypanel? 1-Click installation template for ${meta.name} on Easypanel`,
