@@ -1,6 +1,6 @@
 name: AdGuard Home
-description: Network-wide ads & trackers blocking DNS server 
-instructions: During the setup phase, set the Admin Web Interface Port to 3000. 
+description: Network-wide ads & trackers blocking DNS server.
+instructions: During the setup phase, set the Admin Web Interface Port to 3000. To use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
 changeLog:
   - date: 2023-07-11
     description: First Release
