@@ -64,7 +64,7 @@ async function run() {
         lines.push(`- [${entry.label}](${entry.url})`);
       });
       lines.push(
-        `- [Template Source](https://github.com/easypanel-io/templates/tree/main/templates/${meta.name.toLowerCase()})`
+        `- [Template Source](https://github.com/easypanel-io/templates/tree/main/templates/${slug})`
       );
       lines.push("");
     }
