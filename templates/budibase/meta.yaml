@@ -1,6 +1,15 @@
 name: Budibase
-description: Budibase is an open source low-code platform, and the easiest way to build internal apps that improve productivity.
-instructions: Budibase takes a few minutes to get ready. Sit back, relax, and have a cup of tea!
+description: Budibase is an open-source app that allows teams to build internal
+  tools and forms without coding. It integrates seamlessly with any workflow and
+  saves teams hundreds of hours. With Budibase, you can collect data securely on
+  top of any database, automate tasks and workflows, and turn your data into
+  powerful apps with just one click. The app offers a drag-and-drop interface,
+  premade blocks, and easy automation of manual processes. You can self-host
+  Budibase using Docker, Kubernetes, or Digital Ocean, or choose Budibase Cloud
+  for easy deployment. Budibase is trusted by over 75,000 teams and has been
+  proven to save time and money for businesses.
+instructions: Budibase takes a few minutes to get ready. Sit back, relax, and
+  have a cup of tea!
 changeLog:
   - date: 2022-10-30
     description: first release
@@ -32,3 +41,49 @@ schema:
       type: string
       title: App Service Image
       default: budibase/budibase:v2.5.6
+tags:
+  - Low-code
+  - Productivity
+benefits:
+  - title: Save Time and Effort
+    description: Budibase saves teams hundreds of hours by providing a no-code
+      solution for building internal tools and forms. You don't need any coding
+      experience to create powerful apps.
+  - title: Seamless Integration
+    description: Budibase integrates seamlessly with any workflow, allowing you to
+      collect data securely on top of any database. You can connect to external
+      databases, Rest APIs, import CSVs, or use Budibase's built-in database.
+  - title: Automate Workflows
+    description: With Budibase's automation platform, you can automate tasks and
+      workflows. Turn your data into action and streamline operations within
+      your app and business.
+  - title: Easy Design and Deployment
+    description: Designing internal tools is easy and fast with Budibase's
+      drag-and-drop interface and premade blocks. You can deliver internal tools
+      that look beautiful and work perfectly across mobile, tablet, and desktop.
+      You can self-host Budibase using Docker, Kubernetes, or Digital Ocean, or
+      choose Budibase Cloud for easy deployment.
+features:
+  - title: Collect Data Securely
+    description: Budibase allows you to collect data securely on top of any
+      database. You can connect to external databases, Rest APIs, import CSVs,
+      or use Budibase's built-in database.
+  - title: Automate Workflows
+    description: Budibase's automation platform enables you to automate tasks and
+      workflows. You can turn your data into action and streamline operations
+      within your app and business.
+  - title: No Coding Required
+    description: You don't need any coding experience to use Budibase. You can
+      generate powerful internal tools and forms in just a few seconds without
+      writing a single line of code.
+  - title: Drag-and-Drop Interface
+    description: Designing internal tools is easy and fast with Budibase's
+      drag-and-drop interface. You can use premade blocks and components to
+      create beautiful and functional tools.
+  - title: Self-Host or Use Budibase Cloud
+    description: You have the option to self-host Budibase using Docker, Kubernetes,
+      or Digital Ocean. Alternatively, you can choose Budibase Cloud and let
+      Budibase manage everything for you.
+  - title: Open Source
+    description: Budibase is open source, allowing you to transform operations
+      within the security of your own infrastructure.

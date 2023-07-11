@@ -1,5 +1,10 @@
 name: Servas
-description: A self-hosted bookmark management tool. Servas is based on Laravel and Inertia.js and uses Tailwind CSS and Svelte for the frontend.
+description: Servas is a self-hosted bookmark management tool that allows you to
+  organize your bookmarks with tags and groups. It also has a 'later list'
+  feature to save bookmarks for later access. Servas supports multiple user
+  accounts and has a responsive design that looks good on all devices. It also
+  provides a Chrome browser extension for easy bookmarking. Two Factor
+  Authentication is available for added security.
 instructions: Visit /register to create an account
 changeLog:
   - date: 2023-1-30
@@ -33,3 +38,45 @@ schema:
       type: string
       title: Database Service Name
       default: servas-db
+tags:
+  - Bookmarks
+  - CMS
+benefits:
+  - title: Organize Your Bookmarks
+    description: Servas allows you to organize your bookmarks with tags and groups,
+      making it easy to find and manage your saved links.
+  - title: Save Bookmarks for Later
+    description: With the 'later list' feature, you can save bookmarks for later
+      access, ensuring you don't forget to check out interesting links.
+  - title: Multiple User Accounts
+    description: Servas supports multiple user accounts, allowing you to create
+      separate profiles for different users and keep their bookmarks separate.
+  - title: Responsive Design
+    description: Servas has a responsive design that adapts to different screen
+      sizes, ensuring a seamless experience across all your devices.
+  - title: Chrome Browser Extension
+    description: Servas provides a Chrome browser extension that allows you to add
+      sites to Servas directly from your browser, making bookmarking quick and
+      easy.
+  - title: Two Factor Authentication
+    description: Servas offers Two Factor Authentication for added security,
+      ensuring that only authorized users can access your bookmarks.
+features:
+  - title: Tags
+    description: Organize your bookmarks with tags to easily categorize and find them.
+  - title: Groups
+    description: Group your bookmarks and create nested groups for better organization.
+  - title: Later List
+    description: Add bookmarks to the 'later list' to access them at a later time.
+  - title: Chrome Browser Extension
+    description: Use the Chrome browser extension to add sites to Servas directly
+      from your browser.
+  - title: Multiple User Accounts
+    description: Create multiple user accounts to keep bookmarks separate for
+      different users.
+  - title: Responsive Design
+    description: Servas is designed to look good on all your devices, providing a
+      seamless experience.
+  - title: Two Factor Authentication
+    description: Enable Two Factor Authentication for added security and protect
+      your bookmarks.

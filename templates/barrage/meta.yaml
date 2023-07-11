@@ -1,5 +1,13 @@
 name: Barrage
-description: Minimal Deluge WebUI with full mobile support
+description: "Barrage is a minimal Deluge WebUI with full mobile support. It
+  allows you to manage your torrents from any device with a responsive
+  mobile-first design. You can add torrents by URL or magnet, sort and filter
+  torrents, set global upload and download speed limits, change file priority,
+  and modify torrent options. Barrage can be deployed using Docker and requires
+  the following environment variables: NEXTAUTH_SECRET (used to encrypt the
+  NextAuth.js JWT), DELUGE_URL (the Deluge WebUI URL), DELUGE_PASSWORD (the
+  password for the Deluge WebUI), and BARRAGE_PASSWORD (the password for
+  accessing Barrage)."
 instructions: null
 changeLog:
   - date: 2023-1-25
@@ -41,3 +49,24 @@ schema:
     barragePassword:
       type: string
       title: Barrage Password
+tags:
+  - Web Hosting
+  - Mobile Apps
+benefits:
+  - title: Mobile Support
+    description: Barrage has a responsive mobile-first design, allowing you to
+      manage your torrents from any device.
+  - title: Easy Deployment
+    description: Barrage can be quickly deployed using Docker, making it easy to set
+      up and use.
+features:
+  - title: Add Torrents
+    description: You can add torrents to Barrage by URL or magnet links.
+  - title: Sort and Filter Torrents
+    description: Barrage allows you to sort and filter your torrents for easy management.
+  - title: Speed Limits
+    description: You can set global upload and download speed limits in Barrage.
+  - title: File Priority
+    description: Barrage allows you to change the priority of files within a torrent.
+  - title: Torrent Options
+    description: You can modify various options for your torrents in Barrage.

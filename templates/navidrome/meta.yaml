@@ -1,5 +1,15 @@
 name: Navidrome
-description: Modern Music Server and Streamer compatible with Subsonic/Airsonic
+description: Navidrome is an open source web-based music collection server and
+  streamer. It allows you to enjoy your music collection from anywhere, by
+  making it available through a modern Web UI and through a wide range of
+  third-party compatible mobile apps, for both iOS and Android devices.
+  Navidrome is lightweight, fast, and self-contained, making it suitable for
+  resource-limited platforms like Raspberry Pi. It can handle large music
+  libraries, supports transcoding on the fly to reduce data usage, and is built
+  with modern technologies like GoLang, ReactJS, and Material-UI. Navidrome is
+  compatible with the Subsonic API and actively maintained with regular releases
+  and contributions welcome. Join the Navidrome community on Reddit or Discord
+  for discussions, help, and announcements.
 instructions: null
 changeLog:
   - date: 2023-3-33
@@ -32,3 +42,57 @@ schema:
       type: string
       title: App Service Image
       default: deluan/navidrome:0.49.3
+tags:
+  - Music Server
+  - Streaming
+benefits:
+  - title: Access your music from anywhere
+    description: Navidrome allows you to access your music collection from anywhere
+      using a modern Web UI or third-party mobile apps for iOS and Android
+      devices.
+  - title: Blazing fast
+    description: Navidrome is lightweight, fast, and self-contained, running well
+      even on resource-limited platforms like Raspberry Pi.
+  - title: Handles large libraries
+    description: Navidrome can handle large music collections, even tested with
+      ~900K songs consisting of FLAC and MP3 files.
+  - title: Transcoding on the fly
+    description: Navidrome can convert and reduce your music files as you play them,
+      saving your data plan.
+  - title: Modern and up-to-date
+    description: Navidrome is built with new technologies like GoLang, ReactJS, and
+      Material-UI, ensuring modern features and compatibility.
+  - title: Subsonic API compatible
+    description: Navidrome is compatible with the Subsonic API, supporting all its
+      clients and ecosystem.
+  - title: Active project
+    description: Navidrome is actively maintained with new releases on a regular
+      basis, adding features and bug fixes.
+  - title: Contributions welcome
+    description: Navidrome follows a Pull Request contributions workflow on GitHub,
+      and new users are always welcome to contribute.
+features:
+  - title: Your Personal Streaming Service
+    description: Navidrome allows you to enjoy your music collection from anywhere,
+      making it available through a modern Web UI and third-party mobile apps.
+  - title: Lightweight and Fast
+    description: Navidrome is lightweight, fast, and self-contained, running well
+      even on resource-limited platforms like Raspberry Pi.
+  - title: Handles Large Libraries
+    description: Navidrome can handle large music collections, even tested with
+      ~900K songs consisting of FLAC and MP3 files.
+  - title: Transcoding on the Fly
+    description: Navidrome can convert and reduce your music files as you play them,
+      saving your data plan.
+  - title: Modern and Up-to-date
+    description: Navidrome is built with new technologies like GoLang, ReactJS, and
+      Material-UI, ensuring modern features and compatibility.
+  - title: Subsonic API Compatible
+    description: Navidrome is compatible with the Subsonic API, supporting all its
+      clients and ecosystem.
+  - title: Active Project
+    description: Navidrome is actively maintained with new releases on a regular
+      basis, adding features and bug fixes.
+  - title: Contributions Welcome
+    description: Navidrome follows a Pull Request contributions workflow on GitHub,
+      and new users are always welcome to contribute.

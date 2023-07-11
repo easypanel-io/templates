@@ -1,5 +1,10 @@
 name: Mealie
-description: Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+description: Mealie is a self-hosted recipe manager and meal planner app. It has
+  a RestAPI backend and a reactive frontend application built in Vue for a
+  pleasant user experience. With Mealie, you can easily import recipes from
+  websites, create meal plans, and share recipes and meal plans with your family
+  and cooking club. The app also supports automatic backups and provides an open
+  API for full control of the backend server.
 instructions: Please use the following credentials to login. changeme@easypanel.io|MyPassword
 changeLog:
   - date: 2022-12-11
@@ -30,3 +35,44 @@ schema:
       type: string
       title: App Service Image
       default: hkotel/mealie:v0.5.6
+tags:
+  - Productivity
+  - Web Hosting
+benefits:
+  - title: Easy Recipe Import
+    description: Quickly and easily import recipes from websites using the built-in
+      recipe scraper.
+  - title: Meal Planner
+    description: Create meal plans for the week, month, or year to stay organized
+      and plan your meals in advance.
+  - title: User Management
+    description: Add new users, create user groups, and share recipes and meal plans
+      with your family and cooking club.
+  - title: Automatic Backups
+    description: Keep your data safe with automatic backups in any format supported
+      by Jinja2 templates.
+  - title: Open API
+    description: API-driven application gives you full control of the backend server
+      with interactive documentation.
+features:
+  - title: Recipe Import
+    description: Easily import recipes from websites or create your own family
+      recipes using the UI editor.
+  - title: Meal Planner
+    description: Create meal plans for the week, month, or year and stay organized
+      with your cooking schedule.
+  - title: User Management
+    description: Add new users, create user groups, and share recipes and meal plans
+      with your family and cooking club.
+  - title: Automatic Backups
+    description: Keep your data safe with automatic backups in any format supported
+      by Jinja2 templates.
+  - title: Rich User Interface
+    description: Use a beautiful and intuitive user interface to create, edit, and
+      delete recipes. Recipe editor supports markdown syntax.
+  - title: Webhooks
+    description: Schedule webhooks to send notifications to 3rd party services with
+      today's meal plan data.
+  - title: Open API
+    description: API-driven application gives you full control of the backend server
+      with interactive documentation.

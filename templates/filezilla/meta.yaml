@@ -1,6 +1,9 @@
 name: Filezilla Client
-description: FIleZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: FileZilla Client is a fast and reliable cross-platform FTP, FTPS
+  and SFTP client with lots of useful features and an intuitive graphical user
+  interface.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-21
     description: first release
@@ -30,3 +33,36 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/filezilla:latest
+tags:
+  - FTP
+  - Developer Tools
+benefits:
+  - title: Cross-platform
+    description: FileZilla Client is available for Windows, macOS, and Linux, making
+      it accessible to users on different operating systems.
+  - title: Fast and reliable
+    description: FileZilla Client is known for its fast and reliable performance,
+      allowing users to transfer files quickly and securely.
+  - title: FTP, FTPS, and SFTP support
+    description: FileZilla Client supports multiple file transfer protocols,
+      including FTP, FTPS (FTP over SSL/TLS), and SFTP (SSH File Transfer
+      Protocol).
+  - title: Intuitive graphical user interface
+    description: FileZilla Client has an easy-to-use graphical user interface that
+      allows users to navigate and manage their files effortlessly.
+features:
+  - title: Multi-platform support
+    description: FileZilla Client is available for Windows, macOS, and Linux,
+      ensuring compatibility with different operating systems.
+  - title: File transfer protocols
+    description: FileZilla Client supports FTP, FTPS, and SFTP, providing users with
+      flexibility in transferring files.
+  - title: Drag and drop functionality
+    description: FileZilla Client allows users to easily transfer files by dragging
+      and dropping them from their local machine to the remote server.
+  - title: Site Manager
+    description: FileZilla Client includes a Site Manager feature that allows users
+      to save and manage their FTP server connections for easy access.
+  - title: File editing
+    description: FileZilla Client provides basic file editing capabilities, allowing
+      users to edit files directly on the remote server.

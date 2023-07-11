@@ -1,9 +1,12 @@
 name: DomainMod
-description: DomainMOD is an open source application written in PHP used to
-  manage your domains and other internet assets in a central location. DomainMOD
-  also includes a Data Warehouse framework that allows you to import your web
-  server data so that you can view, export, and report on your live data.
-  Currently the Data Warehouse only supports servers running WHM/cPanel.
+description: DomainMOD is a self-hosted open source application used to manage
+  your domains and other Internet assets in a central location. It provides
+  features such as central management of domains, SSL certificates, registrar
+  and SSL accounts, web hosting, DNS servers, IP addresses, and more. It
+  supports multiple languages and allows for easy importing of domains using
+  registrar's API. It also offers bulk domain updating, custom data fields,
+  reporting, segment filters, user-based currencies, task scheduling, data
+  warehouse integration, and mobile-friendly access.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -48,3 +51,65 @@ schema:
       type: string
       title: Timezone
       default: Europe/Copenhagen
+tags:
+  - Web Hosting
+  - Data Science
+benefits:
+  - title: Self-Hosted & Private
+    description: With DomainMOD, only you have access to your data, ensuring privacy
+      and security.
+  - title: Central Management
+    description: Manage all your domains and internet assets in one central location.
+  - title: Multilingual Support
+    description: DomainMOD supports multiple languages, making it accessible to
+      users from different regions.
+  - title: Registrar Importing
+    description: Import your domains quickly using your registrar's API.
+  - title: Bulk Domain Updater
+    description: Update multiple domains at once with just a few clicks.
+  - title: Custom Data Fields
+    description: Track unlimited information for your domains and SSL certificates
+      using custom fields.
+  - title: Reporting
+    description: Generate reports to make sense of your data.
+  - title: Segment Filters
+    description: Save and filter lists of domains for easy management.
+  - title: User-Based Currencies
+    description: Set currency preferences for each user.
+  - title: Task Scheduler
+    description: Schedule system tasks such as currency conversions and expiration
+      notifications.
+  - title: Data Warehouse
+    description: Import data from WHM web servers for analysis and reporting.
+  - title: Mobile-Friendly
+    description: Access your data on the go with DomainMOD's mobile-friendly design.
+features:
+  - title: Self-Hosted & Private
+    description: DomainMOD ensures privacy and security by allowing you to host your
+      own data.
+  - title: Central Management
+    description: Manage domains, SSL certificates, registrar and SSL accounts, web
+      hosting, DNS servers, IP addresses, and more in one central location.
+  - title: Multilingual Support
+    description: DomainMOD supports multiple languages, including Dutch, English,
+      French, German, Italian, Polish, Portuguese, Russian, and Spanish.
+  - title: Registrar Importing
+    description: Import domains quickly using your registrar's API.
+  - title: Bulk Domain Updater
+    description: Update multiple domains at once with a few clicks.
+  - title: Custom Data Fields
+    description: Track unlimited information for domains and SSL certificates using
+      custom fields.
+  - title: Reporting
+    description: Generate reports to gain insights from your data.
+  - title: Segment Filters
+    description: Save and filter lists of domains for easy management.
+  - title: User-Based Currencies
+    description: Set currency preferences for each user.
+  - title: Task Scheduler
+    description: Schedule system tasks such as currency conversions and expiration
+      notifications.
+  - title: Data Warehouse
+    description: Import data from WHM web servers for analysis and reporting.
+  - title: Mobile-Friendly
+    description: Access your data on the go with DomainMOD's mobile-friendly design.

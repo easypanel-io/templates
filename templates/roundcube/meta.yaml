@@ -1,6 +1,10 @@
 name: Roundcube
-description: This project is a free and open source webmail solution with a desktop-like user interface which is easy to install/configure and that runs on a standard LAMPP server. The skins use the latest web standards to render a functional and customizable UI. Roundcube includes other sophisticated open-source libraries such as PEAR, an IMAP library derived from IlohaMail, the TinyMCE rich text editor, Googiespell library for spell checking and the HTML5-PHP sanitizer by Masterminds.
-instructions: After Roundcube is installed, you can log in to the mail accounts on the service where you entered the "SMTP" information.
+description: Roundcube webmail is a browser-based multilingual IMAP client with
+  an application-like user interface. It provides full functionality you expect
+  from an email client, including MIME support, address book, folder
+  manipulation, message searching and spell checking.
+instructions: After Roundcube is installed, you can log in to the mail accounts
+  on the service where you entered the "SMTP" information.
 changeLog:
   - date: 2023-03-15
     description: First Release
@@ -62,3 +66,67 @@ schema:
       title: Upload Max File Size
       description: File upload size limit.
       default: 5M
+tags:
+  - Email
+  - Web Hosting
+benefits:
+  - title: Browser-based Email Client
+    description: Access your email from any web browser without the need for a
+      separate email client software.
+  - title: Multilingual Support
+    description: Roundcube webmail supports multiple languages, allowing users from
+      different regions to use the app in their preferred language.
+  - title: Full Email Functionality
+    description: Roundcube webmail provides all the features you expect from an
+      email client, including MIME support, address book, folder management,
+      message searching, and spell checking.
+features:
+  - title: Drag-&-drop message management
+    description: Easily manage your email messages by dragging and dropping them
+      into folders or other actions.
+  - title: Full support for MIME and HTML messages
+    description: Roundcube webmail fully supports MIME and HTML messages, allowing
+      you to view and compose richly formatted emails.
+  - title: Multiple sender identities
+    description: Manage multiple email addresses and sender identities within
+      Roundcube webmail.
+  - title: Full featured address book with groups and LDAP connectors
+    description: Store and manage your contacts in the address book, including
+      support for groups and LDAP connectors.
+  - title: Find-as-you-type address book integration
+    description: Quickly find contacts in the address book by typing their name or
+      email address.
+  - title: Threaded message listing
+    description: View email conversations in a threaded format for easier
+      organization and navigation.
+  - title: IDNA and SMTPUTF8 support
+    description: Roundcube webmail supports IDNA and SMTPUTF8 encoding for
+      internationalized domain names and email addresses.
+  - title: Spell checking
+    description: Check the spelling of your email messages before sending them.
+  - title: Responsive skin (multi-device support)
+    description: The user interface of Roundcube webmail is responsive and supports
+      multiple devices, allowing you to access your email from desktops,
+      laptops, tablets, and smartphones.
+  - title: Shared/global IMAP folders
+    description: Access shared or global IMAP folders within Roundcube webmail.
+  - title: Support for access control lists (ACL)
+    description: Manage access control lists for folders and email messages within
+      Roundcube webmail.
+  - title: Built-in caching for fast mailbox access
+    description: Roundcube webmail includes built-in caching for faster access to
+      your mailbox.
+  - title: Unlimited users and messages
+    description: There are no limitations on the number of users or messages that
+      can be managed within Roundcube webmail.
+  - title: Import/export functions
+    description: Import and export email messages and contacts to and from Roundcube
+      webmail.
+  - title: Plug-in API for flexible extensions
+    description: Extend the functionality of Roundcube webmail using the plug-in API.
+  - title: XSS attack protection
+    description: Roundcube webmail includes protection against cross-site scripting
+      (XSS) attacks.
+  - title: Support for PGP encryption
+    description: Encrypt and decrypt email messages using PGP encryption within
+      Roundcube webmail.

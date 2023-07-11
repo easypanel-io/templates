@@ -1,10 +1,11 @@
 name: Portainer
-description: Easily configure, monitor and secure containers in minutes, with
-  support for Docker, Kubernetes, Swarm and Nomad on any cloud, datacenter or
-  device.Portainer allows to manage Docker containers and Swarm
-  orchestration.Reduces the operational complexity associated with multi-cluster
-  management.Bridge the skills gap and facilitate feature discovery and learning
-  with an intuitive UI.
+description: Portainer is a powerful container management platform that allows
+  you to deploy, configure, troubleshoot, and secure containers in minutes. It
+  supports Kubernetes, Docker, and Docker Swarm running in any data center,
+  cloud, network edge, or IIOT device. With Portainer, you can save time by
+  deploying apps rapidly, reduce risk by managing and securing your clusters
+  quickly, and minimize complexity with sane defaults to keep your team on the
+  right track.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -37,3 +38,28 @@ schema:
       type: string
       title: App Service Image
       default: portainer/portainer-ce:2.15.1-alpine
+tags:
+  - Containers
+  - Dashboard
+benefits:
+  - title: Save Time
+    description: Deploy cloud-native applications into containers simply, quickly,
+      and securely.
+  - title: Reduce Risk
+    description: Manage and secure your clusters quickly to minimize potential risks.
+  - title: Minimize Complexity
+    description: Sane defaults and intuitive UI to keep your team on the right track.
+features:
+  - title: Deploy Containers
+    description: Helps developers deploy cloud-native applications into containers
+      simply, quickly, and securely.
+  - title: Troubleshoot Apps
+    description: Find out why your application isn’t working and fix it fast with
+      the help of Portainer.
+  - title: Lifecycle Management
+    description: Manage and update your deployments easily with Portainer.
+  - title: Platform Management
+    description: Set up, maintain, and troubleshoot your container infrastructure with ease.
+  - title: Security & Compliance
+    description: A powerful policy and governance platform to ensure security and
+      compliance.

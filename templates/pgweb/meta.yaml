@@ -1,5 +1,9 @@
 name: pgweb
-description: Cross-platform client for PostgreSQL databases
+description: Pgweb is a web-based database explorer for PostgreSQL. It is
+  written in Go and works on Mac, Linux, and Windows machines. It is distributed
+  as a single binary with zero dependencies. Pgweb is easy to use and provides
+  features such as executing and analyzing custom SQL queries, exporting table
+  and query data to CSV/JSON/XML, query history, and server bookmarks.
 instructions: null
 changeLog:
   - date: 2023-3-15
@@ -30,3 +34,26 @@ schema:
       type: string
       title: App Service Image
       default: sosedoff/pgweb:0.14.0
+tags:
+  - Databases
+  - Developer Tools
+benefits:
+  - title: Cross-platform
+    description: Pgweb works on Mac, Linux, and Windows machines.
+  - title: Simple installation
+    description: Pgweb is distributed as a single binary with zero dependencies.
+  - title: Multiple database sessions
+    description: Pgweb supports multiple database sessions, allowing you to work
+      with multiple databases simultaneously.
+features:
+  - title: Execute and analyze custom SQL queries
+    description: Pgweb allows you to execute and analyze custom SQL queries directly
+      from the web interface.
+  - title: Table and query data export
+    description: Pgweb provides the ability to export table and query data to CSV,
+      JSON, and XML formats.
+  - title: Query history
+    description: Pgweb keeps a history of executed queries, making it easy to refer
+      back to previous queries.
+  - title: Server bookmarks
+    description: Pgweb allows you to bookmark database servers for quick access.

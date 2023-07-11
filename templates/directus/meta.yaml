@@ -1,9 +1,8 @@
 name: Directus
-description: Directus is the world's first Open Data Platform for instantly
-  turning any SQL database into an API and beautiful no-code app.Directus Flows
-  are extremely flexible and easy to configure. Using a simple no-code
-  interface, you can connect any number of operations to create simple or
-  complex workflows that execute automatically in response to a trigger.
+description: Directus is an open-source data platform that allows developers to
+  turn any SQL database into an API and create beautiful no-code apps. With over
+  22,000 stars on GitHub and millions of downloads, Directus is a powerful tool
+  for managing and visualizing data.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -68,3 +67,31 @@ schema:
       type: string
       title: Redis Service Name
       default: directus-redis
+tags:
+  - Developer Tools
+  - API
+benefits:
+  - title: Flexible and customizable
+    description: Directus can be used with any SQL database and offers a dynamic API
+      that can be easily customized to fit your specific needs.
+  - title: No vendor lock-in
+    description: Directus allows you to remain in complete control of your database,
+      with no need to migrate to a proprietary data model.
+  - title: Blazing-fast performance
+    description: Built with Node.js and Vue.js, Directus offers high performance and
+      easy extensibility for developers.
+features:
+  - title: Data Engine
+    description: Turn any SQL database into an API and manage data with ease.
+  - title: Data Studio
+    description: Create custom dashboards and visualizations for your data.
+  - title: Flows
+    description: Automate workflows and data processes with no code.
+  - title: Headless CMS
+    description: Manage content for websites, apps, and other digital experiences.
+  - title: Backend-as-a-Service
+    description: Efficiently connect data and build APIs for scalable projects.
+  - title: Internal Tool Builder
+    description: Build back-office apps and admin panels for your business data.
+  - title: Data Management & Analytics
+    description: Build no-code dashboards for IoT data and business intelligence.

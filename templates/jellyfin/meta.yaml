@@ -1,6 +1,17 @@
 name: Jellyfin
-description: Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
-instructions: Jellyfin takes a few minutes to get ready. Sit back, relax, and get some popcorn!
+description: Jellyfin is a volunteer-built media solution that allows you to
+  collect, manage, and stream your media. It is a free software entertainment
+  system that puts you in control of your media. With Jellyfin, you can enjoy
+  your entire movie collection, watch your favorite shows, listen to music,
+  watch live TV, read books, organize photos, and share memories with friends
+  and family. Jellyfin is available on various platforms, including web,
+  desktop, Android, Apple, Amazon, Roku, and Kodi. It is privacy-focused, with
+  no tracking or central servers collecting your data. Jellyfin is free to
+  download and use, and it is community-built with contributions from
+  volunteers. You can get started by downloading and setting up your server
+  today.
+instructions: Jellyfin takes a few minutes to get ready. Sit back, relax, and
+  get some popcorn!
 changeLog:
   - date: 2022-10-28
     description: first release
@@ -32,3 +43,38 @@ schema:
       type: string
       title: App Service Image
       default: jellyfin/jellyfin:10.8.9
+tags:
+  - Media
+  - Streaming
+benefits:
+  - title: Control Your Media
+    description: Jellyfin allows you to collect, manage, and stream your media from
+      your own server. You have full control over your media library and can
+      customize it to your preferences.
+  - title: Free Software
+    description: Jellyfin is licensed under the GNU GPL and is free to use, modify,
+      and distribute. There are no hidden costs or fees to use Jellyfin.
+  - title: Privacy Focused
+    description: Jellyfin does not track your data or have central servers
+      collecting your information. It is open and transparent, and the only
+      media you see is your own.
+  - title: Available on Multiple Platforms
+    description: Jellyfin is available on web, desktop, Android, Apple, Amazon,
+      Roku, and Kodi. Your media is ready to follow you wherever you go.
+features:
+  - title: Movies
+    description: Enjoy your entire movie collection, easily browse and with
+      beautiful artwork.
+  - title: Shows
+    description: Watch your favorite shows, automatically sorted by season and ready
+      to binge.
+  - title: Music
+    description: Listen to music, your artists, and your playlists at home or on the go.
+  - title: Live TV & DVR
+    description: Watch TV and set automatic recordings to expand your library.
+  - title: Books
+    description: Read your books, comics, and magazines.
+  - title: Photos
+    description: Organize your photos and share memories with your friends and family.
+  - title: SyncPlay
+    description: Easily share a movie night remotely with friends or family.

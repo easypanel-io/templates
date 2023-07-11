@@ -1,5 +1,12 @@
 name: Metabase
-description: The simplest, fastest way to get business intelligence and analytics to everyone in your company
+description: Metabase is a fast analytics app with a friendly user experience
+  and integrated tooling that allows companies to explore data on their own. It
+  offers a visual query builder, interactive dashboards, and the ability to
+  connect to over 20 data sources. Metabase is accessible to all, with a free
+  open-source tier and paid plans available. It is trusted by over 50,000
+  companies and offers enterprise-scaled compliance and security features.
+  Metabase also supports embedded analytics, allowing customer-facing analytics
+  to be integrated into products.
 instructions: null
 changeLog:
   - date: 2022-11-08
@@ -35,3 +42,30 @@ schema:
     metabaseSiteName:
       type: string
       title: Metabase Site Name (Title)
+tags:
+  - Analytics
+  - Dashboard
+benefits:
+  - title: Fast Analytics
+    description: Metabase provides fast analytics capabilities, allowing users to
+      query data immediately without the need for extracts or pipelines.
+  - title: Friendly UX
+    description: Metabase offers a user-friendly interface that is easy to learn and
+      use, making it accessible to non-technical business users.
+  - title: Integrated Tooling
+    description: Metabase includes integrated tooling such as a visual query
+      builder, interactive dashboards, and semantic models, making it a
+      comprehensive analytics solution.
+features:
+  - title: Visual Query Builder
+    description: Metabase allows users to query data using a visual query builder,
+      freeing them from the confines of SQL and making it easier for
+      non-technical users to explore data.
+  - title: Interactive Dashboards
+    description: Users can create and share interactive dashboards with Metabase,
+      using a variety of visualization types to present data in a meaningful
+      way.
+  - title: Embedded Analytics
+    description: Metabase supports embedded analytics, allowing customer-facing
+      analytics to be integrated into products and providing a seamless user
+      experience.

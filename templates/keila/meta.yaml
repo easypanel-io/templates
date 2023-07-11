@@ -1,6 +1,14 @@
 name: Keila
-description: Keila is an Open Source alternative to newsletter tools like Mailchimp or Sendinblue.
-instructions: Login with changeme@easypanel.io:password123 - change this from the administraton panel
+description: Keila is a free/libre open source email newsletter tool that allows
+  you to grow your contact lists and send data-driven newsletter campaigns. It
+  is proudly made in Germany and hosted in the EU. With Keila, you can import
+  existing contacts, add custom data and tags to your contacts, and create smart
+  subsets of your contact lists. Keila respects the privacy of your contacts and
+  gives you live statistics for your newsletters. It also offers integration
+  with other applications through its powerful API. Keila is open source and can
+  be self-hosted.
+instructions: Login with changeme@easypanel.io:password123 - change this from
+  the administraton panel
 changeLog:
   - date: 2023-3-3
     description: first release
@@ -58,3 +66,45 @@ schema:
     emailPassword:
       type: string
       title: SMTP Email Password
+tags:
+  - Email
+  - Marketing
+benefits:
+  - title: Reliable & Easy
+    description: Keila makes it easy to grow your contact lists and send newsletter
+      campaigns.
+  - title: Built for Privacy
+    description: Keila respects the privacy of your contacts and ensures strict
+      European privacy standards.
+  - title: Live Statistics
+    description: Keila provides live statistics for your newsletters, including open
+      and click rates.
+  - title: Integrate & Automate
+    description: Keila offers a powerful API for integrating with other applications
+      and automating email campaigns.
+  - title: Open Source & Self-Hosting
+    description: Keila is free/libre open source software that can be self-hosted on
+      your own servers.
+features:
+  - title: Import Existing Contacts
+    description: Easily import existing contacts by uploading a CSV file.
+  - title: Custom Data & Tags
+    description: Add custom data and tags to your contacts for better segmentation
+      and personalization.
+  - title: Powerful Segmentation
+    description: Create smart subsets of your contact lists using the visual segment
+      editor or query language.
+  - title: Built for Privacy
+    description: Keila ensures the privacy of your contacts and never shares your
+      data with third parties.
+  - title: Hosted in the EU
+    description: Keila's managed email newsletter service is fully operated within
+      the European Union.
+  - title: Live Statistics
+    description: Get live statistics for your newsletters, including open and click rates.
+  - title: Integrate & Automate
+    description: Integrate your email newsletter with other applications using
+      Keila's powerful API.
+  - title: Open Source & Self-Hosting
+    description: Keila is free/libre open source software that can be self-hosted on
+      your own servers.

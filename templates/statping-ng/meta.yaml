@@ -1,9 +1,18 @@
 name: Statping-ng
-description: An easy to use Status Page for your websites and applications.
-  Statping will automatically fetch the application and render a beautiful
-  status page with tons of features for you to build an even better status page.
-  This Status Page generator allows you to use MySQL, Postgres, or SQLite on
-  multiple operating systems.
+description: Statping is an easy-to-use status page and monitoring server for
+  websites and applications. It automatically fetches the application and
+  renders a beautiful status page with tons of features. It allows you to use
+  MySQL, Postgres, or SQLite on multiple operating systems. Statping is
+  lightweight, fast, and available for Linux, Mac, and Windows. It also has a
+  mobile app for viewing services and receiving notifications. You can run
+  Statping on any server, including Docker and AWS EC2. It supports custom SASS
+  styling and integrates with Slack, email, Twilio, and more. Statping is highly
+  customizable and allows you to create your own plugins and notifiers. It has
+  an easy-to-use dashboard and includes a Prometheus Exporter for additional
+  monitoring power. You can run Statping on an EC2 server using the AWS AMI
+  image and create security groups for port 80 and 443. Statping accepts push
+  requests to the dev branch and provides testing on MySQL, Postgres, and
+  SQLite.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -58,3 +67,64 @@ schema:
       type: string
       title: Database Service Name
       default: statping-ng-db
+tags:
+  - Dashboard
+  - Monitoring
+benefits:
+  - title: Easy to use
+    description: Statping is designed to be user-friendly and easy to set up and
+      use. It provides a straightforward dashboard and intuitive features.
+  - title: Future-proof
+    description: Statping is built to remain intact even in the event of a failure.
+      It ensures that your status page remains online to notify users of
+      downtime, even if your server crashes.
+  - title: No requirements
+    description: Statping is built in Go Language and only requires the precompiled
+      binary based on your operating system. There is no need to install
+      anything extra.
+  - title: Lightweight and fast
+    description: Statping is a lightweight application available for Linux, Mac, and
+      Windows. The Docker image is only ~16Mb, ensuring it doesn't take up much
+      hard drive space.
+  - title: Mobile app
+    description: Statping has a mobile app available on the App Store and Google
+      Play. The app allows you to view services, receive notifications, and
+      update groups, users, services, messages, and more.
+  - title: Run on any server
+    description: Statping provides multiple options for running on different
+      servers, including Docker and AWS EC2. It offers flexibility and
+      compatibility with various hosting environments.
+  - title: Customizable
+    description: Statping allows you to customize your status page using SASS
+      styling with easy-to-use variables. It also supports custom plugins and
+      notifiers for greater customization.
+  - title: Integration with Slack, email, Twilio, and more
+    description: Statping includes email notification via SMTP and Slack integration
+      using Incoming Webhook. It supports integration with various communication
+      channels for efficient status updates.
+features:
+  - title: Status page generator
+    description: Statping automatically fetches the application and generates a
+      status page with various features.
+  - title: Support for multiple databases
+    description: Statping supports MySQL, Postgres, and SQLite on multiple operating
+      systems.
+  - title: Framework for creating plugins
+    description: Statping is not just a status page, but also a framework that
+      allows you to create your own plugins to interact with every element of
+      your status page.
+  - title: Easy-to-use dashboard
+    description: Statping provides a straightforward dashboard for monitoring
+      websites and applications with basic HTTP GET or POST requests.
+  - title: Docker support
+    description: Statping can be run using the Docker image, making it easy to set
+      up a status page in seconds.
+  - title: Prometheus Exporter
+    description: Statping includes a Prometheus Exporter for additional monitoring
+      power with services.
+  - title: AWS EC2 support
+    description: Statping can be run on AWS EC2 servers, providing a cost-effective
+      way to host your own status page.
+  - title: Contribution-friendly
+    description: Statping accepts push requests to the dev branch, allowing users to
+      contribute their own features and notifiers.

@@ -1,6 +1,11 @@
 name: Vaultwarden
-description: Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs
-instructions: To access the administration interface, please go to /admin on your installation url. The admin token is in your "Environment" tab.
+description: Vaultwarden is an unofficial Bitwarden server implementation
+  written in Rust. It is compatible with the official Bitwarden clients, and is
+  ideal for self-hosted deployments where running the official resource-heavy
+  service is undesirable. Vaultwarden is targeted towards individuals, families,
+  and smaller organizations.
+instructions: To access the administration interface, please go to /admin on
+  your installation url. The admin token is in your "Environment" tab.
 changeLog:
   - date: 2022-11-19
     description: first release
@@ -32,3 +37,33 @@ schema:
       type: string
       title: App Service Image
       default: vaultwarden/server:latest
+tags:
+  - Developer Tools
+  - Security
+benefits:
+  - title: Self-hosted
+    description: Vaultwarden allows you to host your own Bitwarden server, giving
+      you full control over your data and privacy.
+  - title: Compatible with official clients
+    description: Vaultwarden is compatible with the official Bitwarden clients, so
+      you can continue using your favorite client apps.
+  - title: Lightweight
+    description: Vaultwarden is written in Rust and is designed to be lightweight,
+      making it ideal for smaller deployments.
+features:
+  - title: Web interface
+    description: Vaultwarden provides a web interface similar to the official
+      Bitwarden web interface, allowing you to access your passwords and other
+      data from any device with a web browser.
+  - title: Personal and organization vault support
+    description: Vaultwarden supports both personal and organization vaults,
+      allowing you to organize and share your passwords and other data.
+  - title: Password sharing and access control
+    description: Vaultwarden allows you to share passwords with others and control
+      their access to your shared items.
+  - title: File attachments
+    description: Vaultwarden supports attaching files to your items, allowing you to
+      store additional information or documents securely.
+  - title: Two-step login
+    description: Vaultwarden supports two-step login using email, Duo, YubiKey, and
+      FIDO2 WebAuthn, providing an extra layer of security for your account.

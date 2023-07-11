@@ -1,5 +1,12 @@
 name: Answer
-description: An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+description: Answer is an open-source knowledge-based community software that
+  allows you to quickly build a Q&A community for product technical support,
+  customer support, user communication, and more. It provides features such as
+  questions and answers, content organization, integrations with existing tools
+  and services, gamification, a modern UI, and extensibility through plugins.
+  Answer is free and open source, and it separates the frontend and backend
+  components. It is built with love by the Answer team and contributors, and the
+  code is licensed under the Apache-2.0 License.
 instructions: Go to /install and select sqlite database
 changeLog:
   - date: 2022-12-21
@@ -32,3 +39,44 @@ schema:
       type: string
       title: App Service Image
       default: answerdev/answer:1.0.9
+tags:
+  - Discussion
+  - Social Networking
+benefits:
+  - title: Build a Community
+    description: Answer helps you build a community between your users and your
+      team, allowing for knowledge sharing and problem-solving.
+  - title: Content Organization
+    description: Organize your content into categories and tags, making it easy for
+      users to find the information they need.
+  - title: Integrations
+    description: Integrate Answer with your existing tools and services to improve
+      your workflow and enhance your community.
+  - title: Gamification
+    description: Reward your users for their contributions with gamification
+      features, making collaboration and participation more fun.
+  - title: Modern UI
+    description: Answer has a modern and responsive user interface, providing a
+      great user experience for your community.
+  - title: Extensible
+    description: Extend Answer with plugins to add custom functionality and tailor
+      it to your specific needs.
+  - title: Open Source
+    description: Answer is free and open source, allowing you to use, modify, and
+      contribute to the software.
+features:
+  - title: Questions and Answers
+    description: Users can ask questions and get answers from both other users and the team.
+  - title: Content Organization
+    description: Organize content into categories and tags for easy navigation and search.
+  - title: Integrations
+    description: Integrate with existing tools and services to enhance your workflow
+      and community.
+  - title: Gamification
+    description: Reward users for their contributions with reputation and badges.
+  - title: Modern UI
+    description: A modern and responsive user interface for a great user experience.
+  - title: Extensible
+    description: Extend Answer with plugins to add custom functionality.
+  - title: Open Source
+    description: Answer is free and open source, licensed under the Apache-2.0 License.

@@ -1,5 +1,14 @@
 name: Hasura
-description: The Hasura GraphQL Engine makes your data instantly accessible over a real-time GraphQL API, so you can build and ship modern, performant apps and APIs 10x faster.
+description: Hasura is a platform that automates the development of data APIs,
+  allowing teams to build, secure, operate, and scale APIs faster. It eliminates
+  the need for manual API creation and provides tools for authorization,
+  performance optimization, observability, and API security. With Hasura,
+  developers can effortlessly generate APIs by connecting to existing databases,
+  GraphQL and REST APIs. It supports integration with popular databases like
+  PostgreSQL, MySQL, and MongoDB. Hasura is used by companies like Optum,
+  Philips Healthcare, and Nutrien to accelerate development and modernize data
+  access. The platform also offers a community where developers can connect,
+  gain insights, and access expert guidance.
 instructions: null
 changeLog:
   - date: 2023-03-16
@@ -66,3 +75,43 @@ schema:
         - enum:
             - "false"
           title: "false"
+    hasuraDomain:
+      type: string
+      title: Hasura Domain name
+tags:
+  - GraphQL
+  - Developer Tools
+benefits:
+  - title: Automated API Development
+    description: Hasura automates 80% of the tediousness of building, securing,
+      optimizing, and deploying GraphQL and REST APIs, allowing teams to ship
+      10x faster.
+  - title: Instant API Generation
+    description: Hasura can generate a unified GraphQL or REST API from your data
+      sources in minutes, eliminating the need for manual API creation.
+  - title: Granular Authorization
+    description: Hasura allows you to define role-based permissions down to the row
+      and column level, providing comprehensive tools for API security beyond
+      authentication and authorization.
+  - title: Performance Optimization
+    description: Hasura ensures faster API response times and automatically
+      optimizes scalability for optimal availability and performance of your
+      APIs.
+  - title: Federation of Disparate Data
+    description: Hasura enables you to connect, manage, and iterate siloed,
+      disparate data on a supergraph, providing a unified view of your data
+      sources.
+features:
+  - title: Instant API
+    description: Generate a unified GraphQL or REST API from your data sources in minutes.
+  - title: Authorization
+    description: Define granular, role-based permissions down to the row and column level.
+  - title: Performance
+    description: Ensure faster API response times and automatically optimize scalability.
+  - title: Observability
+    description: Get precision insights for optimal availability and performance of
+      your APIs.
+  - title: API Security
+    description: Comprehensive tools to secure APIs beyond authentication and authorization.
+  - title: Federation
+    description: Connect, manage, and iterate siloed, disparate data on a supergraph.

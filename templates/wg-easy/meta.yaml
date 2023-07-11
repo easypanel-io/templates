@@ -1,5 +1,11 @@
 name: Wg-easy
-description: You have found the easiest way to install & manage WireGuard on any Linux host!
+description: WireGuard Easy is an app that provides an easy way to install and
+  manage WireGuard on any Linux host. It includes a web UI for easy
+  configuration and management of clients. The app supports features such as
+  creating, editing, and deleting clients, showing client QR codes, downloading
+  client configuration files, and displaying statistics and charts for connected
+  clients. It requires a host with a kernel that supports WireGuard and Docker
+  installed.
 instructions: null
 changeLog:
   - date: 2022-12-20
@@ -36,3 +42,40 @@ schema:
     appPassword:
       type: string
       title: Admin Password
+tags:
+  - Developer Tools
+  - Network Tools
+benefits:
+  - title: Easy Installation
+    description: The app provides a simple installation process using Docker.
+  - title: Web UI
+    description: The app includes a web UI for easy configuration and management of clients.
+  - title: Client Management
+    description: The app allows users to list, create, edit, delete, enable, and
+      disable clients.
+  - title: QR Code Support
+    description: The app can generate QR codes for clients, making it easy to
+      connect devices.
+  - title: Configuration File Download
+    description: The app allows users to download client configuration files for easy setup.
+  - title: Statistics and Charts
+    description: The app provides statistics and charts for monitoring connected clients.
+  - title: Gravatar Support
+    description: The app supports Gravatar for user avatars.
+features:
+  - title: All-in-one
+    description: The app includes both WireGuard and a web UI in a single package.
+  - title: Easy Installation
+    description: The app can be installed easily using Docker.
+  - title: Client Management
+    description: The app allows users to list, create, edit, delete, enable, and
+      disable clients.
+  - title: QR Code Generation
+    description: The app can generate QR codes for clients, making it easy to
+      connect devices.
+  - title: Configuration File Download
+    description: The app allows users to download client configuration files for easy setup.
+  - title: Statistics and Charts
+    description: The app provides statistics and charts for monitoring connected clients.
+  - title: Gravatar Support
+    description: The app supports Gravatar for user avatars.

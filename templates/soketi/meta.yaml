@@ -1,5 +1,11 @@
 name: Soketi
-description: Just another simple, fast, and resilient open-source WebSockets server.
+description: Soketi is a serverless WebSockets server that allows developers to
+  deploy real-time applications at a cheaper cost. It is built with fast and
+  resilient technology and is compatible with the Pusher protocol. With Soketi,
+  developers have full control over app management and can trigger HTTP requests
+  using webhooks. It can be deployed on Cloudflare Workers for global
+  scalability. Soketi is a simple, fast, and open-source solution for real-time
+  communication.
 instructions: null
 changeLog:
   - date: 2022-10-31
@@ -51,3 +57,41 @@ schema:
       type: boolean
       title: Enable default app message exchange between clients
       default: true
+tags:
+  - Developer Tools
+  - Web Hosting
+benefits:
+  - title: Cheaper Cost
+    description: Soketi is cheaper than its competitors because you only pay for
+      your infrastructure. It can be as cheap as $5 on DigitalOcean.
+  - title: Fast and Resilient
+    description: Soketi is built with fast and resilient technology, guaranteeing
+      core message delivery in less than 100ms. It can scale to hundreds of
+      servers without losing performance.
+  - title: Pusher Compatible
+    description: Soketi is compatible with the Pusher protocol, allowing developers
+      to connect to the server without replacing their existing code.
+  - title: Full App Management
+    description: Soketi provides built-in app management, similar to Pusher.
+      Developers can define their own app credentials and have full control over
+      access. It also supports reading from popular databases like MySQL or
+      DynamoDB.
+  - title: HTTP Webhooks
+    description: Soketi allows developers to trigger HTTP requests using webhooks.
+      This feature can be paired with Lambda functions for additional
+      functionality.
+features:
+  - title: Serverless Deployment
+    description: Soketi can be deployed as a serverless solution, allowing
+      developers to deploy real-time applications at a cheaper cost using
+      Cloudflare Workers.
+  - title: Scalability
+    description: Soketi can scale to hundreds of servers using the Redis or NATS
+      adapter without losing performance.
+  - title: Open Source
+    description: Soketi is an open-source solution, providing transparency and
+      flexibility for developers.
+  - title: Fast Performance
+    description: Soketi is built with fast technology, written on top of C and
+      ported to Node.js. It has an average time of 6ms to distribute a message
+      to 1k users with minimal CPU and RAM usage.

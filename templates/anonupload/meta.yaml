@@ -1,5 +1,9 @@
 name: AnonUpload
-description: AnonUpload is a simple, databaseless PHP file uploader.
+description: AnonUpload is a simple, databaseless PHP file uploader that allows
+  secure and anonymous file sharing. It is designed to work with any web server,
+  including Nginx, Apache, and Lightspeed. The app does not show the direct
+  filename used to enhance privacy. AnonUpload can be hosted with Docker and
+  supports environment variables for configuration.
 instructions: visit /admin for the administration interface
 changeLog:
   - date: 2022-12-22
@@ -42,3 +46,34 @@ schema:
     appContactEmail:
       type: string
       title: App Contact Email
+tags:
+  - File Management
+  - Developer Tools
+benefits:
+  - title: Secure and Anonymous
+    description: AnonUpload ensures the security and anonymity of file sharing by
+      not displaying the direct filename used.
+  - title: Databaseless
+    description: AnonUpload does not require a database for file storage, making it
+      lightweight and easy to deploy.
+  - title: Plausible Analytics Integration
+    description: AnonUpload can be integrated with Plausible Analytics to track file
+      uploads and downloads.
+  - title: Dockerized
+    description: AnonUpload can be easily deployed using Docker, allowing for easy
+      setup and scalability.
+features:
+  - title: Anonymous File Sharing
+    description: Users can upload files anonymously without revealing their identity
+      or the direct filename.
+  - title: Supports Various File Types
+    description: AnonUpload supports a wide range of file types, including images,
+      documents, audio, video, archives, and text files.
+  - title: File Size Verification
+    description: AnonUpload verifies the size of uploaded files to ensure they meet
+      the specified limits.
+  - title: Customizable File Destination
+    description: The app allows users to specify the destination folder for uploaded files.
+  - title: Configurable Download Time
+    description: Users can set the time limit for file downloads, after which the
+      file will no longer be accessible.

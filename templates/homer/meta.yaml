@@ -1,6 +1,11 @@
 name: Homer
-description: A very simple static homepage for your server.
-instructions: The config files can be found under "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
+description: Homer is a full static html/js dashboard that allows you to keep
+  your services on hand. It is based on a simple yaml configuration file and can
+  be customized with themes. It supports search, grouping, and offline health
+  check. The app can be installed as a PWA and has keyboard shortcuts for easy
+  navigation.
+instructions: The config files can be found under
+  "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
 changeLog:
   - date: 2023-03-17
     description: Template created (v23.02.2)
@@ -30,3 +35,46 @@ schema:
       type: string
       title: App Service Image
       default: b4bz/homer:v23.02.2
+tags:
+  - Web Hosting
+  - CMS
+benefits:
+  - title: Easy Configuration
+    description: Homer uses a simple yaml configuration file to define your services
+      and customize the dashboard.
+  - title: Search and Grouping
+    description: You can easily search for services and group them for better organization.
+  - title: Theme Customization
+    description: Homer supports theme customization, allowing you to personalize the
+      look and feel of the dashboard.
+  - title: Offline Health Check
+    description: Homer can perform offline health checks for your services,
+      providing you with information about their availability.
+  - title: Installable as PWA
+    description: You can install Homer as a Progressive Web App (PWA) for easy
+      access and offline usage.
+  - title: Keyboard Shortcuts
+    description: Homer provides keyboard shortcuts for quick navigation, making it
+      even easier to use.
+features:
+  - title: YAML Configuration
+    description: Homer uses a simple yaml configuration file to define your services
+      and customize the dashboard.
+  - title: Installable (PWA)
+    description: Homer can be installed as a Progressive Web App (PWA) for easy
+      access and offline usage.
+  - title: Search
+    description: Homer supports search functionality, allowing you to quickly find
+      the services you need.
+  - title: Grouping
+    description: You can group your services in Homer for better organization and
+      easier navigation.
+  - title: Theme Customization
+    description: Homer allows you to customize the theme of the dashboard to match
+      your preferences.
+  - title: Offline Health Check
+    description: Homer can perform offline health checks for your services,
+      providing you with information about their availability.
+  - title: Keyboard Shortcuts
+    description: Homer provides keyboard shortcuts for quick navigation, making it
+      even easier to use.

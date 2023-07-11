@@ -1,5 +1,8 @@
 name: Calibre
-description: Calibre is th one stop solution to all your ebook needs
+description: Calibre is an e-book library manager that can view, convert, and
+  catalog e-books in various formats. It can also fetch metadata for books from
+  the internet and download newspapers for convenient reading. Calibre is
+  cross-platform and can run on Linux, Windows, and macOS.
 instructions: Login using user ABC with your set password
 changeLog:
   - date: 2023-3-1
@@ -36,3 +39,36 @@ schema:
     password:
       type: string
       title: Password
+tags:
+  - E-Commerce
+  - Productivity
+benefits:
+  - title: Manage your e-book library
+    description: Calibre allows you to organize and manage your e-book collection,
+      making it easy to find and access your favorite books.
+  - title: Convert e-books to different formats
+    description: With Calibre, you can convert e-books to different formats, making
+      them compatible with your preferred e-book reader or device.
+  - title: Fetch metadata and download newspapers
+    description: Calibre can fetch metadata for your books from the internet,
+      providing you with detailed information about each book. It can also
+      download newspapers and convert them into e-books for convenient reading.
+  - title: Cross-platform compatibility
+    description: Calibre is available for Linux, Windows, and macOS, allowing you to
+      use it on your preferred operating system.
+features:
+  - title: E-book library management
+    description: Calibre provides a user-friendly interface to manage and organize
+      your e-book collection.
+  - title: E-book conversion
+    description: You can convert e-books to different formats using Calibre, making
+      them compatible with various e-book readers and devices.
+  - title: Metadata fetching
+    description: Calibre can fetch metadata for your books from the internet,
+      providing you with detailed information about each book.
+  - title: Newspaper downloading
+    description: Calibre can download newspapers and convert them into e-books for
+      convenient reading.
+  - title: Cross-platform support
+    description: Calibre is available for Linux, Windows, and macOS, ensuring
+      compatibility with your preferred operating system.

@@ -1,5 +1,7 @@
 name: Drone Runner
-description: Runner for Drone.io
+description: Drone.io is a self-service Continuous Integration platform for busy
+  development teams. It allows teams to automate software build and testing
+  processes.
 instructions: null
 changeLog:
   - date: 2022-08-04
@@ -58,3 +60,62 @@ schema:
       type: string
       title: Runner Capacity
       default: "2"
+tags:
+  - Developer Tools
+  - Productivity
+benefits:
+  - title: Configuration as a code
+    description: Pipelines are configured with a simple, easy-to-read file that you
+      commit to your git repository.
+  - title: Any Source Code Manager
+    description: Drone integrates seamlessly with multiple source code management
+      systems, including GitHub, GitHub Enterprise, Bitbucket, and GitLab.
+  - title: Any Platform
+    description: Drone natively supports multiple operating systems and
+      architectures, including Linux x64, ARM, ARM64, and Windows x64.
+  - title: Any Language
+    description: Drone works with any language, database, or service that runs
+      inside a Docker container.
+  - title: Create & Share Plugins
+    description: Drone uses containers to drop pre-configured steps into your
+      pipeline. Choose from hundreds of existing plugins or create your own.
+  - title: Customization When You Need It
+    description: Drone makes advanced customization easy. Implement custom access
+      controls, approval workflows, secret management, YAML syntax extensions,
+      and more.
+  - title: Simple Configuration
+    description: Don’t waste time configuring your build servers. Choose from
+      thousands of Docker images and Drone will auto-provision your environment.
+  - title: Isolated Builds
+    description: Don’t worry about conflicting builds on shared servers. Every build
+      runs in an isolated Docker container, giving you full control.
+  - title: Effortless Scaling
+    description: Drone installs from a single binary and scales automatically.
+features:
+  - title: Configuration as a code
+    description: Pipelines are configured with a simple, easy-to-read file that you
+      commit to your git repository.
+  - title: Any Source Code Manager
+    description: Drone integrates seamlessly with multiple source code management
+      systems, including GitHub, GitHub Enterprise, Bitbucket, and GitLab.
+  - title: Any Platform
+    description: Drone natively supports multiple operating systems and
+      architectures, including Linux x64, ARM, ARM64, and Windows x64.
+  - title: Any Language
+    description: Drone works with any language, database, or service that runs
+      inside a Docker container.
+  - title: Create & Share Plugins
+    description: Drone uses containers to drop pre-configured steps into your
+      pipeline. Choose from hundreds of existing plugins or create your own.
+  - title: Customization When You Need It
+    description: Drone makes advanced customization easy. Implement custom access
+      controls, approval workflows, secret management, YAML syntax extensions,
+      and more.
+  - title: Simple Configuration
+    description: Don’t waste time configuring your build servers. Choose from
+      thousands of Docker images and Drone will auto-provision your environment.
+  - title: Isolated Builds
+    description: Don’t worry about conflicting builds on shared servers. Every build
+      runs in an isolated Docker container, giving you full control.
+  - title: Effortless Scaling
+    description: Drone installs from a single binary and scales automatically.

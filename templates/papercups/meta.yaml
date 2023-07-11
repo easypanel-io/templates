@@ -1,5 +1,19 @@
 name: Papercups
-description: Papercups is an open source live customer support tool web app written in Elixir.
+description: Papercups is an open-source live customer chat web app that allows
+  businesses to streamline communication with their customers. It offers a
+  privacy-focused alternative to popular customer communication tools like
+  Intercom, Drift, and Zendesk. With Papercups, businesses can coordinate and
+  reply to messages over chat, email, Slack, and SMS. The app provides a
+  feature-rich dashboard for customer support and feedback management, allowing
+  users to reply to conversations from Slack, the dashboard, or the mobile app.
+  Papercups also offers a highly customizable chat widget that can be branded
+  and customized without any coding. The app is open-source and
+  developer-friendly, supporting HTML, React, React Native, and Flutter
+  integrations. It can be self-managed and deployed on various cloud platforms,
+  offering unlimited volume and personalized support. Papercups is built with
+  Elixir on top of BEAM for scalability. The app is backed by Y Combinator and
+  prioritizes privacy and security by keeping customer data within the user's
+  infrastructure.
 instructions: null
 changeLog:
   - date: 2023-3-20
@@ -37,3 +51,74 @@ schema:
       type: string
       title: Database Service Name
       default: papercups-db
+tags:
+  - Customer Support
+  - Developer Tools
+benefits:
+  - title: Streamline Communication
+    description: Coordinate and reply to messages over chat, email, Slack, and SMS
+      in one powerful dashboard.
+  - title: Privacy-Focused Alternative
+    description: Papercups offers a privacy-focused, open-source alternative to
+      Intercom, Drift, and Zendesk.
+  - title: Customizable Chat Widget
+    description: Brand and customize the chat widget with colors, greetings, and
+      text without any coding.
+  - title: Developer-Friendly
+    description: Papercups is open-source and supports HTML, React, React Native,
+      and Flutter integrations.
+  - title: Self-Managed Deployment
+    description: Deploy Papercups in your cloud infrastructure for painless adoption
+      and onboarding.
+  - title: Unlimited Volume
+    description: Papercups is built with Elixir on top of BEAM for incredible
+      scalability, offering unlimited volume.
+  - title: Personalized Support
+    description: Get personalized support for managing your deployment on your
+      infrastructure.
+features:
+  - title: Custom Chat Widget
+    description: Papercups provides a customizable chat widget that can be embedded
+      on websites to talk to customers.
+  - title: React Support
+    description: Embed the chat widget as a React component or a simple HTML snippet.
+  - title: React Native Support
+    description: Embed the chat widget in React Native apps (alpha version).
+  - title: Flutter Support
+    description: Embed the chat widget in Flutter apps (beta version).
+  - title: Slack Integration
+    description: Connect Papercups with Slack to view and reply to messages directly
+      from a Slack channel.
+  - title: Mattermost Integration
+    description: Connect Papercups with Mattermost to view and reply to messages
+      directly from a Mattermost channel.
+  - title: Gmail Integration
+    description: Link your support Gmail account to sync messages and reply to
+      emails directly from Papercups.
+  - title: SMS Integration
+    description: Reply to incoming SMS messages directly from Papercups.
+  - title: GitHub Integration
+    description: Link your GitHub organization to Papercups to easily create issues
+      and notify customers when issues are closed.
+  - title: Markdown and Emoji Support
+    description: Use markdown and emoji to add character to your messages.
+  - title: Invite Your Team
+    description: Send invite links to your teammates to join your Papercups account.
+  - title: Conversation Management
+    description: Close, assign, and prioritize conversations for efficient support
+      and feedback management.
+  - title: Private Notes
+    description: Send private notes that you share with your team for internal
+      communication.
+  - title: Customer and Conversation Tags
+    description: Organize customers and conversations with custom tags and labels.
+  - title: "@ Mentions"
+    description: Notify your teammates about important messages using @ mentions.
+  - title: Saved Replies
+    description: Create text snippets for responses to common inquiries to
+      streamline your workflow.
+  - title: Live Session Viewing
+    description: Watch how your customers are interacting with your webpage in real-time.
+  - title: Built on Elixir
+    description: Papercups is built on Elixir, optimized for responsiveness,
+      fault-tolerance, and support for real-time updates.

@@ -1,6 +1,9 @@
 name: Pidgin
-description: Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: Pidgin is a chat program which lets you log into accounts on
+  multiple chat networks simultaneously. This means that you can be chatting
+  with friends on XMPP and sitting in an IRC channel at the same time.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-23
     description: first release
@@ -30,3 +33,23 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/pidgin:latest
+tags:
+  - Chat
+  - Communication
+benefits:
+  - title: Multiple Chat Networks
+    description: Log into accounts on multiple chat networks simultaneously.
+features:
+  - title: Supported Architectures
+    description: x86-64, arm64, armhf
+  - title: Application Setup
+    description: Access the application at http://yourhost:3000/ or https://yourhost:3001/.
+  - title: Third Party Plugins
+    description: Includes default chat plugins and third party plugins for
+      integration with other services.
+  - title: KasmVNC GUI Containers
+    description: Based on Docker Baseimage KasmVNC with additional environment
+      variables and run configurations.
+  - title: Lossless Mode
+    description: Capable of delivering a true lossless image at a high framerate to
+      your web browser.

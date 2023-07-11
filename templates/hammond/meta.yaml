@@ -1,5 +1,11 @@
 name: Hammond
-description: Self hosted vehicle and expense management system. Like Clarkson, but better
+description: Hammond is a self-hosted vehicle expense tracking system with
+  support for multiple users. It is a successor to the Clarkson project and is
+  under active development. It allows users to track fuel and other expenses
+  related to their vehicles, manage multiple vehicles and users, and generate
+  reports. Hammond can be run as a Docker container or installed natively on
+  Linux servers. It is built with Go for the backend and Vue.js for the
+  frontend.
 instructions: null
 changeLog:
   - date: 2023-2-21
@@ -30,3 +36,38 @@ schema:
       type: string
       title: App Service Image
       default: akhilrex/hammond:1.0.0
+tags:
+  - Expense Tracking
+  - Productivity
+benefits:
+  - title: Self-hosted
+    description: Hammond can be self-hosted, giving users full control over their
+      data and privacy.
+  - title: Multiple Users and Vehicles
+    description: Hammond supports multiple users sharing multiple vehicles, making
+      it suitable for families or small businesses.
+  - title: Expense Tracking
+    description: Users can track fuel and other expenses related to their vehicles,
+      helping them manage their vehicle costs.
+  - title: Reporting
+    description: Hammond provides vehicle-level and overall reporting, allowing
+      users to analyze their expenses and make informed decisions.
+features:
+  - title: Migrate data from Clarkson
+    description: Users can migrate their data from the Clarkson project to Hammond,
+      ensuring a smooth transition.
+  - title: Add/Manage multiple vehicles
+    description: Users can add and manage multiple vehicles in Hammond, keeping
+      track of expenses for each vehicle separately.
+  - title: Add/Manage multiple users
+    description: Hammond supports multiple users, allowing families or small
+      businesses to track expenses for their vehicles.
+  - title: Save attachment against vehicles
+    description: Users can save attachments, such as receipts or pump screens,
+      against their vehicles for future reference.
+  - title: Quick Entries
+    description: Users can take a photo of a receipt or pump screen to make an entry
+      later, making expense tracking more convenient.
+  - title: Import from Fuelly
+    description: Hammond supports importing data from Fuelly, with support for more
+      apps coming soon.

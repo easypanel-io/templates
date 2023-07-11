@@ -1,7 +1,13 @@
 name: PsiTransfer
-description: Simple open source self-hosted file sharing solution. It's an
-  alternative to paid services like Dropbox, WeTransfer.No accounts, no logins.
-  Mobile friendly responsive interface.
+description: PsiTransfer is a simple open-source self-hosted file sharing
+  solution. It allows users to easily share files without the need for accounts
+  or logins. The app is mobile-friendly and supports the uploading and
+  downloading of large files. It also offers features such as resumable uploads
+  and downloads, one-time downloads, and the ability to download all files as a
+  zip or tar.gz archive. PsiTransfer is lightweight, with a Vue-based frontend
+  and a gzipped size of less than 100k. It also provides password protection for
+  download lists and supports modal-style file preview. The app requires Node.js
+  version 7.4 or higher.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -34,3 +40,76 @@ schema:
       type: string
       title: App Service Image
       default: psitrax/psitransfer:v2.1.1
+tags:
+  - File Management
+  - Web Hosting
+benefits:
+  - title: Simple and Self-hosted
+    description: PsiTransfer provides a simple and self-hosted file sharing
+      solution, allowing users to easily share files without relying on paid
+      services.
+  - title: No Accounts or Logins
+    description: PsiTransfer does not require users to create accounts or log in,
+      making it convenient for quick file sharing.
+  - title: Mobile-friendly Interface
+    description: PsiTransfer has a responsive interface that is optimized for mobile
+      devices, ensuring a seamless user experience across different devices.
+  - title: Supports Large Files
+    description: PsiTransfer supports the uploading and downloading of large files,
+      making it suitable for sharing files of any size.
+  - title: Resumable Uploads and Downloads
+    description: PsiTransfer supports resumable uploads and downloads, allowing
+      users to pause and resume file transfers without losing progress.
+  - title: One-time Downloads
+    description: PsiTransfer allows users to set an expiration time for their upload
+      bucket, ensuring that files are only available for a limited period of
+      time.
+  - title: Download All Files as Archive
+    description: PsiTransfer provides the option to download all files in a bucket
+      as a zip or tar.gz archive, making it convenient for bulk downloads.
+  - title: Modal-style File Preview
+    description: PsiTransfer supports modal-style file preview, allowing users to
+      preview files before downloading them.
+  - title: Password Protected Download List
+    description: PsiTransfer offers password protection for download lists, ensuring
+      that only authorized users can access the files.
+  - title: Lightweight and Gzipped
+    description: PsiTransfer is a lightweight app with a Vue-based frontend. It is
+      gzipped by default and has a size of less than 100k, ensuring fast loading
+      times.
+  - title: Explicit Named Bucket IDs
+    description: PsiTransfer uses explicit named bucket IDs with query parameters,
+      allowing users to easily share specific buckets.
+features:
+  - title: No Accounts or Logins
+    description: PsiTransfer does not require users to create accounts or log in,
+      making it convenient for quick file sharing.
+  - title: Mobile-friendly Interface
+    description: PsiTransfer has a responsive interface that is optimized for mobile
+      devices, ensuring a seamless user experience across different devices.
+  - title: Supports Large Files
+    description: PsiTransfer supports the uploading and downloading of large files,
+      making it suitable for sharing files of any size.
+  - title: Resumable Uploads and Downloads
+    description: PsiTransfer supports resumable uploads and downloads, allowing
+      users to pause and resume file transfers without losing progress.
+  - title: One-time Downloads
+    description: PsiTransfer allows users to set an expiration time for their upload
+      bucket, ensuring that files are only available for a limited period of
+      time.
+  - title: Download All Files as Archive
+    description: PsiTransfer provides the option to download all files in a bucket
+      as a zip or tar.gz archive, making it convenient for bulk downloads.
+  - title: Modal-style File Preview
+    description: PsiTransfer supports modal-style file preview, allowing users to
+      preview files before downloading them.
+  - title: Password Protected Download List
+    description: PsiTransfer offers password protection for download lists, ensuring
+      that only authorized users can access the files.
+  - title: Lightweight and Gzipped
+    description: PsiTransfer is a lightweight app with a Vue-based frontend. It is
+      gzipped by default and has a size of less than 100k, ensuring fast loading
+      times.
+  - title: Explicit Named Bucket IDs
+    description: PsiTransfer uses explicit named bucket IDs with query parameters,
+      allowing users to easily share specific buckets.

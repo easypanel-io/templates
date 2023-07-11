@@ -1,5 +1,8 @@
 name: Plex
-description: organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.
+description: Plex Media Server is an app that allows you to stream your video,
+  music, and photo collections to any device. It is easy to install and can be
+  used on phones, tablets, streaming devices, gaming consoles, and smart TVs.
+  With Plex Media Server, you can access your media anytime, anywhere.
 instructions: If you get a libusb error, please ignore it.
 changeLog:
   - date: 2022-11-23
@@ -30,3 +33,32 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/plex:latest
+tags:
+  - Media
+  - Streaming
+benefits:
+  - title: Stream your media anywhere
+    description: With Plex Media Server, you can stream your video, music, and photo
+      collections to any device, no matter where you are.
+  - title: Easy installation
+    description: Installing Plex Media Server is simple and straightforward,
+      allowing you to start streaming your media in no time.
+  - title: Support for multiple devices
+    description: Plex Media Server is compatible with a wide range of devices,
+      including phones, tablets, streaming devices, gaming consoles, and smart
+      TVs.
+features:
+  - title: Networking options
+    description: "Plex Media Server offers three types of networking options:
+      bridge, host, and macvlan. You can choose the one that best suits your
+      needs."
+  - title: Docker support
+    description: Plex Media Server provides an official Docker container, making it
+      easy to deploy and manage the app in a Docker environment.
+  - title: Configurable settings
+    description: You can customize various settings of Plex Media Server, such as
+      the timezone, claim token, IP address, hostname, and more.
+  - title: Hardware transcoding support
+    description: If your Docker host has an Intel CPU with Quick Sync feature and
+      you have a Plex Pass subscription, you can enable hardware transcoding for
+      improved performance.

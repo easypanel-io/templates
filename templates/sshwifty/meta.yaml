@@ -27,4 +27,32 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: niruix/sshwifty:0.2.33-beta-release
+      default: niruix/sshwifty:0.2.32-beta-release
+tags:
+  - Developer Tools
+  - Web Hosting
+benefits:
+  - title: Web-based SSH and Telnet access
+    description: Access SSH and Telnet servers directly from your web browser,
+      without the need for additional software.
+  - title: Easy deployment
+    description: Sshwifty can be easily deployed on your computer or server,
+      allowing you to provide SSH and Telnet access to multiple users.
+  - title: Secure connection
+    description: Sshwifty supports TLS encryption, ensuring that your SSH and Telnet
+      connections are secure.
+features:
+  - title: Binary installation
+    description: Download and install precompiled binaries to quickly set up
+      Sshwifty on your machine.
+  - title: Docker image
+    description: Use the prebuilt Docker image to easily deploy Sshwifty in a
+      containerized environment.
+  - title: Compile from source
+    description: Build Sshwifty from the source code for more control and customization.
+  - title: Configuration options
+    description: Customize Sshwifty's behavior through configuration files or
+      environment variables.
+  - title: Remote presets
+    description: Define presets for commonly used SSH and Telnet connections, making
+      it easier for users to connect.

@@ -1,5 +1,9 @@
 name: Rotki
-description: Rotki is an open source portfolio tracking, analytics, accounting, and tax reporting tool that protects your privacy.
+description: Rotki is an open source portfolio tracking, analytics, accounting,
+  and tax reporting tool for crypto assets. It aims to bring transparency into
+  the crypto and financial sectors through the use of open source. With Rotki,
+  your data is stored encrypted locally on your computer, giving you ownership
+  and control over your financial data.
 instructions: null
 changeLog:
   - date: 2023-2-9
@@ -31,4 +35,39 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.27.1
+      default: rotki/rotki:v1.27.0
+tags:
+  - Analytics
+  - Finance
+benefits:
+  - title: Privacy Protection
+    description: Unlike other services, Rotki stores your data encrypted locally on
+      your computer, ensuring your privacy and giving you control over your
+      financial data.
+  - title: Transparency
+    description: Rotki aims to bring transparency into the crypto and financial
+      sectors through the use of open source.
+  - title: Portfolio Tracking
+    description: Rotki provides an overview of your balances across multiple
+      platforms, blockchains, exchanges, and protocols.
+  - title: Analytics and Insights
+    description: Rotki offers graphs and analysis of your historical activity,
+      providing insights into your portfolio.
+  - title: Accounting and Tax Reporting
+    description: Rotki allows you to perform accounting analysis for profit/loss
+      over any period of time and generate reports for tax purposes.
+features:
+  - title: Customization
+    description: Rotki is highly customizable, allowing you to customize the UI
+      look, main currency, language, accounting settings, and more.
+  - title: Decoding EVM Transactions
+    description: Rotki can decode EVM (Ethereum, Optimism, and more) transactions
+      into a human-readable format and display them.
+  - title: Data Import and Analysis
+    description: Rotki can pull, store, and analyze history from activities of all
+      supported platforms, providing a comprehensive view of your financial
+      data.
+  - title: Profit/Loss Analysis
+    description: Rotki allows you to perform accounting analysis for profit/loss
+      over any period of time using customized accounting settings and generate
+      profit/loss reports.

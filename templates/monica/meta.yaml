@@ -1,5 +1,10 @@
 name: Monica
-description: Personal CRM. Remember everything about your friends, family and business relationships.
+description: Monica is an open-source personal relationship management system
+  that helps you organize and record your interactions with your loved ones. It
+  allows you to keep track of important information about your friends and
+  family, such as activities, conversations, birthdays, and more. With Monica,
+  you can strengthen your relationships and be a better friend, family member,
+  or spouse.
 instructions: null
 changeLog:
   - date: 2023-03-17
@@ -69,3 +74,46 @@ schema:
       type: boolean
       title: Check Version
       default: true
+tags:
+  - CRM
+  - Productivity
+benefits:
+  - title: Organize Your Relationships
+    description: Monica provides an easy-to-use interface to store everything you
+      know about your loved ones. You can add and manage contacts, define
+      relationships between contacts, set reminders for important dates, and
+      more.
+  - title: Stay Connected
+    description: With Monica, you can stay in touch with your contacts by sending
+      reminders at a given interval. You can also record activities, tasks, and
+      gifts related to your contacts, ensuring that you never miss an important
+      event or occasion.
+  - title: Personalize Your Experience
+    description: Monica allows you to customize your contact fields, define custom
+      genders, and track conversations on social media or SMS. You can also
+      export and import data, making it easy to manage your information across
+      different platforms.
+features:
+  - title: Contact Management
+    description: Add and manage contacts, define relationships between contacts, and
+      track activities, tasks, and gifts related to your contacts.
+  - title: Reminders
+    description: Set automatic reminders for birthdays and other important dates,
+      and stay in touch with your contacts by sending reminders at a given
+      interval.
+  - title: Debt Management
+    description: Manage debts and record notes about your contacts, including how
+      you met them and other important information.
+  - title: Journal
+    description: Keep a basic journal to record how your day went and upload
+      documents and photos related to your contacts.
+  - title: Customization
+    description: Customize your contact fields, define custom genders, and track
+      conversations on social media or SMS.
+  - title: Data Export and Import
+    description: Export and import data, including contacts as vCards, making it
+      easy to manage your information across different platforms.
+  - title: Open Source
+    description: Monica is open source, meaning the code is publicly available and
+      can be scrutinized by thousands. It is transparent, secure, and free to
+      use.

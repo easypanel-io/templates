@@ -1,5 +1,16 @@
 name: Mstream
-description: The easiest music streaming server available
+description: mStream is a music streaming server that allows you to access your
+  music collection from anywhere. It also allows you to sync your collection
+  between devices for offline access. With mStream, you can host your own server
+  and have complete control over your music. There are no ads, your content will
+  never be removed, and you can stream your music uncompressed for the best
+  audio quality. mStream is also privacy-focused, as it does not collect
+  statistics on your listening habits. It is a great option for artists, as
+  buying music directly from them means your money goes directly to them.
+  mStream is easy to set up, runs on any operating system, and has mobile apps
+  for iOS and Android. It offers features like gapless playback, Milkdrop
+  visualizer, playlist sharing, and drag and drop file uploading. All the code
+  is open source and available on GitHub.
 instructions: null
 changeLog:
   - date: 2023-3-20
@@ -30,3 +41,41 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/mstream:5.11.4
+tags:
+  - Media
+  - Networking
+benefits:
+  - title: Own Your Music
+    description: mStream allows you to have complete control over your music
+      collection. There are no ads and your content will never be removed.
+  - title: Quality
+    description: mStream supports streaming uncompressed music, making it a great
+      choice for audiophiles and FLAC enthusiasts.
+  - title: Privacy
+    description: Unlike streaming services, mStream does not collect statistics on
+      your listening habits, ensuring your privacy.
+  - title: Good for Artists
+    description: Buying music directly from artists through mStream means your money
+      goes directly to them, supporting their work.
+features:
+  - title: Server Setup
+    description: mStream's server setup takes only 30 seconds and can run on any
+      operating system.
+  - title: Mobile Apps
+    description: mStream has mobile apps available for iOS and Android, allowing you
+      to stream your music on the go.
+  - title: Browser Streaming
+    description: You can stream your music from mStream in any browser, making it
+      accessible from any device.
+  - title: Gapless Playback
+    description: mStream supports gapless playback, ensuring a seamless listening
+      experience between songs.
+  - title: Milkdrop Visualizer
+    description: mStream includes the Milkdrop visualizer, providing a visually
+      stunning music visualization experience.
+  - title: Playlist Sharing
+    description: You can share your playlists with others using mStream, allowing
+      them to discover and enjoy your music.
+  - title: Drag and Drop File Uploading
+    description: mStream allows you to easily upload files by simply dragging and
+      dropping them into the interface.

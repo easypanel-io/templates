@@ -1,5 +1,15 @@
 name: Authorizer
-description: Your data, your control. Fully open source, authentication and authorization.
+description: Authorizer is an authentication and authorization service that
+  allows you to authenticate and authorize users for your apps. It provides a
+  low code tool and low cost deployment, allowing you to build secure apps 10x
+  faster. With Authorizer, you own your user data in your preferred database and
+  can authenticate users with multiple auth recipes. It also supports role-based
+  access control and OAuth2 and OpenID compatible APIs. You can deploy your
+  instance easily and integrate it with your application using the provided
+  library. Authorizer offers secure session management, multiple auth recipes,
+  database integration, customizable emails, event webhooks, and multi-factor
+  authentication. It supports various databases and can be deployed anywhere.
+  Join the community on Discord and share your experience with Authorizer.
 instructions: null
 changeLog:
   - date: 2023-01-25
@@ -44,3 +54,54 @@ schema:
       type: string
       title: Redis Service Name
       default: authorizer-redis
+tags:
+  - Authentication
+  - Open Source
+benefits:
+  - title: Build Secure Apps 10x faster
+    description: Authorizer provides a low code tool and low cost deployment,
+      allowing you to build secure apps quickly and efficiently.
+  - title: Own your user data in your preferred database
+    description: With Authorizer, you have full control over your user data and can
+      store it in your preferred database.
+  - title: Authenticate users with multiple auth recipes
+    description: Authorizer supports multiple authentication recipes, including
+      major social logins, basic auth, and magic link auth.
+  - title: Authorize Users Based on your business roles
+    description: You can define roles and authorize your APIs with role-based
+      session tokens using Authorizer.
+  - title: Deploy Your Instance
+    description: Authorizer offers multiple deployment options, including Heroku,
+      Docker, and Kubernetes, allowing you to deploy your authentication and
+      authorization service anywhere.
+features:
+  - title: Secure Session Management
+    description: Authorizer implements secure session management with HTTP only
+      cookies and supports the Authorization Code flow for mobile-based
+      authentication.
+  - title: Auth Recipes
+    description: Authorizer supports multiple authentication recipes, including
+      major social logins, basic auth, and magic link auth. More recipes are
+      coming soon.
+  - title: Connect to Your Database
+    description: Authorizer supports 11+ databases, including major SQL, NoSQL, and
+      GraphDBs, allowing you to connect to your preferred database.
+  - title: Integrate or Implement
+    description: Authorizer comes with a built-in universal login page, but you can
+      also build a custom UI using JavaScript, React, or any framework. More
+      SDKs are coming soon.
+  - title: Role Based Access Control
+    description: Authorizer allows you to define roles and authorize your APIs with
+      role-based session tokens, providing granular access control.
+  - title: Customize Emails
+    description: You can send emails with custom email templates and dynamic
+      variables using Authorizer.
+  - title: Listen to Events
+    description: Authorizer allows you to configure webhooks for various events on
+      the service and take necessary actions with event data.
+  - title: Multi Factor Authentication
+    description: Authorizer provides an added layer of security with email-based OTP
+      for basic authentication.
+  - title: Myriad Database Support
+    description: Authorizer supports a wide range of databases, allowing you to
+      choose the one that suits your needs.

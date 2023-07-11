@@ -1,6 +1,21 @@
 name: linkding
-description: linkding is a simple bookmark service that you can host yourself. It's designed be to be minimal, fast, and easy to set up using Docker.
-instructions: If the login fails with a error 500, please restart the "linkding" app service. This can be caused by the database not being properly reachable at linkding's first start.
+description: linkding is a self-hosted bookmark manager that is designed to be
+  minimal, fast, and easy to set up using Docker. It provides a clean UI
+  optimized for readability and allows users to organize bookmarks with tags,
+  add notes using Markdown, and use read-it-later functionality. Users can also
+  share bookmarks with other users, perform bulk editing, and automatically
+  create snapshots of bookmarked websites on the Internet Archive Wayback
+  Machine. linkding supports importing and exporting bookmarks in Netscape HTML
+  format and provides extensions for Firefox and Chrome, as well as a
+  bookmarklet. It also offers a REST API for developing third-party apps and an
+  admin panel for user self-service and raw data access. linkding can be
+  installed using Docker or Docker Compose, and it supports both SQLite and
+  PostgreSQL databases. Managed hosting options are available for users who
+  prefer a more convenient solution. The application is open source and built
+  using the Django web framework.
+instructions: If the login fails with a error 500, please restart the "linkding"
+  app service. This can be caused by the database not being properly reachable
+  at linkding's first start.
 changeLog:
   - date: 2023-03-18
     description: Template created (v1.17.2)
@@ -63,3 +78,93 @@ schema:
       type: string
       title: Database Service Name (Can be ignored if SQLite)
       default: linkding-db
+tags:
+  - Bookmark
+  - Web Hosting
+benefits:
+  - title: Minimal and Fast
+    description: linkding is designed to be minimal and fast, providing a clean UI
+      optimized for readability.
+  - title: Easy Setup with Docker
+    description: linkding can be easily set up using Docker, allowing users to
+      quickly deploy the application.
+  - title: Bookmark Organization
+    description: linkding allows users to organize bookmarks with tags, making it
+      easy to find and manage saved links.
+  - title: Read-it-Later Functionality
+    description: linkding provides read-it-later functionality, allowing users to
+      save links for later reading.
+  - title: Bookmark Sharing
+    description: linkding allows users to share bookmarks with other users, making
+      it easy to collaborate and discover new content.
+  - title: Bulk Editing
+    description: linkding supports bulk editing, allowing users to perform actions
+      on multiple bookmarks at once.
+  - title: Automatic Website Snapshots
+    description: linkding automatically creates snapshots of bookmarked websites on
+      the Internet Archive Wayback Machine, ensuring that users can access saved
+      content even if the original website is no longer available.
+  - title: Import and Export Bookmarks
+    description: linkding supports importing and exporting bookmarks in Netscape
+      HTML format, making it easy to migrate data to and from other bookmark
+      managers.
+  - title: Extensions and Bookmarklet
+    description: linkding provides extensions for Firefox and Chrome, as well as a
+      bookmarklet, allowing users to quickly add bookmarks from their browsers.
+  - title: REST API
+    description: linkding offers a REST API for developing third-party apps,
+      allowing users to extend the functionality of the application.
+  - title: Admin Panel
+    description: linkding provides an admin panel for user self-service and raw data
+      access, giving users control over their data.
+  - title: Multiple Database Options
+    description: linkding supports both SQLite and PostgreSQL databases, giving
+      users flexibility in choosing their preferred database solution.
+  - title: Managed Hosting Options
+    description: For users who prefer a more convenient solution, linkding offers
+      managed hosting options provided by third-party services.
+  - title: Open Source
+    description: linkding is an open-source application built using the Django web
+      framework, allowing users to modify and contribute to the codebase.
+features:
+  - title: Clean UI optimized for readability
+    description: linkding provides a clean UI optimized for readability, making it
+      easy to navigate and manage bookmarks.
+  - title: Organize bookmarks with tags
+    description: linkding allows users to organize bookmarks with tags, making it
+      easy to categorize and find saved links.
+  - title: Add notes using Markdown
+    description: linkding supports adding notes to bookmarks using Markdown,
+      allowing users to add additional context or information to saved links.
+  - title: Read-it-Later functionality
+    description: linkding provides read-it-later functionality, allowing users to
+      save links for later reading.
+  - title: Share bookmarks with other users
+    description: linkding allows users to share bookmarks with other users, making
+      it easy to collaborate and discover new content.
+  - title: Bulk editing
+    description: linkding supports bulk editing, allowing users to perform actions
+      on multiple bookmarks at once.
+  - title: Automatic website snapshots
+    description: linkding automatically creates snapshots of bookmarked websites on
+      the Internet Archive Wayback Machine, ensuring that users can access saved
+      content even if the original website is no longer available.
+  - title: Import and export bookmarks
+    description: linkding supports importing and exporting bookmarks in Netscape
+      HTML format, making it easy to migrate data to and from other bookmark
+      managers.
+  - title: Extensions for Firefox and Chrome, as well as a bookmarklet
+    description: linkding provides extensions for Firefox and Chrome, as well as a
+      bookmarklet, allowing users to quickly add bookmarks from their browsers.
+  - title: Light and dark themes
+    description: linkding offers light and dark themes, allowing users to customize
+      the appearance of the application.
+  - title: REST API for developing third-party apps
+    description: linkding offers a REST API for developing third-party apps,
+      allowing users to extend the functionality of the application.
+  - title: Admin panel for user self-service and raw data access
+    description: linkding provides an admin panel for user self-service and raw data
+      access, giving users control over their data.
+  - title: Easy setup using Docker and a SQLite database, with PostgreSQL as an option
+    description: linkding can be easily set up using Docker and a SQLite database.
+      PostgreSQL is also supported as an alternative database option.

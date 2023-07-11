@@ -1,5 +1,11 @@
 name: Chatpad
-description: Not just another ChatGPT user-interface!
+description: Chatpad is a user interface for ChatGPT that aims to provide the
+  best experience possible. It is free and open source, with the source code
+  available on GitHub. The app is privacy-focused, with no tracking or cookies,
+  and all data is stored locally. Chatpad can be self-hosted using Docker. It
+  offers one-click deployments and allows users to give feedback and contribute
+  to the project. The app is built with React.js and utilizes libraries such as
+  ToDesktop, DexieJS, and Mantine.
 instructions: null
 changeLog:
   - date: 2023-3-26
@@ -30,3 +36,30 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/deiucanta/chatpad
+tags:
+  - Communication
+  - Chat
+benefits:
+  - title: Free and open source
+    description: Chatpad is provided for free and the source code is available on GitHub.
+  - title: Privacy focused
+    description: No tracking, no cookies, and all data is stored locally.
+  - title: Best experience
+    description: Crafted with love and care to provide the best experience possible.
+features:
+  - title: Chats
+    description: Chatpad provides a user interface for ChatGPT, allowing users to
+      have conversations with the AI model.
+  - title: Prompts
+    description: Users can input prompts to guide the AI model's responses in the
+      conversation.
+  - title: New Chat
+    description: Users can start a new chat session with ChatGPT.
+  - title: GPT-4 READY
+    description: Chatpad is ready to support the next version of the GPT model, GPT-4.
+  - title: Premium quality UI for ChatGPT
+    description: Chatpad offers a high-quality user interface for ChatGPT, providing
+      a seamless and enjoyable experience.
+  - title: Web App & Desktop App
+    description: Chatpad is available as both a web app and a desktop app, allowing
+      users to choose their preferred platform.

@@ -30,3 +30,24 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/freshrss:latest
+tags:
+  - RSS
+  - Web Hosting
+benefits:
+  - title: Self-hosted
+    description: You have full control over your data and can customize the
+      application to your needs.
+  - title: Multi-platform support
+    description: The Docker image supports multiple architectures, making it easy to
+      run on different systems.
+  - title: Easy setup
+    description: The application can be set up quickly using either docker-compose
+      or the docker CLI.
+features:
+  - title: WebUI
+    description: Access the application through a web interface.
+  - title: External database support
+    description: You can use an external MySQL/MariaDB server for storing data.
+  - title: Extensions support
+    description: Additional extensions can be added to enhance the functionality of
+      the application.

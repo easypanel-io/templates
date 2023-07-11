@@ -1,5 +1,15 @@
 name: Clickhouse
-description: ClickHouse is an open-source column-oriented DBMS for online analytical processing that allows users to generate analytical reports using SQL queries in real-time.
+description: ClickHouse is an open-source database designed for real-time apps
+  and analytics. It is the fastest and most resource-efficient database for
+  querying billions of rows in milliseconds. ClickHouse supports all the data
+  sources you need to power your apps and use cases that require exceptional
+  performance. It uses a column-oriented storage format, which makes it at least
+  100x faster than row-oriented databases for processing most queries.
+  ClickHouse can be deployed in various environments, including local machines,
+  cloud platforms, and as a fully managed service. It is trusted by developers
+  working with data at scale and has been adopted by companies like Disney+,
+  Uber, Cloudflare, and GitLab. ClickHouse is free to use and has a large and
+  active community for support and collaboration.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -32,3 +42,52 @@ schema:
       type: string
       title: App Service Image
       default: clickhouse/clickhouse-server:22.6-alpine
+tags:
+  - Data Science
+  - Databases
+benefits:
+  - title: Fast and efficient
+    description: ClickHouse is designed to process analytical queries as fast as
+      possible. It uses all available system resources to achieve exceptional
+      performance, making it at least 100x faster than row-oriented databases.
+  - title: Supports various data sources
+    description: ClickHouse supports databases, data warehouses, streams, logs,
+      analytics, data lake formats, local files, data visualization tools, and
+      various languages and drivers. It can integrate with any data source you
+      need for your applications and use cases.
+  - title: Flexible deployment options
+    description: ClickHouse can be deployed in different environments, including
+      local machines, cloud platforms, and as a fully managed service. It
+      provides flexibility in choosing the deployment option that best suits
+      your needs.
+  - title: Trusted by industry leaders
+    description: ClickHouse is trusted by companies like Disney+, Uber, Cloudflare,
+      and GitLab for their data processing and analytics needs. It has been
+      proven to handle large amounts of data and support high-performance
+      applications.
+  - title: Open-source and community-driven
+    description: ClickHouse is an open-source project with a large and active
+      community. It is continuously developed and improved by a community of
+      contributors. The community provides support, documentation, and resources
+      for users.
+features:
+  - title: Fast query performance
+    description: ClickHouse is optimized for fast query performance. It uses a
+      column-oriented storage format and leverages system resources to process
+      analytical queries in milliseconds.
+  - title: Scalability and high availability
+    description: ClickHouse is designed to handle large amounts of data and support
+      high-performance applications. It can scale horizontally to handle
+      increasing data volumes and ensure high availability.
+  - title: Wide range of data sources
+    description: ClickHouse supports various data sources, including databases, data
+      warehouses, streams, logs, analytics, data lake formats, local files, data
+      visualization tools, and different languages and drivers.
+  - title: Flexible deployment options
+    description: ClickHouse can be deployed on local machines, cloud platforms, or
+      as a fully managed service. It provides flexibility in choosing the
+      deployment option that best suits your needs.
+  - title: Easy integration with existing systems
+    description: ClickHouse can easily integrate with your existing systems and
+      workflows. It supports popular data formats and provides connectors for
+      seamless integration with other tools and platforms.

@@ -1,5 +1,8 @@
 name: SimpleTorrent
-description: SimpleTorrent is a a self-hosted remote torrent client, written in Go (golang). Started torrents remotely, download sets of files on the local disk of the server, which are then retrievable or streamable via HTTP.
+description: SimpleTorrent is a self-hosted remote torrent client written in Go.
+  It allows users to start torrents remotely and download sets of files on the
+  local disk of the server. The downloaded files can be retrieved or streamed
+  via HTTP.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -30,3 +33,114 @@ schema:
       type: string
       title: App Service Image
       default: boypt/cloud-torrent:1.3.9
+tags:
+  - File Management
+  - Developer Tools
+benefits:
+  - title: Individual file download control
+    description: Users have control over which files within a torrent they want to download.
+  - title: Run external program on task completion
+    description: Users can specify an external program to run when a torrent
+      download is completed.
+  - title: Seeding ratio control
+    description: Users can set a seeding ratio for a torrent, and the task will
+      automatically stop when the ratio is reached.
+  - title: Download/Upload speed limiter
+    description: Users can limit the download and upload speeds of torrent downloads.
+  - title: Detailed transfer stats
+    description: The web UI provides detailed transfer statistics for each torrent download.
+  - title: Torrent Watcher
+    description: SimpleTorrent includes a Torrent Watcher feature that monitors a
+      directory for new torrent files and automatically starts downloading them.
+  - title: K8s/docker health-check endpoint
+    description: SimpleTorrent provides a health-check endpoint for Kubernetes or
+      Docker deployments.
+  - title: Extra trackers from external source
+    description: Users can add extra trackers to a torrent from an external source.
+  - title: Protocol Handler to magnet
+    description: SimpleTorrent supports magnet links and provides a protocol handler
+      for easy integration with other applications.
+  - title: RSS subscribing supported
+    description: Users can subscribe to RSS feeds and automatically start
+      downloading torrents based on the feed items.
+  - title: Flexible config file
+    description: SimpleTorrent accepts multiple formats for the config file,
+      including JSON, YAML, and TOML.
+  - title: Single binary
+    description: SimpleTorrent is distributed as a single binary file, making it
+      easy to install and run.
+  - title: Cross platform
+    description: SimpleTorrent is compatible with multiple operating systems,
+      including Linux, Windows, and macOS.
+  - title: Embedded torrent search
+    description: SimpleTorrent includes an embedded torrent search feature, allowing
+      users to search for torrents directly within the application.
+  - title: Real-time updates
+    description: The web UI provides real-time updates for torrent downloads,
+      including progress, speed, and status.
+  - title: Mobile-friendly
+    description: The web UI is designed to be mobile-friendly, allowing users to
+      manage torrent downloads from their mobile devices.
+  - title: Fast content server
+    description: SimpleTorrent includes a fast content server for serving downloaded
+      files over HTTP.
+  - title: IPv6 out of the box
+    description: SimpleTorrent has built-in support for IPv6, making it compatible
+      with IPv6 networks.
+  - title: Updated torrent engine
+    description: SimpleTorrent uses an updated torrent engine for improved
+      performance and stability.
+features:
+  - title: Individual file download control
+    description: Users have control over which files within a torrent they want to download.
+  - title: Run external program on task completion
+    description: Users can specify an external program to run when a torrent
+      download is completed.
+  - title: Seeding ratio control
+    description: Users can set a seeding ratio for a torrent, and the task will
+      automatically stop when the ratio is reached.
+  - title: Download/Upload speed limiter
+    description: Users can limit the download and upload speeds of torrent downloads.
+  - title: Detailed transfer stats
+    description: The web UI provides detailed transfer statistics for each torrent download.
+  - title: Torrent Watcher
+    description: SimpleTorrent includes a Torrent Watcher feature that monitors a
+      directory for new torrent files and automatically starts downloading them.
+  - title: K8s/docker health-check endpoint
+    description: SimpleTorrent provides a health-check endpoint for Kubernetes or
+      Docker deployments.
+  - title: Extra trackers from external source
+    description: Users can add extra trackers to a torrent from an external source.
+  - title: Protocol Handler to magnet
+    description: SimpleTorrent supports magnet links and provides a protocol handler
+      for easy integration with other applications.
+  - title: RSS subscribing supported
+    description: Users can subscribe to RSS feeds and automatically start
+      downloading torrents based on the feed items.
+  - title: Flexible config file
+    description: SimpleTorrent accepts multiple formats for the config file,
+      including JSON, YAML, and TOML.
+  - title: Single binary
+    description: SimpleTorrent is distributed as a single binary file, making it
+      easy to install and run.
+  - title: Cross platform
+    description: SimpleTorrent is compatible with multiple operating systems,
+      including Linux, Windows, and macOS.
+  - title: Embedded torrent search
+    description: SimpleTorrent includes an embedded torrent search feature, allowing
+      users to search for torrents directly within the application.
+  - title: Real-time updates
+    description: The web UI provides real-time updates for torrent downloads,
+      including progress, speed, and status.
+  - title: Mobile-friendly
+    description: The web UI is designed to be mobile-friendly, allowing users to
+      manage torrent downloads from their mobile devices.
+  - title: Fast content server
+    description: SimpleTorrent includes a fast content server for serving downloaded
+      files over HTTP.
+  - title: IPv6 out of the box
+    description: SimpleTorrent has built-in support for IPv6, making it compatible
+      with IPv6 networks.
+  - title: Updated torrent engine
+    description: SimpleTorrent uses an updated torrent engine for improved
+      performance and stability.

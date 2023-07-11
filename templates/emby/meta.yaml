@@ -1,5 +1,15 @@
 name: Emby
-description: Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.
+description: Emby is a personal media server that allows you to manage your home
+  videos, music, and photos in one place. It automatically converts and streams
+  your media on-the-fly to play on any device. With Emby Connect, you can easily
+  access your personal media while away from home. You can also stream live TV,
+  manage your DVR, and control content access for your children. Emby organizes
+  your media into beautiful displays and notifies you of server activity. Emby
+  apps are available for Android, iPhone, iPad, Windows Phone, Windows Tablets,
+  Android TV, Amazon Fire TV, Chromecast, Roku, Xbox, Home Theater Computers,
+  and more. With Emby Premiere, you can enjoy additional features such as Cover
+  Art, Mobile Sync, Cloud Sync, and free Android apps. Join the Emby community
+  and share your experiences with other media enthusiasts.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -34,3 +44,37 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/emby:4.7.11
+tags:
+  - Media
+  - Streaming
+benefits:
+  - title: Easy Access
+    description: Emby Connect makes it easy to enjoy your personal media while away
+      from home. No more fumbling with IP addresses. Just sign in and play.
+  - title: Live TV
+    description: Stream Live TV to any device, manage your DVR, and enjoy your
+      library of recordings.
+  - title: Manage Your Home
+    description: Easily control content access for your children. Monitor and remote
+      control their sessions as you need to.
+features:
+  - title: Automatic Organization
+    description: Emby organizes your personal media into rich, beautiful displays.
+  - title: Stay Notified
+    description: Emby will automatically notify you of server activity based on
+      events and actions that are important to you.
+  - title: Emby Apps
+    description: Take your home videos, music, and photos with you wherever you go,
+      even offline with Emby Mobile Sync. Emby mobile apps are available for
+      Android, iPhone, iPad, Windows Phone and Windows Tablets. Or sit back and
+      enjoy Emby from the living room. Emby apps are available for Android TV,
+      Amazon Fire TV, Chromecast, Roku, Xbox, Home Theater Computers, and more.
+  - title: Parental Controls
+    description: DLNA
+  - title: Try Emby Premiere
+    description: Purchase Emby Premiere and receive additional bonus features such
+      as Cover Art, Mobile Sync, Cloud Sync, and free Android apps.
+  - title: Welcome to the Community
+    description: Join the best group of media enthusiasts around and share your
+      experiences with us. We’re all working together to make our media more
+      fun!

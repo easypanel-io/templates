@@ -1,9 +1,12 @@
 name: Duplicati
-description: "Duplicati is a free, open source, backup client that securely
-  stores encrypted, incremental, compressed backups on cloud storage services
-  and remote file servers. It works with: Amazon S3, OneDrive, Google Drive,
-  Rackspace Cloud Files, HubiC, Backblaze (B2), Amazon Cloud Drive (AmzCD),
-  Swift / OpenStack, WebDAV, SSH (SFTP), FTP, and more!"
+description: Duplicati is a free backup software that allows you to store
+  encrypted backups online. It works on Windows, macOS, and Linux. You can
+  backup files and folders with strong AES-256 encryption, save space with
+  incremental backups and data deduplication, and run backups through the
+  web-based interface or command line interface. Duplicati supports various
+  protocols and services for backup storage, including FTP, SSH, WebDAV,
+  Backblaze B2, Microsoft OneDrive, Amazon S3, Google Drive, and more. It is
+  free and open source, and runs on Windows, Linux, and macOS.
 instructions: null
 changeLog:
   - date: 2022-08-05
@@ -36,3 +39,38 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/duplicati:2.0.6
+tags:
+  - Cloud Storage
+  - Backup
+benefits:
+  - title: Secure Backup
+    description: Duplicati uses strong AES-256 encryption to protect your privacy.
+      You can also use GPG to encrypt your backup.
+  - title: Online Backup
+    description: Duplicati was designed for online backups and handles network
+      issues nicely. It can resume interrupted backups and regularly tests the
+      content of backups.
+  - title: Cross-Platform
+    description: Duplicati runs on Windows, macOS, and Linux, making it accessible
+      on different operating systems.
+features:
+  - title: Multiple Backends
+    description: Duplicati works with standard protocols like FTP, SSH, WebDAV, as
+      well as popular services like Backblaze B2, Microsoft OneDrive, Amazon S3,
+      Google Drive, and more.
+  - title: Strong Encryption
+    description: Backup files and folders with strong AES-256 encryption to ensure
+      the security of your data.
+  - title: Incremental Backups
+    description: Save space with incremental backups that only backup changed parts
+      of files.
+  - title: Web-based Interface
+    description: Duplicati is configured through a web interface that can be
+      accessed from any browser, even on mobile devices.
+  - title: Command Line Interface
+    description: Run backups on any machine through the command line interface.
+  - title: Built-in Scheduler
+    description: Duplicati has a built-in scheduler for automated backups.
+  - title: Free and Open Source
+    description: Duplicati is free software and open source, licensed under LGPL. It
+      can be used for free, even for commercial purposes.

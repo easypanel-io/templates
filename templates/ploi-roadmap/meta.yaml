@@ -1,6 +1,10 @@
 name: Ploi Roadmap
-description: Welcome to Roadmap, the open-source software for your roadmapping needs.
-instructions: After First Deployment, run "php artisan roadmap:install" to setup the inital user account.
+description: Roadmap is an open-source software for roadmapping needs. It allows
+  users to create and customize roadmaps, mention users in comments, upvote
+  items, and generate automatic OG images. It also has a simplified role system
+  and supports OAuth 2 single sign-on.
+instructions: After First Deployment, run "php artisan roadmap:install" to setup
+  the inital user account.
 changeLog:
   - date: 2023-1-6
     description: first release
@@ -52,3 +56,30 @@ schema:
       type: string
       title: Timezone
       default: utc
+tags:
+  - Documentation
+  - Developer Tools
+benefits:
+  - title: Customizable Roadmapping
+    description: Create and customize roadmaps according to your needs.
+  - title: Collaboration
+    description: Mention users in comments and upvote items to prioritize tasks.
+  - title: Automatic OG Image Generation
+    description: Generate branded OG images for your roadmaps.
+  - title: Simplified Role System
+    description: Manage user roles with a simplified role system.
+  - title: OAuth 2 Single Sign-On
+    description: Enable single sign-on with your own application using OAuth 2.
+features:
+  - title: Customizable Roadmaps
+    description: Create and customize roadmaps according to your needs.
+  - title: Mention Users in Comments
+    description: Collaborate with team members by mentioning them in comments.
+  - title: Upvote Items
+    description: Prioritize tasks by upvoting items.
+  - title: Automatic OG Image Generation
+    description: Generate branded OG images for your roadmaps.
+  - title: Simplified Role System
+    description: Manage user roles with a simplified role system.
+  - title: OAuth 2 Single Sign-On
+    description: Enable single sign-on with your own application using OAuth 2.

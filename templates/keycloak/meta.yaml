@@ -1,5 +1,19 @@
 name: Keycloak
-description: Open Source Identity and Access Management For Modern Applications and Services
+description: Keycloak is an open-source Identity and Access Management (IAM)
+  solution that provides authentication, authorization, and user management for
+  applications and services. It allows you to add authentication to your
+  applications with minimum effort, eliminating the need to store and
+  authenticate users. Keycloak supports single sign-on, enabling users to
+  authenticate once and access multiple applications without having to log in
+  again. It also supports identity brokering, allowing users to log in with
+  social networks or existing identity providers. Keycloak provides centralized
+  management through an admin console, where administrators can configure
+  identity brokering, user federation, and fine-grained authorization policies.
+  Users can manage their own accounts through the account management console,
+  where they can update their profile, change passwords, and set up two-factor
+  authentication. Keycloak is based on standard protocols such as OpenID
+  Connect, OAuth 2.0, and SAML, and it offers high performance, scalability, and
+  customization options through themes and extensions.
 instructions: null
 changeLog:
   - date: 2023-3-16
@@ -45,3 +59,54 @@ schema:
     keycloakPassword:
       type: string
       title: Password
+tags:
+  - Security
+  - Developer Tools
+benefits:
+  - title: Single Sign-On
+    description: Users authenticate with Keycloak once and can access multiple
+      applications without having to log in again.
+  - title: Identity Brokering and Social Login
+    description: Keycloak supports login with social networks and existing identity
+      providers, making it easy to integrate with external authentication
+      systems.
+  - title: User Federation
+    description: Keycloak can connect to existing LDAP or Active Directory servers,
+      or you can implement your own user provider.
+  - title: Centralized Management
+    description: Administrators can manage all aspects of the Keycloak server
+      through the admin console, including identity brokering, user federation,
+      and fine-grained authorization.
+  - title: Standard Protocols
+    description: Keycloak is based on standard protocols such as OpenID Connect,
+      OAuth 2.0, and SAML, ensuring compatibility with a wide range of
+      applications and services.
+features:
+  - title: Single-Sign On
+    description: Users authenticate with Keycloak rather than individual
+      applications, eliminating the need for separate login forms and user
+      authentication.
+  - title: Identity Brokering and Social Login
+    description: Keycloak supports login with social networks and existing OpenID
+      Connect or SAML 2.0 identity providers, simplifying the authentication
+      process for users.
+  - title: User Federation
+    description: Keycloak has built-in support for connecting to existing LDAP or
+      Active Directory servers, and you can implement your own provider for
+      other user stores.
+  - title: Admin Console
+    description: Administrators can centrally manage all aspects of the Keycloak
+      server through the admin console, including identity brokering, user
+      federation, application management, and fine-grained authorization.
+  - title: Account Management Console
+    description: Users can manage their own accounts through the account management
+      console, where they can update their profile, change passwords, and set up
+      two-factor authentication.
+  - title: Standard Protocols
+    description: Keycloak is based on standard protocols such as OpenID Connect,
+      OAuth 2.0, and SAML, ensuring compatibility with a wide range of
+      applications and services.
+  - title: Authorization Services
+    description: In addition to role-based authorization, Keycloak provides
+      fine-grained authorization services, allowing you to define custom
+      policies for managing permissions.

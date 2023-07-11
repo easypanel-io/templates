@@ -1,9 +1,17 @@
 name: Bookstack
 description: BookStack is a simple, self-hosted, easy-to-use platform for
-  organising and storing information. The content in BookStack is fully
-  searchable. You are able to search at book level or across all books, chapters
-  & pages. BookStack is built using PHP, on top of the Laravel framework and it
-  uses MySQL to store data.
+  organizing and storing information. It is a free and open-source wiki software
+  that allows users to create and manage books, chapters, and pages. The content
+  in BookStack is fully searchable, and users can link directly to any paragraph
+  to keep documentation connected. BookStack is highly configurable, allowing
+  users to customize the name, logo, and registration options. It is built using
+  PHP and MySQL and can run on a $5 Digital Ocean VPS. BookStack supports
+  multiple languages and offers an optional Markdown editor. It also provides
+  integrated authentication with social providers and enterprise options like
+  Okta, SAML2, and LDAP. Other features include powerful search and linking,
+  page revisions, image management, role and permission system, multi-factor
+  authentication, dark and light modes, and more. BookStack is developed by Dan
+  Brown and the community.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -47,3 +55,47 @@ schema:
       type: string
       title: Database Service Name
       default: bookstack-db
+tags:
+  - Documentation
+  - CMS
+benefits:
+  - title: Simple and Easy to Use
+    description: BookStack has a simple and intuitive interface, making it easy for
+      users to organize and store information.
+  - title: Fully Searchable and Connected
+    description: The content in BookStack is fully searchable, and users can link
+      directly to any paragraph to keep documentation connected.
+  - title: Configurable and Customizable
+    description: BookStack is highly configurable, allowing users to customize the
+      name, logo, registration options, and more.
+  - title: Multi-Lingual Support
+    description: BookStack supports multiple languages, thanks to community contributors.
+  - title: Integrated Authentication
+    description: BookStack provides integrated authentication with social providers
+      like GitHub, Google, Slack, AzureAD, and more. It also offers options for
+      enterprise environments like Okta, SAML2, and LDAP.
+  - title: Powerful Features
+    description: BookStack offers powerful features such as search and linking,
+      cross-book sorting, page revisions, image management, role and permission
+      system, multi-factor authentication, dark and light modes, and more.
+features:
+  - title: Simple and Easy Interface
+    description: BookStack has a simple WYSIWYG interface for editing pages, and all
+      content is organized into books, chapters, and pages.
+  - title: Free and Open Source
+    description: BookStack is fully free and open-source, released under the MIT license.
+  - title: Low System Requirements
+    description: BookStack is built using PHP and MySQL and can run on a $5 Digital
+      Ocean VPS.
+  - title: Built-In Diagrams
+    description: BookStack has built-in diagrams.net drawing capability for creating
+      diagrams within documentation.
+  - title: Optional Markdown Editor
+    description: BookStack supports writing in Markdown with a provided markdown
+      editor and live-preview.
+  - title: Multi-Factor Authentication
+    description: BookStack has built-in multi-factor authentication options,
+      including TOTP and static backup codes.
+  - title: Dark and Light Modes
+    description: BookStack provides both a light theme and a dark theme for the user
+      interface.

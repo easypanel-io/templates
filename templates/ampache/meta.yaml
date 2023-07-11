@@ -1,6 +1,10 @@
 name: Ampache
-description: A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
-instructions: MySQL Username is "admin". The logs will show a line that says "mysql -uadmin -pjnzYXLz7cMzq -h<host> -P<port>"". The password is everything after "-p", in this case "jnzYXLz7cMzq".
+description: Ampache is a web-based audio/video streaming application and file
+  manager that allows you to access your music and videos from anywhere using
+  almost any internet-enabled device.
+instructions: MySQL Username is "admin". The logs will show a line that says
+  "mysql -uadmin -pjnzYXLz7cMzq -h<host> -P<port>"". The password is everything
+  after "-p", in this case "jnzYXLz7cMzq".
 changeLog:
   - date: 2023-03-19
     description: Template created (v5.5.7)
@@ -38,3 +42,38 @@ schema:
     appMediaHostPath:
       type: string
       title: Media Host Path
+tags:
+  - File Management
+  - Media
+benefits:
+  - title: Access your music and videos from anywhere
+    description: With Ampache, you can stream your music and videos from any
+      internet-enabled device, whether it's your phone, tablet, or computer.
+  - title: Manage your music collection
+    description: Ampache provides a simple web interface for browsing and managing
+      your music collection. You can synchronize local and remote catalogs to
+      create a consistent collection.
+  - title: Stream music to your preferred player
+    description: You can stream your music to your preferred player, control it with
+      Localplay, or directly listen on the web page with the HTML5 player.
+  - title: Completely free and open source
+    description: Ampache has been free and open source since 2001 and is licensed
+      under AGPLv3. You can get involved and take control of the application.
+  - title: Access Ampache everywhere
+    description: You can listen to your music from your phone, tablet, or
+      television. Whether you're at home, work, or on vacation, you can access
+      Ampache using a compatible client.
+features:
+  - title: Music collection
+    description: Browse and manage your music collection through a simple web
+      interface. Synchronize local and remote catalogs to create a consistent
+      collection.
+  - title: Music streaming
+    description: Stream your music to your preferred player, control it with
+      Localplay, or directly listen on the web page with the HTML5 player.
+  - title: Open source
+    description: Ampache is completely free and open source since 2001. It is
+      licensed under AGPLv3, allowing you to get involved and take control.
+  - title: Ampache everywhere
+    description: Listen to your music from your phone, tablet, or television. Access
+      Ampache everywhere using a compatible client.

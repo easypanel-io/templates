@@ -1,5 +1,8 @@
 name: Gogs
-description: Gogs is a painless self-hosted Git service
+description: Gogs is a self-hosted Git service that aims to be simple, stable,
+  and extensible. It can be set up easily on various platforms and supports
+  features like user management, repository access, webhooks, Git hooks, issues,
+  pull requests, wiki, and more. Gogs is open source and free to use.
 instructions: null
 changeLog:
   - date: 2023-3-16
@@ -37,3 +40,39 @@ schema:
       type: number
       title: SSH Port
       default: 2222
+tags:
+  - Code Hosting
+  - Developer Tools
+benefits:
+  - title: Easy to install
+    description: Gogs can be installed by running the binary for your platform,
+      using Docker or Vagrant, or getting it packaged. It has low minimal
+      requirements and can even run on a Raspberry Pi or NAS devices.
+  - title: Cross-platform
+    description: Gogs runs on any platform that Go can compile for, including
+      Windows, Mac, Linux, and ARM-based systems.
+  - title: Open source
+    description: Gogs is 100% open source and free of charge. All source code is
+      available under the MIT License on GitHub.
+features:
+  - title: User management
+    description: Gogs provides a user dashboard, user profile, and activity timeline
+      for managing users.
+  - title: Repository access
+    description: Gogs supports SSH, HTTP, and HTTPS protocols for accessing repositories.
+  - title: Webhooks and Git hooks
+    description: Gogs allows you to set up webhooks for repositories, as well as Git
+      hooks for custom actions.
+  - title: Issues, pull requests, and wiki
+    description: Gogs provides features for managing issues, pull requests, and a
+      wiki for collaboration.
+  - title: Authentication
+    description: Gogs supports authentication via SMTP, LDAP, reverse proxy,
+      GitHub.com, and GitHub Enterprise with 2FA.
+  - title: Customization
+    description: Gogs allows you to customize HTML templates, static files, and more.
+  - title: Database backend
+    description: Gogs supports various database backends, including PostgreSQL,
+      MySQL, SQLite3, and TiDB.
+  - title: Localization
+    description: Gogs is available in over 31 languages.

@@ -1,5 +1,8 @@
 name: Netbox
-description: The premiere source of truth powering network automation.
+description: NetBox is a comprehensive DCIM solution that serves as the source
+  of truth for everything on your network. It provides visibility and control
+  across the entire enterprise, allowing efficient management of IP assets and
+  customization of functionality to fit your needs.
 instructions: null
 changeLog:
   - date: 2023-3-17
@@ -50,3 +53,28 @@ schema:
     netboxPassword:
       type: string
       title: Password
+tags:
+  - Network Tools
+  - Dashboard
+benefits:
+  - title: Comprehensive DCIM Solution
+    description: Gain visibility and control across the entire enterprise.
+  - title: IP Address Management
+    description: Efficient management of IP assets across the enterprise, removing
+      the danger from data entry errors.
+  - title: Customization and Integration
+    description: Customize and extend NetBox's functionality to fit your needs.
+features:
+  - title: Built for Networks
+    description: NetBox has a curated data model specifically designed for network
+      engineers and operators, covering all facets of network technology.
+  - title: Customizable & Extensible
+    description: NetBox offers various customization and extension mechanisms,
+      including custom fields, validation, export templates, webhooks, plugins,
+      and REST & GraphQL APIs.
+  - title: Always Open
+    description: NetBox is an open source application licensed under Apache 2,
+      allowing complete access to the code base and avoiding vendor lock-in.
+  - title: Powered by Python
+    description: NetBox is built on the Django framework for Python, making it easy
+      for network engineers to extend its functionality using Python tools.

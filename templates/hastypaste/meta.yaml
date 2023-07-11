@@ -1,5 +1,14 @@
 name: Hasty Paste
-description: A fast and minimal paste bin, written in Python using Quart.
+description: Hasty Paste is a fast and minimal paste bin app that allows users
+  to quickly paste and share text. It is commonly used for sharing debug logs
+  and providing tech support. The app is designed to be lightweight and
+  resource-efficient, with features such as publicly accessible pastes, randomly
+  generated IDs, optional long IDs for added security, expiring pastes, dark
+  theme, and optional syntax highlighting. It also offers a REST API and
+  supports custom file systems, including flat-file system and S3 objects. Hasty
+  Paste is available as a lightweight Docker image and is easy to install and
+  use. The project is actively maintained and welcomes contributions from the
+  community.
 instructions: Hasty Paste takes a minute or two on first launch.
 changeLog:
   - date: 2022-10-30
@@ -37,3 +46,81 @@ schema:
       type: string
       title: Redis Service Name
       default: hastypaste-redis
+tags:
+  - Developer Tools
+  - Web Hosting
+benefits:
+  - title: Fast and Minimal
+    description: Hasty Paste is designed to be fast and minimal, allowing users to
+      quickly paste and share text without any unnecessary features or
+      distractions.
+  - title: Publicly Accessible
+    description: Pastes created in Hasty Paste are publicly accessible, meaning no
+      authentication is required to view or access the shared text.
+  - title: Secure and Random IDs
+    description: Hasty Paste generates random IDs for each paste, reducing the risk
+      of brute force attacks. It also offers an optional 'long' ID for added
+      security.
+  - title: Expiring Pastes
+    description: Users can choose to create expiring pastes, which automatically
+      delete after a certain period of time. This is useful for sharing
+      temporary or sensitive information.
+  - title: Dark Theme
+    description: Hasty Paste offers a dark theme option for users who prefer a
+      darker interface.
+  - title: Optional Syntax Highlighting
+    description: Users can enable optional syntax highlighting for their pastes,
+      making it easier to read and understand code snippets.
+  - title: REST API
+    description: Hasty Paste provides a REST API for programmatic access to create
+      and manage pastes. This allows developers to integrate the app into their
+      own applications or workflows.
+  - title: Custom File Systems
+    description: Hasty Paste supports custom file systems, including a flat-file
+      system and S3 objects. This flexibility allows users to choose the storage
+      solution that best fits their needs.
+  - title: Lightweight Docker Image
+    description: Hasty Paste is available as a lightweight Docker image, built on
+      Alpine Linux. This makes it easy to deploy and run the app in
+      containerized environments.
+features:
+  - title: Quickly Paste and Save
+    description: Hasty Paste allows users to quickly paste and save text, making it
+      easy to share information with others.
+  - title: Randomly Generated IDs
+    description: Each paste in Hasty Paste is assigned a randomly generated ID,
+      ensuring uniqueness and reducing the risk of brute force attacks.
+  - title: Optional 'Long' IDs
+    description: Hasty Paste offers an optional 'long' ID format, which provides
+      added security by increasing the complexity of the ID.
+  - title: Expiring Pastes
+    description: Users can choose to create expiring pastes, which automatically
+      delete after a certain period of time. This is useful for sharing
+      temporary or sensitive information.
+  - title: Dark Theme
+    description: Hasty Paste offers a dark theme option, providing a visually
+      appealing interface for users who prefer darker colors.
+  - title: Optional Syntax Highlighting
+    description: Users can enable optional syntax highlighting for their pastes,
+      making it easier to read and understand code snippets.
+  - title: No JavaScript Needed
+    description: Hasty Paste does not require JavaScript to function, ensuring
+      compatibility with a wide range of devices and browsers.
+  - title: Minimal Resource Usage
+    description: Hasty Paste is designed to use minimal resources, making it
+      efficient and lightweight.
+  - title: REST API
+    description: Hasty Paste provides a REST API for programmatic access to create
+      and manage pastes. This allows developers to integrate the app into their
+      own applications or workflows.
+  - title: Pick Your File System
+    description: Hasty Paste supports custom file systems, allowing users to choose
+      the storage solution that best fits their needs. Options include a custom
+      flat-file system and S3 objects.
+  - title: Caching
+    description: Hasty Paste supports caching, both internal and with Redis, to
+      improve performance and reduce load on the file system.
+  - title: Lightweight Docker Image
+    description: Hasty Paste is available as a lightweight Docker image, built on
+      Alpine Linux. This makes it easy to deploy and run the app in
+      containerized environments.

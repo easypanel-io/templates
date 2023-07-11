@@ -1,5 +1,9 @@
 name: Memos
-description: An open-source, self-hosted memo hub with knowledge management and socialization.
+description: memos is a lightweight, self-hosted memo hub that provides privacy,
+  security, and reliability. It allows users to keep their own data and supports
+  plain text with Markdown. The app is customizable and open source, and all
+  features are free forever. Contributions are welcome from the open-source
+  community.
 instructions: null
 changeLog:
   - date: 2022-12-21
@@ -36,3 +40,35 @@ schema:
       type: string
       title: Timezone
       default: America/New_York
+tags:
+  - Productivity
+  - CMS
+benefits:
+  - title: Privacy First
+    description: Keep your own data by yourself. All data generated at runtime is
+      saved in the SQLite database file.
+  - title: Customizable
+    description: You can customize the server name, icon, description, custom system
+      style, and execution script.
+  - title: Open Source
+    description: All code is open source on GitHub.
+  - title: Free Forever
+    description: All features are free forever and will never be charged.
+features:
+  - title: Privacy First
+    description: memos ensures privacy by keeping all data generated at runtime
+      saved in the SQLite database file.
+  - title: Plain Text with Markdown
+    description: All content in memos is saved as plain text with support for useful
+      Markdown syntax.
+  - title: Lightweight but Powerful
+    description: memos is built using Go + React.js + SQLite architecture, making it
+      lightweight yet powerful.
+  - title: Customizable
+    description: Users can customize the server name, icon, description, custom
+      system style, and execution script in memos.
+  - title: Open Source
+    description: memos is completely open source on GitHub, allowing users to
+      contribute and improve the app.
+  - title: Free Forever
+    description: All features in memos are free forever and will never be charged.
