@@ -1,0 +1,38 @@
+name: OctoPrint
+description: The snappy web interface for your 3D printer.
+instructions: null
+changeLog:
+  - date: 2023-07-11
+    description: First Release
+links:
+  - label: Website
+    url: https://octoprint.org
+  - label: Docs
+    url: https://docs.octoprint.org
+  - label: Github
+    url: https://github.com/OctoPrint/OctoPrint
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    enableMjpgStreamer:
+      type: boolean
+      title: Enable MJPG Streamer
+      default: false
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: octoprint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: octoprint/octoprint:1.9
