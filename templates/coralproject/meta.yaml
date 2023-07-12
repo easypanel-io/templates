@@ -57,6 +57,10 @@ schema:
       type: string
       title: Database Service Name
       default: coral-db
+    enableMetricsPort:
+      type: boolean
+      title: Metrics Port Enable
+      default: false
 tags:
   - Community
   - Web Hosting
