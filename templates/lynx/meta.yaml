@@ -1,9 +1,6 @@
 name: Lynx
-description: Lynx is a fullstack application using the MEVN stack to shorten
-  URLs. It provides an admin interface, the option to redirect the root path,
-  and a simple UI. It allows users to create shortened links with custom slugs.
-instructions: Registration is disabled by default, but the first registration
-  will always be allowed.
+description: A fullstack application using the MEVN stack to shorten your URLs.
+instructions: Registration is disabled by default, but the first registration will always be allowed.
 changeLog:
   - date: 2023-3-15
     description: first release
@@ -42,30 +39,3 @@ schema:
       type: string
       title: Database Service Name
       default: lynx-db
-tags:
-  - Developer Tools
-  - Web Hosting
-benefits:
-  - title: Shorten URLs
-    description: Lynx allows users to shorten long URLs, making them easier to share
-      and remember.
-  - title: Custom Slugs
-    description: Users can create custom slugs for their shortened links, making
-      them more personalized and memorable.
-  - title: Admin Interface
-    description: Lynx provides an admin interface for managing the shortened links
-      and user accounts.
-features:
-  - title: Shorten URLs
-    description: Easily shorten long URLs with just a few clicks.
-  - title: Custom Slugs
-    description: Create custom slugs for your shortened links to make them more
-      personalized.
-  - title: Admin Interface
-    description: Manage your shortened links and user accounts with the built-in
-      admin interface.
-  - title: Redirect Root Path
-    description: Option to redirect the root path to a specific URL.
-  - title: Simple UI
-    description: Lynx has a simple and user-friendly interface for easy navigation
-      and link management.

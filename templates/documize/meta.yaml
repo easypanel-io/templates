@@ -1,13 +1,5 @@
 name: Documize
-description: Documize is a powerful app that combines Zerabase and Community to
-  provide a comprehensive solution for product engineering and knowledge
-  management. Zerabase is a desktop software that centralizes product plans,
-  assets, documents, app analytics, and customer conversations, making it a
-  game-changer for product teams. Community, on the other hand, is a self-hosted
-  knowledge management solution that allows you to capture and share internal
-  operational know-how, processes, guidelines, and manuals. With Documize, you
-  can power your business with these two powerful tools and achieve better
-  outcomes.
+description: Documize Community is an open source, self-hosted, modern, lightweight alternative to Confluence and other similar solutions.
 instructions: null
 changeLog:
   - date: 2023-1-24
@@ -47,30 +39,3 @@ schema:
       type: string
       title: Database Service Name
       default: documize-db
-tags:
-  - Documentation
-  - CMS
-benefits:
-  - title: Centralized Product Information
-    description: Zerabase allows you to centralize all your product plans, assets,
-      documents, app analytics, and customer conversations in one place, making
-      it easy for everyone in your team to access and act upon the information.
-  - title: Efficient Knowledge Management
-    description: Community provides a simple and delightful way to capture and share
-      knowledge management within your organization. It allows you to document
-      processes, guidelines, manuals, and everything in-between, making it easy
-      for your team to find and use the information they need.
-  - title: Flexible Deployment Options
-    description: Documize offers both cloud-based and self-hosted solutions, giving
-      you the flexibility to choose the deployment option that best suits your
-      organization's needs and security requirements.
-features:
-  - title: Zerabase Features
-    description: Zerabase offers features such as centralized product plans, assets,
-      documents, app analytics, and customer conversations, offline-first
-      desktop software, and integration with other tools like Productboard,
-      ProdPad, Notion, and Airfocus.
-  - title: Community Features
-    description: Community provides features like capturing and sharing knowledge
-      management, built-in workflows, self-hosted solution, and integration with
-      other tools like Confluence and Notion.

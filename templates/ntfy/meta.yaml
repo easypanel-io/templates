@@ -1,8 +1,5 @@
 name: Ntfy
-description: ntfy is a simple HTTP-based pub-sub notification service that
-  allows you to send push notifications to your phone or desktop via scripts
-  from any computer. It is used to notify yourself when scripts fail or
-  long-running commands complete.
+description: ntfy lets you send push notifications to your phone or desktop via scripts from any computer, using simple HTTP PUT or POST requests.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -33,37 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: binwiederhier/ntfy:v2.4.0
-tags:
-  - Web Hosting
-  - Developer Tools
-benefits:
-  - title: Easy to use
-    description: ntfy allows you to send push notifications using simple HTTP PUT or
-      POST requests, making it easy to integrate into your scripts or commands.
-  - title: Cross-platform
-    description: ntfy supports both Android and iOS devices, as well as desktop
-      notifications, so you can receive notifications on any device.
-  - title: No sign-up or fees
-    description: ntfy is free to use and does not require any sign-up or payment.
-      You can start sending push notifications right away.
-  - title: Open source
-    description: ntfy is an open source project, which means you can run your own
-      instance of the service if you prefer. The source code is available on
-      GitHub.
-features:
-  - title: Publishing messages
-    description: You can publish messages to ntfy using HTTP PUT or POST requests,
-      or using the ntfy CLI. Messages can be sent in any language and can
-      include custom content.
-  - title: Subscribing to topics
-    description: To receive notifications, you can subscribe to topics of your
-      choosing. Topics do not need to be explicitly created, so you can pick a
-      name and use it when publishing a message.
-  - title: Mobile and desktop support
-    description: ntfy supports both Android and iOS devices, allowing you to receive
-      push notifications on your phone. It also supports desktop notifications,
-      so you can receive notifications on your computer.
-  - title: API and self-hosting
-    description: ntfy provides an API that allows you to integrate push
-      notifications into your own applications. If you prefer, you can also run
-      your own instance of ntfy using the open source code.

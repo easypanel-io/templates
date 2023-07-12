@@ -1,10 +1,5 @@
 name: Nextcloud
-description: "Nextcloud Hub is a self-hosted collaboration platform that
-  integrates four key Nextcloud products: Files, Talk, Groupware, and Office. It
-  offers powerful access control, infrastructure integration, and customizable
-  features. With Nextcloud Hub, users can regain control over their data and
-  collaborate remotely with ease. The platform is scalable and can be deployed
-  on-premises or in the cloud, ensuring no data leaks to third parties."
+description: The self-hosted productivity platform that keeps you in control
 instructions: null
 changeLog:
   - date: 2022-07-22
@@ -59,38 +54,3 @@ schema:
       type: string
       title: Database Service Name
       default: nextcloud-db
-tags:
-  - Productivity
-  - Self-hosted
-benefits:
-  - title: Regain control over your data
-    description: Nextcloud Hub allows users to keep their data on servers they own,
-      ensuring data privacy and security.
-  - title: Remote collaboration made easy
-    description: Nextcloud Hub provides powerful collaboration capabilities,
-      allowing users to share, collaborate, and communicate across
-      organizational boundaries.
-  - title: Customizable and scalable
-    description: Nextcloud Hub can be customized to fit the specific needs of an
-      organization and can scale from small deployments to globally distributed
-      installations.
-  - title: No data leaks to third parties
-    description: Nextcloud Hub ensures that no data, including metadata, leaks to
-      third parties, providing complete control over data privacy.
-features:
-  - title: Nextcloud Files
-    description: Nextcloud Files offers an on-premise Universal File Access and sync
-      platform with powerful collaboration capabilities and desktop, mobile, and
-      web interfaces.
-  - title: Nextcloud Talk
-    description: Nextcloud Talk is a groupware solution that enables real-time
-      communication and collaboration through video chat, audio calls, and
-      messaging.
-  - title: Nextcloud Groupware
-    description: Nextcloud Groupware provides a suite of productivity tools,
-      including calendar, contacts, mail, and more, to enhance collaboration
-      within organizations.
-  - title: Nextcloud Office
-    description: Nextcloud Office is a web-based office suite that allows users to
-      create, edit, and collaborate on documents, spreadsheets, and
-      presentations.

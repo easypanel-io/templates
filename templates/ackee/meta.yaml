@@ -1,7 +1,7 @@
 name: Ackee
-description: Ackee is a self-hosted, Node.js based analytics tool that cares
-  about privacy. It runs on your own server, analyzes the traffic of your
-  websites, and provides useful statistics in a minimal interface.
+description: Self-hosted, Node.js based analytics tool for those who care about
+  privacy. Ackee runs on your own server, analyzes the traffic of your websites
+  and provides useful statistics in a minimal interface.
 instructions: null
 changeLog:
   - date: 2022-06-04
@@ -47,28 +47,3 @@ schema:
       type: string
       title: Database Service Name
       default: ackee-db
-tags:
-  - Analytics
-  - Privacy
-benefits:
-  - title: Privacy-focused analytics
-    description: Ackee keeps tracked data anonymized to avoid identifying users,
-      while still providing helpful insights.
-  - title: Self-hosted and open-source
-    description: Ackee runs on your own server and is 100% open-source, giving you
-      complete control over your data.
-  - title: Easy to integrate
-    description: Add a tracking script to your sites, similar to Google Analytics,
-      and start analyzing your data.
-features:
-  - title: Next level analytics
-    description: Ackee combines privacy-focused analytics and first-class insights
-      in a minimal interface.
-  - title: Data made beautiful
-    description: The minimal UI of Ackee allows you to analyze your data without
-      losing focus.
-  - title: Safe and anonymous
-    description: Ackee uses a multi-step anonymization process to ensure the privacy
-      of your users.
-  - title: Unlimited domains
-    description: Analyze as many domains and apps as you want with Ackee.

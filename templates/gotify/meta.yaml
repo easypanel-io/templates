@@ -1,13 +1,8 @@
 name: Gotify
-description: Gotify is a self-hosted push notification service that allows you
-  to send and receive messages in real-time. It is a simple and cross-platform
-  application written in Go. You have full control over your data as it is free
-  and open source. Gotify provides a REST API and a user interface for sending
-  messages, subscribing to message streams, and managing users, clients, and
-  applications. It also has an Android client that creates push notifications
-  for new messages. Gotify is easy to install and configure, and it supports
-  plugins for extending its functionality. The documentation provides detailed
-  information on installation, configuration, usage, and development of Gotify.
+description: Gotify is a simple server for sending and receiving messages.Both
+  Gotify's API and user interface are designed to be as simple as
+  possible.Gotify is written in Go and can be easily compiled for different
+  platforms.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -54,38 +49,3 @@ schema:
       type: string
       title: Timezone
       default: Europe/London
-tags:
-  - Communication
-  - Developer Tools
-benefits:
-  - title: Control Your Data
-    description: Gotify is a self-hosted service, which means you have full control
-      over your data. You can host it on your own server and ensure the privacy
-      and security of your messages.
-  - title: Free and Open Source
-    description: Gotify is licensed under the MIT license, which means it is free to
-      use and modify. You can customize it to fit your needs and contribute to
-      its development.
-  - title: Simple and Cross-Platform
-    description: Gotify is designed to be simple and easy to use. Both its API and
-      user interface are intuitive and user-friendly. It is written in Go, which
-      makes it cross-platform and easily compilable for different operating
-      systems.
-features:
-  - title: Push Notifications
-    description: Gotify allows you to send push notifications to your clients and
-      applications. You can customize the content, title, and priority of the
-      messages.
-  - title: Real-Time Messaging
-    description: Gotify uses WebSocket for real-time messaging. You can subscribe to
-      message streams and receive updates instantly.
-  - title: User Management
-    description: Gotify provides user management functionality. Users can create and
-      manage their own clients and applications, and view/edit/delete messages
-      sent by their applications.
-  - title: Android Client
-    description: Gotify has an Android client that allows you to subscribe to
-      message streams and receive push notifications on your mobile device.
-  - title: Plugins
-    description: Gotify supports plugins for extending its functionality. You can
-      write and deploy plugins to add new features and integrations.

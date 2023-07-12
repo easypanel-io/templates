@@ -1,13 +1,5 @@
 name: ICEcoder
-description: ICEcoder is a browser-based code editor that provides a modern
-  approach to building websites. It allows you to code directly within the web
-  browser, online or offline, eliminating the need for multiple programs.
-  ICEcoder offers features such as multiple cursors, themes, find and replace
-  builder, login security, code hints, and database management. It can be used
-  online or locally, and it runs on any internet-enabled computer with a modern
-  browser. ICEcoder is free to use and can be customized to integrate with
-  online services. It can also be used as a desktop code editor on Linux, PC,
-  and Mac.
+description: ICEcoder is a browser based code editor, which provides a modern approach to building websites.
 instructions: null
 armSupport: true
 changeLog:
@@ -41,40 +33,3 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/easypanel-community/docker-icecoder:8.1
-tags:
-  - Developer Tools
-  - Web Hosting
-benefits:
-  - title: Simplified Development
-    description: With ICEcoder, you only need one program (your browser) to develop
-      websites, making development faster and more efficient.
-  - title: Easy Maintenance
-    description: ICEcoder allows you to easily maintain websites after development,
-      ensuring smooth and hassle-free management.
-  - title: Flexibility and Customization
-    description: ICEcoder can be used online or locally, and it can be customized to
-      integrate with online services. It also offers a wide range of themes for
-      personalized coding experience.
-features:
-  - title: Multiple Cursors
-    description: Create multiple cursors and make text changes to affect all of them
-      simultaneously.
-  - title: Themes
-    description: Choose from 80+ highlighting themes or create your own with a CSS file.
-  - title: Find & Replace Builder
-    description: Apply find and replace to the current or all open documents,
-      filenames, and files.
-  - title: Login Secured
-    description: ICEcoder can be securely set up and is login secured to keep your
-      files safe. It also supports multi-user access.
-  - title: Type Boosters
-    description: Get coding assistance with features like Emmet, close tag
-      completion, and tag wrappers.
-  - title: Visual Code Diff
-    description: Visually compare code differences between two sets, with in-line
-      highlighting of changes.
-  - title: Code Hints
-    description: JavaScript code is linted with JS Hint as you type, ensuring good
-      coding practices.
-  - title: Database Management
-    description: Easily manage databases with the Adminer plugin, similar to phpMyAdmin.

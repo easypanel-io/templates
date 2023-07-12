@@ -1,12 +1,5 @@
 name: Owncast
-description: Owncast is a free and open source live video and web chat server
-  for use with existing popular broadcasting software. It allows you to have
-  complete control and ownership over your stream, including the content and
-  community. The built-in chat feature encourages engagement from viewers, and
-  the app works with your existing broadcasting software. Your live stream can
-  also reach a wider audience on The Fediverse, allowing people to follow and
-  share your stream on Mastodon and other Fediverse services. Owncast is praised
-  for its democratic freedom and ease of setup.
+description: A lightweight Node.js private proxy registry
 instructions: null
 changeLog:
   - date: 2023-2-21
@@ -39,40 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: gabekangas/owncast:0.0.13
-tags:
-  - Developer Tools
-  - Networking
-benefits:
-  - title: Complete Control and Ownership
-    description: Have complete control and ownership over your stream, allowing you
-      to create the content and community you want.
-  - title: Built-in Chat
-    description: The frictionless built-in chat allows your viewers to be a part of
-      the action. Include custom emotes and build chat bots to encourage
-      engagement from your viewers.
-  - title: Works with Your Software
-    description: Point your existing broadcasting software at your Owncast server
-      and begin streaming on your own server in minutes.
-  - title: Reach a Wider Audience
-    description: Your live stream can reach a wider audience on The Fediverse,
-      allowing people to follow and share your stream on Mastodon and other
-      Fediverse services.
-  - title: Democratic Freedom
-    description: For true democratic freedom, go with Owncast, a service that lets
-      you stream whatever you want to whoever you want without corporate
-      oversight.
-features:
-  - title: Self-hosted and Independent
-    description: Have complete control and ownership over your stream, allowing you
-      to create the content and community you want.
-  - title: Chat
-    description: The frictionless built-in chat allows your viewers to be a part of
-      the action. Include custom emotes and build chat bots to encourage
-      engagement from your viewers.
-  - title: Works with Your Software
-    description: Point your existing broadcasting software at your Owncast server
-      and begin streaming on your own server in minutes.
-  - title: The Fediverse
-    description: Your live stream can reach a wider audience on The Fediverse,
-      allowing people to follow and share your stream on Mastodon and other
-      Fediverse services.

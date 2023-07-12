@@ -1,9 +1,5 @@
 name: Radarr
-description: Radarr is a movie collection manager for Usenet and BitTorrent
-  users. It can monitor multiple RSS feeds for new movies and will interface
-  with clients and indexers to grab, sort, and rename them. It can also be
-  configured to automatically upgrade the quality of existing files in the
-  library when a better quality format becomes available.
+description: Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported.
 instructions: null
 changeLog:
   - date: 2022-10-30
@@ -35,43 +31,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/radarr:version-4.3.2.6857
-tags:
-  - RSS
-  - Media
-benefits:
-  - title: Convenient Movie Calendar
-    description: See all your upcoming movies in one convenient location.
-  - title: Manual Search
-    description: Find all the releases, choose the one you want and send it right to
-      your download client.
-  - title: Automatic Failed Download Handling
-    description: Radarr automatically blacklists failed downloads and tries another
-      one until it finds one that works.
-  - title: Custom Formats
-    description: Ensure you get the right release every time with fine control over
-      release prioritization and selection.
-features:
-  - title: Adding New Movies
-    description: Add new movies with lots of information, such as trailers, ratings, etc.
-  - title: Support for Major Platforms
-    description: Radarr is available for Windows, Linux, macOS, Raspberry Pi, and more.
-  - title: Automatic Quality Upgrade
-    description: Automatically upgrade the quality of existing files in the library
-      when a better quality format becomes available.
-  - title: Failed Download Handling
-    description: Automatically handle failed downloads by blacklisting and trying
-      another release.
-  - title: Manual Search
-    description: Search for releases manually and choose the one you want.
-  - title: Full Integration with Download Clients
-    description: Radarr integrates with popular download clients like SABnzbd,
-      NZBGet, QBittorrent, Deluge, rTorrent, Transmission, and uTorrent.
-  - title: Full Integration with Kodi and Plex
-    description: Radarr integrates with Kodi and Plex for notifications and library updates.
-  - title: Importing Metadata
-    description: Import metadata such as trailers and subtitles for movies.
-  - title: Advanced Customization
-    description: Customize profiles to always download the copy you want.
-  - title: Beautiful UI
-    description: Radarr has a beautiful user interface.
+      default: linuxserver/radarr:version-4.4.4.7068

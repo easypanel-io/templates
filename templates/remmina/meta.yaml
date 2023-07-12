@@ -32,29 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/remmina:latest
-tags:
-  - Remote Desktop Client
-  - Developer Tools
-benefits:
-  - title: Multiple network protocols
-    description: Remmina supports multiple network protocols, allowing users to
-      connect to remote computers using different protocols such as RDP, VNC,
-      SPICE, NX, XDMCP, SSH, and EXEC.
-  - title: Integrated and consistent user interface
-    description: Remmina provides an integrated and consistent user interface,
-      making it easy for users to work with remote computers in a seamless
-      manner.
-  - title: Useful for system administrators and travellers
-    description: Remmina is designed to be useful for system administrators and
-      travellers who often need to work with multiple remote computers,
-      regardless of the screen size.
-features:
-  - title: Remote desktop client
-    description: Remmina is a remote desktop client that allows users to connect to
-      and work with remote computers.
-  - title: Support for multiple network protocols
-    description: Remmina supports multiple network protocols, including RDP, VNC,
-      SPICE, NX, XDMCP, SSH, and EXEC.
-  - title: Integrated and consistent user interface
-    description: Remmina provides an integrated and consistent user interface,
-      making it easy for users to work with remote computers.

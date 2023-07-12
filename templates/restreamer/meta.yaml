@@ -1,9 +1,5 @@
 name: Restreamer
-description: datarhei Restreamer is a real-time live video streaming platform
-  that allows teams to stream and restream video on websites and social media
-  platforms without additional streaming provider costs or software licensing
-  costs. It can be installed on a Raspberry Pi and supports various streaming
-  protocols.
+description: Self-hosting solution to stream live to your website and publish to many like YouTube-Live, Twitter, Twitch, Vimeo, and other platforms or services.
 instructions: null
 changeLog:
   - date: 2022-10-29
@@ -37,26 +33,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: datarhei/restreamer:2.4.2
-tags:
-  - "Streaming "
-  - Web Hosting
-benefits:
-  - title: Cost-effective
-    description: Eliminates the need for additional streaming provider costs and
-      software licensing costs.
-  - title: Easy to use
-    description: Provides a simple yet powerful service for teams to live stream video.
-  - title: Flexible installation
-    description: Can be installed on a Raspberry Pi or other hardware as long as
-      Docker is available.
-features:
-  - title: Live streaming on websites
-    description: Allows live streaming on websites without additional service
-      providers or video hosting providers.
-  - title: Publication services
-    description: Enables sharing live videos publicly or privately with anyone, or
-      using a secret link to give access to private content.
-  - title: API integration
-    description: Provides a fully documented API for easy software development and
-      integration.
+      default: datarhei/restreamer:2.6.0

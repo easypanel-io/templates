@@ -1,11 +1,5 @@
 name: Grafana
-description: Grafana is an open-source observability platform that allows you to
-  query, visualize, and alert on your data. It provides a wide range of features
-  and solutions for monitoring and analyzing metrics, logs, traces, and more.
-  With Grafana, you can create operational dashboards, monitor applications and
-  infrastructure, and gain insights into your data. It offers both self-managed
-  and cloud-based deployment options, and has a large and active community of
-  users and contributors.
+description: The open and composable observability and data visualization platform
 instructions: Login with admin:admin
 changeLog:
   - date: 2023-3-15
@@ -38,52 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: grafana/grafana-oss:9.5.1
-tags:
-  - Dashboard
-  - Monitoring
-benefits:
-  - title: Flexible and customizable
-    description: Grafana allows you to customize and configure your dashboards,
-      alerts, and visualizations to meet your specific needs. It supports a wide
-      range of data sources and plugins, allowing you to connect to various
-      systems and services.
-  - title: Scalable and performant
-    description: Grafana is designed to handle large amounts of data and high
-      traffic loads. It uses efficient storage and query engines, and can scale
-      horizontally to meet the needs of your organization.
-  - title: Open-source and community-driven
-    description: Grafana is built on open-source technologies and has a vibrant
-      community of users and contributors. This means that you can benefit from
-      the collective knowledge and expertise of the community, and contribute
-      back to the project if you wish.
-features:
-  - title: Query, visualize, and alert on data
-    description: Grafana allows you to query and visualize your data using a wide
-      range of built-in and community-contributed visualizations. You can create
-      interactive dashboards, set up alerts and notifications, and share your
-      dashboards with others.
-  - title: Multi-tenant log aggregation system
-    description: Grafana Loki is a multi-tenant log aggregation system that allows
-      you to collect, store, and query logs from various sources. It provides
-      powerful search and filtering capabilities, and integrates seamlessly with
-      Grafana for visualization and alerting.
-  - title: High-scale distributed tracing backend
-    description: Grafana Tempo is a high-scale distributed tracing backend that
-      allows you to collect, store, and query traces from your applications. It
-      provides low-latency, high-throughput tracing capabilities, and integrates
-      with Grafana for visualization and analysis.
-  - title: Scalable and performant metrics backend
-    description: Grafana Mimir is a scalable and performant metrics backend that
-      allows you to collect, store, and query metrics from your applications and
-      infrastructure. It provides efficient storage and query engines, and
-      integrates with Grafana for visualization and analysis.
-  - title: On-call management
-    description: Grafana OnCall is an on-call management system that allows you to
-      manage and organize on-call rotations, escalations, and incident response
-      processes. It provides a centralized platform for collaboration and
-      communication during incidents.
-  - title: Load testing for engineering teams
-    description: Grafana k6 is a load testing tool that allows engineering teams to
-      test the performance and scalability of their applications. It provides a
-      simple and intuitive scripting language, and integrates with Grafana for
-      visualization and analysis of test results.

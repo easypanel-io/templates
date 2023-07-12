@@ -1,10 +1,9 @@
 name: Adminer
-description: Adminer is a full-featured database management tool written in PHP.
-  It is a single file that can be easily deployed to a server. Adminer supports
-  various databases including MySQL, MariaDB, PostgreSQL, SQLite, MS SQL,
-  Oracle, Elasticsearch, and MongoDB. It offers a tidier user interface, better
-  support for MySQL features, higher performance, and more security compared to
-  phpMyAdmin.
+description: Adminer (formerly phpMinAdmin) is a full-featured database
+  management tool written in PHP. Conversely to phpMyAdmin, it consist of a
+  single file ready to deploy to the target server. Adminer is available for
+  MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and
+  others via plugin.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -39,40 +38,3 @@ schema:
       type: string
       title: App Service Image
       default: adminer:4.8.1
-tags:
-  - Databases
-  - Developer Tools
-benefits:
-  - title: Tidier User Interface
-    description: Adminer provides a cleaner and more organized user interface
-      compared to phpMyAdmin.
-  - title: Better Support for MySQL Features
-    description: Adminer offers enhanced support for MySQL features, allowing users
-      to fully utilize the capabilities of the database.
-  - title: Higher Performance
-    description: Adminer is designed to deliver high performance, ensuring efficient
-      database management tasks.
-  - title: More Security
-    description: Adminer prioritizes security and implements measures to protect
-      against brute-force attacks and unauthorized access.
-features:
-  - title: Connect to Database Server
-    description: Adminer allows users to connect to a database server using a
-      username and password.
-  - title: Manage Databases and Tables
-    description: Users can create, alter, and drop databases and tables, as well as
-      modify table properties such as name, engine, collation, and
-      auto_increment.
-  - title: Execute SQL Commands
-    description: Adminer enables users to execute SQL commands, including creating,
-      altering, and dropping indexes, views, stored procedures, and functions.
-  - title: Data Manipulation
-    description: Users can insert, update, and delete records in tables, as well as
-      perform search, aggregate, sort, and limit operations.
-  - title: Export and Import Data
-    description: Adminer supports exporting table structure, data, views, routines,
-      and databases to SQL or CSV files. It also allows importing data from
-      files.
-  - title: User Management
-    description: Adminer provides features for managing users and their rights, as
-      well as displaying variables and processes.

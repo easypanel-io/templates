@@ -1,16 +1,5 @@
 name: Meilisearch
-description: Meilisearch is an open-source, lightning-fast, and hyper-relevant
-  search engine that can be added to any website or application. It offers a
-  flexible and powerful user-focused search experience with lightning-fast
-  search-as-you-type functionality. Meilisearch can be deployed in minutes with
-  smart presets that require zero configuration. It provides ultra-relevant
-  search results and supports all languages with automatic language detection.
-  Meilisearch is compatible with all major platforms and Docker, and it offers
-  ironclad security with API keys and tenant tokens. It also supports custom
-  relevancy and geo search. Meilisearch is easy to integrate with
-  self-explanatory API documentation and SDKs for various programming languages.
-  Join the Meilisearch community to contribute, ask questions, and stay updated
-  on the latest releases and features.
+description: Meilisearch is a lightning-fast search engine that fits effortlessly into your apps, websites, and workflow.
 instructions: null
 changeLog:
   - date: 2022-10-31
@@ -77,46 +66,3 @@ schema:
       type: string
       title: Scheduled Snapshots Interval (in seconds)
       default: "86400"
-tags:
-  - Search
-  - Developer Tools
-benefits:
-  - title: Lightning Fast
-    description: Search-as-you-type returns answers in less than 50 milliseconds,
-      providing an instant search experience for users.
-  - title: Plug 'n Play
-    description: Deploy Meilisearch in a matter of minutes with smart presets that
-      require zero configuration, making it easy to integrate into any website
-      or application.
-  - title: Ultra Relevant
-    description: Meilisearch offers the most advanced full-text search engine with
-      out-of-the-box great relevancy, ensuring accurate and relevant search
-      results for every use case.
-  - title: Open Source
-    description: Meilisearch is an open-source project with a fast-growing
-      community. It encourages collaboration and contributions from developers
-      worldwide.
-  - title: Easy Integration
-    description: Meilisearch provides self-explanatory API documentation and SDKs
-      for popular programming languages, making it easy for developers to
-      integrate and use.
-features:
-  - title: Lightning Fast Search
-    description: Search-as-you-type functionality returns answers in less than 50
-      milliseconds, providing an instant search experience for users.
-  - title: Plug 'n Play Deployment
-    description: Deploy Meilisearch in minutes with smart presets that require zero
-      configuration, allowing for easy integration into any website or
-      application.
-  - title: Ultra Relevant Results
-    description: Meilisearch offers the most advanced full-text search engine with
-      out-of-the-box great relevancy, ensuring accurate and relevant search
-      results for every use case.
-  - title: Open Source Community
-    description: Meilisearch is an open-source project with a fast-growing
-      community. Developers can contribute, collaborate, and benefit from the
-      collective knowledge and expertise.
-  - title: Easy Integration
-    description: Meilisearch provides self-explanatory API documentation and SDKs
-      for popular programming languages, making it easy for developers to
-      integrate and use.

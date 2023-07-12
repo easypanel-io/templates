@@ -1,12 +1,5 @@
 name: Matomo
-description: Matomo is a powerful web analytics platform that gives you 100%
-  data ownership. It is a Google Analytics alternative that protects your data
-  and your customers' privacy. With Matomo, you can be in full control of your
-  data and ensure privacy protection. It offers features such as tracking
-  personal data securely, 100% accurate data reporting, open source platform, no
-  data limitations, easy-to-use interface, enhanced insights, and customizable
-  options. Matomo is trusted by over 1 million websites in over 190 countries
-  and is recognized as a leading global web analytics solution.
+description: Google Analytics alternative that protects your data and your customers' privacy. Take back control with Matomo – a powerful web analytics platform that gives you 100% data ownership.
 instructions: null
 changeLog:
   - date: 2022-09-28
@@ -44,63 +37,3 @@ schema:
       type: string
       title: Database Service Name
       default: matomo-db
-tags:
-  - Analytics
-  - Security
-benefits:
-  - title: Data Ownership and Privacy Protection
-    description: With Matomo, you have 100% data ownership and can protect your
-      user's privacy. You know where your data is stored and what's happening to
-      it, without external influence. Matomo is GDPR and CCPA compliant.
-  - title: Google Analytics Importer
-    description: You can import your historical Google Analytics data directly into
-      Matomo, so you don't have to sacrifice your existing data.
-  - title: Secure Tracking of Personal Data
-    description: Matomo allows you to securely track personal data in accordance
-      with privacy laws, which is unavailable with Google Analytics.
-  - title: 100% Accurate Data Reporting
-    description: Matomo does not use data sampling, so you can make impactful
-      decisions based on 100% accurate reporting.
-  - title: Open Source Platform
-    description: Matomo is an open source platform that minimizes risk and provides
-      a secure and transparent analytics solution.
-  - title: No Data Limitations
-    description: With Matomo, you can have an unlimited number of websites, users,
-      and segments. There is also no limitation on how much data you can store.
-  - title: Easy-to-Use Interface
-    description: Matomo offers a user-friendly interface that allows you to easily
-      navigate and access the data you need.
-  - title: Enhanced Insights
-    description: Matomo provides a comprehensive range of features that give you
-      actionable insights and a complete picture of your customers.
-  - title: Customizable Options
-    description: Matomo can be customized and extended to meet your specific needs,
-      allowing you to create the analytics tool of your dreams.
-  - title: Expert Support
-    description: Matomo experts are available to provide guidance and support,
-      saving you time and money in using the platform effectively.
-features:
-  - title: Data Ownership and Privacy Protection
-    description: Matomo gives you 100% data ownership and ensures privacy protection
-      for your users.
-  - title: Google Analytics Importer
-    description: You can import your historical Google Analytics data directly into Matomo.
-  - title: Secure Tracking of Personal Data
-    description: Matomo allows you to securely track personal data in accordance
-      with privacy laws.
-  - title: 100% Accurate Data Reporting
-    description: Matomo provides 100% accurate reporting without data sampling.
-  - title: Open Source Platform
-    description: Matomo is an open source platform that minimizes risk and provides
-      transparency.
-  - title: No Data Limitations
-    description: Matomo allows unlimited websites, users, and data storage.
-  - title: Easy-to-Use Interface
-    description: Matomo offers a user-friendly interface for easy navigation and
-      data access.
-  - title: Enhanced Insights
-    description: Matomo provides a comprehensive range of features for actionable insights.
-  - title: Customizable Options
-    description: Matomo can be customized and extended to meet specific needs.
-  - title: Expert Support
-    description: Matomo experts provide guidance and support for effective platform usage.

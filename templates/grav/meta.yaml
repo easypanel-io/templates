@@ -1,17 +1,5 @@
 name: Grav
-description: Grav is a modern open source flat-file CMS that allows you to build
-  faster websites. It has been voted 'Best Open Source CMS' in 2016 and 'Best
-  Flat File CMS' in 2017, 2019, 2020, and 2021. Grav is known for its fast
-  performance, extensibility, and easy-to-use interface. It has a powerful API
-  and Package Manager, making it flexible and customizable. Grav is open source
-  and all the code is available on GitHub. It offers features like enjoyable
-  content creation, one-click installs for plugins and themes, powerful content
-  filtering, multi-language support, and easy backups and restores. Grav is used
-  by professionals and has a dedicated community of developers and users. It is
-  suitable for various types of websites, including landing pages, portfolios,
-  product sites, personal resumes, e-commerce sites, blogs, business sites,
-  directories, and documentation. Grav has received positive feedback from users
-  and developers, who appreciate its simplicity, power, and speed.
+description: Grav is a Fast, Simple, and Flexible, file-based Web-platform. There is Zero installation required. It follows similar principles to other flat-file CMS platforms, but has a different design philosophy than most. Grav comes with a powerful Package Management System to allow for simple installation and upgrading of plugins and themes, as well as simple updating of Grav itself.
 instructions: null
 changeLog:
   - date: 2023-03-19
@@ -49,31 +37,3 @@ schema:
       type: string
       title: Timezone
       default: Etc/UTC
-tags:
-  - CMS
-  - Developer Tools
-benefits:
-  - title: Fast Performance
-    description: Grav is designed for fast performance, ensuring that your website
-      loads quickly and efficiently.
-  - title: Extensible
-    description: Grav has a powerful API and Package Manager, allowing you to extend
-      its functionality and customize your website.
-  - title: Easy to Use
-    description: Grav provides a simple and intuitive interface for easy
-      configuration and content creation.
-features:
-  - title: Enjoyable Content Creation
-    description: Use your favorite Markdown editor to create content online or offline.
-  - title: One-Click Installs
-    description: The built-in Package Manager allows you to find, install, and
-      update extensions and themes with ease.
-  - title: Powerful Content Filtering
-    description: Create unlimited taxonomies to filter and manage your content, such
-      as tags, categories, and authors.
-  - title: Multi-Language Support
-    description: Easily present your site in multiple languages with Grav's simple
-      mechanism.
-  - title: Easy Backups and Restores
-    description: Being file-based, backing up and restoring your data is super easy,
-      and changing hosts/servers is a breeze.

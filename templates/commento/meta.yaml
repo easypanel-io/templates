@@ -1,10 +1,5 @@
 name: Commento
-description: Commento is a comments widget that can be added to any website. It
-  allows readers to leave comments without signing up and provides features such
-  as sticky comments, upvotes and downvotes, moderation tools, spam detection,
-  and nested replies. Adding Commento to a website is easy and takes less than
-  10 minutes. The widget can be customized to match the website's look, and it
-  is used by hundreds of bloggers, startups, magazines, and non-profits.
+description: Commento is a platform that you can embed in your website to allow your readers to add comments. It's reasonably fast lightweight. Supports markdown, import from Disqus, voting, automated spam detection, moderation tools, sticky comments, thread locking, OAuth login, single sign-on, and email notifications.
 instructions: null
 changeLog:
   - date: 2022-12-13
@@ -44,38 +39,3 @@ schema:
       type: string
       title: Database Service Name
       default: commento-db
-tags:
-  - CMS
-  - Communication
-benefits:
-  - title: Easy to use
-    description: Adding Commento to your website is easy and painless. It usually
-      takes less than 10 minutes from start to finish.
-  - title: Customizable
-    description: Commento can be customized to match your website's look with just a
-      few lines of CSS.
-  - title: No sign-up required
-    description: Readers can comment without signing up, reducing friction and
-      increasing engagement.
-  - title: Spam detection
-    description: Commento automatically detects and filters out spam comments,
-      saving you time and effort.
-  - title: Nested replies
-    description: Comments can be replied to in a nested format, making discussions
-      easier to follow.
-features:
-  - title: Sticky comments
-    description: Pin important comments to the top of the comment thread for better
-      visibility.
-  - title: Upvotes and downvotes
-    description: Readers can upvote comments that contribute to the discussion,
-      helping to highlight valuable content.
-  - title: Markdown formatting
-    description: Supports markdown formatting for text styling, links, quotes,
-      bullet points, and code snippets.
-  - title: Moderation tools
-    description: Lock heated threads, remove off-topic comments, and enforce
-      timeouts to maintain a healthy discussion environment.
-  - title: Import comments
-    description: Easily switch from Disqus to Commento without losing existing
-      comments by uploading your data export from Disqus.

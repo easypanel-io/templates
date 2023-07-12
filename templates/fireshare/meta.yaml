@@ -1,11 +1,5 @@
 name: Fireshare
-description: Fireshare is an app that allows users to easily share game clips,
-  videos, or other media via unique links. It provides a simple and easy way to
-  self-host videos and share them with friends through generated links. Users
-  can organize their videos into categories, edit video details, and enable
-  public or private access. The app supports mobile browsing, open graph support
-  for sharing on websites and messaging apps, and LDAP authentication for user
-  access management.
+description: Share your game clips, videos, or other media via unique links.
 instructions: null
 changeLog:
   - date: 2023-2-24
@@ -44,52 +38,3 @@ schema:
     adminPassword:
       type: string
       title: Password
-tags:
-  - Media
-  - Sharing
-benefits:
-  - title: Easy Sharing
-    description: Fireshare provides a simple and easy way to share game clips,
-      videos, or other media with friends through unique links.
-  - title: Self-Hosting
-    description: Users can self-host their videos and have full control over the
-      hosting environment.
-  - title: Organized Videos
-    description: Fireshare allows users to organize their videos into categories for
-      easy navigation and management.
-  - title: Video Editing
-    description: Users can edit video details such as title and description directly
-      within the app.
-  - title: Public or Private Access
-    description: Users can choose to make their videos public or private, allowing
-      them to control who can access their content.
-  - title: Mobile Support
-    description: Fireshare is fully compatible with mobile devices, providing a
-      seamless browsing experience.
-  - title: Open Graph Support
-    description: When sharing Fireshare links on websites and messaging apps, the
-      app provides open graph support, displaying title, description, and video
-      thumbnails in posts.
-  - title: LDAP Authentication Support
-    description: Fireshare can be connected to a central user directory using LDAP
-      authentication, allowing for organized user access management.
-features:
-  - title: Dashboard
-    description: Users can view and manage their videos, edit video details, and
-      choose whether to show them on the public feed.
-  - title: Foldered Sorting
-    description: Videos can be organized into categories using folders, providing a
-      simple way to sort and navigate through videos.
-  - title: Uploading
-    description: Users can allow the community or the public to upload videos, with
-      the option to disable or limit access.
-  - title: Edit Video Details
-    description: Users can easily edit the title and description of videos using a
-      basic modal.
-  - title: Video Preview Modal
-    description: Videos opened on the public feed or admin dashboard are displayed
-      in a modal, providing direct link and timestamped link sharing buttons, as
-      well as the ability to shuffle to another video.
-  - title: Watch Page
-    description: The watch page is what users see when given a Fireshare link,
-      displaying the video and its details.

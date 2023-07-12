@@ -1,11 +1,5 @@
 name: UptimeKuma
-description: Uptime Kuma is a self-hosted monitoring tool that allows you to
-  monitor the uptime of your websites and services. It provides a fancy and
-  reactive user interface, supports multiple notification methods, and offers
-  features like monitoring HTTP(s), TCP, keyword, ping, DNS record, push, Steam
-  Game Server, and Docker containers. Uptime Kuma can be easily installed using
-  Docker or run on major Linux distributions and Windows. It also supports 2FA
-  and proxy. The project is open source and actively maintained.
+description: A fancy self-hosted monitoring tool
 instructions: null
 changeLog:
   - date: 2022-08-02
@@ -37,40 +31,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: louislam/uptime-kuma:1.18.5-alpine
-tags:
-  - Monitoring
-  - Self-hosted
-benefits:
-  - title: Easy-to-use
-    description: Uptime Kuma provides a user-friendly interface and is easy to
-      install and configure.
-  - title: Self-hosted
-    description: You have full control over your monitoring data and can host it on
-      your own server.
-  - title: Flexible monitoring options
-    description: Uptime Kuma supports monitoring HTTP(s), TCP, keyword, ping, DNS
-      record, push, Steam Game Server, and Docker containers.
-  - title: Multiple notification methods
-    description: You can receive notifications via Telegram, Discord, Gotify, Slack,
-      Pushover, Email (SMTP), and many other notification services.
-  - title: Reactive user interface
-    description: The UI of Uptime Kuma is fancy, reactive, and provides a great user
-      experience.
-features:
-  - title: Monitoring
-    description: Uptime Kuma allows you to monitor the uptime of your websites and
-      services using various methods like HTTP(s), TCP, keyword, ping, DNS
-      record, push, Steam Game Server, and Docker containers.
-  - title: Notification methods
-    description: Uptime Kuma supports multiple notification methods including
-      Telegram, Discord, Gotify, Slack, Pushover, Email (SMTP), and more.
-  - title: User-friendly interface
-    description: The user interface of Uptime Kuma is designed to be easy to use and
-      provides a great user experience.
-  - title: Self-hosted
-    description: You can host Uptime Kuma on your own server, giving you full
-      control over your monitoring data.
-  - title: Flexible configuration
-    description: Uptime Kuma allows you to configure various settings like
-      monitoring intervals, status pages, proxy support, and 2FA.
+      default: louislam/uptime-kuma:1.21.3

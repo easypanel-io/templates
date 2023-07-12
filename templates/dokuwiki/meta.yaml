@@ -1,13 +1,6 @@
 name: Dokuwiki
-description: DokuWiki is a simple to use and highly versatile Open Source wiki
-  software that doesn't require a database. It is loved by users for its clean
-  and readable syntax. The ease of maintenance, backup and integration makes it
-  an administrator's favorite. Built-in access controls and authentication
-  connectors make DokuWiki especially useful in the enterprise context and the
-  large number of plugins contributed by its vibrant community allow for a broad
-  range of use cases beyond a traditional wiki.
-instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install
-  then restart your container when finished to remove install.php
+description: DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
+instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install then restart your container when finished to remove install.php
 changeLog:
   - date: 2023-3-16
     description: first release
@@ -39,45 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/dokuwiki:version-2022-07-31a
-tags:
-  - Wiki
-  - Documentation
-benefits:
-  - title: Easy to install and use
-    description: DokuWiki is easy to install and use, making it accessible for users
-      of all levels of expertise.
-  - title: Low system requirements
-    description: DokuWiki has low system requirements, allowing it to run
-      efficiently on a wide range of hardware.
-  - title: Built-in Access Control Lists
-    description: DokuWiki has built-in access control lists, allowing administrators
-      to control who can view and edit content.
-  - title: Large variety of extensions
-    description: DokuWiki has a large variety of extensions contributed by its
-      vibrant community, allowing for customization and extending its
-      functionality.
-  - title: Over 50 languages supported
-    description: DokuWiki supports over 50 languages, making it accessible to users
-      around the world.
-  - title: Device independent
-    description: DokuWiki is device independent, allowing users to access and
-      contribute to content from any device.
-  - title: Open Source
-    description: DokuWiki is an Open Source software, which means it is free to use,
-      modify, and distribute.
-features:
-  - title: Corporate Knowledge Base
-    description: DokuWiki can be used as a corporate knowledge base, allowing
-      organizations to centralize and share information.
-  - title: Private notebook
-    description: DokuWiki can be used as a private notebook, allowing individuals to
-      organize and store personal information.
-  - title: Software manual
-    description: DokuWiki can be used as a software manual, providing documentation
-      and instructions for software applications.
-  - title: Project workspace
-    description: DokuWiki can be used as a project workspace, allowing teams to
-      collaborate and share project-related information.
-  - title: CMS - intranet
-    description: DokuWiki can be used as a content management system (CMS) for an
-      intranet, allowing organizations to manage and publish internal content.

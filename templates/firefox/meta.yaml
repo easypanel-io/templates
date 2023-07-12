@@ -1,10 +1,6 @@
 name: Firefox
-description: Firefox Browser, also known as Mozilla Firefox or simply Firefox,
-  is a free and open-source web browser developed by the Mozilla Foundation and
-  its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine
-  to render web pages, which implements current and anticipated web standards.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+description: Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
+instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
 changeLog:
   - date: 2022-11-14
     description: first release
@@ -34,39 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/firefox:latest
-tags:
-  - Web Hosting
-  - Browsers
-benefits:
-  - title: Free and Open-Source
-    description: Firefox is free to use and its source code is open for anyone to
-      view and modify.
-  - title: Cross-Platform
-    description: Firefox is available for Windows, macOS, Linux, and mobile devices,
-      allowing users to access the browser on multiple platforms.
-  - title: Privacy and Security
-    description: Firefox has built-in privacy features, such as Enhanced Tracking
-      Protection, and regularly releases security updates to protect users'
-      data.
-  - title: Customization
-    description: Firefox offers a wide range of add-ons and themes, allowing users
-      to customize their browsing experience according to their preferences.
-  - title: Performance
-    description: Firefox is known for its fast and efficient performance, providing
-      a smooth browsing experience even with multiple tabs open.
-features:
-  - title: Multi-Platform Support
-    description: Firefox is available for Windows, macOS, Linux, and mobile devices,
-      allowing users to access the browser on multiple platforms.
-  - title: Gecko Layout Engine
-    description: Firefox uses the Gecko layout engine to render web pages, ensuring
-      compatibility with current and anticipated web standards.
-  - title: Privacy Features
-    description: Firefox has built-in privacy features, such as Enhanced Tracking
-      Protection, to protect users' data and block unwanted tracking.
-  - title: Customization Options
-    description: Firefox offers a wide range of add-ons and themes, allowing users
-      to customize their browsing experience according to their preferences.
-  - title: Performance Optimization
-    description: Firefox is optimized for performance, providing a fast and
-      efficient browsing experience even with multiple tabs open.

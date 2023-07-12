@@ -1,9 +1,5 @@
 name: Whiteboard
-description: This is a lightweight NodeJS collaborative Whiteboard/Sketchboard
-  app that can be easily customized. It allows users to draw, write text, add
-  images, and save the whiteboard as an image or JSON. It also supports features
-  like undo/redo, drag and drop, and resize/move/rotate images. The app can be
-  accessed on PC, tablet, and mobile devices.
+description: "Lightweight collaborative Whiteboard / Sketchboard "
 instructions: null
 changeLog:
   - date: 2022-08-01
@@ -36,47 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: rofl256/whiteboard:latest
-tags:
-  - Collaboration
-  - Productivity
-benefits:
-  - title: Collaborative Drawing
-    description: Multiple users can draw on the same whiteboard simultaneously,
-      making it ideal for collaborative work and brainstorming sessions.
-  - title: Customizable
-    description: The app can be easily customized to fit specific requirements and
-      preferences. Users can change the layout, keyboard shortcuts, and other
-      settings.
-  - title: Cross-Platform Compatibility
-    description: The app works on PC, tablet, and mobile devices, allowing users to
-      access and collaborate on the whiteboard from anywhere.
-features:
-  - title: Remote User Cursors
-    description: The app shows remote user cursors while drawing, allowing users to
-      see where others are working on the whiteboard.
-  - title: Undo/Redo Function
-    description: Users can undo and redo their actions on the whiteboard, making it
-      easy to correct mistakes or revert changes.
-  - title: Drag and Drop / Copy and Paste Images
-    description: Users can drag and drop or copy and paste images from their PC or
-      web browser onto the whiteboard.
-  - title: Resize, Move, Rotate Images
-    description: Users can resize, move, and rotate images on the whiteboard,
-      allowing for precise positioning and alignment.
-  - title: Write Text and Sticky Notes
-    description: Users can write text and add sticky notes to the whiteboard, making
-      it easy to add annotations and comments.
-  - title: Save Whiteboard as Image and JSON
-    description: Users can save the whiteboard as an image or JSON file, allowing
-      them to share and export their work.
-  - title: Draw Angle Lines and Squares
-    description: Users can draw angle lines by pressing 'Shift' while drawing with
-      the line tool, and draw squares by pressing 'Shift' while drawing with the
-      rectangle tool.
-  - title: Keybindings for All Functions
-    description: The app supports keyboard shortcuts for all functions, making it
-      easy to perform actions quickly and efficiently.
-  - title: REST API
-    description: The app provides a REST API that allows full control of the
-      whiteboard, making it easy to integrate with other systems and
-      applications.

@@ -1,11 +1,5 @@
 name: Visual Studio Code Server
-description: Code-server is a remote development environment that allows you to
-  access Visual Studio Code through a web browser. It provides a consistent
-  development environment across different devices and platforms, allowing you
-  to code on Chromebooks, tablets, and laptops. It also utilizes large cloud
-  servers to speed up tests, compilations, and downloads. Code-server runs on a
-  remote server, reducing resource usage on your local machine and preserving
-  battery life.
+description: Code-server is VS Code running on a remote server, accessible through the browser.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -40,49 +34,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/code-server:4.9.1-ls148
-tags:
-  - Developer Tools
-  - title: Access from Anywhere
-    description: Code-server allows you to access your development environment from
-      any device with a web browser, including Chromebooks, tablets, and
-      laptops.
-  - title: Consistent Development Environment
-    description: With code-server, you can have a consistent development environment
-      across different devices and platforms. This makes it easier to develop
-      for different operating systems and ensures that your code works the same
-      way everywhere.
-  - title: Faster Performance
-    description: By running code-server on a remote server, you can take advantage
-      of its resources to speed up tests, compilations, downloads, and other
-      intensive computations. This can significantly improve your development
-      workflow and save time.
-  - title: Preserve Battery Life
-    description: Since code-server runs on a remote server, you're no longer running
-      resource-intensive processes on your local machine. This helps preserve
-      battery life, especially when you're on the go.
-features:
-  - title: Web-based IDE
-    description: Code-server provides a web-based IDE that is accessible through a
-      web browser. This allows you to code and work on your projects without the
-      need to install any software on your local machine.
-  - title: GitHub Integration
-    description: Code-server supports GitHub integration, allowing you to easily
-      work with your repositories and collaborate with others. You can set up
-      your SSH key and configure your GitHub username and email directly from
-      the code-server terminal.
-  - title: Password Protection
-    description: Code-server allows you to set a password or a hashed password to
-      protect your development environment. This ensures that only authorized
-      users can access your code and projects.
-  - title: Sudo Access
-    description: If enabled, code-server provides sudo access in the terminal,
-      allowing you to perform administrative tasks and run commands with
-      elevated privileges.
-  - title: Proxy Domain Support
-    description: Code-server supports proxy domain configuration, allowing you to
-      access your development environment through a custom domain name.
-  - title: Default Workspace
-    description: You can set a default workspace directory for code-server, which
-      will be opened by default when you access the web interface. This makes it
-      easier to start working on your projects without navigating through
-      directories.

@@ -1,7 +1,5 @@
 name: Listmonk
-description: listmonk is a self-hosted, high performance mailing list and
-  newsletter manager. It comes as a standalone binary and the only dependency is
-  a Postgres database.
+description: Listmonk is a self-hosted, high performance mailing list and newsletter manager. It comes as a standalone binary and the only dependency is a Postgres database.
 instructions: null
 changeLog:
   - date: 2023-2-3
@@ -50,43 +48,3 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
-tags:
-  - Email
-  - Productivity
-benefits:
-  - title: Performance
-    description: listmonk is designed to handle millions of subscribers and can send
-      campaigns of millions of emails. It has a low CPU and memory footprint,
-      making it efficient and scalable.
-  - title: Flexibility
-    description: listmonk offers a range of features including mailing list
-      management, transactional mails, analytics, templating, media management,
-      and more. It can be easily integrated with external systems and supports
-      multiple messaging mediums.
-  - title: Privacy
-    description: listmonk prioritizes subscriber privacy by allowing them to
-      blocklist themselves, export their data, and wipe their data with a single
-      click.
-features:
-  - title: Mailing Lists
-    description: Manage millions of subscribers across multiple lists with custom
-      JSON attributes. Query and segment subscribers using SQL expressions.
-      Import data in bulk or integrate with external CRMs and subscriber
-      databases.
-  - title: Transactional Mails
-    description: Send transactional messages to subscribers using pre-defined
-      templates. Supports various messaging mediums including email, SMS, and
-      messaging interfaces like Whatsapp.
-  - title: Analytics
-    description: Provides simple analytics and visualizations. Allows easy
-      integration with external visualization programs.
-  - title: Templating
-    description: Create dynamic email templates using the Go templating language.
-      Supports template expressions, logic, and functions. Write emails in HTML,
-      Markdown, or plain text.
-  - title: Media Management
-    description: Upload images for email campaigns on the server's filesystem or use
-      S3 compatible backends like Amazon S3 or Minio.
-  - title: Extensibility
-    description: Connect HTTP webhooks to send messages through various mediums like
-      SMS, Whatsapp, FCM notifications, and more.

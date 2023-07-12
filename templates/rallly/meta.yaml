@@ -1,11 +1,5 @@
 name: Rallly
-description: Rallly is an open-source scheduling and collaboration tool designed
-  to make organizing events and meetings easier. It allows users to create
-  meeting polls to find a time that works for everyone. The app is free to use
-  and does not require login. It is mobile-friendly and provides notifications
-  for participants. Users can also comment on polls. Rallly is open-source and
-  self-hostable, giving users full control of their data. The app is ad-free and
-  user-funded. It is created by Luke Vella and is available on GitHub.
+description: Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
 instructions: null
 armSupport: true
 changeLog:
@@ -67,35 +61,3 @@ schema:
     emailPassword:
       type: string
       title: Email Password
-tags:
-  - Calendars
-  - Productivity
-benefits:
-  - title: Streamline your scheduling process
-    description: Ditch the back-and-forth emails and use Rallly to easily find a
-      time that works for everyone.
-  - title: Save time
-    description: Rallly helps you save time by automating the scheduling process and
-      providing notifications for participants.
-features:
-  - title: Scheduling, the smart way
-    description: Set individual start and end times for each option in your poll.
-      Times can be automatically adjusted to each participant's timezone or they
-      can be set to ignore timezones completely.
-  - title: Mobile friendly
-    description: Rallly works great on mobile devices, allowing participants to
-      respond to polls wherever they may be.
-  - title: Notifications
-    description: Keep track of who's responded to your poll and get notified when
-      participants vote or comment.
-  - title: Comments
-    description: Participants can comment on your poll, and the comments will be
-      visible to everyone.
-  - title: No login required
-    description: You don't need to login to create or participate in a poll.
-  - title: Open-source
-    description: The codebase is fully open-source and available on GitHub.
-  - title: Self-hostable
-    description: Run Rallly on your own server to take full control of your data.
-  - title: Ad-free
-    description: Rallly is user-funded and does not display ads.

@@ -23,7 +23,7 @@ async function run() {
       "---",
       `hide_title: true`,
       `sidebar_label: ${meta.name}`,
-      `title: ${meta.name} | Self-Host on Easypanel`,
+      `title: ${meta.name}`,
       `description: How to install ${meta.name} on Easypanel? 1-Click installation template for ${meta.name} on Easypanel`,
       "---",
       "",
@@ -31,7 +31,6 @@ async function run() {
       "",
     ];
 
-    lines.push(`# ${meta.name}`, "");
     lines.push(
       `1-Click installation template for ${meta.name} on Easypanel`,
       ""
@@ -44,29 +43,12 @@ async function run() {
     if (meta?.instructions) {
       lines.push("## Instructions", "", escape(meta.instructions), "");
     }
-    if ("benefits" in meta) {
-      lines.push("## Benefits", "");
-      meta.benefits.forEach((entry) => {
-        lines.push(`- ${entry.title}: ${entry.description}`);
-      });
-      lines.push("");
-    }
-    if ("features" in meta) {
-      lines.push("## Features", "");
-      meta.features.forEach((entry) => {
-        lines.push(`- ${entry.title}: ${entry.description}`);
-      });
-      lines.push("");
-    }
 
     if (meta?.links?.length) {
       lines.push("## Links", "");
       meta.links.forEach((entry) => {
         lines.push(`- [${entry.label}](${entry.url})`);
       });
-      lines.push(
-        `- [Template Source](https://github.com/easypanel-io/templates/tree/main/templates/${slug})`
-      );
       lines.push("");
     }
 
@@ -117,6 +99,7 @@ async function run() {
     const content = lines.join("\n");
 
     await writeFile(filePath, content);
+
     try {
       await copy(
         path.resolve(templatesPath, slug, "assets"),

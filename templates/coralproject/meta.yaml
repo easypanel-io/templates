@@ -1,15 +1,5 @@
 name: Coral
-description: Coral is an open-source commenting platform that improves community
-  engagement on websites through smart technology, effective design, and
-  strategies that work. It offers a better commenting experience for commenters,
-  effective and easy-to-use moderation tools for moderators, and a platform
-  built for publishing for journalists. Coral is fully customizable,
-  lightweight, secure, flexible, and responsive. It prioritizes user privacy by
-  not including any ads, trackers, or hidden pixels in its code. Coral is used
-  by newsrooms around the world and has received positive feedback from media
-  professionals. It can be easily integrated into existing websites and offers a
-  range of features and customization options. Coral is built with love by Coral
-  by Vox Media.
+description: Coral improves community on your website through smart technology, effective design, and strategies that work.
 instructions: null
 changeLog:
   - date: 2023-2-19
@@ -57,52 +47,7 @@ schema:
       type: string
       title: Database Service Name
       default: coral-db
-tags:
-  - Community
-  - Web Hosting
-benefits:
-  - title: Improved Community Engagement
-    description: Coral enhances community engagement on websites through smart
-      technology, effective design, and strategies that work.
-  - title: Better Commenting Experience
-    description: Coral provides commenters with features such as identifying
-      journalists in the conversation, muting annoying voices, sharing
-      discussions, receiving notifications, and seeing new comment alerts
-      instantly.
-  - title: Effective Moderation Tools
-    description: Coral offers moderators a full suite of tools to easily identify
-      disruptive comments and surface the best submissions, supported by smart
-      AI technology.
-  - title: Platform Built for Publishing
-    description: Coral increases loyalty and engagement on websites, giving
-      publishers complete control of the interactions and data without inserting
-      any ads or trackers on the page. It is also optimized for mobile.
-  - title: Fully Customizable
-    description: Developers can easily connect Coral to existing registration
-      systems, fully customize the look and feel, and extend the platform with
-      the GraphQL API and by adding features to the open-source codebase.
-  - title: Privacy First
-    description: Coral prioritizes user privacy by not including any ads, trackers,
-      or hidden pixels in its code. This makes Coral more secure, faster to
-      load, and transparently better for users and communities.
-features:
-  - title: Join a Strong Community
-    description: Coral allows commenters to join a strong community where they can
-      identify journalists in the conversation, mute annoying voices, share
-      discussions, receive notifications, and see new comment alerts instantly.
-  - title: Effective and Easy-to-Use Moderation Tools
-    description: Coral provides moderators with a full suite of tools to easily
-      identify disruptive comments and surface the best submissions, supported
-      by smart AI technology.
-  - title: Built for Publishing
-    description: Coral increases loyalty and engagement on websites, giving
-      publishers complete control of the interactions and data without inserting
-      any ads or trackers on the page. It is also optimized for mobile.
-  - title: Fully Customizable
-    description: Developers can easily connect Coral to existing registration
-      systems, fully customize the look and feel, and extend the platform with
-      the GraphQL API and by adding features to the open-source codebase.
-  - title: Privacy First
-    description: Coral prioritizes user privacy by not including any ads, trackers,
-      or hidden pixels in its code. This makes Coral more secure, faster to
-      load, and transparently better for users and communities.
+    enableMetricsPort:
+      type: boolean
+      title: Metrics Port Enable
+      default: false

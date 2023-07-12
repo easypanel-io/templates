@@ -1,13 +1,7 @@
 name: Kanboard
-description: Kanboard is a free and open source Kanban project management
-  software. It provides a visual and clear overview of tasks, allowing users to
-  easily manage and track their projects. With features like drag and drop task
-  management, limiting work in progress, and search and filter capabilities,
-  Kanboard helps teams stay organized and focused. The software is simple and
-  minimalistic, with a user-friendly interface that requires no training.
-  Kanboard also offers automatic actions to automate workflow, multiple
-  authentication backends for easy integration, and is available in over 30
-  languages. It is free and open source, distributed under the MIT License.
+description: Kanboard is project management software that focuses on the Kanban
+  methodology. There is no fancy user interface, Kanboard focuses on simplicity
+  and minimalism. The number of features is voluntarily limited.
 instructions: null
 changeLog:
   - date: 2022-08-16
@@ -42,53 +36,3 @@ schema:
       type: string
       title: App Service Image
       default: kanboard/kanboard:v1.2.28
-tags:
-  - Project Management
-  - Developer Tools
-benefits:
-  - title: Visualize your work
-    description: Kanboard provides a visual and clear overview of tasks, allowing
-      users to easily track and manage their projects.
-  - title: Limit work in progress
-    description: Kanboard helps users stay focused and efficient by limiting the
-      number of tasks they can work on at a time.
-  - title: Simple and minimalistic
-    description: Kanboard has a simple and minimalistic user interface, focusing on
-      simplicity and ease of use.
-  - title: Search and filter tasks
-    description: Kanboard offers a simple query language that allows users to
-      quickly search and filter tasks based on various criteria.
-  - title: Automate workflow
-    description: Kanboard provides automated actions to streamline workflow and
-      reduce manual repetitive tasks.
-  - title: Multiple authentication backends
-    description: Kanboard supports LDAP/Active Directory integration and OAuth2
-      providers like Google, GitHub, and GitLab.
-  - title: Free and open source
-    description: Kanboard is distributed under the permissive MIT License and is
-      developed by a community of contributors.
-features:
-  - title: Visual and clear overview of tasks
-    description: The Kanban board provides a visual representation of tasks, making
-      it easy to understand the current status of a project.
-  - title: Drag and drop task management
-    description: Tasks can be easily managed by dragging and dropping them between
-      columns on the Kanban board.
-  - title: Limit work in progress
-    description: Users can set limits on the number of tasks they can work on at a
-      time, helping them stay focused and efficient.
-  - title: Search and filter capabilities
-    description: Kanboard offers a simple query language that allows users to search
-      and filter tasks based on various criteria.
-  - title: Tasks, subtasks, attachments, and comments
-    description: Tasks can be broken down into subtasks, and users can add
-      attachments and comments to tasks.
-  - title: Automatic actions
-    description: Kanboard provides automated actions that can be triggered based on
-      events, allowing users to automate their workflow.
-  - title: Translated in 30+ languages
-    description: Kanboard is available in over 30 languages, thanks to contributions
-      from the community.
-  - title: Multiple authentication backends
-    description: Kanboard supports LDAP/Active Directory integration and OAuth2
-      providers for easy authentication.

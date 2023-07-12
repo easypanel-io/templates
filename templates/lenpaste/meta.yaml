@@ -1,10 +1,5 @@
 name: Lenpaste
-description: Lenpaste is an open-source web service that allows users to share
-  notes anonymously. It is an alternative to pastebin.com and offers its own
-  API. The service supports multiple languages, does not require registration,
-  and uses cookies only to store settings. It can also work without JavaScript.
-  Lenpaste is self-hosted and has a public servers list where users can find and
-  add their own servers.
+description: A web service that allows you to share notes anonymously, an alternative to pastebin.com
 instructions: null
 changeLog:
   - date: 2023-1-28
@@ -39,37 +34,3 @@ schema:
       type: string
       title: App Service Image
       default: git.lcomrade.su/root/lenpaste:1.3
-tags:
-  - Notes
-  - Web Hosting
-benefits:
-  - title: No registration required
-    description: Users can start sharing notes immediately without the need to
-      create an account.
-  - title: Supports multiple languages
-    description: Lenpaste supports sharing notes in multiple programming languages
-      and text formats.
-  - title: Self-hosted
-    description: Users have the option to host their own Lenpaste server, giving
-      them full control over their data.
-  - title: Open-source
-    description: Lenpaste is an open-source project, allowing users to contribute to
-      its development and customize it to their needs.
-  - title: API available
-    description: Lenpaste provides its own API, allowing developers to integrate it
-      into their applications or services.
-features:
-  - title: No registration
-    description: Users can start sharing notes immediately without the need to
-      create an account.
-  - title: Multiple languages
-    description: Supports sharing notes in multiple programming languages and text formats.
-  - title: Self-hosted
-    description: Users have the option to host their own Lenpaste server, giving
-      them full control over their data.
-  - title: Open-source
-    description: Lenpaste is an open-source project, allowing users to contribute to
-      its development and customize it to their needs.
-  - title: API
-    description: Lenpaste provides its own API, allowing developers to integrate it
-      into their applications or services.

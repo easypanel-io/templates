@@ -1,12 +1,5 @@
 name: Umami
-description: Umami is an open source, privacy-focused alternative to Google
-  Analytics. It allows you to gather the data you need while respecting the
-  privacy of your users. Umami does not collect any personal information, does
-  not use cookies, does not track users across websites, and is GDPR compliant.
-  It helps you stay compliant with data privacy laws by anonymizing all
-  collected data. Umami is easy to use and understand, with simple analytics
-  that fit on a single page. It is an open source project that is transparent,
-  battle-tested, and community supported.
+description: Umami is an open source, privacy-focused alternative to Google Analytics. Umami lets you to gather the data you need while respecting the privacy of your users. Umami does not collect any personal information, does not use cookies, does not track users across websites, and is GDPR compliant. Best of all, you don't need to display an annoying cookie notice.
 instructions: You can login with username "admin" and password "umami".
 changeLog:
   - date: 2022-09-27
@@ -44,33 +37,3 @@ schema:
       type: string
       title: Database Service Name
       default: umami-db
-tags:
-  - Analytics
-  - Privacy
-benefits:
-  - title: Privacy-focused
-    description: Umami does not collect any personal information, does not use
-      cookies, does not track users across websites, and is GDPR compliant.
-  - title: Own your data
-    description: All data collected by Umami is anonymized, making it impossible to
-      identify any individual user. Your data is securely in your hands.
-  - title: Simple analytics
-    description: Umami collects only the metrics you care about and presents them on
-      a single page, making it easy to use and understand.
-  - title: Open source
-    description: Umami is an open source project that is fully transparent,
-      battle-tested, and community supported.
-features:
-  - title: Privacy-focused alternative to Google Analytics
-    description: Umami is designed to respect the privacy of your users by not
-      collecting any personal information, not using cookies, not tracking users
-      across websites, and being GDPR compliant.
-  - title: Anonymized data collection
-    description: Umami anonymizes all collected data, making it impossible to
-      identify any individual user.
-  - title: Easy to use and understand
-    description: Umami collects only the metrics you care about and presents them on
-      a single page, making it simple to use and understand.
-  - title: Open source development
-    description: Umami is an open source project that is fully transparent,
-      battle-tested, and community supported.

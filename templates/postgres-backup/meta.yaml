@@ -1,7 +1,5 @@
 name: Postgres Backup
-description: This app allows you to backup your PostgresSQL database to S3, with
-  support for periodic backups. It can be run as a Docker container or using
-  Docker Compose.
+description: Backup Postgres to S3. Supports periodic backups & mutli files.
 instructions: "In order to test that you configured it properly, remove the
   SCHEDULE variable from the environment, click deploy and check the logs. If
   everything works fine, you can add the SCHEDULE variable back. You can read
@@ -86,27 +84,3 @@ schema:
       title: Schedule
       default: "@daily"
       description: You can use CRON syntax
-tags:
-  - Databases
-  - Backup
-benefits:
-  - title: Automated backups
-    description: You can schedule the backup to run automatically at a specified
-      time using the SCHEDULE environment variable.
-  - title: Selective backup
-    description: You can choose to backup a specific database or all available
-      databases by setting the POSTGRES_BACKUP_ALL environment variable.
-  - title: Encryption support
-    description: You can encrypt the backup file using the ENCRYPTION_PASSWORD
-      environment variable.
-features:
-  - title: Docker support
-    description: The app can be run as a Docker container, making it easy to deploy
-      and manage.
-  - title: Docker Compose support
-    description: The app can also be run using Docker Compose, allowing you to
-      define and manage the container along with other services.
-  - title: Flexible configuration
-    description: You can configure various environment variables to customize the
-      backup process, such as S3 access credentials, database connection
-      details, and backup options.

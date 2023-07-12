@@ -1,17 +1,5 @@
 name: Excalidraw
-description: Excalidraw is an open-source virtual hand-drawn style whiteboard
-  app. It allows users to create beautiful hand-drawn like diagrams, wireframes,
-  or any other type of drawing. The app features an infinite, canvas-based
-  whiteboard with a hand-drawn style. It also supports dark mode, customization,
-  image support, shape libraries, localization, and export to PNG, SVG, and
-  clipboard. Other features include arrow-binding, undo/redo, zoom and panning
-  support. The app is hosted at excalidraw.com and supports PWA, real-time
-  collaboration, end-to-end encryption, local-first support, and shareable
-  links. The Excalidraw npm package can be installed to use the app locally. The
-  app is actively maintained and welcomes contributions and bug reports. It is
-  integrated with various platforms and services such as VScode, Google Cloud,
-  CodeSandbox, Obsidian, Replit, Slite, Notion, and HackerRank. Excalidraw is
-  sponsored by Open Collective and offers a paid version called Excalidraw+.
+description: Online whiteboard collaboration made easy
 instructions: null
 changeLog:
   - date: 2023-3-27
@@ -42,60 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: excalidraw/excalidraw:sha-4bfc5bb
-tags:
-  - Collaboration
-  - Productivity
-benefits:
-  - title: Open-Source
-    description: Excalidraw is free and open-source, allowing users to contribute
-      and customize the app.
-  - title: Hand-Drawn Style
-    description: The app features a hand-drawn like style, giving drawings a unique
-      and artistic look.
-  - title: Collaborative
-    description: Excalidraw supports real-time collaboration, allowing multiple
-      users to work on the same drawing simultaneously.
-  - title: End-to-End Encryption
-    description: The app ensures the security of user data with end-to-end
-      encryption, protecting it from unauthorized access.
-  - title: Local-First Support
-    description: Excalidraw autosaves drawings to the browser, providing a
-      local-first approach and ensuring data persistence.
-features:
-  - title: Infinite, Canvas-Based Whiteboard
-    description: Excalidraw provides an infinite canvas-based whiteboard for
-      creating drawings of any size.
-  - title: Dark Mode
-    description: The app supports a dark mode, providing a visually pleasing and
-      comfortable drawing experience in low-light environments.
-  - title: Customizable
-    description: Users can customize the app according to their preferences,
-      including the style, tools, and interface.
-  - title: Image Support
-    description: Excalidraw allows users to import and work with images, enhancing
-      the drawing capabilities of the app.
-  - title: Shape Libraries Support
-    description: The app provides shape libraries, allowing users to easily add
-      predefined shapes to their drawings.
-  - title: Localization Support
-    description: Excalidraw supports localization (i18n), making it accessible to
-      users from different language backgrounds.
-  - title: Export to PNG, SVG & Clipboard
-    description: Users can export their drawings in various formats, including PNG,
-      SVG, and clipboard, for easy sharing and integration with other
-      applications.
-  - title: Open Format
-    description: Drawings can be exported as .excalidraw json files, ensuring
-      compatibility and interoperability with other software.
-  - title: Wide Range of Tools
-    description: Excalidraw offers a wide range of drawing tools, including
-      rectangle, circle, diamond, arrow, line, free-draw, and eraser.
-  - title: Arrow-Binding & Labeled Arrows
-    description: The app supports arrow-binding and labeled arrows, allowing users
-      to create clear and informative diagrams.
-  - title: Undo / Redo
-    description: Excalidraw provides undo and redo functionality, enabling users to
-      easily correct mistakes or revert changes.
-  - title: Zoom and Panning Support
-    description: Users can zoom in and out of their drawings and pan across the
-      canvas, providing a flexible and detailed drawing experience.

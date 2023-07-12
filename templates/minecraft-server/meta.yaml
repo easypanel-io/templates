@@ -1,10 +1,5 @@
 name: Minecraft Server
-description: The itzg/minecraft-server Docker image provides a Minecraft Server
-  that will automatically download the latest stable version at startup. It
-  supports running/upgrading to any specific version or the latest snapshot. The
-  image exposes the standard server port, 25565, on the host machine. For
-  Minecraft clients running on consoles, mobile, or native Windows, a different
-  image (itzg/minecraft-bedrock-server) should be used.
+description: Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.
 instructions: null
 changeLog:
   - date: 2023-03-18
@@ -184,23 +179,3 @@ schema:
     rconPassword:
       type: string
       title: RCON Password
-tags:
-  - Gaming
-  - Developer Tools
-benefits:
-  - title: Automatic version management
-    description: The Minecraft Server automatically downloads the latest stable
-      version at startup, ensuring you are always up to date.
-  - title: Flexible version selection
-    description: You can run or upgrade to any specific version of Minecraft or use
-      the latest snapshot.
-  - title: Easy deployment
-    description: The Docker image makes it easy to deploy and manage a Minecraft Server.
-features:
-  - title: Dynamic version support
-    description: The server automatically downloads the latest stable version or any
-      specific version you choose.
-  - title: Server type support
-    description: The image supports different server types, including modpacks.
-  - title: Port exposure
-    description: The standard server port, 25565, is exposed on the host machine.

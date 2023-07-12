@@ -1,11 +1,5 @@
 name: Jirafeau
-description: Jirafeau is an open-source file sharing app that allows users to
-  easily upload and share files. It offers features such as one-click file
-  sharing, file preview in the browser, password protection, expiration time for
-  downloads, and more. Jirafeau does not require a database and has a simple
-  language support system. It also supports file level deduplication for storage
-  optimization. The app is based on the KISS (Keep It Simple, Stupid) principle
-  and is available under the GNU Affero General Public License v3 (AGPL-3.0).
+description: Jirafeau is a one-click-filesharing Select your file, upload, share a link. That's it.
 instructions: null
 changeLog:
   - date: 2022-11-22
@@ -34,49 +28,3 @@ schema:
       type: string
       title: App Service Image
       default: jgeusebroek/jirafeau:20221008
-tags:
-  - File Management
-  - Web Hosting
-benefits:
-  - title: Easy file sharing
-    description: Jirafeau provides a simple and straightforward way to upload and
-      share files. Users can select a file, upload it, and get a download link
-      and a delete link.
-  - title: Large file support
-    description: Thanks to the HTML5 file API, Jirafeau can handle large files
-      without being limited by PHP post_max_size. Users can easily send any
-      large files through the app.
-  - title: Security and privacy
-    description: Jirafeau offers optional password protection for uploading or
-      downloading files. Users can also set expiration time for downloads and
-      enable data encryption for added security.
-  - title: No database required
-    description: Jirafeau does not rely on a database for file storage. It uses
-      basic PHP and file level deduplication to optimize storage and minimize
-      dependencies.
-features:
-  - title: One-click file sharing
-    description: Users can easily upload a file and get a download link and a delete
-      link with just one click.
-  - title: File preview in browser
-    description: Jirafeau allows users to preview the content of a file in the
-      browser, if possible.
-  - title: Password protection
-    description: Users can optionally set a password for uploading or downloading
-      files, adding an extra layer of security.
-  - title: Expiration time for downloads
-    description: Jirafeau allows users to set an expiration time for downloads,
-      after which the file will no longer be accessible.
-  - title: File level deduplication
-    description: Jirafeau supports file level deduplication, which means duplicate
-      files are only stored once and multiple links are generated.
-  - title: No database, only basic PHP
-    description: Jirafeau does not require a database for file storage. It uses
-      basic PHP and file system operations to manage files.
-  - title: Simple language support
-    description: Jirafeau supports multiple languages and offers a simple language
-      support system. Users can contribute translations through Weblate.
-  - title: Data encryption
-    description: Jirafeau offers optional data encryption, where the server encrypts
-      the data and sends the decryption key to the user. The decryption key is
-      not stored on the server, providing added security.

@@ -1,8 +1,5 @@
 name: LibreOffice
-description: LibreOffice is a free and powerful office suite, and a successor to
-  OpenOffice.org (commonly known as OpenOffice). Its clean interface and
-  feature-rich tools help you unleash your creativity and enhance your
-  productivity.
+description: is a free and powerful office suite, and a successor to OpenOffice.org (commonly known as OpenOffice). Its clean interface and feature-rich tools help you unleash your creativity and enhance your productivity.
 instructions: null
 changeLog:
   - date: 2022-11-14
@@ -33,45 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/libreoffice:latest
-tags:
-  - Productivity
-  - Office Suite
-benefits:
-  - title: Free and Open Source
-    description: LibreOffice is free to use and is developed as an open-source
-      project, which means that anyone can contribute to its development and
-      improvement.
-  - title: Cross-Platform Compatibility
-    description: LibreOffice is available for Windows, macOS, and Linux, making it a
-      versatile office suite that can be used on different operating systems.
-  - title: Clean Interface
-    description: LibreOffice has a clean and intuitive interface, making it easy to
-      navigate and use its various features and tools.
-  - title: Feature-Rich Tools
-    description: LibreOffice offers a wide range of tools for word processing,
-      spreadsheets, presentations, and more. It includes features such as spell
-      checking, formula editing, and advanced formatting options.
-  - title: Compatibility with Microsoft Office
-    description: LibreOffice supports the Microsoft Office file formats, allowing
-      you to open, edit, and save documents in formats such as .docx, .xlsx, and
-      .pptx.
-features:
-  - title: Word Processing
-    description: Create and edit documents with a wide range of formatting options,
-      styles, and templates.
-  - title: Spreadsheets
-    description: Perform calculations, create charts, and analyze data using
-      powerful spreadsheet tools.
-  - title: Presentations
-    description: Create professional-looking presentations with customizable slides,
-      animations, and transitions.
-  - title: Drawings
-    description: Create and edit vector graphics, diagrams, and flowcharts.
-  - title: Database Management
-    description: Create and manage databases with built-in tools for creating
-      tables, queries, and reports.
-  - title: Formula Editing
-    description: Create complex mathematical formulas and equations with the formula editor.
-  - title: Extensions and Templates
-    description: Extend the functionality of LibreOffice with a wide range of
-      extensions and customize your documents with templates.

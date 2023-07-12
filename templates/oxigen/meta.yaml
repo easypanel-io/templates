@@ -1,7 +1,5 @@
 name: Oxigen
-description: Oxigen is a dynamic social media image generator that allows users
-  to easily create, customize, and use og images with both a user interface (UI)
-  and an application programming interface (API).
+description: Oxigen is a dynamic social media image generator, which gives you an ability to easily create, customize and use og images with both UI and API.
 instructions: null
 changeLog:
   - date: 2023-1-22
@@ -30,27 +28,3 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/yuriizinets/oxigen:2.0-rc2
-tags:
-  - Social Networking
-  - API
-benefits:
-  - title: Easy to use
-    description: Oxigen provides a user-friendly interface that makes it simple for
-      users to create and customize social media images.
-  - title: Customizable
-    description: Users can customize their social media images by choosing from a
-      variety of templates, fonts, colors, and other design elements.
-  - title: API integration
-    description: Oxigen offers an API that allows developers to programmatically
-      generate social media images, making it easy to automate the image
-      generation process.
-features:
-  - title: Docker support
-    description: Oxigen can be easily installed and run using Docker, making it
-      convenient for deployment in various environments.
-  - title: Binary installation
-    description: Users can install Oxigen by downloading and unpacking the latest
-      release, and then running the binary file.
-  - title: Go installation
-    description: For users with Go installed, Oxigen can be installed globally using
-      the 'go install' command.

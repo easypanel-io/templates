@@ -1,10 +1,5 @@
 name: Sonarr
-description: Sonarr is a PVR (Personal Video Recorder) app for Usenet and
-  BitTorrent users. It can monitor multiple RSS feeds for new episodes of your
-  favorite shows and automatically download, sort, and rename them. It also has
-  features like automatic failed download handling, manual search, episode
-  renaming, integration with download clients and media servers, and a
-  user-friendly interface.
+description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
 instructions: null
 changeLog:
   - date: 2022-12-26
@@ -36,36 +31,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/sonarr:version-3.0.9.1549
-tags:
-  - RSS
-  - Media
-benefits:
-  - title: Convenient Episode Management
-    description: Sonarr allows you to see all your upcoming episodes in one
-      convenient calendar view. You can also manually search for and choose the
-      releases you want to download.
-  - title: Automatic Failed Download Handling
-    description: Sonarr automatically handles failed downloads by blocking the
-      release and trying another one until it finds one that works. This
-      eliminates the hassle of dealing with password-protected releases, missing
-      repair blocks, or other download issues.
-  - title: Easy Installation and Compatibility
-    description: Sonarr is supported on major platforms like Windows, Linux, macOS,
-      and Raspberry Pi. It can be installed as a Windows Service or System Tray
-      Application, and it is compatible with popular download clients and media
-      servers like SABnzbd, NZBGet, Kodi, and Plex.
-features:
-  - title: Calendar
-    description: See all your upcoming episodes in one convenient location.
-  - title: Manual Search
-    description: Find all the releases, choose the one you want and send it right to
-      your download client.
-  - title: Automatic Failed Download Handling
-    description: Sonarr automatically blocks failed downloads and tries another
-      release until it finds one that works.
-  - title: Episode Renaming
-    description: Fully configurable episode renaming for better organization.
-  - title: Integration with Download Clients and Media Servers
-    description: Full integration with popular download clients like SABnzbd and
-      NZBGet, and media servers like Kodi and Plex.
+      default: linuxserver/sonarr:version-3.0.10.1567

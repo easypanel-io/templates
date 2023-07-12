@@ -1,13 +1,6 @@
 name: Photoview
-description: Photoview is a photo gallery app that allows you to organize and
-  browse your photos and videos on your self-hosted personal server. It syncs
-  with your file system, allowing you to organize your media how you want. It
-  supports multiple users, sharing of albums and individual media, and displays
-  EXIF metadata and maps. The app also has a mobile app for easy access on your
-  phone. It supports RAW images, video conversion, and runs on ARM processors.
-  Photoview is secure, private, free, and open-source.
-instructions: You will need to mount the location where your photos are to
-  complete the installation.
+description: Photo gallery for self-hosted personal servers
+instructions: You will need to mount the location where your photos are to complete the installation.
 changeLog:
   - date: 2023-03-16
     description: First Release
@@ -62,75 +55,3 @@ schema:
       type: string
       title: Database Service Name
       default: photoview-db
-tags:
-  - Gallery
-  - Self-hosted
-benefits:
-  - title: Syncs with file system
-    description: Photoview automatically organizes your media based on the file
-      structure of your file system. It can sync with file servers like Samba or
-      FTP, or even files from a Nextcloud instance. It also automatically
-      rescans for new media and keeps it updated.
-  - title: Multiple users and sharing
-    description: You can configure multiple users, each with their own directory of
-      photos and videos. Each user has a username and password to keep their
-      media private. Albums and individual media can be easily shared by
-      generating public or password-protected links.
-  - title: Maps
-    description: Photoview analyzes the EXIF metadata of photos to display
-      information such as the location where the photo was taken. It can
-      automatically present photos on a map and group multiple photos taken at
-      the same location.
-  - title: Mobile app
-    description: Photoview has an official iOS app that allows you to access your
-      entire media library from your phone. You can navigate, share, and
-      download photos and videos directly within the app.
-  - title: RAW support
-    description: Photoview uses Darktable to convert RAW images, making it
-      compatible with many common RAW formats. You can check the supported
-      cameras on the app's website.
-  - title: Video support
-    description: Photoview uses Ffmpeg to convert videos and optimize them for the
-      web. It supports many common video formats.
-  - title: Runs on ARM
-    description: Photoview can run on ARM processors, including embedded devices
-      like the Raspberry Pi.
-  - title: Performant
-    description: Photoview generates thumbnails automatically and loads photos when
-      they are visible on the screen, making browsing fast. It also uses a
-      cookie-token for media resource protection, properly hashes passwords, and
-      has a strict CORS policy for API security.
-  - title: Secure and private
-    description: Photoview ensures the security and privacy of your media. All media
-      resources are protected with a cookie-token, passwords are properly
-      hashed, and the app does not send your media outside of your server.
-  - title: Free and open-source
-    description: Photoview is completely free to use and the code is open for
-      everyone to look at and modify.
-features:
-  - title: Closely tied to the file system
-    description: Photoview presents images found on the local file system of the
-      server, mapping directories to albums.
-  - title: User management
-    description: Each user has their own directory on the file system and can access
-      photos within that directory.
-  - title: Sharing
-    description: Albums and individual media can be easily shared with public or
-      password-protected links.
-  - title: Made for photography
-    description: Photoview supports RAW file formats and EXIF parsing, making it
-      suitable for photographers.
-  - title: Video support
-    description: Photoview supports many common video formats and optimizes videos
-      for the web.
-  - title: Face recognition
-    description: Photoview automatically detects faces in photos and groups photos
-      of the same person together.
-  - title: Performant
-    description: Photoview generates thumbnails automatically and loads photos when
-      they are visible on the screen.
-  - title: Secure
-    description: Photoview protects media resources with a cookie-token, hashes
-      passwords, and has a strict CORS policy.
-  - title: Supported platforms
-    description: Photoview runs on Docker, Arch Linux, Aur, Unraid, EmbassyOS, and YunoHost.

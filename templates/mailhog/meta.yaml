@@ -1,8 +1,5 @@
 name: Mailhog
-description: MailHog is an email testing tool for developers. It allows you to
-  configure your application to use MailHog for SMTP delivery and view messages
-  in a web UI. You can also retrieve messages with the JSON API and optionally
-  release them to real SMTP servers for delivery.
+description: Mailhog is a web and API based SMTP tool for testing emails
 instructions: null
 changeLog:
   - date: 2022-10-31
@@ -31,44 +28,3 @@ schema:
       type: string
       title: App Service Image
       default: mailhog/mailhog:latest
-tags:
-  - Email
-  - Developer Tools
-benefits:
-  - title: Easy installation
-    description: MailHog is built with Go and runs without installation on multiple
-      platforms. You can download the latest release for your platform or use
-      package managers like Homebrew or apt-get to install it.
-  - title: Web UI for viewing messages
-    description: MailHog provides a web interface where you can view your outgoing
-      email messages. You can see the plain text, HTML, or source of the
-      messages.
-  - title: SMTP server with support for authentication
-    description: MailHog includes an ESMTP server that implements RFC5321. It also
-      supports SMTP AUTH (RFC4954) and PIPELINING (RFC2920).
-  - title: Message storage and retrieval
-    description: MailHog supports in-memory message storage as well as MongoDB and
-      file-based storage for message persistence. You can use the HTTP API to
-      list, retrieve, and delete messages.
-features:
-  - title: SMTP server
-    description: MailHog includes an ESMTP server that you can configure your
-      application to use for SMTP delivery.
-  - title: Web UI
-    description: MailHog provides a web interface where you can view your outgoing
-      email messages. You can see the plain text, HTML, or source of the
-      messages.
-  - title: JSON API
-    description: MailHog provides a JSON API that allows you to retrieve messages
-      programmatically.
-  - title: Release to real SMTP servers
-    description: MailHog allows you to release messages to real SMTP servers for delivery.
-  - title: SMTP AUTH and PIPELINING support
-    description: MailHog supports SMTP AUTH (RFC4954) and PIPELINING (RFC2920) for
-      secure and efficient email delivery.
-  - title: Message storage
-    description: MailHog supports in-memory message storage as well as MongoDB and
-      file-based storage for message persistence.
-  - title: Chaos Monkey for failure testing
-    description: MailHog includes a Chaos Monkey feature that allows you to simulate
-      failures and test the resilience of your email system.

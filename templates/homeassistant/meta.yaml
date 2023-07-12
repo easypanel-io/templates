@@ -1,8 +1,5 @@
 name: Home Assistant
-description: Home Assistant is an open-source home automation platform that puts
-  local control and privacy first. It is powered by a worldwide community of
-  tinkerers and DIY enthusiasts. It is perfect to run on a Raspberry Pi or a
-  local server.
+description: Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -33,32 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/homeassistant:latest
-tags:
-  - Home Automation
-  - Developer Tools
-benefits:
-  - title: Local Control
-    description: Home Assistant allows you to control your smart home devices
-      locally, without relying on cloud services or internet connectivity.
-  - title: Privacy
-    description: With Home Assistant, your data stays in your home. There is no need
-      to share your personal information with third-party cloud services.
-  - title: Open Source
-    description: Home Assistant is open-source software, which means you have full
-      control over its code and can customize it to fit your needs.
-features:
-  - title: Installation
-    description: Home Assistant provides detailed documentation on how to install
-      and set up the platform on various devices, including Raspberry Pi and
-      local servers.
-  - title: Integration
-    description: Home Assistant supports over 1000 integrations, allowing you to
-      connect and control a wide range of smart home devices and services.
-  - title: Automation
-    description: With Home Assistant's automation capabilities, you can create
-      complex routines and scenarios to automate tasks and control your smart
-      home devices.
-  - title: Voice Control
-    description: Home Assistant supports voice control, allowing you to control your
-      smart home devices using popular voice assistants like Amazon Alexa and
-      Google Assistant.

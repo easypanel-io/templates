@@ -1,14 +1,6 @@
 name: Zipline
-description: Zipline is a next-generation ShareX/File upload server that is easy
-  to use, packed with features, and has an easy setup. It provides a dashboard
-  with charts, graphs, and tables to view stats, a gallery to view files and
-  media, URL shortening, image compression, password protection for uploads,
-  Discord embeds, OAuth2 registration, two-factor authentication, user invites,
-  and more. Zipline can be set up quickly via Docker or built and run from
-  source. It also supports integration with NGINX proxy. The app is available on
-  GitHub and has 521 stars.
-instructions: After installing Zipline for the first time, you may login to the
-  dashboard with the username "administrator" and the password "password".
+description: A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!
+instructions: After installing Zipline for the first time, you may login to the dashboard with the username "administrator" and the password "password".
 changeLog:
   - date: 2023-01-20
     description: First Release
@@ -47,38 +39,3 @@ schema:
       type: string
       title: Database Service Name
       default: zipline-db
-tags:
-  - File Management
-  - Productivity
-benefits:
-  - title: Easy Setup
-    description: Zipline can be set up quickly via Docker or built and run from source.
-  - title: Packed with Features
-    description: Zipline provides a dashboard with charts, graphs, and tables to
-      view stats, a gallery to view files and media, URL shortening, image
-      compression, password protection for uploads, Discord embeds, OAuth2
-      registration, two-factor authentication, user invites, and more.
-  - title: Integration with NGINX Proxy
-    description: Zipline supports integration with NGINX proxy for easy deployment.
-features:
-  - title: Dashboard
-    description: Zipline provides a dashboard with charts, graphs, and tables to view stats.
-  - title: Gallery Viewer
-    description: Zipline allows users to view files and media in a gallery.
-  - title: URL Shortening
-    description: Zipline supports URL shortening with options for vanities and
-      maximum views.
-  - title: Image Compression
-    description: Zipline provides image compression to save space.
-  - title: Password Protection
-    description: Zipline allows users to protect uploads with a password.
-  - title: Discord Embeds
-    description: Zipline supports Discord embeds for uploads with OG metadata.
-  - title: OAuth2 Registration
-    description: Zipline allows users to register and link accounts with Discord and
-      GitHub using OAuth2.
-  - title: Two-Factor Authentication
-    description: Zipline supports two-factor authentication with Google
-      Authenticator, Authy, etc.
-  - title: User Invites
-    description: Zipline allows users to invite friends to their instance.

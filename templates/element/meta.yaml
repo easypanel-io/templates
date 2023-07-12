@@ -1,13 +1,5 @@
 name: Element
-description: Element is a secure communications platform that allows users to
-  communicate and collaborate with people and organizations they trust. It
-  offers features such as instant messaging, voice/video calls, location
-  sharing, voting polls, and more. Element is built on the Matrix open standard
-  for secure and sovereign real-time communication. It provides secure and
-  compliant communication solutions for businesses, allowing them to protect and
-  strengthen their critical communications. Element also offers flexible hosting
-  options to enable data sovereignty and allows users to connect with partners
-  in real-time across organizations.
+description: Element (formerly known as Vector and Riot) is a Matrix web client built using the Matrix React SDK.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -42,41 +34,3 @@ schema:
       type: string
       title: App Service Image
       default: vectorim/element-web:v1.11.30
-tags:
-  - Communication
-  - Developer Tools
-benefits:
-  - title: Secure and Compliant
-    description: Element provides a secure communications platform that helps
-      businesses protect and strengthen their critical communications. It
-      ensures compliance with data protection regulations and offers secure
-      messaging, voice/video calls, and more.
-  - title: Control Your Data
-    description: Element allows users to host their own communication platform,
-      giving them full control over their data. It offers open source and
-      flexible hosting options to enable data sovereignty.
-  - title: Trusted Communication
-    description: Element enables trusted communication in real-time across
-      organizations. It allows users to collaborate with people and
-      organizations they trust, ensuring secure and reliable communication.
-  - title: Customizable and Flexible
-    description: Element provides customization options to tailor the communication
-      platform according to individual needs. Users can customize discussion
-      spaces, chat rooms, and network configurations to suit their requirements.
-features:
-  - title: Instant Messaging and Voice/Video Calls
-    description: Element offers instant messaging and voice/video call features,
-      allowing users to communicate in real-time with their contacts.
-  - title: Location Sharing and Voting Polls
-    description: Element allows users to share their location with others and
-      conduct voting polls to gather opinions and make decisions
-      collaboratively.
-  - title: Data Protection and Security
-    description: Element prioritizes data protection and security. It ensures that
-      user data is protected while they focus on their work. The platform is
-      built on the Matrix open standard, which provides a decentralized and
-      secure communication infrastructure.
-  - title: Customizable Network Configurations
-    description: Element allows users to customize network configurations, enabling
-      them to create communication networks that meet their organizational
-      requirements.

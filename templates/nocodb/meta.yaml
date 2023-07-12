@@ -1,11 +1,5 @@
 name: NocoDB
-description: NocoDB is an open-source NoCode platform that turns any database
-  into a smart spreadsheet. It allows users to create endless solutions by
-  creating grid views, gallery views, and form views from their own data. Users
-  can search, sort, and filter columns and rows with ease, collaborate with
-  their team, and automate business workflows with their favorite apps. NocoDB
-  provides instant REST APIs with Swagger and allows users to subscribe to their
-  newsletter for updates and new features.
+description: NocoDB is an open source Airtable alternative and no code platform that turns any database into a smart spreadsheet.
 instructions: null
 changeLog:
   - date: 2023-02-8
@@ -48,43 +42,3 @@ schema:
       type: string
       title: Redis Service Name
       default: nocodb-redis
-tags:
-  - Database
-  - Productivity
-benefits:
-  - title: Free & Self-Hostable
-    description: NocoDB is free to use and can be self-hosted, giving users full
-      control over their data and infrastructure.
-  - title: Flexible Integration
-    description: NocoDB can be integrated with many business verticals, allowing
-      users to build custom workflows and solutions.
-  - title: Collaborative Environment
-    description: NocoDB allows users to collaborate with their team, providing
-      fine-grained access control and the ability to share views publicly or
-      with password protection.
-  - title: Automation Capabilities
-    description: NocoDB enables users to automate business workflows by integrating
-      with their favorite apps such as Microsoft Teams, Slack, Discord,
-      Whatsapp, Twilio, Email, and SMS.
-  - title: Headless APIs
-    description: NocoDB provides instant REST APIs with Swagger, allowing users to
-      easily access and interact with their data.
-features:
-  - title: Create Endless Solutions
-    description: Users can create unlimited grid views, gallery views, and form
-      views from their own data, allowing them to build custom solutions for
-      their specific needs.
-  - title: Search, Sort, and Filter
-    description: Users can easily search, sort, and filter columns and rows in
-      NocoDB, making it easy to find and analyze data.
-  - title: Collaborate Like a Spreadsheet
-    description: NocoDB provides a collaborative environment similar to a
-      spreadsheet, allowing users to invite their team and control access to
-      views and data.
-  - title: Automate Business Workflows
-    description: Users can automate business workflows by building integrations with
-      their favorite apps, such as Microsoft Teams, Slack, Discord, Whatsapp,
-      Twilio, Email, and SMS.
-  - title: Headless APIs
-    description: NocoDB provides instant REST APIs with Swagger, allowing users to
-      easily access and interact with their data programmatically.

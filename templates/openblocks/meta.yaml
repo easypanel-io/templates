@@ -1,13 +1,5 @@
 name: Openblocks
-description: Openblocks is an open-source low code platform that allows you to
-  quickly build admin panels, dashboards, approval queues, and client support
-  apps. It offers a comprehensive selection of UI components, seamless
-  embedding, and the ability to connect to any data source without limitations.
-  Openblocks is a developer-first platform that allows you to extend built-in
-  components using JavaScript and leverage external JavaScript libraries. It
-  provides security and reliability through self-hosting options and role-based
-  access control. Openblocks has received positive feedback from developers for
-  its polished interface, functionality, and speed.
+description: Openblocks is a Open-source Retool alternative, low code platform to build your apps exceedingly fast with no limitations
 instructions: null
 changeLog:
   - date: 2023-02-21
@@ -42,46 +34,3 @@ schema:
       type: string
       title: App Service Image
       default: openblocksdev/openblocks-ce:1.1.6
-tags:
-  - Low Code
-  - Developer Tools
-benefits:
-  - title: Exceedingly fast
-    description: Openblocks is designed to be fast and efficient, allowing you to
-      build apps quickly and easily.
-  - title: No limitations
-    description: Openblocks allows you to connect to any data source and provides a
-      wide range of UI components to choose from, giving you the freedom to
-      build apps without limitations.
-  - title: Boundless UI possibilities
-    description: With over 50 built-in UI components and the ability to customize
-      and extend them using JavaScript, Openblocks offers endless possibilities
-      for creating beautiful and user-friendly app interfaces.
-  - title: Security and reliability
-    description: Openblocks can be self-hosted, giving you total control over your
-      resources and ensuring the security and reliability of your data. It also
-      offers role-based access control and audit logs.
-features:
-  - title: Comprehensive selection of UI components
-    description: Openblocks provides over 50 built-in UI components that allow you
-      to quickly and easily build beautiful and functional app interfaces.
-  - title: Seamless embedding
-    description: Openblocks allows you to seamlessly embed your app into any website
-      or platform, making it easy to integrate with existing systems.
-  - title: Connect to any data source
-    description: Openblocks enables you to connect to most databases and any REST
-      API platform within a few clicks, allowing you to integrate heterogeneous
-      data from anywhere.
-  - title: Developer-first platform
-    description: Openblocks is designed with developers in mind, allowing you to
-      extend built-in components using JavaScript and leverage external
-      JavaScript libraries. You can write JavaScript code everywhere to access
-      and manipulate data from anywhere.
-  - title: Self-hosting options
-    description: Openblocks can be deployed via Docker, DigitalOcean, AWS AMI,
-      Heroku, and other platforms, giving you the flexibility to choose how and
-      where to host your app.
-  - title: Positive feedback from developers
-    description: Openblocks has received positive feedback from developers for its
-      polished interface, functionality, and speed. Developers have praised its
-      ease of use, performance, and the range of features it offers.

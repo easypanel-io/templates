@@ -1,7 +1,5 @@
 name: MySQL Backup
-description: mysql-backup-s3 is a Docker container that allows you to backup
-  your MySQL databases to AWS S3. It supports periodic backups and multiple
-  files.
+description: Backup MySQL to S3. Supports periodic backups & mutli files.
 instructions: "In order to test that you configured it properly, remove the
   SCHEDULE variable from the environment, click deploy and check the logs. If
   everything works fine, you can add the SCHEDULE variable back. You can read
@@ -86,32 +84,3 @@ schema:
       title: Schedule
       default: "@daily"
       description: You can use CRON syntax
-tags:
-  - Databases
-  - Productivity
-benefits:
-  - title: Easy to use
-    description: Just run the Docker container with the required environment
-      variables and your MySQL databases will be backed up to AWS S3.
-  - title: Flexible backup options
-    description: You can customize the mysqldump options and specify the databases
-      you want to backup.
-  - title: Supports periodic backups
-    description: You can schedule the backup process to run at specific times using
-      cron format.
-  - title: Supports multiple files
-    description: You can choose to have one file per database if needed.
-features:
-  - title: Customizable mysqldump options
-    description: You can specify additional mysqldump options or override the
-      default options.
-  - title: Specify databases to backup
-    description: You can choose to backup all databases or specify a list of
-      databases to backup.
-  - title: AWS S3 integration
-    description: Backups are stored in your AWS S3 bucket with the specified path prefix.
-  - title: Support for AWS Signature Version 4
-    description: Enables compatibility with minio servers.
-  - title: Flexible scheduling
-    description: You can schedule the backup process to run at specific times using
-      cron format.

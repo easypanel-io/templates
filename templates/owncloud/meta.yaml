@@ -1,17 +1,5 @@
 name: Owncloud
-description: ownCloud is a secure cloud platform that offers real-time content
-  collaboration, file sharing, and web office capabilities. It is trusted by 200
-  million users worldwide and is designed to ensure data protection and privacy.
-  With features like Spaces, Web Office, and secure design, ownCloud provides a
-  seamless and secure collaboration experience for remote teams of all sizes. It
-  offers the flexibility of on-premises deployment or a SaaS solution for
-  smaller organizations. ownCloud is GDPR, LGPD, CCRF, HIPAA, and CCPA ready,
-  making it compliant with data protection regulations. It helps increase
-  productivity by enabling teams to store, share, and work on their data and
-  documents from anywhere and any device. With open APIs and modularity,
-  ownCloud allows for convenient collaboration with internal and external
-  parties without storing data in the public cloud. Stay up to date with the
-  latest news and insights from ownCloud by signing up for their newsletter.
+description: ownCloud is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device.
 instructions: null
 changeLog:
   - date: 2023-2-28
@@ -74,41 +62,3 @@ schema:
     adminPassword:
       type: string
       title: Password
-tags:
-  - File Management
-  - Collaboration
-benefits:
-  - title: Secure Collaboration
-    description: ownCloud ensures data protection and privacy with state-of-the-art
-      security standards and best practices. It offers features like
-      multi-factor authentication, encryption, and file lifecycle management.
-  - title: Flexible Deployment
-    description: ownCloud can be deployed on-premises, in a data center, or in a
-      hybrid setup, giving organizations full control over their data. It also
-      offers a SaaS solution, ownCloud.online, for smaller organizations.
-  - title: Compliance with Data Protection Regulations
-    description: ownCloud is GDPR, LGPD, CCRF, HIPAA, and CCPA ready, ensuring
-      compliance with data protection regulations and providing organizations
-      with peace of mind.
-  - title: Increased Productivity
-    description: ownCloud enables teams to collaborate from anywhere and any device,
-      saving time on coordination and feedback processes. It offers features
-      like real-time collaboration, document annotation, and seamless
-      integration with popular office suites.
-  - title: Convenient Collaboration
-    description: ownCloud allows for convenient collaboration with internal and
-      external parties without storing data in the public cloud. It offers open
-      APIs and modularity for easy integration with other systems.
-features:
-  - title: Spaces
-    description: Spaces is a project folder concept designed to boost seamless
-      digital collaboration for remote teams. It ensures compliance, data
-      control, and security while reducing admin workload.
-  - title: Web Office
-    description: Web Office provides a suite of powerful integrations, including
-      OnlyOffice, Microsoft 365, Collabora Online, and Microsoft Office Online.
-      It enables secure collaboration irrespective of location and device.
-  - title: Secure by Design
-    description: ownCloud Infinite Scale incorporates state-of-the-art security
-      standards and best practices to ensure superior data protection and
-      privacy. It is designed with a three-tier architecture and secure APIs.

@@ -1,11 +1,6 @@
 name: Corteza
-description: Corteza is a 100% open-source, fully standardized low-code app
-  development, business process, integration and data harmonization platform. It
-  is built in Golang and Vue.js, and uses W3C standards and formats. Corteza is
-  cloud-native and deploys via Docker containers. It is licensed under an Apache
-  2.0 license and is freely available to all.
-instructions: Create an account to login. The first account created will have
-  administrator priviledges. Go to /admin for the admijnistration interface
+description: The Corteza low-code platform lets you build and iterate CRM, business process and other structured data apps fast, create intelligent business process workflows and connect with almost any data source.
+instructions: Create an account to login. The first account created will have administrator priviledges. Go to /admin for the admijnistration interface
 changeLog:
   - date: 2023-3-2
     description: first release
@@ -43,40 +38,3 @@ schema:
       type: string
       title: Database Service Name
       default: corteza-db
-tags:
-  - CRM
-  - Developer Tools
-benefits:
-  - title: Rapid Application Development
-    description: Build unlimited web applications and process workflows using
-      block-based tools and Javascript automations in a fraction of the time of
-      traditional coding.
-  - title: Integration Management
-    description: Integrate with data from any machine-readable system or database,
-      regardless of format, across and between instances.
-  - title: Data Harmonization
-    description: Transform all data into a standardized JSON format to create data
-      models for apps and workflows or to federate out.
-  - title: Complete Flexibility and Control
-    description: Build native web apps and expand your third-party software
-      ecosystem with complete flexibility, freedom, and control over your
-      platform and everything you build on it.
-  - title: Open Source and Free
-    description: Corteza is 100% open-source and freely available to all. You can
-      use, modify, distribute, or sell Corteza or apps built with it under your
-      own license and trademark.
-features:
-  - title: Low-Code Platform
-    description: Corteza is a low-code app development platform that allows you to
-      build web applications and process workflows using block-based tools and
-      Javascript automations.
-  - title: Business Process Workflows
-    description: Corteza enables you to create and manage business process
-      workflows, automating repetitive tasks and improving efficiency.
-  - title: Integration Management
-    description: Corteza allows you to integrate with data from any machine-readable
-      system or database, regardless of format, across and between instances.
-  - title: Data Harmonization
-    description: Corteza helps you transform all data into a standardized JSON
-      format, making it easier to create data models for apps and workflows or
-      to federate out.

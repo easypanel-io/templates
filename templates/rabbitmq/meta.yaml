@@ -1,24 +1,6 @@
 name: RabbitMQ
-description: RabbitMQ is an open source message broker that is widely deployed
-  and used by small startups and large enterprises worldwide. It is lightweight
-  and easy to deploy on premises and in the cloud, and supports multiple
-  messaging protocols and streaming. RabbitMQ can be deployed in distributed and
-  federated configurations to meet high-scale, high-availability requirements.
-  It runs on many operating systems and cloud environments, and provides a wide
-  range of developer tools for most popular languages. RabbitMQ offers features
-  such as asynchronous messaging, cross-language messaging, distributed
-  deployment, pluggable authentication and authorization, and management and
-  monitoring tools. It also has commercial features like intra-cluster
-  compression, warm standby replication, and 24/7 expert support. RabbitMQ can
-  be downloaded and installed on popular operating systems and languages, and
-  there are tutorials available to help users get started. Commercial offerings
-  and support agreements are available from VMware, and technical support and
-  cloud hosting are provided by various companies. There is a vibrant community
-  around RabbitMQ with mailing lists, Discord server, and Slack channel for
-  users to connect and get help. Contributions to RabbitMQ are welcome from the
-  community.
-instructions: Default user/pass is guest/guest (if you use the -management
-  version of the image)
+description: RabbitMQ is an open source multi-protocol messaging broker.
+instructions: Default user/pass is guest/guest (if you use the -management version of the image)
 changeLog:
   - date: 2022-11-08
     description: first release
@@ -64,50 +46,3 @@ schema:
       type: string
       title: RAM Memory Limit (recommended)
       default: 512MB
-tags:
-  - Communication
-  - Developer Tools
-benefits:
-  - title: Widely Deployed
-    description: RabbitMQ is used by tens of thousands of users worldwide, from
-      small startups to large enterprises.
-  - title: Lightweight and Easy to Deploy
-    description: RabbitMQ is lightweight and easy to deploy on premises and in the cloud.
-  - title: Supports Multiple Messaging Protocols
-    description: RabbitMQ supports multiple messaging protocols and streaming.
-  - title: High-Scale and High-Availability
-    description: RabbitMQ can be deployed in distributed and federated
-      configurations to meet high-scale, high-availability requirements.
-  - title: Wide Range of Developer Tools
-    description: RabbitMQ provides a wide range of developer tools for most popular
-      languages.
-features:
-  - title: Asynchronous Messaging
-    description: RabbitMQ supports multiple messaging protocols, message queuing,
-      delivery acknowledgement, flexible routing to queues, and multiple
-      exchange types.
-  - title: Cross-Language Messaging
-    description: RabbitMQ allows developers to develop cross-language messaging with
-      their favorite programming languages such as Java, .NET, PHP, Python,
-      JavaScript, Ruby, Go, and many others.
-  - title: Distributed Deployment
-    description: RabbitMQ can be deployed as clusters for high availability and
-      throughput, and can be federated across multiple availability zones and
-      regions.
-  - title: Pluggable Authentication and Authorization
-    description: RabbitMQ supports pluggable authentication and authorization, and
-      also supports TLS and LDAP.
-  - title: Management and Monitoring Tools
-    description: RabbitMQ provides HTTP-API, command line tool, and UI for managing
-      and monitoring the message broker.
-  - title: Intra-Cluster Compression
-    description: RabbitMQ compresses all network traffic exchanged by nodes in a
-      deployment by default, reducing bandwidth usage by 16x for JSON message
-      payloads.
-  - title: Warm Standby Replication
-    description: RabbitMQ supports continuous schema definition and message
-      replication to a remote cluster, making it easy to run a standby cluster
-      for disaster recovery.
-  - title: 24/7 Expert Support
-    description: RabbitMQ offers 24/7 expert support with phone and online global
-      coverage, gold star standards SLAs, and extended support lifecycle.

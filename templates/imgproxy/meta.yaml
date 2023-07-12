@@ -1,6 +1,7 @@
 name: imgproxy
-description: imgproxy is an app that optimizes images for the web on the fly. It
-  makes websites and apps blazing fast while saving storage and SaaS costs.
+description: imgproxy is a fast and secure standalone server for resizing and
+  converting remote images. imgproxy resizes and processes images on the fly and
+  doesn’t consume disk space
 instructions: "To generate a image URL you can use the following link:
   https://progapandist.github.io/imgproxy-form/#. Your Salt and Key can be found
   in the environment variables once you create the service. You can also find
@@ -36,27 +37,3 @@ schema:
       type: string
       title: App Service Image
       default: darthsim/imgproxy:v3.13.2
-tags:
-  - Developer Tools
-  - Media
-benefits:
-  - title: Blazing Fast Performance
-    description: imgproxy resizes and processes images on the fly, resulting in
-      faster loading times for websites and apps.
-  - title: Cost Savings
-    description: By optimizing images on the fly, imgproxy helps save storage and
-      SaaS costs by avoiding the need to store multiple versions of the same
-      image.
-features:
-  - title: Resize Images
-    description: imgproxy allows you to resize images to specific dimensions.
-  - title: Crop Pictures
-    description: Crop pictures to focus on specific areas or remove unwanted parts.
-  - title: Add Watermarks
-    description: Add custom watermarks to images to protect your content.
-  - title: Image Filters
-    description: Apply various filters to images, such as contrast, pixelization,
-      saturation, and more.
-  - title: Security Features
-    description: imgproxy includes security features to protect against image bombs,
-      URL signing, and authorization.

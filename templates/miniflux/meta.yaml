@@ -1,11 +1,9 @@
 name: Miniflux
-description: Miniflux is a minimalist and opinionated feed reader. It focuses on
-  simplicity and readability, with a lightweight user interface and optimized
-  page layout. It allows you to download original article contents and removes
-  pixel trackers for privacy. Miniflux is fast and efficient, with keyboard
-  shortcuts for easy navigation. It is free, open source, and self-hosted, with
-  options for installation via binary, package, or Docker image. Donations are
-  accepted to support the project.
+description: Miniflux is a minimalist and opinionated feed reader written in
+  GO.Supports multiple enclosures/attachments (Podcasts, videos, music, and
+  images).Save articles to third-party services.Play videos from YouTube
+  channels directly inside Miniflux.Send articles to Telegram, Pinboard,
+  Instapaper, Pocket, Wallabag, Linkding, Espial, or Nunux Keeper
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -53,37 +51,3 @@ schema:
       type: string
       title: Database Service Name
       default: miniflux-db
-tags:
-  - Productivity
-  - RSS
-benefits:
-  - title: Optimized for readability
-    description: The page layout, fonts, and colors are chosen to be readable on a
-      screen. The most important thing is the content.
-  - title: Download original article contents
-    description: Do you have feeds that display only a summary? Fetch the original
-      article automatically.
-  - title: No fancy features
-    description: Miniflux focuses on simplicity. Less is more!
-  - title: Fast and efficient
-    description: Be productive, use the keyboard shortcuts to navigate through the
-      application. Scan quickly your unread items with the lightweight user
-      interface.
-  - title: Your privacy is guaranteed
-    description: Nobody resells your private data or tracks your usage. No
-      advertising and user tracking. Miniflux removes automatically pixel
-      trackers.
-  - title: Super simple installation
-    description: Miniflux is compiled statically without external dependencies, drop
-      the binary on your server and you are done. You also have the choice to
-      use the RPM/Debian package or the Docker image.
-  - title: Free, open source and self-hosted
-    description: Miniflux is a free and open source project distributed under the
-      permissive Apache 2.0 License.
-  - title: Donations
-    description: Do you like Miniflux? Make a donation. You can donate via LiberaPay
-      or PayPal.
-features:
-  - title: Minimalist and opinionated feed reader
-    description: Miniflux is a minimalist and opinionated feed reader that focuses
-      on simplicity and readability.

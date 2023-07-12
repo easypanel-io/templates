@@ -1,13 +1,5 @@
 name: CubeJS
-description: Cube is an embedded analytics app that provides a semantic layer
-  for every data app. It allows data engineers and developers to make their data
-  consistent, secure, performant, and accessible across every application.
-  Cube's semantic layer acts as a middleware between data sources and data
-  applications, enabling users to define and manage metrics, grant access
-  control, ensure data caching, and connect data to any front-end application
-  through APIs. With Cube, users can unify their organization's knowledge base,
-  improve application performance, reduce development time, and create
-  beautiful, data-rich user experiences.
+description: Cube — The Semantic Layer for Building Data Applications
 instructions: null
 changeLog:
   - date: 2023-2-27
@@ -45,41 +37,3 @@ schema:
       type: string
       title: Database Service Name
       default: cubejs-db
-tags:
-  - Data Science
-  - Developer Tools
-benefits:
-  - title: Consistent Metrics
-    description: Cube enables users to define and manage metrics upstream, creating
-      a centralized, single source of truth with consistent metrics that only
-      need to be defined once.
-  - title: Secure Access Control
-    description: Cube's semantic layer coordinates access control upstream of data
-      applications, ensuring that only authorized users have access to the right
-      metrics.
-  - title: Reliable Performance
-    description: Cube's caching layer and advanced preaggregation capabilities
-      ensure that data is reliably performant, providing low-latency access to
-      the latest information.
-  - title: Flexible Integration
-    description: Cube's APIs (GraphQL, REST, and SQL) allow users to connect their
-      data to any front-end application, enabling the creation of custom
-      visualizations and integration with data visualization tools and business
-      intelligence dashboards.
-features:
-  - title: Data Modeling
-    description: Cube's data modeling feature allows users to define and manage
-      metrics upstream, consolidating their workflow, centralizing definitions,
-      and creating a single source of truth.
-  - title: Access Control
-    description: Cube's access control feature enables users to grant column- and
-      role-based operational and viewing permissions upstream, ensuring granular
-      access controls.
-  - title: Caching
-    description: Cube's caching feature ensures reliable data performance with a
-      powerful caching layer and advanced preaggregation capabilities.
-  - title: APIs
-    description: Cube's APIs (GraphQL, REST, and SQL) allow users to connect their
-      data to any front-end application, building beautiful custom
-      visualizations and integrating with data visualization tools and business
-      intelligence dashboards.

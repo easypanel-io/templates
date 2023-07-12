@@ -1,9 +1,5 @@
 name: Homarr
-description: Homarr is a simple yet powerful dashboard for your server. It
-  allows you to easily manage and access all of your apps and services in one
-  convenient location. With seamless integrations, customizable features, and
-  support for multiple languages, Homarr provides a user-friendly experience for
-  server management.
+description: Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place. It integrates with the services you use to display information on the homepage (E.g. Show upcoming Sonarr/Radarr releases).For a full list of integrations, head over to our documentation
 instructions: null
 changeLog:
   - date: 2022-12-20
@@ -40,39 +36,3 @@ schema:
       type: string
       title: Timezone
       default: America/New_York
-tags:
-  - "Dashboard "
-  - Documentation
-benefits:
-  - title: Simplify Server Management
-    description: Homarr streamlines the management of your server by providing a
-      sleek and modern dashboard that puts all of your apps and services at your
-      fingertips. With Homarr, you can easily access and control everything in
-      one place.
-  - title: Seamless Integrations
-    description: Homarr seamlessly integrates with popular applications, enhancing
-      your experience and providing valuable information. It supports over 15
-      integrations, including Radarr, Sonarr, PiHole, Dash, and popular Torrent
-      & Usenet clients.
-  - title: Customizable and Multi-lingual
-    description: Homarr is highly customizable, accessible, and supports 23
-      languages. You can personalize your dashboard by adding your self-hosted
-      applications or favorite websites, and organize them as you like.
-  - title: Open Source
-    description: Homarr is an open-source project, allowing you to view, modify, and
-      distribute the entire source code. It also supports commercial usage, but
-      donations are appreciated to cover infrastructure costs.
-features:
-  - title: Organize Your Applications
-    description: Add your self-hosted applications or favorite websites to your
-      dashboard and freely organize them using the drag-and-drop feature.
-  - title: Widgets
-    description: Use integrations to display data and control apps, including
-      Radarr, Sonarr, PiHole, Dash, popular Torrent & Usenet clients, and many
-      more.
-  - title: Quick Search
-    description: Search through your apps and supported integrations instantly to
-      find what you need.
-  - title: Create Your Own Dashboard
-    description: Easily create your own dashboard using Homarr's visual editor,
-      without the need for YAML or JSON.

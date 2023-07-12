@@ -1,9 +1,10 @@
 name: Nzbget
-description: NZBGet is an efficient Usenet downloader that allows users to
-  download files from Usenet based on information given in nzb-files. It is
-  known for its performance and efficiency, and can run on almost any device
-  including PCs, NAS, media players, SAT-receivers, and WLAN-routers. NZBGet is
-  open source and hosted on GitHub.
+description: NZBGet is a binary downloader, which downloads files from Usenet
+  based on information given in nzb-files.NZBGet is written in C++ and is known
+  for its performance and efficiency.NZBGet can run on almost any device -
+  classic PC, NAS, media player, SAT-receiver, WLAN-router, etc. The download
+  area provides precompiled binaries for Windows, macOS, Linux (compatible with
+  many CPUs and platform variants), FreeBSD and Android.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -52,32 +53,3 @@ schema:
       type: string
       title: Timezone
       default: Europe/London
-tags:
-  - File Management
-  - Developer Tools
-benefits:
-  - title: Efficient Downloading
-    description: NZBGet is designed to be highly efficient, allowing users to
-      download files from Usenet quickly and easily.
-  - title: Cross-Platform Compatibility
-    description: NZBGet can run on almost any device, including Windows, Mac, Linux,
-      BSD, and Android.
-  - title: Open Source
-    description: NZBGet is an open source project hosted on GitHub, allowing users
-      to contribute to its development and customization.
-features:
-  - title: Installation Manuals
-    description: NZBGet provides detailed installation manuals for various
-      platforms, including Windows, Mac, Linux, FreeBSD, and Android.
-  - title: Configuration
-    description: NZBGet offers a range of configuration options to customize the
-      downloading process and optimize performance.
-  - title: Automation
-    description: NZBGet supports automation features such as RSS and duplicate
-      check, allowing users to automate their downloads with RSS feeds.
-  - title: Post-Processing
-    description: NZBGet provides post-processing scripts for sorting downloaded
-      video files and performing other tasks after the download is complete.
-  - title: API
-    description: NZBGet offers an API that allows communication with the application
-      from other applications or scripts.

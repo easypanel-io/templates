@@ -1,20 +1,8 @@
 name: Change Detection
-description: changedetection.io is a website change detection, notification, and
-  restock alert system. It allows users to monitor website pages for changes,
-  such as price updates or restock notifications. The app supports various
-  notification formats and offers features like PDF text support, JSON and XML
-  monitoring, and extensive text triggers. It is loved by smart-shoppers,
-  data-journalists, research engineers, data-scientists, security researchers,
-  and more. The app is fully open-source and relies on and financially supports
-  the libraries it builds on. It offers an easy subscription plan for
-  $8.99/month with 5,000 URL watches included. The app can be used for a wide
-  range of use cases, including monitoring pricing changes, tracking PDF file
-  changes, detecting changes in JSON API responses, monitoring HTML source code
-  for unexpected changes, and more. It also supports notifications via various
-  channels like Discord, Email, Slack, Telegram, and API calls. The app can be
-  installed using Docker, Python Pip, or as a standalone Windows application. It
-  also provides proxy configuration options and supports Raspberry Pi and ARM
-  devices. Commercial support is available for organizations that require it.
+description: The best and simplest self-hosted free open source website change
+  detection tracking, monitoring, and notification service. An alternative to
+  Visualping, Watchtower etc. Designed for simplicity - the main goal is to
+  simply monitor which websites had a text change for free.
 instructions: null
 changeLog:
   - date: 2022-08-15
@@ -50,55 +38,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/dgtlmoon/changedetection.io:0.40.2
-tags:
-  - Monitoring
-  - Web Hosting
-benefits:
-  - title: Monitor Website Changes
-    description: Detect and monitor changes in website content, such as pricing
-      updates, restock notifications, and more.
-  - title: Flexible Notification Formats
-    description: Receive notifications via Discord, Email, Slack, Telegram, API
-      calls, and more. Supports 85+ notification formats.
-  - title: Extensive Monitoring Features
-    description: Monitor PDF files, JSON API responses, HTML source code, and more.
-      Use filters and selectors to target specific elements.
-  - title: Open-Source and Community-Driven
-    description: The app is fully open-source and relies on and financially supports
-      the libraries it builds on. It is developed with the help of the
-      open-source community.
-  - title: Easy Subscription Plan
-    description: Subscribe to the app for $8.99/month and get 5,000 URL watches
-      included. Cancel anytime.
-features:
-  - title: Website Change Monitoring
-    description: Monitor website pages for changes, such as price updates, restock
-      notifications, and more.
-  - title: PDF Text Support
-    description: Monitor and track changes in PDF files. Detect when a PDF file has
-      text changes.
-  - title: JSON and XML Monitoring
-    description: Detect and monitor changes in JSON and XML API responses. Trigger
-      notifications based on text changes.
-  - title: Extensive Text Triggers
-    description: Use text triggers to monitor specific changes in website content.
-      Trigger notifications based on specific words, lines, or characters.
-  - title: Flexible Notification Channels
-    description: Receive notifications via Discord, Email, Slack, Telegram, API
-      calls, and more. Supports 85+ notification formats.
-  - title: Visual Selector Tool
-    description: Target specific parts of a webpage using the Visual Selector tool.
-      Easily monitor complex JSON with JSONPath or jq.
-  - title: Browser Steps Configuration
-    description: Perform interactive browser steps before performing change
-      detection. Fill in text boxes, click buttons, and more.
-  - title: Proxy Configuration
-    description: Configure proxies for website monitoring. Supports Bright Data
-      global proxy services.
-  - title: Raspberry Pi and ARM Support
-    description: Supports Raspberry Pi and ARM devices. Install and run the app on
-      these devices.
-  - title: Commercial Support
-    description: Commercial support is available for organizations that require
-      assistance with the app.
+      default: ghcr.io/dgtlmoon/changedetection.io:0.42.2

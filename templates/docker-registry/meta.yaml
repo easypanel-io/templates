@@ -1,12 +1,12 @@
 name: Docker Registry
-description: The Docker Registry is an implementation of the Docker Registry
-  HTTP API V2 for storing and distributing Docker images. It is used with Docker
-  1.6+ and provides a simple, secure, and scalable base for building a
-  large-scale registry solution or running a private registry. It is a core
-  library for many registry operators including Docker Hub, GitHub Container
-  Registry, GitLab Container Registry, and DigitalOcean Container Registry. The
-  Docker Registry is available as an official Docker image and is supported on
-  multiple architectures.
+description: The toolset to pack, ship, store, and deliver content. Docker
+  Registry is the Open Source Registry implementation for storing and
+  distributing container images using the OCI Distribution Specification. The
+  goal of this project is to provide a simple, secure, and scalable base for
+  building a large scale registry solution or running a simple private registry.
+  It is a core library for many registry operators including Docker Hub, GitHub
+  Container Registry, GitLab Container Registry and DigitalOcean Container
+  Registry, as well as the CNCF Harbor Project, and VMware Harbor Registry.
 instructions: The Registry doesn't have a UI. To interact with the registry you
   should use the Docker CLI.
 changeLog:
@@ -50,40 +50,3 @@ schema:
       type: string
       title: Password
       default: admin
-tags:
-  - Containerization
-  - Developer Tools
-benefits:
-  - title: Secure and Scalable
-    description: The Docker Registry provides a secure and scalable solution for
-      storing and distributing Docker images. It is designed to handle
-      large-scale deployments and can be easily scaled to meet the needs of your
-      organization.
-  - title: Integration with Docker
-    description: The Docker Registry integrates seamlessly with Docker and can be
-      used with Docker 1.6+ to store and distribute Docker images. It provides
-      an implementation of the Docker Registry HTTP API V2, allowing you to
-      easily push and pull images from the registry.
-  - title: Support for Multiple Architectures
-    description: The Docker Registry is available as an official Docker image and is
-      supported on multiple architectures, including amd64, arm32v6, arm32v7,
-      arm64v8, ppc64le, and s390x. This allows you to run the registry on a wide
-      range of hardware platforms.
-features:
-  - title: Implementation of Docker Registry HTTP API V2
-    description: The Docker Registry provides an implementation of the Docker
-      Registry HTTP API V2, which allows you to interact with the registry using
-      standard Docker commands. This includes features such as pushing and
-      pulling images, tagging images, and searching for images.
-  - title: Easy Deployment and Configuration
-    description: The Docker Registry can be easily deployed and configured using
-      Docker. You can run a local registry with a single command, and it can be
-      configured to run on a specific port and with custom settings. The
-      registry can also be deployed in a high-availability setup for increased
-      reliability.
-  - title: Integration with Other Registry Operators
-    description: The Docker Registry is a core library for many registry operators,
-      including Docker Hub, GitHub Container Registry, GitLab Container
-      Registry, and DigitalOcean Container Registry. This means that you can use
-      the Docker Registry as a base for building your own registry solution or
-      integrate it with existing registry operators.

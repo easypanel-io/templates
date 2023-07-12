@@ -1,6 +1,6 @@
 name: Dashy
-description: Dashy is an open source, highly customizable, easy to use,
-  privacy-respecting dashboard app.
+description: Dashy helps you organize your self-hosted services by making them
+  accessible from a single place
 instructions: After deploying the project, it may take a while before the app is
   available (5 minutes).
 changeLog:
@@ -36,71 +36,3 @@ schema:
       type: string
       title: App Service Image
       default: lissy93/dashy:2.1.1
-tags:
-  - Dashboard
-  - Productivity
-benefits:
-  - title: Customizable Themes
-    description: Choose from built-in themes or create your own unique look with custom CSS.
-  - title: Auto-fetch Icons
-    description: Dashy can automatically fetch icons from the favicon of each app/service.
-  - title: Status Indicators
-    description: Get an instant overview of the health of each app/service with
-      status indicators.
-  - title: Authentication
-    description: Protect your dashboard with simple authentication or integrate with
-      SSO providers.
-  - title: Widgets
-    description: Display dynamic content from any API-enabled service with pre-built
-      widgets.
-  - title: Alternate Views
-    description: Switch between default, minimal, and workspace views for different
-      use cases.
-  - title: Launching Methods
-    description: Choose how to launch apps/services by default or with right-click options.
-  - title: Search & Shortcuts
-    description: Instantly search and launch apps/services with custom shortcuts and tags.
-  - title: Cloud Backup & Sync
-    description: Backup and sync your dashboard configuration and data with an
-      optional cloud service.
-  - title: Easy Deployment
-    description: Quickly deploy Dashy with Docker or run it on bare metal.
-  - title: Customizable Layouts
-    description: Structure your dashboard to fit your needs with different layouts
-      and customization options.
-features:
-  - title: Theming
-    description: Choose from built-in themes or create your own unique look with custom CSS.
-  - title: Icons
-    description: Auto-fetch icons from favicons or use Font Awesome, Material Design
-      Icons, emoji icons, or images.
-  - title: Status Indicators
-    description: Get an instant overview of the health of each app/service with
-      status indicators.
-  - title: Authentication
-    description: Protect your dashboard with simple authentication or integrate with
-      SSO providers.
-  - title: Widgets
-    description: Display dynamic content from any API-enabled service with pre-built
-      widgets.
-  - title: Alternate Views
-    description: Switch between default, minimal, and workspace views for different
-      use cases.
-  - title: Launching Methods
-    description: Choose how to launch apps/services by default or with right-click options.
-  - title: Search & Shortcuts
-    description: Instantly search and launch apps/services with custom shortcuts and tags.
-  - title: Cloud Backup & Sync
-    description: Backup and sync your dashboard configuration and data with an
-      optional cloud service.
-  - title: Configuration
-    description: Easily configure Dashy through the UI or a YAML file with real-time
-      validation and hints.
-  - title: Multi-Language Support
-    description: Choose from multiple languages or contribute translations to
-      support more languages.
-  - title: Easy Deployment
-    description: Quickly deploy Dashy with Docker or run it on bare metal.
-  - title: Customizable Layouts
-    description: Structure your dashboard to fit your needs with different layouts
-      and customization options.

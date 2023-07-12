@@ -1,10 +1,6 @@
 name: Shynet
-description: Shynet is a self-hosted analytics platform that allows you to track
-  and analyze website traffic. It provides detailed insights into visitor
-  behavior, page views, referrers, and more. With Shynet, you have full control
-  over your data and can customize the platform to meet your specific needs.
-instructions: Open a console session and run ./manage.py createsuperuser to
-  create your administrator account
+description: Modern, privacy-friendly, and detailed web analytics that works without cookies or JS.
+instructions: Open a console session and run ./manage.py createsuperuser to create your administrator account
 changeLog:
   - date: 2023-3-20
     description: first release
@@ -39,37 +35,3 @@ schema:
       type: string
       title: Database Service Name
       default: shynet-db
-tags:
-  - Analytics
-  - Privacy
-benefits:
-  - title: Privacy and Security
-    description: Shynet is self-hosted, meaning your data stays on your server and
-      is not shared with any third parties. This ensures the privacy and
-      security of your website analytics.
-  - title: Customizable
-    description: Shynet is highly customizable, allowing you to configure it to fit
-      your specific requirements. You can set up multiple services, track custom
-      events, and integrate Shynet with other tools and platforms.
-  - title: Open Source
-    description: Shynet is an open-source project, which means you have full access
-      to the source code and can modify it to suit your needs. You can also
-      contribute to the development of Shynet and help improve the platform for
-      everyone.
-features:
-  - title: Real-time Analytics
-    description: Shynet provides real-time analytics, allowing you to see website
-      traffic and visitor behavior as it happens. You can track page views,
-      unique visitors, referrers, user agents, and more.
-  - title: User-friendly Interface
-    description: Shynet has a user-friendly interface that makes it easy to navigate
-      and understand your analytics data. You can view detailed reports, filter
-      data, and generate custom charts and graphs.
-  - title: Integration with Single-Page Applications
-    description: Shynet can be easily integrated with single-page applications. It
-      provides a method to track page loads within your JavaScript code,
-      ensuring accurate analytics for your SPA.
-  - title: API Access
-    description: Shynet offers an API that allows you to access your analytics data
-      programmatically. You can retrieve data for specific services, set custom
-      date ranges, and integrate Shynet with other tools and platforms.

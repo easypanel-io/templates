@@ -1,11 +1,5 @@
 name: HedgeDoc
-description: HedgeDoc is an open-source, web-based, self-hosted, collaborative
-  markdown editor. It allows users to easily collaborate on notes, graphs, and
-  presentations in real-time. The editor runs in the browser and can be
-  installed on a server. HedgeDoc supports features such as real-time
-  collaboration, presentation mode, graphs and diagrams, easy-to-use permission
-  system, revisions, and low system requirements. It is licensed under AGPLv3
-  and is community-driven.
+description: HedgeDoc (formerly known as CodiMD) is an open-source, web-based, self-hosted, collaborative markdown editor.
 instructions: null
 changeLog:
   - date: 2022-10-28
@@ -40,30 +34,3 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/hedgedoc:1.9.7
-tags:
-  - Collaboration
-  - Documents
-benefits:
-  - title: Web-based
-    description: The editor runs in the browser, so no extra software is needed.
-  - title: Self-hosted
-    description: Users can keep control of their data by hosting HedgeDoc on their
-      own server.
-  - title: Real-time collaboration
-    description: Users can collaborate in real-time with others on notes, graphs,
-      and presentations.
-features:
-  - title: Presentation mode
-    description: HedgeDoc can be used to build and present slides in markdown,
-      powered by reveal.js.
-  - title: Graphs & diagrams
-    description: HedgeDoc supports various types of graphs, diagrams, and embedded content.
-  - title: Easy-to-use permission system
-    description: Users can manage permissions of their notes with a simple dropdown
-      selection.
-  - title: Revisions
-    description: HedgeDoc keeps track of changes to notes and allows users to revert
-      to any older version.
-  - title: Low system requirements
-    description: HedgeDoc can run smoothly on a Raspberry Pi and doesn't require
-      much resources.

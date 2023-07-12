@@ -1,11 +1,5 @@
 name: Focalboard
-description: Mattermost Boards is an open source project management app that
-  helps technical teams centralize, plan, and track their work. It allows teams
-  to organize and visualize their tasks in various views such as Kanban, table,
-  gallery, and calendar. With real-time collaboration features, teams can stay
-  aligned and productive. Mattermost Boards offers unlimited boards,
-  customizable templates, file sharing, and user permissions. It is a trusted
-  app used by teams around the world.
+description: Focalboard is an open source, self-hosted alternative to Trello, Notion, and Asana.
 instructions: null
 changeLog:
   - date: 2023-03-20
@@ -71,59 +65,3 @@ schema:
       type: boolean
       title: Telemetry
       default: false
-tags:
-  - Project Management
-  - Productivity
-benefits:
-  - title: Accelerate productivity
-    description: Centralize, plan, and track all your work in one place. Mattermost
-      Boards helps your organization maintain a single source of truth, so your
-      teams stay aligned to complete tasks, reach milestones, and achieve their
-      goals.
-  - title: Organize and visualize work, your way
-    description: Work in the way that suits you best. Manage all your tasks on a
-      Kanban, table, gallery, and calendar view. Focus on the highest priority
-      items with board filters, and save an unlimited number of filtered views
-      for quick access later.
-  - title: Align your teams with real-time collaboration
-    description: Keep everyone in sync with card comments, @mention teammates to get
-      their attention, and set board permissions to share your board with the
-      entire team or specific individuals.
-  - title: Tons of templates to get you started
-    description: Get started fast with pre-built templates or create a fully custom
-      board from scratch. Templates include Project Tasks, Content Calendar,
-      Company Goals & OKRs, Roadmap, Meeting Agenda, and more.
-features:
-  - title: Unlimited boards
-    description: Create as many boards as you need to manage your projects and tasks.
-  - title: Group, filter, and sort tasks
-    description: Organize your tasks by groups, apply filters to focus on specific
-      items, and sort tasks based on priority or other criteria.
-  - title: File sharing
-    description: Attach files to cards and share them with your team for easy access
-      and collaboration.
-  - title: Unlimited custom attributes
-    description: Add custom attributes to cards to capture additional information
-      and tailor the app to your team's needs.
-  - title: Customizable templates
-    description: Use pre-built templates or create your own templates to standardize
-      workflows and save time.
-  - title: Meeting notes
-    description: Take meeting notes directly on cards to keep track of discussions
-      and decisions.
-  - title: Project cards & tasks
-    description: Create cards for projects and tasks, assign owners, set due dates,
-      and track progress.
-  - title: Archiving & back-up snapshots
-    description: Archive completed projects and tasks, and create back-up snapshots
-      for data protection.
-  - title: Priority labeling
-    description: Label cards with priorities to easily identify and focus on
-      high-priority items.
-  - title: User permissions
-    description: Set permissions to control access to boards and ensure data security.
-  - title: Team and direct messaging
-    description: Communicate with your team through team and direct messaging within
-      the app.
-  - title: Multi-team views
-    description: View and manage boards across multiple teams in a single interface.

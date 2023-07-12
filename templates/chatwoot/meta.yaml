@@ -1,15 +1,5 @@
 name: Chatwoot
-description: Chatwoot is an open-source customer engagement platform that
-  provides a multi-channel customer experience for businesses of all sizes. It
-  is an alternative to Intercom, Zendesk, and Salesforce Service Cloud. With
-  Chatwoot, you can manage your customer interactions from various channels such
-  as live chat, email, Facebook, Instagram, Twitter, and more. The platform
-  offers features like automations, chatbots, canned responses, and keyboard
-  shortcuts to help you work smarter and provide quick responses to your
-  customers. You can also track your agents' performance, measure CSAT scores,
-  and get detailed insights into your conversations. Chatwoot is self-hosted and
-  provides extensive documentation, API reference, and a contribution guide for
-  developers.
+description: Customer engagement suite, an open-source alternative to Intercom, Zendesk, Salesforce Service Cloud etc.
 instructions: null
 changeLog:
   - date: 2023-1-22
@@ -57,54 +47,3 @@ schema:
       type: string
       title: Redis Service Name
       default: chatwoot-redis
-tags:
-  - Customer Support
-  - Open Source
-benefits:
-  - title: Manage Customer Interactions
-    description: Chatwoot allows you to manage customer interactions from multiple
-      channels, including live chat, email, social media, and more. You can stay
-      connected with your customers and provide support across different
-      platforms.
-  - title: Automations and Chatbots
-    description: With Chatwoot, you can automate conversations and perform key
-      actions on multiple conversations at once. You can also integrate chatbots
-      to provide quick responses to customer queries.
-  - title: Insights and Reports
-    description: Chatwoot provides detailed insights into your conversations and
-      allows you to track your CSAT score. You can measure your agents'
-      performance and get auto-updating reports to monitor your customer support
-      operations.
-  - title: Self-Hosted and Open-Source
-    description: Chatwoot is a self-hosted platform, which means you have full
-      control over your data and infrastructure. It is also open-source,
-      allowing developers to contribute and customize the platform according to
-      their needs.
-features:
-  - title: Multi-Channel Support
-    description: Manage customer interactions from various channels, including live
-      chat, email, Facebook, Instagram, Twitter, and more.
-  - title: Automations
-    description: Perform key actions on multiple conversations at once with
-      automations. Save time and streamline your customer support operations.
-  - title: Chatbots
-    description: Integrate chatbots to automate conversations and provide quick
-      responses to customer queries.
-  - title: Canned Responses
-    description: Access a curated collection of canned responses to use in your
-      customer communication. Save time and provide consistent responses.
-  - title: Keyboard Shortcuts
-    description: Use keyboard shortcuts to navigate and perform actions in Chatwoot
-      quickly. Increase your productivity and efficiency.
-  - title: Agent Performance Tracking
-    description: Track your agents' performance with auto-updating reports. Monitor
-      response times, resolution rates, and customer satisfaction.
-  - title: CSAT Score Measurement
-    description: Measure and track your CSAT (Customer Satisfaction) score on
-      autopilot. Get insights into customer satisfaction levels.
-  - title: Self-Hosted Instance
-    description: Set up and run a self-hosted instance of Chatwoot. Have full
-      control over your data and infrastructure.
-  - title: Extensive Documentation
-    description: Access product documentation, API reference, and a contribution
-      guide to learn how to set up and customize Chatwoot.

@@ -1,19 +1,5 @@
 name: Paperless-ngx
-description: Paperless-ngx is a document management system that transforms your
-  physical documents into a searchable online archive. It allows you to organize
-  and index your scanned documents with tags, correspondents, types, and more.
-  It performs OCR on your documents, adds selectable text to image-only
-  documents, and supports various file formats including PDF, images, plain text
-  files, and Office documents. The app stores your documents plain on disk and
-  provides a single-page application front end with a dashboard for basic
-  statistics and document upload. It also offers full-text search,
-  auto-completion, highlighting, and searching for similar documents.
-  Paperless-ngx supports email processing, machine learning-powered document
-  matching, and is optimized for multi-core systems. The app can be deployed
-  using docker-compose or by manually installing the dependencies and setting up
-  Apache and a database server. Paperless-ngx is available in multiple languages
-  and welcomes contributions from the community. However, it should be run on a
-  trusted host due to the lack of encryption for stored information.
+description: Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
 instructions: Please use the following credentials to login. admin|password
 changeLog:
   - date: 2022-10-28
@@ -49,59 +35,3 @@ schema:
       type: string
       title: Redis Service Name
       default: paperlessngx-redis
-tags:
-  - Documents
-  - Productivity
-benefits:
-  - title: Reduce Paper Usage
-    description: Transform physical documents into a searchable online archive,
-      reducing the need for paper.
-  - title: Organize and Index Documents
-    description: Tag, categorize, and index scanned documents for easy retrieval and
-      management.
-  - title: OCR and File Format Support
-    description: Perform OCR on documents, add selectable text to image-only
-      documents, and support various file formats including PDF, images, plain
-      text files, and Office documents.
-  - title: Email Processing
-    description: Automatically add documents from email accounts, configure multiple
-      accounts and filters, and perform actions on the emails such as moving,
-      marking as read, flagging, or deleting.
-  - title: Machine Learning-Powered Document Matching
-    description: Learn from stored documents to automatically assign tags,
-      correspondents, and types to new documents.
-  - title: Optimized for Multi-Core Systems
-    description: Efficiently process multiple documents in parallel, taking
-      advantage of multi-core systems.
-features:
-  - title: Document Organization and Indexing
-    description: Organize and index scanned documents with tags, correspondents,
-      types, and more.
-  - title: OCR and Text Extraction
-    description: Perform OCR on documents, add selectable text to image-only
-      documents, and extract metadata.
-  - title: File Format Support
-    description: Support PDF documents, images, plain text files, and Office
-      documents (Word, Excel, PowerPoint, and LibreOffice equivalents).
-  - title: Plain Text Storage
-    description: Store documents plain on disk with configurable filenames and
-      folders managed by the app.
-  - title: Single-Page Application Front End
-    description: Access the app through a single-page application front end with a
-      dashboard for basic statistics and document upload.
-  - title: Full-Text Search
-    description: Search for documents using full-text search, with auto-completion,
-      relevance sorting, and highlighting of matched parts.
-  - title: Similar Document Search
-    description: Find similar documents based on content and metadata.
-  - title: Email Processing
-    description: Automatically add documents from email accounts, configure multiple
-      accounts and filters, and perform actions on the emails.
-  - title: Machine Learning-Powered Document Matching
-    description: Learn from stored documents to automatically assign tags,
-      correspondents, and types to new documents.
-  - title: Multi-Core Optimization
-    description: Efficiently process multiple documents in parallel, optimized for
-      multi-core systems.
-  - title: Sanity Checker
-    description: Check the health of your document archive to ensure data integrity.

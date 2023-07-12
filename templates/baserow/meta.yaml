@@ -1,16 +1,5 @@
 name: Baserow
-description: Baserow is an open-source no-code database and Airtable
-  alternative. It allows users to create their own online database without any
-  technical experience. The user-friendly no-code tool gives users the powers of
-  a developer without leaving their browser. Baserow is a flexible software that
-  can be tailored to the needs of the user. It provides clear and accessible
-  data for all team members, eliminating unorganized projects, ideas, and notes.
-  The platform also allows for easy integration with other software and supports
-  custom and third-party plugins. Baserow offers a hosted SaaS offering on the
-  baserow.io website, as well as the option to self-host on-premise or in the
-  cloud. There are different pricing plans available, including a free plan,
-  premium plan, and advanced plan. Baserow is designed to bring structure to
-  organizations and make businesses future-proof.
+description: Open source no-code database and Airtable alternative. Create your own online database without technical experience. Our user friendly no-code tool gives you the powers of a developer without leaving your browser.
 instructions: It may take several minutes for Baserow to boot up.
 changeLog:
   - date: 2022-10-05
@@ -41,34 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: baserow/baserow:1.14.0
-tags:
-  - Database
-  - Developer Tools
-benefits:
-  - title: No-Code Database
-    description: Create your own online database without any technical experience.
-  - title: Flexible Software
-    description: Tailored to your needs instead of the other way around. Clear and
-      accessible data for all team members.
-  - title: Easy Integration
-    description: Easily integrate with other software and collaborate in real-time.
-  - title: Open Source
-    description: Built with modern and proven frameworks. Self-hosted option available.
-  - title: Different Pricing Plans
-    description: Choose from a free plan, premium plan, or advanced plan based on
-      your needs.
-features:
-  - title: User-Friendly Interface
-    description: Works similar to a spreadsheet, making it easy to use for anyone
-      familiar with spreadsheets.
-  - title: Custom Plugins
-    description: Easily create custom plugins with the provided boilerplate or use
-      third-party plugins.
-  - title: Unlimited Rows
-    description: No limit on the number of rows in your database.
-  - title: Fast Performance
-    description: Continuously tested with 100,000+ rows per table for blazingly fast
-      performance.
-  - title: Premium and Enterprise Features
-    description: Export data to Excel, XML, or JSON. Role-based permissions. Kanban
-      and Calendar views. Admin panel, signup rules, SSO login, and more.

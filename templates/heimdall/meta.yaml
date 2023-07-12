@@ -1,11 +1,9 @@
 name: Heimdall
-description: "Heimdall Application Dashboard is a dashboard for all your web
-  applications. It allows you to add links to any web application or website. It
-  is designed to be simple and elegant, with a visually pleasing interface.
-  Heimdall is backed by the linuxserver.io group and has a strong support
-  system. It supports three types of apps: Generic apps, Foundation apps, and
-  Enhanced apps. Installation is easy, with options for Docker or manual
-  installation."
+description: Heimdall Application Dashboard is a dashboard for all your web
+  applications. It doesn't need to be limited to applications though, you can
+  add links to anything you like. There are no iframes here, no apps within
+  apps, no abstraction of APIs. if you think something should work a certain
+  way, it probably does.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -46,33 +44,3 @@ schema:
       type: string
       title: Timezone
       default: Europe/London
-tags:
-  - Dashboard
-  - Productivity
-benefits:
-  - title: Simplicity
-    description: Heimdall is designed to be simple and easy to use. It avoids the
-      trap of introducing too many options and features, making it complicated
-      for users.
-  - title: Elegance
-    description: Heimdall has a visually pleasing interface, with a focus on design.
-      It aims to encourage users to use the app and discover its benefits.
-  - title: Support
-    description: Heimdall is backed by the linuxserver.io group, which provides
-      strong support. They have contributed to over 150 million Docker pulls.
-features:
-  - title: Generic Apps
-    description: Heimdall allows you to add links to any web application or website,
-      even if it's not intrinsically supported. You can customize the name,
-      background color, and icon.
-  - title: Foundation Apps
-    description: Heimdall supports a list of foundation apps, where you can simply
-      start typing the app name and it will show up in a dropdown. It fills in
-      the default background color and icon for you.
-  - title: Enhanced Apps
-    description: Enhanced apps in Heimdall allow you to use an app's API to display
-      extra information automatically. You just need to enter the API
-      credentials.
-  - title: Installation
-    description: Heimdall can be installed using Docker, which is the easiest way.
-      There are also manual installation instructions available for Ubuntu.

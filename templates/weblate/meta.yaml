@@ -1,8 +1,5 @@
 name: Weblate
-description: Weblate is a libre software web-based continuous localization
-  system used by over 2500 libre projects and companies in more than 165
-  countries. It allows for the translation of software, documentation, and other
-  content.
+description: Weblate is a libre software web-based continuous localization system. Weblate requires 2GB of ram and 2CPUs.
 instructions: Please use the following credentials to login. changeme@easypanel.io|changeme
 changeLog:
   - date: 2022-11-23
@@ -61,40 +58,3 @@ schema:
     emailPassword:
       type: string
       title: Email Password
-tags:
-  - Developer Tools
-  - Localization
-benefits:
-  - title: Continuous Localization
-    description: Weblate provides a web-based interface for continuous localization,
-      allowing for easy and efficient translation of content.
-  - title: Version Control Integration
-    description: Weblate integrates with version control systems like Git,
-      Mercurial, and Subversion, making it easy to manage translations alongside
-      code.
-  - title: REST API and Client Libraries
-    description: Weblate provides a REST API and client libraries for various
-      programming languages, enabling developers to integrate translation
-      workflows into their applications.
-features:
-  - title: Registration and User Profile
-    description: Users can register and create profiles in Weblate, allowing for
-      personalized translation experiences.
-  - title: Translating Using Weblate
-    description: Weblate provides a user-friendly interface for translating content,
-      with features like translation memory, glossary, and automatic
-      suggestions.
-  - title: Downloading and Uploading Translations
-    description: Translations can be easily downloaded and uploaded in various
-      formats, making it convenient to work with external translation tools.
-  - title: Version Control Integration
-    description: Weblate integrates with popular version control systems, allowing
-      for seamless translation management alongside code repositories.
-  - title: Configuration and Customization
-    description: Weblate can be configured and customized to fit the specific needs
-      of translation projects, including access control, language definitions,
-      and add-ons.
-  - title: Translation Workflows
-    description: Weblate supports various translation workflows, including
-      single-language projects, multi-language projects, and collaborative
-      translation.

@@ -1,11 +1,5 @@
 name: Odoo
-description: Odoo is a suite of open source business apps that cover all your
-  company needs. It offers a comprehensive set of integrated applications
-  including CRM, eCommerce, accounting, inventory, point of sale, project
-  management, and more. With a top-notch user experience and seamless
-  integration between apps, Odoo allows you to automate and track everything you
-  do in your business. It is easy to use, scalable, and accessible from anywhere
-  with any device.
+description: Odoo, formerly known as OpenERP, is a suite of open-source business apps written in Python and released under the LGPL license.
 instructions: You can login with username "admin" and password "umami".
 changeLog:
   - date: 2023
@@ -43,44 +37,3 @@ schema:
       type: string
       title: Database Service Name
       default: odoo-db
-tags:
-  - Business Apps
-  - ERP
-benefits:
-  - title: Integrated Apps
-    description: Odoo apps are perfectly integrated with each other, allowing you to
-      fully automate your business processes and have a comprehensive overview
-      of your operations.
-  - title: Cost-effective Solution
-    description: Odoo provides a single, cost-effective, and modular solution for
-      all your business needs, eliminating the need for painful integrations and
-      multiple software solutions.
-  - title: Usability and Scalability
-    description: With a modern and elegant technical design, Odoo offers a top-notch
-      user experience that scales across all apps. Usability improvements made
-      to Odoo are automatically applied to all integrated apps.
-  - title: Fast Evolution
-    description: Odoo evolves much faster than other solutions with regular annual
-      releases, ensuring that you always have access to the latest features and
-      improvements.
-features:
-  - title: CRM
-    description: Manage your customer relationships, track leads, and automate sales
-      processes with Odoo's CRM app.
-  - title: eCommerce
-    description: Create and manage your online store with Odoo's eCommerce app,
-      including features for product catalog, shopping cart, payment
-      integration, and more.
-  - title: Accounting
-    description: Handle your financial management tasks, including invoicing,
-      billing, and accounting, with Odoo's integrated accounting app.
-  - title: Inventory
-    description: Track and manage your inventory, stock levels, and procurement
-      processes with Odoo's inventory management app.
-  - title: Point of Sale
-    description: Streamline your retail operations with Odoo's point of sale app,
-      including features for sales, payments, and inventory management.
-  - title: Project Management
-    description: Plan, organize, and track your projects with Odoo's project
-      management app, including features for task management, team
-      collaboration, and progress tracking.

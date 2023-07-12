@@ -1,15 +1,5 @@
 name: Komga
-description: Komga is a free and open source comics/mangas server that allows
-  users to organize and read their CBZ, CBR, PDF, and EPUB files. It offers a
-  responsive web UI that works on desktop, tablets, and phones, allowing users
-  to browse libraries, series, and books. Users can organize their library with
-  collections and read lists, and edit metadata for their series and books.
-  Komga also provides features such as import embedded metadata automatically,
-  webreader with multiple reading modes, and the ability to manage multiple
-  users with access control and restrictions. It offers a REST API for
-  integration with other tools and scripts, and supports features like duplicate
-  files detection and removal, import from external sources, and import of
-  ComicRack cbl read lists.
+description: Komga is a media server for your comics, mangas, BDs and magazines.
 instructions: null
 changeLog:
   - date: 2022-12-11
@@ -40,54 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: gotson/komga:0.165.0
-tags:
-  - Media
-  - File Management
-benefits:
-  - title: Organize Your Library
-    description: Komga allows you to organize your CBZ, CBR, PDF, and EPUB files in
-      different libraries, collections, and reading lists. This makes it easy to
-      find and manage your comics and mangas.
-  - title: Read Anywhere
-    description: With Komga's responsive web UI, you can read your comics and mangas
-      on any device, including desktops, tablets, and phones. You can also use
-      the integrated Webreader, the Tachiyomi extension, or any OPDS reader for
-      a seamless reading experience.
-  - title: Manage Metadata
-    description: Komga allows you to edit metadata for your series and books, making
-      it easy to keep track of your collection. You can import embedded metadata
-      automatically, ensuring that your comics and mangas are properly
-      organized.
-features:
-  - title: Browse and Discover
-    description: Komga provides a responsive web UI that allows you to browse
-      libraries, series, and books. You can easily discover new comics and
-      mangas and add them to your collection.
-  - title: Organize with Collections and Read Lists
-    description: You can organize your library with collections and read lists in
-      Komga. This allows you to group related comics and mangas together and
-      create reading lists for easy access.
-  - title: Multiple Reading Modes
-    description: Komga's webreader supports multiple reading modes, allowing you to
-      customize your reading experience. You can choose between single page,
-      double page, and continuous scrolling modes.
-  - title: User Management
-    description: Komga allows you to manage multiple users with per-library access
-      control, age restrictions, and labels restrictions. This ensures that your
-      comics and mangas are only accessible to authorized users.
-  - title: REST API
-    description: Komga offers a REST API that allows you to interact with the server
-      programmatically. You can use the API to download book files, whole
-      series, or read lists, and perform other operations.
-  - title: Duplicate Files Detection and Removal
-    description: Komga has built-in duplicate files detection and removal feature.
-      This helps you keep your library clean and organized by automatically
-      identifying and removing duplicate files.
-  - title: Import from External Sources
-    description: You can import books from outside your libraries directly into your
-      series folder in Komga. This makes it easy to add new comics and mangas to
-      your collection.
-  - title: Import ComicRack cbl Read Lists
-    description: Komga supports the import of ComicRack cbl read lists. You can
-      easily import your existing read lists from ComicRack and continue reading
-      your comics and mangas in Komga.

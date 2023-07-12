@@ -1,7 +1,5 @@
 name: Deluge
-description: Deluge is a BitTorrent client that utilizes a daemon/client model.
-  It has various user interfaces available such as the GTK-UI, Web-UI, and
-  Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.
+description: Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.
 instructions: null
 changeLog:
   - date: 2023-1-25
@@ -32,38 +30,3 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/deluge:2.1.1
-tags:
-  - Developer Tools
-  - Networking
-benefits:
-  - title: Flexible User Interfaces
-    description: Deluge offers multiple user interfaces, including GTK-UI, Web-UI,
-      and Console-UI, allowing users to choose the interface that suits their
-      preferences.
-  - title: Daemon/Client Model
-    description: Deluge uses a daemon/client model, which allows for running the
-      Deluge daemon in the background and connecting to it remotely using
-      various user interfaces.
-  - title: Wide Platform Support
-    description: Deluge is available for FreeBSD, Linux, MacOSX, Windows, and can
-      also be installed from source code. This wide platform support ensures
-      that users can use Deluge on their preferred operating system.
-features:
-  - title: Download Plugins
-    description: Deluge supports download plugins, which enhance its functionality
-      and allow users to customize their BitTorrent downloading experience.
-  - title: Forum Support
-    description: Deluge has an active forum where users can seek support, ask
-      questions, and participate in discussions related to the Deluge BitTorrent
-      client.
-  - title: Bug Reporting and Development
-    description: Deluge provides a bug reporting system and supports development
-      through Trac and GitHub. Users can report bugs and contribute to the
-      development of the Deluge client.
-  - title: Authentication and Bandwidth Tweaking
-    description: Deluge offers advanced usage features such as authentication and
-      bandwidth tweaking, allowing users to customize their Deluge client
-      according to their specific needs.
-  - title: VPN and Reverse Proxy Support
-    description: Deluge supports VPN and reverse proxy, enabling users to enhance
-      their privacy and security while using the Deluge BitTorrent client.

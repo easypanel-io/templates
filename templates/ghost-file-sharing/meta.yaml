@@ -1,10 +1,5 @@
 name: Ghost File Sharing
-description: GitHub is a web-based platform for version control and
-  collaboration that allows developers to work together on projects. It provides
-  a centralized repository for code, a platform for code review, and tools for
-  project management and collaboration. With GitHub, developers can easily track
-  changes to their code, collaborate with others, and manage their projects
-  efficiently.
+description: Ghost File Sharing Service is a simple Golang clone of 0x0.st CDN.
 instructions: null
 changeLog:
   - date: 2023-01-28
@@ -33,42 +28,3 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/voxelin/ghost:stable
-tags:
-  - File Management
-  - Developer Tools
-benefits:
-  - title: Version Control
-    description: GitHub provides a powerful version control system that allows
-      developers to track changes to their code, revert to previous versions,
-      and collaborate on code changes.
-  - title: Collaboration
-    description: GitHub enables developers to collaborate on projects by providing
-      tools for code review, issue tracking, and project management. It allows
-      multiple developers to work on the same codebase simultaneously and
-      provides a platform for communication and collaboration.
-  - title: Code Review
-    description: GitHub facilitates code review by providing features such as pull
-      requests, code comments, and inline code review. It allows developers to
-      review and discuss code changes before merging them into the main
-      codebase.
-  - title: Project Management
-    description: GitHub offers project management features such as project boards,
-      milestones, and task tracking. It allows developers to organize and
-      prioritize their work, track progress, and manage project timelines.
-features:
-  - title: Version Control
-    description: GitHub provides a distributed version control system that allows
-      developers to track changes to their code, collaborate with others, and
-      manage their projects efficiently.
-  - title: Code Review
-    description: GitHub enables developers to review and discuss code changes
-      through features such as pull requests, code comments, and inline code
-      review. It allows for effective collaboration and ensures code quality.
-  - title: Collaboration
-    description: GitHub provides a platform for collaboration by allowing multiple
-      developers to work on the same codebase simultaneously. It offers tools
-      for code review, issue tracking, and project management.
-  - title: Project Management
-    description: GitHub offers project management features such as project boards,
-      milestones, and task tracking. It allows developers to organize and
-      prioritize their work, track progress, and manage project timelines.

@@ -1,8 +1,5 @@
 name: PocketBase
-description: PocketBase is an open-source backend for SaaS and mobile apps. It
-  provides a real-time database, authentication, file storage, and an admin
-  dashboard. It can be used as a standalone app or as a Go framework. PocketBase
-  offers SDKs for JavaScript and Dart for easy integration with frontend stacks.
+description: PocketBase is an open source backend consisting of embedded database (SQLite) with realtime subscriptions, built-in auth management, convenient dashboard UI and simple REST-ish API.
 instructions: Admin Dashboard can be accessed via "DOMAIN/_/""
 changeLog:
   - date: 2022-12-03
@@ -35,36 +32,3 @@ schema:
       type: string
       title: App Service Image
       default: augustodelg/pocketbase:0.8.0
-tags:
-  - Database
-  - Dashboard
-benefits:
-  - title: Embedded Database
-    description: PocketBase includes an embedded database with a schema builder,
-      data validations, and real-time subscriptions.
-  - title: Authentication
-    description: Manage app users and handle email/password and OAuth2 sign-ups
-      without hassle.
-  - title: File Storage
-    description: Store files locally or in S3 storage. Easily attach media to
-      database records and generate thumbnails on the fly.
-  - title: Extendable
-    description: PocketBase can be used as a standalone app or as a Go framework. It
-      provides hooks for extending functionality and official client SDKs for
-      easy integration.
-features:
-  - title: Realtime Database
-    description: PocketBase provides an embedded performant database with a schema
-      builder, data validations, realtime subscriptions, and an easy-to-use REST
-      API.
-  - title: Authentication
-    description: PocketBase allows you to manage app users and handle email/password
-      and OAuth2 sign-ups (Google, Facebook, GitHub, GitLab) without hassle.
-  - title: File Storage
-    description: PocketBase allows you to store files locally or in S3 storage. You
-      can easily attach media to database records and generate thumbnails on the
-      fly.
-  - title: Extendable
-    description: PocketBase can be used as a standalone app or as a Go framework. It
-      provides hooks for extending functionality and official client SDKs for
-      painless integration.
