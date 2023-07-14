@@ -4,6 +4,8 @@ instructions: null
 changeLog:
   - date: 2023-1-12
     description: first release
+  - date: 2023-07-12
+    description: Added default user registration
 links:
   - label: Website
     url: https://suitecrm.com/
@@ -14,6 +16,8 @@ links:
 contributors:
   - name: Mxrcy
     url: https://github.com/DrMxrcy
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -25,6 +29,15 @@ schema:
     projectName:
       type: string
       title: Project Name
+    suitecrmUsername:
+      type: string
+      title: Username
+    suitecrmPassword:
+      type: string
+      title: Password
+    suitecrmEmail:
+      type: string
+      title: Email
     appServiceName:
       type: string
       title: App Service Name
