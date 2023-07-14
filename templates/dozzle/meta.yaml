@@ -1,0 +1,57 @@
+name: Dozzle
+description: A lightweight, web-based Docker log viewer that provides real-time monitoring and easy troubleshooting.
+instructions: null
+changeLog:
+  - date: 2023-07-11
+    description: First Release
+links:
+  - label: Website
+    url: https://dozzle.dev
+  - label: Github
+    url: https://github.com/amir20/dozzle
+  - label: Docker
+    url: https://hub.docker.com/r/amir20/dozzle
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - dozzleLevel
+    - dozzleNoAnalytics
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    dozzleUsername:
+      type: string
+      title: Username
+    dozzlePassword:
+      type: string
+      title: Password
+    dozzleLevel:
+      type: string
+      title: Log Level
+      default: info
+      oneOf:
+        - enum:
+            - info
+          title: Info
+        - enum:
+            - debug
+          title: Debug
+    dozzleNoAnalytics:
+      type: boolean
+      title: No Analytics
+      default: false
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dozzle
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: amir20/dozzle:latest
