@@ -1,0 +1,42 @@
+name: Collabora Office
+description: With the Collabora Online Development Edition (CODE) Docker Image you can host your own online Office Suite at home! This Docker image is aimed at home users and contains the latest and greatest developments. Simply integrate it in your preferred File Sync and Share (FSS), to easily get your own online Office Suite up and running!
+instructions: Access the admin console at https://<domain>/browser/dist/admin/admin.html
+changeLog:
+  - date: 2023-07-14
+    description: First Release
+links:
+  - label: Website
+    url: https://collaboraonline.com
+  - label: Documentation
+    url: https://sdk.collaboraonline.com/docs
+  - label: Github
+    url: https://github.com/CollaboraOnline
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appUsername
+    - appPassword
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appUsername:
+      type: string
+      title: Username
+    appPassword:
+      type: string
+      title: Password
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: collabora
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: collabora/code:latest
