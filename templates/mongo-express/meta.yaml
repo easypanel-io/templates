@@ -16,6 +16,7 @@ schema:
   type: object
   required:
     - projectName
+    - appMongoUrl
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -23,6 +24,10 @@ schema:
     projectName:
       type: string
       title: Project Name
+    appMongoUrl:
+      type: string
+      title: Mongo URL
+      description: mongodb://admin:pass@localhost:27017/db?ssl=false
     appAuthUsername:
       type: string
       title: Username

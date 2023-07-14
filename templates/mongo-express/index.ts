@@ -1,13 +1,10 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const databasePassword = randomPassword();
 
-  const appEnv = [
-    `ME_CONFIG_MONGODB_URL=mongodb://mongo:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017`,
-  ];
+  const appEnv = [`ME_CONFIG_MONGODB_URL=${input.appMongoUrl}`];
 
   if (input.appAuthPassword) {
     appEnv.push(
@@ -26,15 +23,6 @@ export function generate(input: Input): Output {
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8081 }],
       deploy: { command: "sleep 60; /docker-entrypoint.sh" },
       env: appEnv.join("\n"),
-    },
-  });
-
-  services.push({
-    type: "mongo",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      password: databasePassword,
     },
   });
 
