@@ -1,0 +1,34 @@
+name: Thumbor
+description: open-source smart on-demand image cropping, resizing and filters
+instructions: null
+changeLog:
+  - date: 2023-07-10
+    description: First Release
+links:
+  - label: Website
+    url: https://www.thumbor.org
+  - label: Documentation
+    url: https://thumbor.readthedocs.io
+  - label: Github
+    url: https://github.com/thumbor/thumbor
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: thumbor
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thumbororg/thumbor:latest

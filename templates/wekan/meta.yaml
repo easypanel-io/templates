@@ -1,0 +1,74 @@
+name: Wekan
+description: Open-Source Kanban
+instructions: null
+changeLog:
+  - date: 2023-07-10
+    description: First Release
+links:
+  - label: Website
+    url: https://wekan.github.io/
+  - label: Docs
+    url: https://github.com/wekan/wekan/wiki
+  - label: Github
+    url: https://github.com/wekan/wekan
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - mailFrom
+    - mailFromSender
+    - mailHost
+    - mailUsername
+    - mailPassword
+    - mailPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wekan
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/wekan/wekan:latest
+    databaseServiceName:
+      type: string
+      title: App Service Name
+      default: wekan-db
+    mailFrom:
+      type: string
+      title: Mail From
+      default: Wekan Notifications
+    mailFromSender:
+      type: string
+      title: Mail From Sender
+      default: noreply.wekan@mydomain.com
+    mailHost:
+      type: string
+      title: Mail Host
+    mailUsername:
+      type: string
+      title: Mail Username
+    mailPassword:
+      type: string
+      title: Mail Password
+    mailPort:
+      type: number
+      title: Mail Port
+      default: 25
+    mailSmtpSsl:
+      type: boolean
+      title: SMTP SSL
+      default: false
+    mailDisableTls:
+      type: boolean
+      title: Disable TLS
+      default: false

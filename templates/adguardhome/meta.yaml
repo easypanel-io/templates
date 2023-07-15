@@ -1,0 +1,34 @@
+name: AdGuard Home
+description: Network-wide ads & trackers blocking DNS server.
+instructions: During the setup phase, set the Admin Web Interface Port to 3000. To use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
+changeLog:
+  - date: 2023-07-11
+    description: First Release
+links:
+  - label: Website
+    url: https://adguard.com
+  - label: Github
+    url: https://github.com/AdguardTeam/AdGuardHome
+  - label: Docker
+    url: https://hub.docker.com/r/adguard/adguardhome
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: adguardhome
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: adguard/adguardhome:latest
