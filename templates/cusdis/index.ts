@@ -25,7 +25,7 @@ export function generate(input: Input): Output {
         `JWT_SECRET=${secret}`,
         `IS_HOSTED=true`,
         `NODE_ENV=production`,
-        `HOST=https://${input.domain}`,
+        `HOST=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       source: {
         type: "image",
