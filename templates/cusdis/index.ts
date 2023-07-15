@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
       env: [
         `USERNAME=${input.username}`,
         `PASSWORD=${input.password}`,
-        `NEXTAUTH_URL=https://${input.domain}`,
+        `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
         `DB_TYPE=pgsql`,
         `DB_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
         `JWT_SECRET=${secret}`,
@@ -36,9 +36,7 @@ export function generate(input: Input): Output {
         secure: true,
       },
       domains: [
-        {
-          name: input.domain,
-        },
+        { host: "$(EASYPANEL_DOMAIN)" },
       ],
     },
   });
