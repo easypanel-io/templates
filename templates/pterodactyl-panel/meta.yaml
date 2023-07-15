@@ -1,0 +1,46 @@
+name: Pterodactyl Panel
+description: Pterodactyl is an open-source game server management panel built with PHP 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to administrators and users. What more are you waiting for? Make game servers a first class citizen on your platform today.
+instructions: After installing, open the console and run "php artisan p:user:make".
+changeLog:
+  - date: 2023-07-10
+    description: Update to v1.11
+links:
+  - label: Website
+    url: https://pterodactyl.io/
+  - label: Documentation
+    url: https://pterodactyl.io/project/introduction.html
+  - label: Github
+    url: https://github.com/pterodactyl/panel
+contributors:
+  - name: Dane Everitt
+    url: https://github.com/DaneEveritt
+  - name: Matthew Penner
+    url: https://github.com/matthewpi
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - redisServiceName
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: panel
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/pterodactyl/panel:latest
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: panel-redis
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: panel-db
