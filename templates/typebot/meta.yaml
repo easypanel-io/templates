@@ -55,15 +55,15 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:2.11.6
+      default: baptistearno/typebot-builder:2
     viewerServiceImage:
       type: string
       title: Viewer Service Image
-      default: baptistearno/typebot-viewer:2.11.6
+      default: baptistearno/typebot-viewer:2
     storageServiceImage:
       type: string
       title: Storage Service Image
-      default: bitnami/minio:2022.12.12
+      default: bitnami/minio:2023
     databaseServiceName:
       type: string
       title: Database Service Name
