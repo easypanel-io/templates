@@ -58,3 +58,37 @@ schema:
       type: string
       title: RAM Memory Limit (recommended)
       default: 512MB
+benefits:
+  - title: Efficient Messaging
+    description: RabbitMQ is a highly efficient open-source message broker that
+      supports multiple messaging protocols and streaming. It is used worldwide
+      by both small startups and large enterprises.
+  - title: Scalability and High Availability
+    description: RabbitMQ can be deployed in distributed and federated
+      configurations to meet high-scale, high-availability requirements. It is
+      lightweight and easy to deploy on premises and in the cloud.
+  - title: Cross-Language Messaging
+    description: RabbitMQ provides a wide range of developer tools for most popular
+      languages, enabling cross-language messaging with your favorite
+      programming languages.
+features:
+  - title: Asynchronous Messaging
+    description: RabbitMQ supports multiple messaging protocols, message queuing,
+      delivery acknowledgement, flexible routing to queues, and multiple
+      exchange types.
+  - title: Distributed Deployment
+    description: RabbitMQ can be deployed as clusters for high availability and
+      throughput, and can federate across multiple availability zones and
+      regions.
+  - title: Enterprise & Cloud Ready
+    description: RabbitMQ supports pluggable authentication and authorisation, TLS
+      and LDAP. It is lightweight and easy to deploy in public and private
+      clouds.
+  - title: Tools & Plugins
+    description: RabbitMQ offers a diverse array of tools and plugins supporting
+      continuous integration, operational metrics, and integration to other
+      enterprise systems. It has a flexible plug-in approach for extending its
+      functionality.
+  - title: Management & Monitoring
+    description: RabbitMQ provides an HTTP-API, command line tool, and UI for
+      managing and monitoring its operations.

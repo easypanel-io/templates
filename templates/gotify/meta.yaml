@@ -56,3 +56,28 @@ schema:
       type: string
       title: Timezone
       default: Europe/London
+benefits:
+  - title: Control Your Data
+    description: Gotify is a self-hosted app, meaning you have complete control over
+      your data. It is free and open source, licensed under the MIT license.
+  - title: Cross Platform
+    description: Written in Go, Gotify can be easily compiled for different
+      platforms, making it a versatile choice for sending and receiving
+      messages.
+  - title: Simple to Use
+    description: Both Gotify's API and user interface are designed to be as simple
+      as possible, making it easy to send and receive messages.
+features:
+  - title: Message Sending and Receiving
+    description: Gotify serves as a simple server for sending messages via a
+      REST-API and subscribing/receiving messages via a web socket connection.
+  - title: User, Client, and Application Management
+    description: Gotify provides functionality for managing users, clients, and
+      applications.
+  - title: Android Client
+    description: Gotify offers an Android client for subscribing to the message
+      stream of the Gotify server. The app creates push notifications for newly
+      received messages.
+  - title: Command Line Client
+    description: Gotify also features a command line client for pushing messages to
+      the Gotify server.

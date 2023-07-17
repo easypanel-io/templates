@@ -71,3 +71,48 @@ schema:
       type: string
       title: Database Service Name
       default: photoview-db
+benefits:
+  - title: Easy Media Organization
+    description: Photoview allows you to easily organize your media files. It
+      automatically scans your file system for media and organizes them based on
+      the file structure. Directories become albums populated with the photos
+      and videos found inside.
+  - title: User Privacy
+    description: Photoview ensures user privacy by allowing each user to have their
+      own directory of photos and videos. Each user is configured with a
+      username and password, keeping their media private.
+  - title: Quick Access
+    description: With the official iOS app, you can quickly access your entire media
+      library from your phone. Navigate, share, and download photos and videos
+      directly within the app.
+  - title: Secure and Private
+    description: Photoview ensures the security of your media resources with a
+      cookie-token, properly hashed passwords, and a strict CORS policy. Your
+      media is valuable, and with Photoview, nothing leaves your server.
+features:
+  - title: File System Sync
+    description: Photoview syncs with your file system, automatically scanning for
+      new media and adding it to keep your gallery updated. This gives you full
+      control to organize your media how you want.
+  - title: User and Sharing
+    description: Photoview allows multiple users, each with their own directory of
+      photos and videos. Albums and individual photos or videos can easily be
+      shared by generating a public or password-protected link.
+  - title: Maps
+    description: When photos are analyzed for EXIF metadata, this information is
+      displayed next to the photo. If the photo is taken with a mobile phone, it
+      most likely includes the coordinates of where the picture was taken. This
+      is used to automatically present the photos on a map.
+  - title: Mobile App
+    description: Photoview has an official iOS app that allows you to quickly access
+      your entire media library from your phone. Navigate, share, and download
+      photos and videos directly within the app.
+  - title: RAW Support
+    description: Photoview uses Darktable under the hood to convert RAW images,
+      supporting many common formats.
+  - title: EXIF Metadata
+    description: Photoview automatically extracts the metadata of images and videos
+      and shows it in the sidebar. It's also used to present images on a map.
+  - title: Video Support
+    description: Photoview uses Ffmpeg under the hood to convert videos and optimize
+      them for the web.

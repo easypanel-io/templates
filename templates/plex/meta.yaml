@@ -38,3 +38,30 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/plex:latest
+benefits:
+  - title: Access Your Media Anywhere
+    description: With Plex Media Server, you can stream your video, music, and photo
+      collections any time, anywhere, to any device. Whether you're on your
+      phone, tablet, gaming console, or smart TV, your media is always at your
+      fingertips.
+  - title: Easy to Use
+    description: Plex Media Server is designed to be easy to install and use. With
+      our intuitive interface, you can easily manage your media collections and
+      enjoy seamless streaming experience.
+  - title: Flexible Networking Options
+    description: "Plex Media Server supports three types of networking: bridge,
+      host, and macvlan. This flexibility allows you to choose the networking
+      setup that best suits your needs."
+features:
+  - title: Media Streaming
+    description: Stream your video, music, and photo collections to any device. Plex
+      Media Server supports streaming to all your favorite phones, tablets,
+      streaming devices, gaming consoles, and smart TVs.
+  - title: Networking Options
+    description: "Choose from three types of networking: bridge, host, and macvlan.
+      Each type offers different benefits, and you can choose the one that best
+      fits your setup."
+  - title: Docker Container
+    description: Plex Media Server comes in an official Docker container, making it
+      easy to deploy and manage. Docker allows you to isolate your app in a
+      container to ensure that it works uniformly across different environments.

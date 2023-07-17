@@ -49,3 +49,36 @@ schema:
       type: string
       title: Database Service Name
       default: shynet-db
+benefits:
+  - title: Real-time Analytics
+    description: Shynet provides real-time analytics, allowing you to monitor your
+      website's traffic and user behavior in real time. This can help you make
+      informed decisions and take immediate action based on the latest data.
+  - title: Privacy-Focused
+    description: Shynet respects user privacy by design. It does not use cookies or
+      collect personally identifiable information. This makes it a great choice
+      for businesses that value user privacy and want to comply with data
+      protection regulations.
+  - title: Detailed Insights
+    description: With Shynet, you can gain detailed insights into your website's
+      performance and user behavior. It provides comprehensive data on page
+      views, sessions, and more, helping you understand your audience better.
+features:
+  - title: Easy Deployment
+    description: Shynet can be easily deployed using Docker, making it a convenient
+      solution for businesses of all sizes. It supports both PostgreSQL and
+      SQLite databases, giving you flexibility in your setup.
+  - title: Admin User Creation
+    description: Shynet allows you to create an admin user with a temporary
+      password, providing secure access to your analytics dashboard.
+  - title: Customizable Whitelabel
+    description: You can customize the whitelabel of your Shynet instance, allowing
+      you to rename it according to your preference.
+  - title: Service Creation and Tracking
+    description: Shynet enables you to create a service and generate a tracking
+      script code. By injecting this script on your web pages, you can start
+      tracking user behavior and collecting analytics data.
+  - title: API Access
+    description: Shynet provides API access to all the information displayed on the
+      dashboard. This allows you to integrate Shynet's data with other systems
+      or applications for further analysis and reporting.

@@ -58,3 +58,35 @@ schema:
       type: string
       title: Redis Service Name
       default: authorizer-redis
+benefits:
+  - title: Free Authentication & Authorization
+    description: Authorizer allows you to authenticate and authorize users for free,
+      helping you build secure apps 10x faster.
+  - title: Control Over User Data
+    description: With Authorizer, you have complete control over your user data,
+      which can be stored in your preferred database.
+  - title: Low Code and Low Cost Deployment
+    description: Authorizer is a low code tool that allows for easy and
+      cost-effective deployment of your apps.
+  - title: OAuth2 and OpenID Compatible
+    description: Authorizer is compatible with OAuth2 and OpenID APIs, allowing for
+      seamless integration with your existing systems.
+features:
+  - title: Secure Session Management
+    description: Authorizer comes with secure session management implemented with
+      HTTP only cookies and Authorization Code flow for mobile-based auth.
+  - title: Multiple Authentication Recipes
+    description: Authorizer supports multiple authentication recipes out of the box,
+      including major social login, basic auth, magic link auth and more.
+  - title: Database Support
+    description: Authorizer supports 11+ databases including major SQL, NoSQL and
+      GraphDBs, allowing you to connect to your preferred database.
+  - title: Role Based Access Control
+    description: With Authorizer, you can define roles and authorize your APIs with
+      role-based session tokens.
+  - title: Customizable Emails
+    description: Authorizer allows you to send emails with custom email templates
+      and dynamic variables.
+  - title: Multi-Factor Authentication
+    description: Authorizer provides an added layer of security with email-based OTP
+      for your basic authentication recipe.

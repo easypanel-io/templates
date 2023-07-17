@@ -47,3 +47,28 @@ schema:
       type: string
       title: Timezone
       default: America/New_York
+benefits:
+  - title: Privacy First
+    description: Memos is a privacy-first note-taking service. It allows you to keep
+      your own data by yourself. All data generated at runtime is saved in the
+      SQLite database file, ensuring your notes and thoughts are kept private
+      and secure.
+  - title: Lightweight but Powerful
+    description: Despite its lightweight package, Memos is a powerful tool. It uses
+      a Go + React.js + SQLite architecture, providing a robust and efficient
+      platform for capturing and sharing your thoughts.
+  - title: Free Forever
+    description: Memos is completely free. All features are available without any
+      charges, allowing you to capture and share your thoughts without any
+      financial constraints.
+features:
+  - title: Plain Text with Markdown
+    description: Memos saves all content as plain text, not HTML. It supports a wide
+      range of useful markdown syntax, making note-taking simple and efficient.
+  - title: Customizable
+    description: Memos is highly customizable. You can personalize the server name,
+      icon, description, system style, and execution script to suit your
+      preferences.
+  - title: Open Source
+    description: Memos is an open-source application. It believes in the future of
+      open source, and all its code is available on GitHub.

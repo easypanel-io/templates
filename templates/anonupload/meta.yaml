@@ -51,3 +51,31 @@ schema:
     appContactEmail:
       type: string
       title: App Contact Email
+benefits:
+  - title: Secure File Sharing
+    description: AnonUpload offers a secure platform for file sharing. It ensures
+      your files are kept private and safe during the sharing process.
+  - title: Anonymous File Sharing
+    description: With AnonUpload, your identity remains anonymous while sharing
+      files. It does not show the direct filename used, maintaining your
+      privacy.
+  - title: No Database Required
+    description: AnonUpload operates without a database, making it a simple and
+      efficient solution for file sharing.
+  - title: Versatile Compatibility
+    description: AnonUpload is designed to work anywhere, be it Nginx, Apache,
+      Lightspeed, or any other platform. It does not use rewrites, just pure
+      PHP.
+features:
+  - title: File Uploading
+    description: AnonUpload allows you to upload various types of files including
+      jpeg, jpg, gif, png, zip, xls, doc, mp3, mp4, mpeg, wav, avi, rar, 7z,
+      txt, and more.
+  - title: File Size Verification
+    description: The app verifies the size of the uploaded files. It supports a
+      maximum upload size of 10GB and a minimum upload size of 0KB.
+  - title: File Destination Control
+    description: You can specify the destination folder for the uploaded files.
+  - title: Download Time Control
+    description: You can set the time to wait until the file downloads. The default
+      time is 30 seconds.

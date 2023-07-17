@@ -38,3 +38,33 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/actualbudget/actual-server:23.2.9
+benefits:
+  - title: Local-First Personal Finance
+    description: Actual is a personal finance tool that operates on a local-first
+      basis. This means that all your financial data is stored on your device,
+      giving you full control over your information.
+  - title: Free and Open-Source
+    description: Actual is 100% free and open-source. This means you can use it
+      without any cost and also have the freedom to modify it according to your
+      needs.
+  - title: Synchronization Across Devices
+    description: Actual has a synchronization feature that allows your changes to
+      move between devices seamlessly. This means you can access and manage your
+      financial data from any device.
+features:
+  - title: Budgeting
+    description: Actual provides a comprehensive budgeting tool that helps you
+      manage your finances effectively. You can set budget limits, track your
+      spending, and get insights into your financial habits.
+  - title: Account Management
+    description: With Actual, you can manage all your financial accounts in one
+      place. It allows you to keep track of your income, expenses, savings, and
+      investments.
+  - title: Reports and Filters
+    description: Actual offers detailed reports and filters to help you analyze your
+      financial data. You can generate reports based on different criteria and
+      filter your data to find specific information.
+  - title: Backup and Restore
+    description: Actual provides a backup and restore feature to ensure the safety
+      of your financial data. You can easily backup your data and restore it
+      whenever needed.

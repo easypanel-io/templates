@@ -38,3 +38,35 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/freshrss:latest
+benefits:
+  - title: Stay Updated
+    description: Freshrss is a self-hostable aggregator for RSS feeds. It allows you
+      to stay updated with your favorite websites, blogs, and more, all in one
+      place.
+  - title: Multi-platform Support
+    description: Freshrss supports multiple platforms. It utilizes the docker
+      manifest for multi-platform awareness, ensuring you can use it on your
+      preferred platform.
+  - title: Easy Setup
+    description: Freshrss comes with an easy setup wizard. For external databases,
+      you can create a user and database in your MySQL/MariaDB server and follow
+      the setup wizard in the web user interface.
+features:
+  - title: RSS Feed Aggregator
+    description: Freshrss is a powerful RSS feed aggregator. It allows you to
+      collect and view content from your favorite websites, blogs, and more, all
+      in one place.
+  - title: Self-Hostable
+    description: Freshrss is self-hostable, giving you full control over your data
+      and privacy. You can host it on your own server and access it from
+      anywhere.
+  - title: Multi-platform Support
+    description: Freshrss supports multiple platforms. Whether you're using x86-64
+      or arm64, Freshrss has got you covered.
+  - title: Easy Setup
+    description: Freshrss comes with an easy setup wizard. It guides you through the
+      process of setting up the application, making it easy even for
+      non-technical users.
+  - title: External Database Support
+    description: Freshrss supports external databases. You can create a user and
+      database in your MySQL/MariaDB server and connect it to Freshrss.

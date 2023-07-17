@@ -43,3 +43,33 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/prowlarr
+benefits:
+  - title: Seamless Integration
+    description: Prowlarr integrates effortlessly with various PVR apps such as
+      LazyLibrarian, Lidarr, Mylar3, Radarr, Readarr, and Sonarr. This allows
+      for a streamlined and efficient management of your indexers.
+  - title: Comprehensive Management
+    description: With Prowlarr, you can manage both Torrent Trackers and Usenet
+      Indexers. This eliminates the need for per app Indexer setup, making the
+      process more convenient and less time-consuming.
+  - title: Wide Support
+    description: Prowlarr supports Usenet for 24 indexers natively and Torrent for
+      over 500 trackers. This wide range of support ensures that you can manage
+      your indexers regardless of the platform they are on.
+features:
+  - title: Indexer Sync
+    description: Prowlarr offers Indexer Sync to Lidarr, Mylar3, Radarr, Readarr,
+      and Sonarr. This means you don't have to manually configure the other
+      applications.
+  - title: Manual Searching
+    description: Prowlarr allows for manual searching of Trackers & Indexers at a
+      category level and parameter-based manual searching. This gives you more
+      control and flexibility in finding what you need.
+  - title: Indexer Health and Status Notifications
+    description: Stay informed about the health and status of your indexers with
+      Prowlarr's notification feature. This ensures that you can promptly
+      address any issues that may arise.
+  - title: Per Indexer Proxy Support
+    description: Prowlarr provides per Indexer proxy support, including SOCKS4,
+      SOCKS5, HTTP, and Flaresolverr. This enhances the security and efficiency
+      of your indexer management.
