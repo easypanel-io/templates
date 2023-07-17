@@ -24,7 +24,7 @@ export function generate(input: Input): Output {
         source: { type: "image", image: input.appServiceImage },
         domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3100 }],
         deploy: { command: "./bp lang --langDir /botpress/data/embeddings" },
-        mounts: [{ type: "volume", name: "lang", mountPath: "/botpress/data" }],
+        mounts: [{ type: "volume", name: "data", mountPath: "/botpress/data" }],
       },
     });
   }
