@@ -29,6 +29,10 @@ schema:
     projectName:
       type: string
       title: Project Name
+    enableLangServer:
+      type: boolean
+      title: Enable Lang Server
+      default: false
     appServiceName:
       type: string
       title: App Service Name
