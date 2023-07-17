@@ -23,8 +23,8 @@ export function generate(input: Input): Output {
         serviceName: input.appServiceName + "-lang",
         source: { type: "image", image: input.appServiceImage },
         domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3100 }],
-        deploy: { command: "./bp lang --langDir /botpress/lang" },
-        mounts: [{ type: "volume", name: "lang", mountPath: "/botpress/lang" }],
+        deploy: { command: "./bp lang --langDir /botpress/data/embeddings" },
+        mounts: [{ type: "volume", name: "lang", mountPath: "/botpress/data" }],
       },
     });
   }
