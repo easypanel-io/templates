@@ -1,5 +1,16 @@
 name: Jirafeau
-description: Jirafeau is a one-click-filesharing Select your file, upload, share a link. That's it.
+description: Jirafeau is an open-source software designed to simplify the
+  process of file sharing. With a one-click-filesharing system, you can easily
+  select your file, upload it, and share a link. The app allows you to send
+  large files, thanks to the HTML5 file API, making the PHP post_max_size limit
+  irrelevant. It provides a real-time progress report, showing speed,
+  percentage, and remaining upload time. Jirafeau also allows you to preview
+  content in your browser, if possible, and offers optional password protection
+  for both uploading and downloading. You can set an expiration time for
+  downloads and choose to self-destruct the file after the first download. The
+  app also provides shortened URLs using base 64 encoding and the maximum upload
+  size is configurable. Jirafeau also includes a small administration interface
+  and a basic, adaptable 'Terms Of Service' page.
 instructions: null
 changeLog:
   - date: 2022-11-22

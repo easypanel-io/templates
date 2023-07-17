@@ -1,5 +1,15 @@
 name: Memos
-description: An open-source, self-hosted memo hub with knowledge management and socialization.
+description: Memos is a privacy-first, lightweight note-taking service designed
+  to help you easily capture and share your thoughts. It is built with a focus
+  on privacy, ensuring that all your data remains yours and is saved in a SQLite
+  database file. The app supports plain text with Markdown, allowing you to save
+  all content as plain text, not HTML, while also supporting a variety of useful
+  markdown syntax. Despite being lightweight, Memos is powerful, built using Go
+  + React.js + SQLite architecture. It is also customizable, allowing you to
+  modify the server name, icon, description, system style, and execution script
+  as per your needs. Memos is open source and free forever, reflecting our
+  belief that open source is the future. You can use it to capture, customize,
+  and share your thoughts without any charges.
 instructions: null
 changeLog:
   - date: 2022-12-21

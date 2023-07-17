@@ -1,6 +1,17 @@
 name: Ampache
-description: A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
-instructions: MySQL Username is "admin". The logs will show a line that says "mysql -uadmin -pjnzYXLz7cMzq -h<host> -P<port>"". The password is everything after "-p", in this case "jnzYXLz7cMzq".
+description: Ampache is a web-based audio/video streaming application and file
+  manager that allows you to access your music and videos from virtually
+  anywhere. With this app, you can browse and manage your music collection
+  through a simple web interface, and synchronize local and remote catalogs to
+  create a unique, consistent collection. Ampache also allows you to stream your
+  music to your preferred player, control it with Localplay, or directly listen
+  on the web page with the HTML5 player. The app is completely free and open
+  source, and it's compatible with almost any internet-enabled device, including
+  your phone, tablet, or television. Whether you're at home, at work, or on
+  vacation, Ampache lets you take your music with you.
+instructions: MySQL Username is "admin". The logs will show a line that says
+  "mysql -uadmin -pjnzYXLz7cMzq -h<host> -P<port>"". The password is everything
+  after "-p", in this case "jnzYXLz7cMzq".
 changeLog:
   - date: 2023-03-19
     description: Template created (v5.5.7)

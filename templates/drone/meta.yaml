@@ -1,5 +1,17 @@
 name: Drone
-description: Drone is a Container-Native, Continuous Delivery Platform
+description: Drone is a self-service Continuous Integration platform designed to
+  automate software build and testing for busy development teams. It allows you
+  to configure pipelines with a simple, easy-to-read file that you commit to
+  your git repository. Each step in the pipeline is executed inside an isolated
+  Docker container that is automatically downloaded at runtime. Drone integrates
+  seamlessly with multiple source code management systems, including GitHub,
+  GitHubEnterprise, Bitbucket, and GitLab. It supports multiple operating
+  systems and architectures, and works with any language, database or service
+  that runs inside a Docker container. You can choose from thousands of public
+  Docker images or provide your own. Drone also allows you to create and share
+  plugins, and makes advanced customization easy. It ensures that every build
+  runs in an isolated Docker container, giving you full control, and scales
+  automatically.
 instructions: null
 changeLog:
   - date: 2022-08-04

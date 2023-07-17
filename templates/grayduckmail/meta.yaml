@@ -1,5 +1,17 @@
 name: Gray Duck Mail
-description: Gray Duck Mail is an alternative to email discussion group software such as Mailman and Sympa designed to be easy to set up and easy to manage.
+description: Gray Duck Mail is an intuitive and user-friendly email discussion
+  list app. It is a great alternative to traditional email discussion group
+  software like Mailman and Sympa, offering easy setup and management. The app
+  is designed to handle email discussion lists effortlessly, making it perfect
+  for small to medium-sized groups such as neighborhoods, schools, workplaces,
+  and families. With Gray Duck Mail, you can send one email and automatically
+  keep everyone in the loop. The app monitors a remote mail server for messages
+  and processes them by relaying the message to all list members. It also
+  automatically handles user subscriptions, unsubscription requests, and email
+  bounces. Gray Duck Mail works with any external email host that allows for
+  POP3/SMTP connections and message forwarding or aliasing. It relies totally on
+  an external mail provider, allowing you to use an existing web host or email
+  account.
 instructions: null
 changeLog:
   - date: 2023-3-3
@@ -29,4 +41,4 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: wagesj45/gray-duck-mail # no versioned tags
+      default: wagesj45/gray-duck-mail

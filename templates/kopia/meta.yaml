@@ -1,5 +1,17 @@
 name: Kopia
-description: Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.
+description: Kopia is a robust open-source backup and restore tool designed to
+  secure your data. It allows you to create encrypted snapshots of your selected
+  files or directories and store them in a location of your choice, be it
+  remote, cloud storage, network-attached storage, or locally on your machine.
+  Kopia supports a wide range of storage locations including Amazon S3, Azure
+  Blob Storage, Backblaze B2, Google Cloud Storage, and many more. It also
+  supports both Command-Line Interface (CLI) and Graphical User Interface (GUI),
+  making it suitable for both advanced and regular users. Kopia's unique
+  features include compression, deduplication, end-to-end 'zero knowledge'
+  encryption, and error correction, ensuring your data is not only secure but
+  also efficiently stored. With Kopia, you have full control over where your
+  snapshots are stored, and it even allows backing up multiple machines to the
+  same storage location.
 instructions: null
 changeLog:
   - date: 2023-07-10

@@ -1,5 +1,15 @@
 name: Clickhouse
-description: ClickHouse is an open-source column-oriented DBMS for online analytical processing that allows users to generate analytical reports using SQL queries in real-time.
+description: ClickHouse is an open-source database designed for real-time
+  applications and analytics. It's renowned for its speed and resource
+  efficiency, capable of querying billions of rows in milliseconds. ClickHouse
+  is column-oriented, making it particularly suited to Online Analytical
+  Processing (OLAP) scenarios, where it can process queries at least 100x faster
+  than row-oriented databases. It utilizes all available system resources to
+  their full potential to deliver the fastest possible analytical query
+  processing. ClickHouse supports a wide range of data sources, including
+  databases, data warehouses, streams, logs, analytics, data lake formats, and
+  local files. It can be deployed in any environment, whether on your machine or
+  in the cloud, and is trusted by developers working with data at scale.
 instructions: null
 changeLog:
   - date: 2022-10-28

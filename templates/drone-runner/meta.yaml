@@ -1,5 +1,22 @@
 name: Drone Runner
-description: Runner for Drone.io
+description: Drone is a powerful Continuous Integration platform designed for
+  busy development teams. It automates software build and testing, making it a
+  vital tool for efficient and effective software development. The platform
+  allows for configuration as a code, with pipelines configured using a simple,
+  easy-to-read file that you commit to your git repository. Each pipeline step
+  is executed inside an isolated Docker container that is automatically
+  downloaded at runtime. Drone integrates seamlessly with multiple source code
+  management systems, including GitHub, GitHubEnterprise, Bitbucket, and GitLab.
+  It supports multiple operating systems and architectures, and works with any
+  language, database or service that runs inside a Docker container. You can
+  choose from thousands of public Docker images or provide your own. Drone also
+  allows for the creation and sharing of plugins, using containers to drop
+  pre-configured steps into your pipeline. Advanced customization is made easy
+  with Drone, allowing for the implementation of custom access controls,
+  approval workflows, secret management, yaml syntax extensions and more. Builds
+  are isolated, ensuring no conflicts on shared servers, and the platform scales
+  effortlessly. Drone is a comprehensive solution for all your continuous
+  integration needs.
 instructions: null
 changeLog:
   - date: 2022-08-04

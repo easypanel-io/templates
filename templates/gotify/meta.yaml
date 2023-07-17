@@ -1,8 +1,15 @@
 name: Gotify
-description: Gotify is a simple server for sending and receiving messages.Both
-  Gotify's API and user interface are designed to be as simple as
-  possible.Gotify is written in Go and can be easily compiled for different
-  platforms.
+description: Gotify is a simple, self-hosted server for sending and receiving
+  messages. It is designed with a user-friendly interface and a straightforward
+  API, making it easy to use across different platforms. The core of Gotify, the
+  gotify/server, features a WebUI and functionality for sending messages via a
+  REST-API, subscribing/receiving messages via a web socket connection, and
+  managing users, clients, and applications. Gotify also includes an Android
+  client, gotify/android, which subscribes to the message stream of
+  gotify/server and creates push notifications for newly received messages.
+  Additionally, there's a command line client, gotify/cli, for pushing messages
+  to gotify/server. All these features make Gotify a versatile tool for managing
+  and exchanging messages in a secure, self-hosted environment.
 instructions: null
 changeLog:
   - date: 2022-07-12

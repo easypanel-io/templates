@@ -1,5 +1,16 @@
 name: Dozzle
-description: A lightweight, web-based Docker log viewer that provides real-time monitoring and easy troubleshooting.
+description: Dozzle is a lightweight, web-based application designed to monitor
+  Docker logs in real-time. It provides an easy-to-use interface for
+  troubleshooting and real-time logging, allowing you to view logs of other
+  Docker containers as they are generated, without the need to refresh the page.
+  Despite its powerful capabilities, Dozzle is designed to consume very little
+  memory and CPU, ensuring it won't cause performance issues when run alongside
+  other containers. It also supports connecting to multiple remote hosts, making
+  it a versatile tool for managing Docker logs. Dozzle doesn't store any log
+  files and is primarily intended for live monitoring of container logs. It also
+  offers features like intelligent fuzzy search for container names, regex log
+  search, split screen for viewing multiple logs, and live stats with memory and
+  CPU usage. Dozzle is open-sourced and released under the MIT License.
 instructions: null
 changeLog:
   - date: 2023-07-11

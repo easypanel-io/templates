@@ -1,5 +1,12 @@
 name: Minecraft Server
-description: Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot.
+description: The itzg/minecraft-server app is a dynamic Minecraft server that
+  automatically downloads the latest stable version upon startup. It offers
+  flexibility by allowing you to run or upgrade to any specific version or the
+  latest snapshot. The app also supports various server types and modpacks. If
+  you're using the latest stable version, the standard server port, 25565, will
+  be exposed on your host machine. For Minecraft clients running on consoles,
+  mobile, or native Windows, a separate image, itzg/minecraft-bedrock-server, is
+  available.
 instructions: null
 changeLog:
   - date: 2023-03-18

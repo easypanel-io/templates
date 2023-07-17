@@ -1,5 +1,19 @@
 name: Filerun
-description: Share files with your clients and colleagues
+description: FileRun is a private, fully controlled alternative to Google Drive,
+  designed to provide instant web access to your files on any server. It allows
+  you to manage your files just like you would on an FTP server, with changes
+  reflecting instantly. The app supports access via FTP, SMB, WebDAV, and
+  desktop sync, and it runs efficiently on any hardware. FileRun also features a
+  virtual drive that lets you access files directly from your computer without
+  using up disk space. It supports all file types, including photos and videos,
+  and allows you to group them together in virtual albums. The app also extracts
+  and indexes metadata from your files, enabling you to search them by keywords,
+  dates, authors, and more. FileRun also allows you to collaborate with others
+  without creating accounts for them, and it has a feature that lets you request
+  files from anyone. It also integrates with various plugins and offers secure
+  file versioning to prevent accidental overwrites. The app is customizable,
+  allowing you to choose color presets and background images to match your
+  branding.
 instructions: null
 changeLog:
   - date: 2023-3-14
@@ -30,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filerun/filerun # no versioned images
+      default: filerun/filerun
     databaseServiceName:
       type: string
       title: Database Service Name

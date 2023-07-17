@@ -1,6 +1,16 @@
 name: Firefox
-description: Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: The Firefox Browser app, developed by the Mozilla Foundation, is a
+  free and open-source web browser that uses the Gecko layout engine to render
+  web pages, implementing current and anticipated web standards. This app is
+  deployed through Docker containers, supporting multiple architectures
+  including x86-64 and arm64. The Firefox Browser app can be accessed at
+  http://yourhost:3000/ or https://yourhost:3001/. The app also offers
+  additional environment variables and run configurations to enable or disable
+  specific functionalities. It is capable of delivering a true lossless image at
+  a high framerate to your web browser by changing the Stream Quality preset to
+  'Lossless'.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-14
     description: first release

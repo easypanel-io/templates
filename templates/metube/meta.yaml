@@ -1,8 +1,13 @@
 name: MeTube
-description: "MeTube is a Web GUI for youtube-dl (using the yt-dlp fork) with
-  playlist support. Allows you to download videos from YouTube and dozens of
-  other sites. Browser extensions allow right-clicking videos and sending them
-  directly to MeTube. "
+description: MeTube is a user-friendly web interface for youtube-dl, a powerful
+  tool that lets you download videos from YouTube and dozens of other sites. It
+  uses the yt-dlp fork for enhanced functionality, including playlist support.
+  With MeTube, you can easily manage your downloads, choose the quality of the
+  videos, and even separate audio-only downloads from video downloads. The app
+  also supports downloading videos into custom directories and automatically
+  creating directories if they do not exist. MeTube also offers a dark mode for
+  a comfortable viewing experience. It's designed to run using Docker, ensuring
+  a smooth and consistent operation across different platforms.
 instructions: null
 changeLog:
   - date: 2022-07-12

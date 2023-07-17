@@ -1,5 +1,14 @@
 name: Lavalink
-description: Standalone audio sending node based on Lavaplayer.
+description: Lavalink is a standalone audio sending node designed to streamline
+  the process of sending audio without it ever reaching any of your shards. It
+  is powered by Lavaplayer and Koe, and is currently being utilized by popular
+  platforms such as FredBoat, Dyno, LewdBot, and more. Lavalink offers a range
+  of features including Twitch/YouTube stream support, an event system, seeking,
+  volume control, and a REST API for resolving Lavaplayer tracks and controlling
+  players. It also provides statistics that are useful for load balancing, basic
+  authentication, Prometheus metrics, Docker images, and plugin support.
+  Lavalink is designed to have a minimal CPU/memory footprint, making it an
+  efficient choice for your audio sending needs.
 instructions: null
 changeLog:
   - date: 2019-07-24

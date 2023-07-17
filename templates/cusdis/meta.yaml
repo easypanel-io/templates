@@ -1,5 +1,17 @@
 name: Cusdis
-description: Cusdis is an open-source, lightweight (~5kb gzipped), privacy-first alternative to Disqus
+description: Cusdis is a lightweight, open-source comment system designed with
+  privacy at its core. It's a simple and efficient alternative to Disqus, with a
+  focus on ease of use and integration. The app is embedded into your website
+  with a JS SDK that is only around 5kb, and it comes with built-in
+  internationalization and dark mode. When a new comment is posted, you receive
+  an email notification and can quickly approve or reply to the comment without
+  needing to log in to a dashboard. Cusdis also allows you to set a Webhook URL
+  that will be triggered when your website receives a new comment, enabling you
+  to integrate it with your favorite tools such as Telegram. The app is free to
+  use, with the option of self-hosting or using the cloud service. The cloud
+  service offers a free tier for one site with 100 approved comments per month
+  and 10 quick approvals per month, and a pro tier for unlimited sites,
+  comments, and quick approvals at $5 per month.
 instructions: null
 changeLog:
   - date: 2023-04-12

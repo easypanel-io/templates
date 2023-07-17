@@ -1,5 +1,18 @@
 name: Mongo Express
-description: Web-based MongoDB admin interface, written with Node.js and express
+description: Mongo-Express is a web-based MongoDB admin interface created with
+  Node.js, Express, and Bootstrap3. This app allows you to connect to multiple
+  databases, view, add, delete databases, and manage collections. You can view,
+  add, update, and delete documents within these collections. It also supports
+  previewing audio, video, and image assets inline in the collection view. Large
+  or nested objects are collapsible for an easy overview, and it supports
+  on-demand loading of large document properties to keep the collection view
+  fast. The app also supports GridFS, allowing you to add, get, and delete
+  incredibly large files. It uses BSON data types in documents and is
+  mobile-responsive, making it usable on small screens. The app also supports
+  connection and authentication to individual databases, as well as admin
+  authentication to view all databases. It also allows for database
+  blacklist/whitelist, custom CA and CA validation disabling, and supports
+  replica sets.
 instructions: null
 changeLog:
   - date: 2023-07-10

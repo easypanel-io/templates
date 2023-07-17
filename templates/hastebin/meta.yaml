@@ -1,5 +1,12 @@
 name: Hastebin
-description: Hastebin is an open-source pastebin software written in node.js, which is easily installable in any network.
+description: Haste is an open-source pastebin software that allows you to easily
+  share text or code snippets. Written in node.js, Haste is designed to be
+  simple, pretty, and easy to use. With Haste, you can quickly share the
+  contents of your text or code by generating a URL that contains your content.
+  This URL can then be shared with others. Haste supports various storage
+  options including file, redis, postgres, mongo, memcached, rethinkdb, Google
+  Datastore, and Amazon S3. It also features built-in rate limiting and key
+  generation options for enhanced security and control.
 instructions: null
 changeLog:
   - date: 2022-11-22
