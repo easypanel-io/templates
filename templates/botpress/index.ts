@@ -16,8 +16,8 @@ export function generate(input: Input): Output {
       deploy: { command: "sleep 10; ./bp" },
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
-        `BP_MODULE_NLU_DUCKLINGURL=http://$(PROJECT_NAME)_$(SERVICE_NAME)-module:8000`,
-        `BP_MODULE_NLU_LANGUAGESOURCES='[{ "endpoint": "http://$(PROJECT_NAME)_$(SERVICE_NAME)-module:3100" }]'`,
+        `BP_MODULE_NLU_DUCKLINGURL=http://$(PROJECT_NAME)_$(SERVICE_NAME)-lang:8000`,
+        `BP_MODULE_NLU_LANGUAGESOURCES='[{ "endpoint": "http://$(PROJECT_NAME)_$(SERVICE_NAME)-lang:3100" }]'`,
         `BP_PRODUCTION=true`,
         `BPFS_STORAGE=database`,
         `EXTERNAL_URL=https://$(PRIMARY_DOMAIN)`,
@@ -29,7 +29,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       projectName: input.projectName,
-      serviceName: input.appServiceName + "-module",
+      serviceName: input.appServiceName + "-lang",
       source: { type: "image", image: input.appServiceImage },
       mounts: [{ type: "volume", name: `lang`, mountPath: "/botpress/lang" }],
       deploy: {
