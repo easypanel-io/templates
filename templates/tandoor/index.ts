@@ -32,10 +32,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
+      domains: [{
+        host: "$(EASYPANEL_DOMAIN)",
         port: 8080,
-        secure: true,
-      },
+      }],
       mounts: [
         {
           type: "volume",
