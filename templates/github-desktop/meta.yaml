@@ -1,16 +1,6 @@
 name: Github Desktop
-description: Github Desktop is an open-source, Electron-based app designed to
-  streamline your GitHub experience. Written in TypeScript and using React, this
-  app allows you to access and manage your GitHub repositories directly from
-  your desktop. It supports multiple platforms and can be accessed via
-  http://yourhost:3000/ or https://yourhost:3001/. The app provides a
-  user-friendly interface for navigating your repositories, making changes, and
-  tracking those changes. It also supports additional functionality through
-  Docker Mods. Whether you're a seasoned developer or new to GitHub, Github
-  Desktop simplifies the process of managing your code and collaborating with
-  others.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+description: Focus on what matters instead of fighting with Git.
+instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
 changeLog:
   - date: 2023-04-12
     description: first release

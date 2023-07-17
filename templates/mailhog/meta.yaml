@@ -1,16 +1,5 @@
 name: Mailhog
-description: MailHog is a versatile email testing tool designed for developers.
-  It allows you to configure your application to use MailHog for SMTP delivery,
-  enabling you to view your outgoing emails in a user-friendly web UI. You can
-  also retrieve these messages with the JSON API. The app provides the option to
-  release messages to real SMTP servers for delivery. MailHog is built with Go,
-  making it lightweight and portable, and it runs without installation on
-  multiple platforms. It supports various features such as real-time updates
-  using EventSource, HTTP basic authentication for MailHog UI and API, multipart
-  MIME support, and in-memory message storage. It also offers MongoDB and
-  file-based storage for message persistence. Additionally, MailHog includes a
-  Chaos Monkey for failure testing and a sendmail replacement that redirects
-  mail to MailHog using SMTP.
+description: Mailhog is a web and API based SMTP tool for testing emails
 instructions: null
 changeLog:
   - date: 2022-10-31

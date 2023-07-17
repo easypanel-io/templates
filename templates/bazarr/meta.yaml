@@ -1,14 +1,5 @@
 name: Bazarr
-description: Bazarr is a companion application to Sonarr and Radarr, designed to
-  manage and download subtitles based on your specific needs. It automatically
-  searches for missing subtitles in your desired language and downloads them as
-  soon as they become available. You can also manually search for matching
-  subtitles, choose the one you prefer, and download it to your media directory.
-  The app regularly searches for matching subtitles and upgrades the ones you've
-  previously downloaded if a better version is found. Bazarr doesn't scan disk
-  to detect series and movies, it only takes care of the series and movies that
-  are indexed in Sonarr and Radarr. It supports 184 subtitles languages with
-  support for forced/foreign subtitles depending on providers.
+description: Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.
 instructions: null
 changeLog:
   - date: 2023-3-17

@@ -1,19 +1,9 @@
 name: Bookstack
-description: "BookStack is a free and open-source platform designed to simplify
-  the organization and storage of information. It provides a user-friendly
-  interface with a WYSIWYG page editor, breaking down content into three
-  easy-to-understand categories: Books, Chapters, and Pages. The content within
-  BookStack is fully searchable, allowing users to search at the book level or
-  across all books, chapters, and pages. It also offers the ability to link
-  directly to any paragraph, ensuring your documentation remains interconnected.
-  BookStack is highly configurable, allowing you to tailor the system to suit
-  your specific needs. It includes built-in drawing capabilities for creating
-  diagrams within your documentation, supports multiple languages, and offers an
-  optional Markdown editor for those who prefer to write in Markdown. The
-  platform also features integrated authentication, powerful search and linking
-  capabilities, cross-book sorting, page revisions, image management, and a
-  comprehensive role and permission system. It also supports multi-factor
-  authentication and offers both a light and dark mode for its user interface."
+description: BookStack is a simple, self-hosted, easy-to-use platform for
+  organising and storing information. The content in BookStack is fully
+  searchable. You are able to search at book level or across all books, chapters
+  & pages. BookStack is built using PHP, on top of the Laravel framework and it
+  uses MySQL to store data.
 instructions: null
 changeLog:
   - date: 2022-07-12

@@ -1,14 +1,6 @@
 name: Homer
-description: Homer is a simple, static homepage for your server, designed to
-  keep your services easily accessible. It operates from a straightforward yaml
-  configuration file, allowing you to customize and manage your dashboard with
-  ease. Homer is a full static HTML/JS dashboard that is meant to be served by
-  an HTTP server. It features a search function, grouping, theme customization,
-  and offline health check. It also supports keyboard shortcuts for quick
-  navigation. With Homer, you can have all your essential services at your
-  fingertips, making server management a breeze.
-instructions: The config files can be found under
-  "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
+description: A very simple static homepage for your server.
+instructions: The config files can be found under "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
 changeLog:
   - date: 2023-03-17
     description: Template created (v23.02.2)

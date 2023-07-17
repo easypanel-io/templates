@@ -1,17 +1,6 @@
 name: AdGuard Home
-description: AdGuard Ad Blocker is a comprehensive tool designed to enhance your
-  online experience by eliminating all kinds of ads, including banners, pop-ups,
-  and video ads. It not only removes annoying web elements but also saves
-  traffic and accelerates page loading. The app works for both browsers and
-  apps, ensuring a seamless, ad-free browsing experience. AdGuard also
-  prioritizes your privacy by shielding your data from web analytics and online
-  trackers. It offers browsing security by protecting against phishing and
-  malicious sites. For families, AdGuard provides parental control features,
-  shielding children from inappropriate and adult content. The app also
-  maintains the functionality and appearance of websites, even after ad sections
-  are removed.
-instructions: During the setup phase, set the Admin Web Interface Port to 3000.
-  To use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
+description: Network-wide ads & trackers blocking DNS server.
+instructions: During the setup phase, set the Admin Web Interface Port to 3000. To use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
 changeLog:
   - date: 2023-07-11
     description: First Release

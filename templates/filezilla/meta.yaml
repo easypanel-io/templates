@@ -1,14 +1,6 @@
 name: Filezilla Client
-description: FileZilla Client is a fast and reliable cross-platform FTP, FTPS
-  and SFTP client. It comes with a host of useful features and an intuitive
-  graphical user interface. The application supports multiple architectures and
-  can be accessed via http or https. The app allows you to interact with it via
-  CLI or use Docker enabled applications. It also offers the ability to deliver
-  a true lossless image at a high framerate to your web browser. This app is
-  perfect for those who need to manage files on a server or upload files to a
-  website.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+description: FIleZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
 changeLog:
   - date: 2022-11-21
     description: first release

@@ -1,15 +1,9 @@
 name: Miniflux
-description: Miniflux is a minimalist and opinionated feed reader designed to
-  optimize readability. The app's layout, fonts, and colors are carefully chosen
-  to ensure content is easily readable on a screen. If you have feeds that only
-  display a summary, Miniflux can fetch the original article automatically for
-  you. The app is designed with simplicity in mind, focusing on essential
-  features and avoiding unnecessary complexities. It's fast and efficient,
-  offering keyboard shortcuts for easy navigation and a lightweight user
-  interface for quickly scanning unread items. Miniflux also prioritizes your
-  privacy, ensuring no one resells your private data or tracks your usage. It
-  automatically removes pixel trackers and does not feature any advertising.
-  Miniflux is a free, open-source app distributed under the Apache 2.0 License.
+description: Miniflux is a minimalist and opinionated feed reader written in
+  GO.Supports multiple enclosures/attachments (Podcasts, videos, music, and
+  images).Save articles to third-party services.Play videos from YouTube
+  channels directly inside Miniflux.Send articles to Telegram, Pinboard,
+  Instapaper, Pocket, Wallabag, Linkding, Espial, or Nunux Keeper
 instructions: null
 changeLog:
   - date: 2022-07-12

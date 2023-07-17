@@ -1,15 +1,5 @@
 name: mCaptcha
-description: mCaptcha is a proof-of-work based captcha system that is designed
-  with a focus on privacy and automation. It offers a seamless user experience,
-  eliminating the need for annoying images or other traditional captcha methods.
-  Instead, mCaptcha uses a SHA256 based proof-of-work (PoW) to rate limit users,
-  making it more difficult for attackers to spam your site. The system is silent
-  and efficient, so much so that users won't even notice it's there. mCaptcha is
-  also compatible with reCAPTCHA and hCaptcha, making it a convenient drop-in
-  replacement. The core functionality of mCaptcha is licensed under AGPL,
-  ensuring it will always be free. It's a revolutionary technology that can
-  change the way the web works, providing a more secure and user-friendly
-  experience.
+description: A no-nonsense CAPTCHA system with seamless UX
 instructions: Login with aaronsw:password
 changeLog:
   - date: 2023-5-18

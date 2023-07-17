@@ -1,13 +1,12 @@
 name: Docker Registry
-description: The Docker Registry 2.0 is an efficient, secure, and reliable tool
-  for storing and distributing Docker images. It is an implementation of the
-  Docker Registry HTTP API V2, designed to work with Docker 1.6 and above. The
-  app allows you to run a local registry, pull images, tag them, and push them
-  to the registry. It is a core component for many registry operators including
-  Docker Hub, GitHub Container Registry, GitLab Container Registry and
-  DigitalOcean Container Registry. The Docker Registry 2.0 is designed to
-  provide a simple, secure, and scalable base for building a large scale
-  registry solution or running a simple private registry.
+description: The toolset to pack, ship, store, and deliver content. Docker
+  Registry is the Open Source Registry implementation for storing and
+  distributing container images using the OCI Distribution Specification. The
+  goal of this project is to provide a simple, secure, and scalable base for
+  building a large scale registry solution or running a simple private registry.
+  It is a core library for many registry operators including Docker Hub, GitHub
+  Container Registry, GitLab Container Registry and DigitalOcean Container
+  Registry, as well as the CNCF Harbor Project, and VMware Harbor Registry.
 instructions: The Registry doesn't have a UI. To interact with the registry you
   should use the Docker CLI.
 changeLog:

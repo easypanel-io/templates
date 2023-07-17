@@ -1,16 +1,9 @@
 name: Heimdall
-description: "Heimdall Application Dashboard is a versatile dashboard for all
-  your web applications. It allows you to add links to any application or site,
-  offering a centralized location for all your important web resources. The app
-  is designed with simplicity and elegance in mind, ensuring a user-friendly
-  experience. It supports three types of items: Generic, Foundation, and
-  Enhanced apps. Generic items are basic links that you can customize with a
-  name, background color, and icon. Foundation apps are supported applications
-  that automatically populate with a default color and icon when you start
-  typing their name. Enhanced apps, similar to Foundation apps, also allow you
-  to display additional information by entering API credentials. Heimdall
-  Application Dashboard is a tool designed to simplify your digital life by
-  bringing all your web applications under one roof."
+description: Heimdall Application Dashboard is a dashboard for all your web
+  applications. It doesn't need to be limited to applications though, you can
+  add links to anything you like. There are no iframes here, no apps within
+  apps, no abstraction of APIs. if you think something should work a certain
+  way, it probably does.
 instructions: null
 changeLog:
   - date: 2022-07-12

@@ -1,12 +1,5 @@
 name: Flarum
-description: Our app is a modern, fast, and free forum software that is designed
-  with a mobile-first approach. It features an extensible and elegant user
-  interface that can be easily styled to match your brand. The app is
-  lightweight and fast, ensuring a smooth and seamless user experience. It is
-  also secure and trusted by many users worldwide. The app supports multiple
-  languages with 41 translation packs, making it accessible to a global
-  audience. Whether you're a small community or a large organization, our app
-  provides a simple and efficient way to engage and interact with your audience.
+description: Flarum is the next-generation forum software that makes online discussion fun. It's simple, fast, and free.
 instructions: Please use the credentials flarum:flarum to login.
 changeLog:
   - date: 2022-10-31
@@ -56,6 +49,10 @@ schema:
         - enum:
             - mariadb
           title: MariaDB
+        # TODO: Track progress on https://github.com/flarum/issue-archive/issues/411
+        # - enum:
+        #     - postgres
+        #   title: PostgreSQL
         - enum:
             - external
           title: External

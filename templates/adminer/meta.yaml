@@ -1,16 +1,9 @@
 name: Adminer
-description: Adminer is a robust, single-file database management tool, designed
-  to streamline your database operations. Written in PHP, it offers a clean and
-  intuitive user interface, superior performance, and enhanced security compared
-  to other similar tools. Adminer supports a wide range of databases including
-  MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB,
-  and others via plugins. With Adminer, you can easily connect to a database
-  server, select an existing database or create a new one, alter table and
-  column properties, manage indexes and foreign keys, and execute any SQL
-  command. It also allows you to export table structure, data, views, routines,
-  and databases to SQL or CSV formats. Adminer prioritizes security, user
-  experience, performance, feature set, and size, making it a comprehensive
-  solution for your database management needs.
+description: Adminer (formerly phpMinAdmin) is a full-featured database
+  management tool written in PHP. Conversely to phpMyAdmin, it consist of a
+  single file ready to deploy to the target server. Adminer is available for
+  MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and
+  others via plugin.
 instructions: null
 changeLog:
   - date: 2022-07-12

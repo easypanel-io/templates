@@ -1,16 +1,6 @@
 name: linkding
-description: Linkding is a self-hosted bookmark manager that offers a clean and
-  optimized user interface for readability. It allows you to organize your
-  bookmarks with tags, add notes using Markdown, and even has a 'read it later'
-  functionality. You can share bookmarks with other users and perform bulk
-  editing. The app automatically provides titles, descriptions, and icons of
-  bookmarked websites and creates snapshots of these sites on the Internet
-  Archive Wayback Machine. You can import and export bookmarks in Netscape HTML
-  format. It also offers light and dark themes for your convenience. The app is
-  designed to be minimal, fast, and easy to set up.
-instructions: If the login fails with a error 500, please restart the "linkding"
-  app service. This can be caused by the database not being properly reachable
-  at linkding's first start.
+description: linkding is a simple bookmark service that you can host yourself. It's designed be to be minimal, fast, and easy to set up using Docker.
+instructions: If the login fails with a error 500, please restart the "linkding" app service. This can be caused by the database not being properly reachable at linkding's first start.
 changeLog:
   - date: 2023-03-18
     description: Template created (v1.17.2)

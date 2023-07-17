@@ -1,18 +1,5 @@
 name: GoToSocial
-description: GoToSocial is an ActivityPub social network server that offers a
-  fast, fun, and safety-focused way to connect with friends and share content.
-  It's a lightweight and customizable platform that respects your privacy, with
-  no tracking or advertising. If you've used platforms like Twitter or Tumblr,
-  GoToSocial will feel familiar. You can follow people, make posts, and interact
-  with others through favorites, replies, and shares. You can write long or
-  short posts, post images, and even limit interactions by posting just to your
-  friends. Unlike other platforms, GoToSocial is not designed to be addictive or
-  to promote 'must-follow' influencers. Your experience is shaped by who you
-  follow and how you interact with them, not by engagement metrics. GoToSocial
-  is ideal for small or single-user instances running on low-powered devices,
-  offering a simple, secure, and easy-to-maintain solution. It's a unique
-  entryway into the Fediverse, offering a different experience from other
-  software like Mastodon.
+description: "GoToSocial is an ActivityPub social network server, written in Golang. It doesn't provide a client interface. Instead, you can use any Mastodon client."
 instructions: null
 changeLog:
   - date: 2023-5-26

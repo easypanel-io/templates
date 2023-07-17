@@ -1,19 +1,6 @@
 name: Mastodon
-description: Mastodon is a unique social networking app that puts control back
-  in your hands. It allows you to curate your own home feed without any
-  interference from algorithms or ads. You can follow anyone across any Mastodon
-  server from a single account and receive their posts in chronological order.
-  Mastodon also provides you with the unique possibility of managing your
-  audience without any middlemen. It supports audio, video and picture posts,
-  accessibility descriptions, polls, content warnings, animated avatars, custom
-  emojis, thumbnail crop control, and more, to help you express yourself online.
-  Each Mastodon server is a completely independent entity, able to interoperate
-  with others to form one global social network. It is built on open web
-  protocols and can interact with any other platform that implements
-  ActivityPub. Mastodon respects your agency and will never serve ads or push
-  profiles for you to see. Your data and your time are yours and yours alone.
-instructions: To create an admin account, type "tootctl accounts create username
-  --email user@example.com --confirmed --role Owner" on the console.
+description: Your self-hosted, globally interconnected microblogging community
+instructions: To create an admin account, type "tootctl accounts create username --email user@example.com --confirmed --role Owner" on the console.
 changeLog:
   - date: 2023-03-26
     description: First Release

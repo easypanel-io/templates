@@ -1,16 +1,5 @@
 name: GlitchTip
-description: GlitchTip is a simple, open-source error tracking application
-  designed to collect and organize every error from your project in real time.
-  It allows you to report your website or application's exceptions, log
-  messages, Content Security Policy violations, and more to one place for easy
-  triage and resolution. GlitchTip also offers Application Performance
-  Monitoring to identify where your app is slow, pinpointing your slowest web
-  requests, database calls, and other transactions. Additionally, it provides
-  Uptime Monitoring, pinging your site and alerting you when it's not
-  responding. GlitchTip is compatible with Sentry client SDKs, and offers the
-  freedom of open source, allowing you to view, modify, and use the code as you
-  see fit. It can be run on your server or hosted for you, with a range of
-  subscription options to suit your needs.
+description: An open source reimplementation of Sentry error tracking platform.
 instructions: To create an admin user, run the command ./manage.py createsuperuser
 changeLog:
   - date: 2023-04-06

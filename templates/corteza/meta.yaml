@@ -1,22 +1,6 @@
 name: Corteza
-description: Corteza is a 100% open-source, low-code app development platform
-  designed to streamline business processes, integration, and data
-  harmonization. Built with cutting-edge technologies, Corteza allows you to
-  easily build native web apps and expand your software ecosystem with complete
-  control and flexibility. It enables you to connect with any record data
-  source, integrate data from any machine-readable system or database, and
-  transform all data into a standardized JSON format for app and workflow
-  creation. With Corteza, you can build unlimited web applications and process
-  workflows using block-based tools and JavaScript automations in a fraction of
-  the time of traditional coding. All of Corteza's code is freely available and
-  can be modified, distributed, or sold under your own license and trademark,
-  with no obligation to publish your modified code. Corteza is cloud-native and
-  deploys via Docker containers, allowing for instant deployment and
-  redeployment of applications and workflows. Corteza is owned and operated by
-  the Commons Conservancy Foundation and is free forever, ensuring that access
-  to Corteza can never be taken away from you.
-instructions: Create an account to login. The first account created will have
-  administrator priviledges. Go to /admin for the admijnistration interface
+description: The Corteza low-code platform lets you build and iterate CRM, business process and other structured data apps fast, create intelligent business process workflows and connect with almost any data source.
+instructions: Create an account to login. The first account created will have administrator priviledges. Go to /admin for the admijnistration interface
 changeLog:
   - date: 2023-3-2
     description: first release
@@ -48,6 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
+      ## when updating corteza template please change the version in index.ts AND the one below
       default: cortezaproject/corteza:2022.9.8
     databaseServiceName:
       type: string

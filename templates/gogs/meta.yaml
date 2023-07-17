@@ -1,16 +1,5 @@
 name: Gogs
-description: Gogs is a self-hosted Git service designed to be simple, stable,
-  and extensible. It provides a painless way to set up your own Git service with
-  an independent binary distribution across all platforms that Go supports,
-  including Linux, macOS, Windows, and ARM-based systems. Gogs is lightweight
-  and has low minimal requirements, making it possible to run even on an
-  inexpensive Raspberry Pi. The app allows access to repositories via SSH, HTTP,
-  and HTTPS protocols and offers features such as user, organization, and
-  repository management, repository webhooks, Git hooks, deploy keys, Git LFS,
-  repository issues, pull requests, wiki, protected branches, and collaboration.
-  It also supports migrating and mirroring repositories with wiki from other
-  code hosts and provides a web editor for quick editing of repository files and
-  wiki. Gogs is 100% open source and free of charge.
+description: Gogs is a painless self-hosted Git service
 instructions: null
 changeLog:
   - date: 2023-3-16

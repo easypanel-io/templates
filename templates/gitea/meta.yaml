@@ -1,16 +1,8 @@
 name: Gitea
-description: Gitea is a lightweight DevOps platform designed to streamline
-  operations from planning to production for teams and developers. It allows the
-  creation and management of repositories, exploration of commit history and
-  code files, review and merging of code commits, and more. Gitea also features
-  an integrated CI/CD system, Gitea Actions, compatible with GitHub Actions, and
-  supports over 20 different types of package management. With Gitea, you can
-  efficiently manage a project's requirements, features, and bugs through issue
-  tasks, labeling, and kanban project boards. It is universally compatible with
-  diverse operating systems and environments, and offers flexible deployment
-  options. Gitea is developed using Golang, a memory-safe language, with a focus
-  on security. It also offers various configurations to satisfy diverse user
-  needs and integrates with your favorite tools to boost your workflow.
+description: "Gitea is a community managed lightweight code hosting solution
+  written in Go. Gitea runs anywhere Go can compile for: Windows, macOS, Linux,
+  ARM, etc.Gitea has low minimal requirements and can run on an inexpensive
+  Raspberry Pi"
 instructions: null
 changeLog:
   - date: 2022-07-12

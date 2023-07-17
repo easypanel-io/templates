@@ -1,16 +1,5 @@
 name: Grafana
-description: Grafana is a powerful, open-source platform designed to visualize,
-  query, and understand your metrics. With Grafana, you can create, explore, and
-  share dashboards with your team and foster a data-driven culture. It features
-  a multi-tenant log aggregation system, Grafana Loki, and a high-scale
-  distributed tracing backend, Grafana Tempo. The platform also includes Grafana
-  Mimir for scalable and performant metrics backend, Grafana OnCall for on-call
-  management, and Grafana k6 for performance testing. Grafana also integrates
-  with Prometheus for monitoring Kubernetes and cloud-native applications. The
-  platform is designed to compose and scale observability with one or all pieces
-  of the stack, providing operational dashboards for your data wherever you need
-  it. Whether you're monitoring applications, infrastructure, or APIs, Grafana
-  provides the tools you need to understand your data.
+description: The open and composable observability and data visualization platform
 instructions: Login with admin:admin
 changeLog:
   - date: 2023-3-15

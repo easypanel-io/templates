@@ -1,16 +1,5 @@
 name: Blender
-description: Blender is a free and open-source 3D computer graphics software
-  toolset that is used for creating a wide range of visual content. This
-  includes animated films, visual effects, art, 3D printed models, motion
-  graphics, interactive 3D applications, virtual reality, and computer games.
-  The app can be accessed at http://yourhost:3000/ or https://yourhost:3001/.
-  The app supports multi-platform awareness, which means it can be used on
-  various architectures including x86-64 and arm64. However, it does not support
-  GPU rendering out of the box, only accelerated workspace experience. The app
-  also supports hardware acceleration for your desktop experience, with the
-  capability of supporting accelerated rendering with /dev/dri mounted in.
-  However, the AMD HIP and Nvidia CUDA runtimes are not installed by default in
-  this container.
+description: Blender is a free and open-source 3D computer graphics software toolset used for creating animated films, visual effects, art, 3D printed models, motion graphics, interactive 3D applications, virtual reality, and computer games.
 instructions: null
 changeLog:
   - date: 2023-04-12
