@@ -1,6 +1,20 @@
 name: RabbitMQ
-description: RabbitMQ is an open source multi-protocol messaging broker.
-instructions: Default user/pass is guest/guest (if you use the -management version of the image)
+description: RabbitMQ is a highly popular open source message broker used by
+  businesses of all sizes, from startups to large enterprises. It is
+  lightweight, easy to deploy, and supports multiple messaging protocols and
+  streaming. RabbitMQ can be deployed in distributed and federated
+  configurations, making it ideal for high-scale, high-availability
+  requirements. It runs on various operating systems and cloud environments, and
+  offers a wide range of developer tools for most popular languages. RabbitMQ
+  supports asynchronous messaging, message queuing, delivery acknowledgement,
+  and flexible routing to queues. It also offers a diverse array of tools and
+  plugins for continuous integration, operational metrics, and integration with
+  other enterprise systems. RabbitMQ is enterprise and cloud ready, with
+  pluggable authentication, authorisation, and support for TLS and LDAP. It also
+  provides an HTTP-API, command line tool, and UI for managing and monitoring
+  the system.
+instructions: Default user/pass is guest/guest (if you use the -management
+  version of the image)
 changeLog:
   - date: 2022-11-08
     description: first release
@@ -31,8 +45,6 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      # TODO: Need to pass this to the json schema form builder of Chakra UI
-      # placeholder: rabbitmq:3
     enableManagementUI:
       type: boolean
       title: Enable RabbitMQ Management UI Plugin (modifies image)

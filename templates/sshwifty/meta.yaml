@@ -1,5 +1,13 @@
 name: Sshwifty
-description: Sshwifty is a SSH and Telnet connector made for the Web. It can be deployed on your computer or server to provide SSH and Telnet access interface for any compatible (standard) web browser.
+description: Sshwifty is a web-based SSH and Telnet client that allows you to
+  access these services directly from any standard web browser. It can be
+  deployed on your computer or server, providing a convenient and accessible
+  interface for SSH and Telnet connections. Sshwifty is designed to be highly
+  configurable, allowing you to set up multiple servers, define presets for
+  known remotes, and even restrict connections to preset remotes only. It also
+  supports secure connections through TLS, and can be configured to connect
+  through a Socks5 proxy. Whether you need to connect to a remote server or a
+  local machine, Sshwifty provides a flexible and user-friendly solution.
 instructions: null
 changeLog:
   - date: 2022-12-20

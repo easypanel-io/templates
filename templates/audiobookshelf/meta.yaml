@@ -1,6 +1,17 @@
 name: Audiobookshelf
-description: Audiobookshelf is a self-hosted audiobook and podcast server.
-instructions: Starter Host Path will be bind to "/audiobooks" inside the container. You can bind any other directories you want to use for your book and podcast collections.
+description: Audiobookshelf is a self-hosted server designed to manage and play
+  your audiobooks and podcasts. It works best when you have an organized
+  directory structure, as it takes information from your folder names, including
+  the author name, series name, book title, publish year, series sequence, and
+  subtitle. The app uses the ID3 metadata tags in audio files to populate data,
+  and it supports the same configuration options you would pass to a Docker
+  container. Audiobookshelf is designed to be deployed on your own server using
+  Easypanel, a modern server control panel. With Audiobookshelf, you can enjoy
+  your favorite audiobooks and podcasts in a well-organized and easily
+  accessible manner.
+instructions: Starter Host Path will be bind to "/audiobooks" inside the
+  container. You can bind any other directories you want to use for your book
+  and podcast collections.
 changeLog:
   - date: 2023-03-17
     description: Template created (v2.2.16)

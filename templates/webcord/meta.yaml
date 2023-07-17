@@ -1,6 +1,15 @@
 name: Webcord
-description: WebCord can be summarized as a pack of security and privacy hardenings, Discord features reimplementations, Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages and wrapped https://discord.com/ page, designed to conform with ToS as much as it is possible (or hide the changes that might violate it from Discord's eyes).
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: "WebCord is an application designed to enhance your Discord
+  experience. It is a pack of security and privacy hardenings, Discord features
+  reimplementations, Electron / Chromium / Discord bugs workarounds,
+  stylesheets, internal pages and wrapped https://discord.com page. It is
+  designed to conform with ToS as much as it is possible. The application can be
+  accessed at: http://yourhost:3000/ or https://yourhost:3001/. This container
+  is based on Docker Baseimage KasmVNC which means there are additional
+  environment variables and run configurations to enable or disable specific
+  functionality."
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2023-5-7
     description: first release

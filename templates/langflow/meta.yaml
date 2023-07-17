@@ -1,5 +1,13 @@
 name: Langflow
-description: An effortless way to experiment and prototype LangChain pipelines
+description: Langflow is an innovative application designed to facilitate the
+  experimentation and prototyping of LangChain pipelines. It provides a
+  user-friendly interface for creating flows by simply dragging and connecting
+  LangChain components such as LLMs, prompt serializers, agents, and chains. You
+  can easily modify prompt parameters, link chains and agents, track an agent's
+  thought process, and export your flow. Once your flow is ready, you can export
+  it as a JSON file for use with LangChain. Langflow also integrates with
+  langchain-serve for one-command deployment to Jina AI Cloud. With Langflow,
+  building and deploying LangChain pipelines has never been easier.
 instructions: null
 changeLog:
   - date: 2023-06-22

@@ -1,5 +1,15 @@
 name: Sonarr
-description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+description: Sonarr is a Personal Video Recorder (PVR) designed for Usenet and
+  BitTorrent users. It monitors multiple RSS feeds for new episodes of your
+  favorite shows and automatically grabs, sorts, and renames them. Sonarr can
+  also be configured to automatically upgrade the quality of files already
+  downloaded when a better quality format becomes available. It features a
+  calendar to see all your upcoming episodes in one convenient location, and a
+  manual search to find all the releases and choose the one you want. Sonarr
+  also handles failed downloads, automatically blocking the release and trying
+  another one until it finds one that works. It is fully integrated with
+  SABnzbd, NZBGet, Kodi, and Plex, and supports major platforms including
+  Windows, Linux, macOS, and Raspberry Pi.
 instructions: null
 changeLog:
   - date: 2022-12-26

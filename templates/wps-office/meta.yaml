@@ -1,6 +1,15 @@
 name: WPS Office
-description: WPS Office is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: WPS Office is a comprehensive office suite that is lightweight yet
+  feature-rich. It offers high compatibility and a range of professional office
+  software tools. With WPS Office, you can edit files in Writer, Presentation,
+  Spreadsheet, and PDF, enhancing your work efficiency. The application can be
+  accessed at your host on ports 3000 and 3001. This container is based on
+  Docker Baseimage KasmVNC, which provides additional environment variables and
+  run configurations to enable or disable specific functionality. The
+  application also supports the docker manifest for multi-platform awareness,
+  ensuring the correct image for your architecture is retrieved.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2023-5-7
     description: first release

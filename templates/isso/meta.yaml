@@ -1,5 +1,15 @@
 name: Isso
-description: Isso – Ich schrei sonst – is a lightweight commenting server written in Python and JavaScript. It aims to be a drop-in replacement for Disqus.
+description: Isso is a lightweight commenting server designed to be a seamless
+  alternative to Disqus. It is written in Python and JavaScript, and it allows
+  users to leave comments on your website in a simple and straightforward
+  manner. The app supports anonymous comments, preserving the identity of your
+  users, and is easy to manage. Users can write comments in Markdown, and they
+  also have the ability to edit or delete their own comments within a default
+  time frame of 15 minutes. The app uses a SQLite backend, ensuring that your
+  comments are not treated as Big Data. Additionally, it offers Disqus and
+  WordPress import features, allowing you to migrate your existing comments
+  without any hassle. The app is easily integrated into your website by
+  embedding a single JavaScript file.
 instructions: Go to /admin for administration interface
 changeLog:
   - date: 2023-2-9

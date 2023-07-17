@@ -1,5 +1,13 @@
 name: Gotenberg
-description: Gotenberg is a Docker-powered stateless API for PDF files.
+description: Gotenberg is a Docker-powered stateless API designed to handle PDF
+  files. It offers a developer-friendly interface to interact with robust tools
+  like Chromium and LibreOffice, enabling the conversion of various document
+  formats such as HTML, Markdown, Word, Excel, and more into PDF files. The app
+  also supports an asynchronous workflow with a webhook feature, allowing you to
+  upload the output file to your preferred destination. Gotenberg is a modular
+  platform, meaning you can customize each module according to your needs.
+  Additionally, it provides the option to build your own Docker image by adding
+  new tools and creating modules that offer new routes to the API.
 instructions: null
 changeLog:
   - date: 2023-02-21

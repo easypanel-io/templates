@@ -1,5 +1,14 @@
 name: Hasty Paste
-description: A fast and minimal paste bin, written in Python using Quart.
+description: Hasty Paste is a fast and minimalistic app designed for quickly
+  pasting and sharing text. It is primarily used for sharing debug logs and
+  similar content to aid developers in providing tech support. The app is
+  publicly accessible with no authentication required. It generates random IDs
+  for each paste, with an optional 'long' ID to reduce the chances of brute
+  force attacks. Users can also add expiring pastes. The app features a dark
+  theme and optional syntax highlighting. It is designed to use minimal
+  resources and does not require JavaScript. Hasty Paste also allows users to
+  choose their file system and offers a custom flat-file system. The app is
+  named 'Hasty Paste' to reflect its speed and ease of use.
 instructions: Hasty Paste takes a minute or two on first launch.
 changeLog:
   - date: 2022-10-30

@@ -1,5 +1,15 @@
 name: Chromium
-description: Chromium Browser is an open source version of Google Chrome
+description: Chromium is an open-source browser project that is designed to
+  provide a safer, faster, and more stable way for all users to experience the
+  web. This app is a Docker containerized version of Chromium, allowing you to
+  deploy and run the Chromium browser in a Docker environment. The app supports
+  multiple architectures, including x86-64 and arm64, and can be accessed via
+  HTTP or HTTPS. It offers additional environment variables and run
+  configurations to enable or disable specific functionality. The app also
+  allows you to specify one or multiple Chromium CLI flags, which will be passed
+  to the application in full. This containerized version of Chromium is designed
+  to function efficiently with modern websites, and includes options for GPU
+  acceleration and Docker in Docker (DinD) setup.
 instructions: null
 changeLog:
   - date: 2022-11-14

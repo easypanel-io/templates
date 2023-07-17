@@ -1,5 +1,14 @@
 name: Servas
-description: A self-hosted bookmark management tool. Servas is based on Laravel and Inertia.js and uses Tailwind CSS and Svelte for the frontend.
+description: Servas is a self-hosted bookmark management tool that allows you to
+  organize and access your bookmarks in a more efficient and streamlined manner.
+  With Servas, you can categorize your bookmarks using tags and groups, which
+  can also be nested for better organization. The app also features a 'Later
+  List' where you can add bookmarks that you wish to access at a later time.
+  Servas also comes with a Chrome browser extension, allowing you to add sites
+  to your bookmark list directly from your browser. The app supports multiple
+  user accounts and boasts a responsive design that ensures it looks good on all
+  your devices. For added security, Servas also offers Two Factor
+  Authentication.
 instructions: Visit /register to create an account
 changeLog:
   - date: 2023-1-30

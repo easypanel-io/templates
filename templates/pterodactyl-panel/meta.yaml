@@ -1,5 +1,16 @@
 name: Pterodactyl Panel
-description: Pterodactyl is an open-source game server management panel built with PHP 7, React, and Go. Designed with security in mind, Pterodactyl runs all game servers in isolated Docker containers while exposing a beautiful and intuitive UI to administrators and users. What more are you waiting for? Make game servers a first class citizen on your platform today.
+description: Pterodactyl® is a free, open-source game server management panel
+  that allows you to manage your game servers with ease and efficiency. It is
+  built with PHP, React, and Go, and designed with a focus on security.
+  Pterodactyl runs all game servers in isolated Docker containers, providing a
+  secure environment for each game. It also offers a beautiful and intuitive
+  user interface, making it easy for anyone to use. The platform supports a wide
+  variety of games, including Minecraft, Rust, Terraria, Teamspeak, Mumble, Team
+  Fortress 2, Counter Strike Global Offensive, Garry's Mod, ARK Survival
+  Evolved, and many more. With Pterodactyl, you can host your games across the
+  world without having to bloat each physical machine with additional
+  dependencies. It's time to make game servers a first-class citizen on your
+  platform with Pterodactyl.
 instructions: After installing, open the console and run "php artisan p:user:make".
 changeLog:
   - date: 2023-07-10

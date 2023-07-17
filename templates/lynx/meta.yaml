@@ -1,6 +1,15 @@
 name: Lynx
-description: A fullstack application using the MEVN stack to shorten your URLs.
-instructions: Registration is disabled by default, but the first registration will always be allowed.
+description: Lynx is a robust URL shortener application designed to simplify and
+  streamline your web browsing experience. Built using the MEVN stack, Lynx
+  offers a user-friendly interface and the ability to redirect the root path for
+  a more personalized touch. The app also features a unique admin interface,
+  providing you with full control over your shortened URLs. With Lynx, you can
+  easily manage and customize your links, each of which includes a slug,
+  destination, and id. The app also supports multiple users, integrates with
+  ShareX, and offers two-factor authentication for enhanced security. Lynx is
+  the sleek, powerful URL shortener you've been looking for.
+instructions: Registration is disabled by default, but the first registration
+  will always be allowed.
 changeLog:
   - date: 2023-3-15
     description: first release

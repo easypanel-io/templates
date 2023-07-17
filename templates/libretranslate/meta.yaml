@@ -1,5 +1,14 @@
 name: LibreTranslate
-description: Free and Open Source Machine Translation API. 100% self-hosted, offline capable and easy to setup.
+description: LibreTranslate is a free and open-source machine translation app
+  that is entirely self-hosted. Unlike other translation apps, it does not rely
+  on proprietary providers such as Google or Azure to perform translations.
+  Instead, its translation engine is powered by the open-source Argos Translate
+  library. LibreTranslate can translate text between different languages,
+  auto-detect the language of the input text, and even handle HTML content. It
+  provides a simple and intuitive interface for users to input the text they
+  want to translate, select the source and target languages, and get the
+  translated text. With LibreTranslate, you can enjoy a reliable, accurate, and
+  privacy-friendly translation service right at your fingertips.
 instructions: null
 changeLog:
   - date: 2020-12-20

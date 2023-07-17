@@ -1,5 +1,17 @@
 name: Listmonk
-description: Listmonk is a self-hosted, high performance mailing list and newsletter manager. It comes as a standalone binary and the only dependency is a Postgres database.
+description: Listmonk is a self-hosted, high-performance mailing list and
+  newsletter manager. It is designed to manage millions of subscribers across
+  various single and double opt-in lists, with custom JSON attributes for each
+  subscriber. The app allows you to query and segment subscribers with SQL
+  expressions and offers a fast bulk importer for easy integration with external
+  CRMs and subscriber databases. Listmonk also provides a simple API for sending
+  transactional messages to subscribers using pre-defined templates. These
+  messages can be sent via email, SMS, Whatsapp, or any medium via Messenger
+  interfaces. The app also includes simple analytics and visualization tools, a
+  powerful templating system for creating dynamic email templates, and a media
+  manager for uploading images for email campaigns. Listmonk is free,
+  open-source, and designed for high performance, with a single binary
+  application that runs everywhere with a minimal CPU and memory footprint.
 instructions: null
 changeLog:
   - date: 2023-2-3

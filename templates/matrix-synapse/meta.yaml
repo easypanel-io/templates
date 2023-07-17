@@ -1,6 +1,15 @@
 name: Matrix Synapse
-description: "Synapse: Matrix homeserver written in Python/Twisted."
-instructions: To create a user, simply execute the command "register_new_matrix_user -c data/homeserver.yaml" via console connection.
+description: Matrix is an open network designed for secure, decentralised
+  communication. This app allows you to chat with friends, family, communities,
+  and co-workers, providing a cozy, safe, and supercharged environment for your
+  conversations. You can reclaim your space and build advanced, rich
+  communication applications on top of Matrix. The app is part of a rich
+  ecosystem that includes clients, servers, bots, and application services. It's
+  an open-source project, generously hosted by UpCloud. With Matrix, you can
+  start a conversation, build apps, and explore the vast possibilities of a
+  decentralised communication network.
+instructions: To create a user, simply execute the command
+  "register_new_matrix_user -c data/homeserver.yaml" via console connection.
 changeLog:
   - date: 2023-03-28
     description: First Release

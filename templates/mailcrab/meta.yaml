@@ -1,5 +1,17 @@
 name: MailCrab
-description: Email test server for development, written in Rust.
+description: MailCrab is an email test server designed for development purposes.
+  It is an accept-all SMTP server that provides a web interface for viewing and
+  inspecting all incoming emails. You can view formatted mail, download
+  attachments, view headers, or view the complete raw mail contents. The app
+  runs on all amd64 and arm64 platforms using docker. The backend server and the
+  frontend of the app are both written in Rust. The backend receives email over
+  an unencrypted connection on a configurable port, and all email is stored in
+  memory while the application is running. The frontend initially performs a
+  call to receive all existing email metadata and then subscribes for new
+  messages using the websocket connection. When opening a message, the endpoint
+  is used to retrieve the complete message body and raw email. The backend also
+  accepts a few commands over the websocket, to mark a message as opened, to
+  delete a single message or delete all messages.
 instructions: null
 changeLog:
   - date: 2022-11-5
