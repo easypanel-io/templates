@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
       source: { type: "image", image: input.appServiceImage },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
       mounts: [{ type: "volume", name: "data", mountPath: "/botpress/data" }],
-      deploy: { command: "sleep 10; ./bp" },
+      deploy: { command: "sleep 10 & ./bp" },
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `BP_MODULE_NLU_DUCKLINGURL=http://$(PROJECT_NAME)_$(SERVICE_NAME)-lang:8000`,
@@ -31,10 +31,10 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName + "-lang",
       source: { type: "image", image: input.appServiceImage },
-      mounts: [{ type: "volume", name: `lang`, mountPath: "/botpress/lang" }],
+      mounts: [{ type: "volume", name: "data", mountPath: "/botpress/data" }],
       deploy: {
         command:
-          "./duckling -p 8000 & ./bp lang --langDir /botpress/lang --port 3100",
+          "./duckling -p 8000 & ./bp lang --langDir /botpress/data/embeddings --port 3100",
       },
     },
   });
