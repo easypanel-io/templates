@@ -25,7 +25,6 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
-    - redisServiceName
   properties:
     projectName:
       type: string
@@ -42,7 +41,3 @@ schema:
       type: string
       title: Database Service Name
       default: botpress-db
-    redisServiceName:
-      type: string
-      title: Redis Service Name
-      default: redis-db
