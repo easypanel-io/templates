@@ -51,7 +51,8 @@ schema:
       title: Starter Host Path
 benefits:
   - title: Self-Hosted Audiobook and Podcast Server
-    description: Audiobookshelf allows you to host your own audiobook and podcast
+    description:
+      Audiobookshelf allows you to host your own audiobook and podcast
       server. This means you can have all your favorite audiobooks and podcasts
       in one place, accessible from anywhere. No more switching between
       different platforms or apps to listen to your favorite content.
@@ -69,12 +70,14 @@ benefits:
       labeled and easy to search.
 features:
   - title: Audio Tracks
-    description: An audiobook in Audiobookshelf contains tracks. Tracks are audio
+    description:
+      An audiobook in Audiobookshelf contains tracks. Tracks are audio
       files assigned a track number. The track number is parsed from the audio
       filename and from the ID3 tags of the audio file. This allows for easy
       navigation within an audiobook.
   - title: Additional Metadata
-    description: Audiobookshelf allows for additional metadata to be added. If you
+    description:
+      Audiobookshelf allows for additional metadata to be added. If you
       have a file named desc.txt in the library item folder it will be used as
       the description. If you have a file named reader.txt in the library item
       folder it will be used as the narrator. If you have an OPF file with
@@ -83,3 +86,7 @@ features:
     description: Audiobookshelf supports a specific directory structure for
       podcasts. This makes it easy to organize and manage your podcasts,
       ensuring that each episode is easy to find and play.
+tags:
+  - Media
+  - Educational
+  - Productivity
