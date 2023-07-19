@@ -44,7 +44,20 @@ async function run() {
     if (meta?.instructions) {
       lines.push("## Instructions", "", escape(meta.instructions), "");
     }
-    
+    if ("benefits" in meta) {
+      lines.push("## Benefits", "");
+      meta.benefits.forEach((entry) => {
+        lines.push(`- ${entry.title}: ${entry.description}`);
+      });
+      lines.push("");
+    }
+    if ("features" in meta) {
+      lines.push("## Features", "");
+      meta.features.forEach((entry) => {
+        lines.push(`- ${entry.title}: ${entry.description}`);
+      });
+      lines.push("");
+    }
     if (meta?.links?.length) {
       lines.push("## Links", "");
       meta.links.forEach((entry) => {
