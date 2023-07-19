@@ -50,3 +50,44 @@ schema:
       type: string
       title: Redis Service Name
       default: paperlessngx-redis
+benefits:
+  - title: Efficient Document Management
+    description: Paperless-ngx is a document management system that transforms your
+      physical documents into a searchable online archive, reducing the need for
+      physical storage and making document retrieval easier and faster.
+  - title: Advanced Search Capabilities
+    description: With full text search, auto completion, and results sorted by
+      relevance, Paperless-ngx makes it easy to find the documents you need.
+      Highlighting shows you which parts of the document matched the query, and
+      you can even search for similar documents.
+  - title: Email Processing
+    description: Paperless-ngx can add documents from your email accounts, allowing
+      you to manage and archive important emails alongside your other documents.
+      You can configure multiple accounts and filters for each account.
+  - title: Machine Learning Powered Document Matching
+    description: Paperless-ngx learns from your documents and can automatically
+      assign tags, correspondents, and types to documents once you've stored a
+      few documents in the system, saving you time and effort in document
+      organization.
+features:
+  - title: Document Scanning and Indexing
+    description: Paperless-ngx allows you to organize and index your scanned
+      documents with tags, correspondents, types, and more. It performs OCR on
+      your documents, adds selectable text to image-only documents, and adds
+      tags, correspondents, and document types to your documents.
+  - title: Support for Various Document Types
+    description: Paperless-ngx supports PDF documents, images, plain text files, and
+      Office documents (Word, Excel, Powerpoint, and LibreOffice equivalents).
+      Office document support is optional and provided by Apache Tika.
+  - title: Customizable Views
+    description: You can customize views in Paperless-ngx, save them, and display
+      them on the dashboard. This allows you to tailor the system to your
+      specific needs and preferences.
+  - title: Email Processing
+    description: When adding documents from mail, Paperless-ngx can move these mail
+      to a new folder, mark them as read, flag them as important or delete them.
+      This helps in managing your email documents efficiently.
+  - title: Sanity Checker
+    description: The integrated sanity checker in Paperless-ngx makes sure that your
+      document archive is in good health, providing peace of mind and ensuring
+      the integrity of your document archive.

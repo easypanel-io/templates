@@ -39,3 +39,39 @@ schema:
       type: string
       title: App Service Image
       default: rlister/hastebin:latest
+benefits:
+  - title: Efficient Data Sharing
+    description: Haste allows users to share data quickly and efficiently. By simply
+      inputting data into the app, users can generate a URL that can be shared
+      with others. This eliminates the need for cumbersome email attachments or
+      other more traditional methods of data sharing.
+  - title: Versatile Data Storage
+    description: Haste supports a variety of data storage options. Whether you
+      prefer file storage, Redis, PostgreSQL, MongoDB, Memcached, RethinkDB,
+      Google Datastore, or Amazon S3, Haste has you covered. This flexibility
+      allows users to choose the storage option that best suits their needs.
+  - title: Simple and Elegant Design
+    description: Haste is designed to be simple and elegant. Its user-friendly
+      interface makes it easy for anyone to use, regardless of their technical
+      expertise. Plus, its sleek design makes it a pleasure to work with.
+features:
+  - title: Data Sharing
+    description: Haste makes it easy to share data. Simply input your data into the
+      app, and Haste will generate a URL that you can share with others. This
+      feature is perfect for those who need to share large amounts of data
+      quickly and efficiently.
+  - title: Multiple Storage Options
+    description: Haste supports a variety of data storage options. You can choose to
+      store your data in files, Redis, PostgreSQL, MongoDB, Memcached,
+      RethinkDB, Google Datastore, or Amazon S3. This feature gives you the
+      flexibility to choose the storage option that best suits your needs.
+  - title: Rate Limiting
+    description: Haste includes built-in rate limiting courtesy of
+      connect-ratelimit. This feature helps to prevent abuse and ensure fair
+      usage by limiting the number of requests a user can make within a certain
+      timeframe.
+  - title: Key Generation
+    description: Haste includes a key generation feature that generates unique keys
+      for each piece of data you input into the app. You can choose to generate
+      phonetic keys, similar to pwgen, or random keys. This feature ensures that
+      each piece of data you share has a unique identifier.

@@ -46,3 +46,27 @@ schema:
       type: string
       title: App Service Image
       default: filebrowser/filebrowser:v2-s6
+benefits:
+  - title: Efficient File Management
+    description: File Browser offers a streamlined interface for managing files
+      within a specified directory. It simplifies tasks such as uploading,
+      deleting, previewing, renaming, and editing files.
+  - title: Multi-User Support
+    description: The app supports the creation of multiple users, with each user
+      having their own directory. This makes it an ideal tool for collaborative
+      environments or shared systems.
+  - title: Standalone Application
+    description: File Browser can be used as a standalone app, providing a dedicated
+      platform for file management without the need for additional software.
+features:
+  - title: Authentication Method
+    description: File Browser allows you to change the way the user authenticates
+      with the server, providing flexibility in terms of security and access
+      control.
+  - title: Command Runner
+    description: This feature enables you to execute any shell command you want
+      before or after a certain event, providing a high level of customization
+      and control.
+  - title: Custom Branding
+    description: File Browser allows you to customize your installation by changing
+      its name, adding a global custom style sheet, and using your own logotype.

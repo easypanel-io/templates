@@ -47,3 +47,38 @@ schema:
       type: string
       title: Database Service Name
       default: shiori-db
+benefits:
+  - title: Efficient Bookmark Management
+    description: Shiori provides a simple and efficient way to manage your
+      bookmarks. It allows you to add, edit, delete, and search bookmarks with
+      ease, making it a convenient tool for organizing your online resources.
+  - title: Offline Access
+    description: Shiori creates an offline archive of the webpages you bookmark.
+      This means you can access your saved content even when you're not
+      connected to the internet.
+  - title: Portability
+    description: Shiori is distributed as a single binary, making it highly
+      portable. You can use it on any device and carry your bookmarks with you
+      wherever you go.
+  - title: Browser Integration
+    description: With the Shiori Web Extension, you can integrate Shiori with your
+      favorite web browser. This allows you to save and remove bookmarks in
+      Shiori without leaving your current page.
+features:
+  - title: Bookmark Management
+    description: Shiori allows you to add, edit, delete, and search bookmarks. It
+      provides a simple and clean interface for managing your bookmarks.
+  - title: Import and Export Functionality
+    description: Shiori supports importing and exporting bookmarks from and to
+      Netscape Bookmark file. It also allows you to import bookmarks from
+      Pocket.
+  - title: Offline Archive
+    description: Shiori creates an offline archive of the webpages you bookmark.
+      This allows you to access your saved content offline.
+  - title: Web Extension
+    description: Shiori offers a web extension that integrates Shiori with your web
+      browser. This allows you to manage your bookmarks without switching from
+      your current page.
+  - title: Database Support
+    description: Shiori supports sqlite3, PostgreSQL, and MySQL as its database.
+      This provides flexibility in terms of data storage and management.

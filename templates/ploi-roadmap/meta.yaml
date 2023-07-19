@@ -62,3 +62,43 @@ schema:
       type: string
       title: Timezone
       default: utc
+benefits:
+  - title: Customisable Roadmapping
+    description: Roadmap is an open-source software designed to cater to your
+      roadmapping needs. It allows you to create a completely customisable
+      roadmap, enabling you to plan and strategise effectively.
+  - title: Prioritise Tasks
+    description: With the ability to upvote items, you can easily identify which
+      tasks or projects have more priority. This feature helps in better
+      decision-making and resource allocation.
+  - title: Easy User Management
+    description: Roadmap comes with a simplified role system, including roles such
+      as administrator, employee, and user. This makes it easy to manage users
+      and their access levels within the application.
+  - title: Single Sign-On
+    description: Roadmap supports OAuth 2 single sign-on with your own application,
+      providing a seamless and secure login experience for users.
+  - title: Automatic Image Generation
+    description: The software automatically generates Open Graph (OG) images,
+      including the branding color you've set up. This feature helps in
+      enhancing the visual appeal and recognition of your roadmap.
+features:
+  - title: Customisable Roadmapping
+    description: Create a completely customisable roadmap to plan and strategise
+      effectively.
+  - title: User Mentions
+    description: Mention users in comments to facilitate communication and collaboration.
+  - title: Upvote System
+    description: Upvote items to identify which tasks or projects have more priority.
+  - title: Automatic Slug Generation
+    description: Automatically generate slugs for your items, making them easier to
+      reference and find.
+  - title: Admin Panel
+    description: Manage your roadmap and users with the easy-to-use Filament admin panel.
+  - title: Role System
+    description: Manage users and their access levels with the simplified role system.
+  - title: Single Sign-On
+    description: Provide a seamless and secure login experience with OAuth 2 single sign-on.
+  - title: Automatic Image Generation
+    description: Enhance the visual appeal of your roadmap with automatically
+      generated OG images.

@@ -43,3 +43,36 @@ schema:
     appPassword:
       type: string
       title: Admin Password
+benefits:
+  - title: Easy installation and management
+    description: Install and manage WireGuard on any Linux host with ease.
+  - title: All-in-one solution
+    description: Includes both WireGuard and a web UI for easy configuration and control.
+  - title: Client management
+    description: List, create, edit, delete, enable, and disable clients with ease.
+  - title: QR code support
+    description: Generate QR codes for easy client configuration.
+  - title: Configuration file download
+    description: Download client configuration files for easy setup.
+  - title: Connection statistics
+    description: View statistics for connected clients.
+  - title: Traffic charts
+    description: Monitor traffic charts for each connected client.
+  - title: Gravatar support
+    description: Display client avatars using Gravatar.
+features:
+  - title: Easy installation
+    description: Simple installation process for WireGuard and the web UI.
+  - title: Client management
+    description: Easily manage clients, including creating, editing, deleting,
+      enabling, and disabling.
+  - title: QR code generation
+    description: Generate QR codes for easy client configuration.
+  - title: Configuration file download
+    description: Download client configuration files for easy setup.
+  - title: Connection statistics
+    description: View statistics for connected clients.
+  - title: Traffic charts
+    description: Monitor traffic charts for each connected client.
+  - title: Gravatar support
+    description: Display client avatars using Gravatar.

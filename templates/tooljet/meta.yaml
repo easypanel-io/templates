@@ -51,3 +51,39 @@ schema:
       type: string
       title: App Service Name
       default: tooljet-db
+benefits:
+  - title: Build custom internal tools
+    description: ToolJet is a low-code framework that allows you to build and deploy
+      custom internal tools for your organization. You can create apps to manage
+      orders, update inventory, track revenue, and more.
+  - title: Connect to various data sources
+    description: ToolJet allows you to connect to various data sources such as
+      databases, API endpoints, SaaS tools, and cloud object storage services.
+      You can fetch and update data from these sources to power your apps.
+  - title: Visualize and modify data
+    description: With ToolJet, you can visualize and modify data using UI widgets
+      like tables, charts, and forms. You can easily create a user-friendly
+      interface to interact with your data.
+  - title: Write custom business logic
+    description: ToolJet provides the flexibility to write custom business logic
+      using JavaScript or Python queries. You can add complex functionality and
+      interact with the user interface of your application.
+  - title: Secure your apps
+    description: ToolJet allows you to secure your apps with group and permissions
+      settings. You can control access to your apps and ensure data privacy.
+features:
+  - title: Connect to datasources
+    description: Easily connect to various data sources like databases, API
+      endpoints, SaaS tools, and cloud object storage services.
+  - title: Build queries
+    description: Use query builders or write JavaScript/Python queries to fetch and
+      update data from connected data sources.
+  - title: Build user interface
+    description: Drag and drop components like tables, charts, and forms to quickly
+      build the user interface of your apps.
+  - title: Bind data to UI
+    description: Bind data from queries to UI components to visualize and modify
+      data in your apps.
+  - title: Preview, release, and share apps
+    description: Preview your app, release it to production, and share it with
+      others. Control access to your apps using group and permissions settings.

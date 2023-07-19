@@ -48,3 +48,34 @@ schema:
     password:
       type: string
       title: Password
+benefits:
+  - title: Open Source
+    description: Flowise is an open-source tool, making it free for both commercial
+      and personal use. This allows you to use and modify the tool according to
+      your needs without any restrictions.
+  - title: Live Running Apps
+    description: With Flowise, you can see your LLM apps running live. This allows
+      you to monitor the performance of your apps in real-time and make
+      necessary adjustments on the go.
+  - title: Custom Component Integrations
+    description: Flowise allows for custom component integrations, giving you the
+      flexibility to add and integrate components that suit your specific needs.
+features:
+  - title: LLM Flow Builder
+    description: Flowise is a UI visual tool that allows you to build your
+      customized LLM flow using LangchainJS. It simplifies the process of
+      creating LLM apps by providing a visual interface for building your flow.
+  - title: QnA Retrieval Chain
+    description: Flowise includes a QnA retrieval chain feature that allows you to
+      create conversational retrieval QA chains. This feature enhances the
+      interaction between your app and its users.
+  - title: Language Translation Chain
+    description: Flowise offers a language translation chain feature that enables
+      language translation using LLM Chain with a Chat Prompt Template and Chat
+      Model. This feature makes your app more accessible to users who speak
+      different languages.
+  - title: Conversational Agent with Memory
+    description: Flowise provides a conversational agent feature for a chat model
+      which utilizes chat specific prompts and buffer memory. This feature
+      allows your app to remember previous interactions and provide more
+      personalized responses.

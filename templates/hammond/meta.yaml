@@ -39,3 +39,32 @@ schema:
       type: string
       title: App Service Image
       default: akhilrex/hammond:1.0.0
+benefits:
+  - title: Self-Hosted Vehicle Expense Tracking
+    description: Hammond is a self-hosted vehicle expense tracking system. It allows
+      you to keep track of fuel and other expenses related to all of your
+      vehicles in one place.
+  - title: Support for Multiple Users
+    description: The app supports multiple users sharing multiple vehicles. This
+      makes it ideal for families or businesses with a fleet of vehicles.
+  - title: Data Migration
+    description: Hammond allows you to migrate data from Clarkson, making it easy to
+      switch over without losing any of your previous data.
+features:
+  - title: Vehicle Management
+    description: Add and manage multiple vehicles, tracking fuel and other expenses
+      for each one.
+  - title: User Management
+    description: Add and manage multiple users, allowing them to share vehicles and
+      track expenses.
+  - title: Expense Tracking
+    description: Keep track of fuel and other expenses related to your vehicles. You
+      can even save attachments against vehicles for easy reference.
+  - title: Quick Entries
+    description: Take a photo of a receipt or pump screen to make an entry later,
+      ensuring you never forget to log an expense.
+  - title: Reporting
+    description: Get vehicle level and overall reporting on your expenses, helping
+      you to better understand your spending.
+  - title: Import from Fuelly
+    description: Easily import your data from Fuelly, with more apps coming soon.

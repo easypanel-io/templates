@@ -50,3 +50,33 @@ schema:
       type: string
       title: Database Service Name
       default: zipline-db
+benefits:
+  - title: Easy to use
+    description: Zipline is designed to be user-friendly and intuitive, making it
+      easy for anyone to upload and manage files.
+  - title: Packed with features
+    description: Zipline offers a wide range of features, including file
+      organization, URL shortening, image compression, and more.
+  - title: Customizable dashboard
+    description: Zipline's dashboard is fully customizable, allowing users to
+      personalize their experience and access the information they need.
+  - title: Fast and efficient
+    description: Zipline is built with performance in mind, ensuring fast and
+      efficient file uploads and management.
+features:
+  - title: File organization
+    description: Easily organize your files with folders and view them with a click
+      of a button.
+  - title: URL shortening
+    description: Create shortened links to websites, set a maximum amount of uses, and more.
+  - title: Image compression
+    description: Compress your images to save space without compromising quality.
+  - title: Discord integration
+    description: Embed your uploads in Discord with OG tags and receive
+      notifications when someone uploads to your instance.
+  - title: OAuth2 registration
+    description: Allow users to link and/or register with selected OAuth2 providers
+      for easy access and authentication.
+  - title: Two-Factor authentication
+    description: Enable an extra layer of security with 2FA using Google
+      Authenticator, Authy, and more.

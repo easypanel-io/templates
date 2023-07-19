@@ -78,3 +78,34 @@ schema:
         - enum:
             - "false"
           title: "false"
+benefits:
+  - title: Rapid API Development
+    description: Hasura allows for faster API development, reducing cost,
+      complexity, and time to market. It enables you to build new applications
+      or add new features to an existing application in days instead of weeks.
+  - title: Accelerated Modernization
+    description: Hasura fast tracks cloud migration, frontend and backend
+      modernization, and application re-architecture projects by automating 80%
+      of your API development work.
+  - title: Standardized Data Access
+    description: Hasura replaces direct database access with a scalable, performant,
+      and secure data API to create a unified and federated core data service.
+features:
+  - title: Instant API
+    description: Hasura provides an instant API from your data to a unified GraphQL
+      or REST API in minutes.
+  - title: Authorization
+    description: Hasura allows you to define granular, role-based permissions down
+      to the row and column level.
+  - title: Performance
+    description: Hasura ensures faster API response times and scalability that’s
+      automatically optimized.
+  - title: Observability
+    description: Hasura offers precision insights for optimal availability and
+      performance of your APIs.
+  - title: API Security
+    description: Hasura provides comprehensive tools to secure APIs beyond
+      authentication and authorization.
+  - title: Federation
+    description: Hasura allows you to connect, manage, and iterate siloed, disparate
+      data on a supergraph.

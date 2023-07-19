@@ -47,3 +47,33 @@ schema:
       type: string
       title: App Service Image
       default: darthsim/imgproxy:v3.13.2
+benefits:
+  - title: Optimized Image Processing
+    description: imgproxy is designed to make websites and apps run faster by
+      optimizing images for the web on the fly. It saves storage and SaaS costs
+      by reducing the need for disk space and eliminating the requirement for
+      all saved images to conform to specific formats.
+  - title: Fast and Efficient
+    description: Built on the world’s fastest image processing library, libvips,
+      imgproxy is incredibly fast and has a minimal memory footprint. It can
+      handle a large amount of image resizing quickly and efficiently.
+  - title: Secure Image Processing
+    description: imgproxy provides robust security measures to protect against
+      common attack vectors in image processing. It checks an image’s real
+      dimensions, cancels processing if it’s too big or not a real image, and
+      prevents denial-of-service attacks by requiring URL signing.
+features:
+  - title: On-the-Fly Image Resizing
+    description: imgproxy resizes and processes images on the fly, eliminating the
+      need to repeatedly prepare images to fit your design every time it
+      changes.
+  - title: Advanced Image Editing
+    description: With over 55+ features, imgproxy offers a comprehensive selection
+      of image editing tools. These include resizing, cropping, contrast
+      adjustment, pixelization, saturation, rotation, background addition, GIF
+      to MP4 conversion, padding, blurring, brightness adjustment, PDF preview
+      generation, and more.
+  - title: Pro Version
+    description: imgproxy Pro offers advanced features and varies by capacity and
+      types of support. It includes concurrent image processing limits, basic
+      and Pro features, priority support, and a 14-day free trial period.

@@ -48,3 +48,35 @@ schema:
       type: string
       title: Database Service Name
       default: supertokens-core-db
+benefits:
+  - title: Fast and Controlled User Authentication
+    description: SuperTokens allows you to build user authentication quickly while
+      maintaining control. It is trusted by startups and enterprises alike, and
+      can be set up in just 5 minutes.
+  - title: Prebuilt UI and Customizable Login Page
+    description: With prebuilt UI hosted on your domain, there are no more
+      redirects. You can also use our frontend SDKs and helper functions to
+      build your own login page quickly.
+  - title: Comprehensive User Management
+    description: SuperTokens provides everything you need for user management,
+      including user roles, 2FA, SSO (AD, Okta), session management, account
+      linking, and machine auth.
+  - title: Multitenant SSO
+    description: Configure sign up with Okta, Microsoft AD and SAML per customer.
+      Each customer has their own user pool.
+features:
+  - title: User Roles and 2FA
+    description: SuperTokens allows you to assign user roles and implement
+      two-factor authentication for added security.
+  - title: Single Sign-On (SSO)
+    description: SuperTokens supports SSO with AD, Okta, and other platforms,
+      allowing users to log in with a single set of credentials.
+  - title: Session Management
+    description: SuperTokens provides robust session management capabilities,
+      allowing you to effectively manage user sessions.
+  - title: Account Linking
+    description: With SuperTokens, you can link multiple user accounts, making it
+      easier to manage users with multiple accounts.
+  - title: Machine Auth
+    description: SuperTokens supports machine auth, allowing you to authenticate
+      machines in addition to users.

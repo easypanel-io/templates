@@ -45,3 +45,30 @@ schema:
       type: string
       title: App Service Image
       default: thumbororg/thumbor:latest
+benefits:
+  - title: Smart Image Cropping
+    description: Thumbor uses advanced face detection technology to crop images
+      around detected faces, ensuring the most important parts of the picture
+      are preserved.
+  - title: Flexible Image Loading and Storage
+    description: Thumbor allows users to store and load images from anywhere, with
+      support for various loaders and storages. Users can also implement their
+      own loaders or storages.
+  - title: Image Filtering
+    description: Thumbor supports image filters that can be applied to images for
+      post-processing. Users can chain and apply filters in order to enhance
+      their images.
+  - title: WebP Support
+    description: Thumbor supports the WebP image format, which compresses images
+      better than JPEG and PNG. This can significantly improve website
+      performance.
+features:
+  - title: Easy Integration
+    description: Thumbor provides comprehensive libraries and plugins in multiple
+      languages, making it easy for developers to integrate and use the service.
+  - title: Decoupled Imaging
+    description: Thumbor decouples imaging from storage and loading, allowing users
+      to tailor the service to their own infrastructure requirements.
+  - title: Efficient Image Management
+    description: Thumbor simplifies image management tasks, such as resizing and
+      cropping, saving time and effort for designers and project managers.
