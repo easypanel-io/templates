@@ -1,5 +1,19 @@
 name: ToolJet
-description: ToolJet is an open-source low-code framework to build and deploy custom internal tools.
+description: "ToolJet is an open-source low-code framework designed to help you
+  build and deploy custom internal tools with ease. It comes with a built-in
+  database, ToolJet DB, built on top of PostgreSQL, and also allows you to
+  connect to external data sources such as PostgreSQL, MongoDB, MS SQL Server,
+  Snowflake, BigQuery, and more. You can also connect to API/GraphQL endpoints,
+  SaaS tools like Airtable, Stripe, Google Sheets, and cloud object storage
+  services like AWS S3, Google Cloud Storage, and Minio. Once connected, ToolJet
+  can run queries on these data sources to fetch and update data. The fetched
+  data can be visualized and modified using UI widgets like tables, charts,
+  forms, etc. You can also use Javascript or Python queries for writing business
+  logic or interacting with the user interface of the application. With ToolJet,
+  you can build apps in three simple steps: connect to data sources, build
+  queries, and build the user interface using the visual App Builder. ToolJet
+  binds together the data sources, queries, and components to convert business
+  logic into custom applications."
 instructions: null
 changeLog:
   - date: 2023-07-09

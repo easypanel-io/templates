@@ -1,6 +1,15 @@
 name: Remmina
-description: Remmina is a remote desktop client written in GTK, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large or tiny screens. Remmina supports multiple network protocols, in an integrated and consistent user interface. Currently RDP, VNC, SPICE, NX, XDMCP, SSH and EXEC are supported.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: Remmina is a remote desktop client designed to be useful for system
+  administrators and travellers who need to work with multiple remote computers.
+  It supports a variety of network protocols, including RDP, VNC, SPICE, NX,
+  XDMCP, SSH and EXEC, all within an integrated and consistent user interface.
+  The app is written in GTK and is designed to be functional on both large and
+  tiny screens. It can be accessed via http://yourhost:3000/ or
+  https://yourhost:3001/. The app is based on Docker Baseimage KasmVNC, which
+  provides additional environment variables and run configurations to enable or
+  disable specific functionality.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-15
     description: first release

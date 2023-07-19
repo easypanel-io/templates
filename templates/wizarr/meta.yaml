@@ -1,5 +1,14 @@
 name: Wizarr
-description: Wizarr is an advanced user invitation and management system for Jellyfin, Plex, Emby, etc
+description: Wizarr is an automatic user invitation system designed to
+  streamline the process of inviting users to your media server. Whether you're
+  using Plex, Jellyfin, or Emby, Wizarr allows you to create a unique link to
+  share with users, automatically inviting them to your server. The app also
+  guides users on how to download the necessary client and provides instructions
+  on how to use your request software. Wizarr offers a secure invitation
+  environment, plug and play SSO support, multi-tiered invitations, and
+  customizable duration for membership. It also integrates with Discord,
+  allowing you to invite users to your Discord server. The app is customizable,
+  allowing you to add any custom HTML as needed.
 instructions: null
 changeLog:
   - date: 2023-03-1
@@ -7,8 +16,6 @@ changeLog:
   - date: 2023-03-22
     description: Update to v2.1.3
 links:
-  - label: Website
-    url: https://wizarr.dev
   - label: Documentation
     url: https://docs.wizarr.dev
   - label: Github

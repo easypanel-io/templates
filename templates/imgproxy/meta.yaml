@@ -1,7 +1,17 @@
 name: imgproxy
-description: imgproxy is a fast and secure standalone server for resizing and
-  converting remote images. imgproxy resizes and processes images on the fly and
-  doesn’t consume disk space
+description: imgproxy is a powerful app designed to optimize images for web use,
+  making websites and apps run faster while saving storage and SaaS costs. It
+  works by resizing and processing images on the fly, eliminating the need for
+  disk space and reducing the cost of conforming all saved images to specific
+  formats. imgproxy offers a wide range of features for editing images,
+  including resizing, cropping, contrast adjustment, pixelization, saturation,
+  rotating, and more. It also provides security features to protect against
+  common attack vectors in image processing. With imgproxy, you can upload
+  images directly to the cloud or your cluster and request images by specifying
+  parameters in the request URL. The app uses the world’s fastest image
+  processing library, libvips, ensuring quick processing and a small memory
+  footprint. imgproxy Pro plans offer advanced features and vary by capacity and
+  types of support.
 instructions: "To generate a image URL you can use the following link:
   https://progapandist.github.io/imgproxy-form/#. Your Salt and Key can be found
   in the environment variables once you create the service. You can also find

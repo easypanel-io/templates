@@ -1,5 +1,18 @@
 name: Keycloak
-description: Open Source Identity and Access Management For Modern Applications and Services
+description: Keycloak is an open-source Identity and Access Management tool that
+  adds authentication to applications and secures services with minimal effort.
+  It eliminates the need for storing or authenticating users, providing user
+  federation, robust authentication, user management, and fine-grained
+  authorization. Keycloak offers a Single-Sign On feature, allowing users to
+  authenticate with Keycloak rather than individual applications, ensuring a
+  seamless login experience across multiple applications. It also supports
+  social login and can authenticate users with existing OpenID Connect or SAML
+  2.0 Identity Providers. Keycloak has built-in support to connect to existing
+  LDAP or Active Directory servers and provides a centralized admin console for
+  managing all aspects of the server. It also offers an account management
+  console for users to manage their own accounts. Based on standard protocols,
+  Keycloak supports OpenID Connect, OAuth 2.0, and SAML, and provides
+  fine-grained authorization services for advanced permission management.
 instructions: null
 changeLog:
   - date: 2023-3-16

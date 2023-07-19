@@ -1,6 +1,16 @@
 name: Roundcube
-description: This project is a free and open source webmail solution with a desktop-like user interface which is easy to install/configure and that runs on a standard LAMPP server. The skins use the latest web standards to render a functional and customizable UI. Roundcube includes other sophisticated open-source libraries such as PEAR, an IMAP library derived from IlohaMail, the TinyMCE rich text editor, Googiespell library for spell checking and the HTML5-PHP sanitizer by Masterminds.
-instructions: After Roundcube is installed, you can log in to the mail accounts on the service where you entered the "SMTP" information.
+description: Roundcube webmail is a browser-based, multilingual IMAP client that
+  offers an application-like user interface. It is designed to provide all the
+  functionalities you would expect from an email client. This includes MIME
+  support, an address book, folder manipulation, message searching, and spell
+  checking. The app also supports drag-and-drop message management, multiple
+  sender identities, and a full-featured address book with groups and LDAP
+  connectors. It offers a threaded message listing, IDNA and SMTPUTF8 support,
+  and a responsive skin for multi-device support. Roundcube webmail also
+  features built-in caching for fast mailbox access, unlimited users and
+  messages, import/export functions, and support for PGP encryption.
+instructions: After Roundcube is installed, you can log in to the mail accounts
+  on the service where you entered the "SMTP" information.
 changeLog:
   - date: 2023-03-15
     description: First Release
@@ -37,7 +47,8 @@ schema:
     roundcubeDefaultHost:
       type: string
       title: Default Host
-      description: Hostname of the IMAP server to connect to. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+      description: Hostname of the IMAP server to connect to. For encypted
+        connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
     roundcubeDefaultPort:
       type: number
       title: Default Port
@@ -46,7 +57,8 @@ schema:
     roundcubeSmtpServer:
       type: string
       title: SMTP Server
-      description: Hostname of the SMTP server to send mails. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+      description: Hostname of the SMTP server to send mails. For encypted
+        connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
     roundcubeSmtpPort:
       type: number
       title: SMTP Port

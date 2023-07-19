@@ -1,6 +1,21 @@
 name: Passbolt
-description: The open source password manager for teams
-instructions: In order to create the first admin account, the following needs to be executed inside the passpolt container "su -m -c "bin/cake passbolt register_user -u YOUR@EMAIL.COM -f YOURNAME -l SURNAME -r admin" -s /bin/sh www-data". Please follow further instructions of the command output.
+description: Passbolt is a security-first, open source password manager designed
+  for teams and businesses. It is trusted by thousands of organizations
+  worldwide, including Fortune 500 companies, defense industry, universities,
+  startups, and many others. The app puts security first, with top penetration
+  testers regularly assessing its software. It supports user-owned secret keys
+  and end-to-end encryption even in complex scenarios. Passbolt is also built
+  for collaboration, allowing organizations and teams to securely share
+  credentials with powerful auditing tools. It offers unparalleled granularity
+  for both access controls and encrypted data. The app is headquartered in the
+  EU, ensuring that privacy is not only a top priority but also guaranteed by
+  law. Passbolt can be used from your browser or mobile phone, with real-time
+  sharing. It also supports programmatic password retrieval, storage, and
+  sharing with its JSON API.
+instructions: In order to create the first admin account, the following needs to
+  be executed inside the passpolt container "su -m -c "bin/cake passbolt
+  register_user -u YOUR@EMAIL.COM -f YOURNAME -l SURNAME -r admin" -s /bin/sh
+  www-data". Please follow further instructions of the command output.
 changeLog:
   - date: 2023-04-03
     description: first release

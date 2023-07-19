@@ -1,6 +1,18 @@
 name: Nango
-description: Get OAuth tokens for APIs - fast & secure
-instructions: Check the environment tab for your API key. Follow the instructions in the FILE mount.
+description: Nango is a powerful app designed to simplify and accelerate the
+  process of building integrations. It provides a unified API, allowing you to
+  drastically simplify your integration code and avoid dealing with each
+  external API's schema and quirks. With Nango, you can authorize any
+  integration using our drop-in UI, and securely manage your users' credentials.
+  The app also enables continuous data synchronization with external APIs, using
+  one of 100+ pre-built integrations, or you can customize them or build your
+  own. Nango also supports 2-way syncs, write-backs, and real-time webhooks.
+  It's designed for engineering teams that want full control without the hassle,
+  allowing you to build exactly the integration your customers need, in code.
+  With Nango, you can leave the maintenance, scaling, and API specific quirks to
+  us, and focus on what you do best.
+instructions: Check the environment tab for your API key. Follow the
+  instructions in the FILE mount.
 changeLog:
   - date: 2023-3-13
     description: first release

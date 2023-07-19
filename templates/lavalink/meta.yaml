@@ -1,5 +1,13 @@
 name: Lavalink
-description: Standalone audio sending node based on Lavaplayer.
+description: Lavalink is a standalone audio sending node designed to facilitate
+  the process of sending audio without it ever reaching any of your shards. It
+  is powered by Lavaplayer and Koe, and is currently being used in production by
+  several popular bots. The app offers a range of features including
+  Twitch/YouTube stream support, an event system, seeking, volume control, and a
+  REST API for resolving Lavaplayer tracks and controlling players. It also
+  provides statistics which are useful for load balancing. Lavalink is designed
+  to have a minimal CPU/memory footprint, and it supports plugins. It is
+  compatible with Java 17 LTS or newer, and it follows Semantic Versioning.
 instructions: null
 changeLog:
   - date: 2019-07-24

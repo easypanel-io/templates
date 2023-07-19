@@ -1,5 +1,17 @@
 name: PocketBase
-description: PocketBase is an open source backend consisting of embedded database (SQLite) with realtime subscriptions, built-in auth management, convenient dashboard UI and simple REST-ish API.
+description: PocketBase is a powerful backend solution for your next SaaS or
+  Mobile app. It is designed to be ready to use out of the box, providing a
+  realtime database, user authentication, file storage, and an admin dashboard
+  all in one file. The realtime database is embedded and performant, featuring a
+  schema builder, data validations, realtime subscriptions, and an easy-to-use
+  REST API. The authentication feature allows you to manage your app users and
+  handle email/password and OAuth2 sign ups from various platforms like Google,
+  Facebook, GitHub, GitLab without any hassle. The file storage feature allows
+  you to store files locally or in an S3 storage, attach media to your database
+  records, and generate thumbnails on the fly. PocketBase is extendable and can
+  be used as a standalone app or as a Go framework, which you can extend via
+  hooks to create your own custom portable backend. It also provides official
+  client SDKs for seamless integration.
 instructions: Admin Dashboard can be accessed via "DOMAIN/_/""
 changeLog:
   - date: 2022-12-03

@@ -1,6 +1,19 @@
 name: Dokuwiki
-description: DokuWiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
-instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install then restart your container when finished to remove install.php
+description: DokuWiki is a highly versatile, open-source wiki software that is
+  simple to use and doesn't require a database. It is known for its clean and
+  readable syntax, making it a favorite among administrators due to its ease of
+  maintenance, backup, and integration. DokuWiki is equipped with built-in
+  access controls and authentication connectors, making it particularly useful
+  in an enterprise context. It supports a wide range of use cases beyond a
+  traditional wiki, thanks to the large number of plugins available. DokuWiki is
+  designed for collaboration, allowing quick updates and easy addition of new
+  pages while maintaining a history of every change. It can be used as a
+  corporate knowledge base, private notebook, software manual, project
+  workspace, CMS, intranet, and more. DokuWiki supports customization at all
+  levels of expertise, from easy configuration via the admin interface to
+  developing your own extensions.
+instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install
+  then restart your container when finished to remove install.php
 changeLog:
   - date: 2023-3-16
     description: first release

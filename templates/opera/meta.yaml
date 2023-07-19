@@ -1,6 +1,16 @@
 name: Opera
-description: Opera is a multi-platform web browser developed by its namesake company Opera. The browser is based on Chromium, but distinguishes itself from other Chromium-based browsers (Chrome, Edge, etc.) through its user interface and other features.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: Opera is a multi-platform web browser developed by Opera. This app
+  is based on Chromium, but sets itself apart from other Chromium-based browsers
+  through its unique user interface and additional features. The app can be
+  accessed at http://yourhost:3000/ or https://yourhost:3001/. It provides a
+  true lossless image at a high frame rate to your web browser by changing the
+  Stream Quality preset to 'Lossless'. The app also allows you to specify one or
+  multiple Chromium CLI flags, which will be passed to the application in full.
+  This app is designed to avoid permission issues that can arise between the
+  host OS and the container by allowing you to specify the user PUID and group
+  PGID.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2023-5-7
     description: first release

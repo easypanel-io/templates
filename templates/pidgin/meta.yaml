@@ -1,6 +1,17 @@
 name: Pidgin
-description: Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously.
-instructions: use abc:abc to login. To access the login interface, add ?login=true to your URL.
+description: Pidgin is a versatile chat application that allows you to log into
+  multiple chat networks simultaneously. This means you can chat with friends on
+  XMPP while also participating in an IRC channel. The application supports a
+  wide range of chat networks, including but not limited to Bonjour, Discord,
+  Facebook, Google Talk, Hangouts, ICQ, Instagram, IRC, Skype, Slack, Telegram,
+  and XMPP. This Pidgin installation comes with default chat plugins and a
+  series of third-party ones. The application also includes Firefox to help you
+  fill out captchas or pre-auth before loading your credentials into the
+  program. Pidgin can be accessed at http://yourhost:3000/ or
+  https://yourhost:3001/. The app is designed to provide a seamless and
+  integrated chat experience across multiple platforms.
+instructions: use abc:abc to login. To access the login interface, add
+  ?login=true to your URL.
 changeLog:
   - date: 2022-11-23
     description: first release

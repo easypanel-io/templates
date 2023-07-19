@@ -1,5 +1,15 @@
 name: Qdrant
-description: Vector Search Engine for the next generation of AI applications
+description: Qdrant is a powerful vector database and vector similarity search
+  engine designed to power the next generation of AI applications. It deploys as
+  an API service, providing search for the nearest high-dimensional vectors.
+  This allows embeddings or neural network encoders to be turned into
+  full-fledged applications for matching, searching, recommending, and much
+  more. Qdrant supports a large variety of data types and query conditions,
+  including string matching, numerical ranges, geo-locations, and more. It is
+  cloud-native and scales horizontally, ensuring efficient utilization of
+  resources. With Qdrant, you can build and deploy semantic neural search on
+  your data in minutes, understand user behavior in real time, and find similar
+  images or detect duplicates with ease.
 instructions: null
 changeLog:
   - date: 2023-06-30

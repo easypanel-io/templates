@@ -1,5 +1,16 @@
 name: Bytebase
-description: Bytebase offers a web-based collaboration workspace to help DBAs and Developers manage the database development lifecycle.
+description: Bytebase is a versatile application designed to streamline database
+  management tasks. It supports a wide range of databases including MySQL,
+  PostgreSQL, Snowflake, Oracle, SQL Server, MongoDB, Redis, Redshift,
+  ClickHouse, TiDB, OceanBase, Google Spanner, and MariaDB. With Bytebase, you
+  can easily configure and manage your database instances, perform SQL reviews,
+  manage data models, roles, and permissions, and handle change workflows in
+  batch mode. The app also offers features for secure data handling, VCS
+  integration, slow query management, and disaster recovery. It comes with an
+  embedded PostgreSQL instance for storing its metadata, but for production
+  setup, it is recommended to store the metadata in an external PostgreSQL
+  database. Bytebase is designed to be deployed easily and quickly, offering a
+  step-by-step quick start guide for users.
 instructions: null
 changeLog:
   - date: 2023-6-11

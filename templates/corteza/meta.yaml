@@ -1,6 +1,17 @@
 name: Corteza
-description: The Corteza low-code platform lets you build and iterate CRM, business process and other structured data apps fast, create intelligent business process workflows and connect with almost any data source.
-instructions: Create an account to login. The first account created will have administrator priviledges. Go to /admin for the admijnistration interface
+description: Corteza is a powerful, open-source low-code platform designed to
+  streamline the process of app development, business process integration, and
+  data harmonization. Built with a backend in Golang and a front end in Vue.js,
+  Corteza allows you to easily build native web apps and expand your software
+  ecosystem with complete control and flexibility. You can connect with any
+  record data source, control everything you build, transform your data into a
+  standardized JSON format, and build unlimited web applications and process
+  workflows using block-based tools and Javascript automations. Corteza is
+  cloud-native and deploys via Docker containers, providing a seamless and
+  efficient app development experience. It is 100% free and open-source,
+  ensuring that it will always be accessible to all.
+instructions: Create an account to login. The first account created will have
+  administrator priviledges. Go to /admin for the admijnistration interface
 changeLog:
   - date: 2023-3-2
     description: first release
@@ -32,7 +43,6 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      ## when updating corteza template please change the version in index.ts AND the one below
       default: cortezaproject/corteza:2022.9.8
     databaseServiceName:
       type: string

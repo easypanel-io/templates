@@ -1,5 +1,12 @@
 name: pgweb
-description: Cross-platform client for PostgreSQL databases
+description: Pgweb is a simple, web-based, cross-platform PostgreSQL database
+  explorer. It is designed to work seamlessly on Mac, Linux, and Windows
+  machines. The app is distributed as a single binary with zero dependencies,
+  making it incredibly easy to use. It supports PostgreSQL 9.1 and later
+  versions, and allows for multiple database sessions. With Pgweb, you can
+  execute and analyze custom SQL queries, export table and query data to
+  CSV/JSON/XML, and keep track of your query history. The app also supports
+  native SSH tunnels and server bookmarks for easy navigation.
 instructions: null
 changeLog:
   - date: 2023-3-15

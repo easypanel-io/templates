@@ -1,5 +1,21 @@
 name: Filerun
-description: Share files with your clients and colleagues
+description: FileRun is a private, fully controlled file management and sharing
+  solution. It's like having your own personal Google Drive, but with complete
+  control and privacy. FileRun allows you to instantly access your files on any
+  server without the need for importing or scanning. It supports access via FTP,
+  SMB, and WebDAV, reflecting any changes made to your files instantly. You can
+  sync files using desktop apps and access your files on the go with compatible
+  mobile apps. FileRun is also great for managing photos with fast thumbnail and
+  preview generation, timeline browsing, and metadata support. It even allows
+  you to group photos from various folders into virtual albums that you can
+  share online. The new virtual drive feature lets you access files directly
+  from your computer without using up all your disk space. FileRun also supports
+  collaboration with guest users and file requests for easy file collection and
+  submission. It also integrates with various plugins for file editing, viewing,
+  and conversion. FileRun ensures your files are safe with automatic file
+  versioning and a trash folder for deleted files. It also allows for full
+  customization to match your branding. FileRun is secure, loaded with features,
+  and offers a smooth and intuitive mobile experience.
 instructions: null
 changeLog:
   - date: 2023-3-14
@@ -30,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filerun/filerun # no versioned images
+      default: filerun/filerun
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -1,6 +1,16 @@
 name: Ploi Roadmap
-description: Welcome to Roadmap, the open-source software for your roadmapping needs.
-instructions: After First Deployment, run "php artisan roadmap:install" to setup the inital user account.
+description: Roadmap is an open-source software designed to streamline your
+  roadmapping process. It offers a completely customizable platform where you
+  can mention users in comments, upvote items to prioritize them, and generate
+  automatic slugs. The software also features a Filament admin panel and a
+  simplified role system that includes administrator, employee, and user roles.
+  Roadmap supports OAuth 2 single sign-on with your own application and
+  automatically generates OG images, including the branding color you've set up.
+  It also integrates with GitHub, allowing you to assign a repository to each
+  project and manage issues directly from the roadmap admin. The software is
+  built with PHP and requires a database to function.
+instructions: After First Deployment, run "php artisan roadmap:install" to setup
+  the inital user account.
 changeLog:
   - date: 2023-1-6
     description: first release

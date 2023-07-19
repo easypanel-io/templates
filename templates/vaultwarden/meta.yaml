@@ -1,6 +1,17 @@
 name: Vaultwarden
-description: Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs
-instructions: To access the administration interface, please go to /admin on your installation url. The admin token is in your "Environment" tab.
+description: Vaultwarden is an unofficial Bitwarden server implementation
+  designed for self-hosted deployments. It is written in Rust and is compatible
+  with the official Bitwarden clients. This application is ideal for
+  individuals, families, and smaller organizations who find the official
+  resource-heavy service undesirable. Vaultwarden supports a wide range of
+  features including personal and organization vault support, password sharing
+  and access control, file attachments, two-step login via email, Duo, YubiKey,
+  and FIDO2 WebAuthn, and many more. It also supports live sync for
+  desktop/browser clients/extensions and mobile clients (Android/iOS). However,
+  it does not prioritize the development of features mainly useful to larger
+  organizations such as single sign-on and directory syncing.
+instructions: To access the administration interface, please go to /admin on
+  your installation url. The admin token is in your "Environment" tab.
 changeLog:
   - date: 2022-11-19
     description: first release

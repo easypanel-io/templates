@@ -1,5 +1,14 @@
 name: Postgres Backup
-description: Backup Postgres to S3. Supports periodic backups & mutli files.
+description: The postgres-backup-s3 app is a powerful tool designed to backup
+  your PostgreSQL databases to Amazon S3. It supports periodic backups, allowing
+  you to schedule automatic backups at your convenience. This ensures that your
+  data is always safe and can be restored whenever needed. The app also offers
+  the option to backup all available databases at once, creating a single
+  archive with a timestamp for easy identification. For added security, the app
+  provides an encryption feature. By setting an encryption password, your backup
+  can be encrypted and only decrypted with the correct password. This app is
+  perfect for those who want to ensure their PostgreSQL databases are securely
+  backed up in a reliable and efficient manner.
 instructions: "In order to test that you configured it properly, remove the
   SCHEDULE variable from the environment, click deploy and check the logs. If
   everything works fine, you can add the SCHEDULE variable back. You can read

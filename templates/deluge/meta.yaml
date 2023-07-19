@@ -1,5 +1,12 @@
 name: Deluge
-description: Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.
+description: Deluge is a comprehensive BitTorrent client designed to cater to
+  your torrenting needs. It operates on a daemon/client model and is equipped
+  with various user interfaces, including GTK-UI, Web-UI, and Console-UI. At its
+  core, Deluge uses libtorrent to efficiently manage the BitTorrent protocol.
+  The app allows you to start various user-interfaces and the Deluge daemon with
+  simple commands. It also provides a web UI that can be accessed at
+  http://localhost:8112 with the default password 'deluge'. For advanced users,
+  Deluge offers features like bandwidth tweaking, VPN, and reverse proxy.
 instructions: null
 changeLog:
   - date: 2023-1-25
