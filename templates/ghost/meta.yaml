@@ -11,6 +11,8 @@ changeLog:
     description: Update to v5.35.1
   - date: 2023-06-30
     description: Update to v5.53.3
+  - date: 2023-07-23
+    description: Update to v5
 links:
   - label: Website
     url: https://ghost.org/
@@ -25,6 +27,8 @@ contributors:
     url: https://github.com/supernova3339
   - name: siriokun
     url: https://github.com/siriokun
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghost:5.53.3-alpine
+      default: ghost:5-alpine
     databaseServiceName:
       type: string
       title: Database Service Name
