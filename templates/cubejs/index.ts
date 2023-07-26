@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
         `CUBEJS_DEV_MODE=true`,
         `CUBEJS_TELEMETRY=false`,
         `CUBEJS_DB_TYPE=postgres`,
-        `CUBEJS_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `CUBEJS_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `CUBEJS_DB_NAME=${input.databaseServiceName}`,
         `CUBEJS_DB_USER=postgres`,
         `CUBEJS_DB_PASS=${databasePassword}`,
@@ -32,10 +32,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 4000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 4000,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -18,19 +18,21 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `PAPERLESS_SECRET_KEY=${secretkey}`,
-        `PAPERLESS_REDIS=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
+        `PAPERLESS_REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `PAPERLESS_ADMIN_USER=admin`,
         `PAPERLESS_ADMIN_PASSWORD=password`,
-        `PAPERLESS_URL=https://${input.domain}`,
+        `PAPERLESS_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
+        },
+      ],
       mounts: [
         {
           type: "volume",

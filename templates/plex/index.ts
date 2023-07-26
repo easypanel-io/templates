@@ -31,10 +31,12 @@ export function generate(input: Input): Output {
           mountPath: "/movies",
         },
       ],
-      proxy: {
-        port: 32400,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 32400,
+        },
+      ],
     },
   });
 

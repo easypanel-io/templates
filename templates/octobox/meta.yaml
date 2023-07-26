@@ -1,0 +1,107 @@
+name: Octobox
+description: Octobox is an innovative app designed to help you manage your
+  GitHub notifications more efficiently. With Octobox, you no longer have to
+  worry about losing track of important issues or waking up to hundreds of
+  notifications. The app adds an extra 'archived' state to each notification,
+  allowing you to mark it as 'done'. If there's any activity on an archived
+  thread, issue or PR, Octobox will move it back into your inbox. You can also
+  search and filter notifications by repository, organization, type, action,
+  state, CI status, and reason. Octobox keeps your notifications up to date with
+  issue/pull-request status, CI status, labels, and more. The app is free for
+  open source projects and offers enhanced notifications for private projects at
+  a cost. Octobox is the perfect tool for developers who want to stay organized
+  and focused.
+instructions: null
+changeLog:
+  - date: 2023-3-22
+    description: first release
+links:
+  - label: Website
+    url: https://octobox.io
+  - label: Documentation
+    url: https://octobox.io/documentation
+  - label: Github
+    url: https://github.com/octobox/octobox
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - githubClient
+    - githubSecret
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: octobox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: octoboxio/octobox:ruby-3
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: octobox-db
+    redisServiceName:
+      type: string
+      title: Database Service Name
+      default: octobox-redis
+    githubClient:
+      type: string
+      title: Github Client ID
+    githubSecret:
+      type: string
+      title: Github Client Secret
+benefits:
+  - title: Efficient Notification Management
+    description: Octobox helps you manage your GitHub notifications efficiently,
+      freeing up more time for you to focus on your projects. It adds an extra
+      'archived' state to each notification so you can mark it as 'done'. If
+      anything happens on an archived thread, issue or PR, Octobox will move it
+      back into your inbox.
+  - title: Stay Updated
+    description: With Octobox, you can keep your notifications up to date with
+      issue/pull-request status, CI status, labels and more shown alongside
+      basic title, organization, repo, and type information.
+  - title: Enhanced Notifications
+    description: By installing the GitHub app, Octobox will pull basic public and
+      private notification information and add live information on issue, PR,
+      and CI status, labels, authors and more to your organization's
+      notifications.
+features:
+  - title: Archiving
+    description: Octobox extends GitHub's notification model by providing an
+      additional 'archived' status, much like Gmail's email client. Archived
+      notifications will not appear in your inbox again unless the thread, issue
+      or PR receives a new notification.
+  - title: Starring
+    description: Octobox also adds a starred status to help you highlight important
+      notifications with a star so you can come back and find them easily.
+      Starred notifications are not social, they are more like bookmarks that
+      GitHub stars.
+  - title: Muting
+    description: Muting a notification will mark the notification as read, move it
+      to the archive and ignore all further notifications from this thread,
+      issue or PR. Muting also sets the thread to ignore:true ignoring further
+      notifications on GitHub too.
+  - title: Syncing
+    description: By default Octobox will synchronize every time you hit the
+      synchronize button. You can set automatic refresh interval on the settings
+      page.
+  - title: Searching
+    description: "Octobox's search bar supports various filter prefixes. Combine
+      them together and with free text searches, for example: 'github enterprise
+      type:issue owner:octobox reason:assign'. Many prefixes accept multiple
+      arguments when separated by commas or passed twice."
+tags:
+  - Developer Tools
+  - Code Hosting

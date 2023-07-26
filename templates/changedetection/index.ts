@@ -20,9 +20,12 @@ export function generate(input: Input): Output {
           mountPath: "/datastore",
         },
       ],
-      proxy: {
-        port: 5000,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 5000,
+        },
+      ],
     },
   });
   return { services };

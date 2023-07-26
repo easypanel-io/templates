@@ -1,7 +1,18 @@
 name: Ackee
-description: Self-hosted, Node.js based analytics tool for those who care about
-  privacy. Ackee runs on your own server, analyzes the traffic of your websites
-  and provides useful statistics in a minimal interface.
+description: Ackee is a self-hosted, Node.js based analytics tool designed for
+  those who value privacy. It operates on your own server, analyzing the traffic
+  of your websites and providing valuable statistics through a minimalistic
+  interface. Ackee offers an overview of all your websites, allowing you to
+  analyze their collective performance. It provides insights into views,
+  referrers, durations, and more. You can easily add, edit, and delete your
+  domains, with a new tracking code just a few clicks away. Ackee's minimal UI
+  allows you to analyze your data without losing focus, and its multi-step
+  anonymization process ensures your users' privacy. The app allows you to
+  analyze as many domains and apps as you want, and its interface is designed to
+  be fast and easy to navigate. Ackee also offers a centralized GraphQL API,
+  perfect for collecting data from a variety of sources. It uses a multi-step
+  process to keep tracked data anonymized while still providing helpful
+  analytics.
 instructions: null
 changeLog:
   - date: 2022-06-04
@@ -47,3 +58,40 @@ schema:
       type: string
       title: Database Service Name
       default: ackee-db
+benefits:
+  - title: Privacy-Focused Analytics
+    description: Ackee is a self-hosted, Node.js based analytics tool designed for
+      those who prioritize privacy. It runs on your own server, analyzing the
+      traffic of your websites and providing useful statistics in a minimal
+      interface.
+  - title: Data Control
+    description: With Ackee, your data remains in your hands. It's 100% open-source
+      and self-hosted, ensuring complete transparency and control over your
+      data.
+  - title: Anonymized Tracking
+    description: Ackee uses a multi-step anonymization process to keep tracked data
+      anonymized, ensuring that your users stay anonymous while still providing
+      helpful analytics.
+features:
+  - title: Dashboard Overview
+    description: Ackee provides an overview of all your websites, allowing you to
+      analyze their performance collectively.
+  - title: Insights
+    description: Ackee offers insights into views, referrers, durations and more,
+      providing all the details you need to understand your website's traffic.
+  - title: Domain Management
+    description: Ackee allows you to add, edit, and delete your domains. Generating
+      a new tracking code is just a few clicks away.
+  - title: Beautiful UI
+    description: Ackee's minimal user interface allows you to analyze your data
+      without losing focus, providing insights at a glance.
+  - title: Unlimited Domains
+    description: With Ackee, you can analyze as many domains and apps as you want,
+      without any restrictions.
+  - title: GraphQL API
+    description: Ackee features a fully documented GraphQL API that allows you to
+      collect data from a variety of sources, including websites, services, and
+      apps.
+tags:
+  - Analytics
+  - Privacy

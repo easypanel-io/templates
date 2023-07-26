@@ -52,15 +52,15 @@ export function generate(input: Input): Output {
       ],
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8065,
         },
       ],
-      proxy: { port: 8065, secure: true },
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
         `MM_SQLSETTINGS_DRIVERNAME=postgres`,
-        `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
-        `DOMAIN=https://${input.domain}`,
+        `MM_SQLSETTINGS_DATASOURCE=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
+        `DOMAIN=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
     },
   });

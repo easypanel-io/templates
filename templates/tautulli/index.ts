@@ -20,10 +20,12 @@ export function generate(input: Input): Output {
           mountPath: "/config",
         },
       ],
-      proxy: {
-        port: 8181,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8181,
+        },
+      ],
     },
   });
 

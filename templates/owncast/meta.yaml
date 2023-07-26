@@ -1,5 +1,14 @@
 name: Owncast
-description: A lightweight Node.js private proxy registry
+description: Owncast is a free and open-source live video and web chat server
+  that works seamlessly with your existing broadcasting software. It gives you
+  complete control and ownership over your stream, allowing you to create the
+  content you want. The app comes with a frictionless built-in chat feature that
+  enables your viewers to engage and be a part of the action. You can include
+  custom emotes and build chat bots to encourage viewer engagement. Owncast also
+  allows your live stream to reach a wider audience on The Fediverse, including
+  platforms like Mastodon and other Fediverse services. It's a self-hosted and
+  independent solution for live streaming, offering a high level of performance
+  comparable to proprietary platforms.
 instructions: null
 changeLog:
   - date: 2023-2-21
@@ -32,3 +41,29 @@ schema:
       type: string
       title: App Service Image
       default: gabekangas/owncast:0.0.13
+benefits:
+  - title: Self-Hosted and Independent
+    description: Owncast gives you complete control and ownership over your stream,
+      allowing you to create the content you want. It's a self-hosted solution,
+      meaning you have the freedom to manage your own server and data.
+  - title: Reach a Wider Audience
+    description: With Owncast, your live stream can reach a wider audience on The
+      Fediverse. This allows people to follow and share your stream on Mastodon
+      and other Fediverse services, expanding your viewer base.
+features:
+  - title: Live Video and Web Chat Server
+    description: Owncast is a free and open source live video and web chat server.
+      It works with your existing broadcasting software, allowing you to start
+      streaming on your own server in minutes.
+  - title: Built-in Chat
+    description: Owncast includes a frictionless built-in chat that allows your
+      viewers to be a part of the action. You can include custom emotes and
+      build chat bots to encourage engagement from your viewers.
+  - title: Customizable
+    description: Owncast allows you to tweak the content of your page, the video
+      quality, server performance and more. You can also extend Owncast’s
+      functionality by building your own bots, overlays, tools and integrations.
+tags:
+  - Chat
+  - Media
+  - Self-hosted

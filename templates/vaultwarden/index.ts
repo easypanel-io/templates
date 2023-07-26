@@ -23,17 +23,19 @@ export function generate(input: Input): Output {
         `DISABLE_ADMIN_TOKEN=false`,
         `SHOW_PASSWORD_HINT=false`,
         `PASSWORD_HINTS_ALLOWED=true`,
-        `DOMAIN=https://${input.domain}`,
+        `DOMAIN=https://$(PRIMARY_DOMAIN)`,
         `SMTP_DEBUG=false`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -44,11 +46,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "web-vault",
           mountPath: "/web-vault",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },

@@ -1,0 +1,136 @@
+name: PeerTube
+description: PeerTube is a revolutionary video sharing tool developed by
+  Framasoft, a French non-profit organization. It offers an alternative to
+  mainstream video platforms, allowing you to establish your own video platform
+  with complete independence. Unlike other platforms, PeerTube doesn't rely on
+  opaque algorithms or obscure moderation policies. The platforms you visit are
+  built, managed, and moderated by their owners. PeerTube also enables platforms
+  to connect with each other, forming a large network of autonomous yet
+  interconnected platforms. Importantly, PeerTube doesn't depend on advertising
+  and doesn't track your activities. It hosts a wide variety of content, with
+  over 600,000 videos across 1,000 platforms in the PeerTube network. PeerTube
+  is free, open-source, and created for non-commercial purposes, ensuring that
+  you are treated as a person, not a product. It is a tool that truly belongs to
+  you and respects your fundamental freedoms as a user.
+instructions: null
+changeLog:
+  - date: 2023-03-24
+    description: First Release
+links:
+  - label: Website
+    url: https://joinpeertube.org/
+  - label: Documentation
+    url: https://docs.joinpeertube.org/
+  - label: Github
+    url: https://github.com/Chocobozzz/PeerTube
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - peertubeAdminMail
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    peertubeAdminMail:
+      type: string
+      title: Admin Mail
+    peertubeSmtpHostname:
+      type: string
+      title: SMTP Hostname
+    peertubeSmtpPort:
+      type: number
+      title: SMTP Port
+      default: 25
+    peertubeSmtpUsername:
+      type: string
+      title: SMTP Username
+    peertubeSmtpPassword:
+      type: string
+      title: SMTP Password
+    peertubeSmtpFrom:
+      type: string
+      title: SMTP From
+      default: noreply@example.com
+    peertubeSmtpTls:
+      type: boolean
+      title: SMTP TLS
+      default: false
+    peertubeSmtpDisableStarttls:
+      type: boolean
+      title: SMTP Disable STARTTLS
+      default: false
+    peertubeSignupEnabled:
+      type: boolean
+      title: Signup Enabled
+      default: true
+    peertubeTranscodingEnabled:
+      type: boolean
+      title: Transcoding Enabled
+      default: true
+    peertubeContactFormEnabled:
+      type: boolean
+      title: Contact Form Enabled
+      default: true
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: peertube
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chocobozzz/peertube:v5.2.0-bullseye
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: peertube-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: peertube-redis
+benefits:
+  - title: Independence
+    description: PeerTube gives you the freedom to create your own video platform,
+      free from opaque algorithms or obscure moderation policies. The platforms
+      you visit are built, managed, and moderated by their owners, ensuring
+      complete independence.
+  - title: Interconnectivity
+    description: PeerTube allows platforms to be connected to each other, creating a
+      large network of platforms that are both autonomous and interconnected.
+      This ensures a wide reach and diverse content.
+  - title: Privacy
+    description: PeerTube does not depend on any advertising and does not track you,
+      ensuring your privacy is respected.
+  - title: Ethical and Open Source
+    description: PeerTube is free, open-source, and created for non-commercial
+      purposes. It is an ethical and open source digital common that belongs to
+      you.
+features:
+  - title: Video Sharing
+    description: PeerTube is a tool for sharing online videos. It allows you to
+      publish your own videos and browse content from a network of over 1,000
+      platforms.
+  - title: Platform Creation
+    description: With PeerTube, you can create your own video platform, managed and
+      moderated by you. This gives you complete control over your content and
+      its moderation.
+  - title: Interconnected Platforms
+    description: PeerTube allows platforms to be connected to each other, creating a
+      network of platforms that are both autonomous and interconnected.
+  - title: Privacy Focused
+    description: PeerTube does not depend on any advertising and does not track you.
+      Your privacy is respected and protected.
+  - title: Open Source
+    description: PeerTube is free and open-source. You can help improve PeerTube
+      with your ideas, suggestions, or by modifying the source code yourself.
+tags:
+  - Media
+  - Video
+  - Social Networking

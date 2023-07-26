@@ -1,5 +1,14 @@
 name: Whiteboard
-description: "Lightweight collaborative Whiteboard / Sketchboard "
+description: Whiteboard is a lightweight, NodeJS-based collaborative sketchboard
+  that can be easily customized to your needs. It allows multiple users to draw
+  and write together in real-time, with each user's cursor visible to others.
+  The app provides a range of features including the ability to undo and redo
+  actions, drag and drop or copy and paste images or PDFs, resize, move, rotate
+  and draw images, write text and sticky notes, and save the whiteboard to an
+  image or JSON. You can also draw angle lines and squares by pressing 'Shift'
+  while drawing. The app is compatible with PC, tablet, and mobile devices, and
+  can be used in various projects such as WebRTC conference tools and online
+  collaboration learning activities.
 instructions: null
 changeLog:
   - date: 2022-08-01
@@ -32,3 +41,29 @@ schema:
       type: string
       title: App Service Image
       default: rofl256/whiteboard:latest
+benefits:
+  - title: Collaborative Whiteboard
+    description: Easily collaborate with others in real-time on a shared whiteboard.
+  - title: Customizable
+    description: Easily customize the whiteboard to suit your needs and preferences.
+  - title: Multi-platform Support
+    description: Works on PC, tablet, and mobile devices for seamless collaboration.
+features:
+  - title: Remote User Cursors
+    description: See the cursors of remote users while they are drawing.
+  - title: Undo/Redo Function
+    description: Easily undo or redo actions for each user.
+  - title: Drag+Drop/Copy+Paste Images or PDFs
+    description: Effortlessly add images or PDFs from your device or browser.
+  - title: Resize, Move, Rotate & Draw Images
+    description: Manipulate and draw on images with ease.
+  - title: Write Text and Sticky Notes
+    description: Add text and sticky notes to the whiteboard.
+  - title: Save Whiteboard to Image and JSON
+    description: Save your whiteboard as an image or JSON file for future reference.
+  - title: Draw Angle Lines and Squares
+    description: Draw angle lines and squares with ease using keyboard shortcuts.
+tags:
+  - Productivity
+  - Collaboration
+  - Whiteboard

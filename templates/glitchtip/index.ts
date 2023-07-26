@@ -1,8 +1,8 @@
 import {
   Output,
-  Services,
   randomPassword,
   randomString,
+  Services,
 } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -13,12 +13,12 @@ export function generate(input: Input): Output {
 
   const appEnv = [
     `SECRET_KEY=${randomString(32)}`,
-    `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
-    `REDIS_URL=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
+    `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+    `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
     `ENABLE_USER_REGISTRATION=${input.enableUserRegistration}`,
     `ENABLE_ORGANIZATION_CREATION=${input.enableOrganizationCreation}`,
+    `GLITCHTIP_DOMAIN=https://$(PRIMARY_DOMAIN)`,
   ];
-  if (input.domain) appEnv.push(`GLITCHTIP_DOMAIN=https://${input.domain}`);
 
   services.push({
     type: "app",
@@ -26,8 +26,12 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 80, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       env: appEnv.join("\n"),
       mounts: [{ type: "volume", name: "uploads", mountPath: "/code/uploads" }],
     },
@@ -47,7 +51,7 @@ export function generate(input: Input): Output {
         {
           type: "bind",
           mountPath: "/code/uploads",
-          hostPath: `/etc/easypanel/projects/${input.projectName}/${input.appServiceName}/volumes/uploads/`,
+          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/uploads/`,
         },
       ],
     },

@@ -1,9 +1,15 @@
 name: Strapi
-description: Strapi enables content-rich experiences to be created, managed and
-  exposed to any digital product, channel or device.Connect your favorite
-  databases, frontend frameworks, or static site generators. Choose where you
-  want to host your websites. Integrate with your favorite tools, and work with
-  the best of each world. No vendor lock-in.
+description: Strapi is a leading open-source headless CMS that is fully
+  customizable and built with 100% JavaScript. It allows you to manage any
+  content, anywhere, providing you with the freedom to use your favorite tools
+  and frameworks. With Strapi, you can build apps quickly, getting your backend
+  done in minutes instead of weeks. You can easily build customizable content
+  APIs and use them with a modern tech stack. Strapi also allows you to
+  effortlessly create content structures that flex to your needs, write, edit,
+  and manage any content types, and build apps and digital experiences without
+  the distraction of CMS complexities. You can consume Strapi API from any
+  client using REST or GraphQL, and deploy on Strapi Cloud or on any cloud
+  platforms.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -58,3 +64,40 @@ schema:
       type: string
       title: Database Service Name
       default: strapi-db
+benefits:
+  - title: Efficient Content Management
+    description: Strapi is a leading open-source headless CMS that allows you to
+      manage any content, anywhere. It provides a flexible data structure that
+      can be easily customized to fit your business needs, enabling you to
+      create rich layout experiences.
+  - title: Rapid Backend Development
+    description: With Strapi, you can get your backend done in minutes instead of
+      weeks. It allows you to easily build customizable content APIs and use
+      them with a modern tech stack, accelerating your app development process.
+  - title: Full Control and Customization
+    description: Strapi gives you full control over your content management. You can
+      easily customize the admin panel as well as the API, extend your content
+      management with custom plugins, and choose where to host your app, with no
+      lock-in.
+features:
+  - title: Flexible Data Structure
+    description: Strapi allows you to effortlessly create content structures that
+      flex to your needs. You can easily define models and add relations to
+      create rich layout experiences.
+  - title: Content Management
+    description: Once you have created your content architecture, you can seamlessly
+      write, edit, and manage any content types. Strapi allows cross-functional
+      teams to deliver content faster across various industries, use cases,
+      locations, devices, and channels.
+  - title: API Integration
+    description: Strapi allows you to easily build apps and digital experiences
+      without the distraction of CMS complexities. You can integrate individual
+      best-in-class services by third-party vendors and connect any framework of
+      your choice.
+  - title: Deployment Options
+    description: With Strapi, you can deploy your app on Strapi Cloud or on any
+      cloud platforms. Strapi can quickly be deployed on Strapi Cloud or on
+      services such as 21YunBox, Render, AWS, Azure, and others or locally using
+      Docker.
+tags:
+  - CMS

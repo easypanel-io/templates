@@ -13,7 +13,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 80, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       env: [
         `RATE_LIMIT_PER_ROUND_COUNT=20`,
         `RATE_LIMIT_ROUND_WAIT_TIME=00:05:00`,
@@ -23,7 +28,7 @@ export function generate(input: Input): Output {
         `WEB_ONLY=0`,
         `WEB_UNSUBSCRIBE=1`,
         `WEB_USE_HTTPS=1`,
-        `WEB_EXTERNAL_URL=${input.domain}`,
+        `WEB_EXTERNAL_URL=$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       mounts: [
         {

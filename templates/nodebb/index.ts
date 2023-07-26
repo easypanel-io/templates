@@ -11,18 +11,22 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
-      domains: input.domain ? [{ name: input.domain }] : [],
-      proxy: { port: 4567, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 4567,
+        },
+      ],
       env: [
         `SETUP=1`,
-        `NODEBB_URL=https://${input.domain || "localhost"}`,
+        `NODEBB_URL=https://$(PRIMARY_DOMAIN)`,
         `NODEBB_ADMIN_EMAIL=${input.nodebbAdminMail || "admin@example.com"}`,
         `NODEBB_ADMIN_USERNAME=${input.nodebbAdminUsername || "admin"}`,
         `NODEBB_ADMIN_PASSWORD=${
           input.nodebbAdminPassword || randomPassword()
         }`,
         `NODEBB_DB=${input.databaseServiceType}`,
-        `NODEBB_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `NODEBB_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `NODEBB_DB_USER=${
           input.databaseServiceType === "redis"
             ? "default"

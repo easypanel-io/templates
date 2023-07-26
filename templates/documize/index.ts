@@ -20,16 +20,18 @@ export function generate(input: Input): Output {
         `DOCUMIZELOCATION=localhost`,
         `DOCUMIZEDBTYPE=postgresql`,
         `DOCUMIZESALT=${databaseSalt}`,
-        `DOCUMIZEDB=host=${input.projectName}_${input.databaseServiceName} port=5432 sslmode=disable user=postgres password=${databasePassword} dbname=${input.projectName}`,
+        `DOCUMIZEDB=host=$(PROJECT_NAME)_${input.databaseServiceName} port=5432 sslmode=disable user=postgres password=${databasePassword} dbname=$(PROJECT_NAME)`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
     },
   });
 

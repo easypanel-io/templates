@@ -19,10 +19,12 @@ export function generate(input: Input): Output {
         `TYPESENSE_DATA_DIR=/data`,
         `TYPESENSE_API_ADDRESS=0.0.0.0`,
       ].join("\n"),
-      proxy: {
-        port: 8108,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8108,
+        },
+      ],
       mounts: [
         {
           type: "volume",

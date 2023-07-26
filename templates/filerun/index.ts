@@ -11,11 +11,11 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `FR_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `FR_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `FR_DB_PORT=3306`,
         `FR_DB_USER=mysql`,
         `FR_DB_PASS=${mysqlPassword}`,
-        `FR_DB_NAME=${input.projectName}`,
+        `FR_DB_NAME=$(PROJECT_NAME)`,
         `APACHE_RUN_USER=www-data`,
         `APACHE_RUN_USER_ID=33`,
         `APACHE_RUN_GROUP=www-data`,
@@ -25,10 +25,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

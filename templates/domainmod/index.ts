@@ -14,10 +14,10 @@ export function generate(input: Input): Output {
         `USER_UID=1000`,
         `USER_GID=1000`,
         `TZ=${input.timezone}`,
-        `ROOT_URL=https://${input.domain}`,
+        `ROOT_URL=https://$(PRIMARY_DOMAIN)`,
         `DOMAINMOD_WEB_ROOT=`,
-        `DOMAINMOD_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `DOMAINMOD_DATABASE=${input.projectName}`,
+        `DOMAINMOD_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `DOMAINMOD_DATABASE=$(PROJECT_NAME)`,
         `DOMAINMOD_USER=mysql`,
         `DOMAINMOD_PASSWORD=${databasePassword}`,
       ].join("\n"),
@@ -25,10 +25,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `NEXTAUTH_SECRET=${appkey}`,
-        `NEXTAUTH_URL=${input.domain}`,
+        `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
         `DELUGEURL=${input.delugeUrl}`,
         `DELUGE_PASSWORD=${input.delugePassword}`,
         `BARRAGE_PASSWORD=${input.barragePassword}`,
@@ -21,10 +21,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
     },
   });
 

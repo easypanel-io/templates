@@ -8,7 +8,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secretkey = randomString(32);
   const redisPassword = randomPassword();
   const mongoPassword = randomPassword();
 
@@ -18,20 +17,24 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `MONGODB_URI=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.databaseServiceName}:27017`,
-        `REDIS_URI=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
-        `SIGINING_SECRET=${secretkey}`,
+        `MONGODB_URI=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017`,
+        `REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `SIGNING_SECRET=${btoa(randomString(45))}`,
         `NODE_ENV=production`,
-        `PORT=3000`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
+      ports: input.enableMetricsPort
+        ? [{ protocol: "tcp", published: 9000, target: 9000 }]
+        : [],
     },
   });
 
