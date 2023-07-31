@@ -9,7 +9,90 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
   const randomJwtSecret = randomPassword();
   const randomCookieSecret = randomPassword();
-  const medusaConfig = require("./medusa-config");
+
+  const activePlugins = [
+    `"medusa-fulfillment-manual"`,
+    `"medusa-payment-manual"`,
+  ];
+
+  input.stripePluginEnabled &&
+    activePlugins.push(JSON.stringify(PluginConfigs.paymentStripe, null, 2));
+
+  input.enableAdminPlugin &&
+    activePlugins.push(JSON.stringify(PluginConfigs.adminPlugin, null, 2));
+
+  input.meiliPluginEnabled &&
+    activePlugins.push(
+      JSON.stringify(PluginConfigs.pluginMeilisearch, null, 2)
+    );
+
+  input.minioPluginEnabled &&
+    activePlugins.push(JSON.stringify(PluginConfigs.fileMinio, null, 2));
+
+  input.s3PluginEnabled &&
+    activePlugins.push(JSON.stringify(PluginConfigs.fileS3, null, 2));
+
+  input.sendgridPluginEnabled &&
+    activePlugins.push(JSON.stringify(PluginConfigs.pluginSendGrid, null, 2));
+
+  const medusaConfig = [
+    `
+const dotenv = require("dotenv");
+
+let ENV_FILE_NAME = ".env";
+
+try {
+  dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
+} catch (e) {}
+
+const ADMIN_CORS =
+  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
+
+const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+
+const DATABASE_URL =
+  process.env.DATABASE_URL || "postgres://localhost/medusa-store";
+
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+`,
+    `
+const plugins = [${activePlugins.join(",\n")}]`,
+    `
+const modules = {
+  eventBus: {
+    resolve: "@medusajs/event-bus-redis",
+    options: {
+      redisUrl: REDIS_URL
+    }
+  },
+  cacheService: {
+    resolve: "@medusajs/cache-redis",
+    options: {
+      redisUrl: REDIS_URL
+    }
+  },
+};
+
+/** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
+const projectConfig = {
+  jwtSecret: process.env.JWT_SECRET,
+  cookieSecret: process.env.COOKIE_SECRET,
+  store_cors: STORE_CORS,
+  database_url: DATABASE_URL,
+  admin_cors: ADMIN_CORS,
+  redis_url: REDIS_URL
+};
+
+/** @type {import('@medusajs/medusa').ConfigModule} */
+module.exports = {
+  projectConfig,
+  plugins,
+  modules,
+};
+`,
+  ];
+
+  console.log("medusaConfig!", medusaConfig.join("\n"));
 
   // Service variables
   let appServiceVariables = [
@@ -113,7 +196,7 @@ export function generate(input: Input): Output {
 
   // Medusa deploy command based in environment
   const medusaDeployCommand = [];
-  const medusa = "./app/node_modules/.bin/medusa";
+  const medusa = "/app/node_modules/.bin/medusa";
 
   if (input.nodeEnv == "development") {
     medusaDeployCommand.push(`${medusa} migrations run`);
@@ -127,9 +210,6 @@ export function generate(input: Input): Output {
       );
     medusaDeployCommand.push(`${medusa} start`);
   }
-
-  if (input.enableAdminPlugin)
-    medusaConfig.plugins.push(PluginConfigs.adminPlugin);
 
   services.push({
     type: "app",
@@ -161,12 +241,14 @@ export function generate(input: Input): Output {
         { type: "volume", name: "app", mountPath: "/usr/src/app" },
         {
           type: "file",
-          content: JSON.stringify(medusaConfig),
+          content: medusaConfig.join("\n"),
           mountPath: "/app/medusa-config.js",
         },
       ],
     },
   });
+
+  console.log("medusaConfig", medusaConfig.join("\n"));
 
   services.push({
     type: "postgres",
