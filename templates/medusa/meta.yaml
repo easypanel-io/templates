@@ -103,6 +103,10 @@ schema:
       default: true
 
     # Stripe Payments
+    stripePluginEnabled:
+      type: boolean
+      title: Stripe enabled
+      default: true
     stripeApiKey:
       type: string
       title: Stripe API key
@@ -117,7 +121,7 @@ schema:
     minioPluginEnabled:
       type: boolean
       title: MinIO enabled
-      default: false
+      default: true
     minioServiceName:
       type: string
       title: MinIO Service Name
@@ -179,7 +183,7 @@ schema:
     meiliPluginEnabled:
       type: boolean
       title: Meilisearch enabled
-      default: false
+      default: true
     meiliServiceName:
       type: string
       title: Meilisearch Service Name
