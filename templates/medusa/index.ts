@@ -1,7 +1,6 @@
 import { randomBytes } from "crypto";
 import { Output, Services, randomPassword } from "~templates-utils";
 import { Input } from "./meta";
-import { PluginConfigs } from "./plugins-config";
 
 export function generate(input: Input): Output {
   const services: Services = [];
@@ -9,55 +8,60 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
   const randomJwtSecret = randomPassword();
   const randomCookieSecret = randomPassword();
+  const medusaConfig = `const dotenv = require("dotenv");
 
-  const activePlugins = [
-    `"medusa-fulfillment-manual"`,
-    `"medusa-payment-manual"`,
-  ];
-
-  input.stripePluginEnabled &&
-    activePlugins.push(JSON.stringify(PluginConfigs.paymentStripe, null, 2));
-
-  input.enableAdminPlugin &&
-    activePlugins.push(JSON.stringify(PluginConfigs.adminPlugin, null, 2));
-
-  input.meiliPluginEnabled &&
-    activePlugins.push(
-      JSON.stringify(PluginConfigs.pluginMeilisearch, null, 2)
-    );
-
-  input.minioPluginEnabled &&
-    activePlugins.push(JSON.stringify(PluginConfigs.fileMinio, null, 2));
-
-  input.s3PluginEnabled &&
-    activePlugins.push(JSON.stringify(PluginConfigs.fileS3, null, 2));
-
-  input.sendgridPluginEnabled &&
-    activePlugins.push(JSON.stringify(PluginConfigs.pluginSendGrid, null, 2));
-
-  const medusaConfig = [
-    `
-const dotenv = require("dotenv");
-
-let ENV_FILE_NAME = ".env";
+let ENV_FILE_NAME = "";
+switch (process.env.NODE_ENV) {
+  case "production":
+    ENV_FILE_NAME = ".env.production";
+    break;
+  case "staging":
+    ENV_FILE_NAME = ".env.staging";
+    break;
+  case "test":
+    ENV_FILE_NAME = ".env.test";
+    break;
+  case "development":
+  default:
+    ENV_FILE_NAME = ".env";
+    break;
+}
 
 try {
   dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
 
+// CORS when consuming Medusa from admin
 const ADMIN_CORS =
   process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
 
+// CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 const DATABASE_URL =
   process.env.DATABASE_URL || "postgres://localhost/medusa-store";
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
-`,
-    `
-const plugins = [${activePlugins.join(",\n")}]`,
-    `
+
+const plugins = [
+  'medusa-fulfillment-manual',
+  'medusa-payment-manual',
+  {
+    resolve: '@medusajs/file-local',
+    options: {
+      upload_dir: "uploads",
+    },
+  },
+  // To enable the admin plugin, uncomment the following lines and run 'yarn add @medusajs/admin'
+  {
+    resolve: "@medusajs/admin",
+    /** @type {import('@medusajs/admin').PluginOptions} */
+    options: {
+      autoRebuild: true,
+    },
+  },
+];
+
 const modules = {
   eventBus: {
     resolve: "@medusajs/event-bus-redis",
@@ -80,6 +84,7 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
+  // Uncomment the following lines to enable REDIS
   redis_url: REDIS_URL
 };
 
@@ -88,18 +93,11 @@ module.exports = {
   projectConfig,
   plugins,
   modules,
-};
-`,
-  ];
-
-  console.log("medusaConfig!", medusaConfig.join("\n"));
+};`;
 
   // Service variables
   let appServiceVariables = [
-    // Nixpacks builder config
     "NIXPACKS_NODE_VERSION=18",
-    "NIXPACKS_NX_APP_NAME=admin",
-    // Medusa variables
     `ADMIN_CORS=${input.adminCors}`,
     `COOKIE_SECRET=${input.cookieSecret || randomCookieSecret}`,
     `DATABASE_TYPE=postgres`,
@@ -111,7 +109,6 @@ module.exports = {
     `STORE_CORS=${input.storefrontCors}`,
     `STRIPE_API_KEY=${input.stripeApiKey}`,
     `STRIPE_WEBHOOK_SECRET=${input.stripeWebhookSecret}`,
-    // Feature flags https://docs.medusajs.com/development/feature-flags/overview
     `MEDUSA_FF_ORDER_EDITING=${input.featureFlagOrderEditing}`,
     `MEDUSA_FF_PRODUCT_CATEGORIES=${input.featureFlagProductCategories}`,
     `MEDUSA_FF_SALES_CHANNELS=${input.featureFlagSaleChannels}`,
@@ -121,7 +118,7 @@ module.exports = {
   if (input.meiliPluginEnabled) {
     const _meiliSearchVariables = [
       `MEILISEARCH_HOST=http://$(PROJECT_NAME)_${input.meiliServiceName}:7700`,
-      `MEILISEARCH_API_KEY=${input.meiliApiKey || ""}`,
+      "MEILISEARCH_API_KEY=",
     ];
     appServiceVariables.push(_meiliSearchVariables.join("\n"));
   }
@@ -130,28 +127,18 @@ module.exports = {
     `MEILI_ENV=${input.meiliEnv}`,
     input.meiliEnv == "production" &&
       `MEILI_MASTER_KEY=${
-        input.meiliMasterKey || randomBytes(18).toString("hex")
+        input.meiliMasterKey || randomBytes(24).toString("hex")
       }`,
+    "MEILI_NO_ANALYTICS=true",
+    "MEILI_SCHEDULE_SNAPSHOT=86400",
   ];
-
-  if (input.meiliNoAnalytics) {
-    melisearchServiceVariables.push("MEILI_NO_ANALYTICS=true");
-  }
-
-  if (input.meiliScheduleSnapshot) {
-    melisearchServiceVariables.push(
-      `MEILI_SCHEDULE_SNAPSHOT=${
-        input.meiliSnapshotInterval ? input.meiliSnapshotInterval : "true"
-      }`
-    );
-  }
 
   if (input.minioPluginEnabled) {
     const _minioVariables = [
-      `MINIO_ENDPOINT=${input.minioEndpoint || ""}`,
-      `MINIO_BUCKET=${input.minioBucket || ""}`,
-      `MINIO_ACCESS_KEY=${input.minioAccessKey || ""}`,
-      `MINIO_SECRET_KEY=${input.minioSecretKey || ""}`,
+      `MINIO_ENDPOINT=http://$(PROJECT_NAME)_${input.minioServiceName}:9000`,
+      "MINIO_BUCKET=",
+      "MINIO_ACCESS_KEY=",
+      "MINIO_SECRET_KEY=",
     ];
     appServiceVariables.push(_minioVariables.join("\n"));
   }
@@ -163,11 +150,11 @@ module.exports = {
 
   if (input.s3PluginEnabled) {
     const _s3Variables = [
-      `S3_URL=${input.s3Url || ""}`,
-      `S3_BUCKET=${input.s3Bucket || ""}`,
-      `S3_REGION=${input.s3Region || ""}`,
-      `S3_ACCESS_KEY_ID=${input.s3AccessKey || ""}`,
-      `S3_SECRET_ACCESS_KEY=${input.s3SecretKey || ""}`,
+      "S3_URL=",
+      "S3_BUCKET=",
+      "S3_REGION=",
+      "S3_ACCESS_KEY_ID=",
+      "S3_SECRET_ACCESS_KEY=",
     ];
     appServiceVariables.push(_s3Variables.join("\n"));
   }
@@ -176,20 +163,20 @@ module.exports = {
     const _sendGridVariables = [
       `SENDGRID_API_KEY=${input.sendGridApiKey}`,
       `SENDGRID_FROM=${input.sendGridFrom}`,
-      `SENDGRID_ORDER_PLACED_ID=${input.sendGridOrderPlacedId}`,
-      `SENDGRID_MEDUSA_RESTOCK_TEMPLATE=${input.sendGridMedusaRestockTemplate}`,
-      `SENDGRID_USER_PASSWORD_RESET_TEMPLATE=${input.sendGridUserPasswordResetTemplate}`,
-      `SENDGRID_CUSTOMER_PASSWORD_RESET_TEMPLATE=${input.sendGridCustomerPasswordResetTemplate}`,
-      `SENDGRID_GIFT_CARD_CREATED_TEMPLATE=${input.sendGridGiftCardCreatedTemplate}`,
-      `SENDGRID_SWAP_RECEIVED_TEMPLATE=${input.sendGridSwapReceivedTemplate}`,
-      `SENDGRID_SWAP_SHIPMENT_CREATED_TEMPLATE=${input.sendGridSwapShipmentCreatedTemplate}`,
-      `SENDGRID_SWAP_CREATED_TEMPLATE=${input.sendGridSwapCreatedTemplate}`,
-      `SENDGRID_CLAIM_SHIPMENT_CREATED_TEMPLATE=${input.sendGridClaimShipmentCreatedTemplate}`,
-      `SENDGRID_ORDER_ITEMS_RETURNED_TEMPLATE=${input.sendGridOrderItemsReturnedTemplate}`,
-      `SENDGRID_ORDER_RETURN_REQUESTED_TEMPLATE=${input.sendGridOrderReturnRequestedTemplate}`,
-      `SENDGRID_ORDER_SHIPPED_TEMPLATE=${input.sendGridOrderShippedTemplate}`,
-      `SENDGRID_ORDER_CANCELED_TEMPLATE=${input.sendGridOrderCanceledTemplate}`,
-      `SENDGRID_ORDER_PLACED_ID_LOCALIZED=${input.sendGridOrderPlacedIdLocalized}`,
+      "SENDGRID_ORDER_PLACED_ID=",
+      "SENDGRID_MEDUSA_RESTOCK_TEMPLATE=",
+      "SENDGRID_USER_PASSWORD_RESET_TEMPLATE=",
+      "SENDGRID_CUSTOMER_PASSWORD_RESET_TEMPLATE=",
+      "SENDGRID_GIFT_CARD_CREATED_TEMPLATE=",
+      "SENDGRID_SWAP_RECEIVED_TEMPLATE=",
+      "SENDGRID_SWAP_SHIPMENT_CREATED_TEMPLATE=",
+      "SENDGRID_SWAP_CREATED_TEMPLATE=",
+      "SENDGRID_CLAIM_SHIPMENT_CREATED_TEMPLATE=",
+      "SENDGRID_ORDER_ITEMS_RETURNED_TEMPLATE=",
+      "SENDGRID_ORDER_RETURN_REQUESTED_TEMPLATE=",
+      "SENDGRID_ORDER_SHIPPED_TEMPLATE=",
+      "SENDGRID_ORDER_CANCELED_TEMPLATE=",
+      "SENDGRID_ORDER_PLACED_ID_LOCALIZED=",
     ];
     appServiceVariables.push(_sendGridVariables.join("\n"));
   }
@@ -197,6 +184,17 @@ module.exports = {
   // Medusa deploy command based in environment
   const medusaDeployCommand = [];
   const medusa = "/app/node_modules/.bin/medusa";
+
+  // Install selected plugins
+  input.minioPluginEnabled &&
+    medusaDeployCommand.push("yarn add medusa-file-minio");
+  input.meiliPluginEnabled &&
+    medusaDeployCommand.push("yarn add medusa-plugin-meilisearch");
+  input.s3PluginEnabled && medusaDeployCommand.push("yarn add medusa-file-s3");
+  input.sendgridPluginEnabled &&
+    medusaDeployCommand.push("yarn add medusa-plugin-sendgrid");
+  input.stripePluginEnabled &&
+    medusaDeployCommand.push("yarn add medusa-payment-stripe");
 
   if (input.nodeEnv == "development") {
     medusaDeployCommand.push(`${medusa} migrations run`);
@@ -241,14 +239,12 @@ module.exports = {
         { type: "volume", name: "app", mountPath: "/usr/src/app" },
         {
           type: "file",
-          content: medusaConfig.join("\n"),
+          content: medusaConfig,
           mountPath: "/app/medusa-config.js",
         },
       ],
     },
   });
-
-  console.log("medusaConfig", medusaConfig.join("\n"));
 
   services.push({
     type: "postgres",
@@ -268,7 +264,6 @@ module.exports = {
     },
   });
 
-  // Activate Medusa plugins based in configurations
   input.minioPluginEnabled &&
     services.push({
       type: "app",

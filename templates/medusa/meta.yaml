@@ -14,8 +14,8 @@ links:
   - label: Demo
     url: https://next.medusajs.com/
 contributors:
-  - name: Paco Salido
-    url: https://psalido.net
+  - name: Paco
+    url: https://github.com/beakman
 schema:
   type: object
   required:
@@ -41,13 +41,19 @@ schema:
       title: Redis Service Name
       default: medusa-redis
 
-    # Medusa Config
+    # Medusa Admin
+    enableAdminPlugin:
+      type: boolean
+      title: Enable admin plugin
+      default: true
     medusaAdminUsername:
       type: string
       title: Medusa Admin Username
     medusaAdminPassword:
       type: string
       title: Medusa Admin Password
+
+    # Medusa Config
     jwtSecret:
       type: string
       title: JWT Secret
@@ -78,7 +84,7 @@ schema:
       title: Port
       default: "9000"
 
-    # Feature flags
+    # https://docs.medusajs.com/development/feature-flags/overview
     featureFlagProductCategories:
       type: boolean
       title: Enable product categories
@@ -95,12 +101,6 @@ schema:
       type: boolean
       title: Enable sale channels
       default: false
-
-    # Admin
-    enableAdminPlugin:
-      type: boolean
-      title: Enable admin plugin
-      default: true
 
     # Stripe Payments
     stripePluginEnabled:
@@ -134,19 +134,6 @@ schema:
       type: string
       title: MinIO volume name
       default: minio
-    minioEndpoint:
-      type: string
-      title: MinIO endpoint
-      default: https://minio.example.com
-    minioBucket:
-      type: string
-      title: MinIO bucket
-    minioAccessKey:
-      type: string
-      title: MinIO access key
-    minioSecretKey:
-      type: string
-      title: MinIO secret key
     minioRootUser:
       type: string
       title: MinIO root user
@@ -162,21 +149,6 @@ schema:
       type: boolean
       title: S3 plugin enabled
       default: false
-    s3Url:
-      type: string
-      title: S3 Url
-    s3Bucket:
-      type: string
-      title: S3 bucket
-    s3Region:
-      type: string
-      title: S3 region
-    s3AccessKey:
-      type: string
-      title: S3 access key
-    s3SecretKey:
-      type: string
-      title: S3 secret key
 
     # Meilisearch
     # yarn add medusa-plugin-meilisearch
@@ -210,26 +182,9 @@ schema:
     meiliMasterKey:
       type: string
       title: Meilisearch master key
-    meiliNoAnalytics:
-      type: boolean
-      title: Meilisearch disable analytics
-      default: true
-    meiliScheduleSnapshot:
-      type: boolean
-      title: Meilisearch schedule snapshot
-      default: false
-    meiliSnapshotInterval:
-      type: string
-      title: Meilisearch snapshot interval (sec)
-      default: "86400"
-    meiliHost:
-      type: string
-      title: Meilisearch host
-    meiliApiKey:
-      type: string
-      title: Meilisearch API key
 
     # Notifications: SendGrid
+    # yarn add medusa-plugin-sendgrid
     sendgridPluginEnabled:
       type: boolean
       title: SendGrid plugin enabled
@@ -241,45 +196,3 @@ schema:
     sendGridFrom:
       type: string
       title: From email
-    sendGridOrderPlacedId:
-      type: string
-      title: Order placed
-    sendGridMedusaRestockTemplate:
-      type: string
-      title: Medusa Restock
-    sendGridUserPasswordResetTemplate:
-      type: string
-      title: User password reset
-    sendGridCustomerPasswordResetTemplate:
-      type: string
-      title: Customer password reset
-    sendGridGiftCardCreatedTemplate:
-      type: string
-      title: Gift card created
-    sendGridSwapReceivedTemplate:
-      type: string
-      title: Swap received
-    sendGridSwapShipmentCreatedTemplate:
-      type: string
-      title: Swap shipment created
-    sendGridSwapCreatedTemplate:
-      type: string
-      title: Swap created
-    sendGridClaimShipmentCreatedTemplate:
-      type: string
-      title: Claim shipment created
-    sendGridOrderItemsReturnedTemplate:
-      type: string
-      title: Order items returned
-    sendGridOrderReturnRequestedTemplate:
-      type: string
-      title: Order return requested
-    sendGridOrderShippedTemplate:
-      type: string
-      title: Order shipped
-    sendGridOrderCanceledTemplate:
-      type: string
-      title: Order canceled
-    sendGridOrderPlacedIdLocalized:
-      type: string
-      title: Order placed localized
