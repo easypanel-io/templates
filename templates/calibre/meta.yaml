@@ -15,6 +15,8 @@ instructions: Login using user ABC with your set password
 changeLog:
   - date: 2023-3-1
     description: first release
+  - date: 2023-7-24
+    description: update
 links:
   - label: Website
     url: https://calibre-ebook.com/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/calibre:6.14.0
+      default: linuxserver/calibre:6.23.0
     password:
       type: string
       title: Password
@@ -57,11 +59,13 @@ benefits:
       books, providing you with detailed information and enhancing your reading
       experience.
   - title: News Download
-    description: Calibre can download newspapers and convert them into e-books for
+    description:
+      Calibre can download newspapers and convert them into e-books for
       convenient reading, keeping you updated with the latest news in a format
       that's comfortable for you.
   - title: Cross-Platform
-    description: Calibre is cross-platform, running on Linux, Windows, and macOS,
+    description:
+      Calibre is cross-platform, running on Linux, Windows, and macOS,
       making it accessible no matter what operating system you use.
 features:
   - title: E-Book Conversion
@@ -69,13 +73,16 @@ features:
       understands. It makes the conversion process a breeze, with just a few
       clicks needed.
   - title: E-Book Viewer
-    description: Calibre comes with an e-book viewer that allows you to read your
+    description:
+      Calibre comes with an e-book viewer that allows you to read your
       books right from the app. It supports a wide range of e-book formats.
   - title: Device Detection
-    description: Calibre can detect many e-book reader devices. Once your device is
+    description:
+      Calibre can detect many e-book reader devices. Once your device is
       connected, you can easily send books to your device for offline reading.
   - title: Metadata Editing
-    description: Calibre allows you to edit e-book metadata, giving you full control
+    description:
+      Calibre allows you to edit e-book metadata, giving you full control
       over the information associated with your e-books.
 tags:
   - Documents
