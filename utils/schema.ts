@@ -185,6 +185,7 @@ export const mongoSchema = z.object({
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mysqlSchema = z.object({
@@ -195,6 +196,7 @@ export const mysqlSchema = z.object({
   rootPassword: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mariadbSchema = z.object({
@@ -205,6 +207,7 @@ export const mariadbSchema = z.object({
   rootPassword: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const postgresSchema = z.object({
@@ -214,6 +217,7 @@ export const postgresSchema = z.object({
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const redisSchema = z.object({
@@ -223,6 +227,7 @@ export const redisSchema = z.object({
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const templateSchema = z.object({

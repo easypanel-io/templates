@@ -1,5 +1,14 @@
 name: Activepieces
-description: No-code Business Automation Tool. An open source alternative to Zapier.
+description: Activepieces is a powerful open-source business automation tool
+  designed to streamline your work without the need for coding. It serves as an
+  excellent alternative to Zapier, allowing you to automate your daily tasks or
+  even your entire business with just a few clicks on the user interface. With
+  Activepieces, you can enjoy the flexibility of using our 3rd party no-code
+  apps to quickly read and write to your favorite apps. Currently, we support 74
+  apps and counting. The tool is self-hosted, ensuring your data remains on your
+  machine, providing an added layer of security. Activepieces also offers
+  infinite flexibility and powerful logging, making it a robust solution for
+  business automation without limits.
 instructions: null
 changeLog:
   - date: 2023-2-27
@@ -12,6 +21,8 @@ changeLog:
     description: Fixed executing flow, and version bumped to 0.3.13
   - date: 2023-6-03
     description: Version bumped to 0.3.15
+  - date: 2023-7-26
+    description: Version bumped to 0.5.3
 links:
   - label: Website
     url: https://activepieces.com
@@ -47,7 +58,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: activepieces/activepieces:0.3.15
+      default: activepieces/activepieces:0.5.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -56,3 +67,40 @@ schema:
       type: string
       title: Redis Service Name
       default: activepieces-redis
+benefits:
+  - title: Business Automation Without Limits
+    description: Automate your daily tasks or your entire business with just a few
+      clicks on the user interface. This app allows you to streamline your
+      operations without interrupting your IT team.
+  - title: Infinite Flexibility
+    description: The app offers infinite flexibility, allowing you to customize your
+      automation processes to suit your specific needs. It's a powerful tool
+      that can adapt to any business model or workflow.
+  - title: Data Security
+    description: Keep your data on your machine. With this app, you have full
+      control over your data, ensuring it remains secure and private.
+  - title: Free and Open Source
+    description: This app is a free and open-source alternative to other business
+      automation tools. It's a cost-effective solution for businesses looking to
+      automate their processes without incurring high costs.
+features:
+  - title: No-Code Powerful Logging
+    description: The app provides powerful logging features without the need for
+      coding. This makes it easy for anyone to automate their work, regardless
+      of their technical skills.
+  - title: Self-Hosted
+    description: The app is self-hosted, meaning you can run it on your own server.
+      This gives you complete control over your data and ensures it remains
+      secure.
+  - title: 74 Apps And Counting
+    description: The app supports integration with over 74 apps and counting. This
+      allows you to automate tasks across multiple platforms, making your
+      workflow more efficient.
+  - title: Open Source Connectors
+    description: The app features open source connectors, allowing you to easily
+      integrate it with other apps and platforms. This makes it a versatile tool
+      that can be used in a variety of business contexts.
+tags:
+  - No-Code
+  - Business Apps
+  - Automation
