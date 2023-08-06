@@ -61,50 +61,25 @@ export function generate(input: Input): Output {
     },
   });
 
-  if (input.databaseType === "postgis" || input.databaseType === "mysql") {
-    const appEnv = [];
-    if (input.databaseType === "postgis") {
-      appEnv.push(
-        `POSTGRES_USER=${input.databaseType}`,
-        `POSTGRES_PASSWORD=${databasePassword}`,
-        `POSTGRES_DB=$(PROJECT_NAME)`
-      );
-    } else {
-      appEnv.push(
-        `MYSQL_ROOT_PASSWORD=${randomPassword()}`,
-        `MYSQL_USER=${input.databaseType}`,
-        `MYSQL_PASSWORD=${databasePassword}`,
-        `MYSQL_DATABASE=$(PROJECT_NAME)`
-      );
-    }
+  if (input.databaseType === "postgis") {
     services.push({
       type: "app",
       data: {
         projectName: input.projectName,
         serviceName: input.databaseServiceName,
-        source: {
-          type: "image",
-          image:
-            input.databaseType === "postgis"
-              ? "postgis/postgis:15-master"
-              : "mysql:8",
-        },
-        env: appEnv.join("\n"),
+        source: { type: "image", image: "postgis/postgis:15-master" },
+        env: [
+          `POSTGRES_USER=${input.databaseType}`,
+          `POSTGRES_PASSWORD=${databasePassword}`,
+          `POSTGRES_DB=$(PROJECT_NAME)`,
+        ].join("\n"),
         mounts: [
           {
             type: "volume",
             name: "data",
-            mountPath: `/var/lib/${
-              input.databaseType === "postgis" ? "postgresql/data" : "mysql"
-            }`,
+            mountPath: "/var/lib/postgresql/data",
           },
         ],
-        deploy: {
-          command:
-            input.databaseType === "postgis"
-              ? ""
-              : "docker-entrypoint.sh --default-authentication-plugin=mysql_native_password",
-        },
       },
     });
   } else {
@@ -114,6 +89,10 @@ export function generate(input: Input): Output {
         projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: databasePassword,
+        command:
+          input.databaseType === "mysql"
+            ? "docker-entrypoint.sh --default-authentication-plugin=mysql_native_password"
+            : "",
       },
     });
   }
