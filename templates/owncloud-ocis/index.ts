@@ -28,11 +28,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.ocisImage,
       },
-      domains: [{ name: input.ocisDomain }],
-      proxy: {
-        port: 9200,
-        secure: true,
-      },
+      domains: [
+        {
+          host: ${input.ocisDomain},
+          port: 9200,
+        },
+      ],
       mounts: [
         {
           type: "file",
@@ -111,11 +112,12 @@ export function generate(input: Input): Output {
         deploy: {
           command: "/bin/sh /entrypoint-override.sh",
         },
-        domains: [{ name: input.onlyofficeDomain }],
-        proxy: {
-          port: 80,
-          secure: true,
-        },
+        domains: [
+          {
+            host: ${input.onlyofficeDomain},
+            port: 9200,
+          },
+        ],
         mounts: [
           {
             type: "file",
@@ -142,13 +144,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.wopiImage,
       },
-      proxy: {
-        port: 8880,
-        secure: true,
-      },
       domains: [
         {
-          name: input.wopiDomain,
+          host: ${input.wopiDomain},
+          port: 8880,
         },
       ],
       env: [
