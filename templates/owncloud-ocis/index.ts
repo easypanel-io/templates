@@ -23,11 +23,6 @@ export function generate(input: Input): Output {
         `SEARCH_EXTRACTOR_TYPE=tika`,
         `SEARCH_EXTRACTOR_TIKA_TIKA_URL=http://${input.projectName}_${input.servicePrefix}-tika:9998`,
         //
-        `NOTIFICATIONS_SMTP_HOST=${input.projectName}_${input.servicePrefix}-inbucket`,
-        `NOTIFICATIONS_SMTP_PORT=2500`,
-        `NOTIFICATIONS_SMTP_SENDER=oCIS notifications <notifications@${input.ocisDomain}>`,
-        `NOTIFICATIONS_SMTP_USERNAME=notifications@${input.ocisDomain}`,
-        `NOTIFICATIONS_SMTP_INSECURE=true`,
       ].join("\n"),
       source: {
         type: "image",
@@ -249,32 +244,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // inbucket
-  services.push({
-    type: "app",
-    data: {
-      projectName: input.projectName,
-      serviceName: `${input.servicePrefix}-inbucket`,
-      env: [
-        `INBUCKET_SMTP_TLSENABLED=true`,
-        `INBUCKET_SMTP_TLSPRIVKEY=/tmp/server.key`,
-        `INBUCKET_SMTP_TLSCERT=/tmp/server.crt`,
-        `INBUCKET_STORAGE_MAILBOXMSGCAP=1000`,
-      ].join("\n"),
-      source: {
-        type: "image",
-        image: input.inbucketImage,
-      },
-      proxy: {
-        port: 9000,
-        secure: true,
-      },
-      deploy: {
-        command:
-          "apk add openssl; openssl req -subj '/CN=inbucket.test' -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout /tmp/server.key -out /tmp/server.crt; /start-inbucket.sh",
-      },
-    },
-  });
 
   // tika
   services.push({
