@@ -15,10 +15,10 @@ export function generate(input: Input): Output {
 
   if (input.databaseType === "postgres") {
     appEnv.push(
-      `LD_DB_DATABASE=${input.projectName}`,
+      `LD_DB_DATABASE=$(PROJECT_NAME)`,
       `LD_DB_USER=postgres`,
       `LD_DB_PASSWORD=${databasePassword}`,
-      `LD_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+      `LD_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
       `LD_DB_PORT=5432`
     );
 
@@ -39,8 +39,12 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       env: appEnv.join("\n"),
-      proxy: { port: 9090, secure: true },
-      domains: input.domain ? [{ name: input.domain }] : [],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9090,
+        },
+      ],
       mounts: [
         {
           type: "volume",

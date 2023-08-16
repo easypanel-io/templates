@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `APP_ENV=staging`,
+        `APP_ENV=production`,
         `APP_NAME=Ploi Roadmap`,
         `APP_KEY=base64:${appKey}`,
         `APP_ENV=local`,
@@ -25,9 +25,9 @@ export function generate(input: Input): Output {
         `APP_LOCALE=${input.appLanguage}`,
         `APP_TIMEZONE=${input.appTimezone}`,
         `DB_CONNECTION=mysql`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_POST=3306`,
-        `DB_DATABASE=${input.projectName}`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
         `DB_USERNAME=mariadb`,
         `DB_PASSWORD=${mariaPassword}`,
       ].join("\n"),
@@ -35,10 +35,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 9000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

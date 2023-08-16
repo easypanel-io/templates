@@ -19,12 +19,12 @@ export function generate(input: Input): Output {
       env: [
         `NANGO_DB_USER=postgres`,
         `NANGO_DB_PASSWORD=${databasePassword}`,
-        `NANGO_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `NANGO_DB_NAME=${input.projectName}`,
+        `NANGO_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `NANGO_DB_NAME=$(PROJECT_NAME)`,
         `NANGO_DB_PORT=5432`,
         "NANGO_DB_SSL=FALSE",
         `SERVER_PORT=3003`,
-        `NANGO_SERVER_URL=https://${input.domain}`,
+        `NANGO_SERVER_URL=https://$(PRIMARY_DOMAIN)`,
         `NANGO_DASHBOARD_USERNAME=${input.webUsername}`,
         `NANGO_DASHBOARD_PASSWORD=${input.webPassword}`,
         `NANGO_SECRET_KEY=${apiKey}`,
@@ -35,21 +35,18 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3003,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3003,
+        },
+      ],
       mounts: [
         {
           type: "file",
           mountPath: "/usr/nango-server/src/packages/server/providers.yaml",
           content:
             "# Overwrite this file with this content: https://github.com/NangoHQ/nango/blob/master/packages/server/providers.yaml",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },

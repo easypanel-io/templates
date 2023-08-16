@@ -8,7 +8,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secret = randomString(64);
+  const secret = randomString(32);
   const databasePassword = randomPassword();
   const minioPassword = randomPassword();
 
@@ -17,10 +17,12 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.builderServiceName,
+      source: { type: "image", image: input.builderServiceImage },
+      domains: [{ host: input.builderDomain, port: 3000 }],
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `NEXTAUTH_URL=https://${input.builderDomain}`,
-        `NEXT_PUBLIC_VIEWER_URL=${input.viewerDomain}`,
+        `NEXT_PUBLIC_VIEWER_URL=https://${input.viewerDomain}`,
         `ENCRYPTION_SECRET=${secret}`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `DISABLE_SIGNUP=false`,
@@ -29,21 +31,8 @@ export function generate(input: Input): Output {
         `S3_ACCESS_KEY=minio`,
         `S3_SECRET_KEY=${minioPassword}`,
         `S3_BUCKET=typebot`,
-        `S3_ENDPOINT=http://${input.projectName}_${input.storageServiceName}:9000`,
+        `S3_ENDPOINT=http://$(PROJECT_NAME)_${input.storageServiceName}:9000`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.builderServiceImage,
-      },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
-      domains: [
-        {
-          name: input.builderDomain,
-        },
-      ],
     },
   });
 
@@ -52,28 +41,17 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.viewerServiceName,
+      source: { type: "image", image: input.viewerServiceImage },
+      domains: [{ host: input.viewerDomain, port: 3000 }],
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
-        `NEXT_PUBLIC_VIEWER_URL=${input.viewerDomain}`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `NEXT_PUBLIC_VIEWER_URL=https://${input.viewerDomain}`,
         `ENCRYPTION_SECRET=${secret}`,
         `S3_ACCESS_KEY=minio`,
         `S3_SECRET_KEY=${minioPassword}`,
         `S3_BUCKET=typebot`,
-        `S3_ENDPOINT=http://${input.projectName}_${input.storageServiceName}:9000`,
+        `S3_ENDPOINT=http://$(PROJECT_NAME)_${input.storageServiceName}:9000`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.viewerServiceImage,
-      },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
-      domains: [
-        {
-          name: input.viewerDomain,
-        },
-      ],
     },
   });
 
@@ -82,25 +60,13 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.storageServiceName,
+      source: { type: "image", image: input.storageServiceImage },
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 9001 }],
+      mounts: [{ type: "volume", name: "data", mountPath: "/data" }],
       env: [
         `MINIO_ROOT_USER=minio`,
         `MINIO_ROOT_PASSWORD=${minioPassword}`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.storageServiceImage,
-      },
-      mounts: [
-        {
-          type: "volume",
-          name: "data",
-          mountPath: "/data",
-        },
-      ],
-      proxy: {
-        port: 9001,
-        secure: true,
-      },
     },
   });
 

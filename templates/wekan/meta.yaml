@@ -1,0 +1,116 @@
+name: Wekan
+description: WeKan is an open-source, customizable, and privacy-focused Kanban
+  app designed for efficient task management. It allows you to create multiple
+  boards for different projects or tasks, with each board having columns to
+  represent different stages of your work such as 'To Do', 'Doing', and 'Done'.
+  You can add cards to each board to represent tasks, complete with titles,
+  descriptions, and due dates. WeKan uses lists on a Kanban board to represent
+  different stages of a workflow, helping you organize and track tasks. You can
+  customize lists by changing their color or adding custom fields to capture
+  more information about tasks. A card in WeKan represents a task on a Kanban
+  board, including a title, description, due date, labels, and comments. As work
+  progresses, you can move the card from one column to another. WeKan also
+  offers several features to protect your data, including a self-hosting option,
+  access controls, and open-source code for security auditing. It is designed
+  with security in mind, and its features and options are built to help you
+  protect your data and keep it secure.
+instructions: null
+changeLog:
+  - date: 2023-07-10
+    description: First Release
+links:
+  - label: Website
+    url: https://wekan.github.io/
+  - label: Docs
+    url: https://github.com/wekan/wekan/wiki
+  - label: Github
+    url: https://github.com/wekan/wekan
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - mailFrom
+    - mailFromSender
+    - mailHost
+    - mailUsername
+    - mailPassword
+    - mailPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wekan
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/wekan/wekan:latest
+    databaseServiceName:
+      type: string
+      title: App Service Name
+      default: wekan-db
+    mailFrom:
+      type: string
+      title: Mail From
+      default: Wekan Notifications
+    mailFromSender:
+      type: string
+      title: Mail From Sender
+      default: noreply.wekan@mydomain.com
+    mailHost:
+      type: string
+      title: Mail Host
+    mailUsername:
+      type: string
+      title: Mail Username
+    mailPassword:
+      type: string
+      title: Mail Password
+    mailPort:
+      type: number
+      title: Mail Port
+      default: 25
+    mailSmtpSsl:
+      type: boolean
+      title: SMTP SSL
+      default: false
+    mailDisableTls:
+      type: boolean
+      title: Disable TLS
+      default: false
+benefits:
+  - title: Efficient Task Management
+    description: Experience efficient task management with WeKan - the Open-Source,
+      customizable, and privacy-focused kanban.
+  - title: Visual Task Tracking
+    description: Keep track of your tasks and projects visually with WeKan. See what
+      needs to be done and what has been completed.
+  - title: Customizable Boards
+    description: Create multiple boards for different projects or tasks. Customize
+      each board with columns to represent different stages of your work.
+features:
+  - title: Kanban Boards
+    description: Create boards to organize and track your tasks and projects. Add
+      columns to represent different stages of your work.
+  - title: Lists
+    description: Use lists on a Kanban board to represent different stages of a
+      workflow. Organize and track tasks within each list.
+  - title: Cards
+    description: Create cards to represent tasks on a Kanban board. Add titles,
+      descriptions, due dates, and more to each card.
+  - title: Security in Focus
+    description: WeKan prioritizes security with features like self-hosting,
+      open-source code, and access controls to protect your data.
+tags:
+  - Project Management
+  - Open-Source
+  - Task Management
+  - Kanban

@@ -1,5 +1,16 @@
 name: Commento
-description: Commento is a platform that you can embed in your website to allow your readers to add comments. It's reasonably fast lightweight. Supports markdown, import from Disqus, voting, automated spam detection, moderation tools, sticky comments, thread locking, OAuth login, single sign-on, and email notifications.
+description: Commento is a comments widget designed to enhance the interaction
+  on your website. It allows your readers to contribute to the discussion by
+  upvoting comments that add value and downvoting those that don't. The widget
+  supports markdown formatting, enabling bold, italics, external links, quotes,
+  bullet points, code, and more. Commento also provides moderation tools to
+  manage the conversation, allowing you to lock heated threads, remove off-topic
+  comments, and enforce timeouts. It features a spam detection system, saving
+  you the hassle of dealing with spammers. The widget supports nested replies,
+  making discussions easier to follow. Importantly, Commento does not require
+  your readers to sign up, reducing friction and encouraging more interaction.
+  You can easily customize the look of the widget to match your website's
+  aesthetics.
 instructions: null
 changeLog:
   - date: 2022-12-13
@@ -20,7 +31,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -32,9 +42,6 @@ schema:
       type: string
       title: App Service Name
       default: commento
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image
@@ -43,3 +50,47 @@ schema:
       type: string
       title: Database Service Name
       default: commento-db
+benefits:
+  - title: Engage Your Audience
+    description: Commento allows your readers to engage in discussions, ask
+      questions, and provide feedback on your content. This interaction can
+      enhance the user experience and increase the value of your website.
+  - title: Effortless Integration
+    description: Adding Commento to your website is a breeze. It usually takes less
+      than 10 minutes from start to finish, making it a quick and easy way to
+      enhance your website's functionality.
+  - title: Customizable Appearance
+    description: While Commento looks great out of the box, you can easily customize
+      the widget to match your website's look. This ensures a seamless
+      integration with your existing design.
+  - title: Spam-Free Environment
+    description: Don't waste time fighting spammers. Commento comes with built-in
+      spam detection, ensuring a clean and pleasant discussion environment for
+      your readers.
+features:
+  - title: Sticky Comments
+    description: Pin important comments to the top of the thread to ensure they
+      don't get lost in the discussion.
+  - title: Upvotes and Downvotes
+    description: Your readers can upvote comments that contribute to the discussion
+      and downvote those that don't, promoting a healthy and constructive
+      conversation.
+  - title: Markdown Formatting
+    description: Commento supports markdown formatting, allowing your readers to use
+      bold, italics, external links, quotes, bullet points, code, and more in
+      their comments.
+  - title: Moderation Tools
+    description: Manage your comment threads effectively with Commento's moderation
+      tools. You can lock heated threads, remove off-topic comments, and enforce
+      timeouts.
+  - title: Nested Replies
+    description: Commento supports nested replies, similar to how Reddit comments
+      work. This makes discussions easier to follow and understand.
+  - title: No Sign-Up Required
+    description: Commento reduces friction by allowing your readers to comment
+      without creating an account, encouraging more people to join the
+      discussion.
+tags:
+  - Comments
+  - Discussion
+  - Website

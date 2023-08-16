@@ -13,19 +13,21 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `DB_CONN=${input.databaseType}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_USER=${databaseUsername}`,
         `DB_PASS=${databasePassword}`,
-        `DB_DATABASE=${input.projectName}`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

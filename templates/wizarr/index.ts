@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `APP_URL=https://${input.domain}`,
+        `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `TZ=utc`,
         `DISABLE_BUILTIN_AUTH=false`,
       ].join("\n"),
@@ -18,20 +18,17 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 5690,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 5690,
+        },
+      ],
       mounts: [
         {
           type: "volume",
           name: "data",
           mountPath: "/data/database",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },

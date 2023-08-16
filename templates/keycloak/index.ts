@@ -11,15 +11,15 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `KEYCLOAK_DATABASE_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `KEYCLOAK_DATABASE_NAME=${input.projectName}`,
+        `KEYCLOAK_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `KEYCLOAK_DATABASE_NAME=$(PROJECT_NAME)`,
         `KEYCLOAK_DATABASE_USER=postgres`,
         `KEYCLOAK_DATABASE_PASSWORD=${databasePassword}`,
         `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
         `KEYCLOAK_ADMIN_PASSWORD=${input.keycloakPassword}`,
         `KC_HOSTNAME_STRICT_HTTPS=false`,
-        `KC_HOSTNAME=${input.domain}`,
-        `KC_HOSTNAME_ADMIN=${input.domain}`,
+        `KC_HOSTNAME=$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME_ADMIN=$(PRIMARY_DOMAIN)`,
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
         `KC_FEATURES=docker`,
@@ -28,13 +28,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
         },
       ],
       mounts: [

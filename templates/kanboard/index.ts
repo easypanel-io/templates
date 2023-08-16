@@ -30,7 +30,12 @@ export function generate(input: Input): Output {
           mountPath: "/etc/nginx/ssl",
         },
       ],
-      proxy: { port: 80 },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
     },
   });
 

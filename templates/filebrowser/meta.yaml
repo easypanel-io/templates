@@ -1,8 +1,15 @@
 name: Filebrowser
-description: Filebrowser provides a file managing interface within a specified
-  directory and it can be used to upload, delete, preview, rename and edit your
-  files. It allows the creation of multiple users and each user can have its own
-  directory. It can be used as a standalone app.
+description: File Browser is a versatile app designed to provide a file managing
+  interface within a specified directory. It's a powerful tool that allows you
+  to upload, delete, preview, rename, and edit your files with ease. The app
+  supports the creation of multiple users, with each user having their own
+  directory, making it an ideal solution for managing files in a multi-user
+  environment. File Browser also offers a range of customization options,
+  including the ability to change the way users authenticate with the server,
+  execute shell commands before or after certain events, and personalize the
+  installation with custom branding. It can be used as a standalone app,
+  offering a comprehensive and user-friendly solution for all your file
+  management needs.
 instructions: 'Default credentials: User:"admin" Password:"admin"'
 changeLog:
   - date: 2022-08-09
@@ -31,7 +38,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-
     appServiceName:
       type: string
       title: App Service Name
@@ -40,3 +46,29 @@ schema:
       type: string
       title: App Service Image
       default: filebrowser/filebrowser:v2-s6
+benefits:
+  - title: Efficient File Management
+    description: File Browser offers a streamlined interface for managing files
+      within a specified directory. It simplifies tasks such as uploading,
+      deleting, previewing, renaming, and editing files.
+  - title: Multi-User Support
+    description: The app supports the creation of multiple users, with each user
+      having their own directory. This makes it an ideal tool for collaborative
+      environments or shared systems.
+  - title: Standalone Application
+    description: File Browser can be used as a standalone app, providing a dedicated
+      platform for file management without the need for additional software.
+features:
+  - title: Authentication Method
+    description: File Browser allows you to change the way the user authenticates
+      with the server, providing flexibility in terms of security and access
+      control.
+  - title: Command Runner
+    description: This feature enables you to execute any shell command you want
+      before or after a certain event, providing a high level of customization
+      and control.
+  - title: Custom Branding
+    description: File Browser allows you to customize your installation by changing
+      its name, adding a global custom style sheet, and using your own logotype.
+tags:
+  - File Management

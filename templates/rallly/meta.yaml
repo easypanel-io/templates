@@ -1,5 +1,13 @@
 name: Rallly
-description: Schedule group meetings with friends, colleagues and teams. Create meeting polls to find the best date and time to organize an event based on your participants' availability. Save time and avoid back-and-forth emails.
+description: Rallly is a free, open-source tool designed to simplify your
+  scheduling process. It allows you to create meeting polls in seconds, helping
+  you find a time that works for everyone. With Rallly, you can ditch the
+  back-and-forth emails and streamline your scheduling tasks for a more
+  organized and less stressful workday. The app supports multiple languages and
+  has been used to create over 100k+ polls by 45k+ registered users. Whether
+  you're an executive assistant at a large organization or simply trying to
+  coordinate a group event, Rallly is the perfect tool to keep your RSVPs simple
+  and your scheduling process efficient.
 instructions: null
 armSupport: true
 changeLog:
@@ -21,7 +29,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -38,13 +45,10 @@ schema:
       type: string
       title: App Service Name
       default: rallly
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image
-      default: lukevella/rallly:2.1.1
+      default: lukevella/rallly:2.11.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -65,3 +69,32 @@ schema:
     emailPassword:
       type: string
       title: Email Password
+benefits:
+  - title: Efficient Scheduling
+    description: Rallly is designed to streamline your scheduling process, saving
+      you time and reducing the stress of back-and-forth emails. It simplifies
+      your scheduling tasks, making your workday more organized and less
+      stressful.
+  - title: Easy Poll Creation
+    description: With Rallly, you can set up a scheduling poll in as little time as
+      possible. It's a simple and efficient way to find a time that works for
+      everyone.
+  - title: Multi-language Support
+    description: Rallly supports 10+ languages, making it accessible to users around
+      the world. It's a tool that transcends language barriers, making
+      scheduling meetings a breeze no matter where you are.
+features:
+  - title: Meeting Polls
+    description: Rallly allows you to create meeting polls to help schedule meetings
+      with groups of people. The host of the meeting can select a few date and
+      time options for participants to choose from, and then tally the results
+      to find the best time.
+  - title: No Login Required
+    description: Rallly is free to use and does not require a login. This means you
+      can create as many polls as you want without the hassle of signing in.
+  - title: User-Funded
+    description: Rallly is a user-funded project. This means it relies on the
+      generosity of its users to keep it free and open-source.
+tags:
+  - Calendars
+  - Productivity

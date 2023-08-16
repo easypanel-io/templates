@@ -19,15 +19,15 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `SECRET_KEY_BASE=${secretkey}`,
-        `FRONTEND_URL=https://${input.domain}`,
+        `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
         `DEFAULT_LOCALE=${input.defaultLocale}`,
         `FORCE_SSL=true`,
         `ENABLE_ACCOUNT_SIGNUP=true`,
-        `REDIS_URL=redis://default@${input.projectName}_${input.redisServiceName}:6379`,
+        `REDIS_URL=redis://default@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `REDIS_PASSWORD=${randomPasswordRedis}`,
         `REDIS_OPENSSL_VERIFY_MODE=none`,
-        `POSTGRES_DATABASE=${input.projectName}`,
-        `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `POSTGRES_DATABASE=$(PROJECT_NAME)`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `POSTGRES_USERNAME=postgres`,
         `POSTGRES_PASSWORD=${randomPasswordPostgres}`,
         `RAILS_MAX_THREADS=5`,
@@ -39,10 +39,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
       deploy: {
         command:
           "bundle exec rails db:chatwoot_prepare && bundle exec rails s -p 3000 -b 0.0.0.0",

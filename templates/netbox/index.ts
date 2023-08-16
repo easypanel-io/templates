@@ -14,13 +14,13 @@ export function generate(input: Input): Output {
       env: [
         `SUPERUSER_EMAIL=${input.netboxEmail}`,
         `SUPERUSER_PASSWORD=${input.netboxPassword}`,
-        `ALLOWED_HOST=${input.domain}`,
-        `DB_NAME=${input.projectName}`,
+        `ALLOWED_HOST=$(PRIMARY_DOMAIN)`,
+        `DB_NAME=$(PROJECT_NAME)`,
         `DB_USER=postgres`,
         `DB_PORT=5432`,
         `DB_PASSWORD=${databasePassword}`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
         `REDIS_PORT=6379`,
         `REDIS_PASSWORD=${redisPassword}`,
       ].join("\n"),
@@ -28,13 +28,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8000,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
         },
       ],
       mounts: [

@@ -17,8 +17,8 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `NEXT_PUBLIC_BASE_URL=https://${input.domain}`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `NEXT_PUBLIC_BASE_URL=https://$(PRIMARY_DOMAIN)`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `SECRET_PASSWORD=${secret}`,
         `SUPPORT_EMAIL=${input.emailSupport}`,
         `SMTP_HOST=${input.emailHost}`,
@@ -30,13 +30,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
         },
       ],
     },

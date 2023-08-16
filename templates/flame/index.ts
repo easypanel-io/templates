@@ -14,10 +14,12 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: `PASSWORD=${input.password}`,
-      proxy: {
-        port: 5005,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 5005,
+        },
+      ],
       mounts: [
         {
           type: "volume",

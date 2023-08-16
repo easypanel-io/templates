@@ -9,17 +9,19 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`WG_HOST=${input.appDomain}`, `PASSWORD=${input.appPassword}`].join(
+      env: [`WG_HOST=$(PRIMARY_DOMAIN)`, `PASSWORD=${input.appPassword}`].join(
         "\n"
       ),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 50921,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 50921,
+        },
+      ],
       ports: [
         {
           protocol: "udp",
@@ -30,11 +32,6 @@ export function generate(input: Input): Output {
           protocol: "tcp",
           published: 51821,
           target: 51821,
-        },
-      ],
-      domains: [
-        {
-          name: input.appDomain,
         },
       ],
       deploy: {

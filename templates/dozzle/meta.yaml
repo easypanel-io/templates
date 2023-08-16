@@ -1,0 +1,97 @@
+name: Dozzle
+description: Dozzle is a lightweight, web-based Docker log viewer designed for
+  real-time monitoring and easy troubleshooting. It allows you to view logs of
+  other Docker containers in real-time, streaming new log entries to the web
+  interface without the need for page refreshes. Despite its capabilities,
+  Dozzle is a small application that consumes very little memory and CPU,
+  ensuring it doesn't cause performance issues when run alongside other
+  containers. It also supports connecting to multiple remote hosts, providing a
+  simple drop-down menu to switch between different hosts. Dozzle doesn't store
+  any log files and is solely for live monitoring of your container logs. It
+  also features an intelligent fuzzy search for container names, regex log
+  search, split screen for viewing multiple logs, and live stats with memory and
+  CPU usage. It also provides authentication with a username and password for
+  added security.
+instructions: null
+changeLog:
+  - date: 2023-07-11
+    description: First Release
+links:
+  - label: Website
+    url: https://dozzle.dev
+  - label: Github
+    url: https://github.com/amir20/dozzle
+  - label: Docker
+    url: https://hub.docker.com/r/amir20/dozzle
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - dozzleLevel
+    - dozzleNoAnalytics
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    dozzleUsername:
+      type: string
+      title: Username
+    dozzlePassword:
+      type: string
+      title: Password
+    dozzleLevel:
+      type: string
+      title: Log Level
+      default: info
+      oneOf:
+        - enum:
+            - info
+          title: Info
+        - enum:
+            - debug
+          title: Debug
+    dozzleNoAnalytics:
+      type: boolean
+      title: No Analytics
+      default: false
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dozzle
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: amir20/dozzle:latest
+benefits:
+  - title: Real-time Monitoring
+    description: Dozzle allows you to view logs of other Docker containers in
+      real-time. As new log entries are generated, they are streamed to the web
+      interface without needing to refresh the page.
+  - title: Lightweight Application
+    description: Dozzle is a lightweight application written in Go, consuming very
+      little memory and CPU. It can be run alongside other containers without
+      causing performance issues.
+  - title: Multi-host Support
+    description: Dozzle UI supports connecting to multiple remote hosts with a
+      simple drop-down to choose between different hosts.
+features:
+  - title: Intelligent Fuzzy Search
+    description: Dozzle features an intelligent fuzzy search for container names,
+      making it easier to find the logs you need.
+  - title: Regex Log Search
+    description: You can search logs using regex, providing a powerful tool for
+      pinpointing specific log entries.
+  - title: Live Stats
+    description: Dozzle provides live stats with memory and CPU usage, giving you
+      real-time insights into your Docker containers.
+  - title: Authentication
+    description: Dozzle supports authentication with a username and password,
+      ensuring that only authorized users can access your Docker logs.
+tags:
+  - Monitoring
+  - Logging

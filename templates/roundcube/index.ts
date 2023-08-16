@@ -13,7 +13,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 80, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       env: [
         `ROUNDCUBEMAIL_DEFAULT_HOST=${input.roundcubeDefaultHost}`,
         `ROUNDCUBEMAIL_DEFAULT_PORT=${input.roundcubeDefaultPort}`,

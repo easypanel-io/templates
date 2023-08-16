@@ -1,0 +1,79 @@
+name: Blender
+description: Blender is a comprehensive, free and open-source 3D computer
+  graphics software toolset. It is used for creating animated films, visual
+  effects, art, 3D printed models, motion graphics, interactive 3D applications,
+  virtual reality, and computer games. The app is designed to be accessed at
+  your host, providing a desktop GUI for easy interaction. It supports hardware
+  acceleration for an enhanced desktop experience, although GPU rendering is not
+  supported out of the box. The app is compatible with multiple architectures,
+  ensuring it can be used on a variety of systems. Please note that while this
+  app can run on Arm devices, it is recommended not to mount in /dev/dri due to
+  the OpenGL ES version not being high enough to run Blender.
+instructions: null
+changeLog:
+  - date: 2023-04-12
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-blender
+  - label: Github
+    url: https://github.com/linuxserver/docker-blender
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: blender
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/blender:latest
+benefits:
+  - title: 3D Graphics Creation
+    description: Blender is a powerful tool for creating 3D computer graphics. This
+      includes animated films, visual effects, art, 3D printed models, motion
+      graphics, interactive 3D applications, virtual reality, and computer
+      games.
+  - title: Multi-Platform Awareness
+    description: The app utilizes the docker manifest for multi-platform awareness.
+      This means it can retrieve the correct image for your architecture,
+      ensuring optimal performance and compatibility.
+  - title: Hardware Acceleration
+    description: The app supports hardware acceleration for an enhanced desktop
+      experience. This includes the ability to mount a GPU into the container
+      for GPU accelerated applications.
+features:
+  - title: Open Source
+    description: Blender is a free and open-source software toolset. This means it's
+      freely available for anyone to use, modify, and distribute.
+  - title: Accessible Application
+    description: The application can be accessed at your host via HTTP or HTTPS,
+      providing flexibility and security for your workflows.
+  - title: Customizable Environment
+    description: The app provides a range of optional environment variables and run
+      configurations. This allows you to customize the functionality and
+      performance of the app to suit your specific needs.
+  - title: Docker Integration
+    description: The app is designed to work seamlessly with Docker. This includes
+      the ability to start a Docker in Docker setup inside the container, and
+      the ability to mount the Docker directory inside the container to the host
+      for increased performance.
+tags:
+  - 3D Graphics
+  - Animation
+  - Visual Effects
+  - Art
+  - Motion Graphics
+  - Virtual Reality
+  - Computer Games

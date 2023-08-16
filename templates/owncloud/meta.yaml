@@ -1,5 +1,19 @@
 name: Owncloud
-description: ownCloud is an open-source file sync, share and content collaboration software that lets teams work on data easily from anywhere, on any device.
+description: ownCloud Infinite Scale 3.0 is a secure cloud platform designed for
+  real-time content collaboration. It is trusted by over 200 million users
+  worldwide and offers a revolutionary project folder concept, Spaces, to boost
+  seamless digital collaboration for remote teams of all sizes. The platform
+  also provides a suite of powerful integrations through Web Office, including
+  OnlyOffice, Microsoft 365, Collabora Online, and Microsoft Office Online,
+  enabling users to collaborate seamlessly and securely from any location and
+  device. ownCloud Infinite Scale 3.0 is designed with state-of-the-art security
+  standards and best practices, ensuring superior data protection and privacy.
+  It allows organizations to control their data at all times, anywhere, and can
+  be deployed on-premises, in a data center of choice, or in a hybrid setup. The
+  platform also supports multi-factor authentication, encryption, and elaborate
+  file lifecycle management for enhanced security. ownCloud Infinite Scale 3.0
+  is designed to increase productivity by enabling modern teams to store, share,
+  and work on their data and documents through a single point of access.
 instructions: null
 changeLog:
   - date: 2023-2-28
@@ -19,7 +33,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
     - appServiceImage
     - databaseType
     - databaseServiceName
@@ -34,9 +47,6 @@ schema:
       type: string
       title: App Service Name
       default: owncloud
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image
@@ -66,3 +76,41 @@ schema:
     adminPassword:
       type: string
       title: Password
+benefits:
+  - title: Secure Cloud Platform
+    description: ownCloud Infinite Scale 3.0 is the latest and most secure version
+      of the ownCloud real-time content collaboration platform. It incorporates
+      state-of-the-art security standards and best practices to ensure superior
+      data protection and privacy.
+  - title: Efficient Collaboration
+    description: With ownCloud, modern teams can collaborate from anywhere and from
+      any device. They can store, share and work on their data and documents
+      through a single point of access, saving time on coordination and feedback
+      processes.
+  - title: Data Sovereignty
+    description: ownCloud allows you to control your data at all times, anywhere and
+      everywhere. It can be deployed on-premises, in a data center of your
+      choice or in a hybrid setup, ensuring 100% data ownership.
+features:
+  - title: Filesharing
+    description: Trusted by 200 million users worldwide, ownCloud provides an easy,
+      flexible and secure way for staff to share files and folders. It allows
+      safe involvement of contacts outside your organization with select
+      documents.
+  - title: Spaces
+    description: Spaces is a revolutionary project folder concept designed to boost
+      seamless digital collaboration for remote teams of all sizes, while
+      ensuring compliance, data control and security.
+  - title: Web Office
+    description: Web Office provides a suite of powerful integrations including
+      OnlyOffice, Microsoft 365, Collabora Online and Microsoft Office Online.
+      This enables users to collaborate seamlessly and securely irrespective of
+      location and device.
+  - title: Infinite Scale
+    description: Infinite Scale is designed as a three-tier architecture separating
+      storage, backend and frontend components communicating through secure,
+      well-defined APIs. It ensures superior data protection and privacy.
+tags:
+  - File Management
+  - Collaboration
+  - Data Security

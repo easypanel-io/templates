@@ -12,11 +12,11 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `LISTMONK_app__address=0.0.0.0:9000`,
-        `LISTMONK_db__host=${input.projectName}_${input.databaseServiceName}`,
+        `LISTMONK_db__host=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `LISTMONK_db__user=postgres`,
         `LISTMONK_db__password=${randomPasswordPostgres}`,
         `LISTMONK_db__port=5432`,
-        `LISTMONK_db__database=${input.projectName}`,
+        `LISTMONK_db__database=$(PROJECT_NAME)`,
         `LISTMONK_app__admin_username=${input.adminUsername}`,
         `LISTMONK_app__admin_password=${input.adminPassword}`,
       ].join("\n"),
@@ -24,10 +24,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 9000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9000,
+        },
+      ],
       mounts: [
         {
           type: "volume",

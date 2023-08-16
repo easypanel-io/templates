@@ -1,5 +1,11 @@
 name: Barrage
-description: Minimal Deluge WebUI with full mobile support
+description: Barrage is a minimalistic Deluge WebUI app with full mobile
+  support. It features a responsive mobile-first design, allowing you to manage
+  your torrents with ease from any device. With Barrage, you can add torrents by
+  URL or magnet, sort and filter your torrents, and set global upload and
+  download speed limits. It also allows you to change file priorities and modify
+  torrent options. The app is designed to be deployed with Docker, making it a
+  convenient and efficient tool for managing your torrents.
 instructions: null
 changeLog:
   - date: 2023-1-25
@@ -28,9 +34,6 @@ schema:
       type: string
       title: App Service Name
       default: barrage
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image
@@ -44,3 +47,38 @@ schema:
     barragePassword:
       type: string
       title: Barrage Password
+benefits:
+  - title: Efficient Torrent Management
+    description: Barrage provides a minimalistic and efficient way to manage your
+      torrents. It allows you to add torrents by URL or magnet, sort and filter
+      them, and change their options, all from a single, easy-to-use interface.
+  - title: Full Mobile Support
+    description: With its responsive mobile-first design, Barrage ensures that you
+      can manage your torrents on the go. Whether you're on a smartphone or a
+      tablet, you'll have full access to all of Barrage's features.
+  - title: Control Over Download and Upload Speeds
+    description: Barrage allows you to set global upload and download speed limits.
+      This means you can control how much of your internet bandwidth is used for
+      torrenting, ensuring that it doesn't interfere with your other online
+      activities.
+features:
+  - title: Add Torrent by URL or Magnet
+    description: Barrage allows you to add torrents to your list by simply pasting a
+      URL or a magnet link. This makes it easy to start downloading a torrent
+      without having to download and open a separate torrent file.
+  - title: Sort and Filter Torrents
+    description: With Barrage, you can easily sort your torrents by various criteria
+      and filter them based on your needs. This makes it easy to find the
+      torrents you're looking for, even if you have a large number of them.
+  - title: Change File Priority
+    description: Barrage allows you to change the priority of individual files
+      within a torrent. This means you can choose which files to download first,
+      which can be particularly useful if you're downloading a torrent that
+      contains multiple files.
+  - title: Change Torrent Options
+    description: Barrage provides the ability to change various options for your
+      torrents. This gives you greater control over your torrent downloads and
+      allows you to customize them to suit your needs.
+tags:
+  - File Management
+  - Developer Tools

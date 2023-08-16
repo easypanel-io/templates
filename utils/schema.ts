@@ -9,6 +9,14 @@ export const projectNameRule = z
     /^[a-z0-9-_]+$/,
     "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
   );
+
+export const backupPrefixRule = z
+  .string()
+  .regex(
+    /^[\w-/]*$/,
+    "Invalid name. Use lowercase letters (a-z), uppercase letters (A-Z), digits (0-9), dash (-), slash (/), underscore (_)."
+  );
+
 export const serviceNameRule = z
   .string()
   .regex(
@@ -21,7 +29,10 @@ export const volumeNameRule = z
     /^[a-z0-9-_]+$/,
     "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
   );
-export const domainRule = z.string().regex(/^[a-z0-9.-]+$/);
+export const domainRule = z
+  .string()
+  .regex(/^[a-z0-9.-]+$/)
+  .or(z.literal("$(EASYPANEL_DOMAIN)"));
 export const portRule = z.number().min(0).max(65535);
 export const passwordRule = z.string().default(randomPassword);
 
@@ -63,6 +74,16 @@ export const appBasicAuthSchema = z
     z.object({
       username: z.string(),
       password: z.string(),
+    })
+  )
+  .optional();
+
+export const appRedirectsSchema = z
+  .array(
+    z.object({
+      regex: z.string(),
+      replacement: z.string(),
+      permanent: z.boolean(),
     })
   )
   .optional();
@@ -113,6 +134,15 @@ export const resourcesSchema = z
   })
   .optional();
 
+export const backupSchema = z
+  .object({
+    enabled: z.boolean(),
+    schedule: z.string(),
+    destinationId: z.string(),
+    prefix: backupPrefixRule,
+  })
+  .optional();
+
 export const appPortsSchema = z
   .array(
     z.object({
@@ -123,27 +153,26 @@ export const appPortsSchema = z
   )
   .default([]);
 
+export const appDomainsSchema = z
+  .array(
+    z.object({
+      host: domainRule,
+      https: z.boolean().default(true),
+      port: z.number().default(80),
+      path: z.string().startsWith("/").default("/"),
+    })
+  )
+  .default([]);
+
 export const appSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
   source: appSourceSchema,
   build: appBuildSchema,
   env: z.string().default(""),
-  proxy: z
-    .object({
-      port: z.number().default(80),
-      secure: z.boolean().default(true),
-    })
-    .default({}),
   basicAuth: appBasicAuthSchema,
   deploy: appDeploySchema,
-  domains: z
-    .array(
-      z.object({
-        name: domainRule,
-      })
-    )
-    .default([]),
+  domains: appDomainsSchema,
   mounts: appMountsSchema,
   ports: appPortsSchema,
   resources: resourcesSchema,
@@ -155,6 +184,8 @@ export const mongoSchema = z.object({
   image: z.string().optional(),
   password: passwordRule,
   resources: resourcesSchema,
+  env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mysqlSchema = z.object({
@@ -164,6 +195,8 @@ export const mysqlSchema = z.object({
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
+  env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mariadbSchema = z.object({
@@ -173,6 +206,8 @@ export const mariadbSchema = z.object({
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
+  env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const postgresSchema = z.object({
@@ -181,6 +216,8 @@ export const postgresSchema = z.object({
   image: z.string().optional(),
   password: passwordRule,
   resources: resourcesSchema,
+  env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const redisSchema = z.object({
@@ -189,6 +226,8 @@ export const redisSchema = z.object({
   image: z.string().optional(),
   password: passwordRule,
   resources: resourcesSchema,
+  env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const templateSchema = z.object({

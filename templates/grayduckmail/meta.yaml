@@ -1,5 +1,17 @@
 name: Gray Duck Mail
-description: Gray Duck Mail is an alternative to email discussion group software such as Mailman and Sympa designed to be easy to set up and easy to manage.
+description: Gray Duck Mail is a user-friendly email discussion list application
+  that offers an alternative to traditional email discussion group software. It
+  is designed to be simple to set up and manage, making the process of running
+  an email discussion list effortless. Gray Duck Mail is perfect for managing
+  mailing lists between small to medium size groups, such as neighborhoods,
+  schools, workplaces, and families. With Gray Duck Mail, you can send one email
+  and automatically keep everyone in the loop. The application monitors a remote
+  mail server for messages and processes them by relaying the message to all
+  list members. It also automatically handles user subscriptions, unsubscription
+  requests, and email bounces. Gray Duck Mail works with any external email host
+  that allows for POP3/SMTP connections and message forwarding or aliasing. It
+  relies totally on an external mail provider, allowing you to use an existing
+  web host or email account.
 instructions: null
 changeLog:
   - date: 2023-3-3
@@ -17,7 +29,6 @@ schema:
   required:
     - projectName
     - appServiceName
-    - domain
     - appServiceImage
   properties:
     projectName:
@@ -27,10 +38,38 @@ schema:
       type: string
       title: App Service Name
       default: grayduckmail
-    domain:
-      type: string
-      title: App Domain
     appServiceImage:
       type: string
       title: App Service Image
-      default: wagesj45/gray-duck-mail # no versioned tags
+      default: wagesj45/gray-duck-mail
+benefits:
+  - title: Effortless Email Discussion Lists
+    description: Gray Duck Mail is an easy-to-use tool that makes running an email
+      discussion list effortless. It is perfect for managing mailing lists
+      between small to medium size groups. Send one email, and everyone is
+      automatically kept in the loop.
+  - title: Easy to Set Up and Manage
+    description: Gray Duck Mail is designed to be easy to set up and manage, making
+      it a great alternative to other email discussion group software. It
+      monitors a remote mail server for messages and processes them by relaying
+      the message to all list members.
+  - title: Automated Handling
+    description: Gray Duck Mail automatically handles user subscriptions,
+      unsubscription requests, and email bounces, saving you time and effort. It
+      works with any external email host that allows for POP3/SMTP connections
+      and message forwarding or aliasing.
+features:
+  - title: Email Discussion Lists
+    description: "Gray Duck Mail allows you to create and manage email discussion
+      lists with ease. It connects you to your group through the one platform
+      that everyone is on: email."
+  - title: Automatic Handling of Subscriptions and Bounces
+    description: Gray Duck Mail automatically handles user subscriptions and
+      unsubscription requests, as well as email bounces. This means you can
+      focus on your discussion, not on managing your list.
+  - title: Works with Any External Email Host
+    description: Gray Duck Mail works with any external email host that allows for
+      POP3/SMTP connections and message forwarding or aliasing. This means you
+      can use it with your existing web host or email account.
+tags:
+  - Email
