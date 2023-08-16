@@ -56,71 +56,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  if (input.collaboraDomain) {
-    // ocis-appprovider-collabora
-    services.push({
-      type: "app",
-      data: {
-        projectName: input.projectName,
-        serviceName: `${input.servicePrefix}-appprovider-collabora`,
-        env: [
-          `REVA_GATEWAY=${input.projectName}_${input.servicePrefix}:9142`,
-          `APP_PROVIDER_GRPC_ADDR=0.0.0.0:9164`,
-          `APP_PROVIDER_EXTERNAL_ADDR=${input.projectName}_${input.servicePrefix}-appprovider-collabora:9164`,
-          `APP_PROVIDER_DRIVER=wopi`,
-          `APP_PROVIDER_WOPI_APP_NAME=Collabora`,
-          `APP_PROVIDER_WOPI_APP_ICON_URI=${input.collaboraDomain}/favicon.ico`,
-          `APP_PROVIDER_WOPI_APP_URL=${input.collaboraDomain}`,
-          `APP_PROVIDER_WOPI_INSECURE=false`,
-          `APP_PROVIDER_WOPI_WOPI_SERVER_EXTERNAL_URL=${input.wopiDomain}`,
-          `APP_PROVIDER_WOPI_FOLDER_URL_BASE_URL=${input.ocisDomain}`,
-        ].join("\n"),
-        source: {
-          type: "image",
-          image: input.ocisImage,
-        },
-        deploy: {
-          command: "app-provider server",
-        },
-        mounts: [
-          {
-            type: "bind",
-            hostPath: `/etc/easypanel/projects/${input.projectName}/${input.servicePrefix}/volumes/ocis-config`,
-            mountPath: "/etc/ocis",
-          },
-        ],
-      },
-    });
-
-    // collabora
-    services.push({
-      type: "app",
-      data: {
-        projectName: input.projectName,
-        serviceName: `${input.servicePrefix}-collabora`,
-        env: [
-          `aliasgroup1=https://${input.wopiDomain}:443`,
-          `DONT_GEN_SSL_CERT=YES`,
-          `extra_params=--o:ssl.enable=false --o:ssl.termination=true --o:welcome.enable=false --o:net.frame_ancestors=${input.ocisDomain}`,
-          `username=${input.collaboraUsername}`,
-          `password=${input.collaboraPassword}`,
-        ].join("\n"),
-        source: {
-          type: "image",
-          image: input.collaboraImage,
-        },
-        deploy: {
-          capAdd: ["MKNOD"],
-        },
-        domains: [{ name: input.collaboraDomain }],
-        proxy: {
-          port: 9980,
-          secure: true,
-        },
-      },
-    });
-  }
-
   if (input.onlyofficeDomain) {
     // ocis-appprovider-onlyoffice
     services.push({
@@ -276,21 +211,21 @@ app_registry:
     name: OpenDocument
     description: OpenDocument text document
     icon: ''
-    default_app: Collabora
+    default_app: OnlyOffice
     allow_creation: true
   - mime_type: application/vnd.oasis.opendocument.spreadsheet
     extension: ods
     name: OpenSpreadsheet
     description: OpenDocument spreadsheet document
     icon: ''
-    default_app: Collabora
+    default_app: OnlyOffice
     allow_creation: true
   - mime_type: application/vnd.oasis.opendocument.presentation
     extension: odp
     name: OpenPresentation
     description: OpenDocument presentation document
     icon: ''
-    default_app: Collabora
+    default_app: OnlyOffice
     allow_creation: true
   - mime_type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
     extension: docx
@@ -377,9 +312,6 @@ internalserver = waitress
 # List of file extensions deemed incompatible with LibreOffice:
 # interoperable locking will be disabled for such files
 nonofficetypes = .md .zmd .txt .epd
-
-# List of file extensions to be supported by Collabora (deprecated)
-codeofficetypes = .odt .ott .ods .ots .odp .otp .odg .otg .doc .dot .xls .xlt .xlm .ppt .pot .pps .vsd .dxf .wmf .cdr .pages .number .key
 
 # WOPI access token expiration time [seconds]
 tokenvalidity = 86400
