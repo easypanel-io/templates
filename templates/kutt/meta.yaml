@@ -1,0 +1,112 @@
+name: Kutt
+description: Kutt is a free and open-source app designed to make your links
+  shorter and more manageable. With Kutt, you can create, protect, and delete
+  your links, and monitor them with detailed statistics. You can also set custom
+  domains for your links, adding a personal touch to your URLs. The app also
+  provides an API, allowing you to create, delete, and get URLs from anywhere.
+  Kutt also offers browser extensions for Chrome and Firefox for easy access and
+  use. The app is completely open source and free, giving you the freedom to
+  host it on your own server if you wish.
+instructions: null
+changeLog:
+  - date: 2023-03-24
+    description: First Release
+links:
+  - label: Website
+    url: https://kutt.it/
+  - label: Documentation
+    url: https://docs.kutt.it/
+  - label: Github
+    url: https://github.com/thedevs-network/kutt
+contributors:
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    siteName:
+      type: string
+      title: Site Name
+    adminEmails:
+      type: string
+      title: Admin Emails
+      description: Comma seperated
+    reportEmail:
+      type: string
+      title: Report Email
+    mailHost:
+      type: string
+      title: Mail Host
+    mailPort:
+      type: number
+      title: Mail Port
+    mailSecure:
+      type: boolean
+      title: Mail Secure
+      default: true
+    mailUser:
+      type: string
+      title: Mail User
+    mailPassword:
+      type: string
+      title: Mail Password
+    mailFrom:
+      type: string
+      title: Mail From
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kutt
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kutt/kutt:v2.7.4
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: kutt-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: kutt-redis
+benefits:
+  - title: Efficient Link Management
+    description: Kutt provides a platform for creating, protecting, and deleting
+      your links. It allows you to monitor your links with detailed statistics,
+      giving you insights into the performance of your links.
+  - title: Custom Domain
+    description: Kutt allows you to use custom domains for your links. This feature
+      enhances your brand visibility and makes your links more recognizable.
+  - title: Free & Open Source
+    description: Kutt is completely open source and free. You can host it on your
+      own server, giving you full control over your data and privacy.
+features:
+  - title: Link Creation
+    description: Create short links with ease. You can add descriptions, set expiry
+      times, and even protect them with passwords.
+  - title: Link Deletion
+    description: Kutt allows you to delete your links whenever you want. This
+      feature gives you full control over the lifespan of your links.
+  - title: Link Statistics
+    description: Get detailed statistics for each of your links. This feature helps
+      you understand how your links are performing and make informed decisions.
+  - title: Custom Domains
+    description: Add or remove custom domains for your links. This feature enhances
+      your brand visibility and makes your links more recognizable.
+  - title: API
+    description: Kutt provides an API that allows you to create, delete, and get
+      URLs from anywhere. This feature enables you to integrate Kutt with other
+      services and automate your workflows.
+tags:
+  - URL Shortener
+  - Link Management
+  - Analytics

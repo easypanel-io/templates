@@ -15,15 +15,17 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `HUMHUB_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
-        `HUMHUB_DB_NAME=${input.projectName}`,
+        `HUMHUB_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `HUMHUB_DB_NAME=$(PROJECT_NAME)`,
         `HUMHUB_DB_USER=mariadb`,
         `HUMHUB_DB_PASSWORD=${dbPassword}`,
       ].join("\n"),
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

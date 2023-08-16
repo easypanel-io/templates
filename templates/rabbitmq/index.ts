@@ -41,10 +41,12 @@ export function generate(input: Input): Output {
             ? "rabbitmq:3-management"
             : input.appServiceImage || "rabbitmq:3",
       },
-      proxy: {
-        port: input.enableManagementUI ? 15672 : 5672,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: input.enableManagementUI ? 15672 : 5672,
+        },
+      ],
       ports,
       mounts: [
         {

@@ -2,7 +2,6 @@ import { readFile, writeFile } from "fs/promises";
 import glob from "glob";
 import { compile } from "json-schema-to-typescript";
 import { snakeCase } from "lodash";
-import * as path from "path";
 import prettier from "prettier";
 import YAML from "yaml";
 
@@ -76,11 +75,11 @@ async function generateIndex(items: string[]) {
 }
 
 function getLogo(dir: string) {
-  const files = glob.sync(path.resolve(dir, "logo.{png,svg}"));
+  const files = glob.sync(dir + "/logo.{png,svg}");
   return files[0]?.split("/").pop() ?? null;
 }
 
 function getScreenshots(dir: string) {
-  const files = glob.sync(path.resolve(dir, "screenshot*.{png,jpg}"));
+  const files = glob.sync(dir + "/screenshot*.{png,jpg,gif}");
   return files.map((file) => file.split("/").pop());
 }

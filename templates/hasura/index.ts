@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `HASURA_GRAPHQL_DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
+        `HASURA_GRAPHQL_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `HASURA_GRAPHQL_ENABLE_CONSOLE=${input.enableConsole}`,
         `HASURA_GRAPHQL_DEV_MODE=${input.devMode}`,
         `HASURA_GRAPHQL_ADMIN_SECRET=${input.hasuraAdminSecret}`,
@@ -20,13 +20,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
       domains: [
         {
-          name: input.hasuraDomain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
         },
       ],
     },

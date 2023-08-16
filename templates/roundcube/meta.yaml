@@ -1,6 +1,16 @@
 name: Roundcube
-description: This project is a free and open source webmail solution with a desktop-like user interface which is easy to install/configure and that runs on a standard LAMPP server. The skins use the latest web standards to render a functional and customizable UI. Roundcube includes other sophisticated open-source libraries such as PEAR, an IMAP library derived from IlohaMail, the TinyMCE rich text editor, Googiespell library for spell checking and the HTML5-PHP sanitizer by Masterminds.
-instructions: After Roundcube is installed, you can log in to the mail accounts on the service where you entered the "SMTP" information.
+description: Roundcube webmail is a browser-based, multilingual IMAP client that
+  offers an application-like user interface. It is designed to provide all the
+  functionalities you would expect from an email client. This includes MIME
+  support, an address book, folder manipulation, message searching, and spell
+  checking. The app also supports drag-and-drop message management, multiple
+  sender identities, and a full-featured address book with groups and LDAP
+  connectors. It offers a threaded message listing, IDNA and SMTPUTF8 support,
+  and a responsive skin for multi-device support. Roundcube webmail also
+  features built-in caching for fast mailbox access, unlimited users and
+  messages, import/export functions, and support for PGP encryption.
+instructions: After Roundcube is installed, you can log in to the mail accounts
+  on the service where you entered the "SMTP" information.
 changeLog:
   - date: 2023-03-15
     description: First Release
@@ -12,7 +22,7 @@ links:
   - label: Docker
     url: https://hub.docker.com/r/roundcube/roundcubemail/
 contributors:
-  - name: BerkSMBL
+  - name: Berk Sümbül
     url: https://berksmbl.com
 schema:
   type: object
@@ -37,7 +47,8 @@ schema:
     roundcubeDefaultHost:
       type: string
       title: Default Host
-      description: Hostname of the IMAP server to connect to. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+      description: Hostname of the IMAP server to connect to. For encypted
+        connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
     roundcubeDefaultPort:
       type: number
       title: Default Port
@@ -46,7 +57,8 @@ schema:
     roundcubeSmtpServer:
       type: string
       title: SMTP Server
-      description: Hostname of the SMTP server to send mails. For encypted connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
+      description: Hostname of the SMTP server to send mails. For encypted
+        connections, prefix the host with tls:// (STARTTLS) or ssl:// (SSL/TLS).
     roundcubeSmtpPort:
       type: number
       title: SMTP Port
@@ -62,3 +74,56 @@ schema:
       title: Upload Max File Size
       description: File upload size limit.
       default: 5M
+benefits:
+  - title: Efficient Email Management
+    description: Roundcube webmail is a browser-based multilingual IMAP client that
+      offers an application-like user interface. It provides full functionality
+      you expect from an email client, making email management efficient and
+      easy.
+  - title: Versatile Functionality
+    description: From MIME support, address book, folder manipulation, to message
+      searching and spell checking, Roundcube webmail provides a wide range of
+      features to cater to your email needs.
+  - title: Fast Mailbox Access
+    description: With built-in caching, Roundcube webmail ensures fast mailbox
+      access, allowing you to browse through your emails quickly and seamlessly.
+  - title: Multi-Device Support
+    description: Roundcube webmail comes with a responsive skin, providing
+      multi-device support. This means you can access your emails from any
+      device, anytime, anywhere.
+features:
+  - title: Drag-&-drop Message Management
+    description: Roundcube webmail allows you to manage your messages easily with
+      its drag-and-drop feature.
+  - title: Full Support for MIME and HTML Messages
+    description: Roundcube webmail provides full support for MIME and HTML messages,
+      ensuring you can view and manage all types of email content.
+  - title: Multiple Sender Identities
+    description: With Roundcube webmail, you can manage multiple sender identities,
+      making it ideal for users with multiple email accounts.
+  - title: Full Featured Address Book
+    description: Roundcube webmail includes a full-featured address book with groups
+      and LDAP connectors, making it easy to manage your contacts.
+  - title: Threaded Message Listing
+    description: Roundcube webmail offers threaded message listing, allowing you to
+      view your email conversations in a threaded view.
+  - title: Spell Checking
+    description: Roundcube webmail includes a spell checking feature, ensuring your
+      emails are free of spelling errors.
+  - title: Support for Access Control Lists (ACL)
+    description: Roundcube webmail supports access control lists (ACL), allowing you
+      to control who has access to your emails.
+  - title: Import/Export Functions
+    description: Roundcube webmail includes import/export functions, allowing you to
+      easily transfer your emails and contacts.
+  - title: Plug-in API for Flexible Extensions
+    description: Roundcube webmail comes with a plug-in API, allowing for flexible
+      extensions to enhance its functionality.
+  - title: XSS Attack Protection
+    description: Roundcube webmail includes XSS attack protection, ensuring your
+      emails are safe from cross-site scripting attacks.
+  - title: Support for PGP Encryption
+    description: Roundcube webmail supports PGP encryption, ensuring your emails are
+      securely encrypted.
+tags:
+  - Email

@@ -1,8 +1,18 @@
 name: Wordpress
-description: WordPress powers nearly a third of the world’s websites. With tools
-  for everyone from personal bloggers to large corporations, this powerful site
-  builder and content management system (cms) aims to make it possible for
-  anyone to create an online presence in minutes.
+description: WordPress is an open-source platform that empowers you to create a
+  unique online space for your business, interests, or any other purpose. It
+  offers a real-time, intuitive editing experience, allowing you to see exactly
+  how your site will look as you add, edit, and rearrange your content. With
+  flexible design tools and powerful features, you can create any kind of custom
+  site. You can start with a blank canvas or choose from a wide variety of
+  themes and patterns, customizing every detail from color and fonts to layouts
+  and functionality. WordPress also offers over 55,000 plugins to extend your
+  site's capabilities, whether you need to add a store, mailing list, portfolio,
+  social feed, analytics, or anything else. Your content, design, and data
+  always belong to you, and WordPress is committed to keeping your site as
+  stable and secure as possible. Whether you're a global creative agency, a
+  local business, or a personal blogger, WordPress offers endless possibilities
+  for your online presence.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -52,3 +62,28 @@ schema:
       type: string
       title: Database Service Name
       default: wordpress-db
+benefits:
+  - title: Flexibility
+    description: Create any kind of custom site with intuitive editing, flexible
+      design tools, and powerful features to manage it all.
+  - title: Customization
+    description: Design anything you imagine. Start with a blank canvas or choose
+      from a wide variety of themes and patterns. Customize every detail, from
+      color and fonts to layouts and functionality.
+  - title: Extensibility
+    description: Make WordPress do whatever you need it to. Add a store, mailing
+      list, portfolio, social feed, analytics; you’re in control with over
+      55,000 plugins.
+  - title: Ownership
+    description: Your content, your design, and your data always belong to you. With
+      WordPress you’re free to tell your story, grow your brand, or simply be
+      yourself.
+  - title: Stability and Security
+    description: Built by an open source community with decades of experience, its
+      passionate contributors are committed to keeping WordPress as stable and
+      secure as possible.
+features: []
+tags:
+  - CMS
+  - Website Builder
+  - Blogging

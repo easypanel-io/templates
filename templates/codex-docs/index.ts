@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `APP_CONFIG_database_driver=mongodb`,
-        `APP_CONFIG_database_mongodb_uri=mongodb://mongo:${mongoPassword}@${input.projectName}_${input.databaseServiceName}:27017`,
+        `APP_CONFIG_database_mongodb_uri=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017`,
         `APP_CONFIG_auth_password=${input.codexAuthPassword}`,
         `APP_CONFIG_auth_secret=${secret}`,
       ].join("\n"),
@@ -46,10 +46,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
     },
   });
 

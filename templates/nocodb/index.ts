@@ -1,7 +1,7 @@
 import {
   Output,
-  randomString,
   randomPassword,
+  randomString,
   Services,
 } from "~templates-utils";
 import { Input } from "./meta";
@@ -40,12 +40,17 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 8080, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       env: [
-        `DATABASE_URL=postgres://postgres:${passwordPostgres}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
-        `NC_REDIS_URL=redis://default:${passwordRedis}@${input.projectName}_${input.redisServiceName}:6379`,
+        `DATABASE_URL=postgres://postgres:${passwordPostgres}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `NC_REDIS_URL=redis://default:${passwordRedis}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `NC_AUTH_JWT_SECRET=${jwtSecret}`,
-        `NC_PUBLIC_URL=https://${input.domain}`,
+        `NC_PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       mounts: [
         {

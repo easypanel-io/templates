@@ -10,22 +10,8 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      env: [
-        `url=https://${input.domain}`,
-        `database__client=mysql`,
-        `database__connection__host=${input.projectName}_${input.databaseServiceName}`,
-        `database__connection__user=mariadb`,
-        `database__connection__password=${databasePassword}`,
-        `database__connection__database=${input.projectName}`,
-      ].join("\n"),
-      proxy: {
-        port: 2368,
-        secure: true,
-      },
+      source: { type: "image", image: input.appServiceImage },
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 2368 }],
       mounts: [
         {
           type: "volume",
@@ -33,11 +19,19 @@ export function generate(input: Input): Output {
           mountPath: "/var/lib/ghost/content",
         },
       ],
+      env: [
+        `url=https://$(PRIMARY_DOMAIN)`,
+        `database__client=mysql`,
+        `database__connection__host=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `database__connection__user=mysql`,
+        `database__connection__password=${databasePassword}`,
+        `database__connection__database=$(PROJECT_NAME)`,
+      ].join("\n"),
     },
   });
 
   services.push({
-    type: "mariadb",
+    type: "mysql",
     data: {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,

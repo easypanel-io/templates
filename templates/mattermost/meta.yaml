@@ -1,5 +1,17 @@
 name: Mattermost
-description: Open source platform for developer collaboration. Secure, flexible, and integrated with the tools you love.
+description: Mattermost is a secure collaboration platform designed to enhance
+  the efficiency and productivity of technical and operational teams. It offers
+  a range of features including team messaging, custom integrations, audio and
+  screen sharing, and workflow automation. Mattermost is designed to improve
+  time to response by 90%, decrease incident resolution time, and increase
+  information availability by executing complex workflows faster and at a higher
+  quality. It also helps in avoiding costly outages and downtime by decreasing
+  the frequency and severity of system failures. The platform is built for
+  enterprise scalability and can be deployed in air gapped networks and BYOD
+  environments. It is also cloud neutral and offers self-host deployment
+  options. Mattermost is open source and can be customized to fit your workflow
+  with robust integrations or by building your own with its App Framework,
+  Plugins, and open APIs.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -28,7 +40,6 @@ schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -36,9 +47,6 @@ schema:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     appServiceName:
       type: string
       title: App Service Name
@@ -51,3 +59,36 @@ schema:
       type: string
       title: Database Service Name
       default: mattermost-db
+benefits:
+  - title: Secure Collaboration
+    description: Mattermost Version 8.0 provides a secure workspace for operational
+      and engineering teams to collaborate effectively. It improves response
+      time by 90% and decreases incident resolution time, ensuring full data
+      control.
+  - title: Avoid Outages and Downtime
+    description: The app helps in avoiding costly outages and downtime by decreasing
+      the frequency and severity of system failures.
+  - title: Increase Information Availability
+    description: Mattermost increases information availability by executing complex
+      workflows faster at higher quality, enhancing productivity.
+features:
+  - title: Team Messaging
+    description: Mattermost offers team messaging feature for seamless communication
+      within teams.
+  - title: Custom Integrations
+    description: The app provides custom integrations to fit your workflow, making
+      it flexible and extensible.
+  - title: Audio & Screen Sharing
+    description: Mattermost supports audio and screen sharing, facilitating better
+      collaboration.
+  - title: Workflow Automation
+    description: The app is designed to automate workflows, increasing efficiency
+      and productivity.
+  - title: Data Control
+    description: Mattermost offers full control over your data with built-in
+      identity and access controls, granular admin controls, and advanced
+      compliance auditing & reporting.
+tags:
+  - Chat
+  - Collaboration
+  - Security

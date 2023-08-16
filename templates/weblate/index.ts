@@ -21,23 +21,25 @@ export function generate(input: Input): Output {
         `WEBLATE_EMAIL_HOST_USER=${input.emailUsername}`,
         `WEBLATE_EMAIL_HOST_PASSWORD=${input.emailPassword}`,
         `WEBLATE_SERVER_EMAIL=${input.emailUsername}`,
-        `WEBLATE_SITE_DOMAIN=https://${input.domain}`,
+        `WEBLATE_SITE_DOMAIN=https://$(PRIMARY_DOMAIN)`,
         `WEBLATE_ADMIN_PASSWORD=changeme`,
         `WEBLATE_ADMIN_EMAIL=changeme@easypanel.io`,
         `POSTGRES_PASSWORD=${databasePassword}`,
         `POSTGRES_USER=postgres`,
-        `POSTGRES_DATABASE=${input.projectName}`,
-        `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `POSTGRES_DATABASE=$(PROJECT_NAME)`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `POSTGRES_SSL_MODE=disable`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

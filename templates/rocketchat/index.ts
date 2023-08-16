@@ -20,15 +20,20 @@ export function generate(input: Input): Output {
           mountPath: "/bitnami/mongodb",
         },
       ],
-      proxy: { port: 80, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
         `MONGODB_REPLICA_SET_MODE=primary`,
         `MONGODB_REPLICA_SET_NAME=rs0`,
         `MONGODB_PORT_NUMBER=27017`,
-        `MONGODB_INITIAL_PRIMARY_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `MONGODB_INITIAL_PRIMARY_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `MONGODB_INITIAL_PRIMARY_PORT_NUMBER=27017`,
-        `MONGODB_ADVERTISED_HOSTNAME=${input.projectName}_${input.databaseServiceName}`,
+        `MONGODB_ADVERTISED_HOSTNAME=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `MONGODB_ENABLE_JOURNAL=true`,
         `ALLOW_EMPTY_PASSWORD=true`,
       ].join("\n"),
@@ -44,11 +49,16 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 80, secure: true },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       deploy: { replicas: 1, command: null, zeroDowntime: true },
       env: [
-        `MONGO_URL=mongodb://${input.projectName}_${input.databaseServiceName}:27017/rocketchat?replicaSet=rs0`,
-        `MONGO_OPLOG_URL=mongodb://${input.projectName}_${input.databaseServiceName}:27017/local?replicaSet=rs0`,
+        `MONGO_URL=mongodb://$(PROJECT_NAME)_${input.databaseServiceName}:27017/rocketchat?replicaSet=rs0`,
+        `MONGO_OPLOG_URL=mongodb://$(PROJECT_NAME)_${input.databaseServiceName}:27017/local?replicaSet=rs0`,
       ].join("\n"),
     },
   });

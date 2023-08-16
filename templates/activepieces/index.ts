@@ -22,9 +22,9 @@ export function generate(input: Input): Output {
         `AP_ENVIRONMENT=prod`,
         `AP_ENCRYPTION_KEY=${encryptionKey}`,
         `AP_JWT_SECRET=${jwtKey}`,
-        `AP_FRONTEND_URL=https:/${input.domain}`,
-        `AP_POSTGRES_DATABASE=${input.projectName}`,
-        `AP_POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `AP_FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
+        `AP_POSTGRES_DATABASE=$(PROJECT_NAME)`,
+        `AP_POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `AP_POSTGRES_PORT=5432`,
         // TODO: When privileged support becomes available, switch this to a sandboxed mode.
         `AP_EXECUTION_MODE=UNSANDBOXED`,
@@ -32,7 +32,7 @@ export function generate(input: Input): Output {
         `AP_POSTGRES_PASSWORD=${databasePassword}`,
         `AP_SANDBOX_RUN_TIME_SECONDS=600`,
         `AP_TELEMENTRY=false`,
-        `AP_REDIS_URL=redis://default:${redisPassword}@${input.projectName}_${input.redisServiceName}:6379`,
+        `AP_REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `AP_SIGN_UP_ENABLED=false`,
         `AP_NODE_EXECUTABLE_PATH=/usr/local/bin/node`,
         `AP_ENGINE_EXECUTABLE_PATH=dist/packages/engine/main.js`,
@@ -41,13 +41,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
     },

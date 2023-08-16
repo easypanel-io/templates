@@ -17,11 +17,11 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `DB_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}?sslmode=disable`,
+        `DB_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `DB_ENABLE_SSL=false`,
         `KEILA_USER=changeme@easypanel.io`,
         `KEILA_PASSWORD=password123`,
-        `URL_HOST=${input.domain}`,
+        `URL_HOST=$(PRIMARY_DOMAIN)`,
         `URL_SCHEMA=https`,
         `SECRET_KEY_BASE=${secret}`,
         `DISABLE_REGISTRATION=false`,
@@ -37,13 +37,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
       domains: [
         {
-          name: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
     },

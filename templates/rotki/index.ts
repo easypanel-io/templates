@@ -14,10 +14,12 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [`ROTKI_ACCEPT_DOCKER_RISK=1`].join("\n"),
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -11,19 +11,21 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `WORDPRESS_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `WORDPRESS_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `WORDPRESS_DB_USER=${input.databaseType}`,
         `WORDPRESS_DB_PASSWORD=${mysqlPassword}`,
-        `WORDPRESS_DB_NAME=${input.projectName}`,
+        `WORDPRESS_DB_NAME=$(PROJECT_NAME)`,
       ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",

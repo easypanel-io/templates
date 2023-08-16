@@ -17,12 +17,12 @@ export function generate(input: Input): Output {
         `ADMIN_PASS=${input.adminPassword}`,
         `APPLICATION_NAME=${input.appServiceName}`,
         `DB_TYPE=mysql`,
-        `DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_PORT=3306`,
         `DB_USER=mysql`,
         `DB_PASS=${mysqlPassword}`,
-        `DB_NAME=${input.projectName}`,
-        `SITE_URL=https://${input.domain}`,
+        `DB_NAME=$(PROJECT_NAME)`,
+        `SITE_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_FORCE_HTTPS=true`,
         `ENABLE_SSL_PROXY=true`,
         `DISPLAY_ERRORS=false`,
@@ -31,10 +31,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 80,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -50,11 +52,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "modules",
           mountPath: "/assets/modules",
-        },
-      ],
-      domains: [
-        {
-          name: input.domain,
         },
       ],
     },

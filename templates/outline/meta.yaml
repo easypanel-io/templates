@@ -1,5 +1,5 @@
 name: Outline Wiki
-description: A fast, collaborative, knowledge base for your team built using React and Node.js.
+description: Outline is a team knowledge base and wiki that helps organize your team's information in a structured and searchable manner. It offers an intuitive editing experience with markdown support, slash commands, and rich embeds. You can collaborate on documents in real-time, with comments and threads keeping conversations organized. The platform integrates seamlessly with Slack, allowing you to search and share documents without leaving the chat. Outline also supports public sharing of documents with your own brand colors, logos, and domain. It's designed to be fast, collaborative, and easy to use, with a focus on security and permissions. It also supports multiple languages and offers integrations with tools like Figma, Loom, and more.
 instructions: Notice, Auththenication Method is Required to use Outline. To use Other Login Methods, Just fill in dummy Cridentials and edit the env! Check out the Docs https://wiki.generaloutline.com/s/hosting/doc/authentication-7ViKRmRY5o! Notice, Some sort of SMTP is Optinal! Check the env Here https://github.com/outline/outline/blob/main/.env.sample
 changeLog:
   - date: 2023-01-15
@@ -61,3 +61,34 @@ schema:
       type: string
       title: Minio Service Name
       default: outline-minio
+benefits:
+  - title: Beautiful Documents
+    description: Outline provides an intuitive editor with markdown support, slash commands, rich embeds, and more. This allows you to create beautiful documents without even trying.
+  - title: Collaborate & Comment
+    description: Outline allows you to collaborate on documents in real-time. Comments and threads keep conversations organized, making collaboration efficient and effective.
+  - title: Structured & Instantly Searchable
+    description: With Outline, you can nest documents in a hierarchy, automatically build a network of backlinks, and search across everything in milliseconds.
+  - title: Integrated with Slack
+    description: Outline integrates with Slack, allowing you to search and share documents without leaving chat, and automatically post document updates.
+  - title: Public Sharing
+    description: Outline allows you to share documents publicly with a link, or privately with a team. You can use your own brand colors, logos, and domain.
+  - title: Fast & Collaborative
+    description: Outline is designed to be fast, collaborative, and easy to use. It ensures millisecond response times, documents load instantly, search is speedy and navigating the UI is snappy.
+features:
+  - title: Intuitive Editing Experience
+    description: Outline provides a blazing fast editor with markdown support, slash commands, embeds, and more.
+  - title: Collaboration
+    description: Outline allows you to collaborate on documents in real-time. Comments and threads keep conversations organized.
+  - title: Structured & Searchable
+    description: Outline allows you to nest documents in a hierarchy, automatically build a network of backlinks, and search across everything in milliseconds.
+  - title: Slack Integration
+    description: Outline integrates with Slack, allowing you to search and share documents without leaving chat, and automatically post document updates.
+  - title: Public Sharing
+    description: Outline allows you to share documents publicly with a link, or privately with a team. You can use your own brand colors, logos, and domain.
+  - title: Customizable
+    description: Outline supports custom domains, allowing you to have docs.yourteam.com. You can white label with your own brand and colors.
+tags:
+  - Documentation
+  - Productivity
+  - Business Apps
+  - Collaboration

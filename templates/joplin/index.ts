@@ -14,17 +14,21 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: { port: 80, secure: true },
-      domains: [{ name: input.domain }],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
+        },
+      ],
       env: [
-        `APP_BASE_URL=https://${input.domain}`,
+        `APP_BASE_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_PORT=80`,
         `DB_CLIENT=pg`,
         `POSTGRES_PASSWORD=${databasePassword}`,
-        `POSTGRES_DATABASE=${input.projectName}`,
+        `POSTGRES_DATABASE=$(PROJECT_NAME)`,
         `POSTGRES_USER=postgres`,
         `POSTGRES_PORT=5432`,
-        `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
       ].join("\n"),
     },
   });

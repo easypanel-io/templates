@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
   const defaultAppSecret = input.defaultAppSecret || `ps_${randomString(12)}`;
 
   const serviceVariables = [
-    `SOKETI_DB_REDIS_HOST=${input.projectName}_${input.redisServiceName}`,
+    `SOKETI_DB_REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
     `SOKETI_DB_REDIS_PORT=6379`,
     `SOKETI_DB_REDIS_USERNAME=default`,
     `SOKETI_DB_REDIS_PASSWORD=${redisRandomPassword}`,
@@ -33,10 +33,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 9601,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9601,
+        },
+      ],
       ports: [
         {
           published: 6001,

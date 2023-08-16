@@ -15,10 +15,12 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [`JWT_SECRET=${secret}`].join("\n"),
-      proxy: {
-        port: 3000,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
       mounts: [
         {
           type: "volume",

@@ -1,35 +1,47 @@
 name: HedgeDoc
-description: HedgeDoc (formerly known as CodiMD) is an open-source, web-based, self-hosted, collaborative markdown editor.
+description: HedgeDoc, previously known as CodiMD, is an open-source, web-based,
+  self-hosted, collaborative markdown editor. It allows you to collaborate on
+  notes, graphs, and presentations in real-time. Simply share your note-link
+  with your co-workers and they can join in the collaboration. The editor runs
+  directly in your browser, allowing you to stay in control of your data by
+  keeping it on your server. HedgeDoc also offers a presentation mode for
+  building and presenting slides in markdown, and supports a variety of graphs,
+  diagrams, and embedded content. It features an easy-to-use permission system
+  for managing note permissions, and keeps track of changes to your notes
+  through revisions, even allowing you to revert to older versions. Despite its
+  extensive features, HedgeDoc has low system requirements and can run smoothly
+  even on a Raspberry Pi.
 instructions: null
 changeLog:
   - date: 2022-10-28
     description: first release
   - date: 2023-2-24
     description: Update to v1.9.7
+  - date: 2023-07-11
+    description: Update to v1.9.8 and return to main image
 links:
+  - label: Website
+    url: https://hedgedoc.org/
   - label: Documentation
     url: https://docs.hedgedoc.org/
   - label: Github
     url: https://git.hedgedoc.org/
-  - label: Website
-    url: https://hedgedoc.org/
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
     - projectName
-    - domain
     - appServiceName
     - appServiceImage
+    - databaseServiceName
   properties:
     projectName:
       type: string
       title: Project Name
-    domain:
-      type: string
-      title: Domain
     appServiceName:
       type: string
       title: App Service Name
@@ -37,4 +49,43 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/hedgedoc:1.9.7
+      default: quay.io/hedgedoc/hedgedoc:1.9.8
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: hedgedoc-db
+benefits:
+  - title: Real-time Collaboration
+    description: HedgeDoc allows you to collaborate on notes, graphs, and
+      presentations in real-time. Simply share your note-link with your
+      co-workers and they’re ready to go.
+  - title: Data Control
+    description: Being a self-hosted solution, HedgeDoc gives you complete control
+      over your data. Your notes and documents stay on your server, ensuring
+      privacy and security.
+  - title: Web-based Solution
+    description: HedgeDoc is a web-based application, meaning you don’t need to
+      install extra software. The editor runs smoothly in your browser, making
+      it accessible from anywhere.
+features:
+  - title: Presentation Mode
+    description: HedgeDoc comes with a presentation mode that allows you to build
+      and present slides in markdown. It's powered by reveal.js, providing a
+      seamless presentation experience.
+  - title: Graphs & Diagrams
+    description: HedgeDoc supports many types of graphs, diagrams, and embedded
+      content. This makes it a versatile tool for visualizing data and ideas.
+  - title: Easy Permission System
+    description: HedgeDoc features an easy-to-use permission system. You can manage
+      the permissions of your notes with a simple dropdown selection.
+  - title: Revisions
+    description: HedgeDoc keeps track of changes to your notes and allows you to
+      revert to any older version. This feature ensures you never lose important
+      information.
+  - title: Low System Requirements
+    description: HedgeDoc doesn’t require much resources. It runs smoothly even on
+      low-powered devices like a Raspberry Pi.
+tags:
+  - Documents
+  - Collaboration
+  - Note-taking

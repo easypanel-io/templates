@@ -13,10 +13,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      proxy: {
-        port: 8080,
-        secure: true,
-      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -37,7 +39,7 @@ export function generate(input: Input): Output {
           type: "file",
           content: [
             "[general]",
-            `host = https://${input.commentsDomain}/`,
+            `host = https://$(PRIMARY_DOMAIN)`,
             "max-age = 15m",
             "notify = stdout",
             "gravatar = true",

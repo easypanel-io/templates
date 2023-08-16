@@ -1,0 +1,98 @@
+name: Trilium Notes
+description: Trilium is a hierarchical note-taking application designed for
+  creating and managing large personal knowledge bases. With Trilium, you can
+  arrange your notes into an arbitrarily deep tree structure, with the ability
+  to place a single note in multiple locations. The app offers rich WYSIWYG note
+  editing, including tables, images, and math, with markdown autoformat. It also
+  supports editing notes with source code, complete with syntax highlighting.
+  Trilium provides seamless note versioning and attributes for note
+  organization, querying, and advanced scripting. The app also includes a
+  synchronization feature with a self-hosted sync server. For enhanced security,
+  Trilium offers strong note encryption with per-note granularity. Other
+  features include sketching diagrams with built-in Excalidraw, visualizing
+  notes and their relations with relation maps and link maps, and a REST API for
+  automation. Trilium is optimized for both usability and performance, capable
+  of handling upwards of 100,000 notes.
+instructions: null
+changeLog:
+  - date: 2023-3-22
+    description: first release
+links:
+  - label: Documentation
+    url: https://github.com/zadam/trilium/wiki
+  - label: Github
+    url: https://github.com/zadam/trilium
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trilium
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zadam/trilium:0.59.2
+benefits:
+  - title: Hierarchical Note Taking
+    description: Organize your notes into a hierarchical tree structure for easy
+      navigation and organization.
+  - title: Rich Editing
+    description: Edit your notes with a rich WYSIWYG editor, including tables,
+      images, and math equations.
+  - title: Fast and Easy Navigation
+    description: Quickly navigate between notes, perform full-text searches, and
+      easily hoist notes for focus.
+  - title: Synchronization
+    description: Sync your notes with a self-hosted server for access from any device.
+  - title: Note Versioning
+    description: Keep track of note revisions and easily revert to previous versions.
+  - title: Note Organization
+    description: Use note attributes for organization, querying, and advanced scripting.
+  - title: Sharing and Encryption
+    description: Share notes publicly and encrypt them for privacy and security.
+  - title: Visualizations and Scripting
+    description: Create relation maps and link maps to visualize note relationships,
+      and use scripting for automation.
+  - title: Import and Export
+    description: Import notes from Evernote and Markdown, and export notes for
+      backup or migration.
+  - title: Web Clipper
+    description: Save web content easily with the built-in web clipper.
+features:
+  - title: Hierarchical Note Organization
+    description: Arrange notes into a tree structure for easy organization and navigation.
+  - title: Rich WYSIWYG Editing
+    description: Edit notes with a powerful WYSIWYG editor, including support for
+      tables, images, and math equations.
+  - title: Fast Navigation and Search
+    description: Quickly navigate between notes, perform full-text searches, and
+      hoist notes for focus.
+  - title: Synchronization
+    description: Sync notes with a self-hosted server for access from any device.
+  - title: Note Versioning
+    description: Keep track of note revisions and easily revert to previous versions.
+  - title: Note Attributes
+    description: Use note attributes for organization, querying, and advanced scripting.
+  - title: Sharing and Encryption
+    description: Share notes publicly and encrypt them for privacy and security.
+  - title: Visualizations and Scripting
+    description: Create relation maps and link maps to visualize note relationships,
+      and use scripting for automation.
+  - title: Import and Export
+    description: Import notes from Evernote and Markdown, and export notes for
+      backup or migration.
+  - title: Web Clipper
+    description: Save web content easily with the built-in web clipper.
+tags:
+  - Notes
