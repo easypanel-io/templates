@@ -30,7 +30,7 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: ${input.ocisDomain},
+          host: input.ocisDomain,
           port: 9200,
         },
       ],
@@ -114,7 +114,7 @@ export function generate(input: Input): Output {
         },
         domains: [
           {
-            host: ${input.onlyofficeDomain},
+            host: input.onlyofficeDomain,
             port: 9200,
           },
         ],
@@ -146,7 +146,7 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: ${input.wopiDomain},
+          host: input.wopiDomain,
           port: 8880,
         },
       ],
