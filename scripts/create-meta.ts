@@ -89,15 +89,57 @@ async function downloadImage(url: string, filename: string): Promise<void> {
   });
 }
 
+function validateMemory(input: string): string {
+  const regex = /^(?:\d+(?:\.\d+)?\s*GB|\d+(?:\.\d+)?\s*MB)$/i;
+  if (!regex.test(input)) {
+    return "Please enter memory in the format 'X.XX GB' or 'X.XX MB'.";
+  }
+  return input;
+}
+
 async function promptUser() {
   let metaYaml = "";
   const name = readlineSync.question("Enter project name: ");
 
   const sanitizedName = name.toLowerCase().replace(/[^a-z0-9]/g, "");
 
+  const licenseOptions = [
+    "MIT",
+    "Apache 2.0",
+    "GNU GPL v3.0",
+    "BSD 2-Clause",
+    "BSD 3-Clause",
+    "ISC",
+    "Unlicense",
+    "Other",
+  ];
+
+  const licenseIndex = readlineSync.keyInSelect(
+    licenseOptions,
+    'Select open-source license (Press "0" for Other)',
+    { cancel: "Other" }
+  );
+
+  let license = "";
+
+  if (licenseIndex !== -1) {
+    if (licenseIndex === licenseOptions.length - 1) {
+      license = readlineSync.question("Enter custom license: ");
+    } else {
+      license = licenseOptions[licenseIndex];
+    }
+  }
+
   const description = readlineSync.question("Enter project description: ", {
     defaultInput: "",
   });
+  const requiredMinimumMemory = readlineSync.question(
+    "Enter required minimum memory (e.g., '3 GB' or '2048 MB'): ",
+    {
+      limit: validateMemory,
+      limitMessage: "Invalid input format. Please enter memory in GB or MB.",
+    }
+  );
   const instructions = readlineSync.question("Enter instructions: ", {
     defaultInput: "null",
   });
@@ -141,7 +183,9 @@ async function promptUser() {
 
   metaYaml += `
 name: ${name}
+license: ${license}
 description: ${description}
+requiredMinimumMemory: ${requiredMinimumMemory}
 instructions: ${instructions}
 changeLog:
   - date: ${changelogDate}
