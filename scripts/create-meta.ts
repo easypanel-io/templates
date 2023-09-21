@@ -1,3 +1,5 @@
+import axios from "axios";
+import { createWriteStream } from "fs";
 import { mkdir, writeFile } from "fs/promises";
 import * as readlineSync from "readline-sync";
 
@@ -70,6 +72,23 @@ function validateUrl(url: string): string {
   return url;
 }
 
+async function downloadImage(url: string, filename: string): Promise<void> {
+  const response = await axios({
+    method: "get",
+    url: url,
+    responseType: "stream",
+  });
+
+  const writer = createWriteStream(filename);
+
+  response.data.pipe(writer);
+
+  return new Promise((resolve, reject) => {
+    writer.on("finish", resolve);
+    writer.on("error", reject);
+  });
+}
+
 async function promptUser() {
   let metaYaml = "";
   const name = readlineSync.question("Enter project name: ");
@@ -82,6 +101,12 @@ async function promptUser() {
   const instructions = readlineSync.question("Enter instructions: ", {
     defaultInput: "null",
   });
+  const logoUrl = validateUrl(
+    readlineSync.question("Enter logo URL (blank for none): ")
+  );
+  const screenshotUrl = validateUrl(
+    readlineSync.question("Enter screenshot URL (blank for none): ")
+  );
   const today = new Date();
   const changelogDate = today.toISOString().split("T")[0];
   const websiteUrl = validateUrl(
@@ -192,6 +217,26 @@ schema:
     console.log("meta.yaml created successfully!");
   } catch (error) {
     console.error("Error writing file: ", error);
+  }
+
+  try {
+    await mkdir(`templates/${sanitizedName}/assets`);
+    console.log(`${sanitizedName} assets folder created successfully!`);
+  } catch (error) {
+    console.error("Error creating assets directory: ", error);
+    return;
+  }
+
+  if (logoUrl) {
+    const logoFilename = `templates/${sanitizedName}/assets/logo.png`;
+    await downloadImage(logoUrl, logoFilename);
+    console.log(`Logo downloaded and saved as ${logoFilename}`);
+  }
+
+  if (screenshotUrl) {
+    const screenshotFilename = `templates/${sanitizedName}/assets/screenshot.png`;
+    await downloadImage(screenshotUrl, screenshotFilename);
+    console.log(`Screenshot downloaded and saved as ${screenshotFilename}`);
   }
 }
 
