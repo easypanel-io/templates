@@ -1,0 +1,47 @@
+name: Komiser
+description: Komiser is an open-source cloud cost optimization and monitoring tool designed to help individuals and organizations manage their cloud resources effectively. It provides insights and recommendations to optimize costs, enhance resource utilization, and improve overall efficiency within cloud environments.
+instructions: null
+changeLog:
+  - date: 2023-9-21
+    description: first release
+links:
+  - label: Website
+    url: https://www.komiser.io/
+  - label: Documentation
+    url: https://docs.komiser.io/
+  - label: Github
+    url: https://github.com/tailwarden/komiser
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - sshPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gogs
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gogs/gogs:0.13.0
+    sshPort:
+      type: number
+      title: SSH Port
+      default: 2222
+benefits:
+  - title: TODO
+    description: TODO
+features:
+  - title: TODO
+    description: TODO
+tags:
+  - Cloud Environment Inspector
