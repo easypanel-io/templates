@@ -11,6 +11,7 @@
     "prettier": "prettier --write .",
     "watch-templates": "nodemon",
     "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
+    "create-meta": "ts-node -r tsconfig-paths/register ./scripts/create-meta.ts",
     "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "check-for-updates": "ts-node -r tsconfig-paths/register ./scripts/check-for-updates.ts",
     "move-docs": "rm -rf ../website/docs/05-templates/* && cp -r ./docs/* ../website/docs/05-templates/"
@@ -32,6 +33,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "readline-sync": "^1.4.10",
     "yaml": "^2.1.1",
     "zod": "^3.14.4"
   },
