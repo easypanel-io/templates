@@ -1,0 +1,55 @@
+name: Trudesk
+description: Trudesk is a versatile open-source helpdesk and customer support platform designed to streamline and enhance customer service operations. With a focus on simplicity, efficiency, and collaboration, Trudesk provides businesses with a powerful toolset to manage customer inquiries, tickets, and communication seamlessly.
+instructions: null
+changeLog:
+  - date: 2023-9-21
+    description: first release
+links:
+  - label: Website
+    url: https://trudesk.io/
+  - label: Github
+    url: https://github.com/polonel/trudesk
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - defaultLocale
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    defaultLocale:
+      type: string
+      title: Default Locale
+      default: en
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chatwoot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chatwoot/chatwoot:v2.17.1
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: chatwoot-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: chatwoot-redis
+benefits:
+  - title: TODO
+    description: TODO
+features:
+  - title: TODO
+    description: TODO
+tags:
+  - TODO
