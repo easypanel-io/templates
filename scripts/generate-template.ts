@@ -167,6 +167,12 @@ async function promptUser() {
   const contributorUrl = validateUrl(
     readlineSync.question("Enter contributor URL: ")
   );
+  const servicePort = readlineSync.question(
+    "Enter service port (default: 80): ",
+    {
+      defaultInput: "80",
+    }
+  );
   const appServiceName = readlineSync.question(
     "Enter app service name for schema: ",
     { defaultInput: "answer" }
@@ -254,11 +260,48 @@ schema:
     return;
   }
 
-  const nameForFile = `templates/${sanitizedName}/meta.yaml`;
+  try {
+    await writeFile(`templates/${sanitizedName}/meta.yaml`, metaYaml);
+    console.log("meta.yaml created successfully!");
+  } catch (error) {
+    console.error("Error writing file: ", error);
+  }
+
+  const indexTs = `
+export function generate(input: Input): Output {
+  const services: Services = [];
+
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.appServiceName,
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: ${servicePort},
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/data",
+        },
+      ],
+    },
+  });
+
+  return { services };
+  `;
 
   try {
-    await writeFile(nameForFile, metaYaml);
-    console.log("meta.yaml created successfully!");
+    await writeFile(`templates/${sanitizedName}/index.ts`, indexTs);
+    console.log("index.ts created successfully!");
   } catch (error) {
     console.error("Error writing file: ", error);
   }
