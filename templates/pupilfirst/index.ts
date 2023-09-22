@@ -21,7 +21,7 @@ export function generate(input: Input): Output {
         `RAILS_ENV=production`,
         `RAILS_LOG_TO_STDOUT=true`,
         `RAILS_SERVE_STATIC_FILES=true`,
-        `ASSET_HOST=${input.assetHost}`,
+        `ASSET_HOST=$(PRIMARY_DOMAIN)`,
         `DATABASE_NAME=$(PROJECT_NAME)`,
         `DATABASE_USERNAME=postgres`,
         `DATABASE_PASSWORD=${databasePassword}`,

@@ -21,9 +21,6 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
-    - assetHost
-    - githubClient
-    - githubSecret
   properties:
     projectName:
       type: string
@@ -40,17 +37,17 @@ schema:
       type: string
       title: Database Service Name
       default: pupilfirst-db
-    assetHost:
-      type: string
-      title: Fully Qualified Domain Name (with https:// or http://)
     defaultSenderEmail:
       type: string
       title: Default Sender Email
+      default: hello@pupilfirst.com
     avaliableLanguage:
       type: string
       title: Avaliable Languages (e.g. en, pt-br)
+      default: en
     defaultLanguage:
       type: string
       title: Default Language (e.g. en)
+      default: en
 tags:
   - Learning Management System
