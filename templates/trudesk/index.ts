@@ -60,7 +60,10 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.searchServiceName,
-      image: "elasticsearch:8.0.0",
+      source: {
+        type: "image",
+        image: "elasticsearch:8.0.0",
+      },
       env: [
         `xpack.security.enabled=false`,
         `xpack.security.http.ssl.enabled=false`,
