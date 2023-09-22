@@ -3,33 +3,6 @@ import { createWriteStream } from "fs";
 import { mkdir, writeFile } from "fs/promises";
 import * as readlineSync from "readline-sync";
 
-interface Item {
-  title: string;
-  description: string;
-}
-
-async function promptItems(category: string): Promise<Item[]> {
-  const items: Item[] = [];
-  let addMore = true;
-
-  console.log(`Enter ${category} (leave title empty to finish):`);
-
-  while (addMore) {
-    const title = readlineSync.question(`Enter ${category} title: `);
-    if (!title) {
-      addMore = false;
-      continue;
-    }
-
-    const description = readlineSync.question(
-      `Enter ${category} description: `
-    );
-    items.push({ title, description });
-  }
-
-  return items;
-}
-
 function promptTags(): string[] {
   const tagOptions = [
     "Analytics",
@@ -152,7 +125,9 @@ async function promptUser() {
   const today = new Date();
   const changelogDate = today.toISOString().split("T")[0];
   const websiteUrl = validateUrl(
-    readlineSync.question("Enter website URL (blank for none): ")
+    readlineSync.question("Enter website URL (required): ", {
+      defaultInput: "https://",
+    })
   );
   const demoUrl = validateUrl(
     readlineSync.question("Enter demo URL (blank for none): ")
@@ -182,9 +157,6 @@ async function promptUser() {
     { defaultInput: "answerdev/answer:1.0.9" }
   );
 
-  const benefits = await promptItems("benefits");
-  const features = await promptItems("features");
-
   const tags = promptTags();
 
   metaYaml += `
@@ -196,11 +168,9 @@ instructions: ${instructions}
 changeLog:
   - date: ${changelogDate}
     description: first release
-links:\n`;
-  if (websiteUrl) {
-    metaYaml += `  - label: Website
+links:
+  - label: Website
     url: ${websiteUrl}\n`;
-  }
   if (demoUrl) {
     metaYaml += `  - label: Demo
     url: ${demoUrl}\n`;
@@ -234,18 +204,6 @@ schema:
       type: string
       title: App Service Image
       default: ${appServiceImage}\n`;
-
-  function appendItems(items: Item[], category: string) {
-    metaYaml += `${category}:\n`;
-    for (const item of items) {
-      metaYaml += `  - title: ${item.title}
-    description: ${item.description}\n`;
-    }
-  }
-
-  appendItems(benefits, "benefits");
-  appendItems(features, "features");
-
   metaYaml += `\ntags:\n`;
 
   for (const tag of tags) {
