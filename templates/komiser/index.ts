@@ -20,6 +20,9 @@ export function generate(input: Input): Output {
           port: 3000,
         },
       ],
+      deploy: {
+        command: "komiser start",
+      },
       mounts: [
         {
           type: "volume",
@@ -30,6 +33,14 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "backup",
           mountPath: "/backup",
+        },
+        {
+          type: "file",
+          content: [
+            "[postgres]",
+            `uri=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
+          ].join("\n"),
+          mountPath: "/data/config.toml",
         },
       ],
     },
