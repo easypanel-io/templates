@@ -62,12 +62,12 @@ async function downloadImage(url: string, filename: string): Promise<void> {
   });
 }
 
-function validateMemory(input: string): string {
+function validateMemory(input: string): boolean {
   const regex = /^(?:\d+(?:\.\d+)?\s*GB|\d+(?:\.\d+)?\s*MB)$/i;
   if (!regex.test(input)) {
-    return "Please enter memory in the format 'X.XX GB' or 'X.XX MB'.";
+    return false;
   }
-  return input;
+  return true;
 }
 
 async function promptUser() {
@@ -110,7 +110,8 @@ async function promptUser() {
     "Enter required minimum memory (e.g., '3 GB' or '2048 MB'): ",
     {
       limit: validateMemory,
-      limitMessage: "Invalid input format. Please enter memory in GB or MB.",
+      limitMessage:
+        "Invalid input format. Please enter memory in the format 'X.XX GB' or 'X.XX MB'.",
     }
   );
   const instructions = readlineSync.question("Enter instructions: ", {
