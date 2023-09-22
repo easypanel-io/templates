@@ -35,5 +35,9 @@ schema:
       type: string
       title: Database Service Name
       default: trudesk-db
+    searchServiceName:
+      type: string
+      title: Elasticsearch Service Name
+      default: trudesk-elastic
 tags:
   - CRM
