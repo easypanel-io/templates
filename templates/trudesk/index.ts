@@ -55,7 +55,22 @@ export function generate(input: Input): Output {
     },
   });
 
-  /* TODO: ADD elasticsearch */
+  services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.searchServiceName,
+      image: "elasticsearch:8.0.0",
+      env: [
+        `xpack.security.enabled=false`,
+        `xpack.security.http.ssl.enabled=false`,
+        `node.name=${input.searchServiceName}`,
+        `cluster.initial_master_nodes==${input.searchServiceName}`,
+        `discovery.seed_hosts=${input.searchServiceName}`,
+        `bootstrap.memory_lock=true`,
+      ],
+    },
+  });
 
   return { services };
 }
