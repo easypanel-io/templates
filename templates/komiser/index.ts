@@ -32,12 +32,15 @@ export function generate(input: Input): Output {
           mountPath: "/backup",
         },
       ],
-      ports: [
-        {
-          published: sshPort,
-          target: 22,
-        },
-      ],
+    },
+  });
+
+  services.push({
+    type: "postgres",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.databaseServiceName,
+      password: databasePassword,
     },
   });
 

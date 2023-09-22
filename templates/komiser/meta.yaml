@@ -20,7 +20,6 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
-    - sshPort
   properties:
     projectName:
       type: string
@@ -28,20 +27,10 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: gogs
+      default: Komiser
     appServiceImage:
       type: string
       title: App Service Image
-      default: gogs/gogs:0.13.0
-    sshPort:
-      type: number
-      title: SSH Port
-      default: 2222
-benefits:
-  - title: TODO
-    description: TODO
-features:
-  - title: TODO
-    description: TODO
+      default: tailwarden/komiser:3.1.0
 tags:
   - Cloud Environment Inspector
