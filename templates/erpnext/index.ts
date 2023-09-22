@@ -76,7 +76,7 @@ do
   fi
 done;
 echo "sites/common_site_config.json found";
-bench new-site frontend --no-mariadb-socket --admin-password=admin --db-root-password=${input.databasePassword} --install-app erpnext --set-default;`,
+bench new-site frontend --no-mariadb-socket --admin-password=admin --db-root-password=${databasePassword} --install-app erpnext --set-default;`,
       },
       mounts: [
         {
