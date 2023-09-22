@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         `NODE_ENV=production`,
         `TRUDESK_DOCKER=true `,
         `TD_MONGODB_SERVER=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017`,
-        `ELATICSEARCH_URI=http://elasticsearch:9200`,
+        `ELATICSEARCH_URI=http://$(PROJECT_NAME)_${input.searchServiceName}:9200`,
       ].join("\n"),
       source: {
         type: "image",
