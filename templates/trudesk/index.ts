@@ -68,7 +68,7 @@ export function generate(input: Input): Output {
         `cluster.initial_master_nodes==${input.searchServiceName}`,
         `discovery.seed_hosts=${input.searchServiceName}`,
         `bootstrap.memory_lock=true`,
-      ],
+      ].join("\n"),
     },
   });
 
