@@ -22,10 +22,6 @@ schema:
     - appServiceImage
     - databaseServiceName
     - redisServiceName
-    - emailNoReply
-    - emailHost
-    - emailUsername
-    - emailPassword
   properties:
     projectName:
       type: string
@@ -46,17 +42,5 @@ schema:
       type: string
       title: Redis Service Name
       default: erpnext-redis
-    emailNoReply:
-      type: string
-      title: No Reply Email
-    emailHost:
-      type: string
-      title: Email Host
-    emailUsername:
-      type: string
-      title: Email Username
-    emailPassword:
-      type: string
-      title: Email Password
 tags:
   - Enterprise Resource Planning
