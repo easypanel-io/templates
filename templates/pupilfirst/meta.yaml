@@ -21,7 +21,7 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
-    - redisServiceName
+    - assetHost
     - githubClient
     - githubSecret
   properties:
@@ -31,30 +31,26 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: octobox
+      default: pupilfirst
     appServiceImage:
       type: string
       title: App Service Image
-      default: octoboxio/octobox:ruby-3
+      default: pupilfirst/pupilfirst:2023.4
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: octobox-db
-    redisServiceName:
+      default: pupilfirst-db
+    assetHost:
       type: string
-      title: Database Service Name
-      default: octobox-redis
-    githubClient:
+      title: Fully Qualified Domain Name (with https:// or http://)
+    defaultSenderEmail:
       type: string
       title: Github Client ID
-    githubSecret:
+    avaliableLanguage:
       type: string
-      title: Github Client Secret
-benefits:
-  - title: TODO
-    description: TODO
-features:
-  - title: TODO
-    description: TODO
+      title: Avaliable Languages (e.g. en, pt-br)
+    defaultLanguage:
+      type: string
+      title: Default Language (e.g. en)
 tags:
   - Learning Management System

@@ -3,8 +3,8 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const secretkey = randomString(64);
   const databasePassword = randomPassword();
-  const redisPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -12,15 +12,19 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `RAILS_ENV=development`,
-        `GITHUB_CLIENT_ID=${input.githubClient}`,
-        `GITHUB_CLIENT_SECRET=${input.githubSecret}`,
-        `OCTOBOX_DATABASE_NAME=$(PROJECT_NAME)`,
-        `OCTOBOX_DATABASE_USERNAME=postgres`,
-        `OCTOBOX_DATABASE_PASSWORD=${databasePassword}`,
-        `OCTOBOX_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
-        `ALLOW_ALL_HOSTNAMES=true`,
+        `SECRET_KEY_BASE=${secretkey}`,
+        `RAILS_ENV=production`,
+        `RAILS_LOG_TO_STDOUT=true`,
+        `RAILS_SERVE_STATIC_FILES=true`,
+        `ASSET_HOST=${input.assetHost}`,
+        `DATABASE_NAME=$(PROJECT_NAME)`,
+        `DATABASE_USERNAME=postgres`,
+        `DATABASE_PASSWORD=${databasePassword}`,
+        `DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `DATABASE_URL=postgresql://${DATABASE_USERNAME}:${DATABASE_PASSWORD}@${DATABASE_HOST}:5432/${DATABASE_NAME}?sslmode=require`,
+        `DEFAULT_SENDER_EMAIL_ADDRESS=${input.defaultSenderEmail}`,
+        `I18N_AVAILABLE_LOCALES=${input.avaliableLanguage}`,
+        `I18N_DEFAULT_LOCALE=${input.defaultLanguage}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -41,15 +45,6 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
-    },
-  });
-
-  services.push({
-    type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: redisPassword,
     },
   });
 
