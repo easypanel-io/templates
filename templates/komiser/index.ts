@@ -3,6 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const databasePassword = randomPassword();
 
   services.push({
     type: "app",
