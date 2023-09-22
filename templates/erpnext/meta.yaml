@@ -33,19 +33,19 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: weblate
+      default: erpnext
     appServiceImage:
       type: string
       title: App Service Image
-      default: weblate/weblate:4.16.2-1
+      default: frappe/bench:14
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: weblate-db
+      default: erpnext-db
     redisServiceName:
       type: string
       title: Redis Service Name
-      default: weblate-redis
+      default: erpnext-redis
     emailNoReply:
       type: string
       title: No Reply Email
@@ -58,11 +58,5 @@ schema:
     emailPassword:
       type: string
       title: Email Password
-benefits:
-  - title: TODO
-    description: TODO
-features:
-  - title: TODO
-    description: TODO
 tags:
   - Enterprise Resource Planning
