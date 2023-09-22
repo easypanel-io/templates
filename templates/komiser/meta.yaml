@@ -36,6 +36,6 @@ schema:
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: postgres:16
+      default: komiser-db
 tags:
   - Cloud Environment Inspector
