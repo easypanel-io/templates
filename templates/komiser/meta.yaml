@@ -20,6 +20,7 @@ schema:
     - projectName
     - appServiceName
     - appServiceImage
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -32,5 +33,9 @@ schema:
       type: string
       title: App Service Image
       default: tailwarden/komiser:3.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: postgres:16
 tags:
   - Cloud Environment Inspector
