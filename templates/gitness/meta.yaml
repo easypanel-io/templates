@@ -1,0 +1,36 @@
+name: Gitness
+description: Harness/Gitness is a tool that helps developers test their code more effectively. It provides a way to automatically generate test cases from a Git repository. This can save developers a lot of time and effort, as they no longer need to manually create test cases for each change they make to their code. Harness/Gitness works by analyzing the code in a Git repository to identify potential test cases. It then generates these test cases in a variety of formats, including Python, Java, and JavaScript. Developers can then run these test cases to verify that their code works as expected.
+instructions: null
+changeLog:
+  - date: 2023-09-25
+    description: first release
+links:
+  - label: Website
+    url: https://gitness.com
+  - label: Documentation
+    url: https://docs.gitness.com
+  - label: GitHub
+    url: https://github.com/harness
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gitness
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: harness/gitness:release-19
+tags:
+  - Code Repository
