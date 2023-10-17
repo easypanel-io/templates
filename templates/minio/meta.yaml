@@ -1,0 +1,34 @@
+name: MinIO
+description: MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.
+instructions: Check the environment tab for your login credentials
+changeLog:
+  - date: 2023-2-27
+    description: first release
+links:
+  - label: Website
+    url: https://min.io
+  - label: Documentation
+    url: https://min.io/docs
+  - label: Github
+    url: hhttps://github.com/minio/minio
+contributors:
+  - name: Supernova3339
+    url: https://github.com/Supernova3339
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: minio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bitnami/minio:2022.12.12
