@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
+        `PUBLIC_URL=https://$(EASYPANEL_DOMAIN)/`,
         `KEY=${appKey}`,
         `SECRET=${appSecret}`,
         `DB_CLIENT=${input.databaseType}`,
@@ -30,7 +31,7 @@ export function generate(input: Input): Output {
         `DB_PASSWORD=${databasePassword}`,
         `CACHE_ENABLED=true`,
         `CACHE_STORE=redis`,
-        `CACHE_REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),
