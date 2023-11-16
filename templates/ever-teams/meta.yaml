@@ -1,0 +1,84 @@
+name: Ever Teams
+description: Ever Teams is a powerful and flexible work and project management
+  platform that can help teams of all sizes to improve their productivity,
+  collaboration, and visibility. It is also highly customizable and can be integrated
+  with a variety of third-party tools. If you are looking for a work and project management
+  platform that can help your team to achieve its goals, then Ever Teams is a great option.
+instructions: null
+changeLog:
+  - date: 2023-10-21
+    description: first release
+links:
+  - label: Demo
+    url: https://www.adminer.org/
+  - label: Github
+    url: https://github.com/ever-co/ever-teams
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ever-teams
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: everco/ever-teams-webapp:latest
+benefits:
+  - title: Increased transparency
+    description:
+      Ever Teams provides real-time visibility into project progress and team performance.
+      This can help to identify potential problems early on and take corrective action.
+  - title: Reduced risk
+    description:
+      Ever Teams can help to reduce risk by providing a centralized platform for managing project risks.
+      This can help to identify and mitigate potential risks before they cause problems.
+  - title: Enhanced decision-making
+    description:
+      Ever Teams provides a number of features to help teams make better decisions,
+      such as reporting and analytics. This can help to identify trends and patterns
+      that can be used to improve team performance.
+features:
+  - title: Create comprehensive tasks
+    description: Clearly define tasks with detailed descriptions, deadlines,
+      and priorities to ensure everyone is on the same page.
+  - title: Assign tasks effectively
+    description: Assign tasks to specific team members,
+      ensuring accountability and clear ownership of responsibilities.
+  - title: Track task progress
+    description: Monitor the progress of each task, identifying any potential roadblocks or delays early on.
+  - title: Manage task dependencies
+    description:
+      Set dependencies between tasks to ensure they are completed in the correct order,
+      preventing bottlenecks and maintaining project flow.
+  - title: Visualize task progress
+    description: View tasks in a convenient list, Kanban board, or calendar view, allowing you to easily grasp project progress.
+  - title: Create team member profiles
+    description: Create and manage profiles for all team members,
+      including their contact information, roles, and responsibilities.
+  - title: Assign roles and permissions
+    description: Assign roles and permissions to team members to control access to different features and data within Ever Teams.
+  - title: Set goals and track progress
+    description: Set individual goals and track progress for each team member, promoting accountability and fostering a culture of continuous improvement.
+  - title: Log time effectively
+    description: Easily track the time you dedicate to specific tasks, projects, and team activities using a user-friendly interface.
+  - title: Identify areas for improvement
+    description: Analyze time usage patterns to identify areas where you can optimize your time management and boost team productivity.
+  - title: Set time estimates
+    description: Set realistic time estimates for tasks and projects to better plan and manage your workload.
+  - title: Analyze team performance
+    description: Gain insights into team performance by generating detailed team reports, including individual contributions and overall productivity metrics.
+tags:
+  - Task Management
+  - Team Management
+  - Collaboration Board
+  - Video Calling
+  - Communication
+  - Productivity Tools
