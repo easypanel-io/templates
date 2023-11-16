@@ -32,6 +32,25 @@ schema:
       type: string
       title: App Service Image
       default: everco/ever-teams-webapp:latest
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      default: noreply@ever.team
+    smtpHost:
+      type: string
+      title: SMTP Host
+    smtpPort:
+      type: string
+      title: SMTP Port
+    smtpSecure:
+      type: string
+      title: SMTP Secure
+    smtpUsername:
+      type: string
+      title: SMTP Username
+    smtpPassword:
+      type: string
+      title: SMTP Password
 benefits:
   - title: Streamlined task and project management
     description:
