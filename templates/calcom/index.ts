@@ -14,6 +14,11 @@ export function generate(input: Input): Output {
     `NEXTAUTH_SECRET=${btoa(randomString(32))}`,
     `CALENDSO_ENCRYPTION_KEY=${btoa(randomString(24))}`,
     `NEXT_PUBLIC_WEBAPP_URL=https://$(PRIMARY_DOMAIN)`,
+    `#EMAIL_SERVER_HOST=smtp.example.org`,
+    `#EMAIL_SERVER_PORT=25`,
+    `#EMAIL_SERVER_USER=`,
+    `#EMAIL_SERVER_PASSWORD=`,
+    `#EMAIL_FROM=no-reply@example.org`,
   ];
 
   if (input.enableStudio) {
