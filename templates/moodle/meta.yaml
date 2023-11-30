@@ -1,0 +1,61 @@
+name: Moodle
+description: Moodle is a learning platform designed to provide educators,
+  administrators and learners with a single robust, secure and integrated
+  system to create personalised learning environments.
+instructions: null
+changeLog:
+  - date: 2023-11-30
+    description: first release
+links:
+  - label: Website
+    url: https://moodle.org/
+  - label: Documentation
+    url: https://docs.moodle.org/
+  - label: Dockerfile
+    url: https://github.com/ulties/moodle-docker
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+    - moodleDomain
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+      default: moodle
+    moodleDomain:
+      type: string
+      title: Moodle Domain
+      default: moodle.example.com
+benefits:
+  - title: Customization and Flexibility
+    description: Moodle is highly customizable, allowing educators to tailor
+      the learning environment to meet specific educational needs. Its modular
+      nature supports the inclusion of plugins for various functionalities,
+      making it adaptable for different teaching and learning styles.
+  - title: Collaborative Learning
+    description: Moodle facilitates collaborative learning through its
+      interactive tools like forums, wikis, and chats. These features enable
+      students to work together on projects, share ideas, and discuss course
+      materials, fostering a community learning environment.
+features:
+  - title: Wide Range of Activity Modules
+    description: Moodle includes a variety of activity modules such as quizzes,
+      forums, and databases, which can be used to build rich, interactive courses.
+      These tools help in assessing student understanding and promoting engagement.
+  - title: Comprehensive Reporting and Tracking
+    description: Moodle provides detailed tracking and reporting features that
+      allow educators to monitor student progress and activity. Teachers can track
+      course completions, quiz attempts, and other student engagements, which is
+      vital for evaluating the effectiveness of the course content.
+  - title: Multilingual Support
+    description: Moodle supports multiple languages, making it a suitable platform
+      for global use. This feature is particularly beneficial for institutions with
+      a diverse student body or those offering courses in multiple languages.
+tags:
+  - E-Learning
+  - LMS
+  - Education
