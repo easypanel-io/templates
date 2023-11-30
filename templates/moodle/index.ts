@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         type: "github",
         owner: "ulties",
         repo: "moodle-docker",
-        ref: "main",
+        ref: "v4.3.0",
         path: "/",
         autoDeploy: false,
       },
