@@ -1,0 +1,75 @@
+name: Minio
+description: Minio is an open-source object storage server compatible with
+  Amazon S3 APIs. It's designed for high-performance and scalable private
+  cloud storage. With Minio, you can store photos, videos, log files,
+  backups, and container / VM images. It offers features like high
+  availability and durability, and it's perfect for use cases such as data
+  lakes, data analysis, backup and archival, and disaster recovery.
+instructions: To access the Minio dashboard, navigate to the Minio domain
+  specified in your EasyPanel configuration. Use the MINIO_ROOT_USER and
+  MINIO_ROOT_PASSWORD environment variables to log in.
+changeLog:
+  - date: 2023-11-30
+    description: Initial Release
+links:
+  - label: Website
+    url: https://min.io
+  - label: Docs
+    url: https://docs.min.io
+  - label: Github
+    url: https://github.com/minio/minio
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+    - serverDomain
+    - clientDomain
+    - rootUser
+    - rootPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    serverDomain:
+      type: string
+      title: Minio Server Domain
+      default: api-minio.example.com
+    clientDomain:
+      type: string
+      title: Minio Client Domain
+      default: minio.example.com
+    rootUser:
+      type: string
+      title: Minio Root Username
+      default: root
+    rootPassword:
+      type: string
+      title: Minio Root Password
+      default: password
+benefits:
+  - title: Scalable Cloud Storage
+    description: Minio provides a robust and scalable solution for your private
+      cloud storage needs, making it ideal for a variety of applications.
+  - title: S3 Compatibility
+    description: Fully compatible with Amazon S3 APIs, Minio ensures seamless
+      integration with a broad range of applications and services.
+  - title: Secure and Private
+    description: With Minio, you have complete control over your data, ensuring a
+      secure and private storage solution.
+features:
+  - title: High Performance
+    description: Minio is designed for high-performance use cases, efficiently
+      handling large volumes of data.
+  - title: Easy to Use
+    description: The intuitive user interface and simple configuration process
+      make Minio easy to set up and manage.
+  - title: Open Source
+    description: As an open-source solution, Minio offers flexibility and freedom
+      from vendor lock-in, with an active community for support and development.
+tags:
+  - Object Storage
+  - S3 Compatible
+  - Open Source
