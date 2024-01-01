@@ -4,6 +4,7 @@ export const PluginConfigs = {
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
       autoRebuild: true,
+      path: "/backoffice",
     },
   },
   paymentStripe: {
@@ -11,6 +12,15 @@ export const PluginConfigs = {
     options: {
       api_key: process.env.STRIPE_API_KEY,
       webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
+    },
+  },
+  paymentPaypal: {
+    resolve: `medusa-payment-paypal`,
+    options: {
+      sandbox: process.env.PAYPAL_SANDBOX,
+      clientId: process.env.PAYPAL_CLIENT_ID,
+      clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+      authWebhookId: process.env.PAYPAL_AUTH_WEBHOOK_ID,
     },
   },
   // https://docs.medusajs.com/plugins/file-service/minio

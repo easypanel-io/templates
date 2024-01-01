@@ -32,6 +32,14 @@ schema:
       type: string
       title: App Service Name
       default: medusa
+    backendServiceName:
+      type: string
+      title: Backend Service Name
+      default: medusa
+    frontendServiceName:
+      type: string
+      title: Frontend Service Name
+      default: medusa-storefront
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -48,6 +56,10 @@ schema:
     medusaAdminPassword:
       type: string
       title: Medusa Admin Password
+    medusaDomain:
+      type: string
+      title: Medusa backend domain
+      default: api.example.com
     jwtSecret:
       type: string
       title: JWT Secret
@@ -58,10 +70,58 @@ schema:
       type: string
       title: Admin CORS
       default: http://localhost:3000
+    logLevel:
+      type: string
+      title: Log level
+      default: error
+    enableStorefront:
+      type: boolean
+      title: Deploy storefront
+      default: true
+    storefrontDomain:
+      type: string
+      title: Storefront domain
+      default: example.com
     storefrontCors:
       type: string
       title: Storefront CORS
       default: https://example.com,http://localhost:8000,http://localhost:3000
+    nextPublicMedusaBackendUrl:
+      type: string
+      title: Public Medusa backend Url
+      default: https://api.example.com
+    featureSearchEnabled:
+      type: boolean
+      default: false
+    nextPublicBaseUrl:
+      type: string
+      title: Next Public Base Url
+      default: https://example.com
+    nextPublicStripeKey:
+      type: string
+      title: Next Public Stripe Key
+    nextPublicPaypalClientId:
+      type: string
+      title: Next Public Paypal Client Id
+    nextPublicSearchAppId:
+      type: string
+      title: Next Public Search App Id
+    nextPublicSearchEndpoint:
+      type: string
+      title: Next Public Search Endpoint
+      default: search.example.com
+    nextPublicSearchApiKey:
+      type: string
+      title: Next Public Search Api Key
+    nextPublicIndexName:
+      type: string
+      title: Next Public Stripe Key
+      default: products
+    revalidateSecret:
+      type: string
+      title: Revalidate secret
+      default: supersecret
+
     nodeEnv:
       type: string
       title: Node environment
@@ -94,15 +154,29 @@ schema:
     featureFlagSaleChannels:
       type: boolean
       title: Enable sale channels
-      default: false
+      default: true
 
-    # Admin
+    # Admin
     enableAdminPlugin:
       type: boolean
       title: Enable admin plugin
       default: true
 
-    # Stripe Payments
+    # Paypal Payments
+    paypalSandbox:
+      type: string
+      title: Paypal Sandbox
+    paypalClientId:
+      type: string
+      title: Paypal Client Id
+    paypalClientSecret:
+      type: string
+      title: Paypal Client Secret
+    paypalAuthWebhookId:
+      type: string
+      title: Paypal AuthWebhookId
+
+    # Stripe Payments
     stripeApiKey:
       type: string
       title: Stripe API key
@@ -130,6 +204,14 @@ schema:
       type: string
       title: MinIO volume name
       default: minio
+    minioDomain:
+      type: string
+      title: MinIO Service Domain
+      default: minio.example.com
+    minioConsoleDomain:
+      type: string
+      title: MinIO Console Domain
+      default: minio-console.example.com
     minioEndpoint:
       type: string
       title: MinIO endpoint
@@ -146,14 +228,18 @@ schema:
     minioRootUser:
       type: string
       title: MinIO root user
-      default: admin@example.com
+      default: myminioadmin
     minioRootPassword:
       type: string
       title: MinIO root password
-      default: supersecret
+      default: minio-secret-key-change-me
+    minioServerUrl:
+      type: string
+      title: MinIO Server URL
+      default: https://minio.example.com
 
     # S3 File Storage
-    # yarn add medusa-file-s3
+    # yarn add medusa-file-s3
     s3PluginEnabled:
       type: boolean
       title: S3 plugin enabled
@@ -187,7 +273,7 @@ schema:
     meiliServiceImage:
       type: string
       title: Meilisearch Service Image
-      default: getmeili/meilisearch:v1.2.0
+      default: getmeili/meilisearch:v1.5.1
     meiliVolumeName:
       type: string
       title: Meilisearch Database Volume Name
@@ -221,11 +307,16 @@ schema:
     meiliHost:
       type: string
       title: Meilisearch host
+      default: https://search.example.com
+    searchDomain:
+      type: string
+      title: Meilisearch Service Domain
+      default: search.example.com
     meiliApiKey:
       type: string
       title: Meilisearch API key
 
-    # Notifications: SendGrid
+    # Notifications: SendGrid
     sendgridPluginEnabled:
       type: boolean
       title: SendGrid plugin enabled
