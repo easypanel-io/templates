@@ -9,7 +9,7 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: ["WEBHOOK_URL=$(EASYPANEL_DOMAIN)"].join("\n"),
+      env: ["WEBHOOK_URL=https://$(EASYPANEL_DOMAIN)"].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
