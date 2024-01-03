@@ -54,7 +54,7 @@ schema:
     sidekiqServiceName:
       type: string
       title: Sidekiq Service Name
-      default: sidekiq
+      default: chatwoot-sidekiq
     databaseServiceName:
       type: string
       title: Database Service Name
