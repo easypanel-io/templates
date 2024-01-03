@@ -32,6 +32,7 @@ schema:
     - defaultLocale
     - appServiceName
     - appServiceImage
+    - sidekiqServiceName
     - databaseServiceName
     - redisServiceName
   properties:
@@ -49,7 +50,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chatwoot/chatwoot:v2.17.1
+      default: chatwoot/chatwoot:v3.4.0
+    sidekiqServiceName:
+      type: string
+      title: Sidekiq Service Name
+      default: sidekiq
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -65,12 +70,14 @@ benefits:
       It provides a streamlined platform for handling customer queries, ensuring
       quick responses and high productivity.
   - title: Multi-Channel Support
-    description: With Chatwoot, businesses can stay connected with their customers
+    description:
+      With Chatwoot, businesses can stay connected with their customers
       across various platforms including email, Facebook, Instagram, Line, SMS,
       Telegram, Twitter, and WhatsApp. This ensures a seamless customer
       experience, regardless of the communication channel.
   - title: Real-Time Insights
-    description: Chatwoot provides real-time insights into your conversations and
+    description:
+      Chatwoot provides real-time insights into your conversations and
       agent performance. It allows businesses to track their customer
       satisfaction score on autopilot, ensuring continuous improvement in
       customer service.
@@ -92,11 +99,13 @@ features:
       conversations, providing quick responses to customer queries and improving
       agent productivity.
   - title: Mobile Apps
-    description: Stay connected with your customers on the go with Chatwoot's mobile
+    description:
+      Stay connected with your customers on the go with Chatwoot's mobile
       apps. It ensures uninterrupted customer service, regardless of your
       location.
   - title: Integrations
-    description: Chatwoot can be integrated with various platforms including Slack,
+    description:
+      Chatwoot can be integrated with various platforms including Slack,
       Dialogflow, and more. This allows businesses to extend Chatwoot's
       functionalities for back-office operations and other use cases.
 tags:

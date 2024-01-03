@@ -65,6 +65,39 @@ export function generate(input: Input): Output {
   });
 
   services.push({
+    type: "app",
+    data: {
+      projectName: input.projectName,
+      serviceName: input.sidekiqServiceName,
+      env: [
+        `SECRET_KEY_BASE=${secretkey}`,
+        `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
+        `DEFAULT_LOCALE=${input.defaultLocale}`,
+        `FORCE_SSL=true`,
+        `ENABLE_ACCOUNT_SIGNUP=true`,
+        `REDIS_URL=redis://default@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `REDIS_PASSWORD=${randomPasswordRedis}`,
+        `REDIS_OPENSSL_VERIFY_MODE=none`,
+        `POSTGRES_DATABASE=$(PROJECT_NAME)`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `POSTGRES_USERNAME=postgres`,
+        `POSTGRES_PASSWORD=${randomPasswordPostgres}`,
+        `RAILS_MAX_THREADS=5`,
+        `NODE_ENV=production`,
+        `RAILS_ENV=production`,
+        `INSTALLATION_ENV=docker`,
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      deploy: {
+        command: "bundle exec sidekiq -C config/sidekiq.yml",
+      },
+    },
+  });
+
+  services.push({
     type: "redis",
     data: {
       projectName: input.projectName,
