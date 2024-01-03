@@ -9,6 +9,11 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
+      env: [
+        "MINIO_SERVER_URL=https://$(EASYPANEL_DOMAIN)",
+        `MINIO_ROOT_USER=${input.username}`,
+        `MINIO_ROOT_PASSWORD=${input.password}`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -17,31 +22,23 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/config",
-        },
-        {
-          type: "file",
-          content: [
-            "default_config:",
-            "",
-            "frontend:",
-            "  themes: !include_dir_merge_named themes",
-            "",
-            "http:",
-            "  use_x_forwarded_for: true",
-            "  trusted_proxies:",
-            "    - 10.0.0.0/8",
-            "",
-          ].join("\n"),
-          mountPath: "/config/configuration.yaml",
+          mountPath: "/data",
         },
       ],
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 8123,
+          port: 9001,
+          path: "/console",
+        },
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 9000,
         },
       ],
+      deploy: {
+        command: `minio server /data --console-address ":9001"`,
+      },
     },
   });
 
