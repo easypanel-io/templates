@@ -1,7 +1,6 @@
 import { randomBytes } from "crypto";
 import { Output, Services, randomPassword } from "~templates-utils";
 import { Input } from "./meta";
-// import { PluginConfigs } from "./plugins-config";
 
 const PluginConfigs = {
   adminPlugin: {
@@ -46,9 +45,9 @@ const PluginConfigs = {
     options: {
       s3_url: process.env.S3_URL,
       bucket: process.env.S3_BUCKET,
-      // aws_config_object: {
-      //  customUserAgent: process.env.S3_CUSTOM_AGENT,
-      // },
+      aws_config_object: {
+        customUserAgent: process.env.S3_CUSTOM_AGENT,
+      },
       region: process.env.S3_REGION,
       access_key_id: process.env.S3_ACCESS_KEY_ID,
       secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
@@ -56,9 +55,8 @@ const PluginConfigs = {
   },
   // yarn add medusa-plugin-meilisearch
   pluginMeilisearch: {
-    resolve: "medusa-plugin-meilisearch",
+    resolve: `medusa-plugin-meilisearch`,
     options: {
-      // other options...
       config: {
         host: process.env.MEILISEARCH_HOST,
         apiKey: process.env.MEILISEARCH_API_KEY,
@@ -68,6 +66,7 @@ const PluginConfigs = {
           indexSettings: {
             searchableAttributes: ["title", "description", "variant_sku"],
             displayedAttributes: [
+              "id",
               "title",
               "description",
               "variant_sku",
@@ -76,10 +75,6 @@ const PluginConfigs = {
             ],
           },
           primaryKey: "id",
-          transformer: (product) => ({
-            id: product.id,
-            // other attributes...
-          }),
         },
       },
     },
@@ -311,6 +306,10 @@ export function generate(input: Input): Output {
 
     if (input.enableStorefront) {
       const _StorefrontVariables = [
+        `NIXPACKS_INSTALL_CMD=${input.featureSearchEnabled || "yarn"}`,
+        `NIXPACKS_BUILD_CMD=${input.featureSearchEnabled || "yarn build"}`,
+        `NIXPACKS_START_CMD=${input.featureSearchEnabled || "yarn start"}`,
+        `NIXPACKS_NODE_VERSION=${input.featureSearchEnabled || "18"}`,
         `NEXT_PUBLIC_MEDUSA_BACKEND_URL=${
           input.nextPublicMedusaBackendUrl || ""
         }`,
@@ -387,11 +386,44 @@ export function generate(input: Input): Output {
     },
   });
 
+  // # Your Medusa backend, should be updated to where you are hosting your server. Remember to update CORS settings for your server. See – https://docs.medusajs.com/usage/configurations#storefront-cors
+  // NEXT_PUBLIC_MEDUSA_BACKEND_URL=https://api.natahome.com
+
+  // # Your store URL, should be updated to where you are hosting your storefront.
+  // NEXT_PUBLIC_BASE_URL=http://localhost:8000
+
+  // # Posgres URL for your Medusa DB for the Product Module. See - https://docs.medusajs.com/modules/products/serverless-module
+  // POSTGRES_URL=postgres://postgres:postgres@localhost:5432/medusa
+
+  // # Your Stripe public key. See – https://docs.medusajs.com/add-plugins/stripe
+  // NEXT_PUBLIC_STRIPE_KEY=
+
+  // # Your PayPal Client ID. See – https://docs.medusajs.com/add-plugins/paypal
+  // NEXT_PUBLIC_PAYPAL_CLIENT_ID=
+
+  // # Your MeiliSearch / Algolia keys. See – https://docs.medusajs.com/add-plugins/meilisearch or https://docs.medusajs.com/add-plugins/algolia
+  // NEXT_PUBLIC_SEARCH_APP_ID=
+  // NEXT_PUBLIC_SEARCH_ENDPOINT=https://search.natahome.com
+  // NEXT_PUBLIC_SEARCH_API_KEY=
+  // NEXT_PUBLIC_INDEX_NAME=products
+
+  // # Your Next.js revalidation secret. See – https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#on-demand-revalidation
+  // REVALIDATE_SECRET=supersecret
+
   const storefrontConfig = {
     features: {
       search: true,
     },
   };
+  const envFileContent = [];
+  envFileContent.push(
+    `NEXT_PUBLIC_MEDUSA_BACKEND_URL=${input.nextPublicMedusaBackendUrl}`
+  );
+  envFileContent.push(`NEXT_PUBLIC_BASE_URL=${input.nextPublicBaseUrl}`);
+  envFileContent.push(`NEXT_PUBLIC_BASE_URL=${input.nextPublicBaseUrl}`);
+  envFileContent.push(`NEXT_PUBLIC_BASE_URL=${input.nextPublicBaseUrl}`);
+  envFileContent.push(`POSTGRES_URL=${input}`);
+  envFileContent.push(`NEXT_PUBLIC_BASE_URL=${input.nextPublicBaseUrl}`);
 
   services.push({
     type: "app",
@@ -428,6 +460,11 @@ export function generate(input: Input): Output {
           type: "file",
           content: JSON.stringify(storefrontConfig, null, " "),
           mountPath: "/app/store-config.js",
+        },
+        {
+          type: "file",
+          content: JSON.stringify(storefrontConfig, null, " "),
+          mountPath: "/app/.env",
         },
       ],
     },
@@ -510,7 +547,7 @@ export function generate(input: Input): Output {
             port: 7700,
           },
           {
-            host: input.searchDomain,
+            host: input.searchDomain || "search.example.com",
             port: 7700,
           },
         ],
