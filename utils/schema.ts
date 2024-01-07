@@ -29,10 +29,7 @@ export const volumeNameRule = z
     /^[a-z0-9-_]+$/,
     "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
   );
-export const domainRule = z
-  .string()
-  .regex(/^[a-z0-9.-]+$/)
-  .or(z.literal("$(EASYPANEL_DOMAIN)"));
+export const domainRule = z.string().regex(/^[^\s*]+$/);
 export const portRule = z.number().min(0).max(65535);
 export const passwordRule = z.string().default(randomPassword);
 
@@ -164,6 +161,18 @@ export const appDomainsSchema = z
   )
   .default([]);
 
+export const maintenanceSchema = z
+  .object({
+    enabled: z.boolean(),
+    title: z.string().optional(),
+    subtitle: z.string().optional(),
+    customLogo: z.string().optional(),
+    customCss: z.string().optional(),
+    hideLogo: z.boolean().optional(),
+    hideLinks: z.boolean().optional(),
+  })
+  .optional();
+
 export const appSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
@@ -176,53 +185,59 @@ export const appSchema = z.object({
   mounts: appMountsSchema,
   ports: appPortsSchema,
   resources: resourcesSchema,
+  maintenance: maintenanceSchema,
 });
 
 export const mongoSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.string().default("mongo:6"),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mysqlSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.string().default("mysql:8"),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const mariadbSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.string().default("mariadb:11"),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const postgresSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.string().default("postgres:16"),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const redisSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.string().default("redis:7"),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
+  command: z.string().optional(),
 });
 
 export const templateSchema = z.object({

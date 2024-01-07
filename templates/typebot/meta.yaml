@@ -23,6 +23,8 @@ changeLog:
     description: Update to v2.11.4
   - date: 2023-03-22
     description: Update to v2.11.6
+  - date: 2023-07-16
+    description: Update to V2
 links:
   - label: Website
     url: https://typebot.io
@@ -33,6 +35,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -70,15 +74,15 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:2.11.6
+      default: baptistearno/typebot-builder:2
     viewerServiceImage:
       type: string
       title: Viewer Service Image
-      default: baptistearno/typebot-viewer:2.11.6
+      default: baptistearno/typebot-viewer:2
     storageServiceImage:
       type: string
       title: Storage Service Image
-      default: bitnami/minio:2022.12.12
+      default: bitnami/minio:2023
     databaseServiceName:
       type: string
       title: Database Service Name
