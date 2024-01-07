@@ -1,11 +1,28 @@
 name: Coral
-description: Coral improves community on your website through smart technology, effective design, and strategies that work.
+description: Coral is a revolutionary app designed to enhance the commenting
+  experience on your website. It employs smart technology and effective design
+  to improve interactions, making it easier for commenters to engage in
+  meaningful discussions. With Coral, commenters can easily identify journalists
+  in the conversation, mute disruptive voices, share discussions, receive
+  notifications, and see new comment alerts instantly. The app also provides a
+  full suite of tools for moderators to easily identify disruptive comments and
+  highlight the best submissions, all backed by smart AI technology. Coral is
+  built for publishing, increasing loyalty and engagement on your website,
+  giving you complete control of the interactions and data, without inserting
+  any ads or trackers on your page. It's lightweight, secure, flexible,
+  responsive, and fully customizable, allowing you to connect it to your
+  existing registration system and customize the look and feel to match your
+  brand. Coral is used across the globe in nearly 20 countries and 14 languages,
+  in newsrooms large and small, trusted by more than 500 news sites in 28
+  countries, including The Washington Post, The Financial Times, Wired, USA
+  Today, and Foreign Policy.
 instructions: null
 changeLog:
   - date: 2023-2-19
     description: first release
   - date: 2023-06-18
-    description: Fixed bug that prevented the application from working version has been replaced with the current version
+    description: Fixed bug that prevented the application from working version has
+      been replaced with the current version
 links:
   - label: Website
     url: https://coralproject.net/
@@ -51,3 +68,35 @@ schema:
       type: boolean
       title: Metrics Port Enable
       default: false
+benefits:
+  - title: Improved Commenting Experience
+    description: Coral enhances the commenting experience on your website by using
+      smart technology and effective design. It helps to increase loyalty and
+      engagement on your website, giving you complete control of the
+      interactions and data.
+  - title: No Ads or Trackers
+    description: Coral prioritizes user privacy. It does not insert any ads or
+      trackers on your page, making it more secure, faster to load, and
+      transparently better for you and your users.
+  - title: Customizable and Flexible
+    description: Coral is lightweight, secure, flexible, and responsive. You can
+      easily connect it to your existing registration system, fully customize
+      the look and feel, and extend the platform with our GraphQL API.
+features:
+  - title: Smart Commenting Tools
+    description: With Coral, your commenters can identify journalists in the
+      conversation, mute annoying voices, share discussions, receive
+      notifications, and see new comment alerts instantly.
+  - title: Effective Moderation Tools
+    description: Coral provides a full suite of tools that help moderators easily
+      identify disruptive comments and surface the best submissions. These tools
+      are supported by smart AI technology.
+  - title: Built for Publishing
+    description: Coral is designed to increase loyalty and engagement on your
+      website. It gives you complete control of the interactions and data,
+      without inserting any ads or trackers on your page. It also works great on
+      mobile.
+tags:
+  - Communication
+  - Community
+  - Privacy

@@ -1,5 +1,18 @@
 name: Tautuilli
-description: Tautulli is a 3rd party application that you can run alongside your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched.
+description: Tautulli is a powerful web application designed to monitor,
+  analyze, and notify you about your Plex Media Server's activities. It runs
+  alongside your Plex Media Server, tracking a variety of statistics including
+  what has been watched, who watched it, when and where it was watched, and how
+  it was watched. The app presents all these statistics in a clean,
+  user-friendly interface with tables and graphs. Tautulli also allows you to
+  monitor current activity on your Plex Media Server, log watch history for all
+  your users, view streaming trends with intuitive graphs, trigger notifications
+  or scripts from events on your Plex server, and keep track of when content is
+  added to your Plex library. You can also create and send newsletters for
+  recently added media, view and delete all synced content from your server, see
+  detailed information on all of your media, and even download the official app
+  to view activity and stats on the go. Tautulli is compatible with any system
+  that supports python.
 instructions: null
 changeLog:
   - date: 2023-1-26
@@ -30,3 +43,47 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/tautulli:2.11.1
+benefits:
+  - title: Comprehensive Monitoring
+    description: Tautulli provides a complete overview of your Plex Media Server
+      activity. It allows you to keep track of what has been watched, who
+      watched it, when and where they watched it, and how it was watched.
+  - title: Detailed Analytics
+    description: With Tautulli, you can view detailed statistics about your Plex
+      library. The app presents all statistics in a clean and intuitive
+      interface with tables and graphs, making it easy to understand your
+      server's performance.
+  - title: Real-time Notifications
+    description: Tautulli allows you to set up notifications or scripts triggered by
+      events on your Plex server. This feature ensures you are always up-to-date
+      with your server's activity.
+  - title: Content Management
+    description: Tautulli helps you manage your Plex library by keeping track of
+      when content is added. It also allows you to view and delete all synced
+      content from your server.
+features:
+  - title: Monitoring
+    description: Monitor the current activity on your Plex Media Server.
+  - title: Statistics
+    description: View statistics about your Plex library.
+  - title: History
+    description: Log watch history for all your users.
+  - title: Graphs
+    description: View streaming trends with intuitive graphs.
+  - title: Notifications
+    description: Trigger notifications or scripts from events on your Plex server.
+  - title: Recently Added
+    description: Keep track of when content is added to your Plex library.
+  - title: Newsletters
+    description: Create and send newsletters for recently added media.
+  - title: Sync
+    description: View and delete all synced content from your server.
+  - title: Media Info
+    description: See detailed information on all of your media.
+  - title: Cross Platform
+    description: Works on any system that supports python.
+  - title: Tautulli Remote
+    description: Download the official app to view activity and stats on the go.
+tags:
+  - Monitoring
+  - Media

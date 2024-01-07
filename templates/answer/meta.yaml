@@ -1,5 +1,15 @@
 name: Answer
-description: An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+description: Answer is an open-source knowledge-based software designed to
+  facilitate a Q&A environment for your products, customers, teams, and more. It
+  allows users to ask questions and get answers, fostering a dynamic exchange of
+  information. The app features a modern and responsive UI, and it's extensible
+  with plugins. It also offers content organization capabilities, allowing you
+  to categorize and tag your content for easy navigation. Additionally, Answer
+  integrates with your existing tools and services to streamline your workflow.
+  The app also incorporates gamification elements, rewarding users for their
+  contributions, making the process of knowledge sharing more engaging. It's a
+  powerful tool for product technical support, customer support, and user
+  communication.
 instructions: Go to /install and select sqlite database
 changeLog:
   - date: 2022-12-21
@@ -32,3 +42,41 @@ schema:
       type: string
       title: App Service Image
       default: answerdev/answer:1.0.9
+benefits:
+  - title: Knowledge Sharing
+    description: Answer allows you to build a platform where users and team members
+      can share their knowledge and solve problems together. It's a great tool
+      for product technical support, customer support, and user communication.
+  - title: Content Organization
+    description: With Answer, you can easily organize your content into categories
+      and tags, making it easy for others to find the knowledge they need.
+  - title: Integration
+    description: Answer can be integrated with your existing tools and services,
+      improving your workflow and making your other tools better.
+  - title: Gamification
+    description: Answer gamifies the Q&A platform with reputation and badges, making
+      collaboration and work more fun for community members and teams.
+features:
+  - title: Questions and Answers
+    description: Users can ask questions and get answers from other users and your
+      team, fostering a sense of community and shared knowledge.
+  - title: Content Organization
+    description: Organize your content into categories and tags to make it easy for
+      users to find the information they need.
+  - title: Integrations
+    description: Integrate Answer with your existing tools and services to improve
+      your workflow and enhance your other tools.
+  - title: Gamification
+    description: Reward your users for their contributions with a gamified system of
+      reputation and badges.
+  - title: Modern UI
+    description: Answer features a modern and responsive user interface, making it
+      easy and enjoyable to use.
+  - title: Extensibility
+    description: Extend the functionality of Answer with plugins to meet your
+      specific needs.
+tags:
+  - Community
+  - Q&A
+  - Knowledge Base
+  - Support

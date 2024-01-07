@@ -17,23 +17,15 @@ export function generate(input: Input): Output {
         `SUITECRM_DATABASE_USER=mariadb`,
         `SUITECRM_DATABASE_PASSWORD=${mariaPassword}`,
         `SUITECRM_ENABLE_HTTPS=yes`,
+        `SUITECRM_HOST=$(PRIMARY_DOMAIN)`,
+        `SUITECRM_USERNAME=${input.suitecrmUsername || "admin"}`,
+        `SUITECRM_PASSWORD=${input.suitecrmPassword || "admin"}`,
+        `SUITECRM_EMAIL=${input.suitecrmEmail || "admin@example.com"}`,
       ].join("\n"),
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
-        },
-      ],
+      source: { type: "image", image: input.appServiceImage },
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8080 }],
       mounts: [
-        {
-          type: "volume",
-          name: "vendor",
-          mountPath: "/bitnami/suitecrm",
-        },
+        { type: "volume", name: "vendor", mountPath: "/bitnami/suitecrm" },
       ],
     },
   });

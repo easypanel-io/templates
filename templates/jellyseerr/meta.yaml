@@ -1,5 +1,21 @@
 name: Jellyseerr
-description: Jellyseerr is a free and open source software application for managing requests for your media library. It is a a fork of Overseerr built to bring support for Jellyfin & Emby media servers!
+description: Overseerr is a powerful application designed to streamline the
+  process of managing your media library. It offers full Plex integration,
+  allowing you to log in and manage user access with Plex, and syncs with your
+  Plex library to show what titles you already have. The app also integrates
+  with Sonarr and Radarr, with plans for more services in the future. Overseerr
+  features an easy-to-use request system, letting users request individual
+  seasons or movies through a clean, user-friendly interface. The app also
+  boasts a simple request management UI, making it easy to approve recent
+  requests without having to navigate through the app. It also offers a granular
+  permission system and localization into other languages. The mobile-friendly
+  design ensures you can approve requests on the go. Jellyseerr, a fork of
+  Overseerr, extends these features to Jellyfin and Emby media servers, offering
+  full integration with these platforms. It also supports movies, shows, mixed
+  libraries, and allows for easy integration with your existing services.
+  Jellyseerr also offers a customizable request system, a simple request
+  management UI, a granular permission system, and support for various
+  notification agents.
 instructions: none
 changeLog:
   - date: 2022-12-20
@@ -30,3 +46,45 @@ schema:
       type: string
       title: App Service Image
       default: fallenbagel/jellyseerr:1.3.0
+benefits:
+  - title: Effortless Media Requesting
+    description: Overseerr and Jellyseerr are designed to make requesting media for
+      your library a breeze. Users can easily find the media they want, click
+      request, and explore other titles that may interest them, all in one
+      seamless flow.
+  - title: Hassle-Free Request Management
+    description: For server owners, these apps take the hassle out of approving
+      users' requests. With a simple request management UI, you don't have to
+      dig through the app to approve recent requests.
+  - title: Mobile-Friendly Design
+    description: Whether you're on the go or away from your desktop, you can easily
+      approve requests thanks to the mobile-friendly design of Overseerr and
+      Jellyseerr.
+  - title: Granular Permission System
+    description: These apps offer a granular permission system, allowing you to
+      manage user access effectively.
+features:
+  - title: Full Plex, Jellyfin, and Emby Integration
+    description: Overseerr and Jellyseerr fully integrate with Plex, Jellyfin, and
+      Emby, allowing you to login and manage user access with these platforms.
+      They also sync to your Plex, Jellyfin, or Emby library to show what titles
+      you already have.
+  - title: Integration with Sonarr and Radarr
+    description: These apps integrate with Sonarr and Radarr, with more services to
+      come in the future.
+  - title: Easy-to-Use Request System
+    description: Users can request individual seasons or movies through a friendly,
+      clean UI. The request system is customizable and incredibly easy to use.
+  - title: Localization into Other Languages
+    description: Overseerr supports localization into other languages, making it
+      accessible to users worldwide.
+  - title: Support for Various Notification Agents
+    description: Jellyseerr supports various notification agents, keeping you
+      updated on the go.
+  - title: Upcoming Features
+    description: Jellyseerr has several upcoming features, including support for
+      multiple server instances, music support, and much more.
+tags:
+  - Media
+  - Request Management
+  - Integration

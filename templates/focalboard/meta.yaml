@@ -1,5 +1,18 @@
 name: Focalboard
-description: Focalboard is an open source, self-hosted alternative to Trello, Notion, and Asana.
+description: Mattermost Boards is an open-source project management tool
+  designed for technical teams. It centralizes, plans, and tracks all your work
+  in one place, helping your organization maintain a single source of truth.
+  This ensures your teams stay aligned to complete tasks, reach milestones, and
+  achieve their goals. The app allows you to manage all your tasks on a Kanban,
+  table, gallery, and calendar view, focusing on the highest priority items with
+  board filters. It also offers real-time collaboration features, including card
+  comments, @mention teammates, and board permissions to share your board with
+  the entire team or specific individuals. Mattermost Boards comes with
+  pre-built templates for quick setup or the option to create a fully custom
+  board from scratch. It also includes features like unlimited boards, file
+  sharing, customizable templates, project cards & tasks, archiving & back-up
+  snapshots, and more. Mattermost Boards is an open-source alternative to tools
+  like Asana, Trello, and Notion.
 instructions: null
 changeLog:
   - date: 2023-03-20
@@ -65,3 +78,51 @@ schema:
       type: boolean
       title: Telemetry
       default: false
+benefits:
+  - title: Accelerate Productivity
+    description: Mattermost Boards centralizes, plans, and tracks all your work in
+      one place. It helps your organization maintain a single source of truth,
+      so your teams stay aligned to complete tasks, reach milestones, and
+      achieve their goals.
+  - title: Organize and Visualize Work Your Way
+    description: Mattermost Boards allows you to work in the way that suits you
+      best. You can manage all your tasks on a Kanban, table, gallery, and
+      calendar view. It also allows you to focus on the highest priority items
+      with board filters, and save an unlimited number of filtered views for
+      quick access later.
+  - title: Real-Time Collaboration
+    description: Mattermost Boards keeps everyone in sync with card comments,
+      @mention teammates to get their attention, and set board permissions to
+      share your board with the entire team or specific individuals.
+  - title: Customizable Templates
+    description: Mattermost Boards provides tons of templates to get you started
+      fast. You can also create a fully custom board from scratch.
+features:
+  - title: Unlimited Boards
+    description: Mattermost Boards allows you to create and manage unlimited boards
+      to keep track of all your projects and tasks.
+  - title: Task Management
+    description: With Mattermost Boards, you can group, filter, and sort tasks to
+      manage your work effectively. It also supports file sharing and unlimited
+      custom attributes.
+  - title: Customizable Templates
+    description: Mattermost Boards comes with pre-built templates for project tasks,
+      content calendar, company goals & OKRs, roadmap, meeting agenda, and more.
+      You can also create a fully custom board from scratch.
+  - title: Real-Time Collaboration
+    description: Mattermost Boards supports real-time collaboration with features
+      like card comments, @mention teammates, and board permissions to share
+      your board with the entire team or specific individuals.
+  - title: Archiving & Back-Up Snapshots
+    description: Mattermost Boards allows you to archive and back-up snapshots of
+      your boards for future reference.
+  - title: User Permissions
+    description: With Mattermost Boards, you can set user permissions to control who
+      can view and edit your boards.
+  - title: Multi-Team Views
+    description: Mattermost Boards supports multi-team views, allowing you to
+      collaborate with multiple teams on the same board.
+tags:
+  - Project Management
+  - Collaboration
+  - Task Management

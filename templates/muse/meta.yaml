@@ -1,5 +1,13 @@
 name: Muse
-description: Muse is a highly-opinionated midwestern self-hosted Discord music bot that doesn't suck. It's made for small to medium-sized Discord servers/guilds (think about a group the size of you, your friends, and your friend's friends).
+description: Muse is a self-hosted Discord music bot designed to enhance your
+  music experience on Discord. It's perfect for small to medium-sized groups,
+  such as you and your friends. With Muse, you can livestream music, seek within
+  a song or video, and even cache music locally for better performance. It also
+  allows users to convert playlists, artists, albums, and songs from Spotify
+  automatically. You can add custom shortcuts, and the bot supports multiple
+  guilds. It normalizes volume across tracks for a consistent listening
+  experience. Muse is written in TypeScript and is easily extendable. It's a
+  loyal Packers fan and doesn't vote to skip - this is anarchy, not a democracy!
 instructions: null
 changeLog:
   - date: 2023-03-30
@@ -46,3 +54,37 @@ schema:
     spotifyClientSecret:
       type: string
       title: Spotify Client Secret
+benefits:
+  - title: Enhanced Discord Experience
+    description: Muse is a self-hosted Discord music bot designed to enhance your
+      Discord server experience. It's perfect for small to medium-sized groups,
+      providing a seamless and enjoyable music listening experience.
+  - title: Customizable and Versatile
+    description: Muse is highly customizable, allowing users to add custom shortcuts
+      and auto-convert playlists, artists, albums, and songs from Spotify. It's
+      a versatile tool that can be tailored to your specific needs.
+  - title: Improved Performance
+    description: With local caching, Muse ensures better performance, providing a
+      smooth and uninterrupted music experience. It also normalizes volume
+      across tracks for a consistent listening experience.
+features:
+  - title: Livestreams
+    description: Muse supports livestreams, allowing you to enjoy live music
+      directly on your Discord server.
+  - title: Seeking within a Song/Video
+    description: Muse allows you to seek within a song or video, giving you full
+      control over your listening experience.
+  - title: No Vote-to-Skip
+    description: Muse operates on anarchy, not democracy. There's no vote-to-skip
+      feature, ensuring that everyone gets to enjoy the music they love.
+  - title: Supports Multiple Guilds
+    description: A single Muse instance can support multiple Discord guilds, making
+      it a convenient and efficient choice for managing music across various
+      servers.
+  - title: Volume Normalization
+    description: Muse normalizes volume across tracks, ensuring a consistent and
+      comfortable listening experience.
+tags:
+  - Music
+  - Discord
+  - Bot

@@ -1,5 +1,15 @@
 name: Sonarr
-description: Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+description: Sonarr is a Personal Video Recorder (PVR) designed for Usenet and
+  BitTorrent users. It monitors multiple RSS feeds for new episodes of your
+  favorite shows and automatically grabs, sorts, and renames them. Sonarr can
+  also be configured to automatically upgrade the quality of files already
+  downloaded when a better quality format becomes available. It features a
+  calendar to see all your upcoming episodes in one convenient location, and a
+  manual search to find all the releases and choose the one you want. Sonarr
+  also handles failed downloads, automatically blocking the release and trying
+  another one until it finds one that works. It is fully integrated with
+  SABnzbd, NZBGet, Kodi, and Plex, and supports major platforms including
+  Windows, Linux, macOS, and Raspberry Pi.
 instructions: null
 changeLog:
   - date: 2022-12-26
@@ -32,3 +42,37 @@ schema:
       type: string
       title: App Service Image
       default: linuxserver/sonarr:version-3.0.10.1567
+benefits:
+  - title: Automated TV Show Management
+    description: Sonarr is a Personal Video Recorder (PVR) that automates the
+      process of downloading your favorite TV shows. It monitors multiple RSS
+      feeds for new episodes and grabs, sorts, and renames them for your
+      convenience.
+  - title: Quality Upgrades
+    description: Sonarr can be configured to automatically upgrade the quality of
+      files already downloaded when a better quality format becomes available.
+      This ensures you always have the best viewing experience possible.
+  - title: Failed Download Handling
+    description: With Sonarr, failed downloads become a thing of the past. The app
+      automatically blocks problematic releases and tries another one until it
+      finds one that works, saving you time and frustration.
+features:
+  - title: Calendar
+    description: See all your upcoming episodes in one convenient location. This
+      feature allows you to keep track of your shows and never miss an episode.
+  - title: Manual Search
+    description: Find all the releases, choose the one you want and send it right to
+      your download client. This gives you full control over what you download.
+  - title: Episode Renaming
+    description: Sonarr offers fully configurable episode renaming. This feature
+      helps you to keep your library organized in the way you prefer.
+  - title: Integration
+    description: Sonarr provides full integration with SABnzbd and NZBGet, as well
+      as with Kodi and Plex for notifications, library updates, and metadata.
+  - title: Support for Specials and Multi-Episode Releases
+    description: Sonarr fully supports specials and multi-episode releases, ensuring
+      you get every piece of content you want from your favorite shows.
+tags:
+  - Media
+  - Calendars
+  - Download
