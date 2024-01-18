@@ -1,0 +1,47 @@
+name: Glpi
+description: PT-BR= O GLPI é um incrível software de gerenciamento de serviços baseado em tecnologias de código aberto. Ele ajuda você a planejar e gerenciar mudanças de TI de maneira fácil, resolver problemas com eficiência, automatizar seus processos de negócios e obter controle sobre sua infraestrutura de TI.          EN-US= GLPI is an incredible Service Management software based on open source technologies. It helps you plan and manage IT changes in an easy way, solve problems efficiently, automate your business processes and gain control over your IT infrastructure.
+instructions: Open the builder URL to access GLPI.
+changeLog:
+  - date: 2024-01-17
+    description: PT-BR= adicionado novas traduções para EN-US.          EN-US= add new translations for EN-US
+  - date: 2023-12-23
+    description: PT-BR= primeiro release.          EN-US= first release
+links:
+  - label: Website
+    url: https://glpi-project.org/
+  - label: Documentação / Documentation
+    url: https://glpi-project.org/documentation/
+  - label: Github
+    url: https://github.com/glpi-project/glpi
+contributors:
+  - name: Fernando Esteves
+    url: https://github.com/feesteves
+schema:
+  type: object
+  required:
+    - nomeServico
+    - nomeProjeto
+    - nomeImagemDocker
+    - nomeServicoBanco
+  properties:
+    nomeServico:
+      type: string
+      title: Nome do Serviço | Service Name
+      default: glpi-app
+    nomeProjeto:
+      type: string
+      title: Nome Projeto | Project Name
+      default: glpi-chamados
+    nomeImagemDocker:
+      type: string
+      title: Imagem do GLPI | Glpi Image Docker Name
+      default: fernandoesteves/glpi:10.0.10
+    nomeServicoBanco:
+      type: string
+      title: Nome do Serviço do Banco | Service Name of Database
+      default: glpi-db
+tags:
+  - TI / IT
+  - Gestão / Changes
+  - Gestão de Mudanças / Change management
+  - glpi
