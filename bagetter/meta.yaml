@@ -1,0 +1,73 @@
+name: BaGetter
+description: PT-BR= BaGetter (pronuncia-se 'ba getter') é um NuGet leve e um servidor de símbolos. É de código aberto, multiplataforma e pronto para nuvem!           EN-US= BaGetter (pronounced 'ba getter') is a lightweight NuGet and symbol server. It is open source, cross-platform, and cloud ready!
+changeLog:
+  - date: 2024-01-17
+    description: PT-BR= primeiro release.          EN-US= first release.
+links:
+  - label: Website
+    url: https://www.bagetter.com/
+  - label: Documentação / Documentation
+    url: https://www.bagetter.com/docs
+  - label: Github
+    url: https://github.com/bagetter/BaGetter
+  - label: Comunidade | Community StackOverflow
+    url: https://stackoverflow.com/questions/tagged/bagetter
+  - label: Comunidade | Community Discord
+    url: https://discord.gg/XsAmm6f2hZ
+contributors:
+  - name: Fernando Esteves
+    url: https://github.com/feesteves
+schema:
+  type: object
+  required:
+    - nomeServico
+    - nomeProjeto
+    - chaveApi
+    - nomeImagemDocker
+    - nomeServicoBanco
+    - tipoBancoDados
+  properties:
+    nomeServico:
+      type: string
+      title: Nome do Serviço | Service Name
+      default: bagetter-app
+    nomeProjeto:
+      type: string
+      title: Nome Projeto | Project Name
+      default: bagetter-nuget
+    chaveApi:
+      type: string
+      title: Chave Api | ApiKey
+    nomeImagemDocker:
+      type: string
+      title: Imagem do BaGetter | BaGetter Image Docker Name
+      default: bagetter/bagetter
+    tipoBancoDados:
+      type: string
+      title: Database Type
+      default: Sqlite
+      oneOf:
+        - enum:
+            - Sqlite
+          title: SQLite
+        - enum:
+            - PostgreSql
+          title: PostgreSQL
+        # - enum:
+        #     - SqlServer
+        #   title: SqlServer
+        # - enum:
+        #     - MySql
+        #   title: MySQL
+        # - enum:
+        #     - AzureTable
+        #   title: Azure Table
+    nomeServicoBanco:
+      type: string
+      title: Nome do Serviço do Banco | Service Name of Database
+      default: bagetter-db
+tags:
+  - nuget server
+  - Gestão de pacotes .Net / Packages .net management nuget
+  - Gestão de Mudanças / Change management
+  - glpi
