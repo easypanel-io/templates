@@ -1,0 +1,61 @@
+name: Elastic Search
+Description: Elastic Search is a dynamic search and analytics engine designed for seamless handling of extensive data across various formats. With a user-friendly interface and a robust query language, it enables effortless advanced searches and data analysis. Boasting high performance and scalability, Elastic Search ensures rapid search responses and efficient data retrieval, making it suitable for diverse applications. The platform prioritizes security with features like role-based access control and encryption, while its real-time indexing and distributed architecture support resilience and reliability. Whether you're a developer or IT professional, Elastic Search provides a centralized solution for managing and extracting valuable insights from your data, offering a powerful search and analytics experience.
+instructions:
+changeLog:
+  - date: 2024-01-24
+    description: first release
+links:
+  - label: Website
+    url: https://www.elastic.co
+  - label: Documentation
+    url: https://www.elastic.co/guide/index.html
+  - label: Github
+    url: https://github.com/elastic/elasticsearch
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - elasticPassword
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: elastic-search
+    elasticPassword:
+      type: string
+      title: Password
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+benefits:
+  - title: Efficient Data Handling
+    description: Elastic Search ensures efficient handling of extensive data, offering swift search responses and streamlined analytics. This results in accelerated business operations and enhanced data-driven decision-making.
+  - title: User-Friendly Interface
+    description: With Elastic Search, advanced searches and data analysis can be performed without coding expertise. The platform's intuitive interface facilitates seamless navigation, making it accessible for users without extensive technical backgrounds.
+  - title: Automated Insights
+    description: Elastic Search empowers users to automate complex data tasks effortlessly. Its real-time indexing and distributed architecture support automation, enhancing operational efficiency and data processing.
+  - title: Seamless Data Integration
+    description: Elastic Search facilitates seamless integration with diverse data sources, supporting structured and unstructured data. Whether it's external databases, REST APIs, or its built-in database, transforming data into insights is simplified.
+features:
+  - title: Scalable Performance
+    description: Elastic Search offers scalable performance, handling vast amounts of data with lightning-fast search responses. Its distributed architecture ensures resilience and reliability for applications with growing data needs.
+  - title: Robust Security
+    description: Elastic Search prioritizes data security with features like role-based access control and encryption, ensuring a secure search and analytics environment.
+  - title: Real-Time Indexing
+    description: Elastic Search supports real-time indexing, allowing users to stay up-to-date with rapidly changing data. This feature is crucial for applications requiring real-time insights and monitoring.
+  - title: Comprehensive Monitoring
+    description: Elastic Search includes monitoring and logging tools, enabling users to track system health, diagnose issues, and optimize performance. This promotes proactive management and efficient utilization of resources.
+tags:
+  - Data Analytics
+  - Search Engine
+  - Security
+  - Scalability
