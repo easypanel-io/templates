@@ -1,5 +1,5 @@
 name: Cloud Commander
-description: Cloud Commander is a versatile cloud management platform offering seamless integration with major providers like AWS, Azure, and GCP. With an intuitive dashboard, it simplifies resource provisioning, scaling, and provides robust security features for data protection and compliance. The platform emphasizes cost management, allowing users to analyze spending patterns and optimize resource utilization. Automation and orchestration capabilities streamline workflows, while collaboration tools and role-based access control enhance team efficiency. Cloud Commander also includes monitoring and analytics tools for performance tracking and data-driven decision-making. Whether you're an IT administrator or developer, Cloud Commander provides a centralized hub to efficiently manage your multi-cloud infrastructure, promoting flexibility and optimization.
+description: Cloud Commander is a file manager for the web. It includes a command-line console and a text editor. Cloud Commander helps you manage your server and work with files, directories and programs in a web browser from any computer, mobile or tablet.
 instructions:
 changeLog:
   - date: 2024-01-22
@@ -39,26 +39,3 @@ schema:
     password:
       type: string
       title: Password
-benefits:
-  - title: Efficiency and Speed
-    description: Cloud Commander streamlines cloud resource management, saving teams valuable time and simplifying the process of overseeing multi-cloud infrastructure. It accelerates business operations by enabling the swift creation and deployment of resources.
-  - title: No Coding Experience Required
-    description: With Cloud Commander, there's no need for coding expertise to manage cloud resources effectively. Its user-friendly interface facilitates seamless navigation and resource management through intuitive, drag-and-drop components.
-  - title: Automate Workflows
-    description: Cloud Commander empowers users to automate complex tasks and workflows effortlessly. Through a simple interface, manual processes can be automated with just a few clicks, enhancing operational efficiency within applications and businesses.
-  - title: Data Integration
-    description: Cloud Commander facilitates seamless integration with external databases, REST APIs, CSV imports, or its built-in database. Transforming data into applications is made easy with a single click, offering versatility and adaptability.
-features:
-  - title: Resource Provisioning
-    description: Cloud Commander allows for efficient resource provisioning, enabling users to manage virtual machines, storage, and applications effortlessly across various cloud service providers.
-  - title: Security Measures
-    description: With robust security features, Cloud Commander prioritizes data protection and compliance, ensuring a secure cloud environment.
-  - title: Automation and Orchestration
-    description: Cloud Commander supports automated scripting and orchestration, streamlining workflows and enhancing operational efficiency through task automation.
-  - title: Cost Management
-    description: Cloud Commander provides insights into resource usage and costs, aiding in the analysis of spending patterns and optimization of cloud expenditure.
-tags:
-  - No-Code
-  - Cloud Management
-  - Automation
-  - Multi-Cloud
