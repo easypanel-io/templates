@@ -65,6 +65,9 @@ export function generate(input: Input): Output {
         type: "image",
         image: "ghcr.io/windmill-labs/windmill:main",
       },
+      deploy: {
+        replicas: input.workerReplicas,
+      },
       mounts: [
         {
           type: "bind",
@@ -93,6 +96,9 @@ export function generate(input: Input): Output {
       source: {
         type: "image",
         image: "ghcr.io/windmill-labs/windmill:main",
+      },
+      deploy: {
+        replicas: input.nativeWorkerReplicas,
       },
     },
   });
