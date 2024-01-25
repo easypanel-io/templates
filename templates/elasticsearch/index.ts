@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `ELASTIC_PASSWORD=${input.elasticPassword}`,
+        `ELASTIC_PASSWORD=${input.password}`,
         `discovery.type=single-node`,
         `xpack.security.enabled=true`,
       ].join("\n"),
