@@ -20,9 +20,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        replicas: 1,
-        command: null,
-        zeroDowntime: false,
+        groups: ["998", "999"],
       },
       domains: [
         {
