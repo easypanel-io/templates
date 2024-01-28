@@ -35,7 +35,7 @@ export function generate(input: Input): Output {
       ],
       resources: {
         memoryReservation: 0,
-        memoryLimit: 512,
+        memoryLimit: 1024,
         cpuReservation: 0,
         cpuLimit: 0,
       },
