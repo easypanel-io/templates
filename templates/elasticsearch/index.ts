@@ -10,8 +10,9 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `FLOWISE_USERNAME=${input.username}`,
-        `FLOWISE_PASSWORD=${input.password}`,
+        `ELASTIC_PASSWORD=${input.password}`,
+        `discovery.type=single-node`,
+        `xpack.security.enabled=true`,
       ].join("\n"),
       source: {
         type: "image",
@@ -20,18 +21,23 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          https: true,
+          port: 9200,
+          path: "/",
         },
       ],
       mounts: [
         {
           type: "volume",
           name: "data",
-          mountPath: "/root/.flowise",
+          mountPath: "/usr/share/elasticsearch/data",
         },
       ],
-      deploy: {
-        command: "sleep 3; flowise start",
+      resources: {
+        memoryReservation: 0,
+        memoryLimit: 1024,
+        cpuReservation: 0,
+        cpuLimit: 0,
       },
     },
   });

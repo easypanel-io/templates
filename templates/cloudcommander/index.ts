@@ -10,8 +10,10 @@ export function generate(input: Input): Output {
       projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `FLOWISE_USERNAME=${input.username}`,
-        `FLOWISE_PASSWORD=${input.password}`,
+        `CLOUDCMD_ROOT=/mnt/fs`,
+        `CLOUDCMD_AUTH=true`,
+        `CLOUDCMD_USERNAME=${input.username}`,
+        `CLOUDCMD_PASSWORD=${input.password}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -25,14 +27,16 @@ export function generate(input: Input): Output {
       ],
       mounts: [
         {
-          type: "volume",
-          name: "data",
-          mountPath: "/root/.flowise",
+          type: "bind",
+          hostPath: "/root",
+          mountPath: "/root",
+        },
+        {
+          type: "bind",
+          hostPath: "/",
+          mountPath: "/mnt/fs",
         },
       ],
-      deploy: {
-        command: "sleep 3; flowise start",
-      },
     },
   });
 
