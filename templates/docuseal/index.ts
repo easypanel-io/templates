@@ -19,6 +19,9 @@ export function generate(input: Input): Output {
         type: "image",
         image: 'docuseal/docuseal:1.4.3',
       },
+      mounts: [
+        { type: 'volume', name: 'data', mountPath: '/data' }
+      ],
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
