@@ -13,6 +13,8 @@ instructions: Botpress needs at least 10 GB of RAM to run!
 changeLog:
   - date: 2023-5-18
     description: first release
+  - date: 2023-07-17
+    description: bug fixes
 links:
   - label: Website
     url: https://botpress.com
@@ -23,6 +25,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -34,6 +38,10 @@ schema:
     projectName:
       type: string
       title: Project Name
+    enableLangServer:
+      type: boolean
+      title: Enable Lang Server
+      default: false
     appServiceName:
       type: string
       title: App Service Name
@@ -41,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: botpress/server:12.30.8
+      default: botpress/server:latest
     databaseServiceName:
       type: string
       title: Database Service Name
