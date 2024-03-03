@@ -10,10 +10,11 @@ description: Answer is an open-source knowledge-based software designed to
   contributions, making the process of knowledge sharing more engaging. It's a
   powerful tool for product technical support, customer support, and user
   communication.
-instructions: Go to /install and select sqlite database
 changeLog:
   - date: 2022-12-21
     description: first release
+  - date: 2024-03-03
+    description: Updated application version to 1.2.0 and added automatic installation support
 links:
   - label: Documentation
     url: https://answer.dev/docs
@@ -24,12 +25,20 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
     - projectName
     - appServiceName
     - appServiceImage
+    - adminName
+    - adminPassword
+    - adminMail
+    - contactMail
+    - databaseType
+    - databaseServiceName
   properties:
     projectName:
       type: string
@@ -41,7 +50,58 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: answerdev/answer:1.0.9
+      default: answerdev/answer:1.2.0
+    siteName:
+      type: string
+      title: Site Name
+      default: Answer
+    siteUrl:
+      type: string
+      title: Site Url
+      default: answer.apache.org
+    language:
+      type: string
+      title: Language
+      default: en-US
+    adminName:
+      type: string
+      minLength: 4
+      title: Admin Username
+    adminPassword:
+      type: string
+      minLength: 8
+      title: Admin Password
+    adminMail:
+      type: string
+      title: Admin Mail
+    contactMail:
+      type: string
+      title: Contact Mail
+    databaseType:
+      type: string
+      title: Database Type
+      default: sqlite3
+      oneOf:
+        - enum:
+            - postgres
+          title: Postgres
+        - enum:
+            - sqlite3
+          title: SQLite
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - mariadb
+          title: MariaDB
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: answer-db
+    autoInstall:
+      type: boolean
+      title: Auto Install
+      default: true
 benefits:
   - title: Knowledge Sharing
     description: Answer allows you to build a platform where users and team members
