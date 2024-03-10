@@ -1,0 +1,61 @@
+name: Plane
+description: Plane is a versatile, self-hosted project management and
+  collaboration platform, built on top of modern technologies like Vue.js
+  and Node.js. Designed to cater to teams looking for a privacy-conscious
+  alternative to mainstream project management tools, Plane offers a suite
+  of features to enhance productivity and streamline workflows. Its
+  self-hosted nature ensures that your data stays within your control,
+  bolstering security and privacy. Plane provides an intuitive interface
+  that allows teams to manage projects, tasks, documents, and communications
+  all in one place. With its customizable dashboard, users can get a quick
+  overview of project statuses, pending tasks, and recent activities. Plane
+  also includes robust features such as real-time collaboration, document
+  editing, task management, and integrated chat functions. The platform
+  supports the creation of multiple projects and workspaces, making it
+  suitable for businesses of all sizes. Its API enables integration with
+  other tools and services, offering flexibility and extensibility. Plane
+  emphasizes ease of use without sacrificing the depth of functionality,
+  making it a compelling choice for teams that value privacy and control
+  over their project management tools.
+instructions: Visit `/god-mode` to finish installation.
+changeLog:
+  - date: 2024-03-10
+    description: first release
+links:
+  - label: Website
+    url: https://plane.so/
+  - label: Documentation
+    url: https://docs.plane.so/
+  - label: Github
+    url: https://github.com/makeplane/plane
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+features:
+  - title: Privacy and Control
+    description: Plane is built with privacy in mind, offering a self-hosted solution
+      that keeps your data under your control, ensuring security and compliance.
+  - title: Enhanced Productivity
+    description: With features like real-time collaboration, task management, and
+      integrated chat, Plane streamlines your workflows, enhancing team productivity.
+  - title: Customizable and Extensible
+    description: Customize your dashboard to get a quick overview of project statuses,
+      pending tasks, and recent activities at a glance.
+  - title: Multiple Projects and Workspaces
+    description: Support for multiple projects and workspaces makes Plane suitable
+      for businesses of all sizes, from startups to large enterprises.
+  - title: Flexible API
+    description: Leverage Plane's API for integration with other tools and services,
+      enhancing your project management capabilities.
+tags:
+  - Project Management
+  - Collaboration
+  - Privacy
