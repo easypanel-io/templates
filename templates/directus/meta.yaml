@@ -26,6 +26,8 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Davide Gaio
+    url: https://github.com/dukio
 schema:
   type: object
   required:
@@ -33,11 +35,12 @@ schema:
     - appServiceName
     - appServiceImage
     - adminEmail
-    - adminPassword
+    - logLevel
     - databaseType
     - databaseServiceName
-    - redisServiceName
+    - storageLocation
   properties:
+    # Base properties
     projectName:
       type: string
       title: Project Name
@@ -48,14 +51,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:9.18.1
+      default: directus/directus:10.8.2
+    # Admin
     adminEmail:
       type: string
       title: Admin Email
-      description: admin@example.com
+      default: admin@example.com
     adminPassword:
       type: string
       title: Admin Password
+      description: Leave empty to generate a random one
+    # General
+    logLevel:
+      type: string
+      title: Log Level
+      oneOf:
+        - enum:
+            - fatal
+          title: Fatal
+        - enum:
+            - error
+          title: Error
+        - enum:
+            - warn
+          title: Warn
+        - enum:
+            - info
+          title: Info
+        - enum:
+            - debug
+          title: Debug
+        - enum:
+            - trace
+          title: Trace
+        - enum:
+            - silent
+          title: Silent
+      default: info
+    # Database
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: directus-db
     databaseType:
       type: string
       title: Database Type
@@ -66,17 +103,48 @@ schema:
         - enum:
             - mysql
           title: MySQL
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: directus-db
+      default: postgres
+    # Cache
     redisServiceName:
       type: string
       title: Redis Service Name
       default: directus-redis
+      description: Leave empty to use memory cache instead
+    # Storage
+    storageLocation:
+      type: string
+      title: Storage Location
+      oneOf:
+        - enum:
+            - local
+          title: Local
+        - enum:
+            - s3
+          title: S3
+      default: local
+      description: If S3, compile the following "Storage S3" fields
+    storageS3Key:
+      type: string
+      title: Storage S3 Key
+    storageS3Secret:
+      type: string
+      title: Storage S3 Secret
+    storageS3Bucket:
+      type: string
+      title: Storage S3 Bucket
+      default: bucket-name
+    storageS3Region:
+      type: string
+      title: Storage S3 Region
+      default: eu-central-001
+    storageS3Endpoint:
+      type: string
+      title: Storage S3 Endpoint
+      default: s3.eu-central-001.example.com
 benefits:
   - title: Efficient Data Management
-    description: Directus is a modern, open-source data platform that allows you to
+    description:
+      Directus is a modern, open-source data platform that allows you to
       efficiently manage your SQL database. It provides a dynamic API for your
       data, enabling you to browse, manage, and visualize your data in an
       intuitive no-code app.
@@ -91,18 +159,21 @@ benefits:
       need to migrate to a proprietary data model, so there's no vendor lock-in.
 features:
   - title: Data Engine
-    description: Directus features a modern data stack that turns any SQL database
+    description:
+      Directus features a modern data stack that turns any SQL database
       into an API and a beautiful no-code app. It's the world's first Open Data
       Platform for instantly managing your data.
   - title: Data Studio
-    description: The Data Studio feature allows for no-code data collaboration. It
+    description:
+      The Data Studio feature allows for no-code data collaboration. It
       enables your entire team to safely and intuitively browse, manage, and
       visualize data.
   - title: Workflow Automation
     description: With the Workflow Automation feature, Directus allows you to
       automate your workflows, increasing efficiency and productivity.
   - title: Asset Management
-    description: Directus also features an Asset Management system that allows you
+    description:
+      Directus also features an Asset Management system that allows you
       to manage and deliver assets efficiently.
 tags:
   - Developer Tools
