@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `URL=https://${input.domainURL}`,
+        `URL=https://${input.domainURL || "$(EASYPANEL_DOMAIN)"}`,
         `PORT=3000`,
         `AWS_ACCESS_KEY_ID=minio`,
         `AWS_REGION=us-east-1`,

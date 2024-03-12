@@ -15,6 +15,8 @@ instructions: Starter Host Path will be bind to "/audiobooks" inside the
 changeLog:
   - date: 2023-03-17
     description: Template created (v2.2.16)
+  - date: 2024-03-10
+    description: Version bumped to 2.8.0
 links:
   - label: Website
     url: https://www.audiobookshelf.org
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/advplyr/audiobookshelf:2.2.22
+      default: ghcr.io/advplyr/audiobookshelf:2.8.0
     hostPath:
       type: string
       title: Starter Host Path

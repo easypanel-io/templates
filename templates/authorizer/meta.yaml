@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2023-03-14
     description: Update to v1.1.41
+  - date: 2024-03-10
+    description: Version bumped to 1.3.8
 links:
   - label: Website
     url: https://authorizer.dev
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -49,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lakhansamani/authorizer:1.1.46
+      default: lakhansamani/authorizer:1.3.8
     databaseServiceName:
       type: string
       title: Database Service Name
