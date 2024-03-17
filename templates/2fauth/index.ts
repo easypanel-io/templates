@@ -96,7 +96,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "stacks",
+          name: "2fauth",
           mountPath: "/2fauth",
         },
       ],
