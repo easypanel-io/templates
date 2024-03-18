@@ -1,0 +1,66 @@
+name: Whisparr
+description: Whisparr is an adult video collection manager designed for
+  Usenet and BitTorrent users. It monitors multiple RSS feeds for new adult
+  content and interfaces with clients and indexers to grab, sort, and rename
+  them. Whisparr also features automatic upgrades of existing files in your
+  library to better quality formats when available. It includes a calendar
+  to track upcoming releases, manual search for precise selection, and
+  automatic handling of failed downloads. Whisparr ensures optimal release
+  selection with its custom formats feature, offering detailed control over
+  prioritization. It supports major platforms like Windows, Linux, macOS,
+and others.
+instructions: null
+changeLog:
+  - date: 2024-03-18
+    description: Template added
+links:
+  - label: Website
+    url: https://whisparr.com/
+  - label: Documentation
+    url: https://wiki.servarr.com/whisparr
+  - label: Github
+    url: https://github.com/Whisparr/Whisparr/
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: whisparr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hotio/whisparr:latest
+benefits:
+  - title: Automated Adult Video Management
+    description: Automatically monitors RSS feeds for new adult content,
+      streamlining your collection process.
+  - title: Quality Upgrades
+    description: Automatically upgrades the quality of existing files in
+      your library when better formats become available.
+  - title: Failed Download Handling
+    description: Automatically handles failed downloads, saving time and frustration.
+features:
+  - title: Calendar
+    description: Track your upcoming adult content releases in one convenient location.
+  - title: Manual Search
+    description: Manually search and select the adult content you want.
+  - title: Custom Formats
+    description: Fine control over release prioritization and selection with custom formats.
+  - title: Integration with Download Clients
+    description: Full integration with major download clients for seamless content management.
+  - title: Metadata Importing
+    description: Imports metadata, enhancing your adult content collection.
+tags:
+  - Adult Media
+  - Download Manager
