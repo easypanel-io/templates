@@ -1,0 +1,81 @@
+name: Redash
+description: Make Your Company Data Driven. Connect to any data source, easily visualize, dashboard and share your data.
+instructions: null
+changeLog:
+  - date: 2023-04-06
+    description: first release
+links:
+  - label: Documentation
+    url: https://redash.io/help/
+  - label: Github
+    url: https://github.com/getredash
+  - label: Website
+    url: https://redash.io
+contributors:
+  - name: tboulogne
+    url: https://github.com/tboulogne
+schema:
+  type: object
+  required:
+    - projectName
+    - domain
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - mailServer
+    - mailPort
+    - mailUser
+    - mailPassword
+    - mailTransport
+
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    domain:
+      type: string
+      title: Domain
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: redash
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: redash/redash:10.1.0.b50633
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: redash-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: redash-redis
+    mailServer:
+      type: string
+      title: Mail Host
+    mailUser:
+      type: string
+      title: Mail auth. user
+    mailPassword:
+      type: string
+      title: Mail auth. password
+    mailPort:
+      type: integer
+      title: Mail server port
+      default: 587
+    mailTransport:
+      type: string
+      title: Mail transport
+      oneOf:
+        - enum:
+            - None
+          title: No transport
+        - enum:
+            - SSL
+          title: Use SSL transport
+        - enum:
+            - TLS
+          title: Use TLS transport
+      default: TLS
