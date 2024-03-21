@@ -22,9 +22,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: '$(EASYPANEL_DOMAIN)',
-          https: true,
           port: 3012,
-          path: "/"
         }
       ],
       mounts: [
