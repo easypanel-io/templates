@@ -1,35 +1,27 @@
-import { Output, randomPassword, Services } from "~templates-utils";
-import { Input } from "./meta";
-
-// @TODO: Fix ENV bugs
-// 1. WEB_URL env in api/beat-worker/worker service is wrong
-// 2. AWS_S3_ENDPOINT_URL env in api/beat-worker/worker service is wrong
-// 3. Domains in minio service is wrong
+import { Output, randomPassword, Services } from '~templates-utils';
+import { Input } from './meta';
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  
-  // @TODO: Make setting
-  const redisPassword = randomPassword();
-  const postgresPassword = randomPassword();
 
-  // @TODO: Make setting
-  const planeVersion = 'v0.16-dev';
+  const redisPassword = input.redisPassword ?? randomPassword();
+  const postgresPassword = input.postgresPassword ?? randomPassword();
 
-  // @TODO: Make setting
-  const mainDomain = "$(EASYPANEL_DOMAIN)";
-  const minioConsoleDomain = "console-minio-$(EASYPANEL_DOMAIN)";
-  const minioApiDomain = "api-minio-$(EASYPANEL_DOMAIN)";
+  const planeVersion = input.planeVersion;
 
-  // @TODO: Make setting
-  const minioRootUser = 'root';
-  const minioRootPass = randomPassword();
+  const projectDomainPrefix = input.projectName;
+  const mainDomain = input.mainDomain ?? projectDomainPrefix + '.$(EASYPANEL_HOST)';
+  const minioConsoleDomain = input.minioConsoleDomain ?? 'minio-console-' + projectDomainPrefix + '.$(EASYPANEL_HOST)';
+  const minioApiDomain = input.minioApiDomain ?? 'minio-api-' + projectDomainPrefix + '.$(EASYPANEL_HOST)';
 
-  // @TODO: Make setting
-  const sentryDsn = '';
+  const minioRootUser = input.minioRootUser ?? 'root';
+  const minioRootPass = input.minioRootPass ?? randomPassword();
 
-  const instanceKey = randomPassword(64);
-  const secretKey = randomPassword(64);
+  const sentryDsn = input.sentryDsn ?? '';
+  const sentryEnvironment = input.sentryEnvironment ?? 'production';
+
+  const instanceKey = input.instanceKey ?? randomPassword(64);
+  const secretKey = input.secretKey ?? randomPassword(64);
 
   const backendEnvironments = [
     '# All the available environments can be found going through https://github.com/makeplane/plane/tree/v0.16-dev/apiserver/plane/settings',
@@ -40,7 +32,7 @@ export function generate(input: Input): Output {
     'DEBUG=0',
     '',
     'SENTRY_DSN="' + sentryDsn + '"',
-    'SENTRY_ENVIRONMENT="production"',
+    'SENTRY_ENVIRONMENT="' + sentryEnvironment + '"',
     '',
     'DATABASE_URL="postgres://postgres:' + postgresPassword + '@' + input.projectName + '_db:5432/' + input.projectName + '"',
     'REDIS_URL="redis://default:' + redisPassword + '@' + input.projectName + '_redis:6379/"',
@@ -64,8 +56,8 @@ export function generate(input: Input): Output {
   ].join("\n");
 
   const proxyEnvironment = [
-    "FILE_SIZE_LIMIT=5242880",
-    "BUCKET_NAME=uploads",
+    'FILE_SIZE_LIMIT=5242880',
+    'BUCKET_NAME=uploads',
     '',
     'DOMAIN_NAME=' + mainDomain,
     '',
@@ -116,8 +108,8 @@ export function generate(input: Input): Output {
   ].join("\n");
 
   const proxyEntrypoint = [
-    "#!/bin/sh",
-    "",
+    '#!/bin/sh',
+    '',
     'export dollar="$"',
     'export http_upgrade="http_upgrade"',
     'envsubst < /etc/nginx/nginx.conf.custom > /etc/nginx/nginx.conf',
@@ -125,193 +117,193 @@ export function generate(input: Input): Output {
   ].join("\n");
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "api",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-backend:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'api',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-backend:' + planeVersion
       },
-      "env": backendEnvironments,
-      "deploy": {
-        "replicas": 1,
-        "command": [
-          "python manage.py wait_for_db",
-          "python manage.py migrate",
-          "./bin/takeoff"
-        ].join(" && "),
-        "zeroDowntime": true
+      'env': backendEnvironments,
+      'deploy': {
+        'replicas': 1,
+        'command': [
+          'python manage.py wait_for_db',
+          'python manage.py migrate',
+          './bin/takeoff'
+        ].join(' && '),
+        'zeroDowntime': true
       }
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "beat-worker",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-backend:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'beat-worker',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-backend:' + planeVersion
       },
-      "env": backendEnvironments,
-      "deploy": {
-        "replicas": 1,
-        "command": "./bin/beat",
-        "zeroDowntime": true
+      'env': backendEnvironments,
+      'deploy': {
+        'replicas': 1,
+        'command': './bin/beat',
+        'zeroDowntime': true
       }
     }
   });
 
   services.push({
-    "type": "postgres",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "db",
-      "image": "postgres:16",
-      "password": postgresPassword
+    'type': 'postgres',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'db',
+      'image': 'postgres:16',
+      'password': postgresPassword
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "minio",
-      "source": {
-        "type": "image",
-        "image": "minio/minio"
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'minio',
+      'source': {
+        'type': 'image',
+        'image': 'minio/minio'
       },
-      "env": minioEnvironments,
-      "deploy": {
-        "replicas": 1,
-        "command": "minio server /export --console-address \":9090\"",
-        "zeroDowntime": true
+      'env': minioEnvironments,
+      'deploy': {
+        'replicas': 1,
+        'command': 'minio server /export --console-address ":9090"',
+        'zeroDowntime': true
       },
-      "domains": [
+      'domains': [
         {
-          "host": minioApiDomain,
-          "https": true,
-          "port": 9000,
-          "path": "/",
-          "middlewares": []
+          'host': minioApiDomain,
+          'https': true,
+          'port': 9000,
+          'path': '/',
+          'middlewares': []
         },
         {
-          "host": minioConsoleDomain,
-          "https": true,
-          "port": 9090,
-          "path": "/",
-          "middlewares": []
+          'host': minioConsoleDomain,
+          'https': true,
+          'port': 9090,
+          'path': '/',
+          'middlewares': []
         }
       ],
-      "mounts": [
+      'mounts': [
         {
-          "type": "volume",
-          "name": "uploads",
-          "mountPath": "/export"
+          'type': 'volume',
+          'name': 'uploads',
+          'mountPath': '/export'
         }
       ]
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "proxy",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-proxy:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'proxy',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-proxy:' + planeVersion
       },
-      "env": proxyEnvironment,
-      "deploy": {
-        "replicas": 1,
-        "command": "sh /custom-docker-entrypoint.sh",
-        "zeroDowntime": true
+      'env': proxyEnvironment,
+      'deploy': {
+        'replicas': 1,
+        'command': 'sh /custom-docker-entrypoint.sh',
+        'zeroDowntime': true
       },
-      "domains": [
+      'domains': [
         {
-          "host": mainDomain,
-          "https": true,
-          "port": 80,
-          "path": "/",
-          "middlewares": []
+          'host': mainDomain,
+          'https': true,
+          'port': 80,
+          'path': '/',
+          'middlewares': []
         }
       ],
-      "mounts": [
+      'mounts': [
         {
-          "type": "file",
-          "content": proxyEntrypoint,
-          "mountPath": "/custom-docker-entrypoint.sh"
+          'type': 'file',
+          'content': proxyEntrypoint,
+          'mountPath': '/custom-docker-entrypoint.sh'
         },
         {
-          "type": "file",
-          "content": nginxConf,
-          "mountPath": "/etc/nginx/nginx.conf.custom"
+          'type': 'file',
+          'content': nginxConf,
+          'mountPath': '/etc/nginx/nginx.conf.custom'
         }
       ]
     }
   });
 
   services.push({
-    "type": "redis",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "redis",
-      "image": "redis:7",
-      "password": redisPassword
+    'type': 'redis',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'redis',
+      'image': 'redis:7',
+      'password': redisPassword
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "space",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-space:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'space',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-space:' + planeVersion
       },
-      "deploy": {
-        "replicas": 1,
-        "command": "/usr/local/bin/start.sh space/server.js space",
-        "zeroDowntime": true
+      'deploy': {
+        'replicas': 1,
+        'command': '/usr/local/bin/start.sh space/server.js space',
+        'zeroDowntime': true
       }
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "web",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-frontend:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'web',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-frontend:' + planeVersion
       },
-      "deploy": {
-        "replicas": 1,
-        "command": "/usr/local/bin/start.sh web/server.js web",
-        "zeroDowntime": true
+      'deploy': {
+        'replicas': 1,
+        'command': '/usr/local/bin/start.sh web/server.js web',
+        'zeroDowntime': true
       }
     }
   });
 
   services.push({
-    "type": "app",
-    "data": {
-      "projectName": input.projectName,
-      "serviceName": "worker",
-      "source": {
-        "type": "image",
-        "image": "makeplane/plane-backend:" + planeVersion
+    'type': 'app',
+    'data': {
+      'projectName': input.projectName,
+      'serviceName': 'worker',
+      'source': {
+        'type': 'image',
+        'image': 'makeplane/plane-backend:' + planeVersion
       },
-      "env": backendEnvironments,
-      "deploy": {
-        "replicas": 1,
-        "command": "./bin/worker",
-        "zeroDowntime": true
+      'env': backendEnvironments,
+      'deploy': {
+        'replicas': 1,
+        'command': './bin/worker',
+        'zeroDowntime': true
       }
     }
   });

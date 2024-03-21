@@ -35,10 +35,59 @@ schema:
   type: object
   required:
     - projectName
+    - planeVersion
   properties:
     projectName:
       type: string
       title: Project Name
+    planeVersion:
+      type: string
+      title: Plane Version Tag
+      default: v0.16-dev
+    redisPassword:
+      type: string
+      title: Redis Password
+      description: Leave empty to generate a random password.
+    postgresPassword:
+      type: string
+      title: Postgres Password
+      description: Leave empty to generate a random password.
+    minioRootUser:
+      type: string
+      title: Minio Root User
+      default: root
+    minioRootPass:
+      type: string
+      title: Minio Root Password
+      description: Leave empty to generate a random password.
+    mainDomain:
+      type: string
+      title: Main Domain Name
+      description: Leave empty to generate one based of your EasyPanel host.
+    minioConsoleDomain:
+      type: string
+      title: Minio Console Domain Name
+      description: Leave empty to generate one based of your EasyPanel host.
+    minioApiDomain:
+      type: string
+      title: Minio API Domain Name
+      description: Leave empty to generate one based of your EasyPanel host.
+    sentryDsn:
+      type: string
+      title: Sentry DSN
+      description: Sentry DSN is in order to setup error logging, leave empty to skip usage of Sentry.
+    sentryEnvironment:
+      type: string
+      title: Sentry Environment
+      default: production
+    instanceKey:
+      type: string
+      title: Plane Instance Key
+      description: Leave empty to automatically generate one.
+    secretKey:
+      type: string
+      title: Plane Secret Key
+      description: Leave empty to automatically generate one.
 features:
   - title: Privacy and Control
     description: Plane is built with privacy in mind, offering a self-hosted solution
