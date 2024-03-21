@@ -3,6 +3,11 @@ import { z } from "zod";
 
 export const randomPassword = () => randomBytes(10).toString("hex");
 
+export const emptyToUndefined = (value: any) => {
+  if (typeof value !== "string") return value;
+  return value.trim() === "" ? undefined : value;
+};
+
 export const projectNameRule = z
   .string()
   .regex(
@@ -29,12 +34,12 @@ export const volumeNameRule = z
     /^[a-z0-9-_]+$/,
     "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
   );
-export const domainRule = z
-  .string()
-  .regex(/^[a-z0-9.-]+$/)
-  .or(z.literal("$(EASYPANEL_DOMAIN)"));
+export const domainRule = z.string().regex(/^[^\s*]+$/);
 export const portRule = z.number().min(0).max(65535);
-export const passwordRule = z.string().default(randomPassword);
+export const passwordRule = z.preprocess(
+  emptyToUndefined,
+  z.string().default(randomPassword)
+);
 
 export const appMountsSchema = z
   .array(
@@ -66,6 +71,7 @@ export const appDeploySchema = z
     capAdd: z.array(z.string()).optional(),
     capDrop: z.array(z.string()).optional(),
     sysctls: z.record(z.string(), z.string()).optional(),
+    groups: z.array(z.string()).optional(),
   })
   .default({});
 
@@ -160,9 +166,22 @@ export const appDomainsSchema = z
       https: z.boolean().default(true),
       port: z.number().default(80),
       path: z.string().startsWith("/").default("/"),
+      middlewares: z.array(z.string()).optional(),
     })
   )
   .default([]);
+
+export const maintenanceSchema = z
+  .object({
+    enabled: z.boolean(),
+    title: z.string().optional(),
+    subtitle: z.string().optional(),
+    customLogo: z.string().optional(),
+    customCss: z.string().optional(),
+    hideLogo: z.boolean().optional(),
+    hideLinks: z.boolean().optional(),
+  })
+  .optional();
 
 export const appSchema = z.object({
   projectName: projectNameRule,
@@ -176,12 +195,13 @@ export const appSchema = z.object({
   mounts: appMountsSchema,
   ports: appPortsSchema,
   resources: resourcesSchema,
+  maintenance: maintenanceSchema,
 });
 
 export const mongoSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.preprocess(emptyToUndefined, z.string().default("mongo:6")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
@@ -191,7 +211,7 @@ export const mongoSchema = z.object({
 export const mysqlSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.preprocess(emptyToUndefined, z.string().default("mysql:8")),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
@@ -202,7 +222,7 @@ export const mysqlSchema = z.object({
 export const mariadbSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.preprocess(emptyToUndefined, z.string().default("mariadb:11")),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
@@ -213,7 +233,7 @@ export const mariadbSchema = z.object({
 export const postgresSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.preprocess(emptyToUndefined, z.string().default("postgres:16")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
@@ -223,7 +243,7 @@ export const postgresSchema = z.object({
 export const redisSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().optional(),
+  image: z.preprocess(emptyToUndefined, z.string().default("redis:7")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),

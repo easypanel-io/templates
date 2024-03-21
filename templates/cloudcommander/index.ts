@@ -9,7 +9,12 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: ["WEBHOOK_URL=https://$(EASYPANEL_DOMAIN)"].join("\n"),
+      env: [
+        `CLOUDCMD_ROOT=/mnt/fs`,
+        `CLOUDCMD_AUTH=true`,
+        `CLOUDCMD_USERNAME=${input.username}`,
+        `CLOUDCMD_PASSWORD=${input.password}`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -17,14 +22,19 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 5678,
+          port: 80,
         },
       ],
       mounts: [
         {
-          type: "volume",
-          name: "data",
-          mountPath: "/home/node/.n8n",
+          type: "bind",
+          hostPath: "/root",
+          mountPath: "/root",
+        },
+        {
+          type: "bind",
+          hostPath: "/",
+          mountPath: "/mnt/fs",
         },
       ],
     },
