@@ -11,6 +11,7 @@
     "prettier": "prettier --write .",
     "watch-templates": "nodemon",
     "build-templates": "ts-node -r tsconfig-paths/register ./scripts/build-templates.ts",
+    "generate-template": "ts-node -r tsconfig-paths/register ./scripts/generate-template.ts",
     "build-docs": "ts-node -r tsconfig-paths/register ./scripts/build-docs.ts",
     "check-for-updates": "ts-node -r tsconfig-paths/register ./scripts/check-for-updates.ts",
     "move-docs": "rm -rf ../website/docs/05-templates/* && cp -r ./docs/* ../website/docs/05-templates/"
@@ -22,6 +23,7 @@
     "@emotion/styled": "^11",
     "@rjsf/chakra-ui": "^4.1.1",
     "@rjsf/core": "^4.1.1",
+    "@types/readline-sync": "^1.4.4",
     "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^6",
@@ -32,6 +34,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "readline-sync": "^1.4.10",
     "yaml": "^2.1.1",
     "zod": "^3.14.4"
   },
