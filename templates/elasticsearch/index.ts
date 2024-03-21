@@ -9,7 +9,11 @@ export function generate(input: Input): Output {
     data: {
       projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: ["WEBHOOK_URL=https://$(EASYPANEL_DOMAIN)"].join("\n"),
+      env: [
+        `ELASTIC_PASSWORD=${input.password}`,
+        `discovery.type=single-node`,
+        `xpack.security.enabled=true`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -17,16 +21,24 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 5678,
+          https: true,
+          port: 9200,
+          path: "/",
         },
       ],
       mounts: [
         {
           type: "volume",
           name: "data",
-          mountPath: "/home/node/.n8n",
+          mountPath: "/usr/share/elasticsearch/data",
         },
       ],
+      resources: {
+        memoryReservation: 0,
+        memoryLimit: 1024,
+        cpuReservation: 0,
+        cpuLimit: 0,
+      },
     },
   });
 
