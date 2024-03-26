@@ -1,0 +1,38 @@
+name: Tianji
+description: All-in-One Insight Hub. Insight into everything, Website Analytics + Uptime Monitor + Server Status. not only another GA alternatives
+instructions: Default login is "admin" / "admin".
+changeLog:
+  - date: 2024-03-26
+    description: Template Added
+links:
+  - label: Website
+    url: https://tianji.msgbyte.com/
+  - label: Documentation
+    url: https://tianji.msgbyte.com/docs/intro
+  - label: Github
+    url: https://github.com/msgbyte/tianji
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tianji
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: moonrailgun/tianji
+tags:
+  - Website Monitor
+  - Analytics
+  - Server Monitor
