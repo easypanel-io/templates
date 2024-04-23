@@ -1,0 +1,76 @@
+name: Twenty
+description: Twenty is a CRM designed to fit your unique business needs.
+  It was brought to life by a passionate community that cares about
+  quality and precision in engineering.
+instructions: null
+changeLog:
+  - date: 2024-5-23
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.twenty.com/
+  - label: Github
+    url: https://github.com/twentyhq/twenty
+contributors:
+  - name: Amit Gadhia
+    url: https://github.com/amitoo7
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: twenty
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: twentycrm/twenty:v0.10.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: twenty-db
+benefits:
+  - title: Full control
+    description: Contribute, self-host, fork. Break free from vendor
+      lock-in and join us in shaping the open future of CRM.
+  - title: Data, Your Way
+    description: The days when the role of CRM platforms was to
+      shift manual data entries to a database are over. Now, the data
+      is already there. CRM 2.0 should be built around your data, allowing
+      you to access and visualize any existing sources, not forcing you to
+      retrofit your data into predefined objects on a remote cloud.
+  - title: Effortlessly Intuitive
+    description: We set out to create something that we ourselves
+      would always enjoy using. The main application draws inspiration
+      from Notion, a tool known for its user-friendly interface and customization capabilities.
+features:
+  - title: Filter, sort and track customer
+    description:
+      Twenty helps you Add,filter,sort,edit and track customer data. you
+      can explore data with advance sort and filtering.
+  - title: Roles and Permissions
+    description:
+      Twenty provides a roles and permissions feature. This allows you
+      to manage user roles and permissions, ensuring that only authorized
+      individuals have access to certain data or operations.
+  - title: Kanban view
+    description: Twenty help you create one or several opportunites for each
+      company. You can track you record using the kanban view chart.
+  - title: Email integration
+    description:
+      Twennty helps you track deals effortlessly with the email intergration.
+      Sync your emails and share them with your team effectively.
+  - title: Api and Webhook
+    description:
+      Twenty helps you connect your CRM to all your tools through their
+      Apis and webhooks. You can extend your CRM capabilty with Twenty.
+tags:
+  - CRM
