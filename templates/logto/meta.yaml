@@ -28,15 +28,19 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: Logto
+      default: logto
     appServiceImage:
       type: string
       title: App Service Image
-      default: svhd/logto::1.15.0
+      default: svhd/logto:1.15.0
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: Logto-db
+      default: logto-db
+    adminAppEndpoint:
+      type: string
+      title: Logto admin app domain
+      default: admin-example.com
 benefits:
   - title: Comprehensive frontend-to-backend identity solution
     description:
