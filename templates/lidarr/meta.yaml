@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:latest
+      default: linuxserver/lidarr:2.2.5
 benefits:
   - title: Automated Music Management
     description: Lidarr is an audio collection manager that automatically monitors
