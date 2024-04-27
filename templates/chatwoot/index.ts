@@ -47,7 +47,7 @@ export function generate(input: Input): Output {
       ],
       deploy: {
         command:
-          "bundle exec rails db:chatwoot_prepare && bundle exec rails s -p 3000 -b 0.0.0.0 && bundle exec sidekiq -C config/sidekiq.yml",
+          "bundle exec rails db:chatwoot_prepare && (bundle exec rails s -p 3000 -b 0.0.0.0 &) && bundle exec sidekiq -C config/sidekiq.yml",
       },
       mounts: [
         {
