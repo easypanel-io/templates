@@ -28,6 +28,8 @@ links:
 contributors:
   - name: Ponkhy
     url: https://github.com/Ponkhy
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ampache/ampache:5.6.0
+      default: ampache/ampache:6.2.1
     appMediaHostPath:
       type: string
       title: Media Host Path
