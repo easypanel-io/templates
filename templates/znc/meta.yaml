@@ -1,0 +1,67 @@
+name: ZNC
+description: ZNC is an IRC bouncer that is designed to stay connected to IRC servers and channels, allowing you to access them at any time.
+instructions: null
+changeLog:
+  - date: 2024-04-27
+    description: first release
+links:
+  - label: Website
+    url: https://github.com/linuxserver
+  - label: Documentation
+    url: https://hub.docker.com/r/linuxserver/znc
+  - label: Github
+    url: https://github.com/linuxserver/docker-znc/
+contributors:
+  - name: LinuxServer.io Team
+    url: https://linuxserver.io/
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - PUID
+    - PGID
+    - serviceTimezone
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: znc
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/znc:znc-1.9.0-ls130
+    PUID:
+      type: string
+      title: PUID
+      default: "1000"
+    PGID:
+      type: string
+      title: PGID
+      default: "1000"
+    serviceTimezone:
+      type: string
+      title: Timezone
+      default: Europe/London
+benefits:
+  - title: Always Connected
+    description: ZNC keeps you permanently connected to your favorite IRC channels and servers, ensuring you never miss important messages.
+  - title: Custom Modules
+    description: Extend ZNC's functionality with custom modules, allowing for personalized features and enhancements.
+features:
+  - title: Detachable Sessions
+    description: ZNC allows you to detach and reattach to IRC sessions without losing the session state, similar to screen or tmux for IRC.
+  - title: Multiple Networks
+    description: Connect to multiple IRC networks simultaneously with a single ZNC instance.
+  - title: Playback Buffers
+    description: ZNC stores chat history when you're away, allowing you to catch up on what you missed once you reconnect.
+  - title: SSL/TLS Support
+    description: Secure your connections with SSL/TLS, protecting your privacy and data integrity.
+  - title: Web Interface
+    description: Manage your ZNC settings and configurations through a user-friendly web interface.
+tags:
+  - Chat
