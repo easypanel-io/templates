@@ -40,44 +40,48 @@ schema:
   type: object
   required:
     - projectName
-    - appServiceName
-    - appServiceImage
-    - databaseServiceName
+    - domain
+    - serviceNamePrefix
+    - workerReplicas
+    - nativeWorkerReplicas
   properties:
     projectName:
       type: string
       title: Project Name
-    appServiceName:
+    domain:
       type: string
-      title: App Service Name
+      title: Domain
+    serviceNamePrefix:
+      type: string
+      title: Service Name Prefix
       default: windmill
-    appServiceImage:
-      type: string
-      title: App Service Image
-      default: ghcr.io/windmill-labs/windmill:main
-    licenseKey:
-      type: string
-      title: EE License Key
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: windmill-db
+    workerReplicas:
+      type: number
+      title: Worker Replicas
+      default: 1
+    nativeWorkerReplicas:
+      type: number
+      title: Native Worker Replicas
+      default: 1
 benefits:
   - title: Easily create internal apps and workflows
     description: Windmill Cloud allows you to quickly create internal apps and
       workflows using code only where it matters.
   - title: Scalable and reliable worker infrastructure
-    description: Windmill Cloud provides self-hostable worker infrastructure that is
+    description:
+      Windmill Cloud provides self-hostable worker infrastructure that is
       scalable, reliable, and fast.
   - title: Fully open-source alternative
     description: Windmill Cloud is a fully open-source alternative to Airplane,
       Superblocks, and Retool.
 features:
   - title: Turn scripts into workflows and UIs
-    description: With Windmill Cloud, you can easily turn scripts into workflows and
+    description:
+      With Windmill Cloud, you can easily turn scripts into workflows and
       user interfaces in just minutes.
   - title: Build production-grade internal tools
-    description: Windmill Cloud allows you to build production-grade internal tools
+    description:
+      Windmill Cloud allows you to build production-grade internal tools
       using Python, Typescript, Go, Bash, and SQL.
   - title: Run scripts reliably at scale
     description: You can run scripts reliably at scale on your infrastructure or

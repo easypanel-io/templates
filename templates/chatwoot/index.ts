@@ -29,6 +29,7 @@ export function generate(input: Input): Output {
     `NODE_ENV=production`,
     `RAILS_ENV=production`,
     `INSTALLATION_ENV=docker`,
+    `TRUSTED_PROXIES=*`,
   ].join("\n");
 
   services.push({

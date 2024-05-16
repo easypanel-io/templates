@@ -3,6 +3,11 @@ import { z } from "zod";
 
 export const randomPassword = () => randomBytes(10).toString("hex");
 
+export const emptyToUndefined = (value: any) => {
+  if (typeof value !== "string") return value;
+  return value.trim() === "" ? undefined : value;
+};
+
 export const projectNameRule = z
   .string()
   .regex(
@@ -23,6 +28,12 @@ export const serviceNameRule = z
     /^[a-z0-9-_]+$/,
     "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
   );
+export const processNameRule = z
+  .string()
+  .regex(
+    /^[a-z0-9-_]+$/,
+    "Invalid name. Use lowercase letters (a-z), digits (0-9), dash (-), underscore (_)."
+  );
 export const volumeNameRule = z
   .string()
   .regex(
@@ -31,7 +42,10 @@ export const volumeNameRule = z
   );
 export const domainRule = z.string().regex(/^[^\s*]+$/);
 export const portRule = z.number().min(0).max(65535);
-export const passwordRule = z.string().default(randomPassword);
+export const passwordRule = z.preprocess(
+  emptyToUndefined,
+  z.string().default(randomPassword)
+);
 
 export const appMountsSchema = z
   .array(
@@ -63,6 +77,8 @@ export const appDeploySchema = z
     capAdd: z.array(z.string()).optional(),
     capDrop: z.array(z.string()).optional(),
     sysctls: z.record(z.string(), z.string()).optional(),
+    groups: z.array(z.string()).optional(),
+    tiniInit: z.boolean().optional(),
   })
   .default({});
 
@@ -81,6 +97,7 @@ export const appRedirectsSchema = z
       regex: z.string(),
       replacement: z.string(),
       permanent: z.boolean(),
+      enabled: z.boolean(),
     })
   )
   .optional();
@@ -118,6 +135,11 @@ export const appBuildSchema = z
     }),
     z.object({
       type: z.literal("nixpacks"),
+      installCommand: z.string().optional(),
+      buildCommand: z.string().optional(),
+      startCommand: z.string().optional(),
+      nixPackages: z.string().optional(),
+      aptPackages: z.string().optional(),
     }),
   ])
   .optional();
@@ -137,6 +159,7 @@ export const backupSchema = z
     schedule: z.string(),
     destinationId: z.string(),
     prefix: backupPrefixRule,
+    databaseName: z.string().optional(),
   })
   .optional();
 
@@ -157,6 +180,7 @@ export const appDomainsSchema = z
       https: z.boolean().default(true),
       port: z.number().default(80),
       path: z.string().startsWith("/").default("/"),
+      middlewares: z.array(z.string()).optional(),
     })
   )
   .default([]);
@@ -172,6 +196,233 @@ export const maintenanceSchema = z
     hideLinks: z.boolean().optional(),
   })
   .optional();
+
+export const boxProcessesSchema = z
+  .array(
+    z.object({
+      name: processNameRule,
+      command: z.string(),
+      directory: z.string(),
+      enabled: z.boolean(),
+    })
+  )
+  .default([]);
+
+export const boxScriptsSchema = z
+  .array(
+    z.object({
+      name: z.string(),
+      content: z.string(),
+      webhookToken: z.string(),
+      schedule: z.string().optional(),
+      enabled: z.boolean(),
+    })
+  )
+  .default([]);
+
+export const boxGitSchema = z
+  .object({
+    name: z.string().optional(),
+    email: z.string().optional(),
+    url: z.string().optional(),
+    branch: z.string().optional(),
+  })
+  .optional();
+
+export const nginxDefaultSite = `
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	root {{ document_root }};
+
+	index index.php index.html;
+
+	server_name _;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass {{ fpm_socket }};
+	}
+}
+`.trim();
+
+export const boxIdeSchema = z
+  .object({
+    defaultFolder: z.string().default("/code"),
+    token: z.string().default(() => randomBytes(10).toString("hex")),
+    enabled: z.boolean().default(true),
+  })
+  .optional();
+
+export const boxAdvancedSchema = z
+  .object({
+    buildScript: z.string().default(""),
+    startScript: z.string().default(""),
+  })
+  .optional();
+
+export const boxPhpSchema = z
+  .object({
+    version: z.string().default("8.3"),
+    maxUploadSize: z.string().default("128M"),
+    maxExecutionTime: z.string().default("30"),
+    opcache: z.boolean().default(true),
+    phpIni: z.string().default(""),
+    enabled: z.boolean().default(true),
+    ioncube: z.boolean().default(false),
+  })
+  .optional();
+
+export const boxNodejsSchema = z
+  .object({
+    version: z.string().default("18"),
+    yarn: z.boolean().default(false),
+    pnpm: z.boolean().default(false),
+    enabled: z.boolean().default(true),
+  })
+  .optional();
+
+export const boxNginxSchema = z
+  .object({
+    rootDocument: z.string().default("/code"),
+    config: z.string().default(nginxDefaultSite),
+    enabled: z.boolean().default(true),
+  })
+  .optional();
+
+export const boxPythonSchema = z
+  .object({
+    version: z.string().default("3"),
+    enabled: z.boolean().default(false),
+  })
+  .optional();
+
+export const boxRubySchema = z
+  .object({
+    version: z.string().default("2.6"),
+    enabled: z.boolean().default(false),
+  })
+  .optional();
+
+export const boxModulesSchema = z
+  .object({
+    ide: z.boolean().default(false),
+    advanced: z.boolean().default(false),
+    php: z.boolean().default(false),
+    nodejs: z.boolean().default(false),
+    nginx: z.boolean().default(false),
+    python: z.boolean().default(false),
+    ruby: z.boolean().default(false),
+    deployments: z.boolean().default(false),
+    git: z.boolean().default(false),
+    domains: z.boolean().default(false),
+    redirects: z.boolean().default(false),
+    basicAuth: z.boolean().default(false),
+    mounts: z.boolean().default(false),
+    processes: z.boolean().default(false),
+    scripts: z.boolean().default(false),
+    ports: z.boolean().default(false),
+    resources: z.boolean().default(false),
+  })
+  .default({});
+
+export const boxDeploymentSchema = z
+  .object({
+    script: z.string().default(""),
+    token: z.string().default(() => randomBytes(10).toString("hex")),
+  })
+  .default({});
+
+export const boxMountsSchema = z
+  .array(
+    z.union([
+      z.object({
+        type: z.literal("bind"),
+        hostPath: z.string(),
+        mountPath: z.string(),
+      }),
+      z.object({
+        type: z.literal("volume"),
+        name: z.string(),
+        mountPath: z.string(),
+      }),
+      z.object({
+        type: z.literal("file"),
+        content: z.string(),
+        mountPath: z.string(),
+      }),
+    ])
+  )
+  .default([]);
+
+export const boxRedirectsSchema = z
+  .array(
+    z.object({
+      regex: z.string(),
+      replacement: z.string(),
+      permanent: z.boolean(),
+      enabled: z.boolean(),
+    })
+  )
+  .default([]);
+
+export const boxBasicAuthSchema = z
+  .array(
+    z.object({
+      username: z.string(),
+      password: z.string(),
+    })
+  )
+  .default([]);
+
+export const boxPortsSchema = z
+  .array(
+    z.object({
+      published: z.number(),
+      target: z.number(),
+      protocol: z.union([z.literal("tcp"), z.literal("udp")]).default("tcp"),
+    })
+  )
+  .default([]);
+
+export const boxSchema = z.object({
+  projectName: projectNameRule,
+  serviceName: serviceNameRule,
+  codeInitialized: z.boolean().default(false),
+  deployment: boxDeploymentSchema,
+  git: boxGitSchema,
+  domains: z
+    .array(
+      z.object({
+        host: z.string(),
+        https: z.boolean(),
+        port: z.number(),
+        path: z.string(),
+        middlewares: z.array(z.string()).optional(),
+      })
+    )
+    .default([]),
+  redirects: boxRedirectsSchema,
+  basicAuth: boxBasicAuthSchema,
+  mounts: boxMountsSchema,
+  processes: boxProcessesSchema,
+  scripts: boxScriptsSchema,
+  ports: boxPortsSchema,
+  resources: resourcesSchema,
+  modules: boxModulesSchema,
+  ide: boxIdeSchema,
+  advanced: boxAdvancedSchema,
+  php: boxPhpSchema,
+  nodejs: boxNodejsSchema,
+  nginx: boxNginxSchema,
+  python: boxPythonSchema,
+  ruby: boxRubySchema,
+});
 
 export const appSchema = z.object({
   projectName: projectNameRule,
@@ -191,7 +442,7 @@ export const appSchema = z.object({
 export const mongoSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().default("mongo:6"),
+  image: z.preprocess(emptyToUndefined, z.string().default("mongo:6")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
@@ -201,7 +452,7 @@ export const mongoSchema = z.object({
 export const mysqlSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().default("mysql:8"),
+  image: z.preprocess(emptyToUndefined, z.string().default("mysql:8")),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
@@ -212,7 +463,7 @@ export const mysqlSchema = z.object({
 export const mariadbSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().default("mariadb:11"),
+  image: z.preprocess(emptyToUndefined, z.string().default("mariadb:11")),
   password: passwordRule,
   rootPassword: passwordRule,
   resources: resourcesSchema,
@@ -223,7 +474,7 @@ export const mariadbSchema = z.object({
 export const postgresSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().default("postgres:16"),
+  image: z.preprocess(emptyToUndefined, z.string().default("postgres:16")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
@@ -233,7 +484,7 @@ export const postgresSchema = z.object({
 export const redisSchema = z.object({
   projectName: projectNameRule,
   serviceName: serviceNameRule,
-  image: z.string().default("redis:7"),
+  image: z.preprocess(emptyToUndefined, z.string().default("redis:7")),
   password: passwordRule,
   resources: resourcesSchema,
   env: z.string().optional(),
