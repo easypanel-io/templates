@@ -46,10 +46,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.11.30
+      default: vectorim/element-web:v1.11.67
 benefits:
   - title: Secure Communications
-    description: This platform is designed with security at its core, providing a
+    description:
+      This platform is designed with security at its core, providing a
       safe environment for your critical business communications. It gives you
       the freedom to communicate on your own terms, ensuring your data is
       protected and your conversations are confidential.
@@ -70,7 +71,8 @@ benefits:
       for you.
 features:
   - title: Secure by Default
-    description: The app's technology protects your data so you can focus on getting
+    description:
+      The app's technology protects your data so you can focus on getting
       your work done. It strengthens your cybersecurity and business continuity
       plans, reducing risks and ensuring your communications remain secure.
   - title: Boost Collaboration

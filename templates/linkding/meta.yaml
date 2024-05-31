@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sissbruecker/linkding:1.17.2
+      default: sissbruecker/linkding:1.30.0
     linkdingSuperuserName:
       type: string
       title: Superuser Name
@@ -80,16 +80,19 @@ benefits:
       bookmarks. It offers a clean and minimalistic user interface optimized for
       readability, making it easy to manage and organize your bookmarks.
   - title: Fast and Easy Setup
-    description: Designed to be minimal, fast, and easy to set up, Linkding can be
+    description:
+      Designed to be minimal, fast, and easy to set up, Linkding can be
       quickly deployed using Docker. It supports SQLite as a default database
       with PostgreSQL as an optional choice.
   - title: Read it Later Functionality
-    description: Linkding comes with a 'Read it Later' feature that allows you to
+    description:
+      Linkding comes with a 'Read it Later' feature that allows you to
       save bookmarks for later reading. This feature is particularly useful for
       users who come across interesting content but don't have time to read it
       immediately.
   - title: Share Bookmarks
-    description: Linkding allows you to share your bookmarks with other users. This
+    description:
+      Linkding allows you to share your bookmarks with other users. This
       feature is especially useful for teams working on a project together or
       for individuals who want to share interesting finds with friends or
       family.
@@ -106,7 +109,8 @@ features:
       changes to multiple bookmarks at once. This feature can save you time when
       you need to update or organize your bookmarks.
   - title: Automatically Provides Titles, Descriptions and Icons
-    description: Linkding automatically provides titles, descriptions, and icons for
+    description:
+      Linkding automatically provides titles, descriptions, and icons for
       bookmarked websites. This feature saves you the hassle of manually
       entering this information.
   - title: Import and Export Bookmarks

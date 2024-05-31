@@ -54,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glitchtip/glitchtip:v3.1.0
+      default: glitchtip/glitchtip:v4.0.9
     databaseServiceName:
       type: string
       title: Redis Service Name
@@ -70,16 +70,19 @@ benefits:
       and where you want, ensuring you're always on top of any issues that
       arise.
   - title: Affordable and Simple
-    description: GlitchTip is designed with simplicity and affordability in mind.
+    description:
+      GlitchTip is designed with simplicity and affordability in mind.
       It's an open-source solution that you can modify and use as you see fit,
       without breaking your budget.
   - title: Performance Monitoring
-    description: With GlitchTip, you can monitor your application's performance and
+    description:
+      With GlitchTip, you can monitor your application's performance and
       find out where your app is slow. It takes a simple, out of the box
       approach, helping you to identify your slowest web requests, database
       calls, and other transactions.
   - title: Uptime Monitoring
-    description: GlitchTip can ping your site and warn you when it's not responding.
+    description:
+      GlitchTip can ping your site and warn you when it's not responding.
       It can also send you an alert via email or webhook if it doesn't receive
       your scheduled ping.
 features:
@@ -88,11 +91,13 @@ features:
       exceptions, log messages, Content Security Policy violations, and more to
       one place for triage and resolution.
   - title: Application Performance Monitoring
-    description: GlitchTip provides a simple, out of the box approach to application
+    description:
+      GlitchTip provides a simple, out of the box approach to application
       performance monitoring. It helps you to identify your slowest web
       requests, database calls, and other transactions.
   - title: Uptime Monitoring
-    description: GlitchTip can ping your site and warn you when it's not responding.
+    description:
+      GlitchTip can ping your site and warn you when it's not responding.
       It can also reverse this process and send GlitchTip a request on schedule.
       If GlitchTip doesn't receive your ping, it will send you an alert.
 tags:

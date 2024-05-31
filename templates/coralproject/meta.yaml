@@ -21,7 +21,8 @@ changeLog:
   - date: 2023-2-19
     description: first release
   - date: 2023-06-18
-    description: Fixed bug that prevented the application from working version has
+    description:
+      Fixed bug that prevented the application from working version has
       been replaced with the current version
 links:
   - label: Website
@@ -55,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coralproject/talk:8.2.4
+      default: coralproject/talk:9.0.6
     redisServiceName:
       type: string
       title: Redis Service Name
@@ -70,7 +71,8 @@ schema:
       default: false
 benefits:
   - title: Improved Commenting Experience
-    description: Coral enhances the commenting experience on your website by using
+    description:
+      Coral enhances the commenting experience on your website by using
       smart technology and effective design. It helps to increase loyalty and
       engagement on your website, giving you complete control of the
       interactions and data.
@@ -88,7 +90,8 @@ features:
       conversation, mute annoying voices, share discussions, receive
       notifications, and see new comment alerts instantly.
   - title: Effective Moderation Tools
-    description: Coral provides a full suite of tools that help moderators easily
+    description:
+      Coral provides a full suite of tools that help moderators easily
       identify disruptive comments and surface the best submissions. These tools
       are supported by smart AI technology.
   - title: Built for Publishing

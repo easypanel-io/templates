@@ -42,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/prowlarr
+      default: linuxserver/prowlarr:1.17.2
 benefits:
   - title: Seamless Integration
     description: Prowlarr integrates effortlessly with various PVR apps such as
@@ -53,16 +53,19 @@ benefits:
       Indexers. This eliminates the need for per app Indexer setup, making the
       process more convenient and less time-consuming.
   - title: Wide Support
-    description: Prowlarr supports Usenet for 24 indexers natively and Torrent for
+    description:
+      Prowlarr supports Usenet for 24 indexers natively and Torrent for
       over 500 trackers. This wide range of support ensures that you can manage
       your indexers regardless of the platform they are on.
 features:
   - title: Indexer Sync
-    description: Prowlarr offers Indexer Sync to Lidarr, Mylar3, Radarr, Readarr,
+    description:
+      Prowlarr offers Indexer Sync to Lidarr, Mylar3, Radarr, Readarr,
       and Sonarr. This means you don't have to manually configure the other
       applications.
   - title: Manual Searching
-    description: Prowlarr allows for manual searching of Trackers & Indexers at a
+    description:
+      Prowlarr allows for manual searching of Trackers & Indexers at a
       category level and parameter-based manual searching. This gives you more
       control and flexibility in finding what you need.
   - title: Indexer Health and Status Notifications

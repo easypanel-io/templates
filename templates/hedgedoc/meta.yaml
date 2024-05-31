@@ -49,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/hedgedoc/hedgedoc:1.9.8
+      default: quay.io/hedgedoc/hedgedoc:1.9.9
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -60,7 +60,8 @@ benefits:
       presentations in real-time. Simply share your note-link with your
       co-workers and they’re ready to go.
   - title: Data Control
-    description: Being a self-hosted solution, HedgeDoc gives you complete control
+    description:
+      Being a self-hosted solution, HedgeDoc gives you complete control
       over your data. Your notes and documents stay on your server, ensuring
       privacy and security.
   - title: Web-based Solution
@@ -69,21 +70,24 @@ benefits:
       it accessible from anywhere.
 features:
   - title: Presentation Mode
-    description: HedgeDoc comes with a presentation mode that allows you to build
+    description:
+      HedgeDoc comes with a presentation mode that allows you to build
       and present slides in markdown. It's powered by reveal.js, providing a
       seamless presentation experience.
   - title: Graphs & Diagrams
     description: HedgeDoc supports many types of graphs, diagrams, and embedded
       content. This makes it a versatile tool for visualizing data and ideas.
   - title: Easy Permission System
-    description: HedgeDoc features an easy-to-use permission system. You can manage
+    description:
+      HedgeDoc features an easy-to-use permission system. You can manage
       the permissions of your notes with a simple dropdown selection.
   - title: Revisions
     description: HedgeDoc keeps track of changes to your notes and allows you to
       revert to any older version. This feature ensures you never lose important
       information.
   - title: Low System Requirements
-    description: HedgeDoc doesn’t require much resources. It runs smoothly even on
+    description:
+      HedgeDoc doesn’t require much resources. It runs smoothly even on
       low-powered devices like a Raspberry Pi.
 tags:
   - Documents

@@ -50,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/requarks/wiki:2.5.298
+      default: ghcr.io/requarks/wiki:2.5.303
     databaseType:
       type: string
       title: Database Type
@@ -84,7 +84,8 @@ benefits:
       Server, and SQLite. You have the flexibility to choose the hosting
       environment that works best for your team.
   - title: Easy Administration
-    description: Manage all aspects of your wiki using the extensive and intuitive
+    description:
+      Manage all aspects of your wiki using the extensive and intuitive
       admin area. You can easily customize the appearance of your wiki, manage
       user access and permissions, and configure authentication options.
   - title: High Performance
@@ -94,12 +95,14 @@ benefits:
       available resources.
 features:
   - title: Authentication
-    description: Wiki.js offers built-in authentication with self-registration and
+    description:
+      Wiki.js offers built-in authentication with self-registration and
       password recovery capabilities. You can also integrate with third-party
       authentication services like Google, Facebook, Microsoft, GitHub, and
       more.
   - title: Modules
-    description: Customize your wiki by enabling or disabling modules based on your
+    description:
+      Customize your wiki by enabling or disabling modules based on your
       team's needs. Wiki.js offers a wide range of modules for features like
       editing, history tracking, localization, media assets, rendering, search,
       storage, and user management.
@@ -114,7 +117,8 @@ features:
       with popular platforms like Git, AWS, Azure, Google Cloud, Facebook, and
       Algolia.
   - title: Sponsors and Backers
-    description: Wiki.js is made possible thanks to generous sponsors and backers.
+    description:
+      Wiki.js is made possible thanks to generous sponsors and backers.
       By supporting the project, you contribute to its ongoing development and
       improvement.
 tags:

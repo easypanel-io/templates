@@ -43,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cubejs/cube:v0.31.66
+      default: cubejs/cube:v0.35.40
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -69,22 +69,26 @@ benefits:
       universal compatibility data engineers and developers need.
 features:
   - title: Data Modeling
-    description: Define and manage metrics upstream to consolidate your workflow,
+    description:
+      Define and manage metrics upstream to consolidate your workflow,
       centralize definitions, and create a single source of truth. The app uses
       Data Models to model raw data into meaningful business definitions and
       pre-aggregate data for optimal results.
   - title: Access Control
-    description: Grant column- and role-based operational and viewing permissions
+    description:
+      Grant column- and role-based operational and viewing permissions
       upstream with granular access controls. In the app, authorization is based
       on the security context, and authentication tokens are generated based on
       your API secret.
   - title: Caching
-    description: "Ensure your data is reliably performant with a powerful caching
+    description:
+      "Ensure your data is reliably performant with a powerful caching
       layer and advanced pre-aggregation capabilities. The app provides a
       two-level caching system: in-memory cache and configurable
       pre-aggregations."
   - title: APIs
-    description: Connect your data to any front-end application to build beautiful
+    description:
+      Connect your data to any front-end application to build beautiful
       custom visualizations. The app’s SQL, REST, and GraphQL APIs provide the
       universal compatibility data engineers and developers need.
 tags:

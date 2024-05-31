@@ -40,13 +40,14 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/isso-comments/isso:0.13.0
+      default: ghcr.io/isso-comments/isso:latest
     adminPassword:
       type: string
       title: Admin Password
 benefits:
   - title: Lightweight Commenting Server
-    description: Isso is a lightweight commenting server that offers a simple and
+    description:
+      Isso is a lightweight commenting server that offers a simple and
       efficient way to manage comments on your website. It is designed to be a
       drop-in replacement for Disqus, providing a more streamlined and
       user-friendly experience.
@@ -68,14 +69,17 @@ features:
       visible before activation. This gives you control over what is displayed
       on your website.
   - title: User Comment Management
-    description: Users can edit or delete their own comments within a default window
+    description:
+      Users can edit or delete their own comments within a default window
       of 15 minutes. This gives users the ability to correct or remove their
       comments as needed.
   - title: Disqus & WordPress Import
-    description: Isso allows for easy migration of your Disqus or WordPress comments
+    description:
+      Isso allows for easy migration of your Disqus or WordPress comments
       without any hassle. This makes transitioning to Isso a smooth process.
   - title: SQLite Backend
-    description: Isso uses an SQLite backend, demonstrating that comments are not
+    description:
+      Isso uses an SQLite backend, demonstrating that comments are not
       Big Data and can be managed efficiently and effectively.
 tags:
   - Documentation

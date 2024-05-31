@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-server:2023.6.1
+      default: itzg/minecraft-server:2024.5.0
     serverName:
       type: string
       title: Server Name
@@ -193,22 +193,27 @@ benefits:
       Minecraft Server at startup, ensuring you always have the most recent
       features and updates.
   - title: Flexible Version Support
-    description: You can run or upgrade to any specific version of Minecraft Server
+    description:
+      You can run or upgrade to any specific version of Minecraft Server
       or the latest snapshot, giving you the flexibility to choose the version
       that best suits your needs.
   - title: Dedicated Server for Different Platforms
-    description: The app provides a dedicated server for Minecraft clients running
+    description:
+      The app provides a dedicated server for Minecraft clients running
       on consoles, mobile, or native Windows, ensuring a smooth and seamless
       gaming experience across different platforms.
 features:
   - title: Dynamic Version Support
-    description: The app supports dynamic versioning, automatically downloading the
+    description:
+      The app supports dynamic versioning, automatically downloading the
       latest stable version of Minecraft Server at startup.
   - title: Server Types and Modpack Support
-    description: The app supports various server types and modpacks, enhancing your
+    description:
+      The app supports various server types and modpacks, enhancing your
       Minecraft gaming experience with additional features and functionalities.
   - title: Dedicated Server for Different Platforms
-    description: The app provides a dedicated server for Minecraft clients running
+    description:
+      The app provides a dedicated server for Minecraft clients running
       on consoles, mobile, or native Windows, ensuring compatibility and a
       smooth gaming experience.
 tags:

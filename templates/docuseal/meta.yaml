@@ -27,7 +27,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: docuseal
+      default: docuseal/docuseal:1.5.7
     databaseServiceName:
       type: string
       title: Database Service Name

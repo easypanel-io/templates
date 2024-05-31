@@ -47,18 +47,20 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openproject/community:12
+      default: openproject/community:13.4.1
 benefits:
   - title: Efficient Project Management
     description: OpenProject offers efficient classic, agile, or hybrid project
       management in a secure environment. It is designed to make your teams'
       working lives easier, more productive, and more enjoyable.
   - title: Data Sovereignty
-    description: With OpenProject, you have full control over your data. It offers
+    description:
+      With OpenProject, you have full control over your data. It offers
       the highest standards in data security and privacy, ensuring that your
       data is protected and secure.
   - title: Hosting in the EU
-    description: OpenProject offers peace of mind hosting in the EU. Your data is
+    description:
+      OpenProject offers peace of mind hosting in the EU. Your data is
       stored on secure servers within the EU, meeting the needs of highly
       security-conscious organizations.
 features:

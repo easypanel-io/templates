@@ -60,7 +60,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnami/suitecrm:8
+      default: bitnami/suitecrm:8.6.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -72,7 +72,8 @@ benefits:
       costs. It offers the freedoms and flexibility of Open Source, allowing you
       to dramatically reduce your total cost of ownership.
   - title: Enhanced Business Relationships
-    description: SuiteCRM enables you to create a central repository for all your
+    description:
+      SuiteCRM enables you to create a central repository for all your
       customer data, providing key insights that can be used to enhance and
       nurture your business relationships.
   - title: Increased Productivity
@@ -81,27 +82,32 @@ benefits:
       business systems, enabling you to share and collaborate across any
       boundaries.
   - title: Improved Customer Satisfaction
-    description: SuiteCRM empowers your customer service team with the tools that
+    description:
+      SuiteCRM empowers your customer service team with the tools that
       will allow them to service smarter, faster and more professionally,
       thereby improving customer satisfaction.
 features:
   - title: 360 Degree View
-    description: Know your customer by creating a central repository for all your
+    description:
+      Know your customer by creating a central repository for all your
       customer data enabling you to gain key insights that can be used to
       enhance and nurture your business relationships.
   - title: Integration
-    description: Increase productivity across your organisation using our open REST
+    description:
+      Increase productivity across your organisation using our open REST
       API allowing you to integrate CRM with core business systems, enabling you
       to share and collaborate across any boundaries.
   - title: Powerful Reporting and Dashboards
-    description: Our powerful reporting and dashboards give you quick visibility of
+    description:
+      Our powerful reporting and dashboards give you quick visibility of
       key metrics to support your business.
   - title: Personalised Quotations
     description: Our Open Source CRM provides you with all the tools to capture
       important leads, manage your opportunities and create personalised
       quotations freeing up precious time to sell.
   - title: Customer Segmentation and Targeted Marketing
-    description: Automate customer segmentation, send targeted marketing content and
+    description:
+      Automate customer segmentation, send targeted marketing content and
       track important activity to generate more leads and feed the funnel.
 tags:
   - CRM

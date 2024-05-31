@@ -39,10 +39,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: semitechnologies/weaviate:1.19.8
+      default: semitechnologies/weaviate:1.25.2
 benefits:
   - title: Powerful Vector Search
-    description: Easily perform lightning-fast pure vector similarity search over
+    description:
+      Easily perform lightning-fast pure vector similarity search over
       raw vectors or data objects, even with filters.
   - title: Hybrid Search
     description: Combine keyword-based search with vector search techniques for
@@ -52,13 +53,16 @@ benefits:
       create next-gen search experiences.
 features:
   - title: Scalable Vector Database
-    description: Store data objects and vector embeddings from ML models and scale
+    description:
+      Store data objects and vector embeddings from ML models and scale
       seamlessly into billions of data objects.
   - title: Integrations
-    description: Choose from a variety of vectorization modules and neural search
+    description:
+      Choose from a variety of vectorization modules and neural search
       frameworks for easy integration.
   - title: Wide Range of Applications
-    description: Power innovative apps beyond search with Weaviate's next-gen vector
+    description:
+      Power innovative apps beyond search with Weaviate's next-gen vector
       database.
 tags:
   - Developer Tools

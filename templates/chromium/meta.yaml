@@ -39,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/chromium:version-b5a6f5c3
+      default: lscr.io/linuxserver/chromium:version-be5e88f6
 benefits:
   - title: Open-Source Browser
     description: Chromium is an open-source browser project that aims to build a
@@ -47,7 +47,8 @@ benefits:
       is designed to be accessible and user-friendly, providing a seamless
       browsing experience.
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
+    description:
+      The app utilizes the docker manifest for multi-platform awareness.
       This means it can retrieve the correct image for your architecture,
       ensuring optimal performance and compatibility.
   - title: Customizable Environment
@@ -63,11 +64,13 @@ features:
       security for your browsing. You can set a username and password for
       authentication.
   - title: Docker in Docker Setup
-    description: The app offers a Docker in Docker (DinD) setup inside the container
+    description:
+      The app offers a Docker in Docker (DinD) setup inside the container
       to use docker in an isolated environment. This feature enhances the
       performance and security of your browsing experience.
   - title: GPU Acceleration
-    description: The app supports GPU acceleration, allowing you to leverage a host
+    description:
+      The app supports GPU acceleration, allowing you to leverage a host
       video card for GPU-accelerated applications. This feature enhances the
       speed and performance of the browser.
 tags:

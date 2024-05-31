@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nocodb/nocodb:0.106.1
+      default: nocodb/nocodb:0.207.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -55,30 +55,36 @@ schema:
       default: nocodb-redis
 benefits:
   - title: Turn Any Database into a Smart Spreadsheet
-    description: NocoDB is an open source platform that can transform any database
+    description:
+      NocoDB is an open source platform that can transform any database
       into a smart spreadsheet. This allows for easy data management and
       manipulation, similar to using a regular spreadsheet, but with the power
       and flexibility of a database.
   - title: Trusted by Thousands of Organizations
-    description: NocoDB is trusted by over 2000 organizations worldwide. Its fast
+    description:
+      NocoDB is trusted by over 2000 organizations worldwide. Its fast
       growth and high adoption rate is a testament to its effectiveness and
       reliability.
   - title: Create Endless Solutions
-    description: NocoDB is free and self-hostable, allowing you to create unlimited
+    description:
+      NocoDB is free and self-hostable, allowing you to create unlimited
       grid views, gallery views, and form views from your own data. It offers a
       high degree of customization and flexibility, letting your imagination be
       the limit.
   - title: Automate Business Workflows
-    description: NocoDB allows you to build automations with your favorite apps such
+    description:
+      NocoDB allows you to build automations with your favorite apps such
       as Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS. This
       can greatly streamline your business workflows and increase productivity.
 features:
   - title: Easy Data Management
-    description: NocoDB allows you to easily search, sort, and filter columns and
+    description:
+      NocoDB allows you to easily search, sort, and filter columns and
       rows. It also supports collaboration just like a spreadsheet, making it
       easy for teams to work together on the same data.
   - title: Fine Grained Access Control
-    description: NocoDB lets you invite your team with fine grained access control.
+    description:
+      NocoDB lets you invite your team with fine grained access control.
       You can also share views publicly and with password protection, ensuring
       that your data is always secure.
   - title: Instant REST APIs

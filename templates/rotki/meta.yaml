@@ -42,10 +42,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.27.1
+      default: rotki/rotki:v1.33.1
 benefits:
   - title: Asset Management
-    description: Rotki is an asset management application that specializes in crypto
+    description:
+      Rotki is an asset management application that specializes in crypto
       assets. It allows you to keep track of your assets in one place, making it
       easier to manage your portfolio.
   - title: Tax Reporting
@@ -53,7 +54,8 @@ benefits:
       statistics from your cryptocurrency transaction data, which can be useful
       for tax purposes.
   - title: Privacy Protection
-    description: Unlike other services, Rotki stores your data encrypted locally on
+    description:
+      Unlike other services, Rotki stores your data encrypted locally on
       your computer. This ensures that your financial data remains private and
       secure.
 features:
@@ -62,10 +64,12 @@ features:
       soon. This allows you to manage your assets across different platforms
       easily.
   - title: Transaction Data Import and Display
-    description: Rotki allows you to import, display, and store your cryptocurrency
+    description:
+      Rotki allows you to import, display, and store your cryptocurrency
       transaction data. It also generates reports and statistics from this data.
   - title: Profit/Loss Report Generation
-    description: Rotki allows you to create a profit/loss report. This can help you
+    description:
+      Rotki allows you to create a profit/loss report. This can help you
       understand your financial performance and make informed decisions.
   - title: Decentralized Finance
     description: Rotki supports decentralized finance. This means you can manage

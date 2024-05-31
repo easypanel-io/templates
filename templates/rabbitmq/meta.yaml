@@ -41,7 +41,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: rabbitmq
+      default: rabbitmq:3.12.14
     appServiceImage:
       type: string
       title: App Service Image
@@ -68,12 +68,14 @@ benefits:
       configurations to meet high-scale, high-availability requirements. It is
       lightweight and easy to deploy on premises and in the cloud.
   - title: Cross-Language Messaging
-    description: RabbitMQ provides a wide range of developer tools for most popular
+    description:
+      RabbitMQ provides a wide range of developer tools for most popular
       languages, enabling cross-language messaging with your favorite
       programming languages.
 features:
   - title: Asynchronous Messaging
-    description: RabbitMQ supports multiple messaging protocols, message queuing,
+    description:
+      RabbitMQ supports multiple messaging protocols, message queuing,
       delivery acknowledgement, flexible routing to queues, and multiple
       exchange types.
   - title: Distributed Deployment
@@ -81,7 +83,8 @@ features:
       throughput, and can federate across multiple availability zones and
       regions.
   - title: Enterprise & Cloud Ready
-    description: RabbitMQ supports pluggable authentication and authorisation, TLS
+    description:
+      RabbitMQ supports pluggable authentication and authorisation, TLS
       and LDAP. It is lightweight and easy to deploy in public and private
       clouds.
   - title: Tools & Plugins

@@ -48,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: weblate/weblate:4.16.2-1
+      default: weblate/weblate:5.5.5.1
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -71,12 +71,14 @@ schema:
       title: Email Password
 benefits:
   - title: Efficient Localization
-    description: Weblate is a web-based continuous localization system that allows
+    description:
+      Weblate is a web-based continuous localization system that allows
       you to easily translate and manage your software projects. With Weblate,
       you can streamline the localization process and ensure that your app is
       available in multiple languages.
   - title: Collaborative Translation
-    description: Weblate enables collaboration among translators, making it easy for
+    description:
+      Weblate enables collaboration among translators, making it easy for
       multiple contributors to work on translations simultaneously. This helps
       to speed up the translation process and ensures high-quality translations.
   - title: Version Control Integration
@@ -86,7 +88,8 @@ benefits:
       always in sync with the latest code changes.
 features:
   - title: Web-Based Interface
-    description: Weblate provides a user-friendly web-based interface that allows
+    description:
+      Weblate provides a user-friendly web-based interface that allows
       you to easily manage your translation projects. You can add new languages,
       import and export translations, and track the progress of translations.
   - title: Glossary and Translation Memory

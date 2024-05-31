@@ -49,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: pentacent/keila:0.11.2
+      default: pentacent/keila:0.14.7
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -72,32 +72,39 @@ schema:
       title: SMTP Email Password
 benefits:
   - title: Reliable & Easy Email Newsletters
-    description: Keila allows you to grow your contact lists and send data-driven
+    description:
+      Keila allows you to grow your contact lists and send data-driven
       newsletter campaigns with ease. It's an open-source tool, made in Germany
       and hosted in the EU.
   - title: Import Existing Contacts
-    description: Keila makes it easy to get started if you have a list of existing
+    description:
+      Keila makes it easy to get started if you have a list of existing
       contacts. Simply upload a CSV file and you're ready to go.
   - title: Custom Data & Tags
-    description: Keila provides complete freedom to add custom data and tags to your
+    description:
+      Keila provides complete freedom to add custom data and tags to your
       contacts. Use data to filter contacts and as merge fields in campaigns.
   - title: Powerful Segmentation
     description: Keila allows you to create smart subsets of your contact lists.
       Build segments with the visual segment editor or our powerful query
       language.
   - title: Built for Privacy
-    description: Keila gives you the stats you need while respecting the privacy of
+    description:
+      Keila gives you the stats you need while respecting the privacy of
       your contacts. Your data is yours and will never be shared with third
       parties.
   - title: Live Statistics
-    description: Keila provides live statistics for your newsletters, including open
+    description:
+      Keila provides live statistics for your newsletters, including open
       and click rates, as soon as you click Send.
 features:
   - title: Integrate & Automate
-    description: Keila's powerful API allows you to integrate your email newsletter
+    description:
+      Keila's powerful API allows you to integrate your email newsletter
       with other applications for managing contacts and email campaigns.
   - title: Open Source & Self-Hosting
-    description: Keila is Free/Libre Open Source Software. You can run it on your
+    description:
+      Keila is Free/Libre Open Source Software. You can run it on your
       own servers using the code on GitHub or our official Docker image.
   - title: Multi-Column Layouts
     description: Build multi-column layouts with Keila’s Block Editor.
@@ -120,7 +127,8 @@ features:
   - title: Powerful Segmentation and Custom Fields
     description: Keila provides powerful segmentation and custom fields.
   - title: Fully-Featured API
-    description: Keila offers a fully-featured API for sending campaigns and syncing
+    description:
+      Keila offers a fully-featured API for sending campaigns and syncing
       contacts.
   - title: Upload Images
     description: Keila allows you to upload images.

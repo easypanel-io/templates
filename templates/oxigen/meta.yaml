@@ -32,14 +32,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/yuriizinets/oxigen:2.0-rc2
+      default: ghcr.io/yuriizinets/oxigen:latest
 benefits:
   - title: Dynamic Social Media Image Generation
     description: Oxigen allows you to easily create and customize social media
       images. This dynamic image generation capability can greatly enhance your
       social media presence and engagement.
   - title: User Interface and API
-    description: Oxigen provides both a user interface and an API, giving you the
+    description:
+      Oxigen provides both a user interface and an API, giving you the
       flexibility to create images in the way that suits you best. Whether you
       prefer a visual approach or a more programmatic one, Oxigen has you
       covered.
@@ -49,7 +50,8 @@ features:
       images to your liking. You can easily adjust various elements of your
       images to make them truly unique and eye-catching.
   - title: API Access
-    description: Oxigen provides an API that allows you to programmatically create
+    description:
+      Oxigen provides an API that allows you to programmatically create
       and customize images. This feature is perfect for those who prefer to
       automate their image creation process.
 tags:

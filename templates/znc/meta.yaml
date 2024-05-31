@@ -34,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/znc:znc-1.9.0-ls130
+      default: lscr.io/linuxserver/znc:1.9.0
     PUID:
       type: string
       title: PUID

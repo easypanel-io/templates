@@ -48,13 +48,14 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ampache/ampache:6.2.1
+      default: ampache/ampache:6.4.0
     appMediaHostPath:
       type: string
       title: Media Host Path
 benefits:
   - title: Access Your Media Anywhere
-    description: Ampache allows you to access your music and videos from anywhere,
+    description:
+      Ampache allows you to access your music and videos from anywhere,
       using almost any internet-enabled device. Whether you're at home, at work,
       or on vacation, your media is always at your fingertips.
   - title: Manage Your Media Collection
@@ -62,7 +63,8 @@ benefits:
       through a simple web interface. It synchronizes local and remote catalogs
       to create a unique, consistent collection.
   - title: Open Source Freedom
-    description: Ampache is completely free and open source, giving you the freedom
+    description:
+      Ampache is completely free and open source, giving you the freedom
       to use and modify it as you see fit. It has been under the AGPLv3 license
       since 2001.
 features:
@@ -70,7 +72,8 @@ features:
     description: Stream your music to your preferred player, control it with
       Localplay, or directly listen on the web page with the HTML5 player.
   - title: Ampache Everywhere
-    description: Listen to your music from your phone, tablet, or television using a
+    description:
+      Listen to your music from your phone, tablet, or television using a
       compatible client.
   - title: File Manager
     description: Ampache is not just a streaming application, it's also a file

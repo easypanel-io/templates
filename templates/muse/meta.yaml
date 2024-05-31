@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: codetheweb/muse:2.2.2
+      default: codetheweb/muse:2.8.1
     discordToken:
       type: string
       title: Discord Token
@@ -56,15 +56,18 @@ schema:
       title: Spotify Client Secret
 benefits:
   - title: Enhanced Discord Experience
-    description: Muse is a self-hosted Discord music bot designed to enhance your
+    description:
+      Muse is a self-hosted Discord music bot designed to enhance your
       Discord server experience. It's perfect for small to medium-sized groups,
       providing a seamless and enjoyable music listening experience.
   - title: Customizable and Versatile
-    description: Muse is highly customizable, allowing users to add custom shortcuts
+    description:
+      Muse is highly customizable, allowing users to add custom shortcuts
       and auto-convert playlists, artists, albums, and songs from Spotify. It's
       a versatile tool that can be tailored to your specific needs.
   - title: Improved Performance
-    description: With local caching, Muse ensures better performance, providing a
+    description:
+      With local caching, Muse ensures better performance, providing a
       smooth and uninterrupted music experience. It also normalizes volume
       across tracks for a consistent listening experience.
 features:
@@ -75,10 +78,12 @@ features:
     description: Muse allows you to seek within a song or video, giving you full
       control over your listening experience.
   - title: No Vote-to-Skip
-    description: Muse operates on anarchy, not democracy. There's no vote-to-skip
+    description:
+      Muse operates on anarchy, not democracy. There's no vote-to-skip
       feature, ensuring that everyone gets to enjoy the music they love.
   - title: Supports Multiple Guilds
-    description: A single Muse instance can support multiple Discord guilds, making
+    description:
+      A single Muse instance can support multiple Discord guilds, making
       it a convenient and efficient choice for managing music across various
       servers.
   - title: Volume Normalization

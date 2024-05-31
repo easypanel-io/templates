@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/calibre:6.23.0
+      default: linuxserver/calibre:7.11.0
     password:
       type: string
       title: Password

@@ -47,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nextcloud:24.0.6
+      default: nextcloud:29.0.0
     databaseType:
       type: string
       title: Database Type
@@ -72,26 +72,31 @@ benefits:
       ensuring no data leaks to third parties. It offers a secure platform for
       data storage and collaboration.
   - title: Remote Collaboration Made Easy
-    description: Nextcloud Hub 5 is designed to facilitate remote collaboration. It
+    description:
+      Nextcloud Hub 5 is designed to facilitate remote collaboration. It
       integrates key Nextcloud products into a single platform, optimizing the
       flow of collaboration.
   - title: Customizable and Scalable
-    description: Nextcloud Hub 5 is customizable and scalable. It can be deployed
+    description:
+      Nextcloud Hub 5 is customizable and scalable. It can be deployed
       on-premises or on the cloud, making it a perfect fit for organizations of
       all sizes.
 features:
   - title: Nextcloud Files
-    description: Nextcloud Files offers an on-premise Universal File Access and sync
+    description:
+      Nextcloud Files offers an on-premise Universal File Access and sync
       platform with powerful collaboration capabilities and desktop, mobile, and
       web interfaces.
   - title: Nextcloud Talk
     description: Nextcloud Talk is a feature of Nextcloud Hub 5 that facilitates
       communication and collaboration within the platform.
   - title: Nextcloud Groupware
-    description: Nextcloud Groupware is a suite of tools integrated into Nextcloud
+    description:
+      Nextcloud Groupware is a suite of tools integrated into Nextcloud
       Hub 5, designed to enhance productivity and collaboration.
   - title: Nextcloud Office
-    description: Nextcloud Office is a part of Nextcloud Hub 5, providing users with
+    description:
+      Nextcloud Office is a part of Nextcloud Hub 5, providing users with
       a suite of office tools for document editing, spreadsheet management, and
       more.
 tags:

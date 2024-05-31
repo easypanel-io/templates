@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: towfiqi/serpbear
+      default: towfiqi/serpbear:2.0.2
     serpUser:
       type: string
       title: Username
@@ -55,7 +55,8 @@ schema:
       title: Password
 benefits:
   - title: Track Your Website's Keyword Positions
-    description: SerpBear allows you to monitor your website's keyword positions in
+    description:
+      SerpBear allows you to monitor your website's keyword positions in
       Google. This feature enables you to understand your website's visibility
       in search engine results and make necessary adjustments to improve your
       SEO strategy.
@@ -65,30 +66,36 @@ benefits:
       ensures that you are always aware of your website's performance in search
       engine rankings.
   - title: Zero Cost to Run
-    description: SerpBear is a cost-effective solution for tracking your website's
+    description:
+      SerpBear is a cost-effective solution for tracking your website's
       keyword positions. You can run the app on mogenius.com or Fly.io for free,
       making it an affordable choice for businesses of all sizes.
 features:
   - title: Unlimited Keywords
-    description: With SerpBear, you can add unlimited domains and unlimited keywords
+    description:
+      With SerpBear, you can add unlimited domains and unlimited keywords
       to track their Search Engine Results Page (SERP). This feature provides
       you with the flexibility to monitor as many keywords as you need for your
       SEO strategy.
   - title: Email Notification
-    description: SerpBear comes with an email notification feature that alerts you
+    description:
+      SerpBear comes with an email notification feature that alerts you
       of your keyword position changes. You can choose to receive these
       notifications daily, weekly, or monthly, depending on your preference.
   - title: SERP API
-    description: SerpBear offers a built-in API that you can use for your marketing
+    description:
+      SerpBear offers a built-in API that you can use for your marketing
       and data reporting tools. This feature allows you to integrate SerpBear
       with other platforms and streamline your SEO tracking process.
   - title: Google Search Console Integration
-    description: SerpBear integrates with Google Search Console to provide you with
+    description:
+      SerpBear integrates with Google Search Console to provide you with
       the actual visit count, impressions, and more for each keyword. This
       feature enables you to gain a comprehensive understanding of your
       website's performance in search engine results.
   - title: Export CSV
-    description: SerpBear allows you to export your domain keywords and their data
+    description:
+      SerpBear allows you to export your domain keywords and their data
       in CSV files whenever you want. This feature makes it easy for you to
       analyze your keyword data and share it with your team.
   - title: Mobile App

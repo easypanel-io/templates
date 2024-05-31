@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: portainer/portainer-ce:2.15.1-alpine
+      default: portainer/portainer-ce:latest
 benefits:
   - title: Efficient Container Management
     description: Portainer simplifies the process of deploying, configuring,
@@ -49,7 +49,8 @@ benefits:
       It allows you to manage containers in any data center, cloud, network
       edge, or IIOT device in just a few minutes.
   - title: Accelerated Container Adoption
-    description: Trusted by thousands of companies worldwide, Portainer accelerates
+    description:
+      Trusted by thousands of companies worldwide, Portainer accelerates
       the adoption of containers by making it easy to get applications up and
       running in a Kubernetes environment. It significantly reduces deployment
       times and minimizes production errors.
@@ -64,15 +65,18 @@ benefits:
       compliance with IT standards.
 features:
   - title: Multi-Platform Support
-    description: Portainer supports Kubernetes, Docker, and Docker Swarm running in
+    description:
+      Portainer supports Kubernetes, Docker, and Docker Swarm running in
       any data center, cloud, network edge, or IIOT device. It provides a
       unified platform for managing containers across multiple environments.
   - title: Deployment of Containers
-    description: Portainer makes it easy to deploy cloud-native applications into
+    description:
+      Portainer makes it easy to deploy cloud-native applications into
       containers. It simplifies the process and ensures that your applications
       are deployed securely.
   - title: Lifecycle Management
-    description: With Portainer, managing and updating your deployments is a breeze.
+    description:
+      With Portainer, managing and updating your deployments is a breeze.
       It provides tools for easy setup, maintenance, and troubleshooting of your
       container infrastructure.
   - title: Integration with Popular Tools

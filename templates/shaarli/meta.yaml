@@ -39,10 +39,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/shaarli/shaarli:v0.12.2
+      default: ghcr.io/shaarli/shaarli:v0.13.0
 benefits:
   - title: Personalized Bookmarking
-    description: Shaarli offers a personal, minimalist, and super-fast bookmarking
+    description:
+      Shaarli offers a personal, minimalist, and super-fast bookmarking
       service. It allows you to share, comment, and save interesting links on
       your own server.
   - title: Versatile Usage
@@ -54,28 +55,35 @@ benefits:
       yours, and you can import and export it to HTML bookmarks format
       compatible with most web browsers.
   - title: Fast and Efficient
-    description: Shaarli is designed to be fast and efficient. It can handle tens of
+    description:
+      Shaarli is designed to be fast and efficient. It can handle tens of
       thousands of shares without slowing down.
   - title: Built-in Security
-    description: Shaarli comes with built-in security features to help you protect
+    description:
+      Shaarli comes with built-in security features to help you protect
       your instance. It does not send any telemetry, metrics, or private
       information to developers.
 features:
   - title: Editable Links
-    description: Shaarli allows you to edit the URL, title, description, tags, and
+    description:
+      Shaarli allows you to edit the URL, title, description, tags, and
       private/public status for all your shares.
   - title: Search and Organization
-    description: You can organize your shares with tags, search in all fields, and
+    description:
+      You can organize your shares with tags, search in all fields, and
       view your shares in a paginated list view with image and video thumbnails.
   - title: Extensibility
-    description: Shaarli is extensible through plugins and can be easily extended by
+    description:
+      Shaarli is extensible through plugins and can be easily extended by
       any client using the REST API exposed by Shaarli.
   - title: Bookmarklet and Sharing Tools
-    description: Shaarli provides a bookmarklet and other tools to share links in
+    description:
+      Shaarli provides a bookmarklet and other tools to share links in
       one click. It also supports mobile browsers and degrades gracefully with
       Javascript disabled.
   - title: Easy Setup
-    description: Setting up Shaarli is simple. Just drop the files on your server,
+    description:
+      Setting up Shaarli is simple. Just drop the files on your server,
       open the page, and you're good to go. No database is required, making
       backup easy.
 tags:

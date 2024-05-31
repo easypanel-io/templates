@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/easypanel-community/docker-ploi-roadmap:1.43
+      default: ghcr.io/easypanel-community/docker-ploi-roadmap:1.44.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -72,11 +72,13 @@ benefits:
       tasks or projects have more priority. This feature helps in better
       decision-making and resource allocation.
   - title: Easy User Management
-    description: Roadmap comes with a simplified role system, including roles such
+    description:
+      Roadmap comes with a simplified role system, including roles such
       as administrator, employee, and user. This makes it easy to manage users
       and their access levels within the application.
   - title: Single Sign-On
-    description: Roadmap supports OAuth 2 single sign-on with your own application,
+    description:
+      Roadmap supports OAuth 2 single sign-on with your own application,
       providing a seamless and secure login experience for users.
   - title: Automatic Image Generation
     description: The software automatically generates Open Graph (OG) images,
@@ -91,7 +93,8 @@ features:
   - title: Upvote System
     description: Upvote items to identify which tasks or projects have more priority.
   - title: Automatic Slug Generation
-    description: Automatically generate slugs for your items, making them easier to
+    description:
+      Automatically generate slugs for your items, making them easier to
       reference and find.
   - title: Admin Panel
     description: Manage your roadmap and users with the easy-to-use Filament admin panel.

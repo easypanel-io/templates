@@ -39,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bityard/silicon:488df721031f74721483da787427115c7db19711
+      default: bityard/silicon:0.1.2
 benefits:
   - title: Efficient Knowledge Management
     description: Silicon Notes is a lightweight, low-friction personal knowledge
@@ -51,7 +51,8 @@ benefits:
       personal knowledge base is always within reach. Whether you're on the go
       or at your desk, you can easily access, edit, and manage your information.
   - title: Powerful Search Capabilities
-    description: Silicon Notes features a powerful full-text and page title search,
+    description:
+      Silicon Notes features a powerful full-text and page title search,
       making it easy to find the information you need. Whether you're looking
       for a specific piece of information or just browsing, the search function
       makes it easy to navigate your personal knowledge base.
@@ -65,11 +66,13 @@ features:
       readable format for your knowledge base. This feature also includes
       language syntax highlighting in the rendered HTML.
   - title: Bi-directional Page Relationships
-    description: Silicon Notes supports bi-directional page relationships, allowing
+    description:
+      Silicon Notes supports bi-directional page relationships, allowing
       you to easily link related pages together. This feature helps to create a
       more interconnected and comprehensive knowledge base.
   - title: Page History
-    description: Silicon Notes keeps a history of each page, allowing you to easily
+    description:
+      Silicon Notes keeps a history of each page, allowing you to easily
       track and revert changes. This feature ensures that no information is lost
       and that you can always return to previous versions of your notes.
   - title: Table of Contents

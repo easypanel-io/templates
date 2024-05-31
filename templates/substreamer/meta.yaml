@@ -36,14 +36,16 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghenry22/substreamer:6.0.41
+      default: ghenry22/substreamer:6.0.43
 benefits:
   - title: Your Music, Your Way
-    description: Substreamer allows you to access and enjoy your music in your own
+    description:
+      Substreamer allows you to access and enjoy your music in your own
       style. It's a free client app for the Subsonic music server, designed to
       deliver your music, your way.
   - title: Compatibility with Subsonic Forks
-    description: Substreamer works seamlessly with Subsonic forks such as Airsonic,
+    description:
+      Substreamer works seamlessly with Subsonic forks such as Airsonic,
       Madsonic, and others that implement the Subsonic API v1.13 or higher,
       including Navidrome and Ampache.
   - title: Organize Your Music Library
@@ -55,7 +57,8 @@ features:
     description: Substreamer is a free client for Subsonic servers, packed with
       features to enhance your music listening experience.
   - title: Subsonic Server
-    description: Substreamer works with the original Subsonic server, allowing you
+    description:
+      Substreamer works with the original Subsonic server, allowing you
       to organize and manage your music library effectively.
   - title: Subsonic Forks
     description: The app is compatible with Subsonic forks such as Airsonic,

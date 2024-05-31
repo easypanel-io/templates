@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: eritislami/evobot:2.7.0
+      default: eritislami/evobot:2.9.0
     discordToken:
       type: string
       title: Discord Token
@@ -61,36 +61,43 @@ schema:
       maximum: 100
 benefits:
   - title: Uninterrupted Music Experience
-    description: EvoBot provides a seamless and uninterrupted music experience on
+    description:
+      EvoBot provides a seamless and uninterrupted music experience on
       Discord. It allows users to play their favorite music from YouTube
       directly on their Discord server.
   - title: Multiple Language Support
-    description: EvoBot supports multiple languages, making it accessible to users
+    description:
+      EvoBot supports multiple languages, making it accessible to users
       from different linguistic backgrounds. It supports English, Arabic,
       Brazilian Portuguese, Czech, Dutch, French, German, Greek, Indonesian,
       Italian, Japanese, Korean, Minionese, Persian, Polish, Russian, Simplified
       Chinese, Singaporean Mandarin, Spanish, Swedish, Traditional Chinese,
       Thai, Turkish, Ukrainian, and Vietnamese.
   - title: User-Friendly Commands
-    description: EvoBot comes with a variety of user-friendly commands that make it
+    description:
+      EvoBot comes with a variety of user-friendly commands that make it
       easy for users to control their music playback. Users can play, pause,
       resume, skip, shuffle, and adjust the volume of their music with simple
       commands.
 features:
   - title: Music Playback
-    description: EvoBot allows users to play music from YouTube via URL or search
+    description:
+      EvoBot allows users to play music from YouTube via URL or search
       query. It also supports playing YouTube playlists.
   - title: Queue System
-    description: EvoBot features a queue system that allows users to line up their
+    description:
+      EvoBot features a queue system that allows users to line up their
       favorite songs and play them one after the other.
   - title: Loop / Repeat
     description: With EvoBot, users can loop or repeat their favorite songs or
       playlists, ensuring they never miss a beat.
   - title: Volume Control
-    description: EvoBot provides volume control, allowing users to adjust the music
+    description:
+      EvoBot provides volume control, allowing users to adjust the music
       volume to their liking.
   - title: Lyrics
-    description: EvoBot can fetch and display the lyrics of the currently playing
+    description:
+      EvoBot can fetch and display the lyrics of the currently playing
       song, enhancing the music listening experience.
 tags:
   - Chat

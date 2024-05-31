@@ -43,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: registry:2.8.1
+      default: registry:2.8.3
     user:
       type: string
       title: User
@@ -59,18 +59,21 @@ benefits:
       designed to be a professional-grade and extensible content distribution
       system.
   - title: Scalability
-    description: Whether you're building a large scale registry solution or running
+    description:
+      Whether you're building a large scale registry solution or running
       a simple private registry, Docker Registry 2.0 is designed to scale to
       your needs. It's a core library for many registry operators, including
       Docker Hub, GitHub Container Registry, GitLab Container Registry, and
       DigitalOcean Container Registry.
   - title: Security
-    description: Security is a key focus of Docker Registry 2.0. The app is designed
+    description:
+      Security is a key focus of Docker Registry 2.0. The app is designed
       to provide a secure tool chain for distributing content, ensuring that
       your data is protected.
 features:
   - title: Open Source Registry
-    description: Docker Registry 2.0 is an open source registry implementation for
+    description:
+      Docker Registry 2.0 is an open source registry implementation for
       storing and distributing container images using the OCI Distribution
       Specification.
   - title: Rich Set of Libraries
@@ -79,11 +82,13 @@ features:
       functionalities, making it easier to work with the distribution
       components.
   - title: HTTP Communication
-    description: Clients can communicate with the registry using HTTP. This makes it
+    description:
+      Clients can communicate with the registry using HTTP. This makes it
       easy to integrate Docker Registry 2.0 with Docker, containerd, and other
       OCI clients.
   - title: Customization
-    description: Docker Registry 2.0 is designed to be extensible, allowing users to
+    description:
+      Docker Registry 2.0 is designed to be extensible, allowing users to
       hack/roll their own on top of healthy open-source components or implement
       their own home made solution through good specs and solid extensions
       mechanism.

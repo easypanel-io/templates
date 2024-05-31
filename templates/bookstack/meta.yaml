@@ -21,7 +21,7 @@ changeLog:
   - date: 2022-07-12
     description: first release
   - date: 2024-03-11
-    description: Version bumped to 24.02.2
+    description: Version bumped to 24.05.1
 links:
   - label: Website
     url: https://www.bookstackapp.com/
@@ -56,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/bookstack:24.02.2
+      default: lscr.io/linuxserver/bookstack:24.05.1
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -68,16 +68,19 @@ benefits:
       content into three real-world groups: Books, Chapters, and Pages, making
       it easy to navigate and find the information you need."
   - title: Searchable and Connected Content
-    description: The content in BookStack is fully searchable, allowing you to find
+    description:
+      The content in BookStack is fully searchable, allowing you to find
       information quickly and efficiently. You can search at the book level or
       across all books, chapters, and pages. Plus, the ability to link directly
       to any paragraph keeps your documentation connected.
   - title: Customisable to Suit Your Needs
-    description: BookStack is highly configurable, allowing you to set it up to suit
+    description:
+      BookStack is highly configurable, allowing you to set it up to suit
       your specific use case. You can change the name, logo, and registration
       options, and decide whether the whole system is publicly viewable or not.
   - title: Multi-Lingual Support
-    description: BookStack supports multiple languages, allowing users to set their
+    description:
+      BookStack supports multiple languages, allowing users to set their
       preferred language. This makes it a versatile tool for global teams and
       organisations.
 features:
@@ -108,7 +111,8 @@ features:
       options include TOTP (Google/Microsoft Authenticator, Authy, etc.) and
       static backup codes.
   - title: Dark & Light Modes
-    description: BookStack provides its user interface in both a light theme and a
+    description:
+      BookStack provides its user interface in both a light theme and a
       dark theme, catering to individual user preferences. This is configurable
       at a user level.
 tags:

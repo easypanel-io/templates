@@ -51,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: drone/drone:2.16.0
+      default: drone/drone:2.24.0
     runnerServiceName:
       type: string
       title: Runner Service Name
@@ -91,11 +91,13 @@ schema:
       default: 2
 benefits:
   - title: Automated Software Build and Testing
-    description: Drone is a self-service Continuous Integration platform designed
+    description:
+      Drone is a self-service Continuous Integration platform designed
       for busy development teams. It automates the process of software build and
       testing, saving time and reducing errors.
   - title: Seamless Integration
-    description: Drone integrates seamlessly with multiple source code management
+    description:
+      Drone integrates seamlessly with multiple source code management
       systems, including GitHub, GitHubEnterprise, Bitbucket, and GitLab, making
       it a versatile tool for any development team.
   - title: Support for Multiple Platforms
@@ -107,12 +109,14 @@ benefits:
       making it an ideal solution for both small and large projects.
 features:
   - title: Configuration as a Code
-    description: Pipelines in Drone are configured with a simple, easy-to-read file
+    description:
+      Pipelines in Drone are configured with a simple, easy-to-read file
       that you commit to your git repository. Each Pipeline step is executed
       inside an isolated Docker container that is automatically downloaded at
       runtime.
   - title: Support for Any Language
-    description: Drone works with any language, database or service that runs inside
+    description:
+      Drone works with any language, database or service that runs inside
       a Docker container. You can choose from thousands of public Docker images
       or provide your own.
   - title: Plugin Creation and Sharing
@@ -120,7 +124,8 @@ features:
       pipeline. You can choose from hundreds of existing plugins, or create your
       own.
   - title: Advanced Customization
-    description: Drone makes advanced customization easy. You can implement custom
+    description:
+      Drone makes advanced customization easy. You can implement custom
       access controls, approval workflows, secret management, yaml syntax
       extensions and more.
   - title: Isolated Builds

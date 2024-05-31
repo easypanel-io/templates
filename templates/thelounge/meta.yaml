@@ -43,10 +43,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/thelounge/thelounge:4
+      default: ghcr.io/thelounge/thelounge:4.4.3
 benefits:
   - title: Always Connected
-    description: With The Lounge, you can remain connected to IRC servers even when
+    description:
+      With The Lounge, you can remain connected to IRC servers even when
       you're offline. You can resume where you left off on any device, ensuring
       you never miss out on any conversation.
   - title: Cross-Platform Compatibility
@@ -58,17 +59,20 @@ benefits:
       share your server with your friends and enjoy a seamless chat experience.
 features:
   - title: Modern Features
-    description: The Lounge brings IRC to the 21st century with modern features like
+    description:
+      The Lounge brings IRC to the 21st century with modern features like
       push notifications, link previews, and file uploads.
   - title: Responsive Interface
     description: The Lounge boasts a responsive interface that works smoothly on
       every device, be it a desktop, smartphone, or tablet.
   - title: Free and Open-Source
-    description: The Lounge is a free and open-source web IRC client, licensed under
+    description:
+      The Lounge is a free and open-source web IRC client, licensed under
       the MIT license. This means you can use it without any cost and even
       contribute to its development.
   - title: Private and Public Modes
-    description: The Lounge offers both private and public modes. In private mode,
+    description:
+      The Lounge offers both private and public modes. In private mode,
       it acts like a bouncer and a client combined, offering an experience
       similar to other modern chat applications. In public mode, it acts as an
       open chat available to anyone without registration.

@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lycheeorg/lychee:v4.7.4
+      default: lycheeorg/lychee:v5.3.0
     databaseType:
       type: string
       title: Database Type
@@ -56,15 +56,18 @@ schema:
           title: SQLite
 benefits:
   - title: Self-Hosted Photo Management
-    description: Lychee is a free photo-management tool that runs on your server or
+    description:
+      Lychee is a free photo-management tool that runs on your server or
       web-space, giving you full control over your photos. Your photos are
       stored securely and you never have to depend on someone else.
   - title: Easy Photo Management
-    description: With Lychee, managing your photos has never been easier. You can
+    description:
+      With Lychee, managing your photos has never been easier. You can
       upload, move, rename, describe, delete or search your photos in seconds,
       all in one place, right from your browser.
   - title: Effortless Sharing
-    description: Sharing your photos is as easy as a single click. Every photo and
+    description:
+      Sharing your photos is as easy as a single click. Every photo and
       album is ready for the public, and you can also protect albums with
       passwords if you want. You have full control over your photos.
   - title: View and Enjoy Your Photos
@@ -75,7 +78,8 @@ benefits:
     description: Lychee is completely open-source and secure. Your server, your
       data, your rules. You are in full control of your photos.
   - title: Designed for Photographers
-    description: Lychee is the perfect place to store all your photos. There is no
+    description:
+      Lychee is the perfect place to store all your photos. There is no
       storage limit, no compression, and no loss in data. It even supports and
       displays your EXIF and IPTC Metadata.
 features:

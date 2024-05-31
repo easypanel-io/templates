@@ -55,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: espocrm/espocrm:7-apache
+      default: espocrm/espocrm:8.2.4-fpm-alpine
     databaseServiceType:
       type: string
       title: Database Service Type
@@ -78,7 +78,8 @@ benefits:
       projects, or opportunities, EspoCRM provides an easy and intuitive
       interface to keep track of everything.
   - title: Boost Sales and Marketing Strategy
-    description: With EspoCRM, you can transform your sales and marketing strategy
+    description:
+      With EspoCRM, you can transform your sales and marketing strategy
       to deliver an exceptional customer experience. It helps you to understand
       your customers better, streamline your sales process, and ultimately
       increase your company's profitability.
@@ -90,7 +91,8 @@ benefits:
       all types and sizes.
 features:
   - title: Cloud and On-Premise Solutions
-    description: EspoCRM offers both cloud-hosted and on-premise solutions, giving
+    description:
+      EspoCRM offers both cloud-hosted and on-premise solutions, giving
       you the flexibility to choose the right one for your business. Whether you
       prefer the convenience of a cloud-based system or the control of hosting
       it on your own servers, EspoCRM has got you covered.

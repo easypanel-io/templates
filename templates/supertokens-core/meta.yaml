@@ -43,14 +43,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: supertokens/supertokens-postgresql:4.3
+      default: supertokens/supertokens-postgresql:9.0.2
     databaseServiceName:
       type: string
       title: Database Service Name
       default: supertokens-core-db
 benefits:
   - title: Fast and Controlled User Authentication
-    description: SuperTokens allows you to build user authentication quickly while
+    description:
+      SuperTokens allows you to build user authentication quickly while
       maintaining control. It is trusted by startups and enterprises alike, and
       can be set up in just 5 minutes.
   - title: Prebuilt UI and Customizable Login Page
@@ -62,7 +63,8 @@ benefits:
       including user roles, 2FA, SSO (AD, Okta), session management, account
       linking, and machine auth.
   - title: Multitenant SSO
-    description: Configure sign up with Okta, Microsoft AD and SAML per customer.
+    description:
+      Configure sign up with Okta, Microsoft AD and SAML per customer.
       Each customer has their own user pool.
 features:
   - title: User Roles and 2FA
@@ -75,7 +77,8 @@ features:
     description: SuperTokens provides robust session management capabilities,
       allowing you to effectively manage user sessions.
   - title: Account Linking
-    description: With SuperTokens, you can link multiple user accounts, making it
+    description:
+      With SuperTokens, you can link multiple user accounts, making it
       easier to manage users with multiple accounts.
   - title: Machine Auth
     description: SuperTokens supports machine auth, allowing you to authenticate

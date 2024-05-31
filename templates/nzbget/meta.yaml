@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbget:21.1.20220922
+      default: lscr.io/linuxserver/nzbget:24.1.20240524
     username:
       type: string
       title: Username
@@ -70,11 +70,13 @@ benefits:
       NZBGet can run smoothly.
 features:
   - title: Binary Downloader
-    description: NZBGet is a binary downloader, which means it downloads files in
+    description:
+      NZBGet is a binary downloader, which means it downloads files in
       binary format from Usenet. This allows for efficient and fast downloading
       of files.
   - title: Open Source
-    description: NZBGet is an open-source application. This means it's constantly
+    description:
+      NZBGet is an open-source application. This means it's constantly
       being improved by a community of developers, ensuring it stays up-to-date
       with the latest technology and features.
   - title: Performance and Efficiency
@@ -86,7 +88,8 @@ features:
       your downloads. This means you can set it up to automatically download new
       content from your favorite Usenet groups.
   - title: VideoSort
-    description: With the VideoSort feature, NZBGet can sort your downloaded video
+    description:
+      With the VideoSort feature, NZBGet can sort your downloaded video
       files, making it easier for you to manage and organize your downloads.
 tags:
   - Download

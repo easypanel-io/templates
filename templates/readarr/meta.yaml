@@ -1,5 +1,6 @@
 name: Readarr
-description: Readarr is an ebook and audiobook collection manager designed for Usenet and
+description:
+  Readarr is an ebook and audiobook collection manager designed for Usenet and
   BitTorrent users. It monitors multiple RSS feeds for new ebooks and audiobooks and interfaces
   with clients and indexers to grab, sort, and rename them. Readarr also has the
   ability to automatically upgrade the quality of existing files in your library
@@ -41,15 +42,17 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/readarr:0.3.25-nightly
+      default: linuxserver/readarr:0.3.28-nightly
 benefits:
   - title: Automated Book Management
-    description: Readarr is an ebook and audiobook collection manager that automatically monitors
+    description:
+      Readarr is an ebook and audiobook collection manager that automatically monitors
       multiple RSS feeds for new releases, grabs, sorts, and renames them. It
       interfaces with clients and indexers to streamline your book collection
       process.
   - title: Quality Upgrades
-    description: Readarr can be configured to automatically upgrade the quality of
+    description:
+      Readarr can be configured to automatically upgrade the quality of
       existing files in your library when a better quality format becomes
       available. This ensures you always have the best version of your favorite
       books.
@@ -63,20 +66,24 @@ features:
       feature allows you to keep track of your book collection and plan your
       reading or listening schedule.
   - title: Manual Search
-    description: Find all the releases, choose the ones you want and send them right to
+    description:
+      Find all the releases, choose the ones you want and send them right to
       your download client. This gives you the power to manually select and
       download the books you want.
   - title: Custom Formats
-    description: Ensure you get the right release every time! Custom Formats allows
+    description:
+      Ensure you get the right release every time! Custom Formats allows
       fine control over release prioritization and selection. It can be as
       simple as a single preferred word or as complex as you want with multiple
       criteria and regex.
   - title: Integration with Download Clients
-    description: Readarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
+    description:
+      Readarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
       rTorrent, Transmission, uTorrent, and other download clients for seamless
       downloading and management of your book collection.
   - title: Metadata Importing
-    description: Readarr can import Metadata such as covers, summaries, and author information, adding
+    description:
+      Readarr can import Metadata such as covers, summaries, and author information, adding
       valuable information to your book collection. It also adds metadata for
       media servers and players to use.
 tags:

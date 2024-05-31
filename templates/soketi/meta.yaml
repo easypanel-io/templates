@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/soketi/soketi:1.4-16-debian
+      default: quay.io/soketi/soketi:1.6-16-debian
     redisServiceName:
       type: string
       title: Redis Service Name
@@ -66,7 +66,8 @@ schema:
       default: true
 benefits:
   - title: Cost Effective
-    description: Soketi Serverless is cheaper than any competitor because you only
+    description:
+      Soketi Serverless is cheaper than any competitor because you only
       pay for your infrastructure. Whether it's your basement server or cloud,
       it fits and runs. It can be as cheap as $5 on DigitalOcean.
   - title: Fast and Resilient
@@ -87,13 +88,16 @@ features:
       Soketi. You don't even need Pusher for it, and you can read from any
       database.
   - title: HTTP Webhooks
-    description: Soketi can trigger HTTP requests whenever a channel gets occupied.
+    description:
+      Soketi can trigger HTTP requests whenever a channel gets occupied.
       Pair it with Lambda functions and Soketi will invoke them for you.
   - title: Unlimited Connections and Messages
-    description: Soketi offers unlimited peak connections and messages per month.
+    description:
+      Soketi offers unlimited peak connections and messages per month.
       The maximum message size and members per channel are also configurable.
   - title: Deployable on Cloudflare
-    description: Soketi can be deployed to Cloudflare Workers, bringing it closer to
+    description:
+      Soketi can be deployed to Cloudflare Workers, bringing it closer to
       your users all around the world.
 tags:
   - Developer Tools

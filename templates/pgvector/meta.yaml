@@ -39,20 +39,23 @@ schema:
     serviceImage:
       type: string
       title: Service Image
-      default: ankane/pgvector:v0.4.4
+      default: ankane/pgvector:v0.5.1
 benefits:
   - title: Unified Data Storage
-    description: pgvector allows you to store all of your application data in one
+    description:
+      pgvector allows you to store all of your application data in one
       place, eliminating the need for multiple databases or storage solutions.
   - title: Advanced Search Capabilities
     description: The app supports exact and approximate nearest neighbor search,
       enabling you to find the most relevant data quickly and efficiently.
   - title: Versatile Distance Measures
-    description: pgvector supports various distance measures including L2 distance,
+    description:
+      pgvector supports various distance measures including L2 distance,
       inner product, and cosine distance, providing flexibility in how you
       search and compare data.
   - title: ACID Compliance and Recovery Features
-    description: With ACID compliance and point-in-time recovery, pgvector ensures
+    description:
+      With ACID compliance and point-in-time recovery, pgvector ensures
       the integrity and reliability of your data.
   - title: Integration with Postgres
     description: pgvector integrates seamlessly with Postgres, allowing you to
@@ -62,11 +65,13 @@ features:
     description: pgvector allows you to perform vector similarity searches in
       Postgres, making it easier to find and retrieve relevant data.
   - title: Data Manipulation
-    description: You can easily create new tables with vector columns, add vector
+    description:
+      You can easily create new tables with vector columns, add vector
       columns to existing tables, insert vectors, update vectors, and delete
       vectors.
   - title: Querying
-    description: pgvector provides a variety of querying options, including getting
+    description:
+      pgvector provides a variety of querying options, including getting
       the nearest neighbors to a vector or a row, and getting rows within a
       certain distance.
   - title: Indexing
