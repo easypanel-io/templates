@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/heimdall:2.5.6
+      default: linuxserver/heimdall:2.6.1
     serviceTimezone:
       type: string
       title: Timezone
@@ -58,17 +58,20 @@ benefits:
       fine-tune to match their needs without getting overwhelmed by a multitude
       of options.
   - title: Elegance
-    description: The design of Heimdall Application Dashboard is visually pleasing,
+    description:
+      The design of Heimdall Application Dashboard is visually pleasing,
       encouraging users to explore and utilize its features. The goal is to make
       users want to use the app, not just need to use it.
 features:
   - title: Versatile Dashboard
-    description: Heimdall Application Dashboard serves as a comprehensive dashboard
+    description:
+      Heimdall Application Dashboard serves as a comprehensive dashboard
       for all your web applications. It's not limited to applications; you can
       add links to anything you like, making it a versatile tool for managing
       your digital resources.
   - title: Generic, Foundation, and Enhanced Apps
-    description: "Heimdall supports three types of items: Generic, Foundation, and
+    description:
+      "Heimdall supports three types of items: Generic, Foundation, and
       Enhanced apps. Generic items allow you to add a link to anything, while
       Foundation and Enhanced apps offer more features, such as default icons
       and background colors, and the ability to display extra information

@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: unleashorg/unleash-server:4.22.5
+      default: unleashorg/unleash-server:5.12.4
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -58,7 +58,8 @@ benefits:
       with your business needs and processes, providing flexibility and
       adaptability.
   - title: Safe and frequent deployments
-    description: With Unleash, you can move from all-or-nothing releases to safe and
+    description:
+      With Unleash, you can move from all-or-nothing releases to safe and
       frequent deployments. You can release features to specific users or
       groups, gather iterative feedback, and conduct A/B testing to ensure a
       smooth and successful rollout.
@@ -68,13 +69,15 @@ benefits:
       technical debt, streamline development processes, and enable faster
       release cycles.
   - title: Privacy and data security
-    description: Unleash prioritizes privacy by design and ensures the security of
+    description:
+      Unleash prioritizes privacy by design and ensures the security of
       user data. It offers data residency, private instances, and flexible
       hosting options to keep your user data safe and compliant with regulations
       like GDPR and Schrems II.
 features:
   - title: Simple and intuitive feature management
-    description: Unleash provides a user-friendly interface and intuitive tools to
+    description:
+      Unleash provides a user-friendly interface and intuitive tools to
       manage and organize your feature flags. It makes feature management easy
       and accessible for developers, allowing them to toggle features on/off
       with ease.
@@ -83,12 +86,14 @@ features:
       takes two steps to set up the software and start improving your software
       delivery workflow. You can be up and running in minutes.
   - title: Powerful customization options
-    description: Unleash offers powerful customization capabilities, allowing you to
+    description:
+      Unleash offers powerful customization capabilities, allowing you to
       tailor the software to your specific use cases. It has a clean and
       powerful UI with an API-first design, enabling you to build on top of it
       and create what you need.
   - title: Transparent and open-source
-    description: Unleash is an open-source feature management software, providing
+    description:
+      Unleash is an open-source feature management software, providing
       transparency and full insight into its development process. It has been
       built, reviewed, and trusted by millions of users worldwide.
 tags:

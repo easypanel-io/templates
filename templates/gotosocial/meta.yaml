@@ -46,33 +46,39 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.9.0
+      default: superseriousbusiness/gotosocial:0.15.0
 benefits:
   - title: Privacy-Focused
-    description: GoToSocial is a privacy-focused social network server. It allows
+    description:
+      GoToSocial is a privacy-focused social network server. It allows
       you to keep in touch with your friends, post, read, and share images and
       articles without being tracked or advertised to.
   - title: Customizable Experience
-    description: GoToSocial offers a customizable experience. You can follow people,
+    description:
+      GoToSocial offers a customizable experience. You can follow people,
       make posts which people can favourite, reply to and share, and scroll
       through posts from people you follow using a timeline. You can write long
       or short posts, or just post images. You can also block people or limit
       interactions that you don't want by posting just to your friends.
   - title: Non-Addictive
-    description: GoToSocial is not designed to be addictive. Your timeline and your
+    description:
+      GoToSocial is not designed to be addictive. Your timeline and your
       experience are shaped by who you follow and how you interact with people,
       not by metrics of engagement.
   - title: Lightweight and Efficient
-    description: GoToSocial is designed for small or single-user instances running
+    description:
+      GoToSocial is designed for small or single-user instances running
       on low-powered devices. It provides lightweight software which is simple
       to install and maintain, and has good security and sensible defaults.
 features:
   - title: Social Networking
-    description: GoToSocial is an ActivityPub social network server that allows you
+    description:
+      GoToSocial is an ActivityPub social network server that allows you
       to keep in touch with your friends, post, read, and share images and
       articles.
   - title: Privacy and Safety
-    description: GoToSocial provides a safety-focused entryway into the Fediverse.
+    description:
+      GoToSocial provides a safety-focused entryway into the Fediverse.
       It does not track or advertise to its users, and allows you to block
       people or limit interactions that you don't want.
   - title: Customizable Experience
@@ -80,11 +86,13 @@ features:
       through posts from people you follow using a timeline. You can write long
       or short posts, or just post images.
   - title: Non-Addictive Design
-    description: GoToSocial is not designed to be addictive. Your timeline and your
+    description:
+      GoToSocial is not designed to be addictive. Your timeline and your
       experience are shaped by who you follow and how you interact with people,
       not by metrics of engagement.
   - title: Lightweight Software
-    description: GoToSocial is designed for small or single-user instances running
+    description:
+      GoToSocial is designed for small or single-user instances running
       on low-powered devices. It provides lightweight software which is simple
       to install and maintain.
 tags:

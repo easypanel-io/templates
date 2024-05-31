@@ -51,27 +51,31 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: appsmith/appsmith-ce:v1.16
+      default: appsmith/appsmith-ce:v1.26
 benefits:
   - title: Streamlined Operations
     description: Appsmith simplifies internal tool development for businesses,
       helping to streamline operations and automate processes. This allows
       businesses to scale faster and more efficiently.
   - title: Rapid Application Development
-    description: With Appsmith, technical users can quickly build, deploy, and share
+    description:
+      With Appsmith, technical users can quickly build, deploy, and share
       applications with end-users to run critical business operations. This
       accelerates the development process and reduces time to market.
   - title: Enhanced Legacy Apps
-    description: Appsmith allows businesses to quickly integrate multiple apps and
+    description:
+      Appsmith allows businesses to quickly integrate multiple apps and
       data, enhancing legacy apps with new features. This ensures that your
       existing software remains relevant and continues to deliver value.
 features:
   - title: Data Integration
-    description: Appsmith can connect to any database, SaaS tool, or GraphQL/REST
+    description:
+      Appsmith can connect to any database, SaaS tool, or GraphQL/REST
       API within a few clicks. Users can query their data directly using SQL or
       the query builder, with 18+ native integrations available.
   - title: Drag and Drop UI Builder
-    description: Appsmith features a drag and drop UI builder with 45+ customizable
+    description:
+      Appsmith features a drag and drop UI builder with 45+ customizable
       widgets. Users can create beautiful responsive UI in minutes without
       writing a single line of HTML/CSS.
   - title: Customizable with Code
@@ -80,11 +84,13 @@ features:
       logic. This provides a high degree of flexibility and control over the
       app's behavior.
   - title: Git-based Version Control
-    description: Appsmith supports git-based version control, allowing users to sync
+    description:
+      Appsmith supports git-based version control, allowing users to sync
       to a git repository and use the same dev workflows. Users can commit
       changes, review pull requests, and deploy with their CI/CD.
   - title: Secure and Private
-    description: Appsmith ensures security and privacy by allowing self-hosting with
+    description:
+      Appsmith ensures security and privacy by allowing self-hosting with
       no telemetry and no private data over the wire. All connections are
       TLS-encrypted, and credentials are encrypted with AES-256.
 tags:

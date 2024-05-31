@@ -41,15 +41,17 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:2.2.5
+      default: linuxserver/lidarr:2.3.3
 benefits:
   - title: Automated Music Management
-    description: Lidarr is an audio collection manager that automatically monitors
+    description:
+      Lidarr is an audio collection manager that automatically monitors
       multiple RSS feeds for new music, grabs, sorts, and renames albums and songs. It
       interfaces with clients and indexers to streamline your music collection
       process.
   - title: Quality Upgrades
-    description: Lidarr can be configured to automatically upgrade the quality of
+    description:
+      Lidarr can be configured to automatically upgrade the quality of
       existing tracks in your library when a better quality format becomes
       available. This ensures you always have the best version of your favorite
       music.
@@ -63,16 +65,19 @@ features:
       feature allows you to keep track of your music collection and plan your
       listening schedule.
   - title: Manual Search
-    description: Find all the releases, choose the ones you want and send them right to
+    description:
+      Find all the releases, choose the ones you want and send them right to
       your download client. This gives you the power to manually select and
       download the music you want.
   - title: Custom Formats
-    description: Ensure you get the right release every time! Custom Formats allows
+    description:
+      Ensure you get the right release every time! Custom Formats allows
       fine control over release prioritization and selection. It can be as
       simple as a single preferred word or as complex as you want with multiple
       criteria and regex.
   - title: Integration with Download Clients
-    description: Lidarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
+    description:
+      Lidarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
       rTorrent, Transmission, uTorrent, and other download clients for seamless
       downloading and management of your music collection.
   - title: Metadata Importing

@@ -42,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/tautulli:2.11.1
+      default: lscr.io/linuxserver/tautulli:2.14.2
 benefits:
   - title: Comprehensive Monitoring
     description: Tautulli provides a complete overview of your Plex Media Server
@@ -54,7 +54,8 @@ benefits:
       interface with tables and graphs, making it easy to understand your
       server's performance.
   - title: Real-time Notifications
-    description: Tautulli allows you to set up notifications or scripts triggered by
+    description:
+      Tautulli allows you to set up notifications or scripts triggered by
       events on your Plex server. This feature ensures you are always up-to-date
       with your server's activity.
   - title: Content Management

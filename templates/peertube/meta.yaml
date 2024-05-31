@@ -86,7 +86,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chocobozzz/peertube:v5.2.0-bullseye
+      default: chocobozzz/peertube:v6.0.4-bookworm
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -97,16 +97,19 @@ schema:
       default: peertube-redis
 benefits:
   - title: Independence
-    description: PeerTube gives you the freedom to create your own video platform,
+    description:
+      PeerTube gives you the freedom to create your own video platform,
       free from opaque algorithms or obscure moderation policies. The platforms
       you visit are built, managed, and moderated by their owners, ensuring
       complete independence.
   - title: Interconnectivity
-    description: PeerTube allows platforms to be connected to each other, creating a
+    description:
+      PeerTube allows platforms to be connected to each other, creating a
       large network of platforms that are both autonomous and interconnected.
       This ensures a wide reach and diverse content.
   - title: Privacy
-    description: PeerTube does not depend on any advertising and does not track you,
+    description:
+      PeerTube does not depend on any advertising and does not track you,
       ensuring your privacy is respected.
   - title: Ethical and Open Source
     description: PeerTube is free, open-source, and created for non-commercial
@@ -118,14 +121,17 @@ features:
       publish your own videos and browse content from a network of over 1,000
       platforms.
   - title: Platform Creation
-    description: With PeerTube, you can create your own video platform, managed and
+    description:
+      With PeerTube, you can create your own video platform, managed and
       moderated by you. This gives you complete control over your content and
       its moderation.
   - title: Interconnected Platforms
-    description: PeerTube allows platforms to be connected to each other, creating a
+    description:
+      PeerTube allows platforms to be connected to each other, creating a
       network of platforms that are both autonomous and interconnected.
   - title: Privacy Focused
-    description: PeerTube does not depend on any advertising and does not track you.
+    description:
+      PeerTube does not depend on any advertising and does not track you.
       Your privacy is respected and protected.
   - title: Open Source
     description: PeerTube is free and open-source. You can help improve PeerTube

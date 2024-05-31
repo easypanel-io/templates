@@ -42,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/go-shiori/shiori:v1.5.4
+      default: ghcr.io/go-shiori/shiori:v1.6.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -61,12 +61,14 @@ benefits:
       portable. You can use it on any device and carry your bookmarks with you
       wherever you go.
   - title: Browser Integration
-    description: With the Shiori Web Extension, you can integrate Shiori with your
+    description:
+      With the Shiori Web Extension, you can integrate Shiori with your
       favorite web browser. This allows you to save and remove bookmarks in
       Shiori without leaving your current page.
 features:
   - title: Bookmark Management
-    description: Shiori allows you to add, edit, delete, and search bookmarks. It
+    description:
+      Shiori allows you to add, edit, delete, and search bookmarks. It
       provides a simple and clean interface for managing your bookmarks.
   - title: Import and Export Functionality
     description: Shiori supports importing and exporting bookmarks from and to
@@ -76,7 +78,8 @@ features:
     description: Shiori creates an offline archive of the webpages you bookmark.
       This allows you to access your saved content offline.
   - title: Web Extension
-    description: Shiori offers a web extension that integrates Shiori with your web
+    description:
+      Shiori offers a web extension that integrates Shiori with your web
       browser. This allows you to manage your bookmarks without switching from
       your current page.
   - title: Database Support

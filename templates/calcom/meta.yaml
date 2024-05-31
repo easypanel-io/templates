@@ -48,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: calcom/cal.com:v2.7.6
+      default: calcom/cal.com:v4.1.4
     databaseServiceName:
       type: string
       title: App Service Name
@@ -59,7 +59,8 @@ benefits:
       effortless. It eliminates the need for back-and-forth emails, allowing you
       to focus on the meeting itself rather than the process of scheduling it.
   - title: Avoid Double Booking
-    description: The app reads your availability from all your existing calendars,
+    description:
+      The app reads your availability from all your existing calendars,
       ensuring you never get double booked. It checks for conflicts across all
       of your calendars and only offers times that are open.
   - title: Automated Workflow
@@ -67,27 +68,32 @@ benefits:
       Notifications, reminders, and follow-ups are automatically taken care of,
       making your scheduling workflow seamless and efficient.
   - title: Adaptable Scheduling
-    description: The app adapts to any business, from doctors scheduling patients to
+    description:
+      The app adapts to any business, from doctors scheduling patients to
       companies booking candidates for interviews. It's a versatile tool that
       can be tailored to suit your specific scheduling needs.
 features:
   - title: Set Your Availability
-    description: With Cal.com, you can set repeating schedules for the times of the
+    description:
+      With Cal.com, you can set repeating schedules for the times of the
       day and week that you want people to be able to book you. This ensures
       that meetings are scheduled at a time that works for both parties.
   - title: Share Your Link
-    description: The app allows you to share your personal Cal.com link, making it
+    description:
+      The app allows you to share your personal Cal.com link, making it
       incredibly easy for people to book a meeting with you.
   - title: Workflow Automation
     description: Cal.com offers workflow automation features, including
       notifications, reminders, and follow-ups. This ensures that you stay on
       top of your schedule and never miss a meeting.
   - title: Round-Robin Scheduling
-    description: This feature ensures even distribution of calls across your team.
+    description:
+      This feature ensures even distribution of calls across your team.
       Collective availability makes it easy to book your team when everyone is
       available.
   - title: Routing Forms
-    description: Ensure every booker is connected to the right person with Routing
+    description:
+      Ensure every booker is connected to the right person with Routing
       Forms. Ask screening questions and automatically connect bookers to the
       right person, event, or even to a link.
   - title: Limit Overbooking

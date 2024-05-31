@@ -41,14 +41,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: psitrax/psitransfer:v2.1.1
+      default: psitrax/psitransfer:v2.2.0
 benefits:
   - title: Effortless File Sharing
     description: PsiTransfer is a simple, open-source, self-hosted file sharing
       solution. It provides an easy and efficient way to share files without the
       need for accounts or logins.
   - title: Mobile Friendly
-    description: The app has a responsive interface that is mobile-friendly, making
+    description:
+      The app has a responsive interface that is mobile-friendly, making
       it easy to use on any device.
   - title: Secure and Private
     description: With PsiTransfer, your files are protected. You can set an
@@ -59,16 +60,19 @@ features:
     description: PsiTransfer supports the sharing of many and very large files,
       making it a great solution for all your file sharing needs.
   - title: Resumable Uploads and Downloads
-    description: The app supports resumable up- and downloads, ensuring that you can
+    description:
+      The app supports resumable up- and downloads, ensuring that you can
       pick up where you left off if your connection is interrupted.
   - title: One-Time Downloads
-    description: PsiTransfer allows for one-time downloads, ensuring that your files
+    description:
+      PsiTransfer allows for one-time downloads, ensuring that your files
       are only accessed when you want them to be.
   - title: Download All Files as Archive
     description: With PsiTransfer, you can download all files as a zip/tar.gz
       archive, making it easier to manage and organize your downloads.
   - title: File Preview
-    description: PsiTransfer offers a modal-style file preview, allowing you to view
+    description:
+      PsiTransfer offers a modal-style file preview, allowing you to view
       your files before downloading them.
 tags:
   - File Management

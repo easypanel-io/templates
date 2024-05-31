@@ -45,25 +45,28 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bytebase/bytebase:2.14.1
+      default: bytebase/bytebase:2.18.0
     databaseServiceName:
       type: string
       title: Database Service Name
       default: bytebase-db
 benefits:
   - title: Efficient Database Management
-    description: Bytebase is designed to streamline database management tasks. It
+    description:
+      Bytebase is designed to streamline database management tasks. It
       supports a variety of databases, including MySQL, PostgreSQL, Snowflake,
       Oracle, SQL Server, MongoDB, Redis, Redshift, ClickHouse, TiDB, OceanBase,
       Google Spanner, and MariaDB. This makes it a versatile tool for managing
       different types of databases.
   - title: Secure Data Handling
-    description: Bytebase ensures the security of your data. It provides an embedded
+    description:
+      Bytebase ensures the security of your data. It provides an embedded
       PostgreSQL instance for storing its own metadata. For a production setup,
       it is recommended to store the metadata in an external PostgreSQL
       database, further enhancing the security of your data.
   - title: Comprehensive Database Operations
-    description: Bytebase allows you to perform a range of database operations. You
+    description:
+      Bytebase allows you to perform a range of database operations. You
       can change the workflow, review SQL, change the database, and manage data
       securely. It also supports VCS integration (GitOps), slow query handling,
       and disaster recovery.
@@ -73,11 +76,13 @@ features:
       provides core concepts and a step-by-step quick start guide to help you
       understand and use the data model feature.
   - title: Roles and Permissions
-    description: Bytebase provides a roles and permissions feature. This allows you
+    description:
+      Bytebase provides a roles and permissions feature. This allows you
       to manage user roles and permissions, ensuring that only authorized
       individuals have access to certain data or operations.
   - title: SQL Editor
-    description: Bytebase includes a SQL editor feature. This allows you to write
+    description:
+      Bytebase includes a SQL editor feature. This allows you to write
       and edit SQL queries directly within the app, making it easier to manage
       and manipulate your data.
   - title: VCS Integration (GitOps)
@@ -85,7 +90,8 @@ features:
       integrate your version control system with Bytebase, enabling you to track
       changes and manage your database more effectively.
   - title: Disaster Recovery
-    description: Bytebase provides a disaster recovery feature. This ensures that
+    description:
+      Bytebase provides a disaster recovery feature. This ensures that
       your data is protected and can be recovered in the event of a disaster,
       providing peace of mind and enhancing the reliability of your database
       management.

@@ -43,14 +43,16 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1
+      default: syncthing/syncthing:1.27
 benefits:
   - title: Continuous File Synchronization
-    description: Syncthing is a real-time file synchronization program that keeps
+    description:
+      Syncthing is a real-time file synchronization program that keeps
       your files updated across multiple computers. It ensures that your data is
       always current, no matter where you access it from.
   - title: Private & Secure
-    description: Your data is stored only on your computers, with no central server
+    description:
+      Your data is stored only on your computers, with no central server
       that could be compromised. All communication is encrypted and
       authenticated, ensuring your data is safe from prying eyes.
   - title: Open and Transparent
@@ -58,13 +60,15 @@ benefits:
       available on GitHub. There are no hidden processes, and any bugs found are
       immediately visible for anyone to browse.
   - title: Easy to Use
-    description: "Syncthing is powerful yet simple to use. You can synchronize as
+    description:
+      "Syncthing is powerful yet simple to use. You can synchronize as
       many folders as you need with different people or just between your own
       devices. It doesn’t need IP addresses or advanced configuration: it just
       works, over LAN and over the Internet."
 features:
   - title: Real-Time Synchronization
-    description: Syncthing synchronizes files between two or more computers in real
+    description:
+      Syncthing synchronizes files between two or more computers in real
       time, ensuring your data is always up-to-date.
   - title: Private and Secure
     description: Syncthing uses TLS for secure communication, includes perfect
@@ -72,7 +76,8 @@ features:
       your data, and only allows connections from devices you have explicitly
       allowed.
   - title: Open Protocol
-    description: The protocol used by Syncthing is a documented specification with
+    description:
+      The protocol used by Syncthing is a documented specification with
       no hidden processes. All source code is available on GitHub.
   - title: Powerful Interface
     description: Configure and monitor Syncthing via a responsive and powerful

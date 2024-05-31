@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceshelf/invoiceshelf:1.1.0
+      default: invoiceshelf/invoiceshelf:1.2.2
     dbServiceName:
       type: string
       title: Database Service Name
@@ -54,12 +54,14 @@ benefits:
       invoices, integrating with accounting software to streamline your
       financial workflows.
   - title: Payment Tracking
-    description: With InvoiceShelf, tracking payments becomes effortless. The system
+    description:
+      With InvoiceShelf, tracking payments becomes effortless. The system
       can be configured to monitor payment statuses, alerting you to overdue
       invoices and automatically updating records when payments are received.
       This ensures your accounts are always accurate and up to date.
   - title: Duplicate Detection
-    description: InvoiceShelf's sophisticated algorithms identify and flag duplicate
+    description:
+      InvoiceShelf's sophisticated algorithms identify and flag duplicate
       invoices, preventing double payments and financial discrepancies. This
       feature saves you time and reduces the risk of financial errors, providing
       peace of mind.
@@ -79,15 +81,18 @@ features:
       contact details, track client-specific payment terms, and view transaction
       histories to enhance relationships and streamline communications.
   - title: Automated Reminders
-    description: Set up automated email reminders for overdue invoices, reducing the
+    description:
+      Set up automated email reminders for overdue invoices, reducing the
       need for manual follow-ups. Customize the reminder frequency and messages
       to maintain professionalism and prompt payments.
   - title: Integration with Accounting Software
-    description: InvoiceShelf integrates with popular accounting software, enabling
+    description:
+      InvoiceShelf integrates with popular accounting software, enabling
       automatic syncing of financial data. This ensures that your accounts are
       always up-to-date, facilitating seamless financial reporting and analysis.
   - title: Secure Cloud Storage
-    description: Store your invoices securely in the cloud with InvoiceShelf. Access
+    description:
+      Store your invoices securely in the cloud with InvoiceShelf. Access
       your financial documents from anywhere, at any time, knowing your data is
       protected with state-of-the-art encryption and security protocols.
 tags:

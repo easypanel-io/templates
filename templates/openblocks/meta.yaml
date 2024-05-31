@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openblocksdev/openblocks-ce:1.1.6
+      default: openblocksdev/openblocks-ce:1.1.8
 benefits:
   - title: Efficient App Development
     description: Openblocks is a developer-friendly platform that significantly
@@ -52,43 +52,52 @@ benefits:
       you can create functional and user-friendly apps quickly, allowing you to
       focus more on business logic.
   - title: Seamless Data Integration
-    description: Openblocks allows you to connect to most databases and any REST API
+    description:
+      Openblocks allows you to connect to most databases and any REST API
       platform within clicks. This feature unleashes the full integration of
       heterogeneous data from anywhere, making it easier to manage and
       manipulate data.
   - title: Customizable UI Components
-    description: With over 50 built-in UI components, Openblocks offers boundless UI
+    description:
+      With over 50 built-in UI components, Openblocks offers boundless UI
       possibilities. You can quickly and easily build beautiful, functional apps
       and even customize new components to suit your needs.
   - title: High Scalability
-    description: Openblocks allows you to write JavaScript code everywhere to access
+    description:
+      Openblocks allows you to write JavaScript code everywhere to access
       and manipulate data. This feature, combined with the ability to leverage
       external JavaScript libraries, provides high scalability for your app
       development.
   - title: Security and Reliability
-    description: Openblocks ensures the security and reliability of your apps. It
+    description:
+      Openblocks ensures the security and reliability of your apps. It
       offers role-based access control and audit logs, giving you total control
       over your resources and ensuring data is stored securely.
 features:
   - title: Low Code Platform
-    description: Openblocks is an open-source low code platform that enables you to
+    description:
+      Openblocks is an open-source low code platform that enables you to
       build admin panels, dashboards, approval queues, and client support apps
       with ease and speed.
   - title: UI Components
-    description: Openblocks offers over 50 built-in UI components that you can use
+    description:
+      Openblocks offers over 50 built-in UI components that you can use
       to build beautiful, functional, and user-friendly apps. You can also
       customize new components and embed them seamlessly into your app.
   - title: Data Source Connectivity
-    description: Openblocks can connect to any data sources without limitation. It
+    description:
+      Openblocks can connect to any data sources without limitation. It
       supports most databases and any REST API platform, allowing for the full
       integration of heterogeneous data.
   - title: JavaScript Extension
-    description: Openblocks is a developer-first platform that allows you to extend
+    description:
+      Openblocks is a developer-first platform that allows you to extend
       built-in components using JavaScript. You can write JavaScript code
       everywhere to access and manipulate data, and leverage external JavaScript
       libraries for more functionality.
   - title: Security Features
-    description: Openblocks offers robust security features, including role-based
+    description:
+      Openblocks offers robust security features, including role-based
       access control and audit logs. It also allows for self-hosting, giving you
       total control over your resources and ensuring data is stored securely.
 tags:

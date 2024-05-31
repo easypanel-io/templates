@@ -57,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nodebb/docker:2.8.9
+      default: nodebb/docker:1.19.12
     databaseServiceType:
       type: string
       title: Database Service Type
@@ -82,7 +82,8 @@ benefits:
       forum software. It is built to meet the expectations of the social and
       mobile web, helping businesses retain customers and foster engagement.
   - title: Powerful and Versatile
-    description: NodeBB powers thousands of community forums, offering a platform
+    description:
+      NodeBB powers thousands of community forums, offering a platform
       that caters to a wide range of needs. Whether you're a self-starter, a
       growing business, or a large corporation, NodeBB has a solution for you.
   - title: Improved User Engagement
@@ -91,12 +92,14 @@ benefits:
       businesses looking to revamp their community forums.
 features:
   - title: Mobile-First Responsive
-    description: NodeBB is designed with a mobile-first approach, ensuring a perfect
+    description:
+      NodeBB is designed with a mobile-first approach, ensuring a perfect
       experience on every device and screen.
   - title: Internationalization
     description: NodeBB supports over 50 languages, making it a truly global platform.
   - title: Search Optimized
-    description: NodeBB enhances your rankings with human-readable URLs, semantic
+    description:
+      NodeBB enhances your rankings with human-readable URLs, semantic
       HTML with embedded microdata, and more.
   - title: Social Media Integration
     description: NodeBB allows you to bring more visitors to your community by

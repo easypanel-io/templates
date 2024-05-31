@@ -43,20 +43,23 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: phpmyadmin:5.2.0
+      default: phpmyadmin:5.2.1
 benefits:
   - title: Efficient MySQL Management
-    description: phpMyAdmin is a free software tool that allows you to handle the
+    description:
+      phpMyAdmin is a free software tool that allows you to handle the
       administration of MySQL over the web. It supports a wide range of
       operations on MySQL and MariaDB, making it a comprehensive tool for
       managing your databases.
   - title: Intuitive User Interface
-    description: With phpMyAdmin, you can perform frequently used operations such as
+    description:
+      With phpMyAdmin, you can perform frequently used operations such as
       managing databases, tables, columns, relations, indexes, users,
       permissions, etc., via the user interface. It also allows you to directly
       execute any SQL statement.
   - title: Multilingual Support
-    description: To cater to a wide range of users, phpMyAdmin is translated into 72
+    description:
+      To cater to a wide range of users, phpMyAdmin is translated into 72
       languages and supports both left-to-right and right-to-left languages.
 features:
   - title: Wide Range of MySQL Operations

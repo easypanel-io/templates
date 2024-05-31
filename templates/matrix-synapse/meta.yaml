@@ -48,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: matrixdotorg/synapse:v1.80.0
+      default: matrixdotorg/synapse:v1.108.0
     databaseType:
       type: string
       title: Database Type

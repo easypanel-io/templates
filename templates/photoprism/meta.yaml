@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: photoprism/photoprism:221118-jammy
+      default: photoprism/photoprism:240528
     photoprismAdminUser:
       type: string
       title: Username

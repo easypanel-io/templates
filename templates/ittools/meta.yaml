@@ -38,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: corentinth/it-tools
+      default: corentinth/it-tools:latest
 benefits:
   - title: Efficient Development
     description: IT-Tools is a comprehensive suite of utilities designed to
@@ -46,7 +46,8 @@ benefits:
       tools, from crypto token generators to various converters, making it a
       one-stop solution for developers.
   - title: Enhanced Productivity
-    description: With IT-Tools, tedious tasks like hashing text, generating UUIDs,
+    description:
+      With IT-Tools, tedious tasks like hashing text, generating UUIDs,
       or converting between different data formats can be done in a matter of
       seconds. This not only saves time but also allows developers to focus on
       more critical aspects of their projects.
@@ -62,17 +63,20 @@ features:
       encrypt/decrypt text, BIP39 passphrase generator, HMAC generator, RSA key
       pair generator, and many more.
   - title: Convenient Converters
-    description: The app includes a variety of converters for different data types
+    description:
+      The app includes a variety of converters for different data types
       and formats. These include date-time converter, integer base converter,
       Roman numeral converter, Base64 string encoder/decoder, color converter,
       case converter, and more.
   - title: Device Information and Code Generators
-    description: IT-Tools provides device information, basic auth generator, open
+    description:
+      IT-Tools provides device information, basic auth generator, open
       graph meta generator, OTP code generator, MIME types, JWT parser, keycode
       info, slugify string, HTML WYSIWYG editor, user-agent parser, HTTP status
       codes, and JSON diff.
   - title: Image and Video Tools
-    description: The app includes tools for generating QR codes, SVG placeholders,
+    description:
+      The app includes tools for generating QR codes, SVG placeholders,
       and even a camera recorder for capturing images and videos.
   - title: Development Helpers
     description: IT-Tools also offers a Git cheatsheet, random port generator,
@@ -80,12 +84,14 @@ features:
       prettify and format, chmod calculator, Docker run to Docker compose
       converter, and XML formatter.
   - title: Network and Math Tools
-    description: The app provides a range of network and math tools, including IPv4
+    description:
+      The app provides a range of network and math tools, including IPv4
       subnet calculator, IPv4 address converter, IPv4 range expander, MAC
       address lookup, IPv6 ULA generator, math evaluator, ETA calculator, and
       percentage calculator.
   - title: Text and Data Tools
-    description: IT-Tools includes a Lorem ipsum generator, text statistics, and a
+    description:
+      IT-Tools includes a Lorem ipsum generator, text statistics, and a
       phone parser and formatter, among other tools, to help you handle text and
       data more efficiently.
 tags:

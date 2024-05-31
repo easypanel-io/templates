@@ -41,15 +41,17 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/radarr:version-4.4.4.7068
+      default: linuxserver/radarr:5.6.0
 benefits:
   - title: Automated Movie Management
-    description: Radarr is a movie collection manager that automatically monitors
+    description:
+      Radarr is a movie collection manager that automatically monitors
       multiple RSS feeds for new movies, grabs, sorts, and renames them. It
       interfaces with clients and indexers to streamline your movie collection
       process.
   - title: Quality Upgrades
-    description: Radarr can be configured to automatically upgrade the quality of
+    description:
+      Radarr can be configured to automatically upgrade the quality of
       existing files in your library when a better quality format becomes
       available. This ensures you always have the best version of your favorite
       movies.
@@ -63,20 +65,24 @@ features:
       feature allows you to keep track of your movie collection and plan your
       viewing schedule.
   - title: Manual Search
-    description: Find all the releases, choose the one you want and send it right to
+    description:
+      Find all the releases, choose the one you want and send it right to
       your download client. This gives you the power to manually select and
       download the movies you want.
   - title: Custom Formats
-    description: Ensure you get the right release every time! Custom Formats allows
+    description:
+      Ensure you get the right release every time! Custom Formats allows
       fine control over release prioritization and selection. It can be as
       simple as a single preferred word or as complex as you want with multiple
       criteria and regex.
   - title: Integration with Download Clients
-    description: Radarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
+    description:
+      Radarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
       rTorrent, Transmission, uTorrent, and other download clients for seamless
       downloading and management of your movie collection.
   - title: Metadata Importing
-    description: Radarr can import Metadata such as trailers or subtitles, adding
+    description:
+      Radarr can import Metadata such as trailers or subtitles, adding
       valuable information to your movie collection. It also adds metadata such
       as posters and information for Kodi and others to use.
 tags:

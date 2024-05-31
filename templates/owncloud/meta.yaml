@@ -50,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: owncloud/server:10.13.1
+      default: owncloud/server:10.14.0
     databaseType:
       type: string
       title: Database Type

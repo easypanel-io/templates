@@ -46,18 +46,20 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kizaing/kavita:0.7.1
+      default: kizaing/kavita:0.7.8.2
     serviceTimezone:
       type: string
       title: Timezone
       default: America/New_York
 benefits:
   - title: Efficient Digital Library
-    description: Kavita is a self-hosted digital library that is lightning fast and
+    description:
+      Kavita is a self-hosted digital library that is lightning fast and
       supports a wide array of file formats. It allows you to easily read and
       share your server with friends.
   - title: Customizable Reading Experience
-    description: Kavita offers a built-in book reader that allows you to customize
+    description:
+      Kavita offers a built-in book reader that allows you to customize
       your reading experience. Control font, spacing, margin, color theme, and
       navigate pages by tapping on the edges of the screen.
   - title: Rich User and Library Management
@@ -66,7 +68,8 @@ benefits:
       per Manga.
 features:
   - title: Extensive File Support
-    description: Kavita supports a wide range of file formats including ZIP, RAR,
+    description:
+      Kavita supports a wide range of file formats including ZIP, RAR,
       RAR5, CBR, CBZ, CB7, CBT, TAR.GZ, 7ZIP/7Z, EPUB2, EPUB3, PDF, JPG/JPEG,
       PNG, WebP, GIF, AVIF.
   - title: Built-in Manga/Comic/Image Reader
@@ -74,7 +77,8 @@ features:
       caching. It supports webtoon and double page reading modes, ensuring you
       never experience loading times when reading.
   - title: Server and User Stats
-    description: Kavita provides interesting stats for your whole server or you as
+    description:
+      Kavita provides interesting stats for your whole server or you as
       an individual. This feature helps you understand your reading habits and
       preferences better.
   - title: User Management and Sharing

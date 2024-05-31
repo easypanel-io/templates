@@ -43,7 +43,8 @@ schema:
       default: lscr.io/linuxserver/pidgin:latest
 benefits:
   - title: Multi-Network Chatting
-    description: Pidgin allows you to log into accounts on multiple chat networks
+    description:
+      Pidgin allows you to log into accounts on multiple chat networks
       simultaneously. This means you can be chatting with friends on XMPP and
       sitting in an IRC channel at the same time, providing a seamless chatting
       experience.
@@ -59,11 +60,13 @@ benefits:
       streamlined user experience.
 features:
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
+    description:
+      The app utilizes the docker manifest for multi-platform awareness.
       Simply pulling the correct image for your architecture should retrieve the
       correct image for your arch.
   - title: Supported Chat Networks
-    description: Pidgin supports a wide range of chat networks including XMPP, IRC,
+    description:
+      Pidgin supports a wide range of chat networks including XMPP, IRC,
       Discord, Facebook, Google Talk, Instagram, Skype, Slack, Telegram, and
       many more. This allows you to connect with friends and colleagues across
       different platforms.
@@ -73,7 +76,8 @@ features:
       username and password, subfolder for the application if running a
       subfolder reverse proxy, and the page title displayed on the web browser.
   - title: Secure Access
-    description: The application can be accessed securely at https://yourhost:3001/.
+    description:
+      The application can be accessed securely at https://yourhost:3001/.
       This ensures that your chat conversations are protected from unauthorized
       access.
 tags:

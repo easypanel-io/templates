@@ -37,19 +37,22 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: binwiederhier/ntfy:v2.4.0
+      default: binwiederhier/ntfy:v2.11.0
 benefits:
   - title: Instant Notifications
-    description: With ntfy, you can receive instant push notifications on your phone
+    description:
+      With ntfy, you can receive instant push notifications on your phone
       or desktop. This can be particularly useful for keeping track of scripts
       or long-running commands, as you'll be notified immediately when they fail
       or complete.
   - title: Easy to Use
-    description: ntfy is designed to be simple and straightforward to use. You can
+    description:
+      ntfy is designed to be simple and straightforward to use. You can
       send notifications using simple HTTP PUT or POST requests, and there's no
       need to sign up or pay any fees.
   - title: Open Source
-    description: ntfy is an open-source app, which means you can review its code,
+    description:
+      ntfy is an open-source app, which means you can review its code,
       contribute to its development, or even run your own instance of the
       service if you wish.
 features:
@@ -62,7 +65,8 @@ features:
       you've subscribed, the app will listen for new messages on that topic and
       notify you when they arrive.
   - title: Message Publishing
-    description: ntfy makes it easy to publish messages to your chosen topic. You
+    description:
+      ntfy makes it easy to publish messages to your chosen topic. You
       can do this using HTTP PUT/POST requests, or with the ntfy CLI. The
       message is included in the request body.
 tags:

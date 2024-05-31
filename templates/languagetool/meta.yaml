@@ -45,10 +45,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: silviof/docker-languagetool:6.0
+      default: silviof/docker-languagetool:6.4
 benefits:
   - title: Enhanced Writing Quality
-    description: LanguageTool is a comprehensive writing assistant that helps you
+    description:
+      LanguageTool is a comprehensive writing assistant that helps you
       improve the quality of your texts. It corrects spelling, grammar, and
       style errors, ensuring your writing is clear, precise, and stylistically
       correct.
@@ -63,7 +64,8 @@ benefits:
       simple, or concise, enhancing the overall readability of your text.
 features:
   - title: Spelling and Grammar Checker
-    description: LanguageTool identifies and corrects spelling and grammar mistakes
+    description:
+      LanguageTool identifies and corrects spelling and grammar mistakes
       in your text. It can spot incorrect subject-verb agreement, wrong plural
       forms, misuse of grammatical forms, and more.
   - title: Punctuation Corrector
@@ -75,7 +77,8 @@ features:
       words, and improper word choice. It helps you improve the style of your
       writing, making it more engaging and effective.
   - title: Casing Corrector
-    description: LanguageTool corrects incorrect casing in your text. Whether you're
+    description:
+      LanguageTool corrects incorrect casing in your text. Whether you're
       writing capitalized names, months, places, or national identities,
       LanguageTool ensures they're correctly cased.
   - title: Browser and Email Add-ons

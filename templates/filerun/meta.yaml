@@ -46,19 +46,21 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filerun/filerun
+      default: filerun/filerun:8.1
     databaseServiceName:
       type: string
       title: Database Service Name
       default: filerun-db
 benefits:
   - title: Private and Controlled File Management
-    description: FileRun is like your private Google Drive, offering full control
+    description:
+      FileRun is like your private Google Drive, offering full control
       over your files. It runs efficiently on any hardware, including Linux,
       Windows, VPS, Shared hosting, NAS, etc. No import or scanning is required,
       and you get instant web access to your files.
   - title: Effortless File Synchronization
-    description: FileRun allows you to sync files using desktop apps and access them
+    description:
+      FileRun allows you to sync files using desktop apps and access them
       from anywhere using compatible mobile apps. It also offers a virtual drive
       for direct access to files from your computer without using all of your
       disk space.
@@ -78,7 +80,8 @@ features:
       server for instant web access. You can upload, download, or manage the
       same files, and all changes made reflect via FileRun without delay.
   - title: Metadata Support
-    description: FileRun automatically extracts and indexes information Exif, XMP,
+    description:
+      FileRun automatically extracts and indexes information Exif, XMP,
       and IPTC, allowing you to search photos by keywords, dates, author, and
       more. You can also add custom metadata fields for any additional
       information you want to attach to the pictures.
@@ -92,7 +95,8 @@ features:
       previewing Office files, text files, and more. It also allows you to
       convert files from one format to another and manipulate PDF documents.
   - title: Mobile Support and Extendability
-    description: FileRun offers fantastic mobile support, adapting to screens of any
+    description:
+      FileRun offers fantastic mobile support, adapting to screens of any
       size for a smooth and intuitive experience. It also allows PHP web
       developers to develop plugins for viewing, creating, or manipulating
       files.

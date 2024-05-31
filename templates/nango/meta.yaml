@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nango.docker.scarf.sh/nangohq/nango-server:0.10.3
+      default: nango.docker.scarf.sh/nangohq/nango-server:0.36.78
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -59,11 +59,13 @@ schema:
       title: Password
 benefits:
   - title: Fast Integration Building
-    description: Nango allows you to build integrations quickly and maintain full
+    description:
+      Nango allows you to build integrations quickly and maintain full
       control. It offers pre-built OAuth and data syncing for over 100 APIs,
       enabling you to streamline your integration process.
   - title: Secure User Authorization
-    description: With Nango's drop-in UI, your users can authorize any integration
+    description:
+      With Nango's drop-in UI, your users can authorize any integration
       securely. Nango Auth handles various authentication types and securely
       manages your users' credentials.
   - title: Simplified Integration Code
@@ -81,17 +83,20 @@ features:
       external APIs. You can use one of the 100+ pre-built integrations,
       customize them, or build your own on top of Nango's infrastructure.
   - title: Real-time Webhooks
-    description: Nango provides real-time webhooks, enabling you to receive updates
+    description:
+      Nango provides real-time webhooks, enabling you to receive updates
       whenever new data is available, all in your own schema.
   - title: Managed API Authentication
     description: Nango offers a drop-in UI that lets your users authorize
       integrations. It also provides reliable external integrations with unified
       error reporting.
   - title: Bi-directional Sync
-    description: Nango continually syncs with APIs in the background, ensuring your
+    description:
+      Nango continually syncs with APIs in the background, ensuring your
       data is always up-to-date.
   - title: Unified API & Models
-    description: Nango provides a single API with documented and structured schemas,
+    description:
+      Nango provides a single API with documented and structured schemas,
       simplifying your integration process.
   - title: Custom Objects
     description: With Nango, users can define custom objects and access the raw

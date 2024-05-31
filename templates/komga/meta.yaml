@@ -41,19 +41,23 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotson/komga:0.165.0
+      default: gotson/komga:1.11.1
 benefits:
   - title: Free and Open Source
-    description: Komga is a free and open source comics/mangas server, providing an
+    description:
+      Komga is a free and open source comics/mangas server, providing an
       accessible platform for comic enthusiasts.
   - title: Versatile Reading Modes
-    description: The app features a webreader with multiple reading modes, enhancing
+    description:
+      The app features a webreader with multiple reading modes, enhancing
       your reading experience.
   - title: User Management
-    description: Komga allows you to manage multiple users with per-library access
+    description:
+      Komga allows you to manage multiple users with per-library access
       control, age restrictions, and labels restrictions.
   - title: Duplicate Detection
-    description: The app can detect and remove duplicate files and pages, ensuring
+    description:
+      The app can detect and remove duplicate files and pages, ensuring
       your library stays organized and clutter-free.
 features:
   - title: Library Browsing
@@ -62,7 +66,8 @@ features:
   - title: Library Organization
     description: Organize your library with collections and read lists.
   - title: Metadata Editing
-    description: Edit metadata for your series and books. Import embedded metadata
+    description:
+      Edit metadata for your series and books. Import embedded metadata
       automatically.
   - title: REST API
     description: Komga offers a REST API, allowing various tools and scripts to

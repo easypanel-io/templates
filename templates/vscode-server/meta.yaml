@@ -41,10 +41,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/code-server:4.9.1-ls148
+      default: lscr.io/linuxserver/code-server:4.89.1
 benefits:
   - title: Access VS Code from anywhere
-    description: Code-server allows you to access Visual Studio Code from any device
+    description:
+      Code-server allows you to access Visual Studio Code from any device
       with a browser. Whether you're using a Chromebook, tablet, or laptop, you
       can have a consistent development environment.
   - title: Develop for Linux on Windows or Mac
@@ -52,7 +53,8 @@ benefits:
       even if you're using a Windows or Mac workstation. Take advantage of large
       cloud servers to speed up tests, compilations, downloads, and more.
   - title: Preserve battery life
-    description: By running intensive computations on your server instead of your
+    description:
+      By running intensive computations on your server instead of your
       local device, code-server helps preserve battery life when you're on the
       go. You no longer need to run excess instances of Chrome.
 features:

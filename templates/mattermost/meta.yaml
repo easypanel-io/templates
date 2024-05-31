@@ -54,35 +54,42 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mattermost/mattermost-team-edition:7.10
+      default: mattermost/mattermost-team-edition:9.8
     databaseServiceName:
       type: string
       title: Database Service Name
       default: mattermost-db
 benefits:
   - title: Secure Collaboration
-    description: Mattermost Version 8.0 provides a secure workspace for operational
+    description:
+      Mattermost Version 8.0 provides a secure workspace for operational
       and engineering teams to collaborate effectively. It improves response
       time by 90% and decreases incident resolution time, ensuring full data
       control.
   - title: Avoid Outages and Downtime
-    description: The app helps in avoiding costly outages and downtime by decreasing
+    description:
+      The app helps in avoiding costly outages and downtime by decreasing
       the frequency and severity of system failures.
   - title: Increase Information Availability
-    description: Mattermost increases information availability by executing complex
+    description:
+      Mattermost increases information availability by executing complex
       workflows faster at higher quality, enhancing productivity.
 features:
   - title: Team Messaging
-    description: Mattermost offers team messaging feature for seamless communication
+    description:
+      Mattermost offers team messaging feature for seamless communication
       within teams.
   - title: Custom Integrations
-    description: The app provides custom integrations to fit your workflow, making
+    description:
+      The app provides custom integrations to fit your workflow, making
       it flexible and extensible.
   - title: Audio & Screen Sharing
-    description: Mattermost supports audio and screen sharing, facilitating better
+    description:
+      Mattermost supports audio and screen sharing, facilitating better
       collaboration.
   - title: Workflow Automation
-    description: The app is designed to automate workflows, increasing efficiency
+    description:
+      The app is designed to automate workflows, increasing efficiency
       and productivity.
   - title: Data Control
     description: Mattermost offers full control over your data with built-in

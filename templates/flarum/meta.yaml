@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: crazymax/flarum:1.6.2
+      default: crazymax/flarum:1.8.5
     databaseType:
       type: string
       title: Database Type

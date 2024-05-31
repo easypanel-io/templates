@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: octoboxio/octobox:ruby-3
+      default: octoboxio/octobox:may-2024
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -73,7 +73,8 @@ benefits:
       issue/pull-request status, CI status, labels and more shown alongside
       basic title, organization, repo, and type information.
   - title: Enhanced Notifications
-    description: By installing the GitHub app, Octobox will pull basic public and
+    description:
+      By installing the GitHub app, Octobox will pull basic public and
       private notification information and add live information on issue, PR,
       and CI status, labels, authors and more to your organization's
       notifications.
@@ -84,12 +85,14 @@ features:
       notifications will not appear in your inbox again unless the thread, issue
       or PR receives a new notification.
   - title: Starring
-    description: Octobox also adds a starred status to help you highlight important
+    description:
+      Octobox also adds a starred status to help you highlight important
       notifications with a star so you can come back and find them easily.
       Starred notifications are not social, they are more like bookmarks that
       GitHub stars.
   - title: Muting
-    description: Muting a notification will mark the notification as read, move it
+    description:
+      Muting a notification will mark the notification as read, move it
       to the archive and ignore all further notifications from this thread,
       issue or PR. Muting also sets the thread to ignore:true ignoring further
       notifications on GitHub too.

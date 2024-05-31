@@ -37,35 +37,42 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: b4bz/homer:v23.02.2
+      default: b4bz/homer:v24.05.1
 benefits:
   - title: Convenience
-    description: Homer is a static homepage for your server, providing a convenient
+    description:
+      Homer is a static homepage for your server, providing a convenient
       way to keep all your services at your fingertips. It's based on a simple
       yaml configuration file, making it easy to set up and use.
   - title: Customization
-    description: Homer allows for theme customization, enabling you to personalize
+    description:
+      Homer allows for theme customization, enabling you to personalize
       your homepage to suit your preferences. It also supports grouping of
       services for better organization.
   - title: Accessibility
-    description: With Homer, you can easily search for your services and access them
+    description:
+      With Homer, you can easily search for your services and access them
       with keyboard shortcuts. It also offers offline health checks, ensuring
       you're always up-to-date with the status of your services.
 features:
   - title: yaml file configuration
-    description: Homer uses a simple yaml configuration file, making it easy to set
+    description:
+      Homer uses a simple yaml configuration file, making it easy to set
       up and manage your homepage.
   - title: Search and Grouping
-    description: Homer supports search and grouping of services, making it easy to
+    description:
+      Homer supports search and grouping of services, making it easy to
       find and organize your services.
   - title: Theme customization
-    description: Homer allows for theme customization, enabling you to personalize
+    description:
+      Homer allows for theme customization, enabling you to personalize
       your homepage to suit your preferences.
   - title: Offline health check
     description: Homer offers offline health checks, ensuring you're always
       up-to-date with the status of your services.
   - title: Keyboard shortcuts
-    description: Homer supports keyboard shortcuts for quick and easy access to your
+    description:
+      Homer supports keyboard shortcuts for quick and easy access to your
       services.
 tags:
   - Dashboard

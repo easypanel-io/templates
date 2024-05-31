@@ -45,33 +45,38 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: botpress/server:12.31.5
+      default: botpress/server:12.31.8
     databaseServiceName:
       type: string
       title: Database Service Name
       default: botpress-db
 benefits:
   - title: Efficient Chatbot Building
-    description: Botpress allows you to build next-generation chatbots powered by
+    description:
+      Botpress allows you to build next-generation chatbots powered by
       OpenAI quickly and efficiently. It simplifies the chatbot building
       process, making it accessible even to those without extensive AI
       knowledge.
   - title: Customizable Templates
-    description: With over 100+ fully customizable templates, Botpress provides a
+    description:
+      With over 100+ fully customizable templates, Botpress provides a
       jumpstart to your project. Whether you need a chatbot for shopping
       assistance, health appointments, or banking support, there's a template
       ready for you.
   - title: Global Reach
-    description: Botpress breaks language barriers by automatically translating to
+    description:
+      Botpress breaks language barriers by automatically translating to
       100+ languages. This feature allows you to launch your chatbot globally,
       reaching users in their preferred language.
   - title: Easy Deployment
-    description: With Botpress, you can deploy your chatbot across various channels
+    description:
+      With Botpress, you can deploy your chatbot across various channels
       with just one click. This feature ensures that you can meet your users
       wherever they are.
 features:
   - title: Visual Flow Editor
-    description: Botpress comes with an intuitive, visual flow editor that brings
+    description:
+      Botpress comes with an intuitive, visual flow editor that brings
       your users’ conversations to life. It handles exception handling &
       deviations, allowing you to focus on building your happy paths.
   - title: AI Task Augment
@@ -83,7 +88,8 @@ features:
       providing a description, your chatbot will speak on brand in every
       interaction with your users.
   - title: GPT-Native Suite
-    description: Leverage the power of GPT with Botpress. It offers GPT-first tools
+    description:
+      Leverage the power of GPT with Botpress. It offers GPT-first tools
       & features like dynamic knowledge ingestion, sentiment analysis, automatic
       self-improvement, data enhancements, and AI recommendations.
 tags:

@@ -40,19 +40,21 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: grafana/grafana-oss:9.5.1
+      default: grafana/grafana-oss:11.0.0
 benefits:
   - title: Comprehensive Data Visualization
     description: Grafana provides a powerful platform for visualizing your data,
       making it easy to understand and analyze. It supports a wide range of data
       sources, allowing you to bring together all your data in one place.
   - title: Effective Incident Response & Management
-    description: With Grafana Alerting, Grafana Incident, and Grafana OnCall, you
+    description:
+      With Grafana Alerting, Grafana Incident, and Grafana OnCall, you
       can effectively manage incidents and respond quickly to issues. This
       ensures that your systems remain up and running, minimizing downtime and
       disruption.
   - title: Performance Testing
-    description: Grafana k6 allows you to conduct performance testing, ensuring that
+    description:
+      Grafana k6 allows you to conduct performance testing, ensuring that
       your systems are capable of handling the demands placed on them. This
       helps to prevent issues before they occur, improving the reliability of
       your systems.
@@ -67,13 +69,16 @@ features:
     description: A scalable and performant metrics backend that allows you to
       effectively monitor your systems.
   - title: Grafana OnCall
-    description: An on-call management feature that ensures you can quickly respond
+    description:
+      An on-call management feature that ensures you can quickly respond
       to incidents and issues.
   - title: Grafana k6
-    description: A load testing tool for engineering teams that helps ensure your
+    description:
+      A load testing tool for engineering teams that helps ensure your
       systems can handle the demands placed on them.
   - title: Prometheus
-    description: A powerful tool for monitoring Kubernetes and cloud native systems,
+    description:
+      A powerful tool for monitoring Kubernetes and cloud native systems,
       providing detailed insights and metrics.
 tags:
   - Monitoring

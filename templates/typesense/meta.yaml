@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:0.24.0.rcn58
+      default: typesense/typesense:27.0.rc15
 tags:
   - Documentation
   - Developer Tools

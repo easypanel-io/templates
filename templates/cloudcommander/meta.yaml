@@ -31,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coderaiser/cloudcmd:17.0.0-alpine
+      default: coderaiser/cloudcmd:17.14.1
     username:
       type: string
       title: Username

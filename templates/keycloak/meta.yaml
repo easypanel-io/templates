@@ -47,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnami/keycloak:21.1.1
+      default: bitnami/keycloak:24.0.4
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -64,19 +64,23 @@ benefits:
       applications and securing services, eliminating the need to handle user
       storage or authentication.
   - title: Single Sign-On
-    description: Users only need to authenticate once with Keycloak to gain access
+    description:
+      Users only need to authenticate once with Keycloak to gain access
       to multiple applications, removing the need for multiple logins and
       logouts.
   - title: Social Login and Identity Brokering
-    description: Keycloak makes it easy to enable login with social networks and can
+    description:
+      Keycloak makes it easy to enable login with social networks and can
       authenticate users with existing OpenID Connect or SAML 2.0 Identity
       Providers.
   - title: User Federation
-    description: Keycloak can connect to existing LDAP or Active Directory servers,
+    description:
+      Keycloak can connect to existing LDAP or Active Directory servers,
       and even allows for the implementation of your own provider if you have
       users in other stores.
   - title: Fine-Grained Authorization
-    description: Keycloak provides fine-grained authorization services, allowing you
+    description:
+      Keycloak provides fine-grained authorization services, allowing you
       to manage permissions for all your services and define the exact policies
       you need.
 features:
@@ -86,25 +90,29 @@ features:
       configuring identity brokering and user federation, and managing
       applications, services, users, permissions, and sessions.
   - title: Account Management Console
-    description: Users can manage their own accounts through the account management
+    description:
+      Users can manage their own accounts through the account management
       console, including updating their profile, changing passwords, setting up
       two-factor authentication, managing sessions, and viewing account history.
   - title: Standard Protocols
-    description: Keycloak is based on standard protocols and provides support for
+    description:
+      Keycloak is based on standard protocols and provides support for
       OpenID Connect, OAuth 2.0, and SAML.
   - title: Authorization Services
     description: If role-based authorization doesn't cover your needs, Keycloak
       provides fine-grained authorization services as well. This allows you to
       manage permissions for all your services from the Keycloak admin console.
   - title: Single-Sign On
-    description: Keycloak provides single-sign out, which means users only have to
+    description:
+      Keycloak provides single-sign out, which means users only have to
       logout once to be logged-out of all applications that use Keycloak.
   - title: Identity Brokering and Social Login
     description: Enabling login with social networks is easy to add through the
       admin console. Keycloak can also authenticate users with existing OpenID
       Connect or SAML 2.0 Identity Providers.
   - title: User Federation
-    description: Keycloak has built-in support to connect to existing LDAP or Active
+    description:
+      Keycloak has built-in support to connect to existing LDAP or Active
       Directory servers. You can also implement your own provider if you have
       users in other stores.
 tags:

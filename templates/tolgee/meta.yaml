@@ -49,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tolgee/tolgee:v3.11.4
+      default: tolgee/tolgee:v3.62.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -62,10 +62,12 @@ schema:
       title: Password
 benefits:
   - title: Smart platform
-    description: Tolgee is a smart platform that allows you to easily translate your
+    description:
+      Tolgee is a smart platform that allows you to easily translate your
       application into any language without modifying your code.
   - title: Fast integration
-    description: Tolgee is designed to be easy to integrate with your application,
+    description:
+      Tolgee is designed to be easy to integrate with your application,
       with integrations available for all major JavaScript frameworks.
   - title: Painless localization
     description: With Tolgee, localization becomes painless as you can easily
@@ -82,7 +84,8 @@ features:
   - title: Auto translation
     description: Automatically translate texts right after you add them for faster delivery.
   - title: Activity Log
-    description: Track and monitor your colleagues' translation activity with the
+    description:
+      Track and monitor your colleagues' translation activity with the
       Activity Log feature.
   - title: One-click screenshots
     description: Allow users to add screenshots with a single click for better

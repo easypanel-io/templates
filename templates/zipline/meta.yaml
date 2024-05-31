@@ -45,14 +45,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/diced/zipline:3.6.4
+      default: ghcr.io/diced/zipline:trunk
     databaseServiceName:
       type: string
       title: Database Service Name
       default: zipline-db
 benefits:
   - title: Easy to use
-    description: Zipline is designed to be user-friendly and intuitive, making it
+    description:
+      Zipline is designed to be user-friendly and intuitive, making it
       easy for anyone to upload and manage files.
   - title: Packed with features
     description: Zipline offers a wide range of features, including file
@@ -65,7 +66,8 @@ benefits:
       efficient file uploads and management.
 features:
   - title: File organization
-    description: Easily organize your files with folders and view them with a click
+    description:
+      Easily organize your files with folders and view them with a click
       of a button.
   - title: URL shortening
     description: Create shortened links to websites, set a maximum amount of uses, and more.
@@ -75,7 +77,8 @@ features:
     description: Embed your uploads in Discord with OG tags and receive
       notifications when someone uploads to your instance.
   - title: OAuth2 registration
-    description: Allow users to link and/or register with selected OAuth2 providers
+    description:
+      Allow users to link and/or register with selected OAuth2 providers
       for easy access and authentication.
   - title: Two-Factor authentication
     description: Enable an extra layer of security with 2FA using Google

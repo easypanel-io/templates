@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:7.8.1
+      default: gotenberg/gotenberg:8.5.1
 benefits:
   - title: Efficient Document Conversion
     description: Gotenberg is a Docker-powered stateless API that efficiently
@@ -49,7 +49,8 @@ benefits:
       Markdown, Word, Excel, and more, making it a versatile tool for all your
       document conversion needs.
   - title: Asynchronous Workflow
-    description: Gotenberg's webhook feature allows for an asynchronous workflow.
+    description:
+      Gotenberg's webhook feature allows for an asynchronous workflow.
       You can upload the output file to the destination of your choice, with
       many options to fit your requirements, from the custom HTTP headers sent
       to your webhook to the HTTP method used to call it.

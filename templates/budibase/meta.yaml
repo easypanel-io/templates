@@ -45,10 +45,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: budibase/budibase:2.21.8
+      default: budibase/budibase:2.27.3
 benefits:
   - title: Efficiency and Speed
-    description: Budibase saves teams hundreds of hours by simplifying the process
+    description:
+      Budibase saves teams hundreds of hours by simplifying the process
       of building internal tools. It allows you to create solutions that speed
       up your business operations.
   - title: No Coding Experience Required
@@ -56,11 +57,13 @@ benefits:
       powerful internal tools and forms. Its user-friendly interface allows you
       to design your tools with drag-and-drop components.
   - title: Automate Workflows
-    description: Budibase allows you to automate tasks and workflows with ease. With
+    description:
+      Budibase allows you to automate tasks and workflows with ease. With
       just a few clicks, you can automate manual processes and streamline
       operations within your app and business.
   - title: Data Integration
-    description: Budibase allows you to connect to an external database, pull data
+    description:
+      Budibase allows you to connect to an external database, pull data
       from a Rest API, import a CSV, or start from scratch with Budibase's
       built-in database. You can turn your data into an app with just one click.
 features:
@@ -72,11 +75,13 @@ features:
     description: Budibase comes with a built-in notification system that sends
       alerts for new visitors or actions taken within the app.
   - title: Design Flexibility
-    description: Budibase provides pre-made blocks and a drag-and-drop interface for
+    description:
+      Budibase provides pre-made blocks and a drag-and-drop interface for
       designing internal tools. It allows you to deliver internal tools that
       look beautiful and work perfectly across mobile, tablet, and desktop.
   - title: Hosting Options
-    description: Budibase offers flexible hosting options. You can self-host using
+    description:
+      Budibase offers flexible hosting options. You can self-host using
       Docker, Kubernetes, or Digital Ocean, or choose Budibase Cloud and let
       Budibase manage everything for you.
 tags:

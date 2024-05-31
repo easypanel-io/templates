@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/grav:1.7.40
+      default: linuxserver/grav:1.7.46
     timezone:
       type: string
       title: Timezone
@@ -56,7 +56,8 @@ benefits:
       afterthought, it's baked in from the start. This ensures your websites
       load quickly, providing a superior user experience.
   - title: Extensible
-    description: Grav is designed to be flexible and extensible, with a powerful API
+    description:
+      Grav is designed to be flexible and extensible, with a powerful API
       and sophisticated Package Manager. This means you can easily customize and
       extend your websites to meet your specific needs.
   - title: Open Source
@@ -65,13 +66,15 @@ benefits:
       means you benefit from the collective knowledge and expertise of a global
       community of developers.
   - title: Easy to Use
-    description: The Grav admin plugin provides a simple and intuitive interface,
+    description:
+      The Grav admin plugin provides a simple and intuitive interface,
       making configuration and content creation easy and enjoyable. Whether
       you're a novice or a seasoned developer, you'll find Grav a pleasure to
       use.
 features:
   - title: One-Click Installs
-    description: Grav's built-in Package Manager allows you to find, install, and
+    description:
+      Grav's built-in Package Manager allows you to find, install, and
       easily update extensions and themes with just one click. This makes it
       easy to add new functionality and change the look and feel of your
       websites.
@@ -80,19 +83,23 @@ features:
       categories, and authors to filter and manage your content. This makes it
       easy to organize your content and make it accessible to your users.
   - title: Dynamic Content Types
-    description: The flat-file nature of Grav lets you define custom fields for any
+    description:
+      The flat-file nature of Grav lets you define custom fields for any
       of your pages, including modular content. This gives you the flexibility
       to create a wide variety of content types.
   - title: Multi-Language Support
-    description: Grav includes a simple mechanism for presenting sites in multiple
+    description:
+      Grav includes a simple mechanism for presenting sites in multiple
       languages. This makes it easy to create multilingual websites that cater
       to a global audience.
   - title: Simple Backups and Restores
-    description: Being file based means backing up and restoring your data is super
+    description:
+      Being file based means backing up and restoring your data is super
       easy, and changing hosts or servers is a breeze. This gives you peace of
       mind knowing your data is safe and easily recoverable.
   - title: Easy Theme Customization
-    description: With Grav, there's no need to start from scratch when customizing
+    description:
+      With Grav, there's no need to start from scratch when customizing
       your theme. Use Theme Inheritance and then modify the bits you need,
       allowing for easier updates and maintenance.
 tags:

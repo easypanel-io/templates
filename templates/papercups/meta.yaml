@@ -43,18 +43,20 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: papercups/papercups:1.1.0
+      default: papercups/papercups:latest
     databaseServiceName:
       type: string
       title: Database Service Name
       default: papercups-db
 benefits:
   - title: Streamlined Communication
-    description: Coordinate and reply to messages over chat, email, Slack, and SMS,
+    description:
+      Coordinate and reply to messages over chat, email, Slack, and SMS,
       all from one powerful dashboard. This removes the friction of having to
       log in to multiple platforms to manage customer communications.
   - title: Privacy-focused
-    description: Papercups is a privacy-focused, open-source alternative to other
+    description:
+      Papercups is a privacy-focused, open-source alternative to other
       customer communication platforms. It is designed with a focus on
       protecting customer data and ensuring secure communications.
   - title: Customizable Widget
@@ -76,7 +78,8 @@ features:
       dashboard. It allows you to manage all your customer communications from
       one place.
   - title: Reply from Where You Work
-    description: You can reply to conversations from Slack, our dashboard, or our
+    description:
+      You can reply to conversations from Slack, our dashboard, or our
       mobile app. This flexibility allows you to manage customer communications
       from wherever you are.
   - title: Brand and Customize Your Widget
@@ -87,7 +90,8 @@ features:
       integrations. Our integration takes minutes to setup, saving your
       developers time.
   - title: Self-managed Deployment
-    description: Papercups can be deployed in your cloud, for painless adoption and
+    description:
+      Papercups can be deployed in your cloud, for painless adoption and
       onboarding. Whether it's AWS, Docker, or Heroku, we've got you covered.
 tags:
   - Customer Support
