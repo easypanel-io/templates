@@ -1,8 +1,9 @@
 name: Drone
-description: Drone.io is a self-service Continuous Integration platform designed
-  for busy development teams. It automates software build and testing, making it
-  an essential tool for efficient and effective software development. Drone.io
-  is configured with a simple, easy-to-read file that you commit to your git
+description:
+  Drone.io is a self-service Continuous Integration platform designed for busy
+  development teams. It automates software build and testing, making it an
+  essential tool for efficient and effective software development. Drone.io is
+  configured with a simple, easy-to-read file that you commit to your git
   repository, and each pipeline step is executed inside an isolated Docker
   container that is automatically downloaded at runtime. The platform integrates
   seamlessly with multiple source code management systems, including GitHub,
@@ -92,46 +93,48 @@ schema:
 benefits:
   - title: Automated Software Build and Testing
     description:
-      Drone is a self-service Continuous Integration platform designed
-      for busy development teams. It automates the process of software build and
-      testing, saving time and reducing errors.
+      Drone is a self-service Continuous Integration platform designed for busy
+      development teams. It automates the process of software build and testing,
+      saving time and reducing errors.
   - title: Seamless Integration
     description:
-      Drone integrates seamlessly with multiple source code management
-      systems, including GitHub, GitHubEnterprise, Bitbucket, and GitLab, making
-      it a versatile tool for any development team.
+      Drone integrates seamlessly with multiple source code management systems,
+      including GitHub, GitHubEnterprise, Bitbucket, and GitLab, making it a
+      versatile tool for any development team.
   - title: Support for Multiple Platforms
-    description: Drone natively supports multiple operating systems and
-      architectures, including Linux x64, ARM, ARM64 and Windows x64, making it
-      a flexible solution for diverse development environments.
+    description:
+      Drone natively supports multiple operating systems and architectures,
+      including Linux x64, ARM, ARM64 and Windows x64, making it a flexible
+      solution for diverse development environments.
   - title: Effortless Scaling
-    description: Drone installs from a single binary and scales automatically,
-      making it an ideal solution for both small and large projects.
+    description:
+      Drone installs from a single binary and scales automatically, making it an
+      ideal solution for both small and large projects.
 features:
   - title: Configuration as a Code
     description:
-      Pipelines in Drone are configured with a simple, easy-to-read file
-      that you commit to your git repository. Each Pipeline step is executed
-      inside an isolated Docker container that is automatically downloaded at
-      runtime.
+      Pipelines in Drone are configured with a simple, easy-to-read file that
+      you commit to your git repository. Each Pipeline step is executed inside
+      an isolated Docker container that is automatically downloaded at runtime.
   - title: Support for Any Language
     description:
-      Drone works with any language, database or service that runs inside
-      a Docker container. You can choose from thousands of public Docker images
-      or provide your own.
+      Drone works with any language, database or service that runs inside a
+      Docker container. You can choose from thousands of public Docker images or
+      provide your own.
   - title: Plugin Creation and Sharing
-    description: Drone uses containers to drop pre-configured steps into your
-      pipeline. You can choose from hundreds of existing plugins, or create your
-      own.
+    description:
+      Drone uses containers to drop pre-configured steps into your pipeline. You
+      can choose from hundreds of existing plugins, or create your own.
   - title: Advanced Customization
     description:
-      Drone makes advanced customization easy. You can implement custom
-      access controls, approval workflows, secret management, yaml syntax
-      extensions and more.
+      Drone makes advanced customization easy. You can implement custom access
+      controls, approval workflows, secret management, yaml syntax extensions
+      and more.
   - title: Isolated Builds
-    description: With Drone, you don't have to worry about conflicting builds on
-      shared servers. Every build runs in an isolated Docker container, giving
-      you full control.
+    description:
+      With Drone, you don't have to worry about conflicting builds on shared
+      servers. Every build runs in an isolated Docker container, giving you full
+      control.
 tags:
   - Developer Tools
   - Continuous Integration

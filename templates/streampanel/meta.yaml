@@ -1,7 +1,9 @@
 name: StreamPanel
-description: StreamPanel simplifies app deployment and management, streamlining
-  your workflow and boosting productivity.
-instructions: Make sure to update the EasyPanel, Google and Github environment variables.
+description:
+  StreamPanel simplifies app deployment and management, streamlining your
+  workflow and boosting productivity.
+instructions:
+  Make sure to update the EasyPanel, Google and Github environment variables.
 changeLog:
   - date: 2024-04-03
     description: Template added
@@ -26,18 +28,22 @@ schema:
       default: nextjs
 benefits:
   - title: Effortless Deployment
-    description: Seamlessly deploy modern applications without the hassle of
-      managing servers.
+    description:
+      Seamlessly deploy modern applications without the hassle of managing
+      servers.
   - title: Streamlined Management
-    description: Simplify app management tasks and free up valuable time for
-      more important work.
+    description:
+      Simplify app management tasks and free up valuable time for more important
+      work.
 features:
   - title: Instant Access
-    description: Access your cloud environment instantly, with pre-installed
-      applications ready to use.
+    description:
+      Access your cloud environment instantly, with pre-installed applications
+      ready to use.
   - title: Scalable Solutions
-    description: Easily scale your environment as your needs grow, ensuring
-      seamless performance at any scale.
+    description:
+      Easily scale your environment as your needs grow, ensuring seamless
+      performance at any scale.
 tags:
   - Cloud Computing
   - App Deployment

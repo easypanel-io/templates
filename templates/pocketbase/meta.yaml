@@ -1,11 +1,12 @@
 name: PocketBase
-description: PocketBase is a powerful backend solution for your next SaaS or
-  Mobile app. It is designed to be ready to use out of the box, providing a
-  realtime database, user authentication, file storage, and an admin dashboard
-  all in one file. The realtime database is embedded and performant, featuring a
-  schema builder, data validations, realtime subscriptions, and an easy-to-use
-  REST API. The authentication feature allows you to manage your app users and
-  handle email/password and OAuth2 sign ups from various platforms like Google,
+description:
+  PocketBase is a powerful backend solution for your next SaaS or Mobile app. It
+  is designed to be ready to use out of the box, providing a realtime database,
+  user authentication, file storage, and an admin dashboard all in one file. The
+  realtime database is embedded and performant, featuring a schema builder, data
+  validations, realtime subscriptions, and an easy-to-use REST API. The
+  authentication feature allows you to manage your app users and handle
+  email/password and OAuth2 sign ups from various platforms like Google,
   Facebook, GitHub, GitLab without any hassle. The file storage feature allows
   you to store files locally or in an S3 storage, attach media to your database
   records, and generate thumbnails on the fly. PocketBase is extendable and can
@@ -46,50 +47,55 @@ schema:
       default: augustodelg/pocketbase:0.22.6
 benefits:
   - title: Realtime Database
-    description: PocketBase provides an embedded performant database with schema
-      builder, data validations, and realtime subscriptions. This allows for
-      efficient data management and instant updates, ensuring your SaaS or
-      mobile app is always up-to-date.
+    description:
+      PocketBase provides an embedded performant database with schema builder,
+      data validations, and realtime subscriptions. This allows for efficient
+      data management and instant updates, ensuring your SaaS or mobile app is
+      always up-to-date.
   - title: Authentication
-    description: Manage your app users effortlessly with PocketBase's built-in
+    description:
+      Manage your app users effortlessly with PocketBase's built-in
       authentication feature. It handles email/password and OAuth2 sign ups
       (Google, Facebook, GitHub, GitLab) without any hassle, ensuring secure and
       easy user access.
   - title: File Storage
     description:
-      With PocketBase, you can store files locally or in S3 storage. It
-      allows you to easily attach media to your database records and generate
+      With PocketBase, you can store files locally or in S3 storage. It allows
+      you to easily attach media to your database records and generate
       thumbnails on the fly, providing a seamless file management experience.
   - title: Admin Dashboard
-    description: PocketBase comes with a convenient admin dashboard, providing a
+    description:
+      PocketBase comes with a convenient admin dashboard, providing a
       centralized location for managing your app's backend. This makes it easier
       to oversee and control various aspects of your app.
 features:
   - title: Realtime Database
-    description: PocketBase's realtime database offers an embedded performant
-      database with schema builder, data validations, realtime subscriptions,
-      and an easy-to-use REST API.
+    description:
+      PocketBase's realtime database offers an embedded performant database with
+      schema builder, data validations, realtime subscriptions, and an
+      easy-to-use REST API.
   - title: Authentication
     description:
-      PocketBase's authentication feature allows you to manage your app
-      users and handle email/password and OAuth2 sign ups (Google, Facebook,
-      GitHub, GitLab) without the hassle.
+      PocketBase's authentication feature allows you to manage your app users
+      and handle email/password and OAuth2 sign ups (Google, Facebook, GitHub,
+      GitLab) without the hassle.
   - title: File Storage
     description:
-      PocketBase's file storage feature allows you to sanely store files
-      locally or in a S3 storage. It also enables you to easily attach media to
-      your database records and generate thumbnails on the fly.
+      PocketBase's file storage feature allows you to sanely store files locally
+      or in a S3 storage. It also enables you to easily attach media to your
+      database records and generate thumbnails on the fly.
   - title: Admin Dashboard
     description:
-      PocketBase provides an admin dashboard that allows you to manage
-      your app's backend in a centralized location.
+      PocketBase provides an admin dashboard that allows you to manage your
+      app's backend in a centralized location.
   - title: Extendable
-    description: PocketBase can be used as a standalone app or as a Go framework
-      that you can extend via hooks to create your own custom portable backend.
+    description:
+      PocketBase can be used as a standalone app or as a Go framework that you
+      can extend via hooks to create your own custom portable backend.
   - title: Client SDKs
     description:
-      PocketBase provides official client SDKs for painless integration,
-      making it easier to connect your app with the backend.
+      PocketBase provides official client SDKs for painless integration, making
+      it easier to connect your app with the backend.
 tags:
   - Databases
   - Developer Tools

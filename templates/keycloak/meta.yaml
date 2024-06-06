@@ -1,7 +1,8 @@
 name: Keycloak
-description: Keycloak is an open-source Identity and Access Management tool that
-  adds authentication to applications and secures services with minimal effort.
-  It eliminates the need for storing or authenticating users, providing user
+description:
+  Keycloak is an open-source Identity and Access Management tool that adds
+  authentication to applications and secures services with minimal effort. It
+  eliminates the need for storing or authenticating users, providing user
   federation, robust authentication, user management, and fine-grained
   authorization. Keycloak offers a Single-Sign On feature, allowing users to
   authenticate with Keycloak rather than individual applications, ensuring a
@@ -60,14 +61,14 @@ schema:
       title: Password
 benefits:
   - title: Effortless Authentication
-    description: Keycloak simplifies the process of adding authentication to
-      applications and securing services, eliminating the need to handle user
-      storage or authentication.
+    description:
+      Keycloak simplifies the process of adding authentication to applications
+      and securing services, eliminating the need to handle user storage or
+      authentication.
   - title: Single Sign-On
     description:
-      Users only need to authenticate once with Keycloak to gain access
-      to multiple applications, removing the need for multiple logins and
-      logouts.
+      Users only need to authenticate once with Keycloak to gain access to
+      multiple applications, removing the need for multiple logins and logouts.
   - title: Social Login and Identity Brokering
     description:
       Keycloak makes it easy to enable login with social networks and can
@@ -75,18 +76,19 @@ benefits:
       Providers.
   - title: User Federation
     description:
-      Keycloak can connect to existing LDAP or Active Directory servers,
-      and even allows for the implementation of your own provider if you have
-      users in other stores.
+      Keycloak can connect to existing LDAP or Active Directory servers, and
+      even allows for the implementation of your own provider if you have users
+      in other stores.
   - title: Fine-Grained Authorization
     description:
-      Keycloak provides fine-grained authorization services, allowing you
-      to manage permissions for all your services and define the exact policies
-      you need.
+      Keycloak provides fine-grained authorization services, allowing you to
+      manage permissions for all your services and define the exact policies you
+      need.
 features:
   - title: Admin Console
-    description: The admin console allows administrators to centrally manage all
-      aspects of the Keycloak server, including enabling and disabling features,
+    description:
+      The admin console allows administrators to centrally manage all aspects of
+      the Keycloak server, including enabling and disabling features,
       configuring identity brokering and user federation, and managing
       applications, services, users, permissions, and sessions.
   - title: Account Management Console
@@ -96,20 +98,22 @@ features:
       two-factor authentication, managing sessions, and viewing account history.
   - title: Standard Protocols
     description:
-      Keycloak is based on standard protocols and provides support for
-      OpenID Connect, OAuth 2.0, and SAML.
+      Keycloak is based on standard protocols and provides support for OpenID
+      Connect, OAuth 2.0, and SAML.
   - title: Authorization Services
-    description: If role-based authorization doesn't cover your needs, Keycloak
-      provides fine-grained authorization services as well. This allows you to
-      manage permissions for all your services from the Keycloak admin console.
+    description:
+      If role-based authorization doesn't cover your needs, Keycloak provides
+      fine-grained authorization services as well. This allows you to manage
+      permissions for all your services from the Keycloak admin console.
   - title: Single-Sign On
     description:
-      Keycloak provides single-sign out, which means users only have to
-      logout once to be logged-out of all applications that use Keycloak.
+      Keycloak provides single-sign out, which means users only have to logout
+      once to be logged-out of all applications that use Keycloak.
   - title: Identity Brokering and Social Login
-    description: Enabling login with social networks is easy to add through the
-      admin console. Keycloak can also authenticate users with existing OpenID
-      Connect or SAML 2.0 Identity Providers.
+    description:
+      Enabling login with social networks is easy to add through the admin
+      console. Keycloak can also authenticate users with existing OpenID Connect
+      or SAML 2.0 Identity Providers.
   - title: User Federation
     description:
       Keycloak has built-in support to connect to existing LDAP or Active

@@ -1,10 +1,11 @@
 name: Heimdall
-description: Heimdall Application Dashboard is a versatile and visually pleasing
-  dashboard for all your web applications. It provides a simple and elegant
-  interface where you can add links to any web application or site you
-  frequently use. The app is designed with simplicity in mind, avoiding the trap
-  of over-complication that many projects fall into. With Heimdall, you can add
-  a link to anything, whether it's intrinsically supported or not, by simply
+description:
+  Heimdall Application Dashboard is a versatile and visually pleasing dashboard
+  for all your web applications. It provides a simple and elegant interface
+  where you can add links to any web application or site you frequently use. The
+  app is designed with simplicity in mind, avoiding the trap of
+  over-complication that many projects fall into. With Heimdall, you can add a
+  link to anything, whether it's intrinsically supported or not, by simply
   filling in the name, background color, and the link URL. The app also supports
   Foundation and Enhanced apps. Foundation apps are those supported by Heimdall,
   and Enhanced apps are like Foundation apps but with the added feature of
@@ -53,7 +54,8 @@ schema:
       default: Europe/London
 benefits:
   - title: Simplicity
-    description: Heimdall Application Dashboard is designed to avoid the trap of
+    description:
+      Heimdall Application Dashboard is designed to avoid the trap of
       over-complication. It offers a straightforward interface that users can
       fine-tune to match their needs without getting overwhelmed by a multitude
       of options.
@@ -65,16 +67,16 @@ benefits:
 features:
   - title: Versatile Dashboard
     description:
-      Heimdall Application Dashboard serves as a comprehensive dashboard
-      for all your web applications. It's not limited to applications; you can
-      add links to anything you like, making it a versatile tool for managing
-      your digital resources.
+      Heimdall Application Dashboard serves as a comprehensive dashboard for all
+      your web applications. It's not limited to applications; you can add links
+      to anything you like, making it a versatile tool for managing your digital
+      resources.
   - title: Generic, Foundation, and Enhanced Apps
     description:
-      "Heimdall supports three types of items: Generic, Foundation, and
-      Enhanced apps. Generic items allow you to add a link to anything, while
-      Foundation and Enhanced apps offer more features, such as default icons
-      and background colors, and the ability to display extra information
-      through an app's API."
+      "Heimdall supports three types of items: Generic, Foundation, and Enhanced
+      apps. Generic items allow you to add a link to anything, while Foundation
+      and Enhanced apps offer more features, such as default icons and
+      background colors, and the ability to display extra information through an
+      app's API."
 tags:
   - Dashboard

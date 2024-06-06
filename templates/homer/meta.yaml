@@ -1,13 +1,15 @@
 name: Homer
-description: Homer is a straightforward, static homepage for your server,
-  designed to keep all your services easily accessible. It operates based on a
-  simple yaml configuration file. This app serves as a full static HTML/JS
-  dashboard, providing a centralized platform where you can manage and access
-  all your services. It features a search function, grouping, theme
-  customization, and offline health checks. It also supports keyboard shortcuts
-  for quick navigation. Homer is designed to be served by an HTTP server and is
-  perfect for those who want to keep their services organized and within reach.
-instructions: The config files can be found under
+description:
+  Homer is a straightforward, static homepage for your server, designed to keep
+  all your services easily accessible. It operates based on a simple yaml
+  configuration file. This app serves as a full static HTML/JS dashboard,
+  providing a centralized platform where you can manage and access all your
+  services. It features a search function, grouping, theme customization, and
+  offline health checks. It also supports keyboard shortcuts for quick
+  navigation. Homer is designed to be served by an HTTP server and is perfect
+  for those who want to keep their services organized and within reach.
+instructions:
+  The config files can be found under
   "/etc/easypanel/projects/PROJECT_NAME/homer/volumes/assets"
 changeLog:
   - date: 2023-03-17
@@ -41,35 +43,36 @@ schema:
 benefits:
   - title: Convenience
     description:
-      Homer is a static homepage for your server, providing a convenient
-      way to keep all your services at your fingertips. It's based on a simple
-      yaml configuration file, making it easy to set up and use.
+      Homer is a static homepage for your server, providing a convenient way to
+      keep all your services at your fingertips. It's based on a simple yaml
+      configuration file, making it easy to set up and use.
   - title: Customization
     description:
-      Homer allows for theme customization, enabling you to personalize
-      your homepage to suit your preferences. It also supports grouping of
-      services for better organization.
+      Homer allows for theme customization, enabling you to personalize your
+      homepage to suit your preferences. It also supports grouping of services
+      for better organization.
   - title: Accessibility
     description:
-      With Homer, you can easily search for your services and access them
-      with keyboard shortcuts. It also offers offline health checks, ensuring
-      you're always up-to-date with the status of your services.
+      With Homer, you can easily search for your services and access them with
+      keyboard shortcuts. It also offers offline health checks, ensuring you're
+      always up-to-date with the status of your services.
 features:
   - title: yaml file configuration
     description:
-      Homer uses a simple yaml configuration file, making it easy to set
-      up and manage your homepage.
+      Homer uses a simple yaml configuration file, making it easy to set up and
+      manage your homepage.
   - title: Search and Grouping
     description:
-      Homer supports search and grouping of services, making it easy to
-      find and organize your services.
+      Homer supports search and grouping of services, making it easy to find and
+      organize your services.
   - title: Theme customization
     description:
-      Homer allows for theme customization, enabling you to personalize
-      your homepage to suit your preferences.
+      Homer allows for theme customization, enabling you to personalize your
+      homepage to suit your preferences.
   - title: Offline health check
-    description: Homer offers offline health checks, ensuring you're always
-      up-to-date with the status of your services.
+    description:
+      Homer offers offline health checks, ensuring you're always up-to-date with
+      the status of your services.
   - title: Keyboard shortcuts
     description:
       Homer supports keyboard shortcuts for quick and easy access to your

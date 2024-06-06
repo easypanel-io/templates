@@ -1,12 +1,13 @@
 name: Pufferpanel
-description: PufferPanel is a free, open-source game server management panel
-  that simplifies the management of your game servers. It supports a wide
-  variety of games including Minecraft, Forge, Spigot, Sponge, Source Dedicated
-  Servers, BungeeCord, PocketMine, and many more. With PufferPanel, you can
-  easily manage multiple game servers from one central location, providing a
-  streamlined and efficient way to control your gaming environment. Whether
-  you're an individual user or a large network, PufferPanel's user-friendly
-  interface makes game server management a breeze.
+description:
+  PufferPanel is a free, open-source game server management panel that
+  simplifies the management of your game servers. It supports a wide variety of
+  games including Minecraft, Forge, Spigot, Sponge, Source Dedicated Servers,
+  BungeeCord, PocketMine, and many more. With PufferPanel, you can easily manage
+  multiple game servers from one central location, providing a streamlined and
+  efficient way to control your gaming environment. Whether you're an individual
+  user or a large network, PufferPanel's user-friendly interface makes game
+  server management a breeze.
 instructions: Run "./pufferpanel user add" in the console to create a new user.
 changeLog:
   - date: 2023-3-21
@@ -41,29 +42,32 @@ schema:
       default: pufferpanel/pufferpanel:2.7.1
 benefits:
   - title: Simplified Game Server Management
-    description: PufferPanel is a free, open-source game server management panel
-      that simplifies the process of managing multiple game servers. It's
-      designed to be user-friendly, making it easy for anyone to manage their
-      game servers.
+    description:
+      PufferPanel is a free, open-source game server management panel that
+      simplifies the process of managing multiple game servers. It's designed to
+      be user-friendly, making it easy for anyone to manage their game servers.
   - title: Support for Multiple Games
-    description: PufferPanel supports a wide range of games including Minecraft,
-      Forge, Spigot, Sponge, Source Dedicated Servers, BungeeCord, PocketMine,
-      and more. This makes it a versatile tool for managing different types of
-      game servers.
+    description:
+      PufferPanel supports a wide range of games including Minecraft, Forge,
+      Spigot, Sponge, Source Dedicated Servers, BungeeCord, PocketMine, and
+      more. This makes it a versatile tool for managing different types of game
+      servers.
   - title: Centralized Control
-    description: With PufferPanel, you can manage all your game servers from one
-      central location. This eliminates the need to switch between different
-      platforms or tools, saving you time and effort.
+    description:
+      With PufferPanel, you can manage all your game servers from one central
+      location. This eliminates the need to switch between different platforms
+      or tools, saving you time and effort.
 features:
   - title: Open Source
     description:
-      PufferPanel is an open-source project, meaning you can freely use,
-      modify, and distribute it. This also ensures transparency and continuous
+      PufferPanel is an open-source project, meaning you can freely use, modify,
+      and distribute it. This also ensures transparency and continuous
       improvement of the platform.
   - title: User Management
-    description: PufferPanel allows you to give other users their own servers or
-      grant them access to your servers. This makes it a great tool for teams
-      and collaborative projects.
+    description:
+      PufferPanel allows you to give other users their own servers or grant them
+      access to your servers. This makes it a great tool for teams and
+      collaborative projects.
   - title: Easy-to-Use Interface
     description:
       PufferPanel features an easy-to-use interface that's designed to be

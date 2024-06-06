@@ -1,18 +1,20 @@
 name: Postgres Backup
-description: The postgres-backup-s3 app is a powerful tool designed to backup
-  your PostgreSQL databases to Amazon S3. It supports periodic backups, allowing
-  you to schedule automatic backups at your convenience. This ensures that your
-  data is always safe and can be restored whenever needed. The app also offers
-  the option to backup all available databases at once, creating a single
-  archive with a timestamp for easy identification. For added security, the app
-  provides an encryption feature. By setting an encryption password, your backup
-  can be encrypted and only decrypted with the correct password. This app is
-  perfect for those who want to ensure their PostgreSQL databases are securely
-  backed up in a reliable and efficient manner.
-instructions: "In order to test that you configured it properly, remove the
-  SCHEDULE variable from the environment, click deploy and check the logs. If
-  everything works fine, you can add the SCHEDULE variable back. You can read
-  more about the environment variables here:
+description:
+  The postgres-backup-s3 app is a powerful tool designed to backup your
+  PostgreSQL databases to Amazon S3. It supports periodic backups, allowing you
+  to schedule automatic backups at your convenience. This ensures that your data
+  is always safe and can be restored whenever needed. The app also offers the
+  option to backup all available databases at once, creating a single archive
+  with a timestamp for easy identification. For added security, the app provides
+  an encryption feature. By setting an encryption password, your backup can be
+  encrypted and only decrypted with the correct password. This app is perfect
+  for those who want to ensure their PostgreSQL databases are securely backed up
+  in a reliable and efficient manner.
+instructions:
+  "In order to test that you configured it properly, remove the SCHEDULE
+  variable from the environment, click deploy and check the logs. If everything
+  works fine, you can add the SCHEDULE variable back. You can read more about
+  the environment variables here:
   https://github.com/schickling/dockerfiles/tree/master/postgres-backup-s3"
 changeLog:
   - date: 2022-08-05
@@ -96,40 +98,40 @@ schema:
 benefits:
   - title: Secure Database Backup
     description:
-      The app provides a secure way to backup your PostgreSQL databases
-      to S3. It supports encryption, allowing you to set a password to encrypt
-      your backup for an added layer of security.
+      The app provides a secure way to backup your PostgreSQL databases to S3.
+      It supports encryption, allowing you to set a password to encrypt your
+      backup for an added layer of security.
   - title: Automatic Backups
     description:
-      The app supports automatic periodic backups. You can set a schedule
-      for the app to automatically backup your databases, ensuring your data is
+      The app supports automatic periodic backups. You can set a schedule for
+      the app to automatically backup your databases, ensuring your data is
       always safe and up-to-date.
   - title: Comprehensive Backup Options
-    description: The app allows you to backup all available databases or select
-      specific ones. This gives you the flexibility to choose what data to
-      backup.
+    description:
+      The app allows you to backup all available databases or select specific
+      ones. This gives you the flexibility to choose what data to backup.
 features:
   - title: PostgreSQL to S3 Backup
     description:
-      The app allows you to backup your PostgreSQL databases to S3. It
-      supports both Docker and Docker Compose usage for flexibility and ease of
-      use.
+      The app allows you to backup your PostgreSQL databases to S3. It supports
+      both Docker and Docker Compose usage for flexibility and ease of use.
   - title: Encryption
-    description: The app supports encryption for your backups. You can set an
-      encryption password to secure your data. The backup can be decrypted using
-      openssl aes-256-cbc.
+    description:
+      The app supports encryption for your backups. You can set an encryption
+      password to secure your data. The backup can be decrypted using openssl
+      aes-256-cbc.
   - title: Scheduling
     description:
-      The app allows you to set a schedule for automatic backups. This
-      ensures your databases are regularly backed up without manual
-      intervention.
+      The app allows you to set a schedule for automatic backups. This ensures
+      your databases are regularly backed up without manual intervention.
   - title: Backup All Databases
     description:
-      The app allows you to backup all available databases. This feature
-      ensures that no data is left unprotected.
+      The app allows you to backup all available databases. This feature ensures
+      that no data is left unprotected.
   - title: S3 Endpoint Configuration
-    description: The app allows you to specify an alternate S3 endpoint. This is
-      useful if you're using an S3 Compatible Storage Provider.
+    description:
+      The app allows you to specify an alternate S3 endpoint. This is useful if
+      you're using an S3 Compatible Storage Provider.
 tags:
   - Databases
   - Backup

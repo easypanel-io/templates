@@ -1,20 +1,21 @@
 name: SuiteCRM
-description: SuiteCRM is the world's leading Open Source CRM, designed to help
-  you sell, market, and service smarter. This feature-rich, enterprise-ready
-  alternative to Salesforce offers all the benefits of CRM at a significantly
-  lower cost, with the freedom and flexibility of Open Source. With SuiteCRM,
-  you can gain a 360-degree view of your customers by creating a central
-  repository for all your customer data, enabling you to gain key insights to
-  enhance and nurture your business relationships. The platform is highly
-  customizable and easy to use, with hundreds of extensions and integrations.
-  SuiteCRM 8, our most advanced upgrade to date, promises to give you better
-  control of your data and business solutions. The platform also allows for
-  seamless integration with core business systems using our open REST API,
-  enhancing productivity across your organization. With SuiteCRM, you can
-  automate key actions, improve efficiency, understand your customers' needs,
-  convert more leads, and engage your customers more effectively with
-  personalized experiences and consistent messaging. It also empowers your
-  customer service team to service smarter, faster, and more professionally.
+description:
+  SuiteCRM is the world's leading Open Source CRM, designed to help you sell,
+  market, and service smarter. This feature-rich, enterprise-ready alternative
+  to Salesforce offers all the benefits of CRM at a significantly lower cost,
+  with the freedom and flexibility of Open Source. With SuiteCRM, you can gain a
+  360-degree view of your customers by creating a central repository for all
+  your customer data, enabling you to gain key insights to enhance and nurture
+  your business relationships. The platform is highly customizable and easy to
+  use, with hundreds of extensions and integrations. SuiteCRM 8, our most
+  advanced upgrade to date, promises to give you better control of your data and
+  business solutions. The platform also allows for seamless integration with
+  core business systems using our open REST API, enhancing productivity across
+  your organization. With SuiteCRM, you can automate key actions, improve
+  efficiency, understand your customers' needs, convert more leads, and engage
+  your customers more effectively with personalized experiences and consistent
+  messaging. It also empowers your customer service team to service smarter,
+  faster, and more professionally.
 instructions: null
 changeLog:
   - date: 2023-1-12
@@ -67,47 +68,49 @@ schema:
       default: suitecrm-db
 benefits:
   - title: Cost-Effective CRM Solution
-    description: SuiteCRM is a feature-rich enterprise-ready alternative to
-      Salesforce, providing all the benefits of CRM at substantially lower
-      costs. It offers the freedoms and flexibility of Open Source, allowing you
-      to dramatically reduce your total cost of ownership.
+    description:
+      SuiteCRM is a feature-rich enterprise-ready alternative to Salesforce,
+      providing all the benefits of CRM at substantially lower costs. It offers
+      the freedoms and flexibility of Open Source, allowing you to dramatically
+      reduce your total cost of ownership.
   - title: Enhanced Business Relationships
     description:
-      SuiteCRM enables you to create a central repository for all your
-      customer data, providing key insights that can be used to enhance and
-      nurture your business relationships.
+      SuiteCRM enables you to create a central repository for all your customer
+      data, providing key insights that can be used to enhance and nurture your
+      business relationships.
   - title: Increased Productivity
-    description: With SuiteCRM, you can increase productivity across your
-      organisation. Its open REST API allows you to integrate CRM with core
-      business systems, enabling you to share and collaborate across any
-      boundaries.
+    description:
+      With SuiteCRM, you can increase productivity across your organisation. Its
+      open REST API allows you to integrate CRM with core business systems,
+      enabling you to share and collaborate across any boundaries.
   - title: Improved Customer Satisfaction
     description:
-      SuiteCRM empowers your customer service team with the tools that
-      will allow them to service smarter, faster and more professionally,
-      thereby improving customer satisfaction.
+      SuiteCRM empowers your customer service team with the tools that will
+      allow them to service smarter, faster and more professionally, thereby
+      improving customer satisfaction.
 features:
   - title: 360 Degree View
     description:
-      Know your customer by creating a central repository for all your
-      customer data enabling you to gain key insights that can be used to
-      enhance and nurture your business relationships.
+      Know your customer by creating a central repository for all your customer
+      data enabling you to gain key insights that can be used to enhance and
+      nurture your business relationships.
   - title: Integration
     description:
-      Increase productivity across your organisation using our open REST
-      API allowing you to integrate CRM with core business systems, enabling you
-      to share and collaborate across any boundaries.
+      Increase productivity across your organisation using our open REST API
+      allowing you to integrate CRM with core business systems, enabling you to
+      share and collaborate across any boundaries.
   - title: Powerful Reporting and Dashboards
     description:
-      Our powerful reporting and dashboards give you quick visibility of
-      key metrics to support your business.
+      Our powerful reporting and dashboards give you quick visibility of key
+      metrics to support your business.
   - title: Personalised Quotations
-    description: Our Open Source CRM provides you with all the tools to capture
-      important leads, manage your opportunities and create personalised
-      quotations freeing up precious time to sell.
+    description:
+      Our Open Source CRM provides you with all the tools to capture important
+      leads, manage your opportunities and create personalised quotations
+      freeing up precious time to sell.
   - title: Customer Segmentation and Targeted Marketing
     description:
-      Automate customer segmentation, send targeted marketing content and
-      track important activity to generate more leads and feed the funnel.
+      Automate customer segmentation, send targeted marketing content and track
+      important activity to generate more leads and feed the funnel.
 tags:
   - CRM

@@ -1,15 +1,17 @@
 name: Matrix Synapse
-description: Matrix is an open network designed for secure, decentralised
-  communication. This app allows you to chat with friends, family, communities,
-  and co-workers, providing a cozy, safe, and supercharged environment for your
-  conversations. You can reclaim your space and build advanced, rich
-  communication applications on top of Matrix. The app is part of a rich
-  ecosystem that includes clients, servers, bots, and application services. It's
-  an open-source project, generously hosted by UpCloud. With Matrix, you can
-  start a conversation, build apps, and explore the vast possibilities of a
-  decentralised communication network.
-instructions: To create a user, simply execute the command
-  "register_new_matrix_user -c data/homeserver.yaml" via console connection.
+description:
+  Matrix is an open network designed for secure, decentralised communication.
+  This app allows you to chat with friends, family, communities, and co-workers,
+  providing a cozy, safe, and supercharged environment for your conversations.
+  You can reclaim your space and build advanced, rich communication applications
+  on top of Matrix. The app is part of a rich ecosystem that includes clients,
+  servers, bots, and application services. It's an open-source project,
+  generously hosted by UpCloud. With Matrix, you can start a conversation, build
+  apps, and explore the vast possibilities of a decentralised communication
+  network.
+instructions:
+  To create a user, simply execute the command "register_new_matrix_user -c
+  data/homeserver.yaml" via console connection.
 changeLog:
   - date: 2023-03-28
     description: First Release
@@ -66,31 +68,36 @@ schema:
       default: synapse-db
 benefits:
   - title: Secure and Decentralised Communication
-    description: Matrix provides a secure, open network for decentralised
-      communication. It allows you to chat with friends, family, communities,
-      and co-workers, ensuring your conversations are safe and private.
+    description:
+      Matrix provides a secure, open network for decentralised communication. It
+      allows you to chat with friends, family, communities, and co-workers,
+      ensuring your conversations are safe and private.
   - title: Reclaim Your Space
-    description: Matrix allows you to build advanced, rich communication
-      applications. It offers a cozy, safe, and supercharged place for your
-      community, giving you the power to reclaim your digital space.
+    description:
+      Matrix allows you to build advanced, rich communication applications. It
+      offers a cozy, safe, and supercharged place for your community, giving you
+      the power to reclaim your digital space.
   - title: Rich Ecosystem
-    description: Matrix is a rich ecosystem of clients, servers, bots, and
-      application services. It provides a versatile platform for building a
-      variety of communication applications.
+    description:
+      Matrix is a rich ecosystem of clients, servers, bots, and application
+      services. It provides a versatile platform for building a variety of
+      communication applications.
 features:
   - title: Open Network
-    description: Matrix provides an open network for secure, decentralised
-      communication. You can start a conversation with anyone, anywhere, without
-      worrying about security or privacy.
+    description:
+      Matrix provides an open network for secure, decentralised communication.
+      You can start a conversation with anyone, anywhere, without worrying about
+      security or privacy.
   - title: Build Advanced Applications
-    description: Matrix allows you to build advanced, rich communication
-      applications. It provides a robust platform for developers to create a
-      variety of applications, from simple chatbots to complex communication
-      systems.
+    description:
+      Matrix allows you to build advanced, rich communication applications. It
+      provides a robust platform for developers to create a variety of
+      applications, from simple chatbots to complex communication systems.
   - title: Rich Ecosystem
-    description: Matrix offers a rich ecosystem of clients, servers, bots, and
-      application services. This ecosystem provides a wide range of tools and
-      resources for developers to build and enhance their applications.
+    description:
+      Matrix offers a rich ecosystem of clients, servers, bots, and application
+      services. This ecosystem provides a wide range of tools and resources for
+      developers to build and enhance their applications.
 tags:
   - Chat
   - Communication

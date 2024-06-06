@@ -1,7 +1,8 @@
 name: OpenSpeedTest
-description: OpenSpeedTest is a powerful and accurate online bandwidth test
-  application that works on any web browser without the need for Flash or Java.
-  It is designed to replicate your real-world connection speed and is capable of
+description:
+  OpenSpeedTest is a powerful and accurate online bandwidth test application
+  that works on any web browser without the need for Flash or Java. It is
+  designed to replicate your real-world connection speed and is capable of
   testing any connection, from 1 Kbps to 1 Gbps+. The application uses the
   latest technology to automatically detect your stable download and upload
   speed from our servers. It also provides a guide on how to increase your
@@ -43,23 +44,27 @@ schema:
       default: openspeedtest/latest
 benefits:
   - title: Accurate Internet Speed Test
-    description: Our app offers the most accurate and powerful online bandwidth
-      test, designed to replicate your real-world connection speed. It works on
-      any device and any web browser, without the need for Flash or Java.
+    description:
+      Our app offers the most accurate and powerful online bandwidth test,
+      designed to replicate your real-world connection speed. It works on any
+      device and any web browser, without the need for Flash or Java.
   - title: Broad Compatibility
-    description: Whether you're using an iPad, iPhone, Android, Smart TV, Xbox,
+    description:
+      Whether you're using an iPad, iPhone, Android, Smart TV, Xbox,
       PlayStation, Windows, Mac, or Linux, our app can test your internet speed.
       It's designed for testing any connection, from 1 Kbps to 1 Gbps+.
   - title: Insightful Results
-    description: The final result will be the average value of the fastest
-      download/upload burst rates during the bandwidth test. These results can
-      help you understand your bandwidth and how it may vary at different times
-      of the day.
+    description:
+      The final result will be the average value of the fastest download/upload
+      burst rates during the bandwidth test. These results can help you
+      understand your bandwidth and how it may vary at different times of the
+      day.
   - title: Internet Speed Improvement Guide
-    description: Our app includes a guide for getting more out of your internet
-      connection before switching broadband plans or Internet service provider.
-      These simple tips can improve your Wifi, DSL, ADSL, Mobile Broadband 3G,
-      4G LTE, WiMax, Fibre, Satellite broadband etc.
+    description:
+      Our app includes a guide for getting more out of your internet connection
+      before switching broadband plans or Internet service provider. These
+      simple tips can improve your Wifi, DSL, ADSL, Mobile Broadband 3G, 4G LTE,
+      WiMax, Fibre, Satellite broadband etc.
 features:
   - title: HTML5 Internet Speed Test
     description:
@@ -67,21 +72,24 @@ features:
       automatically detects your stable download and upload speed from our
       servers.
   - title: Create Your Own Network Speed Test
-    description: No client-side software or plugin is required. You can run a
-      network speed test from any device within your network with a web browser
-      that is IE10 or newer.
+    description:
+      No client-side software or plugin is required. You can run a network speed
+      test from any device within your network with a web browser that is IE10
+      or newer.
   - title: Embeddable SpeedTest for Website/App
     description:
-      You can embed OpenSpeedTest to your website or application. This
-      option will use OpenSpeedTest servers to test your user's internet speed.
+      You can embed OpenSpeedTest to your website or application. This option
+      will use OpenSpeedTest servers to test your user's internet speed.
   - title: SpeedTest for Home or Small Office LAN
-    description: Our app offers a standalone application for Desktop and Mobile
-      users for launching HTML5 Network Speed Test Server. You can test download
-      & upload speed from any device within your network with a web browser that
-      is IE10 or newer.
+    description:
+      Our app offers a standalone application for Desktop and Mobile users for
+      launching HTML5 Network Speed Test Server. You can test download & upload
+      speed from any device within your network with a web browser that is IE10
+      or newer.
   - title: Self-Hosted SpeedTest
-    description: For large-scale deployments, our app offers a
-      Self-hosted/On-Premise HTML5 Network Speed Test. You can download the
-      source code and config your own server or use our Docker Image.
+    description:
+      For large-scale deployments, our app offers a Self-hosted/On-Premise HTML5
+      Network Speed Test. You can download the source code and config your own
+      server or use our Docker Image.
 tags:
   - Network Tools

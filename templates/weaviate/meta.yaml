@@ -1,10 +1,11 @@
 name: Weaviate
-description: Weaviate is an open-source vector database that allows you to store
-  and retrieve data objects based on their semantic properties by indexing them
-  with vectors. It can be used stand-alone or with a variety of modules that can
-  do the vectorization for you and extend the core capabilities. Weaviate
-  provides a lightning-fast pure vector similarity search over raw vectors or
-  data objects, even with filters. It combines keyword-based search with vector
+description:
+  Weaviate is an open-source vector database that allows you to store and
+  retrieve data objects based on their semantic properties by indexing them with
+  vectors. It can be used stand-alone or with a variety of modules that can do
+  the vectorization for you and extend the core capabilities. Weaviate provides
+  a lightning-fast pure vector similarity search over raw vectors or data
+  objects, even with filters. It combines keyword-based search with vector
   search techniques for state-of-the-art results. You can also use any
   generative model in combination with your data, for example to do Q&A over
   your dataset. Weaviate's next-gen vector database can power a wide range of
@@ -43,14 +44,16 @@ schema:
 benefits:
   - title: Powerful Vector Search
     description:
-      Easily perform lightning-fast pure vector similarity search over
-      raw vectors or data objects, even with filters.
+      Easily perform lightning-fast pure vector similarity search over raw
+      vectors or data objects, even with filters.
   - title: Hybrid Search
-    description: Combine keyword-based search with vector search techniques for
+    description:
+      Combine keyword-based search with vector search techniques for
       state-of-the-art search results.
   - title: Generative Search
-    description: Improve search results by using generative models like GPT-3 to
-      create next-gen search experiences.
+    description:
+      Improve search results by using generative models like GPT-3 to create
+      next-gen search experiences.
 features:
   - title: Scalable Vector Database
     description:

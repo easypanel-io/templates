@@ -1,5 +1,8 @@
 name: DocuSeal
-description: DocuSeal is an open source platform that provides secure and efficient digital document signing and processing. Create PDF forms to have them filled and signed online on any device with an easy-to-use, mobile-optimized web tool.
+description:
+  DocuSeal is an open source platform that provides secure and efficient digital
+  document signing and processing. Create PDF forms to have them filled and
+  signed online on any device with an easy-to-use, mobile-optimized web tool.
 instructions: null
 changeLog:
   - date: 2024-2-15
@@ -34,11 +37,14 @@ schema:
       default: docuseal-db
 benefits:
   - title: Fast and slick
-    description: Lightning-fast and smooth document signing with a step-by-step form.
+    description:
+      Lightning-fast and smooth document signing with a step-by-step form.
   - title: Works everywhere
-    description: From mobile to desktop. Document signing made simple on any device.
+    description:
+      From mobile to desktop. Document signing made simple on any device.
   - title: Feature-rich
-    description: Reminders, API integration, seamless embedding, branding and more.
+    description:
+      Reminders, API integration, seamless embedding, branding and more.
 features:
   - title: PDF form fields builder (WYSIWYG)
     description: null

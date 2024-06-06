@@ -1,12 +1,12 @@
 name: RSSHub
-description: RSSHub is an open-source, user-friendly, and extensible RSS feed
-  generator. It is designed to create RSS feeds from virtually any content. With
-  the ability to aggregate millions of contents from various sources, RSSHub
-  ensures the delivery of new routes, features, and bug fixes. The app is
-  compatible with the browser extension RSSHub Radar and mobile auxiliary apps
-  RSSBud (iOS) and RSSAid (Android). It has adapted to hundreds of websites and
-  thousands of content types, making it a versatile tool for generating RSS
-  feeds.
+description:
+  RSSHub is an open-source, user-friendly, and extensible RSS feed generator. It
+  is designed to create RSS feeds from virtually any content. With the ability
+  to aggregate millions of contents from various sources, RSSHub ensures the
+  delivery of new routes, features, and bug fixes. The app is compatible with
+  the browser extension RSSHub Radar and mobile auxiliary apps RSSBud (iOS) and
+  RSSAid (Android). It has adapted to hundreds of websites and thousands of
+  content types, making it a versatile tool for generating RSS feeds.
 instructions: null
 changeLog:
   - date: 2023-07-09
@@ -41,28 +41,31 @@ schema:
       default: diygod/rsshub:latest
 benefits:
   - title: Efficient Content Aggregation
-    description: RSSHub is an open-source RSS feed generator that efficiently
-      aggregates content from a wide variety of sources. It delivers millions of
-      contents, ensuring you always have access to the latest updates.
+    description:
+      RSSHub is an open-source RSS feed generator that efficiently aggregates
+      content from a wide variety of sources. It delivers millions of contents,
+      ensuring you always have access to the latest updates.
   - title: Extensibility
-    description: RSSHub is designed to be extensible, capable of generating RSS
-      feeds from pretty much everything. This means it can adapt to your
-      specific needs and provide feeds from even the most obscure sources.
+    description:
+      RSSHub is designed to be extensible, capable of generating RSS feeds from
+      pretty much everything. This means it can adapt to your specific needs and
+      provide feeds from even the most obscure sources.
   - title: Ease of Use
     description:
-      RSSHub is easy to use, making it accessible to users of all levels
-      of technical proficiency. You can easily generate RSS feeds without
-      needing advanced technical knowledge.
+      RSSHub is easy to use, making it accessible to users of all levels of
+      technical proficiency. You can easily generate RSS feeds without needing
+      advanced technical knowledge.
 features:
   - title: RSS Feed Generation
-    description: RSSHub can generate RSS feeds from a wide variety of sources.
-      Whether it's social media, traditional media, blogs, or any other type of
-      content, RSSHub can create an RSS feed for it.
+    description:
+      RSSHub can generate RSS feeds from a wide variety of sources. Whether it's
+      social media, traditional media, blogs, or any other type of content,
+      RSSHub can create an RSS feed for it.
   - title: Browser Extension and Mobile App Compatibility
     description:
-      RSSHub can be used with the RSSHub Radar browser extension and the
-      RSSBud (iOS) and RSSAid (Android) mobile apps. This allows you to easily
-      discover and subscribe to RSS feeds on your preferred devices.
+      RSSHub can be used with the RSSHub Radar browser extension and the RSSBud
+      (iOS) and RSSAid (Android) mobile apps. This allows you to easily discover
+      and subscribe to RSS feeds on your preferred devices.
   - title: Open Source Development
     description:
       RSSHub is an open-source project, which means it's constantly being

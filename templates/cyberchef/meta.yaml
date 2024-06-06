@@ -1,15 +1,16 @@
 name: CyberChef
-description: CyberChef, also known as the Cyber Swiss Army Knife, is a versatile
-  web app designed to perform a wide array of 'cyber' operations within a web
-  browser. It offers simple encoding methods like XOR and Base64, alongside more
-  complex encryption techniques such as AES, DES, and Blowfish. CyberChef also
-  provides tools for creating binary and hexdumps, compressing and decompressing
-  data, calculating hashes and checksums, parsing IPv6 and X.509, changing
-  character encodings, and much more. The app is designed to be user-friendly,
-  enabling both technical and non-technical analysts to manipulate data in
-  complex ways without the need for intricate tools or algorithms. CyberChef is
-  still under active development, with ongoing testing, bug fixing, new feature
-  additions, and documentation improvements.
+description:
+  CyberChef, also known as the Cyber Swiss Army Knife, is a versatile web app
+  designed to perform a wide array of 'cyber' operations within a web browser.
+  It offers simple encoding methods like XOR and Base64, alongside more complex
+  encryption techniques such as AES, DES, and Blowfish. CyberChef also provides
+  tools for creating binary and hexdumps, compressing and decompressing data,
+  calculating hashes and checksums, parsing IPv6 and X.509, changing character
+  encodings, and much more. The app is designed to be user-friendly, enabling
+  both technical and non-technical analysts to manipulate data in complex ways
+  without the need for intricate tools or algorithms. CyberChef is still under
+  active development, with ongoing testing, bug fixing, new feature additions,
+  and documentation improvements.
 instructions: null
 changeLog:
   - date: 2023-2-9
@@ -42,19 +43,20 @@ schema:
       default: mpepping/cyberchef:v10.18.6
 benefits:
   - title: Data Manipulation
-    description: CyberChef is a web app that enables both technical and
-      non-technical analysts to manipulate data in complex ways without having
-      to deal with complex tools or algorithms. It simplifies tasks such as
-      simple encoding like XOR and Base64, more complex encryption like AES, DES
-      and Blowfish, creating binary and hexdumps, compression and decompression
-      of data, calculating hashes and checksums, IPv6 and X.509 parsing,
-      changing character encodings, and much more.
+    description:
+      CyberChef is a web app that enables both technical and non-technical
+      analysts to manipulate data in complex ways without having to deal with
+      complex tools or algorithms. It simplifies tasks such as simple encoding
+      like XOR and Base64, more complex encryption like AES, DES and Blowfish,
+      creating binary and hexdumps, compression and decompression of data,
+      calculating hashes and checksums, IPv6 and X.509 parsing, changing
+      character encodings, and much more.
   - title: Intuitive Interface
     description:
-      "The app features an intuitive interface with four main areas: the
-      input box, the output box, the operations list, and the recipe area. Users
-      can easily drag and drop operations into the recipe area and see the
-      outcome of their processing in the output box."
+      "The app features an intuitive interface with four main areas: the input
+      box, the output box, the operations list, and the recipe area. Users can
+      easily drag and drop operations into the recipe area and see the outcome
+      of their processing in the output box."
   - title: Automated Encoding Detection
     description:
       CyberChef uses a number of techniques to automatically detect which
@@ -63,48 +65,51 @@ benefits:
       you can click to decode your data.
 features:
   - title: Drag and Drop
-    description: Operations can be dragged in and out of the recipe list, or
-      reorganised. Files up to 2GB can be dragged over the input box to load
-      them directly into the browser.
+    description:
+      Operations can be dragged in and out of the recipe list, or reorganised.
+      Files up to 2GB can be dragged over the input box to load them directly
+      into the browser.
   - title: Auto Bake
-    description: Whenever you modify the input or the recipe, CyberChef will
-      automatically 'bake' for you and produce the output immediately. This can
-      be turned off and operated manually if it is affecting performance.
+    description:
+      Whenever you modify the input or the recipe, CyberChef will automatically
+      'bake' for you and produce the output immediately. This can be turned off
+      and operated manually if it is affecting performance.
   - title: Breakpoints
     description:
-      You can set breakpoints on any operation in your recipe to pause
-      execution before running it. You can also step through the recipe one
-      operation at a time to see what the data looks like at each stage.
+      You can set breakpoints on any operation in your recipe to pause execution
+      before running it. You can also step through the recipe one operation at a
+      time to see what the data looks like at each stage.
   - title: Save and Load Recipes
     description:
-      If you come up with an awesome recipe that you know you’ll want to
-      use again, just click 'Save recipe' and add it to your local storage.
-      It'll be waiting for you next time you visit CyberChef. You can also copy
-      the URL, which includes your recipe and input, to easily share it with
-      others.
+      If you come up with an awesome recipe that you know you’ll want to use
+      again, just click 'Save recipe' and add it to your local storage. It'll be
+      waiting for you next time you visit CyberChef. You can also copy the URL,
+      which includes your recipe and input, to easily share it with others.
   - title: Search
     description:
-      If you know the name of the operation you want or a word associated
-      with it, start typing it into the search field and any matching operations
-      will immediately be shown.
+      If you know the name of the operation you want or a word associated with
+      it, start typing it into the search field and any matching operations will
+      immediately be shown.
   - title: Highlighting
-    description: When you highlight text in the input or output, the offset and
-      length values will be displayed and, if possible, the corresponding data
-      will be highlighted in the output or input respectively.
+    description:
+      When you highlight text in the input or output, the offset and length
+      values will be displayed and, if possible, the corresponding data will be
+      highlighted in the output or input respectively.
   - title: Save to File and Load from File
-    description: You can save the output to a file at any time or load a file by
-      dragging and dropping it into the input field. Files up to around 2GB are
+    description:
+      You can save the output to a file at any time or load a file by dragging
+      and dropping it into the input field. Files up to around 2GB are
       supported.
   - title: Client-Side Processing
     description:
-      None of your recipe configuration or input (either text or files)
-      is ever sent to the CyberChef web server - all processing is carried out
-      within your browser, on your own computer. Due to this feature, CyberChef
-      can be downloaded and run locally.
+      None of your recipe configuration or input (either text or files) is ever
+      sent to the CyberChef web server - all processing is carried out within
+      your browser, on your own computer. Due to this feature, CyberChef can be
+      downloaded and run locally.
   - title: Deep Linking
     description:
-      By manipulating CyberChef's URL hash, you can change the initial
-      settings with which the page opens. Supported arguments are recipe, input
-      (encoded in Base64), and theme.
+      By manipulating CyberChef's URL hash, you can change the initial settings
+      with which the page opens. Supported arguments are recipe, input (encoded
+      in Base64), and theme.
 tags:
   - Developer Tools

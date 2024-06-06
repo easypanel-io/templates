@@ -1,13 +1,14 @@
 name: Lavalink
-description: Lavalink is a standalone audio sending node designed to facilitate
-  the process of sending audio without it ever reaching any of your shards. It
-  is powered by Lavaplayer and Koe, and is currently being used in production by
-  several popular bots. The app offers a range of features including
-  Twitch/YouTube stream support, an event system, seeking, volume control, and a
-  REST API for resolving Lavaplayer tracks and controlling players. It also
-  provides statistics which are useful for load balancing. Lavalink is designed
-  to have a minimal CPU/memory footprint, and it supports plugins. It is
-  compatible with Java 17 LTS or newer, and it follows Semantic Versioning.
+description:
+  Lavalink is a standalone audio sending node designed to facilitate the process
+  of sending audio without it ever reaching any of your shards. It is powered by
+  Lavaplayer and Koe, and is currently being used in production by several
+  popular bots. The app offers a range of features including Twitch/YouTube
+  stream support, an event system, seeking, volume control, and a REST API for
+  resolving Lavaplayer tracks and controlling players. It also provides
+  statistics which are useful for load balancing. Lavalink is designed to have a
+  minimal CPU/memory footprint, and it supports plugins. It is compatible with
+  Java 17 LTS or newer, and it follows Semantic Versioning.
 instructions: null
 changeLog:
   - date: 2019-07-24
@@ -45,47 +46,49 @@ schema:
 benefits:
   - title: High-Quality Audio Streaming
     description:
-      Lavalink offers high-quality audio streaming, allowing you to send
-      audio without it ever reaching any of your shards. This ensures a smooth
-      and uninterrupted audio experience.
+      Lavalink offers high-quality audio streaming, allowing you to send audio
+      without it ever reaching any of your shards. This ensures a smooth and
+      uninterrupted audio experience.
   - title: Efficient Resource Usage
     description:
-      Lavalink is designed to have a minimal CPU/memory footprint, making
-      it an efficient choice for audio streaming. It ensures that your system
+      Lavalink is designed to have a minimal CPU/memory footprint, making it an
+      efficient choice for audio streaming. It ensures that your system
       resources are used optimally.
   - title: Support for Multiple Streaming Platforms
     description:
-      Lavalink supports streaming from various platforms including Twitch
-      and YouTube. This means you can stream audio from your favorite platforms
-      with ease.
+      Lavalink supports streaming from various platforms including Twitch and
+      YouTube. This means you can stream audio from your favorite platforms with
+      ease.
 features:
   - title: Event System
     description:
-      Lavalink comes with an event system, allowing for more interactive
-      and dynamic audio streaming experiences.
+      Lavalink comes with an event system, allowing for more interactive and
+      dynamic audio streaming experiences.
   - title: Seeking and Volume Control
     description:
-      With Lavalink, you have full control over your audio streams. You
-      can seek through tracks and adjust the volume as per your preference.
+      With Lavalink, you have full control over your audio streams. You can seek
+      through tracks and adjust the volume as per your preference.
   - title: REST API
-    description: Lavalink provides a REST API for resolving Lavaplayer tracks,
-      controlling players, and more. This allows for more flexibility and
-      control over your audio streaming.
+    description:
+      Lavalink provides a REST API for resolving Lavaplayer tracks, controlling
+      players, and more. This allows for more flexibility and control over your
+      audio streaming.
   - title: Statistics
-    description: Lavalink provides statistics that are good for load balancing,
-      helping you manage your resources more effectively.
+    description:
+      Lavalink provides statistics that are good for load balancing, helping you
+      manage your resources more effectively.
   - title: Basic Authentication
     description:
-      Lavalink includes basic authentication features, ensuring that your
-      audio streams are secure.
+      Lavalink includes basic authentication features, ensuring that your audio
+      streams are secure.
   - title: Prometheus Metrics
     description:
-      Lavalink supports Prometheus metrics, allowing you to monitor your
-      audio streaming performance effectively.
+      Lavalink supports Prometheus metrics, allowing you to monitor your audio
+      streaming performance effectively.
   - title: Docker Images
     description:
-      Lavalink provides Docker images, making it easier to deploy and run
-      the app.
+      Lavalink provides Docker images, making it easier to deploy and run the
+      app.
   - title: Plugin Support
     description:
       Lavalink supports plugins, allowing you to extend its functionality
