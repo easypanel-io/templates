@@ -9,6 +9,7 @@ async function run() {
 
   // create a folder for each template
   for (let { slug, meta } of templates) {
+    console.log(slug, meta);
     list.push({
       slug,
       logo: meta.logo,
@@ -19,7 +20,7 @@ async function run() {
   }
 
   await writeFile(
-    path.resolve(templatesPath, "index.json"),
+    path.resolve(templatesPath, "list.json"),
     JSON.stringify(list, null, 2)
   );
 }
