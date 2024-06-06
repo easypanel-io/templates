@@ -57,16 +57,19 @@ schema:
       default: panel-db
 benefits:
   - title: Secure Game Server Management
-    description: Pterodactyl Panel is designed with security as a priority. It uses
+    description:
+      Pterodactyl Panel is designed with security as a priority. It uses
       bcrypt hashing, AES-256-CBC encryption, and HTTPS support to ensure your
       game servers are secure. All servers run in isolated Docker containers,
       limiting attack vectors and providing strict resource limits.
   - title: User-Friendly Interface
-    description: Pterodactyl Panel offers a beautiful and intuitive user interface.
+    description:
+      Pterodactyl Panel offers a beautiful and intuitive user interface.
       It's designed to be easy to use, saving you from unnecessary stress and
       frustration.
   - title: Scalability
-    description: Whether you're a hosting company, a large gaming network, or just a
+    description:
+      Whether you're a hosting company, a large gaming network, or just a
       group of friends playing video games, Pterodactyl Panel can scale to meet
       your needs.
   - title: Cost-Effective Solution
@@ -75,7 +78,8 @@ benefits:
       your game servers.
 features:
   - title: Modern Tooling
-    description: Pterodactyl Panel is built on a modern stack, utilizing the best
+    description:
+      Pterodactyl Panel is built on a modern stack, utilizing the best
       design practices. This makes it easy to jump in and make modifications if
       needed.
   - title: Docker Core

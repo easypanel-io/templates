@@ -58,7 +58,8 @@ schema:
       default: mcaptcha-redis
 benefits:
   - title: Privacy Focused
-    description: mCaptcha is a proof-of-work based captcha system that prioritizes
+    description:
+      mCaptcha is a proof-of-work based captcha system that prioritizes
       your privacy. It doesn't track or profile your users, ensuring a secure
       and private user experience.
   - title: Robust and Accurate
@@ -69,7 +70,8 @@ benefits:
     description: mCaptcha is designed to be unobtrusive. Your users won't even
       notice it's there. No more annoying images or unnecessary tasks.
   - title: Defend Like Castles
-    description: mCaptcha's proof-of-work based solution defends your site fiercely,
+    description:
+      mCaptcha's proof-of-work based solution defends your site fiercely,
       making attacking your site more expensive than what it will take for you
       to respond to the attacker's requests.
   - title: Libre Software
@@ -77,20 +79,25 @@ benefits:
       using proprietary-friendly free software licenses but the core is AGPL'd.
 features:
   - title: Proof-of-Work Based
-    description: mCaptcha uses SHA256 based proof-of-work (PoW) to rate limit users.
+    description:
+      mCaptcha uses SHA256 based proof-of-work (PoW) to rate limit users.
       This makes interacting with websites (computationally) expensive for the
       user, deterring malicious attacks.
   - title: Automated Process
-    description: The entire process is automated from the user's point of view. All
+    description:
+      The entire process is automated from the user's point of view. All
       they have to do is click on a button to initiate the process.
   - title: Resistant to Replay Attacks
-    description: mCaptcha's proof-of-work configurations have short lifetimes and
+    description:
+      mCaptcha's proof-of-work configurations have short lifetimes and
       can be used only once. This makes it resistant to replay attacks.
   - title: Seamless User Experience
-    description: mCaptcha's user experience is super silent. Solving CAPTCHAs has
+    description:
+      mCaptcha's user experience is super silent. Solving CAPTCHAs has
       never been easier. One click and your users are on their way.
   - title: Compatible with reCAPTCHA and hCaptcha
-    description: Already using a captcha solution? No worries, mCaptcha's APIs are
+    description:
+      Already using a captcha solution? No worries, mCaptcha's APIs are
       compatible with reCAPTCHA and hCaptcha!
 tags:
   - Privacy

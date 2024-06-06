@@ -34,7 +34,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 3000
+          port: 3000,
         },
       ],
     },

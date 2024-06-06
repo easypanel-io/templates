@@ -100,25 +100,30 @@ benefits:
       databases to your AWS S3 bucket. It ensures that your data is safe and can
       be recovered whenever needed.
   - title: Flexible and Customizable
-    description: The app allows you to customize your backup process according to
+    description:
+      The app allows you to customize your backup process according to
       your needs. You can choose the databases you want to backup, set a
       consistent filename to overwrite with your backup or use a timestamp, and
       even decide the AWS S3 bucket region.
   - title: Automated Backups
-    description: The app supports periodic backups, allowing you to schedule your
+    description:
+      The app supports periodic backups, allowing you to schedule your
       backup process in a cron format. This ensures that your databases are
       backed up regularly without any manual intervention.
 features:
   - title: MySQL to S3 Backup
-    description: The app enables you to backup your MySQL databases to your AWS S3
+    description:
+      The app enables you to backup your MySQL databases to your AWS S3
       bucket. It supports all databases and uses mysqldump options for the
       backup process.
   - title: Multi-file Support
-    description: The app supports multi-file backups, allowing you to have one file
+    description:
+      The app supports multi-file backups, allowing you to have one file
       per database. This makes it easier to manage and recover specific
       databases.
   - title: AWS S3 Bucket Customization
-    description: The app allows you to customize your AWS S3 bucket settings. You
+    description:
+      The app allows you to customize your AWS S3 bucket settings. You
       can set the access key, secret key, bucket path, path prefix in your
       bucket, bucket region, and endpoint URL.
   - title: Backup Scheduling

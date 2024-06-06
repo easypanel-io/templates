@@ -42,7 +42,8 @@ schema:
       default: lscr.io/linuxserver/opera:latest
 benefits:
   - title: Multi-Platform Web Browser
-    description: Opera is a versatile web browser that can be used across multiple
+    description:
+      Opera is a versatile web browser that can be used across multiple
       platforms. It is developed by Opera, a company renowned for its innovative
       and user-friendly browsing solutions.
   - title: Based on Chromium
@@ -50,7 +51,8 @@ benefits:
       compatibility with a wide range of web technologies. Despite its Chromium
       base, Opera stands out with its unique user interface and features.
   - title: Multi-Architecture Support
-    description: The Opera Docker image supports multiple architectures, making it
+    description:
+      The Opera Docker image supports multiple architectures, making it
       adaptable to various systems. Simply pulling the image should retrieve the
       correct version for your architecture.
 features:
@@ -59,7 +61,8 @@ features:
       through its unique user interface. It offers a clean, intuitive, and
       customizable browsing experience.
   - title: Additional Environment Variables
-    description: The Docker Baseimage KasmVNC, which the Opera container is based
+    description:
+      The Docker Baseimage KasmVNC, which the Opera container is based
       on, provides additional environment variables and run configurations.
       These allow you to enable or disable specific functionalities as per your
       requirements.
@@ -68,7 +71,8 @@ features:
       high frame rate to your web browser. This ensures a high-quality browsing
       experience.
   - title: Docker CLI and Docker Compose Support
-    description: You can create a container from the Opera image using either Docker
+    description:
+      You can create a container from the Opera image using either Docker
       CLI or Docker Compose, providing flexibility in deployment.
 tags:
   - Web Browsers

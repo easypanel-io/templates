@@ -95,11 +95,13 @@ schema:
       description: You can use CRON syntax
 benefits:
   - title: Secure Database Backup
-    description: The app provides a secure way to backup your PostgreSQL databases
+    description:
+      The app provides a secure way to backup your PostgreSQL databases
       to S3. It supports encryption, allowing you to set a password to encrypt
       your backup for an added layer of security.
   - title: Automatic Backups
-    description: The app supports automatic periodic backups. You can set a schedule
+    description:
+      The app supports automatic periodic backups. You can set a schedule
       for the app to automatically backup your databases, ensuring your data is
       always safe and up-to-date.
   - title: Comprehensive Backup Options
@@ -108,7 +110,8 @@ benefits:
       backup.
 features:
   - title: PostgreSQL to S3 Backup
-    description: The app allows you to backup your PostgreSQL databases to S3. It
+    description:
+      The app allows you to backup your PostgreSQL databases to S3. It
       supports both Docker and Docker Compose usage for flexibility and ease of
       use.
   - title: Encryption
@@ -116,11 +119,13 @@ features:
       encryption password to secure your data. The backup can be decrypted using
       openssl aes-256-cbc.
   - title: Scheduling
-    description: The app allows you to set a schedule for automatic backups. This
+    description:
+      The app allows you to set a schedule for automatic backups. This
       ensures your databases are regularly backed up without manual
       intervention.
   - title: Backup All Databases
-    description: The app allows you to backup all available databases. This feature
+    description:
+      The app allows you to backup all available databases. This feature
       ensures that no data is left unprotected.
   - title: S3 Endpoint Configuration
     description: The app allows you to specify an alternate S3 endpoint. This is

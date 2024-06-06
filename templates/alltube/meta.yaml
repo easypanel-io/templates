@@ -57,27 +57,32 @@ schema:
       default: dnomd343/alltube:latest
 benefits:
   - title: Easy Video Downloading
-    description: AllTube Download provides a simple and convenient way to download
+    description:
+      AllTube Download provides a simple and convenient way to download
       videos from YouTube. With its HTML GUI, users can easily navigate and
       select the videos they want to download.
   - title: Video Conversion
-    description: The app comes with an optional feature to convert downloaded videos
+    description:
+      The app comes with an optional feature to convert downloaded videos
       into different formats. This is particularly useful for users who need
       their videos in a specific format for playback on various devices.
   - title: Multi-Platform Support
-    description: AllTube Download supports multiple architectures including x86_64,
+    description:
+      AllTube Download supports multiple architectures including x86_64,
       x86, arm64, and arm32. This makes it a versatile tool that can be used on
       a wide range of devices.
 features:
   - title: Video Downloading
-    description: AllTube Download allows users to download videos from YouTube. It
+    description:
+      AllTube Download allows users to download videos from YouTube. It
       uses the youtube-dl library to fetch the video files.
   - title: Video Conversion
     description: The app has an optional feature that enables video conversions.
       Users can convert their downloaded videos into different formats using
       ffmpeg.
   - title: Custom Configuration
-    description: Users can create a custom configuration file to tailor the app to
+    description:
+      Users can create a custom configuration file to tailor the app to
       their specific needs. This includes setting up a basepath, internal and
       external ports, and more.
   - title: JSON API

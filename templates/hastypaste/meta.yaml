@@ -48,14 +48,17 @@ schema:
       default: hastypaste-redis
 benefits:
   - title: Quick and Efficient
-    description: Hasty Paste is designed for speed and efficiency. It allows you to
+    description:
+      Hasty Paste is designed for speed and efficiency. It allows you to
       quickly paste and save text, making it perfect for those who need to share
       information swiftly.
   - title: Accessible
-    description: The app is publicly accessible with no authentication needed. This
+    description:
+      The app is publicly accessible with no authentication needed. This
       makes it easy for anyone to use and share text.
   - title: Secure
-    description: Hasty Paste uses randomly generated IDs to reduce the risk of brute
+    description:
+      Hasty Paste uses randomly generated IDs to reduce the risk of brute
       force attacks. It also offers the option to add expiring pastes for added
       security.
 features:
@@ -63,20 +66,24 @@ features:
     description: Hasty Paste allows you to quickly paste and save text. This is
       ideal for sharing debug logs or any other text-based information.
   - title: Public Access
-    description: The app is publicly accessible, meaning anyone can use it to share
+    description:
+      The app is publicly accessible, meaning anyone can use it to share
       text. No authentication is needed.
   - title: Random ID Generation
-    description: Hasty Paste generates random IDs for each paste, reducing the risk
+    description:
+      Hasty Paste generates random IDs for each paste, reducing the risk
       of brute force attacks.
   - title: Expiring Pastes
-    description: The app allows you to add expiring pastes, providing an extra layer
+    description:
+      The app allows you to add expiring pastes, providing an extra layer
       of security for your shared text.
   - title: Dark Theme and Syntax Highlighting
     description: Hasty Paste offers a dark theme for comfortable viewing in
       low-light environments. It also provides optional syntax highlighting to
       make code easier to read.
   - title: Minimal Resource Usage
-    description: The app uses minimal resources, making it a lightweight solution
+    description:
+      The app uses minimal resources, making it a lightweight solution
       for sharing text.
 tags:
   - Documents
