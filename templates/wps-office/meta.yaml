@@ -1,5 +1,6 @@
 name: WPS Office
-description: WPS Office is a comprehensive office suite that is lightweight yet
+description:
+  WPS Office is a comprehensive office suite that is lightweight yet
   feature-rich. It offers high compatibility and a range of professional office
   software tools. With WPS Office, you can edit files in Writer, Presentation,
   Spreadsheet, and PDF, enhancing your work efficiency. The application can be
@@ -8,8 +9,9 @@ description: WPS Office is a comprehensive office suite that is lightweight yet
   run configurations to enable or disable specific functionality. The
   application also supports the docker manifest for multi-platform awareness,
   ensuring the correct image for your architecture is retrieved.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2023-5-7
     description: first release
@@ -41,26 +43,33 @@ schema:
       default: lscr.io/linuxserver/wps-office:latest
 benefits:
   - title: Comprehensive Office Suite
-    description: WPS Office is a feature-rich office suite that includes tools for
-      editing files in Writer, Presentation, Spreadsheet, and PDF formats.
+    description:
+      WPS Office is a feature-rich office suite that includes tools for editing
+      files in Writer, Presentation, Spreadsheet, and PDF formats.
   - title: High Compatibility
-    description: WPS Office has high compatibility with other office software,
-      allowing you to easily edit and collaborate on files with others.
+    description:
+      WPS Office has high compatibility with other office software, allowing you
+      to easily edit and collaborate on files with others.
   - title: Improved Work Efficiency
-    description: By using WPS Office, you can enhance your work efficiency by
-      efficiently editing and managing your office documents.
+    description:
+      By using WPS Office, you can enhance your work efficiency by efficiently
+      editing and managing your office documents.
 features:
   - title: Writer
-    description: Edit and create documents with advanced formatting and editing tools.
+    description:
+      Edit and create documents with advanced formatting and editing tools.
   - title: Presentation
-    description: Create and deliver professional presentations with customizable
-      templates and multimedia support.
+    description:
+      Create and deliver professional presentations with customizable templates
+      and multimedia support.
   - title: Spreadsheet
-    description: Manage and analyze data with powerful spreadsheet tools, including
+    description:
+      Manage and analyze data with powerful spreadsheet tools, including
       formulas, charts, and data manipulation functions.
   - title: PDF
-    description: Edit and annotate PDF files, convert files to PDF format, and fill
-      out PDF forms.
+    description:
+      Edit and annotate PDF files, convert files to PDF format, and fill out PDF
+      forms.
 tags:
   - Productivity
   - Documents

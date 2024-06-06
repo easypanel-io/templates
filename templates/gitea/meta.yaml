@@ -1,8 +1,9 @@
 name: Gitea
-description: Gitea is a lightweight DevOps platform designed to streamline
-  operations from planning to production. It enables the creation and management
-  of repositories, exploration of commit history and code files, review and
-  merging of code commits, and more. Gitea also supports standard Git features,
+description:
+  Gitea is a lightweight DevOps platform designed to streamline operations from
+  planning to production. It enables the creation and management of
+  repositories, exploration of commit history and code files, review and merging
+  of code commits, and more. Gitea also supports standard Git features,
   including tags, cherry-picking, hooks, and integrated collaboration tools. It
   features an integrated CI/CD system, Gitea Actions, that is compatible with
   GitHub Actions. With Gitea, you can efficiently manage a project's
@@ -52,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gitea/gitea:1.19.2
+      default: gitea/gitea:1.22.0
     databaseType:
       type: string
       title: Database Type
@@ -69,44 +70,52 @@ schema:
       default: gitea-db
 benefits:
   - title: Efficient Development and Collaboration
-    description: Gitea is a lightweight DevOps platform that accelerates development
-      and collaboration. It offers high-efficiency operations from planning to
+    description:
+      Gitea is a lightweight DevOps platform that accelerates development and
+      collaboration. It offers high-efficiency operations from planning to
       production, making development simpler and faster.
   - title: Secure Code Ownership
-    description: Developed using Golang, a memory-safe language, Gitea focuses on
-      security. It ensures that you securely own your code, with features like
-      branch protection for enforcing code signing and WebAuthn-based 2FA login.
+    description:
+      Developed using Golang, a memory-safe language, Gitea focuses on security.
+      It ensures that you securely own your code, with features like branch
+      protection for enforcing code signing and WebAuthn-based 2FA login.
   - title: Flexible and Customizable
-    description: Gitea offers universal compatibility and flexible deployment
-      options. It can be tailored to your requirements, allowing you to enable
-      or disable features with a single configuration file, customize site
-      themes, UI languages, and more.
+    description:
+      Gitea offers universal compatibility and flexible deployment options. It
+      can be tailored to your requirements, allowing you to enable or disable
+      features with a single configuration file, customize site themes, UI
+      languages, and more.
   - title: Integrated with Your Favorite Tools
-    description: Gitea boosts your workflow with its versatile integrations. It
-      syncs seamlessly with chat tools like Slack, Discord, MS Teams, Lark, and
-      more, and improves workflows with CI/CD service compatibility.
+    description:
+      Gitea boosts your workflow with its versatile integrations. It syncs
+      seamlessly with chat tools like Slack, Discord, MS Teams, Lark, and more,
+      and improves workflows with CI/CD service compatibility.
 features:
   - title: Code Hosting
-    description: Gitea enables the creation and management of repositories,
-      exploration of commit history and code files, review and merging of code
-      commits, collaboration management, branch handling, and more.
+    description:
+      Gitea enables the creation and management of repositories, exploration of
+      commit history and code files, review and merging of code commits,
+      collaboration management, branch handling, and more.
   - title: Code Review
-    description: Gitea's code review accommodates both Pull Request and AGit
-      workflows. Reviewers can easily examine code online and submit comments or
-      inquiries, facilitating enhanced code quality.
+    description:
+      Gitea's code review accommodates both Pull Request and AGit workflows.
+      Reviewers can easily examine code online and submit comments or inquiries,
+      facilitating enhanced code quality.
   - title: CI/CD
-    description: Gitea features an integrated CI/CD system, Gitea Actions, that is
+    description:
+      Gitea features an integrated CI/CD system, Gitea Actions, that is
       compatible with GitHub Actions. Users can create workflows using the
       familiar YAML format or utilize numerous existing plugins.
   - title: Project Management
-    description: With Gitea, you can efficiently manage a project's requirements,
-      features, and bugs through issue tasks, labeling, and kanban project
-      boards. These tools help plan and track the progress of your software.
+    description:
+      With Gitea, you can efficiently manage a project's requirements, features,
+      and bugs through issue tasks, labeling, and kanban project boards. These
+      tools help plan and track the progress of your software.
   - title: Package Management
-    description: Gitea supports more than 20 different kinds of public or private
-      package management, including Cargo, Chef, Composer, Conan, Conda,
-      Container, Helm, Maven, npm, NuGet, Pub, PyPI, RubyGems, Vagrant, and
-      more.
+    description:
+      Gitea supports more than 20 different kinds of public or private package
+      management, including Cargo, Chef, Composer, Conan, Conda, Container,
+      Helm, Maven, npm, NuGet, Pub, PyPI, RubyGems, Vagrant, and more.
 tags:
   - Code Hosting
   - Developer Tools

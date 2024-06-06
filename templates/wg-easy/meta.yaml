@@ -1,6 +1,7 @@
 name: Wg-easy
-description: WireGuard Easy is an all-in-one application designed to simplify
-  the installation and management of WireGuard on any Linux host. With a
+description:
+  WireGuard Easy is an all-in-one application designed to simplify the
+  installation and management of WireGuard on any Linux host. With a
   user-friendly web interface, it allows you to list, create, edit, delete,
   enable, and disable clients with ease. You can also view a client's QR code
   and download a client's configuration file directly from the app. The app
@@ -39,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: weejewel/wg-easy:7
+      default: weejewel/wg-easy:7-nightly
     appPassword:
       type: string
       title: Admin Password
@@ -47,9 +48,11 @@ benefits:
   - title: Easy installation and management
     description: Install and manage WireGuard on any Linux host with ease.
   - title: All-in-one solution
-    description: Includes both WireGuard and a web UI for easy configuration and control.
+    description:
+      Includes both WireGuard and a web UI for easy configuration and control.
   - title: Client management
-    description: List, create, edit, delete, enable, and disable clients with ease.
+    description:
+      List, create, edit, delete, enable, and disable clients with ease.
   - title: QR code support
     description: Generate QR codes for easy client configuration.
   - title: Configuration file download
@@ -64,8 +67,9 @@ features:
   - title: Easy installation
     description: Simple installation process for WireGuard and the web UI.
   - title: Client management
-    description: Easily manage clients, including creating, editing, deleting,
-      enabling, and disabling.
+    description:
+      Easily manage clients, including creating, editing, deleting, enabling,
+      and disabling.
   - title: QR code generation
     description: Generate QR codes for easy client configuration.
   - title: Configuration file download

@@ -1,9 +1,10 @@
 name: Homarr
-description: Homarr is a powerful dashboard designed to simplify the management
-  of your server. It provides a sleek, modern interface that brings all your
-  apps and services together in one place, allowing you to access and control
-  everything with ease. Homarr seamlessly integrates with the apps you've added,
-  offering valuable insights and complete control. You can add your self-hosted
+description:
+  Homarr is a powerful dashboard designed to simplify the management of your
+  server. It provides a sleek, modern interface that brings all your apps and
+  services together in one place, allowing you to access and control everything
+  with ease. Homarr seamlessly integrates with the apps you've added, offering
+  valuable insights and complete control. You can add your self-hosted
   applications or favorite websites to your dashboard and organize them as you
   like. Homarr supports integration with many popular applications to enhance
   your user experience. It is customizable, accessible, and supports 23
@@ -43,48 +44,54 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/ajnart/homarr:0.11.2
+      default: ghcr.io/ajnart/homarr:0.15.3
     serviceTimezone:
       type: string
       title: Timezone
       default: America/New_York
 benefits:
   - title: Simplified Server Management
-    description: Homarr provides a sleek, modern dashboard that simplifies the
-      management of your server. It puts all of your apps and services at your
-      fingertips, allowing you to access and control everything in one
-      convenient location.
+    description:
+      Homarr provides a sleek, modern dashboard that simplifies the management
+      of your server. It puts all of your apps and services at your fingertips,
+      allowing you to access and control everything in one convenient location.
   - title: Seamless Integrations
-    description: Homarr seamlessly integrates with the apps you've added, providing
-      you with valuable information and giving you complete control. It can
+    description:
+      Homarr seamlessly integrates with the apps you've added, providing you
+      with valuable information and giving you complete control. It can
       integrate with many popular applications to enhance your experience.
   - title: Customizable and Accessible
-    description: Homarr is customizable, accessible, and supports 23 languages. It
-      allows you to organize your applications and websites on your dashboard
-      freely. It also includes a quick search feature to easily find your apps
-      and supported integrations.
+    description:
+      Homarr is customizable, accessible, and supports 23 languages. It allows
+      you to organize your applications and websites on your dashboard freely.
+      It also includes a quick search feature to easily find your apps and
+      supported integrations.
   - title: Control and Monitor Your Network
-    description: With Homarr, you can control and monitor your network directly from
-      the dashboard. It uses integrations to display data and control apps,
+    description:
+      With Homarr, you can control and monitor your network directly from the
+      dashboard. It uses integrations to display data and control apps,
       including Radarr, Sonarr, PiHole, Dash., popular Torrent & Usenet clients,
       and many more.
 features:
   - title: Highly Customizable
-    description: Homarr is highly customizable with an extensive drag and drop grid
-      system. It allows you to create your own dashboard using its
-      comprehensible and easy-to-use visual editor, with no YAML or JSON
-      involved.
+    description:
+      Homarr is highly customizable with an extensive drag and drop grid system.
+      It allows you to create your own dashboard using its comprehensible and
+      easy-to-use visual editor, with no YAML or JSON involved.
   - title: Advanced Secrets' Management System
-    description: Homarr includes an advanced secrets' management system for enhanced
+    description:
+      Homarr includes an advanced secrets' management system for enhanced
       security. It ensures that your data stays on your device and is not shared
       with any third parties.
   - title: Built-in Status System
-    description: Homarr features a built-in status system that allows you to monitor
-      your applications. It provides you with real-time updates about the status
-      of your apps and services.
+    description:
+      Homarr features a built-in status system that allows you to monitor your
+      applications. It provides you with real-time updates about the status of
+      your apps and services.
   - title: Comprehensive Built-in Icon Picker
-    description: Homarr includes a comprehensive built-in icon picker with over 7000
-      icons. It allows you to personalize your dashboard and make it more
-      visually appealing.
+    description:
+      Homarr includes a comprehensive built-in icon picker with over 7000 icons.
+      It allows you to personalize your dashboard and make it more visually
+      appealing.
 tags:
   - Dashboard

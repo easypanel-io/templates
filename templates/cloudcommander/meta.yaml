@@ -1,5 +1,9 @@
 name: Cloud Commander
-description: Cloud Commander is a file manager for the web. It includes a command-line console and a text editor. Cloud Commander helps you manage your server and work with files, directories and programs in a web browser from any computer, mobile or tablet.
+description:
+  Cloud Commander is a file manager for the web. It includes a command-line
+  console and a text editor. Cloud Commander helps you manage your server and
+  work with files, directories and programs in a web browser from any computer,
+  mobile or tablet.
 instructions:
 changeLog:
   - date: 2024-01-22
@@ -31,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coderaiser/cloudcmd:17.0.0-alpine
+      default: coderaiser/cloudcmd:17.14.1
     username:
       type: string
       title: Username

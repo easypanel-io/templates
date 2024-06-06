@@ -1,18 +1,18 @@
 name: Thumbor
-description: Thumbor is an intelligent imaging service designed to streamline
-  and enhance your image processing tasks. It offers on-demand cropping,
-  resizing, and flipping of images, ensuring the most important parts of your
-  pictures are always preserved. Leveraging advanced face and feature detection
-  algorithms, Thumbor smartly identifies key points in an image for optimal
-  cropping and resizing. It also supports a variety of image filters for
-  post-processing, which can be applied in a sequence for desired effects.
-  Filters include brightness, contrast, grayscale, red-eye, and blur, among
-  others. Thumbor also supports the WebP format, a superior image format that
-  compresses better than jpeg and png, improving your website's performance.
-  With Thumbor, you can store and load images from any location, and it's easy
-  to implement a new loader or storage. It's a complete solution for your
-  imaging needs, from uploading images to rendering them with smart
-  face-recognition cropping.
+description:
+  Thumbor is an intelligent imaging service designed to streamline and enhance
+  your image processing tasks. It offers on-demand cropping, resizing, and
+  flipping of images, ensuring the most important parts of your pictures are
+  always preserved. Leveraging advanced face and feature detection algorithms,
+  Thumbor smartly identifies key points in an image for optimal cropping and
+  resizing. It also supports a variety of image filters for post-processing,
+  which can be applied in a sequence for desired effects. Filters include
+  brightness, contrast, grayscale, red-eye, and blur, among others. Thumbor also
+  supports the WebP format, a superior image format that compresses better than
+  jpeg and png, improving your website's performance. With Thumbor, you can
+  store and load images from any location, and it's easy to implement a new
+  loader or storage. It's a complete solution for your imaging needs, from
+  uploading images to rendering them with smart face-recognition cropping.
 instructions: null
 changeLog:
   - date: 2023-07-10
@@ -47,31 +47,37 @@ schema:
       default: thumbororg/thumbor:latest
 benefits:
   - title: Smart Image Cropping
-    description: Thumbor uses advanced face detection technology to crop images
-      around detected faces, ensuring the most important parts of the picture
-      are preserved.
+    description:
+      Thumbor uses advanced face detection technology to crop images around
+      detected faces, ensuring the most important parts of the picture are
+      preserved.
   - title: Flexible Image Loading and Storage
-    description: Thumbor allows users to store and load images from anywhere, with
-      support for various loaders and storages. Users can also implement their
-      own loaders or storages.
+    description:
+      Thumbor allows users to store and load images from anywhere, with support
+      for various loaders and storages. Users can also implement their own
+      loaders or storages.
   - title: Image Filtering
-    description: Thumbor supports image filters that can be applied to images for
+    description:
+      Thumbor supports image filters that can be applied to images for
       post-processing. Users can chain and apply filters in order to enhance
       their images.
   - title: WebP Support
-    description: Thumbor supports the WebP image format, which compresses images
-      better than JPEG and PNG. This can significantly improve website
-      performance.
+    description:
+      Thumbor supports the WebP image format, which compresses images better
+      than JPEG and PNG. This can significantly improve website performance.
 features:
   - title: Easy Integration
-    description: Thumbor provides comprehensive libraries and plugins in multiple
+    description:
+      Thumbor provides comprehensive libraries and plugins in multiple
       languages, making it easy for developers to integrate and use the service.
   - title: Decoupled Imaging
-    description: Thumbor decouples imaging from storage and loading, allowing users
-      to tailor the service to their own infrastructure requirements.
+    description:
+      Thumbor decouples imaging from storage and loading, allowing users to
+      tailor the service to their own infrastructure requirements.
   - title: Efficient Image Management
-    description: Thumbor simplifies image management tasks, such as resizing and
-      cropping, saving time and effort for designers and project managers.
+    description:
+      Thumbor simplifies image management tasks, such as resizing and cropping,
+      saving time and effort for designers and project managers.
 tags:
   - Image Processing
   - Open Source

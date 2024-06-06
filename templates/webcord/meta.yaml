@@ -1,15 +1,16 @@
 name: Webcord
-description: "WebCord is an application designed to enhance your Discord
-  experience. It is a pack of security and privacy hardenings, Discord features
-  reimplementations, Electron / Chromium / Discord bugs workarounds,
-  stylesheets, internal pages and wrapped https://discord.com page. It is
-  designed to conform with ToS as much as it is possible. The application can be
-  accessed at: http://yourhost:3000/ or https://yourhost:3001/. This container
-  is based on Docker Baseimage KasmVNC which means there are additional
-  environment variables and run configurations to enable or disable specific
-  functionality."
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+description:
+  "WebCord is an application designed to enhance your Discord experience. It is
+  a pack of security and privacy hardenings, Discord features reimplementations,
+  Electron / Chromium / Discord bugs workarounds, stylesheets, internal pages
+  and wrapped https://discord.com page. It is designed to conform with ToS as
+  much as it is possible. The application can be accessed at:
+  http://yourhost:3000/ or https://yourhost:3001/. This container is based on
+  Docker Baseimage KasmVNC which means there are additional environment
+  variables and run configurations to enable or disable specific functionality."
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2023-5-7
     description: first release
@@ -43,23 +44,29 @@ schema:
       default: lscr.io/linuxserver/webcord:latest
 benefits:
   - title: Enhanced Security and Privacy
-    description: WebCord provides security and privacy hardenings to protect your
-      Discord communication and data.
+    description:
+      WebCord provides security and privacy hardenings to protect your Discord
+      communication and data.
   - title: Improved Discord Features
-    description: WebCord includes reimplementations of Discord features, allowing
-      you to enhance your Discord experience.
+    description:
+      WebCord includes reimplementations of Discord features, allowing you to
+      enhance your Discord experience.
   - title: Bug Workarounds and Stylesheets
-    description: WebCord addresses Electron / Chromium / Discord bugs and provides
-      custom stylesheets for a better user interface.
+    description:
+      WebCord addresses Electron / Chromium / Discord bugs and provides custom
+      stylesheets for a better user interface.
 features:
   - title: Conforms with Discord's Terms of Service
-    description: WebCord is designed to conform with Discord's Terms of Service,
-      ensuring compliance while using the app.
+    description:
+      WebCord is designed to conform with Discord's Terms of Service, ensuring
+      compliance while using the app.
   - title: Multi-Platform Support
-    description: WebCord supports multiple architectures, making it compatible with
-      various devices and operating systems.
+    description:
+      WebCord supports multiple architectures, making it compatible with various
+      devices and operating systems.
   - title: Lossless Image Streaming
-    description: WebCord can deliver lossless images at a high framerate to your web
+    description:
+      WebCord can deliver lossless images at a high framerate to your web
       browser, providing a superior visual experience.
 tags:
   - Chat

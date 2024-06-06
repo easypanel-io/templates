@@ -1,5 +1,7 @@
 name: 2FAuth
-description: 2FAuth is a web based self-hosted alternative to One Time Passcode (OTP) generators like Google Authenticator, designed for both mobile and desktop.
+description:
+  2FAuth is a web based self-hosted alternative to One Time Passcode (OTP)
+  generators like Google Authenticator, designed for both mobile and desktop.
 instructions: null
 changeLog:
   - date: 2024-03-17
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 2fauth/2fauth:5.1.0
+      default: 2fauth/2fauth:5.1.1
     appOwnerMail:
       type: string
       title: App Owner Mail
@@ -70,23 +72,43 @@ schema:
       default: 2fauth-redis
 benefits:
   - title: Increased Security
-    description: Two-factor authentication provides a more secure method of access compared to using a password alone. By adding a second authentication factor, you protect your
+    description:
+      Two-factor authentication provides a more secure method of access compared
+      to using a password alone. By adding a second authentication factor, you
+      protect your
   - title: Account Protection
-    description: Even if your password is compromised or stolen, a second authentication factor helps secure your account.
+    description:
+      Even if your password is compromised or stolen, a second authentication
+      factor helps secure your account.
 features:
   - title: Generate passwords
-    description: The main purpose of 2FAuth Serve you some fresh TOTP/HOTP security codes aka One-Time Passwords.
+    description:
+      The main purpose of 2FAuth Serve you some fresh TOTP/HOTP security codes
+      aka One-Time Passwords.
   - title: Work anywhere
-    description: It's a Web App, it just works, whatever device you're on. You only need one device (not even yours) and an Internet connection.
+    description:
+      It's a Web App, it just works, whatever device you're on. You only need
+      one device (not even yours) and an Internet connection.
   - title: QR codes scan
-    description: Scan and decode QR codes to add a 2FA account in no time. Actually, it decodes any QR code, even non 2FA.
+    description:
+      Scan and decode QR codes to add a 2FA account in no time. Actually, it
+      decodes any QR code, even non 2FA.
   - title: 2FA management
-    description: Manage your 2FA accounts, organize and classify them using Groups, edit & delete them. You can even manually add an account without scanning a QR code.
+    description:
+      Manage your 2FA accounts, organize and classify them using Groups, edit &
+      delete them. You can even manually add an account without scanning a QR
+      code.
   - title: Protect your data
-    description: 2FAuth protects your data with Privacy, Self-hosting, WebAuthn authentication, OTP obfuscation, and Auto lock.
+    description:
+      2FAuth protects your data with Privacy, Self-hosting, WebAuthn
+      authentication, OTP obfuscation, and Auto lock.
   - title: Multi-user
-    description: Share your instance with your family, your friends. Everyone can have an account.
+    description:
+      Share your instance with your family, your friends. Everyone can have an
+      account.
   - title: Import / Export
-    description: Migrate from another 2FA app to 2FAuth or export your 2FA data in a breeze.
+    description:
+      Migrate from another 2FA app to 2FAuth or export your 2FA data in a
+      breeze.
 tags:
   - Developer Tools

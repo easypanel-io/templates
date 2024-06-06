@@ -1,9 +1,10 @@
 name: CodeX Docs
-description: CodeX is a comprehensive platform that brings together passionate
-  engineers, designers, students, graduates, and young specialists from around
-  the globe. The app is dedicated to creating high-quality open-source projects
-  and providing a valuable experience of developing full-fledged products for
-  the global market. CodeX offers a range of products including Editor.js, a
+description:
+  CodeX is a comprehensive platform that brings together passionate engineers,
+  designers, students, graduates, and young specialists from around the globe.
+  The app is dedicated to creating high-quality open-source projects and
+  providing a valuable experience of developing full-fledged products for the
+  global market. CodeX offers a range of products including Editor.js, a
   block-styled, API-oriented editor for media that generates useful JSON-output
   with clear data, Hawk.so, a fast and lightweight error tracking service, and
   CodeX Notes, a simple and fast cross-platform notes application based on
@@ -12,7 +13,8 @@ description: CodeX is a comprehensive platform that brings together passionate
   messengers. With a focus on media, social networks, education, augmented
   reality, and medicine, CodeX is a one-stop solution for tech enthusiasts
   looking to make a mark in the global market.
-instructions: View All Configuation on the Docs site - https://docs.codex.so/configuration
+instructions:
+  View All Configuation on the Docs site - https://docs.codex.so/configuration
 changeLog:
   - date: 2023-01-23
     description: First Release
@@ -55,32 +57,37 @@ schema:
       default: codex-db
 benefits:
   - title: High-Quality Open-Source Projects
-    description: CodeX is dedicated to creating high-quality open-source projects.
-      This provides a unique opportunity for users to access and utilize
-      top-notch resources and tools.
+    description:
+      CodeX is dedicated to creating high-quality open-source projects. This
+      provides a unique opportunity for users to access and utilize top-notch
+      resources and tools.
   - title: Valuable Experience
-    description: CodeX offers a priceless experience of making full-valued products
-      on a global market. This can be a great learning opportunity for students,
+    description:
+      CodeX offers a priceless experience of making full-valued products on a
+      global market. This can be a great learning opportunity for students,
       graduates, and young specialists.
   - title: Innovative Tools
-    description: CodeX continuously releases new and improved tools, such as
-      Editor.js with its multiple toolbox items, offering users more ways to
-      configure their work.
+    description:
+      CodeX continuously releases new and improved tools, such as Editor.js with
+      its multiple toolbox items, offering users more ways to configure their
+      work.
 features:
   - title: Editor.js
-    description: Editor.js is an API-oriented, block-styled editor for Media. It
-      generates useful JSON-output with clear data, making it a loved tool for
-      many.
+    description:
+      Editor.js is an API-oriented, block-styled editor for Media. It generates
+      useful JSON-output with clear data, making it a loved tool for many.
   - title: Hawk.so
-    description: Hawk.so is a fast and lightweight errors tracking service. It has
-      catchers for various programming languages including JavaScript, Python,
-      PHP, Node.js, Swift, Java Android, Kotlin, and Scala.
+    description:
+      Hawk.so is a fast and lightweight errors tracking service. It has catchers
+      for various programming languages including JavaScript, Python, PHP,
+      Node.js, Swift, Java Android, Kotlin, and Scala.
   - title: CodeX Notes
-    description: CodeX Notes is a simple, fast, and useful cross-platform notes
-      application based on Editor.js and Electron.
+    description:
+      CodeX Notes is a simple, fast, and useful cross-platform notes application
+      based on Editor.js and Electron.
   - title: Capella
-    description: Capella is a cloud service for image storage and delivery. It
-      allows users to upload files and accept image-filters on the fly with a
-      simple API.
+    description:
+      Capella is a cloud service for image storage and delivery. It allows users
+      to upload files and accept image-filters on the fly with a simple API.
 tags:
   - Developer Tools

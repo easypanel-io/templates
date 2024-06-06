@@ -1,5 +1,6 @@
 name: Langflow
-description: Langflow is an innovative application designed to facilitate the
+description:
+  Langflow is an innovative application designed to facilitate the
   experimentation and prototyping of LangChain pipelines. It provides a
   user-friendly interface for creating flows by simply dragging and connecting
   LangChain components such as LLMs, prompt serializers, agents, and chains. You
@@ -41,33 +42,39 @@ schema:
       title: Password
 benefits:
   - title: Effortless Experimentation
-    description: Langflow provides an effortless way to experiment and prototype
-      LangChain pipelines. It allows users to easily create, manage, and
-      configure their pipelines, making it an ideal tool for those who want to
-      experiment with different configurations and setups.
+    description:
+      Langflow provides an effortless way to experiment and prototype LangChain
+      pipelines. It allows users to easily create, manage, and configure their
+      pipelines, making it an ideal tool for those who want to experiment with
+      different configurations and setups.
   - title: Easy Prototyping
-    description: With Langflow, prototyping LangChain pipelines is a breeze. Users
-      can simply drag and drop components onto the canvas and connect them
-      together to create their pipeline. This makes it easy to visualize and
-      understand the flow of data.
+    description:
+      With Langflow, prototyping LangChain pipelines is a breeze. Users can
+      simply drag and drop components onto the canvas and connect them together
+      to create their pipeline. This makes it easy to visualize and understand
+      the flow of data.
   - title: Flexible Deployment
-    description: Langflow offers flexible deployment options. It can be deployed on
-      Google Cloud Platform or Jina AI Cloud, giving users the freedom to choose
-      the platform that best suits their needs.
+    description:
+      Langflow offers flexible deployment options. It can be deployed on Google
+      Cloud Platform or Jina AI Cloud, giving users the freedom to choose the
+      platform that best suits their needs.
 features:
   - title: Command Line Interface
-    description: Langflow provides a command-line interface for easy management and
+    description:
+      Langflow provides a command-line interface for easy management and
       configuration. It offers a variety of options that can be set to customize
       the server, including the host, number of worker processes, worker
       timeout, port, and more.
   - title: Creating Flows
-    description: Creating flows with Langflow is easy. Users can simply drag sidebar
+    description:
+      Creating flows with Langflow is easy. Users can simply drag sidebar
       components onto the canvas and connect them together to create their
       pipeline. Langflow provides a range of LangChain components to choose
       from, including LLMs, prompt serializers, agents, and chains.
   - title: Exporting Flows
-    description: Once a flow has been created, it can be exported as a JSON file to
-      use with LangChain. This makes it easy to share and reuse flows.
+    description:
+      Once a flow has been created, it can be exported as a JSON file to use
+      with LangChain. This makes it easy to share and reuse flows.
 tags:
   - Data Science
   - Developer Tools

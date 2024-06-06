@@ -1,18 +1,20 @@
 name: Jellyfin
-description: Jellyfin is a free software media system that allows you to take
-  full control of your media. It enables you to collect, manage, and stream your
-  media from your own server to any device. With Jellyfin, you can enjoy your
-  entire movie collection, watch your favorite shows, listen to your music, and
-  even read your books and comics. It also offers features for live TV and DVR,
-  allowing you to watch TV and set automatic recordings to expand your library.
-  Jellyfin also provides a SyncPlay feature, making remote movie nights easier
-  than ever. The app is available on most popular platforms, ensuring your media
-  is ready to follow you wherever you go. Jellyfin is licensed under the GNU
-  GPL, meaning you can use, study, modify, build, and distribute it for free. It
-  is a privacy-focused solution with no tracking or central servers collecting
-  your data.
-instructions: Jellyfin takes a few minutes to get ready. Sit back, relax, and
-  get some popcorn!
+description:
+  Jellyfin is a free software media system that allows you to take full control
+  of your media. It enables you to collect, manage, and stream your media from
+  your own server to any device. With Jellyfin, you can enjoy your entire movie
+  collection, watch your favorite shows, listen to your music, and even read
+  your books and comics. It also offers features for live TV and DVR, allowing
+  you to watch TV and set automatic recordings to expand your library. Jellyfin
+  also provides a SyncPlay feature, making remote movie nights easier than ever.
+  The app is available on most popular platforms, ensuring your media is ready
+  to follow you wherever you go. Jellyfin is licensed under the GNU GPL, meaning
+  you can use, study, modify, build, and distribute it for free. It is a
+  privacy-focused solution with no tracking or central servers collecting your
+  data.
+instructions:
+  Jellyfin takes a few minutes to get ready. Sit back, relax, and get some
+  popcorn!
 changeLog:
   - date: 2022-10-28
     description: first release
@@ -43,38 +45,47 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jellyfin/jellyfin:10.8.9
+      default: jellyfin/jellyfin:10.9.3
 benefits:
   - title: Control Your Media
-    description: Jellyfin is a free software media system that allows you to manage
-      and stream your media your way. You have full control over your media,
-      with no strings attached.
+    description:
+      Jellyfin is a free software media system that allows you to manage and
+      stream your media your way. You have full control over your media, with no
+      strings attached.
   - title: Stream Anywhere
-    description: With Jellyfin, you can stream your media to any device from your
-      own server. Your media is ready to follow you, wherever you go.
+    description:
+      With Jellyfin, you can stream your media to any device from your own
+      server. Your media is ready to follow you, wherever you go.
   - title: Free and Open Source
-    description: Jellyfin is Free Software, licensed under the GNU GPL. You can use
-      it, study it, modify it, build it, and distribute it for free.
+    description:
+      Jellyfin is Free Software, licensed under the GNU GPL. You can use it,
+      study it, modify it, build it, and distribute it for free.
   - title: Privacy Focused
-    description: Jellyfin has no tracking, phone-home, or central servers collecting
-      your data. Your media is your own, and Jellyfin respects that.
+    description:
+      Jellyfin has no tracking, phone-home, or central servers collecting your
+      data. Your media is your own, and Jellyfin respects that.
 features:
   - title: Media Management
-    description: Jellyfin enables you to collect, manage, and stream your media.
-      Enjoy your entire movie collection, watch your favorite shows, listen to
-      your music, and more.
+    description:
+      Jellyfin enables you to collect, manage, and stream your media. Enjoy your
+      entire movie collection, watch your favorite shows, listen to your music,
+      and more.
   - title: Live TV & DVR
-    description: With Jellyfin, you can watch TV and set automatic recordings to
-      expand your library.
+    description:
+      With Jellyfin, you can watch TV and set automatic recordings to expand
+      your library.
   - title: Books, Comics, and Magazines
-    description: Jellyfin isn't just for video and music. You can also read your
-      books, comics, and magazines.
+    description:
+      Jellyfin isn't just for video and music. You can also read your books,
+      comics, and magazines.
   - title: Photos
-    description: Organize your photos and share memories with your friends and
-      family using Jellyfin.
+    description:
+      Organize your photos and share memories with your friends and family using
+      Jellyfin.
   - title: SyncPlay
-    description: Sharing a movie night remotely has never been so easy. With
-      Jellyfin's SyncPlay feature, you can enjoy media with friends or family,
-      no matter where they are.
+    description:
+      Sharing a movie night remotely has never been so easy. With Jellyfin's
+      SyncPlay feature, you can enjoy media with friends or family, no matter
+      where they are.
 tags:
   - Media

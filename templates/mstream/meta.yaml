@@ -1,16 +1,17 @@
 name: Mstream
-description: mStream is a personal music streaming server that allows you to
-  access your music collection from anywhere. It's like having your private
-  cloud for music. With mStream, you can sync your collection between your
-  devices for offline access. It offers high-quality streaming for audiophiles
-  and FLAC enthusiasts, allowing you to stream your music uncompressed. mStream
-  respects your privacy, it does not collect statistics on your listening
-  habits. It's also beneficial for artists as buying music directly means your
-  money goes directly to them. The server setup is quick and it runs on any
-  operating system. It also has mobile apps for iOS & Android and allows you to
-  stream your music in any browser. Other features include gapless playback,
-  Milkdrop visualizer, playlist sharing, and drag and drop file uploading. All
-  the code for mStream is open source.
+description:
+  mStream is a personal music streaming server that allows you to access your
+  music collection from anywhere. It's like having your private cloud for music.
+  With mStream, you can sync your collection between your devices for offline
+  access. It offers high-quality streaming for audiophiles and FLAC enthusiasts,
+  allowing you to stream your music uncompressed. mStream respects your privacy,
+  it does not collect statistics on your listening habits. It's also beneficial
+  for artists as buying music directly means your money goes directly to them.
+  The server setup is quick and it runs on any operating system. It also has
+  mobile apps for iOS & Android and allows you to stream your music in any
+  browser. Other features include gapless playback, Milkdrop visualizer,
+  playlist sharing, and drag and drop file uploading. All the code for mStream
+  is open source.
 instructions: null
 changeLog:
   - date: 2023-3-20
@@ -40,37 +41,45 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/mstream:5.11.4
+      default: lscr.io/linuxserver/mstream:5.12.2
 benefits:
   - title: Own Your Music
-    description: With mStream, you have full control over your music. There are no
-      ads and your content will never get removed.
+    description:
+      With mStream, you have full control over your music. There are no ads and
+      your content will never get removed.
   - title: Quality
-    description: For audiophiles and FLAC enthusiasts, mStream allows you to stream
-      your music uncompressed, ensuring the highest quality.
+    description:
+      For audiophiles and FLAC enthusiasts, mStream allows you to stream your
+      music uncompressed, ensuring the highest quality.
   - title: Privacy
-    description: Unlike other streaming services, mStream doesn't collect statistics
-      on your listening habits. Your server will never snitch on you.
+    description:
+      Unlike other streaming services, mStream doesn't collect statistics on
+      your listening habits. Your server will never snitch on you.
   - title: Support Artists
-    description: By buying music directly from artists, you ensure your money goes
-      directly to them.
+    description:
+      By buying music directly from artists, you ensure your money goes directly
+      to them.
 features:
   - title: Easy Server Setup
-    description: Setting up your mStream server takes just 30 seconds and it can run
-      on any operating system.
+    description:
+      Setting up your mStream server takes just 30 seconds and it can run on any
+      operating system.
   - title: Mobile Apps
-    description: mStream offers mobile apps for both iOS and Android, allowing you
-      to stream your music on any device.
+    description:
+      mStream offers mobile apps for both iOS and Android, allowing you to
+      stream your music on any device.
   - title: Browser Streaming
     description: You can stream your music in any browser with mStream.
   - title: Gapless Playback
-    description: Enjoy seamless listening with mStream's gapless playback feature.
+    description:
+      Enjoy seamless listening with mStream's gapless playback feature.
   - title: Milkdrop Visualizer
     description: Enhance your listening experience with the Milkdrop Visualizer.
   - title: Playlist Sharing
     description: Share your favorite playlists with others using mStream.
   - title: Drag and Drop File Uploading
-    description: Easily add music to your mStream server with the drag and drop file
+    description:
+      Easily add music to your mStream server with the drag and drop file
       uploading feature.
 tags:
   - Media

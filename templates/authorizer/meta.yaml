@@ -1,19 +1,20 @@
 name: Authorizer
-description: Authorizer is a powerful tool designed to simplify the process of
-  user authentication and authorization in your applications. It allows you to
-  build secure apps 10x faster with its low code tool and low-cost deployment.
-  With Authorizer, you have full control over your user data, which can be
-  stored in your preferred database. The app supports multiple authentication
-  recipes and allows you to authorize users based on your business roles. It is
-  compatible with OAuth2 and OpenID APIs. Authorizer also offers secure session
-  management with the best services baked in, including HTTP only cookies and
-  Authorization Code flow for mobile-based authentication. It supports a wide
-  range of databases, including major SQL, NoSQL, and GraphDBs. You can
-  customize emails, configure webhooks for various events, and add an extra
-  layer of security with email-based OTP for basic authentication. With
-  Authorizer, you can deploy your authentication and authorization service
-  anywhere with multiple deployment options. It is a comprehensive solution for
-  all your authentication and authorization needs.
+description:
+  Authorizer is a powerful tool designed to simplify the process of user
+  authentication and authorization in your applications. It allows you to build
+  secure apps 10x faster with its low code tool and low-cost deployment. With
+  Authorizer, you have full control over your user data, which can be stored in
+  your preferred database. The app supports multiple authentication recipes and
+  allows you to authorize users based on your business roles. It is compatible
+  with OAuth2 and OpenID APIs. Authorizer also offers secure session management
+  with the best services baked in, including HTTP only cookies and Authorization
+  Code flow for mobile-based authentication. It supports a wide range of
+  databases, including major SQL, NoSQL, and GraphDBs. You can customize emails,
+  configure webhooks for various events, and add an extra layer of security with
+  email-based OTP for basic authentication. With Authorizer, you can deploy your
+  authentication and authorization service anywhere with multiple deployment
+  options. It is a comprehensive solution for all your authentication and
+  authorization needs.
 instructions: null
 changeLog:
   - date: 2023-01-25
@@ -53,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lakhansamani/authorizer:1.3.8
+      default: lakhansamani/authorizer:1.4.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -64,36 +65,46 @@ schema:
       default: authorizer-redis
 benefits:
   - title: Free Authentication & Authorization
-    description: Authorizer allows you to authenticate and authorize users for free,
+    description:
+      Authorizer allows you to authenticate and authorize users for free,
       helping you build secure apps 10x faster.
   - title: Control Over User Data
-    description: With Authorizer, you have complete control over your user data,
-      which can be stored in your preferred database.
+    description:
+      With Authorizer, you have complete control over your user data, which can
+      be stored in your preferred database.
   - title: Low Code and Low Cost Deployment
-    description: Authorizer is a low code tool that allows for easy and
-      cost-effective deployment of your apps.
+    description:
+      Authorizer is a low code tool that allows for easy and cost-effective
+      deployment of your apps.
   - title: OAuth2 and OpenID Compatible
-    description: Authorizer is compatible with OAuth2 and OpenID APIs, allowing for
+    description:
+      Authorizer is compatible with OAuth2 and OpenID APIs, allowing for
       seamless integration with your existing systems.
 features:
   - title: Secure Session Management
-    description: Authorizer comes with secure session management implemented with
-      HTTP only cookies and Authorization Code flow for mobile-based auth.
+    description:
+      Authorizer comes with secure session management implemented with HTTP only
+      cookies and Authorization Code flow for mobile-based auth.
   - title: Multiple Authentication Recipes
-    description: Authorizer supports multiple authentication recipes out of the box,
+    description:
+      Authorizer supports multiple authentication recipes out of the box,
       including major social login, basic auth, magic link auth and more.
   - title: Database Support
-    description: Authorizer supports 11+ databases including major SQL, NoSQL and
-      GraphDBs, allowing you to connect to your preferred database.
+    description:
+      Authorizer supports 11+ databases including major SQL, NoSQL and GraphDBs,
+      allowing you to connect to your preferred database.
   - title: Role Based Access Control
-    description: With Authorizer, you can define roles and authorize your APIs with
+    description:
+      With Authorizer, you can define roles and authorize your APIs with
       role-based session tokens.
   - title: Customizable Emails
-    description: Authorizer allows you to send emails with custom email templates
-      and dynamic variables.
+    description:
+      Authorizer allows you to send emails with custom email templates and
+      dynamic variables.
   - title: Multi-Factor Authentication
-    description: Authorizer provides an added layer of security with email-based OTP
-      for your basic authentication recipe.
+    description:
+      Authorizer provides an added layer of security with email-based OTP for
+      your basic authentication recipe.
 tags:
   - Authentication
   - Authorization

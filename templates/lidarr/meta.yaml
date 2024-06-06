@@ -1,15 +1,16 @@
 name: Lidarr
-description: Lidarr is an audio collection manager designed for Usenet and
-  BitTorrent users. It monitors multiple RSS feeds for new music and interfaces
-  with clients and indexers to grab, sort, and rename albums and songs. Lidarr also has the
-  capability to automatically upgrade the quality of existing tracks in your library
-  when a better quality format becomes available. The app features a calendar to
-  see all your upcoming releases in one place, manual search to find all the
-  releases and choose the ones you want, and automatic handling of failed
-  downloads. Lidarr ensures you get the right release every time with its custom
-  formats feature, which allows fine control over release prioritization and
-  selection. It also supports major platforms like Windows, Linux, macOS, and
-  others.
+description:
+  Lidarr is an audio collection manager designed for Usenet and BitTorrent
+  users. It monitors multiple RSS feeds for new music and interfaces with
+  clients and indexers to grab, sort, and rename albums and songs. Lidarr also
+  has the capability to automatically upgrade the quality of existing tracks in
+  your library when a better quality format becomes available. The app features
+  a calendar to see all your upcoming releases in one place, manual search to
+  find all the releases and choose the ones you want, and automatic handling of
+  failed downloads. Lidarr ensures you get the right release every time with its
+  custom formats feature, which allows fine control over release prioritization
+  and selection. It also supports major platforms like Windows, Linux, macOS,
+  and others.
 instructions: null
 changeLog:
   - date: 2024-03-18
@@ -41,44 +42,51 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:2.2.5
+      default: linuxserver/lidarr:2.3.3
 benefits:
   - title: Automated Music Management
-    description: Lidarr is an audio collection manager that automatically monitors
-      multiple RSS feeds for new music, grabs, sorts, and renames albums and songs. It
+    description:
+      Lidarr is an audio collection manager that automatically monitors multiple
+      RSS feeds for new music, grabs, sorts, and renames albums and songs. It
       interfaces with clients and indexers to streamline your music collection
       process.
   - title: Quality Upgrades
-    description: Lidarr can be configured to automatically upgrade the quality of
-      existing tracks in your library when a better quality format becomes
-      available. This ensures you always have the best version of your favorite
-      music.
+    description:
+      Lidarr can be configured to automatically upgrade the quality of existing
+      tracks in your library when a better quality format becomes available.
+      This ensures you always have the best version of your favorite music.
   - title: Failed Download Handling
-    description: With Lidarr, failed downloads are a thing of the past. The app
+    description:
+      With Lidarr, failed downloads are a thing of the past. The app
       automatically blacklists the release and tries another one until it finds
       one that works, saving you time and frustration.
 features:
   - title: Calendar
-    description: See all your upcoming releases in one convenient location. This
-      feature allows you to keep track of your music collection and plan your
-      listening schedule.
+    description:
+      See all your upcoming releases in one convenient location. This feature
+      allows you to keep track of your music collection and plan your listening
+      schedule.
   - title: Manual Search
-    description: Find all the releases, choose the ones you want and send them right to
+    description:
+      Find all the releases, choose the ones you want and send them right to
       your download client. This gives you the power to manually select and
       download the music you want.
   - title: Custom Formats
-    description: Ensure you get the right release every time! Custom Formats allows
-      fine control over release prioritization and selection. It can be as
-      simple as a single preferred word or as complex as you want with multiple
-      criteria and regex.
+    description:
+      Ensure you get the right release every time! Custom Formats allows fine
+      control over release prioritization and selection. It can be as simple as
+      a single preferred word or as complex as you want with multiple criteria
+      and regex.
   - title: Integration with Download Clients
-    description: Lidarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
+    description:
+      Lidarr fully integrates with SABnzbd, NZBGet, QBittorrent, Deluge,
       rTorrent, Transmission, uTorrent, and other download clients for seamless
       downloading and management of your music collection.
   - title: Metadata Importing
-    description: Lidarr can import Metadata such as lyrics and album art, adding
-      valuable information to your music collection. It also adds metadata such
-      as artist and album information for media servers and players to use.
+    description:
+      Lidarr can import Metadata such as lyrics and album art, adding valuable
+      information to your music collection. It also adds metadata such as artist
+      and album information for media servers and players to use.
 tags:
   - Media
   - Download Manager

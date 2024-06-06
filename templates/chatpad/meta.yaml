@@ -1,14 +1,15 @@
 name: Chatpad
-description: Chatpad AI is a premium quality user interface for ChatGPT,
-  designed to provide the ultimate chatting experience. It's not just another
-  ChatGPT interface, but a broader vision to revolutionize the way users
-  interact with ChatGPT. The app is free and open-source, with its source code
-  readily available on GitHub for anyone interested. Privacy is a top priority
-  in Chatpad AI, with no tracking, no cookies, and all data being stored
-  locally. The app is crafted with love and care, ensuring the best possible
-  experience for its users. It's available as a web app and a desktop app,
-  providing flexibility and convenience. Chatpad AI is also self-hostable using
-  Docker, giving users full control over their data and usage.
+description:
+  Chatpad AI is a premium quality user interface for ChatGPT, designed to
+  provide the ultimate chatting experience. It's not just another ChatGPT
+  interface, but a broader vision to revolutionize the way users interact with
+  ChatGPT. The app is free and open-source, with its source code readily
+  available on GitHub for anyone interested. Privacy is a top priority in
+  Chatpad AI, with no tracking, no cookies, and all data being stored locally.
+  The app is crafted with love and care, ensuring the best possible experience
+  for its users. It's available as a web app and a desktop app, providing
+  flexibility and convenience. Chatpad AI is also self-hostable using Docker,
+  giving users full control over their data and usage.
 instructions: null
 changeLog:
   - date: 2023-3-26
@@ -41,27 +42,33 @@ schema:
       default: ghcr.io/deiucanta/chatpad
 benefits:
   - title: Free and Open Source
-    description: Chatpad AI is a free and open-source application. This means you
-      can use it without any cost, and if you're interested in how it works, you
-      can check out the source code on GitHub.
+    description:
+      Chatpad AI is a free and open-source application. This means you can use
+      it without any cost, and if you're interested in how it works, you can
+      check out the source code on GitHub.
   - title: Privacy Focused
-    description: Chatpad AI is designed with a strong focus on privacy. It does not
-      track your activities, use cookies, or store your data on remote servers.
-      All your data is stored locally on your device.
+    description:
+      Chatpad AI is designed with a strong focus on privacy. It does not track
+      your activities, use cookies, or store your data on remote servers. All
+      your data is stored locally on your device.
   - title: Premium Quality User Interface
-    description: Chatpad AI offers a premium quality user interface for ChatGPT. It
-      is designed with attention to detail to provide the best possible user
+    description:
+      Chatpad AI offers a premium quality user interface for ChatGPT. It is
+      designed with attention to detail to provide the best possible user
       experience.
 features:
   - title: ChatGPT Interface
-    description: Chatpad AI provides a user-friendly interface for interacting with
+    description:
+      Chatpad AI provides a user-friendly interface for interacting with
       ChatGPT. It makes using ChatGPT a seamless and enjoyable experience.
   - title: Local Data Storage
-    description: Chatpad AI stores all your data locally on your device. This
-      ensures that your data remains private and secure.
+    description:
+      Chatpad AI stores all your data locally on your device. This ensures that
+      your data remains private and secure.
   - title: Self-hosting Capabilities
-    description: Chatpad AI can be self-hosted using Docker. This gives you full
-      control over the application and its data.
+    description:
+      Chatpad AI can be self-hosted using Docker. This gives you full control
+      over the application and its data.
 tags:
   - Chat
   - Privacy

@@ -1,12 +1,13 @@
 name: Calibre
-description: Calibre is a comprehensive e-book management tool designed to
-  organize, convert, and read your e-book collection. It supports most of the
-  major e-book formats and is compatible with various e-book reader devices.
-  Calibre can fetch metadata for your books from the internet, enhancing your
-  library with relevant information. It also allows you to download newspapers
-  and convert them into e-books for a more convenient reading experience. The
-  app is cross-platform, running on Linux, Windows, and macOS. With Calibre, you
-  can easily add books to your library, convert them to a format your reader
+description:
+  Calibre is a comprehensive e-book management tool designed to organize,
+  convert, and read your e-book collection. It supports most of the major e-book
+  formats and is compatible with various e-book reader devices. Calibre can
+  fetch metadata for your books from the internet, enhancing your library with
+  relevant information. It also allows you to download newspapers and convert
+  them into e-books for a more convenient reading experience. The app is
+  cross-platform, running on Linux, Windows, and macOS. With Calibre, you can
+  easily add books to your library, convert them to a format your reader
   understands, and send them to your device. It also offers advanced features
   like e-book editing, metadata editing, and e-book comparison. The app is
   user-friendly, but also offers a Command Line Interface for more power and
@@ -45,18 +46,20 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/calibre:6.23.0
+      default: linuxserver/calibre:7.11.0
     password:
       type: string
       title: Password
 benefits:
   - title: E-Book Management
-    description: Calibre is an e-book library manager that allows you to view,
-      convert, and catalog e-books in most of the major e-book formats. It
-      provides a centralized platform for all your e-book needs.
+    description:
+      Calibre is an e-book library manager that allows you to view, convert, and
+      catalog e-books in most of the major e-book formats. It provides a
+      centralized platform for all your e-book needs.
   - title: Fetch Metadata
-    description: Calibre can go out to the Internet and fetch metadata for your
-      books, providing you with detailed information and enhancing your reading
+    description:
+      Calibre can go out to the Internet and fetch metadata for your books,
+      providing you with detailed information and enhancing your reading
       experience.
   - title: News Download
     description:
@@ -65,25 +68,25 @@ benefits:
       that's comfortable for you.
   - title: Cross-Platform
     description:
-      Calibre is cross-platform, running on Linux, Windows, and macOS,
-      making it accessible no matter what operating system you use.
+      Calibre is cross-platform, running on Linux, Windows, and macOS, making it
+      accessible no matter what operating system you use.
 features:
   - title: E-Book Conversion
-    description: Calibre allows you to convert books to a format your reader
-      understands. It makes the conversion process a breeze, with just a few
-      clicks needed.
+    description:
+      Calibre allows you to convert books to a format your reader understands.
+      It makes the conversion process a breeze, with just a few clicks needed.
   - title: E-Book Viewer
     description:
-      Calibre comes with an e-book viewer that allows you to read your
-      books right from the app. It supports a wide range of e-book formats.
+      Calibre comes with an e-book viewer that allows you to read your books
+      right from the app. It supports a wide range of e-book formats.
   - title: Device Detection
     description:
       Calibre can detect many e-book reader devices. Once your device is
       connected, you can easily send books to your device for offline reading.
   - title: Metadata Editing
     description:
-      Calibre allows you to edit e-book metadata, giving you full control
-      over the information associated with your e-books.
+      Calibre allows you to edit e-book metadata, giving you full control over
+      the information associated with your e-books.
 tags:
   - Documents
   - E-Commerce

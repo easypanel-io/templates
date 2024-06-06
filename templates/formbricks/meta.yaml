@@ -1,5 +1,9 @@
 name: Formbricks
-description: Formbricks provides a free and open source surveying platform. Gather feedback at every point in the user journey with beautiful in-app, website, link and email surveys. Build on top of Formbricks or leverage prebuilt data analysis capabilities.
+description:
+  Formbricks provides a free and open source surveying platform. Gather feedback
+  at every point in the user journey with beautiful in-app, website, link and
+  email surveys. Build on top of Formbricks or leverage prebuilt data analysis
+  capabilities.
 instructions: null
 changeLog:
   - date: 2024-03-28
@@ -27,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/formbricks/formbricks:v1.6.1
+      default: ghcr.io/formbricks/formbricks:v2.0.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -99,19 +103,44 @@ schema:
 
 features:
   - title: Granular in-app targeting
-    description: Combine usage data with custom attributes and device information for fine-grained targeting. Targeted embedded surveys mean better insights for your research team and a better UX for your users.
+    description:
+      Combine usage data with custom attributes and device information for
+      fine-grained targeting. Targeted embedded surveys mean better insights for
+      your research team and a better UX for your users.
   - title: Multi-language app surveys
-    description: For app surveys to fit in smoothly, they should feel like a part of your UI. Matching languages plays a big role for seamless product research. Formbricks lets you handle survey translations easily.
+    description:
+      For app surveys to fit in smoothly, they should feel like a part of your
+      UI. Matching languages plays a big role for seamless product research.
+      Formbricks lets you handle survey translations easily.
   - title: On brand design
-    description: Customize your embedded surveys to fit in. Match the look & feel of your embedded surveys with your app. Leverage our no-code design editor or load a custom style sheet - all on the free plan!
+    description:
+      Customize your embedded surveys to fit in. Match the look & feel of your
+      embedded surveys with your app. Leverage our no-code design editor or load
+      a custom style sheet - all on the free plan!
   - title: Keep all data private and secure
-    description: Formbricks is open source and can be self-hosted easily. Fly through compliance reviews by keeping all data on premise - or use our EU Cloud 🇪🇺. Formbricks works in full compliance with data privacy regulation worldwide
+    description:
+      Formbricks is open source and can be self-hosted easily. Fly through
+      compliance reviews by keeping all data on premise - or use our EU Cloud
+      🇪🇺. Formbricks works in full compliance with data privacy regulation
+      worldwide
   - title: No-code targeting
-    description: To set up and run an online survey, no code changes are needed. Use generic triggers like clicks, page views, scroll depth or exit intents to trigger web surveys whenever you want. Enable less technical team mates to run online surveys in minutes.
+    description:
+      To set up and run an online survey, no code changes are needed. Use
+      generic triggers like clicks, page views, scroll depth or exit intents to
+      trigger web surveys whenever you want. Enable less technical team mates to
+      run online surveys in minutes.
   - title: Free link forms forever, unlimited
-    description: Get unlimited forms, responses, team members and workspaces in our open source web forms builder. In the Cloud we only charge for branding removal. Self-host with one click and remove the branding from all forms for free.
+    description:
+      Get unlimited forms, responses, team members and workspaces in our open
+      source web forms builder. In the Cloud we only charge for branding
+      removal. Self-host with one click and remove the branding from all forms
+      for free.
   - title: Conditional logic
-    description: Jump questions based on previous answers for higher completion rate. Conditional logic lets you personalize the survey experience. Formbricks is the only open source form builder with comprehensive logic capabilities included.
+    description:
+      Jump questions based on previous answers for higher completion rate.
+      Conditional logic lets you personalize the survey experience. Formbricks
+      is the only open source form builder with comprehensive logic capabilities
+      included.
 
 tags:
   - Survey

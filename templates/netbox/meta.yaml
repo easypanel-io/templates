@@ -1,8 +1,9 @@
 name: Netbox
-description: NetBox is a comprehensive solution designed to be the single source
-  of truth for everything on your network. It provides a detailed overview of
-  both physical and virtual assets, including power systems, cabling, IP
-  addresses, and VLANs. The app is designed to facilitate network automation and
+description:
+  NetBox is a comprehensive solution designed to be the single source of truth
+  for everything on your network. It provides a detailed overview of both
+  physical and virtual assets, including power systems, cabling, IP addresses,
+  and VLANs. The app is designed to facilitate network automation and
   monitoring, drawing from an authoritative plan to push out configurations and
   monitor changes across the enterprise. It offers a complete DCIM solution,
   providing visibility and control across the entire enterprise. NetBox also
@@ -45,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/netbox:3.4.6
+      default: lscr.io/linuxserver/netbox:4.0.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -62,30 +63,36 @@ schema:
       title: Password
 benefits:
   - title: Comprehensive Network Management
-    description: NetBox provides a comprehensive solution for managing everything on
-      your network. From physical components like power systems and cabling to
+    description:
+      NetBox provides a comprehensive solution for managing everything on your
+      network. From physical components like power systems and cabling to
       virtual assets like IP addresses and VLANs, NetBox serves as the source of
       truth for your entire network.
   - title: Efficient IP Address Management
-    description: NetBox offers efficient management of IP assets across the
-      enterprise, removing the danger from data entry errors. This ensures that
-      your network remains organized and error-free.
+    description:
+      NetBox offers efficient management of IP assets across the enterprise,
+      removing the danger from data entry errors. This ensures that your network
+      remains organized and error-free.
   - title: Customizable and Integrable
-    description: NetBox is highly customizable and can be extended to fit your
-      specific needs. This makes it a versatile tool that can be integrated into
-      any network environment.
+    description:
+      NetBox is highly customizable and can be extended to fit your specific
+      needs. This makes it a versatile tool that can be integrated into any
+      network environment.
 features:
   - title: Comprehensive DCIM Solution
-    description: NetBox provides a comprehensive Data Center Infrastructure
-      Management (DCIM) solution, giving you visibility and control across your
-      entire enterprise.
+    description:
+      NetBox provides a comprehensive Data Center Infrastructure Management
+      (DCIM) solution, giving you visibility and control across your entire
+      enterprise.
   - title: IP Address Management
-    description: NetBox includes a feature for efficient management of IP assets
-      across the enterprise. This feature helps to eliminate data entry errors
-      and keeps your network organized.
+    description:
+      NetBox includes a feature for efficient management of IP assets across the
+      enterprise. This feature helps to eliminate data entry errors and keeps
+      your network organized.
   - title: Customization and Integration
-    description: NetBox allows you to customize and extend its functionality to fit
-      your needs. This makes it a flexible tool that can be integrated into any
+    description:
+      NetBox allows you to customize and extend its functionality to fit your
+      needs. This makes it a flexible tool that can be integrated into any
       network environment.
 tags:
   - Network Tools

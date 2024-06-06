@@ -1,16 +1,17 @@
 name: Memos
-description: Memos is a privacy-first, lightweight note-taking service designed
-  to easily capture and share your great thoughts. With its focus on privacy,
-  all data generated is saved in the SQLite database file, ensuring that you
-  keep your own data by yourself. The app supports plain text with markdown,
-  allowing you to save all content as plain text, not HTML, while also
-  supporting a variety of useful markdown syntax. Despite being lightweight,
-  Memos is powerful, utilizing a Go + React.js + SQLite architecture. The app is
-  customizable, allowing you to modify the server name, icon, description,
-  system style, and execution script. Memos is open source and free forever,
-  embodying the belief that open source is the future. It offers a RESTful API
-  for third-party services, enabling integration and new possibilities. With
-  Memos, you can embrace a future where creativity knows no boundaries.
+description:
+  Memos is a privacy-first, lightweight note-taking service designed to easily
+  capture and share your great thoughts. With its focus on privacy, all data
+  generated is saved in the SQLite database file, ensuring that you keep your
+  own data by yourself. The app supports plain text with markdown, allowing you
+  to save all content as plain text, not HTML, while also supporting a variety
+  of useful markdown syntax. Despite being lightweight, Memos is powerful,
+  utilizing a Go + React.js + SQLite architecture. The app is customizable,
+  allowing you to modify the server name, icon, description, system style, and
+  execution script. Memos is open source and free forever, embodying the belief
+  that open source is the future. It offers a RESTful API for third-party
+  services, enabling integration and new possibilities. With Memos, you can
+  embrace a future where creativity knows no boundaries.
 instructions: null
 changeLog:
   - date: 2022-12-21
@@ -42,36 +43,41 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: neosmemo/memos:0.12.2
+      default: neosmemo/memos:0.22
     serviceTimezone:
       type: string
       title: Timezone
       default: America/New_York
 benefits:
   - title: Privacy First
-    description: Memos is a privacy-first note-taking service. It allows you to keep
-      your own data by yourself. All data generated at runtime is saved in the
-      SQLite database file, ensuring your notes and thoughts are kept private
-      and secure.
+    description:
+      Memos is a privacy-first note-taking service. It allows you to keep your
+      own data by yourself. All data generated at runtime is saved in the SQLite
+      database file, ensuring your notes and thoughts are kept private and
+      secure.
   - title: Lightweight but Powerful
-    description: Despite its lightweight package, Memos is a powerful tool. It uses
-      a Go + React.js + SQLite architecture, providing a robust and efficient
-      platform for capturing and sharing your thoughts.
+    description:
+      Despite its lightweight package, Memos is a powerful tool. It uses a Go +
+      React.js + SQLite architecture, providing a robust and efficient platform
+      for capturing and sharing your thoughts.
   - title: Free Forever
-    description: Memos is completely free. All features are available without any
-      charges, allowing you to capture and share your thoughts without any
-      financial constraints.
+    description:
+      Memos is completely free. All features are available without any charges,
+      allowing you to capture and share your thoughts without any financial
+      constraints.
 features:
   - title: Plain Text with Markdown
-    description: Memos saves all content as plain text, not HTML. It supports a wide
-      range of useful markdown syntax, making note-taking simple and efficient.
+    description:
+      Memos saves all content as plain text, not HTML. It supports a wide range
+      of useful markdown syntax, making note-taking simple and efficient.
   - title: Customizable
-    description: Memos is highly customizable. You can personalize the server name,
-      icon, description, system style, and execution script to suit your
-      preferences.
+    description:
+      Memos is highly customizable. You can personalize the server name, icon,
+      description, system style, and execution script to suit your preferences.
   - title: Open Source
-    description: Memos is an open-source application. It believes in the future of
-      open source, and all its code is available on GitHub.
+    description:
+      Memos is an open-source application. It believes in the future of open
+      source, and all its code is available on GitHub.
 tags:
   - Notes
   - Privacy

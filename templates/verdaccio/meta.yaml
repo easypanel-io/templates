@@ -1,16 +1,17 @@
 name: Verdaccio
-description: Verdaccio is a lightweight, private npm proxy registry built in
-  Node.js, designed to simplify and enhance your development workflow. It
-  provides a simple, zero-configuration-required local private NPM registry,
-  eliminating the need for a full database to get started. Verdaccio comes
-  equipped with its own compact database and the capability to proxy other
-  registries, such as npmjs.org, while caching the downloaded modules for
-  improved efficiency. It allows you to use all the benefits of the npm package
-  system in your company without exposing all your code to the public. You can
-  link multiple registries, fetch packages from multiple sources in a single
-  project, and even publish locally modified versions of third-party packages.
-  Verdaccio is compatible with popular npm clients like npm, yarn, and pnpm, and
-  supports various plugins for extended storage capabilities.
+description:
+  Verdaccio is a lightweight, private npm proxy registry built in Node.js,
+  designed to simplify and enhance your development workflow. It provides a
+  simple, zero-configuration-required local private NPM registry, eliminating
+  the need for a full database to get started. Verdaccio comes equipped with its
+  own compact database and the capability to proxy other registries, such as
+  npmjs.org, while caching the downloaded modules for improved efficiency. It
+  allows you to use all the benefits of the npm package system in your company
+  without exposing all your code to the public. You can link multiple
+  registries, fetch packages from multiple sources in a single project, and even
+  publish locally modified versions of third-party packages. Verdaccio is
+  compatible with popular npm clients like npm, yarn, and pnpm, and supports
+  various plugins for extended storage capabilities.
 instructions: null
 changeLog:
   - date: 2022-10-31
@@ -42,31 +43,40 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: verdaccio/verdaccio:5.24.1
+      default: verdaccio/verdaccio:5.31.0
 benefits:
   - title: Private Package Management
-    description: Easily use private packages in your company without sending code to
-      the public.
+    description:
+      Easily use private packages in your company without sending code to the
+      public.
   - title: Multiple Registries
-    description: Fetch packages from multiple sources in one project by chaining registries.
+    description:
+      Fetch packages from multiple sources in one project by chaining
+      registries.
   - title: Caching and Failover
-    description: Decrease latency and provide limited failover by caching the
-      npmjs.org registry.
+    description:
+      Decrease latency and provide limited failover by caching the npmjs.org
+      registry.
   - title: Override Public Packages
-    description: Use modified versions of 3rd-party packages by publishing your own
-      version locally.
+    description:
+      Use modified versions of 3rd-party packages by publishing your own version
+      locally.
 features:
   - title: Private NPM Registry
-    description: A lightweight Node.js private proxy registry for managing npm packages.
+    description:
+      A lightweight Node.js private proxy registry for managing npm packages.
   - title: Zero-Config Required
-    description: No need for an entire database, comes with its own tiny database
-      out of the box.
+    description:
+      No need for an entire database, comes with its own tiny database out of
+      the box.
   - title: Proxy Other Registries
-    description: Ability to proxy other registries like npmjs.org and cache
-      downloaded modules.
+    description:
+      Ability to proxy other registries like npmjs.org and cache downloaded
+      modules.
   - title: Extendable Storage
-    description: Supports community-made plugins to hook into services like Amazon's
-      S3 or Google Cloud Storage.
+    description:
+      Supports community-made plugins to hook into services like Amazon's S3 or
+      Google Cloud Storage.
 tags:
   - Developer Tools
   - Package Manager

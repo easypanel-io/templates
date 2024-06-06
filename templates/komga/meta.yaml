@@ -1,6 +1,7 @@
 name: Komga
-description: Komga is a free and open source comics/mangas server that provides
-  an intuitive platform for comic and manga enthusiasts. It allows you to browse
+description:
+  Komga is a free and open source comics/mangas server that provides an
+  intuitive platform for comic and manga enthusiasts. It allows you to browse
   libraries, series, and books via a responsive web UI that is compatible with
   desktops, tablets, and phones. With Komga, you can easily organize your
   library with collections and read lists, and edit metadata for your series and
@@ -41,35 +42,44 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotson/komga:0.165.0
+      default: gotson/komga:1.11.1
 benefits:
   - title: Free and Open Source
-    description: Komga is a free and open source comics/mangas server, providing an
+    description:
+      Komga is a free and open source comics/mangas server, providing an
       accessible platform for comic enthusiasts.
   - title: Versatile Reading Modes
-    description: The app features a webreader with multiple reading modes, enhancing
-      your reading experience.
+    description:
+      The app features a webreader with multiple reading modes, enhancing your
+      reading experience.
   - title: User Management
-    description: Komga allows you to manage multiple users with per-library access
-      control, age restrictions, and labels restrictions.
+    description:
+      Komga allows you to manage multiple users with per-library access control,
+      age restrictions, and labels restrictions.
   - title: Duplicate Detection
-    description: The app can detect and remove duplicate files and pages, ensuring
-      your library stays organized and clutter-free.
+    description:
+      The app can detect and remove duplicate files and pages, ensuring your
+      library stays organized and clutter-free.
 features:
   - title: Library Browsing
-    description: Browse libraries, series and books via a responsive web UI that
-      works on desktop, tablets and phones.
+    description:
+      Browse libraries, series and books via a responsive web UI that works on
+      desktop, tablets and phones.
   - title: Library Organization
     description: Organize your library with collections and read lists.
   - title: Metadata Editing
-    description: Edit metadata for your series and books. Import embedded metadata
+    description:
+      Edit metadata for your series and books. Import embedded metadata
       automatically.
   - title: REST API
-    description: Komga offers a REST API, allowing various tools and scripts to
-      interact with it.
+    description:
+      Komga offers a REST API, allowing various tools and scripts to interact
+      with it.
   - title: File Download
-    description: Download book files, whole series, or read lists directly from the app.
+    description:
+      Download book files, whole series, or read lists directly from the app.
   - title: Import Books
-    description: Import books from outside your libraries directly into your series folder.
+    description:
+      Import books from outside your libraries directly into your series folder.
 tags:
   - Media

@@ -1,16 +1,17 @@
 name: Emby
-description: Emby is a personal media server that brings all of your home
-  videos, music, and photos together into one place for easy access. It
-  automatically converts and streams your media on-the-fly, allowing you to play
-  it on any device. With Emby, you can enjoy your media while away from home
-  without the need to fumble with IP addresses. It also offers live TV streaming
-  to any device, DVR management, and a library of recordings. Emby organizes
-  your personal media into rich, beautiful displays and notifies you of server
-  activity based on events and actions that are important to you. It also offers
-  parental controls to easily manage content access for your children. Emby apps
-  are available for all of your favorite devices, including Android, iPhone,
-  iPad, Windows Phone, and Windows Tablets, allowing you to take your home
-  videos, music, and photos with you wherever you go.
+description:
+  Emby is a personal media server that brings all of your home videos, music,
+  and photos together into one place for easy access. It automatically converts
+  and streams your media on-the-fly, allowing you to play it on any device. With
+  Emby, you can enjoy your media while away from home without the need to fumble
+  with IP addresses. It also offers live TV streaming to any device, DVR
+  management, and a library of recordings. Emby organizes your personal media
+  into rich, beautiful displays and notifies you of server activity based on
+  events and actions that are important to you. It also offers parental controls
+  to easily manage content access for your children. Emby apps are available for
+  all of your favorite devices, including Android, iPhone, iPad, Windows Phone,
+  and Windows Tablets, allowing you to take your home videos, music, and photos
+  with you wherever you go.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -44,35 +45,43 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/emby:4.7.11
+      default: lscr.io/linuxserver/emby:4.8.7
 benefits:
   - title: Easy Access to Personal Media
-    description: Emby Connect provides a seamless way to enjoy your personal media
-      while away from home. No need to worry about IP addresses, simply sign in
-      and play.
+    description:
+      Emby Connect provides a seamless way to enjoy your personal media while
+      away from home. No need to worry about IP addresses, simply sign in and
+      play.
   - title: Live TV Streaming
-    description: Stream Live TV to any device, manage your DVR, and enjoy your
-      library of recordings. Emby brings the convenience of live TV right to
-      your fingertips.
+    description:
+      Stream Live TV to any device, manage your DVR, and enjoy your library of
+      recordings. Emby brings the convenience of live TV right to your
+      fingertips.
   - title: Effortless Media Management
-    description: Emby takes the hassle out of managing your home videos, music, and
-      photos, allowing you to spend more time enjoying and less time struggling.
+    description:
+      Emby takes the hassle out of managing your home videos, music, and photos,
+      allowing you to spend more time enjoying and less time struggling.
   - title: Automatic Organization
-    description: Emby organizes your personal media into rich, beautiful displays,
-      making it easier than ever to navigate and enjoy your media library.
+    description:
+      Emby organizes your personal media into rich, beautiful displays, making
+      it easier than ever to navigate and enjoy your media library.
 features:
   - title: Personal Media Server
-    description: Your personal Emby Server automatically converts and streams your
-      media on-the-fly to play on any device.
+    description:
+      Your personal Emby Server automatically converts and streams your media
+      on-the-fly to play on any device.
   - title: Parental Controls
-    description: Easily control content access for your children with Emby's
-      built-in parental controls. Monitor and remote control their sessions as
-      you need to.
+    description:
+      Easily control content access for your children with Emby's built-in
+      parental controls. Monitor and remote control their sessions as you need
+      to.
   - title: Emby Mobile Sync
-    description: Take your home videos, music, and photos with you wherever you go,
-      even offline with Emby Mobile Sync.
+    description:
+      Take your home videos, music, and photos with you wherever you go, even
+      offline with Emby Mobile Sync.
   - title: Emby Apps
-    description: Emby apps are available for all of your favorite devices, including
+    description:
+      Emby apps are available for all of your favorite devices, including
       Android, iPhone, iPad, Windows Phone and Windows Tablets, Android TV,
       Amazon Fire TV, Chromecast, Roku, Xbox, Home Theater Computers, and more.
 tags:

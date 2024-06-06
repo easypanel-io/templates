@@ -1,15 +1,17 @@
 name: Lynx
-description: Lynx is a robust URL shortener application designed to simplify and
-  streamline your web browsing experience. Built using the MEVN stack, Lynx
-  offers a user-friendly interface and the ability to redirect the root path for
-  a more personalized touch. The app also features a unique admin interface,
-  providing you with full control over your shortened URLs. With Lynx, you can
-  easily manage and customize your links, each of which includes a slug,
-  destination, and id. The app also supports multiple users, integrates with
-  ShareX, and offers two-factor authentication for enhanced security. Lynx is
-  the sleek, powerful URL shortener you've been looking for.
-instructions: Registration is disabled by default, but the first registration
-  will always be allowed.
+description:
+  Lynx is a robust URL shortener application designed to simplify and streamline
+  your web browsing experience. Built using the MEVN stack, Lynx offers a
+  user-friendly interface and the ability to redirect the root path for a more
+  personalized touch. The app also features a unique admin interface, providing
+  you with full control over your shortened URLs. With Lynx, you can easily
+  manage and customize your links, each of which includes a slug, destination,
+  and id. The app also supports multiple users, integrates with ShareX, and
+  offers two-factor authentication for enhanced security. Lynx is the sleek,
+  powerful URL shortener you've been looking for.
+instructions:
+  Registration is disabled by default, but the first registration will always be
+  allowed.
 changeLog:
   - date: 2023-3-15
     description: first release
@@ -43,40 +45,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jackbailey/lynx
+      default: jackbailey/lynx:1.9.2
     databaseServiceName:
       type: string
       title: Database Service Name
       default: lynx-db
 benefits:
   - title: Efficient URL Management
-    description: Lynx offers a sleek and powerful solution for shortening and
-      managing your URLs. It simplifies the process of sharing long and complex
-      URLs by converting them into shorter and more manageable links.
+    description:
+      Lynx offers a sleek and powerful solution for shortening and managing your
+      URLs. It simplifies the process of sharing long and complex URLs by
+      converting them into shorter and more manageable links.
   - title: User-Friendly Interface
-    description: The application features a simple and intuitive user interface,
-      making it easy for users to create, manage, and share shortened URLs.
+    description:
+      The application features a simple and intuitive user interface, making it
+      easy for users to create, manage, and share shortened URLs.
   - title: Secure Access
-    description: With features like multi-user support and 2FA, Lynx ensures secure
-      access to your shortened URLs. Each user has their own account with a
-      unique username and password.
+    description:
+      With features like multi-user support and 2FA, Lynx ensures secure access
+      to your shortened URLs. Each user has their own account with a unique
+      username and password.
 features:
   - title: URL Shortening
-    description: Lynx allows you to shorten your URLs, making them easier to share
-      and remember. Each shortened URL includes a unique slug that serves as the
+    description:
+      Lynx allows you to shorten your URLs, making them easier to share and
+      remember. Each shortened URL includes a unique slug that serves as the
       path in the source URL.
   - title: Admin Interface
-    description: Lynx provides an admin interface where you can manage your
-      shortened URLs. You also have the option to redirect the root path.
+    description:
+      Lynx provides an admin interface where you can manage your shortened URLs.
+      You also have the option to redirect the root path.
   - title: ShareX Integration
-    description: Lynx supports integration with ShareX, allowing you to easily share
-      your shortened URLs.
+    description:
+      Lynx supports integration with ShareX, allowing you to easily share your
+      shortened URLs.
   - title: Multi-User Support
-    description: Lynx supports multiple users, each with their own account. This
-      allows for secure and organized management of shortened URLs.
+    description:
+      Lynx supports multiple users, each with their own account. This allows for
+      secure and organized management of shortened URLs.
   - title: Two-Factor Authentication (2FA)
-    description: For added security, Lynx supports two-factor authentication. This
-      ensures that only authorized users can access their respective accounts.
+    description:
+      For added security, Lynx supports two-factor authentication. This ensures
+      that only authorized users can access their respective accounts.
 tags:
   - URL Shortener
   - Web Tools

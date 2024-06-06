@@ -1,16 +1,17 @@
 name: Restreamer
-description: datarhei Restreamer is a powerful video streaming platform designed
-  to provide real-time live video streaming on websites and social media
-  platforms. It eliminates the need for additional streaming provider costs for
-  video hosting or software licensing. The app allows teams to live stream and
-  restream everything from webcams to broadcasting, making streaming more
-  efficient and user-friendly. It offers live streaming on websites without
-  additional service providers or video hosting providers, and it's instantly
-  available, free of charge, and without advertising. Users can share live
-  videos publicly or privately with anyone, or use a secret link to give their
-  audience access to private content. The app also provides a simple streaming
-  server with self-installation on your server or Raspberry Pi. The fully
-  documented API makes datarhei Restreamer easy to adapt to any project.
+description:
+  datarhei Restreamer is a powerful video streaming platform designed to provide
+  real-time live video streaming on websites and social media platforms. It
+  eliminates the need for additional streaming provider costs for video hosting
+  or software licensing. The app allows teams to live stream and restream
+  everything from webcams to broadcasting, making streaming more efficient and
+  user-friendly. It offers live streaming on websites without additional service
+  providers or video hosting providers, and it's instantly available, free of
+  charge, and without advertising. Users can share live videos publicly or
+  privately with anyone, or use a secret link to give their audience access to
+  private content. The app also provides a simple streaming server with
+  self-installation on your server or Raspberry Pi. The fully documented API
+  makes datarhei Restreamer easy to adapt to any project.
 instructions: null
 changeLog:
   - date: 2022-10-29
@@ -44,37 +45,46 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: datarhei/restreamer:2.6.0
+      default: datarhei/restreamer:2.10.0
 benefits:
   - title: Real-time Live Video Streaming
-    description: datarhei Restreamer provides real-time live video streaming on
-      websites and social media platforms without additional streaming provider
-      costs for video hosting or software licensing costs.
+    description:
+      datarhei Restreamer provides real-time live video streaming on websites
+      and social media platforms without additional streaming provider costs for
+      video hosting or software licensing costs.
   - title: Efficient Streaming
-    description: We aim to help teams stream more efficiently by creating a simple
-      yet powerful service for them to live stream video.
+    description:
+      We aim to help teams stream more efficiently by creating a simple yet
+      powerful service for them to live stream video.
   - title: User-friendly and Powerful
-    description: Our mission is to make a user-friendly and powerful product for
-      everyone to stream video.
+    description:
+      Our mission is to make a user-friendly and powerful product for everyone
+      to stream video.
   - title: Free of Charge
-    description: datarhei Restreamer is instantly available, free of charge, and
-      without advertising.
+    description:
+      datarhei Restreamer is instantly available, free of charge, and without
+      advertising.
   - title: Private and Public Sharing
-    description: Share live videos publicly or privately with anyone, or use a
-      secret link to give your audience access to private content.
+    description:
+      Share live videos publicly or privately with anyone, or use a secret link
+      to give your audience access to private content.
 features:
   - title: Live Streaming
-    description: Live stream on websites without additional service providers or
-      video hosting providers.
+    description:
+      Live stream on websites without additional service providers or video
+      hosting providers.
   - title: Publication Services
     description: Overview of Publication Services in datarhei Restreamer V2.
   - title: Streaming Server
-    description: Enjoy a simple streaming server with self-installation on your
-      server or Raspberry Pi.
+    description:
+      Enjoy a simple streaming server with self-installation on your server or
+      Raspberry Pi.
   - title: Different Streaming Protocols
-    description: Overview of the different streaming protocols from datarhei Restreamer V2.
+    description:
+      Overview of the different streaming protocols from datarhei Restreamer V2.
   - title: Fully Documented API
-    description: The fully documented API helps with software development. datarhei
+    description:
+      The fully documented API helps with software development. datarhei
       Restreamer is very easy to adapt to any project.
 tags:
   - Media

@@ -1,14 +1,15 @@
 name: Planka
-description: Planka is a free, open-source Kanban board designed to streamline
-  project management for workgroups. With Planka, you can create projects,
-  boards, lists, cards, labels, and tasks, all in one place. It allows you to
-  add card members, track time, set due dates, add attachments, and write
-  comments. It also supports markdown in card descriptions and comments. The app
-  provides real-time updates, ensuring all changes in cards or boards are
-  instantly visible to your colleagues. You can customize your project
-  background and filter tasks by members and labels. User notifications keep
-  everyone in the loop about project updates. The app also supports multiple
-  languages, making it a versatile tool for international teams.
+description:
+  Planka is a free, open-source Kanban board designed to streamline project
+  management for workgroups. With Planka, you can create projects, boards,
+  lists, cards, labels, and tasks, all in one place. It allows you to add card
+  members, track time, set due dates, add attachments, and write comments. It
+  also supports markdown in card descriptions and comments. The app provides
+  real-time updates, ensuring all changes in cards or boards are instantly
+  visible to your colleagues. You can customize your project background and
+  filter tasks by members and labels. User notifications keep everyone in the
+  loop about project updates. The app also supports multiple languages, making
+  it a versatile tool for international teams.
 instructions: Login with demo@demo.demo:demo
 changeLog:
   - date: 2023-3-21
@@ -41,39 +42,45 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/plankanban/planka:1.11.0
+      default: ghcr.io/plankanban/planka:1.17.4
     databaseServiceName:
       type: string
       title: Database Service Name
       default: planka-db
 benefits:
   - title: Effortless Project Management
-    description: With Planka, project management has never been easier. The app
-      provides a simple and intuitive interface that allows you to manage your
-      projects without any hassle.
+    description:
+      With Planka, project management has never been easier. The app provides a
+      simple and intuitive interface that allows you to manage your projects
+      without any hassle.
   - title: Real-Time Collaboration
-    description: Planka allows you to work together with your colleagues in
-      real-time. Any changes made to cards or boards are instantly visible to
-      all team members.
+    description:
+      Planka allows you to work together with your colleagues in real-time. Any
+      changes made to cards or boards are instantly visible to all team members.
   - title: Fast and Efficient
-    description: Built with React and Redux, Planka is blazing fast, ensuring that
-      your project management tasks are completed quickly and efficiently.
+    description:
+      Built with React and Redux, Planka is blazing fast, ensuring that your
+      project management tasks are completed quickly and efficiently.
 features:
   - title: Project Tracking
-    description: Planka allows you to create projects, boards, lists, cards, labels,
-      and tasks. This makes it easy to track the progress of your projects.
+    description:
+      Planka allows you to create projects, boards, lists, cards, labels, and
+      tasks. This makes it easy to track the progress of your projects.
   - title: Task Management
-    description: With Planka, you can add card members, track time, set due dates,
-      add attachments, and write comments. This makes managing tasks a breeze.
+    description:
+      With Planka, you can add card members, track time, set due dates, add
+      attachments, and write comments. This makes managing tasks a breeze.
   - title: Customization
-    description: Planka allows you to customize your project background, filter by
-      members and labels, and supports markdown in card descriptions and
-      comments.
+    description:
+      Planka allows you to customize your project background, filter by members
+      and labels, and supports markdown in card descriptions and comments.
   - title: Real-Time Updates and Notifications
-    description: Planka provides real-time updates and user notifications, ensuring
-      that you're always up-to-date with the latest changes and updates.
+    description:
+      Planka provides real-time updates and user notifications, ensuring that
+      you're always up-to-date with the latest changes and updates.
   - title: Internationalization
-    description: Planka supports multiple languages, making it a truly global
-      project management tool.
+    description:
+      Planka supports multiple languages, making it a truly global project
+      management tool.
 tags:
   - Project Management

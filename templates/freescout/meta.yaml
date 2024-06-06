@@ -1,18 +1,19 @@
 name: Freescout
-description: FreeScout is a powerful, open-source help desk and shared inbox
-  application. It's a self-hosted alternative to Zendesk & Help Scout, offering
-  you complete control over your customer support without compromising on
-  privacy. FreeScout is designed to be lightweight yet robust, capable of
-  handling unlimited support agents, tickets, and mailboxes. It offers seamless
-  email integration, automatic replies, internal notes, conversation forwarding,
-  merging, and moving, among other features. The application is mobile-friendly
-  and supports multiple languages. It also includes features like push
-  notifications, starred conversations, collision detection, and flexible
-  notifications for user agents. FreeScout also offers a range of integrations,
-  including Slack, WhatsApp, Facebook, and Telegram, and supports translating
-  tickets, live chat, time tracking, custom fields, and more. It's the perfect
-  solution for those who need professional customer support but can't afford to
-  pay for Zendesk or Help Scout.
+description:
+  FreeScout is a powerful, open-source help desk and shared inbox application.
+  It's a self-hosted alternative to Zendesk & Help Scout, offering you complete
+  control over your customer support without compromising on privacy. FreeScout
+  is designed to be lightweight yet robust, capable of handling unlimited
+  support agents, tickets, and mailboxes. It offers seamless email integration,
+  automatic replies, internal notes, conversation forwarding, merging, and
+  moving, among other features. The application is mobile-friendly and supports
+  multiple languages. It also includes features like push notifications, starred
+  conversations, collision detection, and flexible notifications for user
+  agents. FreeScout also offers a range of integrations, including Slack,
+  WhatsApp, Facebook, and Telegram, and supports translating tickets, live chat,
+  time tracking, custom fields, and more. It's the perfect solution for those
+  who need professional customer support but can't afford to pay for Zendesk or
+  Help Scout.
 instructions: null
 changeLog:
   - date: 2023-1-4
@@ -49,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/freescout:php8.1-1.16.25
+      default: tiredofit/freescout:php8.2-1.17.72
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -64,41 +65,50 @@ schema:
       default: changeme
 benefits:
   - title: Cost-Effective Customer Support Solution
-    description: FreeScout is a free, open-source help desk and shared inbox
-      solution that provides a cost-effective alternative to paid services like
-      Zendesk and Help Scout. It allows businesses to offer professional
-      customer support without incurring high costs.
+    description:
+      FreeScout is a free, open-source help desk and shared inbox solution that
+      provides a cost-effective alternative to paid services like Zendesk and
+      Help Scout. It allows businesses to offer professional customer support
+      without incurring high costs.
   - title: Privacy and Control
-    description: As a self-hosted solution, FreeScout gives you complete control
-      over your data and operations. It ensures your privacy and prevents you
-      from being locked into a service you don't control.
+    description:
+      As a self-hosted solution, FreeScout gives you complete control over your
+      data and operations. It ensures your privacy and prevents you from being
+      locked into a service you don't control.
   - title: Unlimited Support Agents and Tickets
-    description: FreeScout does not limit the number of support agents, tickets, or
+    description:
+      FreeScout does not limit the number of support agents, tickets, or
       mailboxes you can have. This allows for scalability and flexibility in
       managing your customer support.
 features:
   - title: Multilingual Support
-    description: FreeScout supports multiple languages, making it a versatile tool
-      for businesses with a global customer base.
+    description:
+      FreeScout supports multiple languages, making it a versatile tool for
+      businesses with a global customer base.
   - title: Seamless Email Integration
-    description: FreeScout integrates seamlessly with your email, ensuring smooth
+    description:
+      FreeScout integrates seamlessly with your email, ensuring smooth
       communication with customers.
   - title: Advanced Conversation Management
-    description: FreeScout allows for advanced conversation management, including
-      starred conversations, auto replies, internal notes, forwarding and
-      merging conversations, and more.
+    description:
+      FreeScout allows for advanced conversation management, including starred
+      conversations, auto replies, internal notes, forwarding and merging
+      conversations, and more.
   - title: Real-Time Reports
-    description: FreeScout provides real-time reports, helping you monitor and
-      improve your customer support performance.
+    description:
+      FreeScout provides real-time reports, helping you monitor and improve your
+      customer support performance.
   - title: Integration with Various Platforms
-    description: FreeScout can be integrated with various platforms, including
-      Slack, WhatsApp, Facebook, and Telegram, for efficient communication and
-      support.
+    description:
+      FreeScout can be integrated with various platforms, including Slack,
+      WhatsApp, Facebook, and Telegram, for efficient communication and support.
   - title: Knowledge Base and Live Chat
-    description: FreeScout includes a knowledge base for self-service support and a
-      live chat feature for real-time assistance.
+    description:
+      FreeScout includes a knowledge base for self-service support and a live
+      chat feature for real-time assistance.
   - title: Custom Fields and White-Labeling
-    description: FreeScout allows for customization with custom fields and
-      white-labeling, enabling you to tailor the tool to your business needs.
+    description:
+      FreeScout allows for customization with custom fields and white-labeling,
+      enabling you to tailor the tool to your business needs.
 tags:
   - Customer Support

@@ -1,17 +1,19 @@
 name: GlitchTip
-description: GlitchTip is a simple, open-source error tracking application
-  designed to collect, organize, and alert you about every error from your
-  project in real time. It allows you to monitor your software's performance,
-  track errors, and check your site's uptime all in one place. GlitchTip is
-  compatible with Sentry client SDKs, offering a more straightforward operation.
-  It provides a comprehensive error tracking system, reporting your website or
-  application's exceptions, log messages, Content Security Policy violations,
-  and more. With GlitchTip, you can also monitor your application's performance,
-  identifying slow web requests, database calls, and other transactions.
-  Additionally, it offers uptime monitoring, pinging your site and alerting you
-  when it's not responding. GlitchTip is the perfect choice for those who value
-  simplicity, affordability, and the freedom provided by open source.
-instructions: To create an admin user, run the command ./manage.py createsuperuser
+description:
+  GlitchTip is a simple, open-source error tracking application designed to
+  collect, organize, and alert you about every error from your project in real
+  time. It allows you to monitor your software's performance, track errors, and
+  check your site's uptime all in one place. GlitchTip is compatible with Sentry
+  client SDKs, offering a more straightforward operation. It provides a
+  comprehensive error tracking system, reporting your website or application's
+  exceptions, log messages, Content Security Policy violations, and more. With
+  GlitchTip, you can also monitor your application's performance, identifying
+  slow web requests, database calls, and other transactions. Additionally, it
+  offers uptime monitoring, pinging your site and alerting you when it's not
+  responding. GlitchTip is the perfect choice for those who value simplicity,
+  affordability, and the freedom provided by open source.
+instructions:
+  To create an admin user, run the command ./manage.py createsuperuser
 changeLog:
   - date: 2023-04-06
     description: First Release
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glitchtip/glitchtip:v3.1.0
+      default: glitchtip/glitchtip:v4.0.9
     databaseServiceName:
       type: string
       title: Redis Service Name
@@ -65,36 +67,42 @@ schema:
       default: glitchtip-redis
 benefits:
   - title: Real-Time Error Tracking
-    description: GlitchTip collects every error from your project in real time,
-      helping you to organize and make them useful. You can receive alerts when
-      and where you want, ensuring you're always on top of any issues that
-      arise.
+    description:
+      GlitchTip collects every error from your project in real time, helping you
+      to organize and make them useful. You can receive alerts when and where
+      you want, ensuring you're always on top of any issues that arise.
   - title: Affordable and Simple
-    description: GlitchTip is designed with simplicity and affordability in mind.
-      It's an open-source solution that you can modify and use as you see fit,
-      without breaking your budget.
+    description:
+      GlitchTip is designed with simplicity and affordability in mind. It's an
+      open-source solution that you can modify and use as you see fit, without
+      breaking your budget.
   - title: Performance Monitoring
-    description: With GlitchTip, you can monitor your application's performance and
-      find out where your app is slow. It takes a simple, out of the box
-      approach, helping you to identify your slowest web requests, database
-      calls, and other transactions.
+    description:
+      With GlitchTip, you can monitor your application's performance and find
+      out where your app is slow. It takes a simple, out of the box approach,
+      helping you to identify your slowest web requests, database calls, and
+      other transactions.
   - title: Uptime Monitoring
-    description: GlitchTip can ping your site and warn you when it's not responding.
-      It can also send you an alert via email or webhook if it doesn't receive
-      your scheduled ping.
+    description:
+      GlitchTip can ping your site and warn you when it's not responding. It can
+      also send you an alert via email or webhook if it doesn't receive your
+      scheduled ping.
 features:
   - title: Error Tracking
-    description: GlitchTip allows you to report your website or application's
-      exceptions, log messages, Content Security Policy violations, and more to
-      one place for triage and resolution.
+    description:
+      GlitchTip allows you to report your website or application's exceptions,
+      log messages, Content Security Policy violations, and more to one place
+      for triage and resolution.
   - title: Application Performance Monitoring
-    description: GlitchTip provides a simple, out of the box approach to application
+    description:
+      GlitchTip provides a simple, out of the box approach to application
       performance monitoring. It helps you to identify your slowest web
       requests, database calls, and other transactions.
   - title: Uptime Monitoring
-    description: GlitchTip can ping your site and warn you when it's not responding.
-      It can also reverse this process and send GlitchTip a request on schedule.
-      If GlitchTip doesn't receive your ping, it will send you an alert.
+    description:
+      GlitchTip can ping your site and warn you when it's not responding. It can
+      also reverse this process and send GlitchTip a request on schedule. If
+      GlitchTip doesn't receive your ping, it will send you an alert.
 tags:
   - Monitoring
   - Developer Tools

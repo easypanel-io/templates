@@ -1,18 +1,19 @@
 name: Duplicati
-description: Duplicati is a free, open-source backup software designed to store
-  encrypted backups online. It is compatible with Windows, macOS, and Linux. The
-  software works with standard protocols like FTP, SSH, WebDAV, and popular
-  services such as Backblaze B2, Tardigrade, Microsoft OneDrive, Amazon S3,
-  Google Drive, box.com, Mega, hubiC, and many others. Duplicati allows you to
-  backup files and folders with strong AES-256 encryption, saving space with
-  incremental backups and data deduplication. It can run backups on any machine
-  through a web-based interface or via command line interface. Duplicati has a
-  built-in scheduler and auto-updater, ensuring your backups are always
-  up-to-date. It is designed for online backups from scratch, handling network
-  issues efficiently. For instance, interrupted backups can be resumed, and
-  Duplicati regularly tests the content of backups, detecting broken backups on
-  corrupt storage systems before it’s too late. The software is configured by a
-  web interface that runs in any browser and can be accessed from anywhere.
+description:
+  Duplicati is a free, open-source backup software designed to store encrypted
+  backups online. It is compatible with Windows, macOS, and Linux. The software
+  works with standard protocols like FTP, SSH, WebDAV, and popular services such
+  as Backblaze B2, Tardigrade, Microsoft OneDrive, Amazon S3, Google Drive,
+  box.com, Mega, hubiC, and many others. Duplicati allows you to backup files
+  and folders with strong AES-256 encryption, saving space with incremental
+  backups and data deduplication. It can run backups on any machine through a
+  web-based interface or via command line interface. Duplicati has a built-in
+  scheduler and auto-updater, ensuring your backups are always up-to-date. It is
+  designed for online backups from scratch, handling network issues efficiently.
+  For instance, interrupted backups can be resumed, and Duplicati regularly
+  tests the content of backups, detecting broken backups on corrupt storage
+  systems before it’s too late. The software is configured by a web interface
+  that runs in any browser and can be accessed from anywhere.
 instructions: null
 changeLog:
   - date: 2022-08-05
@@ -44,34 +45,41 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/duplicati:2.0.6
+      default: lscr.io/linuxserver/duplicati:2.0.8
 benefits:
   - title: Secure Backup
-    description: Duplicati is a free backup software that securely stores encrypted
-      backups online, ensuring your data is safe and protected.
+    description:
+      Duplicati is a free backup software that securely stores encrypted backups
+      online, ensuring your data is safe and protected.
   - title: Efficient Data Handling
-    description: Designed for online backups from scratch, Duplicati is not only
-      data efficient but also handles network issues effectively. Interrupted
-      backups can be resumed and the content of backups is tested regularly.
+    description:
+      Designed for online backups from scratch, Duplicati is not only data
+      efficient but also handles network issues effectively. Interrupted backups
+      can be resumed and the content of backups is tested regularly.
   - title: Accessible Anywhere
-    description: With a web-based interface that runs in any browser, Duplicati can
-      be accessed from anywhere. This makes it ideal for use on headless
-      machines like a NAS (network attached storage).
+    description:
+      With a web-based interface that runs in any browser, Duplicati can be
+      accessed from anywhere. This makes it ideal for use on headless machines
+      like a NAS (network attached storage).
 features:
   - title: Strong Encryption
-    description: Duplicati uses strong AES-256 encryption to protect your privacy.
-      You can also use GPG to encrypt your backup, ensuring your data is secure.
+    description:
+      Duplicati uses strong AES-256 encryption to protect your privacy. You can
+      also use GPG to encrypt your backup, ensuring your data is secure.
   - title: Supports Many Backends
-    description: Duplicati works with standard protocols like FTP, SSH, WebDAV as
-      well as popular services like Backblaze B2, Tardigrade, Microsoft
-      OneDrive, Amazon S3, Google Drive, box.com, Mega, hubiC and many others.
+    description:
+      Duplicati works with standard protocols like FTP, SSH, WebDAV as well as
+      popular services like Backblaze B2, Tardigrade, Microsoft OneDrive, Amazon
+      S3, Google Drive, box.com, Mega, hubiC and many others.
   - title: Incremental Backups and Data Deduplication
-    description: Save space with incremental backups and data deduplication.
-      Duplicati uploads a full backup initially and stores smaller, incremental
-      updates afterwards to save bandwidth and storage space.
+    description:
+      Save space with incremental backups and data deduplication. Duplicati
+      uploads a full backup initially and stores smaller, incremental updates
+      afterwards to save bandwidth and storage space.
   - title: Built-in Scheduler and Auto-updater
-    description: Duplicati has a built-in scheduler and auto-updater, keeping your
-      backups up-to-date automatically.
+    description:
+      Duplicati has a built-in scheduler and auto-updater, keeping your backups
+      up-to-date automatically.
 tags:
   - Backup
   - Data Security

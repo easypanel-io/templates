@@ -1,7 +1,8 @@
 ---
 name: Whisparr
-description: Whisparr is an adult video collection manager designed for Usenet
-  and BitTorrent users. It monitors multiple RSS feeds for new adult content and
+description:
+  Whisparr is an adult video collection manager designed for Usenet and
+  BitTorrent users. It monitors multiple RSS feeds for new adult content and
   interfaces with clients and indexers to grab, sort, and rename them. Whisparr
   also features automatic upgrades of existing files in your library to better
   quality formats when available. It includes a calendar to track upcoming
@@ -43,22 +44,29 @@ schema:
       default: hotio/whisparr:latest
 benefits:
   - title: Automated Adult Video Management
-    description: Automatically monitors RSS feeds for new adult content,
-      streamlining your collection process.
+    description:
+      Automatically monitors RSS feeds for new adult content, streamlining your
+      collection process.
   - title: Quality Upgrades
-    description: Automatically upgrades the quality of existing files in your
-      library when better formats become available.
+    description:
+      Automatically upgrades the quality of existing files in your library when
+      better formats become available.
   - title: Failed Download Handling
-    description: Automatically handles failed downloads, saving time and frustration.
+    description:
+      Automatically handles failed downloads, saving time and frustration.
 features:
   - title: Calendar
-    description: Track your upcoming adult content releases in one convenient location.
+    description:
+      Track your upcoming adult content releases in one convenient location.
   - title: Manual Search
     description: Manually search and select the adult content you want.
   - title: Custom Formats
-    description: Fine control over release prioritization and selection with custom formats.
+    description:
+      Fine control over release prioritization and selection with custom
+      formats.
   - title: Integration with Download Clients
-    description: Full integration with major download clients for seamless content
+    description:
+      Full integration with major download clients for seamless content
       management.
   - title: Metadata Importing
     description: Imports metadata, enhancing your adult content collection.

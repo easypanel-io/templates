@@ -1,16 +1,18 @@
 name: Budibase
-description: Budibase is an open-source platform designed to simplify the
-  creation of internal tools, saving teams hundreds of hours in the process.
-  With Budibase, you can generate powerful internal tools and forms in just a
-  few seconds, without any coding experience required. The platform allows you
-  to connect to an external database, pull data from a Rest API, import a CSV,
-  or start from scratch with Budibase's built-in database. You can design your
-  tools using drag-and-drop components and automate workflows with just a few
-  clicks. Budibase is trusted by over 75,000 teams and is designed to speed up
-  your business operations. Whether you need to collect data securely, automate
+description:
+  Budibase is an open-source platform designed to simplify the creation of
+  internal tools, saving teams hundreds of hours in the process. With Budibase,
+  you can generate powerful internal tools and forms in just a few seconds,
+  without any coding experience required. The platform allows you to connect to
+  an external database, pull data from a Rest API, import a CSV, or start from
+  scratch with Budibase's built-in database. You can design your tools using
+  drag-and-drop components and automate workflows with just a few clicks.
+  Budibase is trusted by over 75,000 teams and is designed to speed up your
+  business operations. Whether you need to collect data securely, automate
   tasks, or streamline operations, Budibase has you covered.
-instructions: Budibase takes a few minutes to get ready. Sit back, relax, and
-  have a cup of tea!
+instructions:
+  Budibase takes a few minutes to get ready. Sit back, relax, and have a cup of
+  tea!
 changeLog:
   - date: 2022-10-30
     description: first release
@@ -45,40 +47,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: budibase/budibase:2.21.8
+      default: budibase/budibase:2.27.3
 benefits:
   - title: Efficiency and Speed
-    description: Budibase saves teams hundreds of hours by simplifying the process
-      of building internal tools. It allows you to create solutions that speed
-      up your business operations.
+    description:
+      Budibase saves teams hundreds of hours by simplifying the process of
+      building internal tools. It allows you to create solutions that speed up
+      your business operations.
   - title: No Coding Experience Required
-    description: With Budibase, you don't need any coding experience to create
-      powerful internal tools and forms. Its user-friendly interface allows you
-      to design your tools with drag-and-drop components.
+    description:
+      With Budibase, you don't need any coding experience to create powerful
+      internal tools and forms. Its user-friendly interface allows you to design
+      your tools with drag-and-drop components.
   - title: Automate Workflows
-    description: Budibase allows you to automate tasks and workflows with ease. With
-      just a few clicks, you can automate manual processes and streamline
-      operations within your app and business.
+    description:
+      Budibase allows you to automate tasks and workflows with ease. With just a
+      few clicks, you can automate manual processes and streamline operations
+      within your app and business.
   - title: Data Integration
-    description: Budibase allows you to connect to an external database, pull data
-      from a Rest API, import a CSV, or start from scratch with Budibase's
-      built-in database. You can turn your data into an app with just one click.
+    description:
+      Budibase allows you to connect to an external database, pull data from a
+      Rest API, import a CSV, or start from scratch with Budibase's built-in
+      database. You can turn your data into an app with just one click.
 features:
   - title: Data Collection
-    description: Budibase allows you to collect data securely on top of any
-      database. It provides a platform for adding visitor contacts and managing
-      company visits.
+    description:
+      Budibase allows you to collect data securely on top of any database. It
+      provides a platform for adding visitor contacts and managing company
+      visits.
   - title: Notification System
-    description: Budibase comes with a built-in notification system that sends
-      alerts for new visitors or actions taken within the app.
+    description:
+      Budibase comes with a built-in notification system that sends alerts for
+      new visitors or actions taken within the app.
   - title: Design Flexibility
-    description: Budibase provides pre-made blocks and a drag-and-drop interface for
+    description:
+      Budibase provides pre-made blocks and a drag-and-drop interface for
       designing internal tools. It allows you to deliver internal tools that
       look beautiful and work perfectly across mobile, tablet, and desktop.
   - title: Hosting Options
-    description: Budibase offers flexible hosting options. You can self-host using
-      Docker, Kubernetes, or Digital Ocean, or choose Budibase Cloud and let
-      Budibase manage everything for you.
+    description:
+      Budibase offers flexible hosting options. You can self-host using Docker,
+      Kubernetes, or Digital Ocean, or choose Budibase Cloud and let Budibase
+      manage everything for you.
 tags:
   - No-Code
   - Internal tools

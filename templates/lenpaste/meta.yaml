@@ -1,13 +1,14 @@
 name: Lenpaste
-description: Lenpaste is a web service that allows you to share notes
-  anonymously. It is an open-source alternative to pastebin.com. The app
-  supports multiple languages and uses cookies only to store settings. It can
-  work without JavaScript and has its own API. Lenpaste allows you to set
-  maximum length for the paste title and body, maximum lifetime of the paste,
-  and rate limits for viewing and creating pastes. It also provides options to
-  prohibit search engine crawlers from indexing the site and to set information
-  about the server admin. Lenpaste is self-hosted and provides a list of public
-  servers managed by various contributors.
+description:
+  Lenpaste is a web service that allows you to share notes anonymously. It is an
+  open-source alternative to pastebin.com. The app supports multiple languages
+  and uses cookies only to store settings. It can work without JavaScript and
+  has its own API. Lenpaste allows you to set maximum length for the paste title
+  and body, maximum lifetime of the paste, and rate limits for viewing and
+  creating pastes. It also provides options to prohibit search engine crawlers
+  from indexing the site and to set information about the server admin. Lenpaste
+  is self-hosted and provides a list of public servers managed by various
+  contributors.
 instructions: null
 changeLog:
   - date: 2023-1-28
@@ -44,30 +45,38 @@ schema:
       default: git.lcomrade.su/root/lenpaste:1.3
 benefits:
   - title: Anonymity
-    description: Lenpaste allows you to share notes anonymously, ensuring your
-      privacy and confidentiality.
+    description:
+      Lenpaste allows you to share notes anonymously, ensuring your privacy and
+      confidentiality.
   - title: No Registration Required
-    description: With Lenpaste, there's no need to go through a lengthy sign-up
-      process. You can start sharing notes immediately.
+    description:
+      With Lenpaste, there's no need to go through a lengthy sign-up process.
+      You can start sharing notes immediately.
   - title: Multilingual Support
-    description: Lenpaste supports multiple languages, making it accessible to users
-      from different linguistic backgrounds.
+    description:
+      Lenpaste supports multiple languages, making it accessible to users from
+      different linguistic backgrounds.
   - title: Self-Hosted
-    description: Lenpaste is open-source and self-hosted, giving you full control
-      over your data and usage.
+    description:
+      Lenpaste is open-source and self-hosted, giving you full control over your
+      data and usage.
 features:
   - title: Note Sharing
-    description: Lenpaste allows you to easily share notes with others. It's a great
-      tool for quickly sharing text or code snippets.
+    description:
+      Lenpaste allows you to easily share notes with others. It's a great tool
+      for quickly sharing text or code snippets.
   - title: Multiple Language Support
-    description: Lenpaste supports multiple languages, ensuring that users from
-      different linguistic backgrounds can use the app with ease.
+    description:
+      Lenpaste supports multiple languages, ensuring that users from different
+      linguistic backgrounds can use the app with ease.
   - title: Customizable Settings
-    description: Lenpaste uses cookies only to store settings, allowing you to
-      customize your user experience according to your preferences.
+    description:
+      Lenpaste uses cookies only to store settings, allowing you to customize
+      your user experience according to your preferences.
   - title: API Availability
-    description: Lenpaste has its own API, enabling developers to integrate it with
-      other applications or services.
+    description:
+      Lenpaste has its own API, enabling developers to integrate it with other
+      applications or services.
 tags:
   - Code Hosting
   - Documents

@@ -1,13 +1,14 @@
 name: Flarum
-description: Experience a modern, fast, and free forum experience with our app.
-  Designed with an elegant UI, our app is mobile-first, easily stylable, and
-  lightweight, ensuring a seamless experience on any device. It prioritizes
-  security and trust, providing a safe environment for users. The app is also
-  localised into many languages, with 41 translation packs available, making it
-  accessible to users worldwide. Whether you're a leading telephone network
-  serving millions of customers, an avid adventurer sharing your experiences, or
-  a provider of communication and entertainment, our app is the perfect platform
-  for you. It's not just a forum, it's a revolution in community engagement.
+description:
+  Experience a modern, fast, and free forum experience with our app. Designed
+  with an elegant UI, our app is mobile-first, easily stylable, and lightweight,
+  ensuring a seamless experience on any device. It prioritizes security and
+  trust, providing a safe environment for users. The app is also localised into
+  many languages, with 41 translation packs available, making it accessible to
+  users worldwide. Whether you're a leading telephone network serving millions
+  of customers, an avid adventurer sharing your experiences, or a provider of
+  communication and entertainment, our app is the perfect platform for you. It's
+  not just a forum, it's a revolution in community engagement.
 instructions: Please use the credentials flarum:flarum to login.
 changeLog:
   - date: 2022-10-31
@@ -45,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: crazymax/flarum:1.6.2
+      default: crazymax/flarum:1.8.5
     databaseType:
       type: string
       title: Database Type
@@ -79,9 +80,9 @@ schema:
 benefits:
   - title: Modern and Fast
     description:
-      The app is designed with a modern and elegant user interface that
-      is also mobile-first, ensuring a seamless and enjoyable user experience.
-      It is also fast and light, providing quick response times and a smooth
+      The app is designed with a modern and elegant user interface that is also
+      mobile-first, ensuring a seamless and enjoyable user experience. It is
+      also fast and light, providing quick response times and a smooth
       operation.
   - title: Secure and Trusted
     description:
@@ -90,41 +91,41 @@ benefits:
       and ensure your privacy.
   - title: Localized
     description:
-      The app is localized into many languages with 41 translation packs,
-      making it accessible and easy to use for people all around the world.
+      The app is localized into many languages with 41 translation packs, making
+      it accessible and easy to use for people all around the world.
   - title: Extensible and Stylable
     description:
-      The app is extensible, allowing for additional functionalities to
-      be added as needed. It is also stylable, giving you the freedom to
-      customize its appearance to suit your preferences.
+      The app is extensible, allowing for additional functionalities to be added
+      as needed. It is also stylable, giving you the freedom to customize its
+      appearance to suit your preferences.
 features:
   - title: Elegant User Interface
     description:
-      The app features an elegant user interface that is modern and easy
-      to navigate. It is designed with a mobile-first approach, ensuring a
-      seamless experience across all devices.
+      The app features an elegant user interface that is modern and easy to
+      navigate. It is designed with a mobile-first approach, ensuring a seamless
+      experience across all devices.
   - title: Fast and Light
     description:
-      The app is designed to be fast and light, providing quick response
-      times and a smooth operation. This ensures a seamless and enjoyable user
+      The app is designed to be fast and light, providing quick response times
+      and a smooth operation. This ensures a seamless and enjoyable user
       experience.
   - title: Secure
     description:
-      The app has robust security measures in place to protect your data
-      and ensure your privacy. It is trusted by many users worldwide.
+      The app has robust security measures in place to protect your data and
+      ensure your privacy. It is trusted by many users worldwide.
   - title: Localized
     description:
-      The app is localized into many languages with 41 translation packs,
-      making it accessible and easy to use for people all around the world.
+      The app is localized into many languages with 41 translation packs, making
+      it accessible and easy to use for people all around the world.
   - title: Extensible
     description:
-      The app is extensible, allowing for additional functionalities to
-      be added as needed. This ensures that the app can adapt to your changing
-      needs.
+      The app is extensible, allowing for additional functionalities to be added
+      as needed. This ensures that the app can adapt to your changing needs.
   - title: Stylable
-    description: The app is stylable, giving you the freedom to customize its
-      appearance to suit your preferences. This allows you to create a unique
-      and personalized user experience.
+    description:
+      The app is stylable, giving you the freedom to customize its appearance to
+      suit your preferences. This allows you to create a unique and personalized
+      user experience.
 tags:
   - Forums
   - Communication
