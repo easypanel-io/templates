@@ -1,13 +1,15 @@
 name: Cronicle
-description: Cronicle is a powerful, multi-server task scheduler and runner,
-  with an easy-to-use web-based interface. It allows you to schedule and run
-  scripts, commands, or software programs on a recurring basis, similar to cron
-  jobs but with the added capability of visual management and log tracking.
-  Cronicle supports complex workflows including dependencies between tasks, and
-  it can distribute tasks across multiple servers for load balancing. It's ideal
-  for automating backups, updates, data processing tasks, and more in a
-  distributed environment.
-instructions: The default username is 'admin' and the default password is 'admin'
+description:
+  Cronicle is a powerful, multi-server task scheduler and runner, with an
+  easy-to-use web-based interface. It allows you to schedule and run scripts,
+  commands, or software programs on a recurring basis, similar to cron jobs but
+  with the added capability of visual management and log tracking. Cronicle
+  supports complex workflows including dependencies between tasks, and it can
+  distribute tasks across multiple servers for load balancing. It's ideal for
+  automating backups, updates, data processing tasks, and more in a distributed
+  environment.
+instructions:
+  The default username is 'admin' and the default password is 'admin'
 changeLog:
   - date: 2024-03-18
     description: added template
@@ -39,20 +41,30 @@ schema:
       default: soulteary/cronicle:0.9.46
 benefits:
   - title: Automated Task Scheduling
-    description: Automate recurring tasks with precise scheduling and dependency management.
+    description:
+      Automate recurring tasks with precise scheduling and dependency
+      management.
   - title: Multi-Server Support
-    description: EDistribute tasks across multiple servers for improved performance and redundancy.
+    description:
+      EDistribute tasks across multiple servers for improved performance and
+      redundancy.
   - title: Visual Management
-    description: Manage tasks, view logs, and monitor performance through an easy-to-use web interface.
+    description:
+      Manage tasks, view logs, and monitor performance through an easy-to-use
+      web interface.
 features:
   - title: Web-Based Interface
     description: A user-friendly web interface for managing scheduled tasks.
   - title: Support for Complex Workflows
     description: Handle complex task dependencies and conditional execution.
   - title: Distributed Execution
-    description: Run tasks across multiple servers, balancing load and ensuring high availability.
+    description:
+      Run tasks across multiple servers, balancing load and ensuring high
+      availability.
   - title: Detailed Logging
-    description: Keep detailed logs of all task executions for auditing and troubleshooting.
+    description:
+      Keep detailed logs of all task executions for auditing and
+      troubleshooting.
 tags:
   - Automation
   - Task Scheduler

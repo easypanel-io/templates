@@ -1,7 +1,8 @@
 name: Easyshortener
-description: Easyshortener is a multi-user link shortening application designed
-  for simplicity and security. It allows multiple users to manage their links
-  from a built-in administration panel. The app is built with a focus on user
+description:
+  Easyshortener is a multi-user link shortening application designed for
+  simplicity and security. It allows multiple users to manage their links from a
+  built-in administration panel. The app is built with a focus on user
   experience, ensuring it is easy to use. It also features built-in two-factor
   authentication, providing an extra layer of security for your peace of mind.
   Easyshortener is built for Docker, making it easy to deploy with your favorite
@@ -43,38 +44,41 @@ schema:
       default: easyshortener-db
 benefits:
   - title: Efficient URL Management
-    description: With the Easyshortener app, managing multiple URLs becomes a
-      breeze. It allows multiple users to manage their URLs from a single,
-      built-in administration panel.
+    description:
+      With the Easyshortener app, managing multiple URLs becomes a breeze. It
+      allows multiple users to manage their URLs from a single, built-in
+      administration panel.
   - title: Enhanced Security
-    description: The app ensures your peace of mind with its built-in two-factor
+    description:
+      The app ensures your peace of mind with its built-in two-factor
       authentication feature. This adds an extra layer of security to your
       account, making it more difficult for unauthorized users to gain access.
   - title: User-friendly Interface
     description:
-      Easyshortener is designed with a focus on user experience. It is
-      easy to use and provides a seamless experience, making URL management
-      simple and efficient.
+      Easyshortener is designed with a focus on user experience. It is easy to
+      use and provides a seamless experience, making URL management simple and
+      efficient.
   - title: Optimized for Docker
     description:
-      The app is built for Docker, making it easier to deploy and run on
-      your favorite container engine.
+      The app is built for Docker, making it easier to deploy and run on your
+      favorite container engine.
 features:
   - title: Multi-User Support
     description:
-      Easyshortener supports multiple users, allowing you to manage all
-      of them from the built-in administration panel.
+      Easyshortener supports multiple users, allowing you to manage all of them
+      from the built-in administration panel.
   - title: Two Factor Authentication
     description:
       The app comes with a built-in two-factor authentication feature for
       enhanced security.
   - title: Ease of Use
-    description: The app is crafted with love and care to provide the best
-      experience possible. It is easy to use and navigate.
+    description:
+      The app is crafted with love and care to provide the best experience
+      possible. It is easy to use and navigate.
   - title: Docker Compatibility
     description:
-      Easyshortener is built for Docker, allowing you to easily deploy it
-      with your favorite container engine.
+      Easyshortener is built for Docker, allowing you to easily deploy it with
+      your favorite container engine.
 tags:
   - URL Shortener
   - Link Management

@@ -1,12 +1,13 @@
 name: pgweb
-description: Pgweb is a simple, web-based, cross-platform PostgreSQL database
-  explorer. It is designed to work seamlessly on Mac, Linux, and Windows
-  machines. The app is distributed as a single binary with zero dependencies,
-  making it incredibly easy to use. It supports PostgreSQL 9.1 and later
-  versions, and allows for multiple database sessions. With Pgweb, you can
-  execute and analyze custom SQL queries, export table and query data to
-  CSV/JSON/XML, and keep track of your query history. The app also supports
-  native SSH tunnels and server bookmarks for easy navigation.
+description:
+  Pgweb is a simple, web-based, cross-platform PostgreSQL database explorer. It
+  is designed to work seamlessly on Mac, Linux, and Windows machines. The app is
+  distributed as a single binary with zero dependencies, making it incredibly
+  easy to use. It supports PostgreSQL 9.1 and later versions, and allows for
+  multiple database sessions. With Pgweb, you can execute and analyze custom SQL
+  queries, export table and query data to CSV/JSON/XML, and keep track of your
+  query history. The app also supports native SSH tunnels and server bookmarks
+  for easy navigation.
 instructions: null
 changeLog:
   - date: 2023-3-15
@@ -39,37 +40,38 @@ schema:
       default: sosedoff/pgweb:0.15.0
 benefits:
   - title: Cross-Platform Compatibility
-    description: Pgweb is a web-based PostgreSQL database explorer that works
-      seamlessly across Mac, Linux, and Windows machines, making it a versatile
-      tool for database management.
+    description:
+      Pgweb is a web-based PostgreSQL database explorer that works seamlessly
+      across Mac, Linux, and Windows machines, making it a versatile tool for
+      database management.
   - title: Zero Dependencies
     description:
-      The app is distributed as a simple binary with zero dependencies,
-      making it extremely easy to use.
+      The app is distributed as a simple binary with zero dependencies, making
+      it extremely easy to use.
   - title: Supports Multiple Database Sessions
     description:
-      Pgweb supports multiple database sessions, allowing you to manage
-      and interact with multiple databases simultaneously.
+      Pgweb supports multiple database sessions, allowing you to manage and
+      interact with multiple databases simultaneously.
 features:
   - title: Native SSH Tunnels
     description:
-      Pgweb supports native SSH tunnels, providing secure and encrypted
-      channels for database communication.
+      Pgweb supports native SSH tunnels, providing secure and encrypted channels
+      for database communication.
   - title: Custom SQL Queries
-    description: With Pgweb, you can execute and analyze custom SQL queries,
-      providing you with the flexibility to interact with your database as
-      needed.
+    description:
+      With Pgweb, you can execute and analyze custom SQL queries, providing you
+      with the flexibility to interact with your database as needed.
   - title: Data Export
     description:
-      Pgweb allows you to export table and query data to CSV, JSON, and
-      XML formats, making data migration and backup a breeze.
+      Pgweb allows you to export table and query data to CSV, JSON, and XML
+      formats, making data migration and backup a breeze.
   - title: Query History
     description:
-      The app keeps a history of your queries, allowing you to revisit
-      and analyze past database interactions.
+      The app keeps a history of your queries, allowing you to revisit and
+      analyze past database interactions.
   - title: Server Bookmarks
     description:
-      Pgweb allows you to bookmark your servers for quick and easy access
-      in the future.
+      Pgweb allows you to bookmark your servers for quick and easy access in the
+      future.
 tags:
   - Databases

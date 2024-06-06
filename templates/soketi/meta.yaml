@@ -1,5 +1,6 @@
 name: Soketi
-description: Soketi Serverless is an open-source WebSockets server that offers a
+description:
+  Soketi Serverless is an open-source WebSockets server that offers a
   cost-effective, fast, and resilient solution for real-time deployment to
   Cloudflare. It is designed to be cheaper than any competitor, as you only pay
   for your infrastructure. It guarantees core message delivery in less than
@@ -67,38 +68,41 @@ schema:
 benefits:
   - title: Cost Effective
     description:
-      Soketi Serverless is cheaper than any competitor because you only
-      pay for your infrastructure. Whether it's your basement server or cloud,
-      it fits and runs. It can be as cheap as $5 on DigitalOcean.
+      Soketi Serverless is cheaper than any competitor because you only pay for
+      your infrastructure. Whether it's your basement server or cloud, it fits
+      and runs. It can be as cheap as $5 on DigitalOcean.
   - title: Fast and Resilient
-    description: Guaranteed core message delivery in less than 100ms. Soketi is
-      built with one of the fastest available technologies, making it blazing
-      fast. It is also resilient enough to maintain performance even when scaled
-      to hundreds of servers.
+    description:
+      Guaranteed core message delivery in less than 100ms. Soketi is built with
+      one of the fastest available technologies, making it blazing fast. It is
+      also resilient enough to maintain performance even when scaled to hundreds
+      of servers.
   - title: Pusher Compatible
-    description: Soketi uses the Pusher Protocol v7, meaning you don't need to
-      replace your existing code. You just connect to the server.
+    description:
+      Soketi uses the Pusher Protocol v7, meaning you don't need to replace your
+      existing code. You just connect to the server.
   - title: Ready for Production
-    description: Soketi is ready for production. You can scale it to hundreds of
-      servers with Redis or NATS and it will maintain its performance. It is
-      resilient enough for you to have a good night's sleep.
+    description:
+      Soketi is ready for production. You can scale it to hundreds of servers
+      with Redis or NATS and it will maintain its performance. It is resilient
+      enough for you to have a good night's sleep.
 features:
   - title: Built-in App Management
-    description: Just like Pusher, you can define your own app credentials with
-      Soketi. You don't even need Pusher for it, and you can read from any
-      database.
+    description:
+      Just like Pusher, you can define your own app credentials with Soketi. You
+      don't even need Pusher for it, and you can read from any database.
   - title: HTTP Webhooks
     description:
-      Soketi can trigger HTTP requests whenever a channel gets occupied.
-      Pair it with Lambda functions and Soketi will invoke them for you.
+      Soketi can trigger HTTP requests whenever a channel gets occupied. Pair it
+      with Lambda functions and Soketi will invoke them for you.
   - title: Unlimited Connections and Messages
     description:
-      Soketi offers unlimited peak connections and messages per month.
-      The maximum message size and members per channel are also configurable.
+      Soketi offers unlimited peak connections and messages per month. The
+      maximum message size and members per channel are also configurable.
   - title: Deployable on Cloudflare
     description:
-      Soketi can be deployed to Cloudflare Workers, bringing it closer to
-      your users all around the world.
+      Soketi can be deployed to Cloudflare Workers, bringing it closer to your
+      users all around the world.
 tags:
   - Developer Tools
   - Communication

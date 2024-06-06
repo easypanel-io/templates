@@ -1,17 +1,18 @@
 name: phpMyAdmin
-description: phpMyAdmin is a free software tool designed to manage MySQL over
-  the web. This powerful tool supports a broad spectrum of operations on MySQL
-  and MariaDB. It allows you to perform frequently used operations such as
-  managing databases, tables, columns, relations, indexes, users, permissions,
-  and more through its user-friendly interface. Additionally, it provides the
-  flexibility to directly execute any SQL statement. phpMyAdmin also features an
-  intuitive web interface and supports most MySQL features. You can browse and
-  drop databases, tables, views, fields, and indexes; create, copy, drop,
-  rename, and alter databases, tables, fields, and indexes; manage MySQL user
-  accounts and privileges; and much more. It also allows you to import data from
-  CSV and SQL, export data to various formats, administer multiple servers,
-  create graphics of your database layout in various formats, and create complex
-  queries using Query-by-example (QBE).
+description:
+  phpMyAdmin is a free software tool designed to manage MySQL over the web. This
+  powerful tool supports a broad spectrum of operations on MySQL and MariaDB. It
+  allows you to perform frequently used operations such as managing databases,
+  tables, columns, relations, indexes, users, permissions, and more through its
+  user-friendly interface. Additionally, it provides the flexibility to directly
+  execute any SQL statement. phpMyAdmin also features an intuitive web interface
+  and supports most MySQL features. You can browse and drop databases, tables,
+  views, fields, and indexes; create, copy, drop, rename, and alter databases,
+  tables, fields, and indexes; manage MySQL user accounts and privileges; and
+  much more. It also allows you to import data from CSV and SQL, export data to
+  various formats, administer multiple servers, create graphics of your database
+  layout in various formats, and create complex queries using Query-by-example
+  (QBE).
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -63,24 +64,29 @@ benefits:
       languages and supports both left-to-right and right-to-left languages.
 features:
   - title: Wide Range of MySQL Operations
-    description: phpMyAdmin supports a wide range of operations on MySQL and
-      MariaDB. You can browse and drop databases, tables, views, fields, and
-      indexes; create, copy, drop, rename, and alter databases, tables, fields,
-      and indexes; manage MySQL user accounts and privileges; and much more.
+    description:
+      phpMyAdmin supports a wide range of operations on MySQL and MariaDB. You
+      can browse and drop databases, tables, views, fields, and indexes; create,
+      copy, drop, rename, and alter databases, tables, fields, and indexes;
+      manage MySQL user accounts and privileges; and much more.
   - title: Direct SQL Statement Execution
-    description: phpMyAdmin allows you to directly execute any SQL statement,
-      providing you with the flexibility to perform complex operations.
+    description:
+      phpMyAdmin allows you to directly execute any SQL statement, providing you
+      with the flexibility to perform complex operations.
   - title: Data Import and Export
-    description: With phpMyAdmin, you can import data from CSV and SQL files and
-      export data to various formats including CSV, SQL, XML, PDF, ISO/IEC 26300
-      - OpenDocument Text and Spreadsheet, Word, LATEX, and others.
+    description:
+      With phpMyAdmin, you can import data from CSV and SQL files and export
+      data to various formats including CSV, SQL, XML, PDF, ISO/IEC 26300 -
+      OpenDocument Text and Spreadsheet, Word, LATEX, and others.
   - title: Complex Query Creation
-    description: phpMyAdmin enables you to create complex queries using
-      Query-by-example (QBE), making it easier to search globally in a database
-      or a subset of it.
+    description:
+      phpMyAdmin enables you to create complex queries using Query-by-example
+      (QBE), making it easier to search globally in a database or a subset of
+      it.
   - title: Data Transformation
-    description: phpMyAdmin allows you to transform stored data into any format
-      using a set of predefined functions, like displaying BLOB-data as image or
+    description:
+      phpMyAdmin allows you to transform stored data into any format using a set
+      of predefined functions, like displaying BLOB-data as image or
       download-link.
 tags:
   - Databases

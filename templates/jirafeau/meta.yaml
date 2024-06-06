@@ -1,15 +1,16 @@
 name: Jirafeau
-description: Jirafeau is an open-source software designed for simple and
-  efficient file sharing. It operates on a 'one-click-filesharing' principle,
-  where you select your file, upload it, and share a link. The app allows you to
-  send large files without any size limit, thanks to the HTML5 file API. It also
-  provides a real-time progress report, showing speed, percentage, and remaining
-  upload time. Jirafeau offers optional password protection for both uploading
-  and downloading, and you can set an expiration time for downloads. The app
-  also has a self-destruct feature, which deletes the file after the first
-  download. It uses base 64 encoding to shorten URLs and allows for maximal
-  upload size configuration. Jirafeau also features optional data encryption and
-  a small administration interface.
+description:
+  Jirafeau is an open-source software designed for simple and efficient file
+  sharing. It operates on a 'one-click-filesharing' principle, where you select
+  your file, upload it, and share a link. The app allows you to send large files
+  without any size limit, thanks to the HTML5 file API. It also provides a
+  real-time progress report, showing speed, percentage, and remaining upload
+  time. Jirafeau offers optional password protection for both uploading and
+  downloading, and you can set an expiration time for downloads. The app also
+  has a self-destruct feature, which deletes the file after the first download.
+  It uses base 64 encoding to shorten URLs and allows for maximal upload size
+  configuration. Jirafeau also features optional data encryption and a small
+  administration interface.
 instructions: null
 changeLog:
   - date: 2022-11-22
@@ -41,23 +42,23 @@ schema:
 benefits:
   - title: Effortless File Sharing
     description:
-      Jirafeau makes file sharing a breeze. With just a few clicks, you
-      can upload and share your files. No need for complex setups or
-      configurations.
+      Jirafeau makes file sharing a breeze. With just a few clicks, you can
+      upload and share your files. No need for complex setups or configurations.
   - title: Secure and Private
     description:
       Your files are safe with Jirafeau. The app offers optional password
       protection for both uploading and downloading files, ensuring your data
       remains secure.
   - title: Control Over Your Files
-    description: Jirafeau gives you control over your shared files. You can set
-      expiration times for downloads and even opt for files to self-destruct
-      after the first download.
+    description:
+      Jirafeau gives you control over your shared files. You can set expiration
+      times for downloads and even opt for files to self-destruct after the
+      first download.
 features:
   - title: One-Click File Sharing
     description:
-      Jirafeau simplifies file sharing. Simply select your file, upload
-      it, and share the link. It's as easy as 1-2-3.
+      Jirafeau simplifies file sharing. Simply select your file, upload it, and
+      share the link. It's as easy as 1-2-3.
   - title: Large File Support
     description:
       With Jirafeau, you can send large files without worrying about size
@@ -68,12 +69,13 @@ features:
       Jirafeau shows the progress of your file upload, including speed,
       percentage, and remaining upload time.
   - title: Content Preview
-    description: Jirafeau allows you to preview content in your browser, if
-      possible, before downloading.
+    description:
+      Jirafeau allows you to preview content in your browser, if possible,
+      before downloading.
   - title: File Deduplication
     description:
-      Jirafeau optimizes storage by not storing duplicate files. Instead,
-      it generates multiple links for the same file.
+      Jirafeau optimizes storage by not storing duplicate files. Instead, it
+      generates multiple links for the same file.
   - title: Optional Data Encryption
     description:
       For added security, Jirafeau offers optional data encryption. The

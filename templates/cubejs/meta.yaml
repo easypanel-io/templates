@@ -1,11 +1,12 @@
 name: CubeJS
-description: Cube is a Semantic Layer for every data app that aims to connect
-  data silos, drive consistent metrics, and power your AI and analytics with
-  context. It allows you to define and manage metrics upstream to consolidate
-  your workflow, centralize definitions, and create a single source of truth.
-  The app also provides granular access controls to grant column- and role-based
-  operational and viewing permissions upstream. Cube ensures your data is
-  reliably performant with a powerful caching layer and advanced preaggregation
+description:
+  Cube is a Semantic Layer for every data app that aims to connect data silos,
+  drive consistent metrics, and power your AI and analytics with context. It
+  allows you to define and manage metrics upstream to consolidate your workflow,
+  centralize definitions, and create a single source of truth. The app also
+  provides granular access controls to grant column- and role-based operational
+  and viewing permissions upstream. Cube ensures your data is reliably
+  performant with a powerful caching layer and advanced preaggregation
   capabilities. Furthermore, it allows you to connect your data to any front-end
   application to build beautiful custom visualizations with Cube’s GraphQL,
   REST, and SQL APIs. Cube is an API-first, four-part semantic layer that
@@ -50,23 +51,26 @@ schema:
       default: cubejs-db
 benefits:
   - title: Unified Data Management
-    description: The app serves as a semantic layer for every data application,
-      connecting data silos and driving consistent metrics. It powers your AI
-      and analytics with context, creating a single source of truth for your
-      data.
+    description:
+      The app serves as a semantic layer for every data application, connecting
+      data silos and driving consistent metrics. It powers your AI and analytics
+      with context, creating a single source of truth for your data.
   - title: Enhanced Data Security
-    description: The app provides granular access controls, granting column- and
-      role-based operational and viewing permissions. It ensures that only the
-      right people have access to the right metrics.
+    description:
+      The app provides granular access controls, granting column- and role-based
+      operational and viewing permissions. It ensures that only the right people
+      have access to the right metrics.
   - title: Optimized Performance
-    description: With a powerful caching layer and advanced pre-aggregation
-      capabilities, the app ensures your data is reliably performant. It keeps
-      every downstream app updated with the latest information cost-effectively
-      and with low latency.
+    description:
+      With a powerful caching layer and advanced pre-aggregation capabilities,
+      the app ensures your data is reliably performant. It keeps every
+      downstream app updated with the latest information cost-effectively and
+      with low latency.
   - title: Universal Compatibility
-    description: The app allows you to connect your data to any front-end
-      application. With Cube’s GraphQL, REST, and SQL APIs, it provides the
-      universal compatibility data engineers and developers need.
+    description:
+      The app allows you to connect your data to any front-end application. With
+      Cube’s GraphQL, REST, and SQL APIs, it provides the universal
+      compatibility data engineers and developers need.
 features:
   - title: Data Modeling
     description:
@@ -76,20 +80,19 @@ features:
       pre-aggregate data for optimal results.
   - title: Access Control
     description:
-      Grant column- and role-based operational and viewing permissions
-      upstream with granular access controls. In the app, authorization is based
-      on the security context, and authentication tokens are generated based on
-      your API secret.
+      Grant column- and role-based operational and viewing permissions upstream
+      with granular access controls. In the app, authorization is based on the
+      security context, and authentication tokens are generated based on your
+      API secret.
   - title: Caching
     description:
-      "Ensure your data is reliably performant with a powerful caching
-      layer and advanced pre-aggregation capabilities. The app provides a
-      two-level caching system: in-memory cache and configurable
-      pre-aggregations."
+      "Ensure your data is reliably performant with a powerful caching layer and
+      advanced pre-aggregation capabilities. The app provides a two-level
+      caching system: in-memory cache and configurable pre-aggregations."
   - title: APIs
     description:
-      Connect your data to any front-end application to build beautiful
-      custom visualizations. The app’s SQL, REST, and GraphQL APIs provide the
+      Connect your data to any front-end application to build beautiful custom
+      visualizations. The app’s SQL, REST, and GraphQL APIs provide the
       universal compatibility data engineers and developers need.
 tags:
   - Analytics

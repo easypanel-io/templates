@@ -1,17 +1,18 @@
 name: Adminer
-description: Adminer is a comprehensive database management tool, designed to
-  simplify and streamline your database operations. Written in PHP, it is a
-  lightweight yet powerful tool that supports a wide range of databases
-  including MySQL, MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch,
-  MongoDB and others. With Adminer, you can easily connect to a database server
-  using a username and password, select an existing database or create a new
-  one, and manage all aspects of your database including tables, columns,
-  indexes, foreign keys, triggers, views, stored procedures, and functions. It
-  also allows you to execute any SQL command from a text field or a file, and
-  export your database structure, data, views, routines, and databases to SQL or
-  CSV. Adminer prioritizes security, user experience, performance, feature set,
-  and size, making it a reliable and efficient tool for all your database
-  management needs.
+description:
+  Adminer is a comprehensive database management tool, designed to simplify and
+  streamline your database operations. Written in PHP, it is a lightweight yet
+  powerful tool that supports a wide range of databases including MySQL,
+  MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and
+  others. With Adminer, you can easily connect to a database server using a
+  username and password, select an existing database or create a new one, and
+  manage all aspects of your database including tables, columns, indexes,
+  foreign keys, triggers, views, stored procedures, and functions. It also
+  allows you to execute any SQL command from a text field or a file, and export
+  your database structure, data, views, routines, and databases to SQL or CSV.
+  Adminer prioritizes security, user experience, performance, feature set, and
+  size, making it a reliable and efficient tool for all your database management
+  needs.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -49,46 +50,51 @@ schema:
 benefits:
   - title: Efficient Database Management
     description:
-      Adminer is a full-featured database management tool that provides a
-      tidier user interface, better support for MySQL features, higher
-      performance, and more security than other similar tools.
+      Adminer is a full-featured database management tool that provides a tidier
+      user interface, better support for MySQL features, higher performance, and
+      more security than other similar tools.
   - title: Versatile Compatibility
     description:
       Adminer is available for a wide range of databases including MySQL,
       MariaDB, PostgreSQL, SQLite, MS SQL, Oracle, Elasticsearch, MongoDB and
       others via plugin.
   - title: Prioritized Security
-    description: Adminer places security as its top priority. It does not allow
-      connecting to databases without a password and it rate-limits the
-      connection attempts to protect against brute-force attacks.
+    description:
+      Adminer places security as its top priority. It does not allow connecting
+      to databases without a password and it rate-limits the connection attempts
+      to protect against brute-force attacks.
 features:
   - title: Comprehensive Database Operations
     description:
-      Adminer allows you to connect to a database server with username
-      and password, select an existing database or create a new one, list
-      fields, indexes, foreign keys and triggers of table, change name, engine,
+      Adminer allows you to connect to a database server with username and
+      password, select an existing database or create a new one, list fields,
+      indexes, foreign keys and triggers of table, change name, engine,
       collation, auto_increment and comment of table, and alter name, type,
       collation, comment and default values of columns.
   - title: Advanced Table and Column Management
-    description: With Adminer, you can add and drop tables and columns, create,
-      alter, drop and search by indexes including fulltext, create, alter, drop
-      and link lists by foreign keys, and create, alter, drop and select from
-      views.
+    description:
+      With Adminer, you can add and drop tables and columns, create, alter, drop
+      and search by indexes including fulltext, create, alter, drop and link
+      lists by foreign keys, and create, alter, drop and select from views.
   - title: Procedures, Functions, and Triggers
-    description: Adminer enables you to create, alter, drop and call stored
-      procedures and functions, create, alter and drop triggers.
+    description:
+      Adminer enables you to create, alter, drop and call stored procedures and
+      functions, create, alter and drop triggers.
   - title: Data Management
     description:
-      Adminer lets you list data in tables with search, aggregate, sort
-      and limit results, insert new records, update and delete the existing
-      ones, and supports all data types, blobs through file transfer.
+      Adminer lets you list data in tables with search, aggregate, sort and
+      limit results, insert new records, update and delete the existing ones,
+      and supports all data types, blobs through file transfer.
   - title: SQL Command Execution
-    description: Adminer allows you to execute any SQL command from a text field or a file.
+    description:
+      Adminer allows you to execute any SQL command from a text field or a file.
   - title: Data Export
-    description: Adminer provides the ability to export table structure, data,
-      views, routines, databases to SQL or CSV.
+    description:
+      Adminer provides the ability to export table structure, data, views,
+      routines, databases to SQL or CSV.
   - title: User and Rights Management
-    description: Adminer displays users and rights and allows you to change them.
+    description:
+      Adminer displays users and rights and allows you to change them.
   - title: Event and Partition Management
     description: Adminer enables you to manage events and table partitions.
   - title: Customization Options

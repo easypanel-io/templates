@@ -1,13 +1,14 @@
 name: Sshwifty
-description: Sshwifty is a web-based SSH and Telnet client that allows you to
-  access these services directly from any standard web browser. It can be
-  deployed on your computer or server, providing a convenient and accessible
-  interface for SSH and Telnet connections. Sshwifty is designed to be highly
-  configurable, allowing you to set up multiple servers, define presets for
-  known remotes, and even restrict connections to preset remotes only. It also
-  supports secure connections through TLS, and can be configured to connect
-  through a Socks5 proxy. Whether you need to connect to a remote server or a
-  local machine, Sshwifty provides a flexible and user-friendly solution.
+description:
+  Sshwifty is a web-based SSH and Telnet client that allows you to access these
+  services directly from any standard web browser. It can be deployed on your
+  computer or server, providing a convenient and accessible interface for SSH
+  and Telnet connections. Sshwifty is designed to be highly configurable,
+  allowing you to set up multiple servers, define presets for known remotes, and
+  even restrict connections to preset remotes only. It also supports secure
+  connections through TLS, and can be configured to connect through a Socks5
+  proxy. Whether you need to connect to a remote server or a local machine,
+  Sshwifty provides a flexible and user-friendly solution.
 instructions: null
 changeLog:
   - date: 2022-12-20
@@ -38,33 +39,36 @@ schema:
       default: niruix/sshwifty:0.3.10-beta-release
 benefits:
   - title: Web-Based SSH and Telnet Access
-    description: Sshwifty provides a web-based interface for SSH and Telnet
-      connections, allowing you to access these services from any standard web
-      browser.
+    description:
+      Sshwifty provides a web-based interface for SSH and Telnet connections,
+      allowing you to access these services from any standard web browser.
   - title: Secure Connections
     description:
-      Sshwifty supports TLS, ensuring that your connections are secure
-      and your data is protected.
+      Sshwifty supports TLS, ensuring that your connections are secure and your
+      data is protected.
   - title: Flexible Configuration
-    description: Sshwifty can be configured through either a file or environment
-      variables, giving you the flexibility to set up the software in a way that
-      best suits your needs.
+    description:
+      Sshwifty can be configured through either a file or environment variables,
+      giving you the flexibility to set up the software in a way that best suits
+      your needs.
 features:
   - title: SSH and Telnet Connector
     description:
-      Sshwifty allows you to connect to SSH and Telnet services directly
-      from your web browser, eliminating the need for additional software.
+      Sshwifty allows you to connect to SSH and Telnet services directly from
+      your web browser, eliminating the need for additional software.
   - title: Predefined Remote Presets
-    description: Sshwifty allows you to define presets for known remote hosts,
-      saving you time and effort when connecting to these hosts.
+    description:
+      Sshwifty allows you to define presets for known remote hosts, saving you
+      time and effort when connecting to these hosts.
   - title: Secure Connections with TLS
     description:
-      Sshwifty supports TLS, ensuring that your connections are secure
-      and your data is protected.
+      Sshwifty supports TLS, ensuring that your connections are secure and your
+      data is protected.
   - title: Flexible Configuration Options
-    description: Sshwifty can be configured through either a file or environment
-      variables, giving you the flexibility to set up the software in a way that
-      best suits your needs.
+    description:
+      Sshwifty can be configured through either a file or environment variables,
+      giving you the flexibility to set up the software in a way that best suits
+      your needs.
 tags:
   - Developer Tools
   - SSH

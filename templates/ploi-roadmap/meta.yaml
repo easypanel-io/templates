@@ -1,16 +1,18 @@
 name: Ploi Roadmap
-description: Roadmap is an open-source software designed to streamline your
-  roadmapping process. It offers a completely customizable platform where you
-  can mention users in comments, upvote items to prioritize them, and generate
-  automatic slugs. The software also features a Filament admin panel and a
-  simplified role system that includes administrator, employee, and user roles.
-  Roadmap supports OAuth 2 single sign-on with your own application and
-  automatically generates OG images, including the branding color you've set up.
-  It also integrates with GitHub, allowing you to assign a repository to each
-  project and manage issues directly from the roadmap admin. The software is
-  built with PHP and requires a database to function.
-instructions: After First Deployment, run "php artisan roadmap:install" to setup
-  the inital user account.
+description:
+  Roadmap is an open-source software designed to streamline your roadmapping
+  process. It offers a completely customizable platform where you can mention
+  users in comments, upvote items to prioritize them, and generate automatic
+  slugs. The software also features a Filament admin panel and a simplified role
+  system that includes administrator, employee, and user roles. Roadmap supports
+  OAuth 2 single sign-on with your own application and automatically generates
+  OG images, including the branding color you've set up. It also integrates with
+  GitHub, allowing you to assign a repository to each project and manage issues
+  directly from the roadmap admin. The software is built with PHP and requires a
+  database to function.
+instructions:
+  After First Deployment, run "php artisan roadmap:install" to setup the inital
+  user account.
 changeLog:
   - date: 2023-1-6
     description: first release
@@ -64,46 +66,57 @@ schema:
       default: utc
 benefits:
   - title: Customisable Roadmapping
-    description: Roadmap is an open-source software designed to cater to your
-      roadmapping needs. It allows you to create a completely customisable
-      roadmap, enabling you to plan and strategise effectively.
+    description:
+      Roadmap is an open-source software designed to cater to your roadmapping
+      needs. It allows you to create a completely customisable roadmap, enabling
+      you to plan and strategise effectively.
   - title: Prioritise Tasks
-    description: With the ability to upvote items, you can easily identify which
-      tasks or projects have more priority. This feature helps in better
-      decision-making and resource allocation.
+    description:
+      With the ability to upvote items, you can easily identify which tasks or
+      projects have more priority. This feature helps in better decision-making
+      and resource allocation.
   - title: Easy User Management
     description:
-      Roadmap comes with a simplified role system, including roles such
-      as administrator, employee, and user. This makes it easy to manage users
-      and their access levels within the application.
+      Roadmap comes with a simplified role system, including roles such as
+      administrator, employee, and user. This makes it easy to manage users and
+      their access levels within the application.
   - title: Single Sign-On
     description:
       Roadmap supports OAuth 2 single sign-on with your own application,
       providing a seamless and secure login experience for users.
   - title: Automatic Image Generation
-    description: The software automatically generates Open Graph (OG) images,
-      including the branding color you've set up. This feature helps in
-      enhancing the visual appeal and recognition of your roadmap.
+    description:
+      The software automatically generates Open Graph (OG) images, including the
+      branding color you've set up. This feature helps in enhancing the visual
+      appeal and recognition of your roadmap.
 features:
   - title: Customisable Roadmapping
-    description: Create a completely customisable roadmap to plan and strategise
+    description:
+      Create a completely customisable roadmap to plan and strategise
       effectively.
   - title: User Mentions
-    description: Mention users in comments to facilitate communication and collaboration.
+    description:
+      Mention users in comments to facilitate communication and collaboration.
   - title: Upvote System
-    description: Upvote items to identify which tasks or projects have more priority.
+    description:
+      Upvote items to identify which tasks or projects have more priority.
   - title: Automatic Slug Generation
     description:
       Automatically generate slugs for your items, making them easier to
       reference and find.
   - title: Admin Panel
-    description: Manage your roadmap and users with the easy-to-use Filament admin panel.
+    description:
+      Manage your roadmap and users with the easy-to-use Filament admin panel.
   - title: Role System
-    description: Manage users and their access levels with the simplified role system.
+    description:
+      Manage users and their access levels with the simplified role system.
   - title: Single Sign-On
-    description: Provide a seamless and secure login experience with OAuth 2 single sign-on.
+    description:
+      Provide a seamless and secure login experience with OAuth 2 single
+      sign-on.
   - title: Automatic Image Generation
-    description: Enhance the visual appeal of your roadmap with automatically
-      generated OG images.
+    description:
+      Enhance the visual appeal of your roadmap with automatically generated OG
+      images.
 tags:
   - Project Management

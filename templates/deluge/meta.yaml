@@ -1,7 +1,8 @@
 name: Deluge
-description: Deluge is a comprehensive BitTorrent client designed to cater to
-  your torrenting needs. It operates on a daemon/client model and is equipped
-  with various user interfaces, including GTK-UI, Web-UI, and Console-UI. At its
+description:
+  Deluge is a comprehensive BitTorrent client designed to cater to your
+  torrenting needs. It operates on a daemon/client model and is equipped with
+  various user interfaces, including GTK-UI, Web-UI, and Console-UI. At its
   core, Deluge uses libtorrent to efficiently manage the BitTorrent protocol.
   The app allows you to start various user-interfaces and the Deluge daemon with
   simple commands. It also provides a web UI that can be accessed at
@@ -51,15 +52,16 @@ benefits:
 features:
   - title: Daemon/Client Model
     description:
-      Deluge operates on a daemon/client model. This allows it to run the
-      Deluge daemon in the background, enabling efficient torrent management.
+      Deluge operates on a daemon/client model. This allows it to run the Deluge
+      daemon in the background, enabling efficient torrent management.
   - title: Various User Interfaces
     description:
-      Deluge provides multiple user interfaces. You can choose from the
-      GTK-UI, Web-UI, and Console-UI based on your preference or needs.
+      Deluge provides multiple user interfaces. You can choose from the GTK-UI,
+      Web-UI, and Console-UI based on your preference or needs.
   - title: Libtorrent Core
-    description: At its core, Deluge uses libtorrent to handle the BitTorrent
-      protocol. This ensures robust and reliable torrent downloading.
+    description:
+      At its core, Deluge uses libtorrent to handle the BitTorrent protocol.
+      This ensures robust and reliable torrent downloading.
   - title: Remote Connection
     description:
       Deluge allows clients to remotely connect to the daemon, providing

@@ -1,8 +1,9 @@
 name: Cachet
-description: Meet Cachet, the open-source status page system designed to improve
-  downtime communication. Used by great companies worldwide, Cachet allows you
-  to effectively communicate downtime and system outages to your customers,
-  teams, and shareholders. It comes with a beautifully crafted design that is
+description:
+  Meet Cachet, the open-source status page system designed to improve downtime
+  communication. Used by great companies worldwide, Cachet allows you to
+  effectively communicate downtime and system outages to your customers, teams,
+  and shareholders. It comes with a beautifully crafted design that is
   responsive and works seamlessly on your desktop, tablet, and phone. Cachet
   supports multiple languages and comes with a powerful JSON API for updating
   your status page with incidents and component status changes. It also allows
@@ -49,14 +50,15 @@ schema:
       default: cachet-db
 benefits:
   - title: Improved Communication
-    description: Cachet is a tool that enhances communication about downtime and
-      system outages. It is used by great companies worldwide to keep their
-      customers, teams, and shareholders informed about system status.
+    description:
+      Cachet is a tool that enhances communication about downtime and system
+      outages. It is used by great companies worldwide to keep their customers,
+      teams, and shareholders informed about system status.
   - title: Scheduled Maintenance
     description:
-      Cachet allows you to schedule maintenance events in advance. Once
-      the maintenance time has passed, the incident is recorded in the timeline
-      for future reference.
+      Cachet allows you to schedule maintenance events in advance. Once the
+      maintenance time has passed, the incident is recorded in the timeline for
+      future reference.
   - title: Metrics
     description:
       Cachet provides a dashboard where you can set up metrics to measure
@@ -64,24 +66,26 @@ benefits:
       interest. These metrics can be updated using the API.
   - title: Multi-lingual Support
     description:
-      Cachet supports over ten languages, making it accessible to users
-      around the globe.
+      Cachet supports over ten languages, making it accessible to users around
+      the globe.
 features:
   - title: Open Source Status Page System
     description:
-      Cachet is an open source status page system that allows you to list
-      your service components, report incidents, and customize the look of your
+      Cachet is an open source status page system that allows you to list your
+      service components, report incidents, and customize the look of your
       status page.
   - title: Powerful JSON API
-    description: Cachet comes with a powerful JSON API that allows you to update
-      your status page with incidents and component status changes.
+    description:
+      Cachet comes with a powerful JSON API that allows you to update your
+      status page with incidents and component status changes.
   - title: Two-factor Authentication
     description:
       Cachet provides an extra layer of security for your account with
       two-factor authentication, compatible with the Google Authenticator app.
   - title: Subscriber Notifications
-    description: Cachet enables subscriber notifications via email, keeping your
-      users informed about any changes or incidents.
+    description:
+      Cachet enables subscriber notifications via email, keeping your users
+      informed about any changes or incidents.
 tags:
   - Monitoring
   - Communication

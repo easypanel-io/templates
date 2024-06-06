@@ -1,8 +1,9 @@
 name: Collabora Office
-description: Collabora Online is a powerful, flexible, and secure online office
-  suite designed to break free from vendor lock-in and put you in full control
-  of your documents. It offers a private office suite in the cloud, compatible
-  with trillions of existing documents, and can be integrated into your own
+description:
+  Collabora Online is a powerful, flexible, and secure online office suite
+  designed to break free from vendor lock-in and put you in full control of your
+  documents. It offers a private office suite in the cloud, compatible with
+  trillions of existing documents, and can be integrated into your own
   infrastructure or accessed via one of our trusted hosting partners. It is
   excellent for enterprises that need a powerful office suite in the cloud, or
   on-premise, that protects their privacy and allows them to keep full control
@@ -16,7 +17,8 @@ description: Collabora Online is a powerful, flexible, and secure online office
   spreadsheets with advanced formulas, design attractive presentations, and draw
   shapes and diagrams with ease. Collabora Online is fully open source, offering
   native integration in Android and iOS, and prioritizing privacy by default.
-instructions: Access the admin console at https://<domain>/browser/dist/admin/admin.html
+instructions:
+  Access the admin console at https://<domain>/browser/dist/admin/admin.html
 changeLog:
   - date: 2023-07-14
     description: First Release
@@ -59,35 +61,40 @@ schema:
 benefits:
   - title: Digital Sovereignty
     description:
-      Collabora Online is designed with your digital sovereignty in mind.
-      It allows you to maintain full control over your sensitive corporate data,
+      Collabora Online is designed with your digital sovereignty in mind. It
+      allows you to maintain full control over your sensitive corporate data,
       ensuring your privacy is always protected.
   - title: Powerful Online Office Suite
-    description: This app provides a powerful online office suite that can be
-      integrated into your own infrastructure or accessed via trusted hosting
-      partners. It's perfect for enterprises that need a robust office suite in
-      the cloud or on-premise.
+    description:
+      This app provides a powerful online office suite that can be integrated
+      into your own infrastructure or accessed via trusted hosting partners.
+      It's perfect for enterprises that need a robust office suite in the cloud
+      or on-premise.
   - title: World Class Compatibility
-    description: Collabora Online is compatible with trillions of existing
-      documents, making it a flexible solution for businesses of all sizes.
+    description:
+      Collabora Online is compatible with trillions of existing documents,
+      making it a flexible solution for businesses of all sizes.
 features:
   - title: Collaborative Editing
-    description: Collabora Online offers collaborative editing with professional
-      features. This allows multiple users to work on the same document
-      simultaneously, enhancing productivity and efficiency.
+    description:
+      Collabora Online offers collaborative editing with professional features.
+      This allows multiple users to work on the same document simultaneously,
+      enhancing productivity and efficiency.
   - title: Customizable Integration and User Interface
-    description: The app can be customized to integrate perfectly with your own
-      solution. It also offers a flexible user interface that can be tailored to
-      your needs.
+    description:
+      The app can be customized to integrate perfectly with your own solution.
+      It also offers a flexible user interface that can be tailored to your
+      needs.
   - title: Writer
-    description: Collabora Online’s text document editor provides a true WYSIWYG
-      editing experience. You can open any document, add comments, track
-      changes, format and style your pages with endless options.
+    description:
+      Collabora Online’s text document editor provides a true WYSIWYG editing
+      experience. You can open any document, add comments, track changes, format
+      and style your pages with endless options.
   - title: Calc
     description:
-      From simple spreadsheets to advanced formulas, Calc can do it all.
-      Create giant spreadsheets, add charts, sparklines and hyperlinks, and
-      benefit from powerful multi-column sort and filter options.
+      From simple spreadsheets to advanced formulas, Calc can do it all. Create
+      giant spreadsheets, add charts, sparklines and hyperlinks, and benefit
+      from powerful multi-column sort and filter options.
   - title: Impress
     description:
       Create impressive presentations with ease. Design attractive master
@@ -95,9 +102,10 @@ features:
       with your colleagues. Insert speaker notes, custom timings and transitions
       to engage your audience.
   - title: Draw
-    description: Draw shapes and diagrams, add text, charts and tables, insert
-      fields and links. Comment and collaborate with others, then download as an
-      image or pdf to insert into your documents and presentations.
+    description:
+      Draw shapes and diagrams, add text, charts and tables, insert fields and
+      links. Comment and collaborate with others, then download as an image or
+      pdf to insert into your documents and presentations.
 tags:
   - Documents
   - Productivity

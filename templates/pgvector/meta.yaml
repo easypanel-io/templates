@@ -1,18 +1,18 @@
 name: pgvector
-description: pgvector is an open-source app designed to facilitate vector
-  similarity search for Postgres. It allows you to store all your application
-  data in one place, supporting both exact and approximate nearest neighbor
-  search. The app is capable of handling L2 distance, inner product, and cosine
-  distance, making it versatile for various data analysis needs. It is
-  compatible with any language that has a Postgres client. The app also boasts
-  of ACID compliance, point-in-time recovery, JOINs, and all the other great
-  features of Postgres. With pgvector, you can create a new table with a vector
-  column or add a vector column to an existing table, insert vectors, upsert
-  vectors, update vectors, and delete vectors. It also allows you to get the
-  nearest neighbors to a vector or a row, and get rows within a certain
-  distance. The app also supports indexing for improved search performance. It
-  is a powerful tool for managing and analyzing your data in a Postgres
-  environment.
+description:
+  pgvector is an open-source app designed to facilitate vector similarity search
+  for Postgres. It allows you to store all your application data in one place,
+  supporting both exact and approximate nearest neighbor search. The app is
+  capable of handling L2 distance, inner product, and cosine distance, making it
+  versatile for various data analysis needs. It is compatible with any language
+  that has a Postgres client. The app also boasts of ACID compliance,
+  point-in-time recovery, JOINs, and all the other great features of Postgres.
+  With pgvector, you can create a new table with a vector column or add a vector
+  column to an existing table, insert vectors, upsert vectors, update vectors,
+  and delete vectors. It also allows you to get the nearest neighbors to a
+  vector or a row, and get rows within a certain distance. The app also supports
+  indexing for improved search performance. It is a powerful tool for managing
+  and analyzing your data in a Postgres environment.
 instructions: null
 changeLog:
   - date: 2023-06-30
@@ -43,43 +43,47 @@ schema:
 benefits:
   - title: Unified Data Storage
     description:
-      pgvector allows you to store all of your application data in one
-      place, eliminating the need for multiple databases or storage solutions.
+      pgvector allows you to store all of your application data in one place,
+      eliminating the need for multiple databases or storage solutions.
   - title: Advanced Search Capabilities
-    description: The app supports exact and approximate nearest neighbor search,
-      enabling you to find the most relevant data quickly and efficiently.
+    description:
+      The app supports exact and approximate nearest neighbor search, enabling
+      you to find the most relevant data quickly and efficiently.
   - title: Versatile Distance Measures
     description:
-      pgvector supports various distance measures including L2 distance,
-      inner product, and cosine distance, providing flexibility in how you
-      search and compare data.
+      pgvector supports various distance measures including L2 distance, inner
+      product, and cosine distance, providing flexibility in how you search and
+      compare data.
   - title: ACID Compliance and Recovery Features
     description:
-      With ACID compliance and point-in-time recovery, pgvector ensures
-      the integrity and reliability of your data.
+      With ACID compliance and point-in-time recovery, pgvector ensures the
+      integrity and reliability of your data.
   - title: Integration with Postgres
-    description: pgvector integrates seamlessly with Postgres, allowing you to
-      leverage all of the features of this popular database system.
+    description:
+      pgvector integrates seamlessly with Postgres, allowing you to leverage all
+      of the features of this popular database system.
 features:
   - title: Vector Similarity Search
-    description: pgvector allows you to perform vector similarity searches in
-      Postgres, making it easier to find and retrieve relevant data.
+    description:
+      pgvector allows you to perform vector similarity searches in Postgres,
+      making it easier to find and retrieve relevant data.
   - title: Data Manipulation
     description:
-      You can easily create new tables with vector columns, add vector
-      columns to existing tables, insert vectors, update vectors, and delete
-      vectors.
+      You can easily create new tables with vector columns, add vector columns
+      to existing tables, insert vectors, update vectors, and delete vectors.
   - title: Querying
     description:
-      pgvector provides a variety of querying options, including getting
-      the nearest neighbors to a vector or a row, and getting rows within a
-      certain distance.
+      pgvector provides a variety of querying options, including getting the
+      nearest neighbors to a vector or a row, and getting rows within a certain
+      distance.
   - title: Indexing
-    description: pgvector supports exact and approximate nearest neighbor search
-      indexing, allowing you to optimize your search performance.
+    description:
+      pgvector supports exact and approximate nearest neighbor search indexing,
+      allowing you to optimize your search performance.
   - title: Multi-language Support
-    description: pgvector can be used from any language with a Postgres client,
-      offering flexibility in how you interact with your data.
+    description:
+      pgvector can be used from any language with a Postgres client, offering
+      flexibility in how you interact with your data.
 tags:
   - Databases
   - Data Science

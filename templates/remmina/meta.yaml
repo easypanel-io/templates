@@ -1,5 +1,6 @@
 name: Remmina
-description: Remmina is a remote desktop client designed to be useful for system
+description:
+  Remmina is a remote desktop client designed to be useful for system
   administrators and travellers who need to work with multiple remote computers.
   It supports a variety of network protocols, including RDP, VNC, SPICE, NX,
   XDMCP, SSH and EXEC, all within an integrated and consistent user interface.
@@ -8,8 +9,9 @@ description: Remmina is a remote desktop client designed to be useful for system
   https://yourhost:3001/. The app is based on Docker Baseimage KasmVNC, which
   provides additional environment variables and run configurations to enable or
   disable specific functionality.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2022-11-15
     description: first release
@@ -49,31 +51,30 @@ benefits:
       travellers.
   - title: Supports Multiple Network Protocols
     description:
-      The app supports a variety of network protocols including RDP, VNC,
-      SPICE, NX, XDMCP, SSH and EXEC, offering flexibility and versatility in
-      remote connections.
+      The app supports a variety of network protocols including RDP, VNC, SPICE,
+      NX, XDMCP, SSH and EXEC, offering flexibility and versatility in remote
+      connections.
   - title: Integrated and Consistent User Interface
     description:
-      Remmina offers an integrated and consistent user interface, making
-      it easy to navigate and use, regardless of the network protocol being
-      utilized.
+      Remmina offers an integrated and consistent user interface, making it easy
+      to navigate and use, regardless of the network protocol being utilized.
 features:
   - title: Multi-Platform Awareness
     description:
       Remmina utilizes the docker manifest for multi-platform awareness,
       ensuring the correct image is retrieved for your architecture.
   - title: Application Setup
-    description: The application can be accessed at specified host addresses,
-      providing easy setup and access to the application.
+    description:
+      The application can be accessed at specified host addresses, providing
+      easy setup and access to the application.
   - title: Environment Variables
     description:
       Remmina allows for the setting of environment variables, providing
       customization and control over the application's functionality.
   - title: Lossless Mode
     description:
-      The app is capable of delivering a true lossless image at a high
-      framerate to your web browser, providing high-quality remote desktop
-      visuals.
+      The app is capable of delivering a true lossless image at a high framerate
+      to your web browser, providing high-quality remote desktop visuals.
 tags:
   - Remote Desktop
   - System Administration
