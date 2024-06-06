@@ -13,15 +13,13 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `FORCE_SSL=true`,
-        `DATABASE_URL=postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`
+        `DATABASE_URL=postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
       ].join("\n"),
       source: {
         type: "image",
-        image: 'docuseal/docuseal:1.4.3',
+        image: "docuseal/docuseal:1.4.3",
       },
-      mounts: [
-        { type: 'volume', name: 'data', mountPath: '/data' }
-      ],
+      mounts: [{ type: "volume", name: "data", mountPath: "/data" }],
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

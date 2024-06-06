@@ -3,7 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const databasePassword = randomPassword()
+  const databasePassword = randomPassword();
   const secret = randomPassword();
 
   const env = [
@@ -21,7 +21,7 @@ export function generate(input: Input): Output {
     "EASYPANEL_API_KEY=your-easypanel-apikey",
     "",
     "GOOGLE_CLIENT_ID=___.apps.googleusercontent.com",
-    "GOOGLE_CLIENT_SECRET=your-google-secret"
+    "GOOGLE_CLIENT_SECRET=your-google-secret",
   ];
 
   services.push({
@@ -35,16 +35,16 @@ export function generate(input: Input): Output {
         repo: "stream-panel",
         ref: "dev",
         path: "/",
-        autoDeploy: true
+        autoDeploy: true,
       },
       build: {
-        type: "nixpacks"
+        type: "nixpacks",
       },
       env: env.join("\n"),
       deploy: {
         replicas: 1,
         command: "npx prisma migrate deploy && npm run start",
-        zeroDowntime: true
+        zeroDowntime: true,
       },
       domains: [
         {
@@ -54,15 +54,15 @@ export function generate(input: Input): Output {
       ],
     },
   });
-  
+
   services.push({
     type: "postgres",
     data: {
       projectName: input.projectName,
       serviceName: "postgres",
       image: "postgres:16",
-      password: databasePassword
-    }
+      password: databasePassword,
+    },
   });
 
   return { services };

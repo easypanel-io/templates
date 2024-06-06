@@ -32,10 +32,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [{
-        host: "$(EASYPANEL_DOMAIN)",
-        port: 8080,
-      }],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -46,7 +48,7 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "static",
           mountPath: "/opt/recipes/staticfiles",
-        }
+        },
       ],
     },
   });

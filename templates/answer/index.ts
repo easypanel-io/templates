@@ -10,19 +10,25 @@ export function generate(input: Input): Output {
     appEnv.push(
       `LANGUAGE=${input.language || "en-US"}`,
       `SITE_NAME=${input.siteName || "Answer"}`,
-      `SITE_URL=${input.siteUrl === "answer.apache.org" ? "https://$(EASYPANEL_DOMAIN)" : "https://" + input.siteUrl}`,
+      `SITE_URL=${
+        input.siteUrl === "answer.apache.org"
+          ? "https://$(EASYPANEL_DOMAIN)"
+          : "https://" + input.siteUrl
+      }`,
       `ADMIN_NAME=${input.adminName}`,
       `ADMIN_PASSWORD=${input.adminPassword}`,
       `ADMIN_EMAIL=${input.adminMail}`,
       `CONTACT_EMAIL=${input.contactMail}`,
-      `DB_TYPE=${input.databaseType === "mariadb" ? "mysql" : input.databaseType}`,
+      `DB_TYPE=${
+        input.databaseType === "mariadb" ? "mysql" : input.databaseType
+      }`
     );
     if (input.databaseType !== "sqlite3") {
       appEnv.push(
         `DB_USERNAME=${input.databaseType}`,
         `DB_PASSWORD=${databasePassword}`,
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `DB_NAME=$(PROJECT_NAME)`,
+        `DB_NAME=$(PROJECT_NAME)`
       );
       services.push({
         type: input.databaseType,

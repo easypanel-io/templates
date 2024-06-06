@@ -17,22 +17,22 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80
-        }
+          port: 80,
+        },
       ],
       mounts: [
         {
           type: "volume",
           name: "data",
-          mountPath: "/data"
+          mountPath: "/data",
         },
         {
           type: "volume",
           name: "conf",
-          mountPath: "/conf"
+          mountPath: "/conf",
         },
-      ]
-    }
+      ],
+    },
   });
 
   services.push({

@@ -70,7 +70,8 @@ schema:
       default: false
 benefits:
   - title: Free and Open Source
-    description: LibreTranslate is a free and open source machine translation API,
+    description:
+      LibreTranslate is a free and open source machine translation API,
       which means it is accessible to everyone and can be modified to suit
       individual needs.
   - title: Self-Hosted
@@ -78,7 +79,8 @@ benefits:
       providers such as Google or Azure to perform translations. It is entirely
       self-hosted, providing full control over data privacy and security.
   - title: Powered by Argos Translate
-    description: LibreTranslate's translation engine is powered by the open source
+    description:
+      LibreTranslate's translation engine is powered by the open source
       Argos Translate library, ensuring reliable and accurate translations.
 features:
   - title: Simple Translation Requests
@@ -86,7 +88,8 @@ features:
       language to another. Simply input the text, specify the source and target
       languages, and the API will return the translated text.
   - title: Auto Detect Language
-    description: LibreTranslate can automatically detect the language of the input
+    description:
+      LibreTranslate can automatically detect the language of the input
       text. This feature is especially useful when the source language is
       unknown.
   - title: HTML Translation

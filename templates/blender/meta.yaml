@@ -41,12 +41,14 @@ schema:
       default: lscr.io/linuxserver/blender:latest
 benefits:
   - title: 3D Graphics Creation
-    description: Blender is a powerful tool for creating 3D computer graphics. This
+    description:
+      Blender is a powerful tool for creating 3D computer graphics. This
       includes animated films, visual effects, art, 3D printed models, motion
       graphics, interactive 3D applications, virtual reality, and computer
       games.
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
+    description:
+      The app utilizes the docker manifest for multi-platform awareness.
       This means it can retrieve the correct image for your architecture,
       ensuring optimal performance and compatibility.
   - title: Hardware Acceleration
@@ -55,17 +57,20 @@ benefits:
       for GPU accelerated applications.
 features:
   - title: Open Source
-    description: Blender is a free and open-source software toolset. This means it's
+    description:
+      Blender is a free and open-source software toolset. This means it's
       freely available for anyone to use, modify, and distribute.
   - title: Accessible Application
     description: The application can be accessed at your host via HTTP or HTTPS,
       providing flexibility and security for your workflows.
   - title: Customizable Environment
-    description: The app provides a range of optional environment variables and run
+    description:
+      The app provides a range of optional environment variables and run
       configurations. This allows you to customize the functionality and
       performance of the app to suit your specific needs.
   - title: Docker Integration
-    description: The app is designed to work seamlessly with Docker. This includes
+    description:
+      The app is designed to work seamlessly with Docker. This includes
       the ability to start a Docker in Docker setup inside the container, and
       the ability to mount the Docker directory inside the container to the host
       for increased performance.

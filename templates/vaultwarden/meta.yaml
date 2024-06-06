@@ -45,20 +45,24 @@ schema:
       default: vaultwarden/server:latest
 benefits:
   - title: Self-hosted deployment
-    description: Vaultwarden allows you to host your own Bitwarden server, giving
+    description:
+      Vaultwarden allows you to host your own Bitwarden server, giving
       you full control over your data and privacy.
   - title: Compatibility with official Bitwarden clients
     description: Vaultwarden is fully compatible with the official Bitwarden
       clients, ensuring a seamless user experience.
   - title: Ideal for individuals, families, and smaller organizations
-    description: Vaultwarden is designed to meet the needs of individuals, families,
+    description:
+      Vaultwarden is designed to meet the needs of individuals, families,
       and smaller organizations, providing a lightweight and efficient solution.
 features:
   - title: Web interface
-    description: Access your vault and manage your passwords through a user-friendly
+    description:
+      Access your vault and manage your passwords through a user-friendly
       web interface.
   - title: Password sharing and access control
-    description: Share passwords securely with others and control their access to
+    description:
+      Share passwords securely with others and control their access to
       your shared items.
   - title: File attachments and website icons
     description: Attach files to your passwords and store website icons for easy
@@ -67,7 +71,8 @@ features:
     description: Enhance the security of your vault with two-step login and
       authentication options, including email, Duo, YubiKey, and FIDO2 WebAuthn.
   - title: Emergency Access and Master password re-prompt
-    description: Set up emergency access to your vault and enable master password
+    description:
+      Set up emergency access to your vault and enable master password
       re-prompt for added security.
   - title: Live sync for desktop/browser and mobile clients
     description: Keep your vault in sync across all your devices, including
