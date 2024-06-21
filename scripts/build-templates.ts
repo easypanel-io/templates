@@ -1,7 +1,6 @@
 import { readFile, writeFile } from "fs/promises";
 import glob from "glob";
 import { compile } from "json-schema-to-typescript";
-import { snakeCase } from "lodash";
 import prettier from "prettier";
 import YAML from "yaml";
 
@@ -82,4 +81,8 @@ function getLogo(dir: string) {
 function getScreenshots(dir: string) {
   const files = glob.sync(dir + "/screenshot*.{png,jpg,gif}");
   return files.map((file) => file.split("/").pop());
+}
+
+function snakeCase(str: string) {
+  return str.toLowerCase().replace(/([^a-z0-9]+)/g, "_");
 }
