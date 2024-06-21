@@ -7,7 +7,6 @@ const templatesPath = path.resolve(__dirname, "../templates");
 async function run() {
   const list = [];
 
-  // create a folder for each template
   for (let { slug, meta } of templates) {
     list.push({
       slug,
@@ -19,7 +18,7 @@ async function run() {
   }
 
   await writeFile(
-    path.resolve(templatesPath, "index.json"),
+    path.resolve(templatesPath, "list.json"),
     JSON.stringify(list, null, 2)
   );
 }
