@@ -45,6 +45,7 @@ export function generate(input: Input): Output {
       domains: [{ host: input.viewerDomain, port: 3000 }],
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `NEXTAUTH_URL=https://${input.builderDomain}`,
         `NEXT_PUBLIC_VIEWER_URL=https://${input.viewerDomain}`,
         `ENCRYPTION_SECRET=${secret}`,
         `S3_ACCESS_KEY=minio`,
