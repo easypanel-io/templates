@@ -10,6 +10,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const appEnv = [
+    `DATABASE_DIRECT_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `NEXTAUTH_SECRET=${btoa(randomString(32))}`,
     `CALENDSO_ENCRYPTION_KEY=${btoa(randomString(24))}`,
