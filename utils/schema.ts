@@ -1,7 +1,7 @@
 import { randomBytes } from "crypto";
 import { z } from "zod";
 
-export const randomPassword = () => randomBytes(10).toString("hex");
+export const randomPassword = (length?: number) => randomBytes(length ?? 10).toString("hex");
 
 export const emptyToUndefined = (value: any) => {
   if (typeof value !== "string") return value;
