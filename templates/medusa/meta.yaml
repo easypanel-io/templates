@@ -1,0 +1,370 @@
+name: Medusa
+description: Building blocks for digital commerce
+instructions: null
+changeLog:
+  - date: 2024-01-07
+    description: First Release
+links:
+  - label: Website
+    url: https://medusajs.com/
+  - label: Documentation
+    url: https://docs.medusajs.com/
+  - label: Github
+    url: https://github.com/medusajs/medusa
+  - label: Demo
+    url: https://next.medusajs.com/
+contributors:
+  - name: Paco Salido
+    url: https://psalido.net
+schema:
+  type: object
+  required:
+    - projectName
+  properties:
+    # Project Config
+    projectName:
+      type: string
+      title: Project Name
+      default: medusa-store
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: medusa
+    backendServiceName:
+      type: string
+      title: Backend Service Name
+      default: medusa
+    frontendServiceName:
+      type: string
+      title: Frontend Service Name
+      default: medusa-storefront
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: medusa-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: medusa-redis
+
+    # Medusa Config
+    medusaAdminUsername:
+      type: string
+      title: Medusa Admin Username
+    medusaAdminPassword:
+      type: string
+      title: Medusa Admin Password
+    medusaDomain:
+      type: string
+      title: Medusa backend domain
+      default: api.example.com
+    jwtSecret:
+      type: string
+      title: JWT Secret
+    cookieSecret:
+      type: string
+      title: Cookie Secret
+    adminCors:
+      type: string
+      title: Admin CORS
+      default: http://localhost:3000
+    logLevel:
+      type: string
+      title: Log level
+      default: error
+    enableStorefront:
+      type: boolean
+      title: Deploy storefront
+      default: true
+    storefrontDomain:
+      type: string
+      title: Storefront domain
+      default: example.com
+    storefrontCors:
+      type: string
+      title: Storefront CORS
+      default: https://example.com,http://localhost:8000,http://localhost:3000
+    nextPublicMedusaBackendUrl:
+      type: string
+      title: Public Medusa backend Url
+      default: https://api.example.com
+    featureSearchEnabled:
+      type: boolean
+      default: false
+    nextPublicBaseUrl:
+      type: string
+      title: Next Public Base Url
+      default: https://example.com
+    nextPublicStripeKey:
+      type: string
+      title: Next Public Stripe Key
+    nextPublicPaypalClientId:
+      type: string
+      title: Next Public Paypal Client Id
+    nextPublicSearchAppId:
+      type: string
+      title: Next Public Search App Id
+    nextPublicSearchEndpoint:
+      type: string
+      title: Next Public Search Endpoint
+      default: search.example.com
+    nextPublicSearchApiKey:
+      type: string
+      title: Next Public Search Api Key
+    nextPublicIndexName:
+      type: string
+      title: Next Public Stripe Key
+      default: products
+    revalidateSecret:
+      type: string
+      title: Revalidate secret
+      default: supersecret
+
+    nodeEnv:
+      type: string
+      title: Node environment
+      oneOf:
+        - enum:
+            - production
+          title: Production
+        - enum:
+            - development
+          title: Development
+      default: production
+    medusaPort:
+      type: string
+      title: Port
+      default: "9000"
+
+    # Feature flags
+    featureFlagProductCategories:
+      type: boolean
+      title: Enable product categories
+      default: false
+    featureFlagOrderEditing:
+      type: boolean
+      title: Enable order editing
+      default: false
+    featureFlagTaxInclusivePricing:
+      type: boolean
+      title: Enable tax inclusive pricing
+      default: false
+    featureFlagSaleChannels:
+      type: boolean
+      title: Enable sale channels
+      default: true
+
+    # Admin
+    enableAdminPlugin:
+      type: boolean
+      title: Enable admin plugin
+      default: true
+
+    # Paypal Payments
+    paypalSandbox:
+      type: string
+      title: Paypal Sandbox
+    paypalClientId:
+      type: string
+      title: Paypal Client Id
+    paypalClientSecret:
+      type: string
+      title: Paypal Client Secret
+    paypalAuthWebhookId:
+      type: string
+      title: Paypal AuthWebhookId
+
+    # Stripe Payments
+    stripeApiKey:
+      type: string
+      title: Stripe API key
+      default: sk_test_...
+    stripeWebhookSecret:
+      type: string
+      title: Stripe webhook secret
+      default: whsec_...
+
+    # MinIO File Storage
+    # yarn add medusa-file-minio
+    minioPluginEnabled:
+      type: boolean
+      title: MinIO enabled
+      default: false
+    minioServiceName:
+      type: string
+      title: MinIO Service Name
+      default: medusa-storage
+    minioServiceImage:
+      type: string
+      title: MinIO Service Image
+      default: minio/minio:latest
+    minioVolumeName:
+      type: string
+      title: MinIO volume name
+      default: minio
+    minioDomain:
+      type: string
+      title: MinIO Service Domain
+      default: minio.example.com
+    minioConsoleDomain:
+      type: string
+      title: MinIO Console Domain
+      default: minio-console.example.com
+    minioEndpoint:
+      type: string
+      title: MinIO endpoint
+      default: https://minio.example.com
+    minioBucket:
+      type: string
+      title: MinIO bucket
+    minioAccessKey:
+      type: string
+      title: MinIO access key
+    minioSecretKey:
+      type: string
+      title: MinIO secret key
+    minioRootUser:
+      type: string
+      title: MinIO root user
+      default: myminioadmin
+    minioRootPassword:
+      type: string
+      title: MinIO root password
+      default: minio-secret-key-change-me
+    minioServerUrl:
+      type: string
+      title: MinIO Server URL
+      default: https://minio.example.com
+
+    # S3 File Storage
+    # yarn add medusa-file-s3
+    s3PluginEnabled:
+      type: boolean
+      title: S3 plugin enabled
+      default: false
+    s3Url:
+      type: string
+      title: S3 Url
+    s3Bucket:
+      type: string
+      title: S3 bucket
+    s3Region:
+      type: string
+      title: S3 region
+    s3AccessKey:
+      type: string
+      title: S3 access key
+    s3SecretKey:
+      type: string
+      title: S3 secret key
+
+    # Meilisearch
+    # yarn add medusa-plugin-meilisearch
+    meiliPluginEnabled:
+      type: boolean
+      title: Meilisearch enabled
+      default: false
+    meiliServiceName:
+      type: string
+      title: Meilisearch Service Name
+      default: medusa-search
+    meiliServiceImage:
+      type: string
+      title: Meilisearch Service Image
+      default: getmeili/meilisearch:v1.5.1
+    meiliVolumeName:
+      type: string
+      title: Meilisearch Database Volume Name
+      default: meilisearch
+    meiliEnv:
+      type: string
+      title: Meilisearch environment
+      oneOf:
+        - enum:
+            - production
+          title: Production
+        - enum:
+            - development
+          title: Development
+      default: production
+    meiliMasterKey:
+      type: string
+      title: Meilisearch master key
+    meiliNoAnalytics:
+      type: boolean
+      title: Meilisearch disable analytics
+      default: true
+    meiliScheduleSnapshot:
+      type: boolean
+      title: Meilisearch schedule snapshot
+      default: false
+    meiliSnapshotInterval:
+      type: string
+      title: Meilisearch snapshot interval (sec)
+      default: "86400"
+    meiliHost:
+      type: string
+      title: Meilisearch host
+      default: https://search.example.com
+    searchDomain:
+      type: string
+      title: Meilisearch Service Domain
+      default: search.example.com
+    meiliApiKey:
+      type: string
+      title: Meilisearch API key
+
+    # Notifications: SendGrid
+    sendgridPluginEnabled:
+      type: boolean
+      title: SendGrid plugin enabled
+      default: false
+    sendGridApiKey:
+      type: string
+      title: SendGrid api_key
+      default: SG.SECRET...
+    sendGridFrom:
+      type: string
+      title: From email
+    sendGridOrderPlacedId:
+      type: string
+      title: Order placed
+    sendGridMedusaRestockTemplate:
+      type: string
+      title: Medusa Restock
+    sendGridUserPasswordResetTemplate:
+      type: string
+      title: User password reset
+    sendGridCustomerPasswordResetTemplate:
+      type: string
+      title: Customer password reset
+    sendGridGiftCardCreatedTemplate:
+      type: string
+      title: Gift card created
+    sendGridSwapReceivedTemplate:
+      type: string
+      title: Swap received
+    sendGridSwapShipmentCreatedTemplate:
+      type: string
+      title: Swap shipment created
+    sendGridSwapCreatedTemplate:
+      type: string
+      title: Swap created
+    sendGridClaimShipmentCreatedTemplate:
+      type: string
+      title: Claim shipment created
+    sendGridOrderItemsReturnedTemplate:
+      type: string
+      title: Order items returned
+    sendGridOrderReturnRequestedTemplate:
+      type: string
+      title: Order return requested
+    sendGridOrderShippedTemplate:
+      type: string
+      title: Order shipped
+    sendGridOrderCanceledTemplate:
+      type: string
+      title: Order canceled
+    sendGridOrderPlacedIdLocalized:
+      type: string
+      title: Order placed localized
