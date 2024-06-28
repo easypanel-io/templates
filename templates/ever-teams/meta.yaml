@@ -1,0 +1,104 @@
+name: Ever Teams
+description: Ever Teams is a powerful and flexible work and project management
+  platform that can help teams of all sizes to improve their productivity,
+  collaboration, and visibility. It is also highly customizable and can be integrated
+  with a variety of third-party tools. If you are looking for a work and project management
+  platform that can help your team to achieve its goals, then Ever Teams is a great option.
+instructions: null
+changeLog:
+  - date: 2023-11-16
+    description: first release
+links:
+  - label: Ever Co. LTD
+    url: https://github.com/ever-co
+contributors:
+  - name: paradoxe35
+    url: https://github.com/paradoxe35
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ever-teams
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: everco/ever-teams-webapp:latest
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      default: noreply@ever.team
+    smtpHost:
+      type: string
+      title: SMTP Host
+    smtpPort:
+      type: string
+      title: SMTP Port
+    smtpSecure:
+      type: string
+      title: SMTP Secure
+    smtpUsername:
+      type: string
+      title: SMTP Username
+    smtpPassword:
+      type: string
+      title: SMTP Password
+benefits:
+  - title: Streamlined task and project management
+    description:
+      Ever Teams' centralized task management system makes it easy to create, assign, and track tasks across your workforce.
+      This helps to ensure clear accountability and streamlined workflows.
+  - title: Accurate time tracking for tasks, projects, and activities
+    description:
+      Ever Teams' time tracking features allow you to accurately track time spent on tasks,
+      projects, and activities. This provides you with valuable insights into how your team is spending its time,
+      which can help you to identify areas for improvement.
+  - title: Individual and team productivity metrics tracking
+    description:
+      Ever Teams' individual and team productivity metrics tracking tools help you
+      to track the performance of your team members and identify areas for coaching and improvement.
+  - title: Customizable roles and permissions management
+    description: Ever Teams' customizable roles and permissions management tools help you to control access to different features and data.
+features:
+  - title: Centralized work / workforce management
+    description:
+      Ever Teams provides a centralized platform for managing your workforce, including creating and assigning tasks,
+      tracking progress, and monitoring performance.
+  - title: Real-time time management / time tracking / activity tracking
+    description:
+      Ever Teams allows you to track time spent on tasks, projects, and activities in real time,
+      providing valuable insights into how your team is spending its time.
+  - title: Comprehensive productivity tracking & metrics
+    description:
+      Ever Teams tracks a variety of productivity metrics, such as task completion rates, time spent on activities,
+      and individual and team productivity levels.
+  - title: Streamlined projects / tasks & issues management
+    description:
+      Ever Teams helps you manage projects and tasks effectively by providing a centralized platform for creating,
+      assigning, and tracking tasks, as well as identifying, tracking, and resolving issues.
+  - title: Flexible tags / labels for easy organization
+    description:
+      Ever Teams allows you to create custom tags to categorize tasks, projects, and other items,
+      making it easy to find the information you need.
+  - title: Seamless integrations (GitHub, GitLab, Bitbucket, JIRA, etc.)
+    description:
+      Ever Teams integrates with a variety of third-party tools, such as GitHub, GitLab, Bitbucket, and JIRA,
+      to streamline your workflow.
+  - title: Customizable dark / black / light themes
+    description: Ever Teams allows you to choose from a variety of dark, black,
+      or light themes to personalize your experience.
+tags:
+  - Task Management
+  - Team Management
+  - Collaboration Board
+  - Video Calling
+  - Communication
+  - Productivity Tools
