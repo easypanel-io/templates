@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: augustodelg/pocketbase:0.22.6
+      default: spectado/pocketbase:latest
 benefits:
   - title: Realtime Database
     description:
