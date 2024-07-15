@@ -16,14 +16,24 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 8090,
+          port: 80,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "pocketbase-data",
+          name: "data",
           mountPath: "/pb_data",
+        },
+        {
+          type: "volume",
+          name: "public",
+          mountPath: "/pb_public",
+        },
+        {
+          type: "volume",
+          name: "migrations",
+          mountPath: "/pb_migrations",
         },
       ],
     },
