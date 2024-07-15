@@ -29,6 +29,9 @@ export function generate(input: Input): Output {
       ],
       mounts: [{ type: "volume", name: "espocrm", mountPath: "/var/www/html" }],
       env: appEnv.join("\n"),
+      deploy: {
+        command: `chmod -R 755 /var/www/html && docker-entrypoint.sh apache2-foreground`,
+      },
     },
   });
 
