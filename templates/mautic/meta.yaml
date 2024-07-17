@@ -47,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mautic/mautic:5-apache
+      default: mautic/mautic:v4-apache
     databaseServiceName:
       type: string
       title: Database Service Name
