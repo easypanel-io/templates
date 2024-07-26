@@ -1,0 +1,28 @@
+name: Dify
+description:
+changeLog:
+  - date: 2024-7-26
+    description: first release
+links:
+  - label: Website
+    url:
+  - label: Documentation
+    url:
+  - label: Github
+    url:
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dify
