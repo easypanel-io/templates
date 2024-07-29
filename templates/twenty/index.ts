@@ -8,7 +8,7 @@ export function generate(input: Input): Output {
     type: "compose",
     data: {
       projectName: input.projectName,
-      serviceName: input.appServiceName,
+      serviceName: input.serviceName,
       source: {
         type: "git",
         repo: "git@github.com:easypanel-io/compose.git",
