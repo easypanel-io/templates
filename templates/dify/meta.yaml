@@ -1,0 +1,32 @@
+name: Dify
+description:
+  Dify is an open-source platform designed to simplify the development and
+  operation of AI applications using large language models (LLMs). It provides
+  features like visual prompt orchestration, RAG pipeline, agent capabilities,
+  model management, and LLMOps for efficient monitoring and analysis.
+changeLog:
+  - date: 2024-7-26
+    description: first release
+links:
+  - label: Website
+    url: https://dify.ai
+  - label: Documentation
+    url: https://docs.dify.ai
+  - label: Github
+    url: https://github.com/langgenius/dify
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - serviceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    serviceName:
+      type: string
+      title: App Service Name
+      default: dify

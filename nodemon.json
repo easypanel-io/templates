@@ -1,6 +1,10 @@
 {
   "watch": ["templates"],
-  "ignore": ["templates/index.ts", "templates/*/meta.ts"],
+  "ignore": [
+    "templates/index.ts",
+    "templates/*/meta.ts",
+    "templates/list.json"
+  ],
   "ext": "*",
   "exec": "npm run build-templates"
 }

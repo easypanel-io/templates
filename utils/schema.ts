@@ -491,6 +491,69 @@ export const redisSchema = z.object({
   command: z.string().optional(),
 });
 
+export const composeSourceSchema = z
+  .union([
+    z.object({
+      type: z.literal("inline"),
+      content: z.string(),
+    }),
+    z.object({
+      type: z.literal("git"),
+      repo: z.string(),
+      ref: z.string(),
+      rootPath: z.string(),
+      composeFile: z.string(),
+    }),
+  ])
+  .optional();
+
+export const composeDomainsSchema = z
+  .array(
+    z.object({
+      https: z.boolean().default(true),
+      host: domainRule,
+      port: z.number().default(80),
+      service: z.string().default(""),
+      path: z.string().startsWith("/").default("/"),
+      middlewares: z.array(z.string()).optional(),
+      certificateResolver: z.string().optional(),
+      wildcard: z.boolean().default(false),
+    })
+  )
+  .default([]);
+
+export const composeRedirectsSchema = z
+  .array(
+    z.object({
+      regex: z.string(),
+      replacement: z.string(),
+      permanent: z.boolean(),
+      enabled: z.boolean(),
+    })
+  )
+  .optional();
+
+export const composeBasicAuthSchema = z
+  .array(
+    z.object({
+      username: z.string(),
+      password: z.string(),
+    })
+  )
+  .optional();
+
+export const composeSchema = z.object({
+  projectName: projectNameRule,
+  serviceName: serviceNameRule,
+  source: composeSourceSchema,
+  env: z.string().default(""),
+  createDotEnv: z.boolean().default(false),
+  domains: composeDomainsSchema,
+  redirects: composeRedirectsSchema,
+  basicAuth: composeBasicAuthSchema,
+  maintenance: maintenanceSchema,
+});
+
 export const templateSchema = z.object({
   services: z.array(
     z.union([
@@ -517,6 +580,10 @@ export const templateSchema = z.object({
       z.object({
         type: z.literal("redis"),
         data: redisSchema,
+      }),
+      z.object({
+        type: z.literal("compose"),
+        data: composeSchema,
       }),
     ])
   ),
