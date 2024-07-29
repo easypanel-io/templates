@@ -1,15 +1,18 @@
 name: Plane
 description:
+  Plane is an open-source project management tool designed to help teams manage
+  tasks, sprints, and product roadmaps efficiently. It offers features like
+  issue tracking, cycles, modules, custom views, pages, and real-time analytics.
 changeLog:
   - date: 2024-7-26
     description: first release
 links:
   - label: Website
-    url:
+    url: https://plane.so
   - label: Documentation
-    url:
+    url: https://docs.plane.so/introduction/home
   - label: Github
-    url:
+    url: https://github.com/makeplane/plane
 contributors:
   - name: Serban Alexandru
     url: https://github.com/serban-alexandru
@@ -25,4 +28,4 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: supabase
+      default: plane
