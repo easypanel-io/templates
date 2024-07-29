@@ -121,6 +121,42 @@ export const appSourceSchema = z
   ])
   .optional();
 
+export const composeSourceSchema = z
+  .union([
+    z.object({
+      type: z.literal("inline"),
+      content: z.string(),
+    }),
+    z.object({
+      type: z.literal("git"),
+      repo: z.string(),
+      ref: z.string(),
+      rootPath: z.string(),
+      composeFile: z.string(),
+    }),
+  ])
+  .optional();
+
+export const composeRedirectsSchema = z
+  .array(
+    z.object({
+      regex: z.string(),
+      replacement: z.string(),
+      permanent: z.boolean(),
+      enabled: z.boolean(),
+    })
+  )
+  .optional();
+
+export const composeBasicAuthSchema = z
+  .array(
+    z.object({
+      username: z.string(),
+      password: z.string(),
+    })
+  )
+  .optional();
+
 export const appBuildSchema = z
   .union([
     z.object({
@@ -173,7 +209,7 @@ export const appPortsSchema = z
   )
   .default([]);
 
-export const appDomainsSchema = z
+export const domainsSchema = z
   .array(
     z.object({
       host: domainRule,
@@ -181,6 +217,23 @@ export const appDomainsSchema = z
       port: z.number().default(80),
       path: z.string().startsWith("/").default("/"),
       middlewares: z.array(z.string()).optional(),
+      certificateResolver: z.string().optional(),
+      wildcard: z.boolean().default(false),
+    })
+  )
+  .default([]);
+
+export const composeDomainsSchema = z
+  .array(
+    z.object({
+      https: z.boolean().default(true),
+      host: domainRule,
+      port: z.number().default(80),
+      service: z.string().default(""),
+      path: z.string().startsWith("/").default("/"),
+      middlewares: z.array(z.string()).optional(),
+      certificateResolver: z.string().optional(),
+      wildcard: z.boolean().default(false),
     })
   )
   .default([]);
@@ -432,10 +485,22 @@ export const appSchema = z.object({
   env: z.string().default(""),
   basicAuth: appBasicAuthSchema,
   deploy: appDeploySchema,
-  domains: appDomainsSchema,
+  domains: domainsSchema,
   mounts: appMountsSchema,
   ports: appPortsSchema,
   resources: resourcesSchema,
+  maintenance: maintenanceSchema,
+});
+
+export const composeSchema = z.object({
+  projectName: projectNameRule,
+  serviceName: serviceNameRule,
+  source: composeSourceSchema,
+  env: z.string().default(""),
+  createDotEnv: z.boolean().default(false),
+  domains: composeDomainsSchema,
+  redirects: composeRedirectsSchema,
+  basicAuth: composeBasicAuthSchema,
   maintenance: maintenanceSchema,
 });
 
@@ -489,69 +554,6 @@ export const redisSchema = z.object({
   resources: resourcesSchema,
   env: z.string().optional(),
   command: z.string().optional(),
-});
-
-export const composeSourceSchema = z
-  .union([
-    z.object({
-      type: z.literal("inline"),
-      content: z.string(),
-    }),
-    z.object({
-      type: z.literal("git"),
-      repo: z.string(),
-      ref: z.string(),
-      rootPath: z.string(),
-      composeFile: z.string(),
-    }),
-  ])
-  .optional();
-
-export const composeDomainsSchema = z
-  .array(
-    z.object({
-      https: z.boolean().default(true),
-      host: domainRule,
-      port: z.number().default(80),
-      service: z.string().default(""),
-      path: z.string().startsWith("/").default("/"),
-      middlewares: z.array(z.string()).optional(),
-      certificateResolver: z.string().optional(),
-      wildcard: z.boolean().default(false),
-    })
-  )
-  .default([]);
-
-export const composeRedirectsSchema = z
-  .array(
-    z.object({
-      regex: z.string(),
-      replacement: z.string(),
-      permanent: z.boolean(),
-      enabled: z.boolean(),
-    })
-  )
-  .optional();
-
-export const composeBasicAuthSchema = z
-  .array(
-    z.object({
-      username: z.string(),
-      password: z.string(),
-    })
-  )
-  .optional();
-
-export const composeSchema = z.object({
-  projectName: projectNameRule,
-  serviceName: serviceNameRule,
-  source: composeSourceSchema,
-  env: z.string().default(""),
-  createDotEnv: z.boolean().default(false),
-  domains: composeDomainsSchema,
-  redirects: composeRedirectsSchema,
-  basicAuth: composeBasicAuthSchema,
-  maintenance: maintenanceSchema,
 });
 
 export const templateSchema = z.object({
