@@ -21,12 +21,12 @@ schema:
   type: object
   required:
     - projectName
-    - appServiceName
+    - serviceName
   properties:
     projectName:
       type: string
       title: Project Name
-    appServiceName:
+    serviceName:
       type: string
       title: App Service Name
       default: dify
