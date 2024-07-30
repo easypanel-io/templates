@@ -1,0 +1,31 @@
+name: Appwrite
+description:
+  Appwrite is an open-source backend as a service server that abstracts and
+  simplifies complex and repetitive development tasks behind a very simple to
+  use REST API.
+changeLog:
+  - date: 2024-7-30
+    description: first release
+links:
+  - label: Website
+    url: https://appwrite.io
+  - label: Documentation
+    url: https://appwrite.io/docs
+  - label: Github
+    url: https://github.com/appwrite/appwrite
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - projectName
+    - serviceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    serviceName:
+      type: string
+      title: Service Name
+      default: appwrite
