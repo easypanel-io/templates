@@ -1,19 +1,19 @@
-name: Supabase
+name: Appwrite
 description:
-  Supabase is an open source Firebase alternative. Supabase is built on top of
-  Postgres, and it's easy to set up and use. Supabase is also completely free to
-  use, and it's completely open source.
+  Appwrite is an open-source backend as a service server that abstracts and
+  simplifies complex and repetitive development tasks behind a very simple to
+  use REST API.
 instructions: null
 changeLog:
-  - date: 2024-7-26
+  - date: 2024-7-30
     description: first release
 links:
   - label: Website
-    url: https://supabase.com/
+    url: https://appwrite.io
   - label: Documentation
-    url: https://supabase.com/docs
+    url: https://appwrite.io/docs
   - label: Github
-    url: https://github.com/supabase/supabase
+    url: https://github.com/appwrite/appwrite
 contributors:
   - name: Serban Alexandru
     url: https://github.com/serban-alexandru
@@ -29,4 +29,4 @@ schema:
     serviceName:
       type: string
       title: Service Name
-      default: supabase
+      default: appwrite
