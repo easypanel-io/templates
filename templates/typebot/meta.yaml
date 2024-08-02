@@ -43,7 +43,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - builderServiceName
     - viewerServiceName
     - builderDomain
@@ -57,9 +56,6 @@ schema:
     - githubClientSecret
     - adminEmail
   properties:
-    projectName:
-      type: string
-      title: Project Name
     viewerServiceName:
       type: string
       title: Viewer Service Name

@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [`LAVALINK_SERVER_PASSWORD=${input.password}`].join("\n"),
       source: {

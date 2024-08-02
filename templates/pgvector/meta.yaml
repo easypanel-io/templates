@@ -26,13 +26,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - serviceName
     - serviceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     serviceName:
       type: string
       title: Service Name

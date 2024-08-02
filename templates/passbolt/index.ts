@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `APP_FULL_BASE_URL=https://$(PRIMARY_DOMAIN)`,
@@ -50,7 +49,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mysql",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

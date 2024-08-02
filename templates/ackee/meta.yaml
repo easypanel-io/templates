@@ -30,16 +30,12 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - ackeeUsername
     - ackeePassword
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     ackeeUsername:
       type: string
       title: Ackee Username

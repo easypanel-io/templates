@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `HASURA_GRAPHQL_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
@@ -33,7 +32,6 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       image: "postgres:13",
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

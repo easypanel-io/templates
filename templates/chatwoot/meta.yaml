@@ -29,7 +29,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - defaultLocale
     - appServiceName
     - appServiceImage
@@ -37,9 +36,6 @@ schema:
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     defaultLocale:
       type: string
       title: Default Locale

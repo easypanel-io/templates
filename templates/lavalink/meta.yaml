@@ -24,14 +24,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - password
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     password:
       type: string
       title: Auth server password

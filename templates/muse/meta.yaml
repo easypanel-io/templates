@@ -24,7 +24,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - discordToken
@@ -32,9 +31,6 @@ schema:
     - spotifyClientId
     - spotifyClientSecret
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name

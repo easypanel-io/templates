@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
     `NEXTAUTH_SECRET=${secret}`,
     "NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)",
     "",
-    `DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_postgres:5432/${input.projectName}`,
+    `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_postgres:5432/$(PROJECT_NAME)`,
     "",
     "EASYPANEL_URL=https://your-easypanel.url",
     "EASYPANEL_API_KEY=your-easypanel-apikey",
@@ -27,7 +27,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "github",
@@ -58,7 +57,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: "postgres",
       image: "postgres:16",
       password: databasePassword,

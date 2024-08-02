@@ -10,7 +10,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `DB_TYPE=${input.databaseType}`,
@@ -37,7 +36,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "postgres",
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: databasePassword,
       },
@@ -48,7 +46,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "mysql",
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: databasePassword,
       },
@@ -59,7 +56,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "mariadb",
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: databasePassword,
       },

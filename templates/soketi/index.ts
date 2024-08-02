@@ -26,7 +26,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: serviceVariables.join("\n"),
       source: {
@@ -51,7 +50,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: input.redisServiceName,
       password: redisRandomPassword,
     },

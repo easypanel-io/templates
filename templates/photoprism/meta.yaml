@@ -31,7 +31,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - photoprismAdminUser
@@ -39,9 +38,6 @@ schema:
     - databaseType
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name

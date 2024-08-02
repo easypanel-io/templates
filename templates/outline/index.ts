@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `PGSSLMODE=disable`,
@@ -59,7 +58,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
@@ -67,16 +65,11 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: redisPassword,
-    },
+    data: { serviceName: input.redisServiceName, password: redisPassword },
   });
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.minioServiceName,
       env: [
         `MINIO_ROOT_USER=minio`,

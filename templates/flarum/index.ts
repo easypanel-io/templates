@@ -9,7 +9,7 @@ export function generate(input: Input): Output {
       : `$(PROJECT_NAME)_${input.databaseServiceName}`;
   // const dbPort = input.databasePort || input.databaseType === 'postgres' ? 5432 : 3306
   const dbPort = input.databasePort || 3306;
-  const dbName = input.databaseName || input.projectName;
+  const dbName = input.databaseName || "$(PROJECT_NAME)";
   const dbUser = input.databaseUser || input.databaseType;
   const dbRandomPassword = input.databaseUserPassword || randomPassword();
 
@@ -26,7 +26,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: serviceVariables.join("\n"),
       source: {
@@ -53,7 +52,6 @@ export function generate(input: Input): Output {
     services.push({
       type: input.databaseType,
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: dbRandomPassword,
       },

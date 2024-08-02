@@ -78,7 +78,6 @@ async function run() {
       );
       Object.entries(meta.schema.properties).forEach((entry: any) => {
         const [key, value] = entry;
-        if (key === "projectName") return;
         lines.push(
           `${value.title ?? key} | ${value.description ?? "-"} | ${
             meta.schema.required.includes(key as any) ? "yes" : "no"
