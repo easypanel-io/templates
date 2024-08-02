@@ -24,13 +24,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     alltubeTitle:
       type: string
       title: Title

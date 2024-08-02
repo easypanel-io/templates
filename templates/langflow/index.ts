@@ -8,14 +8,13 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "image",
         image: input.appServiceImage,
       },
       env: [
-        `LANGFLOW_DATABASE_URL=postgres://postgres:${databasePassword}@${input.projectName}_${input.appServiceName}-db:5432/${input.projectName}`,
+        `LANGFLOW_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         "LANGFLOW_AUTO_LOGIN=false",
         `LANGFLOW_SUPERUSER=${input.username}`,
         `LANGFLOW_SUPERUSER_PASSWORD=${input.password}`,
@@ -44,7 +43,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-db`,
       image: "postgres:16",
       password: databasePassword,

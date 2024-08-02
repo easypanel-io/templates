@@ -40,15 +40,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - domain
     - serviceNamePrefix
     - workerReplicas
     - nativeWorkerReplicas
   properties:
-    projectName:
-      type: string
-      title: Project Name
     domain:
       type: string
       title: Domain

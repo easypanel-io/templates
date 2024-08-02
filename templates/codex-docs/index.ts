@@ -14,7 +14,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `APP_CONFIG_database_driver=mongodb`,
@@ -57,11 +56,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "mongo",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      password: mongoPassword,
-    },
+    data: { serviceName: input.databaseServiceName, password: mongoPassword },
   });
 
   return { services };

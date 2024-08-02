@@ -18,7 +18,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       domains: [
@@ -38,7 +37,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-daemon",
       source: { type: "image", image: input.appServiceImage },
       deploy: { command: "sleep 120; docker-daemon.sh" },
@@ -55,7 +53,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-websocket",
       source: { type: "image", image: input.appServiceImage },
       deploy: { command: "sleep 120; docker-websocket.sh" },
@@ -84,7 +81,6 @@ export function generate(input: Input): Output {
   services.push({
     type: input.databaseServiceType,
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

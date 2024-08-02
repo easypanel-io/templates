@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "image",
@@ -49,7 +48,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mariadb",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "mariadb:10.2",
       password: dbPassword,

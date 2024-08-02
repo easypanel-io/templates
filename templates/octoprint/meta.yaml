@@ -32,13 +32,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     enableMjpgStreamer:
       type: boolean
       title: Enable MJPG Streamer

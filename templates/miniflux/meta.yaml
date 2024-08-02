@@ -31,16 +31,12 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - adminUsername
     - adminPassword
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     adminUsername:
       type: string
       title: Admin Username

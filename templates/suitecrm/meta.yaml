@@ -37,14 +37,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     suitecrmUsername:
       type: string
       title: Username

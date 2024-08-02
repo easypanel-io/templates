@@ -30,16 +30,12 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - peertubeAdminMail
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     peertubeAdminMail:
       type: string
       title: Admin Mail

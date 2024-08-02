@@ -561,31 +561,31 @@ export const templateSchema = z.object({
     z.union([
       z.object({
         type: z.literal("app"),
-        data: appSchema,
+        data: appSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("mysql"),
-        data: mysqlSchema,
+        data: mysqlSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("mariadb"),
-        data: mariadbSchema,
+        data: mariadbSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("mongo"),
-        data: mongoSchema,
+        data: mongoSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("postgres"),
-        data: postgresSchema,
+        data: postgresSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("redis"),
-        data: redisSchema,
+        data: redisSchema.omit({ projectName: true }),
       }),
       z.object({
         type: z.literal("compose"),
-        data: composeSchema,
+        data: composeSchema.omit({ projectName: true }),
       }),
     ])
   ),

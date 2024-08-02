@@ -25,15 +25,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     siteName:
       type: string
       title: Site Name

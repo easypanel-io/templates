@@ -8,13 +8,12 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
-        `MAUTIC_DB_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `MAUTIC_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `MAUTIC_DB_USER=mysql`,
         `MAUTIC_DB_PASSWORD=${mysqlPassword}`,
-        `MAUTIC_DB_NAME=${input.projectName}`,
+        `MAUTIC_DB_NAME=$(PROJECT_NAME)`,
         `MAUTIC_RUN_CRON_JOBS=true`,
       ].join("\n"),
       source: {
@@ -39,11 +38,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "mysql",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      password: mysqlPassword,
-    },
+    data: { serviceName: input.databaseServiceName, password: mysqlPassword },
   });
 
   return { services };

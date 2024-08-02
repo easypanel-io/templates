@@ -28,14 +28,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appMongoUrl
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appMongoUrl:
       type: string
       title: Mongo URL

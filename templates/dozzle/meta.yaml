@@ -29,15 +29,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - dozzleLevel
     - dozzleNoAnalytics
   properties:
-    projectName:
-      type: string
-      title: Project Name
     dozzleUsername:
       type: string
       title: Username

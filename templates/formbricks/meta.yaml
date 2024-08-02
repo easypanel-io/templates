@@ -21,13 +21,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceImage:
       type: string
       title: App Service Image
