@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
       ],
       domains: [
         {
-          host: "console.$(EASYPANEL_DOMAIN)",
+          host: "console-$(EASYPANEL_DOMAIN)",
           port: 9001,
         },
         {
