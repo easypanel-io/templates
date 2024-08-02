@@ -15,7 +15,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.builderServiceName,
       source: { type: "image", image: input.builderServiceImage },
       domains: [{ host: input.builderDomain, port: 3000 }],
@@ -39,7 +38,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.viewerServiceName,
       source: { type: "image", image: input.viewerServiceImage },
       domains: [{ host: input.viewerDomain, port: 3000 }],
@@ -59,7 +57,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.storageServiceName,
       source: { type: "image", image: input.storageServiceImage },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 9001 }],
@@ -75,7 +72,6 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       image: "postgres:13",
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

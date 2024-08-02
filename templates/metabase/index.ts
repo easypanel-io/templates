@@ -3,12 +3,11 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const siteName = input.projectName || input.metabaseSiteName;
+  const siteName = input.metabaseSiteName || "$(PROJECT_NAME)";
 
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `MB_SITE_NAME=${siteName}`,

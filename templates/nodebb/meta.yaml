@@ -32,15 +32,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceType
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     nodebbAdminUsername:
       type: string
       title: Admin Username

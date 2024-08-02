@@ -29,7 +29,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -39,9 +38,6 @@ schema:
     - emailUsername
     - emailPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name

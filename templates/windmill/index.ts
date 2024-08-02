@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.serviceNamePrefix}-server`,
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.serviceNamePrefix}-database:5432/$(PROJECT_NAME)?sslmode=disable`,
@@ -30,7 +29,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.serviceNamePrefix}-lsp`,
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.serviceNamePrefix}-database:5432/$(PROJECT_NAME)?sslmode=disable`,
@@ -54,7 +52,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.serviceNamePrefix}-worker`,
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.serviceNamePrefix}-database:5432/$(PROJECT_NAME)?sslmode=disable`,
@@ -86,7 +83,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.serviceNamePrefix}-worker-native`,
       env: [
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.serviceNamePrefix}-database:5432/$(PROJECT_NAME)?sslmode=disable`,
@@ -106,7 +102,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.serviceNamePrefix}-database`,
       password: databasePassword,
     },

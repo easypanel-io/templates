@@ -8,11 +8,10 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `TRUST_PROXY_HEADER=1`,
-        `DB_URL=postgres://postgres:${randomPasswordPostgres}@${input.projectName}_${input.databaseServiceName}:5432/${input.projectName}`,
+        `DB_URL=postgres://postgres:${randomPasswordPostgres}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `ENDPOINT=https://$(EASYPANEL_DOMAIN)`,
         `ADMIN_ENDPOINT=https://admin-$(EASYPANEL_DOMAIN)`,
       ].join("\n"),
@@ -39,7 +38,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "postgres:16",
       password: randomPasswordPostgres,

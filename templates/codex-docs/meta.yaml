@@ -31,15 +31,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - codexAuthPassword
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     codexAuthPassword:
       type: string
       title: CodeX Auth Password

@@ -27,15 +27,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - kopiaUsername
     - kopiaPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     kopiaUsername:
       type: string
       title: Username

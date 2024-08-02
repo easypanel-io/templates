@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `LISTMONK_app__address=0.0.0.0:9000`,
@@ -46,7 +45,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "postgres:14",
       password: randomPasswordPostgres,

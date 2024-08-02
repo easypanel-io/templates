@@ -14,7 +14,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `NODE_ENV=production`,
@@ -48,7 +47,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mongo",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "mongo:4",
       password: mongoPassword,

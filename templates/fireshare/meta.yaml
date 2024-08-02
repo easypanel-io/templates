@@ -27,15 +27,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - adminUsername
     - adminPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name

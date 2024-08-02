@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "compose",
     data: {
-      projectName: input.projectName,
       serviceName: input.serviceName,
       source: {
         type: "git",

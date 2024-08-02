@@ -32,17 +32,12 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - adminUsername
     - adminPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
-      default: listmonk
     appServiceName:
       type: string
       title: App Service Name

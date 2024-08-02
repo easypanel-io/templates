@@ -20,13 +20,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name

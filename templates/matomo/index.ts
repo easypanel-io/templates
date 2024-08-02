@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `MATOMO_DATABASE_ADAPTER=mysql`,
@@ -41,7 +40,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mariadb",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
