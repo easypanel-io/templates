@@ -1,0 +1,53 @@
+name: Pupilfirst
+description: Pupilfirst LMS is a learning management system (LMS) designed to facilitate online education and training. An LMS is a software application that enables the creation, delivery, management, and tracking of educational content and resources. Pupilfirst LMS is specifically tailored for educational institutions, organizations, and businesses looking to offer courses, training programs, or other learning experiences in a digital format.
+instructions: null
+changeLog:
+  - date: 2023-9-21
+    description: first release
+links:
+  - label: Website
+    url: https://www.pupilfirst.org/
+  - label: Documentation
+    url: https://docs.pupilfirst.com/
+  - label: Github
+    url: https://github.com/pupilfirst/pupilfirst
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pupilfirst
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pupilfirst/pupilfirst:2023.4
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: pupilfirst-db
+    defaultSenderEmail:
+      type: string
+      title: Default Sender Email
+      default: hello@pupilfirst.com
+    avaliableLanguage:
+      type: string
+      title: Avaliable Languages (e.g. en, pt-br)
+      default: en
+    defaultLanguage:
+      type: string
+      title: Default Language (e.g. en)
+      default: en
+tags:
+  - Learning Management System
