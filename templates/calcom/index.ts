@@ -10,6 +10,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const appEnv = [
+    `DATABASE_DIRECT_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `NEXTAUTH_SECRET=${btoa(randomString(32))}`,
     `CALENDSO_ENCRYPTION_KEY=${btoa(randomString(24))}`,
@@ -20,7 +21,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "app",
       data: {
-        projectName: input.projectName,
         serviceName: input.appServiceName + "-studio",
         source: { type: "image", image: input.appServiceImage },
         domains: [
@@ -40,7 +40,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       domains: [
@@ -56,7 +55,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

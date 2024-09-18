@@ -1,20 +1,21 @@
 name: Typebot
-description: Typebot is an innovative app designed to revolutionize the way you
-  collect information. It allows you to build advanced chatbots visually, using
-  powerful blocks to create unique chat experiences. You can embed these
-  chatbots anywhere on your web or mobile apps and start collecting results
-  instantly. Typebot is designed to replace your old school forms with chatbots,
-  leading to an increase in customer satisfaction, retention, and a threefold
-  increase in your conversion rate compared to traditional forms. With Typebot,
-  you can easily drag and drop blocks to create your app, and even add custom
-  code for your specific needs. It also offers native integration blocks and
-  instructions on how to embed the chatbot on various platforms. One of the main
-  advantages of Typebot is its real-time data collection feature, ensuring that
-  you won't lose any valuable data. It also offers many more powerful features
-  such as hidden fields, team collaboration, linking to sub chatbots, custom
-  code, custom domains, and folder management. Typebot is loved by teams and
-  creators from all around the world for its intelligent features and
-  drag-and-drop simplicity.
+description:
+  Typebot is an innovative app designed to revolutionize the way you collect
+  information. It allows you to build advanced chatbots visually, using powerful
+  blocks to create unique chat experiences. You can embed these chatbots
+  anywhere on your web or mobile apps and start collecting results instantly.
+  Typebot is designed to replace your old school forms with chatbots, leading to
+  an increase in customer satisfaction, retention, and a threefold increase in
+  your conversion rate compared to traditional forms. With Typebot, you can
+  easily drag and drop blocks to create your app, and even add custom code for
+  your specific needs. It also offers native integration blocks and instructions
+  on how to embed the chatbot on various platforms. One of the main advantages
+  of Typebot is its real-time data collection feature, ensuring that you won't
+  lose any valuable data. It also offers many more powerful features such as
+  hidden fields, team collaboration, linking to sub chatbots, custom code,
+  custom domains, and folder management. Typebot is loved by teams and creators
+  from all around the world for its intelligent features and drag-and-drop
+  simplicity.
 instructions: Open the builder URL to access typebot.
 changeLog:
   - date: 2023-02-27
@@ -37,10 +38,11 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Alan Frigo
+    url: https://github.com/alanfrigo
 schema:
   type: object
   required:
-    - projectName
     - builderServiceName
     - viewerServiceName
     - builderDomain
@@ -54,9 +56,6 @@ schema:
     - githubClientSecret
     - adminEmail
   properties:
-    projectName:
-      type: string
-      title: Project Name
     viewerServiceName:
       type: string
       title: Viewer Service Name
@@ -74,7 +73,7 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:2
+      default: baptistearno/typebot-builder:2.25.2
     viewerServiceImage:
       type: string
       title: Viewer Service Image
@@ -102,31 +101,37 @@ schema:
       title: Email to make administrator
 benefits:
   - title: Build advanced chatbots visually
-    description: Typebot gives you powerful blocks to create unique chat
-      experiences. Embed them anywhere on your web/mobile apps and start
-      collecting results like magic.
+    description:
+      Typebot gives you powerful blocks to create unique chat experiences. Embed
+      them anywhere on your web/mobile apps and start collecting results like
+      magic.
   - title: Replace your old school forms with chatbots
-    description: Typebot is a better way to ask for information. It leads to an
-      increase in customer satisfaction and retention and multiply by 3 your
-      conversion rate compared to classical forms.
+    description:
+      Typebot is a better way to ask for information. It leads to an increase in
+      customer satisfaction and retention and multiply by 3 your conversion rate
+      compared to classical forms.
 features:
   - title: Easy building experience
-    description: All you have to do is drag and drop blocks to create your app. Even
-      if you have custom needs, you can always add custom code.
+    description:
+      All you have to do is drag and drop blocks to create your app. Even if you
+      have custom needs, you can always add custom code.
   - title: Embed it in a click
-    description: Embedding your typebot in your applications is a walk in the park.
-      Typebot gives you several step-by-step platform-specific instructions.
-      Your typebot will always feel 'native'.
+    description:
+      Embedding your typebot in your applications is a walk in the park. Typebot
+      gives you several step-by-step platform-specific instructions. Your
+      typebot will always feel 'native'.
   - title: Integrate with any platform
-    description: Typebot offers several native integrations blocks as well as
-      instructions on how to embed typebot on particular platforms.
+    description:
+      Typebot offers several native integrations blocks as well as instructions
+      on how to embed typebot on particular platforms.
   - title: Collect results in real-time
-    description: One of the main advantages of a chat application is that you
-      collect the user's responses on each question. You won't lose any valuable
-      data.
+    description:
+      One of the main advantages of a chat application is that you collect the
+      user's responses on each question. You won't lose any valuable data.
   - title: And many more features
-    description: Typebot makes form building easy and comes with powerful features
-      like hidden fields, team collaboration, link to sub typebots, custom code,
+    description:
+      Typebot makes form building easy and comes with powerful features like
+      hidden fields, team collaboration, link to sub typebots, custom code,
       custom domain, and folder management.
 tags:
   - Chat

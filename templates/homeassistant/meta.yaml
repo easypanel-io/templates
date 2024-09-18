@@ -1,12 +1,13 @@
 name: Home Assistant
-description: Home Assistant is an open-source home automation app that
-  prioritizes local control and privacy. It allows you to manage and automate a
-  wide range of devices and services in your home, from electricity grids and
-  solar panels to voice-controlled devices. With its advanced configuration
-  options, you can customize your home automation to suit your needs. It also
-  offers features like multi-factor authentication for added security. Home
-  Assistant is perfect to run on a Raspberry Pi or a local server, providing a
-  comprehensive solution for your home automation needs.
+description:
+  Home Assistant is an open-source home automation app that prioritizes local
+  control and privacy. It allows you to manage and automate a wide range of
+  devices and services in your home, from electricity grids and solar panels to
+  voice-controlled devices. With its advanced configuration options, you can
+  customize your home automation to suit your needs. It also offers features
+  like multi-factor authentication for added security. Home Assistant is perfect
+  to run on a Raspberry Pi or a local server, providing a comprehensive solution
+  for your home automation needs.
 instructions: null
 changeLog:
   - date: 2022-11-21
@@ -22,13 +23,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -39,31 +36,38 @@ schema:
       default: lscr.io/linuxserver/homeassistant:latest
 benefits:
   - title: Home Automation
-    description: Home Assistant is an open-source home automation platform that
-      focuses on privacy and local control. It allows you to control all your
-      devices from a single, unified interface.
+    description:
+      Home Assistant is an open-source home automation platform that focuses on
+      privacy and local control. It allows you to control all your devices from
+      a single, unified interface.
   - title: Local Control and Privacy
-    description: With Home Assistant, your data is kept secure because it remains in
-      your network and is not sent to any cloud-based servers. This ensures that
-      your privacy is always protected.
+    description:
+      With Home Assistant, your data is kept secure because it remains in your
+      network and is not sent to any cloud-based servers. This ensures that your
+      privacy is always protected.
   - title: Versatility
-    description: Home Assistant can be run on various systems including Raspberry Pi
-      and local servers, making it a versatile choice for different user
+    description:
+      Home Assistant can be run on various systems including Raspberry Pi and
+      local servers, making it a versatile choice for different user
       preferences.
 features:
   - title: Wide Range of Integrations
-    description: Home Assistant supports a wide range of devices and services,
-      offering over 1000 integrations for you to choose from.
+    description:
+      Home Assistant supports a wide range of devices and services, offering
+      over 1000 integrations for you to choose from.
   - title: Customizable Dashboards
-    description: Home Assistant provides customizable dashboards that allow you to
-      control and monitor your devices in a way that suits your needs.
+    description:
+      Home Assistant provides customizable dashboards that allow you to control
+      and monitor your devices in a way that suits your needs.
   - title: Voice Control
-    description: Home Assistant supports voice control, enabling you to manage your
-      devices through voice commands for a hands-free experience.
+    description:
+      Home Assistant supports voice control, enabling you to manage your devices
+      through voice commands for a hands-free experience.
   - title: Automation
-    description: With Home Assistant, you can automate your devices to perform
-      certain tasks at specific times or under certain conditions. This includes
-      turning lights on and off, adjusting the thermostat, and more.
+    description:
+      With Home Assistant, you can automate your devices to perform certain
+      tasks at specific times or under certain conditions. This includes turning
+      lights on and off, adjusting the thermostat, and more.
 tags:
   - Home Automation
   - Open Source

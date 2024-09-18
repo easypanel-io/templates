@@ -1,16 +1,17 @@
 name: Wiki.js
-description: Wiki.js is a powerful and extensible open source Wiki software
-  designed to make documentation a joy to write. It features a beautiful and
-  intuitive interface that can be fully customized to your liking, including a
-  light and dark mode. The software is compatible with various platforms and
-  databases, including PostgreSQL, MySQL, MariaDB, MS SQL Server, and SQLite.
-  With Wiki.js, you can manage all aspects of your wiki using the extensive and
-  intuitive admin area. The software is built with performance in mind, running
-  on the blazing fast Node.js engine. It is designed to intelligently make use
-  of available resources, making it scalable whether it's on a tiny Raspberry Pi
-  or on a high performance VM in the cloud. Wiki.js also allows you to control
-  the privacy of your wiki, making it public, completely private, or a mix of
-  both. It offers a wide range of modules that can be turned on/off on demand,
+description:
+  Wiki.js is a powerful and extensible open source Wiki software designed to
+  make documentation a joy to write. It features a beautiful and intuitive
+  interface that can be fully customized to your liking, including a light and
+  dark mode. The software is compatible with various platforms and databases,
+  including PostgreSQL, MySQL, MariaDB, MS SQL Server, and SQLite. With Wiki.js,
+  you can manage all aspects of your wiki using the extensive and intuitive
+  admin area. The software is built with performance in mind, running on the
+  blazing fast Node.js engine. It is designed to intelligently make use of
+  available resources, making it scalable whether it's on a tiny Raspberry Pi or
+  on a high performance VM in the cloud. Wiki.js also allows you to control the
+  privacy of your wiki, making it public, completely private, or a mix of both.
+  It offers a wide range of modules that can be turned on/off on demand,
   catering to the unique needs of different teams. These modules include
   authentication, editors, history, localization, media assets, rendering,
   search, storage, user management, and themes. Wiki.js is proudly licensed
@@ -34,15 +35,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseType
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -50,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/requarks/wiki:2.5.298
+      default: ghcr.io/requarks/wiki:2.5.303
     databaseType:
       type: string
       title: Database Type
@@ -71,51 +68,60 @@ schema:
       default: wikijs-db
 benefits:
   - title: Powerful and Extensible
-    description: Wiki.js is the most powerful and extensible open source Wiki
-      software available. It offers a wide range of features and modules that
-      can be customized to meet the specific needs of your team.
+    description:
+      Wiki.js is the most powerful and extensible open source Wiki software
+      available. It offers a wide range of features and modules that can be
+      customized to meet the specific needs of your team.
   - title: Beautiful and Intuitive Interface
-    description: Make documentation a joy to write with Wiki.js's beautiful and
-      intuitive interface. The user-friendly design makes it easy to create and
-      manage your wiki pages.
+    description:
+      Make documentation a joy to write with Wiki.js's beautiful and intuitive
+      interface. The user-friendly design makes it easy to create and manage
+      your wiki pages.
   - title: Install Anywhere
-    description: Wiki.js can be installed on virtually any platform and is
-      compatible with popular databases like PostgreSQL, MySQL, MariaDB, MS SQL
-      Server, and SQLite. You have the flexibility to choose the hosting
-      environment that works best for your team.
+    description:
+      Wiki.js can be installed on virtually any platform and is compatible with
+      popular databases like PostgreSQL, MySQL, MariaDB, MS SQL Server, and
+      SQLite. You have the flexibility to choose the hosting environment that
+      works best for your team.
   - title: Easy Administration
-    description: Manage all aspects of your wiki using the extensive and intuitive
-      admin area. You can easily customize the appearance of your wiki, manage
-      user access and permissions, and configure authentication options.
+    description:
+      Manage all aspects of your wiki using the extensive and intuitive admin
+      area. You can easily customize the appearance of your wiki, manage user
+      access and permissions, and configure authentication options.
   - title: High Performance
-    description: Wiki.js is built on the blazing fast Node.js engine, ensuring
-      optimal performance. Whether you're running it on a small Raspberry Pi or
-      a high-performance VM in the cloud, Wiki.js intelligently utilizes
-      available resources.
+    description:
+      Wiki.js is built on the blazing fast Node.js engine, ensuring optimal
+      performance. Whether you're running it on a small Raspberry Pi or a
+      high-performance VM in the cloud, Wiki.js intelligently utilizes available
+      resources.
 features:
   - title: Authentication
-    description: Wiki.js offers built-in authentication with self-registration and
-      password recovery capabilities. You can also integrate with third-party
+    description:
+      Wiki.js offers built-in authentication with self-registration and password
+      recovery capabilities. You can also integrate with third-party
       authentication services like Google, Facebook, Microsoft, GitHub, and
       more.
   - title: Modules
-    description: Customize your wiki by enabling or disabling modules based on your
-      team's needs. Wiki.js offers a wide range of modules for features like
-      editing, history tracking, localization, media assets, rendering, search,
-      storage, and user management.
+    description:
+      Customize your wiki by enabling or disabling modules based on your team's
+      needs. Wiki.js offers a wide range of modules for features like editing,
+      history tracking, localization, media assets, rendering, search, storage,
+      and user management.
   - title: Open Source
-    description: Wiki.js is an open source project released under the AGPL-v3
-      license. This means anyone can contribute new features and help improve
-      the software. It's not just about being free, it's about fostering a
-      collaborative community.
+    description:
+      Wiki.js is an open source project released under the AGPL-v3 license. This
+      means anyone can contribute new features and help improve the software.
+      It's not just about being free, it's about fostering a collaborative
+      community.
   - title: External Integrations
-    description: Connect your wiki with external services for authentication,
-      logging, rendering, search, and storage. Wiki.js supports integrations
-      with popular platforms like Git, AWS, Azure, Google Cloud, Facebook, and
-      Algolia.
+    description:
+      Connect your wiki with external services for authentication, logging,
+      rendering, search, and storage. Wiki.js supports integrations with popular
+      platforms like Git, AWS, Azure, Google Cloud, Facebook, and Algolia.
   - title: Sponsors and Backers
-    description: Wiki.js is made possible thanks to generous sponsors and backers.
-      By supporting the project, you contribute to its ongoing development and
+    description:
+      Wiki.js is made possible thanks to generous sponsors and backers. By
+      supporting the project, you contribute to its ongoing development and
       improvement.
 tags:
   - Wiki

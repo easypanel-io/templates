@@ -1,13 +1,14 @@
 name: Freshrss
-description: FreshRSS is a free, self-hostable aggregator for RSS feeds. It
-  allows you to gather and read your favorite news sources in one place,
-  providing a streamlined and efficient way to stay informed. The app supports
-  multiple platforms and can be easily accessed through a web user interface.
-  FreshRSS also offers the ability to use external databases, enabling users to
-  create a user and database in their MySQL/MariaDB server. Additional
-  extensions can be added to enhance the functionality of the app. FreshRSS is
-  designed to be simple to use, yet powerful, providing a comprehensive solution
-  for RSS feed aggregation.
+description:
+  FreshRSS is a free, self-hostable aggregator for RSS feeds. It allows you to
+  gather and read your favorite news sources in one place, providing a
+  streamlined and efficient way to stay informed. The app supports multiple
+  platforms and can be easily accessed through a web user interface. FreshRSS
+  also offers the ability to use external databases, enabling users to create a
+  user and database in their MySQL/MariaDB server. Additional extensions can be
+  added to enhance the functionality of the app. FreshRSS is designed to be
+  simple to use, yet powerful, providing a comprehensive solution for RSS feed
+  aggregation.
 instructions: null
 changeLog:
   - date: 2022-11-14
@@ -23,13 +24,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -40,35 +37,42 @@ schema:
       default: lscr.io/linuxserver/freshrss:latest
 benefits:
   - title: Stay Updated
-    description: Freshrss is a self-hostable aggregator for RSS feeds. It allows you
-      to stay updated with your favorite websites, blogs, and more, all in one
+    description:
+      Freshrss is a self-hostable aggregator for RSS feeds. It allows you to
+      stay updated with your favorite websites, blogs, and more, all in one
       place.
   - title: Multi-platform Support
-    description: Freshrss supports multiple platforms. It utilizes the docker
-      manifest for multi-platform awareness, ensuring you can use it on your
-      preferred platform.
+    description:
+      Freshrss supports multiple platforms. It utilizes the docker manifest for
+      multi-platform awareness, ensuring you can use it on your preferred
+      platform.
   - title: Easy Setup
-    description: Freshrss comes with an easy setup wizard. For external databases,
-      you can create a user and database in your MySQL/MariaDB server and follow
-      the setup wizard in the web user interface.
+    description:
+      Freshrss comes with an easy setup wizard. For external databases, you can
+      create a user and database in your MySQL/MariaDB server and follow the
+      setup wizard in the web user interface.
 features:
   - title: RSS Feed Aggregator
-    description: Freshrss is a powerful RSS feed aggregator. It allows you to
-      collect and view content from your favorite websites, blogs, and more, all
-      in one place.
+    description:
+      Freshrss is a powerful RSS feed aggregator. It allows you to collect and
+      view content from your favorite websites, blogs, and more, all in one
+      place.
   - title: Self-Hostable
-    description: Freshrss is self-hostable, giving you full control over your data
-      and privacy. You can host it on your own server and access it from
-      anywhere.
+    description:
+      Freshrss is self-hostable, giving you full control over your data and
+      privacy. You can host it on your own server and access it from anywhere.
   - title: Multi-platform Support
-    description: Freshrss supports multiple platforms. Whether you're using x86-64
-      or arm64, Freshrss has got you covered.
+    description:
+      Freshrss supports multiple platforms. Whether you're using x86-64 or
+      arm64, Freshrss has got you covered.
   - title: Easy Setup
-    description: Freshrss comes with an easy setup wizard. It guides you through the
+    description:
+      Freshrss comes with an easy setup wizard. It guides you through the
       process of setting up the application, making it easy even for
       non-technical users.
   - title: External Database Support
-    description: Freshrss supports external databases. You can create a user and
-      database in your MySQL/MariaDB server and connect it to Freshrss.
+    description:
+      Freshrss supports external databases. You can create a user and database
+      in your MySQL/MariaDB server and connect it to Freshrss.
 tags:
   - RSS

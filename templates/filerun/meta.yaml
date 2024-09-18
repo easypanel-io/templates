@@ -1,10 +1,11 @@
 name: Filerun
-description: FileRun is a private, fully controlled file management and sharing
-  solution. It's like having your own personal Google Drive, but with complete
-  control and privacy. FileRun allows you to instantly access your files on any
-  server without the need for importing or scanning. It supports access via FTP,
-  SMB, and WebDAV, reflecting any changes made to your files instantly. You can
-  sync files using desktop apps and access your files on the go with compatible
+description:
+  FileRun is a private, fully controlled file management and sharing solution.
+  It's like having your own personal Google Drive, but with complete control and
+  privacy. FileRun allows you to instantly access your files on any server
+  without the need for importing or scanning. It supports access via FTP, SMB,
+  and WebDAV, reflecting any changes made to your files instantly. You can sync
+  files using desktop apps and access your files on the go with compatible
   mobile apps. FileRun is also great for managing photos with fast thumbnail and
   preview generation, timeline browsing, and metadata support. It even allows
   you to group photos from various folders into virtual albums that you can
@@ -31,14 +32,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -46,56 +43,63 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filerun/filerun
+      default: filerun/filerun:8.1
     databaseServiceName:
       type: string
       title: Database Service Name
       default: filerun-db
 benefits:
   - title: Private and Controlled File Management
-    description: FileRun is like your private Google Drive, offering full control
-      over your files. It runs efficiently on any hardware, including Linux,
-      Windows, VPS, Shared hosting, NAS, etc. No import or scanning is required,
-      and you get instant web access to your files.
+    description:
+      FileRun is like your private Google Drive, offering full control over your
+      files. It runs efficiently on any hardware, including Linux, Windows, VPS,
+      Shared hosting, NAS, etc. No import or scanning is required, and you get
+      instant web access to your files.
   - title: Effortless File Synchronization
-    description: FileRun allows you to sync files using desktop apps and access them
-      from anywhere using compatible mobile apps. It also offers a virtual drive
-      for direct access to files from your computer without using all of your
-      disk space.
+    description:
+      FileRun allows you to sync files using desktop apps and access them from
+      anywhere using compatible mobile apps. It also offers a virtual drive for
+      direct access to files from your computer without using all of your disk
+      space.
   - title: Advanced Photo Management
-    description: FileRun is great for managing photos with fast thumbnail and
-      preview generation. It supports timeline browsing, sorting photos and
-      videos chronologically, and grouping photos from various folders into
-      virtual albums that you can share online.
+    description:
+      FileRun is great for managing photos with fast thumbnail and preview
+      generation. It supports timeline browsing, sorting photos and videos
+      chronologically, and grouping photos from various folders into virtual
+      albums that you can share online.
   - title: Secure and Customizable
-    description: FileRun ensures the safety of your files with automatic file
-      versioning and a trash folder for deleted files. It also allows for
-      complete customization to match your own branding, including background
-      images, colors, and logos.
+    description:
+      FileRun ensures the safety of your files with automatic file versioning
+      and a trash folder for deleted files. It also allows for complete
+      customization to match your own branding, including background images,
+      colors, and logos.
 features:
   - title: File Access and Management
-    description: FileRun allows you to point to where you keep the files on your
-      server for instant web access. You can upload, download, or manage the
-      same files, and all changes made reflect via FileRun without delay.
+    description:
+      FileRun allows you to point to where you keep the files on your server for
+      instant web access. You can upload, download, or manage the same files,
+      and all changes made reflect via FileRun without delay.
   - title: Metadata Support
-    description: FileRun automatically extracts and indexes information Exif, XMP,
-      and IPTC, allowing you to search photos by keywords, dates, author, and
-      more. You can also add custom metadata fields for any additional
-      information you want to attach to the pictures.
+    description:
+      FileRun automatically extracts and indexes information Exif, XMP, and
+      IPTC, allowing you to search photos by keywords, dates, author, and more.
+      You can also add custom metadata fields for any additional information you
+      want to attach to the pictures.
   - title: File Requests and Guest Users
-    description: FileRun allows you to collaborate with other people without
-      creating accounts for them. You can send file requests to collect and
-      receive files from anyone right into your FileRun user account with just a
-      link.
+    description:
+      FileRun allows you to collaborate with other people without creating
+      accounts for them. You can send file requests to collect and receive files
+      from anyone right into your FileRun user account with just a link.
   - title: Various Plugins and File Conversion
-    description: FileRun supports various plugins for creating, editing, and
-      previewing Office files, text files, and more. It also allows you to
-      convert files from one format to another and manipulate PDF documents.
+    description:
+      FileRun supports various plugins for creating, editing, and previewing
+      Office files, text files, and more. It also allows you to convert files
+      from one format to another and manipulate PDF documents.
   - title: Mobile Support and Extendability
-    description: FileRun offers fantastic mobile support, adapting to screens of any
-      size for a smooth and intuitive experience. It also allows PHP web
-      developers to develop plugins for viewing, creating, or manipulating
-      files.
+    description:
+      FileRun offers fantastic mobile support, adapting to screens of any size
+      for a smooth and intuitive experience. It also allows PHP web developers
+      to develop plugins for viewing, creating, or manipulating files.
 tags:
   - File Management
   - Storage

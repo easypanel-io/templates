@@ -1,16 +1,17 @@
 name: NocoDB
-description: NocoDB is an innovative open-source platform that transforms any
-  database into a smart spreadsheet. It's a powerful alternative to Airtable,
-  designed to be flexible and user-friendly. With NocoDB, you can create
-  unlimited grid views, gallery views, and form views from your own data. It
-  offers ultra-ease in searching, sorting, and filtering columns and rows. You
-  can invite your team with fine-grained access control, share views publicly or
-  with password protection. NocoDB also allows you to build automations with
-  your favourite apps like Microsoft Teams, Slack, Discord, Whatsapp, Twilio,
-  Email & SMS. It provides instant REST APIs with Swagger. NocoDB is trusted by
-  over 2000 organizations worldwide and is the fastest growing open source
-  project. It's free and self-hostable, offering endless solutions for your
-  business workflows.
+description:
+  NocoDB is an innovative open-source platform that transforms any database into
+  a smart spreadsheet. It's a powerful alternative to Airtable, designed to be
+  flexible and user-friendly. With NocoDB, you can create unlimited grid views,
+  gallery views, and form views from your own data. It offers ultra-ease in
+  searching, sorting, and filtering columns and rows. You can invite your team
+  with fine-grained access control, share views publicly or with password
+  protection. NocoDB also allows you to build automations with your favourite
+  apps like Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS. It
+  provides instant REST APIs with Swagger. NocoDB is trusted by over 2000
+  organizations worldwide and is the fastest growing open source project. It's
+  free and self-hostable, offering endless solutions for your business
+  workflows.
 instructions: null
 changeLog:
   - date: 2023-02-8
@@ -28,15 +29,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -44,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nocodb/nocodb:0.106.1
+      default: nocodb/nocodb:0.207.3
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -55,40 +52,48 @@ schema:
       default: nocodb-redis
 benefits:
   - title: Turn Any Database into a Smart Spreadsheet
-    description: NocoDB is an open source platform that can transform any database
-      into a smart spreadsheet. This allows for easy data management and
-      manipulation, similar to using a regular spreadsheet, but with the power
-      and flexibility of a database.
+    description:
+      NocoDB is an open source platform that can transform any database into a
+      smart spreadsheet. This allows for easy data management and manipulation,
+      similar to using a regular spreadsheet, but with the power and flexibility
+      of a database.
   - title: Trusted by Thousands of Organizations
-    description: NocoDB is trusted by over 2000 organizations worldwide. Its fast
-      growth and high adoption rate is a testament to its effectiveness and
+    description:
+      NocoDB is trusted by over 2000 organizations worldwide. Its fast growth
+      and high adoption rate is a testament to its effectiveness and
       reliability.
   - title: Create Endless Solutions
-    description: NocoDB is free and self-hostable, allowing you to create unlimited
-      grid views, gallery views, and form views from your own data. It offers a
-      high degree of customization and flexibility, letting your imagination be
-      the limit.
+    description:
+      NocoDB is free and self-hostable, allowing you to create unlimited grid
+      views, gallery views, and form views from your own data. It offers a high
+      degree of customization and flexibility, letting your imagination be the
+      limit.
   - title: Automate Business Workflows
-    description: NocoDB allows you to build automations with your favorite apps such
-      as Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS. This
-      can greatly streamline your business workflows and increase productivity.
+    description:
+      NocoDB allows you to build automations with your favorite apps such as
+      Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS. This can
+      greatly streamline your business workflows and increase productivity.
 features:
   - title: Easy Data Management
-    description: NocoDB allows you to easily search, sort, and filter columns and
-      rows. It also supports collaboration just like a spreadsheet, making it
-      easy for teams to work together on the same data.
+    description:
+      NocoDB allows you to easily search, sort, and filter columns and rows. It
+      also supports collaboration just like a spreadsheet, making it easy for
+      teams to work together on the same data.
   - title: Fine Grained Access Control
-    description: NocoDB lets you invite your team with fine grained access control.
-      You can also share views publicly and with password protection, ensuring
-      that your data is always secure.
+    description:
+      NocoDB lets you invite your team with fine grained access control. You can
+      also share views publicly and with password protection, ensuring that your
+      data is always secure.
   - title: Instant REST APIs
-    description: NocoDB provides instant REST APIs with Swagger, allowing you to
-      easily integrate it with other software and services.
+    description:
+      NocoDB provides instant REST APIs with Swagger, allowing you to easily
+      integrate it with other software and services.
   - title: Automations
-    description: NocoDB supports building automations with a wide range of apps,
-      including Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS.
-      This allows you to automate various tasks and processes, saving you time
-      and effort.
+    description:
+      NocoDB supports building automations with a wide range of apps, including
+      Microsoft Teams, Slack, Discord, Whatsapp, Twilio, Email & SMS. This
+      allows you to automate various tasks and processes, saving you time and
+      effort.
 tags:
   - No-Code
   - Databases

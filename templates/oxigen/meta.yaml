@@ -1,10 +1,11 @@
 name: Oxigen
-description: Oxigen is a dynamic social media image generator designed to
-  streamline the process of creating and customizing og images. With a
-  user-friendly interface and API, Oxigen allows you to effortlessly generate
-  images tailored to your specific needs. Whether you're looking to create
-  unique images for your social media posts or need a reliable tool for
-  generating og images, Oxigen offers a flexible and efficient solution.
+description:
+  Oxigen is a dynamic social media image generator designed to streamline the
+  process of creating and customizing og images. With a user-friendly interface
+  and API, Oxigen allows you to effortlessly generate images tailored to your
+  specific needs. Whether you're looking to create unique images for your social
+  media posts or need a reliable tool for generating og images, Oxigen offers a
+  flexible and efficient solution.
 instructions: null
 changeLog:
   - date: 2023-1-22
@@ -18,13 +19,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -32,26 +29,30 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/yuriizinets/oxigen:2.0-rc2
+      default: ghcr.io/yuriizinets/oxigen:latest
 benefits:
   - title: Dynamic Social Media Image Generation
-    description: Oxigen allows you to easily create and customize social media
-      images. This dynamic image generation capability can greatly enhance your
-      social media presence and engagement.
+    description:
+      Oxigen allows you to easily create and customize social media images. This
+      dynamic image generation capability can greatly enhance your social media
+      presence and engagement.
   - title: User Interface and API
-    description: Oxigen provides both a user interface and an API, giving you the
+    description:
+      Oxigen provides both a user interface and an API, giving you the
       flexibility to create images in the way that suits you best. Whether you
       prefer a visual approach or a more programmatic one, Oxigen has you
       covered.
 features:
   - title: Customizable Images
-    description: With Oxigen, you have the power to customize your social media
-      images to your liking. You can easily adjust various elements of your
-      images to make them truly unique and eye-catching.
+    description:
+      With Oxigen, you have the power to customize your social media images to
+      your liking. You can easily adjust various elements of your images to make
+      them truly unique and eye-catching.
   - title: API Access
-    description: Oxigen provides an API that allows you to programmatically create
-      and customize images. This feature is perfect for those who prefer to
-      automate their image creation process.
+    description:
+      Oxigen provides an API that allows you to programmatically create and
+      customize images. This feature is perfect for those who prefer to automate
+      their image creation process.
 tags:
   - Social Networking
   - Image Generator

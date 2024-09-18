@@ -1,14 +1,14 @@
 name: AnonUpload
-description: AnonUpload is a secure, anonymous file sharing application that
-  does not require a database. It is built with privacy as a priority, ensuring
-  that the direct filename used is not displayed. This PHP file uploader is
-  designed to work anywhere, be it Nginx, Apache, Lightspeed, or any other
-  platform. AnonUpload supports a wide range of file types including jpeg, jpg,
-  gif, png, zip, xls, doc, mp3, mp4, mpeg, wav, avi, rar, 7z, txt and more. It
-  also provides size verification for uploaded files, allowing for a maximum
-  upload size of 10GB and no minimum size. The application also includes a
-  download time feature, which sets a waiting time before a file can be
-  downloaded.
+description:
+  AnonUpload is a secure, anonymous file sharing application that does not
+  require a database. It is built with privacy as a priority, ensuring that the
+  direct filename used is not displayed. This PHP file uploader is designed to
+  work anywhere, be it Nginx, Apache, Lightspeed, or any other platform.
+  AnonUpload supports a wide range of file types including jpeg, jpg, gif, png,
+  zip, xls, doc, mp3, mp4, mpeg, wav, avi, rar, 7z, txt and more. It also
+  provides size verification for uploaded files, allowing for a maximum upload
+  size of 10GB and no minimum size. The application also includes a download
+  time feature, which sets a waiting time before a file can be downloaded.
 instructions: visit /admin for the administration interface
 changeLog:
   - date: 2022-12-22
@@ -24,16 +24,12 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - appEmail
     - appPassword
     - appContactEmail
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -53,32 +49,37 @@ schema:
       title: App Contact Email
 benefits:
   - title: Secure File Sharing
-    description: AnonUpload offers a secure platform for file sharing. It ensures
-      your files are kept private and safe during the sharing process.
+    description:
+      AnonUpload offers a secure platform for file sharing. It ensures your
+      files are kept private and safe during the sharing process.
   - title: Anonymous File Sharing
-    description: With AnonUpload, your identity remains anonymous while sharing
-      files. It does not show the direct filename used, maintaining your
-      privacy.
+    description:
+      With AnonUpload, your identity remains anonymous while sharing files. It
+      does not show the direct filename used, maintaining your privacy.
   - title: No Database Required
-    description: AnonUpload operates without a database, making it a simple and
-      efficient solution for file sharing.
+    description:
+      AnonUpload operates without a database, making it a simple and efficient
+      solution for file sharing.
   - title: Versatile Compatibility
-    description: AnonUpload is designed to work anywhere, be it Nginx, Apache,
-      Lightspeed, or any other platform. It does not use rewrites, just pure
-      PHP.
+    description:
+      AnonUpload is designed to work anywhere, be it Nginx, Apache, Lightspeed,
+      or any other platform. It does not use rewrites, just pure PHP.
 features:
   - title: File Uploading
-    description: AnonUpload allows you to upload various types of files including
-      jpeg, jpg, gif, png, zip, xls, doc, mp3, mp4, mpeg, wav, avi, rar, 7z,
-      txt, and more.
+    description:
+      AnonUpload allows you to upload various types of files including jpeg,
+      jpg, gif, png, zip, xls, doc, mp3, mp4, mpeg, wav, avi, rar, 7z, txt, and
+      more.
   - title: File Size Verification
-    description: The app verifies the size of the uploaded files. It supports a
-      maximum upload size of 10GB and a minimum upload size of 0KB.
+    description:
+      The app verifies the size of the uploaded files. It supports a maximum
+      upload size of 10GB and a minimum upload size of 0KB.
   - title: File Destination Control
     description: You can specify the destination folder for the uploaded files.
   - title: Download Time Control
-    description: You can set the time to wait until the file downloads. The default
-      time is 30 seconds.
+    description:
+      You can set the time to wait until the file downloads. The default time is
+      30 seconds.
 tags:
   - File Management
   - Privacy

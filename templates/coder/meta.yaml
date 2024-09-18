@@ -1,0 +1,40 @@
+name: Coder
+description:
+  Coder is an open source cloud development environment (CDE) that you download
+  and host in your cloud. Deploy a single solution in seconds that provisions
+  the infrastructure, IDE, language, and tools your developers desire. Upgrade
+  to the Enterprise version and add security, governance, and observability
+  capabilities for Platform teams.
+instructions:
+changeLog:
+  - date: 2024-01-23
+    description: first release
+links:
+  - label: Website
+    url: https://coder.com
+  - label: Documentation
+    url: https://coder.com/docs/v2/latest
+  - label: Github
+    url: https://github.com/coder/coder
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: coder
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/coder/coder:latest
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: coder-db

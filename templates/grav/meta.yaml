@@ -1,8 +1,9 @@
 name: Grav
-description: Grav is an award-winning, open-source, flat-file content management
-  system (CMS) designed to help you build faster websites. It's been voted 'Best
-  Open Source CMS' in 2016 and 'Best Flat File CMS' in 2017, 2019, 2020, and
-  2021. Grav is known for its fast performance, extensibility, and user-friendly
+description:
+  Grav is an award-winning, open-source, flat-file content management system
+  (CMS) designed to help you build faster websites. It's been voted 'Best Open
+  Source CMS' in 2016 and 'Best Flat File CMS' in 2017, 2019, 2020, and 2021.
+  Grav is known for its fast performance, extensibility, and user-friendly
   interface. With Grav, you can easily modify flexible configuration settings,
   edit content with a powerful markdown editor, and install a wide range of
   modern themes with one click. It also offers a built-in package manager for
@@ -30,14 +31,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - timezone
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -45,55 +42,63 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/grav:1.7.40
+      default: linuxserver/grav:1.7.46
     timezone:
       type: string
       title: Timezone
       default: Etc/UTC
 benefits:
   - title: Fast Performance
-    description: Grav is not just fast, it's blazing fast. Performance is not an
+    description:
+      Grav is not just fast, it's blazing fast. Performance is not an
       afterthought, it's baked in from the start. This ensures your websites
       load quickly, providing a superior user experience.
   - title: Extensible
-    description: Grav is designed to be flexible and extensible, with a powerful API
-      and sophisticated Package Manager. This means you can easily customize and
+    description:
+      Grav is designed to be flexible and extensible, with a powerful API and
+      sophisticated Package Manager. This means you can easily customize and
       extend your websites to meet your specific needs.
   - title: Open Source
-    description: Grav is an open source project, which means you have complete
-      access to the source code and can modify it to suit your needs. It also
-      means you benefit from the collective knowledge and expertise of a global
-      community of developers.
+    description:
+      Grav is an open source project, which means you have complete access to
+      the source code and can modify it to suit your needs. It also means you
+      benefit from the collective knowledge and expertise of a global community
+      of developers.
   - title: Easy to Use
-    description: The Grav admin plugin provides a simple and intuitive interface,
-      making configuration and content creation easy and enjoyable. Whether
-      you're a novice or a seasoned developer, you'll find Grav a pleasure to
-      use.
+    description:
+      The Grav admin plugin provides a simple and intuitive interface, making
+      configuration and content creation easy and enjoyable. Whether you're a
+      novice or a seasoned developer, you'll find Grav a pleasure to use.
 features:
   - title: One-Click Installs
-    description: Grav's built-in Package Manager allows you to find, install, and
-      easily update extensions and themes with just one click. This makes it
-      easy to add new functionality and change the look and feel of your
-      websites.
+    description:
+      Grav's built-in Package Manager allows you to find, install, and easily
+      update extensions and themes with just one click. This makes it easy to
+      add new functionality and change the look and feel of your websites.
   - title: Powerful Content Filtering
-    description: Grav allows you to create unlimited taxonomies such as tags,
-      categories, and authors to filter and manage your content. This makes it
-      easy to organize your content and make it accessible to your users.
+    description:
+      Grav allows you to create unlimited taxonomies such as tags, categories,
+      and authors to filter and manage your content. This makes it easy to
+      organize your content and make it accessible to your users.
   - title: Dynamic Content Types
-    description: The flat-file nature of Grav lets you define custom fields for any
-      of your pages, including modular content. This gives you the flexibility
-      to create a wide variety of content types.
+    description:
+      The flat-file nature of Grav lets you define custom fields for any of your
+      pages, including modular content. This gives you the flexibility to create
+      a wide variety of content types.
   - title: Multi-Language Support
-    description: Grav includes a simple mechanism for presenting sites in multiple
+    description:
+      Grav includes a simple mechanism for presenting sites in multiple
       languages. This makes it easy to create multilingual websites that cater
       to a global audience.
   - title: Simple Backups and Restores
-    description: Being file based means backing up and restoring your data is super
-      easy, and changing hosts or servers is a breeze. This gives you peace of
-      mind knowing your data is safe and easily recoverable.
+    description:
+      Being file based means backing up and restoring your data is super easy,
+      and changing hosts or servers is a breeze. This gives you peace of mind
+      knowing your data is safe and easily recoverable.
   - title: Easy Theme Customization
-    description: With Grav, there's no need to start from scratch when customizing
-      your theme. Use Theme Inheritance and then modify the bits you need,
-      allowing for easier updates and maintenance.
+    description:
+      With Grav, there's no need to start from scratch when customizing your
+      theme. Use Theme Inheritance and then modify the bits you need, allowing
+      for easier updates and maintenance.
 tags:
   - CMS

@@ -1,5 +1,6 @@
 name: HedgeDoc
-description: HedgeDoc, previously known as CodiMD, is an open-source, web-based,
+description:
+  HedgeDoc, previously known as CodiMD, is an open-source, web-based,
   self-hosted, collaborative markdown editor. It allows you to collaborate on
   notes, graphs, and presentations in real-time. Simply share your note-link
   with your co-workers and they can join in the collaboration. The editor runs
@@ -34,14 +35,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -49,41 +46,49 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/hedgedoc/hedgedoc:1.9.8
+      default: quay.io/hedgedoc/hedgedoc:1.9.9
     databaseServiceName:
       type: string
       title: Database Service Name
       default: hedgedoc-db
 benefits:
   - title: Real-time Collaboration
-    description: HedgeDoc allows you to collaborate on notes, graphs, and
-      presentations in real-time. Simply share your note-link with your
-      co-workers and they’re ready to go.
+    description:
+      HedgeDoc allows you to collaborate on notes, graphs, and presentations in
+      real-time. Simply share your note-link with your co-workers and they’re
+      ready to go.
   - title: Data Control
-    description: Being a self-hosted solution, HedgeDoc gives you complete control
-      over your data. Your notes and documents stay on your server, ensuring
-      privacy and security.
+    description:
+      Being a self-hosted solution, HedgeDoc gives you complete control over
+      your data. Your notes and documents stay on your server, ensuring privacy
+      and security.
   - title: Web-based Solution
-    description: HedgeDoc is a web-based application, meaning you don’t need to
-      install extra software. The editor runs smoothly in your browser, making
-      it accessible from anywhere.
+    description:
+      HedgeDoc is a web-based application, meaning you don’t need to install
+      extra software. The editor runs smoothly in your browser, making it
+      accessible from anywhere.
 features:
   - title: Presentation Mode
-    description: HedgeDoc comes with a presentation mode that allows you to build
-      and present slides in markdown. It's powered by reveal.js, providing a
+    description:
+      HedgeDoc comes with a presentation mode that allows you to build and
+      present slides in markdown. It's powered by reveal.js, providing a
       seamless presentation experience.
   - title: Graphs & Diagrams
-    description: HedgeDoc supports many types of graphs, diagrams, and embedded
-      content. This makes it a versatile tool for visualizing data and ideas.
+    description:
+      HedgeDoc supports many types of graphs, diagrams, and embedded content.
+      This makes it a versatile tool for visualizing data and ideas.
   - title: Easy Permission System
-    description: HedgeDoc features an easy-to-use permission system. You can manage
-      the permissions of your notes with a simple dropdown selection.
+    description:
+      HedgeDoc features an easy-to-use permission system. You can manage the
+      permissions of your notes with a simple dropdown selection.
   - title: Revisions
-    description: HedgeDoc keeps track of changes to your notes and allows you to
-      revert to any older version. This feature ensures you never lose important
+    description:
+      HedgeDoc keeps track of changes to your notes and allows you to revert to
+      any older version. This feature ensures you never lose important
       information.
   - title: Low System Requirements
-    description: HedgeDoc doesn’t require much resources. It runs smoothly even on
+    description:
+      HedgeDoc doesn’t require much resources. It runs smoothly even on
       low-powered devices like a Raspberry Pi.
 tags:
   - Documents

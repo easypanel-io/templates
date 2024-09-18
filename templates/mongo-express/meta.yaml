@@ -1,17 +1,18 @@
 name: Mongo Express
-description: mongo-express is a web-based MongoDB admin interface designed with
-  Node.js, Express, and Bootstrap3. It allows you to connect to multiple
-  databases, view, add, delete databases, and manage collections. You can also
-  view, add, update, and delete documents within these collections. The app
-  supports previewing audio, video, and image assets inline in the collection
-  view. Large or nested objects are collapsible for easy overview, and big
-  document properties are loaded on-demand to keep the collection view fast. The
-  app also supports GridFS, enabling you to add, get, and delete incredibly
-  large files. It uses BSON data types in documents and is mobile responsive,
-  thanks to Bootstrap 3. The app also supports connection and authentication to
-  individual databases, as well as admin authentication to view all databases.
-  It includes features for database blacklist/whitelist, custom CA, and CA
-  validation disabling, and supports replica sets.
+description:
+  mongo-express is a web-based MongoDB admin interface designed with Node.js,
+  Express, and Bootstrap3. It allows you to connect to multiple databases, view,
+  add, delete databases, and manage collections. You can also view, add, update,
+  and delete documents within these collections. The app supports previewing
+  audio, video, and image assets inline in the collection view. Large or nested
+  objects are collapsible for easy overview, and big document properties are
+  loaded on-demand to keep the collection view fast. The app also supports
+  GridFS, enabling you to add, get, and delete incredibly large files. It uses
+  BSON data types in documents and is mobile responsive, thanks to Bootstrap 3.
+  The app also supports connection and authentication to individual databases,
+  as well as admin authentication to view all databases. It includes features
+  for database blacklist/whitelist, custom CA, and CA validation disabling, and
+  supports replica sets.
 instructions: null
 changeLog:
   - date: 2023-07-10
@@ -27,14 +28,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appMongoUrl
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appMongoUrl:
       type: string
       title: Mongo URL
@@ -52,48 +49,57 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mongo-express:1.0.0-alpha
+      default: mongo-express:1.0.2-18
 benefits:
   - title: Efficient Database Management
-    description: mongo-express is a web-based MongoDB admin interface that allows
-      you to efficiently manage your databases. You can connect to multiple
-      databases, view, add, delete databases, and authenticate to individual
-      databases.
+    description:
+      mongo-express is a web-based MongoDB admin interface that allows you to
+      efficiently manage your databases. You can connect to multiple databases,
+      view, add, delete databases, and authenticate to individual databases.
   - title: Comprehensive Collection Management
-    description: The app provides comprehensive collection management features. You
-      can view, add, rename, and delete collections. It also allows you to view,
+    description:
+      The app provides comprehensive collection management features. You can
+      view, add, rename, and delete collections. It also allows you to view,
       add, update, and delete documents within the collections.
   - title: Large File Support
-    description: With GridFS support, mongo-express allows you to add, get, and
-      delete incredibly large files. This makes it a suitable tool for managing
-      large datasets.
+    description:
+      With GridFS support, mongo-express allows you to add, get, and delete
+      incredibly large files. This makes it a suitable tool for managing large
+      datasets.
   - title: Mobile Responsive
-    description: mongo-express is mobile responsive, making it easy to manage your
+    description:
+      mongo-express is mobile responsive, making it easy to manage your
       databases even when you're on the go. It works passably on small screens,
       providing you with flexibility and convenience.
 features:
   - title: Database and Collection Management
-    description: mongo-express allows you to connect to multiple databases, view,
-      add, delete databases, view, add, rename, delete collections, and view,
-      add, update, delete documents.
+    description:
+      mongo-express allows you to connect to multiple databases, view, add,
+      delete databases, view, add, rename, delete collections, and view, add,
+      update, delete documents.
   - title: Large File Handling
-    description: The app supports GridFS, enabling you to add, get, and delete
-      incredibly large files. It also features async on-demand loading of big
-      document properties to keep the collection view fast.
+    description:
+      The app supports GridFS, enabling you to add, get, and delete incredibly
+      large files. It also features async on-demand loading of big document
+      properties to keep the collection view fast.
   - title: Asset Preview
-    description: mongo-express allows you to preview audio, video, and image assets
-      inline in the collection view. This feature enhances your user experience
-      by providing a quick overview of your assets.
+    description:
+      mongo-express allows you to preview audio, video, and image assets inline
+      in the collection view. This feature enhances your user experience by
+      providing a quick overview of your assets.
   - title: Data Type Support
-    description: mongo-express supports the use of BSON data types in documents,
-      providing you with flexibility in data management.
+    description:
+      mongo-express supports the use of BSON data types in documents, providing
+      you with flexibility in data management.
   - title: Authentication Features
-    description: The app allows you to connect and authenticate to individual
-      databases. You can also authenticate as an admin to view all databases.
+    description:
+      The app allows you to connect and authenticate to individual databases.
+      You can also authenticate as an admin to view all databases.
   - title: Customization Options
-    description: mongo-express provides various customization options, including
-      database blacklist/whitelist, custom CA, and CA validation disabling. It
-      also supports replica sets.
+    description:
+      mongo-express provides various customization options, including database
+      blacklist/whitelist, custom CA, and CA validation disabling. It also
+      supports replica sets.
 tags:
   - Databases
   - Developer Tools

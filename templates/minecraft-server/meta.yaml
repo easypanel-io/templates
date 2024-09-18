@@ -1,13 +1,14 @@
 name: Minecraft Server
-description: The itzg/minecraft-server app is designed to provide a seamless
-  Minecraft Server experience. It automatically downloads the latest stable
-  version of the Minecraft server at startup, ensuring you're always up-to-date
-  with the game's latest features and improvements. The app also allows you to
-  run or upgrade to any specific version or the latest snapshot, giving you full
-  control over your gaming experience. If you're using Minecraft clients on
-  consoles, mobile, or native Windows, the app offers a dedicated Bedrock Server
-  for optimal performance. The standard server port, 25565, will be exposed on
-  your host machine for easy access and gameplay.
+description:
+  The itzg/minecraft-server app is designed to provide a seamless Minecraft
+  Server experience. It automatically downloads the latest stable version of the
+  Minecraft server at startup, ensuring you're always up-to-date with the game's
+  latest features and improvements. The app also allows you to run or upgrade to
+  any specific version or the latest snapshot, giving you full control over your
+  gaming experience. If you're using Minecraft clients on consoles, mobile, or
+  native Windows, the app offers a dedicated Bedrock Server for optimal
+  performance. The standard server port, 25565, will be exposed on your host
+  machine for easy access and gameplay.
 instructions: null
 changeLog:
   - date: 2023-03-18
@@ -23,13 +24,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -37,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-server:2023.6.1
+      default: itzg/minecraft-server:2024.5.0
     serverName:
       type: string
       title: Server Name
@@ -189,28 +186,34 @@ schema:
       title: RCON Password
 benefits:
   - title: Latest Minecraft Versions
-    description: The app automatically downloads the latest stable version of
-      Minecraft Server at startup, ensuring you always have the most recent
-      features and updates.
+    description:
+      The app automatically downloads the latest stable version of Minecraft
+      Server at startup, ensuring you always have the most recent features and
+      updates.
   - title: Flexible Version Support
-    description: You can run or upgrade to any specific version of Minecraft Server
-      or the latest snapshot, giving you the flexibility to choose the version
-      that best suits your needs.
+    description:
+      You can run or upgrade to any specific version of Minecraft Server or the
+      latest snapshot, giving you the flexibility to choose the version that
+      best suits your needs.
   - title: Dedicated Server for Different Platforms
-    description: The app provides a dedicated server for Minecraft clients running
-      on consoles, mobile, or native Windows, ensuring a smooth and seamless
-      gaming experience across different platforms.
+    description:
+      The app provides a dedicated server for Minecraft clients running on
+      consoles, mobile, or native Windows, ensuring a smooth and seamless gaming
+      experience across different platforms.
 features:
   - title: Dynamic Version Support
-    description: The app supports dynamic versioning, automatically downloading the
-      latest stable version of Minecraft Server at startup.
+    description:
+      The app supports dynamic versioning, automatically downloading the latest
+      stable version of Minecraft Server at startup.
   - title: Server Types and Modpack Support
-    description: The app supports various server types and modpacks, enhancing your
+    description:
+      The app supports various server types and modpacks, enhancing your
       Minecraft gaming experience with additional features and functionalities.
   - title: Dedicated Server for Different Platforms
-    description: The app provides a dedicated server for Minecraft clients running
-      on consoles, mobile, or native Windows, ensuring compatibility and a
-      smooth gaming experience.
+    description:
+      The app provides a dedicated server for Minecraft clients running on
+      consoles, mobile, or native Windows, ensuring compatibility and a smooth
+      gaming experience.
 tags:
   - Gaming
   - Developer Tools

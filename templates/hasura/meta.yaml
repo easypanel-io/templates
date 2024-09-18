@@ -1,8 +1,9 @@
 name: Hasura
-description: Hasura is a powerful Data API Platform that automates the process
-  of building, securing, optimizing, and deploying GraphQL and REST APIs. It
-  eliminates the need for manual API creation, enabling developers to generate
-  APIs effortlessly by connecting to existing databases. This results in rapid,
+description:
+  Hasura is a powerful Data API Platform that automates the process of building,
+  securing, optimizing, and deploying GraphQL and REST APIs. It eliminates the
+  need for manual API creation, enabling developers to generate APIs
+  effortlessly by connecting to existing databases. This results in rapid,
   scalable application development. Hasura is compatible with a variety of
   popular databases, including PostgreSQL, MySQL, and MongoDB, allowing you to
   build GraphQL APIs on top of your existing databases. It also provides
@@ -29,7 +30,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -37,9 +37,6 @@ schema:
     - devMode
     - hasuraAdminSecret
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hasura/graphql-engine:v2.24.1
+      default: hasura/graphql-engine:v2.36.4
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -80,35 +77,44 @@ schema:
           title: "false"
 benefits:
   - title: Rapid API Development
-    description: Hasura allows for faster API development, reducing cost,
-      complexity, and time to market. It enables you to build new applications
-      or add new features to an existing application in days instead of weeks.
+    description:
+      Hasura allows for faster API development, reducing cost, complexity, and
+      time to market. It enables you to build new applications or add new
+      features to an existing application in days instead of weeks.
   - title: Accelerated Modernization
-    description: Hasura fast tracks cloud migration, frontend and backend
-      modernization, and application re-architecture projects by automating 80%
-      of your API development work.
+    description:
+      Hasura fast tracks cloud migration, frontend and backend modernization,
+      and application re-architecture projects by automating 80% of your API
+      development work.
   - title: Standardized Data Access
-    description: Hasura replaces direct database access with a scalable, performant,
-      and secure data API to create a unified and federated core data service.
+    description:
+      Hasura replaces direct database access with a scalable, performant, and
+      secure data API to create a unified and federated core data service.
 features:
   - title: Instant API
-    description: Hasura provides an instant API from your data to a unified GraphQL
-      or REST API in minutes.
+    description:
+      Hasura provides an instant API from your data to a unified GraphQL or REST
+      API in minutes.
   - title: Authorization
-    description: Hasura allows you to define granular, role-based permissions down
-      to the row and column level.
+    description:
+      Hasura allows you to define granular, role-based permissions down to the
+      row and column level.
   - title: Performance
-    description: Hasura ensures faster API response times and scalability that’s
+    description:
+      Hasura ensures faster API response times and scalability that’s
       automatically optimized.
   - title: Observability
-    description: Hasura offers precision insights for optimal availability and
-      performance of your APIs.
+    description:
+      Hasura offers precision insights for optimal availability and performance
+      of your APIs.
   - title: API Security
-    description: Hasura provides comprehensive tools to secure APIs beyond
-      authentication and authorization.
+    description:
+      Hasura provides comprehensive tools to secure APIs beyond authentication
+      and authorization.
   - title: Federation
-    description: Hasura allows you to connect, manage, and iterate siloed, disparate
-      data on a supergraph.
+    description:
+      Hasura allows you to connect, manage, and iterate siloed, disparate data
+      on a supergraph.
 tags:
   - Developer Tools
   - Databases

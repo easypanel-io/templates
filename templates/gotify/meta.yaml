@@ -1,15 +1,16 @@
 name: Gotify
-description: Gotify is a simple, self-hosted server for sending and receiving
-  messages. It is designed with a user-friendly interface and a straightforward
-  API, making it easy to use across different platforms. The core of Gotify is
-  the server, which features a WebUI and functionality for sending messages via
-  a REST-API, subscribing/receiving messages via a web socket connection, and
-  managing users, clients, and applications. Gotify also includes an Android
-  client for subscribing to the message stream of the server, creating push
-  notifications for newly received messages. Additionally, there is a command
-  line client for pushing messages to the server. All these features make Gotify
-  a versatile tool for managing and exchanging messages while maintaining
-  control over your data.
+description:
+  Gotify is a simple, self-hosted server for sending and receiving messages. It
+  is designed with a user-friendly interface and a straightforward API, making
+  it easy to use across different platforms. The core of Gotify is the server,
+  which features a WebUI and functionality for sending messages via a REST-API,
+  subscribing/receiving messages via a web socket connection, and managing
+  users, clients, and applications. Gotify also includes an Android client for
+  subscribing to the message stream of the server, creating push notifications
+  for newly received messages. Additionally, there is a command line client for
+  pushing messages to the server. All these features make Gotify a versatile
+  tool for managing and exchanging messages while maintaining control over your
+  data.
 instructions: null
 changeLog:
   - date: 2022-07-12
@@ -33,14 +34,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - password
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -48,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotify/server:2.2.4
+      default: gotify/server:2.4.0
     password:
       type: string
       title: Password
@@ -58,29 +55,35 @@ schema:
       default: Europe/London
 benefits:
   - title: Control Your Data
-    description: Gotify is a self-hosted app, meaning you have complete control over
-      your data. It is free and open source, licensed under the MIT license.
+    description:
+      Gotify is a self-hosted app, meaning you have complete control over your
+      data. It is free and open source, licensed under the MIT license.
   - title: Cross Platform
-    description: Written in Go, Gotify can be easily compiled for different
-      platforms, making it a versatile choice for sending and receiving
-      messages.
+    description:
+      Written in Go, Gotify can be easily compiled for different platforms,
+      making it a versatile choice for sending and receiving messages.
   - title: Simple to Use
-    description: Both Gotify's API and user interface are designed to be as simple
-      as possible, making it easy to send and receive messages.
+    description:
+      Both Gotify's API and user interface are designed to be as simple as
+      possible, making it easy to send and receive messages.
 features:
   - title: Message Sending and Receiving
-    description: Gotify serves as a simple server for sending messages via a
-      REST-API and subscribing/receiving messages via a web socket connection.
+    description:
+      Gotify serves as a simple server for sending messages via a REST-API and
+      subscribing/receiving messages via a web socket connection.
   - title: User, Client, and Application Management
-    description: Gotify provides functionality for managing users, clients, and
+    description:
+      Gotify provides functionality for managing users, clients, and
       applications.
   - title: Android Client
-    description: Gotify offers an Android client for subscribing to the message
-      stream of the Gotify server. The app creates push notifications for newly
-      received messages.
+    description:
+      Gotify offers an Android client for subscribing to the message stream of
+      the Gotify server. The app creates push notifications for newly received
+      messages.
   - title: Command Line Client
-    description: Gotify also features a command line client for pushing messages to
-      the Gotify server.
+    description:
+      Gotify also features a command line client for pushing messages to the
+      Gotify server.
 tags:
   - Communication
   - Push Notifications

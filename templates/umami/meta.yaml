@@ -1,13 +1,13 @@
 name: Umami
-description: Umami is a privacy-focused, open-source alternative to Google
-  Analytics. It is designed to respect user privacy by not collecting any
-  personal information, using cookies, or tracking users across websites. It is
-  GDPR compliant and ensures that all data collected is anonymized, making it
-  impossible to identify any individual user. Umami is simple and easy to use,
-  collecting only the metrics you care about and presenting them on a single
-  page. It is a reliable and transparent product with over 4 million downloads.
-  With Umami, you can own your data and stay compliant with ever-changing data
-  privacy laws.
+description:
+  Umami is a privacy-focused, open-source alternative to Google Analytics. It is
+  designed to respect user privacy by not collecting any personal information,
+  using cookies, or tracking users across websites. It is GDPR compliant and
+  ensures that all data collected is anonymized, making it impossible to
+  identify any individual user. Umami is simple and easy to use, collecting only
+  the metrics you care about and presenting them on a single page. It is a
+  reliable and transparent product with over 4 million downloads. With Umami,
+  you can own your data and stay compliant with ever-changing data privacy laws.
 instructions: You can login with username "admin" and password "umami".
 changeLog:
   - date: 2022-09-27
@@ -25,14 +25,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,26 +43,31 @@ schema:
       default: umami-db
 benefits:
   - title: Privacy-focused analytics
-    description: Umami respects the privacy of your users by not collecting any
-      personal information, using cookies, or tracking users across websites. It
-      is GDPR compliant and does not require a cookie notice.
+    description:
+      Umami respects the privacy of your users by not collecting any personal
+      information, using cookies, or tracking users across websites. It is GDPR
+      compliant and does not require a cookie notice.
   - title: Data ownership
-    description: With Umami, you own your website analytics data. All data collected
-      is anonymized, making it impossible to identify individual users. Rest
+    description:
+      With Umami, you own your website analytics data. All data collected is
+      anonymized, making it impossible to identify individual users. Rest
       assured knowing that your data is securely in your hands.
   - title: Simple and easy to use
-    description: Umami provides simple and easy-to-understand analytics without the
-      need for complicated reports. It collects only the metrics you care about
-      and presents them on a single page.
+    description:
+      Umami provides simple and easy-to-understand analytics without the need
+      for complicated reports. It collects only the metrics you care about and
+      presents them on a single page.
 features:
   - title: Privacy-focused alternative to Google Analytics
-    description: Umami is an open-source, privacy-focused alternative to Google
-      Analytics. It allows you to gather the data you need while respecting the
-      privacy of your users.
+    description:
+      Umami is an open-source, privacy-focused alternative to Google Analytics.
+      It allows you to gather the data you need while respecting the privacy of
+      your users.
   - title: Open source and transparent
-    description: Umami is an open-source project, fully transparent, battle-tested,
-      and community-supported. Place your confidence in a product that is
-      dedicated to open source development.
+    description:
+      Umami is an open-source project, fully transparent, battle-tested, and
+      community-supported. Place your confidence in a product that is dedicated
+      to open source development.
 tags:
   - Analytics
   - Privacy

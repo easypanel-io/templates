@@ -1,7 +1,8 @@
 name: LibreTranslate
-description: LibreTranslate is a free and open-source machine translation app
-  that is entirely self-hosted. Unlike other translation apps, it does not rely
-  on proprietary providers such as Google or Azure to perform translations.
+description:
+  LibreTranslate is a free and open-source machine translation app that is
+  entirely self-hosted. Unlike other translation apps, it does not rely on
+  proprietary providers such as Google or Azure to perform translations.
   Instead, its translation engine is powered by the open-source Argos Translate
   library. LibreTranslate can translate text between different languages,
   auto-detect the language of the input text, and even handle HTML content. It
@@ -24,7 +25,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - chartLimit
@@ -33,9 +33,6 @@ schema:
     - suggestions
     - disableWebUI
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -70,29 +67,33 @@ schema:
       default: false
 benefits:
   - title: Free and Open Source
-    description: LibreTranslate is a free and open source machine translation API,
-      which means it is accessible to everyone and can be modified to suit
-      individual needs.
+    description:
+      LibreTranslate is a free and open source machine translation API, which
+      means it is accessible to everyone and can be modified to suit individual
+      needs.
   - title: Self-Hosted
-    description: Unlike other APIs, LibreTranslate doesn't rely on proprietary
-      providers such as Google or Azure to perform translations. It is entirely
+    description:
+      Unlike other APIs, LibreTranslate doesn't rely on proprietary providers
+      such as Google or Azure to perform translations. It is entirely
       self-hosted, providing full control over data privacy and security.
   - title: Powered by Argos Translate
-    description: LibreTranslate's translation engine is powered by the open source
-      Argos Translate library, ensuring reliable and accurate translations.
+    description:
+      LibreTranslate's translation engine is powered by the open source Argos
+      Translate library, ensuring reliable and accurate translations.
 features:
   - title: Simple Translation Requests
-    description: LibreTranslate allows users to easily translate text from one
-      language to another. Simply input the text, specify the source and target
-      languages, and the API will return the translated text.
+    description:
+      LibreTranslate allows users to easily translate text from one language to
+      another. Simply input the text, specify the source and target languages,
+      and the API will return the translated text.
   - title: Auto Detect Language
-    description: LibreTranslate can automatically detect the language of the input
-      text. This feature is especially useful when the source language is
-      unknown.
+    description:
+      LibreTranslate can automatically detect the language of the input text.
+      This feature is especially useful when the source language is unknown.
   - title: HTML Translation
-    description: LibreTranslate supports HTML translation. This means it can
-      translate text within HTML code while preserving the original formatting
-      and structure.
+    description:
+      LibreTranslate supports HTML translation. This means it can translate text
+      within HTML code while preserving the original formatting and structure.
 tags:
   - Translation
   - API

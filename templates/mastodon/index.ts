@@ -53,7 +53,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "app",
       data: {
-        projectName: input.projectName,
         serviceName: input.appServiceName + "-streaming",
         source: { type: "image", image: input.appServiceImage },
         domains: [
@@ -71,7 +70,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-web",
       source: { type: "image", image: input.appServiceImage },
       domains: [
@@ -97,7 +95,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-sidekiq",
       source: { type: "image", image: input.appServiceImage },
       env: appEnv.join("\n"),
@@ -115,7 +112,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-db",
       password: databasePassword,
     },
@@ -124,7 +120,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName + "-redis",
       password: redisPassword,
     },

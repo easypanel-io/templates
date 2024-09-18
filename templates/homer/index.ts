@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: ["INIT_ASSETS=1"].join("\n"),
       source: { type: "image", image: input.appServiceImage },

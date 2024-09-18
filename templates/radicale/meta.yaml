@@ -1,5 +1,13 @@
 name: Radicale
-description: Radicale is a small but powerful CalDAV (calendars, to-do lists) and CardDAV (contacts) server. It allows you to share calendars and contact lists through CalDAV, CardDAV, and HTTP. Radicale supports events, todos, journal entries, and business cards. It works out-of-the-box, requiring no complicated setup or configuration. Radicale can limit access by authentication and secure connections with TLS. It works with many CalDAV and CardDAV clients, stores all data on the file system in a simple folder structure, and can be extended with plugins. Radicale is GPLv3-licensed free software.
+description:
+  Radicale is a small but powerful CalDAV (calendars, to-do lists) and CardDAV
+  (contacts) server. It allows you to share calendars and contact lists through
+  CalDAV, CardDAV, and HTTP. Radicale supports events, todos, journal entries,
+  and business cards. It works out-of-the-box, requiring no complicated setup or
+  configuration. Radicale can limit access by authentication and secure
+  connections with TLS. It works with many CalDAV and CardDAV clients, stores
+  all data on the file system in a simple folder structure, and can be extended
+  with plugins. Radicale is GPLv3-licensed free software.
 instructions: Login with any username or password
 changeLog:
   - date: 2023-3-27
@@ -17,13 +25,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -31,25 +35,43 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tomsquest/docker-radicale:3.1.8.1
+      default: tomsquest/docker-radicale:3.2.0.0
 benefits:
   - title: CalDAV/CardDAV Server
-    description: Radicale serves as a CalDAV (Calendar) and CardDAV (Contact) server, storing and allowing online sharing of calendars, address books, events, and contacts.
+    description:
+      Radicale serves as a CalDAV (Calendar) and CardDAV (Contact) server,
+      storing and allowing online sharing of calendars, address books, events,
+      and contacts.
   - title: Extensible with Plugins
-    description: Radicale can be extended with plugins for authentication, rights management, and storage, allowing for customization and enhanced functionality.
+    description:
+      Radicale can be extended with plugins for authentication, rights
+      management, and storage, allowing for customization and enhanced
+      functionality.
   - title: Wide Compatibility
-    description: Radicale is available for various Linux distributions and also has a Dockerfile, ensuring wide compatibility and ease of installation.
+    description:
+      Radicale is available for various Linux distributions and also has a
+      Dockerfile, ensuring wide compatibility and ease of installation.
 features:
   - title: Modular Code
-    description: Radicale's code is organized into several modules, each handling a specific functionality, making it easier to understand and work with.
+    description:
+      Radicale's code is organized into several modules, each handling a
+      specific functionality, making it easier to understand and work with.
   - title: Integrated HTTP Server
-    description: Radicale comes with an integrated HTTP server for standalone use, simplifying setup and operation.
+    description:
+      Radicale comes with an integrated HTTP server for standalone use,
+      simplifying setup and operation.
   - title: Web Interface
-    description: Radicale includes a web interface module, providing a user-friendly way to interact with the server.
+    description:
+      Radicale includes a web interface module, providing a user-friendly way to
+      interact with the server.
   - title: Authentication and Rights Management
-    description: Radicale includes modules for user authentication and rights management, ensuring secure access to data.
+    description:
+      Radicale includes modules for user authentication and rights management,
+      ensuring secure access to data.
   - title: Storage Management
-    description: Radicale's storage module handles the storing and loading of collections in the filesystem, providing a reliable way to manage data.
+    description:
+      Radicale's storage module handles the storing and loading of collections
+      in the filesystem, providing a reliable way to manage data.
 tags:
   - Calendars
   - Productivity

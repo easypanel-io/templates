@@ -1,9 +1,10 @@
 name: HumHub
-description: HumHub is a flexible open-source social network kit designed to
-  facilitate communication and collaboration. It allows you to create your own
-  customized social network, social intranet, or large social enterprise
-  application tailored to your specific needs. Whether you're looking to boost
-  your business, support your customers, educate your students, or organize your
+description:
+  HumHub is a flexible open-source social network kit designed to facilitate
+  communication and collaboration. It allows you to create your own customized
+  social network, social intranet, or large social enterprise application
+  tailored to your specific needs. Whether you're looking to boost your
+  business, support your customers, educate your students, or organize your
   football club, HumHub provides the tools to make it happen. It features an
   intuitive user interface and a powerful module system that can be extended
   with third-party tools, your own creations, or existing software. With HumHub,
@@ -32,14 +33,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,49 +44,59 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mriedmann/humhub:1.13.0
+      default: mriedmann/humhub:1.14.5
     databaseServiceName:
       type: string
       title: Database Service Name
       default: humhub-db
 benefits:
   - title: Open Source
-    description: HumHub is a completely open-source platform, allowing you to take
+    description:
+      HumHub is a completely open-source platform, allowing you to take
       advantage of the work already done and even improve upon it. It welcomes
       every suggestion or help.
   - title: Flexible
-    description: HumHub is equipped with a powerful module system. You can extend
-      its functionality by using third-party tools, writing your own, or
-      connecting existing software.
+    description:
+      HumHub is equipped with a powerful module system. You can extend its
+      functionality by using third-party tools, writing your own, or connecting
+      existing software.
   - title: Secure
-    description: HumHub is a self-hosted solution that runs on almost every server.
-      You are in full control of your data, ensuring your privacy and security.
+    description:
+      HumHub is a self-hosted solution that runs on almost every server. You are
+      in full control of your data, ensuring your privacy and security.
   - title: Customizable
-    description: With HumHub, you can create your own customized social network,
-      social intranet, or large social enterprise application that truly fits
-      your needs.
+    description:
+      With HumHub, you can create your own customized social network, social
+      intranet, or large social enterprise application that truly fits your
+      needs.
 features:
   - title: Social Communication
-    description: Communicate like you already do in other social networks, just with
-      your own rules. Write posts and updates, share files, like and comment
-      just the way you want it.
+    description:
+      Communicate like you already do in other social networks, just with your
+      own rules. Write posts and updates, share files, like and comment just the
+      way you want it.
   - title: Spaces
-    description: The communication in HumHub works with spaces. A space can be
-      anything, a project, a group or just a simple topic. For every space, you
-      can invite multiple users and set up your own access rights and rules.
+    description:
+      The communication in HumHub works with spaces. A space can be anything, a
+      project, a group or just a simple topic. For every space, you can invite
+      multiple users and set up your own access rights and rules.
   - title: Digital V-Card
-    description: Extend your profile, create your portfolio, connect with other
-      people, find the right person with special skills, inform your followers
-      with updates on your own wall.
+    description:
+      Extend your profile, create your portfolio, connect with other people,
+      find the right person with special skills, inform your followers with
+      updates on your own wall.
   - title: Unlimited Possibilities
-    description: With modules, you can modify anything on HumHub. Spaces, Profiles
-      and other things according to your requirements. Anything you are missing
-      on other social networks, you can build it.
+    description:
+      With modules, you can modify anything on HumHub. Spaces, Profiles and
+      other things according to your requirements. Anything you are missing on
+      other social networks, you can build it.
   - title: Live Updates
-    description: Stay informed about upcoming features and be amongst the first to
-      know about them.
+    description:
+      Stay informed about upcoming features and be amongst the first to know
+      about them.
   - title: Mobile Ready
-    description: HumHub is designed to work with all kinds of modern devices like
+    description:
+      HumHub is designed to work with all kinds of modern devices like
       smartphones and tablets, ensuring you can stay connected wherever you are.
 tags:
   - Social Networking

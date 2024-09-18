@@ -17,7 +17,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `KEY=${appKey}`,
@@ -30,7 +29,7 @@ export function generate(input: Input): Output {
         `DB_PASSWORD=${databasePassword}`,
         `CACHE_ENABLED=true`,
         `CACHE_STORE=redis`,
-        `CACHE_REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),
@@ -63,7 +62,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "postgres",
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         password: databasePassword,
       },
@@ -74,7 +72,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "mysql",
       data: {
-        projectName: input.projectName,
         serviceName: input.databaseServiceName,
         image: "mysql:5",
         password: databasePassword,
@@ -84,11 +81,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: redisPassword,
-    },
+    data: { serviceName: input.redisServiceName, password: redisPassword },
   });
 
   return { services };

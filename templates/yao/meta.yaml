@@ -1,7 +1,8 @@
 name: YAO
-description: YAO is a powerful open-source app engine designed to create web
-  services and applications in a matter of minutes. It is versatile and suitable
-  for a variety of use-cases including AI, IoT, Industrial Internet, Connected
+description:
+  YAO is a powerful open-source app engine designed to create web services and
+  applications in a matter of minutes. It is versatile and suitable for a
+  variety of use-cases including AI, IoT, Industrial Internet, Connected
   Vehicles, DevOps, Energy, and Finance. With YAO, you can create a database
   model, write an interface, and describe the interface using JSON, making it a
   truly codeless programming experience. It supports running on ARM devices and
@@ -13,8 +14,9 @@ description: YAO is a powerful open-source app engine designed to create web
   and other languages. YAO also provides a built-in query engine and offers
   enterprise-level security with permission classification, separation of
   administrator and employee accounts, and API level permission control.
-instructions: Use xiang@iqka.com:A123456p+ to login at /xiang/login/admin . Use
-  amd64 instead of arm64 if you use a non ARM based system.
+instructions:
+  Use xiang@iqka.com:A123456p+ to login at /xiang/login/admin . Use amd64
+  instead of arm64 if you use a non ARM based system.
 changeLog:
   - date: 2023-3-14
     description: first release
@@ -31,14 +33,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -53,86 +51,115 @@ schema:
       default: yao-db
 benefits:
   - title: Efficiency
-    description: YAO is designed to accelerate development and improve efficiency
-      for developers.
+    description:
+      YAO is designed to accelerate development and improve efficiency for
+      developers.
   - title: No Code
-    description: YAO allows you to create database models, write interfaces, and
-      describe interfaces using JSON, making it a codeless programming
-      experience.
+    description:
+      YAO allows you to create database models, write interfaces, and describe
+      interfaces using JSON, making it a codeless programming experience.
   - title: IoT Support
-    description: YAO can run on ARM devices and is suitable for IoT, edge computing,
-      and industrial Internet applications.
+    description:
+      YAO can run on ARM devices and is suitable for IoT, edge computing, and
+      industrial Internet applications.
   - title: Business Intelligence
-    description: YAO provides easy-to-use BI components and functions, empowering
+    description:
+      YAO provides easy-to-use BI components and functions, empowering
       businesses with more possibilities.
   - title: Process Automation
-    description: YAO has built-in processes and supports creating custom processes
-      using data flow, JavaScript, and GRPC plugins.
+    description:
+      YAO has built-in processes and supports creating custom processes using
+      data flow, JavaScript, and GRPC plugins.
   - title: Data Processing
-    description: YAO allows developers to process data in any form using data flow
-      and JavaScript.
+    description:
+      YAO allows developers to process data in any form using data flow and
+      JavaScript.
   - title: Plugin System
-    description: YAO supports function expansion using plugins based on GRPC,
-      allowing developers to extend its capabilities using Node.js, Python, and
-      other languages.
+    description:
+      YAO supports function expansion using plugins based on GRPC, allowing
+      developers to extend its capabilities using Node.js, Python, and other
+      languages.
   - title: Dashboard Creation
-    description: YAO enables the creation of various CRM, ERP, and other enterprise
+    description:
+      YAO enables the creation of various CRM, ERP, and other enterprise
       internal systems by writing JSON descriptions for interface layouts.
   - title: File System Routing
-    description: YAO automatically converts files in the APIs folder into callable
+    description:
+      YAO automatically converts files in the APIs folder into callable
       interfaces, making it easier to manage large-scale projects.
   - title: Powerful Query Engine
-    description: YAO has a built-in query engine comparable to Elasticsearch,
-      allowing for simple and easy-to-use JSON queries.
+    description:
+      YAO has a built-in query engine comparable to Elasticsearch, allowing for
+      simple and easy-to-use JSON queries.
   - title: High Performance
-    description: YAO offers superior performance compared to Java and PHP, and it is
+    description:
+      YAO offers superior performance compared to Java and PHP, and it is
       distributed and can be deployed with a single command.
   - title: Enterprise Security
-    description: YAO provides permission classification, separation of administrator
-      and employee accounts, and API-level permission control for enhanced
+    description:
+      YAO provides permission classification, separation of administrator and
+      employee accounts, and API-level permission control for enhanced
       enterprise security.
   - title: Natural Distribution
-    description: YAO generates binary files for various platforms, making it
-      convenient for users who need to deploy to the cloud.
+    description:
+      YAO generates binary files for various platforms, making it convenient for
+      users who need to deploy to the cloud.
   - title: Model Driven
-    description: YAO allows you to create a database model through DSL with zero
+    description:
+      YAO allows you to create a database model through DSL with zero
       configuration and dependencies, making it ready to use.
 features:
   - title: Framework
-    description: YAO is built on a high-performance and easily expandable technical
+    description:
+      YAO is built on a high-performance and easily expandable technical
       architecture.
   - title: API Engine
-    description: YAO provides an API engine for creating and managing web service APIs.
+    description:
+      YAO provides an API engine for creating and managing web service APIs.
   - title: Workflow Engine
-    description: YAO includes a workflow engine for managing and automating business
+    description:
+      YAO includes a workflow engine for managing and automating business
       processes.
   - title: Interface Engine
-    description: YAO offers an interface engine for creating and managing user interfaces.
+    description:
+      YAO offers an interface engine for creating and managing user interfaces.
   - title: CLI
-    description: YAO provides a command-line interface (CLI) for easy management and
+    description:
+      YAO provides a command-line interface (CLI) for easy management and
       configuration.
   - title: Data Flow Engine
-    description: YAO allows data processing and transformation through a data flow engine.
+    description:
+      YAO allows data processing and transformation through a data flow engine.
   - title: Model Engine
-    description: YAO includes a model engine for creating and managing database models.
+    description:
+      YAO includes a model engine for creating and managing database models.
   - title: Process Engine
-    description: YAO provides a process engine for creating and managing business processes.
+    description:
+      YAO provides a process engine for creating and managing business
+      processes.
   - title: Query Engine
-    description: YAO has a powerful query engine for querying and retrieving data.
+    description:
+      YAO has a powerful query engine for querying and retrieving data.
   - title: Plugin System
-    description: YAO supports a plugin system for extending its functionality using
+    description:
+      YAO supports a plugin system for extending its functionality using
       Node.js, Python, and other languages.
   - title: Table Form
-    description: YAO offers table and form components for creating and managing data
-      tables and forms.
+    description:
+      YAO offers table and form components for creating and managing data tables
+      and forms.
   - title: Chart
-    description: YAO provides chart components for visualizing data in various chart types.
+    description:
+      YAO provides chart components for visualizing data in various chart types.
   - title: Kanban
-    description: YAO includes a Kanban component for managing tasks and workflows.
+    description:
+      YAO includes a Kanban component for managing tasks and workflows.
   - title: Screen
-    description: YAO offers a screen component for creating and managing custom screens.
+    description:
+      YAO offers a screen component for creating and managing custom screens.
   - title: iframe
-    description: YAO allows embedding external content using the iframe component.
+    description:
+      YAO allows embedding external content using the iframe component.
 tags:
   - No-Code
   - Developer Tools

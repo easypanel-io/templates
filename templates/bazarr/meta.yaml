@@ -1,8 +1,9 @@
 name: Bazarr
-description: Bazarr is a companion application to Sonarr and Radarr, designed to
-  manage and download subtitles based on your specific needs. It allows you to
-  define your preferences by TV show or movie, and Bazarr handles the rest. The
-  app automatically searches for missing subtitles and downloads them as soon as
+description:
+  Bazarr is a companion application to Sonarr and Radarr, designed to manage and
+  download subtitles based on your specific needs. It allows you to define your
+  preferences by TV show or movie, and Bazarr handles the rest. The app
+  automatically searches for missing subtitles and downloads them as soon as
   they become available in your desired language. It also offers a manual search
   feature to find all matching subtitles, allowing you to choose the one you
   want and download it to your media directory. Bazarr also regularly searches
@@ -14,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2023-3-17
     description: first release
+  - date: 2024-03-11
+    description: Version bumped to 1.4.2
 links:
   - label: Website
     url: https://bazarr.media/
@@ -24,16 +27,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,34 +42,40 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/bazarr:1.2.0
+      default: lscr.io/linuxserver/bazarr:1.4.2
 benefits:
   - title: Automated Subtitle Management
-    description: Bazarr is a companion application to Sonarr and Radarr that
-      automatically manages and downloads subtitles based on your requirements.
-      It eliminates the need for manual searching and downloading of subtitles,
-      saving you time and effort.
+    description:
+      Bazarr is a companion application to Sonarr and Radarr that automatically
+      manages and downloads subtitles based on your requirements. It eliminates
+      the need for manual searching and downloading of subtitles, saving you
+      time and effort.
   - title: Subtitle Upgrades
-    description: Bazarr regularly searches for matching subtitles and upgrades the
-      ones you previously downloaded if a better one is found. This ensures you
-      always have the best quality subtitles for your media.
+    description:
+      Bazarr regularly searches for matching subtitles and upgrades the ones you
+      previously downloaded if a better one is found. This ensures you always
+      have the best quality subtitles for your media.
 features:
   - title: Automatic Search
-    description: Bazarr automatically searches for missing subtitles and downloads
-      them as soon as they become available in your desired language. This
-      ensures you never miss out on any subtitles for your media.
+    description:
+      Bazarr automatically searches for missing subtitles and downloads them as
+      soon as they become available in your desired language. This ensures you
+      never miss out on any subtitles for your media.
   - title: Manual Search
-    description: Bazarr allows you to manually search for all the matching
-      subtitles, choose the one you want, and download it to your media
-      directory with the proper name to be used by your media player.
+    description:
+      Bazarr allows you to manually search for all the matching subtitles,
+      choose the one you want, and download it to your media directory with the
+      proper name to be used by your media player.
   - title: Subtitle Upgrade
-    description: Bazarr has a feature that regularly searches for matching subtitles
-      and upgrades the one you previously downloaded if a better one is found.
-      This ensures you always have the best quality subtitles for your media.
+    description:
+      Bazarr has a feature that regularly searches for matching subtitles and
+      upgrades the one you previously downloaded if a better one is found. This
+      ensures you always have the best quality subtitles for your media.
   - title: Compatibility
-    description: Bazarr is compatible with Linux, Windows, and macOS, and can be run
-      from python sources. This ensures you can use it on your preferred
-      operating system without any issues.
+    description:
+      Bazarr is compatible with Linux, Windows, and macOS, and can be run from
+      python sources. This ensures you can use it on your preferred operating
+      system without any issues.
 tags:
   - Media
   - Subtitles

@@ -14,7 +14,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `NEXT_PUBLIC_BASE_URL=https://$(PRIMARY_DOMAIN)`,
@@ -43,7 +42,6 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       image: "postgres:14.2",
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

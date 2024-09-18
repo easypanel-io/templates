@@ -1,14 +1,16 @@
 name: Filezilla Client
-description: FileZilla Client is a fast and reliable cross-platform FTP, FTPS
-  and SFTP client. It is designed with a lot of useful features and an intuitive
+description:
+  FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP
+  client. It is designed with a lot of useful features and an intuitive
   graphical user interface. The app is capable of delivering a true lossless
   image at a high framerate to your web browser. It supports multiple
   architectures and can be accessed via HTTP or HTTPS. The app also allows you
   to specify the user PUID and group PGID to avoid permission issues between the
   host OS and the container. It also provides the ability to override the
   default umask settings for services started within the containers.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2022-11-21
     description: first release
@@ -23,13 +25,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -40,27 +38,30 @@ schema:
       default: lscr.io/linuxserver/filezilla:latest
 benefits:
   - title: Cross-Platform Compatibility
-    description: FileZilla Client is a cross-platform FTP, FTPS, and SFTP client,
-      meaning it can be used on various operating systems without compatibility
-      issues.
+    description:
+      FileZilla Client is a cross-platform FTP, FTPS, and SFTP client, meaning
+      it can be used on various operating systems without compatibility issues.
   - title: Intuitive User Interface
-    description: The app features an intuitive graphical user interface, making it
-      easy for users to navigate and operate, regardless of their technical
-      expertise.
+    description:
+      The app features an intuitive graphical user interface, making it easy for
+      users to navigate and operate, regardless of their technical expertise.
   - title: Fast and Reliable
-    description: FileZilla Client is known for its speed and reliability, ensuring
+    description:
+      FileZilla Client is known for its speed and reliability, ensuring
       efficient and uninterrupted file transfers.
 features:
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness,
+    description:
+      The app utilizes the docker manifest for multi-platform awareness,
       allowing it to retrieve the correct image for your architecture.
   - title: Customizable Environment Variables
-    description: FileZilla Client offers customizable environment variables,
-      enabling users to adjust settings such as internal port, HTTP Basic auth
-      username and password, and more.
+    description:
+      FileZilla Client offers customizable environment variables, enabling users
+      to adjust settings such as internal port, HTTP Basic auth username and
+      password, and more.
   - title: Lossless Mode
-    description: The app is capable of delivering a true lossless image at a high
-      framerate to your web browser, ensuring the highest quality of image
-      transmission.
+    description:
+      The app is capable of delivering a true lossless image at a high framerate
+      to your web browser, ensuring the highest quality of image transmission.
 tags:
   - File Management

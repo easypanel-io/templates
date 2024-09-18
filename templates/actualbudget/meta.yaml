@@ -1,7 +1,8 @@
 name: Actual Budget
-description: Actual is a personal finance tool designed to help you manage your
-  finances with ease and convenience. This local-first application is 100% free
-  and open-source, providing you with a reliable platform to keep track of your
+description:
+  Actual is a personal finance tool designed to help you manage your finances
+  with ease and convenience. This local-first application is 100% free and
+  open-source, providing you with a reliable platform to keep track of your
   financial transactions. It's written in NodeJS and features a synchronization
   element that allows your changes to seamlessly move between devices. This
   means you can access and manage your financial data from any device without
@@ -12,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2023-1-25
     description: first release
+  - date: 2024-03-10
+    description: Version bumped to 24.3.0
 links:
   - label: Github
     url: https://github.com/actualbudget/actual
@@ -20,16 +23,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -37,36 +38,42 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/actualbudget/actual-server:23.2.9
+      default: ghcr.io/actualbudget/actual-server:24.5.0
 benefits:
   - title: Local-First Personal Finance
-    description: Actual is a personal finance tool that operates on a local-first
-      basis. This means that all your financial data is stored on your device,
-      giving you full control over your information.
+    description:
+      Actual is a personal finance tool that operates on a local-first basis.
+      This means that all your financial data is stored on your device, giving
+      you full control over your information.
   - title: Free and Open-Source
-    description: Actual is 100% free and open-source. This means you can use it
-      without any cost and also have the freedom to modify it according to your
-      needs.
+    description:
+      Actual is 100% free and open-source. This means you can use it without any
+      cost and also have the freedom to modify it according to your needs.
   - title: Synchronization Across Devices
-    description: Actual has a synchronization feature that allows your changes to
-      move between devices seamlessly. This means you can access and manage your
+    description:
+      Actual has a synchronization feature that allows your changes to move
+      between devices seamlessly. This means you can access and manage your
       financial data from any device.
 features:
   - title: Budgeting
-    description: Actual provides a comprehensive budgeting tool that helps you
-      manage your finances effectively. You can set budget limits, track your
-      spending, and get insights into your financial habits.
+    description:
+      Actual provides a comprehensive budgeting tool that helps you manage your
+      finances effectively. You can set budget limits, track your spending, and
+      get insights into your financial habits.
   - title: Account Management
-    description: With Actual, you can manage all your financial accounts in one
-      place. It allows you to keep track of your income, expenses, savings, and
+    description:
+      With Actual, you can manage all your financial accounts in one place. It
+      allows you to keep track of your income, expenses, savings, and
       investments.
   - title: Reports and Filters
-    description: Actual offers detailed reports and filters to help you analyze your
+    description:
+      Actual offers detailed reports and filters to help you analyze your
       financial data. You can generate reports based on different criteria and
       filter your data to find specific information.
   - title: Backup and Restore
-    description: Actual provides a backup and restore feature to ensure the safety
-      of your financial data. You can easily backup your data and restore it
-      whenever needed.
+    description:
+      Actual provides a backup and restore feature to ensure the safety of your
+      financial data. You can easily backup your data and restore it whenever
+      needed.
 tags:
   - Finance

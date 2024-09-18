@@ -9,7 +9,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `REDIS_HOST=${input.redisServiceName}`,
@@ -57,17 +56,12 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: redisPassword,
-    },
+    data: { serviceName: input.redisServiceName, password: redisPassword },
   });
 
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

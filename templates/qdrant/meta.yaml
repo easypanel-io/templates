@@ -1,15 +1,16 @@
 name: Qdrant
-description: Qdrant is a powerful vector database and vector similarity search
-  engine designed to power the next generation of AI applications. It deploys as
-  an API service, providing search for the nearest high-dimensional vectors.
-  This allows embeddings or neural network encoders to be turned into
-  full-fledged applications for matching, searching, recommending, and much
-  more. Qdrant supports a large variety of data types and query conditions,
-  including string matching, numerical ranges, geo-locations, and more. It is
-  cloud-native and scales horizontally, ensuring efficient utilization of
-  resources. With Qdrant, you can build and deploy semantic neural search on
-  your data in minutes, understand user behavior in real time, and find similar
-  images or detect duplicates with ease.
+description:
+  Qdrant is a powerful vector database and vector similarity search engine
+  designed to power the next generation of AI applications. It deploys as an API
+  service, providing search for the nearest high-dimensional vectors. This
+  allows embeddings or neural network encoders to be turned into full-fledged
+  applications for matching, searching, recommending, and much more. Qdrant
+  supports a large variety of data types and query conditions, including string
+  matching, numerical ranges, geo-locations, and more. It is cloud-native and
+  scales horizontally, ensuring efficient utilization of resources. With Qdrant,
+  you can build and deploy semantic neural search on your data in minutes,
+  understand user behavior in real time, and find similar images or detect
+  duplicates with ease.
 instructions: null
 changeLog:
   - date: 2023-06-30
@@ -27,63 +28,67 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
     appServiceImage:
       type: string
       title: App Service Image
-      default: qdrant/qdrant:v1.3.0
+      default: qdrant/qdrant:v1.9.4
 benefits:
   - title: Advanced Vector Similarity Search
-    description: Qdrant is a next-generation AI application that leverages advanced
-      vector similarity search technology. It allows you to turn embeddings or
-      neural network encoders into full-fledged applications for matching,
-      searching, recommending, and much more.
+    description:
+      Qdrant is a next-generation AI application that leverages advanced vector
+      similarity search technology. It allows you to turn embeddings or neural
+      network encoders into full-fledged applications for matching, searching,
+      recommending, and much more.
   - title: Fast and Accurate
-    description: Qdrant implements a unique custom modification of the HNSW
-      algorithm for Approximate Nearest Neighbor Search. It provides
-      state-of-the-art speed and applies search filters without compromising on
-      results.
+    description:
+      Qdrant implements a unique custom modification of the HNSW algorithm for
+      Approximate Nearest Neighbor Search. It provides state-of-the-art speed
+      and applies search filters without compromising on results.
   - title: Efficient and Scalable
-    description: Qdrant is cloud-native and scales horizontally. It effectively
-      utilizes your resources and can be used with just the right amount of
-      computational resources, no matter how much data you need to serve.
+    description:
+      Qdrant is cloud-native and scales horizontally. It effectively utilizes
+      your resources and can be used with just the right amount of computational
+      resources, no matter how much data you need to serve.
   - title: Rich Data Types and Custom Business Logic
-    description: Qdrant supports a large variety of data types and query conditions.
-      It allows you to build almost any custom business logic that should work
-      on top of similarity matching.
+    description:
+      Qdrant supports a large variety of data types and query conditions. It
+      allows you to build almost any custom business logic that should work on
+      top of similarity matching.
 features:
   - title: Easy to Use API
-    description: Qdrant provides the OpenAPI v3 specification to generate a client
-      library in almost any programming language. You can also utilize
-      ready-made clients for Python or other programming languages with
-      additional functionality.
+    description:
+      Qdrant provides the OpenAPI v3 specification to generate a client library
+      in almost any programming language. You can also utilize ready-made
+      clients for Python or other programming languages with additional
+      functionality.
   - title: Filterable
-    description: Qdrant supports additional payload associated with vectors. It not
-      only stores payload but also allows filter results based on payload
-      values. Unlike Elasticsearch post-filtering, Qdrant guarantees all
-      relevant vectors are retrieved.
+    description:
+      Qdrant supports additional payload associated with vectors. It not only
+      stores payload but also allows filter results based on payload values.
+      Unlike Elasticsearch post-filtering, Qdrant guarantees all relevant
+      vectors are retrieved.
   - title: Semantic Text Search
-    description: Qdrant allows you to overcome the limitations of full-text search
-      by using a neural network-based semantic search. It uses semantic
-      embeddings to find texts with similar meaning.
+    description:
+      Qdrant allows you to overcome the limitations of full-text search by using
+      a neural network-based semantic search. It uses semantic embeddings to
+      find texts with similar meaning.
   - title: Real-Time User Behavior Understanding
-    description: With Qdrant, user behavior can be represented as a semantic vector
-      similar to text or images. This vector can represent user preferences,
-      behavior patterns, or interest in the product. User vectors can be updated
-      in real-time, eliminating the need to deploy a MapReduce cluster.
+    description:
+      With Qdrant, user behavior can be represented as a semantic vector similar
+      to text or images. This vector can represent user preferences, behavior
+      patterns, or interest in the product. User vectors can be updated in
+      real-time, eliminating the need to deploy a MapReduce cluster.
   - title: Similar Image Search
-    description: Qdrant allows you to find similar images, detect duplicates, or
-      even find a picture by text description. It enables you to apply arbitrary
-      business logic on top of a similarity search.
+    description:
+      Qdrant allows you to find similar images, detect duplicates, or even find
+      a picture by text description. It enables you to apply arbitrary business
+      logic on top of a similarity search.
 tags:
   - Data Science
   - Databases

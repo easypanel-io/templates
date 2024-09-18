@@ -1,7 +1,8 @@
 name: Firefox
-description: Firefox Browser, also known as Mozilla Firefox or simply Firefox,
-  is a free and open-source web browser developed by the Mozilla Foundation and
-  its subsidiary, the Mozilla Corporation. This app allows you to deploy and run
+description:
+  Firefox Browser, also known as Mozilla Firefox or simply Firefox, is a free
+  and open-source web browser developed by the Mozilla Foundation and its
+  subsidiary, the Mozilla Corporation. This app allows you to deploy and run
   Firefox in a containerized environment, providing a secure and isolated space
   for your browsing activities. Firefox uses the Gecko layout engine to render
   web pages, implementing current and anticipated web standards. The app
@@ -10,8 +11,9 @@ description: Firefox Browser, also known as Mozilla Firefox or simply Firefox,
   disable specific functionalities. This containerized version of Firefox is
   capable of delivering a true lossless image at a high framerate to your web
   browser, providing an optimal browsing experience.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2022-11-14
     description: first release
@@ -26,13 +28,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -43,40 +41,49 @@ schema:
       default: lscr.io/linuxserver/firefox:latest
 benefits:
   - title: Open-Source Web Browser
-    description: Firefox Browser, developed by the Mozilla Foundation, is a free and
+    description:
+      Firefox Browser, developed by the Mozilla Foundation, is a free and
       open-source web browser. It uses the Gecko layout engine to render web
       pages, implementing current and anticipated web standards.
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
-      This means that simply pulling the correct image for your architecture is
-      made easy and straightforward.
+    description:
+      The app utilizes the docker manifest for multi-platform awareness. This
+      means that simply pulling the correct image for your architecture is made
+      easy and straightforward.
   - title: Accessible Application
-    description: The application can be accessed at specified host addresses,
-      providing flexibility and ease of use.
+    description:
+      The application can be accessed at specified host addresses, providing
+      flexibility and ease of use.
   - title: Customizable Environment Variables
-    description: The app offers a range of optional environment variables that can
-      be customized to suit your needs, such as changing the internal port the
+    description:
+      The app offers a range of optional environment variables that can be
+      customized to suit your needs, such as changing the internal port the
       container listens on, setting the HTTP Basic auth username and password,
       and more.
 features:
   - title: Lossless Mode
-    description: The app is capable of delivering a true lossless image at a high
-      framerate to your web browser. This feature enhances the visual experience
-      and performance of the app.
+    description:
+      The app is capable of delivering a true lossless image at a high framerate
+      to your web browser. This feature enhances the visual experience and
+      performance of the app.
   - title: Docker in Docker (DinD) Setup
-    description: The app offers an optional run configuration that starts a Docker
-      in Docker (DinD) setup inside the container. This allows you to use docker
-      in an isolated environment, enhancing security and performance.
+    description:
+      The app offers an optional run configuration that starts a Docker in
+      Docker (DinD) setup inside the container. This allows you to use docker in
+      an isolated environment, enhancing security and performance.
   - title: GPU Acceleration
-    description: The app supports mounting a GPU into the container. This can be
-      used in conjunction with the DRINODE environment variable to leverage a
-      host video card for GPU accelerated applications.
+    description:
+      The app supports mounting a GPU into the container. This can be used in
+      conjunction with the DRINODE environment variable to leverage a host video
+      card for GPU accelerated applications.
   - title: Environment Variables from Files
-    description: The app allows you to set any environment variable from a file
-      using a special prepend FILE__. This feature enhances security and
-      flexibility in managing environment variables.
+    description:
+      The app allows you to set any environment variable from a file using a
+      special prepend FILE__. This feature enhances security and flexibility in
+      managing environment variables.
   - title: User / Group Identifiers
-    description: The app allows you to specify the user PUID and group PGID to avoid
+    description:
+      The app allows you to specify the user PUID and group PGID to avoid
       permission issues between the host OS and the container when using
       volumes.
 tags:

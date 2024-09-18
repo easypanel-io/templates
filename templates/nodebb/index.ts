@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       domains: [
@@ -38,7 +37,7 @@ export function generate(input: Input): Output {
             ? "admin"
             : input.databaseServiceType === "redis"
             ? 0
-            : input.projectName
+            : "$(PROJECT_NAME)"
         }`,
       ].join("\n"),
       mounts: [{ type: "volume", name: "app", mountPath: "/usr/src/app" }],
@@ -48,7 +47,6 @@ export function generate(input: Input): Output {
   services.push({
     type: input.databaseServiceType,
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

@@ -7,11 +7,13 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`WG_HOST=$(PRIMARY_DOMAIN)`, `PASSWORD=${input.appPassword}`].join(
-        "\n"
-      ),
+      env: [
+        `WG_HOST=$(PRIMARY_DOMAIN)`,
+        `PASSWORD=${input.appPassword}`,
+        `WG_POST_UP=iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -j MASQUERADE; iptables -A FORWARD -o %i -j ACCEPT`,
+        `WG_POST_DOWN=iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -j MASQUERADE; iptables -D FORWARD -o %i -j ACCEPT`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -41,6 +43,13 @@ export function generate(input: Input): Output {
         },
         capAdd: ["NET_ADMIN", "SYS_MODULE"],
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/etc/wireguard",
+        },
+      ],
     },
   });
 

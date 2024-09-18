@@ -1,21 +1,24 @@
 name: Appsmith
-description: Appsmith is a powerful tool designed to help engineers build custom
-  software on top of their data. It simplifies internal tool development for
-  businesses, streamlining operations, automating processes, and integrating
-  multiple apps and data sources. Appsmith allows you to quickly build, deploy,
-  and share applications that run critical business operations. It features
-  intent-based auto-layouts for building responsive apps faster and offers a
-  drag-and-drop interface for creating beautiful UIs without writing a single
-  line of HTML/CSS. You can connect to any database, SaaS tool, or GraphQL/REST
-  API, and query your data directly using SQL or the built-in query builder.
-  Appsmith also provides the ability to write in-line JavaScript or reusable
-  code blocks to extend your app's functionality, customize your UI, or write
-  conditional logic. It's a secure, open-source platform that can be self-hosted
-  for total control, privacy, and security.
+description:
+  Appsmith is a powerful tool designed to help engineers build custom software
+  on top of their data. It simplifies internal tool development for businesses,
+  streamlining operations, automating processes, and integrating multiple apps
+  and data sources. Appsmith allows you to quickly build, deploy, and share
+  applications that run critical business operations. It features intent-based
+  auto-layouts for building responsive apps faster and offers a drag-and-drop
+  interface for creating beautiful UIs without writing a single line of
+  HTML/CSS. You can connect to any database, SaaS tool, or GraphQL/REST API, and
+  query your data directly using SQL or the built-in query builder. Appsmith
+  also provides the ability to write in-line JavaScript or reusable code blocks
+  to extend your app's functionality, customize your UI, or write conditional
+  logic. It's a secure, open-source platform that can be self-hosted for total
+  control, privacy, and security.
 instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2024-03-10
+    description: Version bumped to 1.16
 links:
   - label: Website
     url: https://www.appsmith.com/
@@ -30,16 +33,14 @@ contributors:
     url: https://github.com/deiucanta
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://github.com/BerkSMBL
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,41 +48,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: appsmith/appsmith-ce:v1.9.16
+      default: appsmith/appsmith-ce:v1.26
 benefits:
   - title: Streamlined Operations
-    description: Appsmith simplifies internal tool development for businesses,
-      helping to streamline operations and automate processes. This allows
-      businesses to scale faster and more efficiently.
+    description:
+      Appsmith simplifies internal tool development for businesses, helping to
+      streamline operations and automate processes. This allows businesses to
+      scale faster and more efficiently.
   - title: Rapid Application Development
-    description: With Appsmith, technical users can quickly build, deploy, and share
+    description:
+      With Appsmith, technical users can quickly build, deploy, and share
       applications with end-users to run critical business operations. This
       accelerates the development process and reduces time to market.
   - title: Enhanced Legacy Apps
-    description: Appsmith allows businesses to quickly integrate multiple apps and
-      data, enhancing legacy apps with new features. This ensures that your
-      existing software remains relevant and continues to deliver value.
+    description:
+      Appsmith allows businesses to quickly integrate multiple apps and data,
+      enhancing legacy apps with new features. This ensures that your existing
+      software remains relevant and continues to deliver value.
 features:
   - title: Data Integration
-    description: Appsmith can connect to any database, SaaS tool, or GraphQL/REST
-      API within a few clicks. Users can query their data directly using SQL or
-      the query builder, with 18+ native integrations available.
+    description:
+      Appsmith can connect to any database, SaaS tool, or GraphQL/REST API
+      within a few clicks. Users can query their data directly using SQL or the
+      query builder, with 18+ native integrations available.
   - title: Drag and Drop UI Builder
-    description: Appsmith features a drag and drop UI builder with 45+ customizable
+    description:
+      Appsmith features a drag and drop UI builder with 45+ customizable
       widgets. Users can create beautiful responsive UI in minutes without
       writing a single line of HTML/CSS.
   - title: Customizable with Code
-    description: Users can write in-line JavaScript or reusable code blocks to
-      extend their app's functionality, customize their UI, or write conditional
-      logic. This provides a high degree of flexibility and control over the
-      app's behavior.
+    description:
+      Users can write in-line JavaScript or reusable code blocks to extend their
+      app's functionality, customize their UI, or write conditional logic. This
+      provides a high degree of flexibility and control over the app's behavior.
   - title: Git-based Version Control
-    description: Appsmith supports git-based version control, allowing users to sync
-      to a git repository and use the same dev workflows. Users can commit
-      changes, review pull requests, and deploy with their CI/CD.
+    description:
+      Appsmith supports git-based version control, allowing users to sync to a
+      git repository and use the same dev workflows. Users can commit changes,
+      review pull requests, and deploy with their CI/CD.
   - title: Secure and Private
-    description: Appsmith ensures security and privacy by allowing self-hosting with
-      no telemetry and no private data over the wire. All connections are
+    description:
+      Appsmith ensures security and privacy by allowing self-hosting with no
+      telemetry and no private data over the wire. All connections are
       TLS-encrypted, and credentials are encrypted with AES-256.
 tags:
   - Developer Tools

@@ -1,19 +1,21 @@
 name: MySQL Backup
-description: The mysql-backup-s3 app is a powerful tool designed to backup your
-  MySQL databases to your AWS S3 bucket. It supports periodic backups, allowing
-  you to schedule backup times in cron format, ensuring your data is always safe
-  and up-to-date. The app also supports multi-files, meaning you can have one
-  file per database if you choose to. The app requires your AWS access key, AWS
+description:
+  The mysql-backup-s3 app is a powerful tool designed to backup your MySQL
+  databases to your AWS S3 bucket. It supports periodic backups, allowing you to
+  schedule backup times in cron format, ensuring your data is always safe and
+  up-to-date. The app also supports multi-files, meaning you can have one file
+  per database if you choose to. The app requires your AWS access key, AWS
   secret key, and AWS S3 bucket path. It also requires your MySQL host, user,
   and password. You can customize the path prefix in your bucket, the AWS S3
   bucket region, and the AWS Endpoint URL. The app also allows you to add extra
   mysqldump options without overriding the default ones. With the
   mysql-backup-s3 app, you can ensure your MySQL databases are always backed up
   and secure in your AWS S3 bucket.
-instructions: "In order to test that you configured it properly, remove the
-  SCHEDULE variable from the environment, click deploy and check the logs. If
-  everything works fine, you can add the SCHEDULE variable back. You can read
-  more about the environment variables here:
+instructions:
+  "In order to test that you configured it properly, remove the SCHEDULE
+  variable from the environment, click deploy and check the logs. If everything
+  works fine, you can add the SCHEDULE variable back. You can read more about
+  the environment variables here:
   https://github.com/schickling/dockerfiles/tree/master/mysql-backup-s3"
 changeLog:
   - date: 2022-08-05
@@ -29,7 +31,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - host
@@ -44,9 +45,6 @@ schema:
     - endpoint
     - schedule
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -96,35 +94,40 @@ schema:
       description: You can use CRON syntax
 benefits:
   - title: Secure and Reliable
-    description: The app provides a secure and reliable way to backup your MySQL
-      databases to your AWS S3 bucket. It ensures that your data is safe and can
-      be recovered whenever needed.
+    description:
+      The app provides a secure and reliable way to backup your MySQL databases
+      to your AWS S3 bucket. It ensures that your data is safe and can be
+      recovered whenever needed.
   - title: Flexible and Customizable
-    description: The app allows you to customize your backup process according to
-      your needs. You can choose the databases you want to backup, set a
-      consistent filename to overwrite with your backup or use a timestamp, and
-      even decide the AWS S3 bucket region.
+    description:
+      The app allows you to customize your backup process according to your
+      needs. You can choose the databases you want to backup, set a consistent
+      filename to overwrite with your backup or use a timestamp, and even decide
+      the AWS S3 bucket region.
   - title: Automated Backups
-    description: The app supports periodic backups, allowing you to schedule your
-      backup process in a cron format. This ensures that your databases are
-      backed up regularly without any manual intervention.
+    description:
+      The app supports periodic backups, allowing you to schedule your backup
+      process in a cron format. This ensures that your databases are backed up
+      regularly without any manual intervention.
 features:
   - title: MySQL to S3 Backup
-    description: The app enables you to backup your MySQL databases to your AWS S3
-      bucket. It supports all databases and uses mysqldump options for the
-      backup process.
+    description:
+      The app enables you to backup your MySQL databases to your AWS S3 bucket.
+      It supports all databases and uses mysqldump options for the backup
+      process.
   - title: Multi-file Support
-    description: The app supports multi-file backups, allowing you to have one file
-      per database. This makes it easier to manage and recover specific
-      databases.
+    description:
+      The app supports multi-file backups, allowing you to have one file per
+      database. This makes it easier to manage and recover specific databases.
   - title: AWS S3 Bucket Customization
-    description: The app allows you to customize your AWS S3 bucket settings. You
-      can set the access key, secret key, bucket path, path prefix in your
-      bucket, bucket region, and endpoint URL.
+    description:
+      The app allows you to customize your AWS S3 bucket settings. You can set
+      the access key, secret key, bucket path, path prefix in your bucket,
+      bucket region, and endpoint URL.
   - title: Backup Scheduling
-    description: The app allows you to schedule your backup process in a cron
-      format. This ensures that your databases are backed up regularly and
-      automatically.
+    description:
+      The app allows you to schedule your backup process in a cron format. This
+      ensures that your databases are backed up regularly and automatically.
 tags:
   - Databases
   - Backup
