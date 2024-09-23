@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rabbitmq:3.13-management-alpine
+      default: rabbitmq:3.13.7
     enableManagementUI:
       type: boolean
       title: Enable RabbitMQ Management UI Plugin (modifies image)
