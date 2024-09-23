@@ -17,7 +17,7 @@ instructions:
   Default user/pass is guest/guest (if you use the -management version of the
   image)
 changeLog:
-  - date: 2022-11-08
+  - date: 2024-09-24
     description: first release
 links:
   - label: Website
@@ -38,10 +38,10 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: rabbitmq:3.12.14
     appServiceImage:
       type: string
       title: App Service Image
+      default: rabbitmq:3.13-management-alpine
     enableManagementUI:
       type: boolean
       title: Enable RabbitMQ Management UI Plugin (modifies image)
