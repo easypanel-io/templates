@@ -8,6 +8,7 @@ import {
   useClipboard,
 } from "@chakra-ui/react";
 import Form from "@rjsf/chakra-ui";
+import validator from "@rjsf/validator-ajv8";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -73,6 +74,7 @@ const Home: NextPage = () => {
           bg="white"
         >
           <Form
+            validator={validator}
             schema={template.meta.schema as any}
             formData={formData}
             onChange={(event) => setFormData(event.formData)}
