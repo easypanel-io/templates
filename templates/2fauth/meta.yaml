@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 2fauth/2fauth:5.1.1
+      default: 2fauth/2fauth:5.2.0
     appOwnerMail:
       type: string
       title: App Owner Mail
