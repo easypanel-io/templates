@@ -20,6 +20,8 @@ changeLog:
     description: Version update and external redis and database support
   - date: 2024-03-10
     description: Version bumped to 1.23.0
+  - date: 2024-09-30
+    description: Version bumped to 1.27.2
 links:
   - label: Website
     url: https://baserow.io/
@@ -30,6 +32,8 @@ contributors:
     url: https://github.com/deiucanta
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: baserow/baserow:1.24.2
+      default: baserow/baserow:1.27.2
     databaseServiceName:
       type: string
       title: Database Service Name
