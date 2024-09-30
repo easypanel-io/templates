@@ -12,12 +12,14 @@ description:
   like e-book editing, metadata editing, and e-book comparison. The app is
   user-friendly, but also offers a Command Line Interface for more power and
   versatility.
-instructions: Login using user ABC with your set password
+instructions: Login using user abc with your set password
 changeLog:
   - date: 2023-3-1
     description: first release
   - date: 2023-7-24
     description: update
+  - date: 2024-09-30
+    description: Version updated to 7.19.0
 links:
   - label: Website
     url: https://calibre-ebook.com/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/calibre:7.11.0
+      default: linuxserver/calibre:7.19.0
     password:
       type: string
       title: Password

@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2024-03-12
     description: Version bumped to 2.21.8
+  - date: 2024-09-30
+    description: Version bumped to 2.32.8
 links:
   - label: Website
     url: https://budibase.com/
@@ -30,6 +32,8 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: budibase/budibase:2.27.3
+      default: budibase/budibase:2.32.8
 benefits:
   - title: Efficiency and Speed
     description:
