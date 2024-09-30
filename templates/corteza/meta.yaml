@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2023-3-2
     description: first release
+  - date: 2024-09-30
+    description: Version changed to 2023.9.8
 links:
   - label: Website
     url: https://cortezaproject.org
@@ -27,6 +29,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cortezaproject/corteza:2023.9.6
+      default: cortezaproject/corteza:2023.9.8
     databaseServiceName:
       type: string
       title: Database Service Name

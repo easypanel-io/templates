@@ -15,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2023-2-9
     description: first release
+  - date: 2024-09-30
+    description: Version changed to v10.9.0
 links:
   - label: Documentation
     url: https://github.com/gchq/CyberChef/wiki
@@ -23,6 +25,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -36,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mpepping/cyberchef:v10.18.6
+      default: mpepping/cyberchef:v10.9.0
 benefits:
   - title: Data Manipulation
     description:

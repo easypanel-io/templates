@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2024-03-18
     description: added template
+  - date: 2024-09-30
+    description: Version changed to 0.9.9
 links:
   - label: Website
     url: https://cronicle.net/
@@ -21,6 +23,8 @@ links:
 contributors:
   - name: Mark Topper Diderichsen
     url: https://github.com/marktopper
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -34,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: soulteary/cronicle:0.9.46
+      default: soulteary/cronicle:0.9.9
 benefits:
   - title: Automated Task Scheduling
     description:
