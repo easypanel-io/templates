@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2024-03-12
     description: Version bumped to 2.14.1
+  - date: 2024-09-30
+    description: Version bumped to 2.23.0
 links:
   - label: Documentation
     url: https://www.bytebase.com/docs/get-started/install/deploy-with-docker/
@@ -28,6 +30,8 @@ contributors:
     url: https://github.com/amitoo7
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bytebase/bytebase:2.18.0
+      default: bytebase/bytebase:2.23.0
     databaseServiceName:
       type: string
       title: Database Service Name
