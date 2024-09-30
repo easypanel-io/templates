@@ -15,6 +15,8 @@ instructions: Navigate to /install to create the initial user account.
 changeLog:
   - date: 2023-3-20
     description: first release
+  - date: 2024-09-30
+    description: Version changed to core-2.9.3
 links:
   - label: Website
     url: https://getcockpit.com
@@ -25,6 +27,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -39,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cockpithq/cockpit:core-2.8.4
+      default: cockpithq/cockpit:core-2.9.3
     databaseServiceName:
       type: string
       title: Database Service Name

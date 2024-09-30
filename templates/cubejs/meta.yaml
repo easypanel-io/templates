@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2023-2-27
     description: first release
+  - date: 2024-09-30
+    description: Version changed to v0.36.4
 links:
   - label: Website
     url: https://cube.dev
@@ -26,6 +28,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -40,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cubejs/cube:v0.35.40
+      default: cubejs/cube:v0.36.4
     databaseServiceName:
       type: string
       title: Database Service Name

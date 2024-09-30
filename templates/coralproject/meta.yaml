@@ -25,6 +25,8 @@ changeLog:
     description:
       Fixed bug that prevented the application from working version has been
       replaced with the current version
+  - date: 2024-09-30
+    description: Version changed to 9.3.1
 links:
   - label: Website
     url: https://coralproject.net/
@@ -37,6 +39,8 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -53,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coralproject/talk:9.0.6
+      default: coralproject/talk:9.3.1
     redisServiceName:
       type: string
       title: Redis Service Name
