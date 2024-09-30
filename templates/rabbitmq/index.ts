@@ -37,8 +37,8 @@ export function generate(input: Input): Output {
         type: "image",
         image:
           input.enableManagementUI && !input.appServiceImage
-            ? "rabbitmq:3-management"
-            : input.appServiceImage || "rabbitmq:3",
+            ? "rabbitmq:3.13.7-management"
+            : input.appServiceImage || "rabbitmq:3.13.7",
       },
       domains: [
         {
