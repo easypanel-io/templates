@@ -7,6 +7,8 @@ instructions: null
 changeLog:
   - date: 2024-2-15
     description: first release
+  - date: 2024-09-30
+    description: Version Changed to 1.7.4
 links:
   - label: Website
     url: https://www.docuseal.co/
@@ -17,16 +19,23 @@ links:
 contributors:
   - name: VinumWeb
     url: https://github.com/vinumweb
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
     - databaseServiceName
   properties:
     appServiceName:
       type: string
       title: App Service Name
       default: docuseal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docuseal/docuseal:1.7.4
     databaseServiceName:
       type: string
       title: Database Service Name
