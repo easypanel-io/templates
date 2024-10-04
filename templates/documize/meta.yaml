@@ -20,6 +20,7 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to 5.5.0
+
 links:
   - label: Website
     url: https://documize.com
@@ -44,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/easypanel-community/docker-documize:5.5.0
+      default: ghcr.io/easypanel-community/docker-documize:5.6.0
     databaseServiceName:
       type: string
       title: Database Service Name
