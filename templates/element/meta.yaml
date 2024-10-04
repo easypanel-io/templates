@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to v1.11.23
+  - date: 2024-10-04
+    description: Update to v1.11.79
 links:
   - label: Website
     url: https://element.io/
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.11.67
+      default: vectorim/element-web:v1.11.79
 benefits:
   - title: Secure Communications
     description:
