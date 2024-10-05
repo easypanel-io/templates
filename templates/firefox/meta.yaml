@@ -38,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/firefox:latest
+      default: lscr.io/linuxserver/firefox:0.24.04
 benefits:
   - title: Open-Source Web Browser
     description:
