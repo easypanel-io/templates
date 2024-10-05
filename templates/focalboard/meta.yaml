@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mattermost/focalboard:7.8.9
+      default: mattermost/focalboard:7.11.4
     databaseType:
       type: string
       title: Database Type
