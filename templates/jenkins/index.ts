@@ -31,13 +31,6 @@ export function generate(input: Input): Output {
 
         },
       ],
-      ports: [
-        {
-            published: "50000",
-            target: "50000",
-            protocol: "tcp"
-        }
-      ]
     },
   });
 
