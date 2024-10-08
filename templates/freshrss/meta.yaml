@@ -34,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/freshrss:latest
+      default: lscr.io/linuxserver/freshrss:1.24.3
 benefits:
   - title: Stay Updated
     description:
