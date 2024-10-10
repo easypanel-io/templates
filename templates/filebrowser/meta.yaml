@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filebrowser/filebrowser:v2-s6
+      default: filebrowser/filebrowser:v2.31.2
 benefits:
   - title: Efficient File Management
     description:
