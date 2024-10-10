@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2023-04-06
     description: First Release
+  - date: 2024-10-09
+    description: Version changed to v4.1.4
 links:
   - label: Website
     url: https://glitchtip.com/
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glitchtip/glitchtip:v4.0.9
+      default: glitchtip/glitchtip:v4.1.4
     databaseServiceName:
       type: string
       title: Redis Service Name
