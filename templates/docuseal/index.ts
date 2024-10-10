@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "docuseal/docuseal:1.5.7",
+        image: input.appServiceImage,
       },
       mounts: [{ type: "volume", name: "data", mountPath: "/data" }],
       domains: [
