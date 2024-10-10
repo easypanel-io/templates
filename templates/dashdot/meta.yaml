@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2023-3-29
     description: first release
+  - date: 2024-10-02
+    description: Version changed to 5.8.6
 links:
   - label: Website
     url: https://getdashdot.com/
@@ -20,6 +22,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -33,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mauricenino/dashdot:5.8.3
+      default: mauricenino/dashdot:5.8.6
 benefits:
   - title: Modern Server Dashboard
     description:

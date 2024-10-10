@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2023-07-11
     description: First Release
+  - date: 2024-10-04
+    description: Version changed from latest to v8.5.5
 links:
   - label: Website
     url: https://dozzle.dev
@@ -26,6 +28,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
 schema:
   type: object
   required:
@@ -62,7 +66,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: amir20/dozzle:latest
+      default: amir20/dozzle:8.5.5
 benefits:
   - title: Real-time Monitoring
     description:
