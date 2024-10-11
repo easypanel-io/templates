@@ -8,6 +8,8 @@ instructions: Visit the website to complete installation.
 changeLog:
   - date: 2024-03-23
     description: Template added
+  - date: 2024-10-11
+    description: Version Changed to 2.0.0
 links:
   - label: Website
     url: https://invoiceshelf.com/
@@ -18,6 +20,8 @@ links:
 contributors:
   - name: Mark Topper Diderichsen
     url: https://github.com/marktopper
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -33,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceshelf/invoiceshelf:1.2.2
+      default: invoiceshelf/invoiceshelf:2.0.0
     dbServiceName:
       type: string
       title: Database Service Name

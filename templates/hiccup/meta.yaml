@@ -13,6 +13,9 @@ instructions: null
 changeLog:
   - date: 2023-3-21
     description: first release
+  - date: 2024-10-11
+    description: Version Changed to v0.5.0
+
 links:
   - label: Github
     url: https://github.com/ashwin-pc/hiccup
@@ -32,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bleckbeard/hiccup:v0.4.3
+      default: bleckbeard/hiccup:v0.5.0
 benefits:
   - title: Quick Access
     description:
