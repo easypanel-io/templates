@@ -12,6 +12,9 @@ instructions: null
 changeLog:
   - date: 2022-11-21
     description: first release
+  - date: 2024-10-11
+    description: Version Updated to 2024.10.1
+
 links:
   - label: Documentation
     url: https://www.home-assistant.io/docs/
@@ -20,6 +23,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -33,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/homeassistant:latest
+      default: lscr.io/linuxserver/homeassistant:2024.10.1
 benefits:
   - title: Home Automation
     description:
