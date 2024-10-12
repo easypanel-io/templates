@@ -1,0 +1,74 @@
+name: Mautic 5
+description:
+  "Mautic 5 is an open-source, comprehensive marketing automation platform that
+  empowers businesses to manage and optimize customer engagement strategies. It
+  enables marketers to streamline their workflows by automating marketing tasks
+  such as email campaigns, SMS messaging, social media outreach, and lead
+  generation. Mautic 5 offers detailed analytics, campaign tracking, and
+  personalized communication, ensuring an efficient marketing strategy for
+  businesses of all sizes. With its intuitive interface and powerful features,
+  Mautic 5 helps businesses maximize customer engagement while reducing manual
+  effort."
+instructions: null
+changeLog:
+  - date: 2024-10-12
+    description: Version 5.1.1 (First Release)
+links:
+  - label: Github
+    url: https://github.com/mautic/mautic
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - databaseServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mautic5
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mautic/mautic:5.1.1-apache
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: mautic-db
+
+benefits:
+  - title: Seamless Marketing Automation
+    description:
+      Mautic 5 enables businesses to automate marketing tasks, improving
+      efficiency and reducing the time needed for manual campaign management.
+  - title: Multi-Channel Campaigns
+    description:
+      Mautic 5 supports email, SMS, and social media campaigns, giving marketers
+      the ability to engage with customers across multiple platforms.
+  - title: Open-Source Flexibility
+    description:
+      Being open-source, Mautic 5 allows businesses to customize the platform
+      according to their specific marketing needs, offering full control and
+      transparency.
+
+features:
+  - title: Advanced Campaign Management
+    description:
+      Mautic 5 allows users to create, monitor, and analyze complex marketing
+      campaigns with ease, optimizing customer engagement.
+  - title: Personalization and Segmentation
+    description:
+      With Mautic 5, marketers can personalize communications and segment their
+      audience for more targeted outreach, improving campaign effectiveness.
+  - title: Detailed Analytics
+    description:
+      Mautic 5 provides in-depth insights into marketing performance, helping
+      businesses make data-driven decisions to enhance customer engagement.
+
+tags:
+  - Marketing
+  - Automation
+  - Open-Source
