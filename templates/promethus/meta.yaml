@@ -1,0 +1,97 @@
+name: Prometheus
+description:
+  Prometheus is an open-source monitoring and alerting toolkit designed for
+  reliability and scalability. It collects metrics from configured targets at
+  specified intervals, evaluates rule expressions, and triggers alerts when
+  specified conditions are observed. Prometheus stores all data as time-series,
+  making it ideal for monitoring application and system performance over time.
+  Its powerful query language, PromQL, allows for real-time data analysis, and
+  its flexible integrations support various exporters and service discovery
+  mechanisms. Prometheus can also integrate with alerting tools like
+  Alertmanager to send notifications via email, Slack, or other channels. With
+  native support for Docker, Kubernetes, and other container platforms,
+  Prometheus provides deep visibility into modern infrastructure and services.
+instructions: null
+changeLog:
+  - date: 2024-10-13
+    description: Initial Prometheus release
+links:
+  - label: Github
+    url: https://github.com/prometheus/prometheus
+  - label: Documentation
+    url: https://prometheus.io/docs/introduction/overview/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: prometheus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: prom/prometheus:v2.53.2
+benefits:
+  - title: Scalable Monitoring
+    description:
+      Prometheus excels at monitoring large-scale systems by collecting metrics
+      from distributed applications and systems, making it a powerful tool for
+      cloud-native environments.
+  - title: Time-Series Data Storage
+    description:
+      Prometheus stores all data as time-series metrics, enabling detailed
+      historical analysis of system behavior and trends.
+  - title: Flexible Alerting
+    description:
+      With integrated support for Alertmanager, Prometheus can send alerts
+      through various channels like email, Slack, and PagerDuty when issues
+      arise.
+  - title: Powerful Querying with PromQL
+    description:
+      Prometheus includes a flexible and powerful query language, PromQL, for
+      analyzing time-series data in real-time, enabling deep insights into
+      system performance.
+  - title: Service Discovery
+    description:
+      Prometheus supports various service discovery mechanisms (including
+      Kubernetes, Consul, and DNS) to automatically track and monitor dynamic
+      environments.
+features:
+  - title: Metric Collection
+    description:
+      Prometheus scrapes metrics from a wide range of targets, storing them as
+      time-series data for analysis and alerting.
+  - title: Custom Dashboards
+    description:
+      Use Prometheus with tools like Grafana to create detailed custom
+      dashboards for visualizing metrics and performance data.
+  - title: Alerting
+    description:
+      Set up alerts using Alertmanager to get notified via various channels like
+      email, Slack, or PagerDuty when specific conditions are met.
+  - title: PromQL Query Language
+    description:
+      Leverage PromQL, a powerful query language, to extract and analyze
+      time-series data in real time.
+  - title: Container and Cloud Integration
+    description:
+      Prometheus integrates seamlessly with Docker, Kubernetes, and other
+      cloud-native platforms to monitor microservices, containers, and
+      distributed systems.
+  - title: Exporters
+    description:
+      Utilize Prometheus exporters to collect metrics from various applications,
+      databases, and system components, expanding Prometheus' monitoring
+      capabilities.
+tags:
+  - Monitoring
+  - Time-Series
+  - Alerting
+  - PromQL
+  - Cloud-Native
