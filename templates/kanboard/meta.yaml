@@ -12,7 +12,7 @@ description:
   actions to streamline your workflow, eliminating the need for repetitive
   manual tasks. It supports multiple authentication backends and is translated
   in over 30 languages.
-instructions: null
+instructions: "Default login username: admin, password: admin"
 changeLog:
   - date: 2022-08-16
     description: first release
@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kanboard/kanboard:v1.2.36
+      default: kanboard/kanboard:v1.2.40
 benefits:
   - title: Visualize Your Work
     description:
