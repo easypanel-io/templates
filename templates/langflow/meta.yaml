@@ -9,10 +9,12 @@ description:
   it as a JSON file for use with LangChain. Langflow also integrates with
   langchain-serve for one-command deployment to Jina AI Cloud. With Langflow,
   building and deploying LangChain pipelines has never been easier.
-instructions: null
+instructions: Default username=admin, password=admin
 changeLog:
   - date: 2023-06-22
     description: first release
+  - date: 2024-10-16
+    description: Version updated to 1.0.19
 links:
   - label: Github
     url: https://github.com/logspace-ai/langflow
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: langflowai/langflow:latest
+      default: langflowai/langflow:1.0.19
     username:
       type: string
       title: Username

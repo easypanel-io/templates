@@ -10,10 +10,12 @@ description:
   synchronizes with various services, including Joplin Cloud, Dropbox, and
   OneDrive. All notes are saved in an open format and secured with end-to-end
   encryption.
-instructions: null
+instructions: "Default login email: admin@localhost, password: admin"
 changeLog:
   - date: 2023-03-16
     description: First Release
+  - date: 2024-10-11
+    description: Second Release version updated to 3.0.1-beta
 links:
   - label: Website
     url: https://joplinapp.org/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joplin/server:2.14.2-beta
+      default: joplin/server:3.0.1-beta
     databaseServiceName:
       type: string
       title: Database Service Name

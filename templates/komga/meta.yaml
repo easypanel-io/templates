@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2022-12-11
     description: first release
+  - date: 2024-10-16
+    description: Version updated to 1.14.1
 links:
   - label: Github
     url: https://github.com/gotson/komga
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotson/komga:1.11.1
+      default: gotson/komga:1.14.1
 benefits:
   - title: Free and Open Source
     description:
