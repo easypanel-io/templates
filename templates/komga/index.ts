@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
+          port: 25600,
         },
       ],
       mounts: [
