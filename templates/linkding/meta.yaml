@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2023-03-18
     description: Template created (v1.17.2)
+  - date: 2024-10-16
+    description: Updated Version to (1.9.0)
 links:
   - label: Github
     url: https://github.com/sissbruecker/linkding
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sissbruecker/linkding:1.30.0
+      default: sissbruecker/linkding:1.9.0
     linkdingSuperuserName:
       type: string
       title: Superuser Name
