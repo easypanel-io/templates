@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mailhog/mailhog:latest
+      default: mailhog/mailhog:v1.0.1
 benefits:
   - title: Efficient Email Testing
     description:
