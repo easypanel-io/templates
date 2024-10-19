@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2023-03-18
     description: First Release
+  - date: 2024-10-19
+    description: Update to 2024.10.2
 links:
   - label: Github
     url: https://github.com/itzg/docker-minecraft-server
@@ -21,6 +23,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -34,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-server:2024.5.0
+      default: itzg/minecraft-server:2024.10.2
     serverName:
       type: string
       title: Server Name
