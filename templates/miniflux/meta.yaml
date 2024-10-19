@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2024-10-19
+    description: Version Updated to 2.2.1
 links:
   - label: Website
     url: https://miniflux.app/
@@ -28,6 +30,8 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -50,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: miniflux/miniflux:2.1.3
+      default: miniflux/miniflux:2.2.1
     databaseServiceName:
       type: string
       title: Database Service Name

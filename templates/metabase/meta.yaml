@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2022-11-08
     description: first release
+  - date: 2024-10-19
+    description: Second Release
 links:
   - label: Website
     url: https://www.metabase.com/
@@ -26,6 +28,8 @@ links:
 contributors:
   - name: Rubén Robles
     url: https://github.com/D8vjork
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -39,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: metabase/metabase:latest
+      default: metabase/metabase:v0.50.30.1
     metabaseSiteName:
       type: string
       title: Metabase Site Name (Title)
