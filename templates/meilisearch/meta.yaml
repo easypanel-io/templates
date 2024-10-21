@@ -18,6 +18,8 @@ instructions: null
 changeLog:
   - date: 2022-10-31
     description: first release
+  - date: 2024-10-19
+    description: Update to v1.10.3
 links:
   - label: Website
     url: https://meilisearch.com/
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Rubén Robles
     url: https://github.com/D8vjork
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getmeili/meilisearch:v1.8.1
+      default: getmeili/meilisearch:v1.10.3
     dataVolumeName:
       type: string
       title: Meilisearch Database Volume Name

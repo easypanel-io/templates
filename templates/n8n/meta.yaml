@@ -18,6 +18,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2024-10-19
+    description: Update to 1.64.0
 links:
   - label: Website
     url: https://n8n.io/
@@ -30,6 +32,8 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n8nio/n8n:1.53.0
+      default: n8nio/n8n:1.64.0
 benefits:
   - title: Workflow Automation
     description:

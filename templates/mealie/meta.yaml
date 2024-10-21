@@ -19,6 +19,8 @@ instructions:
 changeLog:
   - date: 2022-12-11
     description: first release
+  - date: 2024-10-19
+    description: Update to 12.0
 links:
   - label: Documentation
     url: https://nightly.mealie.io/
@@ -27,6 +29,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -40,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hkotel/mealie:v1.7.0
+      default: hkotel/mealie:v1.12.0
 benefits:
   - title: Self-Hosted Recipe Manager
     description:
