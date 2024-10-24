@@ -1,0 +1,72 @@
+name: SABnzbd
+description: SABnzbd is an open-source binary downloader for Usenet, designed to
+  simplify the process of downloading files from Usenet servers. It automates the
+  downloading, verifying, and extracting of files from Usenet. SABnzbd is renowned
+  for its high degree of automation, allowing users to simply add an NZB file and
+  let SABnzbd take care of the rest. It supports many features such as automatic
+  file repair and unpacking, making it a powerful tool for Usenet users. The software
+  is web-based, allowing users to manage their downloads from any device with a web
+  browser. SABnzbd also supports many third-party integrations and scripts to enhance
+  its functionality, including automatic media sorting and renaming. It is compatible
+  with all major operating systems including Windows, Linux, macOS, and various NAS
+  devices.
+instructions: null
+changeLog:
+  - date: 2024-03-18
+    description: Template added
+links:
+  - label: Website
+    url: https://sabnzbd.org/
+  - label: Documentation
+    url: https://sabnzbd.org/wiki/
+  - label: Github
+    url: https://github.com/sabnzbd/sabnzbd
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sabnzbd
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/sabnzbd:latest
+benefits:
+  - title: Automated Usenet Downloads
+    description: SABnzbd automates the process of downloading, verifying, and extracting files from Usenet, simplifying the user's experience.
+  - title: High Degree of Automation
+    description: Simply add an NZB file, and SABnzbd manages the rest, including automatic file repair and unpacking.
+  - title: Web-Based Interface
+    description: Manage downloads from any device with a web browser, offering unparalleled convenience and ease of use.
+  - title: Extensive Compatibility
+    description: Supports all major operating systems and NAS devices, ensuring SABnzbd works seamlessly in any environment.
+  - title: Third-Party Integration
+    description: Supports numerous third-party scripts and applications for automatic media sorting, renaming, and more, enhancing functionality.
+features:
+  - title: NZB File Support
+    description: Add NZB files directly to SABnzbd to start downloads, showcasing the simplicity of Usenet downloading.
+  - title: Automatic File Repair
+    description: Automatically repairs damaged files and unpacks them, ensuring the files are ready to use upon download.
+  - title: Customizable Interface
+    description: Offers a highly customizable web interface, allowing users to tailor their experience according to their preferences.
+  - title: Advanced Scripting Support
+    description: Integrates with a variety of scripts and third-party applications to automate sorting and renaming of downloaded media.
+  - title: Detailed History and Statistics
+    description: Maintains a detailed download history and provides comprehensive statistics for monitoring and optimizing downloads.
+tags:
+  - Usenet
+  - Download Manager
+  - Open Source
+  - Automation
+  - Web-Based
