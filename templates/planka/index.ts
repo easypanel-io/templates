@@ -1,14 +1,8 @@
-import {
-  Output,
-  randomPassword,
-  randomString,
-  Services,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secret = randomString(64);
   const databasePassword = randomPassword();
 
   services.push({
@@ -18,8 +12,12 @@ export function generate(input: Input): Output {
       env: [
         `TRUST_PROXY=0`,
         `BASE_URL=https://$(PRIMARY_DOMAIN)`,
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
-        `SECRET_KEY=${secret}`,
+        `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `SECRET_KEY=nosecretkey`,
+        `DEFAULT_ADMIN_EMAIL=${input.adminEmail}`,
+        `DEFAULT_ADMIN_USERNAME=${input.adminUser}`,
+        `DEFAULT_ADMIN_PASSWORD=${input.adminPassword}`,
+        `DEFAULT_ADMIN_NAME=${input.adminName}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -28,24 +26,14 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
+          port: 1337,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "user-avatars",
-          mountPath: "/app/public/user-avatars",
-        },
-        {
-          type: "volume",
-          name: "project-background-images",
-          mountPath: "/app/public/project-background-images",
-        },
-        {
-          type: "volume",
-          name: "attachments",
-          mountPath: "/app/private/attachments",
+          name: "planka_config",
+          mountPath: "/config",
         },
       ],
     },
