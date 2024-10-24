@@ -1125,7 +1125,7 @@
   },
   {
     "slug": "jenkins",
-    "logo": null,
+    "logo": "logo.png",
     "name": "Jenkins",
     "description": "Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration, and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat.",
     "tags": [
@@ -1461,6 +1461,17 @@
       "Open Source",
       "Lead Nurturing",
       "Multi-Channel Marketing"
+    ]
+  },
+  {
+    "slug": "mautic5",
+    "logo": "logo.png",
+    "name": "Mautic 5",
+    "description": "Mautic 5 is an open-source, comprehensive marketing automation platform that empowers businesses to manage and optimize customer engagement strategies. It enables marketers to streamline their workflows by automating marketing tasks such as email campaigns, SMS messaging, social media outreach, and lead generation. Mautic 5 offers detailed analytics, campaign tracking, and personalized communication, ensuring an efficient marketing strategy for businesses of all sizes. With its intuitive interface and powerful features, Mautic 5 helps businesses maximize customer engagement while reducing manual effort.",
+    "tags": [
+      "Marketing",
+      "Automation",
+      "Open-Source"
     ]
   },
   {
@@ -2048,6 +2059,19 @@
       "Web Interface",
       "User Management",
       "API"
+    ]
+  },
+  {
+    "slug": "promethus",
+    "logo": "logo.png",
+    "name": "Prometheus",
+    "description": "Prometheus is an open-source monitoring and alerting toolkit designed for reliability and scalability. It collects metrics from configured targets at specified intervals, evaluates rule expressions, and triggers alerts when specified conditions are observed. Prometheus stores all data as time-series, making it ideal for monitoring application and system performance over time. Its powerful query language, PromQL, allows for real-time data analysis, and its flexible integrations support various exporters and service discovery mechanisms. Prometheus can also integrate with alerting tools like Alertmanager to send notifications via email, Slack, or other channels. With native support for Docker, Kubernetes, and other container platforms, Prometheus provides deep visibility into modern infrastructure and services.",
+    "tags": [
+      "Monitoring",
+      "Time-Series",
+      "Alerting",
+      "PromQL",
+      "Cloud-Native"
     ]
   },
   {
@@ -2752,6 +2776,17 @@
       "Data Science",
       "ERP",
       "CRM"
+    ]
+  },
+  {
+    "slug": "yourls",
+    "logo": "logo.png",
+    "name": "YOURLS",
+    "description": "YOURLS (Your Own URL Shortener) is a powerful, self-hosted service designed for creating and managing short URLs. It provides a clean and simple interface, supports plugins for extended functionality, and offers detailed link tracking analytics. With YOURLS, you can maintain control over your short links and branding. The application is accessible via your host on ports 8080 and 8081. This container is based on Docker Baseimage KasmVNC, providing additional environment variables and configurations for enhanced flexibility. It also supports the docker manifest for multi-platform awareness, ensuring the correct image for your architecture.",
+    "tags": [
+      "URL Shortener",
+      "Self-Hosted",
+      "Analytics"
     ]
   },
   {
