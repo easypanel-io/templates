@@ -35,6 +35,10 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - adminUser
+    - adminPassword
+    - adminEmail
+    - adminName
   properties:
     appServiceName:
       type: string
@@ -48,6 +52,22 @@ schema:
       type: string
       title: Database Service Name
       default: planka-db
+    adminUser:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminName:
+      type: string
+      title: Admin Name
+      default: Admin
+
 benefits:
   - title: Effortless Project Management
     description:
