@@ -10,7 +10,7 @@ description:
   downloads, VideoSort for sorting downloaded video files, and various scripts
   for enhancing functionality. With NZBGet, you can maximize your device's
   performance and improve your downloading experience.
-instructions: null
+instructions: Default username=nzbget, password=tegbzn6789
 changeLog:
   - date: 2022-07-12
     description: first release
@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbget:24.1.20240524
+      default: lscr.io/linuxserver/nzbget:version-v24.3
     username:
       type: string
       title: Username
