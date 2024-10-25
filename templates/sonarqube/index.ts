@@ -3,7 +3,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const redisRandomPassword = randomPassword();
   const databaseRandomPassword = randomPassword();
 
   const serviceVariables = [
