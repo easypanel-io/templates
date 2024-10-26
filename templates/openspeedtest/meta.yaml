@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openspeedtest/latest
+      default: openspeedtest/latest:v2.0.5
 benefits:
   - title: Accurate Internet Speed Test
     description:
