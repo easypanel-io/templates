@@ -53,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: outlinewiki/outline:0.76.1
+      default: outlinewiki/outline:0.80.2
     domainURL:
       type: string
       title: Domain Url
