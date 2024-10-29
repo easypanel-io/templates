@@ -14,8 +14,13 @@ description:
   and support for TLS and LDAP. It also provides an HTTP-API, command line tool,
   and UI for managing and monitoring the system.
 instructions:
-  Default user/pass is guest/guest (if you use the -management version of the
-  image)
+  MUST READ THE INSTRUCTIONS BEFORE DEPLOYING. If you want to use custom CLI
+  version, provide the image and do not select any checkboxes. If you want to
+  use custom Management version, provide the image and select the management
+  checkbox. If you want to use default CLI version, dont provide the image, just
+  select the cli checkbox. If you want to use default Management version, dont
+  provide the image, just select the management checkbox. For RabbitMQ
+  Management Version, default user/password is guest/guest
 changeLog:
   - date: 2022-11-08
     description: first release
@@ -44,11 +49,15 @@ schema:
       title: App Service Name
     appServiceImage:
       type: string
-      title: App Service Image
-      default: rabbitmq:3.13.7
+      title: Custom App Service Image
     enableManagementUI:
       type: boolean
-      title: Enable RabbitMQ Management UI Plugin (modifies image)
+      title:
+        Use RabbitMQ Management UI Image defaults to provided image or
+        rabbitmq:3.13.7-management
+    rabbitmqcli:
+      type: boolean
+      title: Use RabbitMQ CLI default version rabbitmq:3.13.7
     defaultUserName:
       type: string
       title: Default User Name
