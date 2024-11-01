@@ -34,6 +34,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
+      default: qdrant
     appServiceImage:
       type: string
       title: App Service Image
