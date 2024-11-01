@@ -36,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: prom/prometheus:v2.53.2
+      default: prom/prometheus:v2.55.0
 benefits:
   - title: Scalable Monitoring
     description:
