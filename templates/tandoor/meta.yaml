@@ -39,8 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vabene1111/recipes:1.5.17
-    databaseServiceName:
+      default: vabene1111/recipes:1.5.20
       type: string
       title: Database Service Name
       default: tandoor-db
