@@ -1,36 +1,33 @@
 name: Countly
 description:
-  Corteza is a powerful, open-source low-code platform designed to streamline
-  the process of app development, business process integration, and data
-  harmonization. Built with a backend in Golang and a front end in Vue.js,
-  Corteza allows you to easily build native web apps and expand your software
-  ecosystem with complete control and flexibility. You can connect with any
-  record data source, control everything you build, transform your data into a
-  standardized JSON format, and build unlimited web applications and process
-  workflows using block-based tools and Javascript automations. Corteza is
-  cloud-native and deploys via Docker containers, providing a seamless and
-  efficient app development experience. It is 100% free and open-source,
-  ensuring that it will always be accessible to all.
-instructions:
-  Create an account to login. The first account created will have administrator
-  priviledges. Go to /admin for the admijnistration interface
+  Countly is an innovative, open-source analytics and engagement platform
+  designed to help you understand and optimize customer journeys in web, mobile,
+  and desktop applications. Built with a flexible architecture, Countly supports
+  multiple integrations and can be deployed on-premises or in the cloud. This
+  platform enables developers and product managers to gain real-time insights
+  into user behavior, track important metrics, and enhance product experiences
+  through push notifications, A/B testing, and other engagement features.
+  Countly is cloud-native, deploys via Docker containers, and provides data
+  control, security, and a streamlined experience for building and monitoring
+  user engagement. Countly is 100% free and open-source, ensuring it is
+  accessible to everyone.
+
+instructions: null
+
 changeLog:
-  - date: 2023-3-2
-    description: first release
-  - date: 2024-09-30
-    description: Version changed to 2023.9.8
+  - date: 2024-11-02
+    description: Template Release
 links:
   - label: Website
-    url: https://cortezaproject.org
+    url: https://count.ly
   - label: Documentation
-    url: https://docs.cortezaproject.org
-  - label: Github
-    url: https://github.com/cortezaproject/corteza
+    url: https://docs.count.ly
+  - label: GitHub
+    url: https://github.com/countly/countly-server
 contributors:
-  - name: Supernova3339
-    url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
+
 schema:
   type: object
   required:
@@ -55,50 +52,46 @@ schema:
       type: string
       title: Redis Service Name
       default: countly-redis
+
 benefits:
   - title: Open-Source and Free
     description:
-      Corteza is a 100% open-source platform, meaning it is freely available to
-      all. You can use, modify, distribute or even sell Corteza or apps built
-      with it under your own license and trademark for free, with no obligation
-      to publish your modified code.
-  - title: Complete Control
+      Countly is 100% open-source, providing everyone the freedom to use,
+      modify, and distribute it under their terms.
+  - title: Full Control and Flexibility
     description:
-      Corteza gives you complete flexibility, freedom, and control over your
-      platform and everything you build on it. You can export and import
-      complete app configurations, workflows, and record data without limits.
-  - title: Data Standardization
+      Countly gives you control over user data, engagement workflows, and custom
+      analytics setups.
+  - title: Real-Time Analytics and Customization
     description:
-      Corteza allows you to transform all data into a standardized JSON format
-      to create data models for app and workflows or to federate out.
-  - title: Unlimited App Creation
+      Countly allows you to transform and visualize data, creating custom
+      reports and dashboards for various applications.
+  - title: Unlimited App Monitoring
     description:
-      With Corteza, you can create unlimited web applications and process
-      workflows using block-based tools and Javascript automations in a fraction
-      of the time of traditional coding.
+      Monitor multiple applications seamlessly, creating tailored engagement
+      workflows and tracking critical metrics.
+
 features:
-  - title: Low-Code Platform
+  - title: Real-Time User Analytics
     description:
-      Corteza is a fully standardized low-code app development platform. It
-      makes it easy to build native web apps and expand your third-party
-      software ecosystem.
-  - title: Integration Management
+      Gain insights into user behavior in real-time, helping you make
+      data-driven decisions.
+  - title: Push Notifications and A/B Testing
     description:
-      Corteza allows you to integrate with data from any machine-readable system
-      or database, regardless of format, across and between instances.
-  - title: Business Process Workflows
+      Engage users effectively and optimize their experience through custom
+      notifications and controlled A/B testing.
+  - title: Customizable Dashboards and Reports
     description:
-      Corteza enables you to create business process workflows. You can deploy
-      applications and workflows instantly, iterate and redeploy as much as you
-      want.
-  - title: Data Harmonization
+      Build custom dashboards to visualize data metrics and generate detailed
+      reports.
+  - title: Data Privacy and Security
     description:
-      Corteza provides a platform for data harmonization. It allows you to
-      transform all data into a standardized JSON format to create data models
-      for app and workflows or to federate out.
+      Countly’s on-premises deployment provides complete data control, ensuring
+      compliance with privacy standards.
+
 tags:
-  - Low-Code Platform
-  - App Development
-  - Business Process
-  - Integration
-  - Data Harmonization
+  - Analytics
+  - User Engagement
+  - Real-Time Insights
+  - Open-Source
+  - A/B Testing
