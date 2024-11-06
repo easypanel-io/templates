@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_db:5432/$(PROJECT_NAME)`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `JWT_SECRET=${secret}`,
         'ALLOW_REGISTER="false"',
         'ALLOW_OPENAPI="true"',
