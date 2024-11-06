@@ -39,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: verdaccio/verdaccio:5.31.0
+      default: verdaccio/verdaccio:6.0.1
 benefits:
   - title: Private Package Management
     description:

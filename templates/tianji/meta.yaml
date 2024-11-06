@@ -29,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: moonrailgun/tianji:1.11.1
+      default: moonrailgun/tianji:0.2.0
 tags:
   - Website Monitor
   - Analytics

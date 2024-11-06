@@ -73,7 +73,7 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:2.25.2
+      default: baptistearno/typebot-builder:3.1.0
     viewerServiceImage:
       type: string
       title: Viewer Service Image
