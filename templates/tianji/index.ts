@@ -32,7 +32,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      serviceName: "db",
+      serviceName: `${input.appServiceName}-db`,
       image: "postgres:16",
       password: databasePassword,
     },

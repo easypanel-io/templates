@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/webcord:latest
+      default: lscr.io/linuxserver/webcord:4.10.2
 benefits:
   - title: Enhanced Security and Privacy
     description:
