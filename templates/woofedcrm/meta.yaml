@@ -1,0 +1,35 @@
+name: WoofedCRM
+description:
+  WoofedCRM is a customizable Customer Relationship Management (CRM) system.
+instructions: null
+changeLog:
+  - date: 2024-11-07
+    description: Initial template for Easypanel
+links:
+  - label: GitHub Repository
+    url: https://github.com/douglara/woofedcrm
+contributors:
+  - name: Douglara
+  - name: Edgar Ferreira
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appAdminUsername
+    - appAdminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: woofed-app
+    appAdminUsername:
+      type: string
+      title: Admin Username
+      default: lovewoofed
+    appAdminPassword:
+      type: string
+      title: Admin Password
+      default: lovewoofed
+tags:
+  - CRM
+  - Sales
