@@ -6,10 +6,8 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   // Hardcoding database and Redis service names
-  const databaseServiceName = "woofed-db";
   const redisServiceName = "woofed-redis";
 
-  const databasePassword = randomPassword();
   const redisPassword = randomPassword();
 
   // Generate random values for VAPID keys
@@ -52,7 +50,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "douglara/woofedcrm:easy-install-latest",
+        image: input.appServiceImage,
       },
       domains: [
         {
