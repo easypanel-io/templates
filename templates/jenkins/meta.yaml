@@ -1,8 +1,9 @@
 name: Jenkins
 description:
-  Jenkins is an open source automation server. It helps automate the parts of software development related to building, 
-  testing, and deploying, facilitating continuous integration, and continuous delivery. It is a server-based system that 
-  runs in servlet containers such as Apache Tomcat.
+  Jenkins is an open source automation server. It helps automate the parts of
+  software development related to building, testing, and deploying, facilitating
+  continuous integration, and continuous delivery. It is a server-based system
+  that runs in servlet containers such as Apache Tomcat.
 instructions: null
 changeLog:
   - date: 2024-10-06
@@ -30,56 +31,60 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jenkins/jenkins:2.474  
+      default: jenkins/jenkins:2.474
 benefits:
   - title: Automate Everything
-    description: 
-      Jenkins is an open-source automation server that helps you automate various tasks 
-      related to building, testing, and deploying software. Streamline your development 
-      workflow by automating repetitive tasks with Jenkins.
+    description:
+      Jenkins is an open-source automation server that helps you automate
+      various tasks related to building, testing, and deploying software.
+      Streamline your development workflow by automating repetitive tasks with
+      Jenkins.
   - title: Flexible and Extensible
     description:
-      Jenkins supports thousands of plugins that allow you to integrate with various 
-      tools and technologies, making it highly flexible and customizable for any 
-      development environment.
+      Jenkins supports thousands of plugins that allow you to integrate with
+      various tools and technologies, making it highly flexible and customizable
+      for any development environment.
   - title: Open Source
     description:
-      Jenkins is open-source and completely free to use. You can modify, extend, 
+      Jenkins is open-source and completely free to use. You can modify, extend,
       and customize it according to your project needs.
   - title: Scalable
     description:
-      Jenkins allows you to scale by distributing work across multiple machines, 
+      Jenkins allows you to scale by distributing work across multiple machines,
       handling large and complex builds with ease.
   - title: Community Support
     description:
-      Jenkins has a large, active community that contributes plugins, extensions, 
-      and improvements, ensuring that the platform remains up-to-date and well-supported.
+      Jenkins has a large, active community that contributes plugins,
+      extensions, and improvements, ensuring that the platform remains
+      up-to-date and well-supported.
 
 features:
   - title: Continuous Integration and Continuous Delivery (CI/CD)
     description:
-      Jenkins provides robust CI/CD pipelines, enabling you to automate the 
+      Jenkins provides robust CI/CD pipelines, enabling you to automate the
       testing, building, and deployment of your software with ease.
   - title: Pipeline as Code
     description:
-      Jenkins offers Pipeline as Code functionality, allowing you to define your build 
-      processes and workflows as code using a simple DSL syntax.
+      Jenkins offers Pipeline as Code functionality, allowing you to define your
+      build processes and workflows as code using a simple DSL syntax.
   - title: Extensible via Plugins
     description:
-      Jenkins supports thousands of plugins that enable integration with various tools, 
-      like Docker, Kubernetes, Git, and more, enhancing its functionality.
+      Jenkins supports thousands of plugins that enable integration with various
+      tools, like Docker, Kubernetes, Git, and more, enhancing its
+      functionality.
   - title: Distributed Builds
     description:
-      Jenkins supports distributed builds, allowing you to distribute work across multiple 
-      machines to speed up your build processes and handle large workloads.
+      Jenkins supports distributed builds, allowing you to distribute work
+      across multiple machines to speed up your build processes and handle large
+      workloads.
   - title: Monitoring and Alerts
     description:
-      Jenkins provides monitoring and alerting features, allowing you to track your builds, 
-      tests, and deployments, and get notified of any issues in real-time.
+      Jenkins provides monitoring and alerting features, allowing you to track
+      your builds, tests, and deployments, and get notified of any issues in
+      real-time.
 
 tags:
   - Automation
   - CI/CD
   - DevOps
   - Jenkins
-
