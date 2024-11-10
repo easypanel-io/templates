@@ -6,7 +6,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   // Hardcoding database and Redis service names
-  const redisServiceName = "woofed-redis";
+  const redisServiceName = `${input.appServiceName}-redis`;
 
   const redisPassword = randomPassword();
 
@@ -35,7 +35,7 @@ export function generate(input: Input): Output {
     `REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${redisServiceName}:6379/0`,
     `ACTIVE_STORAGE_SERVICE=local`,
     `RAILS_LOG_LEVEL=debug`,
-    `DEFAULT_TIMEZONE=Brasilia`,
+    `DEFAULT_TIMEZONE=${input.appDefaultTimeZone}`,
     `VAPID_PUBLIC_KEY=${vapidPublicKey}`,
     `VAPID_PRIVATE_KEY=${vapidPrivateKey}`,
     `EVOLUTION_API_ENDPOINT=`,
@@ -73,7 +73,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: "woofed-sidekiq",
+      serviceName: `${input.appServiceName}-sidekiq`,
       source: {
         type: "image",
         image: "douglara/woofedcrm:easy-install-latest",
@@ -96,7 +96,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: "woofed-good_job",
+      serviceName: `${input.appServiceName}-goodjob`,
       source: {
         type: "image",
         image: "douglara/woofedcrm:easy-install-latest",

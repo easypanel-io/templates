@@ -14,7 +14,9 @@ links:
     url: https://discord.gg/6CmxcETt
 contributors:
   - name: Douglara
+    url: https://github.com/douglara
   - name: Edgar Ferreira
+    url: https://github.com/zzedgat2012
 schema:
   type: object
   required:
@@ -26,7 +28,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: woofed-app
+      default: woofed
     appServiceImage:
       type: string
       title: App Service Image
@@ -39,6 +41,11 @@ schema:
       type: string
       title: Admin Password
       default: lovewoofed
+    appDefaultTimeZone:
+      type: string
+      title: Time Zone
+      description: "Available timezones: https://gist.github.com/eikes/5a64b661022c756bd6522ed94770e2a6"
+      default: Brasilia
 features:
   - title: Native Chatwoot Integration
     description:
