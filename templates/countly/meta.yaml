@@ -1,0 +1,97 @@
+name: Countly
+description:
+  Countly is an innovative, open-source analytics and engagement platform
+  designed to help you understand and optimize customer journeys in web, mobile,
+  and desktop applications. Built with a flexible architecture, Countly supports
+  multiple integrations and can be deployed on-premises or in the cloud. This
+  platform enables developers and product managers to gain real-time insights
+  into user behavior, track important metrics, and enhance product experiences
+  through push notifications, A/B testing, and other engagement features.
+  Countly is cloud-native, deploys via Docker containers, and provides data
+  control, security, and a streamlined experience for building and monitoring
+  user engagement. Countly is 100% free and open-source, ensuring it is
+  accessible to everyone.
+
+instructions: null
+
+changeLog:
+  - date: 2024-11-02
+    description: Template Release
+links:
+  - label: Website
+    url: https://count.ly
+  - label: Documentation
+    url: https://docs.count.ly
+  - label: GitHub
+    url: https://github.com/countly/countly-server
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: countly
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: countly/countly-server:24.05.8
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: countly-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: countly-redis
+
+benefits:
+  - title: Open-Source and Free
+    description:
+      Countly is 100% open-source, providing everyone the freedom to use,
+      modify, and distribute it under their terms.
+  - title: Full Control and Flexibility
+    description:
+      Countly gives you control over user data, engagement workflows, and custom
+      analytics setups.
+  - title: Real-Time Analytics and Customization
+    description:
+      Countly allows you to transform and visualize data, creating custom
+      reports and dashboards for various applications.
+  - title: Unlimited App Monitoring
+    description:
+      Monitor multiple applications seamlessly, creating tailored engagement
+      workflows and tracking critical metrics.
+
+features:
+  - title: Real-Time User Analytics
+    description:
+      Gain insights into user behavior in real-time, helping you make
+      data-driven decisions.
+  - title: Push Notifications and A/B Testing
+    description:
+      Engage users effectively and optimize their experience through custom
+      notifications and controlled A/B testing.
+  - title: Customizable Dashboards and Reports
+    description:
+      Build custom dashboards to visualize data metrics and generate detailed
+      reports.
+  - title: Data Privacy and Security
+    description:
+      Countly’s on-premises deployment provides complete data control, ensuring
+      compliance with privacy standards.
+
+tags:
+  - Analytics
+  - User Engagement
+  - Real-Time Insights
+  - Open-Source
+  - A/B Testing
