@@ -1,0 +1,99 @@
+name: Grist
+description:
+  Grist is an open-source, customizable data management platform that combines
+  the power of a spreadsheet with the structure of a database. Designed for
+  teams and individuals who need to organize, analyze, and share information,
+  Grist offers a flexible and collaborative environment for data management. It
+  supports relational data linking, allowing users to create complex, connected
+  data tables, and provides tools for custom views, formulas, and dashboards.
+  Grist’s user-friendly interface empowers users to build powerful applications
+  without requiring extensive coding knowledge.
+instructions: null
+changeLog:
+  - date: 2023-3-16
+    description: Initial release of Grist
+links:
+  - label: Website
+    url: https://www.getgrist.com
+  - label: Documentation
+    url: https://support.getgrist.com
+  - label: GitHub
+    url: https://github.com/gristlabs/grist-core
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: grist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gristlabs/grist:1.2.1
+benefits:
+  - title: Powerful Data Management
+    description:
+      Grist enables users to create data structures that link tables with
+      relational data, bringing database-like functionality into a spreadsheet
+      interface.
+  - title: Customizable Views and Dashboards
+    description:
+      With Grist, users can create personalized dashboards and views tailored to
+      their needs, allowing for efficient data analysis and reporting.
+  - title: Collaborative Data Handling
+    description:
+      Grist’s collaborative environment allows teams to work together on shared
+      data tables, making it easy to track updates, comments, and real-time
+      changes.
+  - title: No-Code and Low-Code Flexibility
+    description:
+      Grist’s intuitive platform is designed to empower users without coding
+      experience to build applications. For advanced users, it offers support
+      for custom formulas and scripts.
+  - title: Data Security and Privacy
+    description:
+      Grist provides robust data control options, allowing organizations to
+      manage data access and security settings, making it suitable for sensitive
+      information.
+features:
+  - title: Custom Formulas and Scripts
+    description:
+      Grist supports custom formulas and scripting, enabling users to create
+      complex calculations and automate data processing.
+  - title: Multi-User Collaboration
+    description:
+      Grist is designed for collaboration, allowing multiple users to interact
+      with and edit shared data tables simultaneously.
+  - title: API Integration
+    description:
+      Grist provides API support, allowing integration with external tools and
+      services to streamline data workflows.
+  - title: Templates and Pre-Built Examples
+    description:
+      Grist offers a variety of templates and pre-built examples to help users
+      quickly set up data structures suited for different business needs.
+  - title: Customizable Permissions
+    description:
+      Grist allows for fine-grained permission control, enabling administrators
+      to set specific access levels for individual users.
+  - title: Data Import and Export
+    description:
+      Users can easily import and export data in various formats, making it
+      simple to move data between Grist and other platforms.
+tags:
+  - Data Management
+  - Spreadsheet
+  - Database
+  - Collaboration
+  - No-Code
+  - Customizable Dashboards
+  - Data Security
+  - API Integration
+  - Templates
+  - Data Import/Export
