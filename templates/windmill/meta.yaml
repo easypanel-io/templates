@@ -41,16 +41,21 @@ schema:
   type: object
   required:
     - domain
-    - serviceNamePrefix
+    - appServiceName
+    - appServiceImage
     - workerReplicas
     - nativeWorkerReplicas
   properties:
     domain:
       type: string
       title: Domain
-    serviceNamePrefix:
+    appServiceImage:
       type: string
-      title: Service Name Prefix
+      title: App Service Image
+      default: ghcr.io/windmill-labs/windmill:main
+    appServiceName:
+      type: string
+      title: App Service Name
       default: windmill
     workerReplicas:
       type: number
