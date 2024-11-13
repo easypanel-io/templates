@@ -1,0 +1,113 @@
+name: Penpot
+description:
+  Penpot is an open-source, design and prototyping platform that empowers teams
+  to collaborate and bring creative ideas to life. Unlike other design tools,
+  Penpot is entirely web-based and runs on open standards, allowing teams to
+  access it from anywhere and on any platform. Trusted by designers and
+  developers worldwide, Penpot is known for its flexibility and integration
+  within diverse workflows. It offers real-time collaboration, making it easy
+  for team members to co-create, review, and provide feedback instantly. The app
+  supports complex design requirements, from vector editing to responsive
+  design, and prioritizes user control over projects with extensive
+  customization options. Penpot is built by a team dedicated to privacy and
+  security, with a strong commitment to open-source principles. It ensures that
+  designers and developers alike have the freedom to innovate without
+  restrictions, providing a transparent, community-driven alternative to
+  proprietary tools.
+instructions:
+  In order to configure email invitations for team members, please configure the
+  environment variables provided in backend configuration.
+changeLog:
+  - date: 2024-11-08
+    description: Template Release
+links:
+  - label: Website
+    url: https://penpot.app
+  - label: Documentation
+    url: https://help.penpot.app
+  - label: Github
+    url: https://github.com/penpot
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appBackendServiceImage
+    - appExporterServiceImage
+    - redisServiceName
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: penpot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: penpotapp/frontend:2.3.1
+    appBackendServiceImage:
+      type: string
+      title: App Backend Service Image
+      default: penpotapp/backend:2.3.1
+    appExporterServiceImage:
+      type: string
+      title: App Exporter Service Image
+      default: penpotapp/exporter:2.3.1
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: penpot-redis
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: penpot-db
+
+benefits:
+  - title: Open Source and Transparent
+    description:
+      Penpot is fully open source, making it a transparent tool for design and
+      prototyping. As an open-source project, it invites the community to
+      contribute, improve, and verify its reliability and security.
+  - title: Collaboration-First Design
+    description:
+      Penpot is built from the ground up for teamwork, allowing designers,
+      developers, and stakeholders to collaborate in real-time. It’s ideal for
+      organizations and teams that require a seamless design process with
+      effective communication and instant feedback.
+  - title: Cross-Platform Accessibility
+    description:
+      Penpot runs on web-based, open standards, making it accessible across all
+      platforms. It ensures that designers and developers can access their work
+      from any device without being tied to proprietary software or specific
+      operating systems.
+
+features:
+  - title: Real-Time Collaboration and Feedback
+    description:
+      Penpot enables real-time collaboration, allowing team members to
+      co-create, review, and provide feedback on designs instantly. This feature
+      streamlines the workflow and enhances team productivity.
+  - title: Responsive and Flexible Design Tools
+    description:
+      Penpot offers advanced tools for vector editing, responsive design, and
+      complex layouts, giving designers the flexibility they need to create
+      beautiful and functional designs.
+  - title: Integration with Developer Workflows
+    description:
+      Penpot is designed to integrate seamlessly with developer workflows,
+      making hand-offs easier and faster. It bridges the gap between designers
+      and developers, helping teams work together more effectively.
+  - title: Community-Driven Development
+    description:
+      As a community-driven project, Penpot grows through user feedback and
+      contributions. This means new features, improvements, and bug fixes are
+      continuously shaped by the needs of its users.
+
+tags:
+  - Design
+  - Prototyping
+  - Collaboration
+  - Open Source
