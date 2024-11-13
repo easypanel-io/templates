@@ -40,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: searxng/searxng:latest
+      default: searxng/searxng:2024.10.29-fa4dfd4ef
 benefits:
   - title: Privacy-Respecting Search
     description:
