@@ -22,6 +22,7 @@ export function generate(input: Input): Output {
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
         `KC_FEATURES=docker`,
+        `KC_PROXY_HEADERS=xforwarded`
       ].join("\n"),
       source: {
         type: "image",

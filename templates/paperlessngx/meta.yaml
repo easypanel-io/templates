@@ -42,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: paperlessngx/paperless-ngx:2.8.6
+      default: paperlessngx/paperless-ngx:2.11.6
     redisServiceName:
       type: string
       title: Redis Service Name

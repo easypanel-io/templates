@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: roundcube/roundcubemail:1.6.7-apache
+      default: roundcube/roundcubemail:1.6.9-apache
     roundcubeDefaultHost:
       type: string
       title: Default Host

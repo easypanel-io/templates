@@ -1,0 +1,113 @@
+name: Kimai
+description:
+  Kimai is an open-source time-tracking solution designed for freelancers, small
+  businesses, and enterprises to manage time-tracking needs efficiently. It
+  enables users to track work hours, manage projects, and create accurate
+  reports and invoices based on time entries. With a focus on simplicity and
+  flexibility, Kimai is ideal for organizations looking to improve productivity,
+  manage employee timesheets, and handle client billing without the complexity
+  of traditional ERP systems. Kimai offers a modular architecture, allowing for
+  easy customization to meet unique requirements, and it supports multi-user
+  environments with permissions to manage data access.
+instructions: null
+changeLog:
+  - date: 2024-11-08
+    description: Template Release
+links:
+  - label: Website
+    url: https://www.kimai.org
+  - label: Documentation
+    url: https://www.kimai.org/documentation
+  - label: GitHub
+    url: https://github.com/kimai/kimai
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - adminPassword
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kimai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kimai/kimai2:apache
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: kimai-db
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@kimai.local
+    adminPassword:
+      type: string
+      title: Admin Password
+      description: The password must be at least 8 characters long.
+      default: admin123
+
+benefits:
+  - title: Efficient Time Tracking
+    description:
+      Kimai enables users to track time across various projects and tasks,
+      providing detailed insights for accurate time management.
+  - title: Project and Task Management
+    description:
+      Users can organize time entries by project and task, making it easier to
+      manage workload and monitor project progress.
+  - title: Invoicing and Reporting
+    description:
+      Kimai automates the process of creating reports and invoices based on
+      tracked time, simplifying client billing and payroll.
+  - title: Multi-User and Permissions Support
+    description:
+      The platform supports multiple users, with role-based permissions for
+      controlled access to time tracking and project data.
+  - title: Flexible and Customizable
+    description:
+      Kimai’s modular design allows for easy customization and integration with
+      third-party tools to meet specific business needs.
+features:
+  - title: Web-Based Admin Console
+    description:
+      The admin console allows users to manage time entries, projects, tasks,
+      and clients from a centralized web interface.
+  - title: Multi-Currency Support
+    description:
+      Supports billing in multiple currencies, making it suitable for global
+      teams and client billing across regions.
+  - title: Extensible with Plugins
+    description:
+      Kimai supports various plugins for extended functionality, allowing
+      businesses to tailor the platform to their workflow.
+  - title: Detailed Analytics and Reporting
+    description:
+      Provides detailed reports and analytics on tracked time, client billing,
+      and project costs, enhancing data-driven decision-making.
+  - title: Multi-Language Support
+    description:
+      Kimai supports multiple languages, making it accessible to users across
+      different linguistic backgrounds.
+  - title: Secure and Compliant
+    description:
+      Offers secure data management and supports compliance with industry
+      standards for tracking and billing.
+tags:
+  - Time Tracking
+  - Project Management
+  - Invoicing
+  - Reporting
+  - Multi-User
+  - Multi-Currency
+  - Plugins
+  - Analytics
+  - Multi-Language
+  - Secure Data Management

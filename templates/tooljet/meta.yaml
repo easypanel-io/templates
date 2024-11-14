@@ -43,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tooljet/tooljet-ce:latest
+      default: tooljet/tooljet-ce:v2.9.6
     databaseServiceName:
       type: string
       title: App Service Name

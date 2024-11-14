@@ -30,7 +30,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/transmission:latest
+      default: linuxserver/transmission:version-4.0.6-r0
 benefits:
   - title: Simple and Efficient Torrenting
     description:

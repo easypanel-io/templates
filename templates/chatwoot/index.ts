@@ -78,6 +78,13 @@ export function generate(input: Input): Output {
       deploy: {
         command: "bundle exec sidekiq -C config/sidekiq.yml",
       },
+      mounts: [
+        {
+          type: "bind",
+          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/app`,
+          mountPath: "/app/storage",
+        },
+      ],
     },
   });
 
