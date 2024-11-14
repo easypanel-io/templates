@@ -401,6 +401,19 @@
     ]
   },
   {
+    "slug": "countly",
+    "logo": "logo.png",
+    "name": "Countly",
+    "description": "Countly is an innovative, open-source analytics and engagement platform designed to help you understand and optimize customer journeys in web, mobile, and desktop applications. Built with a flexible architecture, Countly supports multiple integrations and can be deployed on-premises or in the cloud. This platform enables developers and product managers to gain real-time insights into user behavior, track important metrics, and enhance product experiences through push notifications, A/B testing, and other engagement features. Countly is cloud-native, deploys via Docker containers, and provides data control, security, and a streamlined experience for building and monitoring user engagement. Countly is 100% free and open-source, ensuring it is accessible to everyone.",
+    "tags": [
+      "Analytics",
+      "User Engagement",
+      "Real-Time Insights",
+      "Open-Source",
+      "A/B Testing"
+    ]
+  },
+  {
     "slug": "cronicle",
     "logo": "logo.png",
     "name": "Cronicle",
@@ -944,6 +957,24 @@
     ]
   },
   {
+    "slug": "grist",
+    "logo": "logo.png",
+    "name": "Grist",
+    "description": "Grist is an open-source, customizable data management platform that combines the power of a spreadsheet with the structure of a database. Designed for teams and individuals who need to organize, analyze, and share information, Grist offers a flexible and collaborative environment for data management. It supports relational data linking, allowing users to create complex, connected data tables, and provides tools for custom views, formulas, and dashboards. Grist’s user-friendly interface empowers users to build powerful applications without requiring extensive coding knowledge.",
+    "tags": [
+      "Data Management",
+      "Spreadsheet",
+      "Database",
+      "Collaboration",
+      "No-Code",
+      "Customizable Dashboards",
+      "Data Security",
+      "API Integration",
+      "Templates",
+      "Data Import/Export"
+    ]
+  },
+  {
     "slug": "hammond",
     "logo": "logo.png",
     "name": "Hammond",
@@ -1074,6 +1105,19 @@
     ]
   },
   {
+    "slug": "influxdb",
+    "logo": "logo.png",
+    "name": "InfluxDB",
+    "description": "InfluxDB is a time-series database designed to handle high write and query loads commonly required for real-time analytics. It’s optimized for storing timestamped data, making it ideal for monitoring metrics, tracking events, and handling sensor data. With its efficient storage engine, InfluxDB offers built-in support for data compression and compaction, allowing for efficient data retention and storage. This database supports SQL-like queries through InfluxQL, integrates seamlessly with popular data visualization tools like Grafana, and can handle data from IoT devices, DevOps monitoring, finance, and more.",
+    "tags": [
+      "Time-Series",
+      "Monitoring",
+      "Analytics",
+      "IoT",
+      "Database"
+    ]
+  },
+  {
     "slug": "invoiceshelf",
     "logo": "logo.png",
     "name": "InvoiceShelf",
@@ -1201,6 +1245,24 @@
       "Account Management",
       "Standard Protocols",
       "Fine-Grained Authorization"
+    ]
+  },
+  {
+    "slug": "kimai",
+    "logo": "logo.png",
+    "name": "Kimai",
+    "description": "Kimai is an open-source time-tracking solution designed for freelancers, small businesses, and enterprises to manage time-tracking needs efficiently. It enables users to track work hours, manage projects, and create accurate reports and invoices based on time entries. With a focus on simplicity and flexibility, Kimai is ideal for organizations looking to improve productivity, manage employee timesheets, and handle client billing without the complexity of traditional ERP systems. Kimai offers a modular architecture, allowing for easy customization to meet unique requirements, and it supports multi-user environments with permissions to manage data access.",
+    "tags": [
+      "Time Tracking",
+      "Project Management",
+      "Invoicing",
+      "Reporting",
+      "Multi-User",
+      "Multi-Currency",
+      "Plugins",
+      "Analytics",
+      "Multi-Language",
+      "Secure Data Management"
     ]
   },
   {
@@ -1908,6 +1970,18 @@
     ]
   },
   {
+    "slug": "penpot",
+    "logo": "logo.png",
+    "name": "Penpot",
+    "description": "Penpot is an open-source, design and prototyping platform that empowers teams to collaborate and bring creative ideas to life. Unlike other design tools, Penpot is entirely web-based and runs on open standards, allowing teams to access it from anywhere and on any platform. Trusted by designers and developers worldwide, Penpot is known for its flexibility and integration within diverse workflows. It offers real-time collaboration, making it easy for team members to co-create, review, and provide feedback instantly. The app supports complex design requirements, from vector editing to responsive design, and prioritizes user control over projects with extensive customization options. Penpot is built by a team dedicated to privacy and security, with a strong commitment to open-source principles. It ensures that designers and developers alike have the freedom to innovate without restrictions, providing a transparent, community-driven alternative to proprietary tools.",
+    "tags": [
+      "Design",
+      "Prototyping",
+      "Collaboration",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "pgvector",
     "logo": null,
     "name": "pgvector",
@@ -2181,6 +2255,19 @@
     ]
   },
   {
+    "slug": "redmine",
+    "logo": "logo.png",
+    "name": "Redmine",
+    "description": "Redmine is an open-source project management and issue-tracking tool. It provides a flexible framework for managing multiple projects and teams, offering features such as Gantt charts, calendar views, and time tracking to keep your projects organized. Redmine supports multiple databases and can be extended through plugins for additional functionality, making it a highly customizable solution for managing tasks, bugs, and collaboration among teams. The tool also includes role-based access control, allowing administrators to assign different permissions to users based on their responsibilities. Redmine integrates with version control systems like Git, Subversion, and Mercurial, enabling developers to track code changes directly from the platform. It supports major platforms including Windows, Linux, and macOS, and can be accessed via a web browser.",
+    "tags": [
+      "Project Management",
+      "Issue Tracking",
+      "Collaboration",
+      "Time Tracking",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "remmina",
     "logo": "logo.png",
     "name": "Remmina",
@@ -2332,6 +2419,18 @@
     ]
   },
   {
+    "slug": "sonarqube",
+    "logo": "logo.png",
+    "name": "SonarQube Community",
+    "description": "SonarQube Community is an open-source platform for continuous inspection of code quality, designed to detect bugs, vulnerabilities, and code smells across multiple programming languages. It integrates with various CI/CD pipelines, providing valuable insights into code health and maintainability. SonarQube helps teams ensure that their code meets quality standards and aligns with security requirements, promoting efficient software development practices. The Community version is feature-rich and free to use, making it an ideal choice for developers and organizations focused on improving code quality without incurring costs.",
+    "tags": [
+      "Developer Tools",
+      "Code Quality",
+      "Security",
+      "Continuous Integration"
+    ]
+  },
+  {
     "slug": "sonarr",
     "logo": "logo.png",
     "name": "Sonarr",
@@ -2362,6 +2461,19 @@
       "Monitoring",
       "Status Page",
       "Notifications"
+    ]
+  },
+  {
+    "slug": "stirlingpdf",
+    "logo": "logo.png",
+    "name": "StirlingPDF",
+    "description": "StirlingPDF is an open-source PDF management tool designed to streamline PDF handling tasks for both individual users and businesses. It enables users to create, merge, split, compress, and convert PDF documents with ease. Built to support a wide range of platforms, including Linux, Windows, and macOS, StirlingPDF ensures flexibility and resilience for everyday PDF management. Its user-friendly interface and powerful backend make it suitable for both simple and complex PDF workflows. StirlingPDF can run on personal computers or be deployed on servers, offering seamless API access for integration into larger systems. Lightweight and efficient, StirlingPDF is ideal for individual users, small businesses, and large enterprises alike, ensuring reliable PDF manipulation without the need for costly subscriptions. It supports MySQL, PostgreSQL, or SQLite databases, providing robust data handling across various infrastructures.",
+    "tags": [
+      "PDF",
+      "Document Management",
+      "Open Source",
+      "API Integration",
+      "PDF Conversion"
     ]
   },
   {
@@ -2626,6 +2738,18 @@
     ]
   },
   {
+    "slug": "wbo",
+    "logo": "logo.png",
+    "name": "WBO",
+    "description": "WBO (Whiteboard Online) is an open-source, self-hosted, collaborative whiteboard tool that allows users to draw, brainstorm, and share ideas in real-time. It provides a flexible and accessible platform for teams, classrooms, or personal use, enabling simultaneous collaboration on a shared digital canvas. WBO offers tools for free-hand drawing, adding shapes, text, and images, making it ideal for team brainstorming sessions, remote meetings, and educational activities. With a clean and intuitive interface, WBO enhances remote collaboration and facilitates interactive learning.",
+    "tags": [
+      "Collaboration",
+      "Whiteboard",
+      "Self-hosted",
+      "Open-source"
+    ]
+  },
+  {
     "slug": "weaviate",
     "logo": "logo.svg",
     "name": "Weaviate",
@@ -2692,7 +2816,7 @@
   },
   {
     "slug": "whiteboard",
-    "logo": null,
+    "logo": "logo.png",
     "name": "Whiteboard",
     "description": "Whiteboard is a lightweight, NodeJS-based collaborative sketchboard that can be easily customized to your needs. It allows multiple users to draw and write together in real-time, with each user's cursor visible to others. The app provides a range of features including the ability to undo and redo actions, drag and drop or copy and paste images or PDFs, resize, move, rotate and draw images, write text and sticky notes, and save the whiteboard to an image or JSON. You can also draw angle lines and squares by pressing 'Shift' while drawing. The app is compatible with PC, tablet, and mobile devices, and can be used in various projects such as WebRTC conference tools and online collaboration learning activities.",
     "tags": [
