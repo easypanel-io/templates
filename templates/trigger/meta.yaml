@@ -1,0 +1,83 @@
+name: Trigger
+description:
+  Trigger.dev is a free and open-source platform that simplifies building
+  workflows and automations directly within your codebase. It provides a
+  powerful way to connect your application to APIs, schedule tasks, and manage
+  real-time and delayed workflows with ease. By integrating seamlessly into your
+  development process, Trigger.dev allows developers to focus on delivering
+  high-value features instead of managing complex infrastructure. Its
+  scalability and ease of use make it a great fit for modern web applications
+  and cloud-based systems.
+instructions:
+  You should connect your application to Trigger.dev using the provided SDKs and
+  API endpoints for effortless workflow automation.
+changeLog:
+  - date: 2024-11-16
+    description: First Release
+links:
+  - label: Website
+    url: https://trigger.dev/
+  - label: Documentation
+    url: https://docs.trigger.dev/
+  - label: Github
+    url: https://github.com/triggerdotdev/trigger.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trigger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/triggerdotdev/trigger.dev:v2.2.39
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: trigger-db
+benefits:
+  - title: Code-First Workflow Automation
+    description:
+      Build workflows directly in your codebase for seamless integration with
+      your application and development process.
+  - title: API Integrations
+    description:
+      Easily connect to external APIs and manage complex integrations with
+      minimal effort.
+  - title: Real-Time and Delayed Workflows
+    description:
+      Manage real-time triggers and delayed workflows for advanced automation
+      scenarios.
+features:
+  - title: Workflow Management
+    description:
+      Trigger.dev allows you to build, test, and deploy workflows directly from
+      your development environment.
+  - title: API Integration
+    description:
+      Simplify API connections and data transfers with built-in support for
+      multiple APIs and webhooks.
+  - title: Real-Time and Scheduled Events
+    description:
+      Handle real-time events and schedule tasks with precision and reliability.
+  - title: Open Source
+    description:
+      Fully open source and community-driven, making it easy to adapt and
+      enhance for your needs.
+  - title: Extensible
+    description:
+      Extend Trigger.dev’s capabilities through custom modules and plugins.
+tags:
+  - Workflow Automation
+  - API Integration
+  - Real-Time
+  - Open Source
+  - Cloud-Based
