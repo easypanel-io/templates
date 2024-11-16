@@ -1,0 +1,79 @@
+name: BabyBuddy
+description:
+  BabyBuddy is a comprehensive, user-friendly platform designed to help parents
+  and caregivers manage essential details about their child’s growth and
+  development. It provides tools for tracking feedings, sleep schedules, diaper
+  changes, and milestones, making parenting a more organized and informed
+  journey. With BabyBuddy, you can access detailed insights into your child's
+  habits, progress, and overall well-being. The app offers customization options
+  to fit individual family needs and supports data export for secure backup or
+  sharing with healthcare professionals. BabyBuddy is lightweight, easy to
+  deploy, and designed with a focus on privacy, ensuring your family’s data is
+  safe and accessible only to you.
+instructions: Login username=admin,password=admin
+changeLog:
+  - date: 2024-11-16
+    description: First release
+links:
+  - label: Website
+    url: https://babybuddy.app
+  - label: Documentation
+    url: https://docs.babybuddy.app
+  - label: GitHub
+    url: https://github.com/babybuddy/babybuddy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: babybuddy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/babybuddy:2.6.3
+benefits:
+  - title: Simplified Parenting
+    description:
+      BabyBuddy helps you track essential information about your child’s daily
+      activities and growth milestones with ease.
+  - title: Privacy and Security
+    description:
+      BabyBuddy prioritizes data privacy, ensuring your child’s information is
+      safe and accessible only to you.
+  - title: Customization Options
+    description:
+      Tailor the app to suit your family’s unique needs with adjustable settings
+      and features.
+  - title: Easy Deployment
+    description:
+      BabyBuddy is lightweight, simple to deploy, and runs seamlessly on
+      multiple platforms.
+features:
+  - title: Comprehensive Tracking Tools
+    description:
+      Track feedings, sleep schedules, diaper changes, and more with detailed
+      logs and insights.
+  - title: Growth Milestone Management
+    description:
+      Record and monitor your child’s milestones, ensuring you stay updated on
+      their development.
+  - title: Customizable Reports
+    description:
+      Generate and export reports for secure backups or sharing with healthcare
+      professionals.
+  - title: Multi-User Support
+    description:
+      Allow multiple caregivers to contribute to and access the child’s data,
+      making it easier to collaborate.
+tags:
+  - Parenting
+  - Tracking
+  - Child Development
+  - Family Management
