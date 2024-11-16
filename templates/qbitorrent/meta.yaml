@@ -1,0 +1,85 @@
+name: qBittorrent
+description:
+  "qBittorrent is a powerful, open-source BitTorrent client designed to provide
+  an efficient and feature-rich experience for downloading and sharing files. It
+  offers a user-friendly interface, robust functionality, and cross-platform
+  compatibility. qBittorrent supports advanced features like sequential
+  downloading, IP filtering, RSS feed support, and a built-in search engine for
+  finding torrents. It also includes a web-based interface for managing
+  downloads remotely. Designed to balance performance, simplicity, and advanced
+  capabilities, qBittorrent is ideal for users seeking a secure and reliable
+  torrenting solution."
+instructions: Username is admin, password is provided in the overview logs.
+changeLog:
+  - date: 2024-11-16
+    description: First Release
+links:
+  - label: Website
+    url: https://www.qbittorrent.org
+  - label: Docs
+    url: https://github.com/qbittorrent/qBittorrent/wiki
+  - label: Github
+    url: https://github.com/qbittorrent/qBittorrent
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qbittorrent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/qbittorrent:4.6.7
+benefits:
+  - title: User-Friendly Interface
+    description:
+      qBittorrent offers an intuitive interface that simplifies downloading,
+      sharing, and managing torrents.
+  - title: Advanced Features
+    description:
+      Enjoy features like sequential downloading, IP filtering, RSS feed
+      support, and an integrated torrent search engine.
+  - title: Cross-Platform Support
+    description:
+      qBittorrent runs on major operating systems, including Windows, macOS, and
+      Linux, ensuring compatibility across devices.
+  - title: Remote Management
+    description:
+      Manage torrents remotely with qBittorrent's powerful web-based interface,
+      providing flexibility and convenience.
+  - title: Open-Source and Secure
+    description:
+      Benefit from a secure, community-driven, open-source application with no
+      ads or hidden costs.
+features:
+  - title: Integrated Torrent Search
+    description:
+      Search for torrents directly within qBittorrent without relying on
+      external websites.
+  - title: RSS Feed Support
+    description: Automatically download torrents from your favorite RSS feeds.
+  - title: Web-Based UI
+    description:
+      Manage torrents from anywhere using the secure and intuitive web-based
+      interface.
+  - title: Sequential Downloading
+    description:
+      Download files in sequential order, allowing you to preview media files as
+      they are downloaded.
+  - title: IP Filtering and Encryption
+    description:
+      Enhance security with IP filtering and protocol encryption to safeguard
+      your downloads.
+tags:
+  - Torrenting
+  - BitTorrent
+  - File Sharing
+  - Open Source
+  - Remote Management
