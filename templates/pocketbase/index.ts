@@ -15,6 +15,12 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
+          path: "/_/",
+          port: 80,
+        },
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          path: "/api",
           port: 80,
         },
       ],
