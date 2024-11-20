@@ -17,8 +17,6 @@ export function generate(input: Input): Output {
         `PS_DOMAIN=$(PRIMARY_DOMAIN)`,
         `PS_FOLDER_ADMIN=admin4577`,
         `PS_FOLDER_INSTALL=install4577`,
-        `ADMIN_MAIL=admin@admin.com`,
-        `ADMIN_PASSWD=admin12345`,
       ].join("\n"),
       source: {
         type: "image",
