@@ -9,10 +9,8 @@ description:
   Additionally, it offers a vibrant marketplace for modules and themes, enabling
   seamless customization and integration with third-party services.
 instructions:
-  - Configure the database during the installation wizard.
-  - Use the provided domain for the admin panel and storefront setup.
-  - Set appropriate permissions for the `install` and `admin` folders as
-    instructed in the documentation.
+  Configure the database during the installation wizard. Use the provided
+  domains for the admin panel and storefront setup.
 changeLog:
   - date: 2024-11-20
     description: First Release
@@ -25,7 +23,7 @@ links:
     url: https://github.com/PrestaShop/PrestaShop
 contributors:
   - name: Ahson Shaikh
-    url: https://github.com/ahsonshaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
