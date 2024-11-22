@@ -1,0 +1,75 @@
+name: Chevereto
+description:
+  Chevereto is a powerful, self-hosted image hosting platform designed for
+  individuals, communities, and businesses. It allows users to upload, organize,
+  and share images effortlessly. With a clean interface and a wide range of
+  customization options, Chevereto supports private albums, multi-language
+  capabilities, and robust file management, making it the ultimate solution for
+  image hosting.
+instructions: Open the nginx domain to access Chevereto
+changeLog:
+  - date: 2024-11-22
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/Chevereto/Chevereto-Free
+  - label: Documentation
+    url: https://v3-docs.chevereto.com/
+  - label: Demo
+    url: https://demo.chevereto.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chevereto
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chevereto/chevereto:4
+benefits:
+  - title: Easy Image Hosting
+    description:
+      Chevereto provides an intuitive platform for uploading and managing
+      images, with support for bulk uploads and organization features.
+  - title: Customizable and Extensible
+    description:
+      Chevereto offers a wide range of customization options, including themes
+      and API access, to tailor the platform to your needs.
+  - title: Multi-Language and Multi-User Support
+    description:
+      Operate in multiple languages and create user accounts with varying
+      permission levels, perfect for collaborative environments.
+features:
+  - title: Private and Public Albums
+    description:
+      Organize images into private or public albums with advanced privacy
+      controls.
+  - title: Drag-and-Drop Uploads
+    description:
+      Easily upload images by dragging and dropping them into the platform.
+  - title: Multi-User Capabilities
+    description:
+      Allow multiple users to upload and manage their own images securely within
+      the platform.
+  - title: Customizable Appearance
+    description:
+      Adjust themes, colors, and layouts to align with your personal or business
+      branding.
+  - title: Direct Image Links
+    description:
+      Quickly generate direct links for sharing images across social media and
+      other platforms.
+tags:
+  - Image Hosting
+  - File Management
+  - Open Source
+  - Multi-User
+  - Private Albums
