@@ -1,0 +1,80 @@
+name: Automatisch
+description:
+  Automatisch is a powerful, self-hosted workflow automation tool designed for
+  connecting your apps and automating repetitive tasks. With Automatisch, you
+  can create workflows to sync data, send notifications, and perform various
+  actions seamlessly across different services. This container is based on
+  Docker Baseimage KasmVNC, providing additional environment variables and
+  configurations for enhanced flexibility. It also supports the docker manifest
+  for multi-platform awareness, ensuring the correct image for your
+  architecture.
+
+instructions:
+  You can use `user@automatisch.io` email address and `sample` password to log
+  in to Automatisch. Please do not forget to change your email and password from
+  the settings page.
+
+changeLog:
+  - date: 2024-11-25
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://automatisch.io/docs
+  - label: GitHub
+    url: https://github.com/automatisch/automatisch
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: automatisch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dockeriddonuts/automatisch:2.0
+
+benefits:
+  - title: Simplified Workflow Automation
+    description:
+      Automatisch allows you to create workflows easily, streamlining your
+      repetitive tasks across different applications.
+  - title: Self-Hosted Privacy
+    description:
+      Maintain full control over your workflows and data by hosting Automatisch
+      on your own infrastructure.
+  - title: Multi-Platform Support
+    description:
+      Automatisch ensures compatibility across various architectures with its
+      multi-platform Docker manifest.
+
+features:
+  - title: Workflow Builder
+    description:
+      Create and manage workflows through an intuitive interface or APIs.
+  - title: App Integrations
+    description:
+      Connect to numerous services using prebuilt integrations or custom APIs.
+  - title: Task Automation
+    description:
+      Automate repetitive tasks and reduce manual effort by scheduling or
+      triggering actions automatically.
+  - title: Extensible Design
+    description:
+      Extend Automatisch's functionality with plugins and custom scripts for
+      tailored automation solutions.
+
+tags:
+  - Workflow Automation
+  - Self-Hosted
+  - Task Management
+  - API Integrations
