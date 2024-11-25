@@ -1,0 +1,69 @@
+name: Maybe Finance
+description:
+  Maybe Finance is a modern, self-hosted finance management tool designed for
+  tracking personal or business finances efficiently. It provides a clean and
+  user-friendly interface, supports integrations for extended functionality, and
+  offers detailed analytics for insights into your financial data. With Maybe
+  Finance, you can take control of your finances, track expenses, and make
+  informed decisions.
+instructions: null
+changeLog:
+  - date: 2024-11-25
+    description: Template Release
+links:
+  - label: GitHub
+    url: https://github.com/maybe-finance/maybe
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: maybe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/maybe-finance/maybe:0.1.0
+
+benefits:
+  - title: Financial Control
+    description:
+      Maybe Finance helps you track expenses, budgets, and savings to keep your
+      finances in check.
+  - title: Self-Hosted Privacy
+    description:
+      Host Maybe Finance on your infrastructure to ensure full control and
+      privacy over your financial data.
+  - title: Custom Insights
+    description:
+      Generate detailed analytics to gain deeper insights into your financial
+      trends and behavior.
+
+features:
+  - title: Expense Tracking
+    description:
+      Keep a record of your expenses and categorize them for better budgeting.
+  - title: API Integrations
+    description:
+      Connect Maybe Finance with other tools using its flexible API for seamless
+      data flow.
+  - title: Custom Reports
+    description:
+      Create detailed financial reports with insights into income, expenses, and
+      savings.
+  - title: Secure and Reliable
+    description:
+      Enjoy a secure, self-hosted platform for managing sensitive financial
+      information.
+
+tags:
+  - Finance Management
+  - Self-Hosted
+  - Analytics
+  - Budgeting
