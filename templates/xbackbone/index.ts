@@ -21,6 +21,13 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/config",
+        },
+      ],
     },
   });
 
