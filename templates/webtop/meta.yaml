@@ -1,0 +1,69 @@
+name: WebTop
+description:
+  WebTop is a browser-based Linux desktop environment, self-hosted using Docker.
+  It provides a full-featured desktop experience accessible from any device with
+  a modern web browser. WebTop supports multiple desktop environments and
+  applications, making it a versatile tool for productivity, remote work, and
+  development.
+
+instructions:
+
+changeLog:
+  - date: 2024-11-27
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-webtop/
+  - label: Github
+    url: https://github.com/linuxserver/docker-webtop
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: webtop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/webtop:ubuntu-kde-27d523f3-ls64
+
+benefits:
+  - title: Browser-Based Desktop
+    description:
+      Access a full Linux desktop environment directly from your web browser.
+  - title: Customizable Experience
+    description:
+      Choose from multiple desktop environments like KDE, XFCE, and more.
+  - title: Lightweight and Secure
+    description:
+      A lightweight solution for remote desktops, ensuring data privacy and
+      security.
+
+features:
+  - title: Full Desktop Environment
+    description: Provides a complete Linux desktop accessible through a browser.
+  - title: Multi-User Support
+    description:
+      Enable collaboration with multiple user sessions on the same instance.
+  - title: Application Support
+    description:
+      Run various applications, including development tools, directly within the
+      desktop.
+  - title: File Management
+    description: Built-in tools for managing and accessing your files.
+
+tags:
+  - Browser-Based
+  - Self-Hosted
+  - Productivity
+  - Remote Desktop
