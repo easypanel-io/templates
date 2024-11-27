@@ -1,0 +1,34 @@
+name: Heimball
+description:
+  Heimdall is a way to organise all those links to your most used web sites and
+  web applications in a simple way. Simplicity is the key to Heimdall. Why not
+  use it as your browser start page? It even has the ability to include a search
+  bar using either Google, Bing or DuckDuckGo.
+instructions: null
+changeLog:
+  - date: 2024-11-27
+    description: first release
+links:
+  - label: Website
+    url: https://heimdall.site/
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-heimdall/
+  - label: Github
+    url: https://github.com/linuxserver/Heimdall
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: heimball
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/heimdall:latest
