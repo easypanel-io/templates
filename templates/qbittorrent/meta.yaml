@@ -1,0 +1,55 @@
+name: QBittorrent
+description:
+  QBittorrent is a powerful and efficient BitTorrent client for Windows, macOS,
+  and Linux. It features a simple and intuitive user interface, allowing you to
+  easily manage your torrents and downloads. With QBittorrent, you can add
+  torrents, set priorities, and even schedule downloads. The app also supports
+  RSS feeds, allowing you to automatically download new torrents. QBittorrent
+  offers a variety of customization options, such as themes, icons, and
+  notifications, to make your experience even more enjoyable. The app is
+  designed to be easy to use, with a clean and modern interface that is
+  intuitive and easy to navigate. Whether you're a seasoned torrent user or a
+  beginner, QBittorrent is a powerful and efficient tool for managing your
+  torrents and downloads.
+instructions: null
+changeLog:
+  - date: 2022-11-27
+    description: first release
+links:
+  - label: Website
+    url: https://www.qbittorrent.org/
+  - label: Github
+    url: https://github.com/qbittorrent/qBittorrent/
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qbittorrent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/qbittorrent:latest
+    serviceTimezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+    webUIPort:
+      type: integer
+      title: WebUI Port
+      default: 8080
+    torrentingPort:
+      type: integer
+      title: Torrenting Port
+      default: 6881
+tags:
+  - File Management
+  - Media
+  - Productivity
