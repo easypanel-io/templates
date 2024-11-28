@@ -1,0 +1,37 @@
+name: Project Send
+description:
+  Project Send is a self-hosted application that lets you upload files and
+  assign them to specific clients that you create yourself. Secure, private and
+  easy. No more depending on external services or e-mail to send those files.
+instructions: null
+changeLog:
+  - date: 2022-11-27
+    description: first release
+links:
+  - label: Website
+    url: https://www.projectsend.org/
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-projectsend
+  - label: Github
+    url: https://github.com/linuxserver/docker-projectsend
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: projectsend
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/projectsend:latest
+    serviceTimezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
