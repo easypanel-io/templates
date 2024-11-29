@@ -1,0 +1,88 @@
+name: AzuraCast
+description: AzuraCast is a self-hosted, all-in-one web radio management suite. Using its easy installer 
+  and powerful but intuitive web interface, you can start up a fully working web radio station in a few 
+  quick minutes.
+
+  AzuraCast works for web radio stations of all types and sizes, and is built to run on even the most 
+  affordable VPS web hosts.
+instructions: Once installation is complete, you must complete setup by visiting the new installation 
+  in your browser. Some credentials (like the MySQL root password) are automatically generated upon 
+  installation you can access them by viewing the app configuration on the host machine.
+changeLog:
+  - date: 2024-01-05
+    description: Template created (v0.19.4)
+links:
+  - label: Website
+    url: https://azuracast.com
+  - label: Github
+    url: https://github.com/azuracast/azuracast
+contributors:
+  - name: Buster Neece
+    url: https://github.com/BusterNeece
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceVersion
+    - appHttpPort
+    - appHttpsPort
+    - appSftpPort
+    - appMinimumStationPort
+    - appMaximumStationPort
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: azuracast
+    appServiceVersion:
+      type: string
+      title: Release Channel ("stable", "rolling", or a specific version)
+      default: stable
+    appHttpPort:
+      type: number
+      title: HTTP Port
+      default: 80
+    appHttpsPort:
+      type: number
+      title: HTTPS Port
+      default: 443
+    appSftpPort:
+      type: number
+      title: SFTP Port
+      default: 2022
+    appMinimumStationPort:
+      type: number
+      title: Station Auto-assigned Port Range Minimum
+      default: 8000
+    appMaximumStationPort:
+      type: number
+      title: Station Auto-assigned Port Range Maximum
+      default: 8500
+benefits:
+  - title: Everything's Included
+    description: AzuraCast installs everything you need to get a web radio station 
+      up and running in minutes.
+  - title: Powerful and Intuitive
+    description: Manage every aspect of your radio station via a simple yet 
+      powerful web interface.
+  - title: Runs Anywhere
+    description: Install AzuraCast onto any server (or desktop) that supports Docker.
+features:
+  - title: Web-Based Station Management
+    description: Upload media, manage playlists, create local mount points and remote 
+      relays, view analytics and reports and much more, all from the convenience of 
+      your web browser. 
+  - title: Multi-Station Administration
+    description: Host multiple stations on a single installation, create new user 
+      accounts and unique roles with granular permissions. Back up your installation 
+      and keep track of every station from one central location. 
+  - title: Built-in Public Pages
+    description: Out of the box, each station includes a public-facing player page 
+      that can also be embedded into your own web site. Our powerful APIs let you build 
+      your own players and interfaces that take advantage of our rich metadata support. 
+tags:
+  - Media
