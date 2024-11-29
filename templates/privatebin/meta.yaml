@@ -1,0 +1,67 @@
+name: PrivateBin
+description:
+  PrivateBin is a minimalist, open-source, self-hosted pastebin solution
+  designed for secure and private data sharing. It features end-to-end
+  encryption, ensuring that your shared content remains confidential. With its
+  simple interface and focus on privacy, PrivateBin is an excellent tool for
+  individuals and teams who value secure communication.
+
+instructions:
+
+changeLog:
+  - date: 2024-11-27
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://privatebin.info/
+  - label: Github
+    url: https://github.com/PrivateBin/PrivateBin
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: privatebin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: privatebin/nginx-fpm-alpine:1.2.1
+
+benefits:
+  - title: Secure Data Sharing
+    description:
+      Share sensitive information confidently with built-in end-to-end
+      encryption.
+  - title: Self-Hosted Solution
+    description: Maintain full control over your data with a self-hosted setup.
+  - title: Minimalist Design
+    description: Enjoy a clean and simple interface for effortless usage.
+
+features:
+  - title: End-to-End Encryption
+    description:
+      Content is encrypted before it reaches the server, ensuring privacy.
+  - title: Expiry Options
+    description:
+      Set expiration times for shared content to control its availability.
+  - title: Self-Destructing Pastes
+    description:
+      Enable automatic deletion after the first view for sensitive data.
+  - title: No Metadata Storage
+    description: PrivateBin does not store metadata, enhancing user privacy.
+
+tags:
+  - Secure Sharing
+  - Self-Hosted
+  - Privacy
+  - Pastebin
