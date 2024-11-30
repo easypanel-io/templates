@@ -30,7 +30,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: traccar/traccar:latest
+      default: traccar/traccar:6
 benefits:
   - title: Real-Time GPS Tracking
     description:
