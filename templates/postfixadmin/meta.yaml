@@ -1,0 +1,90 @@
+name: PostfixAdmin
+description:
+  PostfixAdmin is a robust, web-based administration interface for managing mail
+  servers using Postfix. It allows you to easily manage virtual domains,
+  mailboxes, and aliases through an intuitive and flexible interface.
+  PostfixAdmin supports advanced features like quota management, domain
+  statistics, and DKIM integration, making it an ideal tool for administrators
+  of self-hosted email solutions.
+
+instructions:
+  To create an admin user, run the following commands in the PostfixAdmin
+  container "chmod +x /var/www/html/scripts/postfixadmin-cli" and
+  "/var/www/html/scripts/postfixadmin-cli admin add". This will create a new
+  admin user for accessing the PostfixAdmin interface.
+
+changeLog:
+  - date: 2024-12-02
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://postfix-configuration.readthedocs.io/en/latest/postfixadmin/
+  - label: GitHub
+    url: https://github.com/postfixadmin/postfixadmin
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpServer
+    - smtpPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: postfixadmin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: postfixadmin:3.3.14-apache
+    smtpServer:
+      type: string
+      title: SMTP Server
+      default: localhost
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "25"
+
+benefits:
+  - title: Simplified Email Administration
+    description:
+      PostfixAdmin provides an easy-to-use web interface for managing mail
+      servers, saving time and effort for administrators.
+  - title: Advanced Mail Management
+    description:
+      Manage virtual domains, aliases, quotas, and DKIM settings with
+      comprehensive support for advanced features.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your email infrastructure with a self-hosted solution
+      that ensures privacy and customization.
+
+features:
+  - title: Virtual Domain Management
+    description:
+      Easily create and manage virtual domains and mailboxes through the
+      PostfixAdmin interface.
+  - title: Quota and Alias Support
+    description:
+      Set mailbox quotas and create email aliases for efficient email handling.
+  - title: DKIM and SPF Integration
+    description:
+      Enhance email authentication with built-in support for DKIM and SPF
+      configuration.
+  - title: Domain Statistics
+    description:
+      Monitor email usage and domain statistics directly from the PostfixAdmin
+      interface.
+
+tags:
+  - Email Administration
+  - Self-Hosted
+  - Mail Server
+  - Postfix
