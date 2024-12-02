@@ -1,0 +1,80 @@
+name: Redlib
+description:
+  Redlib is a privacy-focused and lightweight alternative frontend for Reddit,
+  designed to enhance user experience by removing ads, tracking, and unnecessary
+  JavaScript. Built using Rust, Redlib delivers a fast and efficient browsing
+  experience while ensuring user privacy by proxying all requests, including
+  media, through its server. It provides an ad-free, clutter-free interface
+  inspired by Reddit's modern design, making it an ideal choice for users
+  seeking a secure and streamlined way to browse Reddit content.
+instructions: null
+changeLog:
+  - date: 2024-12-02
+    description: Template added
+links:
+  - label: Website
+    url: https://github.com/redlib-org/redlib
+  - label: Documentation
+    url: https://github.com/redlib-org/redlib#readme
+  - label: Public Instances
+    url: https://github.com/redlib-org/redlib-instances
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: redlib
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: quay.io/redlib/redlib:sha-00dee52
+benefits:
+  - title: Enhanced Privacy
+    description:
+      Redlib proxies all requests through its server, including media,
+      preventing Reddit from directly tracking users or accessing their
+      information.
+  - title: Lightweight and Fast
+    description:
+      Built with Rust, Redlib offers a fast browsing experience with minimal
+      resource usage, free from JavaScript or bloated elements.
+  - title: Customizable Settings
+    description:
+      Users can adjust settings like themes, default sorting, and display
+      options through an intuitive interface, with preferences stored securely
+      in cookies.
+features:
+  - title: No Ads or Tracking
+    description:
+      Browse Reddit without interruptions or intrusive tracking, enjoying a
+      clean and distraction-free interface.
+  - title: Proxy-Based Privacy
+    description:
+      All requests, including media, are proxied through Redlib’s server to
+      ensure user anonymity and secure content delivery.
+  - title: Rust-Powered Efficiency
+    description:
+      Built in Rust for optimal performance, offering a robust and secure
+      backend to handle high traffic with ease.
+  - title: Multi-Platform Deployment
+    description:
+      Redlib supports deployment on Docker, Podman, and other container
+      platforms, with pre-built images for major architectures like amd64,
+      arm64, and armv7.
+  - title: Open Source and Community-Driven
+    description:
+      Fully open-source and actively maintained by a global community, enabling
+      users to contribute to its growth and development.
+tags:
+  - Privacy
+  - Reddit
+  - Alternative Frontend
+  - Lightweight
+  - Open Source
