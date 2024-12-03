@@ -141,6 +141,30 @@
     ]
   },
   {
+    "slug": "automatisch",
+    "logo": "logo.png",
+    "name": "Automatisch",
+    "description": "Automatisch is a powerful, self-hosted workflow automation tool designed for connecting your apps and automating repetitive tasks. With Automatisch, you can create workflows to sync data, send notifications, and perform various actions seamlessly across different services. This container is based on Docker Baseimage KasmVNC, providing additional environment variables and configurations for enhanced flexibility. It also supports the docker manifest for multi-platform awareness, ensuring the correct image for your architecture.",
+    "tags": [
+      "Workflow Automation",
+      "Self-Hosted",
+      "Task Management",
+      "API Integrations"
+    ]
+  },
+  {
+    "slug": "babybuddy",
+    "logo": "logo.png",
+    "name": "BabyBuddy",
+    "description": "BabyBuddy is a comprehensive, user-friendly platform designed to help parents and caregivers manage essential details about their child’s growth and development. It provides tools for tracking feedings, sleep schedules, diaper changes, and milestones, making parenting a more organized and informed journey. With BabyBuddy, you can access detailed insights into your child's habits, progress, and overall well-being. The app offers customization options to fit individual family needs and supports data export for secure backup or sharing with healthcare professionals. BabyBuddy is lightweight, easy to deploy, and designed with a focus on privacy, ensuring your family’s data is safe and accessible only to you.",
+    "tags": [
+      "Parenting",
+      "Tracking",
+      "Child Development",
+      "Family Management"
+    ]
+  },
+  {
     "slug": "barrage",
     "logo": "logo.png",
     "name": "Barrage",
@@ -290,6 +314,19 @@
     "tags": [
       "Chat",
       "Customer Support"
+    ]
+  },
+  {
+    "slug": "chevereto",
+    "logo": "logo.png",
+    "name": "Chevereto",
+    "description": "Chevereto is a powerful, self-hosted image hosting platform designed for individuals, communities, and businesses. It allows users to upload, organize, and share images effortlessly. With a clean interface and a wide range of customization options, Chevereto supports private albums, multi-language capabilities, and robust file management, making it the ultimate solution for image hosting.",
+    "tags": [
+      "Image Hosting",
+      "File Management",
+      "Open Source",
+      "Multi-User",
+      "Private Albums"
     ]
   },
   {
@@ -635,6 +672,18 @@
       "Chat",
       "Communication",
       "Security"
+    ]
+  },
+  {
+    "slug": "elkarbackup",
+    "logo": null,
+    "name": "ElkarBackup",
+    "description": "ElkarBackup is a robust open-source backup management system designed to streamline data protection and recovery for diverse environments. With an intuitive web-based interface and extensive automation capabilities, it simplifies backup scheduling and execution. ElkarBackup supports various storage backends and ensures reliable backup operations with robust monitoring and reporting features. Whether you're managing personal data or enterprise-scale systems, ElkarBackup offers an efficient and user-friendly solution for safeguarding your critical information.",
+    "tags": [
+      "Backup Management",
+      "Automation",
+      "Data Recovery",
+      "Open Source"
     ]
   },
   {
@@ -1548,6 +1597,18 @@
     ]
   },
   {
+    "slug": "maybe-finance",
+    "logo": "logo.png",
+    "name": "Maybe Finance",
+    "description": "Maybe Finance is a modern, self-hosted finance management tool designed for tracking personal or business finances efficiently. It provides a clean and user-friendly interface, supports integrations for extended functionality, and offers detailed analytics for insights into your financial data. With Maybe Finance, you can take control of your finances, track expenses, and make informed decisions.",
+    "tags": [
+      "Finance Management",
+      "Self-Hosted",
+      "Analytics",
+      "Budgeting"
+    ]
+  },
+  {
     "slug": "mcaptcha",
     "logo": "logo.png",
     "name": "mCaptcha",
@@ -1567,6 +1628,18 @@
       "Food & Drink",
       "Recipe Manager",
       "Meal Planner"
+    ]
+  },
+  {
+    "slug": "mediawiki",
+    "logo": "logo.png",
+    "name": "MediaWiki",
+    "description": "MediaWiki is a powerful, open-source wiki platform that powers some of the largest collaborative projects, including Wikipedia. It offers a flexible and extensible framework for creating and managing content, supporting features like user management, version control, and powerful extensions. MediaWiki provides multilingual support, ensuring global accessibility, and includes built-in tools for content organization, search, and collaboration. It is an ideal solution for knowledge bases, documentation sites, and community-driven content platforms. With a vibrant ecosystem of plugins and themes, MediaWiki can be customized to suit diverse use cases.",
+    "tags": [
+      "Wiki",
+      "Collaboration",
+      "Content Management",
+      "CMS"
     ]
   },
   {
@@ -1847,6 +1920,18 @@
     ]
   },
   {
+    "slug": "ollama",
+    "logo": "logo.png",
+    "name": "Ollama",
+    "description": "Ollama is a powerful tool designed to simplify the deployment and interaction with advanced AI models. It provides a streamlined solution for managing and hosting large language models (LLMs) with an intuitive interface. Ollama allows users to run queries and interact with models like OpenAI GPT and others in a secure and efficient manner. The tool includes a web-based interface that makes managing and testing models straightforward. Ollama is designed to support diverse use cases, from research and development to deploying AI capabilities in production systems. It offers flexible deployment options, powerful API integrations, and role-based access control to ensure secure and scalable AI solutions.",
+    "tags": [
+      "AI",
+      "LLM",
+      "Machine Learning",
+      "Custom Applications"
+    ]
+  },
+  {
     "slug": "ombi",
     "logo": "logo.png",
     "name": "Ombi",
@@ -1952,6 +2037,18 @@
     "tags": [
       "Social Networking",
       "Image Generator"
+    ]
+  },
+  {
+    "slug": "pairdrop",
+    "logo": "logo.png",
+    "name": "PairDrop",
+    "description": "PairDrop is an open-source peer-to-peer file sharing application designed for seamless and secure data transfer between devices on the same network. With its minimalist design and cross-platform compatibility, PairDrop ensures a user-friendly and efficient file sharing experience. It eliminates the need for third-party cloud services, offering a direct and private solution for sharing files, links, and other data securely.",
+    "tags": [
+      "File Sharing",
+      "Peer-to-Peer",
+      "Cross-Platform",
+      "Open Source"
     ]
   },
   {
@@ -2142,6 +2239,18 @@
     ]
   },
   {
+    "slug": "postfixadmin",
+    "logo": "logo.png",
+    "name": "PostfixAdmin",
+    "description": "PostfixAdmin is a robust, web-based administration interface for managing mail servers using Postfix. It allows you to easily manage virtual domains, mailboxes, and aliases through an intuitive and flexible interface. PostfixAdmin supports advanced features like quota management, domain statistics, and DKIM integration, making it an ideal tool for administrators of self-hosted email solutions.",
+    "tags": [
+      "Email Administration",
+      "Self-Hosted",
+      "Mail Server",
+      "Postfix"
+    ]
+  },
+  {
     "slug": "postgres-backup",
     "logo": null,
     "name": "Postgres Backup",
@@ -2161,6 +2270,18 @@
       "Web Interface",
       "User Management",
       "API"
+    ]
+  },
+  {
+    "slug": "prestashop",
+    "logo": "logo.png",
+    "name": "Prestashop",
+    "description": "Prestashop is an open-source e-commerce platform that empowers businesses to build and manage their online stores. It provides a user-friendly interface, a robust product catalog system, order management, and customizable themes, making it an ideal choice for merchants of all sizes. Prestashop supports multiple payment gateways, multilingual and multi-currency features, and SEO optimization to ensure a global reach and enhanced online visibility. Additionally, it offers a vibrant marketplace for modules and themes, enabling seamless customization and integration with third-party services.",
+    "tags": [
+      "E-commerce",
+      "Web Development",
+      "Online Store",
+      "CMS"
     ]
   },
   {
@@ -2287,6 +2408,19 @@
       "Books",
       "Ebooks",
       "Audiobooks"
+    ]
+  },
+  {
+    "slug": "redlib",
+    "logo": "logo.png",
+    "name": "Redlib",
+    "description": "Redlib is a privacy-focused and lightweight alternative frontend for Reddit, designed to enhance user experience by removing ads, tracking, and unnecessary JavaScript. Built using Rust, Redlib delivers a fast and efficient browsing experience while ensuring user privacy by proxying all requests, including media, through its server. It provides an ad-free, clutter-free interface inspired by Reddit's modern design, making it an ideal choice for users seeking a secure and streamlined way to browse Reddit content.",
+    "tags": [
+      "Privacy",
+      "Reddit",
+      "Alternative Frontend",
+      "Lightweight",
+      "Open Source"
     ]
   },
   {
@@ -2653,6 +2787,18 @@
     ]
   },
   {
+    "slug": "traggo",
+    "logo": "logo.png",
+    "name": "Traggo",
+    "description": "Traggo is a powerful, self-hosted time tracking and project management tool designed to help teams and individuals organize their workflows and track time efficiently. It features an intuitive interface, flexible reporting, and customizable dashboards. With Traggo, you can maintain complete control over your data, ensuring privacy and productivity.",
+    "tags": [
+      "Time Tracking",
+      "Self-Hosted",
+      "Productivity",
+      "Project Management"
+    ]
+  },
+  {
     "slug": "transmission",
     "logo": "logo.png",
     "name": "Transmission",
@@ -2660,6 +2806,19 @@
     "tags": [
       "Torrent",
       "BitTorrent Client"
+    ]
+  },
+  {
+    "slug": "trigger",
+    "logo": null,
+    "name": "Trigger",
+    "description": "Trigger.dev is a free and open-source platform that simplifies building workflows and automations directly within your codebase. It provides a powerful way to connect your application to APIs, schedule tasks, and manage real-time and delayed workflows with ease. By integrating seamlessly into your development process, Trigger.dev allows developers to focus on delivering high-value features instead of managing complex infrastructure. Its scalability and ease of use make it a great fit for modern web applications and cloud-based systems.",
+    "tags": [
+      "Workflow Automation",
+      "API Integration",
+      "Real-Time",
+      "Open Source",
+      "Cloud-Based"
     ]
   },
   {
@@ -2817,6 +2976,18 @@
     ]
   },
   {
+    "slug": "webtop",
+    "logo": "logo.png",
+    "name": "WebTop",
+    "description": "WebTop is a browser-based Linux desktop environment, self-hosted using Docker. It provides a full-featured desktop experience accessible from any device with a modern web browser. WebTop supports multiple desktop environments and applications, making it a versatile tool for productivity, remote work, and development.",
+    "tags": [
+      "Browser-Based",
+      "Self-Hosted",
+      "Productivity",
+      "Remote Desktop"
+    ]
+  },
+  {
     "slug": "wekan",
     "logo": "logo.svg",
     "name": "Wekan",
@@ -2920,6 +3091,18 @@
       "Productivity",
       "Documents",
       "Office Suite"
+    ]
+  },
+  {
+    "slug": "xbackbone",
+    "logo": "logo.png",
+    "name": "xBackbone",
+    "description": "xBackbone is a versatile, self-hosted file and image sharing platform designed to manage and share content securely and efficiently. It features a clean and intuitive interface, supports multiple authentication options, and provides advanced file management capabilities. With xBackbone, you can maintain complete control over your shared content, ensuring privacy and flexibility.",
+    "tags": [
+      "File Sharing",
+      "Self-Hosted",
+      "Privacy",
+      "Analytics"
     ]
   },
   {
