@@ -12,6 +12,8 @@ export function generate(input: Input): Output {
       env: [
         `CMD_DB_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `CMD_USECDN=false`,
+        `CMD_ALLOW_EMAIL_REGISTER=true`,
+        `CMD_EMAIL=true`,
       ].join("\n"),
       source: {
         type: "image",
