@@ -3,6 +3,19 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const traccarXML = `
+  <!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+  <properties>
+
+  <!-- Documentation: https://www.traccar.org/configuration-file/ -->
+
+  <entry key='database.driver'>org.h2.Driver</entry>
+  <entry key='database.url'>jdbc:h2:./data/database</entry>
+  <entry key='database.user'>sa</entry>
+  <entry key='database.password'></entry>
+
+  </properties>
+  `;
   services.push({
     type: "app",
     data: {
@@ -27,8 +40,7 @@ export function generate(input: Input): Output {
         },
         {
           type: "file",
-          content:
-            "<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>\r\n<properties>\r\n\r\n    <!-- Documentation: https://www.traccar.org/configuration-file/ -->\r\n\r\n    <entry key='database.driver'>org.h2.Driver</entry>\r\n    <entry key='database.url'>jdbc:h2:./data/database</entry>\r\n    <entry key='database.user'>sa</entry>\r\n    <entry key='database.password'></entry>\r\n\r\n</properties>",
+          content: traccarXML,
           mountPath: "/opt/traccar/conf/traccar.xml",
         },
       ],
