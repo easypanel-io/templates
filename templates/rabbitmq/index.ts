@@ -29,16 +29,27 @@ export function generate(input: Input): Output {
     });
   }
 
+  let image = "rabbitmq:3.13.7";
+
+  if (input.appServiceImage) {
+    if (!input.enableManagementUI && !input.rabbitmqcli) {
+      image = input.appServiceImage;
+    } else if (input.enableManagementUI) {
+      image = input.appServiceImage;
+    }
+  } else {
+    if (input.enableManagementUI) {
+      image = "rabbitmq:3.13.7-management";
+    }
+  }
+
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image:
-          input.enableManagementUI && !input.appServiceImage
-            ? "rabbitmq:3.13.7-management"
-            : input.appServiceImage || "rabbitmq:3.13.7",
+        image,
       },
       domains: [
         {
