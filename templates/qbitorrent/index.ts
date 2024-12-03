@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
         `PGID=1000`,
         `TZ=Etc/UTC`,
         `WEBUI_PORT=8080`,
-        `TORRENTING_PORT=6881`,
+        `TORRENTING_PORT=${input.qBittorrentPort}`,
       ].join("\n"),
       mounts: [
         {
@@ -32,13 +32,13 @@ export function generate(input: Input): Output {
       ],
       ports: [
         {
-          published: 6881,
-          target: 6881,
+          published: Number(input.qBittorrentPort),
+          target: Number(input.qBittorrentPort),
           protocol: "tcp",
         },
         {
-          published: 6881,
-          target: 6881,
+          published: Number(input.qBittorrentPort),
+          target: Number(input.qBittorrentPort),
           protocol: "udp",
         },
       ],

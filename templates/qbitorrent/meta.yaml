@@ -28,6 +28,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - qBittorrentPort
   properties:
     appServiceName:
       type: string
@@ -37,6 +38,10 @@ schema:
       type: string
       title: App Service Image
       default: lscr.io/linuxserver/qbittorrent:4.6.7
+    qBittorrentPort:
+      type: string
+      title: Torrenting Port
+      default: "6881"
 benefits:
   - title: User-Friendly Interface
     description:
