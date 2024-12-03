@@ -34,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/ombi:latest
+      default: linuxserver/ombi:4.44.1
     timezone:
       type: string
       title: Timezone
