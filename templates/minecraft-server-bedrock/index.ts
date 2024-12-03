@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
     `VIEW_DISTANCE=${input.viewDistance || ""}`,
     `EULA=${input.eula}`,
     `SERVER_PORT=${input.serverPort || 19132}`,
+    `ONLINE_MODE=${input.onlineMode || false}`,
   ];
 
   services.push({
