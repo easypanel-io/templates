@@ -106,7 +106,7 @@ async function run() {
     if (meta?.contributors?.length) {
       lines.push("## Contributors", "");
       meta.contributors.forEach((entry) => {
-        lines.push(`- [${entry.name}](${entry.url})`);
+        lines.push(`- [${entry.name}]`);
       });
       lines.push("");
     }

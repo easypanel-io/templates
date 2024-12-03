@@ -1,0 +1,101 @@
+name: WoofedCRM
+description:
+  WoofedCRM is a customizable Customer Relationship Management (CRM) system.
+instructions: null
+changeLog:
+  - date: 2024-11-07
+    description: Initial template for Easypanel
+links:
+  - label: GitHub Repository
+    url: https://github.com/douglara/woofedcrm
+  - label: Documentation
+    url: https://docs.woofedcrm.com/docs/intro/
+  - label: Discord
+    url: https://discord.gg/6CmxcETt
+contributors:
+  - name: Douglara
+    url: https://github.com/douglara
+  - name: Edgar Ferreira
+    url: https://github.com/zzedgat2012
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appAdminUsername
+    - appAdminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: woofed
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: douglara/woofedcrm:easy-install-development-c58c14ba6542f505d33b16aac6c39a40616adf48
+    appAdminUsername:
+      type: string
+      title: Admin Username
+      default: lovewoofed
+    appAdminPassword:
+      type: string
+      title: Admin Password
+      default: lovewoofed
+    appDefaultTimeZone:
+      type: string
+      title: Time Zone
+      description: "Available timezones: https://gist.github.com/eikes/5a64b661022c756bd6522ed94770e2a6"
+      default: Brasilia
+features:
+  - title: Native Chatwoot Integration
+    description:
+      Seamlessly integrates with Chatwoot, allowing messaging history and
+      contacts to sync directly into WoofedCRM, enabling efficient customer
+      communication in one place.
+
+  - title: Evolution API Integration
+    description:
+      Provides contact synchronization via the Evolution API, allowing
+      businesses to maintain an updated database without manual entry, enhancing
+      data accuracy.
+
+  - title: Webhook Integration for Automation
+    description:
+      Supports webhook integrations to automate workflows, enabling automated
+      notifications, status updates, and more for a streamlined operational
+      flow.
+
+  - title: Messaging Scheduling
+    description:
+      Allows users to schedule messages for follow-ups, reminders, and timed
+      promotions, improving customer engagement without needing constant
+      monitoring.
+
+  - title: Direct Display in Chatwoot Dashboard
+    description:
+      Embeds WoofedCRM as a tab within the Chatwoot dashboard, providing
+      seamless access to CRM functionalities without switching interfaces.
+
+benefits:
+  - title: Streamlined Customer Communication
+    description:
+      Centralized messaging and contact management enhance customer interaction
+      and response times, increasing customer satisfaction and retention.
+
+  - title: Enhanced Data Synchronization
+    description:
+      Synchronizes data from Chatwoot and Evolution API, keeping customer
+      records up-to-date and reducing data redundancy and errors.
+
+  - title: Time-Saving Automation
+    description:
+      Through webhooks and scheduled messages, WoofedCRM automates repetitive
+      tasks, allowing teams to focus on high-impact activities.
+
+  - title: Accessible and Lightweight
+    description:
+      Designed for small and medium businesses, WoofedCRM offers essential CRM
+      features without the resource-heavy demands of larger systems.
+tags:
+  - CRM
+  - Sales
