@@ -4,6 +4,41 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const vhostTemplate = `
+server {
+    listen 80 default_server;
+    server_name _;
+
+    server_tokens off;
+
+    client_max_body_size 100M;
+
+    root /var/www/app/public/;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+    location ~* /storage/.*\\.php$ {
+        return 503;
+    }
+
+    location ~ \\.php$ {
+        fastcgi_split_path_info ^(.+\\.php)(/.+)$;
+        fastcgi_pass \${PHP_FPM_HOST}:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_intercept_errors off;
+        fastcgi_buffer_size 16k;
+        fastcgi_buffers 4 16k;
+    }
+}
+`;
 
   services.push({
     type: "app",
@@ -65,8 +100,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "file",
-          content:
-            "server {\r\n    listen 80 default_server;\r\n    server_name _;\r\n    \r\n    server_tokens off;\r\n    \r\n    client_max_body_size 100M;\r\n\r\n    root /var/www/app/public/;\r\n    index index.php;\r\n\r\n    location / {\r\n        try_files $uri $uri/ /index.php?$query_string;\r\n    }\r\n\r\n    location = /favicon.ico { access_log off; log_not_found off; }\r\n    location = /robots.txt  { access_log off; log_not_found off; }\r\n\r\n\r\n    location ~* /storage/.*\\.php$ {\r\n        return 503;\r\n    }\r\n\r\n    location ~ \\.php$ {\r\n        fastcgi_split_path_info ^(.+\\.php)(/.+)$;\r\n        fastcgi_pass ${PHP_FPM_HOST}:9000;\r\n        fastcgi_index index.php;\r\n        include fastcgi_params;\r\n        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;\r\n        fastcgi_intercept_errors off;\r\n        fastcgi_buffer_size 16k;\r\n        fastcgi_buffers 4 16k;\r\n    }\r\n}\r\n",
+          content: vhostTemplate,
           mountPath: "/etc/nginx/conf.d/vhost.template",
         },
         {
