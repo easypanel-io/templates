@@ -1,15 +1,8 @@
-import {
-  Output,
-  Services,
-  randomPassword,
-  randomString,
-} from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const databasePassword = randomPassword();
-  const randomKey = randomString();
 
   const file = `
 ;<?php http_response_code(403); /*
