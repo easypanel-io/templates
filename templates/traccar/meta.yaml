@@ -1,0 +1,65 @@
+name: Traccar
+description:
+  Traccar is an open-source GPS tracking system designed for real-time tracking
+  of vehicles, assets, and individuals. It supports a wide range of GPS devices
+  and mobile apps, providing a secure, reliable, and highly customizable
+  platform for tracking and managing your data. Traccar is ideal for fleet
+  management, personal tracking, and asset monitoring.
+instructions: null
+changeLog:
+  - date: 2024-11-30
+    description: Template Release
+links:
+  - label: Website
+    url: https://www.traccar.org/
+  - label: Github
+    url: https://github.com/traccar/traccar
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: traccar
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: traccar/traccar:6
+benefits:
+  - title: Real-Time GPS Tracking
+    description:
+      Monitor the location of vehicles, assets, or individuals in real time with
+      detailed data.
+  - title: Device Compatibility
+    description:
+      Supports over 2,000 GPS devices and mobile apps for seamless integration.
+  - title: Self-Hosted Solution
+    description:
+      Maintain full control of your data with a secure and self-hosted platform.
+features:
+  - title: Geofencing
+    description:
+      Create virtual boundaries and receive alerts when devices enter or exit
+      predefined areas.
+  - title: Event Notifications
+    description:
+      Configurable notifications for events like speeding, SOS signals, or
+      geofence breaches.
+  - title: Multi-Device Support
+    description: Manage and monitor multiple devices from a single interface.
+  - title: Customizable Dashboards
+    description:
+      Personalize dashboards with the data and views most relevant to your
+      needs.
+tags:
+  - GPS Tracking
+  - Fleet Management
+  - Real-Time Tracking
+  - Self-Hosted
+  - Asset Monitoring
