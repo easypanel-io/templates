@@ -1,25 +1,27 @@
 name: Chevereto
 description:
-  Chevereto is a powerful, self-hosted image hosting platform designed for
+  Chevereto is a powerful, self-hosted image and video hosting platform designed for
   individuals, communities, and businesses. It allows users to upload, organize,
-  and share images effortlessly. With a clean interface and a wide range of
+  and share media effortlessly. With a clean interface and a wide range of
   customization options, Chevereto supports private albums, multi-language
   capabilities, and robust file management, making it the ultimate solution for
-  image hosting.
+  image and video hosting.
 instructions: Open the nginx domain to access Chevereto
 changeLog:
   - date: 2024-11-22
     description: First Release
 links:
   - label: Github
-    url: https://github.com/Chevereto/Chevereto-Free
+    url: https://github.com/chevereto/chevereto
   - label: Documentation
-    url: https://v3-docs.chevereto.com/
+    url: https://v4-docs.chevereto.com/
   - label: Demo
     url: https://demo.chevereto.com/
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: Rodolfo Berrios
+    url: https://rodolfoberrios.com
 schema:
   type: object
   required:
@@ -35,10 +37,10 @@ schema:
       title: App Service Image
       default: chevereto/chevereto:4
 benefits:
-  - title: Easy Image Hosting
+  - title: Easy Image and Video Hosting
     description:
       Chevereto provides an intuitive platform for uploading and managing
-      images, with support for bulk uploads and organization features.
+      images and video, with support for bulk uploads and organization features.
   - title: Customizable and Extensible
     description:
       Chevereto offers a wide range of customization options, including themes
