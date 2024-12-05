@@ -1,0 +1,81 @@
+name: OpnForm
+description: OpnForm is an open-source form builder that lets you create beautiful forms and share them anywhere. It's super fast, you don't need to know how to co
+instructions: |
+  After deployment, access your OpnForm instance at the provided domain. 
+  Initial login credentials:
+  - Email: admin@opnform.com
+  - Password: password
+  
+  Important: Change these credentials immediately after your first login.
+  Note: Public registration is disabled by default for security.
+
+links:
+  - label: Website
+    url: https://opnform.com/
+  - label: Documentation
+    url: https://docs.opnform.com/introduction
+  - label: GitHub
+    url: https://github.com/JhumanJ/OpnForm
+
+contributors:
+  - name: ibishal
+    url: https://github.com/ibishal
+
+changeLog:
+  - date: 2023-10-08
+    description: Template Release
+
+schema:
+  type: object
+  required:
+    - apiServiceName
+    - apiServiceImage
+    - uiServiceName
+    - uiServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - workerServiceName
+    - ingressServiceName
+  properties:
+    apiServiceName:
+      type: string
+      title: API Service Name
+      default: opnform-api
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: jhumanj/opnform-api:latest
+    workerServiceName:
+      type: string
+      title: Worker Service Name
+      default: opnform-worker
+    uiServiceName:
+      type: string
+      title: UI Service Name
+      default: opnform-ui
+    uiServiceImage:
+      type: string
+      title: UI Service Image
+      default: jhumanj/opnform-client:latest
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: opnform-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: opnform-redis
+    ingressServiceName:
+      type: string
+      title: Ingress Service Name
+      default: opnform-ingress
+
+features:
+  - title: Form Builder
+    description: Create beautiful, responsive forms with an intuitive drag-and-drop interface.
+  - title: Self-Hosted
+    description: Keep your data private and secure by hosting OpnForm on your own infrastructure.
+  - title: File Uploads
+    description: Accept file uploads securely with built-in storage management.
+  - title: Form Analytics
+    description: Track form submissions and analyze response data with built-in analytics.
