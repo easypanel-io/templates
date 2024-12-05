@@ -1,0 +1,33 @@
+name: Eclipse Mosquitto
+description:
+  Mosquitto is an open source implementation of a server for version 5.0, 3.1.1,
+  and 3.1 of the MQTT protocol. It also includes a C and C++ client library, and
+  the mosquitto_pub and mosquitto_sub utilities for publishing and subscribing.
+instructions: null
+changeLog:
+  - date: 2024-11-27
+    description: first release
+links:
+  - label: Website
+    url: https://mosquitto.org/
+  - label: Documentation
+    url: https://mosquitto.org/documentation/
+  - label: Github
+    url: https://github.com/eclipse-mosquitto/mosquitto
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mosquitto
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eclipse-mosquitto:latest
