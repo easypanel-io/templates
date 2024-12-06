@@ -33,12 +33,12 @@ export function generate(input: Input): Output {
       ports: [
         {
           published: Number(input.qBittorrentPort),
-          target: Number(input.qBittorrentPort),
+          target: 6881,
           protocol: "tcp",
         },
         {
           published: Number(input.qBittorrentPort),
-          target: Number(input.qBittorrentPort),
+          target: 6881,
           protocol: "udp",
         },
       ],
