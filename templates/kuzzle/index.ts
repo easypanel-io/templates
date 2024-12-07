@@ -48,10 +48,11 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-elasticsearch`,
       source: { type: "image", image: input.elasticServiceImage },
-      domains: [
+      mounts: [
         {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          type: "volume",
+          name: "elasticsearch",
+          mountPath: "/usr/share/elasticsearch",
         },
       ],
     },
