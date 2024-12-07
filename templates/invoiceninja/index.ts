@@ -47,7 +47,8 @@ server {
       env: [
         `APP_ENV=production`,
         `APP_DEBUG=0`,
-        `APP_URL=http://localhost`,
+        `APP_URL=https://$(primary_domain)`,
+        `ASSET_URL=https://$(primary_domain)`,
         `APP_KEY=base64:VPtYClO6I4SyH6t79V1fWp9FDrX7WOCK2k+eJbHnTr8=`,
         `DB_TYPE=mysql`,
         `DB_STRICT=false`,
