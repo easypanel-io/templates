@@ -1,0 +1,74 @@
+name: Dillinger
+description:
+  Dillinger is an open-source, online Markdown editor designed to provide a
+  seamless and user-friendly experience for writing and editing Markdown files.
+  With its intuitive interface, Dillinger supports real-time preview, file
+  imports/exports, and integration with popular cloud storage services such as
+  Dropbox, Google Drive, GitHub, and OneDrive. It allows users to write Markdown
+  efficiently and export their work in various formats, including HTML, PDF, and
+  Markdown itself. Dillinger operates as a modern, distraction-free editor that
+  simplifies writing and content creation for developers, writers, and
+  professionals.
+instructions: null
+changeLog:
+  - date: 2024-12-11
+    description: first release
+links:
+  - label: Demo
+    url: https://dillinger.io/
+  - label: GitHub
+    url: https://github.com/joemccann/dillinger
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dillinger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/dillinger:3.39.1
+benefits:
+  - title: Seamless Markdown Editing
+    description:
+      Dillinger simplifies Markdown editing with an intuitive and
+      distraction-free interface, enabling efficient content creation.
+  - title: Real-Time Preview
+    description:
+      Provides a real-time preview of Markdown documents, helping you see
+      changes instantly as you write.
+  - title: Cloud Storage Integration
+    description:
+      Supports integration with popular cloud storage services like Dropbox,
+      Google Drive, GitHub, and OneDrive for easy file management and
+      synchronization.
+features:
+  - title: Real-Time Markdown Preview
+    description:
+      See a live preview of your Markdown document as you write, ensuring
+      accuracy and saving time.
+  - title: Export Options
+    description:
+      Export Markdown files to various formats, including HTML, PDF, and plain
+      Markdown for flexibility in publishing and sharing.
+  - title: File Import and Cloud Sync
+    description:
+      Import files from and sync content with services like Dropbox, Google
+      Drive, GitHub, and OneDrive for convenient file access.
+  - title: User-Friendly Interface
+    description:
+      Dillinger offers a clean and distraction-free editor, ensuring a seamless
+      writing experience for both new and experienced users.
+tags:
+  - Markdown Editor
+  - Content Creation
+  - Productivity Tools
+  - Cloud Integration
+  - File Management
