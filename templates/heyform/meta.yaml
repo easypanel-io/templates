@@ -38,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: HeyForm Service Image
-      default: heyform/community-edition:latest
+      default: heyform/community-edition:v0.0.15
     databaseServiceImage:
       type: string
       title: Database Service Image
@@ -46,7 +46,7 @@ schema:
     redisServiceImage:
       type: string
       title: Redis Service Image
-      default: eqalpha/keydb:latest
+      default: eqalpha/keydb:x86_64_v6.3.4
 benefits:
   - title: Simplified Form Creation
     description:
