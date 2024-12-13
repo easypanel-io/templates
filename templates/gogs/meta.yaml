@@ -29,6 +29,7 @@ schema:
     - appServiceName
     - appServiceImage
     - sshPort
+    - databaseType
   properties:
     appServiceName:
       type: string
@@ -42,6 +43,16 @@ schema:
       type: number
       title: SSH Port
       default: 2222
+    databaseType:
+      type: string
+      title: Select Database Type
+      oneOf:
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - postgres
+          title: Postgres
 benefits:
   - title: Self-Hosted Git Service
     description:
