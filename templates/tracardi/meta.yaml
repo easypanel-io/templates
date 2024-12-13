@@ -4,12 +4,8 @@ description:
   data processing, customer segmentation, and workflow automation. It enables
   businesses to collect, process, and analyze customer data while offering
   actionable insights. Tracardi provides a powerful visual interface, robust API
-  support, and scalable deployment options. This container is based on Docker
-  Baseimage KasmVNC, offering additional environment variables and
-  configurations for enhanced flexibility. It also supports multi-platform
-  deployments using docker manifest, ensuring compatibility with various
-  architectures.
-instructions: Configure the API Domain in the GUI Section.
+  support, and scalable deployment options.
+instructions: Configure the API Domain in the GUI.
 changeLog:
   - date: 2024-12-13
     description: Template Release
@@ -67,7 +63,6 @@ schema:
       type: boolean
       title: Enable Production Setup
       description: Prevents adding demo data.
-
 benefits:
   - title: Real-Time Customer Data Processing
     description:
@@ -81,7 +76,6 @@ benefits:
     description:
       Automate customer interactions with powerful visual workflows and
       event-driven triggers.
-
 features:
   - title: Real-Time Event Processing
     description:
