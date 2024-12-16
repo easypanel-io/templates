@@ -1,0 +1,145 @@
+name: OSTicket
+description:
+  OSTicket is a widely-used, open-source ticketing system designed to streamline
+  customer support management. It provides a user-friendly interface for
+  handling, tracking, and organizing support tickets across multiple channels,
+  including email, web forms, and API integrations. With OSTicket, you can
+  efficiently manage inquiries, automate workflows, and improve customer
+  satisfaction.
+instructions:
+  You can configure other Environmental settings in Environment Section.
+changeLog:
+  - date: 2024-12-16
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.osticket.com
+  - label: Github
+    url: https://github.com/osTicket/osTicket
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpServerHost
+    - smtpServerPort
+    - smtpFromEmail
+    - smtpFromName
+    - installName
+    - installEmail
+    - adminFirstName
+    - adminLastName
+    - adminEmail
+    - adminPassword
+    - adminUsername
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: osticket
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tiredofit/osticket:3.6.2
+    smtpServerHost:
+      type: string
+      title: SMTP Server Host
+      default: smtp.example.com
+    smtpServerPort:
+      type: integer
+      title: SMTP Server Port
+      default: 25
+    smtpServerUsername:
+      type: string
+      title: SMTP Server Username
+    smtpServerPassword:
+      type: string
+      title: SMTP Server Password
+      secret: true
+    smtpFromEmail:
+      type: string
+      title: SMTP From Email
+      default: no-reply@example.com
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: example
+    installName:
+      type: string
+      title: SMTP From Name
+      default: my-company-desk
+      description: Name for your company's desk.
+    installEmail:
+      type: string
+      title: Install Email
+      default: no-reply@example.com
+    adminFirstName:
+      type: string
+      title: Admin First Name
+      default: John
+    adminLastName:
+      type: string
+      title: Admin Last Name
+      default: Doe
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: ostadmin
+      description: Username must be at least 6 characters
+    adminPassword:
+      type: string
+      title: Admin Password
+      secret: true
+      description: Password must be at least 6 characters
+
+benefits:
+  - title: Streamlined Ticket Management
+    description:
+      OSTicket simplifies the process of handling, organizing, and managing
+      customer support tickets across multiple channels, improving response
+      times and customer satisfaction.
+  - title: Self-Hosted Solution
+    description:
+      Retain full control over your customer support system with a self-hosted
+      solution, ensuring privacy and security for your organization.
+  - title: Workflow Automation
+    description:
+      Automate common support processes like ticket routing, escalation, and
+      responses to save time and boost team efficiency.
+features:
+  - title: Multi-Channel Ticket Support
+    description:
+      Receive and manage tickets through email, web forms, and API integrations
+      to centralize customer inquiries in one platform.
+  - title: Customizable Ticket Workflows
+    description:
+      Define custom workflows, forms, and fields to meet your specific support
+      needs.
+  - title: Reporting and Analytics
+    description:
+      Gain valuable insights into your support team's performance with built-in
+      reporting and analytics tools.
+  - title: SLA Management
+    description:
+      Track and enforce Service Level Agreements (SLAs) to ensure tickets are
+      resolved within committed timelines.
+  - title: Knowledge Base
+    description:
+      Provide self-service options to customers by creating and managing a
+      searchable knowledge base with FAQs and guides.
+tags:
+  - Ticketing System
+  - Customer Support
+  - Self-Hosted
+  - Workflow Automation
+  - SLA Management
