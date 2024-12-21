@@ -44,12 +44,14 @@ schema:
     suitecrmUsername:
       type: string
       title: Username
+      default: admin
     suitecrmPassword:
       type: string
       title: Password
     suitecrmEmail:
       type: string
       title: Email
+      default: admin@example.com
     appServiceName:
       type: string
       title: App Service Name
