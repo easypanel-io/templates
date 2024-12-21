@@ -1,0 +1,96 @@
+name: Forgejo
+description:
+  Forgejo is a community-driven, lightweight, and self-hosted Git service that
+  offers a seamless platform for managing repositories, collaborating on code,
+  and controlling your versioning needs. As a fork of Gitea, Forgejo builds on a
+  solid foundation and enhances features with contributions from a vibrant
+  community. It supports all major platforms, including Linux, macOS, Windows,
+  and ARM-based systems. Forgejo is lightweight, extensible, and easy to set up,
+  making it an excellent choice for individuals and teams looking for a
+  self-hosted Git service. Its open-source nature ensures privacy, transparency,
+  and the flexibility to self-host for maximum control.
+instructions: null
+changeLog:
+  - date: 2023-3-16
+    description: First Release
+links:
+  - label: Website
+    url: https://forgejo.org/
+  - label: Documentation
+    url: https://docs.forgejo.org/
+  - label: Github
+    url: https://codeberg.org/forgejo/forgejo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseType
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: forgejo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeberg.org/forgejo/forgejo:9
+    databaseType:
+      type: string
+      title: Select Database Type
+      oneOf:
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - postgres
+          title: Postgres
+benefits:
+  - title: Community-Driven Development
+    description:
+      Forgejo is actively developed and maintained by a community that
+      prioritizes user needs and feedback.
+  - title: Self-Hosted Git Service
+    description:
+      Forgejo provides an easy-to-set-up self-hosted Git service, enabling teams
+      to maintain privacy and control over their repositories.
+  - title: Cross-Platform
+    description:
+      Forgejo runs seamlessly on all major platforms, including Linux, macOS,
+      Windows, and ARM-based systems.
+  - title: Lightweight and Extensible
+    description:
+      Forgejo is lightweight with minimal system requirements and supports
+      plugins and integrations for extensibility.
+  - title: Open Source and Transparent
+    description:
+      Forgejo is 100% open source, giving users the ability to audit, modify,
+      and share the software freely under an open license.
+features:
+  - title: Repository Management
+    description:
+      Forgejo supports repository management features, including webhooks,
+      deploy keys, Git hooks, and Git LFS.
+  - title: Collaborative Development
+    description:
+      Tools like pull requests, issue tracking, and team management make it
+      easier for developers to collaborate on projects.
+  - title: Authentication Options
+    description:
+      Forgejo supports multiple authentication methods, such as LDAP, SMTP, and
+      OAuth, to ensure secure access.
+  - title: Customization
+    description:
+      Users can tailor Forgejo to their needs with customizable templates,
+      static files, and configurations.
+  - title: CI/CD Integrations
+    description:
+      Forgejo integrates with CI/CD pipelines, enabling automated builds, tests,
+      and deployments.
+tags:
+  - Code Hosting
+  - Self-Hosted
+  - Git Service
