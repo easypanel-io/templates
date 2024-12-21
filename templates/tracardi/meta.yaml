@@ -1,0 +1,100 @@
+name: Tracardi
+description:
+  Tracardi is an open-source customer data platform (CDP) designed for real-time
+  data processing, customer segmentation, and workflow automation. It enables
+  businesses to collect, process, and analyze customer data while offering
+  actionable insights. Tracardi provides a powerful visual interface, robust API
+  support, and scalable deployment options.
+instructions: Configure the API Domain in the GUI.
+changeLog:
+  - date: 2024-12-13
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.tracardi.com
+  - label: GitHub
+    url: https://github.com/Tracardi/tracardi
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - guiServiceImage
+    - apiServiceImage
+    - apmServiceImage
+    - workerServiceImage
+    - elasticsearchServiceImage
+    - enableDemoData
+    - enableProductionSetup
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tracardi
+    guiServiceImage:
+      type: string
+      title: GUI Service Image
+      default: tracardi/tracardi-gui:1.1.0
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: tracardi/tracardi-api:1.1.0
+    apmServiceImage:
+      type: string
+      title: APM Service Image
+      default: tracardi/apm:1.1.0
+    workerServiceImage:
+      type: string
+      title: Worker Service Image
+      default: tracardi/update-worker:1.1.0
+    elasticsearchServiceImage:
+      type: string
+      title: Elasticsearch Service Image
+      default: docker.elastic.co/elasticsearch/elasticsearch:7.13.2
+    enableDemoData:
+      type: boolean
+      title: Enable Demo Data
+    enableProductionSetup:
+      type: boolean
+      title: Enable Production Setup
+      description: Prevents adding demo data.
+benefits:
+  - title: Real-Time Customer Data Processing
+    description:
+      Tracardi processes and analyzes customer data in real time, enabling you
+      to make quick, data-driven decisions.
+  - title: Open-Source and Flexible
+    description:
+      Tracardi is fully open-source, offering flexibility to customize and
+      extend its capabilities based on your needs.
+  - title: Workflow Automation
+    description:
+      Automate customer interactions with powerful visual workflows and
+      event-driven triggers.
+features:
+  - title: Real-Time Event Processing
+    description:
+      Process events in real time to capture and act on customer interactions as
+      they happen.
+  - title: Customer Segmentation
+    description:
+      Segment customers into groups based on behavior, demographics, or custom
+      attributes.
+  - title: Visual Workflow Builder
+    description:
+      Build automated workflows easily with a drag-and-drop interface.
+  - title: Scalable and Multi-Platform Support
+    description:
+      Deploy Tracardi in scalable environments with Docker and multi-platform
+      compatibility.
+
+tags:
+  - Customer Data Platform
+  - Real-Time Analytics
+  - Workflow Automation
+  - Open-Source
