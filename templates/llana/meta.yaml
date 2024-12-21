@@ -1,0 +1,110 @@
+name: llana
+description:
+  Llana is a lightweight no-code API wrapper that exposes a REST API for any
+  database within minutes. Stop wasting time building endpoints, just connect
+  your database and start playing. Open source, free to use, and no vendor
+  lock-in.
+instructions: null
+changeLog:
+  - date: 2024-12-10
+    description: First release
+links:
+  - label: Website
+    url: https://llana.io/
+  - label: GitHub
+    url: https://github.com/juicyllama/llana
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseType
+    - dbHostname
+    - dbUsername
+    - dbPassword
+    - dbPort
+    - dbName
+    - jwtSecret
+  properties:
+    appServiceName:
+      type: string
+      title: Application Service Name
+      default: llana
+    appServiceImage:
+      type: string
+      title: Application Service Image
+      default: juicyllama/llana:v1.14
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgresql
+      oneOf:
+        - enum:
+            - postgresql
+          title: PostgreSQL
+        - enum:
+            - mysql
+          title: MySQL
+    dbHostname:
+      type: string
+      title: Database Hostname
+    dbUsername:
+      type: string
+      title: Database Username
+    dbPassword:
+      type: string
+      title: Database Password
+    dbPort:
+      type: string
+      title: Database Port
+    dbName:
+      type: string
+      title: Database Name
+    jwtSecret:
+      type: string
+      title: JWT Secret
+      description: Provide a 32-character long JWT secret.
+benefits:
+  - title: No-Code API Generation
+    description:
+      Automatically generate REST APIs for your database within minutes without
+      writing any code. Connect, configure, and go!
+  - title: Open Source and Free
+    description:
+      Llana is open-source, free to use, and ensures no vendor lock-in, giving
+      you full control of your data and infrastructure.
+  - title: Lightweight and Fast
+    description:
+      Designed for high performance with minimal resource usage, Llana is
+      perfect for both small and large-scale applications.
+features:
+  - title: Instant REST API
+    description:
+      Generate REST APIs for any database instantly. Expose endpoints to query,
+      insert, update, and delete records.
+  - title: Multi-Database Support
+    description:
+      Connect to PostgreSQL, MySQL, and other popular databases seamlessly.
+  - title: Authentication and Security
+    description:
+      Secure your API with JWT-based authentication and configurable security
+      rules.
+  - title: Easy Configuration
+    description:
+      Set up Llana with a simple configuration file. No complex coding required.
+  - title: Vendor Lock-In Free
+    description:
+      Run Llana on your own servers or infrastructure without being tied to any
+      platform.
+  - title: Extendable
+    description:
+      Customize and extend Llana to fit your application's needs through
+      open-source contributions.
+tags:
+  - API
+  - No-Code
+  - Database
+  - Open Source
