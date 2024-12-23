@@ -65,11 +65,11 @@ schema:
       default: clickhouse
     minioUser:
       type: string
-      title: ClickHouse User
+      title: Minio User
       default: admin
     minioPassword:
       type: string
-      title: ClickHouse Password
+      title: Minio Password
       default: password
 benefits:
   - title: Streamlined Observability for AI Applications

@@ -155,7 +155,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-minio`,
       env: [
-        `MINIO_SERVER_URL=https://$(PRIMARY_DOMAIN)`,
+        `MINIO_SERVER_URL=https://$(EASYPANEL_DOMAIN)`,
         `MINIO_ROOT_USER=admin`,
         `MINIO_ROOT_PASSWORD=password`,
       ].join("\n"),
@@ -168,13 +168,11 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: "$(EASYPANEL_DOMAIN)",
-          path: "/",
+          host: "console-$(EASYPANEL_DOMAIN)",
           port: 9001,
         },
         {
           host: "$(EASYPANEL_DOMAIN)",
-          path: "/",
           port: 9000,
         },
       ],
