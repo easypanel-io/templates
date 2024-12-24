@@ -1,0 +1,77 @@
+name: Emby-Stat
+description:
+  Emby-Stat is an advanced statistics and analytics tool for Emby and Jellyfin
+  media servers. It allows you to gain deeper insights into your media library,
+  viewing habits, and server usage. With detailed statistics and customizable
+  reports, Emby-Stat helps you visualize and analyze your media server data
+  effectively. It also provides a user-friendly interface to track playback
+  history, top media consumption trends, and server activity over time.
+  Emby-Stat integrates seamlessly with Emby, giving you the ability to enhance
+  your media management with data-driven decisions.
+instructions: null
+changeLog:
+  - date: 2024-12-24
+    description: First release
+links:
+  - label: Website
+    url: https://embystat.org/
+  - label: Documentation
+    url: https://docs.embystat.org/
+  - label: Github
+    url: https://github.com/mregni/EmbyStat
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: emby-stat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/embystat:latest
+benefits:
+  - title: Gain Insights into Media Usage
+    description:
+      Emby-Stat provides detailed analytics about your media server, helping you
+      understand playback trends, most-watched content, and overall server
+      activity.
+  - title: Enhanced Media Management
+    description:
+      Use Emby-Stat's statistics to make informed decisions about your media
+      library organization and usage patterns.
+  - title: Cross-Platform Integration
+    description:
+      Emby-Stat works seamlessly with Emby and Jellyfin servers, giving you the
+      flexibility to use your preferred media server.
+  - title: Customizable Reports
+    description:
+      Generate reports tailored to your specific needs, such as most-played
+      movies, top TV shows, or user activity summaries.
+features:
+  - title: Detailed Media Statistics
+    description:
+      Get advanced statistics on your media library, including play counts, top
+      users, and playback times.
+  - title: Playback History Tracking
+    description:
+      Track the playback history of your media to see when and how content was
+      consumed.
+  - title: Analytics Dashboard
+    description:
+      Access an intuitive dashboard that visualizes media consumption trends and
+      server activity over time.
+  - title: Multi-Server Support
+    description:
+      Use Emby-Stat with multiple Emby or Jellyfin servers to consolidate
+      analytics across all your media.
+tags:
+  - Media
+  - Analytics
+  - Statistics
