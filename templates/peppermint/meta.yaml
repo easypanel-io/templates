@@ -1,0 +1,75 @@
+name: Peppermint
+description:
+  Peppermint is a robust and versatile self-hosted service designed for managing
+  and organizing your digital assets. It offers a user-friendly interface,
+  supports plugins for extended functionality, and provides advanced analytics
+  for tracking data usage and performance. With Peppermint, you can maintain
+  control over your assets and customize the platform to meet your specific
+  needs. The application is accessible via your host on ports 8080 and 8081.
+  This container is based on Docker Baseimage KasmVNC, providing additional
+  environment variables and configurations for enhanced flexibility. It also
+  supports the docker manifest for multi-platform awareness, ensuring the
+  correct image for your architecture.
+instructions: Use admin:admin123 to login.
+changeLog:
+  - date: 2024-10-17
+    description: Template Release
+links:
+  - label: Website
+    url: https://peppermint.sh/
+  - label: Github
+    url: https://github.com/Peppermint-Lab/peppermint
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: peppermint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pepperlabs/peppermint:latest
+benefits:
+  - title: Asset Management Made Simple
+    description:
+      Peppermint enables you to organize, manage, and track your digital assets
+      efficiently through its intuitive interface or API.
+  - title: Self-Hosted Platform
+    description:
+      Take control of your data with a self-hosted service, ensuring privacy and
+      flexibility for your organization.
+  - title: Customizable Environment
+    description:
+      Adapt Peppermint to fit your specific workflows with a variety of
+      configuration options and plugins.
+
+features:
+  - title: API Integration
+    description:
+      Seamlessly integrate Peppermint with other tools using its comprehensive
+      API for programmatic control.
+  - title: Plugin Support
+    description:
+      Expand Peppermint's functionality with plugins built for various use
+      cases.
+  - title: Analytics and Insights
+    description:
+      Gain deep insights into asset usage, performance metrics, and more through
+      a built-in analytics dashboard.
+  - title: Enhanced Security
+    description:
+      Leverage advanced security features to protect your data and ensure safe
+      access to your assets.
+tags:
+  - Asset Management
+  - Self-Hosted
+  - Analytics
+  - Customization
