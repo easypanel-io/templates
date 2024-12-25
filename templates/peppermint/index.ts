@@ -10,9 +10,9 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `DB_USERNAME=peppermint`,
-        `DB_PASSWORD=12345`,
-        `DB_HOST=peppermint_postgres`,
+        `DB_USERNAME=postgres`,
+        `DB_PASSWORD=${databasePassword}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `SECRET=peppermint4life`,
       ].join("\n"),
       source: {
@@ -22,21 +22,17 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          path: "/admin",
-          port: 80,
-        },
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          path: "/",
+          port: 3000,
         },
       ],
     },
   });
 
   services.push({
-    type: "mysql",
+    type: "postgres",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
     },
   });
