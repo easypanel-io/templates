@@ -1,0 +1,83 @@
+name: Cloud9
+description:
+  Cloud9 is a cloud-based integrated development environment (IDE) designed for
+  developers to code, build, and debug applications collaboratively in real
+  time. It supports a wide range of programming languages and provides a
+  full-featured development environment directly in the browser. Cloud9 allows
+  developers to work on their projects from anywhere, using any device, with the
+  power of a full Linux server behind it. It includes features like built-in
+  terminal, code editor, and support for debugging and running applications
+  seamlessly. Cloud9 is trusted by developers for its efficiency, collaboration
+  tools, and ability to streamline the development workflow.
+instructions: null
+changeLog:
+  - date: 2024-12-26
+    description: First release
+links:
+  - label: Website
+    url: https://aws.amazon.com/cloud9/
+  - label: Documentation
+    url: https://docs.aws.amazon.com/cloud9/
+  - label: Github
+    url: https://github.com/c9
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cloud9
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/cloud9:1.29.2
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: admin
+benefits:
+  - title: Cloud-Based Development
+    description:
+      Cloud9 enables developers to code directly in the cloud, providing access
+      to their development environment from anywhere with an internet
+      connection.
+  - title: Real-Time Collaboration
+    description:
+      Developers can collaborate in real time, sharing their environment with
+      team members, making it an ideal choice for remote or distributed teams.
+  - title: Fully Integrated Tools
+    description:
+      Cloud9 offers a built-in terminal, code editor, and debugger, streamlining
+      the development workflow without the need for additional installations.
+features:
+  - title: Browser-Based IDE
+    description:
+      Cloud9 provides a powerful, browser-based IDE that includes a rich text
+      editor, syntax highlighting, and a terminal, making it easy to develop
+      applications without requiring local installations.
+  - title: Multi-Language Support
+    description:
+      Cloud9 supports a wide range of programming languages, from Python to
+      JavaScript, enabling developers to work on diverse projects within a
+      single platform.
+  - title: Scalable and Customizable
+    description:
+      Cloud9 can be scaled to meet the needs of different projects and
+      environments, with full support for customizing the IDE settings and
+      environment configurations.
+tags:
+  - IDE
+  - Development
+  - Cloud-Based
