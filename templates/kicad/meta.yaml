@@ -1,0 +1,101 @@
+name: KiCad
+description:
+  KiCad is an open-source software suite for electronic design automation (EDA),
+  enabling the design and simulation of electronic circuits and printed circuit
+  boards (PCBs). It provides a comprehensive set of tools for schematic capture,
+  PCB layout, and 3D visualization. KiCad supports extensive libraries of
+  components and footprints, allowing designers to create custom designs with
+  ease. Its robust features, such as design rule checking, netlist generation,
+  and Gerber export, make it a preferred choice for professionals and hobbyists
+  alike. With a focus on flexibility and open-source principles, KiCad empowers
+  users to bring their electronic design projects to life.
+instructions: null
+changeLog:
+  - date: 2024-12-27
+    description: First Release
+links:
+  - label: Website
+    url: https://www.kicad.org
+  - label: Documentation
+    url: https://docs.kicad.org
+  - label: Github
+    url: https://github.com/KiCad/kicad-source-mirror
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kicad
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/kicad:8.0.7
+benefits:
+  - title: Comprehensive EDA Suite
+    description:
+      KiCad provides a complete set of tools for electronic design, from
+      schematic capture to PCB layout and 3D visualization, simplifying the
+      design process.
+  - title: Open-Source and Flexible
+    description:
+      As an open-source tool, KiCad is free to use and customize, making it
+      accessible for both professionals and hobbyists.
+  - title: Extensive Component Libraries
+    description:
+      KiCad includes an extensive library of components and footprints, with the
+      ability to create and manage custom libraries for specific projects.
+  - title: Professional-Grade Tools
+    description:
+      Features like design rule checking, netlist generation, and Gerber file
+      export ensure that KiCad meets professional standards.
+  - title: Community-Driven Development
+    description:
+      KiCad benefits from a vibrant community of developers and users who
+      contribute to its ongoing improvement and provide valuable resources.
+features:
+  - title: Schematic Capture
+    description:
+      KiCad's schematic editor allows users to create and manage electronic
+      circuit diagrams with ease, including hierarchical designs.
+  - title: PCB Layout
+    description:
+      The PCB layout editor provides powerful tools for designing multi-layer
+      boards, routing, and managing design rules.
+  - title: 3D Visualization
+    description:
+      KiCad includes a 3D viewer that allows designers to visualize their PCB
+      designs with realistic rendering of components and boards.
+  - title: Design Rule Checking
+    description:
+      The design rule checker ensures that layouts meet predefined constraints,
+      helping to prevent errors during manufacturing.
+  - title: Gerber File Export
+    description:
+      KiCad supports Gerber file export for seamless collaboration with PCB
+      manufacturers.
+  - title: Component Libraries
+    description:
+      Extensive libraries of components and footprints are included, with
+      support for creating custom libraries.
+  - title: Community Support
+    description:
+      KiCad's active community provides tutorials, documentation, and forums for
+      users of all skill levels.
+tags:
+  - Electronic Design Automation
+  - PCB Design
+  - Schematic Capture
+  - 3D Visualization
+  - Open-Source
+  - Component Libraries
+  - Gerber Export
+  - Design Rule Checking
+  - Multi-Layer Boards
+  - Circuit Simulation
