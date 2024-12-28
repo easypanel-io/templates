@@ -18,6 +18,11 @@ export function generate(input: Input): Output {
           name: "data",
           mountPath: "/data",
         },
+        {
+          type: "volume",
+          name: "ollama",
+          mountPath: "/root/.ollama",
+        },        
       ],
     },
   });
