@@ -1,0 +1,104 @@
+name: LazyLibrarian
+description:
+  LazyLibrarian is an open-source tool designed to manage and automate the
+  downloading, organizing, and serving of eBooks, audiobooks, and magazines. It
+  integrates seamlessly with Usenet and torrent services to fetch content based
+  on user preferences. With LazyLibrarian, you can search, download, and manage
+  your media library effortlessly. It supports multiple download providers,
+  metadata retrieval, and integration with Calibre for organizing your eBook
+  collection. LazyLibrarian is user-friendly, flexible, and provides a
+  centralized solution for book lovers to manage their digital libraries.
+instructions: null
+changeLog:
+  - date: 2024-12-30
+    description: First release
+links:
+  - label: Website
+    url: https://lazylibrarian.gitlab.io
+  - label: Documentation
+    url: https://lazylibrarian.gitlab.io
+  - label: Github
+    url: https://gitlab.com/LazyLibrarian/LazyLibrarian
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lazylibrarian
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/lazylibrarian:latest
+benefits:
+  - title: Easy Media Management
+    description:
+      LazyLibrarian simplifies managing eBooks, audiobooks, and magazines with
+      automated downloads and metadata organization.
+  - title: Multiple Download Options
+    description:
+      LazyLibrarian integrates with Usenet and torrent providers, giving you
+      flexibility in how you fetch content.
+  - title: Metadata and Covers
+    description:
+      Automatically fetch metadata and book covers for your collection to keep
+      it organized and visually appealing.
+  - title: Integration with Calibre
+    description:
+      Integrate LazyLibrarian with Calibre to organize and serve your eBook
+      collection effortlessly.
+  - title: Open Source & Flexible
+    description:
+      LazyLibrarian is open-source and customizable, allowing you to tailor it
+      to your specific needs.
+features:
+  - title: eBook and Audiobook Support
+    description:
+      LazyLibrarian manages both eBooks and audiobooks, making it a
+      comprehensive solution for your media library.
+  - title: Automated Downloading
+    description:
+      Automatically search for and download eBooks, audiobooks, and magazines
+      based on your preferences.
+  - title: Multiple Providers
+    description:
+      Supports a wide range of Usenet and torrent providers for flexible content
+      fetching.
+  - title: Metadata Management
+    description:
+      Fetch and manage metadata, including descriptions, covers, and authors for
+      all your books.
+  - title: Integrated Search
+    description:
+      Perform searches directly from LazyLibrarian’s interface across multiple
+      download providers.
+  - title: Calibre Integration
+    description:
+      Seamlessly integrate with Calibre to organize and serve your library
+      efficiently.
+  - title: Web-Based Interface
+    description:
+      Manage your library from any device with LazyLibrarian’s web-based user
+      interface.
+  - title: Notifications
+    description:
+      Receive notifications for downloads and updates via email or other
+      supported services.
+  - title: Custom Filters
+    description:
+      Customize filters to download only the content that matches your
+      preferences.
+  - title: User-Friendly Setup
+    description:
+      Easy to set up and configure, with detailed documentation for new users.
+tags:
+  - eBooks
+  - Audiobooks
+  - Library
+  - Media Management
