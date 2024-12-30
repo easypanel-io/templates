@@ -34,6 +34,8 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - username
+    - password
     - emailFrom
     - emailHost
     - emailPort
@@ -52,6 +54,14 @@ schema:
       type: string
       title: Database Service Name
       default: keila-db
+    username:
+      type: string
+      title: Username
+      default: changeme@easypanel.io
+    password:
+      type: string
+      title: Password
+      default: password123
     emailFrom:
       type: string
       title: System From Email
