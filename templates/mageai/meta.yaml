@@ -1,0 +1,112 @@
+name: Mage-AI
+description:
+  Mage-AI is a powerful open-source data pipeline tool designed to simplify and
+  accelerate building, deploying, and managing machine learning workflows. It
+  empowers data engineers and scientists with a unified platform to seamlessly
+  create pipelines for data ingestion, transformation, and model deployment.
+  With Mage-AI's user-friendly interface and robust features, it becomes an
+  essential tool for teams aiming to deliver AI solutions efficiently and
+  effectively.
+instructions: null
+changeLog:
+  - date: 2024-12-31
+    description: First Release
+links:
+  - label: Website
+    url: https://docs.mage.ai/introduction/overview
+  - label: Documentation
+    url: https://docs.mage.ai/
+  - label: Github
+    url: https://github.com/mage-ai/mage-ai
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - projectName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mage-ai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mageai/mageai:latest
+    projectName:
+      type: string
+      title: Project Name
+      default: my-first-project
+benefits:
+  - title: Unified Data Workflows
+    description:
+      Mage-AI provides a single interface to design and execute complex data
+      pipelines, streamlining the machine learning process.
+  - title: Easy Integration
+    description:
+      Integrates seamlessly with existing tools and platforms, enabling flexible
+      and scalable pipeline deployments.
+  - title: Open-Source Advantage
+    description:
+      Leverage the power of open-source development for maximum customization
+      and community support.
+  - title: User-Friendly Interface
+    description:
+      A web-based interface simplifies the creation and management of pipelines
+      without extensive coding knowledge.
+  - title: Scalable Architecture
+    description:
+      Scales efficiently to handle projects of any size, from small experiments
+      to enterprise-level solutions.
+features:
+  - title: Data Pipeline Automation
+    description:
+      Automate data ingestion, transformation, and processing tasks to reduce
+      manual effort and improve productivity.
+  - title: Customizable Components
+    description:
+      Easily customize and extend pipeline components to meet your specific
+      project requirements.
+  - title: Real-Time Monitoring
+    description:
+      Monitor pipeline performance in real-time with detailed metrics and logs.
+  - title: Model Deployment
+    description:
+      Simplify model deployment to production environments with Mage-AI's
+      integrated tools.
+  - title: Seamless Cloud Integration
+    description:
+      Supports deployment on popular cloud platforms for flexible and scalable
+      infrastructure.
+  - title: Collaborative Environment
+    description:
+      Enables team collaboration with shared pipelines and configurations.
+  - title: Version Control
+    description:
+      Built-in version control helps track changes and revert to previous states
+      when needed.
+  - title: Multi-Language Support
+    description:
+      Supports Python, SQL, and other languages for building diverse and robust
+      pipelines.
+  - title: Advanced Orchestration
+    description:
+      Schedule, run, and manage multiple pipelines with ease using advanced
+      orchestration features.
+  - title: Lightweight Deployment
+    description:
+      Deploy lightweight containers with minimal resource consumption for high
+      performance.
+tags:
+  - Data Pipelines
+  - Machine Learning
+  - AI
+  - Automation
+  - Data Engineering
+  - Model Deployment
+  - Open-Source
+  - Scalable
+  - Cloud
