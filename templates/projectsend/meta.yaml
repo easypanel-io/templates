@@ -1,0 +1,74 @@
+name: ProjectSend
+description:
+  ProjectSend is a self-hosted file sharing platform designed to securely share
+  files with clients and collaborators. It provides a user-friendly interface,
+  supports advanced user management, and allows for detailed activity tracking.
+  With ProjectSend, you can maintain control over your files and ensure secure
+  access for authorized users. The application is accessible via your host on
+  ports 8080 and 8081. This container is based on Docker Baseimage KasmVNC,
+  providing additional environment variables and configurations for enhanced
+  flexibility. It also supports the docker manifest for multi-platform
+  awareness, ensuring the correct image for your architecture.
+instructions:
+  After Connecting with the DB, configure the URL to be https in next screen of
+  installation wizard and run chmod 755 /app/www/public/emails in the terminal
+  after the installation.
+changeLog:
+  - date: 2025-01-01
+    description: Template Release
+links:
+  - label: Website
+    url: https://www.projectsend.org/
+  - label: Github
+    url: https://github.com/projectsend/projectsend
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: projectsend
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/projectsend:latest
+benefits:
+  - title: Secure File Sharing
+    description:
+      ProjectSend allows you to securely upload and share files with clients and
+      collaborators through a centralized platform.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your files with a self-hosted service, ensuring privacy
+      and flexibility.
+  - title: Advanced User Management
+    description:
+      Manage user roles, permissions, and access levels for better security and
+      organization.
+features:
+  - title: Custom User Roles
+    description:
+      Assign specific roles and permissions to users for tailored access
+      control.
+  - title: File Management
+    description:
+      Organize and categorize files with ease, supporting efficient retrieval
+      and collaboration.
+  - title: Activity Tracking
+    description:
+      Monitor user activity and file access with detailed logs for
+      accountability.
+  - title: Multi-Language Support
+    description:
+      Access the platform in multiple languages to cater to diverse user bases.
+
+tags:
+  - File Sharing
+  - Self-Hosted
+  - Secure Collaboration
