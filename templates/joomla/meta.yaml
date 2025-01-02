@@ -1,0 +1,142 @@
+name: Joomla
+description:
+  Joomla is an open-source platform that allows you to create a dynamic and
+  customizable online space for your business, personal projects, or any other
+  purpose. It offers a flexible content management system (CMS) that enables you
+  to manage and organize your content with ease, providing an intuitive
+  interface for both beginners and experienced users. With Joomla, you can build
+  anything from a simple blog to a complex corporate website, all while having
+  complete control over the design, structure, and functionality of your site.
+  Joomla comes with a wide array of built-in features and extensions, allowing
+  you to enhance your site with additional capabilities such as e-commerce,
+  social networking, forums, galleries, and much more. You can choose from
+  thousands of templates to give your site a unique look and feel, and customize
+  every aspect to match your specific needs. Whether you're working with HTML
+  and CSS or prefer a more visual approach, Joomla offers tools that cater to
+  various levels of technical expertise. Security is a top priority with Joomla,
+  ensuring that your website remains stable and protected from potential
+  threats. Regular updates and a strong community of developers contribute to
+  the platform's reliability and continuous improvement. Whether you're running
+  a global business, a local organization, or a personal website, Joomla
+  provides a powerful, versatile, and secure foundation for your online
+  presence.
+
+instructions: After the application is installed, follow the step by step and
+  configure - Site name; - Enter the real name of your super user; - set the
+  username for your super user account; - set the password for your super user
+  account; - Enter the email address of the super user website;
+
+  - Select the Database Type. (Mysqli only at moment) - Enter the host name.
+  $(Project_Name)_${input.databaseservicename} on easypanel; - Enter the
+  Database Username You Created (use root); - Enter the Database Password You
+  Created; - Enter the Database Name - $(Project_Name) on easypanel;
+changeLog:
+  - date: 2024-08-09
+    description: first release
+links:
+  - label: Website
+    url: https://www.joomla.org
+  - label: Community
+    url: https://community.joomla.org
+  - label: Forum
+    url: https://forum.joomla.org
+  - label: Github
+    url: https://github.com/joomla-docker/docker-joomla
+contributors:
+  - name: Fabrício Matos
+    url: https://github.com/fabriciogmatos
+  - name: Fabiano Matos
+    url: https://github.com/fbnmtz
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseType
+    - databaseServiceName
+    - appSiteName
+    - appAdminUser
+    - appAdminUserName
+    - appAdminPass
+    - appAdminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: joomla-app
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: joomla:latest
+
+    appSiteName:
+      type: string
+      title: App Site Name
+      default: Meu Site Name
+    appAdminUser:
+      type: string
+      title: App admin user
+      default: Joomla Hero
+    appAdminUserName:
+      type: string
+      title: App admin username
+      default: joomla
+    appAdminPass:
+      type: string
+      title: App Admin Password (must be longer than 12 characters!)
+      default: joomla@secured
+    appAdminEmail:
+      type: string
+      title: App Admin Mail
+      default: joomla@example.com
+
+    serviceTimezone:
+      type: string
+      title: Timezone
+      default: America/Sao_Paulo
+      oneOf:
+        - enum:
+            - America/Sao_Paulo
+          title: America/Sao_Paulo
+        - enum:
+            - America/New_York
+          title: America/New_York
+    # service db
+    databaseType:
+      type: string
+      title: Database Type
+      default: mysql
+      oneOf:
+        - enum:
+            - mysql
+          title: MySQL
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: joomla-db
+
+benefits:
+  - title: Flexibility
+    description:
+      Create any kind of custom site with intuitive editing, flexible design
+      tools, and powerful features to manage it all.
+  - title: Customization
+    description:
+      Design anything you imagine. Start with a blank canvas or choose from a
+      wide variety of themes and patterns. Customize every detail, from color
+      and fonts to layouts and functionality.
+  - title: Ownership
+    description:
+      Your content, your design, and your data always belong to you. With Joomla
+      you’re free to tell your story, grow your brand, or simply be yourself.
+  - title: Stability and Security
+    description:
+      Built by an open source community with decades of experience, its
+      passionate contributors are committed to keeping Joomla as stable and
+      secure as possible.
+features: []
+tags:
+  - CMS
+  - Website Builder
+  - Blogging
+  - Site
