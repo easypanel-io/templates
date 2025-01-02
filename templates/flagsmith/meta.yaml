@@ -1,0 +1,68 @@
+name: Flagsmith
+description:
+  Flagsmith is a powerful, self-hosted service for feature flag management,
+  remote configuration, and experimentation. It provides a clean and simple
+  interface, supports integrations with various tools, and offers advanced
+  analytics for feature usage and experimentation results. With Flagsmith, you
+  can maintain control over your feature management and deployment process.
+instructions: null
+changeLog:
+  - date: 2025-01-01
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://docs.flagsmith.com/
+  - label: GitHub
+    url: https://github.com/Flagsmith/flagsmith
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: flagsmith
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lagsmith.docker.scarf.sh/flagsmith/flagsmith:latest
+benefits:
+  - title: Centralized Feature Management
+    description:
+      Manage feature flags across all your environments and applications from a
+      single platform.
+  - title: Remote Configuration
+    description:
+      Dynamically control application behavior without redeploying your code.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your data and feature management with a self-hosted
+      service.
+
+features:
+  - title: REST API
+    description:
+      Integrate Flagsmith with other tools using its flexible API for
+      programmatic access.
+  - title: Integrations
+    description:
+      Connect Flagsmith with tools like Slack, Segment, or GitHub for
+      streamlined workflows.
+  - title: Advanced Analytics
+    description:
+      Gain insights into feature usage, experiments, and configurations for
+      better decision-making.
+  - title: Multi-Environment Support
+    description:
+      Manage and deploy feature flags across multiple environments with ease.
+
+tags:
+  - Feature Flags
+  - Remote Configuration
+  - Analytics
+  - Self-Hosted
