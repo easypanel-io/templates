@@ -18,8 +18,8 @@ export function generate(input: Input): Output {
       env: [
         `DB_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `DB_ENABLE_SSL=false`,
-        `KEILA_USER=changeme@easypanel.io`,
-        `KEILA_PASSWORD=password123`,
+        `KEILA_USER=${input.username}`,
+        `KEILA_PASSWORD=${input.password}`,
         `URL_HOST=$(PRIMARY_DOMAIN)`,
         `URL_SCHEMA=https`,
         `SECRET_KEY_BASE=${secret}`,
