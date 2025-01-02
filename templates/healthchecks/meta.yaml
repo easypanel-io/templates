@@ -1,0 +1,121 @@
+name: Healthchecks.io
+description:
+  Healthchecks.io is an open-source application designed for monitoring cron
+  jobs, periodic tasks, and application endpoints. It provides a lightweight and
+  efficient way to ensure critical processes are running as expected.
+  Healthchecks.io integrates with a wide range of notification methods, allowing
+  users to be alerted when tasks fail to execute within their expected
+  intervals. With its user-friendly interface and robust feature set,
+  Healthchecks.io empowers users to maintain reliable task execution and system
+  monitoring.
+instructions: null
+changeLog:
+  - date: 2024-12-27
+    description: First Release
+links:
+  - label: Website
+    url: https://healthchecks.io
+  - label: Github
+    url: https://github.com/healthchecks/healthchecks
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - superUsername
+    - superPassword
+    - smtpHost
+    - smtpPort
+    - smtpHostUser
+    - smtpHostPassword
+    - enableTLS
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: healthchecks
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/healthchecks:3.9.20241224
+    superUsername:
+      type: string
+      title: Superuser Username
+      default: admin@example.com
+    superPassword:
+      type: string
+      title: Superuser Password
+      default: password
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.example.com
+    smtpPort:
+      type: integer
+      title: SMTP Port
+      default: 587
+    smtpHostUser:
+      type: string
+      title: SMTP Host Username
+      default: smtpUser
+    smtpHostPassword:
+      type: string
+      title: SMTP Host Password
+      default: smtpPassword
+    enableTLS:
+      type: boolean
+      title: Enable TLS
+      default: true
+benefits:
+  - title: Cron Job and Task Monitoring
+    description:
+      Healthchecks.io monitors cron jobs and periodic tasks, ensuring critical
+      operations run smoothly.
+  - title: Open-Source and Lightweight
+    description:
+      A free and open-source solution that is easy to deploy and customize for
+      your specific monitoring needs.
+  - title: Flexible Notifications
+    description:
+      Supports notifications via email, Slack, Telegram, and other integrations
+      for timely alerts.
+  - title: User-Friendly Interface
+    description:
+      Provides a clean and simple web dashboard for setting up and managing
+      checks.
+  - title: Self-Hosted Option
+    description:
+      Can be self-hosted for complete control over your monitoring data.
+features:
+  - title: Task Monitoring
+    description:
+      Tracks periodic tasks, ensuring they execute within expected timeframes.
+  - title: Notification Integrations
+    description:
+      Connects with popular notification channels for instant alerts when checks
+      fail.
+  - title: Grace Periods
+    description:
+      Configurable grace periods to account for minor delays in task execution.
+  - title: Multi-Check Management
+    description:
+      Monitor multiple tasks with unique checks and organize them into projects.
+  - title: Open-Source Community
+    description:
+      A thriving open-source community provides updates, support, and
+      enhancements.
+  - title: Easy Deployment
+    description:
+      Deployable with Docker and compatible with various hosting environments.
+tags:
+  - Task Monitoring
+  - Open-Source
+  - Cron Jobs
+  - System Monitoring
+  - Notifications
+  - Self-Hosted
+  - Alerting
+  - Health Monitoring
