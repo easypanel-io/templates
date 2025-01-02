@@ -1,0 +1,98 @@
+name: MySQL-Workbench
+description:
+  MySQL Workbench is a unified visual tool for database architects, developers,
+  and DBAs. It provides data modeling, SQL development, and comprehensive
+  database management capabilities for MySQL and MariaDB. With MySQL Workbench,
+  you can design and create new databases, reverse-engineer existing databases,
+  and perform complex migrations. It offers a visual query builder, a powerful
+  SQL editor, and support for data modeling and schema creation. MySQL Workbench
+  is a trusted, easy-to-use tool to streamline database operations and improve
+  productivity.
+instructions: null
+changeLog:
+  - date: 2024-12-30
+    description: First Release
+links:
+  - label: Website
+    url: https://www.mysql.com/products/workbench/
+  - label: Documentation
+    url: https://dev.mysql.com/doc/workbench/en/
+  - label: Github
+    url: https://github.com/mysql/mysql-workbench
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mysql-workbench
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/mysql-workbench:latest
+benefits:
+  - title: Unified Database Management
+    description:
+      MySQL Workbench integrates modeling, development, and administration into
+      a single tool for managing MySQL and MariaDB databases efficiently.
+  - title: Visual Data Modeling
+    description:
+      MySQL Workbench allows you to visually design and model your database
+      structure with ease, making it simple to create or reverse-engineer
+      schemas.
+  - title: Advanced SQL Editor
+    description:
+      It provides a powerful SQL editor with syntax highlighting, code
+      completion, and query execution for streamlined database management.
+  - title: Schema Synchronization
+    description:
+      MySQL Workbench helps you synchronize schemas across different databases
+      with a few clicks, reducing manual errors.
+  - title: Cross-Platform Support
+    description:
+      MySQL Workbench is available on Windows, macOS, and Linux, ensuring
+      cross-platform compatibility.
+features:
+  - title: Visual Query Builder
+    description:
+      Build and execute queries visually without writing complex SQL manually.
+  - title: Database Migration
+    description:
+      Migrate databases seamlessly between MySQL and other database systems like
+      PostgreSQL or Oracle.
+  - title: Performance Monitoring
+    description:
+      Monitor database performance metrics and optimize queries for improved
+      efficiency.
+  - title: Secure Connections
+    description:
+      Use SSH tunneling and SSL to establish secure connections with your
+      databases.
+  - title: Data Import & Export
+    description:
+      Easily import and export data in various formats like CSV and JSON.
+  - title: Data Modeling
+    description:
+      Create complex ER diagrams and visually design schemas for databases.
+  - title: Backup and Restore
+    description:
+      Create backups of your databases and restore them easily when needed.
+  - title: Open Source
+    description:
+      MySQL Workbench is open-source, making it accessible and customizable for
+      your needs.
+  - title: Collaboration Support
+    description:
+      Share models and configurations with your team to streamline
+      collaboration.
+tags:
+  - Database
+  - MySQL
+  - Development
+  - Administration
