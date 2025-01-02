@@ -1,0 +1,106 @@
+name: Nzbhydra2
+description:
+  NZBHydra2 is an advanced meta search application designed to unify and manage
+  searches across multiple Usenet and torrent indexers. It acts as a single
+  access point for all your NZB and torrent needs, aggregating search results
+  from various indexers to save time and improve efficiency. NZBHydra2 offers
+  powerful filtering, duplicate management, and easy integration with automation
+  tools like Sonarr, Radarr, and Lidarr. It provides a web-based interface for
+  seamless configuration and search management, making it a must-have for Usenet
+  and torrent enthusiasts.
+instructions: null
+changeLog:
+  - date: 2024-12-31
+    description: First Release
+links:
+  - label: Website
+    url: https://github.com/theotherp/nzbhydra2
+  - label: Documentation
+    url: https://github.com/theotherp/nzbhydra2/wiki
+  - label: Github
+    url: https://github.com/theotherp/nzbhydra2
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nzbhydra2
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/nzbhydra2:latest
+benefits:
+  - title: Unified Search
+    description:
+      NZBHydra2 consolidates search results from multiple Usenet and torrent
+      indexers, providing a single interface for all your search needs.
+  - title: Easy Integration
+    description:
+      Integrates seamlessly with popular automation tools like Sonarr, Radarr,
+      and Lidarr for an automated media setup.
+  - title: Advanced Filtering
+    description:
+      Powerful filtering options to refine search results and download only the
+      content you want.
+  - title: Duplicate Management
+    description:
+      Automatically identifies and removes duplicate results to avoid
+      unnecessary downloads.
+  - title: Web-Based Interface
+    description:
+      Manage and configure NZBHydra2 from any device using its user-friendly web
+      interface.
+features:
+  - title: Meta Search for NZBs and Torrents
+    description:
+      Search multiple Usenet and torrent indexers simultaneously from a single
+      application.
+  - title: Customizable Filters
+    description:
+      Set up custom filters to fine-tune search results and downloads based on
+      your preferences.
+  - title: Indexer Statistics
+    description:
+      View detailed statistics about indexer performance, including response
+      times and search results.
+  - title: Automation Tool Integration
+    description:
+      Works with Sonarr, Radarr, Lidarr, and other tools to automate downloading
+      and managing your media.
+  - title: Proxy Support
+    description:
+      Includes support for proxies to maintain privacy and bypass regional
+      restrictions.
+  - title: Logging and Notifications
+    description:
+      Comprehensive logging and notification options to keep you informed about
+      search results and downloads.
+  - title: Advanced Duplicate Handling
+    description:
+      Automatically detects and manages duplicates to avoid redundant downloads.
+  - title: Backup and Restore
+    description:
+      Easily backup and restore your NZBHydra2 settings for hassle-free
+      migration or recovery.
+  - title: Multi-Indexer Support
+    description:
+      Supports a wide range of Usenet and torrent indexers for comprehensive
+      search capabilities.
+  - title: Performance Optimization
+    description:
+      Optimized for high performance with fast search results and minimal
+      resource usage.
+tags:
+  - NZB
+  - Usenet
+  - Torrents
+  - Meta Search
+  - Automation
+  - Media Management
