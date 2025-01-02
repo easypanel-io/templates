@@ -1,0 +1,30 @@
+name: Slash
+description:
+  Slash is an open source, self-hosted platform designed to help you organize,
+  manage, and share your most important links. Easily create customizable,
+  human-readable shortcuts to streamline your link management. Use tags to
+  categorize your links and share them easily with your team or publicly.
+instructions: null
+changeLog:
+  - date: 2024-19-12
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/yourselfhosted/slash
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: slash
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: yourselfhosted/slash
