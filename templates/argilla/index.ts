@@ -6,6 +6,12 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
 
+  const common_envs = [
+    `ARGILLA_ELASTICSEARCH=http://$(PROJECT_NAME)_${input.appServiceName}-elasticsearch:9200`,
+    `ARGILLA_DATABASE_URL=postgresql+asyncpg://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `ARGILLA_REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
+  ];
+
   services.push({
     type: "app",
     data: {
@@ -16,9 +22,7 @@ export function generate(input: Input): Output {
       },
       env: [
         `ARGILLA_HOME_PATH=/var/lib/argilla`,
-        `ARGILLA_ELASTICSEARCH=http://$(PROJECT_NAME)_${input.appServiceName}-elasticsearch:9200`,
-        `ARGILLA_DATABASE_URL=postgresql+asyncpg://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-        `ARGILLA_REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
+        common_envs.join("\n"),
         `USERNAME=${input.loginUsername}`,
         `PASSWORD=${input.loginPassword}`,
         `API_KEY=argilla.apikey`,
@@ -55,9 +59,7 @@ export function generate(input: Input): Output {
       env: [
         `BACKGROUND_NUM_WORKERS=2`,
         `ARGILLA_HOME_PATH=/var/lib/argilla`,
-        `ARGILLA_ELASTICSEARCH=http://$(PROJECT_NAME)_${input.appServiceName}-elasticsearch:9200`,
-        `ARGILLA_DATABASE_URL=postgresql+asyncpg://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-        `ARGILLA_REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
+        common_envs.join("\n"),
       ].join("\n"),
       mounts: [
         {
