@@ -1,0 +1,78 @@
+name: Invidious
+description:
+  Invidious is a privacy-respecting alternative frontend for YouTube, designed
+  to offer a lightweight, ad-free, and tracking-free viewing experience. It
+  allows users to watch YouTube videos without being tracked, bypasses regional
+  restrictions, and provides advanced features like video downloads,
+  subscription management, and audio-only mode. Invidious supports multiple
+  languages and offers a minimal interface with various themes for enhanced user
+  experience. Additionally, it integrates seamlessly with other platforms by
+  providing RSS feeds for subscriptions and API support.
+instructions: null
+changeLog:
+  - date: 2024-01-03
+    description: First release
+links:
+  - label: Website
+    url: https://invidious.io/
+  - label: Documentation
+    url: https://docs.invidious.io/
+  - label: GitHub
+    url: https://github.com/iv-org/invidious
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: invidious
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: quay.io/invidious/invidious:dbee027ed9b568469815b319332e029964bff7fb-quic
+benefits:
+  - title: Ad-Free and Privacy-Respecting
+    description:
+      Invidious allows users to watch YouTube videos without ads or tracking,
+      ensuring a private and seamless experience.
+  - title: Lightweight and Fast
+    description:
+      Designed for efficiency, Invidious consumes minimal resources, making it
+      ideal for low-powered devices or self-hosting.
+  - title: Enhanced Accessibility
+    description:
+      Offers features like video downloads, audio-only mode, and support for RSS
+      feeds, enabling users to access content in flexible ways.
+features:
+  - title: Ad-Free Video Playback
+    description:
+      Watch YouTube videos without interruptions from ads or intrusive tracking
+      scripts.
+  - title: Audio-Only Mode
+    description:
+      Save bandwidth by streaming only the audio of videos, perfect for music or
+      podcasts.
+  - title: Subscription Management
+    description:
+      Keep track of your favorite channels with subscription management,
+      available via  RSS feeds for external readers.
+  - title: Customizable Themes
+    description:
+      Personalize your experience with various themes and a clean, minimal
+      interface.
+  - title: Open Source and Community-Driven
+    description:
+      Invidious is free and open source, with active contributions from a
+      vibrant community.
+tags:
+  - Privacy
+  - YouTube Alternative
+  - Open Source
+  - Video Streaming
+  - Lightweight
