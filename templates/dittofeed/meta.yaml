@@ -1,0 +1,127 @@
+name: Dittofeed
+description:
+  Dittofeed is an advanced, self-hosted customer engagement platform designed to
+  streamline and enhance your marketing automation workflows. It empowers
+  businesses with real-time insights, robust data-driven personalization, and
+  multi-channel communication tools, including email, SMS, and push
+  notifications. Dittofeed offers a user-friendly interface, powerful API
+  integrations, and extensive customization options, making it ideal for
+  organizations of all sizes. By providing a self-hosted solution, Dittofeed
+  ensures data privacy and compliance while giving you full control over your
+  infrastructure and customer data.
+instructions: null
+changeLog:
+  - date: 2025-01-03
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://docs.dittofeed.com/introduction
+  - label: Github
+    url: https://github.com/dittofeed/dittofeed
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - clickHouseImage
+    - minioImage
+    - temporalImage
+    - temporalUiImage
+    - defaultWorkspaceName
+    - dittofeedPassword
+    - clickHouseUser
+    - clickHousePassword
+    - minioUser
+    - minioPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dittofeed
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dittofeed/dittofeed-lite:v0.19.0
+    clickHouseImage:
+      type: string
+      title: Clickhouse Service Image
+      default: clickhouse/clickhouse-server:23.8.8.20-alpine
+    minioImage:
+      type: string
+      title: Minio Service Image
+      default: minio/minio:latest
+    temporalImage:
+      type: string
+      title: Temporal Service Image
+      default: temporalio/auto-setup:1.22.4
+    temporalUiImage:
+      type: string
+      title: Temporal UI Service Image
+      default: temporalio/ui:2.22.1
+    defaultWorkspaceName:
+      type: string
+      title: Default Workspace Name
+      default: default
+    dittofeedPassword:
+      type: string
+      title: Dittofeed Password
+      default: admin12345
+    clickHouseUser:
+      type: string
+      title: Click House User
+      default: clickhouse
+    clickHousePassword:
+      type: string
+      title: Click House Password
+      default: clickhouse
+    minioUser:
+      type: string
+      title: Minio User
+      default: admin
+    minioPassword:
+      type: string
+      title: Minio Password
+      default: password
+benefits:
+  - title: Streamlined Marketing Automation
+    description:
+      Dittofeed simplifies customer engagement by providing an intuitive way to
+      manage, analyze, and optimize your marketing workflows across multiple
+      channels.
+  - title: Self-Hosted Flexibility
+    description:
+      Maintain full control over your customer data and operations with a
+      self-hosted setup that ensures privacy and compliance.
+  - title: Enhanced Customer Insights
+    description:
+      Gain valuable insights into customer behavior and engagement with detailed
+      analytics and reporting tools.
+
+features:
+  - title: Powerful API Access
+    description:
+      Seamlessly integrate Dittofeed into your existing systems using its robust
+      API for efficient data handling and personalized communications.
+  - title: Multi-Channel Communication
+    description:
+      Engage with customers through email, SMS, push notifications, and other
+      channels, all from a unified platform.
+  - title: Customizable Campaigns
+    description:
+      Tailor your marketing campaigns with dynamic content, audience
+      segmentation, and automated triggers to maximize engagement.
+  - title: Real-Time Analytics
+    description:
+      Monitor campaign performance with real-time metrics, user interactions,
+      and conversion tracking for data-driven decision-making.
+
+tags:
+  - Marketing Automation
+  - Self-Hosted
+  - Customer Engagement
+  - Multi-Channel
+  - Real-Time Analytics
