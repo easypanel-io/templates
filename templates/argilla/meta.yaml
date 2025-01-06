@@ -1,0 +1,99 @@
+name: Argilla
+description:
+  Argilla is a robust platform designed to help engineers and data scientists
+  streamline the management of machine learning data workflows. It simplifies
+  tasks like data labeling, annotation, and quality control, making it easier
+  for businesses to build and maintain high-quality datasets for AI and machine
+  learning projects. Argilla supports efficient collaboration, integrates
+  seamlessly with popular ML frameworks, and provides a user-friendly interface
+  for creating structured datasets. Its open-source nature ensures transparency,
+  flexibility, and the ability to self-host for maximum control over your data
+  and workflows.
+instructions: null
+changeLog:
+  - date: 2024-12-21
+    description: First Release
+links:
+  - label: Website
+    url: https://www.argilla.io/
+  - label: Documentation
+    url: https://docs.argilla.io/
+  - label: Github
+    url: https://github.com/argilla-io/argilla
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - elasticsearchServiceImage
+    - loginUsername
+    - loginPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: argilla
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: argilla/argilla-server:latest
+    elasticsearchServiceImage:
+      type: string
+      title: Elasticsearch Service Image
+      default: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
+    loginUsername:
+      type: string
+      title: Login User Name
+      default: argilla
+    loginPassword:
+      type: string
+      title: Login Password
+      default: password
+      description: This password should be 8 characters long
+benefits:
+  - title: Streamlined Data Workflows
+    description:
+      Argilla simplifies the management of machine learning data workflows,
+      enabling teams to efficiently annotate, label, and maintain high-quality
+      datasets. This helps accelerate AI and ML projects.
+  - title: Enhanced Collaboration
+    description:
+      With Argilla, teams can collaborate seamlessly on dataset creation and
+      management. It provides intuitive tools to ensure consistency and quality
+      in data workflows.
+  - title: Integration with ML Frameworks
+    description:
+      Argilla integrates effortlessly with popular machine learning frameworks
+      and tools, allowing you to easily use your datasets in training and
+      evaluation pipelines.
+features:
+  - title: Data Annotation and Labeling
+    description:
+      Argilla offers advanced tools for annotating and labeling datasets with a
+      user-friendly interface. These features ensure your datasets are accurate
+      and ready for machine learning.
+  - title: Workflow Automation
+    description:
+      Automate repetitive tasks in your data workflows to save time and focus on
+      building intelligent systems. Argilla enables automated quality control
+      and monitoring of datasets.
+  - title: Flexible Deployment
+    description:
+      Argilla is open-source and can be self-hosted, providing flexibility and
+      control over your data and infrastructure. Its design ensures privacy and
+      security.
+  - title: Version Control for Datasets
+    description:
+      Manage and track changes in your datasets with built-in version control,
+      allowing you to maintain an organized history of dataset modifications.
+  - title: Secure and Private
+    description:
+      Argilla prioritizes security and privacy, with features like self-hosting,
+      encrypted connections, and full transparency in its open-source codebase.
+tags:
+  - Machine Learning
+  - Data Labeling
+  - AI Tools
