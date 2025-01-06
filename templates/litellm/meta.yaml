@@ -1,0 +1,85 @@
+name: LiteLLM
+description:
+  YOURLS (Your Own URL Shortener) is a powerful, self-hosted service designed
+  for creating and managing short URLs. It provides a clean and simple
+  interface, supports plugins for extended functionality, and offers detailed
+  link tracking analytics. With YOURLS, you can maintain control over your short
+  links and branding. The application is accessible via your host on ports 8080
+  and 8081. This container is based on Docker Baseimage KasmVNC, providing
+  additional environment variables and configurations for enhanced flexibility.
+  It also supports the docker manifest for multi-platform awareness, ensuring
+  the correct image for your architecture.
+
+instructions: Use admin:admin123 to login.
+
+changeLog:
+  - date: 2024-10-17
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://yourls.org/#Guide
+  - label: Github
+    url: https://github.com/YOURLS/YOURLS
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - masterKey
+    - saltKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: litellm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/berriai/litellm:main-latest
+    masterKey:
+      type: string
+      title: Master Key
+      default: sk-1234
+    saltKey:
+      type: string
+      title: Salt Key
+      default: sk-1234
+benefits:
+  - title: Simple URL Management
+    description:
+      YOURLS allows you to create, manage, and track short URLs easily through
+      its web interface or API.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your links with a self-hosted service, ensuring privacy
+      and flexibility.
+  - title: Custom Branding
+    description:
+      Customize your short links with your own domain to enhance branding and
+      credibility.
+
+features:
+  - title: API Access
+    description:
+      Integrate YOURLS with other tools using its flexible API for programmatic
+      access.
+  - title: Plugins Support
+    description:
+      Extend YOURLS functionality with various community-built plugins.
+  - title: Analytics Dashboard
+    description:
+      Get detailed insights into clicks, referrers, and geographical data.
+  - title: Custom Links
+    description:
+      Create personalized short links with custom slugs for better memorability.
+
+tags:
+  - URL Shortener
+  - Self-Hosted
+  - Analytics
