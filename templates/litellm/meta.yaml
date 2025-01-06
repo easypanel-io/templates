@@ -23,8 +23,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - masterKey
-    - saltKey
   properties:
     appServiceName:
       type: string
@@ -34,14 +32,6 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/berriai/litellm:main-latest
-    masterKey:
-      type: string
-      title: Master Key
-      default: sk-1234
-    saltKey:
-      type: string
-      title: Salt Key
-      default: sk-1234
 benefits:
   - title: Easy Integration
     description:
