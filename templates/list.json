@@ -102,6 +102,20 @@
     ]
   },
   {
+    "slug": "anythingllm",
+    "logo": "logo.png",
+    "name": "Anything-LLM",
+    "description": "Anything-LLM is an open-source, AI-powered platform that enables users to leverage Large Language Models (LLMs) for creating, managing, and querying custom knowledge bases. It provides seamless integration with OpenAI services, offering a robust, flexible, and extensible environment for LLM-driven applications. Ideal for developers and organizations, Anything-LLM streamlines the deployment of intelligent AI solutions.",
+    "tags": [
+      "Large Language Models",
+      "Knowledge Base",
+      "OpenAI Integration",
+      "Customizable",
+      "Open Source",
+      "AI-Powered"
+    ]
+  },
+  {
     "slug": "appsmith",
     "logo": "logo.png",
     "name": "Appsmith",
@@ -116,6 +130,17 @@
     "name": "Appwrite",
     "description": "Appwrite is an open-source backend as a service server that abstracts and simplifies complex and repetitive development tasks behind a very simple to use REST API.",
     "tags": []
+  },
+  {
+    "slug": "argilla",
+    "logo": "logo.svg",
+    "name": "Argilla",
+    "description": "Argilla is a robust platform designed to help engineers and data scientists streamline the management of machine learning data workflows. It simplifies tasks like data labeling, annotation, and quality control, making it easier for businesses to build and maintain high-quality datasets for AI and machine learning projects. Argilla supports efficient collaboration, integrates seamlessly with popular ML frameworks, and provides a user-friendly interface for creating structured datasets. Its open-source nature ensures transparency, flexibility, and the ability to self-host for maximum control over your data and workflows.",
+    "tags": [
+      "Machine Learning",
+      "Data Labeling",
+      "AI Tools"
+    ]
   },
   {
     "slug": "audiobookshelf",
@@ -320,7 +345,7 @@
     "slug": "chevereto",
     "logo": "logo.png",
     "name": "Chevereto",
-    "description": "Chevereto is a powerful, self-hosted image hosting platform designed for individuals, communities, and businesses. It allows users to upload, organize, and share images effortlessly. With a clean interface and a wide range of customization options, Chevereto supports private albums, multi-language capabilities, and robust file management, making it the ultimate solution for image hosting.",
+    "description": "Chevereto is a powerful, self-hosted image and video hosting platform designed for individuals, communities, and businesses. It allows users to upload, organize, and share media effortlessly. With a clean interface and a wide range of customization options, Chevereto supports private albums, multi-language capabilities, and robust file management, making it the ultimate solution for image and video hosting.",
     "tags": [
       "Image Hosting",
       "File Management",
@@ -346,6 +371,17 @@
     "tags": [
       "Databases",
       "Analytics"
+    ]
+  },
+  {
+    "slug": "cloud9",
+    "logo": "logo.png",
+    "name": "Cloud9",
+    "description": "Cloud9 is a cloud-based integrated development environment (IDE) designed for developers to code, build, and debug applications collaboratively in real time. It supports a wide range of programming languages and provides a full-featured development environment directly in the browser. Cloud9 allows developers to work on their projects from anywhere, using any device, with the power of a full Linux server behind it. It includes features like built-in terminal, code editor, and support for debugging and running applications seamlessly. Cloud9 is trusted by developers for its efficiency, collaboration tools, and ability to streamline the development workflow.",
+    "tags": [
+      "IDE",
+      "Development",
+      "Cloud-Based"
     ]
   },
   {
@@ -504,6 +540,17 @@
     ]
   },
   {
+    "slug": "daapd",
+    "logo": "logo.png",
+    "name": "Daapd",
+    "description": "Daapd is a robust, open-source DAAP (Digital Audio Access Protocol) server that allows users to share music libraries over a network. It is designed to work seamlessly with iTunes, Roku SoundBridges, and other DAAP clients, providing an efficient and reliable way to stream audio content across devices. Daapd also supports streaming internet radio, podcasts, and AirPlay devices. With its powerful backend, Daapd ensures smooth performance, a wide range of supported formats, and advanced features like library management and transcoding.",
+    "tags": [
+      "DAAP",
+      "Music Server",
+      "Audio Streaming"
+    ]
+  },
+  {
     "slug": "dashdot",
     "logo": "logo.png",
     "name": "Dashdot",
@@ -539,6 +586,19 @@
     "tags": []
   },
   {
+    "slug": "dillinger",
+    "logo": "logo.png",
+    "name": "Dillinger",
+    "description": "Dillinger is an open-source, online Markdown editor designed to provide a seamless and user-friendly experience for writing and editing Markdown files. With its intuitive interface, Dillinger supports real-time preview, file imports/exports, and integration with popular cloud storage services such as Dropbox, Google Drive, GitHub, and OneDrive. It allows users to write Markdown efficiently and export their work in various formats, including HTML, PDF, and Markdown itself. Dillinger operates as a modern, distraction-free editor that simplifies writing and content creation for developers, writers, and professionals.",
+    "tags": [
+      "Markdown Editor",
+      "Content Creation",
+      "Productivity Tools",
+      "Cloud Integration",
+      "File Management"
+    ]
+  },
+  {
     "slug": "directus",
     "logo": "logo.png",
     "name": "Directus",
@@ -550,6 +610,19 @@
     ]
   },
   {
+    "slug": "dittofeed",
+    "logo": "logo.png",
+    "name": "Dittofeed",
+    "description": "Dittofeed is an advanced, self-hosted customer engagement platform designed to streamline and enhance your marketing automation workflows. It empowers businesses with real-time insights, robust data-driven personalization, and multi-channel communication tools, including email, SMS, and push notifications. Dittofeed offers a user-friendly interface, powerful API integrations, and extensive customization options, making it ideal for organizations of all sizes. By providing a self-hosted solution, Dittofeed ensures data privacy and compliance while giving you full control over your infrastructure and customer data.",
+    "tags": [
+      "Marketing Automation",
+      "Self-Hosted",
+      "Customer Engagement",
+      "Multi-Channel",
+      "Real-Time Analytics"
+    ]
+  },
+  {
     "slug": "docker-registry",
     "logo": "logo.png",
     "name": "Docker Registry",
@@ -557,6 +630,17 @@
     "tags": [
       "Developer Tools",
       "Databases"
+    ]
+  },
+  {
+    "slug": "docmost",
+    "logo": "logo.png",
+    "name": "Docmost",
+    "description": "Docmost is a secure and versatile self-hosted platform for document management and collaboration. It enables organizations to efficiently store, manage, and share documents while maintaining complete control over their data. Docmost is built to streamline workflows, enhance team collaboration, and ensure data privacy. It provides an intuitive interface and robust features for document editing, version control, and seamless integrations with other tools and services. Designed for businesses of all sizes, Docmost empowers teams to work smarter and more securely.",
+    "tags": [
+      "Document Management",
+      "Collaboration",
+      "Self-Hosted"
     ]
   },
   {
@@ -584,6 +668,22 @@
     "description": "DokuWiki is a highly versatile, open-source wiki software that is simple to use and doesn't require a database. It is known for its clean and readable syntax, making it a favorite among administrators due to its ease of maintenance, backup, and integration. DokuWiki is equipped with built-in access controls and authentication connectors, making it particularly useful in an enterprise context. It supports a wide range of use cases beyond a traditional wiki, thanks to the large number of plugins available. DokuWiki is designed for collaboration, allowing quick updates and easy addition of new pages while maintaining a history of every change. It can be used as a corporate knowledge base, private notebook, software manual, project workspace, CMS, intranet, and more. DokuWiki supports customization at all levels of expertise, from easy configuration via the admin interface to developing your own extensions.",
     "tags": [
       "Wiki"
+    ]
+  },
+  {
+    "slug": "dolibarr",
+    "logo": "logo.png",
+    "name": "Dolibarr",
+    "description": "Dolibarr ERP/CRM is an open-source platform designed for small to medium-sized enterprises (SMEs) to manage business operations seamlessly. It offers a comprehensive suite of tools for managing customers, invoices, orders, products, projects, and more. With its modular architecture and user-friendly interface, Dolibarr provides flexibility and scalability for businesses looking for an efficient and customizable ERP/CRM solution.",
+    "tags": [
+      "ERP",
+      "CRM",
+      "Open Source",
+      "Invoicing",
+      "Inventory Management",
+      "Project Management",
+      "Small Business",
+      "Customizable"
     ]
   },
   {
@@ -627,6 +727,19 @@
       "Developer Tools",
       "Continuous Integration",
       "Automation"
+    ]
+  },
+  {
+    "slug": "drupal",
+    "logo": "logo.png",
+    "name": "Drupal",
+    "description": "Drupal is a powerful open-source content management system (CMS) designed to help you create and manage complex, dynamic websites with ease. Drupal is highly customizable, offering robust tools for managing content, users, permissions, and workflows. It supports custom themes, modules, and integrations, enabling you to create tailored experiences for any type of website, from blogs and portfolios to eCommerce platforms and enterprise-level solutions. Drupal prioritizes flexibility, scalability, and security, making it a preferred choice for developers, businesses, and organizations worldwide.",
+    "tags": [
+      "Content Management",
+      "Website Development",
+      "Open Source",
+      "Enterprise CMS",
+      "Modular Architecture"
     ]
   },
   {
@@ -684,6 +797,17 @@
       "Automation",
       "Data Recovery",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "emby-stat",
+    "logo": "logo.png",
+    "name": "Emby-Stat",
+    "description": "Emby-Stat is an advanced statistics and analytics tool for Emby and Jellyfin media servers. It allows you to gain deeper insights into your media library, viewing habits, and server usage. With detailed statistics and customizable reports, Emby-Stat helps you visualize and analyze your media server data effectively. It also provides a user-friendly interface to track playback history, top media consumption trends, and server activity over time. Emby-Stat integrates seamlessly with Emby, giving you the ability to enhance your media management with data-driven decisions.",
+    "tags": [
+      "Media",
+      "Analytics",
+      "Statistics"
     ]
   },
   {
@@ -799,6 +923,18 @@
     ]
   },
   {
+    "slug": "flagsmith",
+    "logo": "logo.png",
+    "name": "Flagsmith",
+    "description": "Flagsmith is a powerful, self-hosted service for feature flag management, remote configuration, and experimentation. It provides a clean and simple interface, supports integrations with various tools, and offers advanced analytics for feature usage and experimentation results. With Flagsmith, you can maintain control over your feature management and deployment process.",
+    "tags": [
+      "Feature Flags",
+      "Remote Configuration",
+      "Analytics",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "flame",
     "logo": "logo.png",
     "name": "Flame",
@@ -851,6 +987,17 @@
       "Project Management",
       "Collaboration",
       "Task Management"
+    ]
+  },
+  {
+    "slug": "forgejo",
+    "logo": "logo.svg",
+    "name": "Forgejo",
+    "description": "Forgejo is a community-driven, lightweight, and self-hosted Git service that offers a seamless platform for managing repositories, collaborating on code, and controlling your versioning needs. As a fork of Gitea, Forgejo builds on a solid foundation and enhances features with contributions from a vibrant community. It supports all major platforms, including Linux, macOS, Windows, and ARM-based systems. Forgejo is lightweight, extensible, and easy to set up, making it an excellent choice for individuals and teams looking for a self-hosted Git service. Its open-source nature ensures privacy, transparency, and the flexibility to self-host for maximum control.",
+    "tags": [
+      "Code Hosting",
+      "Self-Hosted",
+      "Git Service"
     ]
   },
   {
@@ -925,6 +1072,19 @@
     ]
   },
   {
+    "slug": "glances",
+    "logo": "logo.png",
+    "name": "Glances",
+    "description": "Glances is a cross-platform, real-time system monitoring tool designed to offer a unified view of your system's performance and health. It provides an intuitive interface that displays critical information, including CPU usage, memory, disk I/O, network activity, and more. Built to work seamlessly on Linux, macOS, Windows, and ARM-based systems, Glances is highly extensible with plugins and supports remote monitoring via a web-based UI or API. With its open-source foundation, Glances ensures transparency and flexibility, making it a perfect choice for individuals and teams looking for a lightweight yet powerful monitoring solution.",
+    "tags": [
+      "System Monitoring",
+      "Real-Time Metrics",
+      "Open Source",
+      "Cross-Platform",
+      "Extensible"
+    ]
+  },
+  {
     "slug": "glitchtip",
     "logo": "logo.png",
     "name": "GlitchTip",
@@ -933,6 +1093,21 @@
       "Monitoring",
       "Developer Tools",
       "Logging"
+    ]
+  },
+  {
+    "slug": "glpi",
+    "logo": "logo.png",
+    "name": "GLPI",
+    "description": "GLPI (Gestionnaire Libre de Parc Informatique) is a powerful IT asset management and help desk software designed to streamline IT operations. It offers features like inventory management, ticketing, and reporting, making it an ideal solution for IT teams. With its robust plugin support and user-friendly interface, GLPI provides extensive customization options to adapt to various organizational needs. This containerized version is based on Docker Baseimage KasmVNC, ensuring smooth multi-platform support and flexible deployment.",
+    "tags": [
+      "IT Asset Management",
+      "Help Desk",
+      "Ticketing",
+      "Customization",
+      "Reporting",
+      "Plugins",
+      "IT Operations"
     ]
   },
   {
@@ -1024,6 +1199,38 @@
     ]
   },
   {
+    "slug": "grocy",
+    "logo": "logo.svg",
+    "name": "Grocy",
+    "description": "Grocy is a self-hosted groceries and household management solution. It helps you streamline your daily chores, track inventory, manage shopping lists, plan meals, and keep tabs on household tasks. With Grocy, you can efficiently manage your pantry, reduce waste, and optimize your shopping experience. Grocy provides a user-friendly interface to organize your household activities and track consumables with expiration dates, giving you better control over your time and resources.",
+    "tags": [
+      "ERP",
+      "Groceries",
+      "Household Management",
+      "Inventory",
+      "Meal Planning",
+      "Tasks"
+    ]
+  },
+  {
+    "slug": "habridge",
+    "logo": "logo.png",
+    "name": "Habridge",
+    "description": "Habridge is an open-source software solution that emulates Philips Hue bridges, enabling the integration of various smart devices with home automation systems. It provides a simple yet powerful interface for controlling and managing smart lights, switches, and other IoT devices. Habridge supports a wide range of integrations, including Amazon Alexa, Google Home, and custom APIs, allowing users to create a seamless smart home experience. With its focus on flexibility and ease of use, Habridge empowers users to control their home automation setup with precision and efficiency.",
+    "tags": [
+      "Smart Home",
+      "Home Automation",
+      "IoT",
+      "Device Integration",
+      "Open-Source",
+      "Alexa Integration",
+      "Google Home Integration",
+      "Custom Commands",
+      "Philips Hue Emulation",
+      "Voice-Controlled Automation"
+    ]
+  },
+  {
     "slug": "hackmdio",
     "logo": "logo.png",
     "name": "HackMD",
@@ -1075,6 +1282,39 @@
     ]
   },
   {
+    "slug": "headphones",
+    "logo": "logo.png",
+    "name": "Headphones",
+    "description": "Headphones is an open-source application designed to manage and organize your music library with precision and efficiency. It provides a powerful interface for searching, downloading, and managing albums and tracks, ensuring your music collection is always up-to-date. Headphones integrates seamlessly with popular media servers and download clients, offering an automated solution for music enthusiasts. With its focus on flexibility and ease of use, Headphones empowers users to curate their music library effortlessly.",
+    "tags": [
+      "Music Management",
+      "Open-Source",
+      "Automated Downloads",
+      "Media Servers",
+      "Plex Integration",
+      "Emby Integration",
+      "Metadata Management",
+      "Music Library",
+      "Music Automation"
+    ]
+  },
+  {
+    "slug": "healthchecks",
+    "logo": "logo.svg",
+    "name": "Healthchecks.io",
+    "description": "Healthchecks.io is an open-source application designed for monitoring cron jobs, periodic tasks, and application endpoints. It provides a lightweight and efficient way to ensure critical processes are running as expected. Healthchecks.io integrates with a wide range of notification methods, allowing users to be alerted when tasks fail to execute within their expected intervals. With its user-friendly interface and robust feature set, Healthchecks.io empowers users to maintain reliable task execution and system monitoring.",
+    "tags": [
+      "Task Monitoring",
+      "Open-Source",
+      "Cron Jobs",
+      "System Monitoring",
+      "Notifications",
+      "Self-Hosted",
+      "Alerting",
+      "Health Monitoring"
+    ]
+  },
+  {
     "slug": "hedgedoc",
     "logo": "logo.png",
     "name": "HedgeDoc",
@@ -1092,6 +1332,23 @@
     "description": "Heimdall Application Dashboard is a versatile and visually pleasing dashboard for all your web applications. It provides a simple and elegant interface where you can add links to any web application or site you frequently use. The app is designed with simplicity in mind, avoiding the trap of over-complication that many projects fall into. With Heimdall, you can add a link to anything, whether it's intrinsically supported or not, by simply filling in the name, background color, and the link URL. The app also supports Foundation and Enhanced apps. Foundation apps are those supported by Heimdall, and Enhanced apps are like Foundation apps but with the added feature of displaying extra information automatically by entering API credentials. Heimdall is all about making your web application experience smooth, simple, and enjoyable.",
     "tags": [
       "Dashboard"
+    ]
+  },
+  {
+    "slug": "heyform",
+    "logo": "logo.png",
+    "name": "HeyForm",
+    "description": "HeyForm is an open-source form builder platform designed to create, manage, and share forms with ease. It simplifies form creation workflows for businesses, developers, and individuals by offering intuitive UI components and backend management. HeyForm provides robust support for form encryption, session management, and integrations with third-party services like MongoDB and Redis. Its flexible API allows developers to customize and extend functionalities while ensuring data security. HeyForm's clean design and modular architecture make it scalable and adaptable for growing business needs, enabling effective form creation, storage, and analysis.",
+    "tags": [
+      "Form Builder",
+      "Form Encryption",
+      "MongoDB Integration",
+      "Redis Integration",
+      "API-Driven",
+      "Scalable Architecture",
+      "Multi-Tenancy",
+      "Notifications",
+      "Data Security"
     ]
   },
   {
@@ -1122,6 +1379,19 @@
       "Home Automation",
       "Open Source",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "homepage",
+    "logo": "logo.png",
+    "name": "Homepage",
+    "description": "Homepage is a self-hosted dashboard designed to provide a centralized hub for accessing and managing your server and web services. With an intuitive and customizable interface, Homepage makes it easy to organize links, monitor system health, and view important metrics in one place. It supports a wide range of integrations, including Docker, Kubernetes, and popular web services, making it an ideal tool for individuals and teams looking to streamline access and management of their infrastructure. Being open-source, Homepage offers transparency, flexibility, and control to users.",
+    "tags": [
+      "Dashboard",
+      "Self-Hosted",
+      "Open Source",
+      "Customizable",
+      "Infrastructure Management"
     ]
   },
   {
@@ -1178,6 +1448,19 @@
     ]
   },
   {
+    "slug": "invidious",
+    "logo": "logo.svg",
+    "name": "Invidious",
+    "description": "Invidious is a privacy-respecting alternative frontend for YouTube, designed to offer a lightweight, ad-free, and tracking-free viewing experience. It allows users to watch YouTube videos without being tracked, bypasses regional restrictions, and provides advanced features like video downloads, subscription management, and audio-only mode. Invidious supports multiple languages and offers a minimal interface with various themes for enhanced user experience. Additionally, it integrates seamlessly with other platforms by providing RSS feeds for subscriptions and API support.",
+    "tags": [
+      "Privacy",
+      "YouTube Alternative",
+      "Open Source",
+      "Video Streaming",
+      "Lightweight"
+    ]
+  },
+  {
     "slug": "invoiceninja",
     "logo": "logo.png",
     "name": "InvoiceNinja",
@@ -1218,6 +1501,19 @@
     "description": "IT-Tools is a comprehensive suite of handy tools designed to assist developers in their day-to-day tasks. It includes a wide range of features such as Crypto Token generator, Hash text Bcrypt, UUIDs v4 generator, Encrypt/Decrypt text, BIP39 passphrase generator, and many more. The app also offers various converters like Date-time converter, Integer base converter, Roman numeral converter, and Base64 string encoder/decoder among others. It provides a platform for developers to generate QR codes, SVG placeholders, and even record videos from their camera. With additional features like Git cheatsheet, Random port generator, Crontab generator, and JSON prettify and format, IT-Tools is a one-stop solution for all developer needs.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "jackett",
+    "logo": "logo.png",
+    "name": "Jackett",
+    "description": "Jackett is a versatile, open-source indexer proxy for torrenting and Usenet, enabling users to integrate popular trackers with applications like Sonarr, Radarr, and more. Designed to be lightweight and efficient, Jackett streamlines the process of accessing trackers, offering a seamless experience for managing and automating downloads.",
+    "tags": [
+      "Torrenting",
+      "Usenet",
+      "Indexer Proxy",
+      "Open-Source",
+      "Automation"
     ]
   },
   {
@@ -1321,6 +1617,41 @@
     ]
   },
   {
+    "slug": "kicad",
+    "logo": "logo.png",
+    "name": "KiCad",
+    "description": "KiCad is an open-source software suite for electronic design automation (EDA), enabling the design and simulation of electronic circuits and printed circuit boards (PCBs). It provides a comprehensive set of tools for schematic capture, PCB layout, and 3D visualization. KiCad supports extensive libraries of components and footprints, allowing designers to create custom designs with ease. Its robust features, such as design rule checking, netlist generation, and Gerber export, make it a preferred choice for professionals and hobbyists alike. With a focus on flexibility and open-source principles, KiCad empowers users to bring their electronic design projects to life.",
+    "tags": [
+      "Electronic Design Automation",
+      "PCB Design",
+      "Schematic Capture",
+      "3D Visualization",
+      "Open-Source",
+      "Component Libraries",
+      "Gerber Export",
+      "Design Rule Checking",
+      "Multi-Layer Boards",
+      "Circuit Simulation"
+    ]
+  },
+  {
+    "slug": "killbill",
+    "logo": "logo.png",
+    "name": "KillBill",
+    "description": "KillBill is an open-source subscription billing and payment platform designed to simplify complex billing workflows for SaaS and other businesses. It provides robust support for recurring billing, invoicing, and payment management while offering flexibility for customization. KillBill ensures seamless integration with third-party payment gateways, making it adaptable for global payment needs. It supports multiple plugins to extend functionality, enabling businesses to manage tax compliance, analytics, notifications, and more. The platform's Kaui UI offers an intuitive administrative console for managing subscriptions, invoices, payments, and tenants. KillBill's API-driven design allows developers to customize and automate every aspect of the billing process. Its modular architecture ensures it can scale with the growing needs of businesses, providing robust tools for revenue management.",
+    "tags": [
+      "Subscription Management",
+      "Recurring Billing",
+      "Invoicing",
+      "Payment Management",
+      "API-Driven",
+      "Extensible Plugins",
+      "Multi-Tenancy",
+      "Kaui Admin Console",
+      "Revenue Management"
+    ]
+  },
+  {
     "slug": "kimai",
     "logo": "logo.png",
     "name": "Kimai",
@@ -1370,6 +1701,19 @@
     ]
   },
   {
+    "slug": "kuzzle",
+    "logo": "logo.png",
+    "name": "Kuzzle",
+    "description": "Kuzzle is a free and open-source backend platform designed to accelerate the development of web, mobile, and Internet of Things (IoT) applications. It provides real-time features, multi-protocol API support, and robust user management, enabling developers to focus on building high-level business functionalities. Kuzzle is fully customizable through plugins and offers client SDKs for seamless integration with various platforms. Its flexibility and scalability make it an ideal choice for IoT, geolocation, and enterprise applications.",
+    "tags": [
+      "Backend",
+      "IoT",
+      "Real-Time",
+      "API",
+      "Geolocation"
+    ]
+  },
+  {
     "slug": "langflow",
     "logo": "logo.png",
     "name": "Langflow",
@@ -1377,6 +1721,18 @@
     "tags": [
       "Data Science",
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "langfuse",
+    "logo": "logo.png",
+    "name": "Langfuse",
+    "description": "Langfuse is a powerful, self-hosted observability platform designed for AI applications. It simplifies monitoring, debugging, and optimizing your AI workflows with detailed insights, customizable metrics, and flexible integrations. Langfuse provides a clean and intuitive interface, robust API access, and plugin support to extend its functionality. It ensures privacy and compliance by allowing you to maintain full control over your data with a self-hosted solution. The application is accessible via your host and supports multi-platform awareness, ensuring compatibility with various architectures.",
+    "tags": [
+      "Observability",
+      "Self-Hosted",
+      "AI Monitoring",
+      "Analytics"
     ]
   },
   {
@@ -1399,6 +1755,18 @@
       "Developer Tools",
       "Media",
       "Music"
+    ]
+  },
+  {
+    "slug": "lazylibrarian",
+    "logo": "logo.png",
+    "name": "LazyLibrarian",
+    "description": "LazyLibrarian is an open-source tool designed to manage and automate the downloading, organizing, and serving of eBooks, audiobooks, and magazines. It integrates seamlessly with Usenet and torrent services to fetch content based on user preferences. With LazyLibrarian, you can search, download, and manage your media library effortlessly. It supports multiple download providers, metadata retrieval, and integration with Calibre for organizing your eBook collection. LazyLibrarian is user-friendly, flexible, and provides a centralized solution for book lovers to manage their digital libraries.",
+    "tags": [
+      "eBooks",
+      "Audiobooks",
+      "Library",
+      "Media Management"
     ]
   },
   {
@@ -1489,6 +1857,42 @@
     ]
   },
   {
+    "slug": "litellm",
+    "logo": "logo.png",
+    "name": "LiteLLM",
+    "description": "LiteLLM is a lightweight, self-hosted library designed for integrating language models like GPT into your applications. It provides an easy-to-use interface for sending and receiving prompts and responses, with support for multiple model configurations, API keys, and detailed debugging options. With LiteLLM, you can streamline your AI workflows while maintaining full control over your data and configurations.",
+    "tags": [
+      "Language Models",
+      "Self-Hosted",
+      "AI Integration"
+    ]
+  },
+  {
+    "slug": "llana",
+    "logo": "logo.png",
+    "name": "llana",
+    "description": "Llana is a lightweight no-code API wrapper that exposes a REST API for any database within minutes. Stop wasting time building endpoints, just connect your database and start playing. Open source, free to use, and no vendor lock-in.",
+    "tags": [
+      "API",
+      "No-Code",
+      "Database",
+      "Open Source"
+    ]
+  },
+  {
+    "slug": "lobechat",
+    "logo": "logo.png",
+    "name": "LobeChat",
+    "description": "LobeChat is an open-source, AI-powered chat application designed to integrate with OpenAI services. It provides a seamless user experience, combining conversational AI capabilities with a customizable and extensible architecture. LobeChat is ideal for both personal and professional use cases, offering robust features for modern AI chat applications.",
+    "tags": [
+      "AI Chat",
+      "OpenAI Integration",
+      "Customizable",
+      "Open Source",
+      "Conversational AI"
+    ]
+  },
+  {
     "slug": "logseq",
     "logo": "logo.png",
     "name": "Logseq",
@@ -1505,6 +1909,17 @@
     "description": "Logto is an Auth0 alternative designed for modern apps and SaaS products. It offers a seamless developer experience and is well-suited for individuals and growing companies.",
     "tags": [
       "Identity Management"
+    ]
+  },
+  {
+    "slug": "lollypop",
+    "logo": "logo.png",
+    "name": "Lollypop",
+    "description": "Lollypop is a self-hosted, high-performance music library manager and player. It is designed to handle extensive music collections, offering a sleek and modern interface for browsing, organizing, and playing your favorite tracks. The app supports multiple audio formats, playlists, and smart sorting options. Lollypop integrates seamlessly with online services to fetch album artwork, lyrics, and artist information. It also provides a simple API for managing playlists and controlling playback remotely. Lollypop is open-source, free, and designed to run efficiently on minimal hardware, making it a lightweight yet powerful solution for all your music needs.",
+    "tags": [
+      "Music",
+      "Player",
+      "Library Management"
     ]
   },
   {
@@ -1526,6 +1941,23 @@
     "tags": [
       "URL Shortener",
       "Web Tools"
+    ]
+  },
+  {
+    "slug": "mageai",
+    "logo": "logo.png",
+    "name": "Mage-AI",
+    "description": "Mage-AI is a powerful open-source data pipeline tool designed to simplify and accelerate building, deploying, and managing machine learning workflows. It empowers data engineers and scientists with a unified platform to seamlessly create pipelines for data ingestion, transformation, and model deployment. With Mage-AI's user-friendly interface and robust features, it becomes an essential tool for teams aiming to deliver AI solutions efficiently and effectively.",
+    "tags": [
+      "Data Pipelines",
+      "Machine Learning",
+      "AI",
+      "Automation",
+      "Data Engineering",
+      "Model Deployment",
+      "Open-Source",
+      "Scalable",
+      "Cloud"
     ]
   },
   {
@@ -1785,6 +2217,18 @@
     ]
   },
   {
+    "slug": "mysql-workbench",
+    "logo": "logo.png",
+    "name": "MySQL-Workbench",
+    "description": "MySQL Workbench is a unified visual tool for database architects, developers, and DBAs. It provides data modeling, SQL development, and comprehensive database management capabilities for MySQL and MariaDB. With MySQL Workbench, you can design and create new databases, reverse-engineer existing databases, and perform complex migrations. It offers a visual query builder, a powerful SQL editor, and support for data modeling and schema creation. MySQL Workbench is a trusted, easy-to-use tool to streamline database operations and improve productivity.",
+    "tags": [
+      "Database",
+      "MySQL",
+      "Development",
+      "Administration"
+    ]
+  },
+  {
     "slug": "n8n",
     "logo": "logo.png",
     "name": "n8n",
@@ -1905,6 +2349,20 @@
     ]
   },
   {
+    "slug": "nzbhydra2",
+    "logo": "logo.png",
+    "name": "Nzbhydra2",
+    "description": "NZBHydra2 is an advanced meta search application designed to unify and manage searches across multiple Usenet and torrent indexers. It acts as a single access point for all your NZB and torrent needs, aggregating search results from various indexers to save time and improve efficiency. NZBHydra2 offers powerful filtering, duplicate management, and easy integration with automation tools like Sonarr, Radarr, and Lidarr. It provides a web-based interface for seamless configuration and search management, making it a must-have for Usenet and torrent enthusiasts.",
+    "tags": [
+      "NZB",
+      "Usenet",
+      "Torrents",
+      "Meta Search",
+      "Automation",
+      "Media Management"
+    ]
+  },
+  {
     "slug": "octobox",
     "logo": "logo.png",
     "name": "Octobox",
@@ -2006,6 +2464,19 @@
       "Web Browsers",
       "Internet",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "osticket",
+    "logo": "logo.png",
+    "name": "OSTicket",
+    "description": "OSTicket is a widely-used, open-source ticketing system designed to streamline customer support management. It provides a user-friendly interface for handling, tracking, and organizing support tickets across multiple channels, including email, web forms, and API integrations. With OSTicket, you can efficiently manage inquiries, automate workflows, and improve customer satisfaction.",
+    "tags": [
+      "Ticketing System",
+      "Customer Support",
+      "Self-Hosted",
+      "Workflow Automation",
+      "SLA Management"
     ]
   },
   {
@@ -2117,6 +2588,19 @@
       "Prototyping",
       "Collaboration",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "peppermint",
+    "logo": "logo.svg",
+    "name": "Peppermint",
+    "description": "Peppermint is a cutting-edge, open-source issue management and helpdesk platform designed to rival Jira and Zendesk while remaining cost-effective and highly customizable. Built with the user in mind, Peppermint empowers teams to manage support tickets, customer requests, and projects with efficiency and ease.",
+    "tags": [
+      "Issue Management",
+      "Helpdesk",
+      "Open-Source",
+      "Self-Hosted",
+      "Analytics"
     ]
   },
   {
@@ -2364,6 +2848,19 @@
     ]
   },
   {
+    "slug": "qbitorrent",
+    "logo": "logo.png",
+    "name": "qBittorrent",
+    "description": "qBittorrent is a powerful, open-source BitTorrent client designed to provide an efficient and feature-rich experience for downloading and sharing files. It offers a user-friendly interface, robust functionality, and cross-platform compatibility. qBittorrent supports advanced features like sequential downloading, IP filtering, RSS feed support, and a built-in search engine for finding torrents. It also includes a web-based interface for managing downloads remotely. Designed to balance performance, simplicity, and advanced capabilities, qBittorrent is ideal for users seeking a secure and reliable torrenting solution.",
+    "tags": [
+      "Torrenting",
+      "BitTorrent",
+      "File Sharing",
+      "Open Source",
+      "Remote Management"
+    ]
+  },
+  {
     "slug": "qdrant",
     "logo": "logo.svg",
     "name": "Qdrant",
@@ -2378,10 +2875,13 @@
     "slug": "rabbitmq",
     "logo": "logo.svg",
     "name": "RabbitMQ",
-    "description": "RabbitMQ is a highly popular open source message broker used by businesses of all sizes, from startups to large enterprises. It is lightweight, easy to deploy, and supports multiple messaging protocols and streaming. RabbitMQ can be deployed in distributed and federated configurations, making it ideal for high-scale, high-availability requirements. It runs on various operating systems and cloud environments, and offers a wide range of developer tools for most popular languages. RabbitMQ supports asynchronous messaging, message queuing, delivery acknowledgement, and flexible routing to queues. It also offers a diverse array of tools and plugins for continuous integration, operational metrics, and integration with other enterprise systems. RabbitMQ is enterprise and cloud ready, with pluggable authentication, authorisation, and support for TLS and LDAP. It also provides an HTTP-API, command line tool, and UI for managing and monitoring the system.",
+    "description": "RabbitMQ is an open-source message broker software that facilitates reliable messaging between applications and services. It supports a variety of messaging protocols such as AMQP and MQTT, making it a versatile solution for modern distributed systems. With RabbitMQ, you can efficiently manage message queues, exchanges, and routing, enabling seamless communication across different components of your application. It also provides a user-friendly web-based management interface for monitoring, configuration, and troubleshooting.",
     "tags": [
-      "Developer Tools",
-      "Messaging"
+      "Message Broker",
+      "AMQP",
+      "MQTT",
+      "High Availability",
+      "Queue Management"
     ]
   },
   {
@@ -2603,6 +3103,34 @@
     ]
   },
   {
+    "slug": "snapdrop",
+    "logo": "logo.png",
+    "name": "SnapDrop",
+    "description": "Snapdrop is a self-hosted, browser-based file-sharing platform that allows you to seamlessly transfer files between devices on the same local network. Inspired by Apple's AirDrop, Snapdrop works across any device and browser without requiring an account or installation. It provides fast, peer-to-peer file transfers using WebRTC, ensuring privacy and efficiency. Snapdrop's lightweight design ensures minimal resource usage while offering an intuitive user interface for easy file sharing.",
+    "tags": [
+      "File Sharing",
+      "Peer-to-Peer",
+      "Browser-Based",
+      "Cross-Platform",
+      "Productivity",
+      "WebRTC",
+      "Secure Transfers",
+      "Local Network"
+    ]
+  },
+  {
+    "slug": "snipe-it",
+    "logo": "logo.png",
+    "name": "Snipe-IT",
+    "description": "Snipe-IT is a powerful, open-source IT asset management system designed to help organizations efficiently manage and track their IT assets. From laptops to licenses, Snipe-IT provides a centralized platform to store, monitor, and manage asset information securely. Unlike traditional asset management systems, Snipe-IT is modern, intuitive, and built for ease of use. It features detailed reporting, asset auditing, and check-in/check-out functionality, ensuring accountability and accuracy for IT teams. Snipe-IT also supports role-based user management and integrates seamlessly with LDAP and SMTP for user authentication and notifications. Whether you're managing 10 or 10,000 assets, Snipe-IT offers the tools you need to stay organized and improve IT workflow. With robust API support, it can integrate with third-party systems for automation and enhanced reporting. Ideal for businesses of all sizes, Snipe-IT makes IT asset management easy and effective.",
+    "tags": [
+      "Asset Management",
+      "Open Source",
+      "Auditing",
+      "Reporting"
+    ]
+  },
+  {
     "slug": "soketi",
     "logo": "logo.png",
     "name": "Soketi",
@@ -2633,6 +3161,19 @@
       "Media",
       "Calendars",
       "Download"
+    ]
+  },
+  {
+    "slug": "sonatype-nexus",
+    "logo": "logo.png",
+    "name": "Sonatype Nexus",
+    "description": "Sonatype Nexus is a powerful repository manager designed to streamline the management and storage of binary components. It enables development teams to efficiently organize, share, and deploy artifacts across various formats, such as Maven, npm, Docker, and more. With its robust feature set and enterprise-grade capabilities, Sonatype Nexus improves DevOps workflows by providing secure, scalable, and centralized storage for software assets.",
+    "tags": [
+      "Repository Management",
+      "DevOps",
+      "Artifact Storage",
+      "Security",
+      "Open Source"
     ]
   },
   {
@@ -2759,6 +3300,19 @@
     ]
   },
   {
+    "slug": "temporal",
+    "logo": "logo.png",
+    "name": "Temporal",
+    "description": "Temporal is an open-source, self-hosted workflow orchestration engine designed to simplify and enhance the development of scalable, fault-tolerant, and long-running workflows. It empowers developers to build reliable distributed systems by providing built-in state management, automatic retries, and advanced task scheduling. Temporal offers a user-friendly developer experience, powerful SDKs, and seamless integration with various languages, making it ideal for automating complex business processes and microservice orchestration. By providing a self-hosted solution, Temporal ensures data privacy, high availability, and complete control over your workflows and infrastructure.",
+    "tags": [
+      "Workflow Orchestration",
+      "Self-Hosted",
+      "Fault-Tolerant",
+      "Distributed Systems",
+      "Observability"
+    ]
+  },
+  {
     "slug": "thelounge",
     "logo": "logo.png",
     "name": "The Lounge",
@@ -2809,6 +3363,18 @@
       "No-Code",
       "Database",
       "Custom Applications"
+    ]
+  },
+  {
+    "slug": "tracardi",
+    "logo": "logo.png",
+    "name": "Tracardi",
+    "description": "Tracardi is an open-source customer data platform (CDP) designed for real-time data processing, customer segmentation, and workflow automation. It enables businesses to collect, process, and analyze customer data while offering actionable insights. Tracardi provides a powerful visual interface, robust API support, and scalable deployment options.",
+    "tags": [
+      "Customer Data Platform",
+      "Real-Time Analytics",
+      "Workflow Automation",
+      "Open-Source"
     ]
   },
   {
