@@ -1,8 +1,10 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const randomKey1 = randomString(32);
+  const randomKey2 = randomString(32);
 
   services.push({
     type: "app",
@@ -10,8 +12,8 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `APP_HOMEPAGE_URL=https://$(PRIMARY_DOMAIN)`,
-        `SESSION_KEY=key1`,
-        `FORM_ENCRYPTION_KEY=key2`,
+        `SESSION_KEY=${randomKey1}`,
+        `FORM_ENCRYPTION_KEY=${randomKey2}`,
         `MONGO_URI=mongodb://$(PROJECT_NAME)_${input.appServiceName}-db:27017/heyform`,
         `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `REDIS_PORT=6379`,
