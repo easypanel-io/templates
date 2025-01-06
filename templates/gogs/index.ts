@@ -1,9 +1,10 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const sshPort = input.sshPort;
+  const databasePassword = randomPassword();
 
   services.push({
     type: "app",
@@ -39,6 +40,24 @@ export function generate(input: Input): Output {
       ],
     },
   });
+
+  if (input.databaseType === "mysql") {
+    services.push({
+      type: "mysql",
+      data: {
+        serviceName: `${input.appServiceName}-database`,
+        password: databasePassword,
+      },
+    });
+  } else if (input.databaseType === "postgres") {
+    services.push({
+      type: "postgres",
+      data: {
+        serviceName: `${input.appServiceName}-database`,
+        password: databasePassword,
+      },
+    });
+  }
 
   return { services };
 }
