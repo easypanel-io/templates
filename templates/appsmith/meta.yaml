@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 1.16
   - date: 2024-09-30
     description: Version bumped to 1.42
+  - date: 2025-01-06
+    description: Version bumped to 1.55
 
 links:
   - label: Website
@@ -39,7 +41,7 @@ contributors:
   - name: Berk Sümbül
     url: https://github.com/BerkSMBL
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: appsmith/appsmith-ce:v1.42
+      default: appsmith/appsmith-ce:1.55
 benefits:
   - title: Streamlined Operations
     description:

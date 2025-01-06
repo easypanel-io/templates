@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 2.14.1
   - date: 2024-09-30
     description: Version bumped to 2.23.0
+  - date: 2025-01-06
+    description: Version bumped to 3.2.0
 links:
   - label: Documentation
     url: https://www.bytebase.com/docs/get-started/install/deploy-with-docker/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bytebase/bytebase:2.23.0
+      default: bytebase/bytebase:3.2.0
     databaseServiceName:
       type: string
       title: Database Service Name

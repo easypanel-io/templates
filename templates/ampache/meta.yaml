@@ -18,6 +18,8 @@ instructions:
 changeLog:
   - date: 2023-03-19
     description: Template created (v5.5.7)
+  - date: 2025-01-06
+    description: Version bumped to 7.1.1
 links:
   - label: Website
     url: http://ampache.org/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ampache/ampache:6.6.1
+      default: ampache/ampache:7.1.1
     appMediaHostPath:
       type: string
       title: Media Host Path
