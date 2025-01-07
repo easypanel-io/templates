@@ -1,0 +1,75 @@
+name: KeeWeb
+description:
+  KeeWeb is a modern, fast, and self-hosted password manager designed for
+  individuals and teams. It provides a sleek, responsive user interface for
+  managing and securing your passwords efficiently. KeeWeb supports importing
+  and syncing password databases from various sources such as Dropbox, OneDrive,
+  or local storage. It offers seamless offline access, powerful search
+  capabilities, and advanced encryption to protect your sensitive data. KeeWeb
+  ensures a consistent experience across desktop and web applications, with
+  customization options to suit your preferences.
+instructions: null
+changeLog:
+  - date: 2024-01-07
+    description: First Release
+links:
+  - label: Website
+    url: https://keeweb.info/
+  - label: Documentation
+    url: https://github.com/keeweb/keeweb/wiki
+  - label: Github
+    url: https://github.com/keeweb/keeweb
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: keeweb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/keeweb/keeweb:latest
+benefits:
+  - title: Secure Password Management
+    description:
+      KeeWeb offers end-to-end encryption to ensure that your passwords and
+      sensitive data remain safe and secure, whether stored locally or in the
+      cloud.
+  - title: Cross-Platform Compatibility
+    description:
+      KeeWeb provides a consistent experience across web and desktop
+      applications, allowing you to manage your passwords seamlessly on any
+      device.
+  - title: Easy Database Syncing
+    description:
+      KeeWeb supports synchronization with popular cloud storage services like
+      Dropbox and OneDrive, ensuring your password database is always
+      up-to-date.
+features:
+  - title: Powerful Search Functionality
+    description:
+      KeeWeb includes a robust search feature to quickly locate and manage your
+      saved passwords, making it efficient to access the information you need.
+  - title: Offline Access
+    description:
+      KeeWeb allows you to access and manage your password database offline,
+      providing uninterrupted service even without an internet connection.
+  - title: Customizable User Interface
+    description:
+      KeeWeb offers a fully customizable interface, allowing users to tweak
+      themes, layouts, and display preferences to match their needs.
+  - title: Advanced Security Features
+    description:
+      KeeWeb includes advanced security settings like auto-lock, database
+      keyfile support, and integration with hardware security keys for enhanced
+      protection.
+tags:
+  - Security
+  - Password Management
