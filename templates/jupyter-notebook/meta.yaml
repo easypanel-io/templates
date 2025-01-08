@@ -37,7 +37,40 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jupyter/minimal-notebook
+      oneOf:
+        - enum:
+            - jupyter/docker-stacks-foundation
+          title: Docker Stacks Foundation
+        - enum:
+            - jupyter/base-notebook
+          title: Base Notebook
+        - enum:
+            - jupyter/minimal-notebook
+          title: Minimal Notebook
+        - enum:
+            - jupyter/r-notebook
+          title: R Notebook
+        - enum:
+            - jupyter/julia-notebook
+          title: Julia Notebook
+        - enum:
+            - jupyter/scipy-notebook
+          title: SciPy Notebook
+        - enum:
+            - jupyter/tensorflow-notebook
+          title: TensorFlow Notebook
+        - enum:
+            - jupyter/pytorch-notebook
+          title: PyTorch Notebook
+        - enum:
+            - jupyter/datascience-notebook
+          title: Data Science Notebook
+        - enum:
+            - jupyter/pyspark-notebook
+          title: PySpark Notebook
+        - enum:
+            - jupyter/all-spark-notebook
+          title: All Spark Notebook
 benefits:
   - title: Interactive Computing
     description:
