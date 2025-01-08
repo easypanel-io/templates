@@ -1,0 +1,86 @@
+name: MetaTrader5
+description:
+  MetaTrader 5 (MT5) is a powerful, multi-functional trading platform designed
+  for financial institutions, brokers, and individual traders. It supports
+  trading in various financial markets, including Forex, stocks, futures, and
+  CFDs. MT5 offers advanced charting tools, technical indicators, and automated
+  trading capabilities through Expert Advisors (EAs). With a focus on speed,
+  reliability, and flexibility, MT5 enables seamless market analysis, efficient
+  trade execution, and comprehensive risk management. The platform supports
+  multi-asset trading, backtesting, and a robust API for custom integrations.
+instructions: null
+changeLog:
+  - date: 2024-01-08
+    description: First Release
+links:
+  - label: Website
+    url: https://www.metatrader5.com/en
+  - label: Documentation
+    url: https://www.metatrader5.com/en/terminal/help
+  - label: Github
+    url: https://github.com/gmag11/MetaTrader5-Docker-Image
+  - label: Docker Guide
+    url: https://hub.docker.com/r/gmag11/metatrader5_vnc
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - userName
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: metatrader5
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gmag11/metatrader5_vnc
+    userName:
+      type: string
+      title: User Name
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: password
+benefits:
+  - title: Advanced Trading Tools
+    description:
+      MT5 provides a comprehensive suite of tools for market analysis, trade
+      execution, and automated trading strategies.
+  - title: Multi-Asset Trading
+    description:
+      MT5 supports trading across Forex, stocks, futures, and CFDs, catering to
+      diverse financial markets.
+  - title: Customizable and Scalable
+    description:
+      MT5 offers robust APIs for integrations, as well as support for custom
+      trading bots and indicators.
+features:
+  - title: Advanced Charting
+    description:
+      MT5 includes multiple chart types, timeframes, and technical indicators
+      for in-depth market analysis.
+  - title: Automated Trading
+    description:
+      MT5 supports Expert Advisors (EAs) for automated trading strategies and
+      algorithmic trading.
+  - title: Multi-Device Access
+    description:
+      MT5 provides a seamless trading experience across desktop, mobile, and web
+      platforms.
+  - title: Economic Calendar
+    description:
+      MT5 includes a built-in economic calendar for tracking market events and
+      planning trades effectively.
+tags:
+  - Trading
+  - Financial Markets
+  - Automated Trading
+  - Forex
+  - Stocks
