@@ -1,0 +1,112 @@
+name: JupyterNotebook
+description:
+  Jupyter Notebook is a popular, free, and open-source web application that
+  allows you to create and share documents containing live code, equations,
+  visualizations, and narrative text. It supports numerous programming languages
+  and is widely used for data cleaning and transformation, numerical simulation,
+  statistical modeling, data visualization, machine learning, and much more. The
+  app is designed to be accessed via your web browser, providing an interactive
+  interface for easy development and experimentation. It supports hardware
+  acceleration for enhanced performance in computational tasks. The app is
+  compatible with multiple architectures, ensuring it can run on various
+  systems.
+instructions:
+  Run "jupyter server list" in the console of the service and copy the token.
+  Then either login with the token or create a password using that.
+changeLog:
+  - date: 2024-01-06
+    description: First release
+links:
+  - label: Documentation
+    url: https://jupyter-notebook.readthedocs.io/en/stable/
+  - label: Github
+    url: https://github.com/jupyter/notebook
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jupyternotebook
+    appServiceImage:
+      type: string
+      title: App Service Image
+      oneOf:
+        - enum:
+            - jupyter/docker-stacks-foundation
+          title: Docker Stacks Foundation
+        - enum:
+            - jupyter/base-notebook
+          title: Base Notebook
+        - enum:
+            - jupyter/minimal-notebook
+          title: Minimal Notebook
+        - enum:
+            - jupyter/r-notebook
+          title: R Notebook
+        - enum:
+            - jupyter/julia-notebook
+          title: Julia Notebook
+        - enum:
+            - jupyter/scipy-notebook
+          title: SciPy Notebook
+        - enum:
+            - jupyter/tensorflow-notebook
+          title: TensorFlow Notebook
+        - enum:
+            - jupyter/pytorch-notebook
+          title: PyTorch Notebook
+        - enum:
+            - jupyter/datascience-notebook
+          title: Data Science Notebook
+        - enum:
+            - jupyter/pyspark-notebook
+          title: PySpark Notebook
+        - enum:
+            - jupyter/all-spark-notebook
+          title: All Spark Notebook
+benefits:
+  - title: Interactive Computing
+    description:
+      Jupyter Notebook provides an interactive environment where users can write
+      and execute code in real time, view outputs immediately, and iterate
+      quickly.
+  - title: Multi-Language Support
+    description:
+      Jupyter Notebook supports numerous programming languages through its
+      extensible kernel architecture, including Python, R, Julia, and more.
+  - title: Visualizations and Sharing
+    description:
+      Create rich visualizations and share notebooks easily with others,
+      promoting collaboration and reproducibility.
+features:
+  - title: Open Source
+    description:
+      Jupyter Notebook is free and open-source software. This allows users to
+      freely use, modify, and distribute it.
+  - title: Web-Based Access
+    description:
+      Access the application via your web browser, making it easy to use on any
+      device without additional installations.
+  - title: Customizable Environment
+    description:
+      Configure the environment to suit your workflow by using a range of
+      optional environment variables and settings.
+  - title: Docker Integration
+    description:
+      Jupyter Notebook works seamlessly with Docker, enabling rapid deployment
+      and ensuring a consistent development environment.
+tags:
+  - Data Science
+  - Machine Learning
+  - Visualization
+  - Statistical Modeling
+  - Numerical Simulation
+  - Interactive Computing
+  - Data Analysis
