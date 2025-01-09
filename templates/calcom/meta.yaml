@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: calcom/cal.com:v4.1.4
+      default: calcom/cal.com:v4.7.8
     databaseServiceName:
       type: string
       title: App Service Name

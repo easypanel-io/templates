@@ -20,6 +20,8 @@ changeLog:
     description: update
   - date: 2024-09-30
     description: Version updated to 7.19.0
+  - date: 2025-01-09
+    description: Version bumped to 7.23.0
 links:
   - label: Website
     url: https://calibre-ebook.com/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/calibre:7.19.0
+      default: linuxserver/calibre:7.23.0
     password:
       type: string
       title: Password
