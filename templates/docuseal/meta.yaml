@@ -9,6 +9,8 @@ changeLog:
     description: first release
   - date: 2024-09-30
     description: Version Changed to 1.7.4
+  - date: 2025-01-09
+    description: Version bumped to v1.8.6
 links:
   - label: Website
     url: https://www.docuseal.co/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docuseal/docuseal:1.7.4
+      default: docuseal/docuseal:1.8.6
     databaseServiceName:
       type: string
       title: Database Service Name

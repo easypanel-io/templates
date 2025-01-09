@@ -18,6 +18,8 @@ changeLog:
     description: First Release
   - date: 2024-10-04
     description: Version changed from latest to v8.5.5
+  - date: 2025-01-09
+    description: Version bumped to v8.10.1
 links:
   - label: Website
     url: https://dozzle.dev
@@ -66,7 +68,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: amir20/dozzle:8.5.5
+      default: amir20/dozzle:v8.10.1
 benefits:
   - title: Real-time Monitoring
     description:

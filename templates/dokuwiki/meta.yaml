@@ -19,6 +19,8 @@ instructions:
 changeLog:
   - date: 2023-3-16
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to version-2024-02-06b
 links:
   - label: Website
     url: https://dokuwiki.org
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/dokuwiki:version-2024-02-06a
+      default: lscr.io/linuxserver/dokuwiki:version-2024-02-06b
 benefits:
   - title: Easy to Use
     description:
