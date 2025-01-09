@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to 4.23
 links:
   - label: Website
     url: https://domainmod.org/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: domainmod/domainmod:4.21.0
+      default: domainmod/domainmod:4.23
     databaseServiceName:
       type: string
       title: Database Service Name
