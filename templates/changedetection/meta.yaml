@@ -19,6 +19,8 @@ changeLog:
     description: first release
   - date: 2024-09-30
     description: Version changed to 0.46.04
+  - date: 2025-01-09
+    description: Version bumped to 0.48.05
 links:
   - label: Website
     url: https://changedetection.io
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/dgtlmoon/changedetection.io:0.46.04
+      default: ghcr.io/dgtlmoon/changedetection.io:0.48.05
 benefits:
   - title: Real-Time Website Change Detection
     description:

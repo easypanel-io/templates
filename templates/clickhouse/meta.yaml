@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to 24.8
 links:
   - label: Website
     url: https://clickhouse.com/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: clickhouse/clickhouse-server:23.8.14
+      default: clickhouse/clickhouse-server:24.8
 benefits:
   - title: Real-Time Analytics
     description:
