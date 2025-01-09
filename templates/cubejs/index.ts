@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
         `CUBEJS_TELEMETRY=false`,
         `CUBEJS_DB_TYPE=postgres`,
         `CUBEJS_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `CUBEJS_DB_NAME=${input.databaseServiceName}`,
+        `CUBEJS_DB_NAME=$(PROJECT_NAME)`,
         `CUBEJS_DB_USER=postgres`,
         `CUBEJS_DB_PASS=${databasePassword}`,
         `CUBEJS_DB_PORT=5432`,

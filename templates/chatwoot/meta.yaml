@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2023-1-22
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to v3.16.0
 links:
   - label: Documentation
     url: https://www.chatwoot.com/help-center
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chatwoot/chatwoot:v3.9.0
+      default: chatwoot/chatwoot:v3.16.0
     sidekiqServiceName:
       type: string
       title: Sidekiq Service Name

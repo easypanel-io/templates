@@ -15,6 +15,8 @@ changeLog:
     description: added template
   - date: 2024-09-30
     description: Version changed to 0.9.9
+  - date: 2025-01-09
+    description: Version bumped to 0
 links:
   - label: Website
     url: https://cronicle.net/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: soulteary/cronicle:0.9.9
+      default: soulteary/cronicle:0
 benefits:
   - title: Automated Task Scheduling
     description:
