@@ -1,0 +1,76 @@
+name: LightDash
+description:
+  LightDash is a modern, open-source business intelligence (BI) and data
+  exploration tool designed to help teams visualize and understand their data.
+  It connects directly to your existing data warehouse and provides an intuitive
+  interface for building and sharing dashboards. With LightDash, you can create
+  actionable insights from your data without needing advanced technical skills.
+instructions: Configure the Environmental Variables as per the requirements.
+changeLog:
+  - date: 2025-01-10
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://docs.lightdash.com/
+  - label: Github
+    url: https://github.com/lightdash/lightdash
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lightdash
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lightdash/lightdash:0.1447.1
+    browserlessImage:
+      type: string
+      title: Browserless Image
+      default: browserless/chrome
+benefits:
+  - title: Data Exploration Made Simple
+    description:
+      LightDash simplifies exploring and visualizing your data with an intuitive
+      interface designed for both technical and non-technical users.
+  - title: Direct Integration
+    description:
+      Connects directly to your data warehouse, ensuring real-time access to
+      your latest data without replication.
+  - title: Open Source
+    description:
+      Benefit from community-driven innovation and customization with a fully
+      open-source solution.
+
+features:
+  - title: Interactive Dashboards
+    description:
+      Build and share interactive dashboards for team-wide collaboration and
+      insights.
+  - title: SQL-Based Metrics
+    description:
+      Define and reuse metrics across multiple dashboards using a familiar
+      SQL-based approach.
+  - title: Role-Based Access Control
+    description:
+      Secure your data with fine-grained permissions and role-based access
+      controls.
+  - title: Data Transformation
+    description:
+      Transform and model your data directly within LightDash to meet specific
+      analysis needs.
+
+tags:
+  - Business Intelligence
+  - Data Visualization
+  - Open Source
+  - Data Analytics
