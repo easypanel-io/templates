@@ -24,6 +24,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - browserlessImage
   properties:
     appServiceName:
       type: string
