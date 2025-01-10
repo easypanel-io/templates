@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
         `DATASOURCES_DEFAULT_PASSWORD=${databasePassword}`,
         `DATASOURCES_DEFAULT_DATABASE=$(PROJECT_NAME)`,
         `PASSBOLT_REGISTRATION_PUBLIC=false`,
-        `PASSBOLT_SSL_FORCE=true`,
+        `PASSBOLT_SSL_FORCE=false`,
       ].join("\n"),
       source: {
         type: "image",
