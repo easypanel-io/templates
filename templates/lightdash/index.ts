@@ -78,10 +78,9 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-browserless`,
-      env: [].join("\n"),
       source: {
         type: "image",
-        image: input.browserlessImage,
+        image: `${input.browserlessImage}`,
       },
       domains: [
         {
