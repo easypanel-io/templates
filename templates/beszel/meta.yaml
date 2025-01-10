@@ -1,0 +1,69 @@
+name: Beszel
+description:
+  Beszel is a lightweight server monitoring platform that includes Docker
+  statistics, historical data, and alert functions. It has a friendly web
+  interface, simple configuration, and is ready to use out of the box. It
+  supports automatic backup, multi-user, OAuth authentication, and API access.
+instructions: null
+changeLog:
+  - date: 2025-01-10
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://github.com/henrygd/beszel/blob/main/readme.md
+  - label: Github
+    url: https://github.com/henrygd/beszel
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: beszel
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: henrygd/beszel:0.9.1
+benefits:
+  - title: Comprehensive Monitoring
+    description:
+      Monitor server performance, Docker statistics, and historical data
+      seamlessly.
+  - title: Ready-to-Use
+    description:
+      Simple setup with minimal configuration required, making it operational
+      out of the box.
+  - title: Secure and Flexible
+    description:
+      Benefit from multi-user management, OAuth authentication, and automatic
+      backups.
+features:
+  - title: Docker Statistics
+    description:
+      Gain insights into your Docker containers’ performance and resource usage.
+  - title: Historical Data
+    description:
+      View and analyze past server performance trends for better
+      decision-making.
+  - title: Alert Functions
+    description:
+      Receive real-time alerts for critical server events and thresholds.
+  - title: API and OAuth Support
+    description:
+      Access Beszel’s functionalities programmatically via API and secure user
+      authentication through OAuth.
+tags:
+  - Server Monitoring
+  - Docker Statistics
+  - Historical Data
+  - Alerts
+  - OAuth
