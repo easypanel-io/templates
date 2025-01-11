@@ -17,6 +17,8 @@ changeLog:
     description: first release
   - date: 2024-10-04
     description: Update to 8.15.2
+  - date: 2025-01-11
+    description: Version bumped to 8.17.0
 links:
   - label: Website
     url: https://www.elastic.co
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.elastic.co/elasticsearch/elasticsearch:8.15.2
+      default: docker.elastic.co/elasticsearch/elasticsearch:8.17.0
     password:
       type: string
       title: Password

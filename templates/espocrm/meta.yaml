@@ -19,6 +19,8 @@ changeLog:
     description: First Release
   - date: 2024-10-04
     description: Version Updated to 8.4.1-apache
+  - date: 2025-01-11
+    description: Version bumped to 8.4.2-apache
 links:
   - label: Website
     url: https://espocrm.com
@@ -55,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: espocrm/espocrm:8.4.1-apache
+      default: espocrm/espocrm:8.4.2-apache
     databaseServiceType:
       type: string
       title: Database Service Type
