@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2024-10-12
     description: First release
+  - date: 2025-01-09
+    description: Version bumped to 10.4-apache
 links:
   - label: Website
     url: https://www.drupal.org/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: drupal:10-apache
+      default: drupal:10.4-apache
 benefits:
   - title: Open-Source & Secure
     description:
