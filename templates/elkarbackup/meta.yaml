@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2024-11-17
     description: Template Release
+  - date: 2025-01-11
+    description: Version bumped to 2.1.0
 links:
   - label: Website
     url: https://elkarbackup.github.io
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: elkarbackup/elkarbackup:1.3.4-apache
+      default: elkarbackup/elkarbackup:2.1.0
 benefits:
   - title: Centralized Backup Management
     description:

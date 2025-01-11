@@ -14,6 +14,8 @@ changeLog:
     description: first release
   - date: 2024-10-02
     description: Version changed to 5.8.6
+  - date: 2025-01-09
+    description: Version bumped to 5.9
 links:
   - label: Website
     url: https://getdashdot.com/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mauricenino/dashdot:5.8.6
+      default: mauricenino/dashdot:5.9
 benefits:
   - title: Modern Server Dashboard
     description:
