@@ -1,0 +1,78 @@
+name: Moodle
+description:
+  Moodle is a robust, scalable, and open-source learning management system (LMS)
+  designed to provide educators and learners with a customizable platform to
+  create and deliver personalized learning experiences. With Moodle, you can
+  manage courses, track progress, and collaborate using a variety of tools like
+  forums, assignments, and quizzes. It supports integrations with numerous
+  third-party tools and plugins to enhance functionality. Moodle focuses on
+  accessibility, ensuring an inclusive experience for all users. It is widely
+  used in academic institutions, businesses, and non-profits globally to deliver
+  quality online education. Moodle is a free, open-source project distributed
+  under the GNU General Public License.
+instructions:
+  Moodle takes time to install. Default credentails; username=user,
+  password=bitnami
+changeLog:
+  - date: 2025-01-13
+    description: First Release
+links:
+  - label: Website
+    url: https://moodle.org/
+  - label: Documentation
+    url: https://docs.moodle.org/
+  - label: Github
+    url: https://github.com/moodle
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: moodle
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.io/bitnami/moodle:4.5
+benefits:
+  - title: Personalized Learning Experience
+    description:
+      Moodle enables educators to create customized learning environments for
+      their students, enhancing engagement and improving outcomes.
+  - title: Scalable and Flexible
+    description:
+      Moodle can scale from small classes to large organizations and integrates
+      with various third-party tools and plugins to meet diverse needs.
+  - title: Open Source and Free
+    description:
+      Moodle is distributed under the GNU General Public License, ensuring that
+      it remains free and open-source, empowering communities worldwide to
+      improve education.
+features:
+  - title: Course Management
+    description:
+      Moodle provides extensive tools for managing courses, including
+      assignments, quizzes, and tracking student progress.
+  - title: Collaboration Tools
+    description:
+      Moodle offers forums, chats, and group activities to facilitate
+      collaboration and communication among users.
+  - title: Mobile-Friendly
+    description:
+      Moodle’s mobile app allows users to access their courses and learning
+      materials on the go, ensuring seamless learning experiences across
+      devices.
+tags:
+  - LMS
+  - Education
+  - Open Source
+  - Accessibility
+  - Learning Management
+  - Customization
+  - E-learning
