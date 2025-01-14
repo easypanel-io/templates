@@ -4,11 +4,7 @@ description:
   content creation and project management. It offers an intuitive interface,
   seamless real-time collaboration, and powerful tools for organizing tasks,
   notes, and ideas. With Affine Pro, you can centralize your workflows and
-  enhance productivity. The application is accessible via your host on ports
-  8080 and 8081. This container is based on Docker Baseimage KasmVNC, providing
-  additional environment variables and configurations for enhanced flexibility.
-  It also supports the docker manifest for multi-platform awareness, ensuring
-  the correct image for your architecture.
+  enhance productivity.
 
 instructions:
   The migration service can be safely removed once the process is complete. You
