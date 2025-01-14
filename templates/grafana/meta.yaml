@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2024-10-09
     description: Version changed to 11.2.2
+  - date: 2025-01-14
+    description: Version bumped to 11.4.0
 links:
   - label: Website
     url: https://grafana.com
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: grafana/grafana-oss:11.2.2
+      default: grafana/grafana-oss:11.4.0
 benefits:
   - title: Comprehensive Data Visualization
     description:
