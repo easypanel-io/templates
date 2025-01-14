@@ -20,6 +20,8 @@ instructions: null
 changeLog:
   - date: 2023-5-26
     description: First release
+  - date: 2025-01-14
+    description: Version bumped to 0.17.3
 links:
   - label: Website
     url: https://gotosocial.org/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.15.0
+      default: superseriousbusiness/gotosocial:0.17.3
 benefits:
   - title: Privacy-Focused
     description:

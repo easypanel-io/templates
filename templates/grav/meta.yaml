@@ -18,6 +18,8 @@ instructions: null
 changeLog:
   - date: 2023-03-19
     description: Template created (v1.7.39)
+  - date: 2025-01-14
+    description: Version bumped to 1.7.48
 links:
   - label: Website
     url: https://getgrav.org
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/grav:1.7.46
+      default: linuxserver/grav:1.7.48
     timezone:
       type: string
       title: Timezone

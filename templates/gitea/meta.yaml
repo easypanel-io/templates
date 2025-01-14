@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to v1.18.4
+  - date: 2025-01-14
+    description: Version bumped to 1.23.1
 links:
   - label: Website
     url: https://gitea.io/en-us/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gitea/gitea:1.22.2
+      default: gitea/gitea:1.23.1
     databaseType:
       type: string
       title: Database Type

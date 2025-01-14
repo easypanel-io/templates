@@ -15,6 +15,9 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to v1.6.2
+  - date: 2025-01-14
+    description: Version bumped to 1.8.9
+
 links:
   - label: Website
     url: https://flarum.org/
@@ -42,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: crazymax/flarum:1.8.5
+      default: crazymax/flarum:1.8.9
     databaseType:
       type: string
       title: Database Type

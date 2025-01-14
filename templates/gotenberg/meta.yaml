@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2023-02-21
     description: first release
+  - date: 2025-01-14
+    description: Version bumped to 8.15.3
 links:
   - label: Website
     url: https://gotenberg.dev/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:8.5.1
+      default: gotenberg/gotenberg:8.15.3
 benefits:
   - title: Efficient Document Conversion
     description:

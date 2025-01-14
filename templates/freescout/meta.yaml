@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2023-2-23
     description: Update to v1.16.25
+  - date: 2025-01-14
+    description: Version bumped to php8.1-1.17.98
 links:
   - label: Website
     url: https://freescout.net
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/freescout:php8.2-1.17.9
+      default: tiredofit/freescout:php8.1-1.17.98
     databaseServiceName:
       type: string
       title: Database Service Name
