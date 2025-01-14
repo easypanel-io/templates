@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2023-3-16
     description: first release
+  - date: 2025-01-14
+    description: Version bumped to 0.13
 links:
   - label: Website
     url: https://gogs.io/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gogs/gogs:0.13.0
+      default: gogs/gogs:0.13
     sshPort:
       type: number
       title: SSH Port
