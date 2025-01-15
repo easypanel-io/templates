@@ -1,0 +1,79 @@
+name: Funkwhale
+description:
+  Funkwhale is a free, self-hostable and decentralized music server that lets
+  you store, share, and stream your music collection. It allows users to create
+  personal music libraries and share them with others through a federated
+  network using ActivityPub. Funkwhale can be accessed through its web interface
+  or compatible third-party applications, making it easy to enjoy your music
+  anywhere. It supports playlists, album covers, and metadata editing, giving
+  users complete control over their collections. Additional extensions can be
+  added to enhance the functionality of the app, providing a feature-rich music
+  streaming experience.
+instructions:
+  Wait for the migrations to complete. To create the superuser, open the console
+  and type; /usr/local/bin/manage createsuperuser
+changeLog:
+  - date: 2025-01-15
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.funkwhale.audio
+  - label: Github
+    url: https://github.com/YunoHost-Apps/funkwhale_ynh
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: funkwhale
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thetarkus/funkwhale
+benefits:
+  - title: Decentralized Music Sharing
+    description:
+      Funkwhale allows you to share your music library with others over a
+      federated network, ensuring decentralized and secure sharing.
+  - title: Multi-platform Support
+    description:
+      Funkwhale supports multiple platforms and can be accessed through its web
+      interface or third-party music players, giving you the freedom to enjoy
+      your music wherever you go.
+  - title: Self-Hostable
+    description:
+      Funkwhale is self-hostable, giving you full control over your music
+      library and privacy. Host it on your own server and access it anytime,
+      anywhere.
+features:
+  - title: Music Server
+    description:
+      Funkwhale is a feature-rich music server that allows you to store, stream,
+      and manage your music collection efficiently.
+  - title: Decentralized and Federated
+    description:
+      Funkwhale uses the ActivityPub protocol to enable decentralized and
+      federated music sharing, connecting you with other Funkwhale users.
+  - title: Easy Setup
+    description:
+      Funkwhale comes with an easy setup process, making it accessible even to
+      users with minimal technical experience.
+  - title: Playlist and Metadata Management
+    description:
+      Organize your music with playlists and easily edit metadata to keep your
+      library clean and organized.
+  - title: Multi-platform Access
+    description:
+      Access Funkwhale from your web browser or compatible third-party
+      applications, ensuring a seamless music experience across devices.
+tags:
+  - Music
+  - Decentralized
+  - Self-hosting
