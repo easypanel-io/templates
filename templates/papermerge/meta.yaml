@@ -1,0 +1,82 @@
+name: Papermerge
+description:
+  Papermerge is an open-source document management system (DMS) designed to help
+  you digitize, store, and organize documents efficiently. It simplifies
+  document workflows with features like automated OCR, smart categorization, and
+  role-based access control. By centralizing all your documents in a single
+  platform, Papermerge enables teams to improve collaboration and streamline
+  document handling processes.
+instructions:
+changeLog:
+  - date: 2025-01-15
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://docs.papermerge.io/3.3/
+  - label: GitHub
+    url: https://github.com/ciur/papermerge
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: papermerge
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: papermerge/papermerge:3.0.3
+    username:
+      type: string
+      title: Auth Username
+      default: admin
+    password:
+      type: string
+      title: Auth Password
+      default: admin
+
+benefits:
+  - title: Centralized Document Management
+    description:
+      Papermerge consolidates all your documents into a single platform for
+      better organization and easy retrieval.
+  - title: Enhanced Team Efficiency
+    description:
+      Save time and effort by digitizing, categorizing, and searching documents,
+      improving overall team collaboration.
+  - title: Open-Source and Flexible
+    description:
+      Leverage an open-source solution with the flexibility to adapt to your
+      organization’s specific needs.
+
+features:
+  - title: Automated OCR
+    description:
+      Automatically extract text from scanned documents, making them easy to
+      search and reference.
+  - title: Smart Tagging and Categorization
+    description:
+      Assign tags and categorize your documents for seamless organization and
+      workflow management.
+  - title: Role-Based Access Control
+    description:
+      Secure your documents with fine-grained permissions and user management
+      features.
+  - title: Advanced Search Capabilities
+    description:
+      Quickly locate documents using full-text search or by leveraging custom
+      metadata fields.
+
+tags:
+  - Document Management
+  - OCR
+  - Workflow Automation
+  - Open-Source
