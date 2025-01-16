@@ -453,6 +453,13 @@ export function generate(input: Input): Output {
           port: 3000,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/data/data",
+        },
+      ],
     },
   });
 
