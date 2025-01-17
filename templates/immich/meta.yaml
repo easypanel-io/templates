@@ -1,0 +1,85 @@
+name: Immich
+description:
+  Immich is a self-hosted photo and video backup solution designed for
+  individuals and families to store and manage their media files efficiently. It
+  provides a modern interface with features like automatic uploads,
+  deduplication, and powerful search capabilities. Immich ensures that you
+  maintain full control over your media while offering a smooth and
+  user-friendly experience. The application is accessible via your host and
+  includes machine learning services for advanced media categorization and
+  facial recognition. It supports Docker containers with multi-platform
+  awareness, ensuring compatibility across different architectures.
+
+instructions: Wait for the migration to complete.
+
+changeLog:
+  - date: 2025-01-17
+    description: Initial Template Release
+
+links:
+  - label: Documentation
+    url: https://immich.app/docs
+  - label: Github
+    url: https://github.com/immich-app/immich
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - mlServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: immich
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/immich-app/immich-server:release
+    mlServiceImage:
+      type: string
+      title: ML Service Image
+      default: ghcr.io/immich-app/immich-machine-learning:release
+
+benefits:
+  - title: Secure Media Backup
+    description:
+      Immich allows you to back up your photos and videos securely, ensuring
+      privacy and accessibility at all times.
+  - title: Self-Hosted Control
+    description:
+      Maintain full control over your media files with a self-hosted solution
+      designed for flexibility and security.
+  - title: Advanced Search and Categorization
+    description:
+      Leverage machine learning for smart categorization, facial recognition,
+      and efficient searching of your media library.
+
+features:
+  - title: Automatic Uploads
+    description:
+      Automatically back up photos and videos from your devices, keeping your
+      media synchronized effortlessly.
+  - title: Machine Learning Integration
+    description:
+      Use built-in machine learning capabilities for facial recognition and
+      advanced media tagging.
+  - title: Modern Web Interface
+    description:
+      Enjoy an intuitive and sleek web interface for managing your media files
+      with ease.
+  - title: Deduplication
+    description:
+      Save storage space with automatic detection and removal of duplicate
+      files.
+
+tags:
+  - Media Backup
+  - Self-Hosted
+  - Machine Learning
+  - Photo Management
