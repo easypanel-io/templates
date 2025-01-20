@@ -37,11 +37,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/immich-app/immich-server:release
+      default: ghcr.io/immich-app/immich-server:v1.124.2
     mlServiceImage:
       type: string
       title: ML Service Image
-      default: ghcr.io/immich-app/immich-machine-learning:release
+      default: ghcr.io/immich-app/immich-machine-learning:v1.124.2
 
 benefits:
   - title: Secure Media Backup
