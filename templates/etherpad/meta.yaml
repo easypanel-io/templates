@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2023-3-16
     description: first release
+  - date: 2025-01-11
+    description: Version bumped to 2.2.7
 links:
   - label: Website
     url: https://etherpad.org
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: etherpad/etherpad:2.2.5
+      default: etherpad/etherpad:2.2.7
     databaseServiceName:
       type: string
       title: Database Service Name
