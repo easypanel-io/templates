@@ -6,6 +6,8 @@ instructions: null
 changeLog:
   - date: 2024-03-17
     description: First Release
+  - date: 2025-01-06
+    description: Version bumped to 5.4.3
 links:
   - label: Website
     url: https://2fauth.app/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 2fauth/2fauth:5.2.0
+      default: 2fauth/2fauth:5.4.3
     appOwnerMail:
       type: string
       title: App Owner Mail
