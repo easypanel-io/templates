@@ -1,0 +1,81 @@
+name: Nitropage
+description:
+  Nitropage is an extensible, drag-and-drop website builder based on SolidStart,
+  designed for individualists who want complete control over their web design.
+  It is completely free and open source, offering a flexible and intuitive
+  platform for building visually stunning websites without coding. Nitropage
+  supports modular extensions, making it ideal for both beginners and advanced
+  users who seek a personalized and efficient web development experience.
+instructions: null
+changeLog:
+  - date: 2025-01-10
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://nitropage.com/
+  - label: Documentation
+    url: https://nitropage.com/docs
+  - label: Github
+    url: https://codeberg.org/nitropage/nitropage
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nitropage
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeberg.org/nitropage/nitropage:sqlite
+
+benefits:
+  - title: Drag-and-Drop Simplicity
+    description:
+      Create beautiful websites effortlessly with Nitropage’s drag-and-drop
+      editor, perfect for users of all skill levels.
+  - title: Free and Open Source
+    description:
+      Enjoy the freedom of an open-source platform with no licensing costs.
+  - title: SolidStart Framework
+    description:
+      Built on the SolidStart framework, ensuring a fast and responsive user
+      experience.
+
+features:
+  - title: Visual Website Editing
+    description:
+      Design and customize websites in real-time with a powerful visual editor.
+  - title: Customizable Themes
+    description:
+      Choose from a variety of themes and customize them to fit your unique
+      style and branding.
+  - title: Lightweight and Fast
+    description:
+      Nitropage ensures your websites load quickly, providing a smooth user
+      experience.
+  - title: Responsive Design
+    description: Build mobile-friendly websites that look great on any device.
+  - title: Version Control
+    description:
+      Track changes and revert to previous versions with built-in version
+      control.
+  - title: Solid Integration
+    description:
+      Seamlessly integrate with the SolidStart framework for modern web
+      development.
+
+tags:
+  - Website Builder
+  - Drag-and-Drop
+  - Open Source
+  - Visual Editor
+  - SolidStart
