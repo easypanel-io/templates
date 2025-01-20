@@ -1,0 +1,88 @@
+name: DevLake
+description:
+  DevLake is a highly customizable and self-hosted tool for engineering metrics
+  and data integration. It enables teams to collect, transform, and visualize
+  data from various development tools like GitHub, GitLab, and Jira. DevLake
+  provides insightful dashboards and reports for continuous improvement,
+  streamlining your software delivery process.
+
+instructions:
+  Wait for the migration on backend to complete. Access Grafana using
+  https://domain/grafana
+
+changeLog:
+  - date: 2025-01-15
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://devlake.apache.org/docs/GettingStarted
+  - label: Github
+    url: https://github.com/apache/incubator-devlake
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - backendServiceImage
+    - uiServiceImage
+    - grafanaServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: devlake
+    uiServiceImage:
+      type: string
+      title: UI Service Image
+      default: devlake.docker.scarf.sh/apache/devlake-config-ui:v1.0.2-beta5
+    backendServiceImage:
+      type: string
+      title: Backend Service Image
+      default: devlake.docker.scarf.sh/apache/devlake:v1.0.2-beta5
+    grafanaServiceImage:
+      type: string
+      title: Grafana Service Image
+      default: devlake.docker.scarf.sh/apache/devlake-dashboard:v1.0.2-beta5
+
+benefits:
+  - title: Centralized Data Integration
+    description:
+      DevLake consolidates data from various tools into a single platform for
+      better visibility and analysis.
+  - title: Enhanced Team Productivity
+    description:
+      Gain actionable insights to optimize engineering workflows and improve
+      team performance.
+  - title: Open-Source and Flexible
+    description:
+      Leverage an open-source solution with the flexibility to adapt to your
+      organization’s specific needs.
+
+features:
+  - title: Data Synchronization
+    description:
+      Seamlessly integrate data from popular development tools like GitHub,
+      GitLab, Jira, and more.
+  - title: Customizable Dashboards
+    description:
+      Visualize key metrics with prebuilt or custom dashboards tailored to your
+      team’s goals.
+  - title: Powerful API
+    description:
+      Use DevLake’s API to programmatically interact with and extend its
+      capabilities.
+  - title: Community and Enterprise Plugins
+    description:
+      Enhance functionality with a rich set of plugins for various tools and
+      workflows.
+
+tags:
+  - Engineering Metrics
+  - Data Integration
+  - Analytics
+  - Open-Source
