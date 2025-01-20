@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rajnandan1/kener:latest
+      default: ghcr.io/rajnandan1/kener:3.0.1
 benefits:
   - title: Real-Time Service Monitoring
     description:
