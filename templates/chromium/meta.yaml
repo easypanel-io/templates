@@ -17,6 +17,8 @@ changeLog:
     description: first release
   - date: 2024-09-30
     description: Version changed to version-dc5fa092
+  - date: 2025-01-09
+    description: Version bumped to 5f5dd27e-ls102
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-chromium
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/chromium:version-dc5fa092
+      default: lscr.io/linuxserver/chromium:5f5dd27e-ls102
 benefits:
   - title: Open-Source Browser
     description:
