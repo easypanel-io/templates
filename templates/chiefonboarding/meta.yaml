@@ -1,0 +1,73 @@
+name: Chief-Onboarding
+description:
+  Chief-Onboarding is a comprehensive, self-hosted onboarding and employee
+  management platform designed for businesses to streamline their onboarding
+  processes. It allows organizations to manage employee onboarding, document
+  collection, and task tracking efficiently. With a clean interface and robust
+  customization options, Chief-Onboarding supports role-based access,
+  multi-language capabilities, and seamless integration with existing HR
+  systems, making it the ultimate solution for employee onboarding.
+instructions: null
+changeLog:
+  - date: 2025-01-20
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/chiefonboarding/chiefonboarding
+  - label: Documentation
+    url: https://docs.chiefonboarding.com/
+  - label: Demo
+    url: https://demo.chiefonboarding.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chiefonboarding
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chiefonboarding/chiefonboarding:v2.2.5
+benefits:
+  - title: Streamlined Employee Onboarding
+    description:
+      Chief-Onboarding provides an intuitive platform for managing employee
+      onboarding tasks, document collection, and tracking progress seamlessly.
+  - title: Customizable and Scalable
+    description:
+      Chief-Onboarding offers a wide range of customization options, including
+      workflows and templates, to scale with your business needs.
+  - title: Multi-Language and Role-Based Support
+    description:
+      Operate in multiple languages and assign roles with varying permission
+      levels, perfect for diverse teams and compliance requirements.
+features:
+  - title: Automated Task Management
+    description:
+      Streamline task assignments and track progress for a smoother onboarding
+      process.
+  - title: Document Collection and Storage
+    description:
+      Easily collect and store necessary documents securely in one place.
+  - title: Role-Based Access Control
+    description:
+      Assign roles and permissions to ensure secure and efficient collaboration.
+  - title: Customizable Workflows
+    description:
+      Tailor onboarding workflows to fit your organization's unique processes.
+  - title: Seamless Integration
+    description:
+      Integrate with popular HR and productivity tools for a cohesive ecosystem.
+tags:
+  - Employee Onboarding
+  - HR Management
+  - Task Tracking
+  - Role-Based Access
+  - Document Management
