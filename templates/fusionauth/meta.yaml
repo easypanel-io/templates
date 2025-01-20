@@ -1,0 +1,76 @@
+name: FusionAuth
+description:
+  FusionAuth is a powerful, self-hosted identity and access management platform
+  designed for developers. It provides a robust set of features, including user
+  authentication, authorization, and user management, all accessible through a
+  modern API or web interface. FusionAuth supports advanced features like social
+  login, SSO, passwordless login, and multi-factor authentication.
+instructions: null
+changeLog:
+  - date: 2025-01-17
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://fusionauth.io/docs
+  - label: Github
+    url: https://github.com/FusionAuth
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - opensearchServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fusionauth
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: fusionauth/fusionauth-app:1.55.1
+    opensearchServiceImage:
+      type: string
+      title: OpenSearch Service Image
+      default: opensearchproject/opensearch:2.11.0
+benefits:
+  - title: Comprehensive Identity Management
+    description:
+      FusionAuth allows you to manage user authentication, authorization, and
+      profiles efficiently through a user-friendly interface or APIs.
+  - title: Developer-Centric Solution
+    description:
+      Designed with developers in mind, FusionAuth is easy to integrate into any
+      application stack with extensive documentation and SDKs.
+  - title: Secure and Flexible
+    description:
+      FusionAuth provides advanced security features such as SSO, passwordless
+      login, and multi-factor authentication for ultimate flexibility.
+
+features:
+  - title: Multi-Factor Authentication
+    description:
+      Enhance user security with support for TOTP, SMS, and email-based
+      multi-factor authentication.
+  - title: Social Login
+    description:
+      Easily integrate with popular social providers like Google, Facebook, and
+      Twitter for quick user onboarding.
+  - title: Customizable Branding
+    description:
+      Fully customize the look and feel of your login pages and user portals to
+      match your brand.
+  - title: Role-Based Access Control
+    description:
+      Manage user permissions and access with fine-grained role-based access
+      control.
+
+tags:
+  - Identity Management
+  - Authentication
+  - Authorization
+  - Self-Hosted
