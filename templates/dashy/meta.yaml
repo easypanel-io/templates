@@ -19,7 +19,9 @@ instructions:
   (5 minutes).
 changeLog:
   - date: 2022-08-18
-    description: first release
+    description: First Release
+  - date: 2025-01-09
+    description: Version bumped to release-3.1.1
 links:
   - label: Website
     url: https://dashy.to/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lissy93/dashy:3.1.0
+      default: lissy93/dashy:release-3.1.1
 benefits:
   - title: Highly Customizable
     description:
