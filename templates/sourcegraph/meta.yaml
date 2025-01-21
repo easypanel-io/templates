@@ -1,0 +1,82 @@
+name: Sourcegraph
+description:
+  Sourcegraph is a universal code search and intelligence platform designed to
+  help developers find, explore, and understand code across all repositories. It
+  enables teams to improve productivity and code quality by providing a
+  centralized interface for searching, navigating, and understanding codebases.
+  Sourcegraph supports multiple version control systems, languages, and
+  integrations, making it a powerful tool for developers, DevOps, and
+  enterprises. With features like code insights, precise code navigation, and
+  batch changes, Sourcegraph enhances collaboration and streamlines development
+  workflows.
+instructions:
+  Once the server is ready (logo is displayed in the terminal), navigate to the
+  hostname or IP address on port 7080. Create the admin account, then you'll be
+  guided through setting up Sourcegraph for code searching and navigation.
+changeLog:
+  - date: 2025-01-21
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/sourcegraph
+  - label: Documentation
+    url: https://docs.sourcegraph.com
+  - label: Demo
+    url: https://sourcegraph.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sourcegraph
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sourcegraph/server:5.11.5234
+benefits:
+  - title: Universal Code Search
+    description:
+      Sourcegraph provides fast and accurate search capabilities across all your
+      repositories, enabling developers to find and understand code efficiently.
+  - title: Multi-Language Support
+    description:
+      Sourcegraph supports a wide range of programming languages, offering
+      precise code intelligence for navigating and understanding codebases.
+  - title: Enhanced Collaboration
+    description:
+      Improve team collaboration with shared code insights, annotations, and
+      streamlined workflows for development and review.
+features:
+  - title: Code Search and Navigation
+    description:
+      Quickly find code, symbols, and references across all repositories with
+      powerful search and navigation tools.
+  - title: Batch Changes
+    description:
+      Automate large-scale code changes with batch changes, reducing manual
+      effort and errors.
+  - title: Integrations
+    description:
+      Seamlessly integrate Sourcegraph with popular tools like GitHub, GitLab,
+      Bitbucket, and others.
+  - title: Code Insights
+    description:
+      Gain insights into codebases with visual dashboards and analytics to track
+      trends and improve decision-making.
+  - title: Security and Compliance
+    description:
+      Perform automated searches for security vulnerabilities and compliance
+      issues across repositories.
+tags:
+  - Code Search
+  - Developer Tools
+  - Productivity
+  - Open Source
+  - Collaboration
