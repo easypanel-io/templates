@@ -1,0 +1,82 @@
+name: Shotcut
+description:
+  Shotcut is a free, open-source, cross-platform video editor that enables users
+  to create and edit professional-quality videos. Written in C++, it supports a
+  wide range of video formats and codecs thanks to FFmpeg integration. Shotcut
+  provides powerful features such as multi-format timeline editing, 4K
+  resolution support, and advanced video effects and filters. The app offers
+  intuitive drag-and-drop functionality, customizable UI, and support for
+  hardware acceleration. It also includes audio editing tools, frame-accurate
+  seeking, and video compositing capabilities. Shotcut is designed to be
+  user-friendly while offering advanced tools for video enthusiasts and
+  professionals alike. Additional features include support for network stream
+  playback, webcam capture, and external monitoring.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: first release
+links:
+  - label: Website
+    url: https://www.shotcut.org/
+  - label: Github
+    url: https://github.com/mltframework/shotcut
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shotcut
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/shotcut:24.11.17
+benefits:
+  - title: Cross-Platform Support
+    description:
+      Shotcut works seamlessly on Windows, macOS, and Linux, allowing users to
+      edit videos across different operating systems with consistent
+      functionality and performance.
+  - title: Wide Format Support
+    description:
+      Thanks to FFmpeg integration, Shotcut supports hundreds of audio, video,
+      and image formats and codecs, making it highly versatile and capable of
+      handling almost any media file.
+  - title: Advanced Video Editing Features
+    description:
+      Shotcut offers advanced features such as keyframe animations, customizable
+      video filters, multi-track timeline editing, and 4K video support, making
+      it ideal for professional video projects.
+features:
+  - title: Multi-Format Timeline
+    description:
+      This feature allows you to mix and match resolutions and frame rates
+      within a single project timeline, providing unmatched flexibility for
+      editing.
+  - title: Video Effects and Filters
+    description:
+      Shotcut includes a wide range of video filters, including color grading,
+      chroma key, transitions, and text overlays, enabling users to enhance and
+      customize their videos.
+  - title: Hardware Acceleration
+    description:
+      Shotcut supports GPU-based rendering and encoding, significantly improving
+      performance and reducing rendering times for complex projects.
+  - title: Audio Editing Tools
+    description:
+      Shotcut includes tools for audio mixing, waveform visualization, and
+      support for audio filters such as gain, bass, treble, and normalization.
+  - title: Open Source Community
+    description:
+      Being open-source, Shotcut has an active community contributing to its
+      development and providing support to users worldwide.
+tags:
+  - Video Editing
+  - Media
+  - Productivity
