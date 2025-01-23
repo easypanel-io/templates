@@ -1,0 +1,87 @@
+name: Thingsboard
+description:
+  ThingsBoard is an open-source IoT platform designed to simplify the process of
+  collecting, processing, and visualizing data from IoT devices. It provides
+  features like real-time device management, telemetry data visualization, and
+  rule engine workflows to automate tasks and actions.
+instructions:
+  Copy the email and passwords. sysadmin@thingsboard.org / sysadmin,
+  tenant@thingsboard.org / tenant, customer@thingsboard.org / customer. Expose
+  the ports mentioned inside the documentation based on your requirements.
+
+changeLog:
+  - date: 2025-01-21
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://thingsboard.io/docs/
+  - label: Docker Guide
+    url: https://thingsboard.io/docs/user-guide/install/docker/
+  - label: Github
+    url: https://github.com/thingsboard/thingsboard
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: thingsboard
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thingsboard/tb-postgres:3.8.1
+benefits:
+  - title: Real-Time Device Management
+    description:
+      ThingsBoard provides an intuitive interface for managing devices and
+      monitoring their status in real time.
+  - title: Data Visualization
+    description:
+      Visualize telemetry data through customizable dashboards, charts, and
+      widgets for actionable insights.
+  - title: Protocol Support
+    description:
+      ThingsBoard supports multiple protocols like MQTT, HTTP, and CoAP,
+      ensuring compatibility with various IoT devices.
+  - title: Rule Engine Automation
+    description:
+      Automate workflows and actions using ThingsBoard's powerful rule engine,
+      reducing manual intervention.
+  - title: Multi-Tenancy Support
+    description:
+      Manage multiple tenants, customers, and devices from a single platform
+      with granular access control.
+
+features:
+  - title: Telemetry Data Collection
+    description:
+      Collect telemetry data from connected IoT devices and store it for
+      analysis and visualization.
+  - title: Custom Dashboards
+    description:
+      Build dynamic dashboards to visualize data and monitor device performance
+      in real time.
+  - title: Device Management
+    description:
+      Manage devices and assets with features like provisioning, monitoring, and
+      control.
+  - title: Integration with Third-Party Services
+    description:
+      Integrate ThingsBoard with external services to extend functionality and
+      enable seamless IoT solutions.
+  - title: Alerts and Notifications
+    description:
+      Set up alerts and notifications for specific events or conditions to stay
+      informed about critical activities.
+
+tags:
+  - IoT
+  - Device Management
+  - Data Visualization
+  - Automation
