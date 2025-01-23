@@ -1,0 +1,59 @@
+name: Quepasa-API
+description:
+  Quepasa is a self-hosted platform designed to empower small businesses,
+  entrepreneurs, and individuals by providing a robust API for integrating
+  messaging solutions such as WhatsApp™. It offers seamless integration with
+  other tools like Chatwoot to enhance communication and
+  automation capabilities. Quepasa is a free and customizable solution
+  that allows users to maintain control over their messaging infrastructure.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/nocodeleaks/quepasa
+  - label: Comunidade - quepasa API
+    url: https://chat.whatsapp.com/Js22tkvVvRXANtXJlaMERI
+contributors:
+  - name: André Marques
+    url: https://github.com/luiis716
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: Quepasa-API
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeleaks/quepasa:latest
+benefits:
+  - title: Seamless Messaging Integration
+    description:
+    Quepasa-API is an easy-to-use API for use with Chatwoot without losing messages and disconnections
+  - title: Free and Open Source
+    description:
+      Quepasa-AOI is free to use and provides a fully open-source solution,
+      giving you control over your messaging infrastructure without incurring
+      additional costs.
+features:
+  - title: WhatsApp™ Messaging Support
+    description:
+      Quepasa-API integrates seamlessly with WhatsApp™ for efficient
+      communication, providing a platform for messaging automation and
+      interactions.
+  - title: Plugin Support
+    description:
+      Quepasa-API supports a range of plugins to extend functionality and
+      integrate with other tools like  and Chatwoot for advanced use
+      cases.
+tags:
+  - Messaging
+  - Communication
+  - Automation
+  - Open Source
