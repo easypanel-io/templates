@@ -36,13 +36,13 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: "codeleaks/quepasa",
       },
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
           port: 31000,
-        }
+        },
       ],
       mounts: [
         {
