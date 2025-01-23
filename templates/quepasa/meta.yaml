@@ -4,8 +4,7 @@ description:
   entrepreneurs, and individuals by providing a robust API for integrating
   messaging solutions such as WhatsApp™. It offers seamless integration with
   other tools like Chatwoot to enhance communication and
-  automation capabilities. Quepasa is a free and customizable solution
-  that allows users to maintain control over their messaging infrastructure.
+  automation capabilities
 instructions: null
 changeLog:
   - date: 2025-01-23
@@ -22,11 +21,16 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
   properties:
     appServiceName:
       type: string
       title: App Service Name
       default: Quepasa API
+      appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeleaks/quepasa
 benefits:
   - title: Seamless Messaging Integration
     description:
