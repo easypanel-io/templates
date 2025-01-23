@@ -36,7 +36,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "codeleaks/quepasa",
+        image: input.appServiceImage,
       },
       domains: [
         {
