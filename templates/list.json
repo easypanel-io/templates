@@ -488,6 +488,18 @@
     ]
   },
   {
+    "slug": "convertx",
+    "logo": "logo.png",
+    "name": "Convertx",
+    "description": "Convertx is a free, open-source application designed to provide a fast, lightweight media conversion tool that you can use on your desktop or integrate into your workflows. It offers a range of features including support for multiple file formats, batch processing, video trimming, audio extraction, and format customization. It also supports hot-reloading of tasks and notifications upon completion.",
+    "tags": [
+      "Media Conversion",
+      "Open Source",
+      "Efficiency",
+      "Customization"
+    ]
+  },
+  {
     "slug": "coralproject",
     "logo": "logo.png",
     "name": "Coral",
@@ -791,6 +803,18 @@
     ]
   },
   {
+    "slug": "droppy",
+    "logo": "logo.png",
+    "name": "Droppy",
+    "description": "Droppy is a self-hosted file storage and sharing server with a modern, web-based interface. It allows you to securely upload, manage, and share files and folders from any device with a browser. Droppy supports drag-and-drop uploads, real-time updates, and previews for a variety of file types including images, videos, and documents. With its user-friendly interface and robust feature set, Droppy is ideal for personal or team file management. It is lightweight, written in Node.js, and supports customization through environment variables and themes.",
+    "tags": [
+      "File Sharing",
+      "Storage",
+      "Productivity",
+      "Collaboration"
+    ]
+  },
+  {
     "slug": "drupal",
     "logo": "logo.png",
     "name": "Drupal",
@@ -941,6 +965,18 @@
     ]
   },
   {
+    "slug": "evolutionapi",
+    "logo": "logo.png",
+    "name": "Evolution API",
+    "description": "Evolution API is a self-hosted platform designed to empower small businesses, entrepreneurs, and individuals by providing a robust API for integrating messaging solutions such as WhatsApp™. It offers seamless integration with other tools like Typebot, Chatwoot, and OpenAI to enhance communication and automation capabilities. Evolution API is a free and customizable solution that allows users to maintain control over their messaging infrastructure.",
+    "tags": [
+      "Messaging",
+      "Communication",
+      "Automation",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "excalidraw",
     "logo": "logo.png",
     "name": "Excalidraw",
@@ -1068,6 +1104,19 @@
       "Forums",
       "Communication",
       "Social Networking"
+    ]
+  },
+  {
+    "slug": "flatnotes",
+    "logo": "logo.png",
+    "name": "Flatnotes",
+    "description": "Flatnotes is an open-source, self-hosted note-taking platform designed to help individuals and teams manage their notes efficiently. It provides a lightweight and intuitive interface for creating, organizing, and sharing notes. With robust customization options, Flatnotes supports markdown editing, tagging, and a responsive design, making it a versatile solution for note management.",
+    "tags": [
+      "Note-Taking",
+      "Markdown",
+      "Open Source",
+      "Self-Hosted",
+      "Productivity"
     ]
   },
   {
@@ -3373,12 +3422,34 @@
     ]
   },
   {
+    "slug": "shotcut",
+    "logo": "logo.png",
+    "name": "Shotcut",
+    "description": "Shotcut is a free, open-source, cross-platform video editor that enables users to create and edit professional-quality videos. Written in C++, it supports a wide range of video formats and codecs thanks to FFmpeg integration. Shotcut provides powerful features such as multi-format timeline editing, 4K resolution support, and advanced video effects and filters. The app offers intuitive drag-and-drop functionality, customizable UI, and support for hardware acceleration. It also includes audio editing tools, frame-accurate seeking, and video compositing capabilities. Shotcut is designed to be user-friendly while offering advanced tools for video enthusiasts and professionals alike. Additional features include support for network stream playback, webcam capture, and external monitoring.",
+    "tags": [
+      "Video Editing",
+      "Media",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "shynet",
     "logo": "logo.png",
     "name": "Shynet",
     "description": "Shynet is a powerful, open-source analytics tool designed to provide you with clear, comprehensive insights about your website's traffic and user behavior. Unlike traditional analytics platforms, Shynet respects user privacy and does not track individual users across websites. Instead, it focuses on providing aggregate data and trends, helping you understand how users interact with your website as a whole. Shynet offers a range of features including real-time analytics, session tracking, and primary key integration. It also supports single-page applications, ensuring you get accurate data even when users navigate between pages within your application. With Shynet, you can easily create and manage multiple services, each with its own unique tracking script. The app also offers an API, allowing you to access all the information displayed on the dashboard programmatically. Whether you're a small business owner, a web developer, or a data analyst, Shynet provides you with the tools you need to make informed decisions about your website.",
     "tags": [
       "Analytics"
+    ]
+  },
+  {
+    "slug": "sickchill",
+    "logo": "logo.png",
+    "name": "Sickchill",
+    "description": "SickChill is a self-hosted personal video recorder (PVR) application designed to automate the process of downloading and managing TV shows. It supports a wide range of sources to download content, including torrents and Usenet. With its intuitive interface, you can search for and schedule episodes, track your show library, and get detailed information about your favorite series. SickChill integrates with various media players and tools to organize and play content seamlessly. It also includes features like automatic quality selection, subtitles, and episode renaming for a streamlined viewing experience.",
+    "tags": [
+      "TV Shows",
+      "Media",
+      "Automation"
     ]
   },
   {
@@ -3400,6 +3471,32 @@
       "File Management",
       "Media",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "sinusbot",
+    "logo": "logo.png",
+    "name": "Sinusbot",
+    "description": "Sinusbot is a powerful and versatile music bot designed for communication platforms like TeamSpeak and Discord. It allows users to stream high-quality audio, manage playlists, and automate music playback seamlessly. Sinusbot is lightweight, highly customizable, and provides an intuitive web interface for managing audio playback. With support for plugins and scripting, Sinusbot can be tailored to meet the needs of any community, enhancing the audio experience for gaming, collaboration, or leisure activities.",
+    "tags": [
+      "Music Bot",
+      "Audio Streaming",
+      "TeamSpeak",
+      "Discord",
+      "Automation"
+    ]
+  },
+  {
+    "slug": "smokeping",
+    "logo": "logo.png",
+    "name": "SmokePing",
+    "description": "SmokePing is a powerful open-source tool designed for network monitoring and latency measurement. It provides real-time visualizations of network latency and packet loss, making it easier to identify and diagnose connectivity issues. SmokePing uses ICMP and other protocols to monitor latency across multiple targets and generates detailed graphs to highlight network performance over time. It supports alerting, letting you know when latency or packet loss exceeds predefined thresholds. With its flexible configuration and plugin system, SmokePing can be adapted to various network environments, providing valuable insights into network health and reliability.",
+    "tags": [
+      "Network Monitoring",
+      "Latency Measurement",
+      "Open Source",
+      "Connectivity",
+      "Troubleshooting"
     ]
   },
   {
@@ -3474,6 +3571,19 @@
       "Artifact Storage",
       "Security",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "sourcegraph",
+    "logo": "logo.png",
+    "name": "Sourcegraph",
+    "description": "Sourcegraph is a universal code search and intelligence platform designed to help developers find, explore, and understand code across all repositories. It enables teams to improve productivity and code quality by providing a centralized interface for searching, navigating, and understanding codebases. Sourcegraph supports multiple version control systems, languages, and integrations, making it a powerful tool for developers, DevOps, and enterprises. With features like code insights, precise code navigation, and batch changes, Sourcegraph enhances collaboration and streamlines development workflows.",
+    "tags": [
+      "Code Search",
+      "Developer Tools",
+      "Productivity",
+      "Open Source",
+      "Collaboration"
     ]
   },
   {
@@ -3622,6 +3732,18 @@
     ]
   },
   {
+    "slug": "thingsboard",
+    "logo": "logo.png",
+    "name": "Thingsboard",
+    "description": "ThingsBoard is an open-source IoT platform designed to simplify the process of collecting, processing, and visualizing data from IoT devices. It provides features like real-time device management, telemetry data visualization, and rule engine workflows to automate tasks and actions.",
+    "tags": [
+      "IoT",
+      "Device Management",
+      "Data Visualization",
+      "Automation"
+    ]
+  },
+  {
     "slug": "thumbor",
     "logo": "logo.png",
     "name": "Thumbor",
@@ -3641,6 +3763,17 @@
       "Website Monitor",
       "Analytics",
       "Server Monitor"
+    ]
+  },
+  {
+    "slug": "tiddlywiki",
+    "logo": "logo.png",
+    "name": "Tiddlywiki",
+    "description": "Tiddlywiki is a unique open-source, single-file wiki designed to help you organize, capture, and share information effectively. It is a versatile personal notebook that allows you to create, organize, and navigate your notes in a self-contained HTML file. Tiddlywiki is highly customizable, enabling users to tweak layouts, styles, and functionality through plugins and scripts. It works offline and can be hosted online for collaboration or personal use. Whether you're creating a personal knowledge base, journaling, or managing projects, Tiddlywiki provides a flexible platform to meet your needs.",
+    "tags": [
+      "Wiki",
+      "Personal Knowledge Management",
+      "Note-Taking"
     ]
   },
   {
