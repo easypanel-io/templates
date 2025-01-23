@@ -22,20 +22,15 @@ schema:
   type: object
   required:
     - appServiceName
-    - appServiceImage
   properties:
     appServiceName:
       type: string
       title: App Service Name
       default: Quepasa-API
-    appServiceImage:
-      type: string
-      title: App Service Image
-      default: codeleaks/quepasa
 benefits:
   - title: Seamless Messaging Integration
     description:
-    Quepasa-API is an easy-to-use API for use with Chatwoot without losing messages and disconnections
+    Quepasa-API is an easy-to-use API for use with Chatwoot without losing messages and disconnections.
   - title: Free and Open Source
     description:
       Quepasa-AOI is free to use and provides a fully open-source solution,
