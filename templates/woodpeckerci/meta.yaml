@@ -1,0 +1,77 @@
+name: WoodPecker CI
+description:
+  "WoodPecker CI is a modern, open-source continuous integration (CI) and
+  delivery tool designed for developers who value simplicity, flexibility, and
+  scalability. It integrates seamlessly with GitHub, allowing teams to automate
+  testing, build, and deployment workflows efficiently. WoodPecker CI is
+  lightweight, easy to deploy, and supports a wide range of programming
+  languages and platforms. With its agent-based architecture, it provides high
+  customizability and performance, making it ideal for both small projects and
+  large-scale software development pipelines."
+instructions: null
+changeLog:
+  - date: 2025-01-27
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/woodpecker-ci/woodpecker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - agentServiceImage
+    - githubClient
+    - githubSecret
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: woodpecker-ci
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: woodpeckerci/woodpecker-server:v2.8.3
+    agentServiceImage:
+      type: string
+      title: Agent Service Image
+      default: woodpeckerci/woodpecker-agent:v2.8.3
+    githubClient:
+      type: string
+      title: GitHub Client ID
+    githubSecret:
+      type: string
+      title: GitHub Client Secret
+benefits:
+  - title: Seamless GitHub Integration
+    description:
+      WoodPecker CI integrates natively with GitHub to streamline your
+      development workflows, automating builds, tests, and deployments.
+  - title: Lightweight and Efficient
+    description:
+      With its lightweight design, WoodPecker CI is easy to deploy and manage,
+      consuming minimal system resources.
+  - title: Open-Source and Transparent
+    description:
+      Being open-source, WoodPecker CI allows developers to fully customize
+      their CI/CD pipelines and ensures transparency.
+features:
+  - title: Flexible CI/CD Pipelines
+    description:
+      WoodPecker CI offers customizable pipelines to fit the needs of any
+      project, supporting diverse languages and platforms.
+  - title: Agent-Based Architecture
+    description:
+      Its agent-based system ensures better resource management and scalability,
+      allowing distributed builds.
+  - title: Easy Deployment
+    description:
+      WoodPecker CI can be deployed quickly on various environments, including
+      local machines, cloud platforms, and Kubernetes clusters.
+tags:
+  - CI/CD
+  - Open-Source
+  - DevOps
