@@ -1,24 +1,18 @@
 name: Apprise-API
 description:
-  Anything-LLM is an open-source, AI-powered platform that enables users to
-  leverage Large Language Models (LLMs) for creating, managing, and querying
-  custom knowledge bases. It provides seamless integration with OpenAI services,
-  offering a robust, flexible, and extensible environment for LLM-driven
-  applications. Ideal for developers and organizations, Anything-LLM streamlines
-  the deployment of intelligent AI solutions.
+  Apprise-API is an open-source notification gateway that provides a unified and
+  straightforward way to send notifications to a variety of services, including
+  email, SMS, chat apps, and more. It supports dozens of platforms out of the
+  box, making it an ideal solution for developers and organizations seeking a
+  robust, flexible, and extensible notification system. With a lightweight and
+  API-driven design, Apprise-API simplifies integration into any project.
 instructions:
 changeLog:
   - date: 2025-01-27
     description: First release
 links:
-  - label: Website
-    url: https://anythingllm.com/
-  - label: Compose Docs
-    url: https://docs.anythingllm.com/installation-docker/local-docker
-  - label: Documentation
-    url: https://docs.anythingllm.com/
   - label: Github
-    url: https://github.com/mintplex-labs/anything-llm
+    url: https://github.com/caronc/apprise-api
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -37,44 +31,42 @@ schema:
       title: App Service Image
       default: linuxserver/apprise-api:latest
 benefits:
-  - title: Build Custom Knowledge Bases
+  - title: Unified Notification Gateway
     description:
-      Anything-LLM allows you to create and query your own knowledge bases,
-      powered by Large Language Models for accurate and intelligent responses.
-  - title: Easy Integration with OpenAI
+      Apprise-API allows you to send notifications across multiple platforms,
+      including email, SMS, chat apps, and more, from a single API.
+  - title: Extensive Platform Support
     description:
-      Simplify setup with seamless integration of OpenAI API keys, enabling
-      quick and efficient deployment of LLM-powered workflows.
-  - title: Extensible and Customizable
+      With built-in support for dozens of services, Apprise-API ensures seamless
+      integration with your preferred notification platforms.
+  - title: Lightweight and Scalable
     description:
-      Anything-LLM offers a flexible and developer-friendly architecture,
-      allowing customization of features, APIs, and workflows to suit your
-      specific needs.
+      The lightweight design of Apprise-API makes it easy to deploy in
+      containerized environments, ensuring scalability and flexibility.
 features:
-  - title: Knowledge Base Management
+  - title: Multi-Platform Notifications
     description:
-      Easily upload, manage, and query your documents to create a tailored
-      knowledge base using powerful LLM integrations.
-  - title: OpenAI API Integration
+      Send notifications to email, SMS, chat apps, and other platforms with
+      minimal configuration.
+  - title: Open-Source and Extensible
     description:
-      Connect to OpenAI’s models effortlessly for natural language processing,
-      delivering precise and intelligent results.
-  - title: Access Control and Security
+      Apprise-API’s open-source architecture allows developers to customize and
+      extend functionality to meet their specific needs.
+  - title: RESTful API
     description:
-      Secure your instance with access codes, ensuring only authorized users can
-      interact with your custom knowledge bases.
+      Utilize a simple RESTful API to integrate Apprise-API into any application
+      or workflow for easy notification management.
+  - title: Secure and Reliable
+    description:
+      Built with security in mind, Apprise-API ensures that notifications are
+      delivered securely and reliably to the desired platforms.
   - title: Containerized Deployment
     description:
-      Easily deploy Anything-LLM in containerized environments like Docker for
-      scalability and flexibility.
-  - title: User-Friendly Interface
-    description:
-      Enjoy a clean and intuitive UI that simplifies the process of managing and
-      querying your knowledge base, ensuring an excellent user experience.
+      Easily deploy Apprise-API using Docker for quick setup and scalability.
 tags:
-  - Large Language Models
-  - Knowledge Base
-  - OpenAI Integration
-  - Customizable
+  - Notifications
   - Open Source
-  - AI-Powered
+  - API
+  - Email
+  - SMS
+  - Chat Apps
