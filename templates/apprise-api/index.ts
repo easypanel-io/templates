@@ -8,12 +8,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env: [
-        `SERVICE_FQDN_APPRISE_8000=`,
-        `PUID=1000`,
-        `PGID=1000`,
-        `TZ=UTC`,
-      ].join("\n"),
+      env: [`PUID=1000`, `PGID=1000`, `TZ=UTC`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
