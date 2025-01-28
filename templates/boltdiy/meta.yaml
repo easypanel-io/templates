@@ -1,0 +1,69 @@
+name: Bolt.Diy
+description:
+  Bolt.Diy is an AI-powered agent and community for web development, enabling
+  you to create, edit, and deploy full-stack applications without any local
+  setup. It's like having a coding genie at your fingertips, transforming your
+  web ideas into reality with just a few prompts. Bolt.Diy streamlines the
+  development process with intelligent suggestions, automated workflows, and
+  seamless deployment, making it the ultimate tool for modern web developers.
+  The app is fully containerized and designed for accessibility across various
+  platforms.
+instructions: null
+changeLog:
+  - date: 2025-01-28
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/stackblitz-labs/bolt.diy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bolt-diy
+benefits:
+  - title: AI-Powered Development
+    description:
+      Bolt.Diy leverages AI to assist with code generation, debugging, and
+      deployment, dramatically reducing the time needed to build web
+      applications.
+  - title: No Local Setup Required
+    description:
+      Create and deploy full-stack applications directly in the browser or
+      through cloud-hosted environments without the need for local installations
+      or configurations.
+  - title: Real-Time Collaboration
+    description:
+      Work with your team in real-time, sharing ideas and edits seamlessly
+      through an integrated collaboration platform.
+features:
+  - title: Intelligent Code Assistance
+    description:
+      Bolt.Diy provides smart suggestions and automates repetitive coding tasks
+      to speed up the development process.
+  - title: Full-Stack Capabilities
+    description:
+      Build and deploy both front-end and back-end applications using Bolt.Diy's
+      comprehensive tools and frameworks.
+  - title: Community-Driven Platform
+    description:
+      Engage with a vibrant developer community, sharing tips, resources, and
+      best practices to enhance your projects.
+  - title: Integrated Deployment
+    description:
+      Deploy applications directly from the platform to your hosting environment
+      without leaving the interface, ensuring a smooth and efficient workflow.
+tags:
+  - AI
+  - Web Development
+  - Collaboration
+  - Full-Stack
+  - Deployment
+  - Open Source
+  - Community
