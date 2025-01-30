@@ -28,6 +28,9 @@ export function generate(input: Input): Output {
           port: 5985,
         },
       ],
+      deploy: {
+        command: "/entrypoint.sh",
+      },
       mounts: [
         {
           type: "volume",
