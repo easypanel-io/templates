@@ -1,0 +1,108 @@
+name: Teamspeak
+description:
+  TeamSpeak is a powerful and flexible VoIP (Voice over Internet Protocol)
+  application designed for online gaming, business communication, and remote
+  collaboration. It provides crystal-clear voice communication with minimal
+  latency, making it ideal for teams that require real-time coordination.
+  TeamSpeak offers a secure and scalable environment, allowing users to create
+  and manage their own servers with customizable permissions and roles. The
+  application supports a wide range of integrations and plugins, providing
+  extended functionality. TeamSpeak is widely used in gaming communities,
+  corporate environments, and educational institutions for efficient
+  communication.
+
+instructions: null
+
+changeLog:
+  - date: 2025-01-29
+    description: First release
+
+links:
+  - label: Website
+    url: https://www.teamspeak.com/
+  - label: Github
+    url: https://github.com/TeamSpeak-Systems
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - queryServerPort
+    - virtualBaseServerPort
+    - fileManagerPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: teamspeak
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: teamspeak:3.13.7
+    queryServerPort:
+      type: string
+      title: Query Server
+      default: "10011"
+    virtualBaseServerPort:
+      type: string
+      title: Virtual Base Server
+      default: "9987"
+    fileManagerPort:
+      type: string
+      title: File Manager Server
+      default: "30033"
+
+benefits:
+  - title: High-Quality Voice Communication
+    description:
+      TeamSpeak provides superior voice quality with low latency, ensuring
+      seamless real-time communication.
+  - title: Self-Hosted & Secure
+    description:
+      Users can host their own servers, ensuring privacy, security, and full
+      control over their communication environment.
+  - title: Customizable Permissions
+    description:
+      TeamSpeak offers a robust permission system, allowing administrators to
+      configure user roles and access levels.
+  - title: Scalable & Efficient
+    description:
+      Designed to handle small groups to large communities with thousands of
+      participants.
+
+features:
+  - title: Voice Communication
+    description:
+      High-quality, low-latency voice chat for seamless communication.
+  - title: Server Hosting
+    description: Host your own server with full administrative control.
+  - title: Permissions System
+    description: Manage user roles and permissions with a granular system.
+  - title: File Transfers
+    description: Securely transfer files directly within TeamSpeak.
+  - title: Cross-Platform Support
+    description: Available on Windows, macOS, Linux, iOS, and Android.
+  - title: Plugins & Add-ons
+    description:
+      Extend functionality with community-built plugins and integrations.
+  - title: Encryption & Security
+    description: End-to-end encryption ensures safe and secure conversations.
+  - title: Low Resource Usage
+    description: Optimized for minimal CPU and bandwidth consumption.
+  - title: Multi-Server Connectivity
+    description: Connect to multiple servers simultaneously.
+  - title: 3D Sound Positioning
+    description:
+      Provides a spatial audio experience for immersive communication.
+
+tags:
+  - VoIP
+  - Communication
+  - Gaming
+  - Business
+  - Secure
