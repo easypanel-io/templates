@@ -1,0 +1,91 @@
+name: Faraday
+description:
+  Faraday is a powerful open-source vulnerability management platform designed
+  to streamline security assessments and pentesting workflows. It provides
+  centralized visibility, real-time collaboration, and automation capabilities
+  to help security teams manage vulnerabilities efficiently. Faraday supports
+  integration with multiple security tools, offering a unified interface to
+  collect, analyze, and report findings. With its scalable architecture and
+  robust API, Faraday enables teams to enhance their security operations while
+  maintaining compliance and improving response times.
+instructions:
+  Username is faraday; check for the password in the Overview Console logs.
+changeLog:
+  - date: 2025-01-30
+    description: First release
+links:
+  - label: Website
+    url: https://www.faradaysec.com/
+  - label: Documentation
+    url: https://docs.faradaysec.com/
+  - label: Github
+    url: https://github.com/infobyte/faraday
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: faraday
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: faradaysec/faraday:5.10.1
+benefits:
+  - title: Centralized Vulnerability Management
+    description:
+      Faraday provides a unified platform for managing security assessments,
+      allowing teams to track and remediate vulnerabilities effectively.
+  - title: Real-Time Collaboration
+    description:
+      Enable security teams to work together efficiently with shared workspaces,
+      real-time updates, and collaborative issue tracking.
+  - title: Extensive Integrations
+    description:
+      Faraday integrates with a wide range of security tools, including
+      vulnerability scanners, exploit frameworks, and reporting systems.
+  - title: Automated Workflows
+    description:
+      Automate vulnerability management tasks, including data collection,
+      correlation, and reporting, to improve efficiency.
+  - title: Scalable & Flexible
+    description:
+      Faraday supports deployments for teams of any size, from small security
+      groups to enterprise-level security operations centers (SOCs).
+features:
+  - title: Multi-Tool Integration
+    description:
+      Collect data from various security tools, normalizing and aggregating
+      findings for streamlined analysis.
+  - title: Interactive Dashboard
+    description:
+      Gain insights into security assessments with an interactive, data-driven
+      dashboard providing real-time analytics.
+  - title: Customizable Reporting
+    description:
+      Generate detailed security reports with customizable templates and
+      automated data correlation.
+  - title: API & Web Interface
+    description:
+      Extend functionality with a powerful REST API and manage security
+      assessments via an intuitive web interface.
+  - title: Role-Based Access Control (RBAC)
+    description:
+      Implement granular permissions and access controls for managing users and
+      teams securely.
+  - title: Compliance & Risk Management
+    description:
+      Track vulnerabilities and ensure compliance with security standards such
+      as PCI-DSS, ISO 27001, and NIST.
+tags:
+  - Vulnerability Management
+  - Pentesting
+  - Security Operations
+  - Open Source
+  - Cybersecurity
