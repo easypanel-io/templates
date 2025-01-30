@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         repo: "bolt.diy",
         ref: "main",
         path: "/",
-        autoDeploy: true,
+        autoDeploy: false,
       },
       build: {
         type: "dockerfile",
