@@ -1,0 +1,72 @@
+name: OrangeHRM
+description:
+  OrangeHRM is a comprehensive, open-source Human Resource Management (HRM)
+  solution designed to streamline HR processes and manage employee information.
+  It provides modules for employee management, leave tracking, time management,
+  recruitment, and performance reviews. With an intuitive interface and
+  customizable features, OrangeHRM is a great choice for organizations of all
+  sizes.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: Template Release
+links:
+  - label: Website
+    url: https://www.orangehrm.com/
+  - label: Github
+    url: https://github.com/orangehrm/orangehrm
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: orangehrm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: orangehrm/orangehrm:5.7
+
+benefits:
+  - title: Comprehensive HR Management
+    description:
+      OrangeHRM offers a complete suite of tools to manage all aspects of human
+      resources, from recruitment to performance evaluations.
+  - title: Open Source and Customizable
+    description:
+      Enjoy the flexibility of an open-source solution that you can tailor to
+      fit your organization’s unique requirements.
+  - title: Scalable Solution
+    description:
+      Ideal for small businesses and enterprises alike, OrangeHRM grows with
+      your organization.
+
+features:
+  - title: Employee Information Management
+    description:
+      Maintain a centralized database of employee records with easy access and
+      updating capabilities.
+  - title: Leave and Time Tracking
+    description:
+      Streamline leave requests, approvals, and attendance tracking with
+      automated tools.
+  - title: Recruitment and Onboarding
+    description:
+      Manage job postings, applicant tracking, and onboarding processes with
+      ease.
+  - title: Performance Reviews
+    description:
+      Conduct structured performance evaluations and manage employee goals.
+
+tags:
+  - Human Resource Management
+  - Open Source
+  - Employee Management
