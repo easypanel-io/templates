@@ -1,29 +1,25 @@
-name: SimpleTorrent
+name: Wallabag
 description:
-  SimpleTorrent is a self-hosted remote torrent client that allows you to manage
-  your torrents remotely. Written in Go (golang), it enables you to start
-  torrents remotely and download sets of files on the local disk of the server.
-  These files are then retrievable or streamable via HTTP. The app offers
-  individual file download control, the ability to run an external program on
-  task completion, and a seeding ratio to stop tasks when reached. It also
-  provides a download/upload speed limiter and detailed transfer stats in the
-  web UI. SimpleTorrent supports real-time updates, is mobile-friendly, and
-  offers a fast content server. It also supports IPv6 out of the box and has an
-  updated torrent engine from anacrolix/torrent. Additional features include a
-  torrent watcher, K8s/docker health-check endpoint, extra trackers from an
-  external source, and a protocol handler to magnet.
+  Wallabag is a self-hosted read-it-later application that allows you to save
+  web articles and access them later in a clean, distraction-free format.
+  Written in PHP, it enables you to store and organize articles, categorize them
+  with tags, and sync across multiple devices. Wallabag is privacy-focused,
+  supports importing from services like Pocket and Instapaper, and provides a
+  RESTful API for integration with other tools. The app offers browser
+  extensions, a mobile-friendly interface, and multiple export options,
+  including PDF, ePub, and plain text.
 instructions: null
 changeLog:
-  - date: 2022-10-28
-    description: first release
+  - date: 2025-01-31
+    description: First Release
 links:
   - label: Documentation
-    url: https://github.com/boypt/simple-torrent/wiki
+    url: https://doc.wallabag.org
   - label: Github
-    url: https://github.com/boypt/simple-torrent
+    url: https://github.com/wallabag/wallabag
 contributors:
-  - name: Supernova3339
-    url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -33,55 +29,48 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: simpletorrent
+      default: wallabag
     appServiceImage:
       type: string
       title: App Service Image
-      default: boypt/cloud-torrent:1.3.9
+      default: wallabag/wallabag:2.6.10
 benefits:
-  - title: Remote Torrent Management
+  - title: Save Articles for Later
     description:
-      SimpleTorrent allows you to manage your torrents remotely. You can start
-      torrents from anywhere and have them download files directly to the
-      server's local disk. This makes it easy to manage your downloads without
-      needing to be physically present at the server.
-  - title: Streamable Downloads
+      Wallabag allows you to save web articles and read them later in a clean
+      and ad-free format. This ensures distraction-free reading and improved
+      focus on content.
+  - title: Multi-Device Synchronization
     description:
-      Once your files are downloaded to the server, they are retrievable or
-      streamable via HTTP. This means you can access your downloaded content
-      from any device with an internet connection, making it highly convenient
-      and flexible.
-  - title: Control Over Individual File Downloads
+      Your saved articles sync across multiple devices, allowing seamless
+      reading on desktop, tablet, or smartphone. You can access your articles
+      anywhere.
+  - title: Open-Source and Self-Hosted
     description:
-      SimpleTorrent gives you the ability to control individual file downloads.
-      This means you can choose exactly which files you want to download from a
-      torrent, giving you greater control over your downloads and saving server
-      space.
+      Wallabag is fully open-source and can be self-hosted, ensuring complete
+      control over your data while maintaining privacy and security.
 features:
-  - title: DoneCmd
+  - title: Browser Extensions
     description:
-      This feature allows you to run an external program upon the completion of
-      tasks. This can be useful for automating processes or triggering events
-      once a download is complete.
-  - title: SeedRatio
+      Wallabag offers browser extensions for Chrome, Firefox, and other
+      browsers, making it easy to save articles with a single click.
+  - title: Full-Text Search
     description:
-      This feature stops a task when a certain seeding ratio is reached. This
-      allows you to control how much you seed back to the torrent community
-      after your download is complete.
-  - title: UploadRate/DownloadRate
+      The built-in full-text search feature helps you find saved articles
+      quickly by searching within the content.
+  - title: Tag Organization
     description:
-      These features allow you to limit your upload and download speeds. This
-      can be useful for managing bandwidth usage on your server.
-  - title: Torrent Watcher
+      Articles can be categorized with tags, making it easier to find relevant
+      content and organize saved items efficiently.
+  - title: Multiple Export Formats
     description:
-      This feature allows you to monitor your torrents in real-time. It provides
-      detailed transfer stats in the web UI, giving you a clear overview of your
-      torrent activity.
-  - title: Magnet RSS Subscribing
+      Wallabag allows you to export your saved articles in various formats,
+      including PDF, ePub, and plain text, for offline access or backup.
+  - title: Import from Other Services
     description:
-      This feature supports subscribing to magnet RSS feeds. This allows you to
-      automatically download new content from your favorite torrent feeds.
+      You can import your saved articles from Pocket, Instapaper, and other
+      read-it-later services, making the transition seamless.
 tags:
-  - File Management
-  - Media
   - Productivity
+  - Reading
+  - Bookmarking
