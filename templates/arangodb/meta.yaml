@@ -1,0 +1,79 @@
+name: ArangoDB
+description:
+  ArangoDB is a multi-model NoSQL database system that supports graph, document,
+  and key-value data models. It is designed for scalability, high availability,
+  and flexibility, making it suitable for a wide range of applications, from
+  simple document storage to complex graph processing. ArangoDB offers a native
+  query language (AQL), full-text search capabilities, a built-in HTTP API, and
+  a web-based UI for management. It also provides features like replication,
+  sharding, and ACID transactions to ensure data integrity and performance. With
+  its integrated search engine and support for multi-tenancy, ArangoDB is an
+  ideal choice for both small projects and enterprise-level applications.
+instructions: null
+changeLog:
+  - date: 2025-02-03
+    description: First Release
+links:
+  - label: Documentation
+    url: https://www.arangodb.com/docs/stable/
+  - label: Github
+    url: https://github.com/arangodb/arangodb
+contributors:
+  - name: ArangoDB Team
+    url: https://github.com/arangodb
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: arangodb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: arangodb:3.12.4
+benefits:
+  - title: Multi-Model Database
+    description:
+      ArangoDB supports multiple data models, including document, graph, and
+      key-value, allowing developers to use a single database for diverse
+      application needs.
+  - title: Scalable and High Availability
+    description:
+      With built-in clustering, replication, and sharding, ArangoDB ensures high
+      availability and scalability for enterprise-level applications.
+  - title: Rich Querying Capabilities
+    description:
+      ArangoDB provides AQL (ArangoDB Query Language), a powerful query language
+      that supports complex queries, graph traversals, and full-text search.
+features:
+  - title: Native Graph Support
+    description:
+      ArangoDB offers a robust graph database engine with native graph traversal
+      and pattern matching, making it ideal for social networks, recommendation
+      engines, and fraud detection.
+  - title: ACID Transactions
+    description:
+      ArangoDB ensures data integrity with full support for ACID transactions,
+      making it a reliable choice for critical applications.
+  - title: Integrated Search Engine
+    description:
+      With ArangoSearch, ArangoDB provides full-text search, ranking, and
+      filtering capabilities, enhancing search-driven applications.
+  - title: HTTP API and Web UI
+    description:
+      ArangoDB includes a built-in HTTP API and a web-based UI for easy database
+      management and administration.
+  - title: Flexible Deployment Options
+    description:
+      ArangoDB can be deployed as a single instance, in a cluster, or in
+      Kubernetes environments for optimal scalability and reliability.
+tags:
+  - Database
+  - NoSQL
+  - Graph Database
+  - Document Store
+  - Key-Value Store
