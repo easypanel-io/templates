@@ -1,0 +1,90 @@
+name: JSReport
+description:
+  JSReport is an open-source reporting platform designed for developers to
+  generate, manage, and customize reports using JavaScript. It provides a
+  powerful templating engine, flexible rendering, and a web-based studio for
+  designing reports. JSReport supports multiple output formats, including PDF,
+  Excel, HTML, and more, making it ideal for businesses and applications that
+  require automated document generation. It can be self-hosted and integrated
+  with various databases and applications for seamless reporting.
+instructions: null
+changeLog:
+  - date: 2025-02-04
+    description: First release
+links:
+  - label: Website
+    url: https://jsreport.net/
+  - label: Documentation
+    url: https://jsreport.net/learn
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jsreport
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jsreport/jsreport:2.10.0
+    username:
+      type: string
+      title: App Service Username
+      default: admin
+    password:
+      type: string
+      title: App Service Password
+      default: admin
+
+benefits:
+  - title: Customizable Reporting
+    description:
+      JSReport allows users to create fully customizable reports using
+      JavaScript and templating engines like Handlebars, Pug, and EJS.
+  - title: Self-Hosted & Secure
+    description:
+      JSReport can be self-hosted, giving users complete control over their
+      report generation, ensuring data privacy and security.
+  - title: Multiple Output Formats
+    description:
+      Generate reports in various formats, including PDF, Excel, HTML, and
+      images, to fit different business needs.
+  - title: Integration with Databases & APIs
+    description:
+      JSReport supports seamless integration with databases and APIs, making it
+      easy to generate reports from structured data sources.
+features:
+  - title: Web-Based Report Designer
+    description:
+      JSReport includes a web-based studio that allows users to design, preview,
+      and customize reports in real time.
+  - title: API for Automated Report Generation
+    description:
+      A powerful API enables developers to generate reports programmatically and
+      integrate them into applications.
+  - title: Scheduling & Automation
+    description:
+      Users can schedule and automate report generation at predefined intervals,
+      improving efficiency and workflow.
+  - title: Template Inheritance & Versioning
+    description:
+      JSReport supports template inheritance and versioning, allowing users to
+      manage different report structures efficiently.
+  - title: Extensible with Plugins
+    description:
+      The platform supports various plugins to extend functionalities such as
+      authentication, file storage, and additional formatting options.
+tags:
+  - Reporting
+  - PDF Generation
+  - Data Visualization
+  - Business Intelligence
+  - Self-Hosting
