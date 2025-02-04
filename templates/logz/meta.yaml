@@ -1,0 +1,85 @@
+name: Logz.io
+description:
+  Logz.io is a cloud-based observability platform that provides log management,
+  metrics, and tracing powered by open-source technologies such as ELK and
+  OpenTelemetry. It enables users to collect, analyze, and monitor logs in
+  real-time to gain insights into their systems and applications. Logz.io helps
+  developers, DevOps, and security teams troubleshoot issues, optimize
+  performance, and enhance security by providing AI-driven analytics, alerts,
+  and integrations with popular cloud services and DevOps tools.
+instructions: null
+changeLog:
+  - date: 2025-02-04
+    description: first release
+links:
+  - label: Documentation
+    url: https://docs.logz.io/
+  - label: GitHub
+    url: https://github.com/logzio
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - logzShippingToken
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: logz
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: logzio/docker-logs-collector:latest
+    logzShippingToken:
+      type: string
+      title: Logz.io Shipping Token
+      description: Enter the Shipping Token
+benefits:
+  - title: Centralized Log Management
+    description:
+      Logz.io provides a centralized platform to collect, store, and analyze
+      logs from various sources. This enables efficient troubleshooting and
+      faster root cause analysis.
+  - title: AI-Powered Insights
+    description:
+      Logz.io leverages AI and machine learning to provide intelligent alerts,
+      anomaly detection, and recommendations, helping teams identify and resolve
+      issues quickly.
+  - title: Seamless Integrations
+    description:
+      Logz.io integrates seamlessly with popular DevOps tools, cloud platforms,
+      and open-source monitoring solutions, making it easy to deploy and manage
+      logs efficiently.
+features:
+  - title: ELK Stack as a Service
+    description:
+      Logz.io provides a managed ELK stack, eliminating the complexity of
+      deploying and maintaining Elasticsearch, Logstash, and Kibana for log
+      analysis.
+  - title: OpenTelemetry Support
+    description:
+      Logz.io supports OpenTelemetry for collecting traces and metrics,
+      providing full-stack observability across distributed applications.
+  - title: Log Parsing & Enrichment
+    description:
+      Built-in log parsing and enrichment capabilities ensure structured data
+      for easier searching, filtering, and correlation of logs.
+  - title: Alerts & Notifications
+    description:
+      Logz.io provides advanced alerting mechanisms with integrations into
+      Slack, PagerDuty, and other notification platforms to proactively monitor
+      system health.
+  - title: Security & Compliance
+    description:
+      Logz.io offers security event monitoring and compliance reporting, making
+      it an essential tool for security and DevSecOps teams.
+tags:
+  - Observability
+  - Log Management
+  - DevOps
+  - Security
+  - Monitoring
