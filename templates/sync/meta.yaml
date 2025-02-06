@@ -1,0 +1,75 @@
+name: Sync
+description:
+  Sync (Resilio Sync) is a self-hosted file synchronization and sharing
+  application that allows users to securely sync files between devices without
+  relying on cloud storage. It provides a powerful alternative to proprietary
+  cloud-based file sharing services, ensuring complete control over data and
+  privacy. With Sync, users can transfer large files quickly, collaborate on
+  projects in real-time, and maintain data consistency across multiple devices.
+  Built with efficiency and security in mind, Sync is ideal for both personal
+  and business use.
+instructions: null
+changeLog:
+  - date: 2025-02-06
+    description: First Release
+links:
+  - label: Documentation
+    url: https://help.resilio.com/hc/en-us
+  - label: Dockerhub Documentation
+    url: https://hub.docker.com/r/resilio/sync
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sync
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: resilio/sync:2.8.1
+benefits:
+  - title: Secure and Private File Sync
+    description:
+      Sync allows users to sync files directly between devices without relying
+      on cloud storage, ensuring privacy and security.
+  - title: High-Speed File Transfers
+    description:
+      Sync is optimized for fast file transfers, even with large files,
+      utilizing peer-to-peer technology for efficient data distribution.
+  - title: Cross-Platform Support
+    description:
+      Sync is available on multiple platforms, including Windows, macOS, Linux,
+      iOS, and Android, making file access seamless across devices.
+features:
+  - title: Peer-to-Peer File Sync
+    description:
+      Sync directly transfers files between devices using peer-to-peer
+      connections, eliminating the need for centralized cloud storage.
+  - title: End-to-End Encryption
+    description:
+      Sync ensures that all file transfers are encrypted, protecting sensitive
+      data from unauthorized access.
+  - title: Selective Sync
+    description:
+      Users can choose specific files or folders to sync, optimizing storage and
+      bandwidth usage.
+  - title: Automatic Backup
+    description:
+      Keep important files backed up by setting up automatic synchronization
+      between selected devices.
+  - title: Folder Sharing and Collaboration
+    description:
+      Share files and folders securely with team members, allowing real-time
+      collaboration and access control.
+tags:
+  - File Synchronization
+  - Self-Hosted
+  - Privacy
+  - Collaboration
