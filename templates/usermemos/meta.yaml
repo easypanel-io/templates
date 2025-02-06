@@ -1,0 +1,74 @@
+name: Usermemos
+description:
+  Usermemos is a self-hosted note-taking and knowledge management application
+  that allows users to create, organize, and share notes efficiently. It
+  provides an open-source alternative to proprietary note-taking software,
+  offering full control over your data and privacy. With Usermemos, you can
+  store your thoughts, ideas, and important information securely while accessing
+  them from any device. Built with simplicity and performance in mind, Usermemos
+  is ideal for both personal and collaborative use.
+instructions: null
+changeLog:
+  - date: 2025-02-06
+    description: First Release
+links:
+  - label: Documentation
+    url: https://usememos.com/docs/
+  - label: Github
+    url: https://github.com/usememos/memos
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: usermemos
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: neosmemo/memos:stable
+benefits:
+  - title: Privacy and Data Control
+    description:
+      Usermemos allows you to host your own note-taking service, ensuring
+      complete control over your data without reliance on third-party cloud
+      providers.
+  - title: Seamless Note Organization
+    description:
+      Usermemos provides an intuitive interface to create, categorize, and
+      retrieve notes effortlessly, boosting productivity and knowledge
+      retention.
+  - title: Lightweight and Fast
+    description:
+      Designed to be minimalistic yet powerful, Usermemos runs efficiently with
+      low resource usage, making it suitable for self-hosted environments.
+features:
+  - title: Self-Hosted Solution
+    description:
+      Usermemos enables users to deploy and manage their own note-taking
+      platform, ensuring privacy and security.
+  - title: Markdown Support
+    description:
+      Write notes with Markdown formatting, allowing for structured content and
+      enhanced readability.
+  - title: Tag-Based Organization
+    description:
+      Organize notes with tags for easy retrieval and better categorization.
+  - title: Search Functionality
+    description:
+      Quickly find notes using an advanced search feature, making knowledge
+      access effortless.
+  - title: Collaboration Features
+    description:
+      Share notes and collaborate with others by granting access or exporting
+      notes in various formats.
+tags:
+  - Note-Taking
+  - Productivity
+  - Self-Hosted
