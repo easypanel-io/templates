@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: neosmemo/memos:stable
+      default: neosmemo/memos:0.24
 benefits:
   - title: Privacy and Data Control
     description:
