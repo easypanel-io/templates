@@ -1,4 +1,4 @@
-name: Sync
+name: Resilio Sync
 description:
   Sync (Resilio Sync) is a self-hosted file synchronization and sharing
   application that allows users to securely sync files between devices without
@@ -29,7 +29,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: sync
+      default: resilio-sync
     appServiceImage:
       type: string
       title: App Service Image
