@@ -1,0 +1,94 @@
+name: EmailEngine
+description:
+  EmailEngine is a powerful email automation and integration tool designed to
+  simplify email processing for applications. It provides a seamless interface
+  for managing IMAP and SMTP connections, allowing applications to send,
+  receive, and process emails efficiently. With built-in webhook support and
+  extensive API capabilities, EmailEngine enables developers to automate email
+  workflows and integrate email functionality effortlessly. Whether handling
+  transactional emails or managing large-scale email operations, EmailEngine
+  offers a reliable and feature-rich solution.
+instructions: Set the SMTP password for email submissions on the server.
+changeLog:
+  - date: 2025-02-06
+    description: Template Release
+links:
+  - label: Website
+    url: https://emailengine.app
+  - label: Documentation
+    url: https://api.emailengine.app/
+  - label: Github
+    url: https://github.com/postalsys/emailengine
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpMessageSubmission
+    - imapPort
+    - smtpPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: emailengine
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: postalsys/emailengine:latest
+    smtpMessageSubmission:
+      type: string
+      title: SMTP Message Submission
+      default: "2525"
+    imapPort:
+      type: string
+      title: IMAP Port
+      default: "9993"
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: password
+benefits:
+  - title: Seamless Email Integration
+    description:
+      EmailEngine provides a robust solution for integrating IMAP and SMTP
+      functionality, allowing applications to manage emails effortlessly.
+  - title: Webhook Support
+    description:
+      Built-in webhook functionality enables real-time email event tracking,
+      making it easy to trigger automated actions based on incoming or outgoing
+      emails.
+  - title: API-Driven Automation
+    description:
+      The extensive API allows developers to automate email sending, receiving,
+      and processing without dealing with complex email protocols directly.
+  - title: Cost-Effective Solution
+    description:
+      As an open-source tool, EmailEngine offers an affordable solution for
+      managing email automation without relying on expensive third-party
+      services.
+features:
+  - title: IMAP and SMTP Support
+    description:
+      EmailEngine simplifies working with IMAP and SMTP, abstracting
+      complexities and making email handling more efficient.
+  - title: Webhook-Driven Processing
+    description:
+      Automate email workflows with real-time webhooks for incoming and outgoing
+      emails, reducing manual email processing.
+  - title: Advanced Email Parsing
+    description:
+      Extract email content, attachments, and metadata easily with built-in
+      parsing tools, enabling better email workflow automation.
+  - title: Secure Authentication
+    description:
+      Supports OAuth2 and other authentication mechanisms to ensure secure email
+      handling and access control.
+tags:
+  - Email Automation
+  - Webhooks
+  - API Integration
+  - Open Source
