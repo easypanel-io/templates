@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       env: [
         `APPLICATION_URL=https://$(PRIMARY_DOMAIN)`,
         `CANARY=true`,
-        `OFFICE_FILESTASH_URL=http://$(PROJECT_NAME)_filestash:8334`,
+        `OFFICE_FILESTASH_URL=http://$(PROJECT_NAME)_${input.appServiceName}:8334`,
       ].join("\n"),
       domains: [
         {
