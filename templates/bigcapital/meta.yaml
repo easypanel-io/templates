@@ -4,11 +4,7 @@ description:
   assets and operations. It provides a clean and intuitive interface, supports
   plugins for extended functionality, and offers detailed financial tracking
   analytics. With BigCapital, you can maintain control over your investments and
-  branding. The application is accessible via your host on ports 8080 and 8081.
-  This container is based on Docker Baseimage KasmVNC, providing additional
-  environment variables and configurations for enhanced flexibility. It also
-  supports the docker manifest for multi-platform awareness, ensuring the
-  correct image for your architecture.
+  branding.
 
 instructions:
   Delete the Migration Service once completed and access the app using Nginx
