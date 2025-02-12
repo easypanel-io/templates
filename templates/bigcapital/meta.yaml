@@ -1,0 +1,97 @@
+name: Big Capital
+description:
+  BigCapital is a powerful, self-hosted platform designed for managing financial
+  assets and operations. It provides a clean and intuitive interface, supports
+  plugins for extended functionality, and offers detailed financial tracking
+  analytics. With BigCapital, you can maintain control over your investments and
+  branding. The application is accessible via your host on ports 8080 and 8081.
+  This container is based on Docker Baseimage KasmVNC, providing additional
+  environment variables and configurations for enhanced flexibility. It also
+  supports the docker manifest for multi-platform awareness, ensuring the
+  correct image for your architecture.
+
+instructions:
+  Delete the Migration Service once completed and access the app using Nginx
+  Service.
+
+changeLog:
+  - date: 2025-02-12
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.bigcapital.app/
+  - label: Github
+    url: https://github.com/bigcapitalhq/bigcapital
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - serverServiceImage
+    - gotenServiceImage
+    - nginxServiceImage
+    - gotenServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bigcapital
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bigcapitalhq/webapp:v0.22.0
+    nginxServiceImage:
+      type: string
+      title: App Service Image
+      default: dockeriddonuts/bigcapital-nginx:1.0
+    serverServiceImage:
+      type: string
+      title: App Service Image
+      default: bigcapitalhq/server:v0.22.0
+    gotenServiceImage:
+      type: string
+      title: App Service Image
+      default: gotenberg/gotenberg:7
+
+benefits:
+  - title: Comprehensive Financial Management
+    description:
+      BigCapital offers a robust platform for managing and tracking your
+      financial assets easily through its intuitive dashboard and API.
+  - title: Self-Hosted Security
+    description:
+      Maintain full control over your financial data with a self-hosted solution
+      that prioritizes privacy and security.
+  - title: Customizable Platform
+    description:
+      Tailor BigCapital to meet your unique financial needs and branding for
+      enhanced trust and credibility.
+
+features:
+  - title: Advanced API Integration
+    description:
+      Seamlessly integrate BigCapital with your existing financial tools and
+      systems through a powerful API.
+  - title: Plugin Ecosystem
+    description:
+      Enhance BigCapital functionality with various community-built plugins and
+      integrations.
+  - title: Detailed Analytics Dashboard
+    description:
+      Gain comprehensive insights into your financial performance, asset
+      distribution, and key metrics.
+  - title: Personalized Reporting
+    description:
+      Generate custom financial reports and dashboards that align with your
+      business requirements.
+
+tags:
+  - Financial Management
+  - Self-Hosted
+  - Analytics
