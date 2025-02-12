@@ -126,7 +126,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "dockeriddonuts/bigcapital-migration:1.0",
+        image: "dockeriddonuts/bigcapital-migration:1.1",
       },
     },
   });
