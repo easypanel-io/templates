@@ -7,8 +7,7 @@ description:
   Elasticsearch for advanced search capabilities and Redis for optimized caching
   and task management. It also supports custom playlists, video tagging, and
   offline playback, providing complete control over your video collection.
-instructions:
-  Configure Elasticsearch and Redis services for optimal performance.
+instructions: null
 changeLog:
   - date: 2025-02-13
     description: First Release
@@ -37,15 +36,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bbilly1/tubearchivist
+      default: bbilly1/tubearchivist:v0.4.13
     elasticsearchServiceImage:
       type: string
       title: Elasticsearch Service Image
-      default: bbilly1/tubearchivist-es
+      default: bbilly1/tubearchivist-es:8.16.0
     redisServiceImage:
       type: string
       title: Redis Service Image
-      default: redis/redis-stack-server
+      default: redis/redis-stack-server:6.2.6-v19
     username:
       type: string
       title: Username
