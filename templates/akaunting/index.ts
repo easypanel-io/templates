@@ -25,12 +25,12 @@ export function generate(input: Input): Output {
       },
       env: [
         `AKAUNTING_SETUP=false`,
-        `APP_URL=$(PRIMARY_DOMAIN)`,
+        `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_DEBUG=false`,
-        `DB_HOST=${input.appServiceName}-db`,
+        `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `DB_PORT=3306`,
-        `DB_DATABASE=easypanel`,
-        `DB_USERNAME=easypanel`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
+        `DB_USERNAME=$(PROJECT_NAME)`,
         `DB_PASSWORD=${dbPassword}`,
         `COMPANY_NAME=${input.companyName}`,
         `COMPANY_EMAIL=${input.companyEmail}`,
@@ -39,7 +39,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       domains: [
         {
-          host: "$(PRIMARY_DOMAIN)",
+          host: "$(EASYPANEL_DOMAIN)",
           port: 80,
         },
       ],
