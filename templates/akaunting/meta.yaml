@@ -1,0 +1,101 @@
+name: Akaunting
+description: |
+  Akaunting is a powerful online accounting software designed for small businesses, 
+  freelancers, and entrepreneurs. This free and open-source solution provides 
+  comprehensive financial management tools with a modern, user-friendly interface. 
+  Built on Laravel, it offers robust double-entry bookkeeping, real-time financial 
+  tracking, and automated features to streamline your accounting processes. With 
+  multi-user support, document management, and detailed reporting capabilities, 
+  Akaunting helps you maintain professional financial records while saving time 
+  and resources.
+instructions: null
+changeLog:
+  - date: 2025-02-14
+    description: First release with Akaunting 3.0.20
+links:
+  - label: Github
+    url: https://github.com/akaunting/akaunting
+  - label: Documentation
+    url: https://akaunting.com/docs
+  - label: Website
+    url: https://akaunting.com
+contributors:
+  - name: ShayPunter
+    url: https://github.com/shaypunter
+schema:
+  type: object
+  required:
+    - appServiceName
+    - dbName
+    - dbUser
+    - companyName
+    - companyEmail
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: akaunting
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.io/akaunting/akaunting:3.0.20
+    dbName:
+      type: string
+      title: Database Name
+      default: akaunting
+    dbUser:
+      type: string
+      title: Database User
+      default: akaunting
+    companyName:
+      type: string
+      title: Company Name
+      default: My Company
+    companyEmail:
+      type: string
+      title: Company Email
+      default: company@example.com
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+benefits:
+  - title: Professional Accounting Made Simple
+    description: |
+      Akaunting simplifies professional accounting with an intuitive interface
+      and automated features, making it easy for non-accountants to maintain
+      accurate financial records.
+  - title: Free and Open-Source
+    description: |
+      As a free, open-source solution, Akaunting eliminates expensive software
+      costs while giving you full control over your financial data and the
+      freedom to modify the software to suit your needs.
+  - title: Secure and Self-Hosted
+    description: |
+      Host Akaunting on your own infrastructure for complete data privacy and
+      security. You maintain full control over your sensitive financial information
+      with no third-party access.
+features:
+  - title: Double-Entry Bookkeeping
+    description: |
+      Built on professional accounting principles, Akaunting provides comprehensive
+      double-entry bookkeeping to ensure accurate financial records and maintain
+      compliance with accounting standards.
+  - title: Invoice & Bill Management
+    description: |
+      Create professional invoices, track bills, and manage payments efficiently.
+      Automated features help you stay on top of accounts receivable and payable.
+  - title: Financial Reporting
+    description: |
+      Generate detailed financial reports including profit & loss statements,
+      balance sheets, and tax summaries. Get real-time insights into your
+      business's financial health.
+  - title: Multi-User & Multi-Company
+    description: |
+      Support for multiple users and companies makes Akaunting perfect for
+      growing businesses or accountants managing multiple clients.
+tags:
+  - Finance
+  - Accounting
+  - Business
