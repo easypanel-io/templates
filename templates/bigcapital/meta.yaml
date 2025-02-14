@@ -33,6 +33,8 @@ schema:
     - migrationServiceImage
     - nginxServiceImage
     - gotenServiceImage
+    - mongoServiceImage
+    - mysqlServiceImage
   properties:
     appServiceName:
       type: string
