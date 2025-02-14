@@ -33,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shlinkio/shlink:stable
+      default: shlinkio/shlink:4
     geolite2ApiKey:
       type: string
       title: GeoLite2 API Key
