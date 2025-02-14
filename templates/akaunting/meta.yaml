@@ -26,27 +26,14 @@ schema:
   type: object
   required:
     - appServiceName
-    - dbName
-    - dbUser
     - companyName
     - companyEmail
     - adminEmail
+    - adminPassword
   properties:
     appServiceName:
       type: string
       title: App Service Name
-      default: akaunting
-    appServiceImage:
-      type: string
-      title: App Service Image
-      default: docker.io/akaunting/akaunting:3.0.20
-    dbName:
-      type: string
-      title: Database Name
-      default: akaunting
-    dbUser:
-      type: string
-      title: Database User
       default: akaunting
     companyName:
       type: string
@@ -60,6 +47,10 @@ schema:
       type: string
       title: Admin Email
       default: admin@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+      format: password
 benefits:
   - title: Professional Accounting Made Simple
     description: |
