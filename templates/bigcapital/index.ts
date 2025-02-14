@@ -126,7 +126,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "dockeriddonuts/bigcapital-migration:1.1",
+        image: input.migrationServiceImage,
       },
     },
   });
@@ -146,7 +146,7 @@ export function generate(input: Input): Output {
     type: "mariadb",
     data: {
       serviceName: `${input.appServiceName}-mariadb`,
-      image: "dockeriddonuts/bigcapital-mysql:1.0",
+      image: input.mysqlServiceImage,
       password: mysqlDatabasePassword,
       rootPassword: mysqlDatabaseRootPassword,
     },
@@ -156,7 +156,7 @@ export function generate(input: Input): Output {
     type: "mongo",
     data: {
       serviceName: `${input.appServiceName}-mongo`,
-      image: "dockeriddonuts/bigcapital-mongo:1.0",
+      image: input.mongoServiceImage,
       password: mongoDatabasePassword,
     },
   });

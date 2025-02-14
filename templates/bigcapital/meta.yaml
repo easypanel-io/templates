@@ -30,7 +30,7 @@ schema:
     - appServiceName
     - appServiceImage
     - serverServiceImage
-    - gotenServiceImage
+    - migrationServiceImage
     - nginxServiceImage
     - gotenServiceImage
   properties:
@@ -44,16 +44,28 @@ schema:
       default: bigcapitalhq/webapp:v0.22.0
     nginxServiceImage:
       type: string
-      title: App Service Image
+      title: Nginx Service Image
       default: dockeriddonuts/bigcapital-nginx:1.0
+    migrationServiceImage:
+      type: string
+      title: Migration Service Image
+      default: dockeriddonuts/bigcapital-migration:1.1
     serverServiceImage:
       type: string
-      title: App Service Image
+      title: Server Service Image
       default: bigcapitalhq/server:v0.22.0
     gotenServiceImage:
       type: string
-      title: App Service Image
+      title: Goten Service Image
       default: gotenberg/gotenberg:7
+    mongoServiceImage:
+      type: string
+      title: Mongo Service Image
+      default: dockeriddonuts/bigcapital-mongo:1.0
+    mysqlServiceImage:
+      type: string
+      title: MySQL Service Image
+      default: dockeriddonuts/bigcapital-mysql:1.0
 
 benefits:
   - title: Comprehensive Financial Management
