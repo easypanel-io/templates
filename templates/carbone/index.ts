@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `CARBONE_EE_LICENSE=${input.carboneKey}`,
+        `CARBONE_EE_LICENSE=${input.carboneKey ?? ""}`,
         `CARBONE_EE_STUDIO=true`,
       ].join("\n"),
       domains: [

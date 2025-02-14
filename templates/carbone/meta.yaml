@@ -25,7 +25,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - carboneKey
   properties:
     appServiceName:
       type: string
