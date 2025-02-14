@@ -4,11 +4,7 @@ description:
   files with clients and collaborators. It provides a user-friendly interface,
   supports advanced user management, and allows for detailed activity tracking.
   With ProjectSend, you can maintain control over your files and ensure secure
-  access for authorized users. The application is accessible via your host on
-  ports 8080 and 8081. This container is based on Docker Baseimage KasmVNC,
-  providing additional environment variables and configurations for enhanced
-  flexibility. It also supports the docker manifest for multi-platform
-  awareness, ensuring the correct image for your architecture.
+  access for authorized users.
 instructions:
   After Connecting with the DB, configure the URL to be https in next screen of
   installation wizard and run chmod 755 /app/www/public/emails in the terminal
