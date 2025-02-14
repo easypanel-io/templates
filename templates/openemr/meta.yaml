@@ -1,0 +1,90 @@
+name: OpenEMR
+description:
+  OpenEMR is a powerful, open-source electronic medical records and practice
+  management solution designed for efficient healthcare operations. It provides
+  a comprehensive, user-friendly interface, supports modular functionality, and
+  offers robust reporting and analytics for clinical and administrative tasks.
+  With OpenEMR, healthcare providers can manage patient records, appointments,
+  billing, and more. The application is accessible via your host on ports 80 and
+  443. This container is built on a lightweight Docker image, providing
+  additional environment variables and configurations for enhanced flexibility.
+  It also supports the docker manifest for multi-platform awareness, ensuring
+  the correct image for your architecture.
+instructions:
+
+changeLog:
+  - date: 2025-02-11
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://www.open-emr.org/wiki/index.php/OpenEMR_Wiki_Home_Page
+  - label: Github
+    url: https://github.com/openemr/openemr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUser
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openemr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: openemr/openemr:7.0.2
+    adminUser:
+      type: string
+      title: Admin User
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: password
+
+benefits:
+  - title: Comprehensive Patient Management
+    description:
+      OpenEMR streamlines patient data management, scheduling, electronic
+      medical records, and billing, ensuring efficient healthcare operations.
+  - title: Open Source Flexibility
+    description:
+      As an open source solution, OpenEMR offers unparalleled customization and
+      integration possibilities to meet diverse healthcare needs.
+  - title: Regulatory Compliance
+    description:
+      With robust reporting and security features, OpenEMR helps healthcare
+      providers adhere to regulatory standards and improve patient care.
+
+features:
+  - title: Electronic Medical Records
+    description:
+      Securely store and manage comprehensive patient records, including medical
+      history, treatments, and lab results.
+  - title: Appointment Scheduling
+    description:
+      Efficiently manage patient appointments, reminders, and calendar
+      integrations for streamlined operations.
+  - title: Billing and Insurance Management
+    description:
+      Automate billing processes and handle insurance claims to simplify
+      financial administration.
+  - title: Reporting and Analytics
+    description:
+      Generate detailed reports to gain insights into clinical performance and
+      administrative efficiency.
+
+tags:
+  - Electronic Health Records
+  - Practice Management
+  - Open Source
+  - Healthcare
