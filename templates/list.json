@@ -373,6 +373,17 @@
     ]
   },
   {
+    "slug": "bytestash",
+    "logo": "logo.png",
+    "name": "ByteStash",
+    "description": "ByteStash is a self-hosted snippet code storage system designed for developers and teams. It provides a secure, organized platform to store, manage, and share your code snippets. With support for multiple programming languages, syntax highlighting, tagging, and a robust search functionality, ByteStash streamlines code reuse and collaboration. The intuitive interface and powerful features ensure that your code is always at your fingertips, whether you're working solo or with a team.",
+    "tags": [
+      "Code Snippets",
+      "Development",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "cachet",
     "logo": "logo.png",
     "name": "Cachet",
@@ -554,6 +565,18 @@
       "Comments",
       "Website",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "confluence",
+    "logo": "logo.svg",
+    "name": "Confluence",
+    "description": "Confluence is a powerful team collaboration and knowledge-sharing tool. It allows you to create, organize, and collaborate on content in a centralized space. Designed for project management, documentation, and team communication, Confluence helps streamline workflows and enhances productivity. It offers seamless integration with other Atlassian products such as Jira and Bitbucket, making it an ideal solution for agile teams. The intuitive editor and advanced search capabilities ensure that team knowledge is easily accessible. With extensive customization, permission controls, and plugin support, Confluence is a scalable solution for teams of all sizes.",
+    "tags": [
+      "Collaboration",
+      "Documentation",
+      "Productivity",
+      "Project Management"
     ]
   },
   {
@@ -1110,6 +1133,17 @@
       "File Management",
       "Storage",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "filestash",
+    "logo": "logo.png",
+    "name": "Filestash",
+    "description": "Filestash is a self-hosted file management and sharing platform designed for individuals and teams. It offers a secure, user-friendly interface to store, organize, and access all your files from one centralized location. With support for multiple file types, seamless integration with popular storage backends, tagging, and powerful search functionality, Filestash simplifies file management and boosts productivity. Whether working on personal projects or collaborating with your team, Filestash ensures your files are always accessible and easy to manage.",
+    "tags": [
+      "File Management",
+      "Collaboration",
+      "Productivity"
     ]
   },
   {
@@ -1848,6 +1882,17 @@
     "tags": [
       "File Management",
       "Data Science"
+    ]
+  },
+  {
+    "slug": "joomla",
+    "logo": "logo.svg",
+    "name": "Joomla",
+    "description": "Joomla is a powerful, open-source content management system (CMS) that allows users to build dynamic websites and applications. It offers a user-friendly interface, extensive customization options through templates and extensions, and robust security features. Joomla is highly scalable and supports multilingual content, making it a versatile choice for businesses, organizations, and personal websites. The application is accessible via your host on standard web ports and is easy to deploy using containers.",
+    "tags": [
+      "CMS",
+      "Website Builder",
+      "Open-Source"
     ]
   },
   {
@@ -2892,6 +2937,18 @@
     ]
   },
   {
+    "slug": "openemr",
+    "logo": "logo.png",
+    "name": "OpenEMR",
+    "description": "OpenEMR is a powerful, open-source electronic medical records and practice management solution designed for efficient healthcare operations. It provides a comprehensive, user-friendly interface, supports modular functionality, and offers robust reporting and analytics for clinical and administrative tasks. With OpenEMR, healthcare providers can manage patient records, appointments, billing, and more. The application is accessible via your host on ports 80 and 443. This container is built on a lightweight Docker image, providing additional environment variables and configurations for enhanced flexibility. It also supports the docker manifest for multi-platform awareness, ensuring the correct image for your architecture.",
+    "tags": [
+      "Electronic Health Records",
+      "Practice Management",
+      "Open Source",
+      "Healthcare"
+    ]
+  },
+  {
     "slug": "openhab",
     "logo": "logo.png",
     "name": "OpenHAB",
@@ -3572,12 +3629,36 @@
     ]
   },
   {
+    "slug": "rss-bridge",
+    "logo": "logo.png",
+    "name": "RSS-Bridge",
+    "description": "RSS-Bridge is a self-hosted, open-source tool that generates RSS and Atom feeds for websites that do not provide them natively. It enables users to extract and aggregate content from various web pages, social media platforms, and other online sources into a single, unified RSS feed. This allows users to stay updated with the latest content from multiple sources without manually visiting each site. RSS-Bridge supports various website connectors, filtering options, and output formats to provide a customized feed experience.",
+    "tags": [
+      "RSS",
+      "Feed Aggregation",
+      "News",
+      "Content Filtering",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "rsshub",
     "logo": "logo.png",
     "name": "RSSHub",
     "description": "RSSHub is an open-source, user-friendly, and extensible RSS feed generator. It is designed to create RSS feeds from virtually any content. With the ability to aggregate millions of contents from various sources, RSSHub ensures the delivery of new routes, features, and bug fixes. The app is compatible with the browser extension RSSHub Radar and mobile auxiliary apps RSSBud (iOS) and RSSAid (Android). It has adapted to hundreds of websites and thousands of content types, making it a versatile tool for generating RSS feeds.",
     "tags": [
       "RSS"
+    ]
+  },
+  {
+    "slug": "rustdesk",
+    "logo": "logo.png",
+    "name": "Rustdesk",
+    "description": "Rustdesk is a self-hosted remote desktop application that allows you to access and control devices remotely. It provides an open-source alternative to proprietary remote desktop software, offering full control over your own remote access infrastructure. With Rustdesk, users can securely connect to their computers from anywhere, manage remote desktops efficiently, and ensure privacy by hosting their own Rustdesk relay and ID server. Rustdesk is built with high-performance and encryption in mind, making it suitable for both personal and enterprise use.",
+    "tags": [
+      "Remote Desktop",
+      "Productivity",
+      "Security"
     ]
   },
   {
