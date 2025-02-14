@@ -1,0 +1,76 @@
+name: ClassicPress
+description:
+  ClassicPress is a community-led open source content management system for
+  creators. It is a fork of WordPress 6.2 that preserves the TinyMCE classic
+  editor as the default option. It is half the size of WordPress, contains less
+  bloat improving performance, and has no block editor (Gutenberg/Full Site
+  Editing).
+instructions: null
+changeLog:
+  - date: 2025-02-14
+    description: first release
+links:
+  - label: Website
+    url: https://www.classicpress.net/
+  - label: Documentation
+    url: https://docs.classicpress.net/
+  - label: Github
+    url: https://github.com/ClassicPress/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: classicpress
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: classicpress/classicpress:latest
+benefits:
+  - title: Open-Source CMS
+    description:
+      ClassicPress is an open-source content management system (CMS) that
+      focuses on security, stability, and simplicity. It is a community-driven
+      alternative to WordPress, designed for users who want more control and
+      fewer unnecessary updates.
+  - title: Multi-Site Capability
+    description:
+      ClassicPress supports multi-site setups, allowing users to manage multiple
+      websites from a single installation. This makes it an ideal solution for
+      agencies and businesses managing multiple sites.
+  - title: Customizable Environment
+    description:
+      ClassicPress offers a wide range of plugins and themes for customization.
+      Users can configure the CMS environment to fit their specific needs,
+      ensuring a highly personalized experience.
+features:
+  - title: User-Friendly Interface
+    description:
+      ClassicPress provides a familiar and easy-to-navigate interface for
+      content management. Its dashboard is intuitive, making it accessible for
+      both beginners and advanced users.
+  - title: Enhanced Security
+    description:
+      ClassicPress places a strong emphasis on security, with a focus on
+      minimizing vulnerabilities. Regular updates and a security-first approach
+      help keep your site safe.
+  - title: Custom Post Types
+    description:
+      The CMS supports custom post types, giving users the flexibility to create
+      different content types beyond posts and pages. This feature is essential
+      for building complex websites with varied content structures.
+  - title: Plugin and Theme Compatibility
+    description:
+      ClassicPress is compatible with a wide range of plugins and themes, making
+      it easy to extend functionality and customize the appearance of your site.
+tags:
+  - Content Management
+  - Developer Tools
+  - Open Source
