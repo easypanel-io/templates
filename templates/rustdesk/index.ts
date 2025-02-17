@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: [`PUID=1000`, `PGID=1000`, `TZ=Etc/UTC`].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

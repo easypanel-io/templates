@@ -33,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rustdesk/rustdesk-server:1.1.14
+      default: lscr.io/linuxserver/rustdesk:1.3.7
 benefits:
   - title: Secure Remote Access
     description:
