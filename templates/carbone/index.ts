@@ -12,18 +12,21 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [`PUID=1000`, `PGID=1000`, `TZ=Etc/UTC`].join("\n"),
+      env: [
+        `CARBONE_EE_LICENSE=${input.carboneKey ?? ""}`,
+        `CARBONE_EE_STUDIO=true`,
+      ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
+          port: 4000,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "config",
-          mountPath: "/config",
+          name: "template",
+          mountPath: "/app/template",
         },
       ],
     },
