@@ -1,0 +1,140 @@
+name: Poste
+description:
+  Poste is a self-hosted mail server solution that provides a complete and
+  secure email hosting platform. It offers built-in features such as spam
+  filtering, DKIM signing, and webmail access to ensure a reliable email
+  experience. This app is a Docker containerized version of Poste, making it
+  easy to deploy and manage across various environments.
+instructions: null
+changeLog:
+  - date: 2025-02-18
+    description: first release
+links:
+  - label: Documentation
+    url: https://poste.io/docs
+  - label: Github
+    url: https://github.com/analogic/poste.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - customHttpPort
+    - customHttpsPort
+    - virtualHost
+    - smtpRelay
+    - pop3Port
+    - imapPort
+    - smtpPort
+    - smtpsPort
+    - secureImapPort
+    - securePop3Port
+    - emailFilterPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: poste
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: analogic/poste.io:2.4.11
+    customHttpPort:
+      type: string
+      title: Custom HTTP Port
+      default: "8080"
+    customHttpsPort:
+      type: string
+      title: Custom HTTPS Port
+      default: "8443"
+    virtualHost:
+      type: string
+      title: Virtual Host
+      default: mail.example.com
+    smtpRelay:
+      type: string
+      title: SMTP Relay
+      default: "25"
+    pop3Port:
+      type: string
+      title: POP3 Port
+      default: "110"
+    imapPort:
+      type: string
+      title: IMAP Port
+      default: "143"
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "465"
+    smtpsPort:
+      type: string
+      title: SMTPS Port
+      default: "587"
+    secureImapPort:
+      type: string
+      title: Secure IMAP Port
+      default: "993"
+    securePop3Port:
+      type: string
+      title: Secure POP3 Port
+      default: "995"
+    emailFilterPort:
+      type: string
+      title: Email Filter Port
+      default: "4190"
+benefits:
+  - title: Self-Hosted Mail Server
+    description:
+      Poste is a self-hosted email server solution that ensures privacy and data
+      ownership. Users have full control over their email accounts, domains, and
+      mail data without relying on third-party services.
+  - title: Secure & Encrypted Communication
+    description:
+      Poste includes built-in support for TLS encryption, DKIM signing, SPF, and
+      DMARC to enhance email security and prevent phishing attacks.
+  - title: Multi-Platform Support
+    description:
+      The app is compatible with multiple architectures, including x86-64 and
+      arm64, ensuring broad deployment possibilities.
+  - title: Customizable & Extensible
+    description:
+      Poste offers configuration options, allowing administrators to tailor the
+      email server to their specific needs, including domain management, email
+      filtering, and authentication settings.
+
+features:
+  - title: Webmail Interface
+    description:
+      Poste provides a user-friendly webmail interface, allowing users to access
+      and manage their emails directly from a browser.
+  - title: Spam & Malware Protection
+    description:
+      The app includes built-in spam filtering and virus scanning to ensure
+      incoming and outgoing emails are safe and free from malicious content.
+  - title: Domain & Account Management
+    description:
+      Administrators can easily create and manage email accounts, set up custom
+      domains, and configure forwarding rules within the Poste dashboard.
+  - title: Secure Email Protocols
+    description:
+      Poste supports standard email protocols such as SMTP, IMAP, and POP3,
+      ensuring compatibility with a wide range of email clients.
+  - title: Easy SSL Integration
+    description:
+      Poste simplifies SSL certificate management with built-in Let's Encrypt
+      support, making it easy to enable HTTPS for secure email access.
+  - title: Easy Deployment with Docker
+    description:
+      Poste is containerized for quick and seamless deployment, simplifying the
+      installation and management process.
+
+tags:
+  - Email
+  - Self-Hosted
+  - Mail Server
+  - Security
+  - Productivity
