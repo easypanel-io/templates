@@ -1,0 +1,98 @@
+name: TubeArchivist
+description:
+  TubeArchivist is a self-hosted YouTube archiving tool that allows you to
+  manage and organize your YouTube content locally. It downloads videos, indexes
+  metadata, and provides a web-based interface for searching, organizing, and
+  playing content. Designed for personal use, TubeArchivist integrates with
+  Elasticsearch for advanced search capabilities and Redis for optimized caching
+  and task management. It also supports custom playlists, video tagging, and
+  offline playback, providing complete control over your video collection.
+instructions: null
+changeLog:
+  - date: 2025-02-13
+    description: First Release
+links:
+  - label: Documentation
+    url: https://github.com/tubearchivist/tubearchivist/wiki
+  - label: Dockerhub
+    url: https://hub.docker.com/r/bbilly1/tubearchivist
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - elasticsearchServiceImage
+    - redisServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tubearchivist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bbilly1/tubearchivist:v0.4.13
+    elasticsearchServiceImage:
+      type: string
+      title: Elasticsearch Service Image
+      default: bbilly1/tubearchivist-es:8.16.0
+    redisServiceImage:
+      type: string
+      title: Redis Service Image
+      default: redis/redis-stack-server:6.2.6-v19
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: changeme
+benefits:
+  - title: Personal YouTube Archive
+    description:
+      TubeArchivist allows you to create your own YouTube archive. You can
+      download and organize videos locally, giving you full control over your
+      collection and ensuring access even if the original content is removed.
+  - title: Advanced Search and Metadata Indexing
+    description:
+      With Elasticsearch integration, TubeArchivist offers powerful search
+      capabilities. You can search by video title, description, tags, and more,
+      making it easy to find the content you want.
+  - title: Offline Playback and Organization
+    description:
+      TubeArchivist supports offline playback of downloaded videos. Organize
+      content into custom playlists, apply tags, and manage your collection
+      efficiently.
+features:
+  - title: Elasticsearch Integration
+    description:
+      TubeArchivist uses Elasticsearch for advanced search and metadata
+      indexing, providing fast and accurate search results across your video
+      archive.
+  - title: Redis Caching
+    description:
+      Redis is used for caching and task management, improving the performance
+      and responsiveness of the TubeArchivist interface.
+  - title: Custom Playlists and Tagging
+    description:
+      Create custom playlists and apply tags to organize your content. This
+      helps you manage your collection and find videos easily.
+  - title: Scheduled Downloads
+    description:
+      TubeArchivist supports scheduled downloads, allowing you to automate the
+      archiving process for your favorite YouTube channels and playlists.
+  - title: Web-Based Interface
+    description:
+      The intuitive web-based interface makes it easy to manage your video
+      archive, search content, and control playback from any device.
+tags:
+  - Video Management
+  - YouTube Archiving
+  - Offline Playback
+  - Personal Media Server
