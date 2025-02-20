@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/da",
+          mountPath: "/data",
         },
         {
           type: "bind",
