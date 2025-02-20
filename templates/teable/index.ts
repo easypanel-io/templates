@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: `${input.appServiceImage}${input.enableArm ? "-arm64" : ""}`,
       },
       domains: [
         {
@@ -54,7 +54,9 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: input.migrationServiceImage,
+        image: `${input.migrationServiceImage}${
+          input.enableArm ? "-arm64" : ""
+        }`,
       },
     },
   });
