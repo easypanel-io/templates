@@ -38,12 +38,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/teableio/teable:latest
+      default: ghcr.io/teableio/teable:sha-c1ea587c7a09b262a24002c8809488f5b9b92393
     migrationServiceImage:
       type: string
       title: Migration Service Image
-      default: ghcr.io/teableio/teable-db-migrate:latest
-
+      default: ghcr.io/teableio/teable-db-migrate:sha-c1ea587c7a09b262a24002c8809488f5b9b92393
+    enableArm:
+      type: boolean
+      title: Enable Arm
+      default: false
 benefits:
   - title: Efficient Collaboration
     description:
