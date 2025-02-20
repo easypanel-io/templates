@@ -30,7 +30,7 @@ export function generate(input: Input): Output {
         `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `DB_PORT=3306`,
         `DB_DATABASE=$(PROJECT_NAME)`,
-        `DB_USERNAME=$(PROJECT_NAME)`,
+        `DB_USERNAME=mysql`,
         `DB_PASSWORD=${dbPassword}`,
         `COMPANY_NAME=${input.companyName}`,
         `COMPANY_EMAIL=${input.companyEmail}`,
