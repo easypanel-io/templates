@@ -1,10 +1,9 @@
 name: Quepasa API
-description:
-  Quepasa is a self-hosted platform designed to empower small businesses,
-  entrepreneurs, and individuals by providing a robust API for integrating
-  messaging solutions such as WhatsApp™. It offers seamless integration with
-  other tools like Chatwoot to enhance communication and
-  automation capabilities
+description: >
+  Quepasa é uma plataforma self-hosted projetada para capacitar pequenos negócios,
+  empreendedores e indivíduos, fornecendo uma API robusta para integração
+  com soluções de mensagens como WhatsApp™. Oferece integração com
+  ferramentas como Chatwoot para melhorar a comunicação e a automação.
 instructions: null
 changeLog:
   - date: 2025-01-23
@@ -12,7 +11,7 @@ changeLog:
 links:
   - label: Github
     url: https://github.com/nocodeleaks/quepasa
-  - label: Comunidade - quepasa API
+  - label: Comunidade - Quepasa API
     url: https://chat.whatsapp.com/Js22tkvVvRXANtXJlaMERI
 contributors:
   - name: André Marques
@@ -27,30 +26,27 @@ schema:
       type: string
       title: App Service Name
       default: Quepasa API
-      appServiceImage:
+    appServiceImage:
       type: string
       title: App Service Image
       default: codeleaks/quepasa
 benefits:
   - title: Seamless Messaging Integration
-    description:
-    Quepasa API is an easy-to-use API for use with Chatwoot without losing messages and disconnections.
+    description: >
+      A API Quepasa é fácil de usar com o Chatwoot sem perda de mensagens e desconexões.
   - title: Free and Open Source
-    description:
-      Quepasa-AOI is free to use and provides a fully open-source solution,
-      giving you control over your messaging infrastructure without incurring
-      additional costs.
+    description: >
+      Quepasa API é gratuito e open-source, oferecendo controle total sobre sua
+      infraestrutura de mensagens sem custos adicionais.
 features:
   - title: WhatsApp™ Messaging Support
-    description:
-      Quepasa API integrates seamlessly with WhatsApp™ for efficient
-      communication, providing a platform for messaging automation and
-      interactions.
+    description: >
+      A API Quepasa integra-se ao WhatsApp™ para uma comunicação eficiente,
+      permitindo automação e interações avançadas.
   - title: Plugin Support
-    description:
-      Quepasa API supports a range of plugins to extend functionality and
-      integrate with other tools like  and Chatwoot for advanced use
-      cases.
+    description: >
+      A API Quepasa suporta vários plugins para estender funcionalidades
+      e integrar-se a ferramentas como Chatwoot.
 tags:
   - Messaging
   - Communication
