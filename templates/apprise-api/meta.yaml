@@ -1,0 +1,72 @@
+name: Apprise-API
+description:
+  Apprise-API is an open-source notification gateway that provides a unified and
+  straightforward way to send notifications to a variety of services, including
+  email, SMS, chat apps, and more. It supports dozens of platforms out of the
+  box, making it an ideal solution for developers and organizations seeking a
+  robust, flexible, and extensible notification system. With a lightweight and
+  API-driven design, Apprise-API simplifies integration into any project.
+instructions:
+changeLog:
+  - date: 2025-01-27
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/caronc/apprise-api
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: apprise-api
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/apprise-api:latest
+benefits:
+  - title: Unified Notification Gateway
+    description:
+      Apprise-API allows you to send notifications across multiple platforms,
+      including email, SMS, chat apps, and more, from a single API.
+  - title: Extensive Platform Support
+    description:
+      With built-in support for dozens of services, Apprise-API ensures seamless
+      integration with your preferred notification platforms.
+  - title: Lightweight and Scalable
+    description:
+      The lightweight design of Apprise-API makes it easy to deploy in
+      containerized environments, ensuring scalability and flexibility.
+features:
+  - title: Multi-Platform Notifications
+    description:
+      Send notifications to email, SMS, chat apps, and other platforms with
+      minimal configuration.
+  - title: Open-Source and Extensible
+    description:
+      Apprise-API’s open-source architecture allows developers to customize and
+      extend functionality to meet their specific needs.
+  - title: RESTful API
+    description:
+      Utilize a simple RESTful API to integrate Apprise-API into any application
+      or workflow for easy notification management.
+  - title: Secure and Reliable
+    description:
+      Built with security in mind, Apprise-API ensures that notifications are
+      delivered securely and reliably to the desired platforms.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Apprise-API using Docker for quick setup and scalability.
+tags:
+  - Notifications
+  - Open Source
+  - API
+  - Email
+  - SMS
+  - Chat Apps

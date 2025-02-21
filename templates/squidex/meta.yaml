@@ -1,0 +1,92 @@
+name: Squidex
+description:
+  Squidex is an open-source, headless CMS designed for seamless content
+  management across multiple platforms. It provides a real-time GraphQL API,
+  fine-grained permissions, and a flexible workflow for content collaboration.
+  Squidex supports event sourcing and integrates well with modern applications,
+  ensuring a structured and efficient content distribution.
+instructions:
+  If you do not choose any identity provider, you can register a user when you
+  go to the browser.
+changeLog:
+  - date: 2025-01-29
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://docs.squidex.io/
+  - label: Github
+    url: https://github.com/Squidex/squidex
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: squidex
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: squidex/squidex:7
+    adminEmailAddress:
+      type: string
+      title: Admin Email Address
+      description: The email address for admin account.
+    adminPassword:
+      type: string
+      title: Admin Password
+      description: The password for the admin account.
+    googleClient:
+      type: string
+      title: Google Client
+      description: The Client ID for Google OAuth authentication.
+    googleClientSecret:
+      type: string
+      title: Google Client Secret
+    githubClient:
+      type: string
+      title: Github Client ID
+      description: The Client ID for Github OAuth authentication.
+    githubClientSecret:
+      type: string
+      title: Github Client Secret
+    microsoftClient:
+      type: string
+      title: Microsoft Client ID
+      description: The Client ID for Microsoft OAuth authentication.
+    microsoftClientSecret:
+      type: string
+      title: Microsoft Client Secret
+benefits:
+  - title: Headless CMS
+    description:
+      Squidex provides a robust headless content management system with a
+      flexible API-first approach.
+  - title: Real-Time Collaboration
+    description:
+      Enable teams to collaborate with real-time content updates and workflows.
+  - title: Multi-Platform Support
+    description: Deliver content seamlessly across web, mobile, and IoT devices.
+features:
+  - title: GraphQL & REST API
+    description:
+      Easily fetch content using Squidex's powerful GraphQL or REST API.
+  - title: Version Control & History
+    description:
+      Track content changes with built-in version control and rollback options.
+  - title: Permissions & Roles
+    description:
+      Define granular user roles and permissions for secure content management.
+  - title: Event Sourcing
+    description:
+      Benefit from a scalable event-driven architecture for data consistency.
+
+tags:
+  - Headless CMS
+  - API-Driven
+  - Content Management

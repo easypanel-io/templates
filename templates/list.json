@@ -128,6 +128,20 @@
     ]
   },
   {
+    "slug": "apprise-api",
+    "logo": "logo.png",
+    "name": "Apprise-API",
+    "description": "Apprise-API is an open-source notification gateway that provides a unified and straightforward way to send notifications to a variety of services, including email, SMS, chat apps, and more. It supports dozens of platforms out of the box, making it an ideal solution for developers and organizations seeking a robust, flexible, and extensible notification system. With a lightweight and API-driven design, Apprise-API simplifies integration into any project.",
+    "tags": [
+      "Notifications",
+      "Open Source",
+      "API",
+      "Email",
+      "SMS",
+      "Chat Apps"
+    ]
+  },
+  {
     "slug": "appsmith",
     "logo": "logo.png",
     "name": "Appsmith",
@@ -142,6 +156,19 @@
     "name": "Appwrite",
     "description": "Appwrite is an open-source backend as a service server that abstracts and simplifies complex and repetitive development tasks behind a very simple to use REST API.",
     "tags": []
+  },
+  {
+    "slug": "arangodb",
+    "logo": "logo.png",
+    "name": "ArangoDB",
+    "description": "ArangoDB is a multi-model NoSQL database system that supports graph, document, and key-value data models. It is designed for scalability, high availability, and flexibility, making it suitable for a wide range of applications, from simple document storage to complex graph processing. ArangoDB offers a native query language (AQL), full-text search capabilities, a built-in HTTP API, and a web-based UI for management. It also provides features like replication, sharding, and ACID transactions to ensure data integrity and performance. With its integrated search engine and support for multi-tenancy, ArangoDB is an ideal choice for both small projects and enterprise-level applications.",
+    "tags": [
+      "Database",
+      "NoSQL",
+      "Graph Database",
+      "Document Store",
+      "Key-Value Store"
+    ]
   },
   {
     "slug": "argilla",
@@ -199,6 +226,19 @@
       "Tracking",
       "Child Development",
       "Family Management"
+    ]
+  },
+  {
+    "slug": "baikal",
+    "logo": "logo.png",
+    "name": "Baikal",
+    "description": "Baikal is a lightweight, self-hosted CalDAV and CardDAV server that enables users to manage calendars and contacts efficiently. It provides a simple and effective solution for syncing and sharing events, tasks, and address books across multiple devices. Baikal is designed to be easy to install and maintain, making it an excellent choice for individuals and organizations looking for a private, secure, and open-source alternative to cloud-based calendar and contact management services.",
+    "tags": [
+      "Calendar",
+      "Contacts",
+      "Self-Hosting",
+      "Productivity",
+      "Privacy"
     ]
   },
   {
@@ -261,6 +301,21 @@
     ]
   },
   {
+    "slug": "boltdiy",
+    "logo": "logo.svg",
+    "name": "Bolt.Diy",
+    "description": "Bolt.Diy is an AI-powered agent and community for web development, enabling you to create, edit, and deploy full-stack applications without any local setup. It's like having a coding genie at your fingertips, transforming your web ideas into reality with just a few prompts. Bolt.Diy streamlines the development process with intelligent suggestions, automated workflows, and seamless deployment, making it the ultimate tool for modern web developers. The app is fully containerized and designed for accessibility across various platforms.",
+    "tags": [
+      "AI",
+      "Web Development",
+      "Collaboration",
+      "Full-Stack",
+      "Deployment",
+      "Open Source",
+      "Community"
+    ]
+  },
+  {
     "slug": "bookstack",
     "logo": "logo.svg",
     "name": "Bookstack",
@@ -283,6 +338,20 @@
     ]
   },
   {
+    "slug": "browserless",
+    "logo": "logo.png",
+    "name": "Browserless",
+    "description": "Browserless is a powerful self-hosted headless browser service designed to automate web interactions. It enables developers to run headless Chrome instances efficiently for web scraping, testing, PDF generation, and automation tasks. Browserless supports Puppeteer, Playwright, and Selenium, providing a scalable and secure environment for handling complex browser automation tasks. The application is optimized for performance, offering session management, request queuing, and robust security features. With Browserless, developers can offload browser-based automation to a dedicated service, reducing local resource consumption and improving workflow efficiency.",
+    "tags": [
+      "Browser Automation",
+      "Web Scraping",
+      "Testing",
+      "Puppeteer",
+      "Playwright",
+      "Selenium"
+    ]
+  },
+  {
     "slug": "budibase",
     "logo": "logo.svg",
     "name": "Budibase",
@@ -301,6 +370,17 @@
     "description": "Bytebase is a versatile application designed to streamline database management tasks. It supports a wide range of databases including MySQL, PostgreSQL, Snowflake, Oracle, SQL Server, MongoDB, Redis, Redshift, ClickHouse, TiDB, OceanBase, Google Spanner, and MariaDB. With Bytebase, you can easily configure and manage your database instances, perform SQL reviews, manage data models, roles, and permissions, and handle change workflows in batch mode. The app also offers features for secure data handling, VCS integration, slow query management, and disaster recovery. It comes with an embedded PostgreSQL instance for storing its metadata, but for production setup, it is recommended to store the metadata in an external PostgreSQL database. Bytebase is designed to be deployed easily and quickly, offering a step-by-step quick start guide for users.",
     "tags": [
       "Databases"
+    ]
+  },
+  {
+    "slug": "bytestash",
+    "logo": "logo.png",
+    "name": "ByteStash",
+    "description": "ByteStash is a self-hosted snippet code storage system designed for developers and teams. It provides a secure, organized platform to store, manage, and share your code snippets. With support for multiple programming languages, syntax highlighting, tagging, and a robust search functionality, ByteStash streamlines code reuse and collaboration. The intuitive interface and powerful features ensure that your code is always at your fingertips, whether you're working solo or with a team.",
+    "tags": [
+      "Code Snippets",
+      "Development",
+      "Productivity"
     ]
   },
   {
@@ -332,6 +412,18 @@
     "tags": [
       "Documents",
       "E-Commerce"
+    ]
+  },
+  {
+    "slug": "carbone",
+    "logo": "logo.png",
+    "name": "Carbone",
+    "description": "Carbone is a high-performance, self-hosted document generation engine. It allows you to generate reports, invoices, and documents in various formats (e.g., PDF, DOCX, XLSX) using JSON data and template-based rendering. Carbone is designed for scalability and speed, making it ideal for automation, bulk document generation, and seamless integration into various systems and workflows. It supports custom templates and advanced features like charts, sub-reports, and conditional formatting to meet a wide range of business needs.",
+    "tags": [
+      "Document Generation",
+      "Automation",
+      "Reporting",
+      "Productivity"
     ]
   },
   {
@@ -399,6 +491,17 @@
     "description": "Chromium is an open-source browser project that is designed to provide a safer, faster, and more stable way for all users to experience the web. This app is a Docker containerized version of Chromium, allowing you to deploy and run the Chromium browser in a Docker environment. The app supports multiple architectures, including x86-64 and arm64, and can be accessed via HTTP or HTTPS. It offers additional environment variables and run configurations to enable or disable specific functionality. The app also allows you to specify one or multiple Chromium CLI flags, which will be passed to the application in full. This containerized version of Chromium is designed to function efficiently with modern websites, and includes options for GPU acceleration and Docker in Docker (DinD) setup.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "classicpress",
+    "logo": "logo.png",
+    "name": "ClassicPress",
+    "description": "ClassicPress is a community-led open source content management system for creators. It is a fork of WordPress 6.2 that preserves the TinyMCE classic editor as the default option. It is half the size of WordPress, contains less bloat improving performance, and has no block editor (Gutenberg/Full Site Editing).",
+    "tags": [
+      "Content Management",
+      "Developer Tools",
+      "Open Source"
     ]
   },
   {
@@ -485,6 +588,18 @@
       "Comments",
       "Website",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "confluence",
+    "logo": "logo.svg",
+    "name": "Confluence",
+    "description": "Confluence is a powerful team collaboration and knowledge-sharing tool. It allows you to create, organize, and collaborate on content in a centralized space. Designed for project management, documentation, and team communication, Confluence helps streamline workflows and enhances productivity. It offers seamless integration with other Atlassian products such as Jira and Bitbucket, making it an ideal solution for agile teams. The intuitive editor and advanced search capabilities ensure that team knowledge is easily accessible. With extensive customization, permission controls, and plugin support, Confluence is a scalable solution for teams of all sizes.",
+    "tags": [
+      "Collaboration",
+      "Documentation",
+      "Productivity",
+      "Project Management"
     ]
   },
   {
@@ -898,6 +1013,18 @@
     ]
   },
   {
+    "slug": "emailengine",
+    "logo": "logo.png",
+    "name": "EmailEngine",
+    "description": "EmailEngine is a powerful email automation and integration tool designed to simplify email processing for applications. It provides a seamless interface for managing IMAP and SMTP connections, allowing applications to send, receive, and process emails efficiently. With built-in webhook support and extensive API capabilities, EmailEngine enables developers to automate email workflows and integrate email functionality effortlessly. Whether handling transactional emails or managing large-scale email operations, EmailEngine offers a reliable and feature-rich solution.",
+    "tags": [
+      "Email Automation",
+      "Webhooks",
+      "API Integration",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "emby-stat",
     "logo": "logo.png",
     "name": "Emby-Stat",
@@ -988,6 +1115,19 @@
     ]
   },
   {
+    "slug": "faraday",
+    "logo": "logo.png",
+    "name": "Faraday",
+    "description": "Faraday is a powerful open-source vulnerability management platform designed to streamline security assessments and pentesting workflows. It provides centralized visibility, real-time collaboration, and automation capabilities to help security teams manage vulnerabilities efficiently. Faraday supports integration with multiple security tools, offering a unified interface to collect, analyze, and report findings. With its scalable architecture and robust API, Faraday enables teams to enhance their security operations while maintaining compliance and improving response times.",
+    "tags": [
+      "Vulnerability Management",
+      "Pentesting",
+      "Security Operations",
+      "Open Source",
+      "Cybersecurity"
+    ]
+  },
+  {
     "slug": "fider",
     "logo": "logo.png",
     "name": "Fider",
@@ -1016,6 +1156,17 @@
       "File Management",
       "Storage",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "filestash",
+    "logo": "logo.png",
+    "name": "Filestash",
+    "description": "Filestash is a self-hosted file management and sharing platform designed for individuals and teams. It offers a secure, user-friendly interface to store, organize, and access all your files from one centralized location. With support for multiple file types, seamless integration with popular storage backends, tagging, and powerful search functionality, Filestash simplifies file management and boosts productivity. Whether working on personal projects or collaborating with your team, Filestash ensures your files are always accessible and easy to manage.",
+    "tags": [
+      "File Management",
+      "Collaboration",
+      "Productivity"
     ]
   },
   {
@@ -1210,6 +1361,17 @@
       "CMS",
       "Blog",
       "Business Apps"
+    ]
+  },
+  {
+    "slug": "ghostfolio",
+    "logo": "logo.png",
+    "name": "Ghostfolio",
+    "description": "Ghostfolio is a self-hosted wealth management application that allows users to track and analyze their investment portfolios. It provides insights into asset allocation, risk exposure, and financial growth, helping individuals make informed decisions about their finances. With Ghostfolio, users can connect their brokerage accounts, monitor their investments in real-time, and gain a comprehensive overview of their financial health. The application is accessible via a web interface and offers API support for integrations. Built for privacy and control, Ghostfolio is an excellent solution for self-hosted personal finance management.",
+    "tags": [
+      "Investment Tracking",
+      "Personal Finance",
+      "Self-Hosted"
     ]
   },
   {
@@ -1746,6 +1908,17 @@
     ]
   },
   {
+    "slug": "joomla",
+    "logo": "logo.svg",
+    "name": "Joomla",
+    "description": "Joomla is a powerful, open-source content management system (CMS) that allows users to build dynamic websites and applications. It offers a user-friendly interface, extensive customization options through templates and extensions, and robust security features. Joomla is highly scalable and supports multilingual content, making it a versatile choice for businesses, organizations, and personal websites. The application is accessible via your host on standard web ports and is easy to deploy using containers.",
+    "tags": [
+      "CMS",
+      "Website Builder",
+      "Open-Source"
+    ]
+  },
+  {
     "slug": "joplin",
     "logo": "logo.svg",
     "name": "Joplin",
@@ -1755,6 +1928,19 @@
       "Productivity",
       "Developer Tools",
       "Documentation"
+    ]
+  },
+  {
+    "slug": "jsreport",
+    "logo": "logo.png",
+    "name": "JSReport",
+    "description": "JSReport is an open-source reporting platform designed for developers to generate, manage, and customize reports using JavaScript. It provides a powerful templating engine, flexible rendering, and a web-based studio for designing reports. JSReport supports multiple output formats, including PDF, Excel, HTML, and more, making it ideal for businesses and applications that require automated document generation. It can be self-hosted and integrated with various databases and applications for seamless reporting.",
+    "tags": [
+      "Reporting",
+      "PDF Generation",
+      "Data Visualization",
+      "Business Intelligence",
+      "Self-Hosting"
     ]
   },
   {
@@ -1935,6 +2121,17 @@
       "Real-Time",
       "API",
       "Geolocation"
+    ]
+  },
+  {
+    "slug": "labelstudio",
+    "logo": "logo.png",
+    "name": "Label Studio",
+    "description": "Label Studio is an open source data labeling tool. It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats. It can be used to prepare raw data or improve existing training data to get more accurate ML models.",
+    "tags": [
+      "Machine Learning",
+      "Data Annotation",
+      "Developer Tools"
     ]
   },
   {
@@ -2230,6 +2427,18 @@
     "description": "MailCrab is an email test server designed for development purposes. It is an accept-all SMTP server that provides a web interface for viewing and inspecting all incoming emails. You can view formatted mail, download attachments, view headers, or view the complete raw mail contents. The app runs on all amd64 and arm64 platforms using docker. The backend server and the frontend of the app are both written in Rust. The backend receives email over an unencrypted connection on a configurable port, and all email is stored in memory while the application is running. The frontend initially performs a call to receive all existing email metadata and then subscribes for new messages using the websocket connection. When opening a message, the endpoint is used to retrieve the complete message body and raw email. The backend also accepts a few commands over the websocket, to mark a message as opened, to delete a single message or delete all messages.",
     "tags": [
       "Email"
+    ]
+  },
+  {
+    "slug": "maildev",
+    "logo": "logo.png",
+    "name": "Maildev",
+    "description": "Maildev is a simple, self-hosted SMTP server designed for testing and debugging emails in development environments. It captures all outgoing emails and provides a web-based UI to view, inspect, and test them. Maildev supports real-time email updates, allowing developers to see emails as they are sent. It also includes an API for programmatic access to emails and supports multiple inboxes for testing different email scenarios. Maildev is lightweight, easy to set up, and works seamlessly in local development and CI/CD pipelines.",
+    "tags": [
+      "Email",
+      "Development",
+      "Testing",
+      "Debugging"
     ]
   },
   {
@@ -2762,6 +2971,29 @@
     ]
   },
   {
+    "slug": "openemr",
+    "logo": "logo.png",
+    "name": "OpenEMR",
+    "description": "OpenEMR is a powerful, open-source electronic medical records and practice management solution designed for efficient healthcare operations. It provides a comprehensive, user-friendly interface, supports modular functionality, and offers robust reporting and analytics for clinical and administrative tasks. With OpenEMR, healthcare providers can manage patient records, appointments, billing, and more. The application is accessible via your host on ports 80 and 443. This container is built on a lightweight Docker image, providing additional environment variables and configurations for enhanced flexibility. It also supports the docker manifest for multi-platform awareness, ensuring the correct image for your architecture.",
+    "tags": [
+      "Electronic Health Records",
+      "Practice Management",
+      "Open Source",
+      "Healthcare"
+    ]
+  },
+  {
+    "slug": "openhab",
+    "logo": "logo.png",
+    "name": "OpenHAB",
+    "description": "OpenHAB is an open-source automation software designed to integrate and control smart home devices from various manufacturers. Written in Java, it enables you to create rules, manage devices, and automate processes within your smart home ecosystem. The platform provides a flexible and modular approach, allowing integration with hundreds of devices and technologies through add-ons. OpenHAB features a powerful rule engine, a unified user interface, and supports various communication protocols such as Z-Wave, Zigbee, and MQTT. It is highly customizable, secure, and community-driven, offering extensive documentation and support. OpenHAB supports real-time updates, is mobile-friendly, and can be deployed on multiple platforms including Docker and Kubernetes. Additional features include voice control integration, presence detection, and support for custom scripts.",
+    "tags": [
+      "Smart Home",
+      "Automation",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "openproject",
     "logo": "logo.svg",
     "name": "OpenProject",
@@ -2782,6 +3014,18 @@
     ]
   },
   {
+    "slug": "openwebui",
+    "logo": "logo.png",
+    "name": "OpenWebUI",
+    "description": "OpenWebUI is a self-hosted, open-source web-based UI for interacting with various Large Language Models (LLMs). It allows users to chat with AI models, manage API connections, and customize their experience through an intuitive interface. OpenWebUI supports multiple backends such as Ollama, OpenAI-compatible APIs, and local AI runners. It offers a sleek web-based UI, user authentication, and integration with popular LLMs. The application is containerized and easy to deploy with Docker, Kubernetes, or standalone installations. It provides real-time chat, conversation history, and advanced configuration options for AI interactions.",
+    "tags": [
+      "AI",
+      "Chatbot",
+      "Productivity",
+      "Self-Hosting"
+    ]
+  },
+  {
     "slug": "opera",
     "logo": "logo.svg",
     "name": "Opera",
@@ -2790,6 +3034,28 @@
       "Web Browsers",
       "Internet",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "orangehrm",
+    "logo": "logo.png",
+    "name": "OrangeHRM",
+    "description": "OrangeHRM is a comprehensive, open-source Human Resource Management (HRM) solution designed to streamline HR processes and manage employee information. It provides modules for employee management, leave tracking, time management, recruitment, and performance reviews. With an intuitive interface and customizable features, OrangeHRM is a great choice for organizations of all sizes.",
+    "tags": [
+      "Human Resource Management",
+      "Open Source",
+      "Employee Management"
+    ]
+  },
+  {
+    "slug": "organizer",
+    "logo": "logo.png",
+    "name": "Organizer",
+    "description": "Organizer is a self-hosted service designed to help you manage and organize your various web applications efficiently. It serves as a centralized portal where you can categorize and access all your self-hosted apps in a simple and intuitive way. Written in PHP, Organizer provides a dashboard for quick navigation, supports authentication for security, and integrates with various third-party applications. It offers a customizable interface, supports mobile devices, and ensures a seamless experience for managing multiple services within your home or business environment.",
+    "tags": [
+      "Dashboard",
+      "Productivity",
+      "App Management"
     ]
   },
   {
@@ -2903,6 +3169,17 @@
       "Security",
       "Password Manager",
       "Collaboration"
+    ]
+  },
+  {
+    "slug": "passwordpusher",
+    "logo": "logo.png",
+    "name": "Password Pusher",
+    "description": "Password Pusher is an open-source, self-hosted application designed to securely share passwords and sensitive information via unique, time-sensitive URLs. It eliminates the need to send sensitive credentials through insecure channels like email or messaging apps. The app is lightweight, easy to deploy, and prioritizes user privacy and security. Password Pusher allows for fine-grained control over link expiration, including the number of views or days before a link expires. It ensures that shared passwords are destroyed after expiration, adding an extra layer of security. The app can be deployed on various platforms such as Docker or Kubernetes, making it highly flexible and accessible for individuals and organizations alike.",
+    "tags": [
+      "Security",
+      "Password Sharing",
+      "Privacy"
     ]
   },
   {
@@ -3143,6 +3420,17 @@
     ]
   },
   {
+    "slug": "projectsend",
+    "logo": "logo.png",
+    "name": "ProjectSend",
+    "description": "ProjectSend is a self-hosted file sharing platform designed to securely share files with clients and collaborators. It provides a user-friendly interface, supports advanced user management, and allows for detailed activity tracking. With ProjectSend, you can maintain control over your files and ensure secure access for authorized users.",
+    "tags": [
+      "File Sharing",
+      "Self-Hosted",
+      "Secure Collaboration"
+    ]
+  },
+  {
     "slug": "promethus",
     "logo": "logo.png",
     "name": "Prometheus",
@@ -3322,6 +3610,29 @@
     ]
   },
   {
+    "slug": "request-baskets",
+    "logo": "logo.svg",
+    "name": "Request Baskets",
+    "description": "Request Baskets is a lightweight application designed for developers to capture and inspect HTTP requests. It allows creating disposable endpoints to test webhooks, APIs, or any HTTP-based interaction. The application provides an intuitive web interface for monitoring and debugging incoming requests in real time.",
+    "tags": [
+      "HTTP Requests",
+      "API Testing",
+      "Webhooks"
+    ]
+  },
+  {
+    "slug": "resiliosync",
+    "logo": "logo.png",
+    "name": "Resilio Sync",
+    "description": "Sync (Resilio Sync) is a self-hosted file synchronization and sharing application that allows users to securely sync files between devices without relying on cloud storage. It provides a powerful alternative to proprietary cloud-based file sharing services, ensuring complete control over data and privacy. With Sync, users can transfer large files quickly, collaborate on projects in real-time, and maintain data consistency across multiple devices. Built with efficiency and security in mind, Sync is ideal for both personal and business use.",
+    "tags": [
+      "File Synchronization",
+      "Self-Hosted",
+      "Privacy",
+      "Collaboration"
+    ]
+  },
+  {
     "slug": "restreamer",
     "logo": "logo.png",
     "name": "Restreamer",
@@ -3363,12 +3674,36 @@
     ]
   },
   {
+    "slug": "rss-bridge",
+    "logo": "logo.png",
+    "name": "RSS-Bridge",
+    "description": "RSS-Bridge is a self-hosted, open-source tool that generates RSS and Atom feeds for websites that do not provide them natively. It enables users to extract and aggregate content from various web pages, social media platforms, and other online sources into a single, unified RSS feed. This allows users to stay updated with the latest content from multiple sources without manually visiting each site. RSS-Bridge supports various website connectors, filtering options, and output formats to provide a customized feed experience.",
+    "tags": [
+      "RSS",
+      "Feed Aggregation",
+      "News",
+      "Content Filtering",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "rsshub",
     "logo": "logo.png",
     "name": "RSSHub",
     "description": "RSSHub is an open-source, user-friendly, and extensible RSS feed generator. It is designed to create RSS feeds from virtually any content. With the ability to aggregate millions of contents from various sources, RSSHub ensures the delivery of new routes, features, and bug fixes. The app is compatible with the browser extension RSSHub Radar and mobile auxiliary apps RSSBud (iOS) and RSSAid (Android). It has adapted to hundreds of websites and thousands of content types, making it a versatile tool for generating RSS feeds.",
     "tags": [
       "RSS"
+    ]
+  },
+  {
+    "slug": "rustdesk",
+    "logo": "logo.png",
+    "name": "Rustdesk",
+    "description": "Rustdesk is a self-hosted remote desktop application that allows you to access and control devices remotely. It provides an open-source alternative to proprietary remote desktop software, offering full control over your own remote access infrastructure. With Rustdesk, users can securely connect to their computers from anywhere, manage remote desktops efficiently, and ensure privacy by hosting their own Rustdesk relay and ID server. Rustdesk is built with high-performance and encryption in mind, making it suitable for both personal and enterprise use.",
+    "tags": [
+      "Remote Desktop",
+      "Productivity",
+      "Security"
     ]
   },
   {
@@ -3419,6 +3754,17 @@
     "tags": [
       "Bookmarks",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "shlink",
+    "logo": "logo.png",
+    "name": "Shlink",
+    "description": "Shlink is an open-source URL shortener that allows you to create a short URL for your website. It provides a simple and intuitive interface that allows you to create a short URL for your website.",
+    "tags": [
+      "URL Shortener",
+      "Analytics",
+      "Developer Tools"
     ]
   },
   {
@@ -3487,6 +3833,18 @@
     ]
   },
   {
+    "slug": "slash",
+    "logo": "logo.svg",
+    "name": "Slash",
+    "description": "Slash is an open source, self-hosted platform designed to help you organize, manage, and share your most important links. Easily create customizable, human-readable shortcuts to streamline your link management. Use tags to categorize your links and share them easily with your team or publicly.",
+    "tags": [
+      "Link Management",
+      "Self-Hosted",
+      "Open Source",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "smokeping",
     "logo": "logo.png",
     "name": "SmokePing",
@@ -3513,6 +3871,17 @@
       "WebRTC",
       "Secure Transfers",
       "Local Network"
+    ]
+  },
+  {
+    "slug": "snappymail",
+    "logo": "logo.png",
+    "name": "Snappymail",
+    "description": "SnappyMail is a lightweight, fast, and self-hosted webmail client designed for efficient email management. Built with a focus on speed and security, SnappyMail offers a clean user interface, seamless IMAP integration, and multi-account support. It is optimized for both desktop and mobile use, providing a smooth and responsive email experience. SnappyMail supports advanced email features such as PGP encryption, custom folders, and customizable themes. With its self-hosted nature, users maintain full control over their emails, ensuring privacy and security.",
+    "tags": [
+      "Email",
+      "Webmail",
+      "Self-Hosted"
     ]
   },
   {
@@ -3584,6 +3953,30 @@
       "Productivity",
       "Open Source",
       "Collaboration"
+    ]
+  },
+  {
+    "slug": "spacedrive",
+    "logo": "logo.png",
+    "name": "SpaceDrive",
+    "description": "SpaceDrive is a powerful storage and file management solution designed to streamline the organization, synchronization, and access of data across multiple devices. It enables users to efficiently manage their files with real-time synchronization, end-to-end encryption, and scalable storage options. With its robust feature set and enterprise-grade capabilities, SpaceDrive enhances productivity by providing secure, distributed, and decentralized storage for personal and professional use.",
+    "tags": [
+      "File Management",
+      "Cloud Storage",
+      "Decentralized Storage",
+      "Security",
+      "Open Source"
+    ]
+  },
+  {
+    "slug": "squidex",
+    "logo": "logo.png",
+    "name": "Squidex",
+    "description": "Squidex is an open-source, headless CMS designed for seamless content management across multiple platforms. It provides a real-time GraphQL API, fine-grained permissions, and a flexible workflow for content collaboration. Squidex supports event sourcing and integrates well with modern applications, ensuring a structured and efficient content distribution.",
+    "tags": [
+      "Headless CMS",
+      "API-Driven",
+      "Content Management"
     ]
   },
   {
@@ -3707,6 +4100,19 @@
     "tags": [
       "Monitoring",
       "Media"
+    ]
+  },
+  {
+    "slug": "teamspeak",
+    "logo": "logo.png",
+    "name": "Teamspeak",
+    "description": "TeamSpeak is a powerful and flexible VoIP (Voice over Internet Protocol) application designed for online gaming, business communication, and remote collaboration. It provides crystal-clear voice communication with minimal latency, making it ideal for teams that require real-time coordination. TeamSpeak offers a secure and scalable environment, allowing users to create and manage their own servers with customizable permissions and roles. The application supports a wide range of integrations and plugins, providing extended functionality. TeamSpeak is widely used in gaming communities, corporate environments, and educational institutions for efficient communication.",
+    "tags": [
+      "VoIP",
+      "Communication",
+      "Gaming",
+      "Business",
+      "Secure"
     ]
   },
   {
@@ -3969,6 +4375,17 @@
     ]
   },
   {
+    "slug": "wallabag",
+    "logo": "logo.png",
+    "name": "Wallabag",
+    "description": "Wallabag is a self-hosted read-it-later application that allows you to save web articles and access them later in a clean, distraction-free format. Written in PHP, it enables you to store and organize articles, categorize them with tags, and sync across multiple devices. Wallabag is privacy-focused, supports importing from services like Pocket and Instapaper, and provides a RESTful API for integration with other tools. The app offers browser extensions, a mobile-friendly interface, and multiple export options, including PDF, ePub, and plain text.",
+    "tags": [
+      "Productivity",
+      "Reading",
+      "Bookmarking"
+    ]
+  },
+  {
     "slug": "wbo",
     "logo": "logo.png",
     "name": "WBO",
@@ -4106,6 +4523,17 @@
     "tags": [
       "Media",
       "Documentation"
+    ]
+  },
+  {
+    "slug": "woodpeckerci",
+    "logo": "logo.png",
+    "name": "WoodPecker CI",
+    "description": "WoodPecker CI is a modern, open-source continuous integration (CI) and delivery tool designed for developers who value simplicity, flexibility, and scalability. It integrates seamlessly with GitHub, allowing teams to automate testing, build, and deployment workflows efficiently. WoodPecker CI is lightweight, easy to deploy, and supports a wide range of programming languages and platforms. With its agent-based architecture, it provides high customizability and performance, making it ideal for both small projects and large-scale software development pipelines.",
+    "tags": [
+      "CI/CD",
+      "Open-Source",
+      "DevOps"
     ]
   },
   {

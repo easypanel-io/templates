@@ -1,0 +1,82 @@
+name: Confluence
+description:
+  Confluence is a powerful team collaboration and knowledge-sharing tool. It
+  allows you to create, organize, and collaborate on content in a centralized
+  space. Designed for project management, documentation, and team communication,
+  Confluence helps streamline workflows and enhances productivity. It offers
+  seamless integration with other Atlassian products such as Jira and Bitbucket,
+  making it an ideal solution for agile teams. The intuitive editor and advanced
+  search capabilities ensure that team knowledge is easily accessible. With
+  extensive customization, permission controls, and plugin support, Confluence
+  is a scalable solution for teams of all sizes.
+instructions: Get the License Key to access Confluence.
+changeLog:
+  - date: 2025-02-13
+    description: First Release
+links:
+  - label: Documentation
+    url: https://confluence.atlassian.com
+  - label: Dockerhub
+    url: https://hub.docker.com/r/atlassian/confluence-server
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: confluence
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: atlassian/confluence-server:8.6-ubuntu-jdk17
+benefits:
+  - title: Centralized Knowledge Base
+    description:
+      Confluence provides a centralized space for team documentation and
+      knowledge sharing. This ensures that all team members can easily access
+      important information and contribute to content creation.
+  - title: Seamless Collaboration
+    description:
+      Teams can collaborate in real-time on documents, comment on pages, and
+      track changes easily. This helps improve communication and boosts overall
+      team productivity.
+  - title: Integration with Atlassian Ecosystem
+    description:
+      Confluence integrates seamlessly with Jira, Bitbucket, and other Atlassian
+      tools, providing a cohesive workflow for agile teams. This makes task
+      tracking, reporting, and documentation effortless.
+features:
+  - title: Intuitive Content Editor
+    description:
+      The content editor allows you to create well-structured and visually
+      appealing documents with ease. It supports rich text, tables, media
+      embeds, and macros to enhance content.
+  - title: Advanced Search and Organization
+    description:
+      Confluence offers powerful search and organization features, helping you
+      quickly find pages and spaces. Tags, labels, and hierarchical page
+      structures improve content discoverability.
+  - title: Permissions and Access Control
+    description:
+      With detailed permissions and access control settings, you can ensure that
+      sensitive information is protected while allowing open collaboration on
+      other content.
+  - title: Customization and Plugins
+    description:
+      Confluence supports extensive customization and a wide range of plugins.
+      This allows you to tailor the platform to meet your team’s specific needs.
+  - title: Version History and Page Tracking
+    description:
+      Track changes made to pages with version history, ensuring that you can
+      review, compare, and restore previous versions if needed.
+tags:
+  - Collaboration
+  - Documentation
+  - Productivity
+  - Project Management

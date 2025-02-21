@@ -1,0 +1,81 @@
+name: Shlink
+description:
+  Shlink is an open-source URL shortener that allows you to create a short URL
+  for your website. It provides a simple and intuitive interface that allows you
+  to create a short URL for your website.
+instructions:
+  To use this service we need a license key. Create an Account for GeoLite2,
+  Generate a license key, and add it.
+changeLog:
+  - date: 2025-02-14
+    description: first release
+links:
+  - label: Website
+    url: https://shlink.io/
+  - label: Documentation
+    url: https://shlink.io/documentation/
+  - label: Github
+    url: https://github.com/shlinkio/shlink
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - geolite2ApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shlink
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: shlinkio/shlink:4
+    geolite2ApiKey:
+      type: string
+      title: GeoLite2 API Key
+      description: Generate a license key from your GeoLite2 account.
+benefits:
+  - title: Cross-Platform Support
+    description:
+      Shlink is a cross-platform URL shortener that works seamlessly on various
+      operating systems, including Linux, Windows, and macOS. This makes it easy
+      to deploy and manage your short URLs on any platform.
+  - title: Easy Link Management
+    description:
+      Shlink provides a user-friendly interface and API for managing short URLs,
+      making it easy to create, customize, and track URLs without any hassle.
+  - title: Detailed Analytics
+    description:
+      Shlink offers detailed analytics for every short URL, including the number
+      of visits, referrers, device types, and geographical data. This helps
+      users gain valuable insights into their audience and link performance.
+features:
+  - title: Custom Domains
+    description:
+      Shlink supports custom domains, allowing users to create branded short
+      URLs that reflect their identity and improve user trust.
+  - title: RESTful API
+    description:
+      Shlink includes a powerful RESTful API that allows for easy integration
+      with other applications and automated URL management.
+  - title: Geolocation and Device Tracking
+    description:
+      Shlink provides geolocation and device tracking for each click, offering
+      insights into where visitors are coming from and what devices they are
+      using.
+  - title: QR Code Generation
+    description:
+      Automatically generate QR codes for every short URL, making it easy to
+      share links through print media and offline channels.
+  - title: Secure and Open Source
+    description:
+      Shlink is an open-source project with a focus on security and privacy.
+      Users can self-host it for complete control over their data.
+tags:
+  - URL Shortener
+  - Analytics
+  - Developer Tools
