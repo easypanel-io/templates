@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to 2.32.8
   - date: 2025-01-06
     description: Version bumped to 3.2.32
+  - date: 2025-02-21
+    description: Version bumped to 3.4.16
 links:
   - label: Website
     url: https://budibase.com/
@@ -35,7 +37,7 @@ contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: budibase/budibase:3.2.32
+      default: budibase/budibase:3.4.16
 benefits:
   - title: Efficiency and Speed
     description:
