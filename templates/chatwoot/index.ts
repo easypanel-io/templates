@@ -100,7 +100,7 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       serviceName: input.databaseServiceName,
-      image: "postgres:12",
+      image: "pgvector/pgvector:pg17",
       password: randomPasswordPostgres,
     },
   });
