@@ -4,35 +4,34 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       env: [
-        'DOMAIN=https://$(PRIMARY_DOMAIN)',
-        'EMAIL=seu@email.com',
-        'TZ=America/Sao_Paulo',
-        'APP_ENV=production',
-        'NODE_ENV=production',
-        'WEBHOOK_QUEPASA=https://$(PRIMARY_DOMAIN)/webhook/quepasa',
-        'WEBHOOK_TESTE_QUEPASA=https://$(PRIMARY_DOMAIN)/webhook-test/quepasa',
-        'APP_TITLE=Servidor NoCodeLeaks',
-        'QUEPASA_CONTAINER_NAME=NoCodeLeaks',
-        'QUEPASA_HOST_NAME=quepasa',
-        'QUEPASA_MEMORY_LIMIT=4096M',
-        'QUEPASA_EXTERNAL_PORT=31000',
-        'QUEPASA_INTERNAL_PORT=31000',
-        'WEBAPIPORT=31000',
-        'WEBSOCKETSSL=true',
-        'SIGNING_SECRET=BLA!2#BlA123bLA1',
-        'QUEPASA_BASIC_AUTH_USER=seu@email.com',
-        'QUEPASA_BASIC_AUTH_PASSWORD=TESTE',
-        'METRICS_HOST=',
-        'METRICS_PORT=9392',
-        'MIGRATIONS=/builder/migrations',
-        'DEBUGJSONMESSAGES=false',
-        'HTTPLOGS=false'
+        `DOMAIN=https://$(PRIMARY_DOMAIN)`,
+        `EMAIL=${input.email || "seu@email.com"}`,
+        `TZ=America/Sao_Paulo`,
+        `APP_ENV=production`,
+        `NODE_ENV=production`,
+        `WEBHOOK_QUEPASA=https://$(PRIMARY_DOMAIN)/webhook/quepasa`,
+        `WEBHOOK_TESTE_QUEPASA=https://$(PRIMARY_DOMAIN)/webhook-test/quepasa`,
+        `APP_TITLE=${input.appTitle || "Servidor NoCodeLeaks"}`,
+        `QUEPASA_CONTAINER_NAME=NoCodeLeaks`,
+        `QUEPASA_HOST_NAME=quepasa`,
+        `QUEPASA_MEMORY_LIMIT=4096M`,
+        `QUEPASA_EXTERNAL_PORT=31000`,
+        `QUEPASA_INTERNAL_PORT=31000`,
+        `WEBAPIPORT=31000`,
+        `WEBSOCKETSSL=true`,
+        `SIGNING_SECRET=${input.signingSecret || "BLA!2#BlA123bLA1"}`,
+        `QUEPASA_BASIC_AUTH_USER=${input.basicAuthUser || "seu@email.com"}`,
+        `QUEPASA_BASIC_AUTH_PASSWORD=${input.basicAuthPassword || "TESTE"}`,
+        `METRICS_HOST=${input.metricsHost || "localhost"}`,
+        `METRICS_PORT=9392`,
+        `MIGRATIONS=/builder/migrations`,
+        `DEBUGJSONMESSAGES=false`,
+        `HTTPLOGS=false`
       ].join("\n"),
       source: {
         type: "image",
