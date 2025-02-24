@@ -42,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: clickhouse/clickhouse-server:24.8
+      default: clickhouse/clickhouse-server:25.1
 benefits:
   - title: Real-Time Analytics
     description:
