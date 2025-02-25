@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2023-03-17
     description: Template created (v23.02.2)
+  - date: 2025-02-25
+    description: Version bumped to v25.02.1
 links:
   - label: Github
     url: https://github.com/bastienwirtz/homer
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: b4bz/homer:v24.05.1
+      default: b4bz/homer:v25.02.1
 benefits:
   - title: Convenience
     description:
