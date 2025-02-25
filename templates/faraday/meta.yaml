@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2025-01-30
     description: First release
+  - date: 2025-02-25
+    description: Version bumped to 5.11.0
 links:
   - label: Website
     url: https://www.faradaysec.com/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: faradaysec/faraday:5.10.1
+      default: faradaysec/faraday:5.11.0
 benefits:
   - title: Centralized Vulnerability Management
     description:
