@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to v2.23.0
+  - date: 2025-02-25
+    description: Version bumped to v2.32.0
 links:
   - label: Website
     url: https://filebrowser.org/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filebrowser/filebrowser:v2.31.2
+      default: filebrowser/filebrowser:v2.32.0
 benefits:
   - title: Efficient File Management
     description:

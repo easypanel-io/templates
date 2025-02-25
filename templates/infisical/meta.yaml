@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2025-01-08
     description: Template Release
+  - date: 2025-02-25
+    description: Version bumped to v0.112.0-postgres
 links:
   - label: Documentation
     url: https://infisical.com/docs
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: infisical/infisical:v0.101.1-postgres
+      default: infisical/infisical:v0.112.0-postgres
 benefits:
   - title: Secure Secret Management
     description:

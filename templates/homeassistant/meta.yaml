@@ -14,6 +14,8 @@ changeLog:
     description: first release
   - date: 2024-10-11
     description: Version Updated to 2024.10.1
+  - date: 2025-02-25
+    description: Version bumped to 2025.2.5
 
 links:
   - label: Documentation
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/homeassistant:2024.10.1
+      default: lscr.io/linuxserver/homeassistant:2025.2.5
 benefits:
   - title: Home Automation
     description:
