@@ -1,0 +1,83 @@
+name: TubeSync
+description:
+  TubeSync is a powerful self-hosted application designed to automatically sync
+  and download YouTube videos from subscriptions or playlists. It provides an
+  intuitive web interface to manage downloads, supports filtering by keywords,
+  and integrates with various media management systems. TubeSync allows users to
+  schedule automatic downloads, ensuring they never miss new content from their
+  favorite channels. It is built for efficiency, offering high-speed downloads
+  and optimized storage handling. The application runs as a lightweight
+  container, making it easy to deploy and manage.
+instructions: null
+changeLog:
+  - date: 2025-02-25
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/meeb/tubesync
+contributors:
+  - name: Ahson-Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tubesync
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/meeb/tubesync:v0.13.7
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: password
+benefits:
+  - title: Automatic YouTube Video Sync
+    description:
+      TubeSync automatically downloads new videos from your favorite YouTube
+      channels and playlists, ensuring you never miss an upload.
+  - title: Smart Filtering
+    description:
+      With advanced keyword filtering, TubeSync allows you to choose specific
+      videos to download based on titles, descriptions, or tags.
+  - title: Easy Integration with Media Libraries
+    description:
+      TubeSync works seamlessly with popular media management tools like Plex
+      and Jellyfin, making it easy to organize and stream downloaded content.
+features:
+  - title: Subscription Management
+    description:
+      Users can subscribe to YouTube channels and playlists, and TubeSync will
+      automatically download new videos as they are released.
+  - title: Keyword-Based Filtering
+    description:
+      Define specific keywords to filter downloads, ensuring only relevant
+      content is saved.
+  - title: Scheduled Downloads
+    description:
+      Schedule automatic video downloads at set intervals to keep your media
+      library updated without manual intervention.
+  - title: Web-Based UI
+    description:
+      Manage subscriptions, view download history, and configure settings
+      through an intuitive web-based interface.
+  - title: Metadata and Thumbnail Handling
+    description:
+      TubeSync automatically fetches video metadata and thumbnails, making it
+      easy to organize and categorize downloaded videos.
+tags:
+  - YouTube
+  - Video Management
+  - Automation
+  - Media
