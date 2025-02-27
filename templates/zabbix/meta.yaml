@@ -36,15 +36,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: zabbix/zabbix-web-nginx-pgsql:latest
+      default: zabbix/zabbix-web-nginx-pgsql:alpine-trunk
     zabbixServerServiceImage:
       type: string
       title: Zabbix Server Service Image
-      default: zabbix/zabbix-server-pgsql:latest
+      default: zabbix/zabbix-server-pgsql:alpine-trunk
     zabbixAgentServiceImage:
       type: string
       title: Zabbix Agent Service Image
-      default: zabbix/zabbix-agent:latest
+      default: zabbix/zabbix-agent:alpine-trunk
 benefits:
   - title: Comprehensive Monitoring
     description:
