@@ -43,12 +43,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.zabbixServerServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
-        },
-      ],
       mounts: [
         {
           type: "volume",
@@ -83,12 +77,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.zabbixAgentServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
-        },
-      ],
       mounts: [
         {
           type: "volume",
