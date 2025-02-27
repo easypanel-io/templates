@@ -1,0 +1,82 @@
+name: Zabbix
+description:
+  Zabbix is a powerful, self-hosted monitoring solution designed for tracking
+  and analyzing system performance, network utilization, and application health.
+  It provides real-time monitoring, customizable alerts, and detailed
+  visualization tools to help administrators maintain system reliability. Zabbix
+  supports agent-based and agentless monitoring, automation capabilities, and
+  integration with third-party tools. With its flexible architecture, Zabbix is
+  suitable for small to enterprise-level environments. The application includes
+  a web-based dashboard and supports a variety of database backends, making it a
+  robust solution for IT infrastructure monitoring.
+instructions: Use the default credentials (Admin/zabbix) to log in.
+changeLog:
+  - date: 2025-02-27
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://www.zabbix.com/documentation
+  - label: Github
+    url: https://github.com/zabbix/zabbix-docker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - zabbixServerServiceImage
+    - zabbixAgentServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zabbix
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zabbix/zabbix-web-nginx-pgsql:latest
+    zabbixServerServiceImage:
+      type: string
+      title: Zabbix Server Service Image
+      default: zabbix/zabbix-server-pgsql:latest
+    zabbixAgentServiceImage:
+      type: string
+      title: Zabbix Agent Service Image
+      default: zabbix/zabbix-agent:latest
+benefits:
+  - title: Comprehensive Monitoring
+    description:
+      Zabbix provides real-time monitoring for servers, network devices,
+      applications, and cloud environments, ensuring full visibility into system
+      performance.
+  - title: Automation & Alerting
+    description:
+      Zabbix includes automated alerting and remediation actions based on
+      defined triggers, reducing downtime and improving system stability.
+  - title: Scalable & Flexible
+    description:
+      Suitable for both small and large-scale enterprises, Zabbix supports
+      distributed monitoring and high availability deployments.
+features:
+  - title: Agent-Based & Agentless Monitoring
+    description:
+      Zabbix supports monitoring through both agent-based methods and SNMP,
+      IPMI, JMX, and other agentless protocols.
+  - title: Customizable Dashboards
+    description:
+      Zabbix offers advanced visualization tools, including interactive graphs,
+      reports, and real-time monitoring dashboards.
+  - title: Built-In Notification System
+    description:
+      Get alerts via email, SMS, or integrations with messaging platforms when
+      critical issues are detected.
+  - title: API Integration
+    description:
+      Extend Zabbix functionality with its powerful API for automating
+      monitoring tasks and integrating with third-party tools.
+tags:
+  - Monitoring
+  - Network Management
+  - IT Infrastructure
