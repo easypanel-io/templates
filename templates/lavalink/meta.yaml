@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2019-07-24
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to efed40d-alpine
 links:
   - label: Documentation
     url: https://github.com/freyacodes/Lavalink/blob/master/README.md
@@ -28,9 +30,6 @@ schema:
     - appServiceName
     - appServiceImage
   properties:
-    password:
-      type: string
-      title: Auth server password
     appServiceName:
       type: string
       title: App Service Name
@@ -38,7 +37,10 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fredboat/lavalink:v4.0.5
+      default: fredboat/lavalink:efed40d-alpine
+    password:
+      type: string
+      title: Auth server password
 benefits:
   - title: High-Quality Audio Streaming
     description:

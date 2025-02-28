@@ -10,6 +10,8 @@ instructions: Use the provided master-key as the password for UI login.
 changeLog:
   - date: 2025-01-06
     description: Initial Template Release for LiteLLM
+  - date: 2025-02-28
+    description: Version bumped to main-v1.61.20-nightly
 links:
   - label: Documentation
     url: https://docs.litellm.ai/docs/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/berriai/litellm:main-v1.57.0
+      default: ghcr.io/berriai/litellm:main-v1.61.20-nightly
 benefits:
   - title: Easy Integration
     description:

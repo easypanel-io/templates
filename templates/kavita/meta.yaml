@@ -25,6 +25,8 @@ changeLog:
     description:
       Previous repo has been archived, new repo and version updated
       jvmilazz0/kavita:0.8.3
+  - date: 2025-02-28
+    description: Version bumped to 0.8.4
 
 links:
   - label: Website
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jvmilazz0/kavita:0.8.3
+      default: jvmilazz0/kavita:0.8.4
     serviceTimezone:
       type: string
       title: Timezone

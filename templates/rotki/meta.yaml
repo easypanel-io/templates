@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2023-2-9
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to v1.38
 links:
   - label: Documentation
     url: https://rotki.readthedocs.io/en/latest/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.35.1
+      default: rotki/rotki:v1.38
 benefits:
   - title: Asset Management
     description:

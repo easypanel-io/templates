@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2024-11-27
     description: Template Release
+  - date: 2025-02-28
+    description: Version bumped to 1.7.6
 
 links:
   - label: Website
@@ -35,8 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: privatebin/nginx-fpm-alpine:1.2.1
-
+      default: privatebin/nginx-fpm-alpine:1.7.6
 benefits:
   - title: Secure Data Sharing
     description:

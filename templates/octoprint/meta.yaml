@@ -19,6 +19,8 @@ instructions: null
 changeLog:
   - date: 2023-07-11
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 1.10.3
 links:
   - label: Website
     url: https://octoprint.org
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: octoprint/octoprint:1.10.2
+      default: octoprint/octoprint:1.10.3
 benefits:
   - title: Full Remote Control & Monitoring
     description:
