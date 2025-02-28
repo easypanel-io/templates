@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-02-04
     description: First release
+  - date: 2025-02-28
+    description: Version bumped to 4.7.0
 links:
   - label: Website
     url: https://jsreport.net/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jsreport/jsreport:2.10.0
+      default: jsreport/jsreport:4.7.0
     username:
       type: string
       title: App Service Username

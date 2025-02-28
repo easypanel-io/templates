@@ -17,6 +17,8 @@ changeLog:
     description: Template added
   - date: 2024-10-16
     description: Version Updated to 2.6.4
+  - date: 2025-02-28
+    description: Version bumped to 2.9.6
 links:
   - label: Website
     url: https://lidarr.audio/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:2.6.4
+      default: linuxserver/lidarr:2.9.6
 benefits:
   - title: Automated Music Management
     description:

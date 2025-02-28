@@ -12,6 +12,8 @@ instructions: Login with any username or password
 changeLog:
   - date: 2023-3-27
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to 3.4.1.0
 links:
   - label: Website
     url: https://radicale.org/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tomsquest/docker-radicale:3.3.0.1
+      default: tomsquest/docker-radicale:3.4.1.0
 benefits:
   - title: CalDAV/CardDAV Server
     description:

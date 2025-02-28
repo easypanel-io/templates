@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2025-01-27
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 1.51
 links:
   - label: Website
     url: https://pwpush.com
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: pglombardo/pwpush:1.50.6
+      default: pglombardo/pwpush:1.51
 benefits:
   - title: Secure Password Sharing
     description:
