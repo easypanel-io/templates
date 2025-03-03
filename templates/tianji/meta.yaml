@@ -6,6 +6,8 @@ instructions: Default login is "admin" / "admin".
 changeLog:
   - date: 2024-03-26
     description: Template Added
+  - date: 2025-03-03
+    description: Version bumped to 1.18.11
 links:
   - label: Website
     url: https://tianji.msgbyte.com/
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: moonrailgun/tianji:0.2.0
+      default: moonrailgun/tianji:1.18.11
 tags:
   - Website Monitor
   - Analytics
