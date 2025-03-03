@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2023-5-7
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 4.10.4
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-webcord
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/webcord:4.10.2
+      default: lscr.io/linuxserver/webcord:4.10.4
 benefits:
   - title: Enhanced Security and Privacy
     description:

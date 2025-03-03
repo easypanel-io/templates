@@ -20,6 +20,8 @@ instructions:
 changeLog:
   - date: 2023-3-14
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 0.10.4-rc.1
 links:
   - label: Website
     url: https://yaoapps.com/
@@ -44,11 +46,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: yaoapp/yao:0.10.3-arm64
+      default: yaoapp/yao:0.10.4-rc.1
     databaseServiceName:
       type: string
       title: Database Service Name
       default: yao-db
+
 benefits:
   - title: Efficiency
     description:
