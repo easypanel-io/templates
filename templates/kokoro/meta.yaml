@@ -1,0 +1,66 @@
+name: Kokoro
+description:
+  Kokoro is a powerful, browser-based AI voice generator that lets you create
+  natural-sounding voices without installing anything. Use it directly in your
+  browser or self-host it for your own applications with OpenAI API
+  compatibility!
+instructions: null
+changeLog:
+  - date: 2025-03-05
+    description: First Release (0.1.0)
+links:
+  - label: Github
+    url: https://github.com/eduardolat/kokoro-web
+contributors:
+  - name: Ahson-Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kokoro
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/eduardolat/kokoro-web:0.1.0
+benefits:
+  - title: No Installation Required
+    description:
+      Generate high-quality, natural-sounding voices directly in your browser
+      without the need for any installations.
+  - title: Self-hostable and Flexible
+    description:
+      Use Kokoro in your own applications by self-hosting it, ensuring full
+      control over your voice generation capabilities with OpenAI API
+      compatibility.
+  - title: Cutting-edge AI Voice Technology
+    description:
+      Leverage advanced AI models to create lifelike voice outputs that are
+      perfect for multimedia projects, virtual assistants, and more.
+features:
+  - title: Browser-based Interface
+    description:
+      A user-friendly, web-based interface that allows you to generate voices
+      seamlessly from any modern browser.
+  - title: OpenAI API Compatibility
+    description:
+      Integrates with the OpenAI API for easy access to state-of-the-art voice
+      generation models.
+  - title: Customizable Voice Options
+    description:
+      Fine-tune voice characteristics such as tone, pitch, and speed to match
+      your specific requirements.
+  - title: Self-hosting Capability
+    description:
+      Deploy Kokoro on your own servers to maintain control over your data and
+      voice generation processes.
+tags:
+  - AI
+  - Voice Generation
+  - Browser-Based
+  - OpenAI API
