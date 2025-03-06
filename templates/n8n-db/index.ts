@@ -17,8 +17,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `N8N_HOST=https://$(PRIMARY_DOMAIN)`,
-        `WEBHOOK_URL=https://$(EASYPANEL_DOMAIN)`,
+        `N8N_HOST=$(PRIMARY_DOMAIN)`,
+        `WEBHOOK_URL=https://$(PRIMARY_DOMAIN)`,
         `N8N_PROTOCOL=https`,
         `GENERIC_TIMEZONE=UTC`,
         `N8N_ENCRYPTION_KEY=${encryptionKey}`,
