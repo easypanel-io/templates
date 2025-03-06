@@ -22,6 +22,8 @@ export function generate(input: Input): Output {
         `N8N_PROTOCOL=https`,
         `GENERIC_TIMEZONE=UTC`,
         `N8N_ENCRYPTION_KEY=${encryptionKey}`,
+        `N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true`,
+        'N8N_RUNNERS_ENABLED=true',
         // Database
         `DB_TYPE=postgresdb`,
         `DB_POSTGRESDB_DATABASE=$(PROJECT_NAME)`,
