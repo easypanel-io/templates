@@ -96,19 +96,14 @@ export function generate(input: Input): Output {
     },
   });
 
-services.push({
-  type: "postgres",
-  data: {
-    serviceName: input.databaseServiceName,
-    image: "postgres:12",
-    password: randomPasswordPostgres,
-    deploy: {
-      command: "apt-get update && apt-get install -y postgresql-server-dev-12 git build-essential && git clone --branch v0.5.0 https://github.com/pgvector/pgvector.git && cd pgvector && make && make install && psql -U postgres -c \"CREATE EXTENSION vector;\""
-    }
-  },
-});
-
-
+  services.push({
+    type: "postgres",
+    data: {
+      serviceName: input.databaseServiceName,
+      image: "ankane/pgvector:v0.5.1",
+      password: randomPasswordPostgres,
+    },
+  });
 
   return { services };
 }
