@@ -26,6 +26,12 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - compactFormat
+    - jaegerInstrumentation
+    - binaryFormat
+    - portSampling
+    - collectorPort
+    - zipkinPort
   properties:
     appServiceName:
       type: string
@@ -35,6 +41,30 @@ schema:
       type: string
       title: App Service Image
       default: jaegertracing/all-in-one:1.67.0
+    compactFormat:
+      type: string
+      title: Compact Format
+      default: "5775"
+    jaegerInstrumentation:
+      type: string
+      title: Jaeger Instrumentation
+      default: "6831"
+    binaryFormat:
+      type: string
+      title: Binary Format
+      default: "6832"
+    portSampling:
+      type: string
+      title: Port Sampling
+      default: "5778"
+    collectorPort:
+      type: string
+      title: Collector Port
+      default: "14268"
+    zipkinPort:
+      type: string
+      title: Zipkin Port
+      default: "9411"
 benefits:
   - title: Distributed Tracing
     description: Track requests across microservices for better visibility.
