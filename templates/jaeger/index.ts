@@ -21,37 +21,32 @@ export function generate(input: Input): Output {
       ports: [
         {
           protocol: "udp",
-          published: 5775,
+          published: Number(input.compactFormat),
           target: 5775,
         },
         {
           protocol: "udp",
-          published: 6831,
+          published: Number(input.jaegerInstrumentation),
           target: 6831,
         },
         {
           protocol: "udp",
-          published: 6832,
+          published: Number(input.binaryFormat),
           target: 6832,
         },
         {
           protocol: "tcp",
-          published: 5778,
+          published: Number(input.portSampling),
           target: 5778,
         },
         {
           protocol: "tcp",
-          published: 16686,
-          target: 16686,
-        },
-        {
-          protocol: "tcp",
-          published: 14268,
+          published: Number(input.collectorPort),
           target: 14268,
         },
         {
           protocol: "tcp",
-          published: 9411,
+          published: Number(input.zipkinPort),
           target: 9411,
         },
       ],
