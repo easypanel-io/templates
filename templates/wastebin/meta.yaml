@@ -1,0 +1,80 @@
+name: Wastebin
+description:
+  Wastebin is a self-hosted, minimal pastebin designed for quick and simple text
+  sharing. With a clean and intuitive interface inspired by bin, it allows users
+  to create and share text snippets easily. Wastebin supports private pastes,
+  syntax highlighting, and expiration settings for better control over shared
+  content. It is lightweight, fast, and easy to deploy with minimal system
+  requirements.
+instructions:
+  In case of Sqlite write error. Go to your host machine and go the directory.
+  "cd /etc/easypanel/projects/your-project/wastebin/volumes/" and do this "chown
+  -R 10001:10001 data/" then redeploy.
+changeLog:
+  - date: 2025-03-17
+    description: First Release (v3.0.0)
+links:
+  - label: Documentation
+    url: https://github.com/quxfoo/wastebin/wiki
+  - label: Github
+    url: https://github.com/quxfoo/wastebin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wastebin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: quxfoo/wastebin:3.0.0
+benefits:
+  - title: Minimal and Fast
+    description:
+      Wastebin is designed to be lightweight and efficient, making it perfect
+      for quick text-sharing needs without unnecessary features or bloat.
+  - title: Self-Hosted Privacy
+    description:
+      Unlike public pastebin services, Wastebin allows you to host your own
+      instance, ensuring full control over your data and privacy.
+  - title: Syntax Highlighting
+    description:
+      Wastebin supports syntax highlighting for various programming languages,
+      making it useful for sharing and reading code snippets with proper
+      formatting.
+  - title: Expiration and Private Pastes
+    description:
+      Users can set expiration times for pastes or mark them as private,
+      ensuring better content management and control.
+features:
+  - title: Quick and Simple Text Sharing
+    description:
+      Wastebin allows users to create and share pastes with a single click,
+      making the process fast and convenient.
+  - title: Private and Public Pastes
+    description:
+      Users can mark pastes as private, restricting access and keeping sensitive
+      information secure.
+  - title: Expiration Control
+    description:
+      Pastes can have configurable expiration times, allowing users to set
+      content to auto-delete after a certain period.
+  - title: Syntax Highlighting
+    description:
+      Automatic syntax highlighting for various programming languages helps in
+      better readability of shared code snippets.
+  - title: Simple API
+    description:
+      Wastebin provides a straightforward API for programmatic paste creation,
+      making it useful for developers and automation workflows.
+tags:
+  - Pastebin
+  - Productivity
+  - Self-Hosted
