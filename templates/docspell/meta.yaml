@@ -1,0 +1,91 @@
+name: Docspell
+description:
+  Docspell is a personal document management system designed to archive and
+  organize your digital documents. It helps you scan, organize, search, and
+  retrieve your documents with ease. Docspell automatically processes documents,
+  extracts text via OCR, and makes your documents searchable through full-text
+  search powered by Solr. The system consists of multiple components a REST
+  server for the web interface, a job executor (joex) for background processing,
+  a directory consumer for automatic document ingestion, and Solr for powerful
+  search capabilities. Docspell helps you categorize documents, add metadata,
+  and efficiently manage your paperwork in a secure, self-hosted environment.
+
+instructions: The initial setup requires creating a user account.
+
+changeLog:
+  - date: 2025-03-19
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docspell.org/docs/
+  - label: Github
+    url: https://github.com/eikek/docspell
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - joexServiceImage
+    - consumedirServiceImage
+    - solrServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: docspell
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/docspell/restserver:v0.42.0
+    joexServiceImage:
+      type: string
+      title: Joex Service Image
+      default: ghcr.io/docspell/joex:v0.42.0
+    consumedirServiceImage:
+      type: string
+      title: Consumedir Service Image
+      default: docspell/dsc:v0.11.0
+    solrServiceImage:
+      type: string
+      title: Solr Service Image
+      default: solr:9
+benefits:
+  - title: Document Organization
+    description:
+      Docspell helps you organize your digital documents with automatic metadata
+      extraction and customizable tagging.
+  - title: Full-Text Search
+    description:
+      Find any document quickly with powerful full-text search capabilities
+      powered by Solr.
+  - title: Self-Hosted Solution
+    description:
+      Maintain privacy and control over your documents with a completely
+      self-hosted system.
+
+features:
+  - title: OCR Processing
+    description:
+      Automatically extract text from scanned documents to make them searchable.
+  - title: Automated Ingestion
+    description:
+      Set up automatic document processing through various input methods
+      including email and directory watching.
+  - title: Metadata Management
+    description:
+      Organize documents with tags, correspondents, and other metadata fields.
+  - title: Multiple User Support
+    description:
+      Set up individual or shared document collections with customizable access
+      controls.
+
+tags:
+  - Document Management
+  - OCR
+  - Self-Hosted
