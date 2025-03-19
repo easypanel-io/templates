@@ -20,6 +20,13 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "app-data",
+          mountPath: "/app/data",
+        },
+      ],
       env: [
         `USER=${input.serpUser}`,
         `PASSWORD=${input.serpPass}`,
