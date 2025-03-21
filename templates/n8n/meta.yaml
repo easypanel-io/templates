@@ -16,10 +16,8 @@ description:
   focus on your KPIs, not your APIs.
 instructions: null
 changeLog:
-  - date: 2022-07-12
+  - date: 2025-03-05
     description: first release
-  - date: 2024-10-19
-    description: Update to 1.64.0
 links:
   - label: Website
     url: https://n8n.io/
@@ -39,6 +37,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - databaseType
+    - redisService
   properties:
     appServiceName:
       type: string
@@ -47,7 +47,22 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n8nio/n8n:1.64.0
+      default: n8nio/n8n:stable
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgres
+      oneOf:
+        - enum:
+            - sqlite
+          title: SQLite
+        - enum:
+            - postgres
+          title: Postgres
+    redisService:
+      type: boolean
+      title: Redis
+      default: true
 benefits:
   - title: Workflow Automation
     description:
