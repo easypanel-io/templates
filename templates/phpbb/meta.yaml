@@ -1,0 +1,83 @@
+name: phpBB
+description:
+  phpBB is a free and open-source bulletin board software that enables you to
+  create online communities and discussion forums. It offers a highly
+  customizable platform with a user-friendly interface that supports multiple
+  languages and includes features like custom BBCode, private messaging, search
+  functionality, and user groups. The Bitnami phpBB container provides a
+  ready-to-use instance of phpBB with all its dependencies, configured for
+  security and performance. This deployment includes both the phpBB application
+  and a MariaDB database for storing your forum data.
+
+instructions:
+  Login to the phpBB forum via the provided URL. During the first login, use the
+  username "admin" and the passowrd is "admin"
+
+changeLog:
+  - date: 2025-03-21
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://www.phpbb.com/
+  - label: Documentation
+    url: https://www.phpbb.com/support/documentation/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/bitnami/phpbb
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: phpbb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bitnami/phpbb:3.3.12
+
+benefits:
+  - title: Easy Forum Creation
+    description:
+      Set up a fully functional discussion forum without complex configuration
+      or technical knowledge.
+  - title: Highly Customizable
+    description:
+      Tailor your forum's appearance and functionality with thousands of styles,
+      extensions, and language packs.
+  - title: Active Community
+    description:
+      Join a large and active community of users and developers who contribute
+      to the platform's growth and improvement.
+
+features:
+  - title: User Management
+    description:
+      Create user groups with different permission levels and manage user
+      accounts with comprehensive moderation tools.
+  - title: Mobile-Responsive Design
+    description:
+      Offer a seamless browsing experience across all devices with phpBB's
+      responsive design.
+  - title: Powerful Search Functionality
+    description:
+      Enable users to quickly find content using the built-in search system with
+      advanced filtering options.
+  - title: Anti-Spam Measures
+    description:
+      Protect your forum from unwanted content with various anti-spam tools and
+      CAPTCHA verification.
+
+tags:
+  - Forum
+  - Community
+  - Discussion Board
+  - Bulletin Board
