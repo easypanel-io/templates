@@ -19,6 +19,18 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "piwigo-data",
+          mountPath: "/gallery",
+        },
+        {
+          type: "volume",
+          name: "piwigo-config",
+          mountPath: "/config",
+        },
+      ],
     },
   });
 
