@@ -11,7 +11,7 @@ description:
 instructions: null
 
 changeLog:
-  - date: 2025-03-22
+  - date: 2025-03-2
     description: Initial template release
 
 links:
@@ -32,6 +32,8 @@ schema:
     - appServiceName
     - appServiceImage
     - discordToken
+    - timeZone
+    - discordPrefix
   properties:
     appServiceName:
       type: string
@@ -45,6 +47,15 @@ schema:
       type: string
       title: Discord Bot Token
       description: Your Discord bot token from the Discord Developer Portal
+    timeZone:
+      type: string
+      title: Timezone
+      default: America/Detroit
+      description: The timezone for your Discord server.
+    discordPrefix:
+      type: string
+      title: Discord Command Prefix
+      default: "."
 
 benefits:
   - title: Modular Design

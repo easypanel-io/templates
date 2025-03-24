@@ -14,9 +14,9 @@ export function generate(input: Input): Output {
       },
       env: [
         `TOKEN=${input.discordToken}`,
-        "PREFIX=.0",
-        "TZ=America/Detroit",
-        "PUID=1000",
+        `PREFIX=${input.discordPrefix}`,
+        `TZ=${input.timeZone}`,
+        `PUID=1000`,
       ].join("\n"),
       mounts: [
         {
