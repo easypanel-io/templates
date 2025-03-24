@@ -12,7 +12,7 @@ instructions: null
 
 changeLog:
   - date: 2025-03-22
-    description: Initial template release (audio-py311)
+    description: Initial template release
 
 links:
   - label: GitHub
@@ -32,6 +32,7 @@ schema:
     - appServiceName
     - appServiceImage
     - discordToken
+    - dashboardImage
   properties:
     appServiceName:
       type: string
@@ -84,3 +85,4 @@ tags:
   - Automation
   - Community
   - Chat
+  - Dashboard
