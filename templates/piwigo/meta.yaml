@@ -1,0 +1,69 @@
+name: piwigo
+description:
+  Piwigo is a powerful, self-hosted photo gallery solution designed for managing
+  and organizing your image collections efficiently. It provides a user-friendly
+  web interface, supports a vast array of plugins for extended functionality,
+  and offers advanced photo organization features such as albums, tags, and
+  batch processing. With Piwigo, you can maintain full control over your photo
+  storage and sharing.
+instructions: Configure the database in the installation wizard.
+changeLog:
+  - date: 2025-02-24
+    description: Template Release
+links:
+  - label: Website
+    url: https://piwigo.org/
+  - label: DockerHub
+    url: https://hub.docker.com/r/linuxserver/piwigo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: piwigo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/piwigo:15.4.0
+benefits:
+  - title: Efficient Photo Management
+    description:
+      Piwigo enables users to manage large collections of photos with advanced
+      features like batch editing, categorization, and tagging.
+  - title: Self-Hosted Solution
+    description:
+      Retain full control over your photos with a self-hosted gallery solution,
+      ensuring privacy and flexibility.
+  - title: Customizable & Extendable
+    description:
+      Customize your gallery with themes and extend its functionality using
+      community-built plugins.
+features:
+  - title: Album Organization
+    description:
+      Structure your images into albums and sub-albums for easy management.
+  - title: Tagging System
+    description: Add tags to images for faster search and filtering.
+  - title: User Access Control
+    description: Manage permissions and access levels for different users.
+  - title: Plugins & Themes
+    description:
+      Extend Piwigo’s capabilities with plugins and personalize it with themes.
+  - title: Batch Processing
+    description: Modify multiple photos at once, saving time on large galleries.
+  - title: API Access
+    description: Integrate Piwigo with other applications through its API.
+  - title: Mobile Compatibility
+    description: Access and manage your gallery from mobile devices seamlessly.
+tags:
+  - Photo Gallery
+  - Self-Hosted
+  - Image Management
+  - Open Source
