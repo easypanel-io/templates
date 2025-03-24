@@ -1,0 +1,86 @@
+name: Red-DiscordBot
+description:
+  Red-DiscordBot is a fully modular bot for Discord, designed to be easy to use
+  and highly customizable. It features a robust command system, extensive
+  documentation, and a large collection of community-created cogs (modules). The
+  bot supports features like moderation, music playback, games, utility
+  functions, and much more. With its modular design, users can easily add or
+  remove functionality by loading and unloading cogs, making it perfect for both
+  small and large Discord communities.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-22
+    description: Initial template release (audio-py311)
+
+links:
+  - label: GitHub
+    url: https://github.com/Cog-Creators/Red-DiscordBot
+  - label: Documentation
+    url: https://docs.discord.red/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/phasecorex/red-discordbot
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - discordToken
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: red-discordbot
+    appServiceImage:
+      type: string
+      title: Red-DiscordBot Image
+      default: phasecorex/red-discordbot:audio-py311
+    discordToken:
+      type: string
+      title: Discord Bot Token
+      description: Your Discord bot token from the Discord Developer Portal
+
+benefits:
+  - title: Modular Design
+    description:
+      Easily customize your bot by adding or removing cogs (modules) to suit
+      your server's needs.
+  - title: Extensive Feature Set
+    description:
+      Access a wide range of features including moderation, music, games, and
+      utility functions.
+  - title: Active Community
+    description:
+      Benefit from regular updates, community support, and a vast collection of
+      user-created cogs.
+
+features:
+  - title: Command System
+    description:
+      Create and manage custom commands with ease using Red's intuitive command
+      system.
+  - title: Cog Management
+    description:
+      Load, unload, and reload cogs without restarting the bot for seamless
+      updates.
+  - title: Data Storage
+    description:
+      Built-in data storage system for saving settings, user data, and custom
+      configurations.
+  - title: Event System
+    description:
+      Respond to Discord events and create custom event handlers for advanced
+      functionality.
+
+tags:
+  - Discord
+  - Bot
+  - Automation
+  - Community
+  - Chat
