@@ -57,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: espocrm/espocrm:8.4.2-apache
+      default: espocrm/espocrm:9-apache
     databaseServiceType:
       type: string
       title: Database Service Type
