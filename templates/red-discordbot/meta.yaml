@@ -32,7 +32,6 @@ schema:
     - appServiceName
     - appServiceImage
     - discordToken
-    - dashboardImage
   properties:
     appServiceName:
       type: string

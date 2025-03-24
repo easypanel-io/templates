@@ -4,7 +4,6 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  // Red-DiscordBot service
   services.push({
     type: "app",
     data: {
