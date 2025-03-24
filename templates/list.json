@@ -2957,6 +2957,17 @@
     ]
   },
   {
+    "slug": "onlyoffice",
+    "logo": "logo.png",
+    "name": "OnlyOffice",
+    "description": "OnlyOffice is a self-hosted office suite that provides powerful document, spreadsheet, and presentation editing capabilities. It offers full compatibility with Microsoft Office formats and allows real-time document collaboration. Designed for businesses, teams, and individuals, OnlyOffice ensures secure, private, and efficient document management. It includes integration with various cloud storage services, supports plugins for extended functionality, and provides a modern web-based interface. OnlyOffice can be deployed on-premise or in the cloud and is ideal for organizations that need control over their document workflow. Additional features include a built-in document management system, mail integration, calendar, CRM tools, and a powerful API for automation.",
+    "tags": [
+      "Office Suite",
+      "Productivity",
+      "Collaboration"
+    ]
+  },
+  {
     "slug": "openblocks",
     "logo": "logo.png",
     "name": "Openblocks",
@@ -3219,6 +3230,18 @@
     ]
   },
   {
+    "slug": "pgadmin",
+    "logo": "logo.png",
+    "name": "Pgadmin",
+    "description": "PGAdmin is a popular open-source administration and management tool for PostgreSQL databases. It provides a web-based interface to interact with PostgreSQL databases, allowing users to create, modify, and manage databases, tables, roles, and queries with ease. PGAdmin supports advanced query execution, database performance analysis, and extensive user management capabilities. With a modern and intuitive UI, it is designed for database administrators, developers, and analysts to efficiently work with PostgreSQL databases. Additional features include SQL query editor, ERD diagrams, scheduled backups, and monitoring tools.",
+    "tags": [
+      "Database Management",
+      "PostgreSQL",
+      "Web UI",
+      "Administration"
+    ]
+  },
+  {
     "slug": "pgvector",
     "logo": null,
     "name": "pgvector",
@@ -3359,6 +3382,19 @@
       "Lifecycle Management",
       "Platform Management",
       "Security & Compliance"
+    ]
+  },
+  {
+    "slug": "poste",
+    "logo": "logo.png",
+    "name": "Poste",
+    "description": "Poste is a self-hosted mail server solution that provides a complete and secure email hosting platform. It offers built-in features such as spam filtering, DKIM signing, and webmail access to ensure a reliable email experience. This app is a Docker containerized version of Poste, making it easy to deploy and manage across various environments.",
+    "tags": [
+      "Email",
+      "Self-Hosted",
+      "Mail Server",
+      "Security",
+      "Productivity"
     ]
   },
   {
@@ -4103,6 +4139,18 @@
     ]
   },
   {
+    "slug": "teable",
+    "logo": "logo.png",
+    "name": "Teable",
+    "description": "Teable is a powerful, self-hosted service designed for managing team collaboration and projects efficiently. It offers a clean and user-friendly interface, supports plugins for extended functionality, and provides detailed analytics on team activities. With Teable, you can maintain full control over your data and workflows.",
+    "tags": [
+      "Project Management",
+      "Self-Hosted",
+      "Team Collaboration",
+      "Analytics"
+    ]
+  },
+  {
     "slug": "teamspeak",
     "logo": "logo.png",
     "name": "Teamspeak",
@@ -4274,6 +4322,30 @@
     ]
   },
   {
+    "slug": "tubearchivist",
+    "logo": "logo.png",
+    "name": "TubeArchivist",
+    "description": "TubeArchivist is a self-hosted YouTube archiving tool that allows you to manage and organize your YouTube content locally. It downloads videos, indexes metadata, and provides a web-based interface for searching, organizing, and playing content. Designed for personal use, TubeArchivist integrates with Elasticsearch for advanced search capabilities and Redis for optimized caching and task management. It also supports custom playlists, video tagging, and offline playback, providing complete control over your video collection.",
+    "tags": [
+      "Video Management",
+      "YouTube Archiving",
+      "Offline Playback",
+      "Personal Media Server"
+    ]
+  },
+  {
+    "slug": "tubesync",
+    "logo": "logo.png",
+    "name": "TubeSync",
+    "description": "TubeSync is a powerful self-hosted application designed to automatically sync and download YouTube videos from subscriptions or playlists. It provides an intuitive web interface to manage downloads, supports filtering by keywords, and integrates with various media management systems. TubeSync allows users to schedule automatic downloads, ensuring they never miss new content from their favorite channels. It is built for efficiency, offering high-speed downloads and optimized storage handling. The application runs as a lightweight container, making it easy to deploy and manage.",
+    "tags": [
+      "YouTube",
+      "Video Management",
+      "Automation",
+      "Media"
+    ]
+  },
+  {
     "slug": "twenty",
     "logo": "logo.png",
     "name": "Twenty",
@@ -4331,6 +4403,18 @@
       "Monitoring",
       "Self-hosted",
       "Uptime"
+    ]
+  },
+  {
+    "slug": "usermemos",
+    "logo": "logo.png",
+    "name": "Usermemos",
+    "description": "Usermemos is a lightweight, self-hosted note-taking application designed for simplicity, accessibility, and efficiency. It provides an intuitive interface for capturing and organizing memos with support for markdown formatting, tagging, and searching. This app is a Docker containerized version of Usermemos, making it easy to deploy and manage in various environments. The app supports multiple architectures, including x86-64 and arm64, and can be accessed via HTTP or HTTPS. It offers additional environment variables and configurations to enable customization. Usermemos is designed for both personal and collaborative usage, ensuring that users can manage their notes effectively.",
+    "tags": [
+      "Productivity",
+      "Note-Taking",
+      "Self-Hosted",
+      "Developer Tools"
     ]
   },
   {
