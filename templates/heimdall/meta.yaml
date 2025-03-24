@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2023-2-24
     description: Update to v2.5.5
+  - date: 2025-02-25
+    description: Version bumped to 2.6.3
 links:
   - label: Website
     url: https://heimdall.site/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/heimdall:2.6.1
+      default: linuxserver/heimdall:2.6.3
     serviceTimezone:
       type: string
       title: Timezone
