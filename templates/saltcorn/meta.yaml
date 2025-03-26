@@ -1,0 +1,74 @@
+name: Saltcorn
+description:
+  Saltcorn is an extensible open-source no-code database application builder. It
+  allows you to build web applications based on relational data with flexible
+  views, data types, and layouts. With Saltcorn, you can create dynamic
+  applications without writing code, making it a powerful tool for both
+  developers and non-developers alike.
+instructions: Delete the migration container, once that is done with migrations.
+changeLog:
+  - date: 2025-03-13
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://saltcorn.com/
+  - label: Github
+    url: https://github.com/saltcorn/saltcorn
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: saltcorn
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: saltcorn/saltcorn:1.1.2
+
+benefits:
+  - title: No-Code Database Application Builder
+    description:
+      Saltcorn allows users to create database-driven applications without
+      coding, making development accessible to all skill levels.
+  - title: Self-Hosted & Secure
+    description:
+      Host your applications on your own infrastructure, ensuring privacy and
+      complete control over your data.
+  - title: Flexible Data Models & Views
+    description:
+      Design relational databases with customized views, data types, and layouts
+      that fit your specific needs.
+
+features:
+  - title: Drag-and-Drop UI Builder
+    description:
+      Easily create application interfaces with an intuitive drag-and-drop
+      editor.
+  - title: Relational Database Support
+    description:
+      Define relationships between different data models to build complex
+      applications.
+  - title: Multi-Tenant Hosting
+    description:
+      Run multiple instances of Saltcorn on a single installation, enabling
+      SaaS-style deployments.
+  - title: Plugin & Theme Support
+    description:
+      Extend Saltcorn's functionality with community-developed plugins and
+      themes.
+
+tags:
+  - No-Code
+  - Self-Hosted
+  - Database Management
+  - Web Applications
+  - Multi-Tenant
