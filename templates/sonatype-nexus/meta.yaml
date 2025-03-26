@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2024-12-05
     description: First Release
+  - date: 2025-03-03
+    description: Version bumped to 3.77.2
 links:
   - label: Github
     url: https://github.com/sonatype/nexus-public
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sonatype/nexus3:3.75.0
+      default: sonatype/nexus3:3.77.2
 benefits:
   - title: Centralized Artifact Management
     description:

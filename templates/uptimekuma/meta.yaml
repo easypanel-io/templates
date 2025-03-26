@@ -15,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2022-08-02
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 2.0.0-beta.1
 links:
   - label: Website
     url: https://uptime.kuma.pet
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: louislam/uptime-kuma:1.9.2
+      default: louislam/uptime-kuma:2.0.0-beta.1
 benefits:
   - title: Easy-to-use monitoring tool
     description:

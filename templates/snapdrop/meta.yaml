@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2024-12-12
     description: First release
+  - date: 2025-03-03
+    description: Version bumped to version-b8b78cc2
 links:
   - label: Documentation
     url: https://github.com/linuxserver/docker-snapdrop
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/snapdrop:version-f88d46ed
+      default: lscr.io/linuxserver/snapdrop:version-b8b78cc2
 benefits:
   - title: Seamless File Sharing
     description:

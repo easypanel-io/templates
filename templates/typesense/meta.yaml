@@ -18,6 +18,8 @@ instructions: Find your API key in the environment tab
 changeLog:
   - date: 2023-1-25
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 29.0.rc4
 links:
   - label: Documentation
     url: https://typesense.org/docs/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:27.0.rc15
+      default: typesense/typesense:29.0.rc4
 tags:
   - Documentation
   - Developer Tools
