@@ -1,0 +1,62 @@
+name: Komiser
+description:
+  Komiser is an open-source cloud resource manager that helps you understand,
+  manage, and optimize your cloud infrastructure costs. It provides a unified
+  dashboard to monitor and manage resources across multiple cloud providers,
+  offering insights into resource usage, cost optimization opportunities, and
+  security best practices.
+instructions:
+  Once deployed, please provide your credentials in the credentials.yaml file,
+  and then restart the service.
+
+changeLog:
+  - date: "2025-03-26"
+    description: Initial template release
+links:
+  - label: Website
+    url: https://komiser.io/
+  - label: Documentation
+    url: https://docs.komiser.io/
+  - label: GitHub
+    url: https://github.com/tailwarden/komiser
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: komiser
+    appServiceImage:
+      type: string
+      title: Komiser Image
+      default: tailwarden/komiser:3.0.0
+benefits:
+  - title: Cloud Cost Optimization
+    description: Identify and optimize cloud resource costs across providers.
+  - title: Multi-Cloud Management
+    description: Unified dashboard for managing multiple cloud providers.
+  - title: Resource Monitoring
+    description: Real-time monitoring of cloud resources and usage.
+  - title: Security Insights
+    description: Security best practices and compliance monitoring.
+features:
+  - title: Cost Analysis
+    description: Detailed cost breakdown and optimization recommendations.
+  - title: Resource Tracking
+    description: Track and manage cloud resources across providers.
+  - title: Security Monitoring
+    description: Monitor security configurations and compliance.
+  - title: Customizable Dashboard
+    description: Customizable views and reporting options.
+tags:
+  - Cloud Management
+  - Cost Optimization
+  - Resource Monitoring
+  - Security
+  - Multi-Cloud
