@@ -1,0 +1,89 @@
+name: Castopod
+description:
+  Castopod is an open-source hosting platform made for podcasters who want full
+  control over their content. It provides a comprehensive solution for creating,
+  managing, and distributing podcasts with features like built-in analytics,
+  automatic RSS feed generation, and support for the ActivityPub protocol for
+  social interactions. Castopod helps podcasters save time with automatic
+  episode publishing to podcast platforms and social media. The platform
+  includes powerful tools for audience engagement, SEO optimization, and
+  monetization options. With its modern, intuitive interface, Castopod makes
+  podcast hosting accessible while giving creators complete ownership of their
+  content and audience data.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-20
+    description: Initial template release (1.13.4)
+
+links:
+  - label: Website
+    url: https://castopod.org/
+  - label: Documentation
+    url: https://docs.castopod.org/
+  - label: Github
+    url: https://github.com/ad-aures/castopod
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: castopod
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: castopod/castopod:1.13.4
+
+benefits:
+  - title: Full Ownership
+    description:
+      Host your podcasts on your own infrastructure, maintaining complete
+      control over your content and audience data.
+  - title: Built-in Analytics
+    description:
+      Access detailed insights about your audience without relying on
+      third-party services or compromising listener privacy.
+  - title: Social Features
+    description:
+      Engage with your audience through built-in comments, likes, and federation
+      with the Fediverse via ActivityPub.
+
+features:
+  - title: Podcast Management
+    description:
+      Create multiple podcasts, manage episodes, and automatically generate RSS
+      feeds compatible with all podcast platforms.
+  - title: Automatic Publishing
+    description:
+      Save time with automatic episode publishing to podcast directories and
+      social media platforms.
+  - title: Embeddable Player
+    description:
+      Easily embed a customizable podcast player on any website to showcase your
+      episodes.
+  - title: Monetization Options
+    description:
+      Integrate with various monetization methods including value-for-value,
+      premium content, and sponsorships.
+
+tags:
+  - Podcast
+  - Audio
+  - Content Management
+  - ActivityPub
+  - Social
+  - Podcast Hosting
+  - Podcast Management
+  - Podcast Player
+  - Podcast Analytics
+  - Podcast Social Media
