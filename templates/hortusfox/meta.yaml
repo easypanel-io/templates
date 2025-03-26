@@ -1,0 +1,70 @@
+name: HortusFox
+description:
+  HortusFox is a free, open-source, self-hosted, collaborative plant management
+  system designed for individuals and groups to easily manage their plants,
+  tasks, calendar, inventory, and more, all within a user-friendly web
+  application.
+instructions: null
+changeLog:
+  - date: 2025-03-14
+    description: Template Release (v4.4)
+links:
+  - label: Documentation
+    url: https://hortusfox.github.io/
+  - label: Github
+    url: https://github.com/danielbrendel/hortusfox-web?tab=readme-ov-file#docker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hortusfox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/danielbrendel/hortusfox-web:v4.4
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: password
+benefits:
+  - title: Collaborative Plant Management
+    description:
+      Easily manage and share plant care responsibilities among individuals and
+      groups.
+  - title: Comprehensive Task & Calendar Integration
+    description:
+      Organize tasks and schedule plant care with integrated calendar features.
+  - title: Self-Hosted & Open Source
+    description:
+      Enjoy full control over your data with a free, open-source solution.
+features:
+  - title: Plant Inventory Management
+    description: Track and manage your plant collection with detailed records.
+  - title: Task Scheduling
+    description:
+      Create, assign, and track tasks related to plant care and maintenance.
+  - title: Calendar Integration
+    description:
+      Plan and view plant care schedules seamlessly with an integrated calendar.
+  - title: Collaborative Tools
+    description:
+      Share responsibilities and collaborate with group members effectively.
+tags:
+  - Plant Management
+  - Collaboration
+  - Self-Hosted
+  - Open Source
