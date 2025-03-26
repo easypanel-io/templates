@@ -1,0 +1,77 @@
+name: Medusa
+description:
+  Medusa is an automatic Video Library Manager for TV Shows. It continuously
+  monitors multiple sources for new episodes of your favorite TV shows and
+  automatically downloads, processes, and organizes them. Medusa fetches
+  metadata, renames files, and ensures your media library is structured and
+  up-to-date. With a powerful and customizable automation system, it supports
+  multiple download clients, subtitle providers, and metadata sources. Medusa
+  integrates with popular media servers, ensuring seamless media management.
+instructions: null
+changeLog:
+  - date: 2025-03-04
+    description: First Release
+links:
+  - label: Documentation
+    url: https://github.com/pymedusa/Medusa/wiki
+  - label: Github
+    url: https://github.com/pymedusa/Medusa
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: medusa
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/medusa:1.0.22
+benefits:
+  - title: Automated TV Show Management
+    description:
+      Medusa continuously scans multiple sources for new TV show episodes and
+      downloads them automatically. It helps you keep your media library updated
+      without manual intervention.
+  - title: Smart File Organization
+    description:
+      Medusa renames and organizes downloaded episodes into a structured library
+      with metadata, subtitles, and proper file-naming conventions. This makes
+      it easy to manage and access your media.
+  - title: Integration with Media Servers
+    description:
+      Medusa integrates with media servers like Plex, Emby, and Kodi, ensuring
+      that your newly downloaded content is instantly available in your media
+      library.
+features:
+  - title: Multi-Source Episode Tracking
+    description:
+      Medusa tracks episodes from various torrent and Usenet sources, ensuring
+      you never miss a release.
+  - title: Automatic Subtitle Downloading
+    description:
+      Medusa supports automatic subtitle fetching from multiple providers,
+      allowing you to enjoy content in different languages.
+  - title: Custom Download Client Support
+    description:
+      Medusa integrates with multiple torrent and Usenet download clients,
+      including Transmission, qBittorrent, Deluge, SABnzbd, and NZBGet.
+  - title: Post-Processing Automation
+    description:
+      Medusa can automatically extract, rename, and move downloaded files to the
+      correct directories based on customizable rules.
+  - title: Metadata Fetching
+    description:
+      Medusa fetches metadata such as episode information, posters, and
+      descriptions from TVDB, TMDB, and other sources.
+tags:
+  - TV Shows
+  - Media Management
+  - Automation
+  - Productivity
