@@ -15,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2023-06-30
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to v1.13.4
 links:
   - label: Website
     url: https://qdrant.tech/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: qdrant/qdrant:v1.9.4
+      default: qdrant/qdrant:v1.13.4
 benefits:
   - title: Advanced Vector Similarity Search
     description:

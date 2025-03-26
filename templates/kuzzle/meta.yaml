@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2024-11-16
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 2.40.1
 links:
   - label: Website
     url: https://kuzzle.io/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kuzzleio/kuzzle:2
+      default: kuzzleio/kuzzle:2.40.1
     elasticServiceImage:
       type: string
       title: Elastic Service Image

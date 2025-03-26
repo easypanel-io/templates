@@ -19,6 +19,8 @@ instructions:
 changeLog:
   - date: 2024-11-22
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 1.43.0
 links:
   - label: Website
     url: https://www.mediawiki.org
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mediawiki:1.42.3
+      default: mediawiki:1.43.0
 benefits:
   - title: Robust Content Management
     description:

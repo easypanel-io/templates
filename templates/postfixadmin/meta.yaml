@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2024-12-02
     description: Template Release
+  - date: 2025-02-28
+    description: Version bumped to 3.3.15-apache
 
 links:
   - label: Documentation
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: postfixadmin:3.3.14-apache
+      default: postfixadmin:3.3.15-apache
     smtpServer:
       type: string
       title: SMTP Server

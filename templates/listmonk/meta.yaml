@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2023-2-3
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to v4.1.0
 links:
   - label: Website
     url: https://listmonk.app/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: listmonk/listmonk:v3.0.0
+      default: listmonk/listmonk:v4.1.0
     databaseServiceName:
       type: string
       title: Database Service Name

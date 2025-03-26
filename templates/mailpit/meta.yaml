@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-01-13
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to v1.22
 links:
   - label: Github
     url: https://github.com/axllent/mailpit
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: axllent/mailpit:v1.21
+      default: axllent/mailpit:v1.22
 benefits:
   - title: Efficient Email Testing
     description:
