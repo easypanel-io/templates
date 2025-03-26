@@ -1,0 +1,84 @@
+name: Glance
+description:
+  Glance is a fast and lightweight self-hosted dashboard that allows you to
+  monitor various real-time data sources through customizable widgets. With
+  support for RSS feeds, market prices, YouTube uploads, Twitch streams, weather
+  forecasts, server stats, Docker container status, and more, Glance provides a
+  centralized hub for tracking essential information. The dashboard is fully
+  themeable, optimized for mobile devices, and highly configurable through
+  YAML-based settings.
+instructions: You can edit the Yaml configuration as per your needs.
+changeLog:
+  - date: 2025-03-17
+    description: First Release (v0.7.7)
+links:
+  - label: Documentation
+    url: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
+  - label: Github
+    url: https://github.com/glanceapp/glance
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glance
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: glanceapp/glance:v0.7.7
+benefits:
+  - title: Fully Customizable Dashboard
+    description:
+      Glance allows users to create their own dashboard layouts with multiple
+      pages, tabs, and widgets, tailored to their specific needs.
+  - title: Supports Multiple Data Sources
+    description:
+      Monitor RSS feeds, weather forecasts, financial market prices, Docker
+      container status, server metrics, social media updates, and more.
+  - title: Fast and Lightweight
+    description:
+      Glance is designed for low memory usage with minimal dependencies,
+      ensuring fast performance even with multiple widgets.
+  - title: Optimized for Mobile Devices
+    description:
+      The dashboard is mobile-friendly, allowing users to track their favorite
+      widgets on the go.
+  - title: Highly Themeable
+    description:
+      Users can customize themes, styles, and layouts to match their preferences
+      or choose from pre-existing themes.
+features:
+  - title: Various Widgets
+    description:
+      Supports RSS feeds, subreddit posts, Hacker News updates, YouTube channel
+      uploads, Twitch streams, weather forecasts, market prices, Docker
+      container statuses, server stats, and more.
+  - title: YAML-Based Configuration
+    description:
+      Easily configure widgets, pages, and layouts using a simple YAML-based
+      setup.
+  - title: Multi-Page Support
+    description:
+      Users can create multiple pages/tabs with different sets of widgets for
+      better organization.
+  - title: Minimal and Efficient
+    description:
+      Glance is designed to be fast and efficient, with an uncached page loading
+      time of ~1s depending on network speed and number of widgets.
+  - title: Theme and Style Customization
+    description:
+      Modify CSS styles, change widget designs, and adjust layout settings to
+      match user preferences.
+tags:
+  - Dashboard
+  - Productivity
+  - Self-Hosted
+  - Customizable
+  - Widgets
