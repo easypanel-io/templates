@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `WG_HOST=$(PRIMARY_DOMAIN)`,
-        `PASSWORD=${input.appPassword}`,
+        `PASSWORD_HASH=${input.appPassword}`,
         `WG_POST_UP=iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -j MASQUERADE; iptables -A FORWARD -o %i -j ACCEPT`,
         `WG_POST_DOWN=iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -j MASQUERADE; iptables -D FORWARD -o %i -j ACCEPT`,
       ].join("\n"),
