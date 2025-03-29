@@ -32,6 +32,7 @@ schema:
     - githubSecret
     - minioRootUsername
     - minioRootPassword
+    - minioImage
   properties:
     appServiceName:
       type: string
@@ -62,6 +63,12 @@ schema:
       title: Github Secret
       description:
         This is the GitHub Secret associated with your GitHub account.
+    minioImage:
+      type: string
+      title: Minio Image
+      default: minio/minio:RELEASE.2025-02-28T09-55-16Z
+      description:
+        This is the Minio image to be used for storing email attachments and
     minioRootUsername:
       type: string
       title: Minio Root Username
@@ -74,6 +81,7 @@ schema:
       default: admin
       description:
         This is the Minio root password for accessing the Minio storage.
+
 benefits:
   - title: Reliable and Cost-Effective Email Sending
     description:

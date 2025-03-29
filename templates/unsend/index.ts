@@ -78,7 +78,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "minio/minio:latest",
+        image: input.minioImage,
       },
       mounts: [
         {
