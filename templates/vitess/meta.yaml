@@ -25,6 +25,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - vitessPort
   properties:
     appServiceName:
       type: string
@@ -34,6 +35,10 @@ schema:
       type: string
       title: App Service Image
       default: vitess/vttestserver:mysql80
+    vitessPort:
+      type: string
+      title: Vitess Port
+      default: "33574"
 benefits:
   - title: Horizontal Scalability
     description:
