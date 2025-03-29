@@ -22,17 +22,7 @@ export function generate(input: Input): Output {
       ports: [
         {
           protocol: "tcp",
-          published: 33574,
-          target: 33574,
-        },
-        {
-          protocol: "tcp",
-          published: 33574,
-          target: 33574,
-        },
-        {
-          protocol: "tcp",
-          published: 33574,
+          published: Number(input.vitessPort),
           target: 33574,
         },
       ],
