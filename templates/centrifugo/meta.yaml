@@ -1,0 +1,79 @@
+name: Centrifugo
+description:
+  Centrifugo is a scalable real-time messaging server that can be used to add
+  real-time features to your applications. It supports WebSocket and SockJS
+  connections, providing a robust solution for real-time communication.
+
+instructions: null
+
+changeLog:
+  - date: 2025-04-03
+    description: Initial template release
+links:
+  - label: Website
+    url: https://centrifugal.dev/
+  - label: Documentation
+    url: https://centrifugal.dev/docs/getting-started/introduction
+  - label: GitHub
+    url: https://github.com/centrifugal/centrifugo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminPassword
+    - adminSecret
+    - apiKey
+    - hmacSecretKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: centrifugo
+    appServiceImage:
+      type: string
+      title: Centrifugo Image
+      default: centrifugo/centrifugo:v6
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: password
+    adminSecret:
+      type: string
+      title: Admin Secret
+      default: secret
+    apiKey:
+      type: string
+      title: API Key
+      default: api-key
+    hmacSecretKey:
+      type: string
+      title: HMAC Secret Key
+      default: secret
+benefits:
+  - title: Real-time Communication
+    description: Enable real-time features in your applications.
+  - title: Scalable
+    description: Built to handle high loads and scale horizontally.
+  - title: WebSocket Support
+    description: Native WebSocket and SockJS protocol support.
+  - title: Easy Integration
+    description: Simple to integrate with existing applications.
+features:
+  - title: Web Interface
+    description: Built-in web interface for monitoring and management.
+  - title: Multiple Protocols
+    description: Support for WebSocket, SockJS, and HTTP long-polling.
+  - title: Authentication
+    description: Flexible authentication and authorization options.
+  - title: Channel Management
+    description: Efficient channel-based message routing.
+tags:
+  - Real-time
+  - WebSocket
+  - Messaging
+  - Communication
+  - Server 
