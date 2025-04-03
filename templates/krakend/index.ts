@@ -12,11 +12,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      ports: [
+      domains: [
         {
-          published: 8080,
-          target: 8080,
-          protocol: "tcp",
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
         },
       ],
       mounts: [
