@@ -1,0 +1,75 @@
+name: LiteCart
+description:
+  LiteCart is a free and open-source e-commerce platform that provides a complete
+  solution for creating and managing online stores. It features a user-friendly
+  interface, customizable themes, and essential e-commerce functionality including
+  product management, order processing, and customer management. LiteCart is built
+  with PHP and MySQL, making it easy to deploy and maintain.
+instructions: null
+changeLog:
+  - date: 2024-04-04
+    description: First Release
+links:
+  - label: Website
+    url: https://www.litecart.net/
+  - label: Documentation
+    url: https://www.litecart.net/docs/
+  - label: Github
+    url: https://github.com/litecart/litecart
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: litecart
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: shurco/litecart:v0.1.12
+benefits:
+  - title: User-Friendly
+    description:
+      Intuitive interface and easy-to-use admin panel for managing your online store.
+  - title: Complete E-commerce Solution
+    description:
+      Provides all essential features for running an online store including product
+      management, order processing, and customer management.
+  - title: Customizable
+    description:
+      Offers customizable themes and extensions to meet your specific business needs.
+  - title: Open Source
+    description:
+      Free and open-source platform with an active community for support and improvements.
+  - title: Easy Deployment
+    description:
+      Simple deployment process with Docker, making it easy to set up and maintain
+      your online store.
+features:
+  - title: Product Management
+    description:
+      Manage products with detailed information, categories, and inventory tracking.
+  - title: Order Processing
+    description:
+      Process orders with payment integration, shipping options, and order status tracking.
+  - title: Customer Management
+    description:
+      Manage customers with profiles, addresses, and order history.
+  - title: Payment Integration
+    description:
+      Integrate with popular payment gateways for secure transactions.
+  - title: Shipping Integration
+    description:
+      Integrate with shipping carriers for accurate shipping calculations.
+tags:
+  - E-commerce
+  - Online Store
+  - Shopping Cart
+  - PHP
+  - MySQL 
