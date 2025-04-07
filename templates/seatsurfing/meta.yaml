@@ -1,0 +1,73 @@
+name: SeatSurfing
+description:
+  SeatSurfing is a comprehensive desk and room booking system that helps organizations
+  manage their workspace efficiently. It provides a user-friendly interface for employees
+  to book desks and meeting rooms, while giving administrators powerful tools to manage
+  spaces, users, and bookings. The system includes features like real-time availability,
+  booking management, and analytics to optimize space utilization.
+instructions: Login email admin@seatsurfing.local and password 12345678
+changeLog:
+  - date: 2025-04-07
+    description: First Release
+links:
+  - label: Website
+    url: https://seatsurfing.app/
+  - label: Documentation
+    url: https://docs.seatsurfing.app/
+  - label: Github
+    url: https://github.com/seatsurfing
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: seatsurfing
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: seatsurfing/backend
+benefits:
+  - title: Workspace Management
+    description:
+      Efficiently manage desks and meeting rooms with real-time availability tracking.
+  - title: User-Friendly Interface
+    description:
+      Intuitive booking interface for employees and powerful admin tools for managers.
+  - title: Space Optimization
+    description:
+      Analytics and reporting tools to optimize space utilization and reduce costs.
+  - title: Flexible Configuration
+    description:
+      Customizable settings for different types of spaces and booking rules.
+  - title: Integration Ready
+    description:
+      API support for integration with other workplace management systems.
+features:
+  - title: Desk Booking
+    description:
+      Book desks with real-time availability and flexible booking options.
+  - title: Room Management
+    description:
+      Manage meeting rooms with capacity tracking and equipment booking.
+  - title: User Management
+    description:
+      Manage users, roles, and permissions with ease.
+  - title: Analytics
+    description:
+      Track space utilization and generate reports for better decision making.
+  - title: Mobile Support
+    description:
+      Access the system from any device with responsive design.
+tags:
+  - Workspace Management
+  - Desk Booking
+  - Room Booking
+  - Space Management
+  - Workplace Analytics 
