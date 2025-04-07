@@ -24,6 +24,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - bookingServiceImage
+    - adminServiceImage
   properties:
     appServiceName:
       type: string
@@ -32,7 +34,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: seatsurfing/backend
+      default: seatsurfing/backend:1.28.0
+    bookingServiceImage:
+      type: string
+      title: Booking Service Image
+      default: seatsurfing/booking-ui:1.28.0
+    adminServiceImage:
+      type: string
+      title: Admin Service Image
+      default: seatsurfing/admin-ui:1.28.0
 benefits:
   - title: Workspace Management
     description:

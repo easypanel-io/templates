@@ -42,7 +42,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-booking`,
       source: {
         type: "image",
-        image: "seatsurfing/booking-ui",
+        image: input.bookingServiceImage,
       },
     },
   });
@@ -53,7 +53,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-admin`,
       source: {
         type: "image",
-        image: "seatsurfing/admin-ui",
+        image: input.adminServiceImage,
       },
     },
   });
