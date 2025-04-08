@@ -1,0 +1,58 @@
+name: Fathom
+description:
+  Fathom is a simple, privacy-focused alternative to Google Analytics.
+  It provides fast, lightweight and privacy-first website analytics without compromising user data.
+instructions: 
+changeLog:
+  - date: 2024-04-08
+    description: First Release
+links:
+  - label: Website
+    url: https://usefathom.com
+  - label: Documentation
+    url: https://usefathom.com/docs
+  - label: GitHub
+    url: https://github.com/usefathom/fathom
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fathom
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: usefathom/fathom:version-1.2.1
+benefits:
+  - title: Privacy-Focused
+    description: No personal data collection, GDPR compliant by default
+  - title: Lightning Fast
+    description: Lightweight script that won't slow down your website
+  - title: Simple Interface
+    description: Clean, intuitive dashboard for easy analytics tracking
+  - title: Cookie-Free
+    description: Track website stats without cookie banners or popups
+features:
+  - title: Real-Time Analytics
+    description: View your website statistics in real-time
+  - title: Multiple Sites
+    description: Track analytics for multiple websites from one dashboard
+  - title: Custom Domains
+    description: Use your own domain for the tracking script
+  - title: Goal Tracking
+    description: Set up and monitor custom goals and events
+  - title: Data Export
+    description: Export your analytics data in various formats
+tags:
+  - Analytics
+  - Privacy
+  - GDPR
+  - Web Analytics
+  - Statistics 
