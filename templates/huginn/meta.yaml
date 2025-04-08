@@ -1,0 +1,56 @@
+name: Huginn
+description:
+  Huginn is a system for building agents that perform automated tasks for you online.
+  They can read the web, watch for events, and take actions on your behalf.
+instructions: null
+changeLog:
+  - date: 2024-04-08
+    description: First Release
+links:
+  - label: Website
+    url: https://github.com/huginn/huginn
+  - label: Documentation
+    url: https://github.com/huginn/huginn/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: huginn
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: huginn/huginn:1e0c359a46b1e84eb8c658404212eaf693b30e61
+benefits:
+  - title: Automation
+    description: Automate repetitive tasks and workflows
+  - title: Customizable
+    description: Create custom agents for specific needs
+  - title: Data Integration
+    description: Connect and process data from multiple sources
+  - title: Self-Hosted
+    description: Keep your data private and secure
+features:
+  - title: Agent Creation
+    description: Build custom agents with a visual interface
+  - title: Web Scraping
+    description: Extract and process data from websites
+  - title: API Integration
+    description: Connect with various APIs and services
+  - title: Event Monitoring
+    description: Watch for and respond to events
+  - title: Data Processing
+    description: Transform and analyze data
+tags:
+  - Automation
+  - Web Scraping
+  - API
+  - Data Processing
+  - Self-Hosted 
