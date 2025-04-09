@@ -9,7 +9,7 @@ links:
     url: https://github.com/MrBrax/LiveStreamDVR
 contributors:
   - name: MrBrax
-    url: https://github.com/MrBrax
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -23,7 +23,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mrbrax/livestreamdvr:master
+      default: mrbrax/twitchautomator:master
 benefits:
   - title: Automated Recording
     description: Automatically record live streams from your favorite Twitch channels.
