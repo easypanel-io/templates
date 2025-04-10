@@ -23,7 +23,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: corentinth/enclosed:latest
+      default: corentinth/enclosed:1.15.0
 benefits:
   - title: File Sharing
     description: Easy and secure file sharing capabilities.
