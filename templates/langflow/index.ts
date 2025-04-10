@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `LANGFLOW_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+        `LANGFLOW_DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         "LANGFLOW_AUTO_LOGIN=false",
         `LANGFLOW_SUPERUSER=${input.username}`,
         `LANGFLOW_SUPERUSER_PASSWORD=${input.password}`,
