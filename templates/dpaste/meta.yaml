@@ -1,0 +1,49 @@
+name: dPaste
+description: "dPaste is a simple and lightweight pastebin service that allows you to share text snippets, code, and other content quickly. It provides a clean interface for creating, sharing, and managing pastes with support for syntax highlighting and expiration times."
+instructions: "After installation, access the web interface through the provided domain to start creating and sharing pastes."
+changeLog:
+  - date: 2024-04-09
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/DarrenOfficial/dpaste
+contributors:
+  - name: DarrenOfficial
+    url: https://github.com/DarrenOfficial
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dpaste
+benefits:
+  - title: Simple Sharing
+    description: Quickly share code snippets and text with others.
+  - title: Self-Hosted
+    description: Host your own pastebin service for complete control.
+  - title: SQLite Storage
+    description: Lightweight database storage for your pastes.
+  - title: Clean Interface
+    description: User-friendly interface for creating and viewing pastes.
+  - title: Easy Deployment
+    description: Simple setup with Docker and persistent storage.
+features:
+  - title: Text Sharing
+    description: Share text snippets and code easily.
+  - title: Syntax Highlighting
+    description: Support for code syntax highlighting.
+  - title: Persistent Storage
+    description: SQLite database for reliable paste storage.
+  - title: Web Interface
+    description: Clean web interface for managing pastes.
+  - title: Docker Support
+    description: Easy deployment with Docker container.
+tags:
+  - Pastebin
+  - Code Sharing
+  - Text Sharing
+  - Self-Hosted
+  - Development Tools 
