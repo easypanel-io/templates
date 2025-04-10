@@ -1,0 +1,54 @@
+name: Enclosed
+description: Enclosed is a minimalist file sharing and URL shortening service. It provides a simple and efficient way to share files and shorten URLs with a clean, modern interface. Perfect for personal or small team use, it offers secure file storage and easy link management.
+instructions: After installation, access the web interface through the provided domain to start sharing files and shortening URLs.
+changeLog:
+  - date: 2025-04-10
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/corentinth/enclosed
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: enclosed
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: corentinth/enclosed:latest
+benefits:
+  - title: File Sharing
+    description: Easy and secure file sharing capabilities.
+  - title: URL Shortening
+    description: Create short, memorable links for long URLs.
+  - title: Self-Hosted
+    description: Complete control over your data and sharing service.
+  - title: Simple Interface
+    description: Clean and intuitive user interface.
+  - title: Data Persistence
+    description: Reliable storage for your shared files and links.
+features:
+  - title: File Upload
+    description: Upload and share files securely.
+  - title: Link Management
+    description: Create and manage shortened URLs.
+  - title: Modern UI
+    description: Clean and responsive web interface.
+  - title: Persistent Storage
+    description: Keep your files and links safe with volume storage.
+  - title: Docker Support
+    description: Easy deployment with Docker container.
+tags:
+  - File Sharing
+  - URL Shortener
+  - Self-Hosted
+  - Storage
+  - Sharing 
