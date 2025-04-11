@@ -1,0 +1,54 @@
+name: Linksnatch
+description: 
+  Linksnatch is a link management application that helps you organize and track your bookmarks and URLs.
+  It provides a simple interface for managing and categorizing your links.
+instructions: null
+changeLog:
+  - date: 2025-04-11
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/amitmerchant1990/linksnatch
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: linksnatch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: varunsridharan/linksnatch:latest
+benefits:
+  - title: Link Management
+    description: Organize and manage your bookmarks efficiently
+  - title: Simple Interface
+    description: User-friendly interface for easy link management
+  - title: Categorization
+    description: Organize links into categories and tags
+  - title: Self-Hosted
+    description: Keep your bookmarks private and secure
+features:
+  - title: Link Storage
+    description: Store and manage your bookmarks
+  - title: Categories
+    description: Organize links into categories
+  - title: Tags
+    description: Add tags to links for better organization
+  - title: Search
+    description: Search through your saved links
+  - title: Export
+    description: Export your bookmarks in various formats
+tags:
+  - Bookmark Manager
+  - Link Management
+  - Organization
+  - Self-Hosted
+  - Web Application 
