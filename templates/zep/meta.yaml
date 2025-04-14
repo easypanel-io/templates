@@ -1,0 +1,100 @@
+name: Zep
+description:
+  Zep is a powerful, self-hosted AI platform designed for seamless integration
+  with large language models. It provides a clean and intuitive interface,
+  supports plugins for extended functionality, and offers detailed analytics to
+  monitor and optimize your AI workflows. With Zep, you maintain full control
+  over your deployments and configurations. The application is accessible via
+  your host on designated ports, ensuring secure and scalable operations. This
+  container is based on Docker Baseimage KasmVNC, providing additional
+  environment variables and configurations for enhanced flexibility. It also
+  supports the docker manifest for multi-platform awareness, ensuring the
+  correct image for your architecture.
+instructions:
+  Zep Community Edition can be used with any LLM provider that implements the
+  OpenAI API.
+changeLog:
+  - date: 2025-03-04
+    description: Template Release (v1.0)
+links:
+  - label: Documentation
+    url: https://www.getzep.com/
+  - label: Github
+    url: https://github.com/getzep/zep
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - openai_api_key
+    - openai_base_url
+    - openai_model_name
+    - graphitiServiceImage
+    - neo4jServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zep
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zepai/zep:1.0
+    graphitiServiceImage:
+      type: string
+      title: Graphiti Service Image
+      default: zepai/graphiti:0.3
+    neo4jServiceImage:
+      type: string
+      title: Neo4j Service Image
+      default: neo4j:5.22.0
+    openai_api_key:
+      type: string
+      title: OpenAI API Key
+    openai_base_url:
+      type: string
+      title: OpenAI Base URL
+      default: https://api.openai.com/v1/
+    openai_model_name:
+      type: string
+      title: OpenAI Model Name
+      default: gpt-4o-mini
+benefits:
+  - title: Seamless AI Integration
+    description:
+      Zep offers a user-friendly interface for managing and interacting with
+      large language models, enabling smooth integration with popular LLM
+      providers.
+  - title: Self-Hosted Platform
+    description:
+      Retain full control over your AI operations with a self-hosted platform
+      designed for scalability and security.
+  - title: Custom Configurations
+    description:
+      Tailor your deployment with a wide range of configuration options to meet
+      your specific needs.
+features:
+  - title: API Integration
+    description:
+      Seamlessly connect Zep with external tools using its robust API for
+      flexible interaction.
+  - title: Extensible Architecture
+    description:
+      Enhance platform functionality with support for community-built plugins
+      and modules.
+  - title: Real-time Analytics
+    description:
+      Monitor performance and usage through an integrated analytics dashboard
+      that offers detailed insights.
+  - title: Flexible Workflows
+    description:
+      Design custom AI workflows to optimize processes and adapt to your
+      business requirements.
+tags:
+  - AI
+  - Self-Hosted
+  - API
+  - Automation
