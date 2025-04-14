@@ -1,0 +1,56 @@
+name: Wallos
+description: Wallos is a subscription management application that helps you track and manage your recurring subscriptions.
+instructions: null
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/ellite/Wallos
+  - label: Docker Hub
+    url: https://hub.docker.com/r/bellamy/wallos
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wallos
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bellamy/wallos:2.49.1
+benefits:
+  - title: Subscription Tracking
+    description: Keep track of all your recurring subscriptions in one place
+  - title: Financial Management
+    description: Monitor your spending on subscription services
+  - title: Reminder System
+    description: Get notified about upcoming payments
+  - title: Self-Hosted
+    description: Keep your financial data private on your own server
+  - title: Open Source
+    description: Free and open-source subscription manager
+features:
+  - title: Subscription Dashboard
+    description: View all your subscriptions at a glance
+  - title: Payment Tracking
+    description: Track your subscription payments over time
+  - title: Statistics
+    description: Get insights into your subscription spending habits
+  - title: Renewal Reminders
+    description: Never miss a subscription renewal
+  - title: Category Management
+    description: Organize subscriptions by categories
+tags:
+  - Finance
+  - Subscriptions
+  - Expense Tracker
+  - Self-Hosted
+  - Personal Finance
