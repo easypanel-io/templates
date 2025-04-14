@@ -1,0 +1,75 @@
+name: Khoj
+description:
+  Khoj is an AI-powered personal search and chat application that helps you find and organize your personal knowledge.
+  It supports various AI models, web search integration, and code execution capabilities.
+instructions: Configure your chat model provider and search api providers with khoj environment variables.
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: Website
+    url: https://khoj.dev
+  - label: Documentation
+    url: https://docs.khoj.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseImage
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: khoj
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/khoj-ai/khoj:1.40.0
+    databaseImage:
+      type: string
+      title: Database Image
+      default: docker.io/pgvector/pgvector:pg15
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: username@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: password
+benefits:
+  - title: Personal Search
+    description: Search through your personal knowledge and documents
+  - title: AI-Powered
+    description: Get intelligent answers and insights from your data
+  - title: Code Execution
+    description: Run code in a secure sandbox environment
+  - title: Web Search Integration
+    description: Combine personal and web search results
+  - title: Self-Hosted
+    description: Keep your data private and secure
+features:
+  - title: Document Search
+    description: Search through your personal documents and notes
+  - title: AI Chat
+    description: Chat with AI about your personal knowledge
+  - title: Code Sandbox
+    description: Run code in a secure environment
+  - title: Web Search
+    description: Search the web with privacy
+  - title: Multi-Model Support
+    description: Use various AI models for different tasks
+  - title: Admin Interface
+    description: Manage your Khoj instance
+tags:
+  - AI
+  - Search
+  - Chat
+  - Self-Hosted
+  - Knowledge Management 
