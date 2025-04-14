@@ -4,7 +4,7 @@ description:
   It includes support for multiple authentication methods, API access, alerting, and automatic discovery.
 instructions: null
 changeLog:
-  - date: 2025-04-11
+  - date: 2025-04-14
     description: First Release
 links:
   - label: Website
@@ -38,9 +38,9 @@ schema:
       title: SMTP Host
       default: smtp.gmail.com
     smtpPort:
-      type: number
+      type: string
       title: SMTP Port
-      default: 587
+      default: "587"
     smtpUser:
       type: string
       title: SMTP User
