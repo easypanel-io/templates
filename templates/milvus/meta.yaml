@@ -1,0 +1,83 @@
+name: Milvus
+description:
+  Milvus is an open-source vector database designed for AI applications and
+  similarity search. It provides high-performance vector search capabilities and
+  is optimized for handling large-scale vector data. Milvus supports various
+  index types and search methods, making it ideal for applications like
+  recommendation systems, image search, and natural language processing.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-27
+    description: Initial template release (v2.0.2)
+links:
+  - label: Website
+    url: https://milvus.io/
+  - label: Documentation
+    url: https://milvus.io/docs/
+  - label: GitHub
+    url: https://github.com/milvus-io/milvus
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - etcdImage
+    - minioImage
+    - minioAccessKey
+    - minioSecretKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: milvus
+    appServiceImage:
+      type: string
+      title: Milvus Image
+      default: milvusdb/milvus:v2.0.2
+    etcdImage:
+      type: string
+      title: ETCD Image
+      default: quay.io/coreos/etcd:v3.5.0
+    minioImage:
+      type: string
+      title: MinIO Image
+      default: minio/minio:RELEASE.2020-12-03T00-03-10Z
+    minioAccessKey:
+      type: string
+      title: MinIO Access Key
+      description: Access key for MinIO
+      default: "minioadmin"
+    minioSecretKey:
+      type: string
+      title: MinIO Secret Key
+      description: Secret key for MinIO
+      default: "minioadmin"
+benefits:
+  - title: Vector Search
+    description: High-performance vector similarity search capabilities.
+  - title: Scalability
+    description: Designed for handling large-scale vector data.
+  - title: Multiple Index Types
+    description: Support for various index types and search methods.
+  - title: AI Integration
+    description: Optimized for AI and machine learning applications.
+features:
+  - title: Vector Database
+    description: Native support for vector data storage and search.
+  - title: Distributed Architecture
+    description: Scalable distributed architecture.
+  - title: Rich APIs
+    description: Multiple programming language support.
+  - title: Monitoring
+    description: Built-in monitoring and management tools.
+tags:
+  - Database
+  - Vector Database
+  - AI
+  - Search
+  - Machine Learning
