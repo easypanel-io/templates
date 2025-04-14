@@ -68,6 +68,9 @@ export function generate(input: Input): Output {
       },
       env: [
         ...commonEnvs,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
+        `REDIS_PORT=6379`,
+        `REDIS_PASSWORD=${redisPassword}`,
         "DISPATCHER_NODE_ID=dispatcher1",
         "SIDECAR_DISPATCHER=1",
       ].join("\n"),
@@ -132,7 +135,19 @@ export function generate(input: Input): Output {
           protocol: "udp",
         },
       ],
-      env: [...commonEnvs, "SIDECAR_SNMPTRAPD=1"].join("\n"),
+      env: [
+        ...commonEnvs,
+        `SIDECAR_SNMPTRAPD=1`,
+        `SMTP_HOST=${input.smtpHost}`,
+        `SMTP_PORT=${input.smtpPort}`,
+        `SMTP_TLS=on`,
+        `SMTP_STARTTLS=on`,
+        `SMTP_TLS_CHECKCERT=on`,
+        `SMTP_AUTH=on`,
+        `SMTP_USER=${input.smtpUser}`,
+        `SMTP_PASSWORD=${input.smtpPassword}`,
+        `SMTP_FROM=${input.smtpFrom}`,
+      ].join("\n"),
       mounts: [
         {
           type: "bind",

@@ -19,6 +19,11 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - smtpHost
+    - smtpPort
+    - smtpUser
+    - smtpPassword
+    - smtpFrom
   properties:
     appServiceName:
       type: string
@@ -28,6 +33,25 @@ schema:
       type: string
       title: App Service Image
       default: librenms/librenms:25.3.0
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.gmail.com
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpUser:
+      type: string
+      title: SMTP User
+      default: foo
+    smtpPassword:
+      type: string
+      title: SMTP Password
+    smtpFrom:
+      type: string
+      title: SMTP From
+      default: foo@gmail.com
 benefits:
   - title: Network Monitoring
     description: Monitor your network devices and services
