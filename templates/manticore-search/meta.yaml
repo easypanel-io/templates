@@ -1,0 +1,71 @@
+name: Manticore Search
+description:
+  Manticore Search is an easy to use open source fast database for search. It
+  helps thousands of companies from small to large, such as Craigslist, to
+  search and filter petabytes of text data on a single or hundreds of nodes, do
+  stream full-text filtering, add auto-complete, spell correction,
+  more-like-this, faceting and other search-related technologies to their
+  websites and applications.
+
+instructions:
+  The configuration file within the instance can be found at
+  /etc/manticoresearch/manticore.conf. To apply custom settings, ensure that
+  this file is mounted to your own configuration file. The ports are
+  9306/9308/9312 for SQL/HTTP/Binary, expose them depending on how you are going
+  to use Manticore.
+
+changeLog:
+  - date: 2025-04-03
+    description: Initial template release
+links:
+  - label: Website
+    url: https://manticoresearch.com/
+  - label: Documentation
+    url: https://manual.manticoresearch.com/
+  - label: GitHub
+    url: https://github.com/manticoresoftware/manticoresearch
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: manticore-search
+    appServiceImage:
+      type: string
+      title: Manticore Image
+      default: manticoresearch/manticore:9.2.14
+benefits:
+  - title: High Performance
+    description: Fast search and filtering of petabytes of text data.
+  - title: Scalable
+    description: Works on single node or scales to hundreds of nodes.
+  - title: Production Ready
+    description: Used by companies like Craigslist for large-scale search.
+  - title: Feature Rich
+    description: Built-in support for advanced search features.
+features:
+  - title: Full-text Search
+    description: Advanced full-text search and filtering capabilities.
+  - title: Auto-complete
+    description: Built-in support for search suggestions.
+  - title: Spell Correction
+    description: Automatic spelling correction for search queries.
+  - title: Faceting
+    description: Support for faceted search and filtering.
+  - title: More-like-this
+    description: Find similar content based on search results.
+tags:
+  - Search
+  - Database
+  - Full-text Search
+  - Analytics
+  - Open Source
+  - High Performance
+  - Scalable
