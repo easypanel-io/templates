@@ -14,6 +14,8 @@ instructions: Default username=nzbget, password=tegbzn6789
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to version-v24.6
 links:
   - label: Website
     url: https://nzbget.net/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbget:version-v24.3
+      default: lscr.io/linuxserver/nzbget:version-v24.6
     username:
       type: string
       title: Username

@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2023-3-15
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to 0.16.2
 links:
   - label: Documentation
     url: https://github.com/sosedoff/pgweb/wiki
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sosedoff/pgweb:0.16.1
+      default: sosedoff/pgweb:0.16.2
 benefits:
   - title: Cross-Platform Compatibility
     description:
