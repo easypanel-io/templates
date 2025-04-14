@@ -1,0 +1,78 @@
+name: iTop
+description:
+  iTop is a self-hosted, open-source IT service management (ITSM) solution
+  designed for businesses and organizations to manage their IT assets,
+  incidents, and workflows efficiently. It provides a modern web interface for
+  tracking and organizing IT infrastructure, support tickets, change requests,
+  and service catalogs. iTop includes role-based user management, real-time
+  notifications, and detailed reporting tools to help IT teams maintain
+  operational efficiency. It supports multiple authentication methods, including
+  LDAP and SAML, making it suitable for enterprise environments. Additionally,
+  iTop offers API access for integration with third-party tools and automation
+  of IT processes. Its containerized deployment ensures scalability and easy
+  management.
+instructions: On the installation wizard, please connect to the DB.
+changeLog:
+  - date: 2025-03-18
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://www.itophub.io/wiki/page
+  - label: Github
+    url: https://github.com/Combodo/iTop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: itop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: vbkunin/itop:3.2.0
+benefits:
+  - title: Comprehensive IT Asset Management
+    description:
+      iTop provides a structured way to track and manage IT assets, including
+      servers, workstations, software, and configurations.
+  - title: Self-Hosted ITSM Solution
+    description:
+      Businesses can maintain full control over their IT operations, ensuring
+      security, compliance, and customization without relying on third-party
+      services.
+  - title: ITIL-Compliant Incident & Change Management
+    description:
+      iTop follows ITIL best practices for managing incidents, changes, and
+      service requests, helping organizations streamline their IT operations.
+features:
+  - title: CMDB (Configuration Management Database)
+    description:
+      iTop provides a centralized database to document and manage IT assets,
+      relationships, and dependencies.
+  - title: Service Desk & Incident Management
+    description:
+      Manage and track IT incidents, requests, and changes with a built-in
+      service desk system.
+  - title: Workflow Automation & API Integration
+    description:
+      Automate IT processes and integrate iTop with monitoring tools, ticketing
+      systems, and third-party applications.
+  - title: Role-Based Access Control
+    description:
+      Define user roles and permissions to ensure secure access to IT data.
+  - title: Reporting & Dashboards
+    description:
+      Gain insights into IT performance with built-in reports, analytics, and
+      customizable dashboards.
+tags:
+  - ITSM
+  - IT Asset Management
+  - Help Desk
+  - Self-Hosted
