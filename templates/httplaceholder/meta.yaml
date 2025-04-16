@@ -1,0 +1,56 @@
+name: HTTP Placeholder
+description: HTTP Placeholder is a powerful API mocking tool that allows you to create mock HTTP endpoints for testing and development purposes. It provides a simple way to simulate API responses and test your applications without relying on real backend services.
+instructions: After installation, access the web interface through the provided domain to start creating and managing your mock endpoints.
+changeLog:
+  - date: 2025-04-16
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/dukeofharen/httplaceholder
+  - label: Documentation
+    url: https://github.com/dukeofharen/httplaceholder/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: httplaceholder
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dukeofharen/httplaceholder:2024.12.27.10
+benefits:
+  - title: API Mocking
+    description: Create and manage mock HTTP endpoints for testing and development.
+  - title: Development Testing
+    description: Test your applications without relying on real backend services.
+  - title: Response Customization
+    description: Customize mock responses with different status codes, headers, and body content.
+  - title: Database Integration
+    description: Store and manage mock data in a PostgreSQL database.
+  - title: Easy Setup
+    description: Quick and simple setup process for creating mock endpoints.
+features:
+  - title: Mock Endpoints
+    description: Create and manage custom mock HTTP endpoints.
+  - title: Response Customization
+    description: Configure custom responses with different status codes and content.
+  - title: Database Storage
+    description: Store mock data in a PostgreSQL database for persistence.
+  - title: REST API
+    description: Manage mock endpoints through a RESTful API.
+  - title: Web Interface
+    description: User-friendly web interface for managing mock endpoints.
+tags:
+  - API
+  - Testing
+  - Development
+  - Mocking
+  - HTTP 
