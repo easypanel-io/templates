@@ -1,0 +1,65 @@
+name: Isaiah
+description:
+  Isaiah is a Docker-based application that provides a simple and efficient way to manage containerized applications. It offers a web interface for monitoring and controlling Docker containers with a clean, user-friendly interface. Isaiah allows you to view container status, logs, and resource usage, making it easier to maintain your Docker infrastructure.
+instructions: Access the web interface to manage your Docker containers
+
+changeLog:
+  - date: 2025-04-17
+    description: first release
+
+links:
+  - label: Docker
+    url: https://hub.docker.com/r/mosswill/isaiah
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: isaiah
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mosswill/isaiah:latest
+
+benefits:
+  - title: Container Management
+    description:
+      Easily manage your Docker containers through a clean web interface. Isaiah provides a simple way to monitor and control your containerized applications.
+  - title: Lightweight Solution
+    description:
+      Isaiah is designed to be lightweight and resource-efficient while providing powerful container management capabilities. It runs with minimal overhead on your system.
+  - title: Secure Access
+    description:
+      Protect your container management interface with authentication. Isaiah ensures that only authorized users can access and manage your Docker containers.
+
+features:
+  - title: Docker Container Monitoring
+    description:
+      Monitor the status and health of your Docker containers in real-time through an intuitive web interface.
+  - title: Container Management
+    description: 
+      Start, stop, restart, and remove containers directly from the web interface without needing command-line access.
+  - title: Resource Usage Tracking
+    description:
+      Keep track of container resource usage including CPU, memory, and network usage to optimize your infrastructure.
+  - title: Container Logs Access
+    description:
+      Access and search container logs directly through the web interface for easier troubleshooting and monitoring.
+  - title: Simple and Intuitive Interface
+    description:
+      Isaiah features a clean, user-friendly interface that makes Docker container management accessible to users of all technical levels.
+
+tags:
+  - Docker
+  - Container Management
+  - Web Interface
+  - Monitoring
