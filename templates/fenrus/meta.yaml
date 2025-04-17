@@ -1,0 +1,78 @@
+name: Fenrus
+description:
+  Fenrus is a sleek and modern dashboard application designed to provide a centralized 
+  hub for accessing your self-hosted services and applications. It offers a clean, 
+  customizable interface that allows you to organize your various web applications 
+  and resources in a single, easy-to-navigate dashboard. Fenrus supports both dark 
+  and light themes, custom backgrounds, and different layout options to match your 
+  preferences. It's perfect for home server enthusiasts who want a beautiful and 
+  functional starting point for their self-hosted ecosystem.
+instructions: Access the dashboard at the configured port to start customizing your experience
+changeLog:
+  - date: 2025-04-17
+    description: first release
+links:
+  - label: Docker
+    url: https://hub.docker.com/r/revenz/fenrus
+  - label: GitHub
+    url: https://github.com/revenz/Fenrus
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fenrus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: revenz/fenrus:23.08
+    timezone:
+      type: string
+      title: Timezone
+      default: "Pacific/Auckland"
+benefits:
+  - title: Centralized Dashboard
+    description:
+      Fenrus provides a single, unified interface for accessing all your self-hosted 
+      applications and services, eliminating the need to remember multiple URLs.
+  - title: Customizable Interface
+    description:
+      Personalize your dashboard with different themes, layouts, and backgrounds to 
+      create an experience that matches your preferences and workflow.
+  - title: Organized Access
+    description:
+      Group your applications into categories and organize them in a way that makes 
+      the most sense for your specific needs and usage patterns.
+features:
+  - title: Multiple Themes
+    description:
+      Choose between light and dark themes or customize the appearance to suit your 
+      visual preferences.
+  - title: Application Categories
+    description: 
+      Organize your applications into logical categories for easier navigation and 
+      improved workflow efficiency.
+  - title: Custom Backgrounds
+    description:
+      Set custom background images or colors to personalize your dashboard experience.
+  - title: Responsive Design
+    description:
+      Access your dashboard from any device with a fully responsive design that adapts 
+      to different screen sizes.
+  - title: Quick Access
+    description:
+      Quickly access your most frequently used services with a clean, intuitive interface 
+      designed for efficiency.
+tags:
+  - Dashboard
+  - Home Lab
+  - Self-hosted
+  - Web Interface
+  - Organization 
