@@ -1,0 +1,74 @@
+name: Honey
+description:
+  Honey is a lightweight web application developed by dani3l0. It provides a clean 
+  and intuitive interface for accessing and managing your data. The application is 
+  containerized for easy deployment and configuration, making it ideal for self-hosted 
+  environments. Honey uses a file-based configuration system, allowing for simple 
+  customization and persistence across container restarts. With its efficient design 
+  and minimal resource requirements, Honey is a great addition to any self-hosted 
+  service collection.
+instructions: Access the web interface at port 4173 to start using Honey
+changeLog:
+  - date: 2025-04-17
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/dani3l0/honey
+  - label: Container
+    url: https://github.com/dani3l0/honey/pkgs/container/honey
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: honey
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/dani3l0/honey:v2.4.0
+benefits:
+  - title: Easy Deployment
+    description:
+      Honey is packaged as a Docker container for simple deployment in any environment
+      that supports Docker, making it easy to set up and run.
+  - title: Persistent Configuration
+    description:
+      Store your configuration files externally to maintain settings between container
+      restarts and updates, ensuring a consistent experience.
+  - title: Resource Efficient
+    description:
+      With a lightweight design and minimal resource requirements, Honey operates
+      efficiently even on modest hardware setups.
+features:
+  - title: Web Interface
+    description:
+      Access Honey through a clean, modern web interface that works across different
+      devices and screen sizes.
+  - title: File-based Configuration
+    description: 
+      Configure Honey using simple configuration files, giving you complete control
+      over your instance's behavior and settings.
+  - title: Containerized Application
+    description:
+      Run Honey in an isolated container environment for improved security and simplified
+      dependency management.
+  - title: Fast Startup
+    description:
+      Honey's lightweight nature allows for quick startup times, getting you up and
+      running with minimal delay.
+  - title: Easy Updates
+    description:
+      Update to the latest version simply by pulling the newest container image and
+      restarting the service while maintaining your configuration.
+tags:
+  - Web Application
+  - Self-hosted
+  - Docker
+  - Lightweight 
