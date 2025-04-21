@@ -1,0 +1,74 @@
+name: UpSnap
+description:
+  UpSnap is a self-hosted wake-on-lan (WOL) server with a modern web interface. It allows
+  you to remotely power on computers on your local network from anywhere through an
+  intuitive dashboard. UpSnap features device management with customizable names and MAC
+  addresses, wake history tracking, and user authentication. Perfect for home networks,
+  small offices, or lab environments where you need to remotely manage the power state
+  of multiple machines.
+instructions: null
+changeLog:
+  - date: 2025-04-18
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/seriousm4x/upsnap
+  - label: Container
+    url: https://github.com/seriousm4x/upsnap/pkgs/container/upsnap
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: upsnap
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/seriousm4x/upsnap:4
+benefits:
+  - title: Remote Power Management
+    description:
+      Conveniently power on your network devices from anywhere using Wake-on-LAN
+      technology, eliminating the need for physical access.
+  - title: Centralized Dashboard
+    description:
+      Manage all your network devices from a single, user-friendly interface that
+      provides quick access to power controls and device status.
+  - title: Enhanced Network Control
+    description:
+      Gain better control over your network by being able to power on devices when
+      needed, saving energy when machines are not in use.
+features:
+  - title: Modern Web Interface
+    description:
+      UpSnap provides a clean, responsive web interface that works across devices
+      and screen sizes for easy device management.
+  - title: Device Management
+    description: 
+      Add, edit, and organize multiple devices with custom names, descriptions, and
+      MAC addresses for easy identification.
+  - title: Wake History
+    description:
+      Keep track of when devices were powered on with a detailed history log, providing
+      visibility into your network activity.
+  - title: User Authentication
+    description:
+      Secure your Wake-on-LAN controls with user authentication to prevent unauthorized
+      access and power management.
+  - title: Persistent Storage
+    description:
+      Store your device configurations and user data securely with persistent storage
+      that survives container restarts and updates.
+tags:
+  - Wake-on-LAN
+  - Network Management
+  - Remote Access
+  - System Administration
+  - Power Management 
