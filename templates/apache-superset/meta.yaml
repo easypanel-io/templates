@@ -23,7 +23,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: superset
+      default: apache-superset
     appServiceImage:
       type: string
       title: App Service Image
