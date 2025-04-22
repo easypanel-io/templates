@@ -23,8 +23,8 @@ export function generate(input: Input): Output {
       ],
       env: [
         `SUPERSET_SECRET_KEY=${secretKey}`,
-        `POSTGRES_DB=superset`,
-        `POSTGRES_USER=superset`,
+        `POSTGRES_DB=$(PROJECT_NAME)`,
+        `POSTGRES_USER=postgres`,
         `POSTGRES_PASSWORD=${dbPassword}`,
         `POSTGRES_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `POSTGRES_PORT=5432`,
