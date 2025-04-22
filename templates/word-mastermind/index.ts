@@ -3,7 +3,6 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const port = input.webPort ? parseInt(input.webPort) : 3333;
 
   services.push({
     type: "app",
