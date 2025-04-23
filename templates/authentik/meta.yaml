@@ -5,7 +5,7 @@ description:
   single sign-on (SSO), multi-factor authentication (MFA), and a modern user interface.
 instructions: null
 changeLog:
-  - date: 2024-06-05
+  - date: 2025-04-23
     description: Initial release
 links:
   - label: Website
@@ -14,11 +14,9 @@ links:
     url: https://goauthentik.io/docs
   - label: GitHub
     url: https://github.com/goauthentik/authentik
-  - label: Docker Hub
-    url: https://hub.docker.com/r/goauthentik/server
 contributors:
-  - name: Easypanel
-    url: https://github.com/easypanel
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
