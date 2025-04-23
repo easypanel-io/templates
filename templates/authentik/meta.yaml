@@ -1,0 +1,65 @@
+name: Authentik
+description:
+  Authentik is an open-source Identity Provider focused on flexibility and versatility.
+  It provides secure authentication, authorization, and user management with support for
+  single sign-on (SSO), multi-factor authentication (MFA), and a modern user interface.
+instructions: null
+changeLog:
+  - date: 2024-06-05
+    description: Initial release
+links:
+  - label: Website
+    url: https://goauthentik.io
+  - label: Documentation
+    url: https://goauthentik.io/docs
+  - label: GitHub
+    url: https://github.com/goauthentik/authentik
+  - label: Docker Hub
+    url: https://hub.docker.com/r/goauthentik/server
+contributors:
+  - name: Easypanel
+    url: https://github.com/easypanel
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: authentik
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/goauthentik/server:2025.2.4
+benefits:
+  - title: Centralized Identity Management
+    description: Manage users, groups, and permissions from a single dashboard
+  - title: Flexible Authentication
+    description: Support for multiple authentication sources including LDAP, SAML, and OAuth/OIDC
+  - title: Strong Security
+    description: Built-in MFA, brute-force protection, and security auditing capabilities
+  - title: Self-hosted Solution
+    description: Complete control over your identity infrastructure and user data
+features:
+  - title: Single Sign-On (SSO)
+    description: Enable seamless login across multiple applications and services
+  - title: Multi-factor Authentication
+    description: Add additional security with TOTP, WebAuthn/FIDO2, and more
+  - title: Role-based Access Control
+    description: Define granular access policies based on user attributes and roles
+  - title: User Self-service
+    description: Allow users to manage their profiles, reset passwords, and enroll MFA
+  - title: Customizable Flows
+    description: Design authentication workflows that meet your organization's needs
+  - title: API & Integration Support
+    description: Extensive API and integrations with popular services and platforms
+  - title: Outposts
+    description: Deploy proxy services to integrate with legacy applications
+tags:
+  - Identity Provider
+  - Authentication
+  - SSO
+  - Security
+  - Access Management 
