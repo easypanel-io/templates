@@ -1,0 +1,61 @@
+name: Ryot
+description:
+  Ryot is a self-hosted media tracker, organizer, and discovery tool for media libraries.
+  It supports tracking movies, TV shows, music, books, podcasts, games, manga, and anime,
+  helping you manage your personal collection and discover new content.
+instructions: null
+changeLog:
+  - date: 2025-04-25
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/IgnisDa/ryot
+  - label: Docker Hub
+    url: https://hub.docker.com/r/ignisda/ryot
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ryot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ignisda/ryot:v7
+benefits:
+  - title: Universal Media Tracking
+    description: Track and organize multiple media types in a unified platform
+  - title: Privacy-Focused
+    description: Self-hosted solution that keeps your media consumption data private
+  - title: Comprehensive Analytics
+    description: Gain insights into your watching, reading, and listening habits
+  - title: Content Discovery
+    description: Find new content based on your interests and preferences
+features:
+  - title: Multi-media Support
+    description: Track movies, TV shows, books, podcasts, games, manga, anime, and music
+  - title: Progress Tracking
+    description: Keep track of what you've watched, read, or played and your progress
+  - title: Collections
+    description: Organize your media into personalized collections
+  - title: Recommendations
+    description: Get personalized recommendations based on your preferences
+  - title: Import/Export
+    description: Import data from other services and export your collection
+  - title: Responsive UI
+    description: Modern, responsive interface accessible from any device
+tags:
+  - Media Tracker
+  - Content Management
+  - Movies
+  - TV Shows
+  - Music
+  - Books
+  - Gaming 
