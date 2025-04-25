@@ -1,0 +1,62 @@
+name: Universal Media Server
+description:
+  Universal Media Server (UMS) is a DLNA-compliant media server that can share videos, 
+  audio, and images to any DLNA-capable device, including smart TVs, game consoles, 
+  mobile devices, and other computers. It supports a wide range of formats and offers 
+  extensive customization options for transcoding and streaming.
+instructions: null
+changeLog:
+  - date: 2025-04-25
+    description: Initial release
+links:
+  - label: Website
+    url: https://www.universalmediaserver.com/
+  - label: GitHub
+    url: https://github.com/UniversalMediaServer/UniversalMediaServer
+  - label: Docker Hub
+    url: https://hub.docker.com/r/universalmediaserver/ums
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: universalmediaserver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: universalmediaserver/ums:14.12.0
+benefits:
+  - title: Universal Compatibility
+    description: Stream to virtually any device including smart TVs, game consoles, and mobile devices
+  - title: Format Support
+    description: Support for an extensive range of audio and video formats with on-the-fly transcoding
+  - title: No Client Required
+    description: Works with native DLNA clients already built into many devices
+  - title: Lightweight & Efficient
+    description: Designed to run efficiently even on modest hardware
+features:
+  - title: DLNA/UPnP Compliance
+    description: Fully compatible with DLNA and UPnP standards for seamless streaming
+  - title: Automatic Transcoding
+    description: Automatically converts media to formats supported by the target device
+  - title: Subtitle Support
+    description: Handles external and embedded subtitles in various formats
+  - title: Web Interface
+    description: User-friendly web interface for configuration and media management
+  - title: Thumbnail Generation
+    description: Automatically generates thumbnails and previews for media
+  - title: Media Library Organization
+    description: Sorts and categorizes media for easy browsing
+tags:
+  - Media Server
+  - DLNA
+  - Streaming
+  - Transcoding
+  - Home Media 
