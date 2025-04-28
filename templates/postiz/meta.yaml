@@ -1,0 +1,68 @@
+name: Postiz
+description:
+  Postiz is a modern, self-hosted social media management platform that helps you
+  schedule, publish, and analyze content across multiple social networks. It provides
+  a unified dashboard for managing posts, tracking engagement, and optimizing your
+  social media strategy.
+instructions: You can modify the settings by adding the env variables provided. 
+changeLog:
+  - date: 2025-04-28
+    description: Initial release
+links:
+  - label: Website
+    url: https://postiz.com
+  - label: Documentation
+    url: https://docs.postiz.com
+  - label: GitHub
+    url: https://github.com/postiz/postiz
+  - label: Docker Hub
+    url: https://hub.docker.com/r/postiz/postiz
+  - label: Environment Variables
+    url: https://github.com/gitroomhq/postiz-app/blob/main/.env.example
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: postiz
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/gitroomhq/postiz-app:v1.40.1
+benefits:
+  - title: Centralized Management
+    description: Manage all your social media accounts from a single dashboard
+  - title: Content Scheduling
+    description: Plan and schedule posts across multiple platforms in advance
+  - title: Analytics & Insights
+    description: Track performance and engagement metrics across all platforms
+  - title: Team Collaboration
+    description: Work together with your team on content creation and approval
+features:
+  - title: Multi-platform Support
+    description: Connect and manage accounts on major social networks
+  - title: Content Calendar
+    description: Visual calendar for planning and scheduling posts
+  - title: Media Library
+    description: Organize and manage your media assets
+  - title: Analytics Dashboard
+    description: Comprehensive analytics and reporting tools
+  - title: Content Templates
+    description: Create and save reusable content templates
+  - title: Approval Workflows
+    description: Set up custom approval processes for content
+  - title: API Access
+    description: Integrate with other tools through RESTful API
+tags:
+  - Social Media
+  - Content Management
+  - Scheduling
+  - Analytics
+  - Marketing 
