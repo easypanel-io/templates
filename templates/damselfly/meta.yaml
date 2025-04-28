@@ -1,0 +1,62 @@
+name: Damselfly
+description:
+  Damselfly is a modern, self-hosted photo management system that helps you organize,
+  search, and share your photo collection. It uses AI-powered image recognition to
+  automatically tag and categorize your photos, making it easy to find specific images
+  in your collection.
+instructions: Add your photos and libraries in the respected volumes or change them to bind volumes as per your need. 
+changeLog:
+  - date: 2025-04-28
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/Webreaper/Damselfly
+  - label: Docker Hub
+    url: https://hub.docker.com/r/webreaper/damselfly
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: damselfly
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: webreaper/damselfly:4.2.3
+benefits:
+  - title: AI-Powered Organization
+    description: Automatically tag and categorize photos using machine learning
+  - title: Fast Search
+    description: Quickly find photos using tags, metadata, or visual search
+  - title: Privacy-Focused
+    description: Keep your photos private with self-hosted storage
+  - title: Modern Interface
+    description: Clean, responsive web interface for managing your photos
+features:
+  - title: Automatic Tagging
+    description: AI-powered image recognition for automatic photo tagging
+  - title: Face Recognition
+    description: Identify and group photos by people in them
+  - title: Metadata Extraction
+    description: Extract and search by EXIF data and image metadata
+  - title: Duplicate Detection
+    description: Find and manage duplicate photos in your collection
+  - title: Thumbnail Generation
+    description: Automatic thumbnail generation for fast browsing
+  - title: Search & Filter
+    description: Advanced search and filtering capabilities
+  - title: Export Options
+    description: Export photos with metadata and tags
+tags:
+  - Photo Management
+  - AI
+  - Image Recognition
+  - Self-hosted
+  - Photography 
