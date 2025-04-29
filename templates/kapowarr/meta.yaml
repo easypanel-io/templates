@@ -1,0 +1,54 @@
+name: Kapowarr
+description: Kapowarr is a comic book management system that helps you organize and manage your digital comic collection. It provides a user-friendly interface for browsing, reading, and managing your comics.
+instructions: null
+changeLog:
+  - date: 2025-04-29
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/Casvt/Kapowarr
+  - label: Documentation
+    url: https://casvt.github.io/Kapowarr/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kapowarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mrcas/kapowarr:v1.2.0
+benefits:
+  - title: Comic Book Management
+    description: Kapowarr provides a comprehensive solution for managing your digital comic collection with an intuitive interface.
+  - title: Easy Organization
+    description: Organize your comics with metadata, covers, and series information for a better reading experience.
+  - title: User-Friendly
+    description: Simple and intuitive interface makes it easy to browse and read your comics.
+features:
+  - title: Comic Management
+    description: Organize and manage your comic collection with metadata and covers.
+  - title: Reading Interface
+    description: Built-in comic reader with support for various formats.
+  - title: Metadata Support
+    description: Automatic metadata fetching and management for your comics.
+  - title: Series Organization
+    description: Organize comics by series, volumes, and issues.
+  - title: Custom Libraries
+    description: Create and manage multiple comic libraries.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Comics
+  - Manga
+  - Digital Library
+  - Reading
+  - Management 
