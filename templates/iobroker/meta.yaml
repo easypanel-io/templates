@@ -1,0 +1,62 @@
+name: ioBroker
+description: ioBroker is a powerful open-source IoT platform that allows you to connect different smart home systems and devices into one platform. It supports a wide range of protocols and devices, making it a versatile solution for home automation.
+instructions: 
+changeLog:
+  - date: 2025-04-30
+    description: Initial release   
+links:
+  - label: Website
+    url: https://www.iobroker.net
+  - label: Documentation
+    url: https://www.iobroker.net/docu
+  - label: GitHub
+    url: https://github.com/ioBroker/ioBroker
+  - label: Docker Hub
+    url: https://hub.docker.com/r/buanet/iobroker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: iobroker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: buanet/iobroker:v10.0.0
+benefits:
+  - title: Unified Smart Home Platform
+    description: Connect and control all your smart home devices from a single interface
+  - title: Extensive Protocol Support
+    description: Supports multiple protocols including Zigbee, Z-Wave, MQTT, and more
+  - title: Customizable Automation
+    description: Create complex automation rules and scenarios
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: Multi-Protocol Support
+    description: Connect devices using various protocols and standards
+  - title: Visualization
+    description: Create custom dashboards and visualizations
+  - title: Scripting
+    description: Advanced scripting capabilities for custom automation
+  - title: History & Logging
+    description: Store and analyze historical data
+  - title: Mobile Access
+    description: Access your smart home from anywhere using mobile apps
+  - title: Backup & Restore
+    description: Easy backup and restore functionality
+  - title: Plugin System
+    description: Extend functionality with community plugins
+tags:
+  - IoT
+  - Home Automation
+  - Smart Home
+  - Automation
+  - Self-hosted 
