@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const redisPassword = randomPassword();
   const databasePassword = randomPassword();
-  const jwtSecret = randomString(32);
+  const jwtSecret = randomString(16);
 
   services.push({
     type: "app",
