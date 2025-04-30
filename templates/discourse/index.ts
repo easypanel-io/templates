@@ -18,6 +18,7 @@ export function generate(input: Input): Output {
     `DISCOURSE_REDIS_PORT_NUMBER=6379`,
     `DISCOURSE_REDIS_PASSWORD=${redisPassword}`,
   ].join("\n");
+
   services.push({
     type: "app",
     data: {
@@ -29,7 +30,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 3000,
         },
       ],
       env: [
