@@ -1,0 +1,75 @@
+name: Zusam
+description: Zusam is a free and open-source way to self-host private forums for friends and family. It's a simple, modern, and privacy-focused platform for group discussions.
+instructions: null
+changeLog:
+  - date: 2025-05-02
+    description: Initial release
+links:
+  - label: Website
+    url: https://zusam.org
+  - label: Documentation
+    url: https://docs.zusam.org
+  - label: GitHub
+    url: https://github.com/zusam/zusam
+  - label: Docker Hub
+    url: https://hub.docker.com/r/zusam/zusam
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - initGroup
+    - initPassword
+    - initUser
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zusam
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zusam/zusam:0.5.5
+    initGroup:
+      type: string
+      title: Initial Group Name
+      default: zusam
+    initPassword:
+      type: string
+      title: Initial Password
+      default: zusam
+    initUser:
+      type: string
+      title: Initial Username
+      default: zusam
+benefits:
+  - title: Private Forums
+    description: Create private forums for friends and family
+  - title: Self-hosted Solution
+    description: Keep your discussions private by hosting your own platform
+  - title: Simple Interface
+    description: Clean and intuitive user interface
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: Group Discussions
+    description: Create and manage private discussion groups
+  - title: User Management
+    description: Simple user and group management
+  - title: File Sharing
+    description: Share files and media within groups
+  - title: Privacy Focused
+    description: Built with privacy and security in mind
+  - title: Modern Design
+    description: Clean and responsive user interface
+  - title: Easy Setup
+    description: Simple installation and configuration
+tags:
+  - Forum
+  - Discussion
+  - Self-hosted
+  - Open Source
+  - Privacy 
