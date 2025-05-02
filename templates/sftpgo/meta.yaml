@@ -1,0 +1,58 @@
+name: SFTPGo
+description: SFTPGo is a fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support. It supports local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
+instructions: null
+changeLog:
+  - date: 2025-05-02
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/drakkan/sftpgo
+  - label: Documentation
+    url: https://docs.sftpgo.com/2.6/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/drakkan/sftpgo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sftpgo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: drakkan/sftpgo:2.6.x
+benefits:
+  - title: Multiple Protocols
+    description: Support for SFTP, HTTP/S, FTP/S, and WebDAV protocols
+  - title: Multiple Storage Backends
+    description: Support for local filesystem, S3, Google Cloud Storage, and more
+  - title: Security Features
+    description: Built-in security features and encryption support
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: Web Interface
+    description: User-friendly web interface for management
+  - title: User Management
+    description: Comprehensive user and permission management
+  - title: Virtual Folders
+    description: Support for virtual folders and path mapping
+  - title: Quota Management
+    description: Set storage quotas for users and groups
+  - title: Event Notifications
+    description: Configure notifications for various events
+  - title: Backup Support
+    description: Built-in backup and restore functionality
+tags:
+  - SFTP
+  - File Transfer
+  - Self-hosted
+  - Open Source
+  - Security 
