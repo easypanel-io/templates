@@ -1,0 +1,68 @@
+name: TruffleHog
+description: TruffleHog is a security tool that finds secrets in your code, repositories, and files. It uses pattern matching, entropy analysis, and other methods to detect potential secrets and credentials.
+instructions: After installation, TruffleHog will scan the specified directory for secrets. Configure the scan path and command options in the settings.
+changeLog:
+  - date: 2025-05-05
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/trufflesecurity/trufflehog
+  - label: Documentation
+    url: https://trufflesecurity.com/docs/trufflehog
+  - label: Docker Hub
+    url: https://hub.docker.com/r/trufflesecurity/trufflehog
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - scanPath
+    - scanCommand
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trufflehog
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: trufflesecurity/trufflehog:latest
+    scanPath:
+      type: string
+      title: Scan Path
+      description: Host path to scan for secrets
+      default: /path/to/scan
+    scanCommand:
+      type: string
+      title: Scan Command
+      description: Command to run for scanning (e.g., 'trufflehog filesystem /workdir')
+      default: trufflehog filesystem /workdir
+benefits:
+  - title: Security Scanning
+    description: Find secrets and credentials in your code and repositories
+  - title: Multiple Detection Methods
+    description: Uses pattern matching, entropy analysis, and other methods
+  - title: Customizable
+    description: Configurable scanning options and paths
+  - title: Open Source
+    description: Free and open-source security tool
+features:
+  - title: Secret Detection
+    description: Find API keys, passwords, tokens, and other secrets
+  - title: Pattern Matching
+    description: Detect secrets using regex patterns and entropy analysis
+  - title: Custom Commands
+    description: Configure custom scanning commands and options
+  - title: Volume Mounting
+    description: Scan any directory by mounting it to the container
+  - title: Continuous Scanning
+    description: Run scans on a schedule or as part of CI/CD
+tags:
+  - Security
+  - Code Analysis
+  - Secret Detection
+  - Self-hosted
+  - Open Source 
