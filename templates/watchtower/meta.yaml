@@ -1,0 +1,56 @@
+name: Watchtower
+description: Watchtower is a process for automating Docker container base image updates. It monitors running containers and automatically updates them when their base image changes.
+instructions: null
+changeLog:
+  - date: 2025-05-05
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/containrrr/watchtower
+  - label: Documentation
+    url: https://containrrr.dev/watchtower/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/containrrr/watchtower
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: watchtower
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: containrrr/watchtower:latest
+benefits:
+  - title: Automatic Updates
+    description: Automatically updates containers when new images are available
+  - title: Zero Downtime
+    description: Updates containers without service interruption
+  - title: Simple Setup
+    description: Easy to set up and requires minimal configuration
+  - title: Open Source
+    description: Free and open-source container update automation
+features:
+  - title: Container Monitoring
+    description: Monitors running containers for base image updates
+  - title: Automatic Updates
+    description: Automatically pulls and updates containers
+  - title: Docker Socket Access
+    description: Uses Docker socket to manage container updates
+  - title: Notification Support
+    description: Configurable notifications for update events
+  - title: Scheduling
+    description: Optional scheduling for update checks
+tags:
+  - Docker
+  - Automation
+  - Container
+  - Self-hosted
+  - Open Source 
