@@ -1,0 +1,58 @@
+name: AriaNg
+description: AriaNg is a modern web frontend for aria2, a lightweight multi-protocol & multi-source command-line download utility. It provides a beautiful web interface for managing downloads.
+instructions: null
+changeLog:
+  - date: 2025-05-05
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/mayswind/AriaNg
+  - label: Docker Hub
+    url: https://hub.docker.com/r/hurlenko/aria2-ariang
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - rpcSecret
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ariang
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hurlenko/aria2-ariang:latest
+    rpcSecret:
+      type: string
+      title: RPC Secret
+      default: secret
+benefits:
+  - title: Modern Interface
+    description: Beautiful and responsive web interface
+  - title: Multi-protocol
+    description: Support for HTTP, HTTPS, FTP, SFTP, BitTorrent, and more
+  - title: Remote Control
+    description: Control downloads remotely through RPC
+  - title: Open Source
+    description: Free and open-source download manager
+features:
+  - title: Web Interface
+    description: Modern and responsive web UI
+  - title: Multiple Protocols
+    description: Support for various download protocols
+  - title: Remote Access
+    description: Access and control downloads remotely
+  - title: Download Management
+    description: Pause, resume, and manage downloads
+  - title: Configuration
+    description: Customizable download settings
+tags:
+  - Download Manager
+  - File Transfer
+  - Self-hosted
+  - Open Source 
