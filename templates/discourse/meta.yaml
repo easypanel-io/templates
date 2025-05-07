@@ -2,7 +2,7 @@ name: Discourse
 description: Discourse is a modern, open-source discussion platform that provides a clean, intuitive interface for community discussions. It's perfect for forums, mailing lists, chat rooms, and more.
 instructions: Once clicked, please wait for the installation to complete, it will take time. It is also resource intensive, so make sure you have more than 8GB of RAM. 
 changeLog:
-  - date: 2024-04-30
+  - date: 2025-04-30
     description: Initial release
 links:
   - label: Website
@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.io/bitnami/discourse:3
+      default: bitnami/discourse:3
     discourseEmail:
       type: string
       title: Discourse Email
