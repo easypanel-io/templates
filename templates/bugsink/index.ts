@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
       },
       env: [
         `SECRET_KEY=${secretKey}`,
-        `CREATE_SUPERUSER=${input.adminCredentials}`,
+        `CREATE_SUPERUSER=${input.adminUsername}:${input.adminPassword}`,
         `PORT=8000`,
         `DATABASE_URL=mysql://root:${rootDatabasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:3306/$(PROJECT_NAME)`,
       ].join("\n"),

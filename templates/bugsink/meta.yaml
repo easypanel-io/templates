@@ -17,7 +17,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - adminCredentials
+    - adminUsername
+    - adminPassword
   properties:
     appServiceName:
       type: string
@@ -27,11 +28,16 @@ schema:
       type: string
       title: App Service Image
       default: bugsink/bugsink:1.5.3
-    adminCredentials:
+    adminUsername:
       type: string
-      title: Admin Credentials
-      default: admin:admin
-      description: Initial admin username and password (format: username:password)
+      title: Admin Username
+      default: admin
+      description: Admin username
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin
+      description: Admin password
 benefits:
   - title: Bug Tracking
     description: Comprehensive bug tracking and project management system.
