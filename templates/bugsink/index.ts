@@ -39,7 +39,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "mysql",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       rootPassword: rootDatabasePassword,
     },
   });
