@@ -1,0 +1,48 @@
+import { Output, Services, randomPassword, randomString } from "~templates-utils";
+import { Input } from "./meta";
+
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const rootDatabasePassword = randomPassword();
+  const secretKey = randomString(32);
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: input.appServiceName,
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      env: [
+        `SECRET_KEY=${secretKey}`,
+        `CREATE_SUPERUSER=${input.adminCredentials}`,
+        `PORT=8000`,
+        `DATABASE_URL=mysql://root:${rootDatabasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:3306/$(PROJECT_NAME)`,
+      ].join("\n"),
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/data",
+        },
+      ],
+    },
+  });
+
+  services.push({
+    type: "mysql",
+    data: {
+      serviceName: input.databaseServiceName,
+      rootPassword: rootDatabasePassword,
+    },
+  });
+
+  return { services };
+} 

@@ -1,0 +1,60 @@
+name: BugSink
+description: BugSink is a bug tracking and project management system.
+instructions: null
+changeLog:
+  - date: 2025-05-08
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/bugsink/bugsink
+  - label: Documentation
+    url: https://github.com/bugsink/bugsink/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminCredentials
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: web
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bugsink/bugsink:1.5.3
+    adminCredentials:
+      type: string
+      title: Admin Credentials
+      default: admin:admin
+      description: Initial admin username and password (format: username:password)
+benefits:
+  - title: Bug Tracking
+    description: Comprehensive bug tracking and project management system.
+  - title: Easy Deployment
+    description: Simple deployment with Docker and automatic database setup.
+  - title: User Management
+    description: Built-in user management with admin capabilities.
+features:
+  - title: Bug Tracking
+    description: Track and manage bugs and issues efficiently.
+  - title: Project Management
+    description: Manage projects and their associated tasks.
+  - title: User Management
+    description: User authentication and authorization system.
+  - title: Database Integration
+    description: MySQL database integration with automatic setup.
+  - title: Health Monitoring
+    description: Built-in health checks for both web and database services.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Bug Tracking
+  - Project Management
+  - Web Application
+  - MySQL
+  - Django 
