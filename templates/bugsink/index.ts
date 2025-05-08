@@ -4,7 +4,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const rootDatabasePassword = randomPassword();
-  const secretKey = randomString(32);
+  const secretKey = randomString(64);
 
   services.push({
     type: "app",

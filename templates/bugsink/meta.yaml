@@ -5,10 +5,12 @@ changeLog:
   - date: 2025-05-08
     description: First Release
 links:
+  - label: Website
+    url: https://www.bugsink.com/
   - label: Github
     url: https://github.com/bugsink/bugsink
   - label: Documentation
-    url: https://github.com/bugsink/bugsink/wiki
+    url: https://www.bugsink.com/docs/
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -23,7 +25,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: web
+      default: bugsink
     appServiceImage:
       type: string
       title: App Service Image
