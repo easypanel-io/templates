@@ -29,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/maybe-finance/maybe:0.1.0
+      default: ghcr.io/maybe-finance/maybe:0.5.0
 
 benefits:
   - title: Financial Control
