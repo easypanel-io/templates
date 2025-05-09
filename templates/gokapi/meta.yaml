@@ -1,0 +1,45 @@
+name: Gokapi
+description: Gokapi is a lightweight file-sharing server that allows you to easily upload and share files with others. It provides a simple web interface for file uploads, generates shareable links, and supports features like password protection, automatic file expiration, and customizable download limits.
+instructions: null
+changeLog:
+  - date: 2024-05-09
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/Forceu/Gokapi
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gokapi
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: f0rc3/gokapi:v1.9.6
+benefits:
+  - title: Simple File Sharing
+    description: Easily share files with others through a clean and intuitive web interface.
+  - title: Enhanced Privacy Controls
+    description: Set passwords, expiration dates, and download limits for each shared file.
+  - title: Self-Hosted Solution
+    description: Keep control of your data by hosting the file sharing service on your own infrastructure.
+features:
+  - title: Upload Management
+    description: Upload files through a web interface and generate shareable links instantly.
+  - title: Access Controls
+    description: Protect shared files with passwords and set automatic expiration dates.
+  - title: Download Limits
+    description: Limit the number of times a file can be downloaded before it expires.
+tags:
+  - File Sharing
+  - Upload Server
+  - File Transfer
+  - Temporary Storage
