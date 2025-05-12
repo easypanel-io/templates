@@ -1,5 +1,5 @@
-name: BugSink
-description: BugSink is a bug tracking and project management system.
+name: Bugsink
+description: Bugsink is a self-hosted error tracking system compatible with Sentry SDKs.
 instructions: null
 changeLog:
   - date: 2025-05-08
@@ -41,28 +41,25 @@ schema:
       default: admin
       description: Admin password
 benefits:
-  - title: Bug Tracking
-    description: Comprehensive bug tracking and project management system.
-  - title: Easy Deployment
-    description: Simple deployment with Docker and automatic database setup.
-  - title: User Management
-    description: Built-in user management with admin capabilities.
+  - title: Self-Hosted Solution
+    description: Full control over your data by running on your own servers
+  - title: Sentry SDK Compatible
+    description: Works with popular Sentry SDKs across multiple programming languages
+  - title: Scalable Performance
+    description: Handles millions of events per day on minimal hardware
 features:
-  - title: Bug Tracking
-    description: Track and manage bugs and issues efficiently.
-  - title: Project Management
-    description: Manage projects and their associated tasks.
-  - title: User Management
-    description: User authentication and authorization system.
-  - title: Database Integration
-    description: MySQL database integration with automatic setup.
-  - title: Health Monitoring
-    description: Built-in health checks for both web and database services.
-  - title: Containerized
-    description: Easy to deploy and manage in containerized environments.
+  - title: Error Tracking
+    description: Catch and monitor errors with detailed stacktraces and context
+  - title: Issue Grouping
+    description: Automatically group related errors for better management
+  - title: Alerting System
+    description: Get notified when new errors occur in your application
+  - title: Search and Tags
+    description: Search through errors by release, environment, user, and more
+  - title: Sourcemaps Support
+    description: Link minified code to original source for better debugging
 tags:
-  - Bug Tracking
-  - Project Management
-  - Web Application
-  - MySQL
-  - Django 
+  - Error Tracking
+  - Self-Hosted
+  - Monitoring
+  - Sentry Compatible 
