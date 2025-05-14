@@ -1,0 +1,50 @@
+name: Offen
+description: "Offen is a fair and open alternative to common web analytics tools. It gives users access to their data and respects their privacy while providing website owners with the insights they need."
+instructions: "After deployment, access your Offen instance through your browser to complete the setup process."
+changeLog:
+  - date: 2025-05-14
+    description: First Release (v1.4.2)
+links:
+  - label: Website
+    url: https://www.offen.dev
+  - label: Documentation
+    url: https://docs.offen.dev
+  - label: Github
+    url: https://github.com/offen/offen
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: offen
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: offen/offen:v1.4.2
+benefits:
+  - title: Fair Analytics
+    description: Provides website owners with insights while respecting user privacy.
+  - title: User Data Access
+    description: Users can access and manage their own data, ensuring transparency.
+  - title: Privacy-Focused
+    description: Built with privacy in mind, compliant with GDPR and other regulations.
+
+features:
+  - title: Self-Hosted
+    description: Complete control over your analytics data with self-hosting capability.
+  - title: Transparent
+    description: Open source solution with clear data collection and usage policies.
+  - title: Secure Storage
+    description: Uses PostgreSQL for reliable and secure data storage.
+
+tags:
+  - Analytics
+  - Privacy
+  - GDPR 
