@@ -1,0 +1,84 @@
+name: Vitess
+description:
+  Vitess is a database clustering system for horizontal scaling of MySQL. It is
+  designed to make it easier to scale and manage large deployments of MySQL
+  databases. Vitess helps handle sharding, connection pooling, and query routing
+  efficiently, making it a great choice for cloud-native applications and
+  high-traffic websites. It is used by companies like YouTube and Slack to
+  manage massive database workloads. Vitess provides built-in automation, strong
+  consistency, and MySQL compatibility while being resilient to failures and
+  easy to operate at scale.
+instructions: null
+changeLog:
+  - date: 2025-03-11
+    description: First Release
+links:
+  - label: Documentation
+    url: https://vitess.io/docs/
+  - label: Github
+    url: https://github.com/vitessio/vitess
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - vitessPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: vitess
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: vitess/vttestserver:mysql80
+    vitessPort:
+      type: string
+      title: Vitess Port
+      default: "33574"
+benefits:
+  - title: Horizontal Scalability
+    description:
+      Vitess enables seamless horizontal scaling for MySQL databases. It allows
+      you to shard your database without application-level changes, making it
+      easy to scale as your workload grows.
+  - title: MySQL Compatibility
+    description:
+      Vitess retains full MySQL compatibility, ensuring that existing MySQL
+      applications can migrate with minimal modifications while benefiting from
+      advanced scalability features.
+  - title: High Availability
+    description:
+      Vitess ensures high availability through automated failover and robust
+      fault tolerance mechanisms. This makes it a reliable choice for
+      mission-critical applications.
+features:
+  - title: Sharding
+    description:
+      Vitess provides built-in support for database sharding, allowing you to
+      split data across multiple nodes and maintain performance at scale.
+  - title: Connection Pooling
+    description:
+      Efficient connection pooling optimizes database performance by managing
+      and reusing database connections, reducing overhead and improving query
+      efficiency.
+  - title: Query Routing
+    description:
+      Vitess intelligently routes queries to the appropriate database shards,
+      ensuring efficient query execution and minimal latency.
+  - title: Failover and Recovery
+    description:
+      Automatic failover and self-healing capabilities keep the system running
+      smoothly, even in the event of node failures.
+  - title: Kubernetes Integration
+    description:
+      Vitess is cloud-native and integrates seamlessly with Kubernetes for
+      automated deployment, scaling, and management.
+tags:
+  - Database
+  - Scalability
+  - Cloud-Native
+  - MySQL

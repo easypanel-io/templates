@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2024-12-16
     description: First release
+  - date: 2025-02-28
+    description: Version bumped to 1.66.5
 
 links:
   - label: Website
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lobehub/lobe-chat:v1.36.25
+      default: lobehub/lobe-chat:1.66.5
     openAiKey:
       type: string
       title: OpenAI API Key

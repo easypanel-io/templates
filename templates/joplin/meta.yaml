@@ -16,6 +16,8 @@ changeLog:
     description: First Release
   - date: 2024-10-11
     description: Second Release version updated to 3.0.1-beta
+  - date: 2025-02-28
+    description: Version bumped to 3.3.3-beta
 links:
   - label: Website
     url: https://joplinapp.org/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joplin/server:3.0.1-beta
+      default: joplin/server:3.3.3-beta
     databaseServiceName:
       type: string
       title: Database Service Name

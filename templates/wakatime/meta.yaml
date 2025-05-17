@@ -14,6 +14,8 @@ changeLog:
     description: first release
   - date: 2023-03-22
     description: Update to v2.6.2
+  - date: 2025-03-03
+    description: Version bumped to 2.13.1
 links:
   - label: Website
     url: https://wakapi.dev/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n1try/wakapi:2.9.3
+      default: n1try/wakapi:2.13.1
 tags:
   - Developer Tools
   - Analytics

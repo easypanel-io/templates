@@ -14,6 +14,10 @@ instructions: null
 changeLog:
   - date: 2025-01-03
     description: Template Release
+  - date: 2025-03-03
+    description:
+      Version bumped to 2.36.0 for UI, 1.27.1.0 for server, 1.27 for admin
+      tools.
 links:
   - label: Documentation
     url: https://docs.temporal.io/
@@ -38,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: temporalio/auto-setup:1.26.2
+      default: temporalio/auto-setup:1.27.1.0
     elasticsearchImage:
       type: string
       title: Elasticsearch Service Image
@@ -46,11 +50,11 @@ schema:
     temporalUiImage:
       type: string
       title: Temporal UI Service Image
-      default: temporalio/ui:2.22.1
+      default: temporalio/ui:2.36.0
     temporalAdminImage:
       type: string
       title: Temporal Admin Service Image
-      default: temporalio/admin-tools:1.26.2
+      default: temporalio/admin-tools:1.27
 benefits:
   - title: Streamlined Workflow Orchestration
     description:

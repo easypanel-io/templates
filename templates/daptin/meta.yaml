@@ -1,0 +1,58 @@
+name: Daptin
+description:
+  Daptin is an open-source backend development framework that enables rapid development
+  and deployment of production-ready JSONAPI microservices. Design your data model and
+  have a production-ready JSON API online in minutes.
+
+instructions: null
+changeLog:
+  - date: 2025-03-28
+    description: Initial template release
+links:
+  - label: Documentation
+    url: https://daptin.github.io/docs/
+  - label: Website
+    url: https://daptin.github.io/daptin/
+  - label: GitHub
+    url: https://github.com/daptin/daptin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: daptin
+    appServiceImage:
+      type: string
+      title: Daptin Image
+      default: daptin/daptin:v0.11.3
+benefits:
+  - title: Rapid API Development
+    description: Create production-ready JSON APIs in minutes.
+  - title: JSON:API Compliance
+    description: Built-in support for JSON:API specification.
+  - title: Data Model Design
+    description: Visual data model design and automatic API generation.
+  - title: Production Ready
+    description: Includes authentication, validation, and real-time updates.
+features:
+  - title: CRUD Operations
+    description: Automatic CRUD endpoints for your data models.
+  - title: API Documentation
+    description: Built-in OpenAPI/Swagger documentation.
+  - title: Authentication
+    description: Built-in user authentication and authorization.
+  - title: Real-time Updates
+    description: WebSocket support for real-time data updates.
+tags:
+  - Backend
+  - API
+  - Microservices
+  - JSON:API
+  - Database 

@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2023-07-10
     description: First Release
+  - date: 2025-03-03
+    description: Version bumped to 1.29
 links:
   - label: Website
     url: https://syncthing.net
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1.28
+      default: syncthing/syncthing:1.29
 benefits:
   - title: Continuous File Synchronization
     description:

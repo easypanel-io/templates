@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2024-10-11
     description: Version 0.9.0 (First Release)
+  - date: 2025-03-03
+    description: Version bumped to 0.9.3
 links:
   - label: Github
     url: https://github.com/benbusby/whoogle-search
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: benbusby/whoogle-search:0.9.1
+      default: benbusby/whoogle-search:0.9.3
 
 benefits:
   - title: Complete Privacy

@@ -20,6 +20,8 @@ instructions: none
 changeLog:
   - date: 2022-12-20
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to 2.3.0
 links:
   - label: Documentation
     url: https://github.com/Fallenbagel/jellyseerr/tree/develop/docs
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fallenbagel/jellyseerr:1.9.2
+      default: fallenbagel/jellyseerr:2.3.0
 benefits:
   - title: Effortless Media Requesting
     description:

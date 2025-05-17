@@ -1,9 +1,15 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const appKey = randomString(32);
 
   services.push({
     type: "app",
@@ -12,9 +18,10 @@ export function generate(input: Input): Output {
       env: [
         `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `DB_USER=mariadb`,
-        `DB_PASS=${databasePassword}`,
+        `DB_USERNAME=mariadb`,
+        `DB_PASSWORD=${databasePassword}`,
         `DB_DATABASE=$(PROJECT_NAME)`,
+        `APP_KEY=${appKey}`,
       ].join("\n"),
       source: {
         type: "image",
