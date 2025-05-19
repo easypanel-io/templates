@@ -1,0 +1,47 @@
+name: Anse
+description:
+  "Anse is a modern web application that provides a clean and intuitive
+  interface. It's a lightweight and efficient solution for your needs."
+instructions: null
+changeLog:
+  - date: 2025-05-19
+    description: First Release
+links:
+  - label: Website
+    url: https://anse.app
+  - label: Github
+    url: https://github.com/ddiu8081/anse
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ddiu8081/anse:latest
+benefits:
+  - title: Simple Setup
+    description: Easy to deploy and configure with minimal requirements.
+  - title: Modern Interface
+    description: Clean and intuitive user interface.
+  - title: Lightweight
+    description: Efficient and resource-friendly application.
+
+features:
+  - title: Web Interface
+    description: Accessible through port 3000 with a modern web interface.
+  - title: Auto-restart
+    description: Container automatically restarts on failure.
+
+tags:
+  - Web Application
+  - UI
