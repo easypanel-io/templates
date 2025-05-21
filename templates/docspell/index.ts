@@ -1,9 +1,16 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const endpointSecret = randomString(32);
+  const authServerSecret = randomString(32);
 
   services.push({
     type: "app",
@@ -11,8 +18,8 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-restserver`,
       env: [
         `DOCSPELL_SERVER_INTERNAL__URL=http://$(PROJECT_NAME)-${input.appServiceName}-restserver:7880`,
-        `DOCSPELL_SERVER_ADMIN__ENDPOINT_SECRET=admin123`,
-        `DOCSPELL_SERVER_AUTH_SERVER__SECRET=`,
+        `DOCSPELL_SERVER_ADMIN__ENDPOINT_SECRET=${endpointSecret}`,
+        `DOCSPELL_SERVER_AUTH_SERVER__SECRET=${authServerSecret}`,
         `DOCSPELL_SERVER_BACKEND_JDBC_PASSWORD=${databasePassword}`,
         `DOCSPELL_SERVER_BACKEND_JDBC_URL=jdbc:postgresql://$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?sslmode=disable&user=postgres&password=${databasePassword}`,
         `DOCSPELL_SERVER_BACKEND_JDBC_USER=postgres`,
