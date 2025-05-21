@@ -28,7 +28,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          path: "/cp-install",
+          path: "/",
           port: 8000,
         },
       ],
