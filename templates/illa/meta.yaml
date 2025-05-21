@@ -1,0 +1,104 @@
+name: Illa
+description:
+  Illa Cloud is a revolutionary browser-based code editor designed to streamline
+  and modernize the process of website development. It allows you to code
+  directly within your web browser, either online or offline, eliminating the
+  need for multiple programs. With Illa Cloud, you can test your sites on actual
+  web servers and maintain them with ease after development, making for a fast
+  and intelligent development process. It's not just limited to online use - you
+  can also use it as a desktop code editor, provided you have PHP 7.0+. It comes
+  packed with a multitude of features and plugins to enhance your coding
+  experience, including multiple cursors, 80+ highlighting themes, a find &
+  replace builder, login security, coding assistance, visual code difference
+  display, and database management with the Adminer plugin. The latest version,
+  Illa Cloud 8.1, introduces regex search on find and replace, double click tab
+  to collapse file manager, active line number highlighting, and many more
+  improvements and bug fixes.
+instructions: Defualt username; root and password; password
+armSupport: true
+changeLog:
+  - date: 2025-01-21
+    description: First Release
+links:
+  - label: Website
+    url: https://illacloud.com/
+  - label: Documentation
+    url: https://docs.illacloud.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: illa
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: illasoft/illa-builder:v4.8.5
+benefits:
+  - title: Modern Approach to Website Building
+    description:
+      Illa Cloud provides a modern approach to building websites by allowing you
+      to code directly within the web browser, online or offline. This means you
+      only need one program (your browser) to develop sites, and you can test on
+      actual web servers.
+  - title: Easy Maintenance
+    description:
+      After development, maintaining the website is easy with Illa Cloud. This
+      makes for speedy and smart development.
+  - title: Accessible Anywhere
+    description:
+      As Illa Cloud is web-based, you can use it from any internet-enabled
+      computer with a modern browser.
+  - title: Customizable
+    description:
+      Illa Cloud is built with common web languages, allowing you to customize
+      it to your liking and integrate it with online services.
+  - title: Desktop Code Editor
+    description:
+      If you'd like to use Illa Cloud as a desktop code editor, no problem. You
+      only need PHP 7.0+, so you can use it on Linux, PC via WAMP or XAMPP, and
+      Mac via MAMP (or another PHP installation).
+features:
+  - title: Multiple Cursors
+    description:
+      Create multiple cursors and make text changes to affect all of them
+      simultaneously.
+  - title: Themes
+    description:
+      80+ highlighting themes come as standard but you can easily make your own
+      with a CSS file.
+  - title: Find & Replace Builder
+    description:
+      Find and replace can be applied to the current or all open documents, plus
+      filenames & files.
+  - title: Login Secured
+    description:
+      Illa Cloud can be set up wherever you wish and is login secured to help
+      keep your files safe. It's multi-user too!
+  - title: Type Boosters
+    description:
+      Plenty of coding assist is available such as Emmet, close tag completion,
+      and tag wrappers.
+  - title: Visual Code Diff
+    description:
+      Have code differences between 2 sets shown visually, including in-line
+      highlighting of changes.
+  - title: Code Hints
+    description:
+      Your JavaScript code is linted with JS Hint as you type to ensure good
+      coding practices.
+  - title: Database Management
+    description:
+      Database management is easy with the Adminer plugin. It's like phpMyAdmin,
+      but better.
+tags:
+  - Cloud IDE
+  - Developer Tools
+  - Web Development

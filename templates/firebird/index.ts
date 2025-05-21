@@ -1,10 +1,9 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const appSecret = randomString(64);
-  const apiKey = randomString(32);
+  const databasePassword = randomPassword();
 
   services.push({
     type: "app",
@@ -14,26 +13,26 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: [
+        `FIREBIRD_ROOT_PASSWORD=${input.rootPassword}`,
+        `FIREBIRD_USER=${input.dbUser}`,
+        `FIREBIRD_PASSWORD=${input.dbPassword}`,
+        `FIREBIRD_DATABASE=mirror.fdb`,
+        `FIREBIRD_DATABASE_DEFAULT_CHARSET=UTF8`,
+      ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 3050,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "app-data",
-          mountPath: "/app/data",
+          name: "data",
+          mountPath: "/var/lib/firebird/data",
         },
       ],
-      env: [
-        `USER=${input.serpUser}`,
-        `PASSWORD=${input.serpPass}`,
-        `SECRET=${appSecret}`,
-        `APIKEY=${apiKey}`,
-        `NEXT_PUBLIC_APP_URL=https://localhost:80`,
-      ].join("\n"),
     },
   });
 

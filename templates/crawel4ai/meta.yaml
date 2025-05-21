@@ -1,0 +1,122 @@
+name: Crawl4AI
+description:
+  Crawl4AI is an advanced AI-powered web crawling and data extraction tool
+  designed to streamline the process of collecting, processing, and structuring
+  web data for AI applications. It allows you to efficiently crawl websites,
+  extract relevant information, and store it in structured formats such as JSON,
+  CSV, or vector databases. With Crawl4AI, you can integrate real-time web data
+  into your AI models, enhancing their knowledge base and enabling dynamic
+  responses. It supports both cloud-based and on-premise deployments, making it
+  flexible for different use cases. Crawl4AI comes with powerful features such
+  as intelligent content filtering, automated rate-limiting handling, JavaScript
+  rendering for dynamic pages, built-in APIs for seamless integration, and
+  robust authentication support. The latest version, Crawl4AI 2.1, introduces
+  enhanced AI-based content classification, improved speed optimizations,
+  support for multi-agent crawling, and various bug fixes.
+instructions: null
+changeLog:
+  - date: 2025-02-24
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/unclecode/crawl4ai
+  - label: Documentation
+    url: https://docs.crawl4ai.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: crwal4ai
+    enableArm:
+      type: boolean
+      title: Enable ARM Support
+      default: true
+    appServiceImage:
+      type: string
+      title: Service Images
+      oneOf:
+        - enum:
+            - unclecode/crawl4ai:basic
+          title: Basic
+        - enum:
+            - unclecode/crawl4ai:all
+          title: All (ML/LLM Support)
+        - enum:
+            - unclecode/crawl4ai:gpu
+          title: GPU Support
+      enableArm:
+        type: boolean
+        title: Enable ARM Support
+        default: false
+benefits:
+  - title: AI-Powered Web Crawling
+    description:
+      Crawl4AI leverages artificial intelligence to efficiently extract,
+      process, and structure web data, enabling more intelligent and automated
+      crawling.
+  - title: Scalable & Flexible
+    description:
+      Whether you need to crawl small websites or enterprise-scale platforms,
+      Crawl4AI adapts to your needs with cloud and on-premise deployment
+      options.
+  - title: Real-Time Data Extraction
+    description:
+      Ensure your AI applications always have the latest data by dynamically
+      retrieving and updating content from the web.
+  - title: Intelligent Content Filtering
+    description:
+      Advanced filtering mechanisms help refine the crawled data, extracting
+      only what’s most relevant for AI models and analytics.
+  - title: Seamless AI Integration
+    description:
+      Crawl4AI is built with AI-first applications in mind, allowing easy
+      integration with LLMs, vector databases, and knowledge bases.
+
+features:
+  - title: Multi-Agent Crawling
+    description:
+      Scale your crawling operations with multiple agents working simultaneously
+      for faster and more efficient data retrieval.
+  - title: AI-Based Content Classification
+    description:
+      Automatically categorize and tag extracted data based on its relevance and
+      context using built-in AI classifiers.
+  - title: JavaScript Rendering
+    description:
+      Crawl and extract data from dynamic websites that rely on JavaScript,
+      ensuring comprehensive data coverage.
+  - title: Anti-Bot Evasion
+    description:
+      Intelligent handling of rate limiting, CAPTCHAs, and anti-bot measures
+      allows for seamless crawling without interruptions.
+  - title: API-First Design
+    description:
+      Integrate easily with external applications, databases, and AI pipelines
+      using Crawl4AI’s powerful RESTful APIs.
+  - title: Vector Database Compatibility
+    description:
+      Seamlessly store and retrieve embeddings for AI-driven applications,
+      making Crawl4AI ideal for RAG-based models.
+  - title: Automated Scheduler
+    description:
+      Set up automated crawling schedules to continuously collect and refresh
+      web data without manual intervention.
+  - title: Secure Authentication
+    description:
+      Crawl4AI supports user authentication and encrypted data transmission to
+      ensure safe and secure crawling.
+
+tags:
+  - Web Crawling
+  - AI Data Extraction
+  - Machine Learning
+  - Vector Database
+  - AI-Powered Search

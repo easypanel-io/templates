@@ -3,8 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const appSecret = randomString(64);
-  const apiKey = randomString(32);
+  const jwtSecret = randomString(32);
 
   services.push({
     type: "app",
@@ -14,26 +13,33 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: [
+        `LLDAP_JWT_SECRET=${jwtSecret}`,
+        `LLDAP_LDAP_BASE_DN=dc=example,dc=org`,
+        `LLDAP_LDAP_USER_PASS=${input.adminPassword}`,
+        `LLDAP_HTTP_PORT=17170`,
+        `LLDAP_LDAP_PORT=3389`,
+        `RUST_LOG=info`,
+      ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 17170,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "app-data",
-          mountPath: "/app/data",
+          name: "lldap-data",
+          mountPath: "/data",
         },
       ],
-      env: [
-        `USER=${input.serpUser}`,
-        `PASSWORD=${input.serpPass}`,
-        `SECRET=${appSecret}`,
-        `APIKEY=${apiKey}`,
-        `NEXT_PUBLIC_APP_URL=https://localhost:80`,
-      ].join("\n"),
+      ports: [
+        {
+          published: Number(input.exposedPort),
+          target: 3890,
+        },
+      ],
     },
   });
 
