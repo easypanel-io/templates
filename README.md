@@ -61,6 +61,7 @@ selectField:
     - [ ]  use specific versions (2.1.7, instead of 2.1, or 2)
     - [ ]  add all links (website, docs, Github)
     - [ ]  don’t forget instructions
+    - [ ]  use official images (if not possible, explain)
 - [ ]  index.ts
     - [ ]  no unused variables
     - [ ]  no hardcoded secrets (generate random ones)
