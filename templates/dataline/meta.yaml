@@ -1,0 +1,74 @@
+name: Dataline
+description:
+  Dataline is a powerful data management and visualization tool that helps users
+  organize, analyze, and visualize their data in an intuitive way. It provides a
+  user-friendly interface for data manipulation, chart creation, and data
+  sharing capabilities. With its modern design and robust features, Dataline
+  makes it easy to work with various data formats and create meaningful
+  visualizations.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-24
+    description: Initial template release
+
+links:
+  - label: GitHub
+    url: https://github.com/ramiawar/dataline
+  - label: Docker Hub
+    url: https://hub.docker.com/r/ramiawar/dataline
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dataline
+    appServiceImage:
+      type: string
+      title: Dataline Image
+      default: ramiawar/dataline:v1.1.5
+
+benefits:
+  - title: Intuitive Data Management
+    description:
+      Easily organize and manage your data with a user-friendly interface.
+  - title: Powerful Visualization Tools
+    description:
+      Create stunning visualizations and charts from your data with built-in
+      tools.
+  - title: Data Sharing
+    description:
+      Share your data and visualizations with team members or the public.
+
+features:
+  - title: Data Organization
+    description:
+      Organize and structure your data in a way that makes sense for your
+      workflow.
+  - title: Chart Creation
+    description:
+      Create various types of charts and graphs to visualize your data.
+  - title: Data Import/Export
+    description:
+      Import data from various sources and export in multiple formats.
+  - title: User Interface
+    description:
+      Modern and responsive interface for easy data management and
+      visualization.
+
+tags:
+  - Data
+  - Visualization
+  - Analytics
+  - Management
+  - Charts
