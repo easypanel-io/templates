@@ -71,6 +71,17 @@
     ]
   },
   {
+    "slug": "akaunting",
+    "logo": "logo.svg",
+    "name": "Akaunting",
+    "description": "Akaunting is a powerful online accounting software designed for small businesses, \nfreelancers, and entrepreneurs. This free and open-source solution provides \ncomprehensive financial management tools with a modern, user-friendly interface. \nBuilt on Laravel, it offers robust double-entry bookkeeping, real-time financial \ntracking, and automated features to streamline your accounting processes. With \nmulti-user support, document management, and detailed reporting capabilities, \nAkaunting helps you maintain professional financial records while saving time \nand resources.\n",
+    "tags": [
+      "Finance",
+      "Accounting",
+      "Business"
+    ]
+  },
+  {
     "slug": "alltube",
     "logo": "logo.png",
     "name": "AllTube",
@@ -439,6 +450,24 @@
     ]
   },
   {
+    "slug": "castopod",
+    "logo": "logo.png",
+    "name": "Castopod",
+    "description": "Castopod is an open-source hosting platform made for podcasters who want full control over their content. It provides a comprehensive solution for creating, managing, and distributing podcasts with features like built-in analytics, automatic RSS feed generation, and support for the ActivityPub protocol for social interactions. Castopod helps podcasters save time with automatic episode publishing to podcast platforms and social media. The platform includes powerful tools for audience engagement, SEO optimization, and monetization options. With its modern, intuitive interface, Castopod makes podcast hosting accessible while giving creators complete ownership of their content and audience data.",
+    "tags": [
+      "Podcast",
+      "Audio",
+      "Content Management",
+      "ActivityPub",
+      "Social",
+      "Podcast Hosting",
+      "Podcast Management",
+      "Podcast Player",
+      "Podcast Analytics",
+      "Podcast Social Media"
+    ]
+  },
+  {
     "slug": "changedetection",
     "logo": "logo.png",
     "name": "Change Detection",
@@ -664,6 +693,19 @@
     ]
   },
   {
+    "slug": "crawel4ai",
+    "logo": null,
+    "name": "Crawl4AI",
+    "description": "Crawl4AI is an advanced AI-powered web crawling and data extraction tool designed to streamline the process of collecting, processing, and structuring web data for AI applications. It allows you to efficiently crawl websites, extract relevant information, and store it in structured formats such as JSON, CSV, or vector databases. With Crawl4AI, you can integrate real-time web data into your AI models, enhancing their knowledge base and enabling dynamic responses. It supports both cloud-based and on-premise deployments, making it flexible for different use cases. Crawl4AI comes with powerful features such as intelligent content filtering, automated rate-limiting handling, JavaScript rendering for dynamic pages, built-in APIs for seamless integration, and robust authentication support. The latest version, Crawl4AI 2.1, introduces enhanced AI-based content classification, improved speed optimizations, support for multi-agent crawling, and various bug fixes.",
+    "tags": [
+      "Web Crawling",
+      "AI Data Extraction",
+      "Machine Learning",
+      "Vector Database",
+      "AI-Powered Search"
+    ]
+  },
+  {
     "slug": "cronicle",
     "logo": "logo.png",
     "name": "Cronicle",
@@ -771,6 +813,19 @@
     ]
   },
   {
+    "slug": "dataline",
+    "logo": "logo.png",
+    "name": "Dataline",
+    "description": "Dataline is a powerful data management and visualization tool that helps users organize, analyze, and visualize their data in an intuitive way. It provides a user-friendly interface for data manipulation, chart creation, and data sharing capabilities. With its modern design and robust features, Dataline makes it easy to work with various data formats and create meaningful visualizations.",
+    "tags": [
+      "Data",
+      "Visualization",
+      "Analytics",
+      "Management",
+      "Charts"
+    ]
+  },
+  {
     "slug": "deluge",
     "logo": "logo.png",
     "name": "Deluge",
@@ -854,6 +909,17 @@
     "tags": [
       "Document Management",
       "Collaboration",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "docspell",
+    "logo": "logo.png",
+    "name": "Docspell",
+    "description": "Docspell is a personal document management system designed to archive and organize your digital documents. It helps you scan, organize, search, and retrieve your documents with ease. Docspell automatically processes documents, extracts text via OCR, and makes your documents searchable through full-text search powered by Solr. The system consists of multiple components a REST server for the web interface, a job executor (joex) for background processing, a directory consumer for automatic document ingestion, and Solr for powerful search capabilities. Docspell helps you categorize documents, add metadata, and efficiently manage your paperwork in a secure, self-hosted environment.",
+    "tags": [
+      "Document Management",
+      "OCR",
       "Self-Hosted"
     ]
   },
@@ -1213,6 +1279,19 @@
     "description": "FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client. It is designed with a lot of useful features and an intuitive graphical user interface. The app is capable of delivering a true lossless image at a high framerate to your web browser. It supports multiple architectures and can be accessed via HTTP or HTTPS. The app also allows you to specify the user PUID and group PGID to avoid permission issues between the host OS and the container. It also provides the ability to override the default umask settings for services started within the containers.",
     "tags": [
       "File Management"
+    ]
+  },
+  {
+    "slug": "firebird",
+    "logo": "logo.png",
+    "name": "Firebird",
+    "description": "Firebird is a powerful, open-source relational database management system (RDBMS) that offers high performance, scalability, and SQL compliance. It is designed for both small and large-scale applications, providing robust multi-user support, stored procedures, triggers, and full ACID compliance. Firebird is lightweight, requiring minimal configuration while delivering strong reliability and security. It supports multiple authentication methods and integrates seamlessly with various programming languages and frameworks. With its containerized deployment, Firebird ensures easy scalability and simplified management.",
+    "tags": [
+      "Database",
+      "SQL",
+      "Relational Database",
+      "Open Source",
+      "FirebirdDB"
     ]
   },
   {
@@ -1823,6 +1902,17 @@
     ]
   },
   {
+    "slug": "illa",
+    "logo": "logo.png",
+    "name": "Illa",
+    "description": "Illa Cloud is a revolutionary browser-based code editor designed to streamline and modernize the process of website development. It allows you to code directly within your web browser, either online or offline, eliminating the need for multiple programs. With Illa Cloud, you can test your sites on actual web servers and maintain them with ease after development, making for a fast and intelligent development process. It's not just limited to online use - you can also use it as a desktop code editor, provided you have PHP 7.0+. It comes packed with a multitude of features and plugins to enhance your coding experience, including multiple cursors, 80+ highlighting themes, a find & replace builder, login security, coding assistance, visual code difference display, and database management with the Adminer plugin. The latest version, Illa Cloud 8.1, introduces regex search on find and replace, double click tab to collapse file manager, active line number highlighting, and many more improvements and bug fixes.",
+    "tags": [
+      "Cloud IDE",
+      "Developer Tools",
+      "Web Development"
+    ]
+  },
+  {
     "slug": "imgproxy",
     "logo": "logo.svg",
     "name": "imgproxy",
@@ -2210,6 +2300,18 @@
     ]
   },
   {
+    "slug": "kroki",
+    "logo": "logo.png",
+    "name": "Kroki",
+    "description": "Kroki is a self-hosted diagramming and visualization service that allows users to generate diagrams from textual descriptions. It supports multiple diagramming formats, including Mermaid, BPMN, Excalidraw, PlantUML, Graphviz, and more. With Kroki, users can convert structured text into graphical representations quickly and efficiently. The application provides a simple API, making it easy to integrate with other tools. It is lightweight, supports multiple diagram rendering engines, and ensures full control over your data with a self-hosted deployment.",
+    "tags": [
+      "Diagramming",
+      "Visualization",
+      "Self-Hosted",
+      "API-Based"
+    ]
+  },
+  {
     "slug": "kutt",
     "logo": "logo.png",
     "name": "Kutt",
@@ -2447,6 +2549,18 @@
       "No-Code",
       "Database",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "lldap",
+    "logo": "logo.png",
+    "name": "LLDAP",
+    "description": "LLDAP (Lightweight LDAP) is a simple, lightweight, high-performance LDAP server designed for authentication in small to medium-sized deployments. It provides an intuitive web UI for user management and a complete implementation of LDAP search and bind operations. LLDAP is perfect for self-hosted applications that require LDAP authentication without the complexity of full-featured LDAP servers like OpenLDAP. It stores user data in an embedded SQLite database by default but also supports PostgreSQL, making it easy to set up and maintain. With features like password hashing, account creation/deletion, group management, and MFA support, LLDAP offers a modern solution for identity management in your self-hosted infrastructure.",
+    "tags": [
+      "LDAP",
+      "Authentication",
+      "Identity Management",
+      "User Management"
     ]
   },
   {
@@ -2726,6 +2840,18 @@
     "tags": [
       "Developer Tools",
       "Search Engine"
+    ]
+  },
+  {
+    "slug": "memcached",
+    "logo": "logo.png",
+    "name": "Memcached",
+    "description": "Memcached is a high-performance, distributed memory object caching system designed for speeding up dynamic web applications by alleviating database load. It works by storing data and objects in RAM to reduce the number of times an external data source must be read. Memcached is simple yet powerful, featuring a straightforward design that enables rapid deployment, ease of development, and solves many problems facing large data caches. It's particularly useful for database call, API call, or page rendering result caching.",
+    "tags": [
+      "Cache",
+      "In-Memory",
+      "Performance",
+      "Database"
     ]
   },
   {
@@ -3458,6 +3584,18 @@
     ]
   },
   {
+    "slug": "phpbb",
+    "logo": "logo.png",
+    "name": "phpBB",
+    "description": "phpBB is a free and open-source bulletin board software that enables you to create online communities and discussion forums. It offers a highly customizable platform with a user-friendly interface that supports multiple languages and includes features like custom BBCode, private messaging, search functionality, and user groups. The Bitnami phpBB container provides a ready-to-use instance of phpBB with all its dependencies, configured for security and performance. This deployment includes both the phpBB application and a MariaDB database for storing your forum data.",
+    "tags": [
+      "Forum",
+      "Community",
+      "Discussion Board",
+      "Bulletin Board"
+    ]
+  },
+  {
     "slug": "phpmyadmin",
     "logo": "logo.png",
     "name": "phpMyAdmin",
@@ -3485,6 +3623,18 @@
     "description": "Pidgin is a versatile chat application that allows you to log into multiple chat networks simultaneously. This means you can chat with friends on XMPP while also participating in an IRC channel. The application supports a wide range of chat networks, including but not limited to Bonjour, Discord, Facebook, Google Talk, Hangouts, ICQ, Instagram, IRC, Skype, Slack, Telegram, and XMPP. This Pidgin installation comes with default chat plugins and a series of third-party ones. The application also includes Firefox to help you fill out captchas or pre-auth before loading your credentials into the program. Pidgin can be accessed at http://yourhost:3000/ or https://yourhost:3001/. The app is designed to provide a seamless and integrated chat experience across multiple platforms.",
     "tags": [
       "Chat"
+    ]
+  },
+  {
+    "slug": "piwigo",
+    "logo": "logo.png",
+    "name": "piwigo",
+    "description": "Piwigo is a powerful, self-hosted photo gallery solution designed for managing and organizing your image collections efficiently. It provides a user-friendly web interface, supports a vast array of plugins for extended functionality, and offers advanced photo organization features such as albums, tags, and batch processing. With Piwigo, you can maintain full control over your photo storage and sharing.",
+    "tags": [
+      "Photo Gallery",
+      "Self-Hosted",
+      "Image Management",
+      "Open Source"
     ]
   },
   {
@@ -4466,6 +4616,17 @@
     ]
   },
   {
+    "slug": "traduora",
+    "logo": "logo.png",
+    "name": "Traduora",
+    "description": "Traduora is a modern, self-hosted translation management platform designed for teams and developers. It provides a clean and intuitive interface for managing translation projects across multiple languages. With Traduora, you can easily import and export translations in various formats, collaborate with translators, and integrate translations into your applications via API. The platform supports real-time updates, version control of translations, and role-based access control to manage translator permissions. Traduora helps streamline the localization workflow by providing a centralized place to manage all your translation needs while maintaining full control over your translation data and processes.",
+    "tags": [
+      "Translation Management",
+      "Self-Hosted",
+      "Localization"
+    ]
+  },
+  {
     "slug": "traggo",
     "logo": "logo.png",
     "name": "Traggo",
@@ -4507,6 +4668,18 @@
     "description": "Trilium is a hierarchical note-taking application designed for creating and managing large personal knowledge bases. With Trilium, you can arrange your notes into an arbitrarily deep tree structure, with the ability to place a single note in multiple locations. The app offers rich WYSIWYG note editing, including tables, images, and math, with markdown autoformat. It also supports editing notes with source code, complete with syntax highlighting. Trilium provides seamless note versioning and attributes for note organization, querying, and advanced scripting. The app also includes a synchronization feature with a self-hosted sync server. For enhanced security, Trilium offers strong note encryption with per-note granularity. Other features include sketching diagrams with built-in Excalidraw, visualizing notes and their relations with relation maps and link maps, and a REST API for automation. Trilium is optimized for both usability and performance, capable of handling upwards of 100,000 notes.",
     "tags": [
       "Notes"
+    ]
+  },
+  {
+    "slug": "trudesk",
+    "logo": "logo.png",
+    "name": "Trudesk",
+    "description": "Trudesk is a self-hosted, open-source help desk and ticketing system designed for businesses and teams to efficiently manage customer support inquiries. It provides a modern and user-friendly web interface for tracking, organizing, and resolving support tickets. Trudesk includes role-based user management, real-time notifications, reporting tools, and an API for integration with other services. It supports multiple authentication methods, including OAuth and LDAP, making it suitable for enterprise environments. Additionally, Trudesk offers email integration, enabling automatic ticket creation from emails. With its containerized deployment, it ensures scalability and ease of management.",
+    "tags": [
+      "Help Desk",
+      "Customer Support",
+      "Ticketing System",
+      "Self-Hosted"
     ]
   },
   {
@@ -4619,6 +4792,18 @@
     ]
   },
   {
+    "slug": "usertour",
+    "logo": "logo.png",
+    "name": "Usertour",
+    "description": "Usertour.io is an open-source user onboarding platform that helps developers create interactive product tours, feature introductions, and user guides without writing a single line of code. It allows you to design and deploy interactive walkthroughs, checklists, and tooltips to improve user activation and adoption. The platform provides a visual editor for creating tours, targeting specific user segments, and collecting analytics on user engagement. Usertour.io integrates seamlessly with your application, offering customization options to match your branding and design. With its developer-friendly approach, it enables teams to create, test, and deploy product tours quickly while maintaining a native look and feel.",
+    "tags": [
+      "User Onboarding",
+      "Product Tours",
+      "User Experience",
+      "Developer Tools"
+    ]
+  },
+  {
     "slug": "vaultwarden",
     "logo": "logo.png",
     "name": "Vaultwarden",
@@ -4680,6 +4865,17 @@
       "Productivity",
       "Reading",
       "Bookmarking"
+    ]
+  },
+  {
+    "slug": "wastebin",
+    "logo": null,
+    "name": "Wastebin",
+    "description": "Wastebin is a self-hosted, minimal pastebin designed for quick and simple text sharing. With a clean and intuitive interface inspired by bin, it allows users to create and share text snippets easily. Wastebin supports private pastes, syntax highlighting, and expiration settings for better control over shared content. It is lightweight, fast, and easy to deploy with minimal system requirements.",
+    "tags": [
+      "Pastebin",
+      "Productivity",
+      "Self-Hosted"
     ]
   },
   {
