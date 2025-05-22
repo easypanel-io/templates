@@ -1,0 +1,80 @@
+name: ArchiveBox
+description:
+  ArchiveBox is a self-hosted open-source internet archiving solution that
+  allows you to save and browse webpages offline. It enables users to store full
+  snapshots of web pages, including HTML, media, PDFs, and more, preserving them
+  for future reference. ArchiveBox supports various input formats such as
+  bookmarks, RSS feeds, and browser history, making it easy to automate and
+  manage archiving tasks. The web interface provides a structured way to browse
+  archived content, perform full-text searches, and organize saved snapshots
+  efficiently. Additionally, it offers integrations with other tools, supports
+  multiple storage backends, and provides API access for advanced automation.
+instructions:
+  To create superuser, take the console, and do "su archivebox && archivebox
+  manage createsuperuser"
+changeLog:
+  - date: 2025-03-18
+    description: First Release
+links:
+  - label: Documentation
+    url: https://github.com/ArchiveBox/ArchiveBox/wiki
+  - label: Github
+    url: https://github.com/ArchiveBox/ArchiveBox
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: archivebox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: archivebox/archivebox:0.7
+benefits:
+  - title: Webpage Archiving
+    description:
+      ArchiveBox allows you to save full snapshots of web pages, including text,
+      media, and interactive elements. This ensures long-term access to content
+      even if the original webpage is deleted or altered.
+  - title: Multiple Input Sources
+    description:
+      Users can archive content from various sources, such as bookmarks, browser
+      history, RSS feeds, and direct URLs. This flexibility makes it ideal for
+      researchers, journalists, and data preservationists.
+  - title: Full-Text Search & Browsing
+    description:
+      ArchiveBox provides a powerful full-text search engine and an intuitive
+      web interface to browse, tag, and organize archived content efficiently.
+features:
+  - title: Multi-Format Archiving
+    description:
+      ArchiveBox saves pages in multiple formats, including HTML, screenshots,
+      PDFs, and WARC files, ensuring robust long-term preservation.
+  - title: Automation & API Access
+    description:
+      ArchiveBox provides an API for programmatic archiving, allowing seamless
+      integration with other tools and automated workflows.
+  - title: Private & Public Archives
+    description:
+      Users can control access by setting public or private modes, ensuring that
+      sensitive data remains secure while allowing sharing of curated content.
+  - title: Full-Text Search
+    description:
+      The system enables fast and efficient search across archived content,
+      making it easy to retrieve specific information.
+  - title: Self-Hosted & Open Source
+    description:
+      ArchiveBox is self-hosted and fully open-source, giving users complete
+      control over their data without relying on third-party services.
+tags:
+  - Archiving
+  - Web Scraping
+  - Productivity
+  - Research

@@ -1,0 +1,82 @@
+name: Usertour
+description:
+  Usertour.io is an open-source user onboarding platform that helps developers
+  create interactive product tours, feature introductions, and user guides
+  without writing a single line of code. It allows you to design and deploy
+  interactive walkthroughs, checklists, and tooltips to improve user activation
+  and adoption. The platform provides a visual editor for creating tours,
+  targeting specific user segments, and collecting analytics on user engagement.
+  Usertour.io integrates seamlessly with your application, offering
+  customization options to match your branding and design. With its
+  developer-friendly approach, it enables teams to create, test, and deploy
+  product tours quickly while maintaining a native look and feel.
+
+instructions: Login using the email; lisa@simpson.com, password; secret42
+
+changeLog:
+  - date: 2025-03-21
+    description: Initial template release (1.0)
+
+links:
+  - label: Website
+    url: https://www.usertour.io/
+  - label: Documentation
+    url: https://docs.usertour.io/
+  - label: Github
+    url: https://github.com/usertour/usertour
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: usertour
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: usertour/usertour:0.1.6
+benefits:
+  - title: Code-Free Product Tours
+    description:
+      Build interactive product tours and onboarding experiences without writing
+      code, saving development time and resources.
+  - title: Improved User Adoption
+    description:
+      Guide users through your application's features, increasing feature
+      discovery and improving overall user activation.
+  - title: Customizable Experience
+    description:
+      Tailor the appearance and behavior of your tours to match your brand and
+      application's look and feel.
+
+features:
+  - title: Visual Tour Builder
+    description:
+      Design interactive product tours with an intuitive drag-and-drop interface
+      that requires no coding experience.
+  - title: User Segmentation
+    description:
+      Target specific user groups with tailored onboarding experiences based on
+      user roles, behavior, or other criteria.
+  - title: Multi-Format Guidance
+    description:
+      Create various types of user guidance including step-by-step tours,
+      feature spotlights, tooltips, and checklists.
+  - title: Analytics Dashboard
+    description:
+      Track user engagement with your tours and measure completion rates to
+      optimize the onboarding experience.
+
+tags:
+  - User Onboarding
+  - Product Tours
+  - User Experience
+  - Developer Tools

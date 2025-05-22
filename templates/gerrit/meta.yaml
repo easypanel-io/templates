@@ -1,0 +1,59 @@
+name: Gerrit
+description:
+  Gerrit is a web-based code review tool that integrates with Git. It provides
+  a framework for reviewing code changes before they are merged into the codebase,
+  making it an essential tool for collaborative software development.
+
+instructions: null
+
+changeLog:
+  - date: 2025-04-03
+    description: Initial template release
+links:
+  - label: Website
+    url: https://www.gerritcodereview.com/
+  - label: Documentation
+    url: https://gerrit-documentation.storage.googleapis.com/Documentation/3.7.1/index.html
+  - label: GitHub
+    url: https://github.com/GerritCodeReview/gerrit
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gerrit
+    appServiceImage:
+      type: string
+      title: Gerrit Image
+      default: gerritcodereview/gerrit:3.11.2
+benefits:
+  - title: Code Review
+    description: Streamlined code review process with inline comments.
+  - title: Git Integration
+    description: Seamless integration with Git repositories.
+  - title: Access Control
+    description: Fine-grained access control for projects and branches.
+  - title: Collaboration
+    description: Enhanced team collaboration through code review.
+features:
+  - title: Web Interface
+    description: User-friendly web interface for code review.
+  - title: SSH Access
+    description: Secure SSH access for Git operations.
+  - title: Project Management
+    description: Built-in project and repository management.
+  - title: Plugin System
+    description: Extensible through a rich plugin ecosystem.
+tags:
+  - Git
+  - Code Review
+  - Version Control
+  - Collaboration
+  - Development 

@@ -18,6 +18,10 @@ changeLog:
     description: first release
   - date: 2025-01-09
     description: Version bumped to v3.16.0
+  - date: 2025-02-21
+    description:
+      PgVector Extention enabled PG17 has been added and version bumped to
+      v4.0.1
 links:
   - label: Documentation
     url: https://www.chatwoot.com/help-center
@@ -49,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chatwoot/chatwoot:v3.16.0
+      default: chatwoot/chatwoot:v4.0.1
     sidekiqServiceName:
       type: string
       title: Sidekiq Service Name

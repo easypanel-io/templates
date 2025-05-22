@@ -10,6 +10,8 @@ changeLog:
     description: Template added
   - date: 2024-10-11
     description: Version Changed to 2.0.0
+  - date: 2025-02-25
+    description: Version bumped to 2.1.1
 links:
   - label: Website
     url: https://invoiceshelf.com/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceshelf/invoiceshelf:2.0.0
+      default: invoiceshelf/invoiceshelf:2.1.1
     dbServiceName:
       type: string
       title: Database Service Name

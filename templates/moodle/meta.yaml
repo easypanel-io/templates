@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2025-01-13
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 4.5.2
 links:
   - label: Website
     url: https://moodle.org/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.io/bitnami/moodle:4.5
+      default: docker.io/bitnami/moodle:4.5.2
 benefits:
   - title: Personalized Learning Experience
     description:

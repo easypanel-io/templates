@@ -21,6 +21,8 @@ changeLog:
     description: Version changed to 0.46.04
   - date: 2025-01-09
     description: Version bumped to 0.48.05
+  - date: 2025-02-21
+    description: Version bumped to 0.49
 links:
   - label: Website
     url: https://changedetection.io
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/dgtlmoon/changedetection.io:0.48.05
+      default: ghcr.io/dgtlmoon/changedetection.io:0.49
 benefits:
   - title: Real-Time Website Change Detection
     description:

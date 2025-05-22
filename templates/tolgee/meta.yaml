@@ -20,6 +20,8 @@ instructions: null
 changeLog:
   - date: 2023-3-28
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to v3.107.0
 links:
   - label: Website
     url: https://tolgee.io
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tolgee/tolgee:v3.9.0
+      default: tolgee/tolgee:v3.107.0
     databaseServiceName:
       type: string
       title: Database Service Name
