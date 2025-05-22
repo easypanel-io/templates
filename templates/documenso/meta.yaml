@@ -1,0 +1,109 @@
+name: Documenso
+description:
+  The open source DocuSign alternative. Securely sign documents without giving
+  up your privacy or freedom.
+instructions:
+  Please follow the below given stackoverflow instructions to create the .p12
+  file and provide the path of that file to the required field.
+changeLog:
+  - date: 2025-05-21
+    description: First release
+links:
+  - label: Website
+    url: https://documenso.com/
+  - label: Documentation
+    url: https://docs.documenso.com/
+  - label: Github
+    url: https://github.com/documenso/documenso
+  - label: Stackoverflow
+    url: https://stackoverflow.com/questions/21141215/creating-a-p12-file
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpHost
+    - smtpPort
+    - smtpUsername
+    - smtpPassword
+    - smtpFromName
+    - smtpFromAddress
+    - p12Path
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: documenso
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: documenso/documenso:v1.11.0
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.example.com
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: user@example.com
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: password123
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: Documenso
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      default: documents@example.com
+    p12Path:
+      type: string
+      title: P12 Path
+      description:
+        The path to the .p12 file that contains the certificate and private key
+        for the Documenso service.
+benefits:
+  - title: Open Source Document Signing
+    description:
+      Documenso is an open-source alternative to DocuSign, enabling secure
+      document signing without vendor lock-in.
+  - title: Self-Hosted and Privacy-Focused
+    description:
+      Host your own document signing solution with full control over your data
+      and privacy.
+  - title: Modern Digital Signatures
+    description:
+      Supports modern digital signature standards for legally binding document
+      signing.
+features:
+  - title: Document Management
+    description:
+      Upload, organize, and manage documents for signing in a secure
+      environment.
+  - title: E-Signatures
+    description:
+      Collect legally binding electronic signatures from multiple parties.
+  - title: Signature Tracking
+    description: Track the status of document signatures in real-time.
+  - title: Email Notifications
+    description:
+      Automatic email notifications for signature requests and completions.
+  - title: PDF Handling
+    description: Advanced PDF document viewing and manipulation capabilities.
+tags:
+  - Document Management
+  - E-Signatures
+  - Business Tools
+  - Legal
+logo: logo.png
+screenshots:
+  - screenshot.png
