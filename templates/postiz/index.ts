@@ -27,6 +27,7 @@ export function generate(input: Input): Output {
         `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
         `NEXT_PUBLIC_BACKEND_URL=https://$(PRIMARY_DOMAIN)/api`,
         `JWT_SECRET=${jwtSecret}`,
+        `NOT_SECURED=true`,
         `TZ=UTC`,
         `PORT=3000`,
       ].join("\n"),
