@@ -1,0 +1,65 @@
+name: TeamCity
+description: TeamCity is a build management and continuous integration server from JetBrains.
+instructions: null
+changeLog:
+  - date: 2025-04-29
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/JetBrains/teamcity-docker-images
+  - label: Documentation
+    url: https://www.jetbrains.com/help/teamcity/teamcity-docker.html
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - agentServiceImage
+    - enableAgent
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: teamcity
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jetbrains/teamcity-server:2023.11.3
+    agentServiceImage:
+      type: string
+      title: Agent Service Image
+      default: jetbrains/teamcity-agent:2023.11.3
+    enableAgent:
+      type: boolean
+      title: Enable TeamCity Agent
+      default: false
+      description: Set to true to deploy a TeamCity agent alongside the server
+benefits:
+  - title: Powerful CI/CD
+    description: TeamCity provides a robust platform for continuous integration and deployment with support for various build tools and version control systems.
+  - title: User-Friendly Interface
+    description: Intuitive web interface makes it easy to configure and monitor your builds and deployments.
+  - title: Scalable Architecture
+    description: Built to scale with support for multiple build agents and distributed builds.
+features:
+  - title: Build Management
+    description: Comprehensive build management with support for various build tools and frameworks.
+  - title: Version Control Integration
+    description: Seamless integration with popular version control systems like Git, SVN, and Mercurial.
+  - title: Build Agents
+    description: Support for multiple build agents to distribute and parallelize builds.
+  - title: Build History
+    description: Detailed build history and statistics for better project insights.
+  - title: Customizable Workflows
+    description: Flexible build configurations and customizable build workflows.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - CI/CD
+  - Build Server
+  - Continuous Integration
+  - Deployment
+  - Automation 
