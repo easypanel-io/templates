@@ -36,11 +36,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jhumanj/opnform-client:1.7.0
+      default: jhumanj/opnform-client:1.7.2
     apiServiceImage:
       type: string
       title: API Service Image
-      default: jhumanj/opnform-api:1.7.0
+      default: jhumanj/opnform-api:1.7.2
 benefits:
   - title: Easy Form Creation
     description:
