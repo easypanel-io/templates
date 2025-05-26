@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-01-03
     description: Template Release
+  - date: 2025-05-26
+    description: Version bumped to v0.22.0
 links:
   - label: Documentation
     url: https://docs.dittofeed.com/introduction
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dittofeed/dittofeed-lite:v0.19.0
+      default: dittofeed/dittofeed-lite:v0.22.0
     clickHouseImage:
       type: string
       title: Clickhouse Service Image

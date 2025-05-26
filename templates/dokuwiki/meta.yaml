@@ -21,6 +21,8 @@ changeLog:
     description: first release
   - date: 2025-01-09
     description: Version bumped to version-2024-02-06b
+  - date: 2025-05-26
+    description: Version bumped to 2025-05-14
 links:
   - label: Website
     url: https://dokuwiki.org
@@ -31,6 +33,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -44,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/dokuwiki:2024-02-06b-ls258
+      default: lscr.io/linuxserver/dokuwiki:2025-05-14
 benefits:
   - title: Easy to Use
     description:
