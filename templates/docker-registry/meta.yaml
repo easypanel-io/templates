@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2022-08-09
     description: first release
+  - date: 2025-05-26
+    description: Version bumped to 3.0.0
 links:
   - label: Website
     url: https://hub.docker.com/_/registry
@@ -26,6 +28,8 @@ contributors:
     url: https://github.com/bedeoan
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: registry:2.8.3
+      default: registry:3.0.0
     user:
       type: string
       title: User
