@@ -26,6 +26,8 @@ schema:
   type: object
   required:
     - serviceName
+    - appServiceImage
+    - apiServiceImage
   properties:
     serviceName:
       type: string
