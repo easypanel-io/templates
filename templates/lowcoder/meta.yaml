@@ -1,0 +1,97 @@
+name: Lowcoder
+description:
+  Open-source low-code platform to build internal tools with minimal effort.
+instructions: null
+changeLog:
+  - date: 2025-05-26
+    description: First release
+links:
+  - label: Website
+    url: https://lowcoder.org/
+  - label: Documentation
+    url: https://docs.lowcoder.org/
+  - label: Github
+    url: https://github.com/lowcoder-org/lowcoder
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - apiServiceImage
+    - nodeServiceImage
+    - frontendImage
+    - superuserUsername
+    - superuserPassword
+    - smtpHost
+    - smtpPort
+    - smtpUsername
+    - smtpPassword
+    - notificationSender
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: lowcoder
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: lowcoderorg/lowcoder-ce-api-service:2.6.5
+    nodeServiceImage:
+      type: string
+      title: Node Service Image
+      default: lowcoderorg/lowcoder-ce-node-service:2.6.5
+    frontendImage:
+      type: string
+      title: Frontend Image
+      default: lowcoderorg/lowcoder-ce-frontend:2.6.5
+    superuserUsername:
+      type: string
+      title: Superuser Username
+      default: admin@localhost
+    superuserPassword:
+      type: string
+      title: Superuser Password
+      default: password
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.gmail.com
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: your-email@gmail.com
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: your-password
+    notificationSender:
+      type: string
+      title: Notification Email Sender
+      default: info@localhost
+benefits:
+  - title: Build Internal Tools Fast
+    description: Create applications without extensive coding knowledge.
+  - title: Connect to Multiple Data Sources
+    description: Integrate with databases, APIs, and other services.
+  - title: Self-Hosted Solution
+    description: Complete control over your data and infrastructure.
+features:
+  - title: Visual Development
+    description: Drag-and-drop interface for building applications.
+  - title: Data Integration
+    description: Connect to various data sources with minimal configuration.
+  - title: User Management
+    description: Built-in authentication and user permission controls.
+  - title: Customizable Components
+    description: Extensive library of UI components and templates.
+tags:
+  - Low-Code
+  - Internal Tools
+  - Application Builder
+  - Automation
