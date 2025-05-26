@@ -1,0 +1,65 @@
+name: Blinko
+description:
+  Blinko (space) is an open-source, self-hosted “idea hub” that rolls notes,
+  micro-blog posts, paste-bins and lightweight tasks into one minimalist,
+  card-style interface. You jot down thoughts in plain text or Markdown; behind
+  the scenes Blinko indexes every word with an AI-powered RAG engine (works with
+  OpenAI or a local Ollama model), so you can later retrieve anything with
+  natural-language search instead of keywords
+instructions: null
+changeLog:
+  - date: 2025-05-26
+    description: First release
+links:
+  - label: Website
+    url: https://blinko.space/
+  - label: Documentation
+    url: https://docs.blinko.space/
+  - label: Github
+    url: https://github.com/blinkospace/blinko
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: blinko
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: blinkospace/blinko:1.0.0-rc.1
+benefits:
+  - title: Collaborative Space
+    description: Create and manage shared workspaces for team collaboration.
+  - title: Real-time Updates
+    description: See changes and updates from team members instantly.
+  - title: Secure Environment
+    description: Enterprise-grade security for your team's sensitive data.
+  - title: Customizable Workflows
+    description: Adapt the workspace to match your team's unique processes.
+features:
+  - title: Shared Workspaces
+    description: Create multiple workspaces for different teams and projects.
+  - title: Document Management
+    description: Store, organize and version control all your team documents.
+  - title: Team Chat & Messaging
+    description: Built-in communication tools for seamless team coordination.
+  - title: Task Management
+    description: Track and manage team tasks and project progress.
+  - title: Access Controls
+    description: Granular permissions to control who can access what.
+  - title: Activity Tracking
+    description: Monitor workspace activity and team member contributions.
+tags:
+  - Collaboration
+  - Team Management
+  - Document Sharing
+  - Project Management
+  - Real-time
+  - Workspace
