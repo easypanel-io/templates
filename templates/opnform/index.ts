@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
     `APP_ENV=production`,
     `APP_KEY=base64:${appKey}`,
     `APP_DEBUG=true`,
-    `APP_URL=https://$(PRIMARY_DOMAIN)`,
+    `APP_URL=https://$(PROJECT_NAME)-${input.serviceName}-nginx.$(EASYPANEL_HOST)`,
     `SELF_HOSTED=true`,
     `LOG_CHANNEL=errorlog`,
     `LOG_LEVEL=debug`,
