@@ -1,0 +1,89 @@
+name: OpenPanel
+description: Open-source product analytics platform
+instructions:
+  You have to provide the domain name in order to access the OpenPanel dashboard
+  successfully and use the Caddy service to access the OpenPanel.
+changeLog:
+  - date: 2025-05-30
+    description: First release
+links:
+  - label: Website
+    url: https://openpanel.dev/
+
+  - label: GitHub
+    url: https://github.com/Openpanel-dev/openpanel
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appDomain
+    - apiServiceImage
+    - dashboardServiceImage
+    - workerServiceImage
+    - clickhouseServiceImage
+    - geoipServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: openpanel
+    appDomain:
+      type: string
+      title: Application Domain
+      description:
+        "This is essential for the OpenPanel dashboard to work. e.g:
+        example.com, without https:// or http://"
+    apiServiceImage:
+      type: string
+      title: API Image
+      default: lindesvard/openpanel-api:1.0.0
+    dashboardServiceImage:
+      type: string
+      title: Dashboard Image
+      default: lindesvard/openpanel-dashboard:1.0.0
+    workerServiceImage:
+      type: string
+      title: Worker Image
+      default: lindesvard/openpanel-worker:1.0.0
+    clickhouseServiceImage:
+      type: string
+      title: ClickHouse Image
+      default: clickhouse/clickhouse-server:24.3.2-alpine
+    geoipServiceImage:
+      type: string
+      title: GeoIP API Image
+      default: observabilitystack/geoip-api:2025-22
+    emailSender:
+      type: string
+      title: Email Sender Address
+      default: noreply@example.com
+    resendApiKey:
+      type: string
+      title: Resend API Key (for email delivery)
+      default: ""
+benefits:
+  - title: Self-Hosted Analytics
+    description: Full control over your analytics data with self-hosting.
+  - title: Comprehensive Tracking
+    description: Track user behavior and product usage in detail.
+  - title: Privacy-Focused
+    description: Ensure user privacy with your own analytics infrastructure.
+features:
+  - title: User Analytics
+    description: Track and analyze user behavior across your applications.
+  - title: Event Tracking
+    description: Log and process custom events from your products.
+  - title: Interactive Dashboard
+    description: Visualize data with customizable dashboards and reports.
+  - title: Geo-Location Analytics
+    description: Track user activity by geographic location.
+  - title: Real-time Processing
+    description: Process analytics data in real-time with distributed workers.
+tags:
+  - Analytics
+  - Self-Hosted
+  - Product Analytics
+  - User Tracking
