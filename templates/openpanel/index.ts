@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
   const postgresPassword = randomPassword();
   const cookieSecret = randomString(32);
   const redisPassword = randomPassword();
-  const basicAuthHash = randomString(32);
+  const basicAuthHash = randomString(8);
 
   const commonEnvVars = [
     `NODE_ENV=production`,
@@ -47,7 +47,7 @@ http://{$PRIMARY_DOMAIN} {
 http://worker.{$PRIMARY_DOMAIN} {
 
     basic_auth {
-        admin $2b$10$wZt0R0wkz0QaKe0HdLd2mO8gnqyz8QEt9bSzc7apFrfWHdWI.I0ZG
+        admin ${basicAuthHash}
     }
 
     reverse_proxy {$WORKER_URL}:3000
