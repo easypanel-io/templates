@@ -21,6 +21,8 @@ changeLog:
     description: first release
   - date: 2025-01-09
     description: Version bumped to 2.25.0
+  - date: 2025-05-26
+    description: Version bumped to 2.26.0
 links:
   - label: Website
     url: https://drone.io/
@@ -31,6 +33,8 @@ links:
 contributors:
   - name: Ivan Ryan
     url: https://github.com/ivanonpc-22
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -50,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: drone/drone:2.25.0
+      default: drone/drone:2.26.0
     runnerServiceName:
       type: string
       title: Runner Service Name
@@ -58,7 +62,7 @@ schema:
     runnerServiceImage:
       type: string
       title: Runner Service Image
-      default: drone/drone-runner-docker:1.8.3
+      default: drone/drone-runner-docker:1.8.4
     clientID:
       type: string
       title: GitHub OAuth Client ID

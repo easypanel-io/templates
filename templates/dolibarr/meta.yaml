@@ -10,6 +10,8 @@ instructions: Default Credentials; username; admin, password; admin
 changeLog:
   - date: 2024-12-17
     description: First release
+  - date: 2025-05-26
+    description: Version bumped to 21
 links:
   - label: Website
     url: https://www.dolibarr.org/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dolibarr/dolibarr:20
+      default: dolibarr/dolibarr:21
 benefits:
   - title: All-in-One ERP and CRM Solution
     description:
