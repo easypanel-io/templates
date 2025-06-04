@@ -1,0 +1,92 @@
+name: Firecrawl
+description:
+  Firecrawl is an API service that takes a URL, crawls it, and converts it into
+  clean markdown or structured data. It crawls all accessible subpages and gives
+  you clean data for each. No sitemap required. Featuring advanced scraping,
+  crawling, and data extraction capabilities with LLM-ready formats, anti-bot
+  mechanisms, dynamic content handling, and powerful customization options.
+  Perfect for AI applications, data extraction, and web automation.
+instructions: null
+changeLog:
+  - date: 2025-06-04
+    description: First Release
+links:
+  - label: Website
+    url: https://firecrawl.dev/
+  - label: Github
+    url: https://github.com/mendableai/firecrawl
+  - label: Documentation
+    url: https://docs.firecrawl.dev/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - playwrightServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: firecrawl
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/mendableai/firecrawl:latest
+    playwrightServiceImage:
+      type: string
+      title: Playwright Service Image
+      default: ghcr.io/mendableai/playwright-service:latest
+benefits:
+  - title: LLM-Ready Data Extraction
+    description:
+      Converts any website into clean markdown or structured data optimized for
+      use with language models and AI applications.
+  - title: Advanced Web Scraping
+    description:
+      Handles the hard stuff - proxies, anti-bot mechanisms, dynamic content
+      (JS-rendered), output parsing, and orchestration automatically.
+  - title: Multiple Extraction Modes
+    description:
+      Supports scraping single pages, crawling entire websites, mapping site
+      structures, web search, and AI-powered data extraction.
+  - title: Self-Hosted & Scalable
+    description:
+      Deploy on your own infrastructure with full control over your data.
+      Horizontally scalable architecture with separate API, worker, and
+      rendering services.
+features:
+  - title: Multiple Content Formats
+    description:
+      Extract content in markdown, HTML, structured JSON, screenshots, and more.
+      Perfect for different use cases and AI model requirements.
+  - title: Intelligent Crawling
+    description:
+      Smart crawling with depth control, URL filtering, deduplication, and
+      respect for robots.txt. Efficiently discover and extract content from
+      entire websites.
+  - title: AI-Powered Extraction
+    description:
+      Use AI to extract structured data with custom prompts and schemas. Perfect
+      for extracting specific information like prices, names, and details.
+  - title: Dynamic Content Support
+    description:
+      Renders JavaScript-heavy pages with Playwright, handles SPAs, performs
+      actions like clicking and scrolling before extraction.
+  - title: Batch Processing
+    description:
+      Process thousands of URLs simultaneously with built-in queuing, rate
+      limiting, and parallel processing capabilities.
+  - title: Web Search Integration
+    description:
+      Search the web and optionally scrape search results in one operation.
+      Perfect for research and content discovery.
+tags:
+  - Web Scraping
+  - Data Extraction
+  - AI
+  - LLM
+  - Crawler
+  - API
