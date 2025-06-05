@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
   const jwtAccessTokenSecret = randomString(64);
   const jwtRefreshTokenSecret = randomString(64);
   const redisPassword = randomPassword();
+  const apiKey = randomString(64);
 
   services.push({
     type: "app",
@@ -38,9 +39,9 @@ export function generate(input: Input): Output {
       env: [
         `JWT_ACCESS_TOKEN_SECRET=${jwtAccessTokenSecret}`,
         `JWT_REFRESH_TOKEN_SECRET=${jwtRefreshTokenSecret}`,
-        `EMAIL=admin@example.com`,
-        `PASSWORD=admin1234567`,
-        `API_KEY=`,
+        `EMAIL=${input.adminEmail}`,
+        `PASSWORD=${input.adminPassword}`,
+        `API_KEY=${apiKey}`,
         `IP_GEOLOCATION_DB_PATH=`,
         `REDIS_HOST=$(PROJECT_NAME)-${input.appServiceName}-redis`,
         `REDIS_PASSWORD=${redisPassword}`,
