@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2024-11-27
     description: First Release
+  - date: 2025-06-05
+    description: Update to 2025.5.0
 links:
   - label: Github
     url: https://github.com/itzg/docker-minecraft-bedrock-server
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-bedrock-server:2024.11.0
+      default: itzg/minecraft-bedrock-server:2025.5.0
     serverName:
       type: string
       title: Server Name
