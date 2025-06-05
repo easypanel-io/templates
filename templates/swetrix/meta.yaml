@@ -1,0 +1,85 @@
+name: Swetrix
+description:
+  Swetrix is a powerful, privacy-focused analytics platform that provides
+  comprehensive website and application analytics. Built with modern
+  technologies, it offers real-time data collection, beautiful dashboards, and
+  detailed insights into user behavior. Features include event tracking,
+  performance monitoring, user session analysis, and customizable reports.
+  Self-hosted solution that ensures complete data privacy and control while
+  providing enterprise-grade analytics capabilities.
+instructions: null
+changeLog:
+  - date: 2025-06-03
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/Swetrix/swetrix
+  - label: Website
+    url: https://swetrix.com
+  - label: Documentation
+    url: https://docs.swetrix.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - frontendImage
+    - apiImage
+    - clickhouseImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: swetrix
+    frontendImage:
+      type: string
+      title: Frontend Image
+      default: swetrix/swetrix-fe:v3.3.1
+    apiImage:
+      type: string
+      title: API Image
+      default: swetrix/swetrix-api:v3.3.1
+    clickhouseImage:
+      type: string
+      title: ClickHouse Image
+      default: clickhouse/clickhouse-server:24.10-alpine
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description: "Email address for the default admin user"
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin1234567
+      description: "Password for the default admin user"
+benefits:
+  - title: Privacy-Focused
+    description: Complete control over your analytics data with self-hosting.
+  - title: Real-time Analytics
+    description: Monitor website and application performance in real-time.
+  - title: Modern Interface
+    description: Beautiful, intuitive dashboard for visualizing analytics data.
+  - title: High Performance
+    description:
+      Built with ClickHouse for fast query processing and Redis for caching.
+features:
+  - title: Website Analytics
+    description:
+      Comprehensive tracking of page views, user sessions, and interactions.
+  - title: Event Tracking
+    description: Custom event tracking for detailed user behavior analysis.
+  - title: Performance Monitoring
+    description: Monitor page load times and application performance metrics.
+  - title: Real-time Dashboard
+    description: Live analytics dashboard with customizable charts and reports.
+  - title: API Access
+    description: RESTful API for programmatic access to analytics data.
+tags:
+  - Analytics
+  - Privacy
+  - Self-Hosted
+  - Real-time
+  - Dashboard
