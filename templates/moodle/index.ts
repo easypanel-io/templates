@@ -26,6 +26,18 @@ export function generate(input: Input): Output {
           port: 8080,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "moodle-data",
+          mountPath: "/bitnami/moodle",
+        },
+        {
+          type: "volume",
+          name: "moodle-moodledata",
+          mountPath: "/bitnami/moodledata",
+        },
+      ],
     },
   });
 
