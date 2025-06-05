@@ -10,7 +10,7 @@ description:
 instructions: null
 changeLog:
   - date: 2025-06-03
-    description: First release
+    description: First release (v3.3.1)
 links:
   - label: GitHub
     url: https://github.com/Swetrix/swetrix
@@ -28,6 +28,8 @@ schema:
     - frontendImage
     - apiImage
     - clickhouseImage
+    - adminEmail
+    - adminPassword
   properties:
     appServiceName:
       type: string
