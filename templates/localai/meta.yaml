@@ -1,0 +1,73 @@
+name: LocalAI
+description:
+  LocalAI is a drop-in replacement REST API that's compatible with OpenAI API
+  specifications for local inferencing. It allows you to run LLMs, generate
+  images, audio (and not only) locally or on-premises with consumer grade
+  hardware, supporting multiple model families and not requiring GPU.
+
+instructions:
+
+changeLog:
+  - date: 2025-06-10
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://localai.io/
+  - label: Github
+    url: https://github.com/mudler/LocalAI
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - debugMode
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: localai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: localai/localai:v2.29.0-aio-cpu
+    debugMode:
+      type: boolean
+      title: Debug Mode
+      default: false
+
+benefits:
+  - title: OpenAI API Compatible
+    description:
+      Drop-in replacement for OpenAI API that works with existing applications.
+  - title: Local Inference
+    description:
+      Run AI models locally without sending data to external services.
+  - title: Multiple Model Support
+    description:
+      Supports various model families including LLMs, image generation, and
+      audio.
+
+features:
+  - title: Local LLM Hosting
+    description: Host and run large language models locally on your hardware.
+  - title: API Compatibility
+    description:
+      Full compatibility with OpenAI API specifications for easy integration.
+  - title: Multi-Modal Support
+    description:
+      Support for text generation, image creation, audio processing, and more.
+  - title: GPU Acceleration
+    description: Optional GPU support for faster inference with NVIDIA CUDA.
+
+tags:
+  - AI
+  - LLM
+  - OpenAI
+  - Local Inference
+  - Machine Learning
