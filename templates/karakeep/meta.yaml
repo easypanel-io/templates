@@ -1,0 +1,74 @@
+name: Karakeep
+description:
+  Knowledge management system that helps you collect, search, and retrieve
+  information efficiently.
+instructions:
+  Please provide the OpenAI API Key and Sign Up for the user account.
+changeLog:
+  - date: 2025-05-26
+    description: First release
+links:
+  - label: Website
+    url: https://karakeep.app
+  - label: Documentation
+    url: https://docs.karakeep.app
+  - label: Github
+    url: https://github.com/karakeep-app/karakeep
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - meilSearchImage
+    - chromeImage
+    - openaiApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: karakeep
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/karakeep-app/karakeep:0.24.1
+    chromeImage:
+      type: string
+      title: Chrome Image
+      default: gcr.io/zenika-hub/alpine-chrome:123
+    meilSearchImage:
+      type: string
+      title: Meilisearch Image
+      default: getmeili/meilisearch:v1.13.3
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      default: ""
+benefits:
+  - title: Efficient Knowledge Management
+    description:
+      Easily collect, organize, and retrieve your information in one centralized
+      place.
+  - title: Powerful Search
+    description:
+      Advanced search capabilities with Meilisearch integration for fast and
+      accurate results.
+  - title: Web Scraping Capabilities
+    description:
+      Built-in Chrome browser integration for capturing content from the web.
+features:
+  - title: Document Management
+    description: Store and organize documents, notes, and web content.
+  - title: Full-Text Search
+    description: Find content quickly with powerful search capabilities.
+  - title: Web Scraping
+    description: Capture and save content directly from websites.
+  - title: OpenAI Integration
+    description: Optional AI capabilities with OpenAI API integration.
+tags:
+  - Knowledge Management
+  - Search
+  - Web Scraping
+  - Organization
