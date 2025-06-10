@@ -15,7 +15,6 @@ export function generate(input: Input): Output {
   const common_envs = [
     `NODE_PORT=3000`,
     `PG_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?sslmode=disable`,
-    `SERVER_URL=https://$(PRIMARY_DOMAIN)`,
     `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
     `STORAGE_TYPE=local`,
     `APP_SECRET=${appSecret}`,
@@ -29,7 +28,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [common_envs].join("\n"),
+      env: [common_envs, `SERVER_URL=https://$(PRIMARY_DOMAIN)`].join("\n"),
       mounts: [
         {
           type: "volume",
@@ -50,7 +49,10 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-worker`,
-      env: [common_envs].join("\n"),
+      env: [
+        common_envs,
+        `SERVER_URL=https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
