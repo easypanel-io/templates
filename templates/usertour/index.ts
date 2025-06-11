@@ -16,6 +16,7 @@ export function generate(input: Input): Output {
       },
       env: [
         `DATABASE_URL=postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+        `DATABASE_DIRECT_URL=postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `NEST_SERVER_PORT=3000`,
         `EMAIL_HOST=`,
         `EMAIL_PORT=`,
