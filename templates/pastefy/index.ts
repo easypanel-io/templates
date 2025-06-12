@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
         `DATABASE_PASSWORD=${databasePassword}`,
         `DATABASE_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `DATABASE_PORT=3306`,
-        `SERVER_NAME=${input.serverName}`,
+        `SERVER_NAME=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       source: {
         type: "image",
