@@ -1,0 +1,75 @@
+name: OpenGist
+description:
+  OpenGist is a self-hosted pastebin powered by Git. All snippets are stored in
+  a Git repository and can be read and/or modified using standard Git commands,
+  or with the web interface. It is similar to GitHub Gist, but open-source and
+  can be self-hosted. Create public, unlisted or private snippets with syntax
+  highlighting, search functionality, and Git integration.
+instructions: null
+changeLog:
+  - date: 2025-06-12
+    description: First Release
+links:
+  - label: Website
+    url: https://opengist.io/
+  - label: Documentation
+    url: https://opengist.io/
+  - label: Github
+    url: https://github.com/thomiceli/opengist
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: opengist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/thomiceli/opengist:1.10.0
+benefits:
+  - title: Git-Powered Storage
+    description:
+      All snippets are stored in a Git repository, enabling version control,
+      history tracking, and standard Git operations like clone, pull, and push.
+  - title: Self-Hosted Privacy
+    description:
+      Host your own pastebin service with complete control over your data. No
+      third-party dependencies or privacy concerns.
+  - title: GitHub Gist Alternative
+    description:
+      Provides similar functionality to GitHub Gist but with the freedom of
+      self-hosting and customization options.
+features:
+  - title: Multiple Snippet Types
+    description:
+      Create public, unlisted, or private snippets with syntax highlighting
+      support for various programming languages, markdown, and CSV files.
+  - title: Git Integration
+    description:
+      Full Git integration allows you to clone, pull, push snippets via HTTP or
+      SSH, making it easy to integrate with your development workflow.
+  - title: Search and Organization
+    description:
+      Search through code snippets, browse user snippets, add topics for
+      organization, and support for likes and forks to create a collaborative
+      environment.
+  - title: OAuth2 Authentication
+    description:
+      Supports OAuth2 login with GitHub, GitLab, Gitea, and OpenID Connect
+      providers for easy user authentication and management.
+  - title: Embed and Share
+    description:
+      Embed snippets in other websites, download raw files or as ZIP archives,
+      and control snippet visibility for anonymous users.
+tags:
+  - Pastebin
+  - Git
+  - Code Sharing
+  - Self-Hosted
