@@ -12,6 +12,8 @@ instructions: Wait for the migration to complete.
 changeLog:
   - date: 2025-01-17
     description: Initial Template Release
+  - date: 2025-05-23
+    description: update to v1.133.0
 
 links:
   - label: Documentation
@@ -37,11 +39,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/immich-app/immich-server:v1.124.2
+      default: ghcr.io/immich-app/immich-server:v1.133.0
     mlServiceImage:
       type: string
       title: ML Service Image
-      default: ghcr.io/immich-app/immich-machine-learning:v1.124.2
+      default: ghcr.io/immich-app/immich-machine-learning:v1.133.0
 
 benefits:
   - title: Secure Media Backup
