@@ -1,69 +1,101 @@
 name: Zulip
-description: Zulip is a modern, open-source team collaboration platform that redefines the way teams communicate and collaborate. Unlike traditional messaging tools, Zulip organizes conversations into topics, ensuring that important information is easily accessible and discussions remain focused.
-instructions: Please use the following credentials to login. changeme@easypanel.io|changeme
+description: Zulip is a powerful team collaboration platform that combines the immediacy of chat with the organization of email. It features topic-based threading that makes it easy to catch up on conversations that happened while you were away. Zulip is designed for both live and asynchronous conversations, with advanced features like message formatting, file sharing, emoji reactions, and integrations with hundreds of tools. It's perfect for distributed teams, open source projects, and organizations that need organized, searchable communication. Zulip is open source and can be self-hosted for complete control over your data.
+instructions: After deployment, access Zulip at your domain. The first user to register will become the administrator. Configure email settings for full functionality.
 changeLog:
-  - date: 2023-09-21
+  - date: 2025-06-15
     description: first release
 links:
   - label: Website
     url: https://zulip.com/
   - label: Documentation
-    url: https://zulip.com/help/
+    url: https://zulip.readthedocs.io/
   - label: Github
-    url: https://github.com/zulip/zulip/
+    url: https://github.com/zulip/docker-zulip
 contributors:
-  - name: matbrgz
+  - name: Livio Gamassia
+    url: https://github.com/liviogama
+  - name: Matheus Breguêz
     url: https://github.com/matbrgz
 schema:
   type: object
   required:
     - projectName
-    - appServiceName
-    - appServiceImage
+    - zulipServiceName
+    - zulipServiceImage
     - databaseServiceName
     - redisServiceName
-    - emailNoReply
-    - emailHost
-    - emailUsername
-    - emailPassword
+    - memcachedServiceName
+    - rabbitServiceName
+    - adminEmail
   properties:
     projectName:
       type: string
       title: Project Name
-    appServiceName:
+    zulipServiceName:
       type: string
-      title: App Service Name
-      default: weblate
-    appServiceImage:
+      title: Zulip Service Name
+      default: zulip
+    zulipServiceImage:
       type: string
-      title: App Service Image
-      default: weblate/weblate:4.16.2-1
+      title: Zulip Service Image
+      default: zulip/docker-zulip:10.3-0
     databaseServiceName:
       type: string
       title: Database Service Name
-      default: weblate-db
+      default: zulip-db
     redisServiceName:
       type: string
       title: Redis Service Name
-      default: weblate-redis
-    emailNoReply:
+      default: zulip-redis
+    memcachedServiceName:
       type: string
-      title: No Reply Email
+      title: Memcached Service Name
+      default: zulip-memcached
+    rabbitServiceName:
+      type: string
+      title: RabbitMQ Service Name
+      default: zulip-rabbit
+    adminEmail:
+      type: string
+      title: Administrator Email
+      format: email
     emailHost:
       type: string
-      title: Email Host
-    emailUsername:
+      title: Email Host (Optional)
+      default: ""
+    emailHostUser:
       type: string
-      title: Email Username
-    emailPassword:
+      title: Email Host User (Optional)
+      default: ""
+    emailPort:
       type: string
-      title: Email Password
+      title: Email Port (Optional)
+      default: "587"
 benefits:
-  - title: TODO
-    description: TODO
+  - title: Topic-Based Threading
+    description: Zulip's unique topic-based threading system makes it easy to follow conversations and catch up on missed discussions. Unlike traditional chat, every message belongs to a topic, creating organized, searchable conversations.
+  - title: Powerful Integrations
+    description: Connect Zulip with hundreds of tools including GitHub, Jira, Trello, Jenkins, and more. Receive notifications and updates directly in your team channels with native integrations and webhooks.
+  - title: Advanced Message Features
+    description: Rich message formatting with Markdown support, LaTeX math rendering, syntax highlighting for code, emoji reactions, message editing, and threaded replies make communication more expressive and organized.
+  - title: Flexible Communication
+    description: Designed for both real-time and asynchronous communication, Zulip works perfectly for distributed teams across different time zones with its threading model and comprehensive notification system.
 features:
-  - title: TODO
-    description: TODO
+  - title: Stream and Topic Organization
+    description: Organize conversations into streams (channels) and topics for better structure. This unique approach makes it easy to follow multiple conversations simultaneously without losing context.
+  - title: Powerful Search and Archives
+    description: Full-text search across all messages, with advanced filtering options. All conversations are automatically archived and searchable, making it easy to find past discussions and decisions.
+  - title: Mobile and Desktop Apps
+    description: Native applications for iOS, Android, Windows, macOS, and Linux, plus a full-featured web interface. Stay connected and productive from any device with synchronized notifications.
+  - title: Open Source and Self-Hosted
+    description: Complete control over your data with self-hosting options. Zulip is open source with transparent development, regular security updates, and the ability to customize for your organization's needs.
+  - title: Enterprise Security
+    description: End-to-end encryption, LDAP/SAML integration, compliance features, and advanced permission controls. Suitable for organizations with strict security and compliance requirements.
+  - title: Rich Formatting and Code Support
+    description: Markdown formatting, syntax highlighting for dozens of programming languages, LaTeX math rendering, and inline image previews make technical discussions more productive.
 tags:
   - Chat
   - Communication
+  - Collaboration
+  - Team
+  - Open Source
