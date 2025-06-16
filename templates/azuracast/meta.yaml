@@ -1,0 +1,76 @@
+name: AzuraCast
+description:
+  AzuraCast is a free, open-source web radio management suite. Built for radio
+  station managers and DJs, it provides everything you need to start and manage
+  a successful web radio station, from playlist automation to live streaming
+  capabilities, listener statistics, and more.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-11
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.azuracast.com/
+  - label: Github
+    url: https://github.com/AzuraCast/AzuraCast
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appServicePort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: azuracast
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/azuracast/azuracast:0.21.0
+    appServicePort:
+      type: string
+      title: App Service Port
+      default: "2022"
+
+benefits:
+  - title: Complete Radio Management
+    description:
+      Everything you need to run a web radio station in one comprehensive
+      package.
+  - title: Web-Based Interface
+    description:
+      Manage your station from anywhere with an intuitive web-based dashboard.
+  - title: Advanced Features
+    description:
+      Includes playlist automation, live streaming, statistics, and more.
+
+features:
+  - title: Playlist Management
+    description: Create and manage playlists with smart rotation and scheduling.
+  - title: Live Streaming
+    description:
+      Support for live DJs with seamless transitions between automated and live
+      content.
+  - title: Statistics & Analytics
+    description:
+      Detailed listener statistics and analytics to track your station's
+      performance.
+  - title: Multi-Station Support
+    description:
+      Host multiple radio stations from a single AzuraCast installation.
+
+tags:
+  - Radio
+  - Streaming
+  - Broadcasting
+  - Media Management
+  - Music
