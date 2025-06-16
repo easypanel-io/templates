@@ -20,6 +20,8 @@ instructions:
 changeLog:
   - date: 2022-08-05
     description: first release
+  - date: 2025-05-23
+    description: update to v3.28.0
 links:
   - label: Website
     url: https://imgproxy.net/
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Ivan Ryan
     url: https://github.com/ivanonpc-22
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: darthsim/imgproxy:v3.9
+      default: darthsim/imgproxy:v3.28.0
 benefits:
   - title: Optimized Image Processing
     description:
