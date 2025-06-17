@@ -1,0 +1,83 @@
+name: Speedtest Tracker
+description:
+  Speedtest Tracker is a self-hosted internet performance tracking application
+  that runs speedtests and displays the results in a clean web interface. It
+  automatically runs periodic speed tests using various providers like Ookla
+  Speedtest, and stores historical data to track your internet connection
+  performance over time. Perfect for monitoring ISP performance, network
+  troubleshooting, and keeping records of internet speed changes.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-17
+    description: Initial Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.speedtest-tracker.dev/
+  - label: GitHub
+    url: https://github.com/alexjustesen/speedtest-tracker
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: speedtest-tracker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/speedtest-tracker:1.6.1
+      description: Speedtest Tracker Docker image
+
+benefits:
+  - title: Internet Performance Monitoring
+    description:
+      Automatically track your internet connection speed and performance over
+      time with scheduled speed tests.
+  - title: Historical Data
+    description:
+      Store and visualize historical speed test results to identify patterns and
+      performance trends.
+  - title: Multiple Providers
+    description:
+      Support for various speed test providers including Ookla Speedtest for
+      accurate measurements.
+  - title: Self-Hosted Solution
+    description:
+      Keep your network performance data private with a completely self-hosted
+      monitoring solution.
+
+features:
+  - title: Automated Testing
+    description:
+      Schedule automatic speed tests at regular intervals to continuously
+      monitor your connection.
+  - title: Web Dashboard
+    description:
+      Clean and intuitive web interface to view current and historical speed
+      test results.
+  - title: Data Visualization
+    description:
+      Charts and graphs to visualize speed trends and identify performance
+      issues over time.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database for storing test results without external
+      database requirements.
+
+tags:
+  - Network Monitoring
+  - Speed Test
+  - Performance
+  - Self-Hosted
+  - Tracking
