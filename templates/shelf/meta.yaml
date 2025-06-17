@@ -1,0 +1,125 @@
+name: Shelf
+description:
+  Shelf.nu is an open-source asset management platform designed to help
+  organizations track and manage their physical assets efficiently. It provides
+  features for asset tracking, inventory management, check-in/check-out
+  functionality, and reporting. The platform includes location tracking with
+  maps, user management, and email notifications for asset-related activities.
+
+instructions:
+  Make sure to setup your Supabase instance before deploying this template.
+
+changeLog:
+  - date: 2025-06-17
+    description: Initial Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.shelf.nu/
+  - label: GitHub
+    url: https://github.com/shelf-nu/shelf.nu
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shelf
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/shelf-nu/shelf.nu:main-22c9ccd
+      description: Shelf.nu Docker image
+    supabaseAnonPublic:
+      type: string
+      title: Supabase Anonymous Public Key
+      default: ""
+      description: Supabase anonymous public key for authentication
+    supabaseServiceRole:
+      type: string
+      title: Supabase Service Role Key
+      default: ""
+      description: Supabase service role key for server-side operations
+    supabaseUrl:
+      type: string
+      title: Supabase URL
+      default: ""
+      description:
+        Your Supabase instance URL (e.g., https://yourproject.supabase.co)
+    maptilerToken:
+      type: string
+      title: MapTiler Token
+      default: ""
+      description: MapTiler API token for location mapping features
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: ""
+      description: SMTP server hostname for email notifications
+    smtpUser:
+      type: string
+      title: SMTP Username
+      default: ""
+      description: SMTP username for email authentication
+    smtpFrom:
+      type: string
+      title: SMTP From Address
+      default: ""
+      description:
+        Email address to use as sender (e.g., "Support"
+        <support@yourdomain.com>)
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
+      description: SMTP password for email authentication
+
+benefits:
+  - title: Asset Management
+    description:
+      Comprehensive asset tracking and management system with check-in/check-out
+      functionality.
+  - title: Location Tracking
+    description:
+      Built-in mapping and location tracking features for physical asset
+      management.
+  - title: User Management
+    description:
+      Multi-user support with role-based access control and team collaboration
+      features.
+  - title: Email Notifications
+    description:
+      Automated email notifications for asset activities and important updates.
+
+features:
+  - title: Asset Tracking
+    description:
+      Track physical assets with detailed information, photos, and status
+      updates.
+  - title: Check-in/Check-out
+    description:
+      Manage asset assignments and returns with automated tracking and
+      notifications.
+  - title: Reporting
+    description:
+      Generate reports on asset utilization, location history, and inventory
+      status.
+  - title: Integration Ready
+    description:
+      Built-in Supabase integration for authentication and additional cloud
+      services.
+
+tags:
+  - Asset Management
+  - Inventory
+  - Tracking
+  - Business
+  - PostgreSQL
