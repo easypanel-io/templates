@@ -30,7 +30,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         `OFFEN_DATABASE_DIALECT=postgres`,
-        `OFFEN_DATABASE_CONNECTIONSTRING=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-postgres:5432/offen?sslmode=disable`,
+        `OFFEN_DATABASE_CONNECTIONSTRING=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-postgres:5432/$(PROJECT_NAME)?sslmode=disable`,
         `OFFEN_DATABASE_CONNECTIONRETRIES=10`,
       ].join("\n"),
       mounts: [
@@ -44,4 +44,4 @@ export function generate(input: Input): Output {
   });
 
   return { services };
-} 
+}
