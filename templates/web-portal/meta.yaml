@@ -1,0 +1,73 @@
+name: Web Portal
+description:
+  Web Portal is a lightweight and customizable dashboard application developed by enchant97. 
+  It provides a central hub for accessing your self-hosted applications and services. 
+  With a clean and intuitive interface, Web Portal helps you organize and access your 
+  web applications efficiently. It features a SQLite database for configuration storage 
+  and supports custom plugins for extended functionality. This containerized solution 
+  is perfect for home server enthusiasts and self-hosters looking for a clean, 
+  efficient way to manage their web applications.
+instructions: null
+changeLog:
+  - date: 2025-04-17
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/enchant97/web-portal
+  - label: Container
+    url: https://github.com/enchant97/web-portal/pkgs/container/web-portal
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: web-portal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/enchant97/web-portal:2
+benefits:
+  - title: Centralized Dashboard
+    description:
+      Web Portal provides a single, unified interface for accessing all your self-hosted 
+      applications and services, making navigation between them seamless and efficient.
+  - title: Customizable Experience
+    description:
+      Tailor your dashboard to your specific needs with custom organization and plugin 
+      support for extended functionality.
+  - title: Lightweight and Fast
+    description:
+      Built with efficiency in mind, Web Portal has minimal resource requirements while 
+      providing quick access to your applications.
+features:
+  - title: Application Directory
+    description:
+      Organize and manage links to all your web applications in a clean, structured interface.
+  - title: SQLite Database
+    description: 
+      Configuration and data are stored in a simple SQLite database, making backup and 
+      migration straightforward.
+  - title: Plugin Support
+    description:
+      Extend functionality with custom plugins that can be easily integrated into your 
+      Web Portal installation.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Web Portal in any environment that supports Docker with minimal setup.
+  - title: Secure Access
+    description:
+      Protect your dashboard with security features to ensure only authorized users 
+      can access your application directory.
+tags:
+  - Dashboard
+  - Web Portal
+  - Self-hosted
+  - Docker
+  - Application Directory 
