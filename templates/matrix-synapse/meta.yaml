@@ -17,6 +17,8 @@ changeLog:
     description: First Release
   - date: 2024-10-18
     description: Updated version to v1.99.0
+  - date: 2025-06-05
+    description: Update to v1.131.0
 links:
   - label: Website
     url: https://matrix.org
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: matrixdotorg/synapse:v1.99.0
+      default: matrixdotorg/synapse:v1.131.0
     databaseType:
       type: string
       title: Database Type
