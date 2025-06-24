@@ -1,6 +1,10 @@
 name: Inbox Zero
-description: Inbox Zero is an email management platform that helps you clean your inbox, manage subscriptions, and automate email workflows.
-instructions: The Google Client ID and Secret are required for the OAuth flow to work. Select the LLM provider and fill the API keys for the provider.
+description:
+  Inbox Zero is an email management platform that helps you clean your inbox,
+  manage subscriptions, and automate email workflows.
+instructions:
+  The Google Client ID and Secret are required for the OAuth flow to work.
+  Select the LLM provider and fill the API keys for the provider.
 changeLog:
   - date: 2025-04-15
     description: First Release
@@ -17,6 +21,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - googleClientId
+    - googleClientSecret
     - llmProvider
   properties:
     appServiceName:
@@ -26,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dockeriddonuts/inbox-zero:1.1
+      default: ghcr.io/elie222/inbox-zero:v1.7.8
     googleClientId:
       type: string
       title: Google Client ID
@@ -35,7 +41,8 @@ schema:
     googleClientSecret:
       type: string
       title: Google Client Secret
-      description: The Google Client Secret is required for the OAuth flow to work.
+      description:
+        The Google Client Secret is required for the OAuth flow to work.
       default: ""
     llmProvider:
       type: string
@@ -62,70 +69,70 @@ schema:
       type: string
       title: OpenAI API Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: openai
     anthropicApiKey:
       type: string
       title: Anthropic API Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: anthropic
     googleApiKey:
       type: string
       title: Google API Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: google
     groqApiKey:
       type: string
       title: Groq API Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: groq
     bedrockAccessKey:
       type: string
       title: AWS Bedrock Access Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: bedrock
     bedrockSecretKey:
       type: string
       title: AWS Bedrock Secret Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: bedrock
     bedrockRegion:
       type: string
       title: AWS Bedrock Region
       default: "us-west-2"
-      showIf: 
+      showIf:
         field: llmProvider
         is: bedrock
     ollamaBaseUrl:
       type: string
       title: Ollama Base URL
       default: "http://ollama:11434"
-      showIf: 
+      showIf:
         field: llmProvider
         is: ollama
     ollamaModel:
       type: string
       title: Ollama Model
       default: "phi3"
-      showIf: 
+      showIf:
         field: llmProvider
         is: ollama
     openrouterApiKey:
       type: string
       title: OpenRouter API Key
       default: ""
-      showIf: 
+      showIf:
         field: llmProvider
         is: openrouter
     economyLlmProvider:
@@ -162,7 +169,8 @@ benefits:
   - title: Email Management
     description: Take control of your inbox with powerful management tools
   - title: Subscription Control
-    description: Easily manage and unsubscribe from newsletters and subscriptions
+    description:
+      Easily manage and unsubscribe from newsletters and subscriptions
   - title: Email Automation
     description: Automate repetitive email tasks and workflows
   - title: AI-Powered
@@ -171,7 +179,8 @@ benefits:
     description: Keep your email data private on your own server
 features:
   - title: Email Cleanup
-    description: Declutter your inbox by quickly processing and organizing emails
+    description:
+      Declutter your inbox by quickly processing and organizing emails
   - title: Subscription Manager
     description: Track and manage all your email subscriptions
   - title: Auto-Responder
