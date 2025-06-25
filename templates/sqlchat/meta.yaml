@@ -1,0 +1,93 @@
+name: SQLChat
+description:
+  SQLChat is a chat-based SQL client powered by ChatGPT that allows you to
+  interact with your databases using natural language. It provides an intuitive
+  interface for querying databases, exploring data, and learning SQL through
+  conversational interactions. SQLChat supports multiple database types and
+  integrates with OpenAI's GPT models to translate natural language queries into
+  SQL statements, making database interactions more accessible for both
+  beginners and experienced developers.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-25
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/sqlchat/sqlchat
+  - label: Documentation
+    url: https://github.com/sqlchat/sqlchat#readme
+  - label: Website
+    url: https://sqlchat.ai
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - openaiApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sqlchat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sqlchat/sqlchat:latest
+      description: SQLChat Docker image
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: Your OpenAI API key for ChatGPT integration
+
+benefits:
+  - title: Natural Language Queries
+    description:
+      Query your databases using natural language instead of complex SQL syntax,
+      making database interactions more intuitive and accessible.
+  - title: ChatGPT Integration
+    description:
+      Powered by OpenAI's ChatGPT to translate natural language into SQL queries
+      and provide intelligent database insights.
+  - title: Multi-Database Support
+    description:
+      Connect to various database types including PostgreSQL, MySQL, SQLite, and
+      more through a unified chat interface.
+  - title: Learning Tool
+    description:
+      Perfect for learning SQL as it shows the generated SQL queries alongside
+      natural language explanations and results.
+
+features:
+  - title: Conversational Interface
+    description:
+      Chat-based interface that makes database querying feel like having a
+      conversation with an expert SQL developer.
+  - title: Query Translation
+    description:
+      Automatically translates natural language questions into optimized SQL
+      queries with explanations of the logic.
+  - title: Database Explorer
+    description:
+      Explore database schemas, tables, and relationships through natural
+      language commands and questions.
+  - title: Result Visualization
+    description:
+      View query results in formatted tables with options for data export and
+      further analysis through chat.
+
+tags:
+  - Database
+  - SQL
+  - AI
+  - ChatGPT
+  - Query Tool
+  - Natural Language
+  - Next.js
