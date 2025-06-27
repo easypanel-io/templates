@@ -1,0 +1,41 @@
+name: Komiser
+description: Komiser is an open-source cloud cost optimization and monitoring tool designed to help individuals and organizations manage their cloud resources effectively. It provides insights and recommendations to optimize costs, enhance resource utilization, and improve overall efficiency within cloud environments.
+instructions: null
+changeLog:
+  - date: 2023-9-21
+    description: first release
+links:
+  - label: Website
+    url: https://www.komiser.io/
+  - label: Documentation
+    url: https://docs.komiser.io/
+  - label: Github
+    url: https://github.com/tailwarden/komiser
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: Komiser
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tailwarden/komiser:3.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: komiser-db
+tags:
+  - Cloud Environment Inspector
