@@ -1,0 +1,97 @@
+name: Form.io
+description:
+  Form.io is a form and data management platform for progressive web
+  applications. It provides a drag-and-drop form builder, API platform, and data
+  management system that allows developers to rapidly build complex forms and
+  workflows. Form.io combines the power of JSON Schema with a robust API to
+  create dynamic, data-driven applications.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-23
+    description: Initial Template Release
+
+links:
+  - label: Official Website
+    url: https://form.io/
+  - label: Documentation
+    url: https://help.form.io/
+  - label: GitHub
+    url: https://github.com/formio/formio
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - rootEmail
+    - rootPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: formio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: formio/formio:v4.6.0-rc.2
+      description: Form.io Docker image
+    rootEmail:
+      type: string
+      title: Root Admin Email
+      default: admin@example.com
+      description: Email address for the root administrator account
+    rootPassword:
+      type: string
+      title: Root Admin Password
+      default: ""
+      description: Password for the root administrator account
+
+benefits:
+  - title: Drag-and-Drop Form Builder
+    description:
+      Create complex forms with an intuitive visual interface without writing
+      code, including advanced components and validation rules.
+  - title: API-First Architecture
+    description:
+      RESTful API platform that automatically generates endpoints for your forms
+      and data, enabling seamless integration.
+  - title: JSON Schema Based
+    description:
+      Built on JSON Schema standards for maximum flexibility and
+      interoperability with other systems and frameworks.
+  - title: Data Management
+    description:
+      Comprehensive data management system with user authentication,
+      permissions, and workflow capabilities.
+
+features:
+  - title: Form Builder
+    description:
+      Visual drag-and-drop interface for creating forms with advanced components
+      like file uploads, signatures, and calculations.
+  - title: Workflow Engine
+    description:
+      Built-in workflow and business process management with conditional logic
+      and automated actions.
+  - title: User Management
+    description:
+      Complete user authentication and authorization system with role-based
+      access control and team management.
+  - title: API Platform
+    description:
+      Automatically generated REST API endpoints for all forms and data with
+      comprehensive documentation.
+
+tags:
+  - Forms
+  - Form Builder
+  - API Platform
+  - Data Management
+  - Workflow
+  - MongoDB
