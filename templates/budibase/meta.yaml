@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 3.2.32
   - date: 2025-02-21
     description: Version bumped to 3.4.16
+  - date: 2025-06-30
+    description: Updated to multi-service architecture
 links:
   - label: Website
     url: https://budibase.com/
@@ -43,6 +45,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - adminEmail
+    - adminPassword
   properties:
     appServiceName:
       type: string
@@ -52,6 +56,14 @@ schema:
       type: string
       title: App Service Image
       default: budibase/budibase:3.4.16
+    adminEmail:
+      type: string
+      title: Admin Email
+      description: Email for the admin user
+    adminPassword:
+      type: string
+      title: Admin Password
+      description: Password for the admin user
 benefits:
   - title: Efficiency and Speed
     description:
