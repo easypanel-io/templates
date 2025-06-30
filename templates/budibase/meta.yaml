@@ -45,6 +45,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - workerServiceImage
     - adminEmail
     - adminPassword
   properties:
@@ -55,7 +56,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: budibase/budibase:3.4.16
+      default: "budibase/apps:3.13.6"
+    workerServiceImage:
+      type: string
+      title: Worker Service Image
+      default: "budibase/worker:3.13.6"
     adminEmail:
       type: string
       title: Admin Email

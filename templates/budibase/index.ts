@@ -109,7 +109,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "budibase/worker",
+        image: input.workerServiceImage,
       },
     },
   });
@@ -141,7 +141,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "budibase/apps",
+        image: input.appServiceImage,
       },
     },
   });
