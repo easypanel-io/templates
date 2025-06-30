@@ -12,9 +12,9 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const minioRootUser = "minioadmin";
   const minioRootPassword = randomPassword();
-  const chromeToken = input.chromeToken || randomString(32);
-  const accessTokenSecret = input.accessTokenSecret || randomString(64);
-  const refreshTokenSecret = input.refreshTokenSecret || randomString(64);
+  const chromeToken = randomString(32);
+  const accessTokenSecret = randomString(64);
+  const refreshTokenSecret = randomString(64);
 
   services.push({
     type: "postgres",
