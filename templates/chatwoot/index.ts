@@ -14,7 +14,6 @@ export function generate(input: Input): Output {
 
   const env = [
     `SECRET_KEY_BASE=${secretkey}`,
-    `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
     `DEFAULT_LOCALE=${input.defaultLocale}`,
     `FORCE_SSL=false`,
     `ENABLE_ACCOUNT_SIGNUP=true`,
@@ -36,7 +35,9 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env,
+      env: [`FRONTEND_URL=https://$(PRIMARY_DOMAIN)`, ...env.split("\n")].join(
+        "\n"
+      ),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -70,7 +71,10 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: input.sidekiqServiceName,
-      env,
+      env: [
+        `FRONTEND_URL=https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
+        ...env.split("\n"),
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
