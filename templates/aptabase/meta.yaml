@@ -1,0 +1,65 @@
+name: Aptabase
+description:
+  Aptabase is an open-source, privacy-focused analytics platform for mobile and desktop applications.
+  It provides real-time analytics, crash reporting, and user insights while respecting user privacy.
+instructions: Sign up and open the console logs where it will print the link to authorize the email. Copy the URL part that looks like this. [url, https://your-domain/api/_auth/continue?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiU2lnbkluIiwibmFtZSI6IkFoc29uIFNoYWlraCIsImVtYWlsIjoiYWhzb25zaGFpa2g2MTZAZ21haWwuY29tIiwibmJmIjoxNzQ0MTE5MDgyLCJleHAiOjE3NDQxMTk5ODIsImlhdCI6MTc0NDExOTA4MiwiaXNzIjoiYXB0YWJhc2Utc2gifQ.PxbVTiVOXsTkkxQKV1AOGaaEpLnMOOtgSRMqDY6dkIg]\u0027. Do not copy this part at the end ]\u0027
+changeLog:
+  - date: 2024-04-04
+    description: First Release
+links:
+  - label: Website
+    url: https://aptabase.com
+  - label: Documentation
+    url: https://aptabase.com/docs
+  - label: GitHub
+    url: https://github.com/aptabase/aptabase
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - clickhouseServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: aptabase
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/aptabase/aptabase:main
+    clickhouseServiceImage:
+      type: string
+      title: ClickHouse Service Image
+      default: clickhouse/clickhouse-server:23.8.4.69-alpine
+benefits:
+  - title: Privacy Focused
+    description: Built with privacy in mind, ensuring user data protection
+  - title: Real-time Analytics
+    description: Get instant insights into your application usage
+  - title: Crash Reporting
+    description: Automatic crash detection and reporting
+  - title: Self-hosted
+    description: Complete control over your data and infrastructure
+  - title: Open Source
+    description: Transparent and community-driven development
+features:
+  - title: Analytics Dashboard
+    description: Comprehensive analytics and user insights
+  - title: Crash Reporting
+    description: Automatic crash detection and detailed reports
+  - title: User Segmentation
+    description: Analyze user behavior and create segments
+  - title: Real-time Updates
+    description: Live updates of application usage data
+  - title: API Access
+    description: Programmatic access to analytics data
+tags:
+  - Analytics
+  - Privacy
+  - Monitoring
+  - Self-hosted
+  - Open Source 

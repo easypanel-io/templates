@@ -16,6 +16,8 @@ changeLog:
     description: Template Added
   - date: 2025-02-25
     description: Version bumped to 2.7.11
+  - date: 2025-05-25
+
 links:
   - label: Website
     url: https://www.influxdata.com/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: influxdb:2.7.11
+      default: influxdb:2.7.12
 benefits:
   - title: Optimized Time-Series Data Handling
     description:

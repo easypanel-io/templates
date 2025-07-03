@@ -82,6 +82,19 @@
     ]
   },
   {
+    "slug": "alerta",
+    "logo": "logo.png",
+    "name": "Alerta",
+    "description": "Alerta is a monitoring system that consolidates and deduplicates alerts from multiple monitoring systems.",
+    "tags": [
+      "Monitoring",
+      "Alert Management",
+      "Web Application",
+      "PostgreSQL",
+      "API"
+    ]
+  },
+  {
     "slug": "alltube",
     "logo": "logo.png",
     "name": "AllTube",
@@ -169,6 +182,19 @@
     "tags": []
   },
   {
+    "slug": "aptabase",
+    "logo": "logo.png",
+    "name": "Aptabase",
+    "description": "Aptabase is an open-source, privacy-focused analytics platform for mobile and desktop applications. It provides real-time analytics, crash reporting, and user insights while respecting user privacy.",
+    "tags": [
+      "Analytics",
+      "Privacy",
+      "Monitoring",
+      "Self-hosted",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "arangodb",
     "logo": "logo.png",
     "name": "ArangoDB",
@@ -216,6 +242,19 @@
     ]
   },
   {
+    "slug": "authentik",
+    "logo": "logo.png",
+    "name": "Authentik",
+    "description": "Authentik is an open-source Identity Provider focused on flexibility and versatility. It provides secure authentication, authorization, and user management with support for single sign-on (SSO), multi-factor authentication (MFA), and a modern user interface.",
+    "tags": [
+      "Identity Provider",
+      "Authentication",
+      "SSO",
+      "Security",
+      "Access Management"
+    ]
+  },
+  {
     "slug": "authorizer",
     "logo": "logo.png",
     "name": "Authorizer",
@@ -237,6 +276,19 @@
       "Self-Hosted",
       "Task Management",
       "API Integrations"
+    ]
+  },
+  {
+    "slug": "azuracast",
+    "logo": "logo.png",
+    "name": "AzuraCast",
+    "description": "AzuraCast is a free, open-source web radio management suite. Built for radio station managers and DJs, it provides everything you need to start and manage a successful web radio station, from playlist automation to live streaming capabilities, listener statistics, and more.",
+    "tags": [
+      "Radio",
+      "Streaming",
+      "Broadcasting",
+      "Media Management",
+      "Music"
     ]
   },
   {
@@ -321,6 +373,20 @@
       "Motion Graphics",
       "Virtual Reality",
       "Computer Games"
+    ]
+  },
+  {
+    "slug": "blinko",
+    "logo": "logo.png",
+    "name": "Blinko",
+    "description": "Blinko (space) is an open-source, self-hosted “idea hub” that rolls notes, micro-blog posts, paste-bins and lightweight tasks into one minimalist, card-style interface. You jot down thoughts in plain text or Markdown; behind the scenes Blinko indexes every word with an AI-powered RAG engine (works with OpenAI or a local Ollama model), so you can later retrieve anything with natural-language search instead of keywords",
+    "tags": [
+      "Collaboration",
+      "Team Management",
+      "Document Sharing",
+      "Project Management",
+      "Real-time",
+      "Workspace"
     ]
   },
   {
@@ -879,6 +945,19 @@
     ]
   },
   {
+    "slug": "discourse",
+    "logo": "logo.png",
+    "name": "Discourse",
+    "description": "Discourse is a modern, open-source discussion platform that provides a clean, intuitive interface for community discussions. It's perfect for forums, mailing lists, chat rooms, and more.",
+    "tags": [
+      "Forum",
+      "Discussion",
+      "Self-hosted",
+      "Open Source",
+      "Community"
+    ]
+  },
+  {
     "slug": "dittofeed",
     "logo": "logo.png",
     "name": "Dittofeed",
@@ -921,6 +1000,18 @@
       "Document Management",
       "OCR",
       "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "documenso",
+    "logo": "logo.png",
+    "name": "Documenso",
+    "description": "The open source DocuSign alternative. Securely sign documents without giving up your privacy or freedom.",
+    "tags": [
+      "Document Management",
+      "E-Signatures",
+      "Business Tools",
+      "Legal"
     ]
   },
   {
@@ -1183,6 +1274,19 @@
     ]
   },
   {
+    "slug": "evo-ai",
+    "logo": "logo.png",
+    "name": "Evo AI",
+    "description": "AI-powered API platform for conversational applications",
+    "tags": [
+      "AI",
+      "API",
+      "Conversational",
+      "NLP",
+      "Machine Learning"
+    ]
+  },
+  {
     "slug": "evobot",
     "logo": "logo.png",
     "name": "EvoBot",
@@ -1292,6 +1396,20 @@
       "Relational Database",
       "Open Source",
       "FirebirdDB"
+    ]
+  },
+  {
+    "slug": "firecrawl",
+    "logo": "logo.png",
+    "name": "Firecrawl",
+    "description": "Firecrawl is an API service that takes a URL, crawls it, and converts it into clean markdown or structured data. It crawls all accessible subpages and gives you clean data for each. No sitemap required. Featuring advanced scraping, crawling, and data extraction capabilities with LLM-ready formats, anti-bot mechanisms, dynamic content handling, and powerful customization options. Perfect for AI applications, data extraction, and web automation.",
+    "tags": [
+      "Web Scraping",
+      "Data Extraction",
+      "AI",
+      "LLM",
+      "Crawler",
+      "API"
     ]
   },
   {
@@ -1936,6 +2054,19 @@
     ]
   },
   {
+    "slug": "inbox-zero",
+    "logo": "logo.png",
+    "name": "Inbox Zero",
+    "description": "Inbox Zero is an email management platform that helps you clean your inbox, manage subscriptions, and automate email workflows.",
+    "tags": [
+      "Email",
+      "Productivity",
+      "AI",
+      "Self-Hosted",
+      "Automation"
+    ]
+  },
+  {
     "slug": "infisical",
     "logo": "logo.png",
     "name": "Infisical",
@@ -2153,6 +2284,18 @@
     "description": "Kanboard is a free and open-source project management software that utilizes the Kanban methodology. It provides a visual and clear overview of your tasks, allowing you to easily manage your projects by dragging and dropping tasks between columns. The app is designed with simplicity and minimalism in mind, limiting the number of features to maintain focus on your work. It also includes a search and filter function, enabling you to quickly find tasks using a simple query language. Tasks can be broken down into sub-tasks, with the ability to add comments, documents, and change various aspects such as color, category, assignee, and due date. Kanboard also offers automated actions to streamline your workflow, eliminating the need for repetitive manual tasks. It supports multiple authentication backends and is translated in over 30 languages.",
     "tags": [
       "Project Management"
+    ]
+  },
+  {
+    "slug": "karakeep",
+    "logo": "logo.png",
+    "name": "Karakeep",
+    "description": "Knowledge management system that helps you collect, search, and retrieve information efficiently.",
+    "tags": [
+      "Knowledge Management",
+      "Search",
+      "Web Scraping",
+      "Organization"
     ]
   },
   {
@@ -2604,6 +2747,18 @@
       "Music",
       "Player",
       "Library Management"
+    ]
+  },
+  {
+    "slug": "lowcoder",
+    "logo": "logo.png",
+    "name": "Lowcoder",
+    "description": "Open-source low-code platform to build internal tools with minimal effort.",
+    "tags": [
+      "Low-Code",
+      "Internal Tools",
+      "Application Builder",
+      "Automation"
     ]
   },
   {
@@ -3227,6 +3382,17 @@
     ]
   },
   {
+    "slug": "offen",
+    "logo": "logo.png",
+    "name": "Offen",
+    "description": "Offen is a fair and open alternative to common web analytics tools. It gives users access to their data and respects their privacy while providing website owners with the insights they need.",
+    "tags": [
+      "Analytics",
+      "Privacy",
+      "GDPR"
+    ]
+  },
+  {
     "slug": "ollama",
     "logo": "logo.png",
     "name": "Ollama",
@@ -3295,6 +3461,18 @@
     ]
   },
   {
+    "slug": "opengist",
+    "logo": "logo.png",
+    "name": "OpenGist",
+    "description": "OpenGist is a self-hosted pastebin powered by Git. All snippets are stored in a Git repository and can be read and/or modified using standard Git commands, or with the web interface. It is similar to GitHub Gist, but open-source and can be self-hosted. Create public, unlisted or private snippets with syntax highlighting, search functionality, and Git integration.",
+    "tags": [
+      "Pastebin",
+      "Git",
+      "Code Sharing",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "openhab",
     "logo": "logo.png",
     "name": "OpenHAB",
@@ -3346,6 +3524,18 @@
       "Web Browsers",
       "Internet",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "opnform",
+    "logo": "logo.png",
+    "name": "OpnForm",
+    "description": "OpnForm is an open-source form builder that allows you to create beautiful, customizable forms with ease. It provides an intuitive interface for building forms,  collecting submissions, and analyzing data.",
+    "tags": [
+      "Forms",
+      "Web Apps",
+      "Productivity",
+      "Business Apps"
     ]
   },
   {
@@ -3492,6 +3682,29 @@
       "Security",
       "Password Sharing",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "pastefy",
+    "logo": "logo.png",
+    "name": "Pastefy",
+    "description": "Pastefy is a feature-rich, open-source, self-hostable pastebin alternative to GitHub Gist or Pastebin. Share code snippets with friends or save them for yourself with syntax highlighting, file format previews, folder organization, OAuth2 authentication, API access, and powerful features for developers. Upload files via curl, integrate with VS Code, and enjoy extensive format support including Markdown, Mermaid, CSV, GeoJSON, and more.",
+    "tags": [
+      "Pastebin",
+      "Code Sharing",
+      "API",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "paymenter",
+    "logo": "logo.png",
+    "name": "Paymenter",
+    "description": "Paymenter is a modern, open-source billing and client management system. It provides a seamless platform for handling payments, subscriptions, and client services with support for multiple payment gateways and automated billing processes.",
+    "tags": [
+      "Billing",
+      "Payment",
+      "Client Management"
     ]
   },
   {
@@ -3742,6 +3955,19 @@
     "tags": [
       "Databases",
       "Backup"
+    ]
+  },
+  {
+    "slug": "postiz",
+    "logo": "logo.png",
+    "name": "Postiz",
+    "description": "Postiz is a modern, self-hosted social media management platform that helps you schedule, publish, and analyze content across multiple social networks. It provides a unified dashboard for managing posts, tracking engagement, and optimizing your social media strategy.",
+    "tags": [
+      "Social Media",
+      "Content Management",
+      "Scheduling",
+      "Analytics",
+      "Marketing"
     ]
   },
   {
@@ -4330,6 +4556,18 @@
     ]
   },
   {
+    "slug": "spacebin",
+    "logo": "logo.svg",
+    "name": "Spacebin",
+    "description": "Spacebin is a modern, fast, and reliable pastebin server implemented in Go. Text sharing for the final frontier with features like syntax highlighting, password-protected encrypted pastes, configurable expiration, QR codes, reader view mode, and full API support. 99% self-contained requiring only a database to run, making it perfect for self-hosting.",
+    "tags": [
+      "Pastebin",
+      "Go",
+      "Text Sharing",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "spacedrive",
     "logo": "logo.png",
     "name": "SpaceDrive",
@@ -4340,6 +4578,19 @@
       "Decentralized Storage",
       "Security",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "speedtest-tracker",
+    "logo": "logo.png",
+    "name": "Speedtest Tracker",
+    "description": "Speedtest Tracker is a self-hosted internet performance tracking application that runs speedtests and displays the results in a clean web interface. It automatically runs periodic speed tests using various providers like Ookla Speedtest, and stores historical data to track your internet connection performance over time. Perfect for monitoring ISP performance, network troubleshooting, and keeping records of internet speed changes.",
+    "tags": [
+      "Network Monitoring",
+      "Speed Test",
+      "Performance",
+      "Self-Hosted",
+      "Tracking"
     ]
   },
   {
@@ -4442,6 +4693,19 @@
     "tags": [
       "Developer Tools",
       "Security"
+    ]
+  },
+  {
+    "slug": "swetrix",
+    "logo": "logo.png",
+    "name": "Swetrix",
+    "description": "Swetrix is a powerful, privacy-focused analytics platform that provides comprehensive website and application analytics. Built with modern technologies, it offers real-time data collection, beautiful dashboards, and detailed insights into user behavior. Features include event tracking, performance monitoring, user session analysis, and customizable reports. Self-hosted solution that ensures complete data privacy and control while providing enterprise-grade analytics capabilities.",
+    "tags": [
+      "Analytics",
+      "Privacy",
+      "Self-Hosted",
+      "Real-time",
+      "Dashboard"
     ]
   },
   {
@@ -4709,9 +4973,14 @@
   {
     "slug": "twenty",
     "logo": "logo.png",
-    "name": "Twenty",
-    "description": "Twenty is an open-source CRM platform designed to offer full customization and control over your customer relationship management. It provides the flexibility to self-host, avoiding vendor lock-in and offering cost-effective solutions.",
-    "tags": []
+    "name": "Twenty CRM",
+    "description": "Twenty is a modern, open-source CRM platform designed to help businesses manage their customer relationships efficiently.  It offers a user-friendly interface for tracking contacts, organizations, and opportunities while providing powerful customization options.",
+    "tags": [
+      "CRM",
+      "Business Apps",
+      "Productivity",
+      "Collaboration"
+    ]
   },
   {
     "slug": "typebot",
@@ -4825,6 +5094,19 @@
     ]
   },
   {
+    "slug": "vikunja",
+    "logo": "logo.png",
+    "name": "Vikunja",
+    "description": "Vikunja is a self-hosted To-Do list application and task management tool. It provides a clean and intuitive interface for organizing tasks, projects, and team collaboration. With features like task lists, labels, assignees, due dates, and more, Vikunja helps individuals and teams stay organized and productive.",
+    "tags": [
+      "Task Management",
+      "To-Do List",
+      "Project Management",
+      "Productivity",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "vitess",
     "logo": "logo.png",
     "name": "Vitess",
@@ -4899,6 +5181,33 @@
       "Developer Tools",
       "Data Science",
       "Databases"
+    ]
+  },
+  {
+    "slug": "web-check",
+    "logo": "logo.png",
+    "name": "Web-Check",
+    "description": "A comprehensive OSINT tool for analyzing websites, providing insights into security configurations, server architecture, and technologies.",
+    "tags": [
+      "OSINT",
+      "Security",
+      "Web Analysis",
+      "DNS",
+      "SSL",
+      "Performance"
+    ]
+  },
+  {
+    "slug": "web-portal",
+    "logo": "logo.svg",
+    "name": "Web Portal",
+    "description": "Web Portal is a lightweight and customizable dashboard application developed by enchant97. It provides a central hub for accessing your self-hosted applications and services. With a clean and intuitive interface, Web Portal helps you organize and access your web applications efficiently. It features a SQLite database for configuration storage and supports custom plugins for extended functionality. This containerized solution is perfect for home server enthusiasts and self-hosters looking for a clean, efficient way to manage their web applications.",
+    "tags": [
+      "Dashboard",
+      "Web Portal",
+      "Self-hosted",
+      "Docker",
+      "Application Directory"
     ]
   },
   {

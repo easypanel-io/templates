@@ -1,0 +1,197 @@
+name: Inbox Zero
+description:
+  Inbox Zero is an email management platform that helps you clean your inbox,
+  manage subscriptions, and automate email workflows.
+instructions:
+  The Google Client ID and Secret are required for the OAuth flow to work.
+  Select the LLM provider and fill the API keys for the provider.
+changeLog:
+  - date: 2025-04-15
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/elie222/inbox-zero
+  - label: Website
+    url: https://www.getinboxzero.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - googleClientId
+    - googleClientSecret
+    - llmProvider
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: inbox-zero
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/elie222/inbox-zero:v1.7.8
+    googleClientId:
+      type: string
+      title: Google Client ID
+      description: The Google Client ID is required for the OAuth flow to work.
+      default: ""
+    googleClientSecret:
+      type: string
+      title: Google Client Secret
+      description:
+        The Google Client Secret is required for the OAuth flow to work.
+      default: ""
+    llmProvider:
+      type: string
+      title: LLM Provider
+      description: Select the LLM provider and fill only the respective API key.
+      default: openai
+      enum:
+        - openai
+        - anthropic
+        - google
+        - groq
+        - bedrock
+        - ollama
+        - openrouter
+      enumNames:
+        - OpenAI
+        - Anthropic (Claude)
+        - Google (Gemini)
+        - Groq
+        - AWS Bedrock
+        - Ollama
+        - OpenRouter
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: openai
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: anthropic
+    googleApiKey:
+      type: string
+      title: Google API Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: google
+    groqApiKey:
+      type: string
+      title: Groq API Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: groq
+    bedrockAccessKey:
+      type: string
+      title: AWS Bedrock Access Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: bedrock
+    bedrockSecretKey:
+      type: string
+      title: AWS Bedrock Secret Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: bedrock
+    bedrockRegion:
+      type: string
+      title: AWS Bedrock Region
+      default: "us-west-2"
+      showIf:
+        field: llmProvider
+        is: bedrock
+    ollamaBaseUrl:
+      type: string
+      title: Ollama Base URL
+      default: "http://ollama:11434"
+      showIf:
+        field: llmProvider
+        is: ollama
+    ollamaModel:
+      type: string
+      title: Ollama Model
+      default: "phi3"
+      showIf:
+        field: llmProvider
+        is: ollama
+    openrouterApiKey:
+      type: string
+      title: OpenRouter API Key
+      default: ""
+      showIf:
+        field: llmProvider
+        is: openrouter
+    economyLlmProvider:
+      type: string
+      title: Economy LLM Provider
+      default: ollama
+      enum:
+        - openai
+        - anthropic
+        - google
+        - groq
+        - bedrock
+        - ollama
+        - openrouter
+        - none
+      enumNames:
+        - OpenAI
+        - Anthropic (Claude)
+        - Google (Gemini)
+        - Groq
+        - AWS Bedrock
+        - Ollama
+        - OpenRouter
+        - None
+    economyLlmModel:
+      type: string
+      title: Economy LLM Model
+      default: ""
+      showIf:
+        field: economyLlmProvider
+        not: none
+
+benefits:
+  - title: Email Management
+    description: Take control of your inbox with powerful management tools
+  - title: Subscription Control
+    description:
+      Easily manage and unsubscribe from newsletters and subscriptions
+  - title: Email Automation
+    description: Automate repetitive email tasks and workflows
+  - title: AI-Powered
+    description: Leverage AI to handle email categorization and responses
+  - title: Self-Hosted
+    description: Keep your email data private on your own server
+features:
+  - title: Email Cleanup
+    description:
+      Declutter your inbox by quickly processing and organizing emails
+  - title: Subscription Manager
+    description: Track and manage all your email subscriptions
+  - title: Auto-Responder
+    description: Set up automated responses for common email types
+  - title: Email Filters
+    description: Create custom filters to sort and manage incoming emails
+  - title: Analytics
+    description: Track email usage and behavior over time
+tags:
+  - Email
+  - Productivity
+  - AI
+  - Self-Hosted
+  - Automation

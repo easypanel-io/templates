@@ -16,6 +16,8 @@ changeLog:
     description: Version changed to 5.8.6
   - date: 2025-01-09
     description: Version bumped to 5.9
+  - date: 2025-05-26
+    description: Version bumped to 6
 links:
   - label: Website
     url: https://getdashdot.com/
@@ -25,7 +27,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mauricenino/dashdot:5.9
+      default: mauricenino/dashdot:6
 benefits:
   - title: Modern Server Dashboard
     description:
