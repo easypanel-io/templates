@@ -1,0 +1,114 @@
+name: Novu
+description:
+  Novu is an open-source notification infrastructure platform that provides a
+  unified API for managing notifications across multiple channels including
+  email, SMS, push notifications, in-app notifications, and chat. This template
+  deploys a complete Novu infrastructure with separate services for API, Worker,
+  WebSocket, and Dashboard components, backed by MongoDB and Redis. Built for
+  developers who need reliable, scalable notification delivery with features
+  like workflow automation, template management, subscriber management, and
+  real-time analytics. Perfect for applications that require sophisticated
+  notification systems with multi-channel delivery, personalization, and
+  comprehensive tracking capabilities.
+
+instructions: null
+
+changeLog:
+  - date: 2025-07-02
+    description: Initial release
+
+links:
+  - label: GitHub Repository
+    url: https://github.com/novuhq/novu
+  - label: Official Website
+    url: https://novu.co
+  - label: Documentation
+    url: https://docs.novu.co
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - apiServiceImage
+    - workerServiceImage
+    - wsServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: novu
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/novuhq/novu/dashboard:2.3.0
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: ghcr.io/novuhq/novu/api:2.3.0
+    workerServiceImage:
+      type: string
+      title: Worker Service Image
+      default: ghcr.io/novuhq/novu/worker:2.3.0
+    wsServiceImage:
+      type: string
+      title: WebSocket Service Image
+      default: ghcr.io/novuhq/novu/ws:2.3.0
+
+benefits:
+  - title: Multi-Channel Notifications
+    description:
+      Send notifications across email, SMS, push, in-app, and chat channels
+      through a single unified API.
+  - title: Workflow Automation
+    description:
+      Create complex notification workflows with triggers, delays, and
+      conditional logic for sophisticated messaging.
+  - title: Developer-Friendly
+    description:
+      Comprehensive APIs, SDKs, and documentation designed specifically for
+      developers and development teams.
+
+features:
+  - title: Unified Notification API
+    description:
+      Single API to manage notifications across all channels including email,
+      SMS, push, in-app, and chat.
+  - title: Workflow Management
+    description:
+      Visual workflow builder for creating complex notification sequences with
+      conditions and triggers.
+  - title: Template Engine
+    description:
+      Rich template system for creating and managing notification content across
+      different channels.
+  - title: Subscriber Management
+    description:
+      Comprehensive subscriber management with preferences, segmentation, and
+      targeting capabilities.
+  - title: Real-time Analytics
+    description:
+      Detailed analytics and insights into notification delivery, engagement,
+      and performance metrics.
+  - title: Provider Integration
+    description:
+      Support for multiple notification providers including SendGrid, Twilio,
+      Firebase, and many others.
+
+tags:
+  - Notifications
+  - Multi-Channel
+  - Email
+  - SMS
+  - Push Notifications
+  - In-App Messaging
+  - Workflow Automation
+  - API
+  - Open Source
+  - Developer Tools
+  - Analytics
+  - Templates
