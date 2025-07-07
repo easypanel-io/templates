@@ -69,7 +69,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: activepieces/activepieces:0.44.0
+      default: activepieces/activepieces:0.64.2
     databaseServiceName:
       type: string
       title: Database Service Name
