@@ -48,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: adguard/adguardhome:latest
+      default: adguard/adguardhome:v0.107.63
 benefits:
   - title: Ad-Free Browsing
     description:

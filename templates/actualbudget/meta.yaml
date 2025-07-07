@@ -32,7 +32,7 @@ contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -46,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/actualbudget/actual-server:25.2.1
+      default: ghcr.io/actualbudget/actual-server:25.7.1
 benefits:
   - title: Local-First Personal Finance
     description:

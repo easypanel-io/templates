@@ -1,11 +1,10 @@
 import { Output, Services, randomPassword } from "~templates-utils";
-import { Input } from './meta';
+import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const dbPassword = randomPassword();
 
-  // Database service - using managed MySQL
   services.push({
     type: "mysql",
     data: {
@@ -14,14 +13,13 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Akaunting service
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "docker.io/akaunting/akaunting:3.1.14-v",
+        image: input.appServiceImage,
       },
       env: [
         `AKAUNTING_SETUP=false`,

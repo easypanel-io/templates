@@ -29,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/apprise-api:latest
+      default: linuxserver/apprise-api:1.2.0
 benefits:
   - title: Unified Notification Gateway
     description:
