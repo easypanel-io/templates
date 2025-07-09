@@ -1,0 +1,70 @@
+name: Goaway
+description:
+  Goaway is a DNS service that provides filtering and blocking capabilities for
+  unwanted content. It acts as a DNS server that can block malicious domains,
+  advertisements, and other unwanted traffic while providing a clean web
+  interface for management.
+instructions:
+  The login credentials are user = admin and password is genrated on the startup
+  logs of GoAway inside overview section. In order to mount the DNS port, you
+  have to make sure your host machine has the port 53 not being used by any
+  other service.
+changeLog:
+  - date: 2025-07-09
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/pommee/goaway
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: goaway
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pommee/goaway:0.57.0
+    dnsPort:
+      type: string
+      title: DNS Port
+      default: "53"
+      description: The port to use for DNS queries.
+
+benefits:
+  - title: DNS Filtering
+    description: Block unwanted domains and malicious content at the DNS level
+  - title: Web Interface
+    description: Easy-to-use web interface for configuration and monitoring
+  - title: Lightweight
+    description:
+      Minimal resource usage while providing comprehensive DNS filtering
+  - title: Network Protection
+    description: Protect your entire network by filtering DNS requests
+features:
+  - title: DNS Server
+    description: Full-featured DNS server with filtering capabilities
+  - title: Domain Blocking
+    description: Block access to unwanted or malicious domains
+  - title: Web Management
+    description: Comprehensive web interface for easy management
+  - title: Real-time Monitoring
+    description: Monitor DNS queries and blocked requests in real-time
+  - title: Custom Configuration
+    description: Customize blocking rules and DNS settings
+  - title: Network-wide Protection
+    description:
+      Protect all devices on your network with centralized DNS filtering
+tags:
+  - DNS
+  - Network Security
+  - Ad Blocking
+  - Content Filtering
+  - Privacy
