@@ -38,7 +38,12 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/opt/bitnami/keycloak",
+          mountPath: "/opt/keycloak",
+        },
+        {
+          type: "volume",
+          name: "themes",
+          mountPath: "/opt/bitnami/keycloak/themes",
         },
       ],
     },
