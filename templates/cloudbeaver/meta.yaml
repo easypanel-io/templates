@@ -1,0 +1,98 @@
+name: CloudBeaver
+description:
+  CloudBeaver is a web-based database management tool developed by DBeaver team.
+  It provides a modern, intuitive interface for managing databases through your
+  web browser. CloudBeaver supports multiple database types including
+  PostgreSQL, MySQL, MariaDB, SQLite, Oracle, SQL Server, and many others.
+  Perfect for teams who need collaborative database management without
+  installing desktop software.
+instructions: null
+changeLog:
+  - date: 2025-07-11
+    description: Initial release
+links:
+  - label: Website
+    url: https://cloudbeaver.io/
+  - label: Documentation
+    url: https://github.com/dbeaver/cloudbeaver/wiki
+  - label: GitHub
+    url: https://github.com/dbeaver/cloudbeaver
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cloudbeaver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dbeaver/cloudbeaver:25.1.2
+benefits:
+  - title: Web-Based Interface
+    description:
+      Access your databases from anywhere using just a web browser, no desktop
+      software required
+  - title: Multi-Database Support
+    description:
+      Connect to PostgreSQL, MySQL, Oracle, SQL Server, SQLite, and dozens of
+      other database types
+  - title: Team Collaboration
+    description:
+      Share database connections and queries with your team through a
+      centralized web interface
+  - title: Enterprise Features
+    description:
+      Advanced authentication, user management, and security features for
+      enterprise environments
+features:
+  - title: Visual Query Builder
+    description:
+      Build complex SQL queries using an intuitive drag-and-drop interface
+  - title: Data Editor
+    description:
+      View, edit, and manage database records with spreadsheet-like
+      functionality
+  - title: SQL Editor
+    description:
+      Advanced SQL editor with syntax highlighting, autocomplete, and execution
+      planning
+  - title: Database Navigator
+    description:
+      Browse database schemas, tables, views, and other objects in a tree
+      structure
+  - title: Connection Management
+    description:
+      Manage multiple database connections with secure credential storage
+  - title: Data Export/Import
+    description:
+      Export query results and import data in various formats including CSV,
+      JSON, and SQL
+  - title: User Management
+    description:
+      Role-based access control with support for teams and individual users
+  - title: Query History
+    description: Keep track of executed queries and reuse them across sessions
+  - title: Database Metadata
+    description:
+      View detailed information about tables, indexes, constraints, and
+      relationships
+  - title: Custom Dashboards
+    description: Create personalized dashboards with charts and visualizations
+tags:
+  - Database
+  - SQL
+  - Management
+  - Web Interface
+  - PostgreSQL
+  - MySQL
+  - Oracle
+  - Development
+  - Analytics
+  - Team Collaboration
