@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
   const secretKeyBase = randomString(64);
 
   const appEnv = [
-    `BASE_URL=$(PRIMARY_DOMAIN)`,
+    `BASE_URL=https://$(PRIMARY_DOMAIN)`,
     `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `SECRET_KEY_BASE=${secretKeyBase}`,
     `PRESENTATION_STORAGE=local`,
