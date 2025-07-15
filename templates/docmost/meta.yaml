@@ -14,6 +14,8 @@ changeLog:
     description: Template Release
   - date: 2025-05-26
     description: Version bumped to 0.20.4
+  - date: 2025-07-15
+    description: Version bumped to 0.21.0
 links:
   - label: Documentation
     url: https://docmost.com/docs/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docmost/docmost:0.20.4
+      default: docmost/docmost:0.21.0
 benefits:
   - title: Secure Document Management
     description:
