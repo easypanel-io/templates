@@ -19,6 +19,8 @@ changeLog:
     description: first release
   - date: 2025-01-09
     description: Version bumped to 24.8
+  - date: 2025-07-15
+    description: Version bumped to 25.6
 links:
   - label: Website
     url: https://clickhouse.com/
@@ -29,6 +31,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: clickhouse/clickhouse-server:25.1
+      default: clickhouse/clickhouse-server:25.6
 benefits:
   - title: Real-Time Analytics
     description:

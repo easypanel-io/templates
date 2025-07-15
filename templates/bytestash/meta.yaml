@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-02-10
     description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 1.5.8
 links:
   - label: Documentation
     url: https://github.com/jordan-dalby/bytestash/wiki
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: Service Image
-      default: ghcr.io/jordan-dalby/bytestash:1.5.6
+      default: ghcr.io/jordan-dalby/bytestash:1.5.8
 benefits:
   - title: Centralized Code Management
     description:
