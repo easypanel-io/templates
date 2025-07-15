@@ -1,9 +1,16 @@
 name: Discourse
-description: Discourse is a modern, open-source discussion platform that provides a clean, intuitive interface for community discussions. It's perfect for forums, mailing lists, chat rooms, and more.
-instructions: Once clicked, please wait for the installation to complete, it will take time. It is also resource intensive, so make sure you have more than 8GB of RAM. 
+description:
+  Discourse is a modern, open-source discussion platform that provides a clean,
+  intuitive interface for community discussions. It's perfect for forums,
+  mailing lists, chat rooms, and more.
+instructions:
+  Once clicked, please wait for the installation to complete, it will take time.
+  It is also resource intensive, so make sure you have more than 8GB of RAM.
 changeLog:
   - date: 2025-04-30
     description: Initial release
+  - date: 2025-07-15
+    description: Version bumped to 3.4.5
 links:
   - label: Website
     url: https://www.discourse.org
@@ -32,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnami/discourse:3
+      default: bitnami/discourse:3.4.5
     discourseEmail:
       type: string
       title: Discourse Email
@@ -73,4 +80,4 @@ tags:
   - Discussion
   - Self-hosted
   - Open Source
-  - Community 
+  - Community
