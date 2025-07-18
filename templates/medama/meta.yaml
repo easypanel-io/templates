@@ -1,15 +1,19 @@
 name: Medama
 description:
-  Medama Analytics is an open-source project dedicated to providing self-hostable,
-  cookie-free website analytics. With a lightweight tracker of less than 1KB, it aims
-  to offer useful analytics while prioritising user privacy.
-instructions: Login credentials, username; admin and password; CHANGE_ME_ON_FIRST_LOGIN
+  Medama Analytics is an open-source project dedicated to providing
+  self-hostable, cookie-free website analytics. With a lightweight tracker of
+  less than 1KB, it aims to offer useful analytics while prioritising user
+  privacy.
+instructions:
+  Login credentials, username; admin and password; CHANGE_ME_ON_FIRST_LOGIN
 changeLog:
-  - date: 2025-04-08  
+  - date: 2025-04-08
     description: First Release
 links:
   - label: Github
     url: https://github.com/medama-io/medama
+  - label: Documentation
+    url: https://oss.medama.io/introduction
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -29,14 +33,14 @@ schema:
       default: ghcr.io/medama-io/medama:v0.5.2
 benefits:
   - title: Privacy Focused
-    description:
-      Prioritizes user privacy by providing cookie-free analytics.
+    description: Prioritizes user privacy by providing cookie-free analytics.
   - title: Lightweight
     description:
       Less than 1KB tracker ensures minimal impact on website performance.
   - title: Open Source
     description:
-      Fully open-source project allowing for community contributions and transparency.
+      Fully open-source project allowing for community contributions and
+      transparency.
   - title: Self-Hostable
     description:
       Easily deployable on your own infrastructure for complete control.
@@ -56,12 +60,14 @@ features:
       Source code is available for anyone to inspect, modify, and contribute to.
   - title: Self-Hosting
     description:
-      Can be deployed on your own servers, giving you full control over your data.
+      Can be deployed on your own servers, giving you full control over your
+      data.
   - title: Essential Analytics
     description:
-      Provides key metrics to help you understand and optimize your website traffic.
+      Provides key metrics to help you understand and optimize your website
+      traffic.
 tags:
   - Website Tracker
   - Live Tracking
   - Website Monitoring
-  - Analytics 
+  - Analytics
