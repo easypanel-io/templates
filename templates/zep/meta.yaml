@@ -34,6 +34,7 @@ schema:
     - openai_model_name
     - graphitiServiceImage
     - neo4jServiceImage
+    - postgresServiceImage
   properties:
     appServiceName:
       type: string
@@ -62,6 +63,10 @@ schema:
       type: string
       title: OpenAI Model Name
       default: gpt-4o-mini
+    postgresServiceImage:
+      type: string
+      title: Postgres Service Image
+      default: pgvector/pgvector:pg17
 benefits:
   - title: Seamless AI Integration
     description:

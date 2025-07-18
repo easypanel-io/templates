@@ -126,7 +126,7 @@ telemetry:
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
-      image: "ankane/pgvector:v0.5.1",
+      image: input.postgresServiceImage,
     },
   });
 
