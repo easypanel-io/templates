@@ -1,12 +1,20 @@
 name: FlashPaper
-description: FlashPaper is a secure, self-destructing message service that allows you to share sensitive information safely. Messages are encrypted and automatically destroyed after being viewed once, ensuring that sensitive data remains secure and temporary.
-instructions: After installation, access the web interface through the provided domain to start creating self-destructing messages.
+description:
+  FlashPaper is a secure, self-destructing message service that allows you to
+  share sensitive information safely. Messages are encrypted and automatically
+  destroyed after being viewed once, ensuring that sensitive data remains secure
+  and temporary.
+instructions:
+  After installation, access the web interface through the provided domain to
+  start creating self-destructing messages.
 changeLog:
   - date: 2025-04-10
     description: First Release
 links:
   - label: Github
     url: https://github.com/AndrewPaglusch/FlashPaper
+  - label: Website
+    url: https://flashpaper.io
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -23,12 +31,13 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/andrewpaglusch/flashpaper:v2
+      default: ghcr.io/andrewpaglusch/flashpaper:2.4.0
 benefits:
   - title: Self-Destructing Messages
     description: Messages are automatically destroyed after being viewed once.
   - title: Secure Communication
-    description: Share sensitive information securely with automatic destruction.
+    description:
+      Share sensitive information securely with automatic destruction.
   - title: Customizable Interface
     description: Customize the interface with your own branding and messages.
   - title: Message Pruning
@@ -51,4 +60,4 @@ tags:
   - Privacy
   - Encryption
   - Self-Destructing
-  - Communication 
+  - Communication
