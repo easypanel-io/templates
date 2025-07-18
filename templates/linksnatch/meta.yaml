@@ -1,7 +1,8 @@
 name: Linksnatch
-description: 
-  Linksnatch is a link management application that helps you organize and track your bookmarks and URLs.
-  It provides a simple interface for managing and categorizing your links.
+description:
+  Linksnatch is a link management application that helps you organize and track
+  your bookmarks and URLs. It provides a simple interface for managing and
+  categorizing your links.
 instructions: null
 changeLog:
   - date: 2025-04-11
@@ -25,7 +26,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: varunsridharan/linksnatch:latest
+      default: varunsridharan/linksnatch:1.0
 benefits:
   - title: Link Management
     description: Organize and manage your bookmarks efficiently
@@ -51,4 +52,4 @@ tags:
   - Link Management
   - Organization
   - Self-Hosted
-  - Web Application 
+  - Web Application
