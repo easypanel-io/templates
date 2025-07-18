@@ -64,7 +64,7 @@ telemetry:
       env: [
         `ZEP_CONFIG_FILE=zep.yaml`,
         `ZEP_POSTGRES_PASSWORD=${databasePassword}`,
-        `ZEP_POSTGRES_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
+        `ZEP_POSTGRES_HOST=$(PROJECT_NAME)-${input.appServiceName}-db`,
         `ZEP_POSTGRES_DATABASE=$(PROJECT_NAME)`,
         `ZEP_GRAPHITI_HOST=http://$(PROJECT_NAME)_${input.appServiceName}-graphiti:8003`,
         `ZEP_API_SECRET=${zepApiKey}`,
