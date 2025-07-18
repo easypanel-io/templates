@@ -1,12 +1,20 @@
 name: Enclosed
-description: Enclosed is a minimalist file sharing and URL shortening service. It provides a simple and efficient way to share files and shorten URLs with a clean, modern interface. Perfect for personal or small team use, it offers secure file storage and easy link management.
-instructions: After installation, access the web interface through the provided domain to start sharing files and shortening URLs.
+description:
+  Enclosed is a minimalist file sharing and URL shortening service. It provides
+  a simple and efficient way to share files and shorten URLs with a clean,
+  modern interface. Perfect for personal or small team use, it offers secure
+  file storage and easy link management.
+instructions:
+  After installation, access the web interface through the provided domain to
+  start sharing files and shortening URLs.
 changeLog:
   - date: 2025-04-10
     description: First Release
 links:
   - label: Github
     url: https://github.com/corentinth/enclosed
+  - label: Website
+    url: https://enclosed.cc
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -51,4 +59,4 @@ tags:
   - URL Shortener
   - Self-Hosted
   - Storage
-  - Sharing 
+  - Sharing
