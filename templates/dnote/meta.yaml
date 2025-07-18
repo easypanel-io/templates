@@ -1,7 +1,8 @@
 name: Dnote
 description:
-  Dnote is a simple command-line notebook application that helps you capture and organize your thoughts.
-  It provides a clean interface for taking notes and organizing them into books.
+  Dnote is a simple command-line notebook application that helps you capture and
+  organize your thoughts. It provides a clean interface for taking notes and
+  organizing them into books.
 instructions: Configure the SMTP server to send verification emails.
 changeLog:
   - date: 2025-04-11
@@ -9,6 +10,10 @@ changeLog:
 links:
   - label: GitHub
     url: https://github.com/dnote/dnote
+  - label: Website
+    url: https://dnote.io
+  - label: Documentation
+    url: https://www.getdnote.com/blog/introducing-dnote-web/
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -36,9 +41,9 @@ schema:
       title: SMTP Host
       default: smtp.gmail.com
     SmtpPort:
-      type: number
+      type: string
       title: SMTP Port
-      default: 587
+      default: "587"
     SmtpUser:
       type: string
       title: SMTP User
@@ -76,4 +81,4 @@ tags:
   - CLI
   - Organization
   - Self-Hosted
-  - Productivity 
+  - Productivity
