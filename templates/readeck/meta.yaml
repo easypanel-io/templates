@@ -1,14 +1,24 @@
 name: Readeck
-description: Readeck is a self-hosted read-it-later service that allows you to save articles, web pages, and other content for later reading. It provides a clean and distraction-free reading experience with features for organizing and managing your saved content.
-instructions: After installation, access the web interface through the provided domain to start saving and organizing your reading list.
+description:
+  Readeck is a self-hosted read-it-later service that allows you to save
+  articles, web pages, and other content for later reading. It provides a clean
+  and distraction-free reading experience with features for organizing and
+  managing your saved content.
+instructions:
+  After installation, access the web interface through the provided domain to
+  start saving and organizing your reading list.
 changeLog:
   - date: 2024-04-09
     description: First Release
 links:
   - label: Codeberg
     url: https://codeberg.org/readeck/readeck
+  - label: Website
+    url: https://readeck.org
+  - label: Documentation
+    url: https://readeck.org/en/docs/
 contributors:
-  - name: Readeck Team
+  - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
 schema:
   type: object
@@ -51,4 +61,4 @@ tags:
   - Bookmarking
   - Self-Hosted
   - Articles
-  - Content Management 
+  - Content Management
