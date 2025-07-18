@@ -1,10 +1,11 @@
 name: LiteCart
 description:
-  LiteCart is a free and open-source e-commerce platform that provides a complete
-  solution for creating and managing online stores. It features a user-friendly
-  interface, customizable themes, and essential e-commerce functionality including
-  product management, order processing, and customer management. LiteCart is built
-  with PHP and MySQL, making it easy to deploy and maintain.
+  LiteCart is a free and open-source e-commerce platform that provides a
+  complete solution for creating and managing online stores. It features a
+  user-friendly interface, customizable themes, and essential e-commerce
+  functionality including product management, order processing, and customer
+  management. LiteCart is built with PHP and MySQL, making it easy to deploy and
+  maintain.
 instructions: null
 changeLog:
   - date: 2024-04-04
@@ -13,7 +14,7 @@ links:
   - label: Website
     url: https://www.litecart.net/
   - label: Documentation
-    url: https://www.litecart.net/docs/
+    url: https://www.litecart.net/en/wiki/
   - label: Github
     url: https://github.com/litecart/litecart
 contributors:
@@ -36,31 +37,35 @@ schema:
 benefits:
   - title: User-Friendly
     description:
-      Intuitive interface and easy-to-use admin panel for managing your online store.
+      Intuitive interface and easy-to-use admin panel for managing your online
+      store.
   - title: Complete E-commerce Solution
     description:
-      Provides all essential features for running an online store including product
-      management, order processing, and customer management.
+      Provides all essential features for running an online store including
+      product management, order processing, and customer management.
   - title: Customizable
     description:
-      Offers customizable themes and extensions to meet your specific business needs.
+      Offers customizable themes and extensions to meet your specific business
+      needs.
   - title: Open Source
     description:
-      Free and open-source platform with an active community for support and improvements.
+      Free and open-source platform with an active community for support and
+      improvements.
   - title: Easy Deployment
     description:
-      Simple deployment process with Docker, making it easy to set up and maintain
-      your online store.
+      Simple deployment process with Docker, making it easy to set up and
+      maintain your online store.
 features:
   - title: Product Management
     description:
-      Manage products with detailed information, categories, and inventory tracking.
+      Manage products with detailed information, categories, and inventory
+      tracking.
   - title: Order Processing
     description:
-      Process orders with payment integration, shipping options, and order status tracking.
+      Process orders with payment integration, shipping options, and order
+      status tracking.
   - title: Customer Management
-    description:
-      Manage customers with profiles, addresses, and order history.
+    description: Manage customers with profiles, addresses, and order history.
   - title: Payment Integration
     description:
       Integrate with popular payment gateways for secure transactions.
@@ -72,4 +77,4 @@ tags:
   - Online Store
   - Shopping Cart
   - PHP
-  - MySQL 
+  - MySQL
