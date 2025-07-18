@@ -36,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: Centrifugo Image
-      default: centrifugo/centrifugo:v6
+      default: centrifugo/centrifugo:v6.1.0
     adminPassword:
       type: string
       title: Admin Password
@@ -76,4 +76,4 @@ tags:
   - WebSocket
   - Messaging
   - Communication
-  - Server 
+  - Server
