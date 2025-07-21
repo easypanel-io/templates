@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2024-03-18
     description: Template added
+  - date: 2025-07-21
+    description: Version bumped to v3.3.25
 links:
   - label: Website
     url: https://github.com/FlareSolverr/FlareSolverr
@@ -23,6 +25,8 @@ links:
 contributors:
   - name: Mark Topper Diderichsen
     url: https://github.com/marktopper
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -36,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/flaresolverr/flaresolverr:v3.3.21
+      default: ghcr.io/flaresolverr/flaresolverr:v3.3.25
 benefits:
   - title: Bypass Web Protections
     description:

@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 0.17.3
   - date: 2025-02-25
     description: Version bumped to 0.18.1
+  - date: 2025-07-21
+    description: Version bumped to 0.19.1
 links:
   - label: Website
     url: https://gotosocial.org/
@@ -34,6 +36,8 @@ links:
 contributors:
   - name: Michael Kinder
     url: https://github.com/ressonix
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.18.1
+      default: superseriousbusiness/gotosocial:0.19.1
 benefits:
   - title: Privacy-Focused
     description:
