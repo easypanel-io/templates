@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/lazylibrarian:latest
+      default: lscr.io/linuxserver/lazylibrarian:9aa1ebfe-ls173
 benefits:
   - title: Easy Media Management
     description:
