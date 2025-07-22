@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-03-05
     description: First Release (0.1.0)
+  - date: 2025-07-22
+    description: Version bumped to 0.1.3
 links:
   - label: Github
     url: https://github.com/eduardolat/kokoro-web
@@ -27,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/eduardolat/kokoro-web:0.1.0
+      default: ghcr.io/eduardolat/kokoro-web:0.1.3
 benefits:
   - title: No Installation Required
     description:

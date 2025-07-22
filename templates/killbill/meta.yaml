@@ -44,11 +44,11 @@ schema:
     appServiceImage:
       type: string
       title: KillBill Service Image
-      default: killbill/killbill:0.24.10
+      default: killbill/killbill:0.24.13
     kauiAppServiceImage:
       type: string
       title: Kaui Admin Console Image
-      default: killbill/kaui:3.0.9
+      default: killbill/kaui:3.0.17
 benefits:
   - title: Flexible Billing Engine
     description:
