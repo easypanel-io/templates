@@ -15,6 +15,8 @@ instructions:
 changeLog:
   - date: 2025-02-11
     description: Template Release
+  - date: 2025-07-24
+    description: Version bumped to 7.0.4
 
 links:
   - label: Documentation
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openemr/openemr:7.0.2
+      default: openemr/openemr:7.0.4
     adminUser:
       type: string
       title: Admin User

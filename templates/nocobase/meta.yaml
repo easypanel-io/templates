@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 1.5.18
+  - date: 2025-07-24
+    description: Update to 1.8.7
 links:
   - label: Website
     url: https://www.nocobase.com/
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -44,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nocobase/nocobase:1.5.18
+      default: nocobase/nocobase:1.8.7
     databaseServiceName:
       type: string
       title: Database Service Name
