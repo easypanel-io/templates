@@ -43,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbget:version-v24.6
+      default: lscr.io/linuxserver/nzbget:version-v25.2
     username:
       type: string
       title: Username
