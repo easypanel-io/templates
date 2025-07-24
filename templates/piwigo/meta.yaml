@@ -10,6 +10,8 @@ instructions: Configure the database in the installation wizard.
 changeLog:
   - date: 2025-02-24
     description: Template Release
+  - date: 2025-07-24
+    description: Version bumped to 15.5.0
 links:
   - label: Website
     url: https://piwigo.org/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/piwigo:15.4.0
+      default: lscr.io/linuxserver/piwigo:15.5.0
 benefits:
   - title: Efficient Photo Management
     description:

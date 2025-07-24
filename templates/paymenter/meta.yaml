@@ -1,9 +1,18 @@
 name: Paymenter
-description: "Paymenter is a modern, open-source billing and client management system. It provides a seamless platform for handling payments, subscriptions, and client services with support for multiple payment gateways and automated billing processes."
-instructions: Connect the shell and run "php artisan app:init" to initialize the application, and paste your domain inside. Secondly, create an admin user on the same shell using "php artisan app:user:create". 
+description:
+  "Paymenter is a modern, open-source billing and client management system. It
+  provides a seamless platform for handling payments, subscriptions, and client
+  services with support for multiple payment gateways and automated billing
+  processes."
+instructions:
+  Connect the shell and run "php artisan app:init" to initialize the
+  application, and paste your domain inside. Secondly, create an admin user on
+  the same shell using "php artisan app:user:create".
 changeLog:
   - date: 2025-05-13
     description: First Release
+  - date: 2025-07-24
+    description: Update to 1.2.5
 links:
   - label: Website
     url: https://paymenter.org
@@ -27,22 +36,32 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/paymenter/paymenter:v1.1.0
+      default: ghcr.io/paymenter/paymenter:v1.2.5
 benefits:
   - title: Modern Billing System
-    description: A comprehensive solution for managing payments, subscriptions, and client services.
+    description:
+      A comprehensive solution for managing payments, subscriptions, and client
+      services.
   - title: Multiple Payment Gateways
-    description: Support for various payment providers to accommodate different business needs.
+    description:
+      Support for various payment providers to accommodate different business
+      needs.
   - title: Open Source
-    description: Fully open-source solution with active community support and regular updates.
+    description:
+      Fully open-source solution with active community support and regular
+      updates.
 features:
   - title: Automated Billing
-    description: Streamlined billing processes with automatic invoice generation and payment processing.
+    description:
+      Streamlined billing processes with automatic invoice generation and
+      payment processing.
   - title: Client Management
-    description: Complete client portal for managing services, invoices, and support tickets.
+    description:
+      Complete client portal for managing services, invoices, and support
+      tickets.
   - title: Redis Integration
     description: Uses Redis for efficient caching and session management.
 tags:
   - Billing
   - Payment
-  - Client Management 
+  - Client Management
