@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-06-17
     description: Initial Template Release
+  - date: 2025-07-25
+    description: Version bumped to 1.6.5
 
 links:
   - label: Documentation
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/speedtest-tracker:1.6.1
+      default: lscr.io/linuxserver/speedtest-tracker:1.6.5
       description: Speedtest Tracker Docker image
 
 benefits:
