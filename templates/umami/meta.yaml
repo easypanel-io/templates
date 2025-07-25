@@ -12,6 +12,8 @@ instructions: You can login with username "admin" and password "umami".
 changeLog:
   - date: 2022-09-27
     description: first release
+  - date: 2025-07-25
+    description: Version bumped to v2.18.1
 links:
   - label: Website
     url: https://umami.is/
@@ -22,6 +24,8 @@ links:
 contributors:
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -36,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/umami-software/umami:postgresql-v2.16.1
+      default: ghcr.io/umami-software/umami:postgresql-v2.18.1
     databaseServiceName:
       type: string
       title: Database Service Name
