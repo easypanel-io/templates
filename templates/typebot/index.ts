@@ -22,7 +22,6 @@ export function generate(input: Input): Output {
     `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)-${input.appServiceName}-redis:6379`,
   ];
 
-  // Add GitHub OAuth if credentials are provided
   if (
     input.githubClientId &&
     input.githubClientSecret &&
@@ -35,7 +34,6 @@ export function generate(input: Input): Output {
     );
   }
 
-  // Add Google OAuth if credentials are provided
   if (
     input.googleAuthClientId &&
     input.googleAuthClientSecret &&
