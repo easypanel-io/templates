@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
           port: 8000,
         },
       ],
@@ -36,11 +36,11 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "ghcr.io/windmill-labs/windmill-lsp:latest",
+        image: input.lspServiceImage,
       },
       domains: [
         {
-          host: input.domain,
+          host: "$(EASYPANEL_DOMAIN)",
           port: 3001,
           https: true,
           path: "/ws",
@@ -60,7 +60,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "ghcr.io/windmill-labs/windmill:main",
+        image: input.appServiceImage,
       },
       deploy: {
         replicas: input.workerReplicas,
@@ -91,7 +91,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       source: {
         type: "image",
-        image: "ghcr.io/windmill-labs/windmill:main",
+        image: input.appServiceImage,
       },
       deploy: {
         replicas: input.nativeWorkerReplicas,
