@@ -49,6 +49,12 @@ schema:
       type: string
       title: Redis Service Image
       default: eqalpha/keydb:x86_64_v6.3.4
+    googleRecaptchaKey:
+      type: string
+      title: Google Recaptcha Key
+    googleRecaptchaSecret:
+      type: string
+      title: Google Recaptcha Secret
 benefits:
   - title: Simplified Form Creation
     description:
