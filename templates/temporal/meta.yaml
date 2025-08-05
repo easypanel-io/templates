@@ -46,7 +46,7 @@ schema:
     elasticsearchImage:
       type: string
       title: Elasticsearch Service Image
-      default: elasticsearch:7.16.2
+      default: elasticsearch:9.1.0
     temporalUiImage:
       type: string
       title: Temporal UI Service Image
