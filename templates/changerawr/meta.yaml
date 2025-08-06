@@ -1,0 +1,94 @@
+name: Changerawr
+description:
+  Changerawr is a modern, open-source change management platform designed to
+  help organizations track, manage, and implement changes efficiently. Built
+  with Next.js and PostgreSQL, it provides a comprehensive solution for change
+  requests, approval workflows, impact assessment, and rollback procedures. The
+  platform features real-time collaboration, automated notifications, audit
+  trails, and detailed reporting capabilities. Perfect for DevOps teams, IT
+  departments, and organizations that need to maintain control over their change
+  management processes while ensuring transparency and accountability.
+instructions: null
+changeLog:
+  - date: 2025-08-06
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/supernova3339/changerawr
+  - label: Documentation
+    url: https://github.com/supernova3339/changerawr#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: changerawr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/supernova3339/changerawr:latest
+benefits:
+  - title: Comprehensive Change Management
+    description:
+      Complete change management solution with request tracking, approval
+      workflows, impact assessment, and rollback procedures for controlled
+      organizational changes.
+  - title: Real-Time Collaboration
+    description:
+      Enable team collaboration with real-time updates, comments, notifications,
+      and shared visibility into change requests and their progress.
+  - title: Automated Workflows
+    description:
+      Streamline change processes with automated approval workflows,
+      notifications, and status updates to reduce manual overhead and improve
+      efficiency.
+  - title: Audit Trail & Compliance
+    description:
+      Maintain detailed audit trails and compliance documentation with
+      comprehensive logging of all change activities and decisions.
+  - title: Impact Assessment
+    description:
+      Assess and document the potential impact of changes with built-in tools
+      for risk evaluation and dependency mapping.
+  - title: Dashboard & Reporting
+    description:
+      Comprehensive dashboards and reporting capabilities provide insights into
+      change metrics, success rates, and process improvements.
+features:
+  - title: Change Request Management
+    description:
+      Create, track, and manage change requests with detailed information,
+      attachments, and categorization for organized change handling.
+  - title: Approval Workflows
+    description:
+      Configure custom approval workflows with multi-stage approvals, escalation
+      rules, and role-based access control for proper governance.
+  - title: Risk Assessment
+    description:
+      Built-in risk assessment tools with impact analysis, dependency mapping,
+      and rollback planning for safer change implementation.
+  - title: Calendar & Scheduling
+    description:
+      Integrated calendar system for scheduling changes, avoiding conflicts, and
+      coordinating implementation timelines across teams.
+  - title: Integration Support
+    description:
+      GitHub integration and API support for connecting with existing
+      development tools and CI/CD pipelines for seamless workflows.
+  - title: Notification System
+    description:
+      Automated email and in-app notifications keep stakeholders informed about
+      change status updates, approvals, and deadlines.
+tags:
+  - Change Management
+  - DevOps
+  - Project Management
+  - Workflow
+  - Compliance
