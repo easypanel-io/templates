@@ -8,10 +8,13 @@ description:
   trails, and detailed reporting capabilities. Perfect for DevOps teams, IT
   departments, and organizations that need to maintain control over their change
   management processes while ensuring transparency and accountability.
-instructions: null
+instructions:
+  To enable automatic updates for Changerawr, configure the Easypanel Project
+  ID, Service ID, panel URL and API token in your Changerawr settings. These
+  configurations allow the system to automatically detect and apply new updates.
 changeLog:
-  - date: 2025-08-06
-    description: First release
+  - date: 2025-08-08
+    description: First Release (v1.0.4)
 links:
   - label: Github
     url: https://github.com/supernova3339/changerawr
@@ -33,7 +36,31 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/supernova3339/changerawr:latest
+      default: ghcr.io/supernova3339/changerawr:v1.0.4
+    enableOAuth2:
+      type: boolean
+      title: Enable OAuth2 Server
+      description: Enable OAuth2 server for Easypanel integration
+      default: false
+    oauth2ServiceImage:
+      type: string
+      title: OAuth2 Service Image
+      description:
+        Docker image for OAuth2 server (required if OAuth2 is enabled)
+      default: ghcr.io/supernova3339/ep-oauth2-serv:latest
+    easypanelApiToken:
+      type: string
+      title: Easypanel API Token
+      description:
+        API token for Easypanel integration (required if OAuth2 is enabled)
+      default: ""
+    easypanelUrl:
+      type: string
+      title: Easypanel URL
+      description:
+        URL of your Easypanel instance (required if OAuth2 is enabled)
+      default: https://$(EASYPANEL_HOST)
+
 benefits:
   - title: Comprehensive Change Management
     description:
