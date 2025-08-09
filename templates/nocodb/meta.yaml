@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 0.262.1
+  - date: 2025-06-03
+    description: Version bumped to 0.263.4
 links:
   - label: Website
     url: https://www.nocodb.com/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nocodb/nocodb:0.262.1
+      default: nocodb/nocodb:0.263.4
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbhydra2:latest
+      default: lscr.io/linuxserver/nzbhydra2:7.14.1
 benefits:
   - title: Unified Search
     description:

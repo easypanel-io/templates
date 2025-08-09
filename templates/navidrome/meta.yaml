@@ -20,6 +20,8 @@ changeLog:
     description: Update to 0.53.3
   - date: 2025-02-28
     description: Version bumped to 0.54.5
+  - date: 2025-06-03
+    description: Version bumped to 0.56.0
 links:
   - label: Website
     url: https://www.navidrome.org/
@@ -30,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: deluan/navidrome:0.54.5
+      default: deluan/navidrome:0.56.0
 benefits:
   - title: Personal Streaming Service
     description:
