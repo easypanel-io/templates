@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-postgres`,
       password: postgresPassword,
+      image: "postgres:17",
     },
   });
 
@@ -74,10 +75,12 @@ export function generate(input: Input): Output {
         `GITHUB_ENCRYPTION_KEY=${githubEncryptionKey}`,
         `ANALYTICS_SALT=${analyticsSalt}`,
         "NODE_ENV=production",
-        `EASYPANEL_PROJECT_ID=`,
-        `EASYPANEL_SERVICE_ID=`,
-        `EASYPANEL_PANEL_URL=`,
-        `EASYPANEL_API_KEY=`,
+        `EASYPANEL_PROJECT_ID=xxxxx`,
+        `EASYPANEL_SERVICE_ID=xxxxx`,
+        `EASYPANEL_PANEL_URL=https://$(EASYPANEL_HOST)`,
+        `EASYPANEL_API_KEY=xxxxx`,
+        `CHR_EPOA2_SERV_URL=https://$(PROJECT_NAME)-${input.appServiceName}-oauth2.$(EASYPANEL_HOST)`,
+        `CHR_EPOA2_SERV_API_KEY=${clientApiKey}`,
       ].join("\n"),
       mounts: [
         {
