@@ -13,7 +13,8 @@ changeLog:
     description: First release
   - date: 2025-02-28
     description: Version bumped to 1.66.5
-
+  - date: 2025-07-22
+    description: Version bumped to 1.103.0
 links:
   - label: Website
     url: https://lobehub.com/
@@ -44,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lobehub/lobe-chat:1.66.5
+      default: lobehub/lobe-chat:1.103.0
     openAiKey:
       type: string
       title: OpenAI API Key

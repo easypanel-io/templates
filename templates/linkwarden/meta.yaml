@@ -11,6 +11,8 @@ instructions: Configure Environment Variables as per your needs.
 changeLog:
   - date: 2025-01-16
     description: Template Release
+  - date: 2025-07-22
+    description: Version bumped to v2.11.5
 
 links:
   - label: Documentation
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/linkwarden/linkwarden:v2.9.3
+      default: ghcr.io/linkwarden/linkwarden:v2.11.5
 benefits:
   - title: Advanced Bookmark Management
     description:
