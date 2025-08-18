@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to v1.38
+  - date: 2025-07-24
+    description: Version bumped to v1.39.1
 links:
   - label: Documentation
     url: https://rotki.readthedocs.io/en/latest/
@@ -28,6 +30,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.38
+      default: rotki/rotki:v1.39.1
 benefits:
   - title: Asset Management
     description:

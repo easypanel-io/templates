@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-02-04
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to sha-d19ce75
 links:
   - label: Website
     url: https://rss-bridge.github.io/rss-bridge/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rssbridge/rss-bridge:sha-549bed6
+      default: rssbridge/rss-bridge:sha-d19ce75
 benefits:
   - title: Generate RSS Feeds for Any Website
     description:

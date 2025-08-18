@@ -22,6 +22,8 @@ instructions:
 changeLog:
   - date: 2023-03-16
     description: First Release
+  - date: 2025-07-24
+    description: Version bumped to sha-84c642c
 links:
   - label: Website
     url: https://photoview.github.io/
@@ -32,6 +34,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: viktorstrate/photoview:sha-6693920
+      default: viktorstrate/photoview:sha-84c642c
     databaseType:
       type: string
       title: Database Type

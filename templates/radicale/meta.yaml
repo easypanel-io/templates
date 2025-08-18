@@ -14,6 +14,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 3.4.1.0
+  - date: 2025-07-24
+    description: Version bumped to 3.5.4.0
 links:
   - label: Website
     url: https://radicale.org/
@@ -24,6 +26,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -37,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tomsquest/docker-radicale:3.4.1.0
+      default: tomsquest/docker-radicale:3.5.4.0
 benefits:
   - title: CalDAV/CardDAV Server
     description:
