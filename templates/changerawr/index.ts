@@ -13,6 +13,7 @@ export function generate(input: Input): Output {
   const analyticsSalt = randomString(32);
   const sessionSecret = randomString(32);
   const postgresPassword = randomPassword();
+  const clientApiKey = randomString(32);
 
   services.push({
     type: "postgres",
@@ -31,7 +32,7 @@ export function generate(input: Input): Output {
           type: "image",
           image:
             input.oauth2ServiceImage ||
-            "ghcr.io/easypanel-io/oauth2-server:latest",
+            "ghcr.io/supernova3339/oauth2-server:latest",
         },
         env: [
           `EASYPANEL_URL=${input.easypanelUrl}`,
@@ -39,6 +40,7 @@ export function generate(input: Input): Output {
           `API_TOKEN=${input.easypanelApiToken}`,
           "NODE_ENV=production",
           "PORT=3000",
+          `CLIENT_API_KEY=${clientApiKey}`,
         ].join("\n"),
         mounts: [
           {

@@ -10,8 +10,10 @@ description:
   management processes while ensuring transparency and accountability.
 instructions:
   To enable automatic updates for Changerawr, configure the Easypanel Project
-  ID, Service ID, panel URL and API token in your Changerawr settings. These
-  configurations allow the system to automatically detect and apply new updates.
+  ID, Service ID, panel URL and API token in Environment Variables of Changerawr
+  App Service. These configurations allow the system to automatically detect and
+  apply new updates. Make sure not to use CloudFlare Zero Trust, that will
+  causes issues.
 changeLog:
   - date: 2025-08-08
     description: First Release (v1.0.4)
@@ -53,7 +55,7 @@ schema:
       title: Easypanel API Token
       description:
         API token for Easypanel integration (required if OAuth2 is enabled)
-      default: ""
+      default: "xxxx-xxxx-xxxx-xxxx"
     easypanelUrl:
       type: string
       title: Easypanel URL
@@ -62,32 +64,28 @@ schema:
       default: https://$(EASYPANEL_HOST)
 
 benefits:
-  - title: Comprehensive Change Management
+  - title: Integrated with Easypanel
     description:
-      Complete change management solution with request tracking, approval
-      workflows, impact assessment, and rollback procedures for controlled
-      organizational changes.
-  - title: Real-Time Collaboration
+      Enjoy a seamless experience with Changerawr on Easypanel with SSO and
+      automatic updates.
+  - title: Full-text search
     description:
-      Enable team collaboration with real-time updates, comments, notifications,
-      and shared visibility into change requests and their progress.
-  - title: Automated Workflows
+      Effortlessly browse everything, immediately. All your knowledge in one
+      place, just a key bind away.
+  - title: Powerful Content Editor
     description:
-      Streamline change processes with automated approval workflows,
-      notifications, and status updates to reduce manual overhead and improve
-      efficiency.
-  - title: Audit Trail & Compliance
+      Buttons, Embeds, Alerts, and more! Write changelogs that look professional
+      to your team and your customers. efficiency.
+  - title: Audit Logs
     description:
-      Maintain detailed audit trails and compliance documentation with
-      comprehensive logging of all change activities and decisions.
-  - title: Impact Assessment
+      Know everything that happens, when it happens. From approving a request to
+      logging in, you get to know everything that has ever happened.
+  - title: AI Powered
+    description: Optional AI Integration for increasing your workflow 10x.
+  - title: Tags & Versioning
     description:
-      Assess and document the potential impact of changes with built-in tools
-      for risk evaluation and dependency mapping.
-  - title: Dashboard & Reporting
-    description:
-      Comprehensive dashboards and reporting capabilities provide insights into
-      change metrics, success rates, and process improvements.
+      Organize your changelogs exactly how you want with colorful tags and
+      modern versioning.
 features:
   - title: Change Request Management
     description:
