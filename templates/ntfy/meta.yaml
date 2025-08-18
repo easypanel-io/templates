@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2022-11-21
     description: first release
+  - date: 2025-07-24
+    description: Update to v2.13
 links:
   - label: Documentation
     url: https://docs.ntfy.sh
@@ -21,6 +23,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -34,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: binwiederhier/ntfy:v2.11.0
+      default: binwiederhier/ntfy:v2.13
 benefits:
   - title: Instant Notifications
     description:

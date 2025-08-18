@@ -19,6 +19,8 @@ instructions: null
 changeLog:
   - date: 2023-07-09
     description: First Release
+  - date: 2025-07-25
+    description: Version bumped to v3.15.1
 links:
   - label: Website
     url: https://docs.tooljet.com
@@ -29,6 +31,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tooljet/tooljet-ce:v2.9.6
+      default: tooljet/tooljet-ce:v3.15.1
     databaseServiceName:
       type: string
       title: App Service Name

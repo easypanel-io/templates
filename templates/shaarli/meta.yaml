@@ -15,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2023-04-04
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to v0.14.0
 links:
   - label: Documentation
     url: https://demo.shaarli.org/doc/html/index.html
@@ -23,6 +25,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -36,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/shaarli/shaarli:latest
+      default: ghcr.io/shaarli/shaarli:v0.14.0
 benefits:
   - title: Personalized Bookmarking
     description:

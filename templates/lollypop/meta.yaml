@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2024-12-30
     description: First Release
+  - date: 2025-07-22
+    description: Version bumped to 1.4.40
 links:
   - label: Website
     url: https://lollypop.app/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/lollypop:latest
+      default: lscr.io/linuxserver/lollypop:1.4.40
 benefits:
   - title: Modern Interface
     description:

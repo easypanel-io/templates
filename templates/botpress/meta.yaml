@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 12.31.5
   - date: 2025-01-06
     description: Version bumped to 12.31.9
+  - date: 2025-07-15
+    description: Version bumped to 12.31.10
 
 links:
   - label: Website
@@ -31,6 +33,8 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: botpress/server:12.31.9
+      default: botpress/server:12.31.10
     databaseServiceName:
       type: string
       title: Database Service Name
