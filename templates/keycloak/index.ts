@@ -40,6 +40,11 @@ export function generate(input: Input): Output {
           name: "data",
           mountPath: "/opt/keycloak",
         },
+        {
+          type: "volume",
+          name: "themes",
+          mountPath: "/opt/bitnami/keycloak/themes",
+        },
       ],
     },
   });
