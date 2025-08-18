@@ -65,6 +65,9 @@ export function generate(input: Input): Output {
         `MINIO_ROOT_USER=minio`,
         `MINIO_ROOT_PASSWORD=${minioPassword}`,
       ].join("\n"),
+      deploy: {
+        command: "minio server /data --console-address 0.0.0.0:9001",
+      },
     },
   });
 
