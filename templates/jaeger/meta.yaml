@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-03-14
     description: First Release
+  - date: 2025-07-22
+    description: Version bumped to v1.71.0
 links:
   - label: Website
     url: https://www.jaegertracing.io
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jaegertracing/all-in-one:1.67.0
+      default: jaegertracing/all-in-one:1.71.0
     compactFormat:
       type: string
       title: Compact Format
