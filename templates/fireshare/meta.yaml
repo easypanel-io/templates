@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2023-2-24
     description: first release
+  - date: 2025-07-21
+    description: Version bumped to v1.2.25
 links:
   - label: Website
     url: https://v.fireshare.net
@@ -24,6 +26,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -39,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shaneisrael/fireshare:v1.2.20
+      default: shaneisrael/fireshare:v1.2.25
     adminUsername:
       type: string
       title: Username

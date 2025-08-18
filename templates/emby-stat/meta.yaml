@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2024-12-24
     description: First release
+  - date: 2025-07-21
+    description: Version bumped to 0.2.0
 links:
   - label: Website
     url: https://embystat.org/
@@ -21,7 +23,7 @@ links:
     url: https://github.com/mregni/EmbyStat
 contributors:
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/embystat:latest
+      default: lscr.io/linuxserver/embystat:0.2.0
 benefits:
   - title: Gain Insights into Media Usage
     description:
