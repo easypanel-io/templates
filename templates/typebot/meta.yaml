@@ -16,7 +16,7 @@ description:
   custom domains, and folder management. Typebot is loved by teams and creators
   from all around the world for its intelligent features and drag-and-drop
   simplicity.
-instructions: Open the builder URL to access typebot.
+instructions: Please configure at least one OAuth provider for authentication.
 changeLog:
   - date: 2023-02-27
     description: first release
@@ -26,6 +26,10 @@ changeLog:
     description: Update to v2.11.6
   - date: 2023-07-16
     description: Update to V2
+  - date: 2025-01-17
+    description: Updated to use Redis instead of MinIO, simplified configuration
+  - date: 2025-07-28
+    description: Updated the template.
 links:
   - label: Website
     url: https://typebot.io
@@ -40,65 +44,53 @@ contributors:
     url: https://berksmbl.com
   - name: Alan Frigo
     url: https://github.com/alanfrigo
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - builderServiceName
-    - viewerServiceName
-    - builderDomain
-    - viewerDomain
+    - appServiceName
     - builderServiceImage
     - viewerServiceImage
-    - storageServiceImage
-    - databaseServiceName
-    - storageServiceName
-    - githubClientId
-    - githubClientSecret
     - adminEmail
   properties:
-    viewerServiceName:
+    appServiceName:
       type: string
-      title: Viewer Service Name
-      default: typebot-viewer
-    builderServiceName:
-      type: string
-      title: Builder Service Name
-      default: typebot-builder
-    builderDomain:
-      type: string
-      title: Builder Domain
-    viewerDomain:
-      type: string
-      title: Viewer Domain
+      title: App Service Name
+      default: typebot
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:3.1.0
+      default: baptistearno/typebot-builder:3.9
     viewerServiceImage:
       type: string
       title: Viewer Service Image
-      default: baptistearno/typebot-viewer:2
-    storageServiceImage:
-      type: string
-      title: Storage Service Image
-      default: bitnami/minio:2023
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: typebot-db
-    storageServiceName:
-      type: string
-      title: Storage Service Name
-      default: typebot-minio
-    githubClientId:
-      type: string
-      title: Github Client ID
-    githubClientSecret:
-      type: string
-      title: Github Client Secret
+      default: baptistearno/typebot-viewer:3.9.0
     adminEmail:
       type: string
-      title: Email to make administrator
+      title: Admin Email
+      default: admin@example.com
+      description: Email address for the administrator account
+    githubClientId:
+      type: string
+      title: GitHub Client ID (Optional)
+      default: ""
+      description: GitHub OAuth App Client ID for authentication
+    githubClientSecret:
+      type: string
+      title: GitHub Client Secret (Optional)
+      default: ""
+      description: GitHub OAuth App Client Secret for authentication
+    googleAuthClientId:
+      type: string
+      title: Google OAuth Client ID (Optional)
+      default: ""
+      description: Google OAuth Client ID for authentication
+    googleAuthClientSecret:
+      type: string
+      title: Google OAuth Client Secret (Optional)
+      default: ""
+      description: Google OAuth Client Secret for authentication
 benefits:
   - title: Build advanced chatbots visually
     description:
@@ -133,6 +125,10 @@ features:
       Typebot makes form building easy and comes with powerful features like
       hidden fields, team collaboration, link to sub typebots, custom code,
       custom domain, and folder management.
+  - title: OAuth Authentication
+    description:
+      Support for multiple OAuth providers including GitHub and Google for
+      secure user authentication and easy login management.
 tags:
   - Chat
   - Forms
