@@ -50,6 +50,12 @@ export function generate(input: Input): Output {
             mountPath: "/app/data",
           },
         ],
+        domains: [
+          {
+            host: "$(EASYPANEL_DOMAIN)",
+            port: 3000,
+          },
+        ],
       },
     });
   }
