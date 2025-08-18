@@ -73,7 +73,7 @@ export function generate(input: Input): Output {
       type: "mysql",
       data: {
         serviceName: input.databaseServiceName,
-        image: "mysql:5",
+        image: "mysql:8",
         password: databasePassword,
       },
     });
