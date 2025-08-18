@@ -15,7 +15,8 @@ instructions: null
 changeLog:
   - date: 2025-03-19
     description: Template Release
-
+  - date: 2025-07-25
+    description: Version bumped to v0.21.0
 links:
   - label: Documentation
     url: https://docs.traduora.co/docs/getting-started
@@ -39,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: everco/ever-traduora:v0.20.1
+      default: everco/ever-traduora:v0.21.0
 
 benefits:
   - title: Centralized Translation Management

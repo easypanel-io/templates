@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2025-03-03
     description: Version bumped to 4.10.4
+  - date: 2025-07-25
+    description: Version bumped to 4.11.0
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-webcord
@@ -26,6 +28,8 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -39,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/webcord:4.10.4
+      default: lscr.io/linuxserver/webcord:4.11.0
 benefits:
   - title: Enhanced Security and Privacy
     description:
