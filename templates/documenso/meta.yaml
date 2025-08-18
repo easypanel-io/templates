@@ -8,6 +8,8 @@ instructions:
 changeLog:
   - date: 2025-05-23
     description: First release
+  - date: 2025-07-15
+    description: Version bumped to v1.12.1
 links:
   - label: Website
     url: https://documenso.com/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: documenso/documenso:v1.11.0
+      default: documenso/documenso:v1.12.1
     smtpHost:
       type: string
       title: SMTP Host
