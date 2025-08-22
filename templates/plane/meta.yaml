@@ -3,10 +3,13 @@ description:
   Plane is an open-source project management tool designed to help teams manage
   tasks, sprints, and product roadmaps efficiently. It offers features like
   issue tracking, cycles, modules, custom views, pages, and real-time analytics.
-instructions: null
+instructions:
+  Wait for the migrations to be completed before using the application.
 changeLog:
   - date: 2024-7-26
     description: first release
+  - date: 2025-8-22
+    description: update to v0.28.0
 links:
   - label: Website
     url: https://plane.so
@@ -17,6 +20,8 @@ links:
 contributors:
   - name: Serban Alexandru
     url: https://github.com/serban-alexandru
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:

@@ -11,9 +11,9 @@ export function generate(input: Input): Output {
       source: {
         type: "git",
         repo: "https://github.com/easypanel-io/compose.git",
-        ref: "21-05-2025",
+        ref: "03-07-2025",
         rootPath: "/plane/code",
-        composeFile: "docker-compose.yml",
+        composeFile: "docker-compose.yaml",
       },
       domains: [
         {
