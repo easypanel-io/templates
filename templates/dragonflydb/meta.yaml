@@ -1,0 +1,69 @@
+name: DragonflyDB
+description: |
+    DragonflyDB is a modern, high-performance, in-memory data store designed as a drop-in replacement for Redis and Memcached. It offers superior performance, scalability, and memory efficiency, making it ideal for caching, session storage, real-time analytics, and more. DragonflyDB supports the Redis protocol and is compatible with most Redis clients and tools.
+instructions: null
+changeLog:
+    - date: 2025-08-29
+      description: Initial template release
+links:
+    - label: Website
+      url: https://dragonflydb.io/
+    - label: Documentation
+      url: https://www.dragonflydb.io/docs/
+    - label: Docker Hub
+      url: https://hub.docker.com/r/dragonflydb/dragonfly
+contributors:
+    - name: Danilo Alonso
+      url: https://github.com/damusix
+schema:
+    type: object
+    required:
+        - appServiceName
+        - appServiceImage
+    properties:
+        appServiceName:
+            type: string
+            title: App Service Name
+            default: dragonflydb
+        appServiceImage:
+            type: string
+            title: DragonflyDB Image
+            default: dragonflydb/dragonfly:v1.17.0
+        dragonflyArgs:
+            type: string
+            title: DragonflyDB Extra Args
+            description: Optional extra command-line arguments for DragonflyDB
+            default: ""
+        dragonflyPassword:
+            type: string
+            title: DragonflyDB Password
+            description: Optional password for the database (DFLY_REQUIREPASS)
+            default: ""
+benefits:
+    - title: Redis-Compatible
+      description: Drop-in replacement for Redis and Memcached with protocol compatibility.
+    - title: High Performance
+      description: Superior throughput and low latency for demanding workloads.
+    - title: Memory Efficient
+      description: Advanced memory management for large datasets.
+    - title: Scalable
+      description: Designed for horizontal and vertical scaling.
+    - title: Easy Migration
+      description: Works with existing Redis clients and tools.
+features:
+    - title: In-Memory Data Store
+      description: Fast, persistent, and reliable key-value storage.
+    - title: Redis Protocol Support
+      description: Compatible with most Redis commands and clients.
+    - title: Multi-threaded Architecture
+      description: Utilizes modern hardware for maximum performance.
+    - title: Observability
+      description: Built-in metrics and monitoring endpoints.
+    - title: Flexible Deployment
+      description: Simple Docker and Kubernetes support.
+tags:
+    - Database
+    - Cache
+    - Redis
+    - In-Memory
+    - Key-Value Store
