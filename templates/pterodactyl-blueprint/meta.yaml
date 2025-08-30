@@ -1,0 +1,98 @@
+name: Pterodactyl Panel - Blueprint
+description:
+  Pterodactyl® is a free, open-source game server management panel that allows
+  you to manage your game servers with ease and efficiency. It is built with
+  PHP, React, and Go, and designed with a focus on security. Pterodactyl runs
+  all game servers in isolated Docker containers, providing a secure environment
+  for each game. It also offers a beautiful and intuitive user interface, making
+  it easy for anyone to use. The platform supports a wide variety of games,
+  including Minecraft, Rust, Terraria, Teamspeak, Mumble, Team Fortress 2,
+  Counter Strike Global Offensive, Garry's Mod, ARK Survival Evolved, and many
+  more. With Pterodactyl, you can host your games across the world without
+  having to bloat each physical machine with additional dependencies. It's time
+  to make game servers a first-class citizen on your platform with Pterodactyl.
+instructions:
+  After installing, open the console and run "php artisan p:user:make".
+links:
+  - label: Website
+    url: https://pterodactyl.io/
+  - label: Documentation
+    url: https://pterodactyl.io/project/introduction.html
+  - label: Github
+    url: https://github.com/pterodactyl/panel
+contributors:
+  - name: Dane Everitt
+    url: https://github.com/DaneEveritt
+  - name: Matthew Penner
+    url: https://github.com/matthewpi
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - redisServiceName
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: blueprint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/blueprintframework/blueprint:v1.11.7
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: blueprint-redis
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: blueprint-db
+benefits:
+  - title: Secure Game Server Management
+    description:
+      Pterodactyl Panel is designed with security as a priority. It uses bcrypt
+      hashing, AES-256-CBC encryption, and HTTPS support to ensure your game
+      servers are secure. All servers run in isolated Docker containers,
+      limiting attack vectors and providing strict resource limits.
+  - title: User-Friendly Interface
+    description:
+      Pterodactyl Panel offers a beautiful and intuitive user interface. It's
+      designed to be easy to use, saving you from unnecessary stress and
+      frustration.
+  - title: Scalability
+    description:
+      Whether you're a hosting company, a large gaming network, or just a group
+      of friends playing video games, Pterodactyl Panel can scale to meet your
+      needs.
+  - title: Cost-Effective Solution
+    description:
+      Pterodactyl Panel is 100% free and open-source. There are no exorbitant
+      monthly costs, making it a cost-effective solution for managing your game
+      servers.
+features:
+  - title: Modern Tooling
+    description:
+      Pterodactyl Panel is built on a modern stack, utilizing the best design
+      practices. This makes it easy to jump in and make modifications if needed.
+  - title: Docker Core
+    description:
+      Pterodactyl Panel runs all game servers in isolated Docker containers.
+      This provides environments tailored to each specific game and ensures that
+      resources are used efficiently.
+  - title: Support for a Variety of Games
+    description:
+      "Pterodactyl Panel supports a wide variety of games, including Minecraft,
+      Rust, Terraria, Teamspeak, Mumble, Team Fortress 2, Counter Strike: Global
+      Offensive, Garry's Mod, ARK: Survival Evolved, and many more."
+  - title: Open Source
+    description:
+      Pterodactyl Panel is open-source, meaning all of its code is completely
+      accessible and modifiable. This allows for complete transparency and the
+      ability to tailor the software to your specific needs.
+tags:
+  - Gaming
+  - Developer Tools
