@@ -1,18 +1,20 @@
-name: Pterodactyl Panel - Blueprint
+name: Pterodactyl Panel with Blueprint Framework
 description:
-  Pterodactyl® is a free, open-source game server management panel that allows
-  you to manage your game servers with ease and efficiency. It is built with
-  PHP, React, and Go, and designed with a focus on security. Pterodactyl runs
-  all game servers in isolated Docker containers, providing a secure environment
-  for each game. It also offers a beautiful and intuitive user interface, making
-  it easy for anyone to use. The platform supports a wide variety of games,
-  including Minecraft, Rust, Terraria, Teamspeak, Mumble, Team Fortress 2,
-  Counter Strike Global Offensive, Garry's Mod, ARK Survival Evolved, and many
-  more. With Pterodactyl, you can host your games across the world without
-  having to bloat each physical machine with additional dependencies. It's time
-  to make game servers a first-class citizen on your platform with Pterodactyl.
+  Pterodactyl Panel enhanced with Blueprint Framework - a powerful extension system
+  that supercharges your game server management experience. Blueprint is the official
+  framework for creating and managing extensions on Pterodactyl Panel, allowing you
+  to customize your panel with themes, addons, and powerful features. This template
+  provides a complete Pterodactyl Panel installation with Blueprint pre-installed,
+  giving you access to a vast ecosystem of community-created extensions. Blueprint
+  enables you to install themes, dashboard widgets, administrative tools, and custom
+  functionality with just a few clicks. Perfect for hosting providers, gaming communities,
+  and server administrators who want to extend their panel capabilities beyond the
+  standard Pterodactyl features.
 instructions:
-  After installing, open the console and run "php artisan p:user:make".
+  After installation, access the console and run "php artisan p:user:make" to create
+  an admin user. Blueprint extensions can be installed via the admin panel or using
+  the "blueprint -install" command. Visit the Blueprint marketplace to discover
+  available themes and extensions.
 changeLog:
   - date: 2025-08-30
     description: Template Release
@@ -57,47 +59,54 @@ schema:
       title: Database Service Name
       default: blueprint-db
 benefits:
-  - title: Secure Game Server Management
+  - title: Blueprint Extension System
     description:
-      Pterodactyl Panel is designed with security as a priority. It uses bcrypt
-      hashing, AES-256-CBC encryption, and HTTPS support to ensure your game
-      servers are secure. All servers run in isolated Docker containers,
-      limiting attack vectors and providing strict resource limits.
-  - title: User-Friendly Interface
+      Blueprint Framework provides a comprehensive extension system that allows
+      you to customize your Pterodactyl Panel with themes, widgets, and addons.
+      Install community-created extensions with one click or develop your own
+      using Blueprint's developer-friendly API.
+  - title: Enhanced Administrative Tools
     description:
-      Pterodactyl Panel offers a beautiful and intuitive user interface. It's
-      designed to be easy to use, saving you from unnecessary stress and
-      frustration.
-  - title: Scalability
+      Access powerful administrative features through Blueprint extensions,
+      including advanced user management, server monitoring tools, automated
+      backups, and custom dashboard widgets that provide deeper insights into
+      your game servers.
+  - title: Theme Customization
     description:
-      Whether you're a hosting company, a large gaming network, or just a group
-      of friends playing video games, Pterodactyl Panel can scale to meet your
-      needs.
-  - title: Cost-Effective Solution
+      Transform your panel's appearance with professionally designed themes
+      available through Blueprint. Create a unique brand experience for your
+      users with custom colors, layouts, and UI components.
+  - title: Community-Driven Ecosystem
     description:
-      Pterodactyl Panel is 100% free and open-source. There are no exorbitant
-      monthly costs, making it a cost-effective solution for managing your game
-      servers.
+      Benefit from a thriving community of developers creating extensions,
+      themes, and tools. Blueprint's marketplace offers solutions for every
+      need, from simple UI tweaks to complex server management features.
 features:
-  - title: Modern Tooling
+  - title: Blueprint Framework Integration
     description:
-      Pterodactyl Panel is built on a modern stack, utilizing the best design
-      practices. This makes it easy to jump in and make modifications if needed.
-  - title: Docker Core
+      Pre-installed Blueprint Framework enables seamless extension management,
+      theme installation, and custom addon development. Access the Blueprint
+      CLI and web interface for managing your panel customizations.
+  - title: Extension Marketplace
     description:
-      Pterodactyl Panel runs all game servers in isolated Docker containers.
-      This provides environments tailored to each specific game and ensures that
-      resources are used efficiently.
-  - title: Support for a Variety of Games
+      Browse and install extensions directly from the Blueprint marketplace,
+      including themes, dashboard widgets, server management tools, and
+      administrative utilities. All extensions are community-vetted and secure.
+  - title: Developer-Friendly API
     description:
-      "Pterodactyl Panel supports a wide variety of games, including Minecraft,
-      Rust, Terraria, Teamspeak, Mumble, Team Fortress 2, Counter Strike: Global
-      Offensive, Garry's Mod, ARK: Survival Evolved, and many more."
-  - title: Open Source
+      Blueprint provides comprehensive APIs for creating custom extensions,
+      themes, and integrations. Extensive documentation and development tools
+      make it easy to build and distribute your own panel enhancements.
+  - title: One-Click Extension Management
     description:
-      Pterodactyl Panel is open-source, meaning all of its code is completely
-      accessible and modifiable. This allows for complete transparency and the
-      ability to tailor the software to your specific needs.
+      Install, update, and remove extensions with simple commands or through
+      the web interface. Blueprint handles dependencies, database migrations,
+      and file management automatically for a seamless experience.
+  - title: Theme System
+    description:
+      Transform your panel's look and feel with professionally designed themes.
+      Blueprint's theme system supports complete UI overhauls while maintaining
+      full compatibility with Pterodactyl's core functionality.
 tags:
   - Gaming
   - Developer Tools
