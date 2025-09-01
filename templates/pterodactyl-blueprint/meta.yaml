@@ -1,16 +1,17 @@
 name: Pterodactyl Panel with Blueprint Framework
 description:
-  Pterodactyl Panel enhanced with Blueprint Framework - a powerful extension
-  system that supercharges your game server management experience. Blueprint is
-  the official framework for creating and managing extensions on Pterodactyl
-  Panel, allowing you to customize your panel with themes, addons, and powerful
-  features. This template provides a complete Pterodactyl Panel installation
-  with Blueprint pre-installed, giving you access to a vast ecosystem of
-  community-created extensions. Blueprint enables you to install themes,
-  dashboard widgets, administrative tools, and custom functionality with just a
-  few clicks. Perfect for hosting providers, gaming communities, and server
-  administrators who want to extend their panel capabilities with custom
-  database naming and enhanced configuration options.
+  Pterodactyl Panel enhanced with the Blueprint Framework — an advanced extension system
+  that enhances the game server management experience.
+  Please note: Blueprint is not official or affiliated with Pterodactyl Panel. It is
+  an independent framework for creating and managing extensions, allowing
+  you to customize the panel with themes, add-ons, and advanced features. This template
+  offers a complete installation of Pterodactyl Panel with Blueprint already configured,
+  providing access to a wide variety of extensions created
+  by the community. With Blueprint, you can easily install themes, dashboard widgets,
+  administrative tools, and custom features.
+  Ideal for hosting providers, gaming communities, and administrators who
+  want to extend the panel's capabilities with advanced configuration options and
+  custom database naming.
 instructions:
   After installation, access the console and run "php artisan p:user:make" to
   create an admin user. Blueprint extensions can be installed via the admin
