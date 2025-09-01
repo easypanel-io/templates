@@ -10,11 +10,11 @@ interface Input {
 
 // Função para gerar uma chave de aplicação Laravel válida (base64:32 bytes)
 function generateLaravelAppKey(): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  let result = 'base64:';
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let result = '';
   
-  // Gerar 32 bytes (44 caracteres base64)
-  for (let i = 0; i < 44; i++) {
+  // Gerar 32 caracteres aleatórios
+  for (let i = 0; i < 32; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   
