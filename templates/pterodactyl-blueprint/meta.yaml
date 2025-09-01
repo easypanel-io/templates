@@ -1,21 +1,22 @@
 name: Pterodactyl Panel with Blueprint Framework
 description:
-  Pterodactyl Panel enhanced with Blueprint Framework - a powerful extension system
-  that supercharges your game server management experience. This advanced template
-  provides a complete development environment with integrated VS Code IDE, PHP support,
-  and Nginx web server. Blueprint is the official framework for creating and managing
-  extensions on Pterodactyl Panel, allowing you to customize your panel with themes,
-  addons, and powerful features. With the integrated IDE, you can develop and deploy
-  Blueprint extensions directly within the container, making it perfect for developers
-  and administrators who want both powerful game server management and a complete
-  development environment in one package.
+  Pterodactyl Panel enhanced with Blueprint Framework - a powerful extension
+  system that supercharges your game server management experience. Blueprint is
+  the official framework for creating and managing extensions on Pterodactyl
+  Panel, allowing you to customize your panel with themes, addons, and powerful
+  features. This template provides a complete Pterodactyl Panel installation
+  with Blueprint pre-installed, giving you access to a vast ecosystem of
+  community-created extensions. Blueprint enables you to install themes,
+  dashboard widgets, administrative tools, and custom functionality with just a
+  few clicks. Perfect for hosting providers, gaming communities, and server
+  administrators who want to extend their panel capabilities with custom
+  database naming and enhanced configuration options.
 instructions:
-  After installation, access the integrated VS Code IDE through the web interface to
-  develop and manage your Blueprint extensions. Create an admin user by running
-  "php artisan p:user:make" in the terminal. Blueprint extensions can be installed
-  via the admin panel or using the "blueprint -install" command. The integrated
-  development environment includes PHP, Nginx, and Git support for seamless extension
-  development.
+  After installation, access the console and run "php artisan p:user:make" to
+  create an admin user. Blueprint extensions can be installed via the admin
+  panel or using the "blueprint -install" command. Visit the Blueprint
+  marketplace to discover available themes and extensions. You can customize the
+  database name during setup for better organization and management.
 changeLog:
   - date: 2025-08-30
     description: Template Release
@@ -66,12 +67,12 @@ schema:
       default: pterodactyl_panel
       description: Nome do banco de dados que será criado
 benefits:
-  - title: Integrated Development Environment
+  - title: Custom Database Configuration
     description:
-      Complete development environment with VS Code IDE accessible through web
-      browser, PHP runtime, Nginx web server, and Git integration. Develop and
-      deploy Blueprint extensions directly within the container without external
-      tools or complex setups.
+      Enhanced template with customizable database naming options, allowing you
+      to organize your databases with meaningful names instead of using default
+      project names. Perfect for managing multiple Pterodactyl installations
+      with clear database identification.
   - title: Blueprint Extension System
     description:
       Blueprint Framework provides a comprehensive extension system that allows
@@ -95,17 +96,16 @@ benefits:
       themes, and tools. Blueprint's marketplace offers solutions for every
       need, from simple UI tweaks to complex server management features.
 features:
-  - title: Web-Based IDE Integration
+  - title: Enhanced Configuration Options
     description:
-      Access a full-featured VS Code development environment through your web
-      browser. Develop Blueprint extensions, edit themes, and manage your panel
-      code directly within the container with syntax highlighting, debugging,
-      and Git integration.
+      Improved template with additional configuration options including custom
+      database naming, better environment variable management, and optimized
+      settings for both development and production environments.
   - title: Blueprint Framework Integration
     description:
       Pre-installed Blueprint Framework enables seamless extension management,
-      theme installation, and custom addon development. Access the Blueprint
-      CLI and web interface for managing your panel customizations.
+      theme installation, and custom addon development. Access the Blueprint CLI
+      and web interface for managing your panel customizations.
   - title: Extension Marketplace
     description:
       Browse and install extensions directly from the Blueprint marketplace,
@@ -118,9 +118,9 @@ features:
       make it easy to build and distribute your own panel enhancements.
   - title: One-Click Extension Management
     description:
-      Install, update, and remove extensions with simple commands or through
-      the web interface. Blueprint handles dependencies, database migrations,
-      and file management automatically for a seamless experience.
+      Install, update, and remove extensions with simple commands or through the
+      web interface. Blueprint handles dependencies, database migrations, and
+      file management automatically for a seamless experience.
   - title: Theme System
     description:
       Transform your panel's look and feel with professionally designed themes.
@@ -129,5 +129,3 @@ features:
 tags:
   - Gaming
   - Developer Tools
-  - IDE
-  - Web Development

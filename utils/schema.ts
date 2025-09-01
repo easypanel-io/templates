@@ -721,10 +721,6 @@ export const templateSchema = z.object({
         type: z.literal("compose"),
         data: composeSchema.omit({ projectName: true }),
       }),
-      z.object({
-        type: z.literal("box"),
-        data: boxSchema.omit({ projectName: true }),
-      }),
     ])
   ),
 });
