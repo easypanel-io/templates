@@ -19,16 +19,20 @@ export function generate(input: Input): Output {
         `APP_ENVIRONMENT_ONLY=false`,
         `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_TIMEZONE=UTC`,
+        `APP_DEBUG=true`,
+        `APP_KEY=`,
 
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_DATABASE=$(PROJECT_NAME)`,
         `DB_USERNAME=mariadb`,
         `DB_PASSWORD=${databasePassword}`,
+        `DB_PORT=3306`,
 
         `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
         `REDIS_PASSWORD=${redisPassword}`,
+        `REDIS_PORT=6379`,
 
-        `MAIL_FROM=noreply@example.com`,
+        `MAIL_FROM=noreply@$(PRIMARY_DOMAIN)`,
         `MAIL_DRIVER=smtp`,
         `MAIL_HOST=mail`,
         `MAIL_PORT=1025`,
@@ -39,6 +43,10 @@ export function generate(input: Input): Output {
         `CACHE_DRIVER=redis`,
         `SESSION_DRIVER=redis`,
         `QUEUE_CONNECTION=redis`,
+        
+        `TRUSTED_PROXIES=*`,
+        `APP_SERVICE_AUTHOR=support@$(PRIMARY_DOMAIN)`,
+        `PTERODACTYL_TELEMETRY_ENABLED=false`,
       ].join("\n"),
       domains: [
         {
@@ -49,12 +57,22 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "app",
-          mountPath: "/app",
+          name: "app-data",
+          mountPath: "/app/var",
         },
         {
           type: "volume",
-          name: "nginx",
+          name: "app-storage",
+          mountPath: "/app/storage",
+        },
+        {
+          type: "volume",
+          name: "panel-logs",
+          mountPath: "/var/log/panel",
+        },
+        {
+          type: "volume",
+          name: "nginx-config",
           mountPath: "/etc/nginx/http.d/",
         },
       ],
