@@ -1,10 +1,31 @@
-import { Output, randomPassword, Services } from "~templates-utils";
-import { Input } from "./meta";
+import type { Output, Services } from "~templates-utils";
+import { randomPassword } from "~templates-utils";
+
+interface Input {
+  appServiceName: string;
+  appServiceImage: string;
+  redisServiceName: string;
+  databaseServiceName: string;
+}
+
+// Função para gerar uma chave de aplicação Laravel válida (base64:32 bytes)
+function generateLaravelAppKey(): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+  let result = 'base64:';
+  
+  // Gerar 32 bytes (44 caracteres base64)
+  for (let i = 0; i < 44; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  
+  return result;
+}
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
+  const appKey = generateLaravelAppKey();
 
   services.push({
     type: "app",
@@ -20,7 +41,7 @@ export function generate(input: Input): Output {
         `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_TIMEZONE=UTC`,
         `APP_DEBUG=true`,
-        `APP_KEY=`,
+        `APP_KEY=${appKey}`,
 
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `DB_DATABASE=$(PROJECT_NAME)`,
