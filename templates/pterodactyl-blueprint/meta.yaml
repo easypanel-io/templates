@@ -49,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/blueprintframework/blueprint:v1.11.7
+      default: ghcr.io/blueprintframework/blueprint:v1.11.11
     redisServiceName:
       type: string
       title: Redis Service Name
