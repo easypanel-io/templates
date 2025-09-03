@@ -19,6 +19,8 @@ instructions:
 changeLog:
   - date: 2023
     description: first release
+  - date: 2025-09-03
+    description: Updated to Managed Database
 links:
   - label: Website
     url: https://www.odoo.com
@@ -29,12 +31,13 @@ links:
 contributors:
   - name: DrMxrcy
     url: https://github.com/DrMxrcy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceName
   properties:
     appServiceName:
       type: string
@@ -44,10 +47,6 @@ schema:
       type: string
       title: App Service Image
       default: odoo:18.0
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: odoo-db
 benefits:
   - title: Integrated Business Management
     description:
