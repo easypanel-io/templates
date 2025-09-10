@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-db`,
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.dbServiceImage,
       },
       domains: [
         {
