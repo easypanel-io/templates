@@ -1,0 +1,56 @@
+name: Obsidian
+description:
+  Obsidian is a powerful knowledge base that works on top of a local folder of plain text Markdown files.
+  It provides a flexible and extensible platform for note-taking, knowledge management, and personal knowledge base creation.
+instructions: null
+changeLog:
+  - date: 2025-04-11
+    description: First Release
+links:
+  - label: Website
+    url: https://obsidian.md
+  - label: Documentation
+    url: https://help.obsidian.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: obsidian
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/obsidian:1.8.9
+benefits:
+  - title: Knowledge Management
+    description: Organize and manage your knowledge effectively
+  - title: Markdown Support
+    description: Write and format notes using Markdown
+  - title: Graph View
+    description: Visualize connections between your notes
+  - title: Self-Hosted
+    description: Keep your notes private and secure
+features:
+  - title: Note Taking
+    description: Create and organize notes in Markdown
+  - title: Knowledge Graph
+    description: Visualize connections between notes
+  - title: Plugins
+    description: Extend functionality with plugins
+  - title: Search
+    description: Powerful search across all notes
+  - title: Sync
+    description: Sync your notes across devices
+tags:
+  - Note Taking
+  - Knowledge Base
+  - Markdown
+  - Self-Hosted
+  - Productivity 
