@@ -10,6 +10,8 @@ instructions: Open the nginx domain to access Chevereto
 changeLog:
   - date: 2024-11-22
     description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 4.3
 links:
   - label: Github
     url: https://github.com/chevereto/chevereto
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chevereto/chevereto:4
+      default: chevereto/chevereto:4.3
 benefits:
   - title: Easy Image and Video Hosting
     description:

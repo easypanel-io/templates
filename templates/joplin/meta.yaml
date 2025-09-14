@@ -18,6 +18,8 @@ changeLog:
     description: Second Release version updated to 3.0.1-beta
   - date: 2025-02-28
     description: Version bumped to 3.3.3-beta
+  - date: 2025-07-22
+    description: Version bumped to 3.4.1
 links:
   - label: Website
     url: https://joplinapp.org/
@@ -28,6 +30,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joplin/server:3.3.3-beta
+      default: joplin/server:3.4.1
     databaseServiceName:
       type: string
       title: Database Service Name

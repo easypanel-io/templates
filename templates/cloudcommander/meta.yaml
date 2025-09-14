@@ -14,6 +14,8 @@ changeLog:
     description: Version bumped to 18.4.1
   - date: 2025-02-24
     description: Version bumped to 18.5.1
+  - date: 2025-07-15
+    description: Version bumped to 18.6.1
 links:
   - label: Website
     url: https://cloudcmd.io
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coderaiser/cloudcmd:18.5.1
+      default: coderaiser/cloudcmd:18.6.1
     username:
       type: string
       title: Username

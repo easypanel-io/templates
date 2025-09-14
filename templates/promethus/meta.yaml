@@ -17,6 +17,8 @@ changeLog:
     description: Initial Prometheus release
   - date: 2025-02-28
     description: Version bumped to v3.2.1
+  - date: 2025-07-24
+    description: Version bumped to v3.5.0
 links:
   - label: Github
     url: https://github.com/prometheus/prometheus
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: prom/prometheus:v3.2.1
+      default: prom/prometheus:v3.5.0
 benefits:
   - title: Scalable Monitoring
     description:

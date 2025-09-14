@@ -534,6 +534,19 @@
     ]
   },
   {
+    "slug": "centrifugo",
+    "logo": "logo.png",
+    "name": "Centrifugo",
+    "description": "Centrifugo is a scalable real-time messaging server that can be used to add real-time features to your applications. It supports WebSocket and SockJS connections, providing a robust solution for real-time communication.",
+    "tags": [
+      "Real-time",
+      "WebSocket",
+      "Messaging",
+      "Communication",
+      "Server"
+    ]
+  },
+  {
     "slug": "changedetection",
     "logo": "logo.png",
     "name": "Change Detection",
@@ -2429,6 +2442,19 @@
     "description": "Komga is a free and open source comics/mangas server that provides an intuitive platform for comic and manga enthusiasts. It allows you to browse libraries, series, and books via a responsive web UI that is compatible with desktops, tablets, and phones. With Komga, you can easily organize your library with collections and read lists, and edit metadata for your series and books. The app also has the ability to import embedded metadata automatically. It features a web reader with multiple reading modes and allows you to manage multiple users with per-library access control, age restrictions, and labels restrictions. Additionally, Komga offers a REST API for interaction with other tools and scripts, and provides features for downloading book files, whole series, or read lists. It also has a duplicate files detection system and can import books from outside your libraries directly into your series folder. Komga also supports the import of ComicRack cbl read lists.",
     "tags": [
       "Media"
+    ]
+  },
+  {
+    "slug": "komiser",
+    "logo": null,
+    "name": "Komiser",
+    "description": "Komiser is an open-source cloud resource manager that helps you understand, manage, and optimize your cloud infrastructure costs. It provides a unified dashboard to monitor and manage resources across multiple cloud providers, offering insights into resource usage, cost optimization opportunities, and security best practices.",
+    "tags": [
+      "Cloud Management",
+      "Cost Optimization",
+      "Resource Monitoring",
+      "Security",
+      "Multi-Cloud"
     ]
   },
   {
@@ -5261,9 +5287,10 @@
     "name": "Wg-easy",
     "description": "WireGuard Easy is an all-in-one application designed to simplify the installation and management of WireGuard on any Linux host. With a user-friendly web interface, it allows you to list, create, edit, delete, enable, and disable clients with ease. You can also view a client's QR code and download a client's configuration file directly from the app. The app provides statistics on which clients are connected and features Tx/Rx charts for each connected client. It also supports Gravatar. WireGuard Easy requires a host with a kernel that supports WireGuard and Docker installed.",
     "tags": [
-      "VPN",
       "Network Tools",
-      "Security"
+      "Security",
+      "VPN",
+      "WireGuard"
     ]
   },
   {
