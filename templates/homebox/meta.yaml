@@ -1,0 +1,105 @@
+name: Homebox
+description:
+  Homebox is a modern, self-hosted inventory management system designed for
+  personal use. It provides a clean and intuitive interface for tracking your
+  belongings, managing collections, and organizing your personal inventory. With
+  support for barcodes, photos, and detailed item information, Homebox helps you
+  keep track of everything you own in one centralized location.
+instructions: null
+changeLog:
+  - date: 2025-09-17
+    description: Template Release (0.21)
+links:
+  - label: Demo
+    url: https://demo.homebox.software
+  - label: Documentation
+    url: https://homebox.software/en/
+  - label: Github
+    url: https://github.com/sysadminsmedia/homebox
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: homebox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/sysadminsmedia/homebox:0.21
+    logLevel:
+      type: string
+      title: Log Level
+      default: info
+      description: Logging level for the application
+    logFormat:
+      type: string
+      title: Log Format
+      default: text
+      description: Log format (text or json)
+    maxFileUpload:
+      type: string
+      title: Max File Upload Size (MB)
+      default: "10"
+      description: Maximum file upload size in megabytes
+    allowAnalytics:
+      type: boolean
+      title: Allow Analytics
+      default: false
+      description: Allow basic analytics to help improve Homebox
+
+benefits:
+  - title: Personal Inventory Management
+    description:
+      Organize and track all your personal belongings in one centralized system
+      with detailed item information and categorization.
+  - title: Barcode and Photo Support
+    description:
+      Add items quickly using barcode scanning or photo uploads, making
+      inventory management fast and convenient.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your personal inventory data completely private and secure on your
+      own server with no external dependencies.
+
+features:
+  - title: Item Tracking
+    description:
+      Track detailed information about your belongings including purchase dates,
+      prices, locations, and custom notes for comprehensive inventory
+      management.
+  - title: Barcode Scanning
+    description:
+      Quickly add items to your inventory using barcode scanning for fast and
+      accurate item entry.
+  - title: Photo Management
+    description:
+      Attach photos to your items for visual identification and documentation of
+      your belongings.
+  - title: Search and Filter
+    description:
+      Find items quickly with powerful search and filtering capabilities to
+      locate specific belongings in your collection.
+  - title: Categories and Tags
+    description:
+      Organize your inventory with custom categories and tags for better
+      organization and management.
+  - title: Web Interface
+    description:
+      Access your inventory from any device with a modern, responsive web
+      interface that works on desktop and mobile.
+
+tags:
+  - Inventory Management
+  - Personal Organization
+  - Self-Hosted
+  - Barcode Scanner
+  - Asset Tracking
+  - Collection Management
