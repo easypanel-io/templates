@@ -1,0 +1,95 @@
+name: Portracker
+description:
+  Portracker is a self-hosted port tracking and monitoring application that
+  provides real-time visibility into port usage across your infrastructure. It
+  automatically discovers and tracks ports used by services running on your
+  system, including Docker containers, and provides a comprehensive dashboard
+  for port management and conflict detection. Perfect for DevOps teams and
+  system administrators who need to maintain organized port assignments.
+instructions: null
+changeLog:
+  - date: 2025-09-17
+    description: Template Release (v1.1)
+links:
+  - label: Github
+    url: https://github.com/mostafawahied/portracker
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - enableTrueNas
+    - trueNasApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: portracker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mostafawahied/portracker:1.1
+    enableTrueNas:
+      type: boolean
+      title: Enable TrueNAS Integration
+      default: false
+      description: Enable enhanced TrueNAS features and API integration
+    trueNasApiKey:
+      type: string
+      title: TrueNAS API Key
+      default: ""
+      description:
+        API key for TrueNAS integration (required if TrueNAS is enabled)
+
+benefits:
+  - title: Real-Time Port Monitoring
+    description:
+      Automatically discover and track ports used by services running on your
+      system with real-time updates and comprehensive port visibility.
+  - title: Docker Integration
+    description:
+      Seamlessly integrate with Docker to track container ports and service
+      assignments with automatic discovery capabilities.
+  - title: Conflict Prevention
+    description:
+      Identify port conflicts before they happen and maintain organized port
+      assignments across your entire infrastructure.
+
+features:
+  - title: Automatic Port Discovery
+    description:
+      Automatically discover ports used by running services and containers
+      without manual configuration or port scanning.
+  - title: Docker Socket Integration
+    description:
+      Read-only access to Docker socket for discovering services running in
+      Docker containers and their port assignments.
+  - title: System Port Detection
+    description:
+      Advanced system-level port detection with required permissions for
+      accessing host processes and port information.
+  - title: TrueNAS Integration
+    description:
+      Optional TrueNAS API integration for enhanced features and infrastructure
+      management capabilities.
+  - title: Data Persistence
+    description:
+      Reliable data storage for port tracking information, service
+      configurations, and historical port usage data.
+  - title: Web Dashboard
+    description:
+      Clean and intuitive web interface for viewing port assignments, managing
+      services, and monitoring port usage across your infrastructure.
+
+tags:
+  - Port Tracking
+  - Infrastructure Monitoring
+  - Self-Hosted
+  - Docker Integration
+  - DevOps
+  - System Administration
+  - Port Management
