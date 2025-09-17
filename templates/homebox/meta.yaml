@@ -1,0 +1,56 @@
+name: Homebox
+description: Homebox is an inventory management system that helps you keep track of your belongings, their location, and other details to simplify home organization.
+instructions: null
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/hay-kot/homebox
+  - label: Documentation
+    url: https://hay-kot.github.io/homebox/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: homebox
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/hay-kot/homebox:v0.10.3
+benefits:
+  - title: Home Inventory Management
+    description: Keep track of all your belongings in one place
+  - title: Location Tracking
+    description: Track where items are stored within your home
+  - title: Search & Filter
+    description: Quickly find items when you need them
+  - title: Self-Hosted
+    description: Keep your inventory data private on your own server
+  - title: Open Source
+    description: Free and open-source inventory management system
+features:
+  - title: Item Catalog
+    description: Catalog all your belongings with details and photos
+  - title: Location Management
+    description: Organize items by location and sub-locations
+  - title: Labels & Tags
+    description: Categorize items with custom labels and tags
+  - title: Item History
+    description: Track maintenance, warranty, and purchase information
+  - title: Mobile Friendly
+    description: Access your inventory from any device
+tags:
+  - Inventory
+  - Organization
+  - Home Management
+  - Self-Hosted
+  - Personal
