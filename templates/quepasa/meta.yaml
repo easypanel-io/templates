@@ -1,0 +1,55 @@
+name: Quepasa API
+description: >
+  Quepasa é uma plataforma self-hosted projetada para capacitar pequenos
+  negócios, empreendedores e indivíduos, fornecendo uma API robusta para
+  integração com soluções de mensagens como WhatsApp™. Oferece integração com
+  ferramentas como Chatwoot para melhorar a comunicação e a automação.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/nocodeleaks/quepasa
+  - label: Comunidade - Quepasa API
+    url: https://chat.whatsapp.com/Js22tkvVvRXANtXJlaMERI
+contributors:
+  - name: André Marques
+    url: https://github.com/luiis716
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: Quepasa API
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeleaks/quepasa
+benefits:
+  - title: Seamless Messaging Integration
+    description: >
+      A API Quepasa é fácil de usar com o Chatwoot sem perda de mensagens e
+      desconexões.
+  - title: Free and Open Source
+    description: >
+      Quepasa API é gratuito e open-source, oferecendo controle total sobre sua
+      infraestrutura de mensagens sem custos adicionais.
+features:
+  - title: WhatsApp™ Messaging Support
+    description: >
+      A API Quepasa integra-se ao WhatsApp™ para uma comunicação eficiente,
+      permitindo automação e interações avançadas.
+  - title: Plugin Support
+    description: >
+      A API Quepasa suporta vários plugins para estender funcionalidades e
+      integrar-se a ferramentas como Chatwoot.
+tags:
+  - Messaging
+  - Communication
+  - Automation
+  - Open Source
