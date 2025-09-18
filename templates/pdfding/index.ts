@@ -17,9 +17,10 @@ export function generate(input: Input): Output {
         `DEFAULT_THEME=dark`,
         `DEFAULT_THEME_COLOR=blue`,
         `SECRET_KEY=${secretKey}`,
-        `HOST_NAME=$(PRIMARY_DOMAIN)}`,
+        `HOST_NAME=$(PRIMARY_DOMAIN)`,
         `CSRF_COOKIE_SECURE=FALSE`,
         `SESSION_COOKIE_SECURE=FALSE`,
+        `ALLOWED_HOSTS=$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       mounts: [
         {
