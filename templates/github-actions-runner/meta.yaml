@@ -2,7 +2,7 @@ name: Github Actions Runner
 description:
   A GitHub Actions runner is a service that runs the jobs defined in your GitHub workflows.
   
-  This image is based on Linux
+  This image is based on Linux 24.04
 instructions:
   Go to your GitHub repository or organization.
   Navigate to Settings > Actions > Runners.
@@ -16,14 +16,14 @@ links:
   - label: Documentation
     url: https://docs.github.com/en/actions/concepts/runners/self-hosted-runners
   - label: GitHub
-    url: https://github.com/chaddyc/gha-runner
+    url: https://github.com/leogomide/gha-runner
   - label: Docker Hub
-    url: https://hub.docker.com/r/chaddyc/gha-runner
+    url: https://hub.docker.com/r/leogomide/gha-runner
   - label: Environment Variables
-    url: https://github.com/chaddyc/gha-runner
+    url: https://github.com/leogomide/gha-runner
 contributors:
-  - name: ARKbr
-    url: https://github.com/ARKbr
+  - name: Leonardo Gomide
+    url: https://github.com/leogomide
 schema:
   type: object
   required:
@@ -39,14 +39,14 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chaddyc/gha-runner:24.04
+      default: leogomide/gha-runner:latest-x64
       oneOf:
         - enum:
-            - chaddyc/gha-runner:24.04
-          title: Ubuntu 24.04
+            - leogomide/gha-runner:latest-x64
+          title: latest-x64
         - enum:
-            - chaddyc/gha-runner:22.04
-          title: Ubuntu 22.04
+            - leogomide/gha-runner:latest-arm64
+          title: latest-arm64
     githubRepoUrl:
       type: string
       title: Github Repository Link
