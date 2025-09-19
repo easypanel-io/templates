@@ -1,0 +1,88 @@
+name: Github Actions Runner
+description:
+  A GitHub Actions runner is a service that runs the jobs defined in your GitHub workflows.
+  
+  This image is based on Linux
+  
+  Go to your GitHub repository or organization.
+  Navigate to Settings > Actions > Runners.
+  Click Add Runner and copy the registration token provided.
+
+changeLog:
+  - date: 2025-09-19
+    description: Initial release
+links:
+  - label: Website
+    url: https://github.com/actions/runner
+  - label: Documentation
+    url: https://docs.github.com/en/actions/concepts/runners/self-hosted-runners
+  - label: GitHub
+    url: https://github.com/chaddyc/gha-runner
+  - label: Docker Hub
+    url: https://hub.docker.com/r/chaddyc/gha-runner
+  - label: Environment Variables
+    url: https://github.com/chaddyc/gha-runner
+contributors:
+  - name: ARKbr
+    url: https://github.com/ARKbr
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - githubRepoUrl
+    - githubRepoToken
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gha-runner
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chaddyc/gha-runner:24.04
+      oneOf:
+        - enum:
+            - chaddyc/gha-runner:24.04
+          title: Ubuntu 24.04
+        - enum:
+            - chaddyc/gha-runner:22.04
+          title: Ubuntu 22.04
+    githubRepoUrl:
+      type: string
+      title: Github Repository Link
+      default: https://github.com/<your-repo>
+    githubRepoToken:
+      type: string
+      title: Github Repository Token
+      default: <your-runner-token>
+
+benefits:
+  - title: Full Environment Control
+    description: Customize the operating system, tools, and dependencies to match your project needs
+  - title: Persistent Resources
+    description: Keep build caches and artifacts between runs for faster execution
+  - title: Private Network Access
+    description: Run jobs inside secure environments with access to internal services and databases
+  - title: Cost Efficiency
+    description: Reduce reliance on GitHub-hosted runners by using your own infrastructure
+features:
+  - title: Custom Environment Setup
+    description: Install and configure any tools, libraries, or runtimes required for your workflows
+  - title: Hardware Flexibility
+    description: Run jobs on your own servers, virtual machines, or even specialized hardware like GPUs
+  - title: Persistent Storage
+    description: Retain build artifacts, logs, and caches between workflow runs
+  - title: Secure Network Integration
+    description: Connect workflows directly to internal systems and private databases
+  - title: Scalable Infrastructure
+    description: Register multiple runners to balance load and handle parallel jobs
+  - title: Long-running Jobs
+    description: Support workflows that require more time than GitHub-hosted runners allow
+  - title: Custom Labels
+    description: Tag runners with labels to target specific jobs and environments
+tags:
+  - GitHub Actions
+  - CI/CD
+  - Automation
+  - DevOps
