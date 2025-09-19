@@ -3,11 +3,10 @@ description:
   A GitHub Actions runner is a service that runs the jobs defined in your GitHub workflows.
   
   This image is based on Linux
-  
+instructions:
   Go to your GitHub repository or organization.
   Navigate to Settings > Actions > Runners.
   Click Add Runner and copy the registration token provided.
-
 changeLog:
   - date: 2025-09-19
     description: Initial release
