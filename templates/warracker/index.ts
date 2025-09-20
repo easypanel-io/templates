@@ -34,7 +34,7 @@ export function generate(input: Input): Output {
     `NGINX_MAX_BODY_SIZE_VALUE=${input.maxUploadMb}M`,
     `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
     `APP_BASE_URL=https://$(PRIMARY_DOMAIN)`,
-    `WARRACKER_MEMORY_MODE=${input.memoryMode}`,
+    `WARRACKER_MEMORY_MODE=optimized`,
     `PYTHONUNBUFFERED=1`,
   ];
 

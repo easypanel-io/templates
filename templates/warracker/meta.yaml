@@ -21,11 +21,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - smtpHost
-    - smtpPort
-    - smtpUsername
-    - smtpPassword
-    - maxUploadMb
   properties:
     appServiceName:
       type: string
@@ -60,11 +55,6 @@ schema:
       title: Max Upload Size (MB)
       default: "32"
       description: Maximum file upload size in megabytes
-    memoryMode:
-      type: string
-      title: Memory Mode
-      default: optimized
-      description: Memory optimization mode (optimized or ultra-light)
     enableOidc:
       type: boolean
       title: Enable OIDC SSO
