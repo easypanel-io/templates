@@ -22,8 +22,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - enableTrueNas
-    - trueNasApiKey
   properties:
     appServiceName:
       type: string
