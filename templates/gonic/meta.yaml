@@ -1,0 +1,80 @@
+name: Gonic
+description:
+  Gonic is a music streaming server / subsonic server API implementation,
+  written in Go. It provides a simple and efficient way to stream your music
+  collection through a web interface or compatible clients. Gonic supports
+  various audio formats and offers features like transcoding, cover art, and
+  playlist management.
+instructions: Login credentials are admin/admin
+changeLog:
+  - date: 2025-09-23
+    description: Initial template release (v0.18.0)
+links:
+  - label: Github
+    url: https://github.com/sentriz/gonic
+  - label: DockerHub
+    url: https://hub.docker.com/r/sentriz/gonic
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gonic
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sentriz/gonic:v0.18.0
+benefits:
+  - title: Self-Hosted Music Streaming
+    description:
+      Host your own music streaming server with full control over your music
+      collection and privacy.
+  - title: Subsonic API Compatible
+    description:
+      Compatible with a wide range of Subsonic clients, allowing you to use your
+      preferred music player.
+  - title: Efficient and Fast
+    description:
+      Built in Go for high performance and low resource usage, making it perfect
+      for home servers.
+  - title: Transcoding Support
+    description:
+      Automatically transcodes audio files to different formats based on client
+      requirements and bandwidth.
+features:
+  - title: Music Streaming
+    description:
+      Stream your music collection through a web interface or compatible
+      Subsonic clients.
+  - title: Podcast Support
+    description: Manage and stream your podcast collection alongside your music.
+  - title: Playlist Management
+    description:
+      Create, manage, and share playlists with support for various playlist
+      formats.
+  - title: Cover Art
+    description:
+      Automatic cover art detection and display for albums and tracks.
+  - title: Transcoding
+    description:
+      On-the-fly audio transcoding to optimize streaming for different devices
+      and bandwidth.
+  - title: Jukebox Mode
+    description: Optional jukebox mode for direct audio output on the server.
+  - title: Web Interface
+    description:
+      Clean and responsive web interface for browsing and playing your music
+      collection.
+tags:
+  - Media
+  - Music
+  - Streaming
+  - Subsonic
+  - Self-Hosted
