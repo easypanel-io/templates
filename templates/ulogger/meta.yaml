@@ -1,0 +1,56 @@
+name: uLogger
+description: uLogger is a lightweight, self-hosted GPS tracking platform that allows you to track and visualize your location data. It's perfect for personal use, fleet management, or tracking outdoor activities.
+instructions: null
+changeLog:
+  - date: 2025-04-30
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/bfabiszewski/ulogger-server
+  - label: Docker Hub
+    url: https://hub.docker.com/r/bfabiszewski/ulogger
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ulogger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bfabiszewski/ulogger:v1.0
+benefits:
+  - title: Self-hosted GPS Tracking
+    description: Keep your location data private by hosting your own GPS tracking platform
+  - title: Lightweight Solution
+    description: Minimal resource requirements make it perfect for small deployments
+  - title: Multi-language Support
+    description: Available in multiple languages for global accessibility
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: GPS Tracking
+    description: Track and record location data with high precision
+  - title: Web Interface
+    description: User-friendly web interface for viewing and managing tracks
+  - title: Mobile Support
+    description: Compatible with various GPS tracking apps for mobile devices
+  - title: Track Management
+    description: Organize and manage multiple tracks with ease
+  - title: Data Export
+    description: Export your tracking data in various formats
+  - title: Customizable
+    description: Configure language and other settings to suit your needs
+tags:
+  - GPS Tracking
+  - Location
+  - Self-hosted
+  - Open Source
+  - Mobile 
