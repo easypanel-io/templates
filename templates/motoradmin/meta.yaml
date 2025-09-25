@@ -1,0 +1,54 @@
+name: MotorAdmin
+description: MotorAdmin is a modern, open-source database administration tool that provides a user-friendly interface for managing and interacting with your databases. It offers features for data visualization, query building, and database management.
+instructions: null
+changeLog:
+  - date: 2025-04-16
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/motor-admin/motor-admin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: motoradmin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: motoradmin/motoradmin:0.4.21
+benefits:
+  - title: Database Management
+    description: User-friendly interface for managing and interacting with databases.
+  - title: Data Visualization
+    description: Visualize and analyze your data with intuitive tools.
+  - title: Query Building
+    description: Build and execute database queries with ease.
+  - title: Secure Access
+    description: Secure database access with proper authentication.
+  - title: Data Persistence
+    description: Reliable PostgreSQL database for storing application data.
+features:
+  - title: Database Interface
+    description: Intuitive web interface for database management.
+  - title: Query Builder
+    description: Visual tools for building and executing database queries.
+  - title: Data Visualization
+    description: Tools for visualizing and analyzing database content.
+  - title: User Management
+    description: Manage user access and permissions.
+  - title: Modern Interface
+    description: Clean and intuitive web interface for database administration.
+tags:
+  - Database
+  - Administration
+  - Data Management
+  - Visualization
+  - Query Builder 
