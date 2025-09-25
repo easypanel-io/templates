@@ -1,0 +1,56 @@
+name: Paisa
+description: Paisa is a personal finance manager and expense tracker that helps you manage your finances, track expenses, and visualize your financial data.
+instructions: null
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/ananthakumaran/paisa
+  - label: Documentation
+    url: https://github.com/ananthakumaran/paisa#paisa
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: paisa
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ananthakumaran/paisa:v0.7.3
+benefits:
+  - title: Expense Tracking
+    description: Track and categorize your expenses easily
+  - title: Financial Visualization
+    description: Visualize your financial data with charts and graphs
+  - title: Budget Management
+    description: Create and manage budgets for different categories
+  - title: Self-Hosted
+    description: Keep your financial data private on your own server
+  - title: Open Source
+    description: Free and open-source personal finance manager
+features:
+  - title: Expense Tracking
+    description: Record and categorize all your expenses
+  - title: Income Management
+    description: Track your income sources and payments
+  - title: Budget Planning
+    description: Create monthly or yearly budgets
+  - title: Financial Reports
+    description: Generate financial reports and insights
+  - title: Data Visualization
+    description: View your financial data in visual charts
+tags:
+  - Finance
+  - Budgeting
+  - Expense Tracker
+  - Self-Hosted
+  - Personal Finance
