@@ -1,0 +1,110 @@
+name: ScyllaDB
+description:
+  ScyllaDB is a distributed NoSQL database that is compatible with Apache
+  Cassandra but offers superior performance and lower latency. It's designed to
+  handle high-throughput, low-latency workloads with linear scalability.
+  ScyllaDB is written in C++ and uses a shared-nothing architecture, making it
+  highly efficient for modern hardware. It's particularly well-suited for
+  applications requiring high availability, consistent performance, and massive
+  scalability.
+
+instructions:
+  Once the server is up, you can connect to ScyllaDB using the following ports
+  9042 - Native transport (CQL) 9160 - Thrift transport 7000 - Inter-node
+  communication 7001 - SSL inter-node communication 10000 - REST API
+
+changeLog:
+  - date: 2025-03-24
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://www.scylladb.com/
+  - label: Documentation
+    url: https://docs.scylladb.com/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/scylladb/scylla
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - cqlPort
+    - thriftPort
+    - rpcPort
+    - rpcSslPort
+    - restPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: scylla
+    appServiceImage:
+      type: string
+      title: ScyllaDB Image
+      default: scylladb/scylla:6.1
+    cqlPort:
+      type: string
+      title: CQL Port
+      description: Port for Native transport (CQL)
+      default: "9042"
+    thriftPort:
+      type: string
+      title: Thrift Port
+      description: Port for Thrift transport
+      default: "9160"
+    rpcPort:
+      type: string
+      title: RPC Port
+      description: Port for Inter-node communication
+      default: "7000"
+    rpcSslPort:
+      type: string
+      title: RPC SSL Port
+      description: Port for SSL inter-node communication
+      default: "7001"
+    restPort:
+      type: string
+      title: REST Port
+      description: Port for REST API
+      default: "10000"
+
+benefits:
+  - title: High Performance
+    description:
+      Superior performance compared to Apache Cassandra with lower latency and
+      higher throughput.
+  - title: Linear Scalability
+    description:
+      Scale horizontally with predictable performance as you add more nodes.
+  - title: Cassandra Compatibility
+    description:
+      Drop-in replacement for Apache Cassandra with improved performance and
+      reliability.
+
+features:
+  - title: Distributed Architecture
+    description:
+      Built on a shared-nothing architecture for maximum performance and
+      reliability.
+  - title: CQL Support
+    description:
+      Compatible with Cassandra Query Language (CQL) for easy migration.
+  - title: Monitoring & Management
+    description:
+      Built-in monitoring tools and JMX support for system management.
+  - title: Data Consistency
+    description:
+      Configurable consistency levels for optimal performance and reliability.
+
+tags:
+  - Database
+  - NoSQL
+  - Distributed
+  - High Performance
+  - Scalable
