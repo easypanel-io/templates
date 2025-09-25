@@ -1,0 +1,64 @@
+name: Readeck
+description:
+  Readeck is a self-hosted read-it-later service that allows you to save
+  articles, web pages, and other content for later reading. It provides a clean
+  and distraction-free reading experience with features for organizing and
+  managing your saved content.
+instructions:
+  After installation, access the web interface through the provided domain to
+  start saving and organizing your reading list.
+changeLog:
+  - date: 2024-04-09
+    description: First Release
+links:
+  - label: Codeberg
+    url: https://codeberg.org/readeck/readeck
+  - label: Website
+    url: https://readeck.org
+  - label: Documentation
+    url: https://readeck.org/en/docs/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: readeck
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codeberg.org/readeck/readeck:latest
+benefits:
+  - title: Self-Hosted
+    description: Keep control of your reading list with your own instance.
+  - title: Clean Interface
+    description: Enjoy a distraction-free reading experience.
+  - title: Content Management
+    description: Organize and manage your saved articles efficiently.
+  - title: Easy Saving
+    description: Quickly save articles for later reading.
+  - title: Privacy Focused
+    description: Your reading data stays on your own server.
+features:
+  - title: Article Storage
+    description: Save articles and web pages for later reading.
+  - title: Content Organization
+    description: Organize content with tags and categories.
+  - title: Reading Mode
+    description: Clean, distraction-free reading interface.
+  - title: Data Control
+    description: Full control over your reading data.
+  - title: Web Interface
+    description: Access your reading list through a modern web interface.
+tags:
+  - Reading
+  - Bookmarking
+  - Self-Hosted
+  - Articles
+  - Content Management
