@@ -1,0 +1,59 @@
+name: KrakenD
+description:
+  KrakenD is a high-performance API Gateway that helps you build microservices
+  architecture. It's designed to be ultra-fast and lightweight, aggregating
+  multiple services into a single API endpoint. It's perfect for building
+  microservices, mobile backends, and public APIs.
+
+instructions: Please follow the official documentation for more information and customizations. 
+changeLog:
+  - date: 2025-04-03
+    description: Initial template release
+links:
+  - label: Website
+    url: https://www.krakend.io/
+  - label: Documentation
+    url: https://www.krakend.io/docs/
+  - label: GitHub
+    url: https://github.com/krakend
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: krakend
+    appServiceImage:
+      type: string
+      title: KrakenD Image
+      default: devopsfaith/krakend:2.9.3
+benefits:
+  - title: High Performance
+    description: Ultra-fast API Gateway with minimal latency.
+  - title: Service Aggregation
+    description: Combine multiple services into a single API endpoint.
+  - title: Lightweight
+    description: Minimal resource footprint and simple deployment.
+  - title: Production Ready
+    description: Built for high availability and scalability.
+features:
+  - title: API Gateway
+    description: Route and manage multiple API endpoints.
+  - title: Authentication
+    description: Built-in support for various authentication methods.
+  - title: Rate Limiting
+    description: Control API usage with rate limiting.
+  - title: Request/Response Transformation
+    description: Transform API requests and responses.
+tags:
+  - API Gateway
+  - Microservices
+  - Backend
+  - High Performance
+  - Open Source 
