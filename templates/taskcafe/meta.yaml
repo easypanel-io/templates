@@ -1,0 +1,56 @@
+name: TaskCafe
+description: TaskCafe is a modern, open-source project management tool that helps teams organize and track their work. It provides an intuitive interface for managing projects, tasks, and collaborations with features similar to Trello and other project management tools.
+instructions: After installation, access the web interface through the provided domain to start managing your projects and tasks.
+changeLog:
+  - date: 2025-04-10
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/JordanKnott/taskcafe
+  - label: Documentation
+    url: https://github.com/JordanKnott/taskcafe/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: taskcafe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: taskcafe/taskcafe:0.3.2
+benefits:
+  - title: Project Management
+    description: Organize and track projects with an intuitive interface.
+  - title: Task Organization
+    description: Create, manage, and track tasks efficiently.
+  - title: Team Collaboration
+    description: Work together with team members on projects and tasks.
+  - title: File Uploads
+    description: Upload and attach files to tasks and projects.
+  - title: Database Persistence
+    description: Reliable PostgreSQL database for data storage.
+features:
+  - title: Project Boards
+    description: Visual boards for organizing and tracking tasks.
+  - title: Task Management
+    description: Create, assign, and track tasks with detailed information.
+  - title: File Attachments
+    description: Upload and manage files related to tasks.
+  - title: User Management
+    description: Manage team members and their access.
+  - title: Modern Interface
+    description: Clean and intuitive web interface for project management.
+tags:
+  - Project Management
+  - Task Tracking
+  - Collaboration
+  - Team
+  - Productivity 
