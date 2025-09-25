@@ -1,0 +1,98 @@
+name: Reactive Resume
+description:
+  Reactive Resume is a free and open-source resume builder that simplifies the
+  process of creating, updating, and sharing your resume. With zero user
+  tracking or advertising, your privacy is a top priority. The platform is
+  extremely user-friendly and can be self-hosted in less than 30 seconds if you
+  wish to own your data completely. It's available in multiple languages and
+  comes packed with features such as real-time editing, dozens of templates,
+  drag-and-drop customisation, and integration with OpenAI for enhancing your
+  writing. You can share a personalised link of your resume to potential
+  employers, track its views or downloads, and customise your page layout by
+  dragging-and-dropping sections.
+
+instructions: null
+
+changeLog:
+  - date: "2025-06-30"
+    description: "Initial release"
+
+links:
+  - label: "Website"
+    url: "https://rxresu.me/"
+  - label: "Documentation"
+    url: "https://docs.rxresu.me/"
+  - label: "Github"
+    url: "https://github.com/AmruthPillai/Reactive-Resume"
+  - label: "Demo"
+    url: "https://rxresu.me/"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "reactive-resume"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "amruthpillai/reactive-resume:v4.4.5"
+      description: "Image for the app service"
+    disableSignups:
+      type: boolean
+      title: "Disable Public Signups"
+      default: false
+      description: "Prevent new users from registering accounts"
+    disableEmailAuth:
+      type: boolean
+      title: "Disable Email Authentication"
+      default: false
+      description: "Disable email/password authentication (OAuth only)"
+
+benefits:
+  - title: "Privacy-First Design"
+    description:
+      "No user tracking, no analytics, no advertising. Your data stays on your
+      server and under your complete control."
+  - title: "Professional Templates"
+    description:
+      "Choose from dozens of professionally designed templates ranging from
+      traditional to modern styles, all fully customizable."
+  - title: "AI-Powered Features"
+    description:
+      "Integrate with OpenAI to improve your writing, fix grammar, change tone,
+      and even translate your resume into different languages."
+
+features:
+  - title: "Drag & Drop Builder"
+    description:
+      "Intuitive drag-and-drop interface to customize your resume layout,
+      reorder sections, and create custom sections specific to your industry."
+  - title: "Real-time Collaboration"
+    description:
+      "Share personalized links with potential employers, track views and
+      downloads, and make real-time updates that are instantly available."
+  - title: "Multi-format Export"
+    description:
+      "Export your resume as PDF in A4 or Letter format, or save as JSON for
+      easy backup and portability between instances."
+  - title: "Multi-language Support"
+    description:
+      "Available in multiple languages with full internationalization support,
+      and use AI to translate your resume content."
+
+tags:
+  - "Resume Builder"
+  - "CV"
+  - "Career"
+  - "PDF Generator"
+  - "Privacy"
+  - "Open Source"
