@@ -1,0 +1,54 @@
+name: Feedpushr
+description: Feedpushr is a simple and fast RSS/Atom feed aggregator that can push notifications to various services. It supports multiple output formats and can be used to monitor and aggregate RSS/Atom feeds.
+instructions: null
+changeLog:
+  - date: 2025-04-24
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/ncarlier/feedpushr
+  - label: Documentation
+    url: https://docs.readflow.app/en/integrations/examples/feedpushr/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: feedpushr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ncarlier/feedpushr:latest
+benefits:
+  - title: Simple Feed Aggregation
+    description: Feedpushr provides a simple way to aggregate RSS/Atom feeds and push notifications to various services.
+  - title: Multiple Output Formats
+    description: Supports multiple output formats and can be integrated with various notification services.
+  - title: Easy to Use
+    description: Simple configuration and easy to set up, making it perfect for monitoring and aggregating feeds.
+features:
+  - title: RSS/Atom Support
+    description: Supports both RSS and Atom feed formats for comprehensive feed aggregation.
+  - title: Multiple Outputs
+    description: Can push notifications to various services and supports multiple output formats.
+  - title: REST API
+    description: Provides a REST API for easy integration and automation.
+  - title: Web Interface
+    description: Includes a web interface for easy management and monitoring of feeds.
+  - title: Filtering
+    description: Supports filtering of feed items based on various criteria.
+  - title: Customizable
+    description: Highly customizable with support for custom output formats and filters.
+tags:
+  - RSS
+  - Atom
+  - Feed
+  - Aggregator
+  - Notifications
