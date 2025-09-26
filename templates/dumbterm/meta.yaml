@@ -1,0 +1,69 @@
+name: DumbTerm
+description:
+  DumbTerm is a web-based terminal emulator that provides secure terminal access
+  through your browser. It features PIN protection, session management, and
+  configurable security settings. Perfect for remote server access, development
+  environments, and system administration tasks.
+instructions: null
+changeLog:
+  - date: 2025-09-26
+    description: First release (v1.2.0)
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbterm
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbterm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbterm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbterm:1.2.0
+benefits:
+  - title: Web-Based Terminal
+    description:
+      Access your server terminal directly through your web browser without
+      additional software installation.
+  - title: Secure Access
+    description:
+      PIN protection and session management for secure terminal access.
+  - title: Cross-Platform
+    description:
+      Works on any device with a web browser, including mobile devices.
+  - title: No Installation Required
+    description:
+      No need to install SSH clients or terminal software on client devices.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface for terminal access.
+  - title: PIN Protection
+    description: Optional PIN-based access control for additional security.
+  - title: Session Management
+    description: Configurable session duration and lockout protection.
+  - title: Starship Integration
+    description: Optional Starship prompt for enhanced terminal experience.
+  - title: Timezone Configuration
+    description: Configurable timezone for proper time display.
+  - title: CORS Support
+    description: Configurable cross-origin resource sharing settings.
+  - title: Persistent Storage
+    description: Configuration and data persist across container restarts.
+  - title: Root Access
+    description: Runs with root privileges for full system access.
+tags:
+  - Terminal
+  - SSH
+  - Web Interface
+  - Security
+  - System Administration
