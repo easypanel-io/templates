@@ -26,6 +26,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - backendImage
   properties:
     appServiceName:
       type: string
