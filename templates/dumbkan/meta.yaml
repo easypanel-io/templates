@@ -1,0 +1,74 @@
+name: DumbKan
+description:
+  DumbKan is a simple, self-hosted Kanban board application for project
+  management and task organization. It provides a clean interface for creating
+  boards, managing tasks, and collaborating on projects. Perfect for teams and
+  individuals who need a lightweight project management solution.
+instructions: null
+changeLog:
+  - date: 2025-09-26
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbkan
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbkan
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbkan
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbkan:latest
+benefits:
+  - title: Project Management
+    description:
+      Simple and effective Kanban boards for organizing tasks and managing
+      project workflows.
+  - title: Team Collaboration
+    description:
+      Share boards with team members for collaborative project management and
+      task tracking.
+  - title: Visual Organization
+    description:
+      Drag-and-drop interface for intuitive task management and visual project
+      organization.
+  - title: Self-Hosted
+    description:
+      Complete control over your project data with no external dependencies or
+      data sharing.
+features:
+  - title: Kanban Boards
+    description:
+      Create and manage multiple Kanban boards for different projects.
+  - title: Task Management
+    description: Create, edit, and organize tasks with descriptions and labels.
+  - title: Drag and Drop
+    description:
+      Intuitive drag-and-drop interface for moving tasks between columns.
+  - title: Board Sharing
+    description: Share boards with team members for collaborative work.
+  - title: Column Management
+    description: Customize board columns to match your workflow.
+  - title: Task Labels
+    description: Organize tasks with custom labels and categories.
+  - title: Data Persistence
+    description: All boards and tasks persist across container restarts.
+  - title: Web Interface
+    description: Clean, responsive web interface accessible from any device.
+tags:
+  - Kanban
+  - Project Management
+  - Task Management
+  - Collaboration
+  - Web Interface
