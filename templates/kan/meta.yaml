@@ -1,0 +1,92 @@
+name: Kan
+description:
+  Kan is a modern, self-hosted Kanban board application built with Next.js and
+  PostgreSQL. It provides a clean and intuitive interface for project
+  management, task tracking, and team collaboration. Features include
+  drag-and-drop boards, customizable columns, task assignments, and real-time
+  updates.
+instructions: null
+changeLog:
+  - date: 2025-09-30
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/kanbn/kan
+  - label: DockerHub
+    url: https://hub.docker.com/r/kanbn/kan
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kan-web
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/kanbn/kan:0.4.4
+benefits:
+  - title: Modern Kanban Interface
+    description:
+      Clean and intuitive Kanban board interface with drag-and-drop
+      functionality for efficient project management and task tracking.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your project data with no external dependencies or
+      data sharing with third parties.
+  - title: Real-Time Collaboration
+    description:
+      Real-time updates and collaboration features for team members to work
+      together effectively on projects and tasks.
+  - title: Customizable Workflows
+    description:
+      Flexible board configuration with customizable columns, labels, and
+      workflows to match your team's processes.
+features:
+  - title: Drag-and-Drop Interface
+    description:
+      Intuitive drag-and-drop functionality for moving tasks between columns and
+      organizing project workflows.
+  - title: Task Management
+    description:
+      Comprehensive task management with descriptions, assignments, due dates,
+      and priority levels.
+  - title: Team Collaboration
+    description:
+      Multi-user support with team member assignments and real-time updates for
+      seamless collaboration.
+  - title: Board Customization
+    description:
+      Customizable boards with flexible column configurations and labeling
+      systems to match your workflow.
+  - title: Database Integration
+    description:
+      Built-in PostgreSQL database for reliable data storage and persistence
+      across sessions.
+  - title: Authentication
+    description:
+      Secure authentication system with Better Auth integration for user
+      management and access control.
+  - title: Responsive Design
+    description:
+      Mobile-responsive design that works seamlessly across desktop and mobile
+      devices.
+  - title: Data Persistence
+    description:
+      All project data, tasks, and user information persists across container
+      restarts and updates.
+tags:
+  - Project Management
+  - Kanban Board
+  - Task Tracking
+  - Team Collaboration
+  - Self-hosted
+  - Next.js
+  - PostgreSQL
+  - Web Interface
