@@ -1,29 +1,15 @@
-import crypto from "crypto";
-import { Output, Services } from "~templates-utils";
+
+mport { Output, Services, randomString } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
 
     const services: Services = [];
-
-
     const env: string[] = [];
-    let password = input.dragonflyPassword;
+    const password = input.dragonflyPassword || randomString(32);
 
-    if (!password) {
-        // Generate SHA-1 of current time
-        const now = new Date().toISOString();
-        password = crypto.createHash("sha1").update(now).digest("hex");
-    }
-
-    env.push(`DFLY_REQUIREPASS=${password}`);
-
-    const args = input.dragonflyArgs ? input.dragonflyArgs.split(" ") : [];
-
-    const command = [
-        "/usr/local/bin/dragonfly",
-        ...args
-    ].join(' ').trim();
+    env.push('# See https://www.dragonflydb.io/docs/managing-dragonfly/flags for all flags')
+    env.push(`DFLY_requirepass=${password || ''}`);
 
     services.push({
         type: "app",
@@ -32,9 +18,6 @@ export function generate(input: Input): Output {
             source: {
                 type: "image",
                 image: input.appServiceImage,
-            },
-            deploy: {
-                command: args.length > 0 ? command : undefined,
             },
             env: env.length > 0 ? env.join("\n") : undefined,
             ports: [
@@ -59,10 +42,6 @@ export function generate(input: Input): Output {
             ],
         },
     });
-
-    console.log(
-        JSON.stringify({ services }, null, 2)
-    )
 
     return { services };
 }

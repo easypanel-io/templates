@@ -1,17 +1,21 @@
 name: DragonflyDB
 description: |
-    DragonflyDB is a modern, high-performance, in-memory data store designed as a drop-in replacement for Redis and Memcached. It offers superior performance, scalability, and memory efficiency, making it ideal for caching, session storage, real-time analytics, and more. DragonflyDB supports the Redis protocol and is compatible with most Redis clients and tools.
+    DragonflyDB is a modern, high-performance, in-memory
+    data store designed as a drop-in replacement for Redis
+    and Memcached. It offers superior performance,
+    scalability, and memory efficiency, making it ideal for
+    caching, session storage, real-time analytics, and more.
+    DragonflyDB supports the Redis protocol and is
+    compatible with most Redis clients and tools.
 instructions: null
 changeLog:
     - date: 2025-08-29
-      description: Initial template release
+      description: first release
 links:
     - label: Website
       url: https://dragonflydb.io/
     - label: Documentation
       url: https://www.dragonflydb.io/docs/
-    - label: Docker Hub
-      url: https://hub.docker.com/r/dragonflydb/dragonfly
 contributors:
     - name: Danilo Alonso
       url: https://github.com/damusix
@@ -28,12 +32,7 @@ schema:
         appServiceImage:
             type: string
             title: DragonflyDB Image
-            default: dragonflydb/dragonfly:v1.17.0
-        dragonflyArgs:
-            type: string
-            title: DragonflyDB Extra Args
-            description: Optional extra command-line arguments for DragonflyDB
-            default: ""
+            default: docker.dragonflydb.io/dragonflydb/dragonfly:latest
         dragonflyPassword:
             type: string
             title: DragonflyDB Password
