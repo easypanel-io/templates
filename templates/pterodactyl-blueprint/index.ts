@@ -63,23 +63,38 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "app-data",
-          mountPath: "/app/var",
-        },
-        {
-          type: "volume",
-          name: "app-storage",
-          mountPath: "/app/storage",
-        },
-        {
-          type: "volume",
-          name: "panel-logs",
-          mountPath: "/var/log/panel",
+          name: "app-var",
+          mountPath: "/app/var/",
         },
         {
           type: "volume",
           name: "nginx-config",
           mountPath: "/etc/nginx/http.d/",
+        },
+        {
+          type: "volume",
+          name: "letsencrypt-certs",
+          mountPath: "/etc/letsencrypt/live",
+        },
+        {
+          type: "volume",
+          name: "app-logs",
+          mountPath: "/app/storage/logs",
+        },
+        {
+          type: "volume",
+          name: "nginx-logs",
+          mountPath: "/var/log/nginx",
+        },
+        {
+          type: "volume",
+          name: "blueprint-extensions",
+          mountPath: "/blueprint_extensions",
+        },
+        {
+          type: "volume",
+          name: "app",
+          mountPath: "/app",
         },
       ],
     },
