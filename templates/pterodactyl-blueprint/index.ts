@@ -1,33 +1,16 @@
 import type { Output, Services } from "~templates-utils";
-import { randomPassword } from "~templates-utils";
+import { randomPassword, randomString } from "~templates-utils";
 
 interface Input {
   appServiceName: string;
   appServiceImage: string;
-  redisServiceName: string;
-  databaseServiceName: string;
-  databaseName: string;
-}
-
-// Função para gerar uma chave de aplicação Laravel válida (base64:32 bytes)
-function generateLaravelAppKey(): string {
-  const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let result = "";
-
-  // Gerar 32 caracteres aleatórios
-  for (let i = 0; i < 32; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-
-  return result;
 }
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
-  const appKey = generateLaravelAppKey();
+  const appKey = randomString(32);
 
   services.push({
     type: "app",
@@ -45,13 +28,13 @@ export function generate(input: Input): Output {
         `APP_DEBUG=true`,
         `APP_KEY=${appKey}`,
 
-        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `DB_DATABASE=${input.databaseName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
+        `DB_DATABASE=$(PROJECT_NAME)`,
         `DB_USERNAME=mariadb`,
         `DB_PASSWORD=${databasePassword}`,
         `DB_PORT=3306`,
 
-        `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `REDIS_PASSWORD=${redisPassword}`,
         `REDIS_PORT=6379`,
 
@@ -105,15 +88,17 @@ export function generate(input: Input): Output {
   services.push({
     type: "mariadb",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
-      databaseName: input.databaseName,
     },
   });
 
   services.push({
     type: "redis",
-    data: { serviceName: input.redisServiceName, password: redisPassword },
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: redisPassword,
+    },
   });
 
   return { services };

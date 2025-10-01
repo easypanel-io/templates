@@ -41,9 +41,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - redisServiceName
-    - databaseServiceName
-    - databaseName
   properties:
     appServiceName:
       type: string
@@ -53,19 +50,6 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/blueprintframework/blueprint:v1.11.11
-    redisServiceName:
-      type: string
-      title: Redis Service Name
-      default: blueprint-redis
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: blueprint-db
-    databaseName:
-      type: string
-      title: Database Name
-      default: pterodactyl_panel
-      description: Nome do banco de dados que será criado
 benefits:
   - title: Custom Database Configuration
     description:
