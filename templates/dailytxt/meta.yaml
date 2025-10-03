@@ -1,0 +1,110 @@
+name: DailyTxT
+description:
+  DailyTxT is a secure, encrypted personal diary web application that allows
+  users to write and manage daily entries with end-to-end encryption. It
+  provides a user-friendly interface for journaling with features like file
+  uploads, search functionality, and multi-language support. All data is
+  encrypted locally, ensuring complete privacy and security for personal
+  thoughts and memories.
+instructions: null
+changeLog:
+  - date: 2025-10-03
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/PhiTux/DailyTxT
+  - label: DockerHub
+    url: https://hub.docker.com/r/phitux/dailytxt
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - allowRegistration
+    - jwtExpDays
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dailytxt
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: phitux/dailytxt:1.0.15
+    allowRegistration:
+      type: boolean
+      title: Allow Registration
+      description: Allow new users to register
+      default: true
+    jwtExpDays:
+      type: number
+      title: JWT Expiration Days
+      description: Days until JWT token expires
+      default: 60
+benefits:
+  - title: End-to-End Encryption
+    description:
+      All diary entries and uploaded files are encrypted locally using your
+      personal encryption key, ensuring complete privacy and security of your
+      personal thoughts and memories.
+  - title: Secure File Storage
+    description:
+      Upload and attach files to your diary entries with automatic encryption,
+      providing a secure way to store photos, documents, and other media
+      alongside your written entries.
+  - title: Privacy-First Design
+    description:
+      Built with privacy as the core principle, DailyTxT ensures that only you
+      can access your data through your personal encryption key, with no
+      external data sharing or cloud dependencies.
+  - title: Multi-User Support
+    description:
+      Support for multiple user accounts with individual encryption keys, making
+      it suitable for families or small teams who want to maintain separate,
+      secure diary spaces.
+features:
+  - title: Encrypted Diary Entries
+    description:
+      Write and store daily diary entries with automatic encryption using your
+      personal encryption key, ensuring complete privacy and security.
+  - title: File Upload Support
+    description:
+      Attach files, photos, and documents to your diary entries with automatic
+      encryption and secure storage alongside your written content.
+  - title: Search Functionality
+    description:
+      Search through your encrypted diary entries efficiently with built-in
+      search capabilities that work across all your stored content.
+  - title: Multi-Language Support
+    description:
+      Automatic language detection based on browser settings with support for
+      English and German, with more languages planned for future releases.
+  - title: Responsive Design
+    description:
+      Optimized interface for both desktop and mobile devices, providing a
+      seamless journaling experience across all your devices.
+  - title: JWT Authentication
+    description:
+      Secure authentication system with configurable JWT token expiration,
+      providing flexible session management for different security needs.
+  - title: Data Persistence
+    description:
+      All diary entries, uploaded files, and user preferences persist across
+      container restarts and updates with encrypted local storage.
+  - title: Update Notifications
+    description:
+      Optional automatic checking for newer versions of DailyTxT to keep your
+      installation up-to-date with the latest features and security
+      improvements.
+tags:
+  - Diary
+  - Journal
+  - Encryption
+  - Privacy
+  - Personal
+  - Web App
+  - File Storage
+  - Self-hosted
