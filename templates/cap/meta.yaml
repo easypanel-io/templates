@@ -1,0 +1,112 @@
+name: Cap
+description:
+  Cap is an open source screen recording and sharing platform, providing a
+  lightweight alternative to Loom. With Cap, you can create beautiful, shareable
+  screen recordings with instant sharing capabilities or local recording with
+  full editing features. It supports 4K recording, 60fps capture, and offers
+  both cloud and self-hosted storage options. Perfect for creating tutorials,
+  presentations, educational content, and team collaboration. Cap includes
+  features like auto-generated captions, titles, summaries, chapters, and
+  AI-powered transcriptions.
+instructions: null
+changeLog:
+  - date: 2025-07-29
+    description: first release
+links:
+  - label: Website
+    url: https://cap.so/
+  - label: GitHub
+    url: https://github.com/capsoftware/cap
+  - label: Documentation
+    url: https://cap.so/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - minioServiceImage
+    - minioAccessKey
+    - minioSecretKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cap-web
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/capsoftware/cap-web:latest
+    minioServiceImage:
+      type: string
+      title: MinIO Service Image
+      default: bitnami/minio:latest
+    minioAccessKey:
+      type: string
+      title: MinIO Access Key
+      default: capS3root
+    minioSecretKey:
+      type: string
+      title: MinIO Secret Key
+      default: capS3root
+    s3BucketName:
+      type: string
+      title: S3 Bucket Name
+      default: capso
+      description: (Optional) can be configured later
+    s3Region:
+      type: string
+      title: S3 Region
+      default: us-east-1
+      description: (Optional) can be configured later
+benefits:
+  - title: Open Source Screen Recording
+    description:
+      Cap is a fully open source alternative to Loom, giving you complete
+      control over your screen recording infrastructure. Record, edit, and share
+      videos without vendor lock-in.
+  - title: Professional Quality Output
+    description:
+      Create high-quality screen recordings with 4K support, 60fps capture, and
+      intelligent compression. Perfect for professional presentations,
+      tutorials, and educational content.
+  - title: Self-Hosted Storage
+    description:
+      Use your own S3-compatible storage with MinIO included in this template.
+      Keep full control over your recordings and data with custom storage
+      solutions.
+  - title: AI-Powered Features
+    description:
+      Automatically generate titles, summaries, clickable chapters, and
+      transcriptions for every recording using Cap's built-in AI features.
+features:
+  - title: Instant Sharing
+    description:
+      Hit record, stop, and instantly share a link. Your video goes live in
+      seconds with automatically generated captions, titles, and summaries.
+  - title: Studio Mode
+    description:
+      Record locally with full editing capabilities for maximum quality control.
+      Perfect for detailed tutorials and professional content creation.
+  - title: Cross-Platform Recording
+    description:
+      Native support for recording across different platforms with consistent
+      quality and performance. Works seamlessly with your existing workflow.
+  - title: Team Collaboration
+    description:
+      Share recordings with your team for feedback, collaboration, and async
+      communication. Replace meetings with shareable screen recordings.
+  - title: Custom Storage Integration
+    description:
+      Connect your own S3 bucket or use the included MinIO storage. Perfect for
+      teams with compliance requirements or data sovereignty needs.
+  - title: Privacy Controls
+    description:
+      Choose between instant sharing and local recording. Password protect
+      sensitive recordings or keep everything local-only for maximum privacy.
+tags:
+  - Productivity
+  - Video
+  - Developer Tools
