@@ -1,0 +1,85 @@
+name: Once Campfire
+description:
+  Once Campfire is a modern, open-source team communication platform built by
+  Basecamp. It provides a simple and intuitive interface for team messaging,
+  file sharing, and collaboration. Once Campfire offers real-time messaging,
+  threaded conversations, file uploads, and search functionality in a clean,
+  distraction-free environment. It's designed to help teams communicate
+  effectively without the complexity of larger enterprise platforms.
+instructions: Setup the initial user and start using the app.
+changeLog:
+  - date: 2025-09-10
+    description: Initial Template Release (sha-d7c6727)
+links:
+  - label: GitHub
+    url: https://github.com/basecamp/once-campfire
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: once-campfire
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/basecamp/once-campfire:sha-d7c6727
+      description: Once Campfire Docker image
+benefits:
+  - title: Simple Team Communication
+    description:
+      Clean, intuitive interface for team messaging without the complexity of
+      enterprise platforms, focusing on essential communication features.
+  - title: Real-Time Messaging
+    description:
+      Instant messaging capabilities with real-time updates and notifications to
+      keep your team connected and informed.
+  - title: File Sharing
+    description:
+      Easy file upload and sharing capabilities to collaborate on documents,
+      images, and other files within your team conversations.
+  - title: Threaded Conversations
+    description:
+      Organized discussions with threaded conversations to keep topics organized
+      and make it easy to follow specific discussions.
+features:
+  - title: Modern Interface
+    description:
+      Clean, modern web interface designed for productivity and ease of use
+      across desktop and mobile devices.
+  - title: Search Functionality
+    description:
+      Powerful search capabilities to find messages, files, and conversations
+      quickly across your team's communication history.
+  - title: Team Management
+    description:
+      Easy team member management with invitation system and user roles for
+      organized team communication.
+  - title: Open Source
+    description:
+      Open-source platform that you can customize and extend according to your
+      team's specific needs and requirements.
+  - title: Self-Hosted
+    description:
+      Complete control over your team's communication data with self-hosted
+      deployment and no external dependencies.
+  - title: Lightweight
+    description:
+      Lightweight application that runs efficiently with minimal resource
+      requirements, perfect for small to medium teams.
+tags:
+  - Team Communication
+  - Messaging
+  - Collaboration
+  - Open Source
+  - Basecamp
+  - Real-Time
+  - File Sharing
+  - Self-Hosted
