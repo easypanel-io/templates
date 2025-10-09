@@ -1,0 +1,124 @@
+name: FoundryVTT
+description:
+  Foundry Virtual Tabletop is a modern, self-hosted virtual tabletop platform
+  designed for playing tabletop roleplaying games online. It provides a
+  comprehensive suite of tools for game masters and players, including dynamic
+  lighting, fog of war, automated combat systems, and extensive customization
+  options. FoundryVTT supports multiple game systems and offers a rich ecosystem
+  of community-created modules and content. With its powerful JavaScript API and
+  intuitive interface, FoundryVTT delivers an immersive gaming experience that
+  rivals traditional tabletop gaming.
+
+instructions:
+  You will need a valid FoundryVTT license key from foundryvtt.com to activate
+  the software. The admin key is used for initial setup and can be changed after
+  first login. Make sure to keep your license key secure as it's required for
+  updates and activation.
+
+changeLog:
+  - date: 2025-10-09
+    description: Initial template release (SHA-18b36bf)
+
+links:
+  - label: Website
+    url: https://foundryvtt.com/
+  - label: Documentation
+    url: https://foundryvtt.com/kb/
+  - label: Community
+    url: https://discord.gg/foundryvtt
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - foundryReleaseUrl
+    - foundryUsername
+    - foundryPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: foundryvtt
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: felddy/foundryvtt:sha-18b36bf
+    foundryReleaseUrl:
+      type: string
+      title: FoundryVTT Release URL
+      description: The URL of the FoundryVTT release
+    foundryUsername:
+      type: string
+      title: FoundryVTT Username
+      description: Your FoundryVTT.com account username
+    foundryPassword:
+      type: string
+      title: FoundryVTT Password
+      description: Your FoundryVTT.com account password
+    foundryAdminKey:
+      type: string
+      title: Admin Key
+      description: Initial admin key for first-time setup
+    foundryLicenseKey:
+      type: string
+      title: License Key
+      description: Your FoundryVTT license key (required for activation)
+      default: ""
+
+benefits:
+  - title: Self-Hosted Control
+    description:
+      Maintain complete control over your virtual tabletop server with
+      self-hosted deployment, ensuring your game data stays private and secure.
+  - title: Rich Feature Set
+    description:
+      Access powerful features including dynamic lighting, fog of war, automated
+      combat, and extensive customization options for immersive gaming
+      experiences.
+  - title: Extensive Module Ecosystem
+    description:
+      Benefit from a thriving community of developers creating modules and
+      content to enhance your gaming sessions with additional functionality.
+  - title: Multi-System Support
+    description:
+      Play virtually any tabletop RPG system with official and community-created
+      game systems, from D&D to custom homebrew systems.
+
+features:
+  - title: Dynamic Lighting System
+    description:
+      Advanced lighting and vision system that creates realistic shadows and
+      line-of-sight mechanics for enhanced immersion during gameplay.
+  - title: Automated Combat
+    description:
+      Streamlined combat system with automated dice rolling, damage calculation,
+      and turn management to keep games flowing smoothly.
+  - title: Rich Media Support
+    description:
+      Upload and manage maps, tokens, audio, and video content to create
+      immersive gaming environments with high-quality assets.
+  - title: Real-Time Collaboration
+    description:
+      Multiple players can interact simultaneously with live updates, chat, and
+      collaborative tools for seamless online gaming sessions.
+  - title: JavaScript API
+    description:
+      Powerful scripting capabilities allow for custom automation, macros, and
+      module development to tailor the experience to your specific needs.
+  - title: Cross-Platform Compatibility
+    description:
+      Works on Windows, Mac, Linux, and mobile devices, ensuring all players can
+      join your games regardless of their preferred platform.
+
+tags:
+  - Gaming
+  - Virtual Tabletop
+  - RPG
+  - Self-Hosted
+  - Multiplayer
+  - Game Master Tools
