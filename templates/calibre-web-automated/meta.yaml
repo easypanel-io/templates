@@ -1,0 +1,111 @@
+name: Calibre Web Automated
+description:
+  Calibre Web Automated (CWA) is an enhanced version of Calibre Web with
+  automated book processing capabilities. It automatically adds books to your
+  library from an ingest directory, supports Hardcover API integration for
+  enhanced metadata, and provides network share compatibility. CWA processes
+  books according to your configured settings and removes them from the ingest
+  directory after processing, making it perfect for automated eBook management
+  workflows.
+instructions: Default login credentials are admin/admin123
+changeLog:
+  - date: 2025-09-12
+    description: Template Release
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/crocodilestick/calibre-web-automated
+  - label: Github
+    url: https://github.com/crocodilestick/calibre-web-automated
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: calibre-web-automated
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: crocodilestick/calibre-web-automated:v2.0.0
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+      description: Timezone for the application
+    hardcoverToken:
+      type: string
+      title: Hardcover API Token
+      default: ""
+      description:
+        Hardcover API key for enhanced metadata (get one at
+        https://docs.hardcover.app/api/getting-started/)
+    networkShareMode:
+      type: boolean
+      title: Network Share Mode
+      default: false
+      description:
+        Enable if your library is on a network share (NFS/SMB) to reduce locking
+        issues
+    enablePlugins:
+      type: boolean
+      title: Enable Calibre Plugins
+      default: false
+      description: Enable support for Calibre plugins (experimental)
+
+benefits:
+  - title: Automated Book Processing
+    description:
+      Automatically process and add books to your library from an ingest
+      directory, removing the need for manual book management and organization.
+  - title: Enhanced Metadata Integration
+    description:
+      Integrate with Hardcover API for richer book metadata, covers, and
+      information to keep your library well-organized and informative.
+  - title: Network Share Compatibility
+    description:
+      Optimized for network storage solutions like NFS and SMB shares with
+      reduced locking issues and improved performance on network-attached
+      storage.
+
+features:
+  - title: Automated Ingest Processing
+    description:
+      Drop books into the ingest directory and CWA will automatically process
+      them according to your configured settings, then remove them after
+      processing.
+  - title: Hardcover API Integration
+    description:
+      Enhanced metadata retrieval using Hardcover API for better book
+      information, covers, and categorization.
+  - title: Plugin Support
+    description:
+      Support for Calibre plugins to extend functionality and customize your
+      book processing workflow (experimental feature).
+  - title: Network Storage Optimization
+    description:
+      Special optimizations for network-attached storage to prevent locking
+      issues and improve performance on shared drives.
+  - title: Flexible Port Configuration
+    description:
+      Customizable web server port to avoid conflicts with other services
+      running on your system.
+  - title: Automatic Library Creation
+    description:
+      If you don't have an existing library, CWA will automatically create one
+      at the specified location with proper configuration.
+
+tags:
+  - eBook Management
+  - Digital Library
+  - Automation
+  - Self-Hosted
+  - Calibre
+  - Books
+  - Hardcover
