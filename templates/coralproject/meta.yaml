@@ -29,6 +29,8 @@ changeLog:
     description: Version changed to 9.3.1
   - date: 2025-01-09
     description: Version bumped to 9.6.1
+  - date: 2025-07-15
+    description: Version bumped to 9.9.7
 links:
   - label: Website
     url: https://coralproject.net/
@@ -42,7 +44,7 @@ contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -59,7 +61,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coralproject/talk:9.7.0
+      default: coralproject/talk:9.9.7
     redisServiceName:
       type: string
       title: Redis Service Name

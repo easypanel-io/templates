@@ -13,6 +13,8 @@ instructions: Username is admin, password is provided in the overview logs.
 changeLog:
   - date: 2024-11-16
     description: First Release
+  - date: 2025-07-24
+    description: Version bumped to 5.1.2
 links:
   - label: Website
     url: https://www.qbittorrent.org
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/qbittorrent:4.6.7
+      default: lscr.io/linuxserver/qbittorrent:5.1.2
     qBittorrentPort:
       type: string
       title: Torrenting Port

@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2025-03-17
     description: First Release (v3.0.0)
+  - date: 2025-07-25
+    description: Version bumped to 3.2.0
 links:
   - label: Documentation
     url: https://github.com/quxfoo/wastebin/wiki
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quxfoo/wastebin:3.0.0
+      default: quxfoo/wastebin:3.2.0
 benefits:
   - title: Minimal and Fast
     description:

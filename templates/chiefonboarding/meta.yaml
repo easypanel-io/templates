@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-01-20
     description: First Release
+  - date: 2025-07-15
+    description: Version bumped to v2.2.7
 links:
   - label: Github
     url: https://github.com/chiefonboarding/chiefonboarding
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chiefonboarding/chiefonboarding:v2.2.5
+      default: chiefonboarding/chiefonboarding:v2.2.7
 benefits:
   - title: Streamlined Employee Onboarding
     description:

@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-01-01
     description: Template Release
+  - date: 2025-07-21
+    description: Version bumped to 2.187.0
 links:
   - label: Documentation
     url: https://docs.flagsmith.com/
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: flagsmith.docker.scarf.sh/flagsmith/flagsmith:latest
+      default: flagsmith.docker.scarf.sh/flagsmith/flagsmith:2.187.0
 benefits:
   - title: Centralized Feature Management
     description:

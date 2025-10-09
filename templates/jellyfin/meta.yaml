@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 2025022405
+  - date: 2025-06-03
+    description: Version bumped to 10.10.7
 links:
   - label: Website
     url: https://jellyfin.org/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jellyfin/jellyfin:2025022405
+      default: linuxserver/jellyfin:10.10.7
 benefits:
   - title: Control Your Media
     description:

@@ -15,6 +15,8 @@ instructions: Go to /admin for administration interface
 changeLog:
   - date: 2023-2-9
     description: first release
+  - date: 2025-05-23
+    description: update to v0.13.1.dev0
 links:
   - label: Documentation
     url: https://isso-comments.de/docs/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/isso-comments/isso:release
+      default: ghcr.io/isso-comments/isso:0.13.1.dev0
     adminPassword:
       type: string
       title: Admin Password

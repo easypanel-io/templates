@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2023-07-10
     description: Update to v1.11
+  - date: 2025-07-24
+    description: Version bumped to v1.11.11
 links:
   - label: Website
     url: https://pterodactyl.io/
@@ -28,6 +30,8 @@ contributors:
     url: https://github.com/DaneEveritt
   - name: Matthew Penner
     url: https://github.com/matthewpi
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/pterodactyl/panel:v1.11.9
+      default: ghcr.io/pterodactyl/panel:v1.11.11
     redisServiceName:
       type: string
       title: Redis Service Name

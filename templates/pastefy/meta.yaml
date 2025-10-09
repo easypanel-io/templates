@@ -1,0 +1,81 @@
+name: Pastefy
+description:
+  Pastefy is a feature-rich, open-source, self-hostable pastebin alternative to
+  GitHub Gist or Pastebin. Share code snippets with friends or save them for
+  yourself with syntax highlighting, file format previews, folder organization,
+  OAuth2 authentication, API access, and powerful features for developers.
+  Upload files via curl, integrate with VS Code, and enjoy extensive format
+  support including Markdown, Mermaid, CSV, GeoJSON, and more.
+instructions: null
+changeLog:
+  - date: 2025-06-12
+    description: First Release
+links:
+  - label: Website
+    url: https://pastefy.app/
+  - label: Documentation
+    url: https://github.com/interaapps/pastefy/wiki
+  - label: Github
+    url: https://github.com/interaapps/pastefy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pastefy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: interaapps/pastefy:7.1.4
+benefits:
+  - title: Feature-Rich Pastebin
+    description:
+      Comprehensive alternative to GitHub Gist and Pastebin with advanced
+      features like folder organization, OAuth2 authentication, API access, and
+      extensive file format support.
+  - title: Developer-Friendly
+    description:
+      Upload files via curl, integrate with VS Code and Raycast, access RESTful
+      API with SDKs for JavaScript/TypeScript, Java, and Go. Perfect for
+      development workflows.
+  - title: Extensive Format Support
+    description:
+      Preview support for Markdown, Mermaid diagrams, SVG, CSV, GeoJSON, Diff
+      files, calendar files, regex patterns, and Asciinema recordings with
+      syntax highlighting.
+features:
+  - title: Rich Content Previews
+    description:
+      Support for previewing various file formats including Markdown, Mermaid
+      diagrams, SVG graphics, CSV data, GeoJSON maps, calendar files, and
+      Asciinema terminal recordings.
+  - title: Authentication & Organization
+    description:
+      OAuth2 login with multiple providers (InteraApps, Google, GitHub, Discord,
+      Twitch), folder organization, paste management, and the ability to like
+      and fork pastes.
+  - title: API & Integrations
+    description:
+      Comprehensive REST API with official SDKs for JavaScript/TypeScript, Java,
+      and Go. Extensions for VS Code and Raycast, plus command-line upload
+      support via curl.
+  - title: Advanced Features
+    description:
+      Copy buttons, raw preview mode, paste forking, custom CORS settings,
+      encryption support, and configurable login requirements for reading and
+      creating pastes.
+tags:
+  - Pastebin
+  - Code Sharing
+  - API
+  - Self-Hosted
+logo: logo.png
+screenshots:
+  - screenshot.png

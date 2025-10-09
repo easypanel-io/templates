@@ -15,6 +15,12 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2025-05-26
+    description: Version bumped to 11.7.2
+  - date: 2025-08-13
+    description: 
+      Version bumped to 11.10.2
+      MySQL 8 support added
 links:
   - label: Website
     url: https://directus.io/
@@ -27,6 +33,10 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+  - name: Abhinay M
+    url: https://github.com/AbhinayMe
 schema:
   type: object
   required:
@@ -45,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:11.4.1
+      default: directus/directus:11.10.2
     adminEmail:
       type: string
       title: Admin Email

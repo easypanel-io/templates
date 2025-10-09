@@ -11,6 +11,8 @@ instructions: You can edit the Yaml configuration as per your needs.
 changeLog:
   - date: 2025-03-17
     description: First Release (v0.7.7)
+  - date: 2025-07-21
+    description: Version bumped to v0.8.4
 links:
   - label: Documentation
     url: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glanceapp/glance:v0.7.7
+      default: glanceapp/glance:v0.8.4
 benefits:
   - title: Fully Customizable Dashboard
     description:

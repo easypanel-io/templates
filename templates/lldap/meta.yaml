@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2025-03-22
     description: Initial template release
+  - date: 2025-07-22
+    description: Version bumped to 2025-07-22
 
 links:
   - label: GitHub
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lldap/lldap:v0.6.1
+      default: lldap/lldap:2025-07-22
     adminPassword:
       type: string
       title: Admin Password
