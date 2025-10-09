@@ -15,6 +15,8 @@ changeLog:
     description: Initial Template Release
   - date: 2025-07-25
     description: Version bumped to 753fb6ad997f70693688bce057f0c8cf5da8e6ee
+  - date: 2025-10-09
+    description: Update template and include Redis Cache
 
 links:
   - label: Documentation
@@ -40,11 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/teableio/teable:753fb6ad997f70693688bce057f0c8cf5da8e6ee
-    migrationServiceImage:
-      type: string
-      title: Migration Service Image
-      default: ghcr.io/teableio/teable-db-migrate:753fb6ad997f70693688bce057f0c8cf5da8e6ee
+      default: ghcr.io/teableio/teable:latest
     enableArm:
       type: boolean
       title: Enable Arm
