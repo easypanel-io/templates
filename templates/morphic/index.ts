@@ -53,7 +53,7 @@ search:
       serviceName: `${input.appServiceName}-searxng`,
       source: {
         type: "image",
-        image: "searxng/searxng:latest",
+        image: input.searxngServiceImage,
       },
       domains: [
         {
