@@ -1,5 +1,8 @@
 name: Double Commander
-description: A cross-platform open-source file manager with two panels side by side. It is inspired by Total Commander and features a modern interface with extensive file management capabilities.
+description:
+  A cross-platform open-source file manager with two panels side by side. It is
+  inspired by Total Commander and features a modern interface with extensive
+  file management capabilities.
 instructions: null
 changeLog:
   - date: 2025-05-07
@@ -9,6 +12,8 @@ links:
     url: https://github.com/doublecmd/doublecmd
   - label: Docker Hub
     url: https://hub.docker.com/r/linuxserver/doublecommander
+  - label: Website
+    url: https://doublecmd.sourceforge.io
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -50,4 +55,4 @@ tags:
   - File Manager
   - FTP Client
   - Self-hosted
-  - Open Source 
+  - Open Source
