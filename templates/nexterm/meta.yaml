@@ -1,5 +1,9 @@
 name: Nexterm
-description: "Nexterm is a powerful web-based terminal emulator that provides secure and convenient terminal access through your web browser. It offers a modern interface for remote terminal operations, making it ideal for developers and system administrators who need reliable terminal access from anywhere."
+description:
+  "Nexterm is a powerful web-based terminal emulator that provides secure and
+  convenient terminal access through your web browser. It offers a modern
+  interface for remote terminal operations, making it ideal for developers and
+  system administrators who need reliable terminal access from anywhere."
 instructions: null
 changeLog:
   - date: 2025-05-12
@@ -7,6 +11,8 @@ changeLog:
 links:
   - label: Github
     url: https://github.com/gnmyt/Nexterm
+  - label: Documentation
+    url: https://docs.nexterm.dev
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -26,18 +32,28 @@ schema:
       default: germannewsmaker/nexterm:1.0.2-OPEN-PREVIEW
 benefits:
   - title: Web-Based Access
-    description: Access your terminal from any modern web browser without the need for additional software installation.
+    description:
+      Access your terminal from any modern web browser without the need for
+      additional software installation.
   - title: Secure Connection
-    description: Built with security in mind, ensuring your terminal sessions are protected.
+    description:
+      Built with security in mind, ensuring your terminal sessions are
+      protected.
   - title: Modern Interface
-    description: Clean and intuitive web interface for comfortable terminal operations.
+    description:
+      Clean and intuitive web interface for comfortable terminal operations.
 features:
   - title: Browser-Based Terminal
-    description: Full terminal emulation directly in your web browser with support for common terminal features.
+    description:
+      Full terminal emulation directly in your web browser with support for
+      common terminal features.
   - title: Persistent Sessions
-    description: Maintains your terminal sessions and configurations across browser restarts.
+    description:
+      Maintains your terminal sessions and configurations across browser
+      restarts.
   - title: Easy Deployment
-    description: Simple setup process with Docker, making it easy to deploy and manage.
+    description:
+      Simple setup process with Docker, making it easy to deploy and manage.
 tags:
   - Terminal
   - Development
