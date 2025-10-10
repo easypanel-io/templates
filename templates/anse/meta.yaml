@@ -11,6 +11,8 @@ links:
     url: https://anse.app
   - label: Github
     url: https://github.com/ddiu8081/anse
+  - label: Documentation
+    url: https://docs.anse.app
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -27,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ddiu8081/anse:latest
+      default: ddiu8081/anse:v1.1.11
 benefits:
   - title: Simple Setup
     description: Easy to deploy and configure with minimal requirements.
