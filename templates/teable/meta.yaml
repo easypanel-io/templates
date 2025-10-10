@@ -33,7 +33,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - migrationServiceImage
   properties:
     appServiceName:
       type: string
