@@ -8,7 +8,6 @@ interface Input {
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  // ChatChat Service
   services.push({
     type: "app",
     data: {
@@ -23,7 +22,6 @@ export function generate(input: Input): Output {
           port: 3000,
         },
       ],
-      env: "",
       mounts: [
         {
           type: "volume",

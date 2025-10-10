@@ -26,7 +26,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/okisdev/chatchat:latest
+      default: ghcr.io/okisdev/chatchat:0.1.9
 benefits:
   - title: Simple and Lightweight
     description:
