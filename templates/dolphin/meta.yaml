@@ -1,0 +1,90 @@
+name: Dolphin
+description:
+  Dolphin is a powerful GameCube and Wii emulator that allows you to play your
+  favorite Nintendo games on modern hardware. With support for high-definition
+  graphics, save states, and enhanced controls, Dolphin brings classic gaming to
+  life with improved performance and visual quality. This browser-accessible
+  version provides the full Dolphin emulator through a web interface, enabling
+  you to play retro games from anywhere without local installation.
+
+instructions: null
+
+changeLog:
+  - date: 2025-10-13
+    description: Initial Template Release
+
+links:
+  - label: Website
+    url: https://dolphin-emu.org/
+  - label: Documentation
+    url: https://dolphin-emu.org/docs/guides/
+  - label: GitHub
+    url: https://github.com/dolphin-emu/dolphin
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dolphin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/dolphin:d7dc9d9e-ls28
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+
+benefits:
+  - title: GameCube & Wii Emulation
+    description:
+      Play your favorite Nintendo GameCube and Wii games with high compatibility
+      and accuracy on modern hardware.
+  - title: Enhanced Graphics
+    description:
+      Enjoy games in high-definition with upscaling, anti-aliasing, and other
+      visual enhancements not available on original hardware.
+  - title: Web-Based Access
+    description:
+      Access Dolphin emulator through your browser from any device without local
+      installation or complex setup.
+  - title: Save States
+    description:
+      Quick save and load game states at any point, making it easy to pick up
+      where you left off or retry difficult sections.
+
+features:
+  - title: High Compatibility
+    description:
+      Supports a vast library of GameCube and Wii games with excellent
+      compatibility and accuracy.
+  - title: Performance Enhancements
+    description:
+      Take advantage of modern hardware with multi-core CPU support, speed
+      throttling, and frame skipping options.
+  - title: Control Options
+    description:
+      Configure keyboard, mouse, or gamepad controls with full customization for
+      optimal gaming experience.
+  - title: Graphics Settings
+    description:
+      Customize resolution, aspect ratio, shaders, and post-processing effects
+      to enhance visual quality.
+
+tags:
+  - Gaming
+  - Emulator
+  - GameCube
+  - Wii
+  - Nintendo
+  - Desktop
+  - Browser
