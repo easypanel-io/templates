@@ -9,7 +9,7 @@ description:
 instructions:
 
 changeLog:
-  - date: 2025-06-10
+  - date: 2025-10-13
     description: Template Release
 
 links:
@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hub.qucheng.com/app/zincsearch
+      default: public.ecr.aws/zinclabs/zincsearch:0.4.10
     adminUsername:
       type: string
       title: Admin Username
@@ -45,7 +45,7 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
-      default: pass4Zinc
+      default: "123"
 
 benefits:
   - title: Lightweight Search Engine
