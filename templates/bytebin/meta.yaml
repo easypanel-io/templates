@@ -1,0 +1,90 @@
+name: Bytebin
+description:
+  Bytebin is a fast, lightweight, and simple pastebin service for sharing text
+  and code snippets. Built with performance in mind, it provides an easy way to
+  store and share content through unique URLs. Bytebin is designed to be
+  minimalistic and efficient, making it perfect for developers who need a
+  straightforward solution for sharing code, logs, or text data with automatic
+  expiration and configurable storage limits.
+
+instructions: null
+
+changeLog:
+  - date: 2025-10-13
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/lucko/bytebin
+  - label: Documentation
+    url: https://github.com/lucko/bytebin#readme
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bytebin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/lucko/bytebin:latest
+    keyLength:
+      type: string
+      title: Key Length
+      default: "15"
+    maxContentSize:
+      type: string
+      title: Max Content Size (MB)
+      default: "5"
+
+benefits:
+  - title: Fast & Lightweight
+    description:
+      Minimal resource footprint with high performance for quick content sharing
+      and retrieval.
+  - title: Simple to Use
+    description:
+      Straightforward API and interface for posting and retrieving content with
+      unique URLs.
+  - title: Automatic Expiration
+    description:
+      Content automatically expires after a certain period, keeping storage
+      clean and efficient.
+  - title: Configurable Limits
+    description:
+      Customize key length and maximum content size to suit your specific needs
+      and security requirements.
+
+features:
+  - title: Pastebin Service
+    description:
+      Share text, code snippets, and logs easily through unique URLs with
+      automatic content management.
+  - title: RESTful API
+    description:
+      Simple REST API for posting content and retrieving it using unique keys
+      for integration with other tools.
+  - title: Content Storage
+    description:
+      Persistent storage with configurable limits and automatic cleanup of
+      expired content.
+  - title: Customizable Settings
+    description:
+      Configure key length and maximum content size through environment
+      variables for your use case.
+
+tags:
+  - Pastebin
+  - Code Sharing
+  - Text Storage
+  - API
+  - Developer Tools
