@@ -1,0 +1,91 @@
+name: RStudio
+description:
+  RStudio is a powerful integrated development environment (IDE) for R
+  programming and statistical computing. It provides a comprehensive set of
+  tools for data analysis, visualization, and statistical modeling. This
+  server-based version allows you to access RStudio through your web browser,
+  enabling collaborative work and remote access to your R projects from
+  anywhere. Perfect for data scientists, statisticians, and researchers working
+  with R.
+
+instructions: Default username is rstudio and password is 1234
+
+changeLog:
+  - date: 2025-10-13
+    description: Initial Template Release (4.5)
+
+links:
+  - label: Website
+    url: https://posit.co/products/open-source/rstudio/
+  - label: Documentation
+    url: https://docs.posit.co/ide/server-pro/
+  - label: GitHub
+    url: https://github.com/rstudio/rstudio
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rstudio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: rocker/rstudio:4.5
+    password:
+      type: string
+      title: Password
+      default: "1234"
+
+benefits:
+  - title: Web-Based IDE
+    description:
+      Access a full-featured R development environment through your web browser
+      from any device without local installation.
+  - title: Statistical Computing
+    description:
+      Powerful tools for statistical analysis, data visualization, and machine
+      learning with extensive R package support.
+  - title: Remote Collaboration
+    description:
+      Work on R projects remotely and collaborate with team members by sharing
+      access to the same RStudio server instance.
+  - title: Data Science Workflows
+    description:
+      Integrated support for R Markdown, Shiny apps, version control, and
+      package management for complete data science workflows.
+
+features:
+  - title: Code Editor
+    description:
+      Advanced code editor with syntax highlighting, code completion, and
+      debugging tools specifically designed for R.
+  - title: Data Visualization
+    description:
+      Create interactive plots and visualizations using ggplot2, plotly, and
+      other R visualization libraries.
+  - title: Package Management
+    description:
+      Easy installation and management of R packages from CRAN, Bioconductor,
+      and GitHub repositories.
+  - title: R Markdown Support
+    description:
+      Create reproducible reports and documents combining code, output, and
+      narrative text using R Markdown.
+
+tags:
+  - Development
+  - IDE
+  - R
+  - Statistics
+  - Data Science
+  - Analytics
