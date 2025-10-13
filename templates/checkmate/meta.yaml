@@ -12,6 +12,8 @@ instructions: Go to the /register path to register your user.
 changeLog:
   - date: 2025-08-04
     description: First release
+  - date: 2025-10-10
+    description: Version bumped to v3.2.0
 links:
   - label: Github
     url: https://github.com/bluewave-labs/checkmate
@@ -35,12 +37,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/bluewave-labs/checkmate-backend-mono:v2.3.1
+      default: ghcr.io/bluewave-labs/checkmate-backend-mono:v3.2.0
     mongoServiceImage:
       type: string
       title: MongoDB Service Image
-      default: ghcr.io/bluewave-labs/checkmate-mongo:v2.3.1
-benefits:
+      default: ghcr.io/bluewave-labs/checkmate-mongo:v3.2.0
   - title: Real-Time Monitoring
     description:
       Continuously monitor your websites, APIs, and services with real-time

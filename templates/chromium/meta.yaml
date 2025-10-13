@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 5f5dd27e-ls102
   - date: 2025-07-15
     description: Version bumped to 7a928a3a
+  - date: 2025-10-10
+    description: Version bumped to 74179d94
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-chromium
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/chromium:version-7a928a3a
+      default: lscr.io/linuxserver/chromium:version-74179d94
 benefits:
   - title: Open-Source Browser
     description:

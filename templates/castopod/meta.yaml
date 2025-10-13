@@ -16,7 +16,8 @@ instructions: First install the application by going on this path "/cp-install"
 changeLog:
   - date: 2025-03-20
     description: Initial template release (1.13.4)
-
+  - date: 2025-10-06
+    description: Version bumped to 1.13.5
 links:
   - label: Website
     url: https://castopod.org/
@@ -42,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: castopod/castopod:1.13.4
+      default: castopod/castopod:1.13.5
 
 benefits:
   - title: Full Ownership

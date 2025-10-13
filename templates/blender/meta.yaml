@@ -20,7 +20,8 @@ changeLog:
     description: Version bumped to 4.3.2
   - date: 2025-07-15
     description: Version bumped to 4.4.3
-
+  - date: 2025-10-06
+    description: Version bumped to 4.5.3
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-blender
@@ -44,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/blender:4.4.3
+      default: lscr.io/linuxserver/blender:4.5.3
 benefits:
   - title: 3D Graphics Creation
     description:
