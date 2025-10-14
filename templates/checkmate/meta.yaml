@@ -42,6 +42,7 @@ schema:
       type: string
       title: MongoDB Service Image
       default: ghcr.io/bluewave-labs/checkmate-mongo:v3.2.0
+  benefits:
   - title: Real-Time Monitoring
     description:
       Continuously monitor your websites, APIs, and services with real-time
