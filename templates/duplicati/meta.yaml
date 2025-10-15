@@ -20,6 +20,8 @@ changeLog:
     description: first release
   - date: 2025-01-09
     description: Version bumped to 2.1.0
+  - date: 2025-10-16
+    description: Version bumped to 2.1.2
 links:
   - label: Website
     url: https://www.duplicati.com/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/duplicati:2.1.0
+      default: lscr.io/linuxserver/duplicati:2.1.2-development
     appPassword:
       type: string
       title: App Service Password
