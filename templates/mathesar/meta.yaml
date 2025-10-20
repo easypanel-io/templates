@@ -1,0 +1,85 @@
+name: Mathesar
+description:
+  Mathesar is an open-source database GUI that makes PostgreSQL accessible to
+  non-technical users. It provides an intuitive interface for working with
+  databases without requiring SQL knowledge. Users can visually create and edit
+  tables, modify schemas, browse and manipulate data, and collaborate with team
+  members. Built on PostgreSQL, it leverages the power and reliability of this
+  proven database while adding user-friendly features like spreadsheet-like data
+  editing, relationship visualization, and automated schema management. Mathesar
+  is perfect for teams that need to work with data collaboratively but don't
+  have extensive database expertise. As a self-hosted solution, it gives
+  organizations complete control over their data and infrastructure. Whether
+  you're managing content, organizing research data, or building internal tools,
+  Mathesar makes database operations approachable while maintaining the full
+  capabilities of PostgreSQL.
+instructions: null
+changeLog:
+  - date: 2025-10-20
+    description: Initial Release (v0.6.0)
+links:
+  - label: Website
+    url: https://www.mathesar.org
+  - label: Documentation
+    url: https://docs.mathesar.org
+  - label: Github
+    url: https://github.com/mathesar-foundation/mathesar
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: mathesar
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mathesar/mathesar:0.6.0
+    databaseServiceImage:
+      type: string
+      title: Database Image Service
+      default: pgautoupgrade/pgautoupgrade:17-bookworm
+benefits:
+  - title: Empower non-technical teams
+    description:
+      Collaborate on real PostgreSQL databases with an intuitive UI for tables,
+      data entry, and schema changes without writing SQL.
+  - title: Own your data
+    description:
+      Self-hosted deployment ensures full control and compliance; no vendor
+      lock-in.
+  - title: Built on PostgreSQL
+    description:
+      Leverages proven Postgres features (constraints, types, relationships)
+      while keeping your database accessible from any other tool.
+features:
+  - title: Table and schema editing
+    description:
+      Create and edit tables, columns, data types, constraints, and
+      relationships visually.
+  - title: Data browsing and filtering
+    description:
+      Browse, search, sort, and filter data with a familiar spreadsheet-like
+      experience.
+  - title: File uploads and attachments
+    description:
+      Upload CSV/TSV and manage attachments; optionally configure S3-compatible
+      storage.
+  - title: Access control and SSO
+    description:
+      Configure users and roles; supports OIDC-based SSO for centralized auth.
+  - title: Production-ready proxy
+    description:
+      Ships with a Caddy-based reverse proxy for static files and HTTPS.
+tags:
+  - Database GUI
+  - PostgreSQL
+  - No-code/Low-code
+  - Self-hosted
