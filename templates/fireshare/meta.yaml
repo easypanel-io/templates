@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2025-07-21
     description: Version bumped to v1.2.25
+  - date: 2025-10-17
+    description: Version bumped to v1.2.30
 links:
   - label: Website
     url: https://v.fireshare.net
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shaneisrael/fireshare:v1.2.25
+      default: shaneisrael/fireshare:v1.2.30
     adminUsername:
       type: string
       title: Username

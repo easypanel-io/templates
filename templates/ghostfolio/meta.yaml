@@ -21,7 +21,8 @@ changeLog:
     description: Version bumped to 2.140.0
   - date: 2025-07-21
     description: Version bumped to 2.183.0
-
+  - date: 2025-10-17
+    description: Version bumped to 2.208.0
 links:
   - label: Documentation
     url: https://ghostfolio.dev/docs/
@@ -45,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.io/ghostfolio/ghostfolio:2.183.0
+      default: docker.io/ghostfolio/ghostfolio:2.208.0
 benefits:
   - title: Personal Finance Management
     description:

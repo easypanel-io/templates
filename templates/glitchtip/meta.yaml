@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to v4.2
   - date: 2025-07-21
     description: Version bumped to v5.0
+  - date: 2025-10-17
+    description: Version bumped to v5.1
 links:
   - label: Website
     url: https://glitchtip.com/
@@ -60,7 +62,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glitchtip/glitchtip:v5.0
+      default: glitchtip/glitchtip:v5.1
     databaseServiceName:
       type: string
       title: Redis Service Name
