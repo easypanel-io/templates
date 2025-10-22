@@ -1,0 +1,92 @@
+name: Swingmusic
+description:
+  Swingmusic is a beautiful, self-hosted music player and streaming server for
+  your personal music collection. It provides a modern, intuitive web interface
+  that allows you to stream your music library from anywhere. With support for
+  various audio formats and a clean, responsive design, Swingmusic makes it easy
+  to enjoy your music collection across all your devices. The application offers
+  features like playlist management, search functionality, and album artwork
+  display, making it a perfect alternative to commercial streaming services for
+  those who want to keep their music library private and under their control.
+instructions: null
+changeLog:
+  - date: 2025-10-22
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/swingmx/swingmusic
+  - label: Documentation
+    url: https://github.com/swingmx/swingmusic#readme
+  - label: Demo
+    url: https://swingmx.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: swingmusic
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/swingmx/swingmusic:v2.0.9
+      description: Swingmusic Docker image from GitHub Container Registry
+benefits:
+  - title: Self-Hosted Music Streaming
+    description:
+      Host your own music streaming server to access your personal music
+      collection from anywhere without relying on commercial streaming services
+      or subscriptions.
+  - title: Privacy & Control
+    description:
+      Keep your music library completely private on your own infrastructure with
+      full control over your data and listening habits without third-party
+      tracking.
+  - title: Modern Web Interface
+    description:
+      Enjoy a beautiful, responsive web interface that works seamlessly across
+      desktop, tablet, and mobile devices for a consistent listening experience.
+  - title: Format Support
+    description:
+      Play your music collection regardless of format with broad audio file
+      support, eliminating the need to convert your existing library.
+features:
+  - title: Music Library Management
+    description:
+      Organize and browse your entire music collection with support for artists,
+      albums, tracks, and automatic metadata extraction from audio files.
+  - title: Playlist Creation
+    description:
+      Create and manage custom playlists to organize your favorite tracks and
+      enjoy curated listening experiences tailored to your preferences.
+  - title: Search & Discovery
+    description:
+      Quickly find any song, album, or artist in your collection with powerful
+      search functionality and intuitive browsing capabilities.
+  - title: Album Artwork Display
+    description:
+      Automatically display embedded album artwork from your audio files for a
+      visually rich music browsing and playback experience.
+  - title: Web-Based Player
+    description:
+      Stream your music through any modern web browser without requiring
+      additional software or plugins on your devices.
+  - title: Responsive Design
+    description:
+      Access your music library from any device with a fully responsive
+      interface that adapts to different screen sizes and orientations.
+tags:
+  - Music
+  - Media Server
+  - Self-Hosted
+  - Streaming
+  - Music Player
+  - Audio
+  - Entertainment
+  - Personal Media
