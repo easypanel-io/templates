@@ -1,0 +1,103 @@
+name: 4ga Boards
+description:
+  4ga Boards is a modern, open-source project management and collaboration
+  platform inspired by Trello. It provides a powerful Kanban-style board system
+  for organizing tasks, projects, and workflows. With its intuitive
+  drag-and-drop interface, 4ga Boards makes it easy to visualize work, track
+  progress, and collaborate with teams. The application features customizable
+  boards, lists, and cards, along with support for attachments, user avatars,
+  and project backgrounds. Built with modern web technologies, 4ga Boards offers
+  a seamless experience for managing projects of any size. It's perfect for
+  teams looking for a self-hosted alternative to commercial project management
+  tools, providing full control over your data and workflows. Whether you're
+  managing software development sprints, marketing campaigns, or personal todo
+  lists, 4ga Boards provides the flexibility and features you need.
+instructions: null
+changeLog:
+  - date: 2025-10-23
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/rargames/4ga-boards
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: 4gaboards
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rargames/4gaboards:3.2.11
+      description: 4ga Boards Docker image from GitHub Container Registry
+benefits:
+  - title: Self-Hosted Control
+    description:
+      Take full control of your project management data by hosting 4ga Boards on
+      your own infrastructure, ensuring privacy and data sovereignty for your
+      team.
+  - title: Kanban Workflow
+    description:
+      Visualize your work with intuitive Kanban boards that make it easy to
+      track tasks, manage workflows, and see progress at a glance with
+      drag-and-drop functionality.
+  - title: Team Collaboration
+    description:
+      Collaborate effectively with your team through shared boards, task
+      assignments, and real-time updates that keep everyone aligned and
+      productive.
+  - title: Customizable Boards
+    description:
+      Personalize your workspace with custom board backgrounds, user avatars,
+      and flexible organization structures that adapt to your team's unique
+      workflow.
+features:
+  - title: Kanban Boards
+    description:
+      Create and manage multiple boards with customizable lists and cards for
+      organizing tasks and projects using the proven Kanban methodology.
+  - title: Drag and Drop
+    description:
+      Intuitive drag-and-drop interface makes it easy to move cards between
+      lists, reorder tasks, and reorganize your workflow without any friction.
+  - title: File Attachments
+    description:
+      Attach files and documents directly to cards, keeping all project-related
+      materials organized and accessible in one central location.
+  - title: User Avatars
+    description:
+      Personalize your workspace with custom user avatars that help team members
+      quickly identify who's working on what and build team identity.
+  - title: Project Backgrounds
+    description:
+      Customize board appearance with project background images that help
+      distinguish different projects and make your workspace more visually
+      appealing.
+  - title: PostgreSQL Database
+    description:
+      Built on reliable PostgreSQL database backend ensuring data integrity,
+      performance, and scalability for teams of any size.
+  - title: Modern Interface
+    description:
+      Clean, responsive web interface built with modern technologies provides an
+      excellent user experience across desktop and mobile devices.
+  - title: Open Source
+    description:
+      Fully open-source project allows you to customize, extend, and contribute
+      to the platform while benefiting from community-driven improvements.
+tags:
+  - Project Management
+  - Kanban
+  - Productivity
+  - Collaboration
+  - Task Management
+  - Self-Hosted
+  - Team Tools
+  - Workflow
