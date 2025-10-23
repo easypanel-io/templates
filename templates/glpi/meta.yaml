@@ -18,6 +18,9 @@ changeLog:
     description: Template Release
   - date: 2025-07-21
     description: Version bumped to 9.1.4
+- - date: 2025-10-23
+    description: Version bumped to 11.0.1
+
 links:
   - label: Documentation
     url: https://glpi-project.org/documentation/
@@ -39,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: diouxx/glpi:9.1.4
+default: glpi/glpi:11.0.1
 benefits:
   - title: Comprehensive IT Asset Management
     description:
