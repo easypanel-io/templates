@@ -1,5 +1,4 @@
-
-mport { Output, Services, randomString } from "~templates-utils";
+import { Output, Services, randomString } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -9,7 +8,7 @@ export function generate(input: Input): Output {
     const password = input.dragonflyPassword || randomString(32);
 
     env.push('# See https://www.dragonflydb.io/docs/managing-dragonfly/flags for all flags')
-    env.push(`DFLY_requirepass=${password || ''}`);
+    env.push(`DFLY_requirepass=${password}`);
 
     services.push({
         type: "app",
