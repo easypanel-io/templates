@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 1.26.0
   - date: 2025-07-21
     description: Version bumped to 1.26.3
+  - date: 2025-10-17
+    description: Version bumped to 1.27.0
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-freshrss
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/freshrss:1.26.3
+      default: lscr.io/linuxserver/freshrss:1.27.0
 benefits:
   - title: Stay Updated
     description:

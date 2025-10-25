@@ -13,6 +13,8 @@ changeLog:
     description: Template Release
   - date: 2025-07-21
     description: Version bumped to 6.2.21
+  - date: 2025-10-17
+    description: Version bumped to 6.4.2
 links:
   - label: Documentation
     url: https://firefly-iii.org/documentation/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fireflyiii/core:version-6.2.21
+      default: fireflyiii/core:version-6.4.2
 
 benefits:
   - title: Comprehensive Financial Tracking
