@@ -1,0 +1,108 @@
+name: slskd
+description:
+  slskd is a modern, web-based client for the Soulseek peer-to-peer file sharing
+  network. It provides a clean, intuitive web interface for browsing, searching,
+  and downloading files from the Soulseek network. Unlike traditional desktop
+  clients, slskd runs as a daemon service that you can access from any device
+  with a web browser. The application supports all core Soulseek features
+  including user searches, room browsing, private messaging, and file sharing.
+  With its containerized deployment, slskd makes it easy to run a persistent
+  Soulseek client on a server or NAS device. It's perfect for music enthusiasts,
+  collectors, and anyone who wants to participate in the Soulseek community
+  without running a desktop application. The daemon continues to operate even
+  when you're not actively using the web interface, ensuring you never miss
+  downloads or messages.
+instructions: Default credentials are slskd/slskd.
+changeLog:
+  - date: 2025-10-23
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/slskd/slskd
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - torrentPort
+    - webPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: slskd
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: slskd/slskd:0.23.2
+      description: slskd Docker image
+    torrentPort:
+      type: string
+      title: Torrent Port
+      default: "5031"
+    webPort:
+      type: string
+      title: Web Port
+      default: "50300"
+benefits:
+  - title: Web-Based Access
+    description:
+      Access your Soulseek client from any device with a web browser, no need to
+      install desktop applications or maintain multiple client installations.
+  - title: Always-On Operation
+    description:
+      Run slskd as a persistent daemon service that continues operating 24/7,
+      ensuring you never miss downloads, uploads, or messages from other users.
+  - title: Modern Interface
+    description:
+      Enjoy a clean, responsive web interface with modern design and user
+      experience improvements over traditional Soulseek desktop clients.
+  - title: Remote Management
+    description:
+      Manage your Soulseek activity remotely through the web interface with
+      support for remote configuration and control from anywhere.
+features:
+  - title: Soulseek Network Client
+    description:
+      Full-featured client for the Soulseek peer-to-peer network supporting all
+      core functionality including searches, downloads, uploads, and messaging.
+  - title: Web Interface
+    description:
+      Responsive web-based interface accessible from any device with a browser,
+      providing easy access to all Soulseek features without desktop software.
+  - title: Search and Browse
+    description:
+      Search the Soulseek network for files, browse user libraries, and explore
+      chat rooms to discover new music and content from the community.
+  - title: File Sharing
+    description:
+      Share your own files with the Soulseek community while downloading from
+      others, maintaining the network's peer-to-peer nature and etiquette.
+  - title: Private Messaging
+    description:
+      Communicate with other Soulseek users through private messages, discuss
+      music, and build connections within the community.
+  - title: Room Support
+    description:
+      Join and participate in Soulseek chat rooms to engage with communities
+      around specific music genres, artists, or interests.
+  - title: Daemon Mode
+    description:
+      Runs as a background service that operates continuously, handling uploads
+      and downloads even when the web interface isn't actively being used.
+  - title: Remote Configuration
+    description:
+      Configure and manage all aspects of the client remotely through the web
+      interface without needing direct server access or configuration files.
+tags:
+  - File Sharing
+  - P2P
+  - Media
+  - Music
+  - Self-Hosted
+  - Download Manager
+  - Soulseek
+  - Community
