@@ -1,0 +1,104 @@
+name: LibreSpeed
+description:
+  LibreSpeed is a free and open-source HTML5-based speed test application that
+  you can host on your own server. It provides a lightweight, self-hosted
+  alternative to commercial speed test services like Speedtest.net. LibreSpeed
+  allows you to measure download speed, upload speed, ping, and jitter of your
+  internet connection through a clean, modern web interface. It's perfect for
+  network administrators, ISPs, or anyone who wants to monitor their internet
+  connection performance without relying on third-party services. The
+  application stores test results and provides analytics to track connection
+  quality over time.
+instructions: null
+changeLog:
+  - date: 2025-10-21
+    description: Initial Template Release (v5.4.1)
+links:
+  - label: GitHub
+    url: https://github.com/librespeed/speedtest
+  - label: Demo
+    url: https://librespeed.org/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: librespeed
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/librespeed:5.4.1
+      description: LibreSpeed Docker image from LinuxServer.io
+    password:
+      type: string
+      title: Results Password
+      default: PASSWORD
+      description: Password to access test results and statistics
+    customResults:
+      type: boolean
+      title: Enable Custom Results
+      default: false
+      description: Enable custom results page
+    ipinfoApiKey:
+      type: string
+      title: IPInfo API Key
+      default: ""
+      description: Optional API key from ipinfo.io for enhanced geolocation data
+benefits:
+  - title: Self-Hosted Speed Testing
+    description:
+      Host your own speed test server to measure internet connection performance
+      without relying on third-party services or sharing data externally.
+  - title: Privacy-Focused
+    description:
+      Keep all speed test data on your own infrastructure, ensuring complete
+      privacy and control over your network performance metrics.
+  - title: Lightweight & Fast
+    description:
+      Minimal resource usage with HTML5-based testing that works across all
+      modern browsers without requiring plugins or additional software.
+  - title: Results Tracking
+    description:
+      Store and analyze historical speed test results to monitor connection
+      quality trends and identify performance issues over time.
+features:
+  - title: Download Speed Test
+    description:
+      Accurately measure your internet download speed with configurable test
+      parameters and detailed performance metrics.
+  - title: Upload Speed Test
+    description:
+      Test your upload bandwidth with precise measurements to understand your
+      connection's full capabilities in both directions.
+  - title: Ping & Jitter Measurement
+    description:
+      Monitor connection latency and stability with ping and jitter tests to
+      identify network quality issues beyond just bandwidth.
+  - title: Results Database
+    description:
+      Automatically store test results with password-protected access for
+      reviewing historical performance data and trends.
+  - title: Clean Web Interface
+    description:
+      Modern, responsive HTML5 interface that works seamlessly across desktop
+      and mobile devices without requiring any plugins.
+  - title: Geolocation Support
+    description:
+      Optional integration with IPInfo API for enhanced geolocation data to
+      track test results by location and ISP information.
+tags:
+  - Speed Test
+  - Network Tools
+  - Self-Hosted
+  - Performance Monitoring
+  - Bandwidth Testing
+  - Internet Speed
+  - Network Diagnostics
+  - Analytics
