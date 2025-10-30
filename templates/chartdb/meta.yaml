@@ -1,0 +1,108 @@
+name: ChartDB
+description:
+  ChartDB is an open-source, web-based database diagramming editor that enables
+  you to visualize and manage database schemas through interactive diagrams.
+  Create entity-relationship diagrams (ERDs) instantly by connecting to your
+  databases and automatically generating visual representations of your schema.
+  The application supports instant schema visualization using a single query and
+  offers AI-powered features through OpenAI integration for intelligent SQL
+  export and schema management. ChartDB provides an intuitive interface for
+  understanding complex database structures, making it perfect for developers,
+  database administrators, and teams who need to document and communicate
+  database designs. With its modern web-based approach, you can access your
+  database diagrams from anywhere and collaborate effectively on database
+  architecture without installing desktop software.
+instructions: null
+changeLog:
+  - date: 2025-10-30
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://chartdb.io
+  - label: GitHub
+    url: https://github.com/chartdb/chartdb
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chartdb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/chartdb/chartdb:latest
+      description: ChartDB Docker image
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description:
+        Optional OpenAI API key to enable AI-powered features like intelligent
+        SQL export and schema suggestions
+benefits:
+  - title: Instant Schema Visualization
+    description:
+      Connect to your databases and automatically generate visual
+      entity-relationship diagrams with a single query, saving hours of manual
+      diagramming work.
+  - title: AI-Powered Features
+    description:
+      Leverage OpenAI integration for intelligent SQL export, schema
+      suggestions, and automated database documentation generation.
+  - title: Web-Based Access
+    description:
+      Access your database diagrams from anywhere with a modern web interface,
+      no desktop software installation required.
+  - title: Open Source
+    description:
+      Benefit from a fully open-source solution with active community support
+      and the flexibility to customize for your needs.
+features:
+  - title: Database Schema Visualization
+    description:
+      Automatically generate interactive entity-relationship diagrams from your
+      existing databases with instant schema detection and visualization.
+  - title: Interactive Diagrams
+    description:
+      Create and edit database diagrams with an intuitive drag-and-drop
+      interface, making database design accessible and collaborative.
+  - title: AI-Powered SQL Export
+    description:
+      Use OpenAI integration to generate intelligent SQL exports and receive
+      smart suggestions for schema optimization and design improvements.
+  - title: Single Query Schema Import
+    description:
+      Import entire database schemas instantly with a single query, supporting
+      rapid visualization of complex database structures.
+  - title: Modern Web Interface
+    description:
+      Access ChartDB through a clean, modern web interface that works seamlessly
+      across desktop and mobile devices.
+  - title: Multiple Database Support
+    description:
+      Connect to various database systems and visualize schemas from different
+      database platforms in a unified interface.
+  - title: Self-Hosted Solution
+    description:
+      Deploy ChartDB on your own infrastructure to maintain complete control
+      over your database documentation and sensitive schema information.
+  - title: Collaboration Ready
+    description:
+      Share and collaborate on database designs with your team through a
+      centralized web-based platform accessible to all stakeholders.
+tags:
+  - Database
+  - Diagram
+  - ERD
+  - Visualization
+  - Schema
+  - Self-Hosted
+  - AI
+  - Design Tool
+  - Documentation
