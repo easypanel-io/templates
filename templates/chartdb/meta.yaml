@@ -37,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/chartdb/chartdb:latest
+      default: ghcr.io/chartdb/chartdb:1.17.0
       description: ChartDB Docker image
     openaiApiKey:
       type: string
