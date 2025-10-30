@@ -1,0 +1,105 @@
+name: GHStats
+description:
+  GHStats is a self-hosted GitHub statistics and analytics tool that helps you
+  track and visualize your GitHub repository metrics. Monitor stars, traffic,
+  clones, views, and other important repository statistics over time with an
+  intuitive web interface. The application collects and stores historical data
+  from your GitHub repositories, allowing you to analyze trends and growth
+  patterns that would otherwise be lost after GitHub's 14-day statistics
+  retention period. Perfect for developers, project maintainers, and
+  organizations who want to maintain long-term analytics of their GitHub
+  presence. GHStats requires a GitHub personal access token to fetch repository
+  statistics and stores all collected data persistently for historical analysis
+  and visualization.
+instructions: null
+changeLog:
+  - date: 2025-10-30
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/vladkens/ghstats
+  - label: Docker Hub
+    url: https://github.com/vladkens/ghstats/pkgs/container/ghstats
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - githubToken
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ghstats
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/vladkens/ghstats:v0.7.1
+      description: GHStats Docker image
+    githubToken:
+      type: string
+      title: GitHub Token
+      description:
+        GitHub personal access token for fetching repository statistics
+benefits:
+  - title: Historical Data Retention
+    description:
+      Keep long-term history of your GitHub repository statistics beyond
+      GitHub's default 14-day retention period for comprehensive analytics.
+  - title: Self-Hosted Analytics
+    description:
+      Host your own GitHub statistics dashboard with complete control over your
+      data and privacy without relying on third-party services.
+  - title: Repository Insights
+    description:
+      Track stars, traffic, clones, views, and other metrics to understand your
+      repository's growth and popularity trends over time.
+  - title: Data Persistence
+    description:
+      All collected statistics are stored persistently in a dedicated volume,
+      ensuring your historical data is never lost.
+features:
+  - title: GitHub Statistics Tracking
+    description:
+      Automatically collects and stores repository statistics including stars,
+      forks, traffic, clones, and views from your GitHub repositories.
+  - title: Historical Data Storage
+    description:
+      Maintains long-term historical records of all collected metrics, allowing
+      you to analyze trends beyond GitHub's limited retention period.
+  - title: Web Dashboard
+    description:
+      Access your GitHub statistics through a clean web interface with
+      visualizations and insights accessible from any device.
+  - title: Multiple Repositories
+    description:
+      Track statistics across multiple GitHub repositories from a single
+      dashboard for comprehensive project portfolio monitoring.
+  - title: Persistent Storage
+    description:
+      All collected data is stored in a persistent volume mounted at /app/data,
+      ensuring your statistics history survives container restarts.
+  - title: Automated Collection
+    description:
+      Automatically fetches and updates repository statistics at regular
+      intervals without manual intervention required.
+  - title: Lightweight Deployment
+    description:
+      Runs efficiently with minimal resource requirements, perfect for any
+      Docker-capable host or cloud environment.
+  - title: GitHub API Integration
+    description:
+      Uses official GitHub API with your personal access token to securely fetch
+      repository data and statistics.
+tags:
+  - GitHub
+  - Analytics
+  - Statistics
+  - Monitoring
+  - Self-Hosted
+  - Repository
+  - Tracking
+  - Metrics
