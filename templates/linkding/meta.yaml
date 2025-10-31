@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to 1.38.1
   - date: 2025-07-22
     description: Version bumped to 1.41.0
+  - date: 2025-10-30
+    description: Version bumped to 1.44.1
 links:
   - label: Github
     url: https://github.com/sissbruecker/linkding
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sissbruecker/linkding:1.41.0
+      default: sissbruecker/linkding:1.44.1
     linkdingSuperuserName:
       type: string
       title: Superuser Name

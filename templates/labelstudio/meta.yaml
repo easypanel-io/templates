@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-02-14
     description: First Release
+  - date: 2025-10-30
+    description: Version bumped to 20251028.125324-develop-6757db6
 links:
   - label: Website
     url: https://labelstud.io/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: heartexlabs/label-studio:20250722.133548-develop-cc90fa143
+      default: heartexlabs/label-studio:20251028.125324-develop-6757db6
 benefits:
   - title: Effortless Data Labeling
     description:

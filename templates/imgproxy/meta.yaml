@@ -24,6 +24,8 @@ changeLog:
     description: update to v3.28.0
   - date: 2025-07-22
     description: Version bumped to v3.29.1
+  - date: 2025-10-30
+    description: Version bumped to v3.30.1
 links:
   - label: Website
     url: https://imgproxy.net/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: darthsim/imgproxy:v3.29.1
+      default: darthsim/imgproxy:v3.30.1
 benefits:
   - title: Optimized Image Processing
     description:

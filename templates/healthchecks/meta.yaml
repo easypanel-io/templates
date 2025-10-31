@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to 3.9.20250224
   - date: 2025-07-22
     description: Version bumped to 3.10.20250721
+  - date: 2025-10-30
+    description: Version bumped to 3.11.2
 links:
   - label: Website
     url: https://healthchecks.io
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/healthchecks:3.10.20250721
+      default: lscr.io/linuxserver/healthchecks:3.11.2
     superUsername:
       type: string
       title: Superuser Username

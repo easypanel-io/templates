@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to efed40d-alpine
   - date: 2025-07-22
     description: Version bumped to c7eb5d3-alpine
+  - date: 2025-07-22
+    description: Version bumped to d07573b-alpine
 links:
   - label: Documentation
     url: https://github.com/freyacodes/Lavalink/blob/master/README.md
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fredboat/lavalink:c7eb5d3-alpine
+      default: fredboat/lavalink:d07573b-alpine
     password:
       type: string
       title: Auth server password

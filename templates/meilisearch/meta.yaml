@@ -24,6 +24,8 @@ changeLog:
     description: Update to v1.13.3
   - date: 2025-07-22
     description: Update to v1.15.2
+  - date: 2025-10-30
+    description: Update to v1.24.0
 links:
   - label: Website
     url: https://meilisearch.com/
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getmeili/meilisearch:v1.15.2
+      default: getmeili/meilisearch:v1.24.0
     dataVolumeName:
       type: string
       title: Meilisearch Database Volume Name

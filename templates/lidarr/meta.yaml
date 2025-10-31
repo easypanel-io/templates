@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 2.9.6
   - date: 2025-07-22
     description: Version bumped to 2.12.4
+  - date: 2025-10-30
+    description: Version bumped to 2.14.5
 links:
   - label: Website
     url: https://lidarr.audio/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:2.12.4
+      default: linuxserver/lidarr:2.14.5
 benefits:
   - title: Automated Music Management
     description:
