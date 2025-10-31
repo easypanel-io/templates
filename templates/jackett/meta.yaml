@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2024-12-25
     description: Template Release
+  - date: 2025-10-30
+    description: Version bumped to 0.24.196
 links:
   - label: Website
     url: https://jackett.sh/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/jackett:0.22.2182
+      default: lscr.io/linuxserver/jackett:0.24.196
 
 benefits:
   - title: Seamless Integration

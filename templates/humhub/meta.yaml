@@ -20,6 +20,8 @@ instructions: null
 changeLog:
   - date: 2023-1-22
     description: first release
+  - date: 2025-10-30
+    description: Version bumped to 1.15.6
 links:
   - label: Website
     url: https://www.humhub.com
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mriedmann/humhub:1.9.4
+      default: mriedmann/humhub:1.15.6
     databaseServiceName:
       type: string
       title: Database Service Name

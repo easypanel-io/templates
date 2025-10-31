@@ -10,6 +10,8 @@ instructions: Setup the initial user and start using the app.
 changeLog:
   - date: 2025-09-10
     description: Initial Template Release (sha-d7c6727)
+  - date: 2025-10-30
+    description: Version bumped to sha-89f45ce
 links:
   - label: GitHub
     url: https://github.com/basecamp/once-campfire
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/basecamp/once-campfire:sha-d7c6727
+      default: ghcr.io/basecamp/once-campfire:sha-89f45ce
       description: Once Campfire Docker image
 benefits:
   - title: Simple Team Communication

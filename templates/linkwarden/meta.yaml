@@ -13,7 +13,8 @@ changeLog:
     description: Template Release
   - date: 2025-07-22
     description: Version bumped to v2.11.5
-
+  - date: 2025-10-30
+    description: Version bumped to v2.13.1
 links:
   - label: Documentation
     url: https://linkwarden.app/docs
@@ -37,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/linkwarden/linkwarden:v2.11.5
+      default: ghcr.io/linkwarden/linkwarden:v2.13.1
 benefits:
   - title: Advanced Bookmark Management
     description:

@@ -29,7 +29,8 @@ changeLog:
     description: Version bumped to 0.8.4
   - date: 2025-07-22
     description: Version bumped to 0.8.7
-
+  - date: 2025-10-30
+    description: Version bumped to 0.8.8
 links:
   - label: Website
     url: https://www.kavitareader.com/
@@ -55,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jvmilazz0/kavita:0.8.7
+      default: jvmilazz0/kavita:0.8.8
     serviceTimezone:
       type: string
       title: Timezone

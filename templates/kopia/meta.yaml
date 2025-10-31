@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 20250204.0.1210
   - date: 2025-07-22
     description: Version bumped to 20250722.0.5129
+  - date: 2025-10-30
+    description: Version bumped to 20251023.0.52914
 links:
   - label: Website
     url: https://kopia.io/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kopia/kopia:20250722.0.5129
+      default: kopia/kopia:20251023.0.52914
 benefits:
   - title: Secure and Encrypted Backups
     description:

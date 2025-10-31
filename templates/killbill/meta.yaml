@@ -20,6 +20,8 @@ instructions:
 changeLog:
   - date: 2023-3-16
     description: First release
+  - date: 2025-10-30
+    description: Version bumped to 0.24.15
 links:
   - label: Website
     url: https://killbill.io
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: KillBill Service Image
-      default: killbill/killbill:0.24.13
+      default: killbill/killbill:0.24.15
     kauiAppServiceImage:
       type: string
       title: Kaui Admin Console Image

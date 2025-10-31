@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to 0.1521.0
   - date: 2025-07-22
     description: Version bumped to 0.1826.3
+  - date: 2025-10-30
+    description: Version bumped to 0.2114.2
 links:
   - label: Documentation
     url: https://docs.lightdash.com/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lightdash/lightdash:0.1826.3
+      default: lightdash/lightdash:0.2114.2
     browserlessImage:
       type: string
       title: Browserless Image

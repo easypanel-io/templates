@@ -10,6 +10,8 @@ changeLog:
     description: Template Release (v4.4)
   - date: 2025-07-22
     description: Version bumped to v5.1
+  - date: 2025-10-30
+    description: Version bumped to v5.3
 links:
   - label: Documentation
     url: https://hortusfox.github.io/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/danielbrendel/hortusfox-web:v5.1
+      default: ghcr.io/danielbrendel/hortusfox-web:v5.3
     adminEmail:
       type: string
       title: Admin Email

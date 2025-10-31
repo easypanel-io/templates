@@ -8,6 +8,8 @@ instructions:
 changeLog:
   - date: 2025-04-15
     description: First Release
+  - date: 2025-10-30
+    description: Version bumped to 2.17.10
 links:
   - label: GitHub
     url: https://github.com/elie222/inbox-zero
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/elie222/inbox-zero:v1.10.2
+      default: ghcr.io/elie222/inbox-zero:v2.17.10
     googleClientId:
       type: string
       title: Google Client ID
