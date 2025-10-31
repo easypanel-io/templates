@@ -1,0 +1,76 @@
+name: Nakama
+description: Nakama is a scalable server for social and real-time games and apps.
+instructions: 'Default credentials: User:"admin" Password:"password"'
+changeLog:
+  - date: 2023-9-14
+    description: first release
+links:
+  - label: Website
+    url: https://heroiclabs.com
+  - label: Documentation
+    url: https://heroiclabs.com/docs/nakama
+  - label: Github
+    url: https://github.com/heroiclabs/nakama
+contributors:
+  - name: Henrique Barucco
+    url: https://github.com/henriquebarucco
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - databasePassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nakama
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: registry.heroiclabs.com/heroiclabs/nakama:3.17.1
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: nakama-db
+    databasePassword:
+      type: string
+      title: Database Password
+      default: password
+
+benefits:
+  - title: Simplified Development
+    description: Nakama provides a simplified development process by offering essential features like user authentication, social networking, storage, and real-time data exchange in one integrated solution. This streamlines development, saving you time and effort.
+  - title: Scalability
+    description: Nakama is designed to handle massive scale, operating as a distributed cluster. When your app or game gains popularity, simply launch additional instances to effortlessly manage increased traffic and demand. This scalability ensures your project can grow with ease.
+  - title: Cross-Platform Compatibility
+    description: Nakama supports development across various platforms, including mobile, console, desktop, and web, with seamless Unity integration. This versatility empowers you to create successful projects on your preferred platform.
+  - title: Enhanced User Engagement
+    description: Nakama offers features like user accounts, real-time chat, leaderboards, and matchmaking to enhance user engagement and make your app or game more social and competitive.
+  - title: Simplified Customization
+    description: Nakama allows you to execute custom server-side code using the Lua programming language. This means you can modify behavior on the fly and add new features faster, all without requiring updates to user devices.
+features:
+  - title: User Account Management
+    description: Nakama simplifies user account management, allowing users to register, create profiles, connect with friends, join groups, and engage in social interactions within your app or game.
+  - title: Real-Time Chat
+    description: Nakama offers real-time chat capabilities, enabling users to chat one-on-one, join group conversations, and participate in chat rooms, enhancing social interactions and user engagement.
+  - title: In-App Notifications
+    description: With Nakama, you can easily send in-app notifications to one or multiple users, providing a convenient way to broadcast messages and updates within your app or game.
+  - title: Leaderboards
+    description: Implement leaderboards in your app or game to introduce a competitive element, allowing users to compare their achievements and enhance their social gaming experience.
+  - title: Matchmaker
+    description: Nakama's matchmaker simplifies the process of finding opponents for real-time and turn-based games, ensuring users have engaging and competitive gaming experiences.
+  - title: Multiplayer Support
+    description: Nakama's multiplayer engine makes it effortless for users to set up and join multiplayer matches, facilitating rapid data exchange between players for seamless gameplay.
+  - title: Server Runtime Code
+    description: Nakama seamlessly integrates the Lua programming language as a fast embedded code runtime on the server. This enables the execution of custom logic not running on the user's device or browser, allowing you to modify behavior on the fly and introduce new features quickly.
+  - title: Installation and Compatibility
+    description: Nakama is easy to set up during development on macOS, Linux, or Windows machines. When ready for production, you can seamlessly transition to cloud hosting or use the Heroic Cloud for efficient management of your server infrastructure.
+tags:
+  - Games
+  - Socket
