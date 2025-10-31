@@ -1,0 +1,97 @@
+name: Checkmate
+description:
+  Checkmate is a modern, open-source uptime monitoring solution designed to keep
+  track of your websites, APIs, and services. Built with a focus on simplicity
+  and reliability, it provides real-time monitoring capabilities with instant
+  notifications when your services go down. The application features a clean,
+  intuitive dashboard that displays the current status of all monitored
+  services, historical uptime data, and detailed analytics. Perfect for
+  businesses, developers, and system administrators who need to ensure their
+  digital services remain accessible to users.
+instructions: Go to the /register path to register your user.
+changeLog:
+  - date: 2025-08-04
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/bluewave-labs/checkmate
+  - label: Documentation
+    url: https://github.com/bluewave-labs/checkmate#readme
+  - label: Website
+    url: https://checkmate.so
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: checkmate
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/bluewave-labs/checkmate-backend-mono:v2.3.1
+    mongoServiceImage:
+      type: string
+      title: MongoDB Service Image
+      default: ghcr.io/bluewave-labs/checkmate-mongo:v2.3.1
+benefits:
+  - title: Real-Time Monitoring
+    description:
+      Continuously monitor your websites, APIs, and services with real-time
+      status updates and instant alerting when issues are detected.
+  - title: Comprehensive Dashboard
+    description:
+      Clean and intuitive dashboard providing at-a-glance visibility into the
+      health and performance of all your monitored services.
+  - title: Historical Analytics
+    description:
+      Track uptime trends and performance metrics over time with detailed
+      historical data and analytics for better insights.
+  - title: Instant Notifications
+    description:
+      Get immediately notified via multiple channels when your services
+      experience downtime or performance issues.
+  - title: Easy Configuration
+    description:
+      Simple setup process with flexible configuration options to monitor
+      various types of services and endpoints.
+  - title: Scalable Architecture
+    description:
+      Built with MongoDB and Redis for high performance and scalability to
+      handle monitoring of large numbers of services.
+features:
+  - title: Service Health Monitoring
+    description:
+      Monitor HTTP/HTTPS endpoints, APIs, and web services with customizable
+      check intervals and timeout settings.
+  - title: Uptime Statistics
+    description:
+      Detailed uptime percentages and availability statistics with historical
+      data visualization and reporting.
+  - title: Alert Management
+    description:
+      Configurable alert rules with multiple notification channels including
+      email, webhooks, and third-party integrations.
+  - title: Response Time Tracking
+    description:
+      Monitor and track response times for your services with performance
+      metrics and trend analysis over time.
+  - title: Status Page
+    description:
+      Public status pages to communicate service availability to your users and
+      stakeholders transparently.
+  - title: Team Collaboration
+    description:
+      Multi-user support with role-based access control for team collaboration
+      and shared monitoring responsibilities.
+tags:
+  - Monitoring
+  - Uptime
+  - Analytics
+  - DevOps
