@@ -1,0 +1,82 @@
+name: Rybbit
+description:
+  Rybbit is a comprehensive analytics platform that provides powerful insights
+  into user behavior and application performance. Built with modern web
+  technologies including React frontend and Node.js backend, it offers real-time
+  data processing with ClickHouse and PostgreSQL databases. The platform
+  features a sleek dashboard for visualizing analytics data, user management
+  with authentication, and configurable signup settings. Perfect for businesses
+  looking to gain deep insights into their applications and user interactions.
+instructions: null
+changeLog:
+  - date: 2025-06-03
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/rybbit-io
+  - label: Website
+    url: https://rybbit.io
+  - label: Documentation
+    url: https://www.rybbit.io/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - backendImage
+    - clientImage
+    - clickhouseImage
+    - caddyImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: rybbit
+    backendImage:
+      type: string
+      title: Backend Image
+      default: ghcr.io/rybbit-io/rybbit-backend:v1.0.0
+    clientImage:
+      type: string
+      title: Client Image
+      default: ghcr.io/rybbit-io/rybbit-client:v1.0.0
+    caddyImage:
+      type: string
+      title: Caddy Image
+      default: caddy:2.10.0
+    clickhouseImage:
+      type: string
+      title: ClickHouse Image
+      default: clickhouse/clickhouse-server:25.4.2
+benefits:
+  - title: Real-time Analytics
+    description:
+      Process and visualize data in real-time with ClickHouse backend.
+  - title: User Management
+    description: Built-in authentication and user management system.
+  - title: Modern Stack
+    description: Built with React, Node.js, and modern web technologies.
+  - title: Self-Hosted
+    description: Full control over your analytics data with self-hosting.
+features:
+  - title: Analytics Dashboard
+    description:
+      Comprehensive dashboard for visualizing analytics data and metrics.
+  - title: User Authentication
+    description: Secure user authentication and session management.
+  - title: Database Integration
+    description:
+      Dual database setup with ClickHouse for analytics and PostgreSQL for
+      application data.
+  - title: Email Integration
+    description: Email delivery capabilities with Resend API integration.
+  - title: Reverse Proxy
+    description: Built-in Caddy reverse proxy with automatic HTTPS.
+tags:
+  - Analytics
+  - Dashboard
+  - Self-Hosted
+  - Real-time
+  - Authentication
