@@ -14,6 +14,10 @@ changeLog:
     description: First Release
   - date: 2025-07-22
     description: Version bumped to 3.2.18
+  - date: 2025-11-03
+    description:
+      Added database type selection (SQLite, PostgreSQL, MySQL, MariaDB), volume
+      mounts, timezone configuration, and Resend email integration support
 links:
   - label: Website
     url: https://kener.ing/
@@ -29,6 +33,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - databaseType
+    - timezone
   properties:
     appServiceName:
       type: string
@@ -37,7 +43,36 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rajnandan1/kener:3.2.18
+      default: ghcr.io/rajnandan1/kener:3.2.19
+    databaseType:
+      type: string
+      title: Database Type
+      default: sqlite
+      oneOf:
+        - enum:
+            - sqlite
+          title: SQLite (Default)
+        - enum:
+            - postgres
+          title: PostgreSQL
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - mariadb
+          title: MariaDB
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+    resendApiKey:
+      type: string
+      title: Resend API Key (Optional)
+      default: ""
+    resendSenderEmail:
+      type: string
+      title: Resend Sender Email (Optional)
+      default: ""
 benefits:
   - title: Real-Time Service Monitoring
     description:
