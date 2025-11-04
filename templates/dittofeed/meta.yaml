@@ -15,6 +15,10 @@ changeLog:
     description: Template Release
   - date: 2025-05-26
     description: Version bumped to v0.22.0
+  - date: 2025-11-04
+    description:
+      Added bootstrap environment variable and updated version to
+      v0.23.0-alpha.127
 links:
   - label: Documentation
     url: https://docs.dittofeed.com/introduction
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dittofeed/dittofeed-lite:v0.22.0
+      default: dittofeed/dittofeed-lite:v0.23.0-alpha.127
     clickHouseImage:
       type: string
       title: Clickhouse Service Image
