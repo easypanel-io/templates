@@ -23,6 +23,7 @@ export function generate(input: Input): Output {
     `PASSWORD=${input.dittofeedPassword}`,
     `DASHBOARD_API_BASE=https://$(PRIMARY_DOMAIN)`,
     `SESSION_COOKIE_SECURE=true`,
+    `BOOTSTRAP=true`,
   ].join("\n");
 
   services.push({
