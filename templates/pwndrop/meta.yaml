@@ -1,0 +1,95 @@
+name: Pwndrop
+description:
+  Pwndrop is a self-deployable file hosting service for red teamers, designed
+  for sending payloads and collecting loot in penetration testing operations. It
+  provides a lightweight, standalone solution for hosting and managing files
+  during security assessments. With its simple web interface, you can easily
+  upload, organize, and share files with customizable download links. Pwndrop
+  offers features like file tracking, download notifications, and an admin
+  portal protected by a secret path for enhanced security.
+instructions: null
+changeLog:
+  - date: 2025-10-21
+    description: Initial Template Release (v1.0.1)
+links:
+  - label: GitHub
+    url: https://github.com/kgretzky/pwndrop
+  - label: Documentation
+    url: https://breakdev.org/pwndrop/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - secretPath
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pwndrop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/pwndrop:1.0.1
+      description: Pwndrop Docker image from LinuxServer.io
+    secretPath:
+      type: string
+      title: Secret Admin Path
+      default: /pwndrop
+      description:
+        Subfolder path where the admin portal can be accessed (e.g.,
+        /mysecretpath)
+benefits:
+  - title: Self-Deployable File Hosting
+    description:
+      Quick and easy deployment of a file hosting service with minimal
+      configuration required, perfect for temporary file sharing needs.
+  - title: Lightweight Solution
+    description:
+      Resource-efficient application that can run on minimal infrastructure
+      without complex dependencies or heavy resource requirements.
+  - title: Secure Admin Access
+    description:
+      Protected admin interface accessible through a customizable secret path,
+      preventing unauthorized access to administrative functions.
+  - title: File Management
+    description:
+      Simple web-based interface for uploading, organizing, and managing files
+      with easy-to-generate shareable download links.
+features:
+  - title: Easy File Upload
+    description:
+      Intuitive web interface for quick file uploads and organization with
+      support for managing multiple files simultaneously.
+  - title: Customizable Links
+    description:
+      Generate custom download links with configurable parameters for better
+      tracking and control over file distribution.
+  - title: Download Tracking
+    description:
+      Monitor file downloads with detailed tracking information to know when and
+      how files are being accessed.
+  - title: Secret Admin Portal
+    description:
+      Access administrative functions through a configurable secret path that
+      hides the admin interface from unauthorized users.
+  - title: Standalone Deployment
+    description:
+      Self-contained application that doesn't require external dependencies,
+      making it easy to deploy in various environments.
+  - title: Minimal Configuration
+    description:
+      Get started quickly with minimal setup required - just deploy and start
+      sharing files immediately.
+tags:
+  - File Sharing
+  - Security Tools
+  - Red Team
+  - Penetration Testing
+  - File Hosting
+  - Self-Hosted
+  - Lightweight
+  - Admin Portal
