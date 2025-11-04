@@ -22,6 +22,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Update to 2.17
+  - date: 2025-11-04
+    description: Update to 2.19
 links:
   - label: Documentation
     url: https://paperless-ngx.readthedocs.io/en/latest/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: paperlessngx/paperless-ngx:2.17
+      default: paperlessngx/paperless-ngx:2.19
     redisServiceName:
       type: string
       title: Redis Service Name

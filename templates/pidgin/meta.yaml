@@ -19,6 +19,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 2.14.13
+  - date: 2025-07-24
+    description: Version bumped to 2.14.14
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-pidgin
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/pidgin:2.14.13
+      default: lscr.io/linuxserver/pidgin:2.14.14
 benefits:
   - title: Multi-Network Chatting
     description:

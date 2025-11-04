@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2023-06-30
     description: first release
+  - date: 2025-11-04
+    description: Update to 0.8 (changed to pgvector/pgvector)
 links:
   - label: Github
     url: https://github.com/pgvector/pgvector
@@ -35,7 +37,7 @@ schema:
     serviceImage:
       type: string
       title: Service Image
-      default: ankane/pgvector:v0.5.1
+      default: pgvector/pgvector:0.8
 benefits:
   - title: Unified Data Storage
     description:

@@ -18,6 +18,8 @@ changeLog:
     description: Fixed Planka Template
   - date: 2025-07-24
     description: Version bumped to 1.26.2
+  - date: 2025-11-04
+    description: Version bumped to 1.26.3
 links:
   - label: Website
     url: https://planka.app
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/planka:1.26.2
+      default: lscr.io/linuxserver/planka:1.26.3
     databaseServiceName:
       type: string
       title: Database Service Name
