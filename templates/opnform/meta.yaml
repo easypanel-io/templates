@@ -9,6 +9,8 @@ changeLog:
     description: First release
   - date: 2025-07-24
     description: Version bumped to 1.9.2
+  - date: 2025-11-04
+    description: Version bumped to 1.10.1
 links:
   - label: Website
     url: https://opnform.com/
@@ -33,11 +35,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jhumanj/opnform-client:1.9.2
+      default: jhumanj/opnform-client:1.10.1
     apiServiceImage:
       type: string
       title: API Service Image
-      default: jhumanj/opnform-api:1.9.2
+      default: jhumanj/opnform-api:1.10.1
 benefits:
   - title: Easy Form Creation
     description:
