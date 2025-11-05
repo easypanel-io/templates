@@ -21,6 +21,8 @@ changeLog:
     description: First Release
   - date: 2025-07-25
     description: Version bumped to v7.93
+  - date: 2025-11-05
+    description: Version bumped to v8.16
 links:
   - label: Website
     url: https://wekan.github.io/
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/wekan/wekan:v7.93
+      default: ghcr.io/wekan/wekan:v8.16
     databaseServiceName:
       type: string
       title: App Service Name

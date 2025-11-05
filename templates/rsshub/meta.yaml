@@ -15,6 +15,8 @@ changeLog:
     description: Version bumped to 2025-02-28
   - date: 2025-07-24
     description: Version bumped to 2025-07-24
+  - date: 2025-11-05
+    description: Version bumped to 2025-11-05
 links:
   - label: Website
     url: https://rsshub.app/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: diygod/rsshub:2025-07-24
+      default: diygod/rsshub:2025-11-05
 benefits:
   - title: Efficient Content Aggregation
     description:

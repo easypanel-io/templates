@@ -10,6 +10,8 @@ instructions:
 changeLog:
   - date: 2025-05-22
     description: First release
+  - date: 2025-11-05
+    description: Version bumped to v1.10.2
 links:
   - label: Website
     url: https://twenty.com/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: twentycrm/twenty:v0.54.4
+      default: twentycrm/twenty:v1.10.2
 benefits:
   - title: Modern User Interface
     description:

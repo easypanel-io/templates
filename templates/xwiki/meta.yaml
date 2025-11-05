@@ -9,6 +9,8 @@ changeLog:
     description: First Release
   - date: 2025-07-25
     description: Version bumped to 17.4.2-mysql-tomcat
+  - date: 2025-11-05
+    description: Version bumped to 17.4.7-mysql-tomcat
 links:
   - label: Github
     url: https://github.com/xwiki/xwiki-platform
@@ -28,7 +30,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: xwiki:17.4.2-mysql-tomcat
+      default: xwiki:17.4.7-mysql-tomcat
 benefits:
   - title: Collaborative Editing
     description:

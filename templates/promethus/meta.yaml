@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to v3.2.1
   - date: 2025-07-24
     description: Version bumped to v3.5.0
+  - date: 2025-11-05
+    description: Version bumped to v3.7.3
 links:
   - label: Github
     url: https://github.com/prometheus/prometheus
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: prom/prometheus:v3.5.0
+      default: prom/prometheus:v3.7.3
 benefits:
   - title: Scalable Monitoring
     description:

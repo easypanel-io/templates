@@ -24,6 +24,8 @@ changeLog:
     description: Update to v2.5.298
   - date: 2025-03-03
     description: Version bumped to 2.5.306
+  - date: 2025-11-05
+    description: Version bumped to 2.5.308
 links:
   - label: Website
     url: https://js.wiki/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/requarks/wiki:2.5.306
+      default: ghcr.io/requarks/wiki:2.5.308
     databaseType:
       type: string
       title: Database Type

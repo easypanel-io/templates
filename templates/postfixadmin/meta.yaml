@@ -18,7 +18,8 @@ changeLog:
     description: Template Release
   - date: 2025-02-28
     description: Version bumped to 3.3.15-apache
-
+  - date: 2025-11-05
+    description: Version bumped to 3.3.16-apache
 links:
   - label: Documentation
     url: https://postfix-configuration.readthedocs.io/en/latest/postfixadmin/
@@ -44,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: postfixadmin:3.3.15-apache
+      default: postfixadmin:3.3.16-apache
     smtpServer:
       type: string
       title: SMTP Server

@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 1.29
   - date: 2025-07-25
     description: Version bumped to 1.30
+  - date: 2025-11-05
+    description: Version bumped to 2.0.11
 links:
   - label: Website
     url: https://syncthing.net
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1.30
+      default: syncthing/syncthing:2.0.11
 benefits:
   - title: Continuous File Synchronization
     description:

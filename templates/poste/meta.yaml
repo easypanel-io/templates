@@ -11,6 +11,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 2.5.5
+  - date: 2025-11-05
+    description: Version bumped to 2.5.7
 links:
   - label: Documentation
     url: https://poste.io/docs
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: analogic/poste.io:2.5.5
+      default: analogic/poste.io:2.5.7
     customHttpPort:
       type: string
       title: Custom HTTP Port

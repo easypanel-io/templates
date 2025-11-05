@@ -20,6 +20,8 @@ changeLog:
     description: Template created (v1.5.4)
   - date: 2025-03-03
     description: Version bumped to v1.7.4
+  - date: 2025-11-05
+    description: Version bumped to v1.8.0
 links:
   - label: Github
     url: https://github.com/go-shiori/shiori
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/go-shiori/shiori:v1.7.4
+      default: ghcr.io/go-shiori/shiori:v1.8.0
     databaseServiceName:
       type: string
       title: Database Service Name

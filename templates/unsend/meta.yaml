@@ -14,6 +14,9 @@ changeLog:
     description: First Release (v1.4.0)
   - date: 2025-07-25
     description: Version bumped to v1.5.4
+    description: First Release (v1.4.0)
+  - date: 2025-11-05
+    description: Version bumped to v1.5.5
 links:
   - label: Documentation
     url: https://unsend.dev/
@@ -43,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/unsend-dev/unsend:v1.5.4
+      default: ghcr.io/unsend-dev/unsend:v1.5.5
     awsAccessKey:
       type: string
       title: AWS Access Key
