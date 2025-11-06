@@ -17,12 +17,12 @@ export function generate(input: Input): Output {
         `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
         `KEYCLOAK_ADMIN_PASSWORD=${input.keycloakPassword}`,
         `KC_HOSTNAME_STRICT_HTTPS=false`,
-        `KC_HOSTNAME=$(PRIMARY_DOMAIN)`,
-        `KC_HOSTNAME_ADMIN=$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME=https://$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME_ADMIN=https://$(PRIMARY_DOMAIN)`,
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
         `KC_FEATURES=docker`,
-        `KC_PROXY_HEADERS=xforwarded`
+        `KC_PROXY_HEADERS=xforwarded`,
       ].join("\n"),
       source: {
         type: "image",
