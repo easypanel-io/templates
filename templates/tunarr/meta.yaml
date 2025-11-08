@@ -1,0 +1,111 @@
+name: Tunarr
+description:
+  Tunarr is a modern IPTV server that creates custom TV channels from your
+  personal media library. It automatically generates continuous programming
+  schedules using your movies, TV shows, and other content, creating an
+  authentic TV viewing experience. Tunarr provides intelligent scheduling,
+  program guide generation, and seamless integration with popular media
+  libraries like Plex, Jellyfin, and Emby. Perfect for home entertainment
+  setups, it transforms your digital media collection into personalized TV
+  channels that can be watched on any IPTV-compatible device or application.
+
+instructions:
+  After deployment, access Tunarr through your domain. The web interface will
+  guide you through the initial setup process. You'll need to configure your
+  media library connections (Plex, Jellyfin, Emby, or local files), set up TV
+  channels and programming schedules, and configure your IPTV player to connect
+  to the generated M3U playlist. Tunarr will automatically scan your media
+  library and create intelligent programming schedules for your custom TV
+  channels.
+
+changeLog:
+  - date: 2025-10-14
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/chrisbenincasa/tunarr
+  - label: Documentation
+    url: https://tunarr.com
+  - label: Docker Hub
+    url: https://hub.docker.com/r/chrisbenincasa/tunarr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tunarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chrisbenincasa/tunarr:0.22.6
+    logLevel:
+      type: string
+      title: Log Level
+      default: "INFO"
+      enum: ["DEBUG", "INFO", "WARN", "ERROR"]
+      description: Application logging level
+    timezone:
+      type: string
+      title: Timezone
+      default: "Asia/Karachi"
+      description: Timezone for accurate guide data and scheduling
+    databasePath:
+      type: string
+      title: Database Path (Optional)
+      default: ""
+      description: Custom path for Tunarr database storage
+
+benefits:
+  - title: Intelligent Scheduling
+    description:
+      Automatically creates realistic TV programming schedules from your media
+      library with smart content selection and timing.
+  - title: Media Library Integration
+    description:
+      Seamlessly integrates with Plex, Jellyfin, Emby, and local file systems
+      for comprehensive media library support.
+  - title: Program Guide Generation
+    description:
+      Generates detailed EPG (Electronic Program Guide) data with accurate
+      scheduling and program information for your channels.
+  - title: Modern Web Interface
+    description:
+      Clean, intuitive web interface for easy channel configuration, media
+      management, and real-time monitoring of your TV streams.
+
+features:
+  - title: Multi-Source Support
+    description:
+      Connect multiple media libraries and sources to create diverse TV channels
+      with content from different platforms.
+  - title: Advanced Channel Configuration
+    description:
+      Fine-tune channel settings, programming rules, and content filters to
+      create exactly the TV experience you want.
+  - title: Commercial Management
+    description:
+      Insert commercials, bumpers, and station identification between programs
+      to create authentic TV channel experience.
+  - title: IPTV Standard Compliance
+    description:
+      Generates standard M3U playlists and EPG data compatible with any IPTV
+      player or device for universal compatibility.
+
+tags:
+  - IPTV
+  - Media Server
+  - TV Channels
+  - Streaming
+  - Home Entertainment
+  - Plex Integration
+  - Jellyfin Integration
