@@ -1,0 +1,90 @@
+name: Palmr
+description:
+  Palmr is a self-hosted file management and download application that provides
+  a comprehensive solution for managing files and downloads. It features a
+  modern web interface for file operations, download management, and file
+  organization. Palmr supports various file operations including uploading,
+  downloading, organizing, and managing your files in a centralized location.
+instructions: null
+changeLog:
+  - date: 2025-09-18
+    description: Template Release
+links:
+  - label: Github
+    url: https://github.com/kyantech/palmr
+  - label: Documentation
+    url: https://palmr.kyantech.com.br/docs/2.0.0-beta
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: palmr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kyantech/palmr:v3.1.1-rc.1
+
+benefits:
+  - title: File Management
+    description:
+      Centralized file management with uploading, downloading, and organizing
+      capabilities for your file collection.
+  - title: Self-Hosted Control
+    description:
+      Keep your files completely private and secure on your own server with full
+      control over your file library.
+  - title: Download Management
+    description:
+      Advanced download management with concurrent downloads, queue management,
+      and memory optimization for large files.
+
+features:
+  - title: File Operations
+    description:
+      Comprehensive file operations including upload, download, organize, and
+      manage files with a modern web interface.
+  - title: Download Management
+    description:
+      Advanced download system with concurrent downloads, queue management, and
+      automatic memory scaling for optimal performance.
+  - title: Memory Optimization
+    description:
+      Intelligent memory management with auto-scaling capabilities and garbage
+      collection for large file downloads.
+  - title: S3 Compatible Storage
+    description:
+      Optional S3-compatible storage integration for scalable file storage and
+      cloud integration capabilities.
+  - title: File Encryption
+    description:
+      Optional filesystem encryption for secure file storage with configurable
+      encryption keys.
+  - title: Multi-Language Support
+    description:
+      Multi-language interface support with configurable default language
+      settings.
+  - title: Presigned URLs
+    description:
+      Secure file sharing with presigned URLs and configurable expiration times
+      for temporary access.
+  - title: Data Persistence
+    description:
+      Reliable data storage for files, user preferences, and application state
+      with persistent volume mounting.
+
+tags:
+  - File Management
+  - Download Manager
+  - Self-Hosted
+  - Web Interface
+  - File Storage
+  - Download Queue
+  - Memory Management
