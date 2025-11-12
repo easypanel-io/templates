@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 24.10.4
   - date: 2025-07-15
     description: Version bumped to 25.03.10
+  - date: 2025-10-10
+    description: Version bumped to 25.03.22
 links:
   - label: Website
     url: https://count.ly
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: countly/countly-server:v25.03.10
+      default: countly/countly-server:25.03.22
     databaseServiceName:
       type: string
       title: Database Service Name

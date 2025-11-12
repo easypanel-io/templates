@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-02-14
     description: first release
+  - date: 2025-10-10
+    description: Version bumped to php8.4-apache
 links:
   - label: Website
     url: https://www.classicpress.net/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: classicpress/classicpress:php8.3-apache
+      default: classicpress/classicpress:php8.4-apache
 benefits:
   - title: Open-Source CMS
     description:

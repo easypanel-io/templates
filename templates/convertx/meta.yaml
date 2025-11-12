@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-01-20
     description: First Release
+  - date: 2025-10-10
+    description: Version bumped to v0.15.1
 links:
   - label: Github
     url: https://github.com/C4illin/ConvertX/tree/main
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/c4illin/convertx:v0.11.0
+      default: ghcr.io/c4illin/convertx:v0.15.1
 benefits:
   - title: Efficient and Fast
     description:
