@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-06-03
     description: First release (v3.3.1)
+  - date: 2025-11-05
+    description: Version bumped to 4.0.6
 links:
   - label: GitHub
     url: https://github.com/Swetrix/swetrix
@@ -38,11 +40,11 @@ schema:
     frontendImage:
       type: string
       title: Frontend Image
-      default: swetrix/swetrix-fe:v3.3.1
+      default: swetrix/swetrix-fe:v4.0.6
     apiImage:
       type: string
       title: API Image
-      default: swetrix/swetrix-api:v3.3.1
+      default: swetrix/swetrix-api:v4.0.6
     clickhouseImage:
       type: string
       title: ClickHouse Image

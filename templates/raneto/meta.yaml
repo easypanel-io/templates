@@ -8,6 +8,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 0.17.8
+  - date: 2025-11-05
+    description: Version bumped to 0.18.0
 links:
   - label: Website
     url: https://raneto.com
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/raneto:0.17.8
+      default: lscr.io/linuxserver/raneto:0.18.0
     serviceTimezone:
       type: string
       title: Timezone

@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 6.0.3
   - date: 2025-07-24
     description: Version bumped to 6.0.6
+  - date: 2025-11-05
+    description: Version bumped to 6.1.0
 links:
   - label: Website
     url: https://www.redmine.org/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: redmine:6.0.6
+      default: redmine:6.1.0
     databaseServiceName:
       type: string
       title: Database Service Name

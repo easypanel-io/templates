@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 5.19.3
+  - date: 2025-11-05
+    description: Version bumped to 6.0.3-develop
 links:
   - label: Website
     url: https://radarr.video/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/radarr:5.19.3
+      default: linuxserver/radarr:6.0.3-develop
 benefits:
   - title: Automated Movie Management
     description:

@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-01-31
     description: First Release
+  - date: 2025-11-05
+    description: Version bumped to 2.6.14
 links:
   - label: Documentation
     url: https://doc.wallabag.org
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: wallabag/wallabag:2.6.13
+      default: wallabag/wallabag:2.6.14
 benefits:
   - title: Save Articles for Later
     description:

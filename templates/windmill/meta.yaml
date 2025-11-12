@@ -29,6 +29,8 @@ changeLog:
     description: Update to latest + EE
   - date: 2025-07-28
     description: Update to v.1.514
+  - date: 2025-11-05
+    description: Update to v.1.573
 links:
   - label: Website
     url: https://windmill.dev
@@ -53,11 +55,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/windmill-labs/windmill:1.514
+      default: ghcr.io/windmill-labs/windmill:1.573
     lspServiceImage:
       type: string
       title: LSP Service Image
-      default: ghcr.io/windmill-labs/windmill-lsp:1.514
+      default: ghcr.io/windmill-labs/windmill-lsp:1.573
     appServiceName:
       type: string
       title: App Service Name
