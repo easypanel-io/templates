@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-01-20
     description: First Release
+  - date: 2025-10-16
+    description: Version bumped to 1.5.2
 links:
   - label: Github
     url: https://github.com/alextselegidis/easyappointments
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: alextselegidis/easyappointments:1.5.1
+      default: alextselegidis/easyappointments:1.5.2
 benefits:
   - title: Simplified Appointment Scheduling
     description:

@@ -24,6 +24,8 @@ changeLog:
     description: Update to v1.11.79
   - date: 2025-07-21
     description: Version bumped to v1.11.106
+  - date: 2025-10-16
+    description: Version bumped to v1.12.2-rc.0
 links:
   - label: Website
     url: https://element.io/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.11.106
+      default: vectorim/element-web:v1.12.2-rc.0
 benefits:
   - title: Secure Communications
     description:

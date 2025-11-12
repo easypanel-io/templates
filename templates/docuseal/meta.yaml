@@ -15,6 +15,8 @@ changeLog:
     description: Version bumped to 2.0.1
   - date: 2025-07-15
     description: Version bumped to 2.0.7
+  - date: 2025-10-16
+    description: Version bumped to 2.1.8
 links:
   - label: Website
     url: https://www.docuseal.co/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docuseal/docuseal:2.0.7
+      default: docuseal/docuseal:2.1.8
     databaseServiceName:
       type: string
       title: Database Service Name

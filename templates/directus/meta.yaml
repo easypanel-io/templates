@@ -21,6 +21,8 @@ changeLog:
     description: 
       Version bumped to 11.10.2
       MySQL 8 support added
+  - date: 2025-10-16
+    description: Version bumped to 11.12.0
 links:
   - label: Website
     url: https://directus.io/
@@ -55,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:11.10.2
+      default: directus/directus:11.12.0
     adminEmail:
       type: string
       title: Admin Email

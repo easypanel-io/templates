@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v8.10.1
   - date: 2025-05-26
     description: Version bumped to v8.12
+  - date: 2025-10-16
+    description: Version bumped to pr-4183
 links:
   - label: Website
     url: https://dozzle.dev
@@ -70,7 +72,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: amir20/dozzle:v8.13
+      default: amir20/dozzle:pr-4183
 benefits:
   - title: Real-time Monitoring
     description:
