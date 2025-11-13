@@ -1,0 +1,80 @@
+name: LibreNMS
+description: 
+  LibreNMS is a fully featured network monitoring system that provides a wealth of features and device support.
+  It includes support for multiple authentication methods, API access, alerting, and automatic discovery.
+instructions: null
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: Website
+    url: https://www.librenms.org
+  - label: Documentation
+    url: https://docs.librenms.org
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpHost
+    - smtpPort
+    - smtpUser
+    - smtpPassword
+    - smtpFrom
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: librenms
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: librenms/librenms:25.3.0
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.gmail.com
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUser:
+      type: string
+      title: SMTP User
+      default: foo
+    smtpPassword:
+      type: string
+      title: SMTP Password
+    smtpFrom:
+      type: string
+      title: SMTP From
+      default: foo@gmail.com
+benefits:
+  - title: Network Monitoring
+    description: Monitor your network devices and services
+  - title: Auto Discovery
+    description: Automatically discover and add network devices
+  - title: Alerting
+    description: Get notified about network issues
+  - title: Self-Hosted
+    description: Keep your monitoring data private and secure
+features:
+  - title: Device Monitoring
+    description: Monitor network devices and services
+  - title: Performance Graphs
+    description: View performance metrics and graphs
+  - title: Alerting System
+    description: Configure alerts for network issues
+  - title: API Access
+    description: Access data through REST API
+  - title: Multi-User Support
+    description: Support for multiple users with different roles
+tags:
+  - Network Monitoring
+  - SNMP
+  - Syslog
+  - Self-Hosted
+  - Network Management 
