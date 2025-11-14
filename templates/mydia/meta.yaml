@@ -1,0 +1,96 @@
+name: Mydia
+description:
+  Mydia is a modern, self-hosted media server and library manager designed to
+  organize, stream, and manage your personal movie and TV show collections. It
+  features an intuitive web interface with beautiful media displays, automatic
+  metadata fetching, poster artwork, and comprehensive search capabilities.
+  Mydia supports hardlinks for efficient storage management, allowing you to
+  maintain both download folders and organized libraries without duplicating
+  files. The application provides user management, watchlist functionality,
+  viewing history, and personalized recommendations. Built with Phoenix/Elixir
+  for high performance and reliability, Mydia offers a sleek alternative to
+  traditional media servers with a focus on simplicity and modern design.
+  Perfect for cord-cutters and media enthusiasts who want complete control over
+  their digital media library.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-13
+    description: Template Release v0.4.6
+
+links:
+  - label: Github
+    url: https://github.com/getmydia/mydia
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mydia
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/getmydia/mydia:0.4.6
+    timezone:
+      type: string
+      title: Timezone
+      default: America/New_York
+
+benefits:
+  - title: Modern & Beautiful Interface
+    description:
+      Enjoy a sleek, intuitive web interface with stunning media displays,
+      poster artwork, and smooth navigation designed for the modern web.
+  - title: Efficient Storage Management
+    description:
+      Support for hardlinks allows you to organize your media library without
+      duplicating files, saving valuable disk space while maintaining organized
+      collections.
+  - title: Self-Hosted Privacy
+    description:
+      Complete control over your media collection and viewing data. No
+      third-party tracking, no subscription fees, and your content stays
+      private.
+
+features:
+  - title: Media Library Management
+    description:
+      Organize your movies and TV shows with automatic metadata fetching, poster
+      artwork, ratings, descriptions, and cast information.
+  - title: Streaming & Playback
+    description:
+      Stream your media directly in the browser with a responsive video player
+      that supports various formats and quality levels.
+  - title: User Management
+    description:
+      Create multiple user accounts with individual watchlists, viewing history,
+      and personalized recommendations for each family member.
+  - title: Search & Discovery
+    description:
+      Powerful search functionality and content discovery features to help you
+      find what to watch from your collection.
+  - title: Watchlist & History
+    description:
+      Track what you've watched, maintain watchlists for future viewing, and
+      resume playback exactly where you left off.
+  - title: Hardlink Support
+    description:
+      Efficiently manage storage with hardlink support, allowing organized
+      libraries without file duplication from download folders.
+
+tags:
+  - Media Server
+  - Movies
+  - TV Shows
+  - Streaming
+  - Media Library
