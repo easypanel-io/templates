@@ -1,0 +1,95 @@
+name: Sure
+description:
+  Sure is a self-hosted personal finance management application built with Ruby
+  on Rails. It helps individuals and families track expenses, manage budgets,
+  monitor income, and gain insights into their financial health. Sure features
+  an intuitive interface for recording transactions, categorizing expenses,
+  creating budgets, and generating financial reports. With real-time data
+  processing via Sidekiq background jobs and optional AI-powered features
+  through OpenAI integration, Sure provides intelligent financial insights,
+  spending pattern analysis, and automated categorization. Built for
+  privacy-conscious users, Sure keeps all your financial data on your own
+  infrastructure without sharing sensitive information with third-party
+  services. Perfect for anyone seeking complete control over their personal
+  finance tracking and analysis.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-17
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/we-promise/sure
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sure
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/we-promise/sure:0.6.5-alpha.10
+    openaiToken:
+      type: string
+      title: OpenAI API Token (Optional - for AI features)
+      default: ""
+
+benefits:
+  - title: Complete Financial Privacy
+    description:
+      Keep all your financial data on your own infrastructure. Your sensitive
+      banking information, transactions, and spending habits never leave your
+      server.
+  - title: AI-Powered Insights
+    description:
+      Optional OpenAI integration provides intelligent spending analysis,
+      automated transaction categorization, and personalized financial
+      recommendations.
+  - title: Real-Time Financial Tracking
+    description:
+      Background job processing with Sidekiq ensures instant transaction
+      updates, budget calculations, and financial report generation.
+
+features:
+  - title: Expense Tracking
+    description:
+      Record and categorize all your expenses with detailed transaction history,
+      receipts, and notes for comprehensive financial tracking.
+  - title: Budget Management
+    description:
+      Create custom budgets for different categories, set spending limits, and
+      receive alerts when approaching or exceeding budget thresholds.
+  - title: Income Monitoring
+    description:
+      Track multiple income sources, monitor cash flow, and analyze earning
+      patterns over time with detailed reporting.
+  - title: Financial Reports
+    description:
+      Generate comprehensive financial reports including spending summaries,
+      category breakdowns, trends analysis, and custom date ranges.
+  - title: Automated Categorization
+    description:
+      Use AI-powered transaction categorization to automatically organize
+      expenses and income with smart pattern recognition.
+  - title: Multi-Currency Support
+    description:
+      Track finances in multiple currencies with automatic conversion and
+      support for international transactions.
+
+tags:
+  - Finance
+  - Personal Finance
+  - Budget
+  - Expense Tracker
+  - Money Management
