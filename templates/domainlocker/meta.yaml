@@ -1,0 +1,89 @@
+name: Domain Locker
+description:
+  Domain Locker is a self-hosted domain portfolio management and monitoring
+  application designed to help you keep track of all your registered domains. It
+  provides centralized management for domain registrations, expiration dates,
+  renewal reminders, DNS records, SSL certificates, and hosting information.
+  Domain Locker features automated WHOIS lookups, expiration notifications via
+  email, domain health checks, and comprehensive reporting. With scheduled
+  updates and monitoring, you'll never miss a domain renewal deadline again. The
+  application includes automatic daily checks for domain updates and sends
+  timely expiration reminders. Perfect for domain investors, web developers,
+  agencies, and anyone managing multiple domain portfolios who needs a reliable
+  system to track and monitor their digital assets.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-17
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/Lissy93/domain-locker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: domainlocker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lissy93/domain-locker:0.1.2
+
+benefits:
+  - title: Never Miss Renewals
+    description:
+      Automated expiration monitoring and email reminders ensure you never lose
+      a valuable domain due to missed renewal deadlines.
+  - title: Centralized Management
+    description:
+      Manage all your domains from one dashboard. Track registrars, nameservers,
+      SSL certificates, and DNS records in a single location.
+  - title: Automated Monitoring
+    description:
+      Daily automated checks update domain information and health status.
+      Background jobs ensure your data stays current without manual
+      intervention.
+
+features:
+  - title: Domain Portfolio Management
+    description:
+      Track all your registered domains with detailed information including
+      registrar, registration date, expiration date, and renewal status.
+  - title: Expiration Reminders
+    description:
+      Automated email notifications alert you before domains expire.
+      Configurable reminder schedules ensure adequate time for renewals.
+  - title: WHOIS Integration
+    description:
+      Automatic WHOIS lookups retrieve and update domain information including
+      registrar details, nameservers, and registration dates.
+  - title: Domain Health Monitoring
+    description:
+      Monitor domain health status, DNS resolution, SSL certificate validity,
+      and overall availability with automated daily checks.
+  - title: Scheduled Updates
+    description:
+      Cron-based scheduler runs daily domain updates at 3 AM and expiration
+      reminder checks at 4 AM automatically.
+  - title: Multi-Domain Support
+    description:
+      Manage unlimited domains across multiple registrars with support for
+      different TLDs and domain extensions.
+
+tags:
+  - Domain Management
+  - Domain Monitoring
+  - WHOIS
+  - DNS
+  - Domain Portfolio
