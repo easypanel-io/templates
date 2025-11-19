@@ -1,0 +1,100 @@
+name: Poznote
+description:
+  Poznote is a lightweight, self-hosted note-taking application designed for
+  personal knowledge management and quick note capture. It provides a simple,
+  clean interface for creating, organizing, and managing notes without
+  unnecessary complexity. Poznote uses SQLite for data storage, making it easy
+  to deploy without requiring external database setup. The application features
+  secure authentication, markdown support, and fast search capabilities to help
+  you find information quickly. All your notes are stored locally in a SQLite
+  database file, ensuring privacy and complete control over your data. Perfect
+  for individuals who want a straightforward, fast, and private note-taking
+  solution that can be accessed from any browser.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-18
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://poznote.com
+  - label: Github
+    url: https://github.com/TimothePoznanski/poznote
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: poznote
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/timothepoznanski/poznote:1.9.0
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: ""
+
+benefits:
+  - title: Simple & Fast
+    description:
+      Minimalist interface focused on quick note capture and retrieval. No
+      bloat, just the essentials you need for effective note-taking.
+  - title: Self-Hosted Privacy
+    description:
+      All notes stored locally in SQLite database on your server. Your thoughts
+      and ideas remain completely private and under your control.
+  - title: Zero Database Setup
+    description:
+      Uses SQLite for storage - no external database configuration required.
+      Simple deployment with everything contained in one application.
+
+features:
+  - title: Quick Note Capture
+    description:
+      Create and edit notes quickly with a clean, distraction-free interface
+      designed for fast note-taking.
+  - title: Secure Authentication
+    description:
+      Password-protected access ensures only authorized users can view and
+      manage your notes.
+  - title: SQLite Storage
+    description:
+      Reliable, lightweight SQLite database stores all your notes efficiently
+      without requiring external database servers.
+  - title: Search Functionality
+    description:
+      Quickly find notes with built-in search capabilities to locate information
+      when you need it.
+  - title: Markdown Support
+    description:
+      Write notes in markdown format for structured, formatted content that's
+      easy to read and portable.
+  - title: Web-Based Access
+    description:
+      Access your notes from any device with a web browser - no desktop app
+      installation required.
+
+tags:
+  - Notes
+  - Note Taking
+  - Knowledge Management
+  - Markdown
+  - SQLite
