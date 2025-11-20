@@ -10,6 +10,8 @@ changeLog:
     description: Initial release
   - date: 2025-07-24
     description: Version bumped to v1.65.7
+  - date: 2025-09-04
+    description: Version bumped to v2.5.4
 links:
   - label: Website
     url: https://postiz.com
@@ -21,9 +23,13 @@ links:
     url: https://hub.docker.com/r/postiz/postiz
   - label: Environment Variables
     url: https://github.com/gitroomhq/postiz-app/blob/main/.env.example
+  - label: Docker Compose Configuration
+    url: https://docs.postiz.com/installation/docker-compose
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: Leonardo Gomide
+    url: https://github.com/leogomide
 schema:
   type: object
   required:
@@ -37,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gitroomhq/postiz-app:v1.65.7
+      default: ghcr.io/gitroomhq/postiz-app:v2.5.4
 benefits:
   - title: Centralized Management
     description: Manage all your social media accounts from a single dashboard
