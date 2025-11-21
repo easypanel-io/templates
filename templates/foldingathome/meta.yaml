@@ -1,0 +1,80 @@
+name: Folding@Home
+description:
+  Folding@Home is a distributed computing project that simulates protein folding
+  and other molecular dynamics to help researchers understand how proteins work
+  and how they can malfunction. By donating your unused computing power, you
+  become a citizen scientist contributing to research on diseases like COVID-19,
+  Alzheimer's, cancer, and many others. The project uses your computer to run
+  simulations that help scientists develop new treatments and understand
+  biological processes.
+
+instructions: null
+
+changeLog:
+  - date: "2025-07-01"
+    description: "Initial release"
+
+links:
+  - label: "Website"
+    url: "https://foldingathome.org/"
+  - label: "Documentation"
+    url: "https://foldingathome.org/start-folding/"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "foldingathome"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "lscr.io/linuxserver/foldingathome:8.4.9"
+benefits:
+  - title: "Contribute to Science"
+    description:
+      "Help researchers understand diseases and develop new treatments by
+      donating your computer's idle processing power to important research."
+  - title: "Fight Global Diseases"
+    description:
+      "Contribute to research on COVID-19, Alzheimer's disease, cancer,
+      Parkinson's, and many other conditions affecting millions worldwide."
+  - title: "Easy Participation"
+    description:
+      "Simply deploy and let it run - the software automatically downloads and
+      processes research tasks while your computer is idle."
+
+features:
+  - title: "Distributed Computing"
+    description:
+      "Part of a global network of volunteers contributing computing power to
+      scientific research and drug discovery efforts."
+  - title: "Web Interface"
+    description:
+      "Monitor your contributions, view statistics, and configure settings
+      through an intuitive web-based control panel."
+  - title: "Automatic Task Management"
+    description:
+      "Automatically downloads work units, processes them, and uploads results
+      without requiring manual intervention."
+  - title: "Team Collaboration"
+    description:
+      "Join teams to collaborate with others and track collective contributions
+      to research projects."
+
+tags:
+  - "Science"
+  - "Research"
+  - "Distributed Computing"
+  - "Medical Research"
+  - "Protein Folding"
+  - "Citizen Science"
+  - "Volunteer Computing"
