@@ -1,0 +1,91 @@
+name: Ironmount
+description:
+  Ironmount is a self-hosted cloud storage solution that provides secure,
+  private file storage and sharing capabilities. It enables users to mount
+  remote storage locations as local filesystems using FUSE (Filesystem in
+  Userspace), offering seamless integration with your operating system's file
+  manager. Ironmount supports multiple storage backends and provides a web
+  interface for managing files, sharing links, and organizing data. With
+  built-in encryption, user management, and access control features, Ironmount
+  ensures your data remains private and secure on your own infrastructure. The
+  application requires elevated system privileges (SYS_ADMIN capability) and
+  FUSE device access to mount filesystems. Perfect for individuals and
+  organizations seeking complete control over their file storage, secure file
+  sharing, and cloud storage alternatives without relying on third-party
+  services.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-21
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/nicotsx/ironmount
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ironmount
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/nicotsx/ironmount:v0.10
+
+benefits:
+  - title: Self-Hosted Cloud Storage
+    description:
+      Complete control over your file storage with private cloud infrastructure
+      hosted on your own servers.
+  - title: FUSE Filesystem Integration
+    description:
+      Mount remote storage as local filesystems for seamless file access through
+      your operating system's native file manager.
+  - title: Privacy and Security
+    description:
+      Keep your data secure on your own infrastructure with built-in encryption
+      and access control features.
+
+features:
+  - title: Filesystem Mounting
+    description:
+      Use FUSE to mount remote storage locations as local filesystems with
+      native OS integration.
+  - title: Web Interface
+    description:
+      Manage files, create sharing links, and organize data through an intuitive
+      web-based interface.
+  - title: Multiple Storage Backends
+    description:
+      Support for various storage backends enabling flexible deployment and
+      migration options.
+  - title: Secure File Sharing
+    description:
+      Create secure sharing links with customizable permissions and expiration
+      dates for controlled file access.
+  - title: User Management
+    description:
+      Built-in user authentication and authorization system with role-based
+      access control.
+  - title: Data Encryption
+    description:
+      End-to-end encryption ensures your files remain private and secure during
+      storage and transfer.
+
+tags:
+  - Storage
+  - Cloud
+  - File Sharing
+  - FUSE
+  - Self-Hosted
