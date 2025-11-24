@@ -1,0 +1,94 @@
+name: BentoPDF
+description:
+  BentoPDF is a powerful self-hosted PDF manipulation and conversion service
+  that provides a comprehensive API for working with PDF documents. It enables
+  developers and teams to automate PDF operations including conversion, merging,
+  splitting, compression, watermarking, and more through a simple REST API.
+  Built with modern technologies, BentoPDF offers a web interface for manual
+  operations and programmatic access for integration into your applications and
+  workflows. The service supports converting various document formats to PDF,
+  extracting text and images, adding annotations, and manipulating PDF metadata.
+  With no external dependencies on third-party services, BentoPDF ensures your
+  documents remain private and secure on your own infrastructure. Perfect for
+  document management systems, automated report generation, form processing,
+  digital archiving, and any application that requires reliable PDF handling
+  capabilities without the costs and privacy concerns of cloud-based PDF
+  services.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-24
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://bentopdf.com
+  - label: Docker Hub
+    url: https://hub.docker.com/r/bentopdf/bentopdf
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bentopdf
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bentopdf/bentopdf:v1.7.9
+
+benefits:
+  - title: Self-Hosted PDF Processing
+    description:
+      Process PDFs on your own infrastructure without sending sensitive
+      documents to external services, maintaining complete privacy and control.
+  - title: Comprehensive REST API
+    description:
+      Easy-to-use API enables seamless integration with existing applications
+      and automated workflows for PDF operations.
+  - title: No External Dependencies
+    description:
+      Fully contained service with all PDF processing capabilities built-in,
+      eliminating reliance on third-party services and reducing costs.
+
+features:
+  - title: PDF Conversion
+    description:
+      Convert various document formats including Word, Excel, PowerPoint,
+      images, and HTML to high-quality PDF documents.
+  - title: PDF Manipulation
+    description:
+      Merge multiple PDFs, split documents into pages, extract specific pages,
+      and reorganize page order programmatically.
+  - title: Compression and Optimization
+    description:
+      Reduce PDF file sizes while maintaining quality, optimize for web
+      delivery, and compress images within documents.
+  - title: Watermarking and Annotations
+    description:
+      Add text or image watermarks, insert annotations, stamps, and custom
+      metadata to protect and identify documents.
+  - title: Text and Image Extraction
+    description:
+      Extract text content for indexing and search, pull images from PDFs, and
+      parse document structure and metadata.
+  - title: Web Interface
+    description:
+      User-friendly web UI for manual PDF operations and testing API
+      capabilities without writing code.
+
+tags:
+  - PDF
+  - Document Processing
+  - Conversion
+  - API
+  - Automation
