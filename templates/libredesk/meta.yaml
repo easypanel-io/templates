@@ -1,0 +1,97 @@
+name: Libredesk
+description:
+  Libredesk is a modern, self-hosted helpdesk and customer support platform
+  built with Rust. It provides a comprehensive solution for managing customer
+  inquiries, tickets, and support workflows. Libredesk features a clean web
+  interface, multi-user support, ticket management, and integration capabilities
+  for businesses of all sizes.
+instructions: Default credentials are System/${SystemUserPassword}
+changeLog:
+  - date: 2025-09-24
+    description: First release (v0.7.4-alpha)
+links:
+  - label: Website
+    url: https://libredesk.com/
+  - label: Documentation
+    url: https://docs.libredesk.io/introduction
+  - label: DockerHub
+    url: https://hub.docker.com/r/libredesk/libredesk
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - systemUserPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: libredesk
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: libredesk/libredesk:v0.7.4-alpha
+    systemUserPassword:
+      type: string
+      title: System User Password
+      default: b^J=81Z>I3%$kVB[
+      description: Password for the System User should match the same pattern.
+benefits:
+  - title: Self-Hosted Helpdesk
+    description:
+      Complete control over your customer support platform with no external
+      dependencies or data sharing.
+  - title: Modern Architecture
+    description:
+      Built with Rust for high performance, reliability, and security in
+      customer support operations.
+  - title: Multi-User Support
+    description:
+      Support for multiple agents and administrators with role-based access
+      control.
+  - title: Ticket Management
+    description:
+      Comprehensive ticket management system with status tracking, priority
+      levels, and assignment capabilities.
+  - title: Clean Web Interface
+    description:
+      Intuitive and responsive web interface that works on desktop and mobile
+      devices.
+features:
+  - title: Ticket Management
+    description:
+      Create, assign, and track customer support tickets with full lifecycle
+      management.
+  - title: User Management
+    description:
+      Multi-user support with different roles and permissions for agents and
+      administrators.
+  - title: Database Integration
+    description:
+      PostgreSQL database for reliable data storage and Redis cache for
+      performance optimization.
+  - title: File Attachments
+    description:
+      Support for file attachments in tickets and customer communications.
+  - title: Configuration Management
+    description:
+      Flexible configuration through TOML files for customizing the platform
+      behavior.
+  - title: Automatic Installation
+    description: Automatic database schema installation and upgrades on startup.
+  - title: Health Monitoring
+    description:
+      Built-in health checks for database connectivity and service monitoring.
+  - title: RESTful API
+    description:
+      Comprehensive API for integration with external systems and custom
+      workflows.
+tags:
+  - Helpdesk
+  - Customer Support
+  - Ticket Management
+  - Self-Hosted
+  - Web Interface
