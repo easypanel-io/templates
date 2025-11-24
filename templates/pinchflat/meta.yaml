@@ -1,0 +1,89 @@
+name: Pinchflat
+description:
+  Pinchflat is a modern, self-hosted media management and download application
+  designed for organizing and managing your digital media collection. It
+  provides an intuitive web interface for downloading, organizing, and accessing
+  your media files with support for various formats and sources. Pinchflat
+  offers powerful features for media discovery, automated downloads, and
+  collection management in a clean, user-friendly environment.
+instructions: null
+changeLog:
+  - date: 2025-09-11
+    description: Initial Template Release (v2025.6.6)
+links:
+  - label: GitHub
+    url: https://github.com/kieraneglin/pinchflat
+  - label: Docker Hub
+    url: https://hub.docker.com/r/kieraneglin/pinchflat
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pinchflat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/kieraneglin/pinchflat:v2025.6.6
+      description: Pinchflat Docker image
+benefits:
+  - title: Media Management
+    description:
+      Comprehensive media management solution for organizing, downloading, and
+      accessing your digital media collection with powerful search and filtering
+      capabilities.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your media collection with a self-hosted solution
+      that keeps your files private and secure on your own infrastructure.
+  - title: Automated Downloads
+    description:
+      Automated media downloading capabilities with support for various sources
+      and formats to streamline your media collection process.
+  - title: Web Interface
+    description:
+      Modern web-based interface accessible from any device with responsive
+      design and intuitive navigation for easy media management.
+features:
+  - title: Media Organization
+    description:
+      Advanced media organization features with custom categories, tags, and
+      metadata management for efficient collection browsing.
+  - title: Download Management
+    description:
+      Powerful download management with queue support, progress tracking, and
+      automated retry mechanisms for reliable media acquisition.
+  - title: Search and Discovery
+    description:
+      Advanced search capabilities with full-text search, filtering, and
+      discovery features to quickly find your media content.
+  - title: Multi-Format Support
+    description:
+      Support for various media formats and sources with automatic format
+      detection and conversion capabilities.
+  - title: User Management
+    description:
+      Built-in user management system with role-based access control and
+      permission management for secure multi-user environments.
+  - title: API Integration
+    description:
+      Comprehensive REST API for integration with other applications and custom
+      automation workflows.
+tags:
+  - Media Management
+  - Download Manager
+  - Self-Hosted
+  - Web Interface
+  - File Organization
+  - Media Collection
+  - Automation
+  - Search
+  - Multi-Format
+  - API
