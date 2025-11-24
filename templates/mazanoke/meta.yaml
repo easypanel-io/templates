@@ -1,0 +1,90 @@
+name: Mazanoke
+description:
+  Mazanoke is a self-hosted local image optimizer that runs in your browser. It
+  works offline and keeps your images private without ever leaving your device.
+  Created for everyday people and designed to be shared with family and friends,
+  it serves as an alternative to questionable "free" online tools.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release (v1.1.5)
+links:
+  - label: Documentation
+    url: https://github.com/civilblur/mazanoke
+  - label: Github
+    url: https://github.com/civilblur/mazanoke
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mazanoke
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/civilblur/mazanoke:v1.1.5
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin
+benefits:
+  - title: Privacy-Focused Image Processing
+    description:
+      All image processing happens locally in your browser, ensuring your images
+      never leave your device and remain completely private.
+  - title: Offline Functionality
+    description:
+      Works completely offline once loaded, making it perfect for use anywhere
+      without requiring an internet connection.
+  - title: Alternative to Online Tools
+    description:
+      Provides a trustworthy alternative to questionable "free" online image
+      optimization tools that may compromise your privacy.
+
+features:
+  - title: Image Quality Optimization
+    description:
+      Adjust image quality, set target file size, and configure max width/height
+      to optimize your images for web use or storage efficiency.
+  - title: Multiple Format Support
+    description:
+      Convert between and to JPG, PNG, WebP, ICO formats, and convert from HEIC,
+      AVIF, TIFF, GIF, SVG formats for maximum compatibility.
+  - title: Clipboard Integration
+    description:
+      Paste images directly from your clipboard for instant optimization without
+      needing to upload files from your device.
+  - title: EXIF Data Removal
+    description:
+      Automatically removes EXIF data including location, date, and other
+      metadata to protect your privacy and reduce file sizes.
+  - title: Progressive Web App
+    description:
+      Installable web app that can be used offline, with shortcuts added to your
+      device for convenient access anytime.
+  - title: No Tracking
+    description:
+      Completely free of tracking, analytics, or data collection, ensuring your
+      privacy is fully protected during image processing.
+
+tags:
+  - Image Optimization
+  - Image Compression
+  - Image Converter
+  - Self-Hosted
+  - Privacy
+  - Offline

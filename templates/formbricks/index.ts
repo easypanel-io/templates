@@ -11,8 +11,10 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const nextAuthSecret = randomString(32);
   const encryptionKey = randomString(32);
+  const redisPassword = randomPassword();
   const appEnv = [
-    `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+    `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
     `NEXTAUTH_SECRET=${nextAuthSecret}`,
     `ENCRYPTION_KEY=${encryptionKey}`,
     `WEBAPP_URL=https://$(PRIMARY_DOMAIN)`,
@@ -38,7 +40,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: "formbricks-app",
+      serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       domains: [
         {
@@ -60,8 +62,17 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      image: input.databaseServiceImage,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: redisPassword,
     },
   });
 
