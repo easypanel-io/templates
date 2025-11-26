@@ -1,0 +1,104 @@
+name: Moocup
+description:
+  Moocup is a visual editor designed to create stunning screenshots in seconds.
+  It provides a simple and functional interface where you can drop your
+  screenshot, apply beautiful base styles, customize it however you wish, and
+  export professional-looking visuals instantly. Built for developers,
+  designers, and content creators who need to showcase their work with polished
+  screenshots for portfolios, documentation, presentations, or social media. The
+  tool offers an intuitive drag-and-drop workflow with real-time visual editing,
+  eliminating the need for complex design software or manual styling. With
+  Moocup's self-hosted solution, your screenshots remain private and never leave
+  your infrastructure, making it ideal for sensitive projects or proprietary
+  applications. The browser-based editor requires zero installation and works
+  seamlessly across devices with responsive design. Perfect for anyone who
+  values simplicity and functionality but still wants to create eye-catching
+  visuals that make their projects stand out without the overhead of heavyweight
+  design tools or paid screenshot services.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-26
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://moocup.jaydip.me
+  - label: GitHub
+    url: https://github.com/jellydeck/moocup
+  - label: Docker Hub
+    url: https://hub.docker.com/r/jellydeck/moocup
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: moocup
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jellydeck/moocup:1.0.12
+
+benefits:
+  - title: Stunning Screenshots in Seconds
+    description:
+      Transform plain screenshots into professional, eye-catching visuals
+      instantly with beautiful pre-made styles and intuitive customization
+      options.
+  - title: Simple and Functional
+    description:
+      Clean, distraction-free interface focuses on what matters - creating great
+      visuals without the complexity of full-featured design software.
+  - title: Privacy-First Editing
+    description:
+      Self-hosted solution ensures your screenshots never leave your
+      infrastructure, perfect for sensitive projects, proprietary applications,
+      or confidential work.
+  - title: Zero Installation Required
+    description:
+      Browser-based editor works immediately without downloads, plugins, or
+      software installation on any device with a modern web browser.
+
+features:
+  - title: Drag and Drop Editor
+    description:
+      Simply drop your screenshot into the editor and watch as a beautiful base
+      style is automatically applied, ready for further customization.
+  - title: Visual Style Customization
+    description:
+      Customize backgrounds, borders, shadows, padding, gradients, and more with
+      real-time preview to create exactly the look you want.
+  - title: Export Ready Visuals
+    description:
+      Export your styled screenshots in high quality formats ready for
+      portfolios, documentation, presentations, social media, or marketing
+      materials.
+  - title: Portfolio-Ready Designs
+    description:
+      Pre-configured styles specifically designed to make your project
+      screenshots stand out in portfolios, case studies, and presentations.
+  - title: Instant Styling
+    description:
+      Real-time visual editing with instant feedback allows you to iterate
+      quickly and create professional results in seconds, not minutes.
+  - title: No Design Skills Required
+    description:
+      Intuitive interface and smart defaults mean anyone can create
+      professional-looking screenshot visuals without graphic design experience.
+
+tags:
+  - Screenshots
+  - Visual Editor
+  - Design Tool
+  - Portfolio
+  - Image Editor
