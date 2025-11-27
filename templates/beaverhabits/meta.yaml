@@ -1,0 +1,89 @@
+name: BeaverHabits
+description:
+  BeaverHabits is a self-hosted habit tracking application that helps you build
+  and maintain positive habits through a simple, intuitive web interface. It
+  provides visual tracking of your daily habits, customizable date columns, and
+  supports both database and file-based storage options for flexibility in
+  deployment and data management.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release (v0.7.0)
+links:
+  - label: Demo
+    url: https://beaverhabits.com/demo
+  - label: Documentation
+    url: https://github.com/daya0576/beaverhabits/wiki
+  - label: Github
+    url: https://github.com/daya0576/beaverhabits
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: beaverhabits
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: daya0576/beaverhabits:0.7.0
+    trustedLocalEmail:
+      type: string
+      title: Trusted Local Email
+      default: "your@email.com"
+      description: Email address to skip authentication (leave empty to disable)
+
+benefits:
+  - title: Simple Habit Tracking
+    description:
+      Clean and intuitive interface for tracking daily habits with visual
+      progress indicators and easy-to-use controls for habit management.
+  - title: Flexible Storage Options
+    description:
+      Choose between SQLite database or JSON file storage to match your
+      deployment preferences and data management needs.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your habit data completely private and secure on your own server with
+      no external dependencies or data sharing.
+
+features:
+  - title: Visual Habit Tracking
+    description:
+      Track your daily habits with visual indicators and progress tracking to
+      help you stay motivated and consistent with your goals.
+  - title: Customizable Interface
+    description:
+      Customize the number of date columns displayed on the index page to match
+      your preferred viewing style and workflow.
+  - title: Authentication Options
+    description:
+      Skip authentication for trusted local users or implement full
+      authentication system based on your security requirements.
+  - title: iOS Standalone Support
+    description:
+      Enhanced mobile experience with iOS standalone app mode for seamless habit
+      tracking on mobile devices.
+  - title: Data Persistence
+    description:
+      Reliable data storage with options for both database and file-based
+      storage to ensure your habit data is always preserved.
+  - title: Easy Deployment
+    description:
+      Simple Docker-based deployment with minimal configuration required to get
+      your personal habit tracking server running quickly.
+
+tags:
+  - Habit Tracking
+  - Productivity
+  - Self-Hosted
+  - Web Interface
+  - Personal Development
+  - Goal Setting
