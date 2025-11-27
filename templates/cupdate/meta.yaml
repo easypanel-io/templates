@@ -1,0 +1,105 @@
+name: Cupdate
+description:
+  Cupdate is a self-hosted web application for monitoring and managing Docker
+  container updates. It provides a centralized dashboard to track available
+  updates for your running containers, view container versions, and manage
+  update notifications. By connecting to the Docker daemon via the Docker
+  socket, Cupdate scans all running containers and checks for newer image
+  versions available in container registries. The web interface displays an
+  overview of your container infrastructure with update status, image tags,
+  registry information, and visual indicators for outdated containers. Cupdate
+  features automatic update checking on a configurable schedule, support for
+  multiple container registries, detailed container information with links to
+  documentation and registries, and the ability to manage container logos and
+  metadata. With its lightweight architecture and persistent storage using
+  BoltDB and SQLite, Cupdate offers an efficient solution for staying informed
+  about container updates without requiring complex automation or CI/CD
+  pipelines. Perfect for home lab administrators managing multiple Docker
+  containers, DevOps teams maintaining staging environments, system
+  administrators tracking container versions across servers, or anyone who wants
+  visibility into their Docker infrastructure's update status without manually
+  checking each container.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-26
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/alexgustafsson/cupdate
+  - label: Docker Hub
+    url: https://github.com/alexgustafsson/cupdate/pkgs/container/cupdate
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cupdate
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/alexgustafsson/cupdate:0.22.2
+
+benefits:
+  - title: Centralized Update Monitoring
+    description:
+      Track all your Docker container updates from a single dashboard,
+      eliminating the need to manually check each container for available
+      updates.
+  - title: Proactive Update Awareness
+    description:
+      Stay informed about available container updates with automatic checking
+      and visual indicators, helping you maintain security and access new
+      features.
+  - title: Simplified Container Management
+    description:
+      Get a comprehensive overview of your Docker infrastructure with version
+      information, registry links, and update status at a glance.
+  - title: Lightweight & Self-Hosted
+    description:
+      Run entirely on your own infrastructure with minimal resource
+      requirements, ensuring your container information remains private.
+
+features:
+  - title: Automatic Update Scanning
+    description:
+      Automatically scans running containers and checks container registries for
+      newer image versions on a configurable schedule.
+  - title: Web-Based Dashboard
+    description:
+      Intuitive web interface displaying all containers, their current versions,
+      available updates, and registry information.
+  - title: Multi-Registry Support
+    description:
+      Works with Docker Hub, GitHub Container Registry (ghcr.io), and other
+      container registries to check for updates.
+  - title: Container Metadata Management
+    description:
+      Store and display custom logos, descriptions, and metadata for your
+      containers for better organization and identification.
+  - title: Persistent Storage
+    description:
+      Uses BoltDB for caching and SQLite for database storage, ensuring data
+      persists across container restarts.
+  - title: Docker Socket Integration
+    description:
+      Connects directly to the Docker daemon via socket to monitor all running
+      containers without requiring external APIs or credentials.
+
+tags:
+  - Docker
+  - Container Management
+  - Update Monitoring
+  - System Administration
+  - DevOps
