@@ -1,0 +1,116 @@
+name: Wishlist
+description:
+  Wishlist is a self-hosted gift registry and wishlist management application
+  that simplifies gift-giving for families, friends, and special occasions. It
+  provides a centralized platform where users can create and share wishlists,
+  claim items to prevent duplicate gifts, and track purchase status. The
+  application features automatic product data fetching from URLs, user-friendly
+  interfaces accessible to all ages, and support for multiple groups to separate
+  different circles like family, friends, or coworkers. Wishlist includes
+  registry mode for wedding registries or single comprehensive lists, item
+  claiming with privacy to prevent gift spoilers, purchase tracking for claimed
+  items, gift suggestions from friends and family, and user invitation via email
+  with SMTP integration. Built with a modern web interface and Progressive Web
+  App support, Wishlist offers seamless access across devices with offline
+  capabilities. The application uses SQLite for lightweight data storage and
+  stores user-uploaded images locally, ensuring all data remains on your
+  infrastructure. With OAuth authentication support and customizable token
+  expiration, Wishlist provides secure access control while maintaining ease of
+  use. Perfect for families coordinating holidays and birthdays, couples
+  managing wedding registries, friend groups organizing gift exchanges, or
+  anyone who wants a private alternative to public wishlist services with
+  complete control over their data and privacy.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-28
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/cmintey/wishlist
+  - label: Docker Hub
+    url: https://github.com/cmintey/wishlist/pkgs/container/wishlist
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wishlist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cmintey/wishlist:v0.55.0
+    tokenTime:
+      type: string
+      title: Token Expiration Time (hours)
+      default: "72"
+
+benefits:
+  - title: Prevent Duplicate Gifts
+    description:
+      Users can claim items on wishlists, ensuring no one accidentally buys the
+      same gift and eliminating gift-giving coordination headaches.
+  - title: Self-Hosted Privacy
+    description:
+      Keep all wishlist data, user information, and gift plans on your own
+      infrastructure, away from commercial platforms and data mining.
+  - title: Family-Friendly Interface
+    description:
+      Simple, intuitive design that works for all age groups, making it easy for
+      grandparents, parents, and kids to participate.
+  - title: Multi-Group Organization
+    description:
+      Create separate groups for different social circles, keeping family
+      wishlists separate from friend groups or coworkers.
+
+features:
+  - title: Item Claiming System
+    description:
+      Claim items on wishlists to prevent duplicates while keeping the surprise
+      intact with privacy settings that hide claims from list owners.
+  - title: Purchase Tracking
+    description:
+      Mark claimed items as purchased to track fulfillment status and see which
+      gifts have been bought.
+  - title: Automatic Product Fetching
+    description:
+      Paste a product URL and automatically retrieve product name, price, image,
+      and description from major retailers.
+  - title: User Invitations
+    description:
+      Invite family and friends via email with customizable signup tokens and
+      SMTP integration for seamless onboarding.
+  - title: Gift Suggestions
+    description:
+      Provide and receive gift suggestions, helping friends and family
+      contribute ideas when users need inspiration.
+  - title: Progressive Web App
+    description:
+      Install on any device as a PWA for app-like experience with offline
+      support and home screen shortcuts.
+  - title: Registry Mode
+    description:
+      Enable registry mode for weddings or special events to maintain a single
+      comprehensive list for all items.
+  - title: OAuth Authentication
+    description:
+      Secure login with OAuth provider support for convenient and secure user
+      authentication.
+
+tags:
+  - Wishlist
+  - Gift Registry
+  - Family
+  - Gift Management
+  - Self-Hosted
