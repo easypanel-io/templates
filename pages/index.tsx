@@ -2,11 +2,11 @@ import {
   Box,
   Button,
   Flex,
-  Select,
   Stack,
   Text,
   useClipboard,
 } from "@chakra-ui/react";
+import { Select } from "chakra-react-select";
 import Form from "@rjsf/chakra-ui";
 import validator from "@rjsf/validator-ajv8";
 import type { NextPage } from "next";
@@ -22,6 +22,14 @@ const Home: NextPage = () => {
   const [formData, setFormData] = useState<any>();
   const [output, setOutput] = useState<string>("");
   const { hasCopied, onCopy } = useClipboard(output);
+
+  // Prepare options for searchable select
+  const templateOptions = templates.map((item) => ({
+    value: item.slug,
+    label: item.meta.name,
+  }));
+
+  const selectedOption = templateOptions.find((opt) => opt.value === slug) || null;
 
   useEffect(() => {
     setFormData(null);
@@ -50,19 +58,30 @@ const Home: NextPage = () => {
             Templates
           </Text>
           <Select
-            width="64"
-            value={slug}
-            onChange={(e) => {
-              router.push(e.target.value);
+            key={slug as string || "no-selection"}
+            placeholder="Select Template"
+            options={templateOptions}
+            value={selectedOption}
+            onChange={(option) => {
+              if (option) {
+                router.push(`/?slug=${option.value}`, undefined, { shallow: false });
+              } else {
+                // Clear selection
+                router.push("/", undefined, { shallow: false });
+              }
             }}
-          >
-            <option value="">Select Template</option>
-            {templates.map((item) => (
-              <option key={item.slug} value={item.slug}>
-                {item.meta.name}
-              </option>
-            ))}
-          </Select>
+            chakraStyles={{
+              container: (provided) => ({
+                ...provided,
+                width: "400px",
+              }),
+            }}
+            isClearable
+            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+            styles={{
+              menuPortal: (base) => ({ ...base, zIndex: 9999 }),
+            }}
+          />
         </Flex>
       </Box>
       {template && (
