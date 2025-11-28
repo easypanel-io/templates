@@ -1,0 +1,90 @@
+name: Dockge
+description:
+  Dockge is a modern, self-hosted Docker Compose management tool that provides a
+  beautiful and intuitive web interface for managing your Docker Compose stacks.
+  It allows you to create, edit, start, stop, and monitor your Docker Compose
+  applications through a user-friendly dashboard. Dockge simplifies Docker
+  Compose management with features like real-time logs, stack monitoring, and
+  easy configuration editing.
+instructions: null
+changeLog:
+  - date: 2025-09-11
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/louislam/dockge
+  - label: Documentation
+    url: https://dockge.kuma.pet/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/louislam/dockge
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dockge
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: louislam/dockge:1.5.0
+      description: Dockge Docker image
+benefits:
+  - title: Docker Compose Management
+    description:
+      Beautiful web interface for managing Docker Compose stacks with real-time
+      monitoring, logs, and easy configuration editing.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your Docker Compose management with a self-hosted
+      solution that keeps your infrastructure private and secure.
+  - title: Real-Time Monitoring
+    description:
+      Monitor your Docker Compose stacks in real-time with live logs, status
+      updates, and performance metrics.
+  - title: Easy Configuration
+    description:
+      Intuitive interface for creating, editing, and managing Docker Compose
+      files without command-line complexity.
+features:
+  - title: Stack Management
+    description:
+      Create, start, stop, and delete Docker Compose stacks through an intuitive
+      web interface with one-click operations.
+  - title: Real-Time Logs
+    description:
+      View real-time logs from your Docker Compose services with filtering and
+      search capabilities for better debugging.
+  - title: Configuration Editor
+    description:
+      Built-in YAML editor with syntax highlighting and validation for editing
+      Docker Compose files directly in the browser.
+  - title: Service Monitoring
+    description:
+      Monitor service health, resource usage, and status with comprehensive
+      dashboards and alerts.
+  - title: Backup and Restore
+    description:
+      Backup and restore your Docker Compose configurations and data with
+      built-in backup management tools.
+  - title: Multi-Stack Support
+    description:
+      Manage multiple Docker Compose stacks from a single interface with
+      organized project management and categorization.
+tags:
+  - Docker Compose
+  - Container Management
+  - Self-Hosted
+  - Web Interface
+  - Monitoring
+  - DevOps
+  - Infrastructure
+  - YAML Editor
+  - Logs
+  - Stack Management
