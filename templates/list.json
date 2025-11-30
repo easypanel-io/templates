@@ -2470,6 +2470,19 @@
     ]
   },
   {
+    "slug": "kafka",
+    "logo": "logo.svg",
+    "name": "Kafka",
+    "description": "Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant, and real-time data processing. It enables you to publish and subscribe to streams of records, store streams of records in a fault-tolerant way, and process streams of records as they occur. Kafka is commonly used for building real-time streaming data pipelines and applications. This template deploys a Kafka cluster using the new KRaft mode (no Zookeeper required), with configurable number of broker/controller nodes and an optional Kafka UI for management.",
+    "tags": [
+      "Message Broker",
+      "Event Streaming",
+      "High Availability",
+      "Queue Management",
+      "Real-time"
+    ]
+  },
+  {
     "slug": "kanboard",
     "logo": "logo.png",
     "name": "Kanboard",
