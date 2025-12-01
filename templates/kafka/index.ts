@@ -89,7 +89,7 @@ export function generate(input: Input): Output {
           },
         ],
       },
-    });
+    } as Services[number]);
   }
 
   return { services };
