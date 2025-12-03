@@ -1,0 +1,104 @@
+name: ngrok
+description:
+  ngrok is a secure tunneling service that creates secure tunnels from a public
+  endpoint to a locally running web service. It's perfect for exposing local
+  development servers, testing webhooks, and sharing your work with others. This
+  template provides easy deployment of ngrok with configurable authentication,
+  regions, and target services.
+instructions: null
+changeLog:
+  - date: 2025-07-16
+    description: first release
+links:
+  - label: Website
+    url: https://ngrok.com
+  - label: Documentation
+    url: https://ngrok.com/docs
+  - label: GitHub
+    url: https://github.com/ngrok/ngrok
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - ngrokAuthToken
+    - ngrokServiceName
+    - ngrokTargetPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ngrok
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ngrok/ngrok:3.23.3-alpine
+    ngrokAuthToken:
+      type: string
+      title: ngrok Auth Token
+      default: ""
+    ngrokServiceName:
+      type: string
+      title: ngrok Service Name
+      default: ngrok
+      description: The name of the service that will be tunneled.
+    ngrokTargetPort:
+      type: string
+      title: ngrok Target Port
+      default: ""
+      description: The port of the service that will be tunneled.
+benefits:
+  - title: Secure Tunneling
+    description:
+      Create secure tunnels from public endpoints to your locally running
+      services, perfect for development and testing.
+  - title: Easy Webhook Testing
+    description:
+      Test webhooks and integrations by exposing your local development server
+      to the internet with a public URL.
+  - title: Multiple Protocols
+    description:
+      Support for HTTP, HTTPS, and TCP protocols to tunnel various types of
+      services and applications.
+  - title: Global Regions
+    description:
+      Choose from multiple global regions to optimize latency and performance
+      for your specific use case.
+  - title: Custom Domains
+    description:
+      Use custom domains for your tunnels with ngrok Pro plan, providing
+      professional URLs for your services.
+features:
+  - title: Web Interface
+    description:
+      Access the ngrok web interface to inspect HTTP requests, view tunnel
+      status, and manage your tunnels through a user-friendly dashboard.
+  - title: Request Inspection
+    description:
+      Inspect all HTTP requests and responses in real-time, making debugging and
+      development much easier.
+  - title: Authentication
+    description:
+      Secure your tunnels with ngrok authentication tokens, ensuring only
+      authorized access to your services.
+  - title: Region Selection
+    description:
+      Choose from multiple global regions to optimize performance and reduce
+      latency for your specific geographic location.
+  - title: Protocol Support
+    description:
+      Support for HTTP, HTTPS, and TCP protocols, allowing you to tunnel various
+      types of services and applications.
+  - title: Custom Domains
+    description:
+      Use custom domains for your tunnels with ngrok Pro plan, providing
+      professional and memorable URLs for your services.
+tags:
+  - Tunneling
+  - Development
+  - Webhooks
+  - Testing
+  - Networking

@@ -34,6 +34,7 @@ export function generate(input: Input): Output {
         `NEXT_PRIVATE_SMTP_FROM_ADDRESS=${input.smtpFromAddress}`,
         `NEXT_PUBLIC_UPLOAD_TRANSPORT=database`,
         `NEXT_PRIVATE_SIGNING_TRANSPORT=local`,
+        `NEXT_PRIVATE_SIGNING_LOCAL_FILE_PATH=/app/certs/cert.p12`,
       ].join("\n"),
       source: {
         type: "image",
@@ -49,7 +50,7 @@ export function generate(input: Input): Output {
         {
           type: "bind",
           hostPath: `/etc/keys/cert.p12`,
-          mountPath: "/opt/documenso/cert.p12",
+          mountPath: "/app/certs/cert.p12",
         },
       ],
     },
