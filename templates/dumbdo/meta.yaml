@@ -1,0 +1,90 @@
+name: Dumbdo
+description:
+  DumbDo is a stupidly simple todo list application that just works. No complex
+  database, no unnecessary features - just todos. It features a clean, minimal
+  interface with dark/light mode support, file-based storage, and PIN
+  protection. Built with the "Dumb" design system principles, it's fast,
+  lightweight, and fully responsive with PWA support.
+instructions: null
+changeLog:
+  - date: 2025-09-11
+    description:
+      Initial Template Release (af4532890ed0613d4cb4a35931d436cea63180ff)
+links:
+  - label: Website
+    url: https://www.dumbware.io/DumbDo
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbdo
+  - label: Docker Hub
+    url: https://hub.docker.com/r/dumbwareio/dumbdo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbdo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbdo:af4532890ed0613d4cb4a35931d436cea63180ff
+      description: Dumbdo Docker image
+benefits:
+  - title: Stupidly Simple
+    description:
+      No complex database, no unnecessary features - just todos. Built with the
+      "Dumb" design system principles for maximum simplicity and reliability.
+  - title: Clean Minimal Interface
+    description:
+      Clean, minimal interface with dark/light mode support and system
+      preference detection for a distraction-free todo management experience.
+  - title: File-Based Storage
+    description:
+      Simple file-based storage using JSON files - todos persist between
+      sessions without complex database setup or maintenance requirements.
+  - title: PIN Protection
+    description:
+      Optional PIN protection (4-10 digits) to secure your todos while keeping
+      the interface simple and accessible.
+features:
+  - title: Dark/Light Mode
+    description:
+      Built-in dark and light mode with automatic system preference detection
+      for comfortable viewing in any environment.
+  - title: Fully Responsive Design
+    description:
+      Mobile-first responsive design that works perfectly on desktop, tablet,
+      and mobile devices with touch-friendly interface.
+  - title: PWA Support
+    description:
+      Progressive Web App support allowing you to install DumbDo as a native app
+      on your device for quick access.
+  - title: File-Based Storage
+    description:
+      Simple JSON file storage at `/app/data/todos.json` - easy to backup,
+      restore, and migrate your todos between instances.
+  - title: Fast and Lightweight
+    description:
+      Minimal resource usage with fast performance - no complex dependencies or
+      heavy frameworks, just pure efficiency.
+  - title: Single List Mode
+    description:
+      Optional single list mode to show all todos without the list selector for
+      even simpler todo management.
+tags:
+  - Todo List
+  - Task Management
+  - Self-Hosted
+  - Lightweight
+  - PWA
+  - Dark Mode
+  - Simple
+  - Docker
+  - Fast
+  - Minimal
