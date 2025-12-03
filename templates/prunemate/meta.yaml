@@ -20,11 +20,7 @@ description:
   simple web interface to manage Docker resource cleanup without remembering
   complex docker system prune commands.
 
-instructions:
-  PruneMate requires access to the Docker socket to manage Docker resources.
-  After deployment, you need to mount the Docker socket (/var/run/docker.sock)
-  to the container. This can be configured in Easypanel's advanced settings
-  using bind mounts.
+instructions: null
 
 changeLog:
   - date: 2025-12-02
