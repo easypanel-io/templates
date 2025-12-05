@@ -1,0 +1,83 @@
+name: PdfDing
+description:
+  PdfDing is a self-hosted PDF management and processing application that
+  provides a comprehensive solution for handling PDF documents. It offers
+  features for viewing, organizing, and managing PDF files with a clean web
+  interface. PdfDing supports various PDF operations including viewing,
+  searching, and organizing your PDF collection in a centralized location.
+instructions: null
+changeLog:
+  - date: 2025-09-18
+    description: Template Release
+links:
+  - label: Github
+    url: https://github.com/mrmn2/PdfDing
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pdfding
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mrmn/pdfding:v1.3.1
+benefits:
+  - title: PDF Management
+    description:
+      Centralized PDF document management with viewing, organizing, and
+      searching capabilities for your PDF collection.
+  - title: Self-Hosted Control
+    description:
+      Keep your PDF documents completely private and secure on your own server
+      with full control over your document library.
+  - title: Clean Interface
+    description:
+      Modern web interface with customizable themes and colors for a
+      personalized document management experience.
+
+features:
+  - title: PDF Viewing
+    description:
+      Built-in PDF viewer with support for various PDF formats and high-quality
+      document rendering.
+  - title: Document Organization
+    description:
+      Organize and categorize your PDF documents with folder structures and
+      metadata management.
+  - title: Search Functionality
+    description:
+      Search through your PDF collection with text-based search capabilities and
+      metadata filtering.
+  - title: Theme Customization
+    description:
+      Customizable themes and colors including dark and light modes with various
+      color schemes.
+  - title: Secure Access
+    description:
+      Secure document access with configurable cookie settings and CSRF
+      protection for production deployments.
+  - title: Media Storage
+    description:
+      Persistent storage for PDF documents and media files with reliable data
+      persistence.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database for storing document metadata, user
+      preferences, and application state.
+
+tags:
+  - PDF Management
+  - Document Viewer
+  - Self-Hosted
+  - Web Interface
+  - SQLite
+  - File Management
+  - Document Organization
