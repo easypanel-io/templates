@@ -1,0 +1,117 @@
+name: Soulbeet
+description:
+  Soulbeet is a self-hosted music management and downloading application that
+  integrates with slskd (Soulseek daemon) and beets to create a seamless music
+  acquisition and organization workflow. The application provides a web
+  interface for searching and downloading music through the Soulseek
+  peer-to-peer network, then automatically organizing your downloads using
+  beets' powerful music library management capabilities. Soulbeet connects to
+  your slskd instance to handle the actual Soulseek network communication,
+  allowing you to search for tracks, browse user shares, and queue downloads.
+  Once files are downloaded, beets integration enables automatic tagging,
+  metadata correction, album art fetching, and file organization based on your
+  configured rules. The application uses SQLite for lightweight data persistence
+  and supports custom beets configurations for advanced music library
+  management. Perfect for music enthusiasts who want to build and maintain a
+  well-organized digital music collection, users looking for a self-hosted
+  alternative to music streaming services, audiophiles who prefer to own their
+  music with proper metadata and organization, or anyone who wants to combine
+  the power of Soulseek's peer-to-peer network with beets' music library
+  management in a single unified interface.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-10
+    description: Template Release
+
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/docccccc/soulbeet
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: soulbeet
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.io/docccccc/soulbeet:master
+    slskdApiKey:
+      type: string
+      title: slskd API Key
+      default: ""
+    enableSlskd:
+      type: boolean
+      title: Enable Built-in slskd Service
+      default: true
+
+benefits:
+  - title: Unified Music Workflow
+    description:
+      Combine Soulseek downloading with beets organization in a single interface
+      for seamless music acquisition and library management.
+  - title: Automatic Organization
+    description:
+      Downloaded music is automatically tagged, renamed, and organized using
+      beets' powerful library management capabilities.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your music collection and downloading activity private on your own
+      infrastructure without relying on streaming services.
+  - title: Peer-to-Peer Access
+    description:
+      Access the vast Soulseek network to find rare and hard-to-find music not
+      available on mainstream platforms.
+
+features:
+  - title: slskd Integration
+    description:
+      Direct integration with slskd for Soulseek network access, searching,
+      browsing shares, and managing downloads.
+  - title: Beets Integration
+    description:
+      Automatic music library management with beets for tagging, metadata
+      correction, and file organization.
+  - title: Web Interface
+    description:
+      Clean web-based interface for searching, browsing, and managing your music
+      downloads and library.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database for persistent storage of download history,
+      library metadata, and application state.
+  - title: Custom Configuration
+    description:
+      Support for custom beets configuration files to tailor music organization
+      rules to your preferences.
+  - title: Download Management
+    description:
+      Queue and manage downloads from the Soulseek network with progress
+      tracking and status updates.
+  - title: Music Library
+    description:
+      Organize your music collection with proper folder structure, consistent
+      naming, and complete metadata.
+  - title: Album Art
+    description:
+      Automatic album art fetching and embedding through beets integration for a
+      complete music library experience.
+
+tags:
+  - Music
+  - Downloads
+  - Media
+  - Self-Hosted
+  - Soulseek
+  - Library Management
