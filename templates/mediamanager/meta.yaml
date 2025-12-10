@@ -1,0 +1,106 @@
+name: MediaManager
+description:
+  MediaManager is a self-hosted media management application designed to help
+  you organize, catalog, and manage your media collection. The application
+  provides a clean web interface for browsing and managing your media files
+  including movies, TV shows, music, and other digital content. With support for
+  custom metadata, tagging, and categorization, MediaManager makes it easy to
+  keep your media library organized and accessible. The application features
+  automatic media scanning, metadata extraction, thumbnail generation, and
+  search capabilities to quickly find content in large collections. Built with a
+  PostgreSQL backend for reliable data storage, MediaManager can handle
+  extensive media libraries with thousands of items. The flexible configuration
+  system allows you to customize media directories, scanning behavior, and
+  display preferences to match your needs. Perfect for home media enthusiasts
+  who want to organize their digital collections, content creators managing
+  large media archives, small organizations needing a simple media asset
+  management solution, or anyone looking for a lightweight self-hosted
+  alternative to complex media management systems.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-10
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/maxdorninger/mediamanager
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mediamanager
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/maxdorninger/mediamanager/mediamanager:1.10
+
+benefits:
+  - title: Organized Media Library
+    description:
+      Keep your entire media collection organized with custom metadata, tags,
+      and categories for easy browsing and management.
+  - title: Self-Hosted Privacy
+    description:
+      Host your media catalog on your own infrastructure with complete control
+      over your data and no reliance on third-party services.
+  - title: Fast Search
+    description:
+      Quickly find any media item in your collection with powerful search and
+      filtering capabilities across all metadata.
+  - title: Lightweight Solution
+    description:
+      Simple and efficient media management without the complexity of
+      full-featured media server applications.
+
+features:
+  - title: Media Scanning
+    description:
+      Automatically scan configured directories to discover and catalog new
+      media files as they are added to your collection.
+  - title: Metadata Management
+    description:
+      Add and edit metadata for your media items including titles, descriptions,
+      tags, and custom fields.
+  - title: Thumbnail Generation
+    description:
+      Automatic thumbnail generation for visual browsing of your media
+      collection in the web interface.
+  - title: Category Organization
+    description:
+      Organize media into categories and collections for logical grouping and
+      easier navigation.
+  - title: Web Interface
+    description:
+      Clean, responsive web interface for browsing and managing your media
+      library from any device.
+  - title: PostgreSQL Backend
+    description:
+      Reliable PostgreSQL database backend for storing metadata and supporting
+      large media collections.
+  - title: Flexible Configuration
+    description:
+      Customizable settings for media directories, scanning behavior, and
+      display preferences.
+  - title: Search & Filter
+    description:
+      Advanced search and filtering options to quickly locate specific media
+      items across your entire library.
+
+tags:
+  - Media
+  - File Management
+  - Organization
+  - Self-Hosted
+  - Library
