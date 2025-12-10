@@ -1,0 +1,78 @@
+name: Docmost
+description:
+  Docmost is a secure and versatile self-hosted platform for document management
+  and collaboration. It enables organizations to efficiently store, manage, and
+  share documents while maintaining complete control over their data. Docmost is
+  built to streamline workflows, enhance team collaboration, and ensure data
+  privacy. It provides an intuitive interface and robust features for document
+  editing, version control, and seamless integrations with other tools and
+  services. Designed for businesses of all sizes, Docmost empowers teams to work
+  smarter and more securely.
+instructions: null
+changeLog:
+  - date: 2024-12-21
+    description: Template Release
+  - date: 2025-05-26
+    description: Version bumped to 0.20.4
+  - date: 2025-07-15
+    description: Version bumped to 0.21.0
+links:
+  - label: Documentation
+    url: https://docmost.com/docs/
+  - label: Github
+    url: https://github.com/Docmost/Docmost
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: docmost
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docmost/docmost:0.21.0
+benefits:
+  - title: Secure Document Management
+    description:
+      Docmost provides a secure platform for storing and managing your
+      organization's documents, ensuring data privacy and control.
+  - title: Enhanced Team Collaboration
+    description:
+      Enable seamless collaboration among team members with robust tools for
+      document editing, sharing, and version control.
+  - title: Workflow Optimization
+    description:
+      Streamline your workflows by integrating Docmost with other tools and
+      automating repetitive tasks.
+features:
+  - title: Document Version Control
+    description:
+      Keep track of document changes with built-in version control, ensuring
+      transparency and accountability.
+  - title: Customizable Workspaces
+    description:
+      Create tailored workspaces for different teams or projects, allowing for
+      organized and focused collaboration.
+  - title: Secure File Sharing
+    description:
+      Share documents securely with granular permissions and encryption to
+      protect sensitive data.
+  - title: API and Integrations
+    description:
+      Extend Docmost's functionality by integrating with your existing tools
+      using its powerful API.
+  - title: Cross-Platform Support
+    description:
+      Access Docmost on any device, ensuring productivity regardless of location
+      or platform.
+tags:
+  - Document Management
+  - Collaboration
+  - Self-Hosted

@@ -1,0 +1,78 @@
+name: Draw.io
+description:
+  Draw.io is a versatile, self-hosted diagramming tool designed for individuals
+  and teams. It provides an intuitive, drag-and-drop interface for creating
+  flowcharts, network diagrams, UML diagrams, and more. Draw.io supports
+  integrations with various cloud storage solutions such as Google Drive,
+  OneDrive, and local storage for easy file management. With a focus on
+  simplicity and functionality, Draw.io enables seamless collaboration and
+  offline access, ensuring that users can work efficiently. Its rich library of
+  shapes, templates, and customization options caters to a wide range of
+  diagramming needs.
+instructions: null
+changeLog:
+  - date: 2024-01-07
+    description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 28.0.4
+links:
+  - label: Website
+    url: https://drawio-app.com/
+  - label: Documentation
+    url: https://github.com/jgraph/drawio/wiki
+  - label: Github
+    url: https://github.com/jgraph/drawio
+  - label: Docker Guide
+    url: https://www.drawio.com/blog/diagrams-docker-app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: drawio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jgraph/drawio:28.0.4
+benefits:
+  - title: Intuitive Diagram Creation
+    description:
+      Draw.io offers a user-friendly interface with drag-and-drop functionality
+      for easy and efficient diagram creation, suitable for all skill levels.
+  - title: Cross-Platform Compatibility
+    description:
+      Draw.io ensures a consistent experience across web and desktop
+      applications, allowing seamless access and collaboration from any device.
+  - title: Cloud and Local Storage Integration
+    description:
+      Draw.io supports syncing and saving diagrams to popular cloud services
+      like Google Drive and OneDrive or directly to local storage for
+      flexibility.
+features:
+  - title: Rich Shape Library
+    description:
+      Draw.io provides a comprehensive library of shapes, icons, and templates
+      to help users create professional-quality diagrams effortlessly.
+  - title: Offline Access
+    description:
+      Draw.io allows users to create and edit diagrams without an internet
+      connection, ensuring uninterrupted productivity.
+  - title: Collaboration Features
+    description:
+      Draw.io supports real-time collaboration, enabling teams to work on
+      diagrams together and streamline their workflows.
+  - title: Customizable Interface
+    description:
+      Draw.io offers various customization options, including themes and layout
+      preferences, to tailor the user experience to individual needs.
+tags:
+  - Diagramming
+  - Collaboration
+  - Productivity

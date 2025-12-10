@@ -8,75 +8,77 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secret = randomString(32);
+  const encryptionSecret = randomString(32);
   const databasePassword = randomPassword();
-  const minioPassword = randomPassword();
+  const redisPassword = randomPassword();
 
-  services.push({
-    type: "app",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.builderServiceName,
-      source: { type: "image", image: input.builderServiceImage },
-      domains: [{ host: input.builderDomain, port: 3000 }],
-      env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
-        `NEXTAUTH_URL=https://${input.builderDomain}`,
-        `NEXT_PUBLIC_VIEWER_URL=https://${input.viewerDomain}`,
-        `ENCRYPTION_SECRET=${secret}`,
-        `ADMIN_EMAIL=${input.adminEmail}`,
-        `DISABLE_SIGNUP=false`,
-        `GITHUB_CLIENT_ID=${input.githubClientId}`,
-        `GITHUB_CLIENT_SECRET=${input.githubClientSecret}`,
-        `S3_ACCESS_KEY=minio`,
-        `S3_SECRET_KEY=${minioPassword}`,
-        `S3_BUCKET=typebot`,
-        `S3_ENDPOINT=http://$(PROJECT_NAME)_${input.storageServiceName}:9000`,
-      ].join("\n"),
-    },
-  });
+  const commonEnv = [
+    `ENCRYPTION_SECRET=${encryptionSecret}`,
+    `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `NODE_OPTIONS=--no-node-snapshot`,
+    `NEXTAUTH_URL=https://$(PROJECT_NAME)-${input.appServiceName}-builder.$(EASYPANEL_HOST)`,
+    `NEXT_PUBLIC_VIEWER_URL=https://$(PROJECT_NAME)-${input.appServiceName}-viewer.$(EASYPANEL_HOST)`,
+    `ADMIN_EMAIL=${input.adminEmail}`,
+    `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)-${input.appServiceName}-redis:6379`,
+  ];
 
-  services.push({
-    type: "app",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.viewerServiceName,
-      source: { type: "image", image: input.viewerServiceImage },
-      domains: [{ host: input.viewerDomain, port: 3000 }],
-      env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
-        `NEXT_PUBLIC_VIEWER_URL=https://${input.viewerDomain}`,
-        `ENCRYPTION_SECRET=${secret}`,
-        `S3_ACCESS_KEY=minio`,
-        `S3_SECRET_KEY=${minioPassword}`,
-        `S3_BUCKET=typebot`,
-        `S3_ENDPOINT=http://$(PROJECT_NAME)_${input.storageServiceName}:9000`,
-      ].join("\n"),
-    },
-  });
+  if (
+    input.githubClientId &&
+    input.githubClientSecret &&
+    input.githubClientId.trim() !== "" &&
+    input.githubClientSecret.trim() !== ""
+  ) {
+    commonEnv.push(
+      `GITHUB_CLIENT_ID=${input.githubClientId}`,
+      `GITHUB_CLIENT_SECRET=${input.githubClientSecret}`
+    );
+  }
 
-  services.push({
-    type: "app",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.storageServiceName,
-      source: { type: "image", image: input.storageServiceImage },
-      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 9001 }],
-      mounts: [{ type: "volume", name: "data", mountPath: "/data" }],
-      env: [
-        `MINIO_ROOT_USER=minio`,
-        `MINIO_ROOT_PASSWORD=${minioPassword}`,
-      ].join("\n"),
-    },
-  });
+  if (
+    input.googleAuthClientId &&
+    input.googleAuthClientSecret &&
+    input.googleAuthClientId.trim() !== "" &&
+    input.googleAuthClientSecret.trim() !== ""
+  ) {
+    commonEnv.push(
+      `GOOGLE_AUTH_CLIENT_ID=${input.googleAuthClientId}`,
+      `GOOGLE_AUTH_CLIENT_SECRET=${input.googleAuthClientSecret}`
+    );
+  }
 
   services.push({
     type: "postgres",
     data: {
-      image: "postgres:13",
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: redisPassword,
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: `${input.appServiceName}-builder`,
+      source: { type: "image", image: input.builderServiceImage },
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
+      env: [...commonEnv].join("\n"),
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: `${input.appServiceName}-viewer`,
+      source: { type: "image", image: input.viewerServiceImage },
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
+      env: [...commonEnv].join("\n"),
     },
   });
 

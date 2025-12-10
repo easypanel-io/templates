@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [`TZ=Etc/UTC`, `PUID=1000`, `PGID=1000`].join("\n"),
       source: {

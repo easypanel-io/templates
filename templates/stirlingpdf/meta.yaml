@@ -1,0 +1,97 @@
+name: StirlingPDF
+description:
+  StirlingPDF is an open-source PDF management tool designed to streamline PDF
+  handling tasks for both individual users and businesses. It enables users to
+  create, merge, split, compress, and convert PDF documents with ease. Built to
+  support a wide range of platforms, including Linux, Windows, and macOS,
+  StirlingPDF ensures flexibility and resilience for everyday PDF management.
+  Its user-friendly interface and powerful backend make it suitable for both
+  simple and complex PDF workflows. StirlingPDF can run on personal computers or
+  be deployed on servers, offering seamless API access for integration into
+  larger systems. Lightweight and efficient, StirlingPDF is ideal for individual
+  users, small businesses, and large enterprises alike, ensuring reliable PDF
+  manipulation without the need for costly subscriptions. It supports MySQL,
+  PostgreSQL, or SQLite databases, providing robust data handling across various
+  infrastructures.
+instructions: null
+changeLog:
+  - date: 2024-11-13
+    description: Initial release of StirlingPDF
+  - date: 2025-03-03
+    description: Version bumped to 0.43.2
+  - date: 2025-07-25
+    description: Version bumped to 1.1.0
+links:
+  - label: Website
+    url: https://stirlingpdf.io/
+  - label: Documentation
+    url: https://stirlingpdf.io/
+  - label: Github
+    url: https://github.com/Stirling-Tools/Stirling-PDF
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: PDF Service Name
+      default: stirlingpdf
+    appServiceImage:
+      type: string
+      title: PDF Service Image
+      default: frooodle/s-pdf:1.1.0
+benefits:
+  - title: Comprehensive PDF Management
+    description:
+      StirlingPDF offers a suite of tools for handling PDFs, allowing users to
+      create, merge, split, compress, and convert documents in one easy-to-use
+      application.
+  - title: Multi-Platform Support
+    description:
+      StirlingPDF is available for Linux, Windows, and macOS, making it
+      accessible for users across various operating systems.
+  - title: Open-Source & Free
+    description:
+      StirlingPDF is open-source, meaning it is free to use without any
+      subscription costs, providing a cost-effective solution for PDF
+      management.
+  - title: Flexible Deployment Options
+    description:
+      StirlingPDF can be run on personal devices or deployed on a server,
+      offering both local and remote PDF management capabilities.
+  - title: API Integration
+    description:
+      StirlingPDF includes API access, allowing businesses to integrate PDF
+      handling functionality into their own applications and workflows.
+features:
+  - title: Complete PDF Toolkit
+    description:
+      StirlingPDF provides a comprehensive toolkit for all major PDF operations,
+      from creating to compressing, to meet various document management needs.
+  - title: User-Friendly Interface
+    description:
+      StirlingPDF is built with an intuitive interface, making it accessible for
+      users of all technical backgrounds.
+  - title: Customizable Storage
+    description:
+      StirlingPDF supports MySQL, PostgreSQL, or SQLite databases, ensuring data
+      is stored securely and managed efficiently.
+  - title: Efficient Performance
+    description:
+      StirlingPDF is lightweight and performs operations quickly, making it
+      suitable for handling both small and large PDF files without lag.
+  - title: Server and Cloud Ready
+    description:
+      StirlingPDF can be deployed on cloud platforms and servers, supporting
+      high availability for enterprise-grade use.
+tags:
+  - PDF
+  - Document Management
+  - Open Source
+  - API Integration
+  - PDF Conversion

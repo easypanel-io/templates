@@ -1,7 +1,8 @@
 name: Corteza
-description: Corteza is a powerful, open-source low-code platform designed to
-  streamline the process of app development, business process integration, and
-  data harmonization. Built with a backend in Golang and a front end in Vue.js,
+description:
+  Corteza is a powerful, open-source low-code platform designed to streamline
+  the process of app development, business process integration, and data
+  harmonization. Built with a backend in Golang and a front end in Vue.js,
   Corteza allows you to easily build native web apps and expand your software
   ecosystem with complete control and flexibility. You can connect with any
   record data source, control everything you build, transform your data into a
@@ -10,11 +11,18 @@ description: Corteza is a powerful, open-source low-code platform designed to
   cloud-native and deploys via Docker containers, providing a seamless and
   efficient app development experience. It is 100% free and open-source,
   ensuring that it will always be accessible to all.
-instructions: Create an account to login. The first account created will have
-  administrator priviledges. Go to /admin for the admijnistration interface
+instructions:
+  Create an account to login. The first account created will have administrator
+  priviledges. Go to /admin for the admijnistration interface
 changeLog:
   - date: 2023-3-2
     description: first release
+  - date: 2024-09-30
+    description: Version changed to 2023.9.8
+  - date: 2025-01-09
+    description: Version bumped to 2024.9.0
+  - date: 2025-07-15
+    description: Version bumped to 2024.9.3
 links:
   - label: Website
     url: https://cortezaproject.org
@@ -25,17 +33,15 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -43,44 +49,52 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cortezaproject/corteza:2022.9.8
+      default: cortezaproject/corteza:2024.9.3
     databaseServiceName:
       type: string
       title: Database Service Name
       default: corteza-db
 benefits:
   - title: Open-Source and Free
-    description: Corteza is a 100% open-source platform, meaning it is freely
-      available to all. You can use, modify, distribute or even sell Corteza or
-      apps built with it under your own license and trademark for free, with no
-      obligation to publish your modified code.
+    description:
+      Corteza is a 100% open-source platform, meaning it is freely available to
+      all. You can use, modify, distribute or even sell Corteza or apps built
+      with it under your own license and trademark for free, with no obligation
+      to publish your modified code.
   - title: Complete Control
-    description: Corteza gives you complete flexibility, freedom, and control over
-      your platform and everything you build on it. You can export and import
+    description:
+      Corteza gives you complete flexibility, freedom, and control over your
+      platform and everything you build on it. You can export and import
       complete app configurations, workflows, and record data without limits.
   - title: Data Standardization
-    description: Corteza allows you to transform all data into a standardized JSON
-      format to create data models for app and workflows or to federate out.
+    description:
+      Corteza allows you to transform all data into a standardized JSON format
+      to create data models for app and workflows or to federate out.
   - title: Unlimited App Creation
-    description: With Corteza, you can create unlimited web applications and process
+    description:
+      With Corteza, you can create unlimited web applications and process
       workflows using block-based tools and Javascript automations in a fraction
       of the time of traditional coding.
 features:
   - title: Low-Code Platform
-    description: Corteza is a fully standardized low-code app development platform.
-      It makes it easy to build native web apps and expand your third-party
+    description:
+      Corteza is a fully standardized low-code app development platform. It
+      makes it easy to build native web apps and expand your third-party
       software ecosystem.
   - title: Integration Management
-    description: Corteza allows you to integrate with data from any machine-readable
-      system or database, regardless of format, across and between instances.
+    description:
+      Corteza allows you to integrate with data from any machine-readable system
+      or database, regardless of format, across and between instances.
   - title: Business Process Workflows
-    description: Corteza enables you to create business process workflows. You can
-      deploy applications and workflows instantly, iterate and redeploy as much
-      as you want.
+    description:
+      Corteza enables you to create business process workflows. You can deploy
+      applications and workflows instantly, iterate and redeploy as much as you
+      want.
   - title: Data Harmonization
-    description: Corteza provides a platform for data harmonization. It allows you
-      to transform all data into a standardized JSON format to create data
-      models for app and workflows or to federate out.
+    description:
+      Corteza provides a platform for data harmonization. It allows you to
+      transform all data into a standardized JSON format to create data models
+      for app and workflows or to federate out.
 tags:
   - Low-Code Platform
   - App Development

@@ -1,0 +1,79 @@
+name: Infisical
+description:
+  Infisical is a robust, self-hosted platform designed for securely managing and
+  accessing secrets, environment variables, and API keys. It provides a
+  user-friendly interface, seamless integration with popular development and
+  CI/CD tools, and advanced encryption to ensure the safety of sensitive data.
+  With Infisical, you maintain full control over your secrets infrastructure,
+  providing enhanced security and flexibility for your workflows.
+instructions:
+  You may delete the migration service once the migration is completed.
+changeLog:
+  - date: 2025-01-08
+    description: Template Release
+  - date: 2025-02-25
+    description: Version bumped to v0.112.0-postgres
+  - date: 2025-05-23
+    description: Version bumped to v0.130.1-postgres
+links:
+  - label: Documentation
+    url: https://infisical.com/docs
+  - label: Github
+    url: https://github.com/Infisical/infisical
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: infisical
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: infisical/infisical:v0.138.0-postgres
+benefits:
+  - title: Secure Secret Management
+    description:
+      Infisical provides a centralized and secure way to manage environment
+      variables and secrets across your applications.
+  - title: Self-Hosted Privacy
+    description:
+      Retain full control and privacy over your secrets with a self-hosted
+      solution.
+  - title: Seamless Integration
+    description:
+      Easily integrate Infisical with your favorite CI/CD tools, frameworks, and
+      development environments.
+
+features:
+  - title: End-to-End Encryption
+    description:
+      Protect your secrets with advanced end-to-end encryption, ensuring they
+      remain safe and inaccessible to unauthorized parties.
+  - title: Role-Based Access Control
+    description:
+      Manage user and team access with granular role-based permissions for
+      better security.
+  - title: Real-Time Sync
+    description:
+      Automatically sync secrets and environment variables across your team in
+      real time.
+  - title: Version Control
+    description:
+      Track changes and roll back to previous versions of secrets for better
+      manageability.
+
+tags:
+  - Secret Management
+  - Self-Hosted
+  - Security
+  - Environment Variables
+  - Encryption

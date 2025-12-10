@@ -1,0 +1,46 @@
+name: Minio
+description:
+  Minio is an open-source, self-hosted object storage solution designed to
+  empower users with efficient data storage and management capabilities.
+  Prioritizing control and privacy, Minio enables individuals and organizations
+  to build their private cloud infrastructure. With its user-friendly interface
+  and robust features, Minio allows seamless storage and retrieval of large
+  amounts of data while offering secure access controls.
+instructions: null
+changeLog:
+  - date: 2024-01-03
+    description: first release
+links:
+  - label: Documentation
+    url: https://min.io/docs/minio/linux/index.html
+  - label: Github
+    url: https://github.com/minio/minio
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+  - name: Andrei Canta
+    url: https://github.com/deiucanta
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: minio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: minio/minio:latest
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password
+      default: password

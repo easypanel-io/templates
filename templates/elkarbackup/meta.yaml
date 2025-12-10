@@ -1,0 +1,84 @@
+name: ElkarBackup
+description:
+  ElkarBackup is a robust open-source backup management system designed to
+  streamline data protection and recovery for diverse environments. With an
+  intuitive web-based interface and extensive automation capabilities, it
+  simplifies backup scheduling and execution. ElkarBackup supports various
+  storage backends and ensures reliable backup operations with robust monitoring
+  and reporting features. Whether you're managing personal data or
+  enterprise-scale systems, ElkarBackup offers an efficient and user-friendly
+  solution for safeguarding your critical information.
+instructions:
+  Login using root/root, custom settingss can be configured with the provided
+  envs.
+changeLog:
+  - date: 2024-11-17
+    description: Template Release
+  - date: 2025-01-11
+    description: Version bumped to 2.1.0
+links:
+  - label: Website
+    url: https://elkarbackup.github.io
+  - label: Documentation
+    url: https://elkarbackup.github.io/elkarbackup/
+  - label: Github
+    url: https://github.com/elkarbackup/elkarbackup
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: elkarbackup
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: elkarbackup/elkarbackup:2.1.0
+benefits:
+  - title: Centralized Backup Management
+    description:
+      ElkarBackup provides a centralized platform for managing backups, ensuring
+      data protection across all devices and environments with minimal effort.
+  - title: User-Friendly Interface
+    description:
+      The intuitive web interface simplifies configuration, monitoring, and
+      management of backups, making it accessible even for users with limited
+      technical expertise.
+  - title: Flexible Scheduling
+    description:
+      ElkarBackup's advanced scheduling options allow users to automate backup
+      tasks based on their specific needs, reducing manual intervention.
+  - title: Cost-Effective Solution
+    description:
+      As an open-source tool, ElkarBackup offers a cost-effective solution for
+      backup management, eliminating the need for expensive proprietary
+      software.
+features:
+  - title: Multi-Backend Support
+    description:
+      ElkarBackup supports various storage backends, including local storage,
+      network shares, and cloud services, ensuring flexibility in choosing
+      storage options.
+  - title: Automation and Scheduling
+    description:
+      Automate backup jobs with cron-like scheduling, ensuring regular and
+      reliable backups without manual intervention.
+  - title: Robust Monitoring and Reporting
+    description:
+      Comprehensive monitoring and reporting tools enable users to track backup
+      performance, detect failures, and ensure data integrity.
+  - title: Secure Data Handling
+    description:
+      ElkarBackup ensures secure backup and recovery processes, with options to
+      encrypt data and limit access through role-based permissions.
+tags:
+  - Backup Management
+  - Automation
+  - Data Recovery
+  - Open Source

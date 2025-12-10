@@ -1,0 +1,70 @@
+name: LiteLLM
+description:
+  LiteLLM is a lightweight, self-hosted library designed for integrating
+  language models like GPT into your applications. It provides an easy-to-use
+  interface for sending and receiving prompts and responses, with support for
+  multiple model configurations, API keys, and detailed debugging options. With
+  LiteLLM, you can streamline your AI workflows while maintaining full control
+  over your data and configurations.
+instructions: Use the provided master-key as the password for UI login.
+changeLog:
+  - date: 2025-01-06
+    description: Initial Template Release for LiteLLM
+  - date: 2025-02-28
+    description: Version bumped to main-v1.61.20-nightly
+links:
+  - label: Documentation
+    url: https://docs.litellm.ai/docs/
+  - label: Github
+    url: https://github.com/berriai/litellm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: litellm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/berriai/litellm:main-v1.61.20-nightly
+benefits:
+  - title: Easy Integration
+    description:
+      LiteLLM simplifies the process of integrating language models into your
+      applications with minimal setup.
+  - title: Self-Hosted Flexibility
+    description:
+      Maintain full control over your AI integrations by hosting LiteLLM on your
+      own infrastructure.
+  - title: Detailed Debugging
+    description:
+      Enable detailed logs and debugging to optimize and troubleshoot your AI
+      workflows.
+
+features:
+  - title: Multi-Model Support
+    description:
+      Configure and use multiple language models easily within the same setup.
+  - title: API Key Management
+    description:
+      Securely manage API keys and other sensitive information through
+      environment variables.
+  - title: Debugging Tools
+    description:
+      Access detailed logs to monitor requests, responses, and configurations.
+  - title: Lightweight Setup
+    description:
+      Run LiteLLM with minimal resource requirements for efficient AI
+      integration.
+
+tags:
+  - Language Models
+  - Self-Hosted
+  - AI Integration

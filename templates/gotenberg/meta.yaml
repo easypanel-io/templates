@@ -1,9 +1,10 @@
 name: Gotenberg
-description: Gotenberg is a Docker-powered stateless API designed to handle PDF
-  files. It offers a developer-friendly interface to interact with robust tools
-  like Chromium and LibreOffice, enabling the conversion of various document
-  formats such as HTML, Markdown, Word, Excel, and more into PDF files. The app
-  also supports an asynchronous workflow with a webhook feature, allowing you to
+description:
+  Gotenberg is a Docker-powered stateless API designed to handle PDF files. It
+  offers a developer-friendly interface to interact with robust tools like
+  Chromium and LibreOffice, enabling the conversion of various document formats
+  such as HTML, Markdown, Word, Excel, and more into PDF files. The app also
+  supports an asynchronous workflow with a webhook feature, allowing you to
   upload the output file to your preferred destination. Gotenberg is a modular
   platform, meaning you can customize each module according to your needs.
   Additionally, it provides the option to build your own Docker image by adding
@@ -12,6 +13,12 @@ instructions: null
 changeLog:
   - date: 2023-02-21
     description: first release
+  - date: 2025-01-14
+    description: Version bumped to 8.15.3
+  - date: 2025-02-25
+    description: Version bumped to 8.17.1
+  - date: 2025-07-21
+    description: Version bumped to 8.21
 links:
   - label: Website
     url: https://gotenberg.dev/
@@ -24,16 +31,14 @@ contributors:
     url: https://github.com/TheoCouss
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,34 +46,40 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:7.8.1
+      default: gotenberg/gotenberg:8.21
 benefits:
   - title: Efficient Document Conversion
-    description: Gotenberg is a Docker-powered stateless API that efficiently
-      converts various document formats into PDF files. It works with HTML,
-      Markdown, Word, Excel, and more, making it a versatile tool for all your
-      document conversion needs.
+    description:
+      Gotenberg is a Docker-powered stateless API that efficiently converts
+      various document formats into PDF files. It works with HTML, Markdown,
+      Word, Excel, and more, making it a versatile tool for all your document
+      conversion needs.
   - title: Asynchronous Workflow
-    description: Gotenberg's webhook feature allows for an asynchronous workflow.
-      You can upload the output file to the destination of your choice, with
-      many options to fit your requirements, from the custom HTTP headers sent
-      to your webhook to the HTTP method used to call it.
+    description:
+      Gotenberg's webhook feature allows for an asynchronous workflow. You can
+      upload the output file to the destination of your choice, with many
+      options to fit your requirements, from the custom HTTP headers sent to
+      your webhook to the HTTP method used to call it.
   - title: Modular Platform
-    description: Gotenberg is a modular platform composed of modules, each with
-      properties you may customize to your liking. This flexibility allows you
-      to tailor the platform to your specific needs.
+    description:
+      Gotenberg is a modular platform composed of modules, each with properties
+      you may customize to your liking. This flexibility allows you to tailor
+      the platform to your specific needs.
 features:
   - title: Document Conversion
-    description: Gotenberg provides a developer-friendly API to interact with
-      powerful tools like Chromium and LibreOffice for converting various
-      document formats into PDF files.
+    description:
+      Gotenberg provides a developer-friendly API to interact with powerful
+      tools like Chromium and LibreOffice for converting various document
+      formats into PDF files.
   - title: Webhook Feature
-    description: The webhook feature allows you to upload the output file to the
+    description:
+      The webhook feature allows you to upload the output file to the
       destination of your choice. You can customize the HTTP headers and the
       HTTP method used to call your webhook.
   - title: Modular Design
-    description: Gotenberg is composed of modules, each with properties you can
-      customize. This modular design allows for a high degree of flexibility and
+    description:
+      Gotenberg is composed of modules, each with properties you can customize.
+      This modular design allows for a high degree of flexibility and
       adaptability.
 tags:
   - Developer Tools

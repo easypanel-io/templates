@@ -1,20 +1,27 @@
 name: Bytebase
-description: Bytebase is a versatile application designed to streamline database
-  management tasks. It supports a wide range of databases including MySQL,
-  PostgreSQL, Snowflake, Oracle, SQL Server, MongoDB, Redis, Redshift,
-  ClickHouse, TiDB, OceanBase, Google Spanner, and MariaDB. With Bytebase, you
-  can easily configure and manage your database instances, perform SQL reviews,
-  manage data models, roles, and permissions, and handle change workflows in
-  batch mode. The app also offers features for secure data handling, VCS
-  integration, slow query management, and disaster recovery. It comes with an
-  embedded PostgreSQL instance for storing its metadata, but for production
-  setup, it is recommended to store the metadata in an external PostgreSQL
-  database. Bytebase is designed to be deployed easily and quickly, offering a
-  step-by-step quick start guide for users.
+description:
+  Bytebase is a versatile application designed to streamline database management
+  tasks. It supports a wide range of databases including MySQL, PostgreSQL,
+  Snowflake, Oracle, SQL Server, MongoDB, Redis, Redshift, ClickHouse, TiDB,
+  OceanBase, Google Spanner, and MariaDB. With Bytebase, you can easily
+  configure and manage your database instances, perform SQL reviews, manage data
+  models, roles, and permissions, and handle change workflows in batch mode. The
+  app also offers features for secure data handling, VCS integration, slow query
+  management, and disaster recovery. It comes with an embedded PostgreSQL
+  instance for storing its metadata, but for production setup, it is recommended
+  to store the metadata in an external PostgreSQL database. Bytebase is designed
+  to be deployed easily and quickly, offering a step-by-step quick start guide
+  for users.
 instructions: null
 changeLog:
   - date: 2023-6-11
     description: first release
+  - date: 2024-03-12
+    description: Version bumped to 2.14.1
+  - date: 2024-09-30
+    description: Version bumped to 2.23.0
+  - date: 2025-01-06
+    description: Version bumped to 3.2.0
 links:
   - label: Documentation
     url: https://www.bytebase.com/docs/get-started/install/deploy-with-docker/
@@ -23,17 +30,17 @@ links:
 contributors:
   - name: Amit Gadhia
     url: https://github.com/amitoo7
+  - name: Berk Sümbül
+    url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,49 +48,56 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bytebase/bytebase:2.2.0
+      default: bytebase/bytebase:3.2.0
     databaseServiceName:
       type: string
       title: Database Service Name
       default: bytebase-db
 benefits:
   - title: Efficient Database Management
-    description: Bytebase is designed to streamline database management tasks. It
-      supports a variety of databases, including MySQL, PostgreSQL, Snowflake,
-      Oracle, SQL Server, MongoDB, Redis, Redshift, ClickHouse, TiDB, OceanBase,
-      Google Spanner, and MariaDB. This makes it a versatile tool for managing
+    description:
+      Bytebase is designed to streamline database management tasks. It supports
+      a variety of databases, including MySQL, PostgreSQL, Snowflake, Oracle,
+      SQL Server, MongoDB, Redis, Redshift, ClickHouse, TiDB, OceanBase, Google
+      Spanner, and MariaDB. This makes it a versatile tool for managing
       different types of databases.
   - title: Secure Data Handling
-    description: Bytebase ensures the security of your data. It provides an embedded
+    description:
+      Bytebase ensures the security of your data. It provides an embedded
       PostgreSQL instance for storing its own metadata. For a production setup,
       it is recommended to store the metadata in an external PostgreSQL
       database, further enhancing the security of your data.
   - title: Comprehensive Database Operations
-    description: Bytebase allows you to perform a range of database operations. You
-      can change the workflow, review SQL, change the database, and manage data
+    description:
+      Bytebase allows you to perform a range of database operations. You can
+      change the workflow, review SQL, change the database, and manage data
       securely. It also supports VCS integration (GitOps), slow query handling,
       and disaster recovery.
 features:
   - title: Data Model Management
-    description: Bytebase allows you to manage your data models effectively. It
-      provides core concepts and a step-by-step quick start guide to help you
-      understand and use the data model feature.
+    description:
+      Bytebase allows you to manage your data models effectively. It provides
+      core concepts and a step-by-step quick start guide to help you understand
+      and use the data model feature.
   - title: Roles and Permissions
-    description: Bytebase provides a roles and permissions feature. This allows you
-      to manage user roles and permissions, ensuring that only authorized
+    description:
+      Bytebase provides a roles and permissions feature. This allows you to
+      manage user roles and permissions, ensuring that only authorized
       individuals have access to certain data or operations.
   - title: SQL Editor
-    description: Bytebase includes a SQL editor feature. This allows you to write
-      and edit SQL queries directly within the app, making it easier to manage
-      and manipulate your data.
+    description:
+      Bytebase includes a SQL editor feature. This allows you to write and edit
+      SQL queries directly within the app, making it easier to manage and
+      manipulate your data.
   - title: VCS Integration (GitOps)
-    description: Bytebase supports VCS integration (GitOps). This allows you to
-      integrate your version control system with Bytebase, enabling you to track
-      changes and manage your database more effectively.
+    description:
+      Bytebase supports VCS integration (GitOps). This allows you to integrate
+      your version control system with Bytebase, enabling you to track changes
+      and manage your database more effectively.
   - title: Disaster Recovery
-    description: Bytebase provides a disaster recovery feature. This ensures that
-      your data is protected and can be recovered in the event of a disaster,
-      providing peace of mind and enhancing the reliability of your database
-      management.
+    description:
+      Bytebase provides a disaster recovery feature. This ensures that your data
+      is protected and can be recovered in the event of a disaster, providing
+      peace of mind and enhancing the reliability of your database management.
 tags:
   - Databases

@@ -9,12 +9,11 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const coreSecret = randomString();
+  const coreSecret = randomString(32);
 
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
@@ -23,7 +22,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "image",
@@ -37,6 +35,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         `CORE_DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         `CORE_RETURN_HTTPS=false`,
         `CORE_SECRET=${coreSecret}`,
         `CORE_HOST=0.0.0.0`,

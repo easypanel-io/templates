@@ -9,7 +9,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "image",
@@ -19,6 +18,13 @@ export function generate(input: Input): Output {
         {
           host: "$(EASYPANEL_DOMAIN)",
           port: 80,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "app-data",
+          mountPath: "/app/data",
         },
       ],
       env: [

@@ -1,0 +1,103 @@
+name: Ollama
+description:
+  "Ollama is a powerful tool designed to simplify the deployment and interaction
+  with advanced AI models. It provides a streamlined solution for managing and
+  hosting large language models (LLMs) with an intuitive interface. Ollama
+  allows users to run queries and interact with models like OpenAI GPT and
+  others in a secure and efficient manner. The tool includes a web-based
+  interface that makes managing and testing models straightforward. Ollama is
+  designed to support diverse use cases, from research and development to
+  deploying AI capabilities in production systems. It offers flexible deployment
+  options, powerful API integrations, and role-based access control to ensure
+  secure and scalable AI solutions."
+instructions: null
+changeLog:
+  - date: 2024-11-16
+    description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 0.5.12
+  - date: 2025-02-28
+    description: Version bumped to v0.5.18
+  - date: 2025-07-24
+    description: Version bumped to 0.9.6
+links:
+  - label: Website
+    url: https://ollama.com
+  - label: Docs
+    url: https://docs.ollama.com
+  - label: Github
+    url: https://github.com/Ollama/Ollama
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - uiServiceImage
+    - webuiName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ollama
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ollama/ollama:0.9.6
+    uiServiceImage:
+      type: string
+      title: Ollama UI Service Image
+      default: ghcr.io/open-webui/open-webui:v0.6.18
+    webuiName:
+      type: string
+      title: Ollama UI Name
+      default: Ollama
+benefits:
+  - title: Simplified AI Deployment
+    description:
+      Ollama makes it easy to deploy and manage advanced AI models, enabling
+      users to focus on building and scaling AI applications efficiently.
+  - title: Secure Model Hosting
+    description:
+      Host AI models with enterprise-grade security, ensuring data privacy and
+      role-based access control for users and teams.
+  - title: Intuitive Web Interface
+    description:
+      Ollama provides a user-friendly web interface for managing AI models,
+      running queries, and testing capabilities without hassle.
+  - title: Flexible Deployment Options
+    description:
+      Deploy Ollama on your preferred infrastructure, whether it's cloud-based
+      or on-premises, to suit your organizational needs.
+  - title: API Integrations
+    description:
+      Ollama offers robust APIs for seamless integration with existing
+      applications and workflows, enabling AI-powered automation.
+features:
+  - title: Manage AI Models
+    description:
+      Deploy, configure, and manage AI models effortlessly with Ollama’s
+      streamlined interface and tools.
+  - title: Interactive Query System
+    description:
+      Run queries and interact with hosted models to leverage AI for tasks like
+      natural language processing, data generation, and more.
+  - title: Web-Based UI
+    description:
+      Access a secure, feature-rich web UI to manage your AI models and interact
+      with them in real-time.
+  - title: Scalable Architecture
+    description:
+      Scale your AI deployments to handle increasing workloads without
+      compromising performance or security.
+  - title: Role-Based Access Control
+    description:
+      Control who can access and interact with the AI models using role-based
+      access permissions.
+tags:
+  - AI
+  - LLM
+  - Machine Learning
+  - Custom Applications

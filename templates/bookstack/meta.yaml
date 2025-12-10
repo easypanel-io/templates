@@ -1,9 +1,10 @@
 name: Bookstack
-description: "BookStack is a free and open-source platform designed to help you
-  organize and store information in a simple and efficient way. It is a
-  self-hosted solution that allows you to create, edit, and manage content
-  through an easy-to-use interface. The content is divided into three real-world
-  groups: Books, Chapters, and Pages, making it easy to navigate and find the
+description:
+  "BookStack is a free and open-source platform designed to help you organize
+  and store information in a simple and efficient way. It is a self-hosted
+  solution that allows you to create, edit, and manage content through an
+  easy-to-use interface. The content is divided into three real-world groups:
+  Books, Chapters, and Pages, making it easy to navigate and find the
   information you need. The platform also includes a powerful search feature
   that allows you to search at the book level or across all books, chapters, and
   pages. You can also link directly to any paragraph, keeping your documentation
@@ -20,6 +21,12 @@ instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2024-03-11
+    description: Version bumped to 24.05.1
+  - date: 2024-09-30
+    description: Version bumped to 24.05.4
+  - date: 2025-07-15
+    description: Version bumped to 25.05.2
 links:
   - label: Website
     url: https://www.bookstackapp.com/
@@ -36,17 +43,15 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -54,61 +59,70 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/bookstack:23.05.2
+      default: lscr.io/linuxserver/bookstack:25.05.2
     databaseServiceName:
       type: string
       title: Database Service Name
       default: bookstack-db
 benefits:
   - title: Organised Information Storage
-    description: "BookStack is a simple, self-hosted platform that allows you to
-      organise and store information in a structured manner. It breaks down
-      content into three real-world groups: Books, Chapters, and Pages, making
-      it easy to navigate and find the information you need."
+    description:
+      "BookStack is a simple, self-hosted platform that allows you to organise
+      and store information in a structured manner. It breaks down content into
+      three real-world groups: Books, Chapters, and Pages, making it easy to
+      navigate and find the information you need."
   - title: Searchable and Connected Content
-    description: The content in BookStack is fully searchable, allowing you to find
+    description:
+      The content in BookStack is fully searchable, allowing you to find
       information quickly and efficiently. You can search at the book level or
       across all books, chapters, and pages. Plus, the ability to link directly
       to any paragraph keeps your documentation connected.
   - title: Customisable to Suit Your Needs
-    description: BookStack is highly configurable, allowing you to set it up to suit
-      your specific use case. You can change the name, logo, and registration
+    description:
+      BookStack is highly configurable, allowing you to set it up to suit your
+      specific use case. You can change the name, logo, and registration
       options, and decide whether the whole system is publicly viewable or not.
   - title: Multi-Lingual Support
-    description: BookStack supports multiple languages, allowing users to set their
+    description:
+      BookStack supports multiple languages, allowing users to set their
       preferred language. This makes it a versatile tool for global teams and
       organisations.
 features:
   - title: Easy, Simple Interface
-    description: BookStack has been designed with simplicity in mind. The page
-      editor features a straightforward WYSIWYG interface, making it easy for
-      anyone to use.
+    description:
+      BookStack has been designed with simplicity in mind. The page editor
+      features a straightforward WYSIWYG interface, making it easy for anyone to
+      use.
   - title: Built-In diagrams.net
-    description: The page editor within BookStack has a built-in diagrams.net
-      drawing capability, allowing for the quick and easy creation of diagrams
-      within your documentation.
-  - title: Optional Markdown Editor
-    description: If you prefer to write in Markdown, BookStack supports you. A
-      markdown editor is provided, complete with a live-preview as you write
+    description:
+      The page editor within BookStack has a built-in diagrams.net drawing
+      capability, allowing for the quick and easy creation of diagrams within
       your documentation.
+  - title: Optional Markdown Editor
+    description:
+      If you prefer to write in Markdown, BookStack supports you. A markdown
+      editor is provided, complete with a live-preview as you write your
+      documentation.
   - title: Integrated Authentication
-    description: BookStack supports various login methods, including default
-      email/password and social providers such as GitHub, Google, Slack, AzureAD
-      and more. Enterprise environments can utilise Okta, SAML2 and LDAP
-      options.
+    description:
+      BookStack supports various login methods, including default email/password
+      and social providers such as GitHub, Google, Slack, AzureAD and more.
+      Enterprise environments can utilise Okta, SAML2 and LDAP options.
   - title: Powerful Features
-    description: BookStack comes packed with powerful features like cross-book
-      sorting, page revisions, image management, and a full role and permission
-      system to lock down content and actions as required.
+    description:
+      BookStack comes packed with powerful features like cross-book sorting,
+      page revisions, image management, and a full role and permission system to
+      lock down content and actions as required.
   - title: Multi-Factor Authentication
-    description: For enhanced security, BookStack has built-in Multi-Factor
-      Authentication (MFA) which can be enforced at a per-role level. MFA
-      options include TOTP (Google/Microsoft Authenticator, Authy, etc.) and
-      static backup codes.
+    description:
+      For enhanced security, BookStack has built-in Multi-Factor Authentication
+      (MFA) which can be enforced at a per-role level. MFA options include TOTP
+      (Google/Microsoft Authenticator, Authy, etc.) and static backup codes.
   - title: Dark & Light Modes
-    description: BookStack provides its user interface in both a light theme and a
-      dark theme, catering to individual user preferences. This is configurable
-      at a user level.
+    description:
+      BookStack provides its user interface in both a light theme and a dark
+      theme, catering to individual user preferences. This is configurable at a
+      user level.
 tags:
   - Wiki
   - Documentation

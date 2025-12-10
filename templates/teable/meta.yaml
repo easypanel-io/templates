@@ -1,0 +1,88 @@
+name: Teable
+description:
+  Teable is a powerful, self-hosted service designed for managing team
+  collaboration and projects efficiently. It offers a clean and user-friendly
+  interface, supports plugins for extended functionality, and provides detailed
+  analytics on team activities. With Teable, you can maintain full control over
+  your data and workflows.
+
+instructions:
+  Wait for the migration to complete, then start using Teable for managing your
+  projects.
+
+changeLog:
+  - date: 2025-02-12
+    description: Initial Template Release
+  - date: 2025-07-25
+    description: Version bumped to 753fb6ad997f70693688bce057f0c8cf5da8e6ee
+
+links:
+  - label: Documentation
+    url: https://teable.io/docs
+  - label: Github
+    url: https://github.com/teableio/teable
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - migrationServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: teable
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/teableio/teable:753fb6ad997f70693688bce057f0c8cf5da8e6ee
+    migrationServiceImage:
+      type: string
+      title: Migration Service Image
+      default: ghcr.io/teableio/teable-db-migrate:753fb6ad997f70693688bce057f0c8cf5da8e6ee
+    enableArm:
+      type: boolean
+      title: Enable Arm
+      default: false
+benefits:
+  - title: Efficient Collaboration
+    description:
+      Teable simplifies team collaboration and project management through a
+      unified platform.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your data with a self-hosted service, ensuring privacy
+      and flexibility.
+  - title: Customizable Workflows
+    description:
+      Customize workflows to match your team’s unique processes and enhance
+      productivity.
+
+features:
+  - title: API Access
+    description:
+      Integrate Teable with other tools using its flexible API for programmatic
+      access.
+  - title: Plugin Support
+    description:
+      Extend Teable’s functionality with various plugins to meet specific team
+      needs.
+  - title: Activity Analytics
+    description:
+      Gain insights into project progress, team activities, and overall
+      performance.
+  - title: Task Management
+    description:
+      Organize tasks, set priorities, and track progress in one place for
+      effective project management.
+
+tags:
+  - Project Management
+  - Self-Hosted
+  - Team Collaboration
+  - Analytics

@@ -1,0 +1,79 @@
+name: PairDrop
+description:
+  PairDrop is an open-source peer-to-peer file sharing application designed for
+  seamless and secure data transfer between devices on the same network. With
+  its minimalist design and cross-platform compatibility, PairDrop ensures a
+  user-friendly and efficient file sharing experience. It eliminates the need
+  for third-party cloud services, offering a direct and private solution for
+  sharing files, links, and other data securely.
+instructions: null
+changeLog:
+  - date: 2024-11-17
+    description: Template Release
+  - date: 2025-02-28
+    description: Version bumped to 1.11.2
+links:
+  - label: Website
+    url: https://pairdrop.net
+  - label: Documentation
+    url: https://pairdrop.net/docs
+  - label: Github
+    url: https://github.com/schlagmichdoch/pairdrop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pairdrop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/pairdrop:1.11.2
+benefits:
+  - title: Peer-to-Peer File Sharing
+    description:
+      PairDrop provides direct peer-to-peer file sharing, ensuring that your
+      data is not stored on third-party servers, keeping transfers private and
+      secure.
+  - title: Cross-Platform Compatibility
+    description:
+      PairDrop supports various platforms, including Windows, macOS, Linux,
+      Android, and iOS, making it accessible for all devices on the same
+      network.
+  - title: Easy to Use
+    description:
+      With its simple and intuitive interface, PairDrop enables users to share
+      files quickly and effortlessly, without requiring complex configurations.
+  - title: Open-Source and Free
+    description:
+      PairDrop is an open-source solution, allowing users to enjoy its features
+      without subscription fees or hidden costs.
+features:
+  - title: Local Network File Sharing
+    description:
+      PairDrop operates on local networks, enabling secure and fast file
+      transfers without the need for an internet connection.
+  - title: Device Discovery
+    description:
+      Automatically discover and connect to nearby devices for quick file
+      sharing.
+  - title: End-to-End Encryption
+    description:
+      Ensure that your files are transferred securely with built-in end-to-end
+      encryption, protecting your data from unauthorized access.
+  - title: Lightweight and Minimalist
+    description:
+      Designed to be lightweight, PairDrop runs efficiently on all devices,
+      consuming minimal resources while providing robust functionality.
+tags:
+  - File Sharing
+  - Peer-to-Peer
+  - Cross-Platform
+  - Open Source

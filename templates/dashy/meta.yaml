@@ -1,23 +1,27 @@
 name: Dashy
-description: Dashy is the ultimate homepage for your homelab, designed to be
-  your personal, privacy-respecting dashboard. It is highly customizable and
-  easy to use, offering a unique user experience with its built-in themes and UI
-  color palette editor. Dashy can auto-fetch icons from the favicon of each of
-  your apps or services, and it provides an instant overview of the health of
-  each of your apps with status indicators. It also features a simple
-  authentication feature for protecting your dashboard, and supports multiple
-  users with granular controls. Dashy comes with 50+ pre-built widgets for
-  displaying dynamic content from any API-enabled service. It offers alternate
-  views for a minimal view or a workspace view, and allows you to choose how to
-  launch your apps. Dashy also includes a search and shortcuts feature for easy
-  navigation, and an optional cloud backup and sync service for off-site config
-  backup. The app supports multiple languages and is easily configurable through
-  a simple YAML file or directly through the UI.
-instructions: After deploying the project, it may take a while before the app is
-  available (5 minutes).
+description:
+  Dashy is the ultimate homepage for your homelab, designed to be your personal,
+  privacy-respecting dashboard. It is highly customizable and easy to use,
+  offering a unique user experience with its built-in themes and UI color
+  palette editor. Dashy can auto-fetch icons from the favicon of each of your
+  apps or services, and it provides an instant overview of the health of each of
+  your apps with status indicators. It also features a simple authentication
+  feature for protecting your dashboard, and supports multiple users with
+  granular controls. Dashy comes with 50+ pre-built widgets for displaying
+  dynamic content from any API-enabled service. It offers alternate views for a
+  minimal view or a workspace view, and allows you to choose how to launch your
+  apps. Dashy also includes a search and shortcuts feature for easy navigation,
+  and an optional cloud backup and sync service for off-site config backup. The
+  app supports multiple languages and is easily configurable through a simple
+  YAML file or directly through the UI.
+instructions:
+  After deploying the project, it may take a while before the app is available
+  (5 minutes).
 changeLog:
   - date: 2022-08-18
-    description: first release
+    description: First Release
+  - date: 2025-01-09
+    description: Version bumped to release-3.1.1
 links:
   - label: Website
     url: https://dashy.to/
@@ -33,13 +37,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,65 +47,77 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lissy93/dashy:2.1.1
+      default: lissy93/dashy:release-3.1.1
 benefits:
   - title: Highly Customizable
-    description: Dashy allows you to create a unique looking dashboard with tons of
+    description:
+      Dashy allows you to create a unique looking dashboard with tons of
       built-in themes and a UI color palette editor. You can also use custom CSS
       for further customization.
   - title: Privacy-Respecting
-    description: Dashy respects your privacy and provides features like simple auth
-      for protecting your dashboard. It also supports Keycloak and other SSO
+    description:
+      Dashy respects your privacy and provides features like simple auth for
+      protecting your dashboard. It also supports Keycloak and other SSO
       providers.
   - title: Multi-Language Support
-    description: Dashy's UI has been translated into several languages including
-      English, German, French, Dutch, and Slovenian. Your language should be
-      applied automatically, or you can change it in the config menu.
+    description:
+      Dashy's UI has been translated into several languages including English,
+      German, French, Dutch, and Slovenian. Your language should be applied
+      automatically, or you can change it in the config menu.
   - title: Cloud Backup & Sync
-    description: Dashy offers an optional, end-to-end encrypted, free backup cloud
-      service. This enables you to have your config backed up off-site, and to
-      sync data between multiple instances easily.
+    description:
+      Dashy offers an optional, end-to-end encrypted, free backup cloud service.
+      This enables you to have your config backed up off-site, and to sync data
+      between multiple instances easily.
 features:
   - title: Theming
-    description: With tons of built-in themes to choose from, plus a UI color
-      palette editor, you can have a unique looking dashboard in no time. There
-      is also support for custom CSS.
+    description:
+      With tons of built-in themes to choose from, plus a UI color palette
+      editor, you can have a unique looking dashboard in no time. There is also
+      support for custom CSS.
   - title: Icons
-    description: Dashy can auto-fetch icons from the favicon of each of your apps/
+    description:
+      Dashy can auto-fetch icons from the favicon of each of your apps/
       services. There is also native support for Font Awesome, Material Design
       Icons, emoji icons and normal images.
   - title: Status Indicators
-    description: Get an instant overview of the health of each of your apps with
-      status indicators. Once enabled, a small dot next to each app will show
-      whether it is up and online, with more info like response time visible on
-      hover.
+    description:
+      Get an instant overview of the health of each of your apps with status
+      indicators. Once enabled, a small dot next to each app will show whether
+      it is up and online, with more info like response time visible on hover.
   - title: Widgets
-    description: Display dynamic content from any API-enabled service. Dashy comes
-      bundled with 50+ pre-built widgets for self-hosted services, productivity,
-      and monitoring.
+    description:
+      Display dynamic content from any API-enabled service. Dashy comes bundled
+      with 50+ pre-built widgets for self-hosted services, productivity, and
+      monitoring.
   - title: Alternate Views
-    description: As well as the default home, there is also a minimal view, which
-      makes a great fast-loading browser start page. Plus a workspace view
-      useful for working on multiple apps at once, all without having to leave
-      your dashboard.
+    description:
+      As well as the default home, there is also a minimal view, which makes a
+      great fast-loading browser start page. Plus a workspace view useful for
+      working on multiple apps at once, all without having to leave your
+      dashboard.
   - title: Launching Methods
-    description: Choose how to launch each of your apps by default, or right click
-      for all options. Apps can be opened in a new tab, the same tab, a quick
-      pop-up modal or in the workspace view.
+    description:
+      Choose how to launch each of your apps by default, or right click for all
+      options. Apps can be opened in a new tab, the same tab, a quick pop-up
+      modal or in the workspace view.
   - title: Search & Shortcuts
-    description: To search, just start typing, results will be filtered instantly.
-      Use the arrow keys or tab to navigate through results, and press enter to
-      launch. You can also create custom shortcuts for frequently used apps, or
-      add custom tags for easier searching. Dashy can also be used to search the
-      web using your favorite search engine.
+    description:
+      To search, just start typing, results will be filtered instantly. Use the
+      arrow keys or tab to navigate through results, and press enter to launch.
+      You can also create custom shortcuts for frequently used apps, or add
+      custom tags for easier searching. Dashy can also be used to search the web
+      using your favorite search engine.
   - title: Configuration
-    description: Dashy's config is specified in a simple YAML file. But you can also
+    description:
+      Dashy's config is specified in a simple YAML file. But you can also
       configure directly through the UI, and have changes written to, and backed
       up on disk. Real-time validation and hints are in place to help you.
   - title: Customizable Layouts
-    description: Structure your dashboard to fit your use case. From the UI, you can
-      choose between different layouts, item sizes, show/ hide components,
-      switch themes plus more. You can customize pretty much every area of your
+    description:
+      Structure your dashboard to fit your use case. From the UI, you can choose
+      between different layouts, item sizes, show/ hide components, switch
+      themes plus more. You can customize pretty much every area of your
       dashboard. There are config options for custom header, footer, nav bar
       links, title etc. You can also choose to hide any elements you don't need.
 tags:

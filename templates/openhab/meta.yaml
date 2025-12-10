@@ -1,0 +1,89 @@
+name: OpenHAB
+description:
+  OpenHAB is an open-source automation software designed to integrate and
+  control smart home devices from various manufacturers. Written in Java, it
+  enables you to create rules, manage devices, and automate processes within
+  your smart home ecosystem. The platform provides a flexible and modular
+  approach, allowing integration with hundreds of devices and technologies
+  through add-ons. OpenHAB features a powerful rule engine, a unified user
+  interface, and supports various communication protocols such as Z-Wave,
+  Zigbee, and MQTT. It is highly customizable, secure, and community-driven,
+  offering extensive documentation and support. OpenHAB supports real-time
+  updates, is mobile-friendly, and can be deployed on multiple platforms
+  including Docker and Kubernetes. Additional features include voice control
+  integration, presence detection, and support for custom scripts.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 4.3.3
+  - date: 2025-07-24
+    description: Version bumped to 5.0.0
+links:
+  - label: Documentation
+    url: https://www.openhab.org/docs/
+  - label: Github
+    url: https://github.com/openhab/openhab-addons
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openhab
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: openhab/openhab:5.0.0
+benefits:
+  - title: Centralized Smart Home Control
+    description:
+      OpenHAB allows you to integrate and control multiple smart home devices
+      from a single platform. This provides a unified and seamless experience
+      for managing your home automation setup.
+  - title: Flexible Rule Engine
+    description:
+      The powerful rule engine in OpenHAB enables you to automate processes by
+      creating complex rules for your smart home devices. This ensures your home
+      works exactly the way you want.
+  - title: Multi-Platform Support
+    description:
+      OpenHAB supports various platforms including Linux, Windows, macOS,
+      Docker, and Kubernetes. This makes it easy to deploy OpenHAB on your
+      preferred environment.
+features:
+  - title: Voice Control Integration
+    description:
+      OpenHAB integrates with popular voice assistants like Alexa and Google
+      Assistant, allowing you to control your devices using voice commands for
+      hands-free convenience.
+  - title: Presence Detection
+    description:
+      This feature uses various methods such as geofencing or network presence
+      to detect when someone is home or away, enabling you to trigger automation
+      based on occupancy.
+  - title: Modular Add-On System
+    description:
+      OpenHAB supports a wide range of add-ons for integrating with different
+      devices and technologies. This ensures compatibility with hundreds of
+      smart home products.
+  - title: Unified User Interface
+    description:
+      The OpenHAB platform provides a customizable and user-friendly interface
+      that allows you to control and monitor your smart home devices from any
+      device, including mobile, tablet, and desktop.
+  - title: Secure and Private
+    description:
+      OpenHAB prioritizes security and privacy by running locally on your
+      network, ensuring that your data stays secure and under your control.
+tags:
+  - Smart Home
+  - Automation
+  - Productivity

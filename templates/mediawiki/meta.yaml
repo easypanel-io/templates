@@ -1,0 +1,100 @@
+name: MediaWiki
+description:
+  MediaWiki is a powerful, open-source wiki platform that powers some of the
+  largest collaborative projects, including Wikipedia. It offers a flexible and
+  extensible framework for creating and managing content, supporting features
+  like user management, version control, and powerful extensions. MediaWiki
+  provides multilingual support, ensuring global accessibility, and includes
+  built-in tools for content organization, search, and collaboration. It is an
+  ideal solution for knowledge bases, documentation sites, and community-driven
+  content platforms. With a vibrant ecosystem of plugins and themes, MediaWiki
+  can be customized to suit diverse use cases.
+instructions:
+  During the installation, configure the database as prompted, and once
+  completed, a file named "LocalSettings.php" will be downloaded. Open
+  EasyPanel, navigate to the Storage section for MediaWiki, and create a file
+  mount. Paste the content of the LocalSettings.php file into the mount and set
+  its mount path to /var/www/html/LocalSettings.php. Finally, redeploy the
+  MediaWiki app in EasyPanel to apply the configuration.
+changeLog:
+  - date: 2024-11-22
+    description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 1.43.0
+  - date: 2025-06-05
+    description: Update to 1.43.1
+  - date: 2025-07-22
+    description: Update to 1.43.3
+links:
+  - label: Website
+    url: https://www.mediawiki.org
+  - label: Documentation
+    url: https://www.mediawiki.org/wiki/Manual:Contents
+  - label: Github
+    url: https://github.com/wikimedia/mediawiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mediawiki
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mediawiki:1.43.3
+benefits:
+  - title: Robust Content Management
+    description:
+      MediaWiki provides a comprehensive set of tools for organizing, editing,
+      and managing collaborative content, making it suitable for knowledge bases
+      and wikis.
+  - title: Customizable and Extensible
+    description:
+      Leverage a wide array of extensions and skins to tailor MediaWiki to your
+      specific needs, whether for a public-facing site or internal
+      documentation.
+  - title: Multilingual Support
+    description:
+      Easily create multilingual content and manage translations with built-in
+      language support, ensuring accessibility for a global audience.
+  - title: Scalable and Flexible
+    description:
+      MediaWiki is built to handle projects of any size, from small teams to
+      massive, high-traffic sites like Wikipedia.
+  - title: Open Source
+    description:
+      MediaWiki is open-source, offering complete control and the freedom to
+      modify and adapt it to your organization's needs.
+features:
+  - title: Revision History and Versioning
+    description:
+      Track changes with a complete revision history, allowing users to compare,
+      restore, and review edits.
+  - title: User Management and Permissions
+    description:
+      Manage users and define granular permissions to control access and editing
+      rights on your wiki.
+  - title: Full-Text Search
+    description:
+      MediaWiki includes a powerful search feature to help users quickly find
+      the information they need.
+  - title: Structured Data with Templates
+    description:
+      Use templates to standardize and organize content, making it easier to
+      maintain and update.
+  - title: Active Community
+    description:
+      Join an active community of contributors and developers, offering support
+      and fostering innovation within the MediaWiki ecosystem.
+tags:
+  - Wiki
+  - Collaboration
+  - Content Management
+  - CMS

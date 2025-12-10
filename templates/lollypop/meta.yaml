@@ -1,0 +1,79 @@
+name: Lollypop
+description:
+  Lollypop is a self-hosted, high-performance music library manager and player.
+  It is designed to handle extensive music collections, offering a sleek and
+  modern interface for browsing, organizing, and playing your favorite tracks.
+  The app supports multiple audio formats, playlists, and smart sorting options.
+  Lollypop integrates seamlessly with online services to fetch album artwork,
+  lyrics, and artist information. It also provides a simple API for managing
+  playlists and controlling playback remotely. Lollypop is open-source, free,
+  and designed to run efficiently on minimal hardware, making it a lightweight
+  yet powerful solution for all your music needs.
+instructions: null
+changeLog:
+  - date: 2024-12-30
+    description: First Release
+  - date: 2025-07-22
+    description: Version bumped to 1.4.40
+links:
+  - label: Website
+    url: https://lollypop.app/
+  - label: Documentation
+    url: https://lollypop.app/docs/
+  - label: Github
+    url: https://github.com/linuxserver/lollypop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lollypop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/lollypop:1.4.40
+benefits:
+  - title: Modern Interface
+    description:
+      Lollypop features a sleek and modern interface that makes it easy to
+      browse, organize, and play your music collection.
+  - title: Multi-Format Support
+    description:
+      Supports multiple audio formats, allowing you to play all your favorite
+      tracks without any compatibility issues.
+  - title: Lightweight
+    description:
+      Lollypop is designed to run efficiently on minimal hardware, making it a
+      perfect choice for users looking for a lightweight music player.
+features:
+  - title: Music Library Management
+    description:
+      Organize and browse your music library with smart sorting options,
+      playlists, and metadata fetching for tracks.
+  - title: Remote API
+    description:
+      Lollypop provides a simple API to manage playlists and control playback
+      remotely from other devices.
+  - title: Extensibility
+    description:
+      Integrate with online services to fetch album artwork, lyrics, and artist
+      information for an enriched listening experience.
+  - title: Performance
+    description:
+      Lollypop is optimized for high performance and minimal resource usage,
+      ensuring smooth playback and library management.
+  - title: Open Source
+    description:
+      Free and open-source software, allowing the community to contribute to its
+      features and enhancements.
+tags:
+  - Music
+  - Player
+  - Library Management

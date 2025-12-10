@@ -1,11 +1,12 @@
 name: Chatwoot
-description: Chatwoot is a new age multi-channel customer experience platform
-  designed for businesses of all sizes. It serves as an open-source customer
-  engagement suite, providing an alternative to platforms like Intercom,
-  Zendesk, and Salesforce Service Cloud. With Chatwoot, you can manage your
-  agents' workload, track their performance through auto-updating reports, and
-  work smarter with automations. The app allows you to perform key actions on
-  multiple conversations at once and provides super quick responses to customer
+description:
+  Chatwoot is a new age multi-channel customer experience platform designed for
+  businesses of all sizes. It serves as an open-source customer engagement
+  suite, providing an alternative to platforms like Intercom, Zendesk, and
+  Salesforce Service Cloud. With Chatwoot, you can manage your agents' workload,
+  track their performance through auto-updating reports, and work smarter with
+  automations. The app allows you to perform key actions on multiple
+  conversations at once and provides super quick responses to customer
   conversations, making your agents super productive. It also offers features to
   manage your email, Facebook, Instagram, Line, SMS, Telegram, and Twitter
   customer interactions directly from the platform. Additionally, Chatwoot
@@ -15,6 +16,14 @@ instructions: null
 changeLog:
   - date: 2023-1-22
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to v3.16.0
+  - date: 2025-02-21
+    description:
+      PgVector Extention enabled PG17 has been added and version bumped to
+      v4.0.1
+  - date: 2025-07-15
+    description: Version bumped to v4.3.0 
 links:
   - label: Documentation
     url: https://www.chatwoot.com/help-center
@@ -28,16 +37,13 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - defaultLocale
     - appServiceName
     - appServiceImage
+    - sidekiqServiceName
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     defaultLocale:
       type: string
       title: Default Locale
@@ -49,7 +55,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chatwoot/chatwoot:v2.17.1
+      default: chatwoot/chatwoot:v4.3.0
+    sidekiqServiceName:
+      type: string
+      title: Sidekiq Service Name
+      default: chatwoot-sidekiq
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -60,43 +70,50 @@ schema:
       default: chatwoot-redis
 benefits:
   - title: Efficient Customer Engagement
-    description: Chatwoot is a powerful customer engagement suite that allows
-      businesses to manage their customer interactions across multiple channels.
-      It provides a streamlined platform for handling customer queries, ensuring
-      quick responses and high productivity.
+    description:
+      Chatwoot is a powerful customer engagement suite that allows businesses to
+      manage their customer interactions across multiple channels. It provides a
+      streamlined platform for handling customer queries, ensuring quick
+      responses and high productivity.
   - title: Multi-Channel Support
-    description: With Chatwoot, businesses can stay connected with their customers
-      across various platforms including email, Facebook, Instagram, Line, SMS,
+    description:
+      With Chatwoot, businesses can stay connected with their customers across
+      various platforms including email, Facebook, Instagram, Line, SMS,
       Telegram, Twitter, and WhatsApp. This ensures a seamless customer
       experience, regardless of the communication channel.
   - title: Real-Time Insights
-    description: Chatwoot provides real-time insights into your conversations and
-      agent performance. It allows businesses to track their customer
-      satisfaction score on autopilot, ensuring continuous improvement in
-      customer service.
+    description:
+      Chatwoot provides real-time insights into your conversations and agent
+      performance. It allows businesses to track their customer satisfaction
+      score on autopilot, ensuring continuous improvement in customer service.
 features:
   - title: Shared Inbox
-    description: Chatwoot offers a shared inbox feature that allows teams to
-      collaborate and solve customer queries together. This ensures efficient
-      workload management and faster resolution of customer issues.
+    description:
+      Chatwoot offers a shared inbox feature that allows teams to collaborate
+      and solve customer queries together. This ensures efficient workload
+      management and faster resolution of customer issues.
   - title: Automations
-    description: Work smarter with Chatwoot's automation feature. It allows
-      businesses to perform key actions on multiple conversations at once,
-      saving time and improving efficiency.
+    description:
+      Work smarter with Chatwoot's automation feature. It allows businesses to
+      perform key actions on multiple conversations at once, saving time and
+      improving efficiency.
   - title: Live Chat Channels
-    description: Chatwoot provides live chat channels to facilitate real-time
-      communication with customers. This feature enables businesses to provide
-      instant support and enhance customer satisfaction.
+    description:
+      Chatwoot provides live chat channels to facilitate real-time communication
+      with customers. This feature enables businesses to provide instant support
+      and enhance customer satisfaction.
   - title: Chatbots
-    description: Chatwoot's chatbot feature allows businesses to automate
-      conversations, providing quick responses to customer queries and improving
-      agent productivity.
+    description:
+      Chatwoot's chatbot feature allows businesses to automate conversations,
+      providing quick responses to customer queries and improving agent
+      productivity.
   - title: Mobile Apps
-    description: Stay connected with your customers on the go with Chatwoot's mobile
-      apps. It ensures uninterrupted customer service, regardless of your
-      location.
+    description:
+      Stay connected with your customers on the go with Chatwoot's mobile apps.
+      It ensures uninterrupted customer service, regardless of your location.
   - title: Integrations
-    description: Chatwoot can be integrated with various platforms including Slack,
+    description:
+      Chatwoot can be integrated with various platforms including Slack,
       Dialogflow, and more. This allows businesses to extend Chatwoot's
       functionalities for back-office operations and other use cases.
 tags:

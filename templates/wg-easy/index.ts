@@ -7,11 +7,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [`WG_HOST=$(PRIMARY_DOMAIN)`, `PASSWORD=${input.appPassword}`].join(
-        "\n"
-      ),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -19,28 +15,31 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 50921,
+          port: 51821,
         },
       ],
       ports: [
         {
-          protocol: "udp",
-          published: 51820,
+          published: Number(input.appServicePort),
           target: 51820,
-        },
-        {
-          protocol: "tcp",
-          published: 51821,
-          target: 51821,
+          protocol: "udp",
         },
       ],
       deploy: {
-        sysctls: {
-          "net.ipv4.conf.all.src_valid_mark": "1",
-          "net.ipv4.ip_forward": "1",
-        },
         capAdd: ["NET_ADMIN", "SYS_MODULE"],
       },
+      mounts: [
+        {
+          type: "volume",
+          name: "wg-config",
+          mountPath: "/etc/wireguard",
+        },
+        {
+          type: "bind",
+          hostPath: "/lib/modules",
+          mountPath: "/lib/modules",
+        },
+      ],
     },
   });
 

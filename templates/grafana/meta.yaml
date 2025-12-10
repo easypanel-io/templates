@@ -1,18 +1,25 @@
 name: Grafana
-description: Grafana is a powerful, open-source platform designed to provide
-  comprehensive metrics, logs, and trace data visualization. It allows users to
-  query, visualize, and alert on their data, offering high-scale distributed
-  tracing and scalable, performant metrics. The app also includes features for
-  incident response and management, performance testing, and on-call management.
-  Grafana can connect to various data sources and applications, providing
-  operational dashboards for your data anywhere. It also offers a free forever
-  plan, allowing users to monitor their data with 10,000 series metrics, 50 GB
-  of logs, 50 GB of traces, and 500 VUh of k6 testing. Grafana is a versatile
-  tool for anyone looking to gain insights from their data.
+description:
+  Grafana is a powerful, open-source platform designed to provide comprehensive
+  metrics, logs, and trace data visualization. It allows users to query,
+  visualize, and alert on their data, offering high-scale distributed tracing
+  and scalable, performant metrics. The app also includes features for incident
+  response and management, performance testing, and on-call management. Grafana
+  can connect to various data sources and applications, providing operational
+  dashboards for your data anywhere. It also offers a free forever plan,
+  allowing users to monitor their data with 10,000 series metrics, 50 GB of
+  logs, 50 GB of traces, and 500 VUh of k6 testing. Grafana is a versatile tool
+  for anyone looking to gain insights from their data.
 instructions: Login with admin:admin
 changeLog:
   - date: 2023-3-15
     description: first release
+  - date: 2024-10-09
+    description: Version changed to 11.2.2
+  - date: 2025-01-14
+    description: Version bumped to 11.4.0
+  - date: 2025-07-21
+    description: Version bumped to 12.0.2
 links:
   - label: Website
     url: https://grafana.com
@@ -23,16 +30,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -40,40 +45,49 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: grafana/grafana-oss:9.5.1
+      default: grafana/grafana-oss:12.0.2
 benefits:
   - title: Comprehensive Data Visualization
-    description: Grafana provides a powerful platform for visualizing your data,
-      making it easy to understand and analyze. It supports a wide range of data
-      sources, allowing you to bring together all your data in one place.
+    description:
+      Grafana provides a powerful platform for visualizing your data, making it
+      easy to understand and analyze. It supports a wide range of data sources,
+      allowing you to bring together all your data in one place.
   - title: Effective Incident Response & Management
-    description: With Grafana Alerting, Grafana Incident, and Grafana OnCall, you
-      can effectively manage incidents and respond quickly to issues. This
-      ensures that your systems remain up and running, minimizing downtime and
+    description:
+      With Grafana Alerting, Grafana Incident, and Grafana OnCall, you can
+      effectively manage incidents and respond quickly to issues. This ensures
+      that your systems remain up and running, minimizing downtime and
       disruption.
   - title: Performance Testing
-    description: Grafana k6 allows you to conduct performance testing, ensuring that
-      your systems are capable of handling the demands placed on them. This
-      helps to prevent issues before they occur, improving the reliability of
-      your systems.
+    description:
+      Grafana k6 allows you to conduct performance testing, ensuring that your
+      systems are capable of handling the demands placed on them. This helps to
+      prevent issues before they occur, improving the reliability of your
+      systems.
 features:
   - title: Grafana Loki
-    description: A multi-tenant log aggregation system that allows you to easily
-      manage and analyze your logs.
+    description:
+      A multi-tenant log aggregation system that allows you to easily manage and
+      analyze your logs.
   - title: Grafana Tempo
-    description: A high-scale distributed tracing backend that provides detailed
-      insights into your systems.
+    description:
+      A high-scale distributed tracing backend that provides detailed insights
+      into your systems.
   - title: Grafana Mimir
-    description: A scalable and performant metrics backend that allows you to
-      effectively monitor your systems.
+    description:
+      A scalable and performant metrics backend that allows you to effectively
+      monitor your systems.
   - title: Grafana OnCall
-    description: An on-call management feature that ensures you can quickly respond
-      to incidents and issues.
+    description:
+      An on-call management feature that ensures you can quickly respond to
+      incidents and issues.
   - title: Grafana k6
-    description: A load testing tool for engineering teams that helps ensure your
-      systems can handle the demands placed on them.
+    description:
+      A load testing tool for engineering teams that helps ensure your systems
+      can handle the demands placed on them.
   - title: Prometheus
-    description: A powerful tool for monitoring Kubernetes and cloud native systems,
+    description:
+      A powerful tool for monitoring Kubernetes and cloud native systems,
       providing detailed insights and metrics.
 tags:
   - Monitoring

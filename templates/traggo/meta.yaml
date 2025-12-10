@@ -1,0 +1,81 @@
+name: Traggo
+description:
+  Traggo is a powerful, self-hosted time tracking and project management tool
+  designed to help teams and individuals organize their workflows and track time
+  efficiently. It features an intuitive interface, flexible reporting, and
+  customizable dashboards. With Traggo, you can maintain complete control over
+  your data, ensuring privacy and productivity.
+instructions:
+
+changeLog:
+  - date: 2024-11-27
+    description: Template Release
+  - date: 2025-03-03
+    description: Version bumped to 0.6.1
+  - date: 2025-07-25
+    description: Version bumped to 0.7.1
+
+links:
+  - label: Website
+    url: https://traggo.net/
+  - label: Github
+    url: https://github.com/traggo/server
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - traggoUsername
+    - traggoPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: traggo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: traggo/server:0.7.1
+    traggoUsername:
+      type: string
+      title: Traggo Username
+      default: admin
+    traggoPassword:
+      type: string
+      title: Traggo Password
+
+benefits:
+  - title: Efficient Time Tracking
+    description:
+      Traggo provides intuitive tools for logging time and managing projects
+      effectively.
+  - title: Self-Hosted Solution
+    description:
+      Take full control of your data and privacy with this self-hosted platform.
+  - title: Flexible Reporting
+    description:
+      Generate detailed reports to track progress and measure team productivity.
+
+features:
+  - title: Time Logging
+    description: Easily track and log time for various tasks and projects.
+  - title: Custom Dashboards
+    description:
+      Personalize your dashboards to suit your workflow and preferences.
+  - title: Team Collaboration
+    description:
+      Enable seamless collaboration with role-based permissions and shared
+      views.
+  - title: Export Options
+    description: Export reports and logs in multiple formats for external use.
+
+tags:
+  - Time Tracking
+  - Self-Hosted
+  - Productivity
+  - Project Management

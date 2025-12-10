@@ -9,7 +9,6 @@ export function generate(input: Input): Output {
     services.push({
       type: "app",
       data: {
-        projectName: input.projectName,
         serviceName: input.runnerServiceName,
         env: [
           `DRONE_RPC_HOST=${input.rpcHost}`,
@@ -41,7 +40,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `DRONE_GITHUB_CLIENT_ID=${input.clientID}`,

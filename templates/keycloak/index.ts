@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `KEYCLOAK_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
@@ -18,11 +17,12 @@ export function generate(input: Input): Output {
         `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
         `KEYCLOAK_ADMIN_PASSWORD=${input.keycloakPassword}`,
         `KC_HOSTNAME_STRICT_HTTPS=false`,
-        `KC_HOSTNAME=$(PRIMARY_DOMAIN)`,
-        `KC_HOSTNAME_ADMIN=$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME=https://$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME_ADMIN=https://$(PRIMARY_DOMAIN)`,
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
         `KC_FEATURES=docker`,
+        `KC_PROXY_HEADERS=xforwarded`,
       ].join("\n"),
       source: {
         type: "image",
@@ -40,6 +40,11 @@ export function generate(input: Input): Output {
           name: "data",
           mountPath: "/opt/keycloak",
         },
+        {
+          type: "volume",
+          name: "themes",
+          mountPath: "/opt/bitnami/keycloak/themes",
+        },
       ],
     },
   });
@@ -47,7 +52,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

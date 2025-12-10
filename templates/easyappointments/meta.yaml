@@ -1,0 +1,70 @@
+name: EasyAppointments
+description:
+  EasyAppointments is an open-source, self-hosted scheduling platform designed
+  to help businesses manage appointments seamlessly. It enables organizations to
+  handle booking, customer management, and service scheduling with ease. With an
+  intuitive interface and robust customization options, EasyAppointments
+  supports integrations, multi-language capabilities, and detailed reporting,
+  making it a versatile solution for appointment scheduling.
+instructions: null
+changeLog:
+  - date: 2025-01-20
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/alextselegidis/easyappointments
+  - label: Documentation
+    url: https://easyappointments.org/
+  - label: Demo
+    url: https://demo.easyappointments.org/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: easyappointments
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: alextselegidis/easyappointments:1.5.1
+benefits:
+  - title: Simplified Appointment Scheduling
+    description:
+      EasyAppointments provides an intuitive platform for managing appointments
+      and schedules efficiently.
+  - title: Customizable and Scalable
+    description:
+      EasyAppointments offers a range of customization options, including themes
+      and integrations, to grow with your business needs.
+  - title: Multi-Language Support
+    description:
+      Operate in multiple languages to cater to diverse customer bases.
+features:
+  - title: Online Appointment Booking
+    description:
+      Allow customers to book appointments online, reducing manual intervention.
+  - title: Customer and Service Management
+    description:
+      Manage customer profiles and service details efficiently in one place.
+  - title: Calendar Synchronization
+    description:
+      Sync with Google Calendar or other platforms for seamless scheduling.
+  - title: Reporting and Analytics
+    description:
+      Generate detailed reports to track appointments, revenue, and customer
+      trends.
+  - title: Mobile-Friendly Interface
+    description: A responsive interface ensures accessibility across devices.
+tags:
+  - Appointment Scheduling
+  - Booking System
+  - Open Source
+  - Calendar Integration
+  - Multi-Language

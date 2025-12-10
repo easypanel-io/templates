@@ -1,6 +1,7 @@
 name: Excalidraw
-description: Excalidraw is an open-source virtual whiteboard designed to bring
-  your creativity to life. It allows you to create beautiful hand-drawn like
+description:
+  Excalidraw is an open-source virtual whiteboard designed to bring your
+  creativity to life. It allows you to create beautiful hand-drawn like
   diagrams, wireframes, or any other visuals you can imagine. The app is
   equipped with an infinite, canvas-based whiteboard that supports a hand-drawn
   like style. It offers a wide range of tools including rectangle, circle,
@@ -27,13 +28,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,42 +38,52 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: excalidraw/excalidraw:sha-4bfc5bb
+      default: excalidraw/excalidraw:latest
 benefits:
   - title: Infinite, Canvas-Based Whiteboard
-    description: Excalidraw provides an infinite, canvas-based whiteboard, allowing
-      you to create and expand your ideas without any limitations.
+    description:
+      Excalidraw provides an infinite, canvas-based whiteboard, allowing you to
+      create and expand your ideas without any limitations.
   - title: Hand-Drawn Style
-    description: With Excalidraw, you can create beautiful hand-drawn like diagrams,
+    description:
+      With Excalidraw, you can create beautiful hand-drawn like diagrams,
       wireframes, or whatever you like, giving your work a unique and personal
       touch.
   - title: End-to-End Encryption
-    description: Excalidraw ensures the security of your work with end-to-end
-      encryption, keeping your creations safe and private.
+    description:
+      Excalidraw ensures the security of your work with end-to-end encryption,
+      keeping your creations safe and private.
   - title: Local-First Support
-    description: All your data is saved locally in your browser, ensuring you have
-      access to your work even when offline.
+    description:
+      All your data is saved locally in your browser, ensuring you have access
+      to your work even when offline.
 features:
   - title: Free & Open-Source
-    description: Excalidraw is a free and open-source application, making it
-      accessible to everyone.
+    description:
+      Excalidraw is a free and open-source application, making it accessible to
+      everyone.
   - title: Customizable
-    description: Excalidraw is highly customizable, allowing you to tailor your
-      workspace to your needs.
+    description:
+      Excalidraw is highly customizable, allowing you to tailor your workspace
+      to your needs.
   - title: Image Support
-    description: Excalidraw supports image integration, enabling you to enhance your
-      work with visuals.
+    description:
+      Excalidraw supports image integration, enabling you to enhance your work
+      with visuals.
   - title: Export Options
-    description: Excalidraw allows you to export your work to PNG, SVG, clipboard,
-      or as an .excalidraw json file, providing flexibility in how you save and
-      share your creations.
+    description:
+      Excalidraw allows you to export your work to PNG, SVG, clipboard, or as an
+      .excalidraw json file, providing flexibility in how you save and share
+      your creations.
   - title: Wide Range of Tools
-    description: Excalidraw offers a wide range of tools including rectangle,
-      circle, diamond, arrow, line, free-draw, eraser, and more, giving you the
-      freedom to create as you wish.
+    description:
+      Excalidraw offers a wide range of tools including rectangle, circle,
+      diamond, arrow, line, free-draw, eraser, and more, giving you the freedom
+      to create as you wish.
   - title: Zoom and Panning Support
-    description: Excalidraw supports zoom and panning, allowing you to navigate your
-      canvas with ease.
+    description:
+      Excalidraw supports zoom and panning, allowing you to navigate your canvas
+      with ease.
 tags:
   - Productivity
   - Collaboration

@@ -1,8 +1,9 @@
 name: Syncthing
-description: Syncthing is a powerful, real-time file synchronization program
-  designed to keep your data secure and under your control. It enables the
-  synchronization of files between two or more computers, ensuring your data is
-  always up-to-date across your devices. Syncthing prioritizes your privacy and
+description:
+  Syncthing is a powerful, real-time file synchronization program designed to
+  keep your data secure and under your control. It enables the synchronization
+  of files between two or more computers, ensuring your data is always
+  up-to-date across your devices. Syncthing prioritizes your privacy and
   security, with no data ever stored on a central server that could be
   compromised. All communication is encrypted and authenticated, with only
   devices you have explicitly allowed able to connect to your other devices. The
@@ -16,6 +17,10 @@ instructions: null
 changeLog:
   - date: 2023-07-10
     description: First Release
+  - date: 2025-03-03
+    description: Version bumped to 1.29
+  - date: 2025-07-25
+    description: Version bumped to 1.30
 links:
   - label: Website
     url: https://syncthing.net
@@ -26,16 +31,14 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -43,42 +46,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1
+      default: syncthing/syncthing:1.30
 benefits:
   - title: Continuous File Synchronization
-    description: Syncthing is a real-time file synchronization program that keeps
-      your files updated across multiple computers. It ensures that your data is
+    description:
+      Syncthing is a real-time file synchronization program that keeps your
+      files updated across multiple computers. It ensures that your data is
       always current, no matter where you access it from.
   - title: Private & Secure
-    description: Your data is stored only on your computers, with no central server
-      that could be compromised. All communication is encrypted and
-      authenticated, ensuring your data is safe from prying eyes.
+    description:
+      Your data is stored only on your computers, with no central server that
+      could be compromised. All communication is encrypted and authenticated,
+      ensuring your data is safe from prying eyes.
   - title: Open and Transparent
-    description: Syncthing operates on an open protocol with all source code
-      available on GitHub. There are no hidden processes, and any bugs found are
-      immediately visible for anyone to browse.
+    description:
+      Syncthing operates on an open protocol with all source code available on
+      GitHub. There are no hidden processes, and any bugs found are immediately
+      visible for anyone to browse.
   - title: Easy to Use
-    description: "Syncthing is powerful yet simple to use. You can synchronize as
-      many folders as you need with different people or just between your own
+    description:
+      "Syncthing is powerful yet simple to use. You can synchronize as many
+      folders as you need with different people or just between your own
       devices. It doesn’t need IP addresses or advanced configuration: it just
       works, over LAN and over the Internet."
 features:
   - title: Real-Time Synchronization
-    description: Syncthing synchronizes files between two or more computers in real
-      time, ensuring your data is always up-to-date.
+    description:
+      Syncthing synchronizes files between two or more computers in real time,
+      ensuring your data is always up-to-date.
   - title: Private and Secure
-    description: Syncthing uses TLS for secure communication, includes perfect
-      forward secrecy to prevent any eavesdropper from ever gaining access to
-      your data, and only allows connections from devices you have explicitly
-      allowed.
+    description:
+      Syncthing uses TLS for secure communication, includes perfect forward
+      secrecy to prevent any eavesdropper from ever gaining access to your data,
+      and only allows connections from devices you have explicitly allowed.
   - title: Open Protocol
-    description: The protocol used by Syncthing is a documented specification with
-      no hidden processes. All source code is available on GitHub.
+    description:
+      The protocol used by Syncthing is a documented specification with no
+      hidden processes. All source code is available on GitHub.
   - title: Powerful Interface
-    description: Configure and monitor Syncthing via a responsive and powerful
-      interface accessible via your browser. It works on multiple platforms
-      including Mac OS X, Windows, Linux, FreeBSD, Solaris, OpenBSD, and many
-      others.
+    description:
+      Configure and monitor Syncthing via a responsive and powerful interface
+      accessible via your browser. It works on multiple platforms including Mac
+      OS X, Windows, Linux, FreeBSD, Solaris, OpenBSD, and many others.
 tags:
   - File Management
   - Security

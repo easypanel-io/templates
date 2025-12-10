@@ -1,0 +1,116 @@
+name: KillBill
+description:
+  KillBill is an open-source subscription billing and payment platform designed
+  to simplify complex billing workflows for SaaS and other businesses. It
+  provides robust support for recurring billing, invoicing, and payment
+  management while offering flexibility for customization. KillBill ensures
+  seamless integration with third-party payment gateways, making it adaptable
+  for global payment needs. It supports multiple plugins to extend
+  functionality, enabling businesses to manage tax compliance, analytics,
+  notifications, and more. The platform's Kaui UI offers an intuitive
+  administrative console for managing subscriptions, invoices, payments, and
+  tenants. KillBill's API-driven design allows developers to customize and
+  automate every aspect of the billing process. Its modular architecture ensures
+  it can scale with the growing needs of businesses, providing robust tools for
+  revenue management.
+instructions:
+  You have to configure the KillBill URL in your Kaui Environment Section. Then
+  access the Kaui App Service to access KillBill. Default credentials username;
+  admin, password; password.
+changeLog:
+  - date: 2023-3-16
+    description: First release
+links:
+  - label: Website
+    url: https://killbill.io
+  - label: Documentation
+    url: https://docs.killbill.io
+  - label: GitHub
+    url: https://github.com/killbill/killbill
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - kauiAppServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: killbill
+    appServiceImage:
+      type: string
+      title: KillBill Service Image
+      default: killbill/killbill:0.24.13
+    kauiAppServiceImage:
+      type: string
+      title: Kaui Admin Console Image
+      default: killbill/kaui:3.0.17
+benefits:
+  - title: Flexible Billing Engine
+    description:
+      KillBill supports complex billing scenarios, including recurring payments,
+      subscription management, and multi-tier pricing models.
+  - title: Seamless Payment Integration
+    description:
+      KillBill integrates with various third-party payment gateways, supporting
+      global payment methods for businesses of any size.
+  - title: API-Driven
+    description:
+      KillBill provides a powerful API-first approach, enabling developers to
+      automate and customize billing workflows to suit business needs.
+  - title: Extensible Plugin System
+    description:
+      The plugin architecture allows extending KillBill's capabilities with
+      custom integrations, notifications, tax calculations, and reporting.
+  - title: Centralized Admin Management
+    description:
+      Kaui, the admin console, allows centralized management of subscriptions,
+      invoices, payments, and tenants, providing clear insights into billing
+      operations.
+features:
+  - title: Subscription Management
+    description:
+      Create, update, and manage subscriptions with ease, supporting various
+      pricing models such as flat, tiered, and volume-based billing.
+  - title: Invoicing Engine
+    description:
+      KillBill automatically generates detailed invoices for subscriptions and
+      usage-based charges, ensuring accuracy and compliance.
+  - title: Payment Management
+    description:
+      Manage payments, refunds, and chargebacks with integrations to major
+      payment gateways like Stripe, PayPal, and Authorize.Net.
+  - title: Multi-Tenancy
+    description:
+      KillBill supports multi-tenancy, enabling businesses to manage multiple
+      customers under a single instance.
+  - title: Extensible Plugin Framework
+    description:
+      Extend KillBill's capabilities using plugins for tax calculations,
+      analytics, notifications, or custom payment integrations.
+  - title: API-First Design
+    description:
+      The powerful REST API allows you to programmatically interact with all
+      aspects of billing, invoicing, and payment management.
+  - title: Kaui Admin Console
+    description:
+      Kaui provides an intuitive user interface to manage subscriptions,
+      payments, invoices, and tenants efficiently.
+  - title: Event Notifications
+    description:
+      Leverage KillBill's event-driven architecture to trigger notifications,
+      updates, or actions based on billing events.
+tags:
+  - Subscription Management
+  - Recurring Billing
+  - Invoicing
+  - Payment Management
+  - API-Driven
+  - Extensible Plugins
+  - Multi-Tenancy
+  - Kaui Admin Console
+  - Revenue Management

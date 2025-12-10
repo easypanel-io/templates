@@ -1,21 +1,27 @@
 name: Calcom
-description: Cal.com is a versatile scheduling app designed to streamline the
-  process of setting up meetings, appointments, and events. It allows users to
-  set their availability, connect their existing calendars, and share a personal
-  link for others to book a meeting at a time that works for both parties. The
-  app ensures you never get double booked by checking for conflicts across all
-  your calendars. It also offers workflow automation, enabling you to build
-  processes around your events with automatic notifications, reminders, and
-  follow-ups. With features like round-robin scheduling, routing forms, and
-  meeting overload prevention, Cal.com adapts to any business, making it an
-  ideal solution for doctors, companies, teachers, and experts. The app is
-  available in over 26 languages and can be embedded anywhere for easy access.
-  It also offers simple rescheduling and requires confirmation to ensure smooth
-  scheduling.
+description:
+  Cal.com is a versatile scheduling app designed to streamline the process of
+  setting up meetings, appointments, and events. It allows users to set their
+  availability, connect their existing calendars, and share a personal link for
+  others to book a meeting at a time that works for both parties. The app
+  ensures you never get double booked by checking for conflicts across all your
+  calendars. It also offers workflow automation, enabling you to build processes
+  around your events with automatic notifications, reminders, and follow-ups.
+  With features like round-robin scheduling, routing forms, and meeting overload
+  prevention, Cal.com adapts to any business, making it an ideal solution for
+  doctors, companies, teachers, and experts. The app is available in over 26
+  languages and can be embedded anywhere for easy access. It also offers simple
+  rescheduling and requires confirmation to ensure smooth scheduling.
 instructions: null
 changeLog:
   - date: 2023-04-03
     description: First Release
+  - date: 2025-01-09
+    description: Version bumped to v4.7.8
+  - date: 2025-02-21
+    description: Version bumped to v5.0.4
+  - date: 2025-07-15
+    description: Version bumped to v5.4.20
 links:
   - label: Website
     url: https://cal.com
@@ -26,17 +32,15 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     enableStudio:
       type: boolean
       title: Enable Prisma Studio
@@ -48,54 +52,65 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: calcom/cal.com:v2.7.6
+      default: calcom/cal.com:v5.4.20
     databaseServiceName:
       type: string
       title: App Service Name
       default: calcom-db
 benefits:
   - title: Efficient Scheduling
-    description: Cal.com is designed to make scheduling meetings and events
-      effortless. It eliminates the need for back-and-forth emails, allowing you
-      to focus on the meeting itself rather than the process of scheduling it.
+    description:
+      Cal.com is designed to make scheduling meetings and events effortless. It
+      eliminates the need for back-and-forth emails, allowing you to focus on
+      the meeting itself rather than the process of scheduling it.
   - title: Avoid Double Booking
-    description: The app reads your availability from all your existing calendars,
-      ensuring you never get double booked. It checks for conflicts across all
-      of your calendars and only offers times that are open.
+    description:
+      The app reads your availability from all your existing calendars, ensuring
+      you never get double booked. It checks for conflicts across all of your
+      calendars and only offers times that are open.
   - title: Automated Workflow
-    description: Cal.com enables you to build processes around your events.
-      Notifications, reminders, and follow-ups are automatically taken care of,
-      making your scheduling workflow seamless and efficient.
+    description:
+      Cal.com enables you to build processes around your events. Notifications,
+      reminders, and follow-ups are automatically taken care of, making your
+      scheduling workflow seamless and efficient.
   - title: Adaptable Scheduling
-    description: The app adapts to any business, from doctors scheduling patients to
+    description:
+      The app adapts to any business, from doctors scheduling patients to
       companies booking candidates for interviews. It's a versatile tool that
       can be tailored to suit your specific scheduling needs.
 features:
   - title: Set Your Availability
-    description: With Cal.com, you can set repeating schedules for the times of the
-      day and week that you want people to be able to book you. This ensures
-      that meetings are scheduled at a time that works for both parties.
+    description:
+      With Cal.com, you can set repeating schedules for the times of the day and
+      week that you want people to be able to book you. This ensures that
+      meetings are scheduled at a time that works for both parties.
   - title: Share Your Link
-    description: The app allows you to share your personal Cal.com link, making it
+    description:
+      The app allows you to share your personal Cal.com link, making it
       incredibly easy for people to book a meeting with you.
   - title: Workflow Automation
-    description: Cal.com offers workflow automation features, including
-      notifications, reminders, and follow-ups. This ensures that you stay on
-      top of your schedule and never miss a meeting.
+    description:
+      Cal.com offers workflow automation features, including notifications,
+      reminders, and follow-ups. This ensures that you stay on top of your
+      schedule and never miss a meeting.
   - title: Round-Robin Scheduling
-    description: This feature ensures even distribution of calls across your team.
+    description:
+      This feature ensures even distribution of calls across your team.
       Collective availability makes it easy to book your team when everyone is
       available.
   - title: Routing Forms
-    description: Ensure every booker is connected to the right person with Routing
-      Forms. Ask screening questions and automatically connect bookers to the
-      right person, event, or even to a link.
+    description:
+      Ensure every booker is connected to the right person with Routing Forms.
+      Ask screening questions and automatically connect bookers to the right
+      person, event, or even to a link.
   - title: Limit Overbooking
-    description: You can limit people from overbooking you on a weekly or daily
-      basis. Put breathing room between meetings with buffers either side and
-      prevent surprises with minimum notice periods.
+    description:
+      You can limit people from overbooking you on a weekly or daily basis. Put
+      breathing room between meetings with buffers either side and prevent
+      surprises with minimum notice periods.
   - title: Customization
-    description: Cal.com allows you to customize your scheduling experience. Set
+    description:
+      Cal.com allows you to customize your scheduling experience. Set
       availability, location, duration, and more on a per-link basis. Send
       bookings to different calendars or set a default.
 tags:

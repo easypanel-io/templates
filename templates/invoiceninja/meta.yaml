@@ -1,0 +1,93 @@
+name: InvoiceNinja
+description:
+  Invoice Ninja is a powerful, open-source platform for managing invoices,
+  quotes, and payments, specifically designed for freelancers and small
+  businesses. It allows you to automate billing, track payments, and manage
+  expenses effortlessly. With a user-friendly interface and robust feature set,
+  Invoice Ninja supports multi-currency, recurring billing, and various payment
+  gateways, providing a comprehensive invoicing solution.
+instructions: Open the nginx domain to access InvoiceNinja
+changeLog:
+  - date: 2024-11-21
+    description: First Release
+  - date: 2025-05-23
+    description: update to v5.11
+  - date: 2025-07-22
+    description: Version bumped to v5.12
+links:
+  - label: Github
+    url: https://github.com/invoiceninja/invoiceninja
+  - label: Documentation
+    url: https://invoiceninja.github.io/docs/
+  - label: Demo
+    url: https://demo.invoiceninja.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - nginxImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: invoiceninja
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: invoiceninja/invoiceninja:5.12
+    nginxImage:
+      type: string
+      title: Nginx Image
+      default: nginx:1.27
+    adminUsername:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+benefits:
+  - title: Streamlined Invoicing
+    description:
+      Invoice Ninja simplifies invoicing with customizable templates, recurring
+      invoices, and the ability to track payments and expenses effortlessly.
+  - title: Payment Integration
+    description:
+      Invoice Ninja supports multiple payment gateways, including Stripe and
+      PayPal, enabling seamless and flexible payment processing for your
+      clients.
+  - title: Multi-Currency Support
+    description:
+      With support for multiple currencies and languages, Invoice Ninja is ideal
+      for businesses operating internationally.
+features:
+  - title: Recurring Invoices
+    description: Automate billing with recurring invoices and subscriptions.
+  - title: Payment Gateways
+    description:
+      Integrate with popular payment gateways like Stripe, PayPal, and others
+      for easy payment processing.
+  - title: Expense Tracking
+    description:
+      Manage your expenses and link them directly to invoices for better
+      accounting.
+  - title: Client Portal
+    description:
+      Provide your clients with a portal where they can view and pay invoices
+      directly.
+  - title: Customizable Templates
+    description:
+      Use professionally designed templates or customize them to reflect your
+      brand.
+tags:
+  - Invoicing
+  - Payments
+  - Billing
+  - Expense Management
+  - Open Source

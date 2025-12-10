@@ -1,0 +1,104 @@
+name: Browserless
+description:
+  Browserless is a powerful self-hosted headless browser service designed to
+  automate web interactions. It enables developers to run headless Chrome
+  instances efficiently for web scraping, testing, PDF generation, and
+  automation tasks. Browserless supports Puppeteer, Playwright, and Selenium,
+  providing a scalable and secure environment for handling complex browser
+  automation tasks. The application is optimized for performance, offering
+  session management, request queuing, and robust security features. With
+  Browserless, developers can offload browser-based automation to a dedicated
+  service, reducing local resource consumption and improving workflow
+  efficiency.
+
+instructions:
+  Update your App to use Browserless. Follow the docs;
+  https://docs.browserless.io/baas/docker/quickstart.
+
+changeLog:
+  - date: 2025-01-29
+    description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 2.33.0
+
+links:
+  - label: Documentation
+    url: https://docs.browserless.io/
+  - label: Github
+    url: https://github.com/browserless/chrome
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - concurrentSessions
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: browserless
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/browserless/chromium:v2.33.0
+    concurrentSessions:
+      type: string
+      title: Concurrent Sessions
+      default: "10"
+benefits:
+  - title: Scalable Browser Automation
+    description:
+      Browserless enables developers to run headless Chrome instances for
+      automation, testing, and data extraction without maintaining local
+      infrastructure.
+  - title: Supports Multiple Frameworks
+    description:
+      Compatible with Puppeteer, Playwright, and Selenium, making it versatile
+      for different automation needs.
+  - title: Optimized Performance
+    description:
+      Designed for efficiency, with session management, request queuing, and
+      resource monitoring to ensure smooth execution of browser tasks.
+
+features:
+  - title: Headless Browser API
+    description:
+      Provides a REST API to interact with headless Chrome for automation and
+      testing.
+  - title: Web Scraping
+    description:
+      Perform data extraction from websites with ease using Puppeteer and
+      Playwright integrations.
+  - title: Screenshot & PDF Generation
+    description:
+      Capture screenshots and generate PDFs from web pages for reporting and
+      archival purposes.
+  - title: Session Management
+    description:
+      Manage multiple concurrent sessions efficiently to optimize resource usage
+      and speed.
+  - title: Secure Execution
+    description:
+      Includes authentication, IP whitelisting, and rate limiting to prevent
+      abuse and ensure security.
+  - title: Cloud & On-Prem Support
+    description:
+      Deploy in the cloud or self-host on your own infrastructure for full
+      control over automation tasks.
+  - title: Request Queuing
+    description:
+      Handles a large number of automation requests efficiently with an
+      intelligent queuing system.
+
+tags:
+  - Browser Automation
+  - Web Scraping
+  - Testing
+  - Puppeteer
+  - Playwright
+  - Selenium

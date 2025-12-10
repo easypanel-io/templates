@@ -1,0 +1,89 @@
+name: Homepage
+description:
+  Homepage is a self-hosted dashboard designed to provide a centralized hub for
+  accessing and managing your server and web services. With an intuitive and
+  customizable interface, Homepage makes it easy to organize links, monitor
+  system health, and view important metrics in one place. It supports a wide
+  range of integrations, including Docker, Kubernetes, and popular web services,
+  making it an ideal tool for individuals and teams looking to streamline access
+  and management of their infrastructure. Being open-source, Homepage offers
+  transparency, flexibility, and control to users.
+instructions: Configure settings.yaml for customization.
+changeLog:
+  - date: 2024-12-22
+    description: First Release
+  - date: 2025-02-25
+    description: Version bumped to v0.10.9
+  - date: 2025-07-22
+    description: Version bumped to v1.4
+links:
+  - label: Website
+    url: https://gethomepage.dev/
+  - label: Documentation
+    url: https://gethomepage.dev/widgets/authoring/
+  - label: GitHub
+    url: https://github.com/gethomepage/homepage
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: homepage
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/gethomepage/homepage:v1.4
+benefits:
+  - title: Centralized Dashboard
+    description:
+      Homepage provides a centralized location to access links, services, and
+      metrics, improving efficiency and organization.
+  - title: Highly Customizable
+    description:
+      With a wide range of configuration options, Homepage allows users to
+      tailor the dashboard to their specific needs.
+  - title: Integrations with Popular Tools
+    description:
+      Homepage integrates with Docker, Kubernetes, and other tools, making it
+      easy to manage containers and infrastructure.
+  - title: Open Source and Transparent
+    description:
+      Homepage is fully open source, offering flexibility, security, and control
+      over your data and setup.
+  - title: Cross-Platform Compatibility
+    description:
+      Homepage runs seamlessly on any system that supports Docker, making it
+      highly portable and versatile.
+features:
+  - title: Link Management
+    description:
+      Organize and display quick access links to frequently used services and
+      applications.
+  - title: System Metrics
+    description:
+      View critical system information such as CPU, memory usage, and disk
+      status directly on your dashboard.
+  - title: User-Friendly Interface
+    description:
+      Enjoy an intuitive and visually appealing interface for managing services
+      and links.
+  - title: API and Remote Configuration
+    description:
+      Configure and manage Homepage remotely via its robust API support.
+  - title: Lightweight and Easy to Deploy
+    description:
+      Deploy Homepage effortlessly with minimal resources, ensuring a smooth
+      setup experience.
+tags:
+  - Dashboard
+  - Self-Hosted
+  - Open Source
+  - Customizable
+  - Infrastructure Management

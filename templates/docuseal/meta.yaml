@@ -1,0 +1,83 @@
+name: DocuSeal
+description:
+  DocuSeal is an open source platform that provides secure and efficient digital
+  document signing and processing. Create PDF forms to have them filled and
+  signed online on any device with an easy-to-use, mobile-optimized web tool.
+instructions: null
+changeLog:
+  - date: 2024-2-15
+    description: first release
+  - date: 2024-09-30
+    description: Version Changed to 1.7.4
+  - date: 2025-01-09
+    description: Version bumped to v1.8.6
+  - date: 2025-05-26
+    description: Version bumped to 2.0.1
+  - date: 2025-07-15
+    description: Version bumped to 2.0.7
+links:
+  - label: Website
+    url: https://www.docuseal.co/
+  - label: Documentation
+    url: https://www.docuseal.co/docs
+  - label: Github
+    url: https://github.com/docusealco/docuseal
+contributors:
+  - name: VinumWeb
+    url: https://github.com/vinumweb
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: docuseal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docuseal/docuseal:2.0.7
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: docuseal-db
+benefits:
+  - title: Fast and slick
+    description:
+      Lightning-fast and smooth document signing with a step-by-step form.
+  - title: Works everywhere
+    description:
+      From mobile to desktop. Document signing made simple on any device.
+  - title: Feature-rich
+    description:
+      Reminders, API integration, seamless embedding, branding and more.
+features:
+  - title: PDF form fields builder (WYSIWYG)
+    description: null
+  - title: 11 field types available (Signature, Date, File, Checkbox etc.)
+    description: null
+  - title: Multiple submitters per document
+    description: null
+  - title: Automated emails via SMTP
+    description: null
+  - title: Files storage on disk or AWS S3, Google Storage, Azure Cloud
+    description: null
+  - title: Automatic PDF eSignature
+    description: null
+  - title: PDF signature verification
+    description: null
+  - title: Users management
+    description: null
+  - title: Mobile-optimized
+    description: null
+  - title: API and Webhooks for integrations
+    description: null
+  - title: Easy to deploy in minutes
+    description: null
+tags:
+  - PDF

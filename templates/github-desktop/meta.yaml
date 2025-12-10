@@ -1,18 +1,22 @@
 name: Github Desktop
-description: Github Desktop is an open-source, Electron-based application that
-  simplifies the way you interact with GitHub. Written in TypeScript and using
-  React, this app provides a user-friendly interface for managing your GitHub
-  repositories. It allows you to access your GitHub account, manage your
-  repositories, make changes, and track updates, all from the convenience of
-  your desktop. The app is accessible via http://yourhost:3000/ or
-  https://yourhost:3001/. It supports multiple architectures and can be easily
-  deployed using Docker. Please note that this app requires specific environment
-  variables and run configurations for optimal functionality.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+description:
+  Github Desktop is an open-source, Electron-based application that simplifies
+  the way you interact with GitHub. Written in TypeScript and using React, this
+  app provides a user-friendly interface for managing your GitHub repositories.
+  It allows you to access your GitHub account, manage your repositories, make
+  changes, and track updates, all from the convenience of your desktop. The app
+  is accessible via http://yourhost:3000/ or https://yourhost:3001/. It supports
+  multiple architectures and can be easily deployed using Docker. Please note
+  that this app requires specific environment variables and run configurations
+  for optimal functionality.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2023-04-12
     description: first release
+  - date: 2025-07-21
+    description: Version bumped to 3.4.13
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-github-desktop
@@ -21,16 +25,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -38,39 +40,45 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/github-desktop
+      default: lscr.io/linuxserver/github-desktop:3.4.13
 benefits:
   - title: Efficient GitHub Management
-    description: The Github Desktop app allows users to manage their GitHub
-      repositories in a more efficient and streamlined manner. It provides a
-      user-friendly interface that makes it easy to commit changes, create
-      branches, and sync with the remote repository.
+    description:
+      The Github Desktop app allows users to manage their GitHub repositories in
+      a more efficient and streamlined manner. It provides a user-friendly
+      interface that makes it easy to commit changes, create branches, and sync
+      with the remote repository.
   - title: Multi-Platform Support
-    description: The app supports multiple architectures, making it accessible to a
-      wide range of users. It utilizes the Docker manifest for multi-platform
+    description:
+      The app supports multiple architectures, making it accessible to a wide
+      range of users. It utilizes the Docker manifest for multi-platform
       awareness, ensuring the correct image is retrieved for your architecture.
   - title: Secure Access
-    description: The app can be accessed securely via HTTP and HTTPS, ensuring that
-      your data and information are always protected. It also supports HTTP
-      Basic auth for added security.
+    description:
+      The app can be accessed securely via HTTP and HTTPS, ensuring that your
+      data and information are always protected. It also supports HTTP Basic
+      auth for added security.
 features:
   - title: Open Source
-    description: Github Desktop is an open-source Electron-based GitHub app. It is
-      written in TypeScript and uses React, making it a reliable and transparent
-      tool for managing GitHub repositories.
+    description:
+      Github Desktop is an open-source Electron-based GitHub app. It is written
+      in TypeScript and uses React, making it a reliable and transparent tool
+      for managing GitHub repositories.
   - title: Customizable Environment
-    description: The app provides a range of optional environment variables and run
+    description:
+      The app provides a range of optional environment variables and run
       configurations that can be customized to suit your needs. This includes
       the ability to change the internal port the container listens on, the HTTP
       Basic auth username and password, and more.
   - title: Docker Integration
-    description: The app is capable of starting a Docker in Docker (DinD) setup
-      inside the container, allowing you to use Docker in an isolated
-      environment. This feature can be used to increase performance and
-      functionality.
+    description:
+      The app is capable of starting a Docker in Docker (DinD) setup inside the
+      container, allowing you to use Docker in an isolated environment. This
+      feature can be used to increase performance and functionality.
   - title: Lossless Mode
-    description: The app is capable of delivering a true lossless image at a high
-      framerate to your web browser. This feature ensures that you always get
-      the highest quality image possible.
+    description:
+      The app is capable of delivering a true lossless image at a high framerate
+      to your web browser. This feature ensures that you always get the highest
+      quality image possible.
 tags:
   - Developer Tools

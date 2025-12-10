@@ -1,22 +1,28 @@
 name: AdGuard Home
-description: AdGuard Ad Blocker is a comprehensive solution designed to enhance
-  your online browsing experience by eliminating all kinds of ads, from annoying
-  banners and pop-ups to intrusive video ads. It not only removes these
-  distractions but also maintains the functionality and appearance of the
-  websites you visit. The app also offers privacy protection, shielding your
-  data from web analytics and online trackers. In addition, AdGuard ensures
-  browsing security by protecting against phishing and malicious sites. It also
-  includes a parental control feature, providing a safe online environment for
-  children by blocking inappropriate and adult content. The app is designed to
-  work across all browsers and apps, offering a seamless ad-free experience.
-  Moreover, it saves traffic and speeds up page loading by filtering ads before
-  they reach your device. AdGuard is more than just an ad blocker; it's a tool
-  that enhances your online safety and browsing speed.
-instructions: During the setup phase, set the Admin Web Interface Port to 3000.
-  To use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
+description:
+  AdGuard Ad Blocker is a comprehensive solution designed to enhance your online
+  browsing experience by eliminating all kinds of ads, from annoying banners and
+  pop-ups to intrusive video ads. It not only removes these distractions but
+  also maintains the functionality and appearance of the websites you visit. The
+  app also offers privacy protection, shielding your data from web analytics and
+  online trackers. In addition, AdGuard ensures browsing security by protecting
+  against phishing and malicious sites. It also includes a parental control
+  feature, providing a safe online environment for children by blocking
+  inappropriate and adult content. The app is designed to work across all
+  browsers and apps, offering a seamless ad-free experience. Moreover, it saves
+  traffic and speeds up page loading by filtering ads before they reach your
+  device. AdGuard is more than just an ad blocker; it's a tool that enhances
+  your online safety and browsing speed.
+instructions:
+  During the setup phase, if the instance, does not start, you have to disable
+  the service using port 53 on your host server, so adguard can bind the port
+  53. Then setup the admin account on port 3000, then change it to port 80. To
+  use the DHCP feature, you must also open ports 67/udp 68/tcp-udp.
 changeLog:
   - date: 2023-07-11
     description: First Release
+  - date: 2025-06-21
+    description: Update the instructions for the setup phase
 links:
   - label: Website
     url: https://adguard.com
@@ -27,16 +33,14 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,38 +51,46 @@ schema:
       default: adguard/adguardhome:latest
 benefits:
   - title: Ad-Free Browsing
-    description: AdGuard Ad Blocker ensures a smooth, uninterrupted browsing
-      experience by eliminating all kinds of ads, including banners, pop-ups,
-      and video ads.
+    description:
+      AdGuard Ad Blocker ensures a smooth, uninterrupted browsing experience by
+      eliminating all kinds of ads, including banners, pop-ups, and video ads.
   - title: Privacy Protection
-    description: AdGuard safeguards your personal data from web analytics and online
+    description:
+      AdGuard safeguards your personal data from web analytics and online
       trackers, ensuring your online activities remain private.
   - title: Browsing Security
-    description: AdGuard provides robust protection against phishing and malicious
-      sites, keeping your online interactions safe and secure.
+    description:
+      AdGuard provides robust protection against phishing and malicious sites,
+      keeping your online interactions safe and secure.
   - title: Parental Control
-    description: AdGuard offers a reliable parental control feature that shields
-      children from inappropriate and adult content on the web.
+    description:
+      AdGuard offers a reliable parental control feature that shields children
+      from inappropriate and adult content on the web.
   - title: Traffic Saving and Speed
-    description: AdGuard not only blocks ads but also reduces traffic and speeds up
-      page loading, enhancing your overall browsing experience.
+    description:
+      AdGuard not only blocks ads but also reduces traffic and speeds up page
+      loading, enhancing your overall browsing experience.
 features:
   - title: Ad Blocking
-    description: AdGuard effectively wipes out annoying banners, pop-ups, and video
-      ads, providing a clean, ad-free browsing environment.
+    description:
+      AdGuard effectively wipes out annoying banners, pop-ups, and video ads,
+      providing a clean, ad-free browsing environment.
   - title: Privacy Protection
-    description: AdGuard has robust privacy protection features that shield your
-      data from web analytics and online trackers.
+    description:
+      AdGuard has robust privacy protection features that shield your data from
+      web analytics and online trackers.
   - title: Browsing Security
-    description: AdGuard's browsing security feature protects against phishing and
+    description:
+      AdGuard's browsing security feature protects against phishing and
       malicious sites, ensuring your online safety.
   - title: Parental Control
-    description: AdGuard's parental control feature shields children from
-      inappropriate and adult content, providing a safe online environment for
-      kids.
+    description:
+      AdGuard's parental control feature shields children from inappropriate and
+      adult content, providing a safe online environment for kids.
   - title: Traffic Saving and Speed
-    description: AdGuard filters ads before they get pulled by your browser to your
-      device, saving traffic and speeding up page loading.
+    description:
+      AdGuard filters ads before they get pulled by your browser to your device,
+      saving traffic and speeding up page loading.
 tags:
   - Privacy
   - Security

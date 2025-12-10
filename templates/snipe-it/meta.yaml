@@ -1,0 +1,129 @@
+name: Snipe-IT
+description:
+  Snipe-IT is a powerful, open-source IT asset management system designed to
+  help organizations efficiently manage and track their IT assets. From laptops
+  to licenses, Snipe-IT provides a centralized platform to store, monitor, and
+  manage asset information securely. Unlike traditional asset management
+  systems, Snipe-IT is modern, intuitive, and built for ease of use. It features
+  detailed reporting, asset auditing, and check-in/check-out functionality,
+  ensuring accountability and accuracy for IT teams. Snipe-IT also supports
+  role-based user management and integrates seamlessly with LDAP and SMTP for
+  user authentication and notifications. Whether you're managing 10 or 10,000
+  assets, Snipe-IT offers the tools you need to stay organized and improve IT
+  workflow. With robust API support, it can integrate with third-party systems
+  for automation and enhanced reporting. Ideal for businesses of all sizes,
+  Snipe-IT makes IT asset management easy and effective.
+instructions:
+changeLog:
+  - date: 2024-12-09
+    description: First release
+  - date: 2025-03-03
+    description: Version bumped to v8.0.2
+  - date: 2025-07-24
+    description: Version bumped to v8.2.1
+links:
+  - label: Documentation
+    url: https://snipe-it.readme.io/
+  - label: GitHub
+    url: https://github.com/snipe/snipe-it
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - smtpHost
+    - smtpPort
+    - smtpUsername
+    - smtpPassword
+    - smtpFromAddress
+    - smtpFromName
+    - smtpReplyToEmail
+    - smtpReplyToName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: snipeit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: snipe/snipe-it:v8.2.1
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.example.com
+    smtpPort:
+      type: integer
+      title: SMTP Port
+      default: 587
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: example
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      sensitive: true
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      default: you@example.com
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: Snipe-IT
+    smtpReplyToEmail:
+      type: string
+      title: SMTP Reply-To Email
+      default: you@example.com
+    smtpReplyToName:
+      type: string
+      title: SMTP Reply-To Name
+      default: Snipe-IT
+benefits:
+  - title: Centralized Asset Management
+    description:
+      Snipe-IT provides a single platform to track and manage all IT assets,
+      including hardware, software, and licenses, ensuring improved visibility
+      and control.
+  - title: Role-Based Access Control
+    description:
+      Snipe-IT supports role-based user management, allowing administrators to
+      define permissions for different users and ensure security.
+  - title: Comprehensive Auditing
+    description:
+      Snipe-IT maintains an audit log for all asset activities, helping IT teams
+      track changes and ensure accountability.
+  - title: Seamless Integration
+    description:
+      With API support and LDAP integration, Snipe-IT can easily integrate with
+      existing systems for automation and reporting.
+  - title: Check-In/Check-Out Functionality
+    description:
+      Easily assign and return assets to users, ensuring assets are tracked
+      efficiently across the organization.
+features:
+  - title: Easy Installation
+    description:
+      Snipe-IT can be deployed quickly using Docker or manual installation,
+      ensuring a hassle-free setup.
+  - title: Real-Time Notifications
+    description:
+      Integrate with SMTP to enable real-time email notifications for asset
+      status changes and reminders.
+  - title: Flexible Reporting
+    description:
+      Generate detailed reports on asset lifecycle, warranty status, and
+      assignments to make data-driven decisions.
+  - title: API Support
+    description:
+      Snipe-IT provides a robust API to integrate asset management data with
+      third-party systems and automation tools.
+tags:
+  - Asset Management
+  - Open Source
+  - Auditing
+  - Reporting

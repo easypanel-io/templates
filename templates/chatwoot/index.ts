@@ -12,29 +12,32 @@ export function generate(input: Input): Output {
   const randomPasswordRedis = randomPassword();
   const randomPasswordPostgres = randomPassword();
 
+  const env = [
+    `SECRET_KEY_BASE=${secretkey}`,
+    `DEFAULT_LOCALE=${input.defaultLocale}`,
+    `FORCE_SSL=false`,
+    `ENABLE_ACCOUNT_SIGNUP=true`,
+    `REDIS_URL=redis://default@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+    `REDIS_PASSWORD=${randomPasswordRedis}`,
+    `REDIS_OPENSSL_VERIFY_MODE=none`,
+    `POSTGRES_DATABASE=$(PROJECT_NAME)`,
+    `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+    `POSTGRES_USERNAME=postgres`,
+    `POSTGRES_PASSWORD=${randomPasswordPostgres}`,
+    `RAILS_MAX_THREADS=5`,
+    `NODE_ENV=production`,
+    `RAILS_ENV=production`,
+    `INSTALLATION_ENV=docker`,
+    `TRUSTED_PROXIES=*`,
+  ].join("\n");
+
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
-      env: [
-        `SECRET_KEY_BASE=${secretkey}`,
-        `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
-        `DEFAULT_LOCALE=${input.defaultLocale}`,
-        `FORCE_SSL=true`,
-        `ENABLE_ACCOUNT_SIGNUP=true`,
-        `REDIS_URL=redis://default@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
-        `REDIS_PASSWORD=${randomPasswordRedis}`,
-        `REDIS_OPENSSL_VERIFY_MODE=none`,
-        `POSTGRES_DATABASE=$(PROJECT_NAME)`,
-        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `POSTGRES_USERNAME=postgres`,
-        `POSTGRES_PASSWORD=${randomPasswordPostgres}`,
-        `RAILS_MAX_THREADS=5`,
-        `NODE_ENV=production`,
-        `RAILS_ENV=production`,
-        `INSTALLATION_ENV=docker`,
-      ].join("\n"),
+      env: [`FRONTEND_URL=https://$(PRIMARY_DOMAIN)`, ...env.split("\n")].join(
+        "\n"
+      ),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -65,9 +68,33 @@ export function generate(input: Input): Output {
   });
 
   services.push({
+    type: "app",
+    data: {
+      serviceName: input.sidekiqServiceName,
+      env: [
+        `FRONTEND_URL=https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
+        ...env.split("\n"),
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      deploy: {
+        command: "bundle exec sidekiq -C config/sidekiq.yml",
+      },
+      mounts: [
+        {
+          type: "bind",
+          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/app`,
+          mountPath: "/app/storage",
+        },
+      ],
+    },
+  });
+
+  services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: input.redisServiceName,
       password: randomPasswordRedis,
     },
@@ -76,9 +103,8 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
-      image: "postgres:12",
+      image: "pgvector/pgvector:pg17",
       password: randomPasswordPostgres,
     },
   });

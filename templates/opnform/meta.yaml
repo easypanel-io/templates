@@ -1,0 +1,73 @@
+name: OpnForm
+description:
+  OpnForm is an open-source form builder that allows you to create beautiful,
+  customizable forms with ease. It provides an intuitive interface for building
+  forms,  collecting submissions, and analyzing data.
+instructions: Login using the credentials, admin@opnform.com/password.
+changeLog:
+  - date: 2025-05-23
+    description: First release
+  - date: 2025-07-24
+    description: Version bumped to 1.9.2
+links:
+  - label: Website
+    url: https://opnform.com/
+  - label: Documentation
+    url: https://docs.opnform.com/
+  - label: Github
+    url: https://github.com/JhumanJ/OpnForm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - serviceName
+    - appServiceImage
+    - apiServiceImage
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: opnform
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jhumanj/opnform-client:1.9.2
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: jhumanj/opnform-api:1.9.2
+benefits:
+  - title: Easy Form Creation
+    description:
+      Build professional forms without coding using an intuitive drag-and-drop
+      interface.
+  - title: Customizable Design
+    description:
+      Customize the look and feel of your forms with themes and styling options.
+  - title: Advanced Features
+    description:
+      Access conditional logic, file uploads, and integrations with other tools.
+  - title: Self-Hosted Solution
+    description:
+      Maintain full control over your data with this self-hosted form solution.
+features:
+  - title: Form Builder
+    description:
+      Create forms with a variety of field types including text, email, file
+      upload, and more.
+  - title: Response Management
+    description: View, manage, and export form submissions in various formats.
+  - title: Conditional Logic
+    description:
+      Show or hide fields based on user input to create dynamic forms.
+  - title: Spam Protection
+    description: Protect your forms with CAPTCHA and other anti-spam measures.
+  - title: Notifications
+    description: Receive email notifications when new submissions are received.
+tags:
+  - Forms
+  - Web Apps
+  - Productivity
+  - Business Apps

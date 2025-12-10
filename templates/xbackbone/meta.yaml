@@ -1,0 +1,74 @@
+name: xBackbone
+description:
+  xBackbone is a versatile, self-hosted file and image sharing platform designed
+  to manage and share content securely and efficiently. It features a clean and
+  intuitive interface, supports multiple authentication options, and provides
+  advanced file management capabilities. With xBackbone, you can maintain
+  complete control over your shared content, ensuring privacy and flexibility.
+instructions:
+  Configure the Base URL and set up the database connection during installation.
+
+changeLog:
+  - date: 2024-11-26
+    description: Template Release
+  - date: 2025-03-03
+    description: Version bumped to 3.8.1
+
+links:
+  - label: Website
+    url: https://xbackbone.app/
+  - label: Github
+    url: https://github.com/SergiX44/XBackBone
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: xbackbone
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/xbackbone:3.8.1
+
+benefits:
+  - title: Secure File Sharing
+    description:
+      xBackbone ensures your files and images are shared securely, maintaining
+      full control over your data.
+  - title: Self-Hosted Solution
+    description:
+      Stay in control of your content with a self-hosted platform that ensures
+      privacy and flexibility.
+  - title: Custom Branding
+    description:
+      Personalize the interface and share links with your own branding for a
+      professional touch.
+
+features:
+  - title: File Management
+    description:
+      Organize your uploads with an intuitive dashboard and detailed file
+      properties.
+  - title: Authentication Options
+    description:
+      Choose from multiple authentication methods, including LDAP, OAuth, and
+      local accounts.
+  - title: Customizable Sharing
+    description: Share files and images with personalized links and permissions.
+  - title: Analytics Dashboard
+    description: Access insights into file access and sharing statistics.
+
+tags:
+  - File Sharing
+  - Self-Hosted
+  - Privacy
+  - Analytics

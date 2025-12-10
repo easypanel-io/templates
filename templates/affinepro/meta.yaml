@@ -1,0 +1,96 @@
+name: Affine Pro
+description:
+  Affine Pro is a modern, self-hosted platform designed for collaborative
+  content creation and project management. It offers an intuitive interface,
+  seamless real-time collaboration, and powerful tools for organizing tasks,
+  notes, and ideas. With Affine Pro, you can centralize your workflows and
+  enhance productivity.
+
+instructions:
+  The migration service can be safely removed once the process is complete. You
+  may configure the Mailer to receive email notifications, or leave it unset if
+  notifications are not required.
+
+changeLog:
+  - date: 2025-01-14
+    description: Template Release
+  - date: 2025-02-21
+    description: Version bumped to stable-780dd83
+
+links:
+  - label: Documentation
+    url: https://affine.pro/docs
+  - label: Github
+    url: https://github.com/toeverything/Affine
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: affinepro
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/toeverything/affine-graphql:stable-780dd83
+    mailerHost:
+      type: string
+      title: Mailer Host
+    mailerHostPort:
+      type: string
+      title: Mailer Host Port
+    mailerHostUser:
+      type: string
+      title: Mailer Host User
+    mailerPassword:
+      type: string
+      title: Mailer Password
+    mailerSender:
+      type: string
+      title: Mailer Sender
+
+benefits:
+  - title: Streamlined Collaboration
+    description:
+      Affine Pro offers real-time collaborative tools, enabling teams to work
+      together seamlessly on projects.
+  - title: Self-Hosted Control
+    description:
+      Maintain control over your data with a secure, self-hosted solution for
+      enhanced privacy and flexibility.
+  - title: Comprehensive Workspace
+    description:
+      Centralize notes, tasks, and project plans in one place for better
+      organization and productivity.
+
+features:
+  - title: Real-Time Collaboration
+    description:
+      Work together with your team in real time, ensuring everyone stays aligned
+      and productive.
+  - title: Customizable Workflows
+    description:
+      Adapt the platform to your specific needs with flexible task and note
+      management options.
+  - title: Integration Support
+    description:
+      Connect Affine Pro with your existing tools and services for a seamless
+      workflow.
+  - title: Secure and Scalable
+    description:
+      Benefit from a secure and scalable architecture, designed to handle teams
+      of any size.
+
+tags:
+  - Collaboration
+  - Self-Hosted
+  - Productivity
+  - Project Management

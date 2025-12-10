@@ -14,16 +14,15 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `SECRET_KEY=${secret}`,
         `DB_ENGINE=django.db.backends.postgresql`,
-        `POSTGRES_HOST=${input.projectName}_${input.databaseServiceName}`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `POSTGRES_PORT=5432`,
         `POSTGRES_PASSWORD=${databasePassword}`,
         `POSTGRES_USER=postgres`,
-        `POSTGRES_DB=${input.projectName}`,
+        `POSTGRES_DB=$(PROJECT_NAME)`,
         `GUNICORN_MEDIA=1`,
         `DEBUG=0`,
         `ENABLE_PDF_EXPORT=1`,
@@ -32,10 +31,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [{
-        host: "$(EASYPANEL_DOMAIN)",
-        port: 8080,
-      }],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -46,7 +47,7 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "static",
           mountPath: "/opt/recipes/staticfiles",
-        }
+        },
       ],
     },
   });
@@ -54,7 +55,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

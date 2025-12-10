@@ -1,0 +1,72 @@
+name: Spacebin
+description:
+  Spacebin is a modern, fast, and reliable pastebin server implemented in Go.
+  Text sharing for the final frontier with features like syntax highlighting,
+  password-protected encrypted pastes, configurable expiration, QR codes, reader
+  view mode, and full API support. 99% self-contained requiring only a database
+  to run, making it perfect for self-hosting.
+instructions: null
+changeLog:
+  - date: 2025-06-12
+    description: First Release
+links:
+  - label: Website
+    url: https://spaceb.in/
+  - label: Documentation
+    url: https://github.com/lukewhrit/spacebin#documentation
+  - label: Github
+    url: https://github.com/lukewhrit/spacebin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: spacebin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: spacebinorg/spirit:v1.0.3
+benefits:
+  - title: Modern & Reliable
+    description:
+      Built in Go for performance and reliability, avoiding common problems of
+      many pastebin servers. 99% self-contained requiring only a database to
+      run.
+  - title: JavaScript-Free UI
+    description:
+      Modern user interface that works perfectly without JavaScript, while still
+      providing syntax highlighting and advanced features when JS is enabled.
+  - title: Highly Configurable
+    description:
+      Extensive configuration options including rate limiting, expiration
+      settings, custom document sizes, authentication, and multiple database
+      support (SQLite, MySQL, PostgreSQL).
+features:
+  - title: Text & Code Sharing
+    description:
+      Upload raw text and code with syntax highlighting for popular languages.
+      Support for custom named documents, phrase and random string identifiers.
+  - title: Security & Privacy
+    description:
+      Password-protected encrypted pastes, configurable rate limiting, basic
+      auth for private instances, and configurable document expiration.
+  - title: Advanced Features
+    description:
+      QR code generation for easy sharing, reader view mode with markdown
+      formatting, paste collections, and comprehensive REST API for automation.
+  - title: Database Flexibility
+    description:
+      Support for SQLite, MySQL, and PostgreSQL databases. Easy deployment with
+      Docker or manual installation with configurable connection strings.
+tags:
+  - Pastebin
+  - Go
+  - Text Sharing
+  - Self-Hosted

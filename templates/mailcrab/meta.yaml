@@ -1,6 +1,7 @@
 name: MailCrab
-description: MailCrab is an email test server designed for development purposes.
-  It is an accept-all SMTP server that provides a web interface for viewing and
+description:
+  MailCrab is an email test server designed for development purposes. It is an
+  accept-all SMTP server that provides a web interface for viewing and
   inspecting all incoming emails. You can view formatted mail, download
   attachments, view headers, or view the complete raw mail contents. The app
   runs on all amd64 and arm64 platforms using docker. The backend server and the
@@ -16,22 +17,26 @@ instructions: null
 changeLog:
   - date: 2022-11-5
     description: first release
+  - date: 2024-10-18
+    description: Updated version to 1.3.0
+  - date: 2025-02-28
+    description: Version bumped to v1.4.0
+  - date: 2025-07-22
+    description: Version bumped to v1.6.1
 links:
   - label: Github
     url: https://github.com/tweedegolf/mailcrab
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -39,35 +44,42 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: marlonb/mailcrab:latest
+      default: marlonb/mailcrab:v1.6.1
 benefits:
   - title: Efficient Email Testing
-    description: MailCrab is an email test server that allows developers to
-      efficiently test their email functionalities during development. It
-      accepts all SMTP server emails, making it a versatile tool for various
-      email testing scenarios.
+    description:
+      MailCrab is an email test server that allows developers to efficiently
+      test their email functionalities during development. It accepts all SMTP
+      server emails, making it a versatile tool for various email testing
+      scenarios.
   - title: Comprehensive Email Inspection
-    description: With MailCrab, you can view and inspect all incoming emails in a
+    description:
+      With MailCrab, you can view and inspect all incoming emails in a
       user-friendly web interface. It allows you to view formatted mail,
       download attachments, view headers, or see the complete raw mail contents,
       providing a comprehensive overview of your email tests.
   - title: Lightweight and Versatile
-    description: MailCrab is a lightweight app, with just a 7.77 MB docker image,
-      making it easy to deploy and run. It is also versatile, running on all
-      amd64 and arm64 platforms using docker.
+    description:
+      MailCrab is a lightweight app, with just a 7.77 MB docker image, making it
+      easy to deploy and run. It is also versatile, running on all amd64 and
+      arm64 platforms using docker.
 features:
   - title: Accept-all SMTP Server
-    description: MailCrab operates as an accept-all SMTP server, allowing you to
-      test a wide range of email functionalities.
+    description:
+      MailCrab operates as an accept-all SMTP server, allowing you to test a
+      wide range of email functionalities.
   - title: Web Interface
-    description: The app provides a web interface where you can view and inspect all
+    description:
+      The app provides a web interface where you can view and inspect all
       incoming emails, offering a user-friendly way to manage your email tests.
   - title: Email Inspection Tools
-    description: MailCrab offers tools to view formatted mail, download attachments,
-      view headers, or see the complete raw mail contents, giving you a detailed
+    description:
+      MailCrab offers tools to view formatted mail, download attachments, view
+      headers, or see the complete raw mail contents, giving you a detailed
       insight into your email tests.
   - title: Cross-Platform Compatibility
-    description: MailCrab is compatible with all amd64 and arm64 platforms using
-      docker, making it a versatile tool for various development environments.
+    description:
+      MailCrab is compatible with all amd64 and arm64 platforms using docker,
+      making it a versatile tool for various development environments.
 tags:
   - Email

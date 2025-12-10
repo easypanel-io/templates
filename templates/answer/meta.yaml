@@ -1,19 +1,23 @@
 name: Answer
-description: Answer is an open-source knowledge-based software designed to
-  facilitate a Q&A environment for your products, customers, teams, and more. It
-  allows users to ask questions and get answers, fostering a dynamic exchange of
-  information. The app features a modern and responsive UI, and it's extensible
-  with plugins. It also offers content organization capabilities, allowing you
-  to categorize and tag your content for easy navigation. Additionally, Answer
-  integrates with your existing tools and services to streamline your workflow.
-  The app also incorporates gamification elements, rewarding users for their
-  contributions, making the process of knowledge sharing more engaging. It's a
-  powerful tool for product technical support, customer support, and user
-  communication.
-instructions: Go to /install and select sqlite database
+description:
+  Answer is an open-source knowledge-based software designed to facilitate a Q&A
+  environment for your products, customers, teams, and more. It allows users to
+  ask questions and get answers, fostering a dynamic exchange of information.
+  The app features a modern and responsive UI, and it's extensible with plugins.
+  It also offers content organization capabilities, allowing you to categorize
+  and tag your content for easy navigation. Additionally, Answer integrates with
+  your existing tools and services to streamline your workflow. The app also
+  incorporates gamification elements, rewarding users for their contributions,
+  making the process of knowledge sharing more engaging. It's a powerful tool
+  for product technical support, customer support, and user communication.
+instructions: null
 changeLog:
   - date: 2022-12-21
     description: first release
+  - date: 2024-03-03
+    description:
+      Updated application version to 1.2.0 and added automatic installation
+      support
 links:
   - label: Documentation
     url: https://answer.dev/docs
@@ -24,16 +28,20 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Berk Sümbül
+    url: https://berksmbl.com
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
+    - adminName
+    - adminPassword
+    - adminMail
+    - contactMail
+    - databaseType
+    - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,40 +49,101 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: answerdev/answer:1.0.9
+      default: answerdev/answer:1.2.0
+    siteName:
+      type: string
+      title: Site Name
+      default: Answer
+    siteUrl:
+      type: string
+      title: Site Url
+      default: answer.apache.org
+    language:
+      type: string
+      title: Language
+      default: en-US
+    adminName:
+      type: string
+      minLength: 4
+      title: Admin Username
+    adminPassword:
+      type: string
+      minLength: 8
+      title: Admin Password
+    adminMail:
+      type: string
+      title: Admin Mail
+    contactMail:
+      type: string
+      title: Contact Mail
+    databaseType:
+      type: string
+      title: Database Type
+      default: sqlite3
+      oneOf:
+        - enum:
+            - postgres
+          title: Postgres
+        - enum:
+            - sqlite3
+          title: SQLite
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - mariadb
+          title: MariaDB
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: answer-db
+    autoInstall:
+      type: boolean
+      title: Auto Install
+      default: true
 benefits:
   - title: Knowledge Sharing
-    description: Answer allows you to build a platform where users and team members
-      can share their knowledge and solve problems together. It's a great tool
-      for product technical support, customer support, and user communication.
+    description:
+      Answer allows you to build a platform where users and team members can
+      share their knowledge and solve problems together. It's a great tool for
+      product technical support, customer support, and user communication.
   - title: Content Organization
-    description: With Answer, you can easily organize your content into categories
-      and tags, making it easy for others to find the knowledge they need.
+    description:
+      With Answer, you can easily organize your content into categories and
+      tags, making it easy for others to find the knowledge they need.
   - title: Integration
-    description: Answer can be integrated with your existing tools and services,
-      improving your workflow and making your other tools better.
+    description:
+      Answer can be integrated with your existing tools and services, improving
+      your workflow and making your other tools better.
   - title: Gamification
-    description: Answer gamifies the Q&A platform with reputation and badges, making
+    description:
+      Answer gamifies the Q&A platform with reputation and badges, making
       collaboration and work more fun for community members and teams.
 features:
   - title: Questions and Answers
-    description: Users can ask questions and get answers from other users and your
-      team, fostering a sense of community and shared knowledge.
+    description:
+      Users can ask questions and get answers from other users and your team,
+      fostering a sense of community and shared knowledge.
   - title: Content Organization
-    description: Organize your content into categories and tags to make it easy for
-      users to find the information they need.
+    description:
+      Organize your content into categories and tags to make it easy for users
+      to find the information they need.
   - title: Integrations
-    description: Integrate Answer with your existing tools and services to improve
-      your workflow and enhance your other tools.
+    description:
+      Integrate Answer with your existing tools and services to improve your
+      workflow and enhance your other tools.
   - title: Gamification
-    description: Reward your users for their contributions with a gamified system of
+    description:
+      Reward your users for their contributions with a gamified system of
       reputation and badges.
   - title: Modern UI
-    description: Answer features a modern and responsive user interface, making it
-      easy and enjoyable to use.
+    description:
+      Answer features a modern and responsive user interface, making it easy and
+      enjoyable to use.
   - title: Extensibility
-    description: Extend the functionality of Answer with plugins to meet your
-      specific needs.
+    description:
+      Extend the functionality of Answer with plugins to meet your specific
+      needs.
 tags:
   - Community
   - Q&A

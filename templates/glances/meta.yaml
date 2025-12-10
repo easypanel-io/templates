@@ -1,0 +1,89 @@
+name: Glances
+description:
+  Glances is a cross-platform, real-time system monitoring tool designed to
+  offer a unified view of your system's performance and health. It provides an
+  intuitive interface that displays critical information, including CPU usage,
+  memory, disk I/O, network activity, and more. Built to work seamlessly on
+  Linux, macOS, Windows, and ARM-based systems, Glances is highly extensible
+  with plugins and supports remote monitoring via a web-based UI or API. With
+  its open-source foundation, Glances ensures transparency and flexibility,
+  making it a perfect choice for individuals and teams looking for a lightweight
+  yet powerful monitoring solution.
+instructions:
+  To use Glances with Podman, you can mount a bind volume
+  "/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock".
+changeLog:
+  - date: 2024-12-22
+    description: First Release
+  - date: 2025-07-21
+    description: Version bumped to 4.3.3
+links:
+  - label: Website
+    url: https://nicolargo.github.io/glances/
+  - label: Documentation
+    url: https://glances.readthedocs.io/en/stable/
+  - label: GitHub
+    url: https://github.com/nicolargo/glances
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glances
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nicolargo/glances:4.3.3
+benefits:
+  - title: Real-Time System Monitoring
+    description:
+      Glances provides a detailed and real-time overview of system performance
+      metrics, ensuring you stay informed about your system's health.
+  - title: Cross-Platform Support
+    description:
+      Glances works seamlessly on Linux, macOS, Windows, and ARM-based systems,
+      offering flexibility for diverse environments.
+  - title: Extensible and Customizable
+    description:
+      With plugins and configuration options, Glances can be tailored to suit
+      your specific monitoring needs.
+  - title: Remote Monitoring
+    description:
+      Monitor systems remotely using the web interface, API, or third-party
+      integrations.
+  - title: Open Source and Transparent
+    description:
+      Glances is open source, ensuring users can audit, modify, and extend the
+      tool as needed.
+features:
+  - title: Unified Monitoring Dashboard
+    description:
+      Displays key performance metrics, including CPU, memory, disk usage,
+      network traffic, and more, in a single view.
+  - title: Remote Access
+    description: Access Glances remotely using its web-based UI or RESTful API.
+  - title: Threshold-Based Alerts
+    description:
+      Configure alerts based on thresholds to get notified about critical system
+      issues in real-time.
+  - title: Plugin Support
+    description:
+      Extend functionality with plugins for additional metrics or integrations
+      with other tools.
+  - title: Multi-Platform Integration
+    description:
+      Integrates with tools like Docker, Podman, and Kubernetes for container
+      monitoring.
+tags:
+  - System Monitoring
+  - Real-Time Metrics
+  - Open Source
+  - Cross-Platform
+  - Extensible

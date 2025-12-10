@@ -1,20 +1,22 @@
 name: Limesurvey
-description: "Welcome to LimeSurvey, the world's #1 survey platform designed to
-  provide you with the best online survey tool that's fresh, quick, and
-  anonymous. Whether you're a student, professional, or enterprise, LimeSurvey
-  allows you to design a survey and gather insightful data, all for free. With
-  LimeSurvey, you can create a simple questionnaire or poll, or even a
-  sophisticated survey with complex validation rules, conditional logic, and
-  quota management. It's the perfect alternative to Google Forms or Doodle.
-  LimeSurvey is also the optimal online survey tool for research institutes,
-  universities, and other educational establishments, offering free surveys,
-  polls, and other open-source possibilities. With easy-to-use templates and an
-  on-hand customer service team, LimeSurvey is your go-to solution for all your
-  survey needs."
+description:
+  "Welcome to LimeSurvey, the world's #1 survey platform designed to provide you
+  with the best online survey tool that's fresh, quick, and anonymous. Whether
+  you're a student, professional, or enterprise, LimeSurvey allows you to design
+  a survey and gather insightful data, all for free. With LimeSurvey, you can
+  create a simple questionnaire or poll, or even a sophisticated survey with
+  complex validation rules, conditional logic, and quota management. It's the
+  perfect alternative to Google Forms or Doodle. LimeSurvey is also the optimal
+  online survey tool for research institutes, universities, and other
+  educational establishments, offering free surveys, polls, and other
+  open-source possibilities. With easy-to-use templates and an on-hand customer
+  service team, LimeSurvey is your go-to solution for all your survey needs."
 instructions: null
 changeLog:
   - date: 2023-01-24
     description: first release
+  - date: 2025-07-22
+    description: Version bumped to 6-1.6.72
 links:
   - label: Website
     url: https://limesurvey.org/
@@ -25,19 +27,17 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - limesurveyUsername
     - limesurveyPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/limesurvey:1.5.10
+      default: tiredofit/limesurvey:6-1.6.72
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -58,39 +58,46 @@ schema:
       title: Password
 benefits:
   - title: Efficient Survey Creation
-    description: LimeSurvey is an online survey tool that allows you to design and
+    description:
+      LimeSurvey is an online survey tool that allows you to design and
       distribute surveys with ease. Whether you're a student, professional, or
       enterprise, LimeSurvey can help you gather the insights you need.
   - title: Versatile and Comprehensive
-    description: From simple questionnaires to sophisticated surveys with complex
+    description:
+      From simple questionnaires to sophisticated surveys with complex
       validation rules, conditional logic, and quota management, LimeSurvey
       provides all the tools you need to reach your audience effectively.
   - title: Optimal Tool for Education
-    description: LimeSurvey is the perfect tool for research institutes,
-      universities, and other educational establishments. With our free surveys,
-      polls, and other open-source possibilities, you can gather valuable data
-      for your studies.
+    description:
+      LimeSurvey is the perfect tool for research institutes, universities, and
+      other educational establishments. With our free surveys, polls, and other
+      open-source possibilities, you can gather valuable data for your studies.
   - title: Customizable for Corporates
-    description: LimeSurvey can be tailored to meet the needs of corporate clients,
+    description:
+      LimeSurvey can be tailored to meet the needs of corporate clients,
       offering custom response limits, upload storage, support, and more. Tell
       us what you need, and we'll provide the solution.
 features:
   - title: Unlimited Answers
-    description: With LimeSurvey, there's no limit to the number of responses you
-      can collect. This allows you to gather as much data as you need for your
+    description:
+      With LimeSurvey, there's no limit to the number of responses you can
+      collect. This allows you to gather as much data as you need for your
       research or business.
   - title: 80+ Languages
-    description: LimeSurvey supports over 80 languages, making it a truly global
-      tool. This feature allows you to reach and understand audiences from all
-      around the world.
+    description:
+      LimeSurvey supports over 80 languages, making it a truly global tool. This
+      feature allows you to reach and understand audiences from all around the
+      world.
   - title: User Management and Rights System
-    description: LimeSurvey comes with a comprehensive user management and rights
-      system. This allows you to control who has access to your surveys and what
-      they can do with them.
+    description:
+      LimeSurvey comes with a comprehensive user management and rights system.
+      This allows you to control who has access to your surveys and what they
+      can do with them.
   - title: Participant Management
-    description: LimeSurvey provides a robust participant management system. This
-      feature allows you to manage your survey participants effectively,
-      ensuring that you get the most out of your data collection efforts.
+    description:
+      LimeSurvey provides a robust participant management system. This feature
+      allows you to manage your survey participants effectively, ensuring that
+      you get the most out of your data collection efforts.
 tags:
   - Analytics
   - Business Apps

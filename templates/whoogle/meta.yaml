@@ -1,0 +1,70 @@
+name: Whoogle
+description:
+  "Whoogle is an open-source, privacy-focused search engine that serves as a
+  proxy for Google Search. It allows users to access Google’s powerful search
+  capabilities without being tracked, monitored, or bombarded with ads. Whoogle
+  removes trackers, logs, and ads, ensuring that search queries and browsing
+  activities remain private and anonymous. Users benefit from Google's accurate
+  and comprehensive search results, while maintaining full control over their
+  personal data. Its lightweight design makes it easy to deploy and use, often
+  preferred by those seeking to balance search efficiency with enhanced privacy."
+instructions: null
+changeLog:
+  - date: 2024-10-11
+    description: Version 0.9.0 (First Release)
+  - date: 2025-03-03
+    description: Version bumped to 0.9.3
+links:
+  - label: Github
+    url: https://github.com/benbusby/whoogle-search
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: whoogle
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: benbusby/whoogle-search:0.9.3
+
+benefits:
+  - title: Complete Privacy
+    description:
+      Whoogle ensures full anonymity by removing ads, trackers, and logs,
+      allowing you to use Google’s search engine without compromising your
+      privacy.
+  - title: Ad-Free Experience
+    description:
+      Unlike Google Search, Whoogle provides an ad-free environment, delivering
+      cleaner search results without distractions.
+  - title: Open-Source Freedom
+    description:
+      Being open-source, Whoogle gives users full control over their data and
+      the platform, offering transparency and customization.
+
+features:
+  - title: Google’s Powerful Search
+    description:
+      Whoogle uses Google’s search engine to deliver accurate and comprehensive
+      results without sacrificing user privacy.
+  - title: Lightweight and Fast
+    description:
+      Whoogle is designed to be fast and lightweight, making it easy to deploy
+      on any system with minimal resources.
+  - title: No Account Required
+    description:
+      Unlike Google, Whoogle does not require users to log in or create an
+      account, making it ideal for those who prioritize privacy.
+
+tags:
+  - Search
+  - Privacy
+  - Open-Source

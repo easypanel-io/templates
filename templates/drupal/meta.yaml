@@ -1,0 +1,94 @@
+name: Drupal
+description:
+  Drupal is a powerful open-source content management system (CMS) designed to
+  help you create and manage complex, dynamic websites with ease. Drupal is
+  highly customizable, offering robust tools for managing content, users,
+  permissions, and workflows. It supports custom themes, modules, and
+  integrations, enabling you to create tailored experiences for any type of
+  website, from blogs and portfolios to eCommerce platforms and enterprise-level
+  solutions. Drupal prioritizes flexibility, scalability, and security, making
+  it a preferred choice for developers, businesses, and organizations worldwide.
+instructions: null
+changeLog:
+  - date: 2024-10-12
+    description: First release
+  - date: 2025-01-09
+    description: Version bumped to 10.4-apache
+  - date: 2025-07-15
+    description: Version bumped to 11.2.2-apache
+links:
+  - label: Website
+    url: https://www.drupal.org/
+  - label: Documentation
+    url: https://www.drupal.org/docs
+  - label: Github
+    url: https://github.com/drupal/drupal
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: drupal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: drupal:11.2.2-apache
+benefits:
+  - title: Open-Source & Secure
+    description:
+      Drupal is an open-source CMS with an active community that ensures robust
+      security updates, making it ideal for enterprise-grade applications.
+  - title: Highly Customizable
+    description:
+      From themes and layouts to modules and APIs, Drupal allows extensive
+      customization to suit any website needs.
+  - title: Scalable & Flexible
+    description:
+      Drupal is built to scale for websites of any size, handling high traffic
+      and content-heavy platforms seamlessly.
+  - title: Multilingual Support
+    description:
+      Out-of-the-box support for multiple languages enables you to create
+      localized content and reach a global audience.
+  - title: Advanced Content Management
+    description:
+      Drupal provides powerful content authoring tools, workflows, and
+      permissions to streamline content management for teams.
+features:
+  - title: Modular Architecture
+    description:
+      Drupal's modular design enables developers to extend functionality using
+      community-contributed or custom-built modules.
+  - title: Content Workflows
+    description:
+      Drupal supports advanced content workflows with features like drafts,
+      revisions, and role-based publishing permissions.
+  - title: API-First Approach
+    description:
+      Drupal supports headless CMS architectures, enabling you to build
+      decoupled applications using its powerful APIs.
+  - title: Theming System
+    description:
+      Drupal offers a robust theming system for creating responsive, accessible,
+      and visually appealing designs.
+  - title: Enterprise-Level Performance
+    description:
+      Drupal is optimized for enterprise performance, supporting caching, CDN
+      integration, and database clustering.
+  - title: SEO-Friendly
+    description:
+      Built-in SEO tools and customizable metadata help improve search engine
+      visibility for Drupal websites.
+tags:
+  - Content Management
+  - Website Development
+  - Open Source
+  - Enterprise CMS
+  - Modular Architecture

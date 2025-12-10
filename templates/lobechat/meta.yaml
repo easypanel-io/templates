@@ -1,0 +1,106 @@
+name: LobeChat
+description:
+  LobeChat is an open-source, AI-powered chat application designed to integrate
+  with OpenAI services. It provides a seamless user experience, combining
+  conversational AI capabilities with a customizable and extensible
+  architecture. LobeChat is ideal for both personal and professional use cases,
+  offering robust features for modern AI chat applications.
+instructions:
+  Configure your OpenAI API key and proxy URL to start using the application.
+
+changeLog:
+  - date: 2024-12-16
+    description: First release
+  - date: 2025-02-28
+    description: Version bumped to 1.66.5
+  - date: 2025-07-22
+    description: Version bumped to 1.103.0
+links:
+  - label: Website
+    url: https://lobehub.com/
+  - label: Compose Docs
+    url: https://lobehub.com/docs/self-hosting/server-database/docker-compose
+  - label: Documentation
+    url: https://lobehub.com/docs/usage/start
+  - label: Github
+    url: https://github.com/lobehub/lobe-chat
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - openAiKey
+    - openAiProxy
+    - accessCode
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lobechat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lobehub/lobe-chat:1.103.0
+    openAiKey:
+      type: string
+      title: OpenAI API Key
+      default: sk-xxxx
+      description: OpenAI API Key for enabling AI functionalities.
+    openAiProxy:
+      type: string
+      title: OpenAI Proxy
+      default: https://api-proxy.com/v1
+      description: Proxy URL for accessing OpenAI API securely.
+    accessCode:
+      type: string
+      title: Access Code
+      default: lobe66
+      description: Access code for secure authentication to the chat service.
+
+benefits:
+  - title: AI-Powered Conversations
+    description:
+      LobeChat leverages OpenAI's powerful models to provide intelligent,
+      real-time conversational experiences for users.
+  - title: Easy Integration with OpenAI
+    description:
+      Simplify AI setup with quick integration of OpenAI API keys and proxy
+      configurations, allowing users to get started effortlessly.
+  - title: Full Customization
+    description:
+      LobeChat offers extensive options for customizing chat workflows, user
+      interfaces, and integration points for enhanced flexibility.
+
+features:
+  - title: OpenAI Integration
+    description:
+      Seamlessly connect to OpenAI services for delivering cutting-edge
+      conversational AI capabilities in your chat applications.
+  - title: Access Control with Secure Codes
+    description:
+      Protect your chat application with access codes, ensuring only authorized
+      users can interact with the AI service.
+  - title: Multi-Platform Support
+    description:
+      LobeChat works across platforms, including web and containerized
+      environments, providing versatility in deployment.
+  - title: Extensible Architecture
+    description:
+      Built for developers, LobeChat's architecture allows you to add new
+      integrations, APIs, or features with minimal effort.
+  - title: User-Friendly UI
+    description:
+      LobeChat includes a clean, intuitive interface for a smooth user
+      experience, enabling quick adoption and usage.
+
+tags:
+  - AI Chat
+  - OpenAI Integration
+  - Customizable
+  - Open Source
+  - Conversational AI

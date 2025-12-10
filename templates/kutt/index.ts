@@ -14,7 +14,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: { type: "image", image: input.appServiceImage },
       domains: [
@@ -25,7 +24,7 @@ export function generate(input: Input): Output {
       ],
       mounts: [{ type: "volume", name: "app", mountPath: "/usr/src/app" }],
       env: [
-        `SITE_NAME=${input.siteName || input.projectName}`,
+        `SITE_NAME=${input.siteName || "$(PROJECT_NAME)"}`,
         `DEFAULT_DOMAIN=$(PRIMARY_DOMAIN)`,
         `CUSTOM_DOMAIN_USE_HTTPS=true`,
         `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
@@ -50,7 +49,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },
@@ -58,11 +56,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "redis",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
-      password: redisPassword,
-    },
+    data: { serviceName: input.redisServiceName, password: redisPassword },
   });
 
   return { services };

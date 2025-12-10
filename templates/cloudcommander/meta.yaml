@@ -1,0 +1,51 @@
+name: Cloud Commander
+description:
+  Cloud Commander is a file manager for the web. It includes a command-line
+  console and a text editor. Cloud Commander helps you manage your server and
+  work with files, directories and programs in a web browser from any computer,
+  mobile or tablet.
+instructions:
+changeLog:
+  - date: 2024-01-22
+    description: first release
+  - date: 2024-09-30
+    description: Version changed to 18.1.0
+  - date: 2025-01-09
+    description: Version bumped to 18.4.1
+  - date: 2025-02-24
+    description: Version bumped to 18.5.1
+  - date: 2025-07-15
+    description: Version bumped to 18.6.1
+links:
+  - label: Website
+    url: https://cloudcmd.io
+  - label: Github
+    url: https://github.com/coderaiser/cloudcmd
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cloudcmd
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: coderaiser/cloudcmd:18.6.1
+    username:
+      type: string
+      title: Username
+      default: admin
+    password:
+      type: string
+      title: Password

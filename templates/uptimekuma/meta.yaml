@@ -1,19 +1,24 @@
 name: UptimeKuma
-description: Uptime Kuma is a self-hosted monitoring tool designed to keep track
-  of your website's uptime. It provides a comprehensive monitoring solution for
-  HTTP(s), TCP, HTTP(s) Keyword, HTTP(s) Json Query, Ping, DNS Record, Push,
-  Steam Game Server, and Docker Containers. The tool features a user-friendly,
-  reactive, and fast UI/UX. It offers notifications via various platforms
-  including Telegram, Discord, Gotify, Slack, Pushover, and Email (SMTP), among
-  others. Uptime Kuma supports multi-language interfaces and multiple status
-  pages, allowing users to map status pages to specific domains. It also
-  provides ping charts, certificate info, proxy support, and 2FA support for
-  enhanced security. This tool is perfect for those who want to ensure their
-  website is always up and running.
+description:
+  Uptime Kuma is a self-hosted monitoring tool designed to keep track of your
+  website's uptime. It provides a comprehensive monitoring solution for HTTP(s),
+  TCP, HTTP(s) Keyword, HTTP(s) Json Query, Ping, DNS Record, Push, Steam Game
+  Server, and Docker Containers. The tool features a user-friendly, reactive,
+  and fast UI/UX. It offers notifications via various platforms including
+  Telegram, Discord, Gotify, Slack, Pushover, and Email (SMTP), among others.
+  Uptime Kuma supports multi-language interfaces and multiple status pages,
+  allowing users to map status pages to specific domains. It also provides ping
+  charts, certificate info, proxy support, and 2FA support for enhanced
+  security. This tool is perfect for those who want to ensure their website is
+  always up and running.
 instructions: null
 changeLog:
   - date: 2022-08-02
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 2.0.0-beta.1
+  - date: 2025-07-25
+    description: Version bumped to 2.0.0-beta.3
 links:
   - label: Website
     url: https://uptime.kuma.pet
@@ -24,16 +29,14 @@ links:
 contributors:
   - name: Ivan Ryan
     url: https://github.com/ivanonpc-22
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,42 +44,51 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: louislam/uptime-kuma:1.21.3
+      default: louislam/uptime-kuma:2.0.0-beta.3
 benefits:
   - title: Easy-to-use monitoring tool
-    description: Uptime Kuma is a self-hosted monitoring tool that is designed to be
+    description:
+      Uptime Kuma is a self-hosted monitoring tool that is designed to be
       user-friendly and easy to set up and use.
   - title: Monitoring for various types of services
-    description: Uptime Kuma can monitor uptime for HTTP(s), TCP, HTTP(s) Keyword,
-      HTTP(s) Json Query, Ping, DNS Record, Push, Steam Game Server, and Docker
+    description:
+      Uptime Kuma can monitor uptime for HTTP(s), TCP, HTTP(s) Keyword, HTTP(s)
+      Json Query, Ping, DNS Record, Push, Steam Game Server, and Docker
       Containers.
   - title: Fancy and reactive UI/UX
-    description: Uptime Kuma provides a visually appealing and responsive user
-      interface that enhances the monitoring experience.
+    description:
+      Uptime Kuma provides a visually appealing and responsive user interface
+      that enhances the monitoring experience.
   - title: Notifications via multiple channels
-    description: Uptime Kuma supports notifications via Telegram, Discord, Gotify,
-      Slack, Pushover, Email (SMTP), and over 90 other notification services.
+    description:
+      Uptime Kuma supports notifications via Telegram, Discord, Gotify, Slack,
+      Pushover, Email (SMTP), and over 90 other notification services.
   - title: Real-time monitoring with 20-second intervals
-    description: Uptime Kuma provides real-time monitoring with 20-second intervals,
+    description:
+      Uptime Kuma provides real-time monitoring with 20-second intervals,
       allowing you to quickly detect and respond to any issues or downtime.
 features:
   - title: Easy installation with Docker
-    description: Uptime Kuma can be easily installed using Docker, making it
-      convenient to set up and run on your preferred platform.
+    description:
+      Uptime Kuma can be easily installed using Docker, making it convenient to
+      set up and run on your preferred platform.
   - title: Support for non-Docker installations
-    description: Uptime Kuma also supports non-Docker installations on major Linux
+    description:
+      Uptime Kuma also supports non-Docker installations on major Linux
       distributions and Windows platforms.
   - title: Monitoring of Docker containers
-    description: Uptime Kuma can monitor the uptime of Docker containers, providing
+    description:
+      Uptime Kuma can monitor the uptime of Docker containers, providing
       insights into the availability and performance of your containerized
       applications.
   - title: Multi-language support
-    description: Uptime Kuma supports multiple languages, allowing users from
-      different regions to use the app in their preferred language.
+    description:
+      Uptime Kuma supports multiple languages, allowing users from different
+      regions to use the app in their preferred language.
   - title: Status pages and domain mapping
-    description: Uptime Kuma allows you to create status pages and map them to
-      specific domains, providing a centralized view of the status of your
-      services.
+    description:
+      Uptime Kuma allows you to create status pages and map them to specific
+      domains, providing a centralized view of the status of your services.
 tags:
   - Monitoring
   - Self-hosted

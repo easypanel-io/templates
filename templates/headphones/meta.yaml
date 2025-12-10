@@ -1,0 +1,91 @@
+name: Headphones
+description:
+  Headphones is an open-source application designed to manage and organize your
+  music library with precision and efficiency. It provides a powerful interface
+  for searching, downloading, and managing albums and tracks, ensuring your
+  music collection is always up-to-date. Headphones integrates seamlessly with
+  popular media servers and download clients, offering an automated solution for
+  music enthusiasts. With its focus on flexibility and ease of use, Headphones
+  empowers users to curate their music library effortlessly.
+instructions: null
+changeLog:
+  - date: 2024-12-27
+    description: First Release
+links:
+  - label: Website
+    url: https://github.com/rembo10/headphones
+  - label: Github
+    url: https://github.com/rembo10/headphones
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: headphones
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/headphones:version-a78f38c1
+benefits:
+  - title: Automated Music Management
+    description:
+      Headphones automates the process of finding, downloading, and organizing
+      music, saving users valuable time.
+  - title: Open-Source and Customizable
+    description:
+      As an open-source tool, Headphones is free to use and customize, making it
+      accessible and adaptable to unique user needs.
+  - title: Media Server Integration
+    description:
+      Integrates with popular media servers like Plex and Emby, enhancing the
+      overall music streaming experience.
+  - title: User-Friendly Interface
+    description:
+      Provides an intuitive interface for managing music libraries without
+      requiring advanced technical knowledge.
+  - title: Community-Driven Development
+    description:
+      Headphones benefits from a passionate community of developers and users
+      who contribute to its growth and provide valuable support.
+features:
+  - title: Music Library Management
+    description:
+      Organize and curate your music library with powerful tools for tagging and
+      metadata management.
+  - title: Automated Downloads
+    description:
+      Search for and download music automatically using your preferred download
+      client.
+  - title: Integration with Media Servers
+    description:
+      Seamlessly integrates with Plex, Emby, and other media servers for a
+      complete music experience.
+  - title: Metadata Fetching
+    description:
+      Fetches accurate metadata and album art to keep your library polished and
+      organized.
+  - title: Community Support
+    description:
+      An active community offers extensive documentation, tutorials, and forums
+      for troubleshooting and enhancements.
+  - title: Cross-Platform Compatibility
+    description:
+      Runs on various platforms, ensuring accessibility across different
+      operating systems.
+tags:
+  - Music Management
+  - Open-Source
+  - Automated Downloads
+  - Media Servers
+  - Plex Integration
+  - Emby Integration
+  - Metadata Management
+  - Music Library
+  - Music Automation

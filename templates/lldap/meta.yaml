@@ -1,0 +1,94 @@
+name: LLDAP
+description:
+  LLDAP (Lightweight LDAP) is a simple, lightweight, high-performance LDAP
+  server designed for authentication in small to medium-sized deployments. It
+  provides an intuitive web UI for user management and a complete implementation
+  of LDAP search and bind operations. LLDAP is perfect for self-hosted
+  applications that require LDAP authentication without the complexity of
+  full-featured LDAP servers like OpenLDAP. It stores user data in an embedded
+  SQLite database by default but also supports PostgreSQL, making it easy to set
+  up and maintain. With features like password hashing, account
+  creation/deletion, group management, and MFA support, LLDAP offers a modern
+  solution for identity management in your self-hosted infrastructure.
+
+instructions:
+  Login using the username "admin" and the password you would decide.
+
+changeLog:
+  - date: 2025-03-22
+    description: Initial template release
+  - date: 2025-07-22
+    description: Version bumped to 2025-07-22
+
+links:
+  - label: GitHub
+    url: https://github.com/nitnelave/lldap
+  - label: Docker Hub
+    url: https://hub.docker.com/r/nitnelave/lldap
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminPassword
+    - exposedPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lldap
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lldap/lldap:2025-07-22
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: adminPassword
+    exposedPort:
+      type: string
+      title: Exposed Port
+      default: "3890"
+
+benefits:
+  - title: Simple User Management
+    description:
+      Manage users and groups through an intuitive web UI without needing to
+      understand LDAP complexities.
+  - title: Lightweight and Fast
+    description:
+      Designed for performance and minimal resource usage while providing all
+      essential LDAP functionality.
+  - title: Easy Integration
+    description:
+      Seamlessly connect with applications that support LDAP authentication,
+      including Nextcloud, Jellyfin, and many others.
+
+features:
+  - title: Web-Based Administration
+    description:
+      Create and manage users, groups, and permissions through a modern web
+      interface without LDAP expertise.
+  - title: LDAP Standard Compliance
+    description:
+      Full implementation of LDAP search and bind operations for compatibility
+      with existing applications.
+  - title: Multi-Factor Authentication
+    description:
+      Enhanced security with time-based one-time password (TOTP) support for
+      two-factor authentication.
+  - title: Password Policy Enforcement
+    description:
+      Configure password requirements including minimum length, complexity, and
+      expiration policies.
+
+tags:
+  - LDAP
+  - Authentication
+  - Identity Management
+  - User Management

@@ -1,12 +1,13 @@
 name: Hammond
-description: Hammond is a self-hosted vehicle management system designed to
-  track fuel and other expenses related to your vehicles. It supports multiple
-  users sharing multiple vehicles, making it an ideal solution for families,
-  businesses, or any group with shared vehicles. With Hammond, you can manage
-  multiple vehicles, track fuel and other expenses, and even save attachments
-  against vehicles. The app also features quick entries, allowing you to take a
-  photo of a receipt or pump screen for later entry. It provides vehicle-level
-  and overall reporting, helping you keep a close eye on your vehicle expenses.
+description:
+  Hammond is a self-hosted vehicle management system designed to track fuel and
+  other expenses related to your vehicles. It supports multiple users sharing
+  multiple vehicles, making it an ideal solution for families, businesses, or
+  any group with shared vehicles. With Hammond, you can manage multiple
+  vehicles, track fuel and other expenses, and even save attachments against
+  vehicles. The app also features quick entries, allowing you to take a photo of
+  a receipt or pump screen for later entry. It provides vehicle-level and
+  overall reporting, helping you keep a close eye on your vehicle expenses.
   Furthermore, Hammond allows you to import data from Clarkson or Fuelly, making
   the transition to this system seamless and straightforward.
 instructions: null
@@ -24,13 +25,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,33 +38,42 @@ schema:
       default: akhilrex/hammond:1.0.0
 benefits:
   - title: Self-Hosted Vehicle Expense Tracking
-    description: Hammond is a self-hosted vehicle expense tracking system. It allows
-      you to keep track of fuel and other expenses related to all of your
-      vehicles in one place.
+    description:
+      Hammond is a self-hosted vehicle expense tracking system. It allows you to
+      keep track of fuel and other expenses related to all of your vehicles in
+      one place.
   - title: Support for Multiple Users
-    description: The app supports multiple users sharing multiple vehicles. This
-      makes it ideal for families or businesses with a fleet of vehicles.
+    description:
+      The app supports multiple users sharing multiple vehicles. This makes it
+      ideal for families or businesses with a fleet of vehicles.
   - title: Data Migration
-    description: Hammond allows you to migrate data from Clarkson, making it easy to
-      switch over without losing any of your previous data.
+    description:
+      Hammond allows you to migrate data from Clarkson, making it easy to switch
+      over without losing any of your previous data.
 features:
   - title: Vehicle Management
-    description: Add and manage multiple vehicles, tracking fuel and other expenses
-      for each one.
+    description:
+      Add and manage multiple vehicles, tracking fuel and other expenses for
+      each one.
   - title: User Management
-    description: Add and manage multiple users, allowing them to share vehicles and
-      track expenses.
+    description:
+      Add and manage multiple users, allowing them to share vehicles and track
+      expenses.
   - title: Expense Tracking
-    description: Keep track of fuel and other expenses related to your vehicles. You
-      can even save attachments against vehicles for easy reference.
+    description:
+      Keep track of fuel and other expenses related to your vehicles. You can
+      even save attachments against vehicles for easy reference.
   - title: Quick Entries
-    description: Take a photo of a receipt or pump screen to make an entry later,
-      ensuring you never forget to log an expense.
+    description:
+      Take a photo of a receipt or pump screen to make an entry later, ensuring
+      you never forget to log an expense.
   - title: Reporting
-    description: Get vehicle level and overall reporting on your expenses, helping
-      you to better understand your spending.
+    description:
+      Get vehicle level and overall reporting on your expenses, helping you to
+      better understand your spending.
   - title: Import from Fuelly
-    description: Easily import your data from Fuelly, with more apps coming soon.
+    description:
+      Easily import your data from Fuelly, with more apps coming soon.
 tags:
   - Finance
   - Productivity

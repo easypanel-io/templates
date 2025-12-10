@@ -1,0 +1,76 @@
+name: Evo AI
+description: AI-powered API platform for conversational applications
+instructions: Use admin email - admin@evoai.com and configure the password.
+changeLog:
+  - date: 2025-05-27
+    description: First release
+  - date: 2025-07-21
+    description: Version bumped to 0.1.0
+links:
+  - label: Website
+    url: https://evoai.co/
+  - label: Documentation
+    url: https://docs.evoai.co/
+  - label: GitHub
+    url: https://github.com/EvolutionAPI/evo-ai
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - frontendImage
+    - adminInitialPassword
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: evo-ai
+    appServiceImage:
+      type: string
+      title: API Service Image
+      default: evoapicloud/evo-ai:0.1.0
+    frontendImage:
+      type: string
+      title: Frontend Image
+      default: evoapicloud/evo-ai-frontend:0.1.0
+    adminInitialPassword:
+      type: string
+      title: Admin Initial Password
+      default: admin123
+    sendgridApiKey:
+      type: string
+      title: SendGrid API Key
+      default: ""
+    emailFrom:
+      type: string
+      title: Email From Address
+      default: noreply@example.com
+benefits:
+  - title: AI Conversation Platform
+    description: Build intelligent conversational applications with ease.
+  - title: Scalable Architecture
+    description: Designed to scale with your application's needs.
+  - title: Comprehensive API
+    description: Access powerful AI capabilities through a simple API interface.
+features:
+  - title: Conversational AI
+    description: Natural language processing and generation capabilities.
+  - title: User Authentication
+    description: Secure JWT-based authentication system.
+  - title: Email Integration
+    description: SendGrid integration for email communications.
+  - title: Data Persistence
+    description: PostgreSQL database for reliable data storage.
+  - title: Caching
+    description: Redis caching for improved performance.
+  - title: Web Interface
+    description: User-friendly frontend for interacting with the AI platform.
+tags:
+  - AI
+  - API
+  - Conversational
+  - NLP
+  - Machine Learning

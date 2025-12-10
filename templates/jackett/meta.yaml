@@ -1,0 +1,77 @@
+name: Jackett
+description:
+  Jackett is a versatile, open-source indexer proxy for torrenting and Usenet,
+  enabling users to integrate popular trackers with applications like Sonarr,
+  Radarr, and more. Designed to be lightweight and efficient, Jackett
+  streamlines the process of accessing trackers, offering a seamless experience
+  for managing and automating downloads.
+instructions: null
+changeLog:
+  - date: 2024-12-25
+    description: Template Release
+links:
+  - label: Website
+    url: https://jackett.sh/
+  - label: Github
+    url: https://github.com/Jackett/Jackett
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jackett
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/jackett:0.22.2182
+
+benefits:
+  - title: Seamless Integration
+    description:
+      Jackett acts as a bridge between torrent trackers and applications like
+      Sonarr, Radarr, and Lidarr, simplifying the automation of media downloads.
+  - title: Open-Source and Free
+    description:
+      Enjoy the benefits of a completely free and open-source solution, backed
+      by an active community.
+  - title: Customizable and Flexible
+    description:
+      Configure Jackett to meet your specific needs, with support for multiple
+      trackers and platforms.
+
+features:
+  - title: Wide Tracker Support
+    description:
+      Supports hundreds of public and private trackers for both torrents and
+      Usenet.
+  - title: API Compatibility
+    description:
+      Integrates seamlessly with popular applications via API for automated
+      workflows.
+  - title: Cross-Platform
+    description:
+      Available for Windows, macOS, Linux, and Docker, ensuring compatibility
+      across all environments.
+  - title: Lightweight and Efficient
+    description:
+      Designed to be resource-efficient, making it suitable for deployment on
+      low-end devices or VPS.
+  - title: Regular Updates
+    description:
+      Benefit from consistent updates and improvements supported by an active
+      open-source community.
+
+tags:
+  - Torrenting
+  - Usenet
+  - Indexer Proxy
+  - Open-Source
+  - Automation

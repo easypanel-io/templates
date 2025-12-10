@@ -1,0 +1,99 @@
+name: GLPI
+description:
+  GLPI (Gestionnaire Libre de Parc Informatique) is a powerful IT asset
+  management and help desk software designed to streamline IT operations. It
+  offers features like inventory management, ticketing, and reporting, making it
+  an ideal solution for IT teams. With its robust plugin support and
+  user-friendly interface, GLPI provides extensive customization options to
+  adapt to various organizational needs. This containerized version is based on
+  Docker Baseimage KasmVNC, ensuring smooth multi-platform support and flexible
+  deployment.
+
+instructions:
+  Default login is; glpi/glpi, and other credentials can be found on the Github
+  repository or during the installation wizard.
+
+changeLog:
+  - date: 2024-12-31
+    description: Template Release
+  - date: 2025-07-21
+    description: Version bumped to 9.1.4
+links:
+  - label: Documentation
+    url: https://glpi-project.org/documentation/
+  - label: Github
+    url: https://github.com/glpi-project/glpi
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glpi
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: diouxx/glpi:9.1.4
+benefits:
+  - title: Comprehensive IT Asset Management
+    description:
+      GLPI enables organizations to efficiently manage IT assets, track
+      hardware, and maintain an up-to-date inventory.
+  - title: Integrated Help Desk System
+    description:
+      Includes a robust ticketing system to streamline issue tracking and
+      resolution for IT teams.
+  - title: Extensive Customization
+    description:
+      Offers a variety of plugins and configuration options to adapt the
+      software to specific organizational requirements.
+  - title: Web-Based Interface
+    description:
+      Accessible from any device, making IT operations manageable from anywhere.
+
+features:
+  - title: Asset Inventory Management
+    description:
+      Track and manage hardware, software, and other IT assets effectively.
+  - title: Ticketing System
+    description:
+      Manage user requests, incidents, and changes through an intuitive help
+      desk interface.
+  - title: Reporting and Statistics
+    description:
+      Generate detailed reports to analyze IT performance and identify
+      improvement areas.
+  - title: Plugin Support
+    description:
+      Enhance GLPI with a variety of plugins developed by the community.
+  - title: User and Group Management
+    description: Manage roles and permissions to ensure secure access control.
+  - title: Multi-Language Support
+    description:
+      Available in multiple languages to cater to global organizations.
+  - title: Custom Workflows
+    description:
+      Define workflows and automate repetitive IT tasks for improved efficiency.
+  - title: Integration Capabilities
+    description:
+      Integrates with various third-party tools and APIs for extended
+      functionality.
+  - title: Centralized IT Management
+    description:
+      Centralize IT asset and help desk management for better visibility and
+      coordination.
+
+tags:
+  - IT Asset Management
+  - Help Desk
+  - Ticketing
+  - Customization
+  - Reporting
+  - Plugins
+  - IT Operations

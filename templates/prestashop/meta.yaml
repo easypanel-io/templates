@@ -1,0 +1,92 @@
+name: Prestashop
+description:
+  Prestashop is an open-source e-commerce platform that empowers businesses to
+  build and manage their online stores. It provides a user-friendly interface, a
+  robust product catalog system, order management, and customizable themes,
+  making it an ideal choice for merchants of all sizes. Prestashop supports
+  multiple payment gateways, multilingual and multi-currency features, and SEO
+  optimization to ensure a global reach and enhanced online visibility.
+  Additionally, it offers a vibrant marketplace for modules and themes, enabling
+  seamless customization and integration with third-party services.
+instructions:
+  Configure the database during the installation wizard. Use the provided
+  domains for the admin panel and storefront setup.
+changeLog:
+  - date: 2024-11-20
+    description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 8.2.1
+links:
+  - label: Website
+    url: https://www.prestashop.com
+  - label: Documentation
+    url: https://devdocs.prestashop.com
+  - label: Github
+    url: https://github.com/PrestaShop/PrestaShop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: prestashop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: prestashop/prestashop:8.2.1
+benefits:
+  - title: Comprehensive E-commerce Solution
+    description:
+      Prestashop provides all the tools needed to launch and manage a successful
+      online store, including product catalog management, payment integration,
+      and order processing.
+  - title: Customizable Themes and Modules
+    description:
+      Choose from a wide variety of themes and modules available in the
+      Prestashop marketplace to create a unique shopping experience tailored to
+      your brand.
+  - title: Multilingual and Multi-currency Support
+    description:
+      Expand your business globally with built-in support for multiple languages
+      and currencies, ensuring a seamless shopping experience for customers
+      worldwide.
+  - title: SEO-Friendly
+    description:
+      Prestashop includes built-in SEO optimization tools to improve your
+      store's visibility on search engines and attract more customers.
+  - title: Active Community
+    description:
+      Join a vibrant community of developers, merchants, and contributors who
+      provide ongoing support and innovation for the Prestashop ecosystem.
+features:
+  - title: Product Catalog Management
+    description:
+      Organize and display products with categories, attributes, and variations,
+      providing customers with detailed and engaging product listings.
+  - title: Secure Payment Integration
+    description:
+      Prestashop supports multiple secure payment gateways, allowing customers
+      to complete transactions safely and conveniently.
+  - title: Analytics and Reporting
+    description:
+      Gain insights into your store's performance with built-in analytics and
+      reporting tools, helping you make informed business decisions.
+  - title: Mobile-Responsive Design
+    description:
+      Ensure an optimized shopping experience across devices with
+      mobile-responsive themes and layouts.
+  - title: Open Source
+    description:
+      Prestashop is open-source, providing full control and flexibility to
+      customize your store according to your specific needs.
+tags:
+  - E-commerce
+  - Web Development
+  - Online Store
+  - CMS

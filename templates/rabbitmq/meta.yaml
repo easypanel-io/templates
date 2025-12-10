@@ -1,43 +1,42 @@
 name: RabbitMQ
-description: RabbitMQ is a highly popular open source message broker used by
-  businesses of all sizes, from startups to large enterprises. It is
-  lightweight, easy to deploy, and supports multiple messaging protocols and
-  streaming. RabbitMQ can be deployed in distributed and federated
-  configurations, making it ideal for high-scale, high-availability
-  requirements. It runs on various operating systems and cloud environments, and
-  offers a wide range of developer tools for most popular languages. RabbitMQ
-  supports asynchronous messaging, message queuing, delivery acknowledgement,
-  and flexible routing to queues. It also offers a diverse array of tools and
-  plugins for continuous integration, operational metrics, and integration with
-  other enterprise systems. RabbitMQ is enterprise and cloud ready, with
-  pluggable authentication, authorisation, and support for TLS and LDAP. It also
-  provides an HTTP-API, command line tool, and UI for managing and monitoring
-  the system.
-instructions: Default user/pass is guest/guest (if you use the -management
-  version of the image)
+description:
+  RabbitMQ is an open-source message broker software that facilitates reliable
+  messaging between applications and services. It supports a variety of
+  messaging protocols such as AMQP and MQTT, making it a versatile solution for
+  modern distributed systems. With RabbitMQ, you can efficiently manage message
+  queues, exchanges, and routing, enabling seamless communication across
+  different components of your application. It also provides a user-friendly
+  web-based management interface for monitoring, configuration, and
+  troubleshooting.
+
+instructions: null
+
 changeLog:
-  - date: 2022-11-08
-    description: first release
+  - date: 2024-12-17
+    description: First release
+
 links:
   - label: Website
     url: https://www.rabbitmq.com/
   - label: Documentation
     url: https://www.rabbitmq.com/documentation.html
-  - label: Github
-    url: https://github.com/rabbitmq/rabbitmq-server/
+  - label: GitHub
+    url: https://github.com/rabbitmq
+
 contributors:
-  - name: Rubén Robles
-    url: https://github.com/D8vjork
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
-    - totalMemory
+    - appServiceImage
+    - defaultVhost
+    - defaultUser
+    - defaultPassword
+    - defaultAMQPPort
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -45,53 +44,60 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-    enableManagementUI:
-      type: boolean
-      title: Enable RabbitMQ Management UI Plugin (modifies image)
-    defaultUserName:
+      default: rabbitmq:3-management
+    defaultVhost:
       type: string
-      title: Default User Name
-    defaultUserPassword:
+      title: Default Vhost
+      default: /
+    defaultUser:
       type: string
-      title: Default User Password
-    totalMemory:
+      title: Default User
+      default: guest
+    defaultPassword:
       type: string
-      title: RAM Memory Limit (recommended)
-      default: 512MB
+      title: Default Password
+      default: guest
+    defaultAMQPPort:
+      type: integer
+      title: Default AMQP Port on Host
+      default: 5672
 benefits:
-  - title: Efficient Messaging
-    description: RabbitMQ is a highly efficient open-source message broker that
-      supports multiple messaging protocols and streaming. It is used worldwide
-      by both small startups and large enterprises.
-  - title: Scalability and High Availability
-    description: RabbitMQ can be deployed in distributed and federated
-      configurations to meet high-scale, high-availability requirements. It is
-      lightweight and easy to deploy on premises and in the cloud.
-  - title: Cross-Language Messaging
-    description: RabbitMQ provides a wide range of developer tools for most popular
-      languages, enabling cross-language messaging with your favorite
-      programming languages.
+  - title: Reliable Message Delivery
+    description:
+      RabbitMQ ensures reliable and efficient message delivery with support for
+      message acknowledgments, persistence, and clustering for high
+      availability.
+  - title: Versatile Protocol Support
+    description:
+      RabbitMQ supports multiple messaging protocols, including AMQP, MQTT, and
+      STOMP, enabling flexibility in communication between different systems.
+  - title: Easy Management and Monitoring
+    description:
+      With RabbitMQ's Management UI, you can monitor queues, exchanges, and
+      message throughput, and easily configure the broker through a web
+      interface.
+
 features:
-  - title: Asynchronous Messaging
-    description: RabbitMQ supports multiple messaging protocols, message queuing,
-      delivery acknowledgement, flexible routing to queues, and multiple
-      exchange types.
-  - title: Distributed Deployment
-    description: RabbitMQ can be deployed as clusters for high availability and
-      throughput, and can federate across multiple availability zones and
-      regions.
-  - title: Enterprise & Cloud Ready
-    description: RabbitMQ supports pluggable authentication and authorisation, TLS
-      and LDAP. It is lightweight and easy to deploy in public and private
-      clouds.
-  - title: Tools & Plugins
-    description: RabbitMQ offers a diverse array of tools and plugins supporting
-      continuous integration, operational metrics, and integration to other
-      enterprise systems. It has a flexible plug-in approach for extending its
-      functionality.
-  - title: Management & Monitoring
-    description: RabbitMQ provides an HTTP-API, command line tool, and UI for
-      managing and monitoring its operations.
+  - title: Lightweight and Fast
+    description:
+      RabbitMQ is lightweight and optimized for fast message processing, making
+      it ideal for both small-scale and enterprise-level applications.
+  - title: High Availability
+    description:
+      RabbitMQ supports clustering and mirrored queues to ensure message
+      availability and prevent data loss in case of failure.
+  - title: Management Web UI
+    description:
+      The built-in web-based UI allows you to monitor queues, exchanges, and
+      performance metrics in real time.
+  - title: Plugins and Extensibility
+    description:
+      Extend RabbitMQ's functionality with a rich set of plugins for
+      authentication, monitoring, and protocol support.
+
 tags:
-  - Developer Tools
-  - Messaging
+  - Message Broker
+  - AMQP
+  - MQTT
+  - High Availability
+  - Queue Management

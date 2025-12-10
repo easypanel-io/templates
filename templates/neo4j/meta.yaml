@@ -1,0 +1,74 @@
+name: Neo4j
+description:
+  Neo4j is a native graph database that brings data relationships to the
+  foreground. It's designed to store, manage, and analyze connected data
+  efficiently. Neo4j is particularly well-suited for applications that need to
+  model complex relationships between entities, such as social networks,
+  recommendation engines, fraud detection, and knowledge graphs.
+instructions: null
+changeLog:
+  - date: 2025-03-26
+    description: Initial template release
+  - date: 2025-07-24
+    description: Update to Neo4j 5.26.9
+links:
+  - label: Website
+    url: https://neo4j.com/
+  - label: Documentation
+    url: https://neo4j.com/docs/
+  - label: Docker Hub
+    url: https://hub.docker.com/_/neo4j
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - neo4jUser
+    - neo4jPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: neo4j
+    appServiceImage:
+      type: string
+      title: Neo4j Image
+      default: neo4j:5.26.9
+    neo4jPassword:
+      type: string
+      title: Neo4j Password
+      description: Password for the neo4j user
+      default: password
+    neo4jUser:
+      type: string
+      title: Neo4j User
+      description: User for the neo4j database
+      default: neo4j
+
+benefits:
+  - title: Native Graph Database
+    description: Optimized for storing and querying connected data.
+  - title: Powerful Query Language
+    description: Cypher query language for intuitive graph operations.
+  - title: Scalability
+    description: Scale horizontally and vertically as needed.
+  - title: Rich Ecosystem
+    description: Extensive tools, libraries, and integrations.
+features:
+  - title: Graph Database
+    description: Native graph storage and processing.
+  - title: ACID Compliance
+    description: Full ACID compliance for data consistency.
+  - title: Browser Interface
+    description: User-friendly web interface for database management.
+  - title: Plugin Support
+    description: Extensible through custom plugins.
+tags:
+  - Database
+  - Graph Database
+  - NoSQL
+  - Analytics
+  - Knowledge Graph

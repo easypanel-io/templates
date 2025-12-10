@@ -1,0 +1,79 @@
+name: Alerta
+description: Alerta is a monitoring system that consolidates and deduplicates alerts from multiple monitoring systems.
+instructions: null
+changeLog:
+  - date: 2025-05-08
+    description: First Release
+links:
+  - label: Website
+    url: https://alerta.io/
+  - label: Github
+    url: https://github.com/alerta/alerta
+  - label: Documentation
+    url: https://docs.alerta.io/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsers
+    - adminPassword
+    - adminKey
+    - adminKeyMaxAge
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: alerta
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: alerta/alerta-web:9.0.4
+      description: Image to use for the app service
+    adminUsers:
+      type: string
+      title: Admin Users
+      default: admin@alerta.io
+      description: Comma-separated list of admin user email addresses
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: super-secret
+      description: Password for admin users
+    adminKey:
+      type: string
+      title: Admin Key
+      default: demo-key
+      description: API key assigned to the first admin user
+    adminKeyMaxAge:
+      type: string
+      title: Admin Key Max Age
+      default: "500"
+      description: Maximum age of admin API key in days
+benefits:
+  - title: Alert Management
+    description: Consolidates and deduplicates alerts from multiple monitoring systems.
+  - title: User Management
+    description: Built-in user authentication and authorization system.
+  - title: API Access
+    description: RESTful API for integration with other systems.
+features:
+  - title: Alert Consolidation
+    description: Deduplicates and consolidates alerts from multiple sources.
+  - title: Authentication
+    description: Built-in authentication system with admin user management.
+  - title: API Integration
+    description: RESTful API for integration with monitoring systems.
+  - title: Database Integration
+    description: PostgreSQL database integration for reliable data storage.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Monitoring
+  - Alert Management
+  - Web Application
+  - PostgreSQL
+  - API 

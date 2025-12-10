@@ -1,9 +1,10 @@
 name: Rotki
-description: Rotki is a comprehensive asset management and accounting
-  application, specifically designed for crypto assets. The app is designed to
-  help with tax reporting by importing, displaying, storing, and generating
-  reports and statistics from cryptocurrency transaction data and other assets.
-  It integrates with multiple exchanges, providing a centralized platform for
+description:
+  Rotki is a comprehensive asset management and accounting application,
+  specifically designed for crypto assets. The app is designed to help with tax
+  reporting by importing, displaying, storing, and generating reports and
+  statistics from cryptocurrency transaction data and other assets. It
+  integrates with multiple exchanges, providing a centralized platform for
   managing your crypto assets. Rotki also offers the ability to generate
   profit/loss reports, making it easier to understand your financial standing.
   It's important to note that while Rotki aids in tax reporting, it does not
@@ -15,6 +16,10 @@ instructions: null
 changeLog:
   - date: 2023-2-9
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to v1.38
+  - date: 2025-07-24
+    description: Version bumped to v1.39.1
 links:
   - label: Documentation
     url: https://rotki.readthedocs.io/en/latest/
@@ -25,16 +30,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -42,34 +45,40 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.27.1
+      default: rotki/rotki:v1.39.1
 benefits:
   - title: Asset Management
-    description: Rotki is an asset management application that specializes in crypto
+    description:
+      Rotki is an asset management application that specializes in crypto
       assets. It allows you to keep track of your assets in one place, making it
       easier to manage your portfolio.
   - title: Tax Reporting
-    description: Rotki aims to help with tax reporting. It generates reports and
-      statistics from your cryptocurrency transaction data, which can be useful
-      for tax purposes.
+    description:
+      Rotki aims to help with tax reporting. It generates reports and statistics
+      from your cryptocurrency transaction data, which can be useful for tax
+      purposes.
   - title: Privacy Protection
-    description: Unlike other services, Rotki stores your data encrypted locally on
-      your computer. This ensures that your financial data remains private and
+    description:
+      Unlike other services, Rotki stores your data encrypted locally on your
+      computer. This ensures that your financial data remains private and
       secure.
 features:
   - title: Integration with Multiple Exchanges
-    description: Rotki has integration for multiple exchanges, with more coming
-      soon. This allows you to manage your assets across different platforms
-      easily.
+    description:
+      Rotki has integration for multiple exchanges, with more coming soon. This
+      allows you to manage your assets across different platforms easily.
   - title: Transaction Data Import and Display
-    description: Rotki allows you to import, display, and store your cryptocurrency
+    description:
+      Rotki allows you to import, display, and store your cryptocurrency
       transaction data. It also generates reports and statistics from this data.
   - title: Profit/Loss Report Generation
-    description: Rotki allows you to create a profit/loss report. This can help you
+    description:
+      Rotki allows you to create a profit/loss report. This can help you
       understand your financial performance and make informed decisions.
   - title: Decentralized Finance
-    description: Rotki supports decentralized finance. This means you can manage
-      your DeFi assets along with your traditional assets.
+    description:
+      Rotki supports decentralized finance. This means you can manage your DeFi
+      assets along with your traditional assets.
 tags:
   - Finance
   - Analytics

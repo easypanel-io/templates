@@ -1,0 +1,75 @@
+name: Kener
+description:
+  Kener is an advanced, self-hosted status page system designed for individuals
+  and teams. It offers a sleek, responsive user interface for monitoring and
+  communicating the status of your services efficiently. Kener supports
+  real-time monitoring, incident management, and customizable status pages. With
+  seamless offline access, powerful search capabilities, and robust encryption,
+  Kener ensures your service status is transparent and secure. It provides a
+  consistent experience across desktop and web applications, with customization
+  options to suit your preferences.
+instructions: null
+changeLog:
+  - date: 2025-01-16
+    description: First Release
+  - date: 2025-07-22
+    description: Version bumped to 3.2.18
+links:
+  - label: Website
+    url: https://kener.ing/
+  - label: Documentation
+    url: https://kener.ing/docs
+  - label: GitHub
+    url: https://github.com/rajnandan1/kener
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kener
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rajnandan1/kener:3.2.18
+benefits:
+  - title: Real-Time Service Monitoring
+    description:
+      Kener provides real-time monitoring of your services, allowing you to
+      track uptime and performance metrics effectively.
+  - title: Incident Management
+    description:
+      Manage incidents efficiently with Kener's integrated incident reporting
+      and tracking features, ensuring timely communication with your users.
+  - title: Customizable Status Pages
+    description:
+      Create and customize status pages that reflect your brand, providing
+      transparency and building trust with your audience.
+features:
+  - title: Seamless Offline Access
+    description:
+      Access and manage your status pages offline, ensuring uninterrupted
+      service even without an internet connection.
+  - title: Powerful Search Functionality
+    description:
+      Quickly locate and manage your monitors and incidents with Kener's robust
+      search capabilities.
+  - title: Advanced Security Features
+    description:
+      Protect your data with advanced security settings, including end-to-end
+      encryption and access controls.
+  - title: Integration with GitHub
+    description:
+      Leverage GitHub integration for incident management, enabling
+      collaborative issue tracking and resolution.
+tags:
+  - Status Page
+  - Monitoring
+  - Incident Management
+  - Self-Hosted

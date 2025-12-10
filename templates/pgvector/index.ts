@@ -6,11 +6,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "postgres",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.serviceName,
-      image: input.serviceImage,
-    },
+    data: { serviceName: input.serviceName, image: input.serviceImage },
   });
 
   return { services };

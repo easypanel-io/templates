@@ -1,6 +1,7 @@
 name: Fider
-description: Fider is a feature-rich solution designed to help you understand
-  and prioritize your customers' needs. It allows your customers to share their
+description:
+  Fider is a feature-rich solution designed to help you understand and
+  prioritize your customers' needs. It allows your customers to share their
   ideas, vote, and discuss what they need the most. With Fider, you can keep
   everyone informed about the status of their suggestions, whether they are
   started, completed, or declined. The app offers a one-click sign-in feature,
@@ -16,6 +17,10 @@ instructions: Fider REQUIRES email in order for installation to work!
 changeLog:
   - date: 2022-11-19
     description: first release
+  - date: 2025-01-14
+    description: Version bumped to SHA_a1553876aed65a35e1171831b3dd467749eca87b
+  - date: 2025-02-25
+    description: Version bumped to SHA_49128a57113c065edc6068bf568926a066c463e5
 links:
   - label: Website
     url: https://fider.io
@@ -29,7 +34,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
@@ -39,9 +43,6 @@ schema:
     - emailUsername
     - emailPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -49,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getfider/fider:stable
+      default: getfider/fider:v0.28.1
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -72,45 +73,54 @@ schema:
       title: Email Password
 benefits:
   - title: Prioritize Customer Needs
-    description: Fider allows you to prioritize what your customers really need. By
-      giving your customers a voice, they can tell you what they need, allowing
-      you to spend less time guessing and more time building the right product.
+    description:
+      Fider allows you to prioritize what your customers really need. By giving
+      your customers a voice, they can tell you what they need, allowing you to
+      spend less time guessing and more time building the right product.
   - title: Stay Informed
-    description: Fider keeps everyone informed. Whenever you start, complete or
-      decline a suggestion, Fider will notify everyone that subscribed to that
-      topic, ensuring everyone is up-to-date.
+    description:
+      Fider keeps everyone informed. Whenever you start, complete or decline a
+      suggestion, Fider will notify everyone that subscribed to that topic,
+      ensuring everyone is up-to-date.
   - title: Easy Sign In
-    description: Fider makes it easy for visitors to contribute. With one click sign
-      in via various platforms, visitors are only one click away from
-      contributing.
+    description:
+      Fider makes it easy for visitors to contribute. With one click sign in via
+      various platforms, visitors are only one click away from contributing.
   - title: Customizable
-    description: Fider allows you to make the platform your own. With custom CSS
-      features, you can style Fider the way you want, including your logo, your
-      colors, and your identity.
+    description:
+      Fider allows you to make the platform your own. With custom CSS features,
+      you can style Fider the way you want, including your logo, your colors,
+      and your identity.
 features:
   - title: Share Ideas, Vote and Discuss
-    description: Fider provides a feature-packed solution for all your needs. It
-      allows you to share ideas, vote and discuss, giving voice to your
-      community and getting valuable suggestions.
+    description:
+      Fider provides a feature-packed solution for all your needs. It allows you
+      to share ideas, vote and discuss, giving voice to your community and
+      getting valuable suggestions.
   - title: Private Site
-    description: Fider offers the option to control access to your site by making it
+    description:
+      Fider offers the option to control access to your site by making it
       private, ensuring only the right people have access.
   - title: Public API
-    description: Fider provides a complete API, giving you total control to
-      integrate Fider into your process.
+    description:
+      Fider provides a complete API, giving you total control to integrate Fider
+      into your process.
   - title: Multi-language
-    description: Fider is translated in 10+ languages, such as English, Spanish,
-      German, French and Portuguese, making it accessible to a wide range of
-      users.
+    description:
+      Fider is translated in 10+ languages, such as English, Spanish, German,
+      French and Portuguese, making it accessible to a wide range of users.
   - title: Organize Your Content
-    description: Fider allows you to tag your content to make it easier to find,
-      group and decide. Tags can be either Public or Private.
+    description:
+      Fider allows you to tag your content to make it easier to find, group and
+      decide. Tags can be either Public or Private.
   - title: Markdown
-    description: Fider allows you to style your text with the popular Markdown
-      markup language, making it easy to create engaging content.
+    description:
+      Fider allows you to style your text with the popular Markdown markup
+      language, making it easy to create engaging content.
   - title: Your Own Domain
-    description: When using our hosted service, you can use your own domain and get
-      a free TLS certificate to keep it secure.
+    description:
+      When using our hosted service, you can use your own domain and get a free
+      TLS certificate to keep it secure.
 tags:
   - Productivity
   - Feedback

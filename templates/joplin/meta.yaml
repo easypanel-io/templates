@@ -1,9 +1,25 @@
 name: Joplin
-description: Joplin is an open-source note-taking application that allows you to capture your thoughts and access them securely from any device. It supports multimedia notes, including images, videos, PDFs, and audio files, and even allows the creation of math expressions and diagrams. With Joplin Cloud, you can share your notes and collaborate with others. The app also features a web clipper extension for saving web pages or screenshots as notes. Joplin can be customized with plugins, themes, and multiple text editors, and it synchronizes with various services, including Joplin Cloud, Dropbox, and OneDrive. All notes are saved in an open format and secured with end-to-end encryption.
-instructions: null
+description:
+  Joplin is an open-source note-taking application that allows you to capture
+  your thoughts and access them securely from any device. It supports multimedia
+  notes, including images, videos, PDFs, and audio files, and even allows the
+  creation of math expressions and diagrams. With Joplin Cloud, you can share
+  your notes and collaborate with others. The app also features a web clipper
+  extension for saving web pages or screenshots as notes. Joplin can be
+  customized with plugins, themes, and multiple text editors, and it
+  synchronizes with various services, including Joplin Cloud, Dropbox, and
+  OneDrive. All notes are saved in an open format and secured with end-to-end
+  encryption.
+instructions: "Default login email: admin@localhost, password: admin"
 changeLog:
   - date: 2023-03-16
     description: First Release
+  - date: 2024-10-11
+    description: Second Release version updated to 3.0.1-beta
+  - date: 2025-02-28
+    description: Version bumped to 3.3.3-beta
+  - date: 2025-07-22
+    description: Version bumped to 3.4.1
 links:
   - label: Website
     url: https://joplinapp.org/
@@ -14,17 +30,15 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -32,39 +46,69 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joplin/server:2.10.10-beta
+      default: joplin/server:3.4.1
     databaseServiceName:
       type: string
       title: Database Service Name
       default: joplin-db
 benefits:
   - title: Multimedia Notes
-    description: Joplin supports images, videos, PDFs, and audio files. You can create math expressions and diagrams directly from the app, and take photos with the mobile app to save them to a note.
+    description:
+      Joplin supports images, videos, PDFs, and audio files. You can create math
+      expressions and diagrams directly from the app, and take photos with the
+      mobile app to save them to a note.
   - title: Collaboration
-    description: With Joplin Cloud, you can share your notes with friends, family, or colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.
+    description:
+      With Joplin Cloud, you can share your notes with friends, family, or
+      colleagues and collaborate on them. You can also publish a note to the
+      internet and share the URL with others.
   - title: Web Clipping
-    description: Joplin provides a web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.
+    description:
+      Joplin provides a web clipper extension, available on Chrome and Firefox,
+      to save web pages or take screenshots as notes.
   - title: Customization
-    description: Joplin allows customization with plugins, custom themes, and multiple text editors (Rich Text or Markdown). You can also create your own scripts and plugins using the Extension API.
+    description:
+      Joplin allows customization with plugins, custom themes, and multiple text
+      editors (Rich Text or Markdown). You can also create your own scripts and
+      plugins using the Extension API.
   - title: Accessibility
-    description: Joplin ensures your notes are accessible from any device by synchronizing with various services, including Joplin Cloud, Dropbox, and OneDrive. The app is available on Windows, macOS, Linux, Android, and iOS. A terminal app is also available.
+    description:
+      Joplin ensures your notes are accessible from any device by synchronizing
+      with various services, including Joplin Cloud, Dropbox, and OneDrive. The
+      app is available on Windows, macOS, Linux, Android, and iOS. A terminal
+      app is also available.
   - title: Data Ownership
-    description: Joplin is open source and saves your notes to an open format, ensuring you always have access to them. It uses End-To-End Encryption (E2EE) to secure your notes and ensure only you can access them.
+    description:
+      Joplin is open source and saves your notes to an open format, ensuring you
+      always have access to them. It uses End-To-End Encryption (E2EE) to secure
+      your notes and ensure only you can access them.
 features:
   - title: Note-Taking
-    description: Joplin allows you to create and manage notes, to-do lists, and reminders across all your devices.
+    description:
+      Joplin allows you to create and manage notes, to-do lists, and reminders
+      across all your devices.
   - title: Multimedia Support
-    description: Joplin supports the inclusion of images, videos, PDFs, and audio files in your notes.
+    description:
+      Joplin supports the inclusion of images, videos, PDFs, and audio files in
+      your notes.
   - title: Math Expressions and Diagrams
-    description: You can create math expressions and diagrams directly within the app.
+    description:
+      You can create math expressions and diagrams directly within the app.
   - title: Collaboration
-    description: Joplin Cloud allows you to share your notes and collaborate with others.
+    description:
+      Joplin Cloud allows you to share your notes and collaborate with others.
   - title: Web Clipping
-    description: Joplin provides a web clipper extension for Chrome and Firefox to save web pages or screenshots as notes.
+    description:
+      Joplin provides a web clipper extension for Chrome and Firefox to save web
+      pages or screenshots as notes.
   - title: Customization
-    description: Joplin supports plugins, custom themes, and multiple text editors for customization.
+    description:
+      Joplin supports plugins, custom themes, and multiple text editors for
+      customization.
   - title: Synchronization
-    description: Joplin syncs your notes across devices using various services, including Joplin Cloud, Dropbox, and OneDrive.
+    description:
+      Joplin syncs your notes across devices using various services, including
+      Joplin Cloud, Dropbox, and OneDrive.
   - title: End-To-End Encryption
     description: Joplin uses End-To-End Encryption to secure your notes.
 tags:

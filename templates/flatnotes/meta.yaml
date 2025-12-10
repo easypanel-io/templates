@@ -1,0 +1,82 @@
+name: Flatnotes
+description:
+  Flatnotes is an open-source, self-hosted note-taking platform designed to help
+  individuals and teams manage their notes efficiently. It provides a
+  lightweight and intuitive interface for creating, organizing, and sharing
+  notes. With robust customization options, Flatnotes supports markdown editing,
+  tagging, and a responsive design, making it a versatile solution for note
+  management.
+instructions: null
+changeLog:
+  - date: 2025-01-20
+    description: First Release
+  - date: 2025-02-25
+    description: Version bumped to v5.4.1
+  - date: 2025-07-21
+    description: Version bumped to v5.5.3
+links:
+  - label: Github
+    url: https://github.com/dullage/flatnotes
+  - label: Demo
+    url: https://flatnotes.dullage.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: flatnotes
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dullage/flatnotes:v5.5.3
+    username:
+      type: string
+      title: Username
+      default: flatnotesuser
+    password:
+      type: string
+      title: Password
+      default: password
+benefits:
+  - title: Lightweight and Fast
+    description:
+      Flatnotes provides a minimalistic platform that is quick to set up and use
+      for note-taking.
+  - title: Customizable and Flexible
+    description:
+      Flatnotes allows users to personalize their note-taking experience with
+      markdown support and tagging.
+  - title: Accessible Anywhere
+    description:
+      A responsive design ensures that notes are accessible on desktops,
+      tablets, and mobile devices.
+features:
+  - title: Markdown Support
+    description:
+      Write and edit notes using markdown for a rich text editing experience.
+  - title: Note Tagging
+    description: Organize notes effectively with a robust tagging system.
+  - title: Search and Filter
+    description:
+      Quickly find notes using the search and filtering functionality.
+  - title: Self-Hosted for Privacy
+    description:
+      Host Flatnotes on your own server to ensure complete control over your
+      data.
+  - title: Responsive Interface
+    description: Access and manage notes seamlessly across all devices.
+tags:
+  - Note-Taking
+  - Markdown
+  - Open Source
+  - Self-Hosted
+  - Productivity

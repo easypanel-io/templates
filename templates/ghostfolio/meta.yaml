@@ -1,0 +1,85 @@
+name: Ghostfolio
+description:
+  Ghostfolio is a self-hosted wealth management application that allows users to
+  track and analyze their investment portfolios. It provides insights into asset
+  allocation, risk exposure, and financial growth, helping individuals make
+  informed decisions about their finances. With Ghostfolio, users can connect
+  their brokerage accounts, monitor their investments in real-time, and gain a
+  comprehensive overview of their financial health. The application is
+  accessible via a web interface and offers API support for integrations. Built
+  for privacy and control, Ghostfolio is an excellent solution for self-hosted
+  personal finance management.
+
+instructions:
+  Click on get started, create account and save the generated token safely for
+  logins.
+
+changeLog:
+  - date: 2025-02-06
+    description: Template Release
+  - date: 2025-02-25
+    description: Version bumped to 2.140.0
+  - date: 2025-07-21
+    description: Version bumped to 2.183.0
+
+links:
+  - label: Documentation
+    url: https://ghostfolio.dev/docs/
+  - label: Github
+    url: https://github.com/ghostfolio/ghostfolio
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ghostfolio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.io/ghostfolio/ghostfolio:2.183.0
+benefits:
+  - title: Personal Finance Management
+    description:
+      Ghostfolio provides users with a self-hosted solution to track and manage
+      their investment portfolios, ensuring complete privacy and control.
+  - title: Real-Time Portfolio Insights
+    description:
+      Users can monitor asset performance, view real-time price updates, and
+      analyze their financial growth with powerful visualization tools.
+  - title: Secure and Private
+    description:
+      Ghostfolio is designed for self-hosting, meaning all financial data
+      remains private and under user control, without reliance on third-party
+      services.
+
+features:
+  - title: Multi-Asset Support
+    description:
+      Track stocks, ETFs, cryptocurrencies, and other financial assets in a
+      single dashboard.
+  - title: API Access
+    description:
+      Integrate Ghostfolio with other applications using its API for automated
+      data retrieval.
+  - title: Risk Analysis
+    description:
+      Assess portfolio risk exposure with advanced analytics and performance
+      indicators.
+  - title: Transaction Tracking
+    description:
+      Log and monitor investment transactions to maintain an accurate financial
+      history.
+
+tags:
+  - Investment Tracking
+  - Personal Finance
+  - Self-Hosted

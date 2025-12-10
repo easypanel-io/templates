@@ -1,0 +1,63 @@
+name: HackMD
+description:
+  HackMD is a simple and powerful note-taking app that allows you to create
+  notes, write and organize your thoughts, and collaborate with others in real
+  time. It's a great tool for anyone who wants to stay organized and productive
+  while working remotely or on the go.
+instructions: null
+changeLog:
+  - date: 2024-11-27
+    description: first release
+  - date: 2025-07-21
+    description: Version bumped to 2.6.0
+links:
+  - label: Website
+    url: https://hackmd.io/
+  - label: Github
+    url: https://github.com/hackmdio/codimd
+contributors:
+  - name: Serban Alexandru
+    url: https://github.com/serban-alexandru
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hackmd
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nabo.codimd.dev/hackmdio/hackmd:2.6.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: hackmd-db
+benefits:
+  - title: No-Code Collaboration
+    description:
+      The app provides a no-code collaboration experience, allowing you to
+      collaborate on documents in real time. This eliminates the need for manual
+      sharing and ensures that all changes are tracked and saved.
+  - title: No-Code Note Taking
+    description:
+      The app provides a no-code note taking experience, allowing you to create
+      notes, write and organize your thoughts, and collaborate with others in
+      real time. This eliminates the need for manual note taking and ensures
+      that all notes are saved and accessible.
+  - title: No-Code Organization
+    description:
+      The app provides a no-code organization experience, allowing you to
+      organize your notes, tasks, and other content in a structured and
+      intuitive way. This eliminates the need for manual organization and
+      ensures that all content is easily accessible and searchable.
+tags:
+  - No-Code
+  - Collaboration
+  - Note Taking

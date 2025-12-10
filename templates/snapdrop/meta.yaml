@@ -1,0 +1,90 @@
+name: SnapDrop
+description:
+  Snapdrop is a self-hosted, browser-based file-sharing platform that allows you
+  to seamlessly transfer files between devices on the same local network.
+  Inspired by Apple's AirDrop, Snapdrop works across any device and browser
+  without requiring an account or installation. It provides fast, peer-to-peer
+  file transfers using WebRTC, ensuring privacy and efficiency. Snapdrop's
+  lightweight design ensures minimal resource usage while offering an intuitive
+  user interface for easy file sharing.
+instructions:
+  Access the Snapdrop service via your browser on devices connected to the same
+  network. Simply drag and drop files to transfer them to other devices detected
+  on the Snapdrop interface.
+changeLog:
+  - date: 2024-12-12
+    description: First release
+  - date: 2025-03-03
+    description: Version bumped to version-b8b78cc2
+links:
+  - label: Documentation
+    url: https://github.com/linuxserver/docker-snapdrop
+  - label: GitHub
+    url: https://github.com/RobinLinus/snapdrop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: snapdrop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/snapdrop:version-b8b78cc2
+benefits:
+  - title: Seamless File Sharing
+    description:
+      Snapdrop enables fast and seamless file transfers between devices on the
+      same network without needing any accounts or installations.
+  - title: Cross-Platform Support
+    description:
+      Snapdrop works across all devices and browsers, including mobile phones,
+      tablets, and desktops, ensuring broad compatibility.
+  - title: Private and Secure Transfers
+    description:
+      File transfers are peer-to-peer over WebRTC, ensuring privacy and no
+      third-party servers for file storage.
+  - title: Lightweight and Fast
+    description:
+      Snapdrop is lightweight, consumes minimal resources, and delivers
+      efficient file transfers.
+features:
+  - title: Peer-to-Peer Transfers
+    description:
+      Uses WebRTC for direct peer-to-peer file transfers, bypassing external
+      servers for enhanced privacy.
+  - title: Browser-Based Interface
+    description:
+      No installation required; simply open the Snapdrop service in any modern
+      browser to start sharing files.
+  - title: Multi-Device Detection
+    description:
+      Automatically detects other devices on the same network, allowing seamless
+      file transfers between them.
+  - title: Drag-and-Drop Functionality
+    description:
+      Share files easily by dragging and dropping them into the Snapdrop
+      interface.
+  - title: Cross-Browser Compatibility
+    description:
+      Snapdrop works on Chrome, Firefox, Safari, Edge, and other major browsers.
+  - title: Mobile-Friendly Design
+    description:
+      Optimized for mobile devices, allowing you to share files between your
+      phone, tablet, and desktop effortlessly.
+tags:
+  - File Sharing
+  - Peer-to-Peer
+  - Browser-Based
+  - Cross-Platform
+  - Productivity
+  - WebRTC
+  - Secure Transfers
+  - Local Network

@@ -1,0 +1,76 @@
+name: FireFlyIII
+description:
+  Firefly III is a self-hosted personal finance manager designed to help you
+  take control of your finances. It provides a simple and intuitive interface
+  for tracking expenses, creating budgets, and generating insightful reports.
+  With its robust features, Firefly III enables you to analyze your financial
+  data effectively.
+
+instructions: null
+
+changeLog:
+  - date: 2025-01-10
+    description: Template Release
+  - date: 2025-07-21
+    description: Version bumped to 6.2.21
+links:
+  - label: Documentation
+    url: https://firefly-iii.org/documentation/
+  - label: Github
+    url: https://github.com/firefly-iii/firefly-iii
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fireflyiii
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: fireflyiii/core:version-6.2.21
+
+benefits:
+  - title: Comprehensive Financial Tracking
+    description:
+      Firefly III allows you to track expenses, income, and transfers across
+      multiple accounts with ease.
+  - title: Budgeting Made Simple
+    description:
+      Plan your finances and track your spending habits with intuitive budgeting
+      tools.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your financial data private and secure with a self-hosted solution.
+  - title: Insightful Reporting
+    description:
+      Generate detailed financial reports to analyze and optimize your spending.
+
+features:
+  - title: Multi-Currency Support
+    description: Manage transactions in multiple currencies seamlessly.
+  - title: Budget and Savings Goals
+    description:
+      Set and track budgets or savings goals to stay financially disciplined.
+  - title: Advanced Reporting
+    description:
+      Gain insights with charts, reports, and visualizations of your financial
+      data.
+  - title: API Access
+    description:
+      Extend functionality or integrate Firefly III with other applications
+      through its API.
+
+tags:
+  - Personal Finance
+  - Self-Hosted
+  - Budgeting
+  - Expense Tracking

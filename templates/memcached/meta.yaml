@@ -1,0 +1,83 @@
+name: Memcached
+description:
+  Memcached is a high-performance, distributed memory object caching system
+  designed for speeding up dynamic web applications by alleviating database
+  load. It works by storing data and objects in RAM to reduce the number of
+  times an external data source must be read. Memcached is simple yet powerful,
+  featuring a straightforward design that enables rapid deployment, ease of
+  development, and solves many problems facing large data caches. It's
+  particularly useful for database call, API call, or page rendering result
+  caching.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-20
+    description: Initial template release
+  - date: 2025-07-22
+    description: Update to 1.6.38
+
+links:
+  - label: Website
+    url: https://memcached.org/
+  - label: Documentation
+    url: https://github.com/memcached/memcached/wiki
+  - label: Github
+    url: https://github.com/memcached/memcached
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: memcached
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: memcached:1.6.38
+
+benefits:
+  - title: High Performance
+    description:
+      Memcached provides extremely fast performance with O(1) get/set/delete
+      operations and supports operations over 50,000 QPS per node.
+  - title: Simple to Use
+    description:
+      With a simple design and protocol, Memcached is easy to implement and use
+      in your applications.
+  - title: Distributed Architecture
+    description:
+      Scale horizontally by adding more nodes to your Memcached cluster,
+      distributing memory and load across multiple machines.
+
+features:
+  - title: In-Memory Caching
+    description:
+      Store frequently accessed data in RAM for lightning-fast retrieval,
+      reducing database load.
+  - title: Multi-protocol Support
+    description:
+      Connect to Memcached using various clients in different languages like
+      PHP, Python, Ruby, Java, and more.
+  - title: Key-Value Storage
+    description:
+      Store any arbitrary data (strings, objects) associated with a key for
+      simple retrieval.
+  - title: LRU Eviction
+    description:
+      Least Recently Used (LRU) algorithm automatically removes the least-used
+      items when memory is needed.
+
+tags:
+  - Cache
+  - In-Memory
+  - Performance
+  - Database

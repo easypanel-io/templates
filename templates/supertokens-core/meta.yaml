@@ -1,20 +1,24 @@
 name: Supertokens Core
-description: SuperTokens is an advanced user authentication solution designed to
-  streamline your app's security. It offers a range of features including user
-  roles, two-factor authentication (2FA), Single Sign-On (SSO) with platforms
-  like AD and Okta, session management, user management, account linking, and
-  machine authentication. The app is trusted by startups and enterprises alike
-  for its ease of setup and use. With SuperTokens, you can host your login page
-  on your own domain, eliminating the need for redirects. It also provides
-  prebuilt UIs and frontend SDKs to help you build your own login page quickly.
-  SuperTokens is also capable of handling multitenant SSO, allowing each
-  customer to have their own user pool. Loved by the world's best teams,
-  SuperTokens is your go-to solution for user authentication and session
-  management.
+description:
+  SuperTokens is an advanced user authentication solution designed to streamline
+  your app's security. It offers a range of features including user roles,
+  two-factor authentication (2FA), Single Sign-On (SSO) with platforms like AD
+  and Okta, session management, user management, account linking, and machine
+  authentication. The app is trusted by startups and enterprises alike for its
+  ease of setup and use. With SuperTokens, you can host your login page on your
+  own domain, eliminating the need for redirects. It also provides prebuilt UIs
+  and frontend SDKs to help you build your own login page quickly. SuperTokens
+  is also capable of handling multitenant SSO, allowing each customer to have
+  their own user pool. Loved by the world's best teams, SuperTokens is your
+  go-to solution for user authentication and session management.
 instructions: Check environment tab for your API key
 changeLog:
   - date: 2023-2-22
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 10.0.2
+  - date: 2025-07-25
+    description: Version bumped to 11.0.4
 links:
   - label: Website
     url: https://supertokens.com/
@@ -25,17 +29,15 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -43,43 +45,52 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: supertokens/supertokens-postgresql:4.3
+      default: supertokens/supertokens-postgresql:11.0.4
     databaseServiceName:
       type: string
       title: Database Service Name
       default: supertokens-core-db
 benefits:
   - title: Fast and Controlled User Authentication
-    description: SuperTokens allows you to build user authentication quickly while
+    description:
+      SuperTokens allows you to build user authentication quickly while
       maintaining control. It is trusted by startups and enterprises alike, and
       can be set up in just 5 minutes.
   - title: Prebuilt UI and Customizable Login Page
-    description: With prebuilt UI hosted on your domain, there are no more
-      redirects. You can also use our frontend SDKs and helper functions to
-      build your own login page quickly.
+    description:
+      With prebuilt UI hosted on your domain, there are no more redirects. You
+      can also use our frontend SDKs and helper functions to build your own
+      login page quickly.
   - title: Comprehensive User Management
-    description: SuperTokens provides everything you need for user management,
-      including user roles, 2FA, SSO (AD, Okta), session management, account
-      linking, and machine auth.
+    description:
+      SuperTokens provides everything you need for user management, including
+      user roles, 2FA, SSO (AD, Okta), session management, account linking, and
+      machine auth.
   - title: Multitenant SSO
-    description: Configure sign up with Okta, Microsoft AD and SAML per customer.
-      Each customer has their own user pool.
+    description:
+      Configure sign up with Okta, Microsoft AD and SAML per customer. Each
+      customer has their own user pool.
 features:
   - title: User Roles and 2FA
-    description: SuperTokens allows you to assign user roles and implement
-      two-factor authentication for added security.
+    description:
+      SuperTokens allows you to assign user roles and implement two-factor
+      authentication for added security.
   - title: Single Sign-On (SSO)
-    description: SuperTokens supports SSO with AD, Okta, and other platforms,
-      allowing users to log in with a single set of credentials.
+    description:
+      SuperTokens supports SSO with AD, Okta, and other platforms, allowing
+      users to log in with a single set of credentials.
   - title: Session Management
-    description: SuperTokens provides robust session management capabilities,
-      allowing you to effectively manage user sessions.
+    description:
+      SuperTokens provides robust session management capabilities, allowing you
+      to effectively manage user sessions.
   - title: Account Linking
-    description: With SuperTokens, you can link multiple user accounts, making it
-      easier to manage users with multiple accounts.
+    description:
+      With SuperTokens, you can link multiple user accounts, making it easier to
+      manage users with multiple accounts.
   - title: Machine Auth
-    description: SuperTokens supports machine auth, allowing you to authenticate
-      machines in addition to users.
+    description:
+      SuperTokens supports machine auth, allowing you to authenticate machines
+      in addition to users.
 tags:
   - Developer Tools
   - Security

@@ -1,22 +1,27 @@
 name: n8n
-description: n8n is a powerful workflow automation tool designed for technical
-  people. It allows you to build complex automations 10x faster, without the
-  need to fight with APIs. The app enables you to create flexible workflows
-  focused on deep data integration. You can use JavaScript for complex tasks
-  that require flexibility and the user-friendly UI for everything else. n8n
-  provides the ability to connect APIs with no code for automating basic tasks,
-  or write vanilla Javascript for manipulating complex data. It supports
-  integration with any app and allows for the creation of custom scenarios at
-  speed. With n8n, you can pump data around your entire tech stack with 350+
-  native integrations or use custom code to create your own. It also offers
-  features like bulk operations, painless debugging, and the ability to host on
-  your own infrastructure. n8n is not just a helpful tool, it's the heart of
-  your business, helping you optimize engineering resources, boost efficiency,
-  and focus on your KPIs, not your APIs.
+description:
+  n8n is a powerful workflow automation tool designed for technical people. It
+  allows you to build complex automations 10x faster, without the need to fight
+  with APIs. The app enables you to create flexible workflows focused on deep
+  data integration. You can use JavaScript for complex tasks that require
+  flexibility and the user-friendly UI for everything else. n8n provides the
+  ability to connect APIs with no code for automating basic tasks, or write
+  vanilla Javascript for manipulating complex data. It supports integration with
+  any app and allows for the creation of custom scenarios at speed. With n8n,
+  you can pump data around your entire tech stack with 350+ native integrations
+  or use custom code to create your own. It also offers features like bulk
+  operations, painless debugging, and the ability to host on your own
+  infrastructure. n8n is not just a helpful tool, it's the heart of your
+  business, helping you optimize engineering resources, boost efficiency, and
+  focus on your KPIs, not your APIs.
 instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2024-10-19
+    description: Update to 1.64.0
+  - date: 2025-07-22
+    description: Update to 1.103.2
 links:
   - label: Website
     url: https://n8n.io/
@@ -29,16 +34,14 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -46,43 +49,52 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n8nio/n8n:0.225.2
+      default: n8nio/n8n:1.103.2
 benefits:
   - title: Workflow Automation
-    description: n8n is a powerful tool that allows you to build complex automations
-      10x faster, without the need to fight with APIs. It is designed to save
-      you from the tedious task of slogging through a spaghetti of scripts.
+    description:
+      n8n is a powerful tool that allows you to build complex automations 10x
+      faster, without the need to fight with APIs. It is designed to save you
+      from the tedious task of slogging through a spaghetti of scripts.
   - title: Flexible and User-friendly
-    description: With n8n, you can build flexible workflows focused on deep data
+    description:
+      With n8n, you can build flexible workflows focused on deep data
       integration. It features a user-friendly UI that makes it easy for both
       technical and non-technical people to collaborate on workflows.
   - title: Efficient and Scalable
-    description: n8n automates the frustrating work for you, allowing you to focus
-      your energy on tasks that move the needle. It is capable of executing 220
+    description:
+      n8n automates the frustrating work for you, allowing you to focus your
+      energy on tasks that move the needle. It is capable of executing 220
       workflow executions per second on a single instance, and you can add more
       instances if required.
   - title: Cost-effective
-    description: Unlike other platforms, n8n allows you to build complex workflows
-      without stressing over budget. You can self-host for free, or pay for a
-      package of workflows in the cloud.
+    description:
+      Unlike other platforms, n8n allows you to build complex workflows without
+      stressing over budget. You can self-host for free, or pay for a package of
+      workflows in the cloud.
 features:
   - title: No Code and Low Code Options
-    description: n8n allows you to connect APIs with no code to automate basic
-      tasks. Or, if you need to manipulate complex data, you can write in
-      vanilla Javascript.
+    description:
+      n8n allows you to connect APIs with no code to automate basic tasks. Or,
+      if you need to manipulate complex data, you can write in vanilla
+      Javascript.
   - title: Custom Scenarios
-    description: With n8n, you can build custom scenarios at speed. It allows you to
+    description:
+      With n8n, you can build custom scenarios at speed. It allows you to
       integrate with any app and perform bulk operations.
   - title: Painless Debugging
-    description: n8n provides a painless debugging experience. It also allows you to
-      host on your own infrastructure.
+    description:
+      n8n provides a painless debugging experience. It also allows you to host
+      on your own infrastructure.
   - title: Wide Range of Integrations
-    description: n8n supports over 350 native integrations, allowing you to pump
-      data around your entire tech stack. You can also use custom code to create
-      your own integrations.
+    description:
+      n8n supports over 350 native integrations, allowing you to pump data
+      around your entire tech stack. You can also use custom code to create your
+      own integrations.
   - title: Customizable Error Handling
-    description: n8n offers customizable error handling. You can also share
-      workflows with a click and use over 600 templates to move faster.
+    description:
+      n8n offers customizable error handling. You can also share workflows with
+      a click and use over 600 templates to move faster.
 tags:
   - Automation
   - Workflow

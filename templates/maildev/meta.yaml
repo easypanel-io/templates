@@ -1,0 +1,79 @@
+name: Maildev
+description:
+  Maildev is a simple, self-hosted SMTP server designed for testing and
+  debugging emails in development environments. It captures all outgoing emails
+  and provides a web-based UI to view, inspect, and test them. Maildev supports
+  real-time email updates, allowing developers to see emails as they are sent.
+  It also includes an API for programmatic access to emails and supports
+  multiple inboxes for testing different email scenarios. Maildev is
+  lightweight, easy to set up, and works seamlessly in local development and
+  CI/CD pipelines.
+instructions: null
+changeLog:
+  - date: 2025-02-03
+    description: First Release
+  - date: 2025-06-05
+    description: Update to 2.2.1
+links:
+  - label: Documentation
+    url: https://github.com/maildev/maildev
+  - label: Github
+    url: https://github.com/maildev/maildev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: maildev
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: maildev/maildev:2.2.1
+benefits:
+  - title: Email Testing Without Spam
+    description:
+      Maildev captures all outgoing emails, preventing them from being sent to
+      real recipients, making it ideal for development and testing environments.
+  - title: Web-Based Email Viewer
+    description:
+      The Maildev web UI provides a simple interface for viewing and debugging
+      emails, including support for HTML, plain text, and attachments.
+  - title: API for Automated Testing
+    description:
+      Maildev includes an API that allows developers to programmatically
+      retrieve and manage emails, enabling automated email testing in CI/CD
+      pipelines.
+features:
+  - title: Real-Time Email Monitoring
+    description:
+      Maildev updates emails in real-time, allowing developers to see messages
+      instantly as they are sent from their applications.
+  - title: Multiple Inbox Support
+    description:
+      Maildev supports multiple email inboxes, making it useful for testing
+      scenarios that require sending and receiving emails across different
+      addresses.
+  - title: SMTP Server for Local Development
+    description:
+      Maildev provides an SMTP server that can be configured in local
+      applications to capture outgoing emails without external email services.
+  - title: HTML and Plain Text Email Rendering
+    description:
+      Emails sent to Maildev can be viewed in both HTML and plain text formats,
+      ensuring correct rendering across different email clients.
+  - title: Docker and Kubernetes Ready
+    description:
+      Maildev can be easily deployed using Docker or Kubernetes, making it a
+      convenient choice for modern development workflows.
+tags:
+  - Email
+  - Development
+  - Testing
+  - Debugging

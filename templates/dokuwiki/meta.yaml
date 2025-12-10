@@ -1,7 +1,8 @@
 name: Dokuwiki
-description: DokuWiki is a highly versatile, open-source wiki software that is
-  simple to use and doesn't require a database. It is known for its clean and
-  readable syntax, making it a favorite among administrators due to its ease of
+description:
+  DokuWiki is a highly versatile, open-source wiki software that is simple to
+  use and doesn't require a database. It is known for its clean and readable
+  syntax, making it a favorite among administrators due to its ease of
   maintenance, backup, and integration. DokuWiki is equipped with built-in
   access controls and authentication connectors, making it particularly useful
   in an enterprise context. It supports a wide range of use cases beyond a
@@ -12,11 +13,16 @@ description: DokuWiki is a highly versatile, open-source wiki software that is
   workspace, CMS, intranet, and more. DokuWiki supports customization at all
   levels of expertise, from easy configuration via the admin interface to
   developing your own extensions.
-instructions: Go to http://IP-ADDRESS:PORT/install.php to configure your install
-  then restart your container when finished to remove install.php
+instructions:
+  Go to http://IP-ADDRESS:PORT/install.php to configure your install then
+  restart your container when finished to remove install.php
 changeLog:
   - date: 2023-3-16
     description: first release
+  - date: 2025-01-09
+    description: Version bumped to version-2024-02-06b
+  - date: 2025-05-26
+    description: Version bumped to 2025-05-14
 links:
   - label: Website
     url: https://dokuwiki.org
@@ -27,16 +33,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -44,38 +48,46 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/dokuwiki:version-2022-07-31a
+      default: lscr.io/linuxserver/dokuwiki:2025-05-14
 benefits:
   - title: Easy to Use
-    description: DokuWiki is a simple to use wiki software that doesn't require a
-      database. It is loved by users for its clean and readable syntax.
+    description:
+      DokuWiki is a simple to use wiki software that doesn't require a database.
+      It is loved by users for its clean and readable syntax.
   - title: Versatile and Flexible
-    description: DokuWiki is highly versatile and can be used for a broad range of
-      use cases beyond a traditional wiki. It can be used as a corporate
-      knowledge base, private notebook, software manual, project workspace, CMS,
-      and more.
+    description:
+      DokuWiki is highly versatile and can be used for a broad range of use
+      cases beyond a traditional wiki. It can be used as a corporate knowledge
+      base, private notebook, software manual, project workspace, CMS, and more.
   - title: Easy Maintenance and Integration
-    description: The ease of maintenance, backup, and integration makes DokuWiki an
+    description:
+      The ease of maintenance, backup, and integration makes DokuWiki an
       administrator's favorite. It also has built-in access controls and
       authentication connectors.
 features:
   - title: No Database Required
-    description: DokuWiki is a wiki software that doesn't require a database, making
-      it simple and straightforward to use.
+    description:
+      DokuWiki is a wiki software that doesn't require a database, making it
+      simple and straightforward to use.
   - title: Clean and Readable Syntax
-    description: DokuWiki is loved by users for its clean and readable syntax,
-      making it easy to create and edit content.
+    description:
+      DokuWiki is loved by users for its clean and readable syntax, making it
+      easy to create and edit content.
   - title: Built-in Access Controls
-    description: DokuWiki has built-in access controls and authentication
-      connectors, making it especially useful in the enterprise context.
+    description:
+      DokuWiki has built-in access controls and authentication connectors,
+      making it especially useful in the enterprise context.
   - title: Variety of Extensions
-    description: DokuWiki supports a large number of plugins, allowing for a broad
-      range of use cases beyond a traditional wiki.
+    description:
+      DokuWiki supports a large number of plugins, allowing for a broad range of
+      use cases beyond a traditional wiki.
   - title: Supports Over 50 Languages
-    description: DokuWiki supports over 50 languages, making it accessible to users
-      around the world.
+    description:
+      DokuWiki supports over 50 languages, making it accessible to users around
+      the world.
   - title: Device Independent
-    description: DokuWiki is device independent, meaning it can be used on any
-      device with an internet connection.
+    description:
+      DokuWiki is device independent, meaning it can be used on any device with
+      an internet connection.
 tags:
   - Wiki

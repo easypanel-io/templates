@@ -1,0 +1,72 @@
+name: Endurain
+description:
+  Endurain is a cutting-edge endurance tracking and training platform designed
+  for athletes and fitness enthusiasts. It offers a user-friendly interface to
+  track workouts, set goals, and analyze performance metrics. With Endurain, you
+  can manage your training routines using detailed analytics, route planning,
+  and personalized coaching features. It supports integrations with fitness
+  devices and third-party tools, making it a versatile solution for athletes at
+  any level. Its emphasis on data-driven insights and seamless user experience
+  ensures athletes stay motivated and achieve their fitness goals. Endurain is
+  distributed under an open-source license, allowing for customization to meet
+  unique training needs.
+instructions: null
+changeLog:
+  - date: 2025-01-14
+    description: First Release
+  - date: 2025-07-21
+    description: Version bumped to v0.12.7
+links:
+  - label: Github
+    url: https://github.com/joaovitoriasilva/endurain
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: endurain
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/joaovitoriasilva/endurain:v0.12.7
+benefits:
+  - title: Advanced Training Analytics
+    description:
+      Endurain provides in-depth performance metrics and analytics to help
+      athletes optimize their training and achieve peak performance.
+  - title: Versatile and Adaptable
+    description:
+      Endurain integrates with a wide range of fitness devices and third-party
+      tools, ensuring compatibility with various training workflows.
+  - title: Open Source and Customizable
+    description:
+      Endurain is open-source, allowing athletes and developers to tailor the
+      platform to specific fitness and training needs.
+features:
+  - title: Workout Tracking
+    description:
+      Endurain enables users to log and track their workouts, ensuring progress
+      and consistency in their fitness journey.
+  - title: Route Planning
+    description:
+      Plan and optimize training routes with Endurain’s intuitive route mapping
+      feature, tailored for outdoor enthusiasts.
+  - title: Goal Setting and Progress Monitoring
+    description:
+      Set training goals and monitor progress with personalized insights and
+      automated reminders to stay on track.
+tags:
+  - Endurance Training
+  - Open Source
+  - Fitness Tracking
+  - Workout Analytics
+  - Route Planning
+  - Performance Metrics
+  - Goal Setting

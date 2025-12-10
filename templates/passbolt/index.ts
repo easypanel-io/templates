@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `APP_FULL_BASE_URL=https://$(PRIMARY_DOMAIN)`,
@@ -17,7 +16,7 @@ export function generate(input: Input): Output {
         `DATASOURCES_DEFAULT_PASSWORD=${databasePassword}`,
         `DATASOURCES_DEFAULT_DATABASE=$(PROJECT_NAME)`,
         `PASSBOLT_REGISTRATION_PUBLIC=false`,
-        `PASSBOLT_SSL_FORCE=true`,
+        `PASSBOLT_SSL_FORCE=false`,
       ].join("\n"),
       source: {
         type: "image",
@@ -50,7 +49,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mysql",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

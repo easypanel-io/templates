@@ -1,0 +1,81 @@
+name: Carbone
+description:
+  Carbone is a high-performance, self-hosted document generation engine. It
+  allows you to generate reports, invoices, and documents in various formats
+  (e.g., PDF, DOCX, XLSX) using JSON data and template-based rendering. Carbone
+  is designed for scalability and speed, making it ideal for automation, bulk
+  document generation, and seamless integration into various systems and
+  workflows. It supports custom templates and advanced features like charts,
+  sub-reports, and conditional formatting to meet a wide range of business
+  needs.
+instructions: null
+changeLog:
+  - date: 2025-02-12
+    description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 5.0.0-beta.10
+links:
+  - label: Documentation
+    url: https://carbone.io/documentation/design/overview/getting-started.html
+  - label: Github
+    url: https://github.com/carboneio/carbone
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: carbone
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: carbone/carbone-ee:full-5.0.0-beta.10
+    carboneKey:
+      type: string
+      title: Carbone License Key
+benefits:
+  - title: High-Performance Document Generation
+    description:
+      Carbone provides fast and efficient document generation, making it
+      suitable for high-volume environments where speed and reliability are
+      critical.
+  - title: Template-Based Rendering
+    description:
+      Create templates in familiar formats like DOCX and XLSX, and use JSON data
+      to generate documents without complex coding.
+  - title: Multi-Format Support
+    description:
+      Generate documents in various formats including PDF, DOCX, XLSX, ODT, and
+      more, allowing flexible output options for different business needs.
+features:
+  - title: JSON Data Integration
+    description:
+      Use simple JSON data structures to populate templates and generate
+      documents dynamically with minimal setup.
+  - title: Customizable Templates
+    description:
+      Support for creating custom templates with conditional formatting,
+      sub-reports, and advanced charting options.
+  - title: Multi-Language Support
+    description:
+      Carbone supports multiple languages for document generation, making it a
+      global solution for businesses.
+  - title: REST API
+    description:
+      Seamlessly integrate Carbone with other applications using its REST API
+      for automated document generation.
+  - title: Cloud and On-Premises
+    description:
+      Deploy Carbone in the cloud or on-premises depending on your security and
+      infrastructure requirements.
+tags:
+  - Document Generation
+  - Automation
+  - Reporting
+  - Productivity

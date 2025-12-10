@@ -1,0 +1,78 @@
+name: Twenty CRM
+description:
+  Twenty is a modern, open-source CRM platform designed to help businesses
+  manage their customer relationships efficiently.  It offers a user-friendly
+  interface for tracking contacts, organizations, and opportunities while
+  providing powerful customization options.
+instructions:
+  Please define the domain used for the Twenty service in the worker environment
+  variable SERVER_URL.
+changeLog:
+  - date: 2025-05-22
+    description: First release
+links:
+  - label: Website
+    url: https://twenty.com/
+  - label: Documentation
+    url: https://docs.twenty.com/
+  - label: Github
+    url: https://github.com/twentyhq/twenty
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: twenty
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: twentycrm/twenty:v0.54.4
+benefits:
+  - title: Modern User Interface
+    description:
+      Twenty CRM offers a clean, intuitive user interface that makes managing
+      customer relationships simple and efficient.
+  - title: Open Source
+    description:
+      As an open-source platform, Twenty CRM provides full transparency,
+      customizability, and no vendor lock-in.
+  - title: Customizable
+    description:
+      Easily adapt the CRM to your specific business needs with extensive
+      customization options.
+  - title: Scalable
+    description:
+      Built with modern technologies, Twenty CRM scales with your business from
+      startups to enterprises.
+features:
+  - title: Contact Management
+    description:
+      Easily manage and organize your contacts with comprehensive profiles and
+      interaction history.
+  - title: Organization Tracking
+    description:
+      Keep track of companies, their contacts, and business opportunities in one
+      place.
+  - title: Task Management
+    description:
+      Create, assign, and track tasks to ensure nothing falls through the
+      cracks.
+  - title: Customizable Workflows
+    description:
+      Adapt the CRM's workflows to match your specific business processes.
+  - title: Data Import/Export
+    description:
+      Easily import existing contact data or export data for use in other
+      systems.
+tags:
+  - CRM
+  - Business Apps
+  - Productivity
+  - Collaboration

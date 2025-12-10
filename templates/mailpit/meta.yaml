@@ -1,0 +1,90 @@
+name: Mailpit
+description:
+  Mailpit is a modern email testing tool designed for developers. It allows you
+  to configure your application to use Mailpit for SMTP delivery, enabling you
+  to view your outgoing emails in a user-friendly web UI. The app also offers
+  the option to forward messages to real SMTP servers for delivery. With
+  Mailpit, you can view messages in the web UI or retrieve them using the JSON
+  API. It supports SMTP AUTH and PIPELINING and provides real-time updates using
+  WebSocket. Mailpit also includes message search functionality, custom SMTP
+  configurations, and HTTP basic authentication for its UI and API. It's
+  lightweight, portable, and easy to deploy.
+instructions: null
+changeLog:
+  - date: 2025-01-13
+    description: First Release
+  - date: 2025-02-28
+    description: Version bumped to v1.22
+  - date: 2025-07-22
+    description: Version bumped to v1.27
+links:
+  - label: Github
+    url: https://github.com/axllent/mailpit
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mailpit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: axllent/mailpit:v1.27
+benefits:
+  - title: Efficient Email Testing
+    description:
+      Mailpit is a powerful tool for developers, allowing you to easily test
+      your outgoing SMTP server. It provides a simple way to view your outgoing
+      emails in a web-based user interface, ensuring that your email system is
+      working as expected.
+  - title: Flexible Email Forwarding
+    description:
+      With Mailpit, you have the option to forward your emails to real SMTP
+      servers for delivery. This gives you the flexibility to test your emails
+      in a controlled environment before sending them out to actual recipients.
+  - title: Multi-Platform Compatibility
+    description:
+      Built with Go, Mailpit runs without installation on multiple platforms.
+      This makes it a versatile tool that can be used in a variety of
+      development environments.
+features:
+  - title: Web UI for Email Viewing
+    description:
+      Mailpit provides a web interface where you can view your messages in plain
+      text, HTML, or source form. This makes it easy to inspect your outgoing
+      emails and ensure they are formatted correctly.
+  - title: JSON API for Message Retrieval
+    description:
+      Mailpit includes a JSON API that allows you to list, retrieve, and delete
+      messages. This provides a convenient way to manage your test emails and
+      keep your testing environment clean.
+  - title: Real-time Updates
+    description:
+      Mailpit supports real-time updates using WebSocket. This means you can see
+      changes to your outgoing emails as they happen, helping you to identify
+      and fix issues more quickly.
+  - title: Support for SMTP AUTH and PIPELINING
+    description:
+      Mailpit implements RFC5321, including support for SMTP AUTH (RFC4954) and
+      PIPELINING (RFC2920). This ensures that your test emails are sent in
+      accordance with established email protocols.
+  - title: In-memory Message Storage
+    description:
+      Mailpit stores messages in-memory, providing a lightweight and efficient
+      way to manage your test emails. It also supports file-based storage for
+      message persistence.
+  - title: Advanced Search Functionality
+    description:
+      Mailpit includes powerful search capabilities, allowing you to quickly
+      find specific emails or content within messages.
+tags:
+  - Email
+  - Email Testing
+  - SMTP Testing Server

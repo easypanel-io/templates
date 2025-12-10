@@ -1,0 +1,72 @@
+name: Evolution API
+description:
+  Evolution API is a self-hosted platform designed to empower small businesses,
+  entrepreneurs, and individuals by providing a robust API for integrating
+  messaging solutions such as WhatsApp™. It offers seamless integration with
+  other tools like Typebot, Chatwoot, and OpenAI to enhance communication and
+  automation capabilities. Evolution API is a free and customizable solution
+  that allows users to maintain control over their messaging infrastructure.
+instructions: null
+changeLog:
+  - date: 2025-01-17
+    description: First Release
+links:
+  - label: Website
+    url: https://evolution-api.com
+  - label: Documentation
+    url: https://doc.evolution-api.com/v1/en/get-started/introduction
+  - label: Github
+    url: https://github.com/EvolutionAPI/evolution-api
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: evolution-api
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: evoapicloud/evolution-api:v2.3.0
+benefits:
+  - title: Seamless Messaging Integration
+    description:
+      Evolution API allows you to integrate messaging solutions like WhatsApp™
+      into your platform, enabling efficient communication with your audience
+      directly through a robust API.
+  - title: Highly Customizable
+    description:
+      With support for plugins and integration with tools like Typebot,
+      Chatwoot, and OpenAI, Evolution API can be tailored to meet the specific
+      needs of your business or project.
+  - title: Free and Open Source
+    description:
+      Evolution API is free to use and provides a fully open-source solution,
+      giving you control over your messaging infrastructure without incurring
+      additional costs.
+features:
+  - title: WhatsApp™ Messaging Support
+    description:
+      Evolution API integrates seamlessly with WhatsApp™ for efficient
+      communication, providing a platform for messaging automation and
+      interactions.
+  - title: Plugin Support
+    description:
+      Evolution API supports a range of plugins to extend functionality and
+      integrate with other tools like Typebot and Chatwoot for advanced use
+      cases.
+  - title: Multi-Language Support
+    description:
+      The platform supports multiple languages, making it suitable for global
+      businesses and diverse teams.
+tags:
+  - Messaging
+  - Communication
+  - Automation
+  - Open Source

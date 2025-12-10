@@ -1,0 +1,90 @@
+name: Pgadmin
+description:
+  PGAdmin is a popular open-source administration and management tool for
+  PostgreSQL databases. It provides a web-based interface to interact with
+  PostgreSQL databases, allowing users to create, modify, and manage databases,
+  tables, roles, and queries with ease. PGAdmin supports advanced query
+  execution, database performance analysis, and extensive user management
+  capabilities. With a modern and intuitive UI, it is designed for database
+  administrators, developers, and analysts to efficiently work with PostgreSQL
+  databases. Additional features include SQL query editor, ERD diagrams,
+  scheduled backups, and monitoring tools.
+instructions: null
+changeLog:
+  - date: 2025-02-25
+    description: first release
+  - date: 2025-07-24
+    description: Update to 9.5.0
+links:
+  - label: Documentation
+    url: https://www.pgadmin.org/docs/
+  - label: Github
+    url: https://github.com/pgadmin-org/pgadmin4
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - defaultEmail
+    - defaultPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pgadmin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dpage/pgadmin4:9.5.0
+    defaultEmail:
+      type: string
+      title: Default Email
+      default: admin@example.com
+    defaultPassword:
+      type: string
+      title: Default Password
+      default: password
+benefits:
+  - title: Web-Based Database Administration
+    description:
+      PGAdmin provides a powerful web-based interface for managing PostgreSQL
+      databases, making it accessible from anywhere without needing a desktop
+      client installation.
+  - title: Advanced Query Execution
+    description:
+      The built-in SQL editor allows users to write, execute, and debug queries
+      efficiently with syntax highlighting, autocompletion, and query history.
+  - title: User and Role Management
+    description:
+      PGAdmin enables administrators to manage users, roles, and permissions
+      effectively, ensuring secure access control over the database.
+features:
+  - title: Query Tool
+    description:
+      PGAdmin includes an advanced SQL query tool that supports syntax
+      highlighting, query formatting, and execution plan visualization.
+  - title: Database Designer (ERD)
+    description:
+      This feature allows users to visualize database schema relationships with
+      an entity-relationship diagram (ERD) builder.
+  - title: Backup and Restore
+    description:
+      PGAdmin provides tools to schedule and perform database backups and
+      restorations, ensuring data safety and recovery options.
+  - title: Server Monitoring
+    description:
+      Users can monitor database performance and resource usage through
+      PGAdmin's built-in dashboard, helping identify slow queries and
+      bottlenecks.
+  - title: Multi-Database Support
+    description:
+      PGAdmin supports managing multiple PostgreSQL servers from a single
+      interface, making it ideal for large-scale database environments.
+tags:
+  - Database Management
+  - PostgreSQL
+  - Web UI
+  - Administration

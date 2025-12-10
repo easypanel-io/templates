@@ -1,0 +1,78 @@
+name: Slash
+description:
+  Slash is an open source, self-hosted platform designed to help you organize,
+  manage, and share your most important links. Easily create customizable,
+  human-readable shortcuts to streamline your link management. Use tags to
+  categorize your links and share them easily with your team or publicly.
+instructions: null
+changeLog:
+  - date: 2025-02-14
+    description: First Release
+  - date: 2025-03-03
+    description: Version bumped to 1.0.0
+links:
+  - label: Github
+    url: https://github.com/yourselfhosted/slash
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: slash
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: yourselfhosted/slash:1.0.0
+benefits:
+  - title: Efficient Link Management
+    description:
+      Slash is an open-source, self-hosted platform designed to help you
+      organize, manage, and share your most important links. It provides an
+      intuitive interface for creating, managing, and categorizing links
+      effortlessly.
+  - title: Customizable Shortcuts
+    description:
+      With Slash, you can create human-readable, customizable shortcuts for your
+      links. This makes it easy to share and remember important URLs without
+      relying on cryptic or auto-generated links.
+  - title: Tag-Based Organization
+    description:
+      Slash supports a powerful tag-based system for organizing your links.
+      Easily categorize and filter your links using tags, helping you keep
+      everything structured and easy to find.
+features:
+  - title: Self-Hosting Capability
+    description:
+      Slash is designed to be self-hosted, giving you full control over your
+      data and ensuring privacy and security in managing your links.
+  - title: Public and Team Sharing
+    description:
+      Share your links publicly or with specific teams, making collaboration
+      simple and efficient. This feature is ideal for teams that need to manage
+      and share resources regularly.
+  - title: Search and Filter
+    description:
+      Slash offers a robust search and filter function, making it easy to find
+      links based on keywords, tags, or custom shortcuts.
+  - title: API Support
+    description:
+      Slash includes API support for integrating link management with other
+      applications and automating workflows, providing flexibility and enhanced
+      productivity.
+  - title: Analytics and Insights
+    description:
+      Gain insights into how your links are being used with built-in analytics.
+      Track visits, referrers, and other data to better understand link
+      performance.
+tags:
+  - Link Management
+  - Self-Hosted
+  - Open Source
+  - Productivity

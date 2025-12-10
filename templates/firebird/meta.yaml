@@ -1,0 +1,99 @@
+name: Firebird
+description:
+  Firebird is a powerful, open-source relational database management system
+  (RDBMS) that offers high performance, scalability, and SQL compliance. It is
+  designed for both small and large-scale applications, providing robust
+  multi-user support, stored procedures, triggers, and full ACID compliance.
+  Firebird is lightweight, requiring minimal configuration while delivering
+  strong reliability and security. It supports multiple authentication methods
+  and integrates seamlessly with various programming languages and frameworks.
+  With its containerized deployment, Firebird ensures easy scalability and
+  simplified management.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-18
+    description: Template Release
+  - date: 2025-07-21
+    description: Version bumped to 5.0.3
+
+links:
+  - label: Documentation
+    url: https://firebirdsql.org/manual/
+  - label: Github
+    url: https://github.com/FirebirdSQL/firebird
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - rootPassword
+    - dbUser
+    - dbPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: firebird
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: firebirdsql/firebird:5.0.3
+    rootPassword:
+      type: string
+      title: Root Password
+      default: rootpassword
+    dbUser:
+      type: string
+      title: Database User
+      default: dbuser
+    dbPassword:
+      type: string
+      title: Database Password
+      default: password
+
+benefits:
+  - title: High Performance & Scalability
+    description:
+      Firebird delivers exceptional speed and scalability, making it suitable
+      for enterprise applications and large-scale databases.
+  - title: Open-Source & Cost-Effective
+    description:
+      Firebird is completely open-source, offering a cost-effective RDBMS
+      solution without licensing fees.
+  - title: ACID Compliance & Security
+    description:
+      Ensures data integrity with full ACID compliance, robust authentication,
+      and security mechanisms.
+
+features:
+  - title: SQL Standard Support
+    description:
+      Firebird supports advanced SQL features, stored procedures, triggers,
+      views, and more for complex database applications.
+  - title: Multi-Platform Compatibility
+    description:
+      Firebird runs on multiple operating systems, including Windows, Linux, and
+      macOS, ensuring cross-platform flexibility.
+  - title: Lightweight & Low Resource Usage
+    description:
+      Requires minimal system resources while delivering high performance.
+  - title: Role-Based Access Control
+    description: Manage user roles and permissions for secure database access.
+  - title: Backup & Recovery Tools
+    description:
+      Firebird provides built-in tools for database backup, restore, and
+      disaster recovery.
+
+tags:
+  - Database
+  - SQL
+  - Relational Database
+  - Open Source
+  - FirebirdDB

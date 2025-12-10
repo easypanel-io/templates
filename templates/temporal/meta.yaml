@@ -1,0 +1,97 @@
+name: Temporal
+description:
+  Temporal is an open-source, self-hosted workflow orchestration engine designed
+  to simplify and enhance the development of scalable, fault-tolerant, and
+  long-running workflows. It empowers developers to build reliable distributed
+  systems by providing built-in state management, automatic retries, and
+  advanced task scheduling. Temporal offers a user-friendly developer
+  experience, powerful SDKs, and seamless integration with various languages,
+  making it ideal for automating complex business processes and microservice
+  orchestration. By providing a self-hosted solution, Temporal ensures data
+  privacy, high availability, and complete control over your workflows and
+  infrastructure.
+instructions: null
+changeLog:
+  - date: 2025-01-03
+    description: Template Release
+  - date: 2025-03-03
+    description:
+      Version bumped to 2.36.0 for UI, 1.27.1.0 for server, 1.27 for admin
+      tools.
+links:
+  - label: Documentation
+    url: https://docs.temporal.io/
+  - label: Github
+    url: https://github.com/temporalio/temporal
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - elasticsearchImage
+    - temporalUiImage
+    - temporalAdminImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: temporal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: temporalio/auto-setup:1.28.0.0
+    elasticsearchImage:
+      type: string
+      title: Elasticsearch Service Image
+      default: elasticsearch:9.0.4
+    temporalUiImage:
+      type: string
+      title: Temporal UI Service Image
+      default: temporalio/ui:2.39.0
+    temporalAdminImage:
+      type: string
+      title: Temporal Admin Service Image
+      default: temporalio/admin-tools:1.28
+benefits:
+  - title: Streamlined Workflow Orchestration
+    description:
+      Temporal simplifies building and managing distributed workflows, providing
+      an intuitive way to orchestrate complex business processes and
+      long-running tasks.
+  - title: Self-Hosted Flexibility
+    description:
+      Maintain full control over your workflows and data with a self-hosted
+      setup that ensures privacy, compliance, and high availability.
+  - title: Fault-Tolerant and Scalable
+    description:
+      Temporal offers built-in fault tolerance, automatic retries, and scalable
+      task execution, ensuring reliability even in highly distributed
+      environments.
+features:
+  - title: Powerful SDK Support
+    description:
+      Seamlessly integrate Temporal into your applications with robust SDKs for
+      Go, Java, TypeScript, and Python, allowing easy development and deployment
+      of workflows.
+  - title: Workflow State Persistence
+    description:
+      Automatically persist workflow state and execution history to resume
+      operations from the exact point of failure or interruption.
+  - title: Advanced Task Scheduling
+    description:
+      Schedule and manage tasks with fine-grained control, enabling time-based
+      or event-driven workflows with ease.
+  - title: Built-In Observability
+    description:
+      Gain real-time insights into workflow performance, task execution, and
+      bottlenecks with Temporal’s built-in observability tools.
+
+tags:
+  - Workflow Orchestration
+  - Self-Hosted
+  - Fault-Tolerant
+  - Distributed Systems
+  - Observability

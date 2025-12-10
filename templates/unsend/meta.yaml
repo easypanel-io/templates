@@ -1,0 +1,131 @@
+name: Unsend
+description:
+  Unsend is a self-hosted, alternative email-sending platform that provides a
+  reliable and cost-effective way to send emails using Amazon SES. With a
+  powerful dashboard, Unsend allows users to manage contacts, send bulk emails
+  (such as newsletters and product updates), and handle subscriptions
+  seamlessly. Future updates aim to support additional communication channels,
+  including SMS, push notifications, and WhatsApp.
+instructions:
+  You can use Minio for S3 Compatibility and provide AWS like credentials for
+  it.
+changeLog:
+  - date: 2025-03-17
+    description: First Release (v1.4.0)
+  - date: 2025-07-25
+    description: Version bumped to v1.5.4
+links:
+  - label: Documentation
+    url: https://unsend.dev/
+  - label: Github
+    url: https://github.com/unsend-dev/unsend/tree/main
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - awsAccessKey
+    - secretKey
+    - defaultRegion
+    - githubId
+    - githubSecret
+    - minioRootUsername
+    - minioRootPassword
+    - minioImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: unsend
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/unsend-dev/unsend:v1.5.4
+    awsAccessKey:
+      type: string
+      title: AWS Access Key
+      description: This is the AWS Access Key associated with your AWS account.
+    secretKey:
+      type: string
+      title: AWS Secret Key
+      description: This is the AWS Secret Key associated with your AWS account.
+    defaultRegion:
+      type: string
+      title: Default Region
+      default: us-east-1
+    githubId:
+      type: string
+      title: Github ID
+      description: This is the GitHub ID associated with your GitHub account.
+    githubSecret:
+      type: string
+      title: Github Secret
+      description:
+        This is the GitHub Secret associated with your GitHub account.
+    minioImage:
+      type: string
+      title: Minio Image
+      default: minio/minio:RELEASE.2025-02-28T09-55-16Z
+      description:
+        This is the Minio image to be used for storing email attachments and
+    minioRootUsername:
+      type: string
+      title: Minio Root Username
+      default: admin
+      description:
+        This is the Minio root username for accessing the Minio storage.
+    minioRootPassword:
+      type: string
+      title: Minio Root Password
+      default: admin
+      description:
+        This is the Minio root password for accessing the Minio storage.
+
+benefits:
+  - title: Reliable and Cost-Effective Email Sending
+    description:
+      Unsend leverages Amazon SES to provide a scalable and affordable
+      alternative to traditional email providers.
+  - title: Self-Hosted for Full Control
+    description:
+      Unlike SaaS email platforms, Unsend allows you to host your own instance,
+      ensuring full control over email deliverability and data security.
+  - title: Bulk Email Management
+    description:
+      Unsend makes it easy to manage contacts and send bulk emails, such as
+      newsletters, transactional emails, and product updates.
+  - title: Subscription Handling
+    description:
+      Unsend automatically manages email subscriptions and opt-outs, ensuring
+      compliance with user preferences.
+  - title: Future Multi-Channel Support
+    description:
+      Future updates aim to expand Unsend to support SMS, push notifications,
+      and WhatsApp messaging.
+features:
+  - title: Amazon SES Integration
+    description:
+      Unsend seamlessly integrates with Amazon SES for reliable email delivery.
+  - title: Contact Management
+    description:
+      Users can manage and organize email contacts through a user-friendly
+      dashboard.
+  - title: Bulk Email Sending
+    description:
+      Unsend supports sending mass emails with customizable templates.
+  - title: Subscription & Unsubscription Management
+    description:
+      Automatically handles email subscriptions and opt-outs for compliance and
+      better user engagement.
+  - title: OAuth Integration
+    description:
+      Supports GitHub OAuth authentication for secure and seamless login.
+tags:
+  - Email
+  - Self-Hosted
+  - Amazon SES
+  - Bulk Email
+  - Productivity

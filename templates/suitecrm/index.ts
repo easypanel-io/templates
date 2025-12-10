@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `SUITECRM_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
@@ -16,11 +15,10 @@ export function generate(input: Input): Output {
         `SUITECRM_DATABASE_NAME=$(PROJECT_NAME)`,
         `SUITECRM_DATABASE_USER=mariadb`,
         `SUITECRM_DATABASE_PASSWORD=${mariaPassword}`,
-        `SUITECRM_ENABLE_HTTPS=yes`,
         `SUITECRM_HOST=$(PRIMARY_DOMAIN)`,
-        `SUITECRM_USERNAME=${input.suitecrmUsername || "admin"}`,
-        `SUITECRM_PASSWORD=${input.suitecrmPassword || "admin"}`,
-        `SUITECRM_EMAIL=${input.suitecrmEmail || "admin@example.com"}`,
+        `SUITECRM_USERNAME=${input.suitecrmUsername}`,
+        `SUITECRM_PASSWORD=${input.suitecrmPassword}`,
+        `SUITECRM_EMAIL=${input.suitecrmEmail}`,
       ].join("\n"),
       source: { type: "image", image: input.appServiceImage },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8080 }],
@@ -32,11 +30,7 @@ export function generate(input: Input): Output {
 
   services.push({
     type: "mariadb",
-    data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
-      password: mariaPassword,
-    },
+    data: { serviceName: input.databaseServiceName, password: mariaPassword },
   });
 
   return { services };

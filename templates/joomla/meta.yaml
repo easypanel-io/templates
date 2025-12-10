@@ -1,0 +1,81 @@
+name: Joomla
+description:
+  Joomla is a powerful, open-source content management system (CMS) that allows
+  users to build dynamic websites and applications. It offers a user-friendly
+  interface, extensive customization options through templates and extensions,
+  and robust security features. Joomla is highly scalable and supports
+  multilingual content, making it a versatile choice for businesses,
+  organizations, and personal websites. The application is accessible via your
+  host on standard web ports and is easy to deploy using containers.
+
+instructions: Complete the Installation Wizard.
+
+changeLog:
+  - date: 2025-01-31
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.joomla.org
+  - label: Github
+    url: https://github.com/joomla/joomla-cms
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: joomla
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: joomla:5.2.3
+
+benefits:
+  - title: Flexible and Scalable CMS
+    description:
+      Joomla provides a powerful and flexible content management system that can
+      scale from simple websites to complex enterprise applications.
+  - title: Extensive Customization
+    description:
+      With thousands of extensions and templates available, Joomla allows you to
+      customize your website to meet your needs.
+  - title: Strong Community Support
+    description:
+      Backed by a large and active community, Joomla offers extensive
+      documentation, forums, and developer resources.
+
+features:
+  - title: User Management
+    description:
+      Joomla offers advanced user management with multiple access levels and
+      permissions for different roles.
+  - title: Multilingual Support
+    description:
+      Joomla supports multilingual content out of the box, making it an ideal
+      choice for global websites.
+  - title: Built-in SEO Features
+    description:
+      Joomla provides search engine optimization (SEO) tools to help improve
+      your site's visibility and rankings.
+  - title: Extensions and Plugins
+    description:
+      Extend Joomla’s functionality with thousands of extensions available in
+      the Joomla Extensions Directory (JED).
+  - title: Security and Performance
+    description:
+      Joomla includes built-in security measures, regular updates, and caching
+      mechanisms to ensure optimal performance.
+
+tags:
+  - CMS
+  - Website Builder
+  - Open-Source

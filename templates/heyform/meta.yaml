@@ -1,0 +1,118 @@
+name: HeyForm
+description:
+  HeyForm is an open-source form builder platform designed to create, manage,
+  and share forms with ease. It simplifies form creation workflows for
+  businesses, developers, and individuals by offering intuitive UI components
+  and backend management. HeyForm provides robust support for form encryption,
+  session management, and integrations with third-party services like MongoDB
+  and Redis. Its flexible API allows developers to customize and extend
+  functionalities while ensuring data security. HeyForm's clean design and
+  modular architecture make it scalable and adaptable for growing business
+  needs, enabling effective form creation, storage, and analysis.
+instructions: null
+changeLog:
+  - date: 2024-12-12
+    description: First release
+  - date: 2025-07-22
+    description: Version bumped to v0.1.0
+links:
+  - label: Website
+    url: https://heyform.net/
+  - label: Documentation
+    url: https://docs.heyform.net
+  - label: GitHub
+    url: https://github.com/heyform/heyform
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceImage
+    - redisServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: heyform
+    appServiceImage:
+      type: string
+      title: HeyForm Service Image
+      default: heyform/community-edition:v0.1.0
+    databaseServiceImage:
+      type: string
+      title: Database Service Image
+      default: percona/percona-server-mongodb:6.0
+    redisServiceImage:
+      type: string
+      title: Redis Service Image
+      default: eqalpha/keydb:x86_64_v6.3.4
+    googleRecaptchaKey:
+      type: string
+      title: Google Recaptcha Key
+    googleRecaptchaSecret:
+      type: string
+      title: Google Recaptcha Secret
+benefits:
+  - title: Simplified Form Creation
+    description:
+      HeyForm makes it easy to create and manage forms using a user-friendly
+      interface and backend support.
+  - title: Data Security
+    description:
+      HeyForm supports robust form encryption, ensuring your collected data
+      remains secure.
+  - title: Flexible API-Driven Architecture
+    description:
+      HeyForm’s API-first design enables developers to extend and customize the
+      platform as needed.
+  - title: Seamless Integrations
+    description:
+      Integrate with MongoDB for storage and Redis for session management and
+      performance enhancements.
+  - title: Scalable Platform
+    description:
+      HeyForm’s modular architecture makes it highly scalable, adapting to the
+      growing needs of any business.
+features:
+  - title: Drag-and-Drop Form Builder
+    description:
+      Use an intuitive drag-and-drop interface to create forms quickly without
+      coding.
+  - title: Form Encryption
+    description:
+      Ensure form data is encrypted to maintain privacy and compliance.
+  - title: MongoDB Backend
+    description:
+      Leverage MongoDB to store and manage form submissions efficiently.
+  - title: Redis Integration
+    description:
+      Use Redis for caching and session management to improve form response
+      performance.
+  - title: Customizable Templates
+    description:
+      Choose from pre-built templates or create custom forms tailored to your
+      needs.
+  - title: API-Driven Design
+    description:
+      Automate and programmatically manage forms, submissions, and
+      configurations using HeyForm's RESTful API.
+  - title: Multi-Tenancy Support
+    description:
+      Manage multiple projects or teams under a single instance of HeyForm.
+  - title: Notifications and Integrations
+    description:
+      Configure email notifications and integrate with third-party tools to
+      automate workflows.
+tags:
+  - Form Builder
+  - Form Encryption
+  - MongoDB Integration
+  - Redis Integration
+  - API-Driven
+  - Scalable Architecture
+  - Multi-Tenancy
+  - Notifications
+  - Data Security

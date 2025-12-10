@@ -1,9 +1,23 @@
 name: PhotoPrism
-description: PhotoPrism is an AI-powered photos app designed for the decentralized web. It uses the latest technologies to automatically tag and find pictures without interrupting your workflow. You can run it at home, on a private server, or in the cloud. PhotoPrism allows you to browse all your photos and videos without worrying about RAW conversion, duplicates, or video formats. It offers powerful search filters to easily find specific pictures and includes high-resolution world maps to relive your favorite trips. The app supports playing Live Photos by hovering over them in albums and search results, recognizes the faces of your family and friends, and automatically classifies pictures based on their content and location. PhotoPrism is committed to user and privacy-friendly solutions, ensuring your data is never shared without your consent.
+description:
+  PhotoPrism is an AI-powered photos app designed for the decentralized web. It
+  uses the latest technologies to automatically tag and find pictures without
+  interrupting your workflow. You can run it at home, on a private server, or in
+  the cloud. PhotoPrism allows you to browse all your photos and videos without
+  worrying about RAW conversion, duplicates, or video formats. It offers
+  powerful search filters to easily find specific pictures and includes
+  high-resolution world maps to relive your favorite trips. The app supports
+  playing Live Photos by hovering over them in albums and search results,
+  recognizes the faces of your family and friends, and automatically classifies
+  pictures based on their content and location. PhotoPrism is committed to user
+  and privacy-friendly solutions, ensuring your data is never shared without
+  your consent.
 instructions: null
 changeLog:
   - date: 2023-03-16
     description: First Release
+  - date: 2025-02-28
+    description: Version bumped to 250228
 links:
   - label: Website
     url: https://photoprism.app
@@ -19,7 +33,6 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - photoprismAdminUser
@@ -27,9 +40,6 @@ schema:
     - databaseType
     - databaseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -37,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: photoprism/photoprism:221118-jammy
+      default: photoprism/photoprism:250707
     photoprismAdminUser:
       type: string
       title: Username
@@ -61,24 +71,40 @@ schema:
       default: photoprism-db
 benefits:
   - title: AI-Powered Photos App
-    description: PhotoPrism is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.
+    description:
+      PhotoPrism is an AI-Powered Photos App for the Decentralized Web. It makes
+      use of the latest technologies to tag and find pictures automatically
+      without getting in your way.
   - title: Privacy-Friendly
-    description: PhotoPrism was built from the ground up to run wherever you need it, without compromising freedom, privacy, or functionality. Your data will never be shared with Google, Amazon, Microsoft or Apple unless you intentionally upload files to one of their services.
+    description:
+      PhotoPrism was built from the ground up to run wherever you need it,
+      without compromising freedom, privacy, or functionality. Your data will
+      never be shared with Google, Amazon, Microsoft or Apple unless you
+      intentionally upload files to one of their services.
   - title: User-Friendly
-    description: PhotoPrism provides an intuitive user interface that ensures millisecond response times, documents load instantly, search is speedy and navigating the UI is snappy.
+    description:
+      PhotoPrism provides an intuitive user interface that ensures millisecond
+      response times, documents load instantly, search is speedy and navigating
+      the UI is snappy.
 features:
   - title: Multimedia Browsing
-    description: Browse all your photos and videos without worrying about RAW conversion, duplicates or video formats.
+    description:
+      Browse all your photos and videos without worrying about RAW conversion,
+      duplicates or video formats.
   - title: Powerful Search
     description: Easily find specific pictures using powerful search filters.
   - title: High-Resolution World Maps
-    description: Includes four high-resolution world maps to bring back the memories of your favorite trips.
+    description:
+      Includes four high-resolution world maps to bring back the memories of
+      your favorite trips.
   - title: Live Photos
-    description: Play Live Photos by hovering over them in albums and search results.
+    description:
+      Play Live Photos by hovering over them in albums and search results.
   - title: Face Recognition
     description: Recognizes the faces of your family and friends.
   - title: Automatic Classification
-    description: Automatic classification of pictures based on their content and location.
+    description:
+      Automatic classification of pictures based on their content and location.
 tags:
   - Media
   - Gallery

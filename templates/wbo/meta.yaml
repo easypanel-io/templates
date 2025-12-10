@@ -1,0 +1,85 @@
+name: WBO
+description:
+  WBO (Whiteboard Online) is an open-source, self-hosted, collaborative
+  whiteboard tool that allows users to draw, brainstorm, and share ideas in
+  real-time. It provides a flexible and accessible platform for teams,
+  classrooms, or personal use, enabling simultaneous collaboration on a shared
+  digital canvas. WBO offers tools for free-hand drawing, adding shapes, text,
+  and images, making it ideal for team brainstorming sessions, remote meetings,
+  and educational activities. With a clean and intuitive interface, WBO enhances
+  remote collaboration and facilitates interactive learning.
+instructions: null
+changeLog:
+  - date: 2024-11-07
+    description: initial release
+  - date: 2025-07-25
+    description: Version bumped to v1.22.0
+links:
+  - label: Website
+    url: https://wbo.ophir.dev
+  - label: GitHub
+    url: https://github.com/lovasoa/whitebophir
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wbo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lovasoa/wbo:v1.22.0
+benefits:
+  - title: Real-time collaborative whiteboard
+    description:
+      WBO enables multiple users to collaborate simultaneously on a shared
+      whiteboard, making it perfect for remote teams and classrooms.
+  - title: Easy-to-use drawing and annotation tools
+    description:
+      Provides a range of tools for free-hand drawing, shapes, text, and images
+      to support brainstorming, teaching, and team collaboration.
+  - title: Self-hosted and private
+    description:
+      WBO is self-hosted, ensuring control over your data and privacy, which is
+      ideal for secure, in-house collaboration.
+  - title: Responsive and clean UI
+    description:
+      WBO offers a modern, user-friendly interface that enhances collaboration
+      with an intuitive and easy-to-navigate design.
+  - title: Lightweight and open-source
+    description:
+      WBO is lightweight and free, making it accessible for individuals and
+      organizations looking for a cost-effective collaboration tool.
+features:
+  - title: Flexible installation with Docker
+    description:
+      WBO can be easily installed using Docker, making deployment and setup
+      straightforward on any platform.
+  - title: Multiple device support
+    description:
+      WBO supports usage across various devices, enabling seamless collaboration
+      from desktops, tablets, and mobile devices.
+  - title: Customizable for tailored use cases
+    description:
+      As an open-source project, WBO can be customized to meet specific
+      collaboration and whiteboarding needs.
+  - title: Cross-platform compatibility
+    description:
+      WBO is compatible with major browsers, enabling easy access without
+      additional software installations.
+  - title: Lightweight resource usage
+    description:
+      WBO operates efficiently with minimal system resources, making it suitable
+      for environments with limited hardware capacity.
+tags:
+  - Collaboration
+  - Whiteboard
+  - Self-hosted
+  - Open-source

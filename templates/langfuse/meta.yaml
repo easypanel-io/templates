@@ -1,0 +1,112 @@
+name: Langfuse
+description:
+  Langfuse is a powerful, self-hosted observability platform designed for AI
+  applications. It simplifies monitoring, debugging, and optimizing your AI
+  workflows with detailed insights, customizable metrics, and flexible
+  integrations. Langfuse provides a clean and intuitive interface, robust API
+  access, and plugin support to extend its functionality. It ensures privacy and
+  compliance by allowing you to maintain full control over your data with a
+  self-hosted solution. The application is accessible via your host and supports
+  multi-platform awareness, ensuring compatibility with various architectures.
+instructions: null
+changeLog:
+  - date: 2024-12-23
+    description: Template Release
+  - date: 2025-07-22
+    description: Version bumped to 3.84
+links:
+  - label: Documentation
+    url: https://langfuse.com/docs
+  - label: Github
+    url: https://github.com/langfuse/langfuse
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - workerImage
+    - clickHouseImage
+    - minioImage
+    - clickHouseUser
+    - clickHousePassword
+    - minioUser
+    - minioPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: langfuse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: langfuse/langfuse:3.84
+    workerImage:
+      type: string
+      title: App Service Image
+      default: langfuse/langfuse-worker:3.84
+    clickHouseImage:
+      type: string
+      title: App Service Image
+      default: clickhouse/clickhouse-server
+    minioImage:
+      type: string
+      title: App Service Image
+      default: minio/minio:latest
+    clickHouseUser:
+      type: string
+      title: Click House User
+      default: clickhouse
+    clickHousePassword:
+      type: string
+      title: ClickHouse Password
+      default: clickhouse
+    minioUser:
+      type: string
+      title: Minio User
+      default: admin
+    minioPassword:
+      type: string
+      title: Minio Password
+      default: password
+benefits:
+  - title: Streamlined Observability for AI Applications
+    description:
+      Langfuse simplifies observability by providing an intuitive way to
+      monitor, analyze, and optimize your AI application workflows.
+  - title: Self-Hosted Flexibility
+    description:
+      Maintain full control over your data and operations with a self-hosted
+      setup that ensures privacy and compliance.
+  - title: Enhanced Debugging
+    description:
+      Quickly identify and resolve issues with detailed logs, traces, and
+      metrics tailored for AI-driven systems.
+
+features:
+  - title: Powerful API Access
+    description:
+      Seamlessly integrate Langfuse into your workflows using its robust API for
+      efficient data ingestion and analysis.
+  - title: Built-In Analytics
+    description:
+      Gain actionable insights with comprehensive analytics, including
+      performance metrics, user interactions, and bottleneck identification.
+  - title: Plugin Support
+    description:
+      Enhance Langfuse’s capabilities with plugins to adapt it to your specific
+      use case.
+  - title: Customizable Monitoring
+    description:
+      Define custom metrics and observability rules to suit your AI
+      application’s unique requirements.
+
+tags:
+  - Observability
+  - Self-Hosted
+  - AI Monitoring
+  - Analytics

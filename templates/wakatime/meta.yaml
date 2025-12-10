@@ -1,19 +1,23 @@
 name: Wakapi
-description: Wakapi is a powerful open-source tool designed to help you track
-  and analyze your coding time. It allows you to monitor the time you've spent
-  coding on various projects, in different programming languages, and more. It's
-  perfect for those who love statistics and want to gain insights into their
-  coding habits. Wakapi provides fancy statistics and plots, public
-  leaderboards, cool badges for readmes, and weekly email reports. It's built by
-  developers for developers, ensuring it meets your needs perfectly. With
-  Wakapi, you can easily keep track of your coding time and improve your
-  productivity.
+description:
+  Wakapi is a powerful open-source tool designed to help you track and analyze
+  your coding time. It allows you to monitor the time you've spent coding on
+  various projects, in different programming languages, and more. It's perfect
+  for those who love statistics and want to gain insights into their coding
+  habits. Wakapi provides fancy statistics and plots, public leaderboards, cool
+  badges for readmes, and weekly email reports. It's built by developers for
+  developers, ensuring it meets your needs perfectly. With Wakapi, you can
+  easily keep track of your coding time and improve your productivity.
 instructions: null
 changeLog:
   - date: 2023-01-24
     description: first release
   - date: 2023-03-22
     description: Update to v2.6.2
+  - date: 2025-03-03
+    description: Version bumped to 2.13.1
+  - date: 2025-07-25
+    description: Version bumped to 2.14.1
 links:
   - label: Website
     url: https://wakapi.dev/
@@ -22,16 +26,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n1try/wakapi:2.7.0
+      default: n1try/wakapi:2.14.1
 tags:
   - Developer Tools
   - Analytics

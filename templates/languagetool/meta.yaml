@@ -1,11 +1,12 @@
 name: Languagetool
-description: LanguageTool is your personal writing assistant, designed to
-  enhance your writing skills and ensure error-free communication. This
-  multilingual app offers a comprehensive spelling, style, and grammar checker,
-  capable of correcting or paraphrasing texts in a variety of languages. It
-  integrates seamlessly with various platforms including browsers like Chrome,
-  Edge, Firefox, Safari, Opera, and email platforms like Gmail and Outlook. It
-  also works with office plugins such as Google Docs, Word, OpenOffice, and
+description:
+  LanguageTool is your personal writing assistant, designed to enhance your
+  writing skills and ensure error-free communication. This multilingual app
+  offers a comprehensive spelling, style, and grammar checker, capable of
+  correcting or paraphrasing texts in a variety of languages. It integrates
+  seamlessly with various platforms including browsers like Chrome, Edge,
+  Firefox, Safari, Opera, and email platforms like Gmail and Outlook. It also
+  works with office plugins such as Google Docs, Word, OpenOffice, and
   LibreOffice. LanguageTool is equipped with an AI-based style and grammar
   checker trusted by renowned organizations worldwide. It offers a
   distraction-free writing experience, a personal dictionary, and quality
@@ -20,6 +21,8 @@ instructions: null
 changeLog:
   - date: 2023-2-24
     description: first release
+  - date: 2025-07-22
+    description: Version bumped to 6.6
 links:
   - label: Website
     url: https://languagetool.org
@@ -28,16 +31,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -45,43 +46,51 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: silviof/docker-languagetool:6.0
+      default: silviof/docker-languagetool:6.6
 benefits:
   - title: Enhanced Writing Quality
-    description: LanguageTool is a comprehensive writing assistant that helps you
-      improve the quality of your texts. It corrects spelling, grammar, and
-      style errors, ensuring your writing is clear, precise, and stylistically
+    description:
+      LanguageTool is a comprehensive writing assistant that helps you improve
+      the quality of your texts. It corrects spelling, grammar, and style
+      errors, ensuring your writing is clear, precise, and stylistically
       correct.
   - title: Multilingual Support
-    description: LanguageTool supports a wide range of languages, making it a
-      versatile tool for users worldwide. Whether you're writing in English,
-      Spanish, German, French, or any other supported language, LanguageTool is
-      there to assist you.
+    description:
+      LanguageTool supports a wide range of languages, making it a versatile
+      tool for users worldwide. Whether you're writing in English, Spanish,
+      German, French, or any other supported language, LanguageTool is there to
+      assist you.
   - title: AI-Powered Paraphrasing
-    description: LanguageTool uses artificial intelligence to help you find the
-      right words. It can rephrase your sentences to be more formal, fluent,
-      simple, or concise, enhancing the overall readability of your text.
+    description:
+      LanguageTool uses artificial intelligence to help you find the right
+      words. It can rephrase your sentences to be more formal, fluent, simple,
+      or concise, enhancing the overall readability of your text.
 features:
   - title: Spelling and Grammar Checker
-    description: LanguageTool identifies and corrects spelling and grammar mistakes
-      in your text. It can spot incorrect subject-verb agreement, wrong plural
-      forms, misuse of grammatical forms, and more.
+    description:
+      LanguageTool identifies and corrects spelling and grammar mistakes in your
+      text. It can spot incorrect subject-verb agreement, wrong plural forms,
+      misuse of grammatical forms, and more.
   - title: Punctuation Corrector
-    description: LanguageTool ensures you're using punctuation correctly. It can
-      help you form complex sentences and tell you when you've used too many
-      exclamation points.
+    description:
+      LanguageTool ensures you're using punctuation correctly. It can help you
+      form complex sentences and tell you when you've used too many exclamation
+      points.
   - title: Style Improver
-    description: LanguageTool detects overused phrases, foreign terms, redundant
-      words, and improper word choice. It helps you improve the style of your
-      writing, making it more engaging and effective.
+    description:
+      LanguageTool detects overused phrases, foreign terms, redundant words, and
+      improper word choice. It helps you improve the style of your writing,
+      making it more engaging and effective.
   - title: Casing Corrector
-    description: LanguageTool corrects incorrect casing in your text. Whether you're
+    description:
+      LanguageTool corrects incorrect casing in your text. Whether you're
       writing capitalized names, months, places, or national identities,
       LanguageTool ensures they're correctly cased.
   - title: Browser and Email Add-ons
-    description: LanguageTool offers browser and email add-ons, allowing you to
-      improve your text while typing an email, a blog post, or a simple tweet.
-      It integrates with your favorite office programs, ensuring error-free
+    description:
+      LanguageTool offers browser and email add-ons, allowing you to improve
+      your text while typing an email, a blog post, or a simple tweet. It
+      integrates with your favorite office programs, ensuring error-free
       results.
 tags:
   - Productivity

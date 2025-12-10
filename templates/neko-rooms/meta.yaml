@@ -1,0 +1,73 @@
+name: Neko Rooms
+description:
+  Neko Rooms is a self-hosted, collaborative virtualized browser-sharing
+  platform that enables users to share and interact with web applications in a
+  fully isolated and secure environment. It allows multiple users to join a
+  shared session, providing seamless co-browsing experiences with synchronized
+  interactions. Neko Rooms is built for teams, support agents, and anyone
+  needing real-time, interactive browsing collaboration. It is optimized for
+  low-latency streaming and supports multiple configurations for enhanced
+  flexibility and performance.
+instructions: null
+changeLog:
+  - date: 2025-03-14
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/m1k1o/neko-rooms
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: neko-rooms
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: m1k1o/neko-rooms:latest
+benefits:
+  - title: Secure Remote Browsing
+    description:
+      Neko Rooms provides a fully isolated, secure browsing environment,
+      preventing data leaks and ensuring privacy for collaborative sessions.
+  - title: Real-Time Collaboration
+    description:
+      Share your browser session with multiple users in real time, enabling
+      co-browsing, presentations, and collaborative web interactions.
+  - title: Multi-User Support
+    description:
+      Neko Rooms allows multiple users to join the same session, interact
+      simultaneously, and work together on web applications.
+features:
+  - title: Low-Latency Streaming
+    description:
+      Optimized for minimal delay, ensuring smooth and responsive browsing
+      sessions for all participants.
+  - title: Multi-User Synchronization
+    description:
+      Keep all participants synchronized with shared controls, allowing seamless
+      interaction within the session.
+  - title: Customizable Environment
+    description:
+      Configure your instance with various settings, including network policies,
+      session persistence, and resource limits.
+  - title: Secure Containerization
+    description:
+      Neko Rooms runs in a secure, containerized environment to ensure complete
+      isolation from the host system.
+  - title: Integration with Reverse Proxies
+    description:
+      Supports integration with Traefik, NGINX, and other reverse proxies for
+      better scalability and access management.
+tags:
+  - Remote Collaboration
+  - Virtualized Browser
+  - Self-Hosted
+  - Secure Browsing

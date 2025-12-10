@@ -1,7 +1,8 @@
 name: Ghost File Sharing
-description: Our app is a powerful tool designed to streamline your workflow and
-  enhance productivity. It allows you to easily find code, projects, and people
-  on GitHub, making it simpler than ever to collaborate and contribute to
+description:
+  Our app is a powerful tool designed to streamline your workflow and enhance
+  productivity. It allows you to easily find code, projects, and people on
+  GitHub, making it simpler than ever to collaborate and contribute to
   open-source projects. With this app, you can stay updated with product
   updates, company news, and more by subscribing to our newsletter. It also
   offers a range of features designed to ensure the security of your work,
@@ -21,13 +22,9 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -38,27 +35,32 @@ schema:
       default: ghcr.io/voxelin/ghost:stable
 benefits:
   - title: Efficient Code Management
-    description: The app provides a platform for efficient code management. It
-      allows users to keep track of their code changes and revert back to any
-      previous state of the project. This makes it easier to manage and control
-      the versions of your project.
+    description:
+      The app provides a platform for efficient code management. It allows users
+      to keep track of their code changes and revert back to any previous state
+      of the project. This makes it easier to manage and control the versions of
+      your project.
   - title: Collaboration
-    description: The app enables users to collaborate on projects. It allows
-      multiple people to work on the same project at the same time, making it
-      easier to collaborate and contribute to projects.
+    description:
+      The app enables users to collaborate on projects. It allows multiple
+      people to work on the same project at the same time, making it easier to
+      collaborate and contribute to projects.
 features:
   - title: Code Repository
-    description: The app provides a code repository where users can store and manage
-      their code. This repository is accessible from anywhere, making it easy to
-      work on your projects from any location.
+    description:
+      The app provides a code repository where users can store and manage their
+      code. This repository is accessible from anywhere, making it easy to work
+      on your projects from any location.
   - title: Version Control
-    description: The app includes a version control feature that allows users to
-      keep track of changes made to the code. This feature makes it easy to
-      revert back to a previous version of the project if necessary.
+    description:
+      The app includes a version control feature that allows users to keep track
+      of changes made to the code. This feature makes it easy to revert back to
+      a previous version of the project if necessary.
   - title: Collaboration Tools
-    description: The app includes tools that make it easy to collaborate on
-      projects. These tools include features for sharing code, discussing
-      changes, and reviewing code.
+    description:
+      The app includes tools that make it easy to collaborate on projects. These
+      tools include features for sharing code, discussing changes, and reviewing
+      code.
 tags:
   - Code Hosting
   - Developer Tools

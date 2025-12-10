@@ -1,0 +1,105 @@
+name: Jaeger
+description:
+  Jaeger is an end-to-end distributed tracing system used for monitoring and
+  troubleshooting microservices-based architectures. It helps developers track
+  requests across complex systems, visualize latencies, and diagnose performance
+  issues. Jaeger supports multiple storage backends and provides powerful
+  querying and visualization capabilities. It is designed to be scalable and
+  production-ready, making it a valuable tool for debugging and optimizing
+  distributed applications.
+instructions: null
+changeLog:
+  - date: 2025-03-14
+    description: First Release
+  - date: 2025-07-22
+    description: Version bumped to v1.71.0
+links:
+  - label: Website
+    url: https://www.jaegertracing.io
+  - label: Documentation
+    url: https://www.jaegertracing.io/docs/latest
+  - label: Github
+    url: https://github.com/jaegertracing/jaeger
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - compactFormat
+    - jaegerInstrumentation
+    - binaryFormat
+    - portSampling
+    - collectorPort
+    - zipkinPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jaeger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jaegertracing/all-in-one:1.71.0
+    compactFormat:
+      type: string
+      title: Compact Format
+      default: "5775"
+    jaegerInstrumentation:
+      type: string
+      title: Jaeger Instrumentation
+      default: "6831"
+    binaryFormat:
+      type: string
+      title: Binary Format
+      default: "6832"
+    portSampling:
+      type: string
+      title: Port Sampling
+      default: "5778"
+    collectorPort:
+      type: string
+      title: Collector Port
+      default: "14268"
+    zipkinPort:
+      type: string
+      title: Zipkin Port
+      default: "9411"
+benefits:
+  - title: Distributed Tracing
+    description: Track requests across microservices for better visibility.
+  - title: Performance Optimization
+    description:
+      Identify and diagnose performance bottlenecks in distributed applications.
+  - title: Multiple Storage Backends
+    description:
+      Supports multiple storage options such as Elasticsearch and Cassandra.
+  - title: Scalable & Production-Ready
+    description: Designed to handle high loads and large-scale applications.
+  - title: Powerful Visualization
+    description: Provides an intuitive UI for analyzing traces and latencies.
+  - title: OpenTelemetry Integration
+    description:
+      Seamlessly integrates with OpenTelemetry for enhanced observability.
+features:
+  - title: End-to-End Tracing
+    description: Capture and analyze traces from service to service.
+  - title: Trace Visualization
+    description: View trace timelines and dependencies in an intuitive UI.
+  - title: Latency Analysis
+    description: Identify slow services and optimize performance.
+  - title: Adaptive Sampling
+    description:
+      Control trace sampling dynamically for efficient data collection.
+  - title: Storage Flexibility
+    description:
+      Store traces in Elasticsearch, Cassandra, Kafka, or local memory.
+  - title: OpenTelemetry Support
+    description:
+      Natively integrates with OpenTelemetry for seamless instrumentation.
+tags:
+  - Observability
+  - Monitoring
+  - Distributed Tracing

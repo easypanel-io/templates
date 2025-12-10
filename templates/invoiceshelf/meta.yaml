@@ -1,0 +1,107 @@
+---
+name: InvoiceShelf
+description:
+  InvoiceShelf is an open-source web & mobile app that helps you track expenses,
+  payments & create professional invoices & estimates. Web Application is made
+  using Laravel & VueJS while the Mobile Apps are built using React Native.
+instructions: Visit the website to complete installation.
+changeLog:
+  - date: 2024-03-23
+    description: Template added
+  - date: 2024-10-11
+    description: Version Changed to 2.0.0
+  - date: 2025-02-25
+    description: Version bumped to 2.1.1
+links:
+  - label: Website
+    url: https://invoiceshelf.com/
+  - label: Documentation
+    url: https://docs.invoiceshelf.com/
+  - label: Github
+    url: https://github.com/InvoiceShelf/InvoiceShelf
+contributors:
+  - name: Mark Topper Diderichsen
+    url: https://github.com/marktopper
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dbServiceName
+    - dbServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: invoiceshelf
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: invoiceshelf/invoiceshelf:2.1.1
+    dbServiceName:
+      type: string
+      title: Database Service Name
+      default: db
+    dbServiceImage:
+      type: string
+      title: Database Service Image
+      default: mariadb:11
+benefits:
+  - title: Automated Invoice Processing
+    description:
+      InvoiceShelf is a comprehensive invoice management tool that automatically
+      processes incoming invoices, extracting essential details through OCR
+      technology. It seamlessly categorizes, sorts, and stores invoices,
+      integrating with accounting software to streamline your financial
+      workflows.
+  - title: Payment Tracking
+    description:
+      With InvoiceShelf, tracking payments becomes effortless. The system can be
+      configured to monitor payment statuses, alerting you to overdue invoices
+      and automatically updating records when payments are received. This
+      ensures your accounts are always accurate and up to date.
+  - title: Duplicate Detection
+    description:
+      InvoiceShelf's sophisticated algorithms identify and flag duplicate
+      invoices, preventing double payments and financial discrepancies. This
+      feature saves you time and reduces the risk of financial errors, providing
+      peace of mind.
+features:
+  - title: Dashboard Overview
+    description:
+      Access a comprehensive overview of your financials with our dashboard
+      feature. Track pending, paid, and overdue invoices at a glance, and get
+      insights into your cash flow and financial health, helping you make
+      informed decisions.
+  - title: Customizable Invoice Templates
+    description:
+      Create professional and branded invoices with ease using customizable
+      templates. InvoiceShelf allows you to adjust layouts, add your logo, and
+      set default payment terms to match your business’s unique needs.
+  - title: Client Management
+    description:
+      Organize and manage your client information in one place. Store contact
+      details, track client-specific payment terms, and view transaction
+      histories to enhance relationships and streamline communications.
+  - title: Automated Reminders
+    description:
+      Set up automated email reminders for overdue invoices, reducing the need
+      for manual follow-ups. Customize the reminder frequency and messages to
+      maintain professionalism and prompt payments.
+  - title: Integration with Accounting Software
+    description:
+      InvoiceShelf integrates with popular accounting software, enabling
+      automatic syncing of financial data. This ensures that your accounts are
+      always up-to-date, facilitating seamless financial reporting and analysis.
+  - title: Secure Cloud Storage
+    description:
+      Store your invoices securely in the cloud with InvoiceShelf. Access your
+      financial documents from anywhere, at any time, knowing your data is
+      protected with state-of-the-art encryption and security protocols.
+tags:
+  - Finance
+  - Invoice Management
+  - Payment Tracking
+  - Accounting

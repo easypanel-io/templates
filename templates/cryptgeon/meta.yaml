@@ -1,0 +1,55 @@
+name: Cryptgeon
+description:
+  Cryptgeon is a secure, open source sharing note or file service inspired by
+  PrivNote. It includes a server, a web page and a CLI client.
+instructions: null
+changeLog:
+  - date: 2025-03-11
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/cupcakearmy/cryptgeon
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cryptgeon
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: cupcakearmy/cryptgeon:2.9.1
+benefits:
+  - title: Secure Sharing
+    description:
+      Cryptgeon uses encryption to ensure your shared notes and files remain
+      confidential.
+  - title: Multi-Platform Access
+    description:
+      Access your content via the server, web page, or CLI client for
+      versatility.
+  - title: Open Source & Transparent
+    description:
+      Built as an open source project, Cryptgeon encourages community trust and
+      collaboration.
+features:
+  - title: Server Component
+    description: Handles secure sharing of notes and files.
+  - title: Web Interface
+    description: A user-friendly web page for easy note and file access.
+  - title: CLI Client
+    description: A command-line tool for managing and sharing notes and files.
+  - title: Secure Encryption
+    description: Implements robust encryption protocols to protect your data.
+tags:
+  - Secure Sharing
+  - File Sharing
+  - Notes
+  - Open Source

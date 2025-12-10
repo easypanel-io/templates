@@ -1,19 +1,22 @@
 name: Isso
-description: Isso is a lightweight commenting server designed to be a seamless
-  alternative to Disqus. It is written in Python and JavaScript, and it allows
-  users to leave comments on your website in a simple and straightforward
-  manner. The app supports anonymous comments, preserving the identity of your
-  users, and is easy to manage. Users can write comments in Markdown, and they
-  also have the ability to edit or delete their own comments within a default
-  time frame of 15 minutes. The app uses a SQLite backend, ensuring that your
-  comments are not treated as Big Data. Additionally, it offers Disqus and
-  WordPress import features, allowing you to migrate your existing comments
-  without any hassle. The app is easily integrated into your website by
-  embedding a single JavaScript file.
+description:
+  Isso is a lightweight commenting server designed to be a seamless alternative
+  to Disqus. It is written in Python and JavaScript, and it allows users to
+  leave comments on your website in a simple and straightforward manner. The app
+  supports anonymous comments, preserving the identity of your users, and is
+  easy to manage. Users can write comments in Markdown, and they also have the
+  ability to edit or delete their own comments within a default time frame of 15
+  minutes. The app uses a SQLite backend, ensuring that your comments are not
+  treated as Big Data. Additionally, it offers Disqus and WordPress import
+  features, allowing you to migrate your existing comments without any hassle.
+  The app is easily integrated into your website by embedding a single
+  JavaScript file.
 instructions: Go to /admin for administration interface
 changeLog:
   - date: 2023-2-9
     description: first release
+  - date: 2025-05-23
+    description: update to v0.13.1.dev0
 links:
   - label: Documentation
     url: https://isso-comments.de/docs/
@@ -25,14 +28,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - adminPassword
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -40,42 +39,49 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/isso-comments/isso:0.13.0
+      default: ghcr.io/isso-comments/isso:0.13.1.dev0
     adminPassword:
       type: string
       title: Admin Password
 benefits:
   - title: Lightweight Commenting Server
-    description: Isso is a lightweight commenting server that offers a simple and
-      efficient way to manage comments on your website. It is designed to be a
-      drop-in replacement for Disqus, providing a more streamlined and
-      user-friendly experience.
+    description:
+      Isso is a lightweight commenting server that offers a simple and efficient
+      way to manage comments on your website. It is designed to be a drop-in
+      replacement for Disqus, providing a more streamlined and user-friendly
+      experience.
   - title: Maintains User Anonymity
-    description: Unlike other commenting systems, Isso allows for anonymous
-      comments, ensuring the privacy of your website visitors. It maintains user
-      identity without recording personal information like IP addresses or
-      email.
+    description:
+      Unlike other commenting systems, Isso allows for anonymous comments,
+      ensuring the privacy of your website visitors. It maintains user identity
+      without recording personal information like IP addresses or email.
   - title: Easy Integration
-    description: Isso uses JavaScript and cross-origin resource sharing for easy
+    description:
+      Isso uses JavaScript and cross-origin resource sharing for easy
       integration into static websites. This makes it a versatile tool that can
       be used with a wide range of web platforms.
 features:
   - title: Markdown Support
-    description: Isso supports comments written in Markdown, allowing users to
-      format their comments in a way that is both easy to write and read.
+    description:
+      Isso supports comments written in Markdown, allowing users to format their
+      comments in a way that is both easy to write and read.
   - title: Comment Moderation
-    description: With Isso, comments in the moderation queue are not publicly
-      visible before activation. This gives you control over what is displayed
-      on your website.
+    description:
+      With Isso, comments in the moderation queue are not publicly visible
+      before activation. This gives you control over what is displayed on your
+      website.
   - title: User Comment Management
-    description: Users can edit or delete their own comments within a default window
-      of 15 minutes. This gives users the ability to correct or remove their
-      comments as needed.
+    description:
+      Users can edit or delete their own comments within a default window of 15
+      minutes. This gives users the ability to correct or remove their comments
+      as needed.
   - title: Disqus & WordPress Import
-    description: Isso allows for easy migration of your Disqus or WordPress comments
+    description:
+      Isso allows for easy migration of your Disqus or WordPress comments
       without any hassle. This makes transitioning to Isso a smooth process.
   - title: SQLite Backend
-    description: Isso uses an SQLite backend, demonstrating that comments are not
-      Big Data and can be managed efficiently and effectively.
+    description:
+      Isso uses an SQLite backend, demonstrating that comments are not Big Data
+      and can be managed efficiently and effectively.
 tags:
   - Documentation

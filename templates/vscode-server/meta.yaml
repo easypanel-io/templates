@@ -1,8 +1,9 @@
 name: Visual Studio Code Server
-description: The LinuxServer.io team presents the docker-code-server, a powerful
-  tool that allows you to run VS Code on a remote server, accessible through
-  your browser. This means you can code on your Chromebook, tablet, and laptop
-  with a consistent development environment. If you're using a Windows or Mac
+description:
+  The LinuxServer.io team presents the docker-code-server, a powerful tool that
+  allows you to run VS Code on a remote server, accessible through your browser.
+  This means you can code on your Chromebook, tablet, and laptop with a
+  consistent development environment. If you're using a Windows or Mac
   workstation, you can more easily develop for Linux. The app also allows you to
   leverage large cloud servers to speed up tests, compilations, downloads, and
   more. It helps preserve battery life when you're on the go, as all intensive
@@ -12,6 +13,10 @@ instructions: null
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 4.97.2
+  - date: 2025-07-25
+    description: Version bumped to 4.102.2
 links:
   - label: Documentation
     url: https://github.com/linuxserver/docker-code-server/blob/master/README.md
@@ -20,17 +25,15 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - password
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     password:
       type: string
       title: VS Code Server Password
@@ -41,27 +44,32 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/code-server:4.9.1-ls148
+      default: lscr.io/linuxserver/code-server:4.102.2
 benefits:
   - title: Access VS Code from anywhere
-    description: Code-server allows you to access Visual Studio Code from any device
-      with a browser. Whether you're using a Chromebook, tablet, or laptop, you
-      can have a consistent development environment.
+    description:
+      Code-server allows you to access Visual Studio Code from any device with a
+      browser. Whether you're using a Chromebook, tablet, or laptop, you can
+      have a consistent development environment.
   - title: Develop for Linux on Windows or Mac
-    description: With code-server, you can easily develop applications for Linux
-      even if you're using a Windows or Mac workstation. Take advantage of large
-      cloud servers to speed up tests, compilations, downloads, and more.
+    description:
+      With code-server, you can easily develop applications for Linux even if
+      you're using a Windows or Mac workstation. Take advantage of large cloud
+      servers to speed up tests, compilations, downloads, and more.
   - title: Preserve battery life
-    description: By running intensive computations on your server instead of your
-      local device, code-server helps preserve battery life when you're on the
-      go. You no longer need to run excess instances of Chrome.
+    description:
+      By running intensive computations on your server instead of your local
+      device, code-server helps preserve battery life when you're on the go. You
+      no longer need to run excess instances of Chrome.
 features:
   - title: Remote development
-    description: Access Visual Studio Code remotely from any device with a browser.
+    description:
+      Access Visual Studio Code remotely from any device with a browser.
   - title: Cross-platform development
     description: Develop applications for Linux on Windows or Mac workstations.
   - title: Server-side computation
-    description: Offload intensive computations to your server to preserve battery life.
+    description:
+      Offload intensive computations to your server to preserve battery life.
 tags:
   - Developer Tools
   - Code Hosting

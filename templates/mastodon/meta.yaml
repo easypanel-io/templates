@@ -1,21 +1,25 @@
 name: Mastodon
-description: Mastodon is a unique social networking app that puts control back
-  in your hands. It allows you to curate your own home feed, free from
-  algorithms or ads, ensuring you see only what matters most to you. The app
-  supports a wide range of content types, including audio, video, and picture
-  posts, polls, content warnings, and more, enabling you to express yourself
-  freely online. Mastodon is decentralized and open-source, meaning each server
-  is a completely independent entity, yet able to interoperate with others to
-  form a global social network. The app respects your agency, never serving ads
-  or pushing profiles, and is built on open web protocols, allowing it to
-  interact with any other platform that implements ActivityPub. With Mastodon,
-  you have the power to manage your audience, moderate content, and create a
-  social media experience that truly reflects you.
-instructions: To create an admin account, type "tootctl accounts create username
-  --email user@example.com --confirmed --role Owner" on the console.
+description:
+  Mastodon is a unique social networking app that puts control back in your
+  hands. It allows you to curate your own home feed, free from algorithms or
+  ads, ensuring you see only what matters most to you. The app supports a wide
+  range of content types, including audio, video, and picture posts, polls,
+  content warnings, and more, enabling you to express yourself freely online.
+  Mastodon is decentralized and open-source, meaning each server is a completely
+  independent entity, yet able to interoperate with others to form a global
+  social network. The app respects your agency, never serving ads or pushing
+  profiles, and is built on open web protocols, allowing it to interact with any
+  other platform that implements ActivityPub. With Mastodon, you have the power
+  to manage your audience, moderate content, and create a social media
+  experience that truly reflects you.
+instructions:
+  To create an admin account, type "tootctl accounts create username --email
+  user@example.com --confirmed --role Owner" on the console.
 changeLog:
   - date: 2023-03-26
     description: First Release
+  - date: 2025-07-22
+    description: Version bumped to v4.4.1
 links:
   - label: Website
     url: https://joinmastodon.org
@@ -26,16 +30,14 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     enableStreaming:
       type: boolean
       title: Enable Streaming Service
@@ -64,37 +66,44 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/mastodon/mastodon:v4.1
+      default: ghcr.io/mastodon/mastodon:v4.4.1
 benefits:
   - title: Control Your Own Social Media Experience
-    description: Mastodon gives you the power to curate your own home feed, without
+    description:
+      Mastodon gives you the power to curate your own home feed, without
       interference from algorithms or ads. Your timeline is filled with what
       matters to you most, not what a corporation thinks you should see.
   - title: Decentralized and Independent
-    description: Each Mastodon server is a completely independent entity, yet able
-      to interoperate with others to form one global social network. This
+    description:
+      Each Mastodon server is a completely independent entity, yet able to
+      interoperate with others to form one global social network. This
       decentralization ensures that instant global communication doesn't belong
       to one company.
   - title: Respect for Your Agency
-    description: Mastodon respects your agency. Your feed is curated and created by
-      you. We will never serve ads or push profiles for you to see. That means
-      your data and your time are yours and yours alone.
+    description:
+      Mastodon respects your agency. Your feed is curated and created by you. We
+      will never serve ads or push profiles for you to see. That means your data
+      and your time are yours and yours alone.
 features:
   - title: Follow Across Servers
-    description: Follow anyone across any Mastodon server from a single account and
-      receive their posts in chronological order. Make your corner of the
-      internet a little more like you.
+    description:
+      Follow anyone across any Mastodon server from a single account and receive
+      their posts in chronological order. Make your corner of the internet a
+      little more like you.
   - title: Moderation Your Way
-    description: Each server creates their own rules and regulations, which are
-      enforced locally and not top-down like corporate social media. Join a
-      server with the rules you agree with, or host your own.
+    description:
+      Each server creates their own rules and regulations, which are enforced
+      locally and not top-down like corporate social media. Join a server with
+      the rules you agree with, or host your own.
   - title: Unparalleled Creativity
-    description: Mastodon supports audio, video and picture posts, accessibility
+    description:
+      Mastodon supports audio, video and picture posts, accessibility
       descriptions, polls, content warnings, animated avatars, custom emojis,
       thumbnail crop control, and more, to help you express yourself online.
   - title: Interoperable
-    description: Built on open web protocols, Mastodon can speak with any other
-      platform that implements ActivityPub. With one account you get access to a
-      whole universe of social apps—the fediverse.
+    description:
+      Built on open web protocols, Mastodon can speak with any other platform
+      that implements ActivityPub. With one account you get access to a whole
+      universe of social apps—the fediverse.
 tags:
   - Social Networking

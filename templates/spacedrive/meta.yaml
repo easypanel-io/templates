@@ -1,0 +1,85 @@
+name: SpaceDrive
+description:
+  SpaceDrive is a powerful storage and file management solution designed to
+  streamline the organization, synchronization, and access of data across
+  multiple devices. It enables users to efficiently manage their files with
+  real-time synchronization, end-to-end encryption, and scalable storage
+  options. With its robust feature set and enterprise-grade capabilities,
+  SpaceDrive enhances productivity by providing secure, distributed, and
+  decentralized storage for personal and professional use.
+instructions: null
+changeLog:
+  - date: 2025-01-30
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/spacedriveapp/spacedrive
+  - label: Documentation
+    url: https:/spacedrive.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: spacedrive
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/spacedriveapp/spacedrive/server:0.4.2
+    username:
+      type: string
+      title: Username
+      default: spacedrive
+    password:
+      type: string
+      title: Password
+      default: password
+benefits:
+  - title: Distributed Storage
+    description:
+      SpaceDrive provides a decentralized approach to file management, ensuring
+      redundancy and accessibility across multiple devices.
+  - title: End-to-End Encryption
+    description:
+      Protect your data with robust encryption protocols, keeping your files
+      secure from unauthorized access.
+  - title: Cross-Platform Support
+    description:
+      Manage and sync files seamlessly across Windows, macOS, Linux, and mobile
+      devices.
+features:
+  - title: Real-Time Sync
+    description:
+      Keep your files updated across all devices with efficient synchronization
+      technology.
+  - title: File Versioning
+    description:
+      Access and restore previous versions of files with built-in version
+      control.
+  - title: Remote Access
+    description:
+      Securely access your files from anywhere with SpaceDrive’s cloud and local
+      storage integration.
+  - title: Offline Mode
+    description:
+      Work on your files even without an internet connection and sync when
+      connectivity is restored.
+  - title: API & Developer Support
+    description:
+      Extend functionality with a comprehensive API, allowing integrations with
+      third-party applications and services.
+tags:
+  - File Management
+  - Cloud Storage
+  - Decentralized Storage
+  - Security
+  - Open Source

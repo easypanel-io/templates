@@ -1,19 +1,26 @@
 name: Directus
-description: Directus is a modern, open-source data platform that instantly
-  transforms any SQL database into an API and a beautiful no-code app. It is
-  designed to work with any SQL database, allowing you to maintain complete
-  control over your new or existing database without the need for migration to a
-  proprietary data model. The Directus API layers on top of your database,
-  providing both REST and GraphQL APIs for your data. The Directus App enables
-  your entire team to safely and intuitively browse, manage, and visualize data.
-  It is a flexible platform that can be used as a Backend-as-a-Service, a
-  Headless CMS, an Internal Tool Builder, and for Data Management & Analytics.
-  With Directus, you can connect external digital experiences, design APIs,
-  control data flows, build internal tools, and much more.
+description:
+  Directus is a modern, open-source data platform that instantly transforms any
+  SQL database into an API and a beautiful no-code app. It is designed to work
+  with any SQL database, allowing you to maintain complete control over your new
+  or existing database without the need for migration to a proprietary data
+  model. The Directus API layers on top of your database, providing both REST
+  and GraphQL APIs for your data. The Directus App enables your entire team to
+  safely and intuitively browse, manage, and visualize data. It is a flexible
+  platform that can be used as a Backend-as-a-Service, a Headless CMS, an
+  Internal Tool Builder, and for Data Management & Analytics. With Directus, you
+  can connect external digital experiences, design APIs, control data flows,
+  build internal tools, and much more.
 instructions: null
 changeLog:
   - date: 2022-07-12
     description: first release
+  - date: 2025-05-26
+    description: Version bumped to 11.7.2
+  - date: 2025-08-13
+    description: 
+      Version bumped to 11.10.2
+      MySQL 8 support added
 links:
   - label: Website
     url: https://directus.io/
@@ -26,10 +33,13 @@ contributors:
     url: https://github.com/Ponkhy
   - name: Andrei Canta
     url: https://github.com/deiucanta
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+  - name: Abhinay M
+    url: https://github.com/AbhinayMe
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - adminEmail
@@ -38,9 +48,6 @@ schema:
     - databaseServiceName
     - redisServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -48,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:9.18.1
+      default: directus/directus:11.10.2
     adminEmail:
       type: string
       title: Admin Email
@@ -76,34 +83,41 @@ schema:
       default: directus-redis
 benefits:
   - title: Efficient Data Management
-    description: Directus is a modern, open-source data platform that allows you to
+    description:
+      Directus is a modern, open-source data platform that allows you to
       efficiently manage your SQL database. It provides a dynamic API for your
       data, enabling you to browse, manage, and visualize your data in an
       intuitive no-code app.
   - title: Flexible and Scalable
-    description: Whether you're managing content for websites, apps, or digital
-      signage, or building back-office apps and admin panels, Directus offers
-      endless solutions. Its flexibility and scalability make it an ideal
-      solution for projects of any size.
+    description:
+      Whether you're managing content for websites, apps, or digital signage, or
+      building back-office apps and admin panels, Directus offers endless
+      solutions. Its flexibility and scalability make it an ideal solution for
+      projects of any size.
   - title: No Vendor Lock-In
-    description: Directus installs on top of any SQL database, allowing you to
-      remain in complete control of your new or existing database. There's no
-      need to migrate to a proprietary data model, so there's no vendor lock-in.
+    description:
+      Directus installs on top of any SQL database, allowing you to remain in
+      complete control of your new or existing database. There's no need to
+      migrate to a proprietary data model, so there's no vendor lock-in.
 features:
   - title: Data Engine
-    description: Directus features a modern data stack that turns any SQL database
-      into an API and a beautiful no-code app. It's the world's first Open Data
-      Platform for instantly managing your data.
+    description:
+      Directus features a modern data stack that turns any SQL database into an
+      API and a beautiful no-code app. It's the world's first Open Data Platform
+      for instantly managing your data.
   - title: Data Studio
-    description: The Data Studio feature allows for no-code data collaboration. It
-      enables your entire team to safely and intuitively browse, manage, and
-      visualize data.
+    description:
+      The Data Studio feature allows for no-code data collaboration. It enables
+      your entire team to safely and intuitively browse, manage, and visualize
+      data.
   - title: Workflow Automation
-    description: With the Workflow Automation feature, Directus allows you to
-      automate your workflows, increasing efficiency and productivity.
+    description:
+      With the Workflow Automation feature, Directus allows you to automate your
+      workflows, increasing efficiency and productivity.
   - title: Asset Management
-    description: Directus also features an Asset Management system that allows you
-      to manage and deliver assets efficiently.
+    description:
+      Directus also features an Asset Management system that allows you to
+      manage and deliver assets efficiently.
 tags:
   - Developer Tools
   - CMS

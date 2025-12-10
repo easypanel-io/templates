@@ -1,11 +1,12 @@
 name: Kavita
-description: Kavita is a high-speed, sleekly designed, self-hosted digital
-  library that supports a wide range of file formats. It allows you to quickly
-  resume your reading from your homepage, browse your Manga, Comics, and Books,
-  and search for your favorite manga with ease. Kavita also provides full
-  support for all fields from ComicInfo.xml (and EPUB) for metadata filtering.
-  It features built-in ratings and reviews for each Manga, integrated chapters
-  and volumes, and user & library management. Kavita also includes a responsive
+description:
+  Kavita is a high-speed, sleekly designed, self-hosted digital library that
+  supports a wide range of file formats. It allows you to quickly resume your
+  reading from your homepage, browse your Manga, Comics, and Books, and search
+  for your favorite manga with ease. Kavita also provides full support for all
+  fields from ComicInfo.xml (and EPUB) for metadata filtering. It features
+  built-in ratings and reviews for each Manga, integrated chapters and volumes,
+  and user & library management. Kavita also includes a responsive
   Manga/Comic/Image Reader with impressive caching for a seamless reading
   experience, and a customizable Book reader. It also provides server and user
   stats, and premium features with a Kavita+ Subscription. Kavita supports a
@@ -15,10 +16,20 @@ description: Kavita is a high-speed, sleekly designed, self-hosted digital
   offering full text search, grouping and organizing features, full metadata
   support and filtering ability, and cool stats for individual user accounts and
   your server.
-instructions: null
+instructions:
+  "Register your user and make sure the Username does not contain spaces."
 changeLog:
   - date: 2022-12-21
     description: first release
+  - date: 2024-10-16
+    description:
+      Previous repo has been archived, new repo and version updated
+      jvmilazz0/kavita:0.8.3
+  - date: 2025-02-28
+    description: Version bumped to 0.8.4
+  - date: 2025-07-22
+    description: Version bumped to 0.8.7
+
 links:
   - label: Website
     url: https://www.kavitareader.com/
@@ -29,16 +40,14 @@ links:
 contributors:
   - name: DrMxrcy
     url: https://github.com/DrMxrcy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -46,41 +55,47 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kizaing/kavita:0.7.1
+      default: jvmilazz0/kavita:0.8.7
     serviceTimezone:
       type: string
       title: Timezone
       default: America/New_York
 benefits:
   - title: Efficient Digital Library
-    description: Kavita is a self-hosted digital library that is lightning fast and
+    description:
+      Kavita is a self-hosted digital library that is lightning fast and
       supports a wide array of file formats. It allows you to easily read and
       share your server with friends.
   - title: Customizable Reading Experience
-    description: Kavita offers a built-in book reader that allows you to customize
-      your reading experience. Control font, spacing, margin, color theme, and
+    description:
+      Kavita offers a built-in book reader that allows you to customize your
+      reading experience. Control font, spacing, margin, color theme, and
       navigate pages by tapping on the edges of the screen.
   - title: Rich User and Library Management
-    description: Kavita provides user-based roles, authentication, and library
-      management right from the app. It also offers built-in ratings and reviews
-      per Manga.
+    description:
+      Kavita provides user-based roles, authentication, and library management
+      right from the app. It also offers built-in ratings and reviews per Manga.
 features:
   - title: Extensive File Support
-    description: Kavita supports a wide range of file formats including ZIP, RAR,
-      RAR5, CBR, CBZ, CB7, CBT, TAR.GZ, 7ZIP/7Z, EPUB2, EPUB3, PDF, JPG/JPEG,
-      PNG, WebP, GIF, AVIF.
+    description:
+      Kavita supports a wide range of file formats including ZIP, RAR, RAR5,
+      CBR, CBZ, CB7, CBT, TAR.GZ, 7ZIP/7Z, EPUB2, EPUB3, PDF, JPG/JPEG, PNG,
+      WebP, GIF, AVIF.
   - title: Built-in Manga/Comic/Image Reader
-    description: Kavita comes with a responsive manga reader with impressive
-      caching. It supports webtoon and double page reading modes, ensuring you
-      never experience loading times when reading.
+    description:
+      Kavita comes with a responsive manga reader with impressive caching. It
+      supports webtoon and double page reading modes, ensuring you never
+      experience loading times when reading.
   - title: Server and User Stats
-    description: Kavita provides interesting stats for your whole server or you as
-      an individual. This feature helps you understand your reading habits and
+    description:
+      Kavita provides interesting stats for your whole server or you as an
+      individual. This feature helps you understand your reading habits and
       preferences better.
   - title: User Management and Sharing
-    description: With Kavita, you can create users and share your libraries with
-      them. It also allows you to grant users permissions to view libraries or
-      see different mixed-media collections.
+    description:
+      With Kavita, you can create users and share your libraries with them. It
+      also allows you to grant users permissions to view libraries or see
+      different mixed-media collections.
 tags:
   - Media
   - File Management

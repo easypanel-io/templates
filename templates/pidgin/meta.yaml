@@ -1,8 +1,9 @@
 name: Pidgin
-description: Pidgin is a versatile chat application that allows you to log into
-  multiple chat networks simultaneously. This means you can chat with friends on
-  XMPP while also participating in an IRC channel. The application supports a
-  wide range of chat networks, including but not limited to Bonjour, Discord,
+description:
+  Pidgin is a versatile chat application that allows you to log into multiple
+  chat networks simultaneously. This means you can chat with friends on XMPP
+  while also participating in an IRC channel. The application supports a wide
+  range of chat networks, including but not limited to Bonjour, Discord,
   Facebook, Google Talk, Hangouts, ICQ, Instagram, IRC, Skype, Slack, Telegram,
   and XMPP. This Pidgin installation comes with default chat plugins and a
   series of third-party ones. The application also includes Firefox to help you
@@ -10,11 +11,14 @@ description: Pidgin is a versatile chat application that allows you to log into
   program. Pidgin can be accessed at http://yourhost:3000/ or
   https://yourhost:3001/. The app is designed to provide a seamless and
   integrated chat experience across multiple platforms.
-instructions: use abc:abc to login. To access the login interface, add
-  ?login=true to your URL.
+instructions:
+  use abc:abc to login. To access the login interface, add ?login=true to your
+  URL.
 changeLog:
   - date: 2022-11-23
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to 2.14.13
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-pidgin
@@ -23,16 +27,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -40,41 +42,47 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/pidgin:latest
+      default: lscr.io/linuxserver/pidgin:2.14.13
 benefits:
   - title: Multi-Network Chatting
-    description: Pidgin allows you to log into accounts on multiple chat networks
+    description:
+      Pidgin allows you to log into accounts on multiple chat networks
       simultaneously. This means you can be chatting with friends on XMPP and
       sitting in an IRC channel at the same time, providing a seamless chatting
       experience.
   - title: Third-Party Plugins
-    description: This Pidgin installation comes with default chat plugins plus a
-      series of third-party ones. These plugins enhance the functionality of the
-      app, allowing you to customize your chatting experience to suit your
-      needs.
+    description:
+      This Pidgin installation comes with default chat plugins plus a series of
+      third-party ones. These plugins enhance the functionality of the app,
+      allowing you to customize your chatting experience to suit your needs.
   - title: Integrated Web Browser
-    description: To ease integration with some third-party plugins, Firefox is
-      included in this image. This allows you to fill out captchas or pre-auth
-      before loading your credentials into the program, providing a more
-      streamlined user experience.
+    description:
+      To ease integration with some third-party plugins, Firefox is included in
+      this image. This allows you to fill out captchas or pre-auth before
+      loading your credentials into the program, providing a more streamlined
+      user experience.
 features:
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
-      Simply pulling the correct image for your architecture should retrieve the
+    description:
+      The app utilizes the docker manifest for multi-platform awareness. Simply
+      pulling the correct image for your architecture should retrieve the
       correct image for your arch.
   - title: Supported Chat Networks
-    description: Pidgin supports a wide range of chat networks including XMPP, IRC,
+    description:
+      Pidgin supports a wide range of chat networks including XMPP, IRC,
       Discord, Facebook, Google Talk, Instagram, Skype, Slack, Telegram, and
       many more. This allows you to connect with friends and colleagues across
       different platforms.
   - title: Customizable Settings
-    description: The app allows you to customize various settings such as the
-      internal port the container listens on for http and https, HTTP Basic auth
-      username and password, subfolder for the application if running a
-      subfolder reverse proxy, and the page title displayed on the web browser.
+    description:
+      The app allows you to customize various settings such as the internal port
+      the container listens on for http and https, HTTP Basic auth username and
+      password, subfolder for the application if running a subfolder reverse
+      proxy, and the page title displayed on the web browser.
   - title: Secure Access
-    description: The application can be accessed securely at https://yourhost:3001/.
-      This ensures that your chat conversations are protected from unauthorized
+    description:
+      The application can be accessed securely at https://yourhost:3001/. This
+      ensures that your chat conversations are protected from unauthorized
       access.
 tags:
   - Chat

@@ -1,24 +1,31 @@
 name: GoToSocial
-description: GoToSocial is a lightweight, customizable, and safety-focused
-  social network server that provides a fun and fast entryway into the
-  Fediverse. It is written in Golang and allows you to keep in touch with
-  friends, post, read, and share images and articles without being tracked or
-  advertised to. If you've used platforms like Twitter or Tumblr, GoToSocial
-  will feel familiar. You can follow people, have followers, make posts that
-  others can favorite, reply to, and share, and scroll through posts from people
-  you follow using a timeline. You can write long or short posts, post images,
-  and even block people or limit unwanted interactions by posting just to your
-  friends. GoToSocial is not designed for influencers with tens of thousands of
-  followers, nor is it designed to be addictive. Your timeline and experience
-  are shaped by who you follow and how you interact with people, not by
-  engagement metrics. GoToSocial is ideal for small or single-user instances
-  running on low-powered devices, like single-board computers or old laptops
-  repurposed as home servers. It is simple to install and maintain, and
-  prioritizes good security and sensible defaults.
+description:
+  GoToSocial is a lightweight, customizable, and safety-focused social network
+  server that provides a fun and fast entryway into the Fediverse. It is written
+  in Golang and allows you to keep in touch with friends, post, read, and share
+  images and articles without being tracked or advertised to. If you've used
+  platforms like Twitter or Tumblr, GoToSocial will feel familiar. You can
+  follow people, have followers, make posts that others can favorite, reply to,
+  and share, and scroll through posts from people you follow using a timeline.
+  You can write long or short posts, post images, and even block people or limit
+  unwanted interactions by posting just to your friends. GoToSocial is not
+  designed for influencers with tens of thousands of followers, nor is it
+  designed to be addictive. Your timeline and experience are shaped by who you
+  follow and how you interact with people, not by engagement metrics. GoToSocial
+  is ideal for small or single-user instances running on low-powered devices,
+  like single-board computers or old laptops repurposed as home servers. It is
+  simple to install and maintain, and prioritizes good security and sensible
+  defaults.
 instructions: null
 changeLog:
   - date: 2023-5-26
     description: First release
+  - date: 2025-01-14
+    description: Version bumped to 0.17.3
+  - date: 2025-02-25
+    description: Version bumped to 0.18.1
+  - date: 2025-07-21
+    description: Version bumped to 0.19.1
 links:
   - label: Website
     url: https://gotosocial.org/
@@ -29,16 +36,14 @@ links:
 contributors:
   - name: Michael Kinder
     url: https://github.com/ressonix
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -46,46 +51,54 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.9.0
+      default: superseriousbusiness/gotosocial:0.19.1
 benefits:
   - title: Privacy-Focused
-    description: GoToSocial is a privacy-focused social network server. It allows
-      you to keep in touch with your friends, post, read, and share images and
-      articles without being tracked or advertised to.
+    description:
+      GoToSocial is a privacy-focused social network server. It allows you to
+      keep in touch with your friends, post, read, and share images and articles
+      without being tracked or advertised to.
   - title: Customizable Experience
-    description: GoToSocial offers a customizable experience. You can follow people,
-      make posts which people can favourite, reply to and share, and scroll
-      through posts from people you follow using a timeline. You can write long
-      or short posts, or just post images. You can also block people or limit
+    description:
+      GoToSocial offers a customizable experience. You can follow people, make
+      posts which people can favourite, reply to and share, and scroll through
+      posts from people you follow using a timeline. You can write long or short
+      posts, or just post images. You can also block people or limit
       interactions that you don't want by posting just to your friends.
   - title: Non-Addictive
-    description: GoToSocial is not designed to be addictive. Your timeline and your
+    description:
+      GoToSocial is not designed to be addictive. Your timeline and your
       experience are shaped by who you follow and how you interact with people,
       not by metrics of engagement.
   - title: Lightweight and Efficient
-    description: GoToSocial is designed for small or single-user instances running
-      on low-powered devices. It provides lightweight software which is simple
-      to install and maintain, and has good security and sensible defaults.
+    description:
+      GoToSocial is designed for small or single-user instances running on
+      low-powered devices. It provides lightweight software which is simple to
+      install and maintain, and has good security and sensible defaults.
 features:
   - title: Social Networking
-    description: GoToSocial is an ActivityPub social network server that allows you
-      to keep in touch with your friends, post, read, and share images and
-      articles.
+    description:
+      GoToSocial is an ActivityPub social network server that allows you to keep
+      in touch with your friends, post, read, and share images and articles.
   - title: Privacy and Safety
-    description: GoToSocial provides a safety-focused entryway into the Fediverse.
-      It does not track or advertise to its users, and allows you to block
-      people or limit interactions that you don't want.
+    description:
+      GoToSocial provides a safety-focused entryway into the Fediverse. It does
+      not track or advertise to its users, and allows you to block people or
+      limit interactions that you don't want.
   - title: Customizable Experience
-    description: With GoToSocial, you can follow people, make posts, and scroll
-      through posts from people you follow using a timeline. You can write long
-      or short posts, or just post images.
+    description:
+      With GoToSocial, you can follow people, make posts, and scroll through
+      posts from people you follow using a timeline. You can write long or short
+      posts, or just post images.
   - title: Non-Addictive Design
-    description: GoToSocial is not designed to be addictive. Your timeline and your
+    description:
+      GoToSocial is not designed to be addictive. Your timeline and your
       experience are shaped by who you follow and how you interact with people,
       not by metrics of engagement.
   - title: Lightweight Software
-    description: GoToSocial is designed for small or single-user instances running
-      on low-powered devices. It provides lightweight software which is simple
-      to install and maintain.
+    description:
+      GoToSocial is designed for small or single-user instances running on
+      low-powered devices. It provides lightweight software which is simple to
+      install and maintain.
 tags:
   - Social Networking

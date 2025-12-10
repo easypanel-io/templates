@@ -1,17 +1,24 @@
 name: Flowise
-description: Flowise is an open-source UI visual tool that allows you to build
-  your own customized LLM (Language Learning Model) flow with ease. It is built
-  on top of LangChainJS and is written in Node Typescript/Javascript. With
-  Flowise, you can see your LLM apps running live, making the process of
-  building and testing faster and more efficient. The app is extensible,
-  allowing for custom component integrations. It offers a variety of features
-  such as QnA retrieval chain, language translation chain, and a conversational
-  agent with memory for chat models. Flowise is designed to make the process of
-  visualizing and building LLM apps simple and accessible.
+description:
+  Flowise is an open-source UI visual tool that allows you to build your own
+  customized LLM (Language Learning Model) flow with ease. It is built on top of
+  LangChainJS and is written in Node Typescript/Javascript. With Flowise, you
+  can see your LLM apps running live, making the process of building and testing
+  faster and more efficient. The app is extensible, allowing for custom
+  component integrations. It offers a variety of features such as QnA retrieval
+  chain, language translation chain, and a conversational agent with memory for
+  chat models. Flowise is designed to make the process of visualizing and
+  building LLM apps simple and accessible.
 instructions: null
 changeLog:
   - date: 2023-06-22
     description: first release
+  - date: 2025-01-14
+    description: Version bumped to 2.2.3
+  - date: 2025-02-25
+    description: Version bumped to 2.2.5
+  - date: 2025-07-21
+    description: Version bumped to 3.0.4
 links:
   - label: Website
     url: https://flowiseai.com
@@ -22,18 +29,16 @@ links:
 contributors:
   - name: AlexSerban
     url: https://github.com/serban-alexandru
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - username
     - password
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -41,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: flowiseai/flowise
+      default: flowiseai/flowise:3.0.4
     username:
       type: string
       title: Username
@@ -50,34 +55,41 @@ schema:
       title: Password
 benefits:
   - title: Open Source
-    description: Flowise is an open-source tool, making it free for both commercial
-      and personal use. This allows you to use and modify the tool according to
-      your needs without any restrictions.
+    description:
+      Flowise is an open-source tool, making it free for both commercial and
+      personal use. This allows you to use and modify the tool according to your
+      needs without any restrictions.
   - title: Live Running Apps
-    description: With Flowise, you can see your LLM apps running live. This allows
-      you to monitor the performance of your apps in real-time and make
-      necessary adjustments on the go.
+    description:
+      With Flowise, you can see your LLM apps running live. This allows you to
+      monitor the performance of your apps in real-time and make necessary
+      adjustments on the go.
   - title: Custom Component Integrations
-    description: Flowise allows for custom component integrations, giving you the
+    description:
+      Flowise allows for custom component integrations, giving you the
       flexibility to add and integrate components that suit your specific needs.
 features:
   - title: LLM Flow Builder
-    description: Flowise is a UI visual tool that allows you to build your
-      customized LLM flow using LangchainJS. It simplifies the process of
-      creating LLM apps by providing a visual interface for building your flow.
+    description:
+      Flowise is a UI visual tool that allows you to build your customized LLM
+      flow using LangchainJS. It simplifies the process of creating LLM apps by
+      providing a visual interface for building your flow.
   - title: QnA Retrieval Chain
-    description: Flowise includes a QnA retrieval chain feature that allows you to
-      create conversational retrieval QA chains. This feature enhances the
-      interaction between your app and its users.
+    description:
+      Flowise includes a QnA retrieval chain feature that allows you to create
+      conversational retrieval QA chains. This feature enhances the interaction
+      between your app and its users.
   - title: Language Translation Chain
-    description: Flowise offers a language translation chain feature that enables
-      language translation using LLM Chain with a Chat Prompt Template and Chat
-      Model. This feature makes your app more accessible to users who speak
-      different languages.
+    description:
+      Flowise offers a language translation chain feature that enables language
+      translation using LLM Chain with a Chat Prompt Template and Chat Model.
+      This feature makes your app more accessible to users who speak different
+      languages.
   - title: Conversational Agent with Memory
-    description: Flowise provides a conversational agent feature for a chat model
-      which utilizes chat specific prompts and buffer memory. This feature
-      allows your app to remember previous interactions and provide more
-      personalized responses.
+    description:
+      Flowise provides a conversational agent feature for a chat model which
+      utilizes chat specific prompts and buffer memory. This feature allows your
+      app to remember previous interactions and provide more personalized
+      responses.
 tags:
   - Developer Tools

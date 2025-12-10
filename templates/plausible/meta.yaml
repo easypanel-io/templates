@@ -1,8 +1,9 @@
 name: Plausible
-description: Plausible is a simple, lightweight, and open-source web analytics
-  tool that serves as a privacy-friendly alternative to Google Analytics. It is
-  designed to be intuitive and easy to use, providing essential insights about
-  your website's traffic on a single page, without the need for complex menus or
+description:
+  Plausible is a simple, lightweight, and open-source web analytics tool that
+  serves as a privacy-friendly alternative to Google Analytics. It is designed
+  to be intuitive and easy to use, providing essential insights about your
+  website's traffic on a single page, without the need for complex menus or
   custom reports. The Plausible script is 45 times smaller than Google
   Analytics, ensuring your site loads faster and contributes to a greener web.
   It respects user privacy by not using cookies or collecting personal data, and
@@ -31,15 +32,11 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseServiceName
     - clickhouseServiceName
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -47,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: plausible/analytics:v1.5.1
+      default: plausible/analytics:v2.0.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -58,39 +55,46 @@ schema:
       default: plausible-clickhouse
 benefits:
   - title: Simple and Intuitive Analytics
-    description: Plausible provides a simple and intuitive alternative to Google
-      Analytics. It cuts through the noise, providing all essential insights on
-      one page in one minute. There's no need for custom reports or dashboards,
-      making it easy to understand your site traffic.
+    description:
+      Plausible provides a simple and intuitive alternative to Google Analytics.
+      It cuts through the noise, providing all essential insights on one page in
+      one minute. There's no need for custom reports or dashboards, making it
+      easy to understand your site traffic.
   - title: Lightweight and Fast
-    description: With a script 45 times smaller than Google Analytics, Plausible is
-      a lightweight solution that helps your site load faster. By switching to
+    description:
+      With a script 45 times smaller than Google Analytics, Plausible is a
+      lightweight solution that helps your site load faster. By switching to
       Plausible, a site with 10,000 monthly visitors can save 4.5 kg of CO2
       emissions per year, contributing to a greener and more sustainable web.
   - title: Privacy-Friendly
-    description: Plausible respects the privacy of your site visitors. It operates
-      without cookies and does not collect personal data. All site measurement
-      is carried out anonymously, with no cross-site or cross-device tracking.
-      Your site data is exclusively processed with servers owned and operated by
+    description:
+      Plausible respects the privacy of your site visitors. It operates without
+      cookies and does not collect personal data. All site measurement is
+      carried out anonymously, with no cross-site or cross-device tracking. Your
+      site data is exclusively processed with servers owned and operated by
       European companies and never leaves the EU.
   - title: Open Source and Transparent
-    description: Plausible is an open source web analytics tool. Its source code is
+    description:
+      Plausible is an open source web analytics tool. Its source code is
       accessible on GitHub, allowing anyone to inspect and review it. This
       transparency ensures that Plausible's actions match its words.
 features:
   - title: Goal Conversions, Revenue and Campaigns Tracking
-    description: Plausible allows you to segment your audience by any metric you
-      click on. It helps answer important questions about your visitors,
-      content, and referral sources. You can analyze paid campaigns using UTM
-      parameters, track ecommerce revenue, outbound link clicks, file downloads,
-      and 404 error pages. It also allows you to create custom events with
-      custom dimensions to track conversions and attribution.
+    description:
+      Plausible allows you to segment your audience by any metric you click on.
+      It helps answer important questions about your visitors, content, and
+      referral sources. You can analyze paid campaigns using UTM parameters,
+      track ecommerce revenue, outbound link clicks, file downloads, and 404
+      error pages. It also allows you to create custom events with custom
+      dimensions to track conversions and attribution.
   - title: Dashboard Sharing
-    description: With Plausible, you can share your stats privately by generating a
-      secure link, or make them public for transparency. You can also invite
-      team members and assign user roles, making collaboration easy.
+    description:
+      With Plausible, you can share your stats privately by generating a secure
+      link, or make them public for transparency. You can also invite team
+      members and assign user roles, making collaboration easy.
   - title: Smooth Transition from Universal Analytics
-    description: Plausible offers a real-time dashboard, entry pages report, and
+    description:
+      Plausible offers a real-time dashboard, entry pages report, and
       integration with Search Console. It allows you to track your paid
       campaigns and conversions, invite team members, and even import your
       historical stats, ensuring a smooth transition from Universal Analytics.

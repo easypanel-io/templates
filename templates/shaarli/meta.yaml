@@ -1,19 +1,22 @@
 name: Shaarli
-description: Shaarli is a personal, minimalist, super-fast, and database-free
-  bookmarking service. It allows you to manage and share the links you discover,
-  making it an ideal tool for those who frequently come across interesting
-  content on the web. With Shaarli, you can share, comment, and save links, use
-  it as a minimal blog or writing platform, or even as a read-it-later/todo
-  list. It also serves as a notepad for drafting and saving articles, posts, or
-  ideas, and a knowledge base for keeping notes, documentation, and code
-  snippets. You can edit, view, and search your links, organize them with tags,
-  and even generate ATOM and RSS feeds. Shaarli is self-hosted, meaning you
-  install it on your own server, ensuring your data remains yours. It's an
-  excellent alternative to commercial services, and it's free and open-source.
+description:
+  Shaarli is a personal, minimalist, super-fast, and database-free bookmarking
+  service. It allows you to manage and share the links you discover, making it
+  an ideal tool for those who frequently come across interesting content on the
+  web. With Shaarli, you can share, comment, and save links, use it as a minimal
+  blog or writing platform, or even as a read-it-later/todo list. It also serves
+  as a notepad for drafting and saving articles, posts, or ideas, and a
+  knowledge base for keeping notes, documentation, and code snippets. You can
+  edit, view, and search your links, organize them with tags, and even generate
+  ATOM and RSS feeds. Shaarli is self-hosted, meaning you install it on your own
+  server, ensuring your data remains yours. It's an excellent alternative to
+  commercial services, and it's free and open-source.
 instructions: null
 changeLog:
   - date: 2023-04-04
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to v0.14.0
 links:
   - label: Documentation
     url: https://demo.shaarli.org/doc/html/index.html
@@ -22,16 +25,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -39,45 +40,54 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/shaarli/shaarli:v0.12.2
+      default: ghcr.io/shaarli/shaarli:v0.14.0
 benefits:
   - title: Personalized Bookmarking
-    description: Shaarli offers a personal, minimalist, and super-fast bookmarking
-      service. It allows you to share, comment, and save interesting links on
-      your own server.
+    description:
+      Shaarli offers a personal, minimalist, and super-fast bookmarking service.
+      It allows you to share, comment, and save interesting links on your own
+      server.
   - title: Versatile Usage
-    description: Shaarli can be used as a minimal blog, a read-it-later list, a
-      notepad to draft and save articles, a knowledge base for notes and code
-      snippets, a playlist manager for online media, and more.
+    description:
+      Shaarli can be used as a minimal blog, a read-it-later list, a notepad to
+      draft and save articles, a knowledge base for notes and code snippets, a
+      playlist manager for online media, and more.
   - title: Data Ownership
-    description: With Shaarli, you have full control over your data. The data is
-      yours, and you can import and export it to HTML bookmarks format
-      compatible with most web browsers.
+    description:
+      With Shaarli, you have full control over your data. The data is yours, and
+      you can import and export it to HTML bookmarks format compatible with most
+      web browsers.
   - title: Fast and Efficient
-    description: Shaarli is designed to be fast and efficient. It can handle tens of
+    description:
+      Shaarli is designed to be fast and efficient. It can handle tens of
       thousands of shares without slowing down.
   - title: Built-in Security
-    description: Shaarli comes with built-in security features to help you protect
-      your instance. It does not send any telemetry, metrics, or private
-      information to developers.
+    description:
+      Shaarli comes with built-in security features to help you protect your
+      instance. It does not send any telemetry, metrics, or private information
+      to developers.
 features:
   - title: Editable Links
-    description: Shaarli allows you to edit the URL, title, description, tags, and
+    description:
+      Shaarli allows you to edit the URL, title, description, tags, and
       private/public status for all your shares.
   - title: Search and Organization
-    description: You can organize your shares with tags, search in all fields, and
-      view your shares in a paginated list view with image and video thumbnails.
+    description:
+      You can organize your shares with tags, search in all fields, and view
+      your shares in a paginated list view with image and video thumbnails.
   - title: Extensibility
-    description: Shaarli is extensible through plugins and can be easily extended by
-      any client using the REST API exposed by Shaarli.
+    description:
+      Shaarli is extensible through plugins and can be easily extended by any
+      client using the REST API exposed by Shaarli.
   - title: Bookmarklet and Sharing Tools
-    description: Shaarli provides a bookmarklet and other tools to share links in
-      one click. It also supports mobile browsers and degrades gracefully with
+    description:
+      Shaarli provides a bookmarklet and other tools to share links in one
+      click. It also supports mobile browsers and degrades gracefully with
       Javascript disabled.
   - title: Easy Setup
-    description: Setting up Shaarli is simple. Just drop the files on your server,
-      open the page, and you're good to go. No database is required, making
-      backup easy.
+    description:
+      Setting up Shaarli is simple. Just drop the files on your server, open the
+      page, and you're good to go. No database is required, making backup easy.
 tags:
   - Bookmarks
   - Documentation

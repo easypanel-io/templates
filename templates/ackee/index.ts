@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       env: [
         `WAIT_HOSTS=$(PROJECT_NAME)_${input.databaseServiceName}:27017`,
@@ -32,7 +31,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "mongo",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "mongo:4",
       password: mongoPassword,

@@ -1,16 +1,19 @@
 name: LibreOffice
-description: LibreOffice is a free and powerful office suite app that serves as
-  a successor to OpenOffice.org. It features a clean interface and feature-rich
-  tools that help you unleash your creativity and enhance your productivity. The
-  app can be accessed at http://yourhost:3000/ or https://yourhost:3001/. It is
-  designed to deliver a true lossless image at a high framerate to your web
-  browser. The app also supports multiple architectures, ensuring that it can be
-  used on a variety of platforms. This app is perfect for those who need a
-  comprehensive office suite for their daily tasks.
+description:
+  LibreOffice is a free and powerful office suite app that serves as a successor
+  to OpenOffice.org. It features a clean interface and feature-rich tools that
+  help you unleash your creativity and enhance your productivity. The app can be
+  accessed at http://yourhost:3000/ or https://yourhost:3001/. It is designed to
+  deliver a true lossless image at a high framerate to your web browser. The app
+  also supports multiple architectures, ensuring that it can be used on a
+  variety of platforms. This app is perfect for those who need a comprehensive
+  office suite for their daily tasks.
 instructions: null
 changeLog:
   - date: 2022-11-14
     description: first release
+  - date: 2025-07-22
+    description: Version bumped to 25.2.4
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-libreoffice
@@ -19,16 +22,14 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -36,37 +37,42 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/libreoffice:latest
+      default: lscr.io/linuxserver/libreoffice:25.2.4
 benefits:
   - title: Powerful Office Suite
-    description: LibreOffice is a free and powerful office suite, a successor to
+    description:
+      LibreOffice is a free and powerful office suite, a successor to
       OpenOffice.org. It offers a clean interface and feature-rich tools that
       help you unleash your creativity and enhance your productivity.
   - title: Multi-Platform Awareness
-    description: The app utilizes the docker manifest for multi-platform awareness.
-      This means that pulling the LibreOffice image should retrieve the correct
-      image for your architecture, ensuring optimal compatibility and
-      performance.
+    description:
+      The app utilizes the docker manifest for multi-platform awareness. This
+      means that pulling the LibreOffice image should retrieve the correct image
+      for your architecture, ensuring optimal compatibility and performance.
   - title: Accessible Anywhere
-    description: The application can be accessed at your host, making it easy to
-      work from anywhere. This flexibility allows you to stay productive no
-      matter where you are.
+    description:
+      The application can be accessed at your host, making it easy to work from
+      anywhere. This flexibility allows you to stay productive no matter where
+      you are.
 features:
   - title: Customizable Environment Variables
-    description: LibreOffice offers a range of environment variables that you can
-      customize to suit your needs. These include the internal port the
-      container listens on, HTTP Basic auth username and password, the home
-      directory for the file manager, and more.
+    description:
+      LibreOffice offers a range of environment variables that you can customize
+      to suit your needs. These include the internal port the container listens
+      on, HTTP Basic auth username and password, the home directory for the file
+      manager, and more.
   - title: Optional Run Configurations
-    description: The app provides optional run configurations, including the ability
-      to start a Docker in Docker setup inside the container, mount a GPU into
-      the container for GPU accelerated applications, and deliver a true
-      lossless image at a high framerate to your web browser.
+    description:
+      The app provides optional run configurations, including the ability to
+      start a Docker in Docker setup inside the container, mount a GPU into the
+      container for GPU accelerated applications, and deliver a true lossless
+      image at a high framerate to your web browser.
   - title: User / Group Identifiers
-    description: When using volumes, you can specify the user PUID and group PGID to
-      avoid permissions issues between the host OS and the container. This
-      ensures that any volume directories on the host are owned by the same user
-      you specify.
+    description:
+      When using volumes, you can specify the user PUID and group PGID to avoid
+      permissions issues between the host OS and the container. This ensures
+      that any volume directories on the host are owned by the same user you
+      specify.
 tags:
   - Productivity
   - Documents

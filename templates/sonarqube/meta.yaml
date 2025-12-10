@@ -1,0 +1,92 @@
+name: SonarQube Community
+description:
+  SonarQube Community is an open-source platform for continuous inspection of
+  code quality, designed to detect bugs, vulnerabilities, and code smells across
+  multiple programming languages. It integrates with various CI/CD pipelines,
+  providing valuable insights into code health and maintainability. SonarQube
+  helps teams ensure that their code meets quality standards and aligns with
+  security requirements, promoting efficient software development practices. The
+  Community version is feature-rich and free to use, making it an ideal choice
+  for developers and organizations focused on improving code quality without
+  incurring costs.
+instructions: Default login; username=admin, password=admin
+changeLog:
+  - date: 2022-12-15
+    description: Latest release with enhanced language support and bug fixes
+  - date: 2025-03-03
+    description: Version bumped to 9.9.8-community
+links:
+  - label: Website
+    url: https://www.sonarqube.org/
+  - label: Documentation
+    url: https://docs.sonarqube.org/latest/
+  - label: GitHub
+    url: https://github.com/SonarSource/sonarqube
+contributors:
+  - name: SonarSource Team
+    url: https://github.com/SonarSource
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sonarqube
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sonarqube:9.9.8-community
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: sonarqube-db
+
+benefits:
+  - title: Open Source and Free
+    description:
+      The Community Edition of SonarQube is entirely open source and free,
+      making it accessible to teams of all sizes. It offers essential code
+      quality and security features without any licensing costs.
+  - title: Multi-Language Support
+    description:
+      SonarQube supports over 20 programming languages, including Java,
+      JavaScript, Python, C#, and more, ensuring comprehensive code analysis for
+      various projects.
+  - title: Continuous Code Inspection
+    description:
+      SonarQube integrates with popular CI/CD tools to provide continuous
+      inspection of code quality. It ensures that issues are caught early and
+      fixes are incorporated seamlessly.
+  - title: Security Vulnerability Detection
+    description:
+      The platform scans code for known vulnerabilities and ensures that code
+      aligns with secure development practices, helping teams build safe
+      applications.
+features:
+  - title: Dashboard and Metrics
+    description:
+      SonarQube provides an intuitive dashboard that displays key metrics, code
+      quality trends, and insights to help teams make informed decisions.
+  - title: Integrations with CI/CD
+    description:
+      SonarQube integrates seamlessly with CI/CD pipelines like Jenkins, GitHub
+      Actions, and GitLab CI, making it easy to enforce code quality gates.
+  - title: Extensible with Plugins
+    description:
+      SonarQube can be extended with a wide range of plugins, providing
+      additional functionality for languages, quality profiles, and
+      authentication mechanisms.
+  - title: Community Support
+    description:
+      The SonarQube Community Edition has a strong user base and active support
+      through forums, helping developers troubleshoot issues and share best
+      practices.
+tags:
+  - Developer Tools
+  - Code Quality
+  - Security
+  - Continuous Integration

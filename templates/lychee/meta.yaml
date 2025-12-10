@@ -1,17 +1,19 @@
 name: Lychee
-description: Lychee is a free, self-hosted photo-management tool designed to
-  make managing your photos a breeze. It allows you to upload, move, rename,
-  describe, delete, and search your photos all in one place, right from your
-  browser. With Lychee, you can easily share your photos and albums with just
-  one click, and even protect them with passwords for added security. The app
-  also allows you to view your images in full-screen mode, navigate using your
-  keyboard, and make your photos public for others to enjoy. Lychee supports
-  batch editing with desktop-like multi-select and displays your EXIF and IPTC
-  Metadata. You can import your photos from various sources, tag them, or mark
-  them as important. Lychee is designed with a beautiful, intuitive interface
-  and is perfect for photographers as it offers unlimited storage, no
-  compression, and no loss in data.
-instructions: Lychee takes a few minutes to get ready. Sit back, relax, and have a coffee!
+description:
+  Lychee is a free, self-hosted photo-management tool designed to make managing
+  your photos a breeze. It allows you to upload, move, rename, describe, delete,
+  and search your photos all in one place, right from your browser. With Lychee,
+  you can easily share your photos and albums with just one click, and even
+  protect them with passwords for added security. The app also allows you to
+  view your images in full-screen mode, navigate using your keyboard, and make
+  your photos public for others to enjoy. Lychee supports batch editing with
+  desktop-like multi-select and displays your EXIF and IPTC Metadata. You can
+  import your photos from various sources, tag them, or mark them as important.
+  Lychee is designed with a beautiful, intuitive interface and is perfect for
+  photographers as it offers unlimited storage, no compression, and no loss in
+  data.
+instructions:
+  Lychee takes a few minutes to get ready. Sit back, relax, and have a coffee!
 changeLog:
   - date: 2022-10-28
     description: first release
@@ -30,14 +32,10 @@ contributors:
 schema:
   type: object
   required:
-    - projectName
     - appServiceName
     - appServiceImage
     - databaseType
   properties:
-    projectName:
-      type: string
-      title: Project Name
     appServiceName:
       type: string
       title: App Service Name
@@ -45,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lycheeorg/lychee:v4.7.4
+      default: lycheeorg/lychee:v5.3.0
     databaseType:
       type: string
       title: Database Type
@@ -56,48 +54,59 @@ schema:
           title: SQLite
 benefits:
   - title: Self-Hosted Photo Management
-    description: Lychee is a free photo-management tool that runs on your server or
+    description:
+      Lychee is a free photo-management tool that runs on your server or
       web-space, giving you full control over your photos. Your photos are
       stored securely and you never have to depend on someone else.
   - title: Easy Photo Management
-    description: With Lychee, managing your photos has never been easier. You can
-      upload, move, rename, describe, delete or search your photos in seconds,
-      all in one place, right from your browser.
+    description:
+      With Lychee, managing your photos has never been easier. You can upload,
+      move, rename, describe, delete or search your photos in seconds, all in
+      one place, right from your browser.
   - title: Effortless Sharing
-    description: Sharing your photos is as easy as a single click. Every photo and
-      album is ready for the public, and you can also protect albums with
-      passwords if you want. You have full control over your photos.
+    description:
+      Sharing your photos is as easy as a single click. Every photo and album is
+      ready for the public, and you can also protect albums with passwords if
+      you want. You have full control over your photos.
   - title: View and Enjoy Your Photos
-    description: Lychee allows you to view all your images in full-screen mode,
-      navigate forward and backward using your keyboard, or let others enjoy
-      your photos by making them public.
+    description:
+      Lychee allows you to view all your images in full-screen mode, navigate
+      forward and backward using your keyboard, or let others enjoy your photos
+      by making them public.
   - title: Open Source and Secure
-    description: Lychee is completely open-source and secure. Your server, your
-      data, your rules. You are in full control of your photos.
+    description:
+      Lychee is completely open-source and secure. Your server, your data, your
+      rules. You are in full control of your photos.
   - title: Designed for Photographers
-    description: Lychee is the perfect place to store all your photos. There is no
-      storage limit, no compression, and no loss in data. It even supports and
-      displays your EXIF and IPTC Metadata.
+    description:
+      Lychee is the perfect place to store all your photos. There is no storage
+      limit, no compression, and no loss in data. It even supports and displays
+      your EXIF and IPTC Metadata.
 features:
   - title: Upload and Create Albums
-    description: With Lychee, you can easily upload your photos or create a new
-      album for them.
+    description:
+      With Lychee, you can easily upload your photos or create a new album for
+      them.
   - title: See All Information from Your Photos
-    description: Lychee allows you to see all the information from your photos,
-      including EXIF and IPTC Metadata, which are always available one click
-      away.
+    description:
+      Lychee allows you to see all the information from your photos, including
+      EXIF and IPTC Metadata, which are always available one click away.
   - title: Batch Editing
-    description: Lychee supports batch editing with desktop-like multi-select,
-      making it easy to manage your photos.
+    description:
+      Lychee supports batch editing with desktop-like multi-select, making it
+      easy to manage your photos.
   - title: Share Your Photos
-    description: You can share your albums or photos with your favorite service.
-      With just one click, you can make your photos public for your audience.
+    description:
+      You can share your albums or photos with your favorite service. With just
+      one click, you can make your photos public for your audience.
   - title: Import Photos
-    description: Lychee allows you to import your photos from various sources,
-      including your local computer, server, via URL, or even from your Dropbox.
+    description:
+      Lychee allows you to import your photos from various sources, including
+      your local computer, server, via URL, or even from your Dropbox.
   - title: Tag Your Photos
-    description: Never lose one of your photos in the depth of your albums. With
-      Lychee, you can tag them or mark them as important.
+    description:
+      Never lose one of your photos in the depth of your albums. With Lychee,
+      you can tag them or mark them as important.
 tags:
   - Gallery
   - Photo Management

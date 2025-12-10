@@ -1,0 +1,85 @@
+name: OnlyOffice
+description:
+  OnlyOffice is a self-hosted office suite that provides powerful document,
+  spreadsheet, and presentation editing capabilities. It offers full
+  compatibility with Microsoft Office formats and allows real-time document
+  collaboration. Designed for businesses, teams, and individuals, OnlyOffice
+  ensures secure, private, and efficient document management. It includes
+  integration with various cloud storage services, supports plugins for extended
+  functionality, and provides a modern web-based interface. OnlyOffice can be
+  deployed on-premise or in the cloud and is ideal for organizations that need
+  control over their document workflow. Additional features include a built-in
+  document management system, mail integration, calendar, CRM tools, and a
+  powerful API for automation.
+instructions: null
+changeLog:
+  - date: 2025-02-26
+    description: first release
+links:
+  - label: Documentation
+    url: https://helpcenter.onlyoffice.com/
+  - label: Github
+    url: https://github.com/ONLYOFFICE
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: onlyoffice
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: onlyoffice/documentserver:9.0
+benefits:
+  - title: Full Office Suite Functionality
+    description:
+      OnlyOffice provides a complete set of tools for creating and editing
+      documents, spreadsheets, and presentations. It ensures compatibility with
+      Microsoft Office formats, making it a powerful alternative for businesses
+      and individuals.
+  - title: Real-Time Collaboration
+    description:
+      OnlyOffice enables teams to work together on documents in real time. Users
+      can co-edit, comment, and track changes, ensuring efficient collaboration
+      while maintaining document integrity.
+  - title: Self-Hosted & Secure
+    description:
+      OnlyOffice can be deployed on your own server, ensuring full control over
+      your data. It supports encryption, access permissions, and integration
+      with identity management systems for enhanced security.
+features:
+  - title: Microsoft Office Compatibility
+    description:
+      OnlyOffice supports and maintains full compatibility with DOCX, XLSX, and
+      PPTX formats, allowing seamless document exchange between users of
+      different office suites.
+  - title: Integrated Document Management
+    description:
+      Includes a built-in document management system that enables file
+      organization, sharing, and permission control, providing an all-in-one
+      productivity solution.
+  - title: Plugin Support
+    description:
+      Extend OnlyOffice functionality with plugins, including features like text
+      translation, spell checking, and document signing.
+  - title: API & Automation
+    description:
+      OnlyOffice provides a powerful API for developers to integrate and
+      automate document workflows, making it highly customizable for enterprise
+      needs.
+  - title: Multi-Platform Access
+    description:
+      With web, desktop, and mobile applications, OnlyOffice ensures users can
+      access their documents from any device, maintaining productivity on the
+      go.
+tags:
+  - Office Suite
+  - Productivity
+  - Collaboration

@@ -1,0 +1,84 @@
+name: Sonatype Nexus
+description:
+  Sonatype Nexus is a powerful repository manager designed to streamline the
+  management and storage of binary components. It enables development teams to
+  efficiently organize, share, and deploy artifacts across various formats, such
+  as Maven, npm, Docker, and more. With its robust feature set and
+  enterprise-grade capabilities, Sonatype Nexus improves DevOps workflows by
+  providing secure, scalable, and centralized storage for software assets.
+instructions:
+  After logging in without a password, log out and then log back in using the
+  username admin. To get the password, open the container console tab and run
+  the command cat /nexus-data/admin.password. Once logged in, you will be
+  prompted to change the password.
+changeLog:
+  - date: 2024-12-05
+    description: First Release
+  - date: 2025-03-03
+    description: Version bumped to 3.77.2
+  - date: 2025-07-25
+    description: Version bumped to 3.82.0
+links:
+  - label: Github
+    url: https://github.com/sonatype/nexus-public
+  - label: Documentation
+    url: https://help.sonatype.com/repomanager3
+  - label: Demo
+    url: https://www.sonatype.com/nexus-repository-sonatype
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nexus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sonatype/nexus3:3.82.0
+benefits:
+  - title: Centralized Artifact Management
+    description:
+      Nexus Repository Manager provides a single source for all your development
+      artifacts, enabling teams to collaborate more efficiently.
+  - title: Security and Compliance
+    description:
+      Scan your components for vulnerabilities and ensure compliance with
+      security standards using Sonatype integrations.
+  - title: Support for Multiple Formats
+    description:
+      Manage a wide range of repository formats, including Maven, npm, Docker,
+      PyPI, and more.
+features:
+  - title: Repository Management
+    description:
+      Organize and control access to software artifacts across different teams
+      and environments.
+  - title: Proxy Caching
+    description:
+      Reduce build times by caching remote repositories and speeding up
+      dependency resolution.
+  - title: Vulnerability Scanning
+    description:
+      Integrate with tools like Sonatype Lifecycle to identify and mitigate
+      risks in your dependencies.
+  - title: High Availability
+    description:
+      Ensure uninterrupted access to your artifacts with clustering and high
+      availability configurations.
+  - title: REST API Support
+    description:
+      Automate and extend the repository manager's functionality using its
+      comprehensive REST API.
+tags:
+  - Repository Management
+  - DevOps
+  - Artifact Storage
+  - Security
+  - Open Source

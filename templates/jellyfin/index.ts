@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.appServiceName,
       source: {
         type: "image",
@@ -19,11 +18,17 @@ export function generate(input: Input): Output {
           port: 8096,
         },
       ],
+      env: [`PUID=1000`, `PGID=1000`, `TZ=Etc/UTC`].join("\n"),
       mounts: [
         {
           type: "volume",
-          name: "cache",
-          mountPath: "/cache",
+          name: "tvshows",
+          mountPath: "/data/tvshows",
+        },
+        {
+          type: "volume",
+          name: "movies",
+          mountPath: "/data/movies",
         },
         {
           type: "volume",

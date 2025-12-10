@@ -1,0 +1,78 @@
+name: ByteStash
+description:
+  ByteStash is a self-hosted snippet code storage system designed for developers
+  and teams. It provides a secure, organized platform to store, manage, and
+  share your code snippets. With support for multiple programming languages,
+  syntax highlighting, tagging, and a robust search functionality, ByteStash
+  streamlines code reuse and collaboration. The intuitive interface and powerful
+  features ensure that your code is always at your fingertips, whether you're
+  working solo or with a team.
+instructions: null
+changeLog:
+  - date: 2025-02-10
+    description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 1.5.8
+links:
+  - label: Documentation
+    url: https://github.com/jordan-dalby/bytestash/wiki
+  - label: Github
+    url: https://github.com/jordan-dalby/bytestash
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: bytestash
+    appServiceImage:
+      type: string
+      title: Service Image
+      default: ghcr.io/jordan-dalby/bytestash:1.5.8
+benefits:
+  - title: Centralized Code Management
+    description:
+      ByteStash provides a single, secure location to store all your code
+      snippets, making it easy to manage and access your code whenever you need
+      it.
+  - title: Enhanced Productivity
+    description:
+      With features like tagging, robust search functionality, and syntax
+      highlighting, ByteStash helps you quickly locate and reuse code,
+      streamlining your development workflow.
+  - title: Collaboration and Sharing
+    description:
+      Easily share your snippets with teammates or the developer community, and
+      collaborate in real-time or asynchronously to improve code quality and
+      foster innovation.
+features:
+  - title: Syntax Highlighting
+    description:
+      Supports multiple programming languages with customizable syntax
+      highlighting to ensure your code is easy to read and understand.
+  - title: Tagging and Organization
+    description:
+      Organize your snippets with tags and categories, making it simple to sort
+      and find code quickly.
+  - title: Secure Access
+    description:
+      Implement user authentication and access controls to keep your code
+      private and secure.
+  - title: Powerful Search
+    description:
+      Utilize advanced search features to quickly locate snippets by keywords,
+      tags, or language.
+  - title: RESTful API
+    description:
+      Integrate ByteStash with other tools and services through a comprehensive
+      and easy-to-use API.
+tags:
+  - Code Snippets
+  - Development
+  - Productivity
