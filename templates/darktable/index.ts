@@ -1,0 +1,35 @@
+import { Output, Services } from "~templates-utils";
+import { Input } from "./meta";
+
+export function generate(input: Input): Output {
+  const services: Services = [];
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: input.appServiceName,
+      env: [`PUID=0`, `PGID=0`, `TZ=${input.timezone}`, `NO_DECOR=true`].join(
+        "\n"
+      ),
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/config",
+        },
+      ],
+    },
+  });
+
+  return { services };
+}
