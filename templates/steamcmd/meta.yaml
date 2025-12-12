@@ -1,0 +1,65 @@
+name: SteamCMD
+description: SteamCMD is a command-line version of the Steam client for installing and updating Steam games and dedicated servers. It's perfect for managing game servers and game installations.
+instructions: After installation, you can use SteamCMD to install and update games. The installation directory can be configured in the settings.
+changeLog:
+  - date: 2025-05-05
+    description: Initial release
+links:
+  - label: Documentation
+    url: https://developer.valvesoftware.com/wiki/SteamCMD
+  - label: Docker Hub
+    url: https://hub.docker.com/r/steamcmd/steamcmd
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object  
+  required:
+    - appServiceName
+    - appServiceImage
+    - installPath
+    - steamCommand
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: steamcmd
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: steamcmd/steamcmd:latest
+    installPath:
+      type: string
+      title: Installation Path
+      description: Host path where games will be installed
+      default: /path/to/games
+    steamCommand:
+      type: string
+      title: Steam Command
+      description: SteamCMD command to install CSGO locally to data directory.
+      default: +login anonymous +force_install_dir /data +app_update 740 +quit
+benefits:
+  - title: Game Management
+    description: Install and update Steam games and dedicated servers
+  - title: Command Line
+    description: Powerful command-line interface for automation
+  - title: Official Tool
+    description: Official Valve tool for game server management
+  - title: Containerized
+    description: Runs in a container for easy management
+features:
+  - title: Game Installation
+    description: Install any Steam game or dedicated server
+  - title: Automatic Updates
+    description: Keep games and servers up to date
+  - title: Custom Commands
+    description: Run any SteamCMD command
+  - title: Volume Persistence
+    description: Persistent game data through volume mounting
+  - title: Automation
+    description: Perfect for automated game server management
+tags:
+  - Steam
+  - Game Server
+  - Self-hosted
+  - Gaming 
