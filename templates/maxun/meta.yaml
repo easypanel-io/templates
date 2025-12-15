@@ -1,0 +1,84 @@
+name: Maxun
+description:
+  Maxun is a self-hosted data automation platform that combines a modern
+  frontend with a backend capable of browser automation (Playwright), file
+  storage via MinIO, and PostgreSQL persistence. It lets you run data collection
+  and integration workflows with headless Chromium, store assets in
+  S3-compatible storage, and manage everything from a web interface. Ideal for
+  teams who need a self-hosted automation stack with database, object storage,
+  and browser automation included.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-15
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/getmaxun
+  - label: Docker Hub (Backend)
+    url: https://hub.docker.com/r/getmaxun/maxun-backend
+  - label: Docker Hub (Frontend)
+    url: https://hub.docker.com/r/getmaxun/maxun-frontend
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - backendImage
+    - frontendImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: maxun
+    backendImage:
+      type: string
+      title: Backend Image
+      default: getmaxun/maxun-backend:v0.0.30
+    frontendImage:
+      type: string
+      title: Frontend Image
+      default: getmaxun/maxun-frontend:v0.0.30
+
+benefits:
+  - title: Full Stack Included
+    description:
+      Ships with backend, frontend, PostgreSQL, and MinIO for a complete
+      automation stack.
+  - title: Headless Browser Ready
+    description:
+      Playwright enabled for browser automation with sensible defaults for
+      Docker.
+  - title: Object Storage Built-In
+    description:
+      MinIO provides S3-compatible storage for assets and automation outputs.
+  - title: Self-Hosted Control
+    description:
+      Keep data, storage, and automation private on your own infrastructure.
+
+features:
+  - title: PostgreSQL Persistence
+    description:
+      Production-grade database for Maxun data and automation results.
+  - title: MinIO S3 Storage
+    description:
+      Store files, exports, and automation artifacts in S3-compatible storage.
+  - title: Playwright Support
+    description:
+      Headless Chromium with required flags for running inside containers.
+  - title: Web UI
+    description:
+      Frontend served separately with configurable public URL and backend URL.
+
+tags:
+  - Automation
+  - Playwright
+  - PostgreSQL
+  - MinIO
+  - Self-Hosted
