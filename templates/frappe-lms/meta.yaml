@@ -1,0 +1,98 @@
+name: Frappe LMS
+description:
+  LMS (Learning Management System) is a comprehensive educational platform built
+  on the Frappe framework that enables organizations to create, manage, and
+  deliver online learning content. The system provides course management,
+  student enrollment, progress tracking, assessments, and interactive learning
+  features. Built with modern web technologies, it offers a robust and scalable
+  solution for educational institutions, corporate training programs, and online
+  learning platforms. The Frappe-based architecture ensures reliability,
+  extensibility, and ease of customization for specific learning requirements.
+instructions:
+  Default login credentials are Administrator/admin. It takes 5-7 minutes to
+  install the app.
+changeLog:
+  - date: 2025-08-06
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/frappe/lms
+  - label: Documentation
+    url: https://frappe.io/learning
+  - label: Website
+    url: https://frappeframework.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: frappe-lms
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: frappe/bench:v5.25.9
+benefits:
+  - title: Comprehensive Learning Management
+    description:
+      Complete learning management system with course creation, student
+      enrollment, progress tracking, and assessment capabilities for
+      comprehensive educational delivery.
+  - title: Modern Web Framework
+    description:
+      Built on the Frappe framework, providing a modern, scalable, and
+      extensible architecture for reliable learning management operations.
+  - title: Interactive Learning Features
+    description:
+      Rich interactive features including multimedia content support, discussion
+      forums, assignments, and real-time progress monitoring for engaging
+      learning experiences.
+  - title: Multi-tenant Architecture
+    description:
+      Support for multiple organizations, courses, and user roles with secure
+      isolation and customizable learning environments.
+  - title: Assessment and Analytics
+    description:
+      Built-in assessment tools, grading systems, and comprehensive analytics
+      for tracking student performance and learning outcomes.
+  - title: Mobile Responsive Design
+    description:
+      Responsive design that works seamlessly across desktop, tablet, and mobile
+      devices for accessible learning anywhere, anytime.
+features:
+  - title: Course Management
+    description:
+      Create and manage courses with structured content, modules, lessons, and
+      multimedia resources for comprehensive learning delivery.
+  - title: Student Enrollment
+    description:
+      Streamlined student enrollment process with user management, role-based
+      access control, and automated course assignments.
+  - title: Progress Tracking
+    description:
+      Real-time progress monitoring with detailed analytics, completion
+      tracking, and performance metrics for both students and instructors.
+  - title: Assessment Tools
+    description:
+      Built-in assessment creation tools with multiple question types, automated
+      grading, and detailed feedback mechanisms.
+  - title: Discussion Forums
+    description:
+      Interactive discussion forums for student collaboration, Q&A sessions, and
+      community-based learning experiences.
+  - title: Content Management
+    description:
+      Rich content management system supporting various media types, file
+      uploads, and structured content organization.
+tags:
+  - Learning Management
+  - Education
+  - E-Learning
+  - Course Management
+  - Student Portal
