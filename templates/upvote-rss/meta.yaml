@@ -1,0 +1,108 @@
+name: Upvote RSS
+description:
+  Upvote RSS is a self-hosted RSS feed generator for Reddit that creates
+  personalized RSS feeds based on Reddit post upvotes. The application connects
+  to Reddit's API to monitor posts you've upvoted and generates RSS feeds that
+  you can subscribe to in any RSS reader. This allows you to follow your upvoted
+  content across different subreddits in a single feed, making it easy to keep
+  track of interesting posts and discussions you've engaged with. The
+  application uses Reddit OAuth authentication to access your upvoted posts
+  securely, caches feed data for performance, and provides a simple web
+  interface for accessing your personalized RSS feeds. Perfect for Reddit users
+  who want to follow their upvoted content via RSS, power users who prefer RSS
+  readers over native Reddit interfaces, content curators who want to track
+  interesting posts across multiple subreddits, or anyone looking for a
+  self-hosted solution to create custom Reddit RSS feeds based on their
+  engagement.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-15
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/johnwarne/upvote-rss
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: upvote-rss
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/johnwarne/upvote-rss:v1.8.0
+    redditUser:
+      type: string
+      title: Reddit Username
+      default: ""
+    redditClientId:
+      type: string
+      title: Reddit Client ID
+      default: ""
+    redditClientSecret:
+      type: string
+      title: Reddit Client Secret
+      default: ""
+
+benefits:
+  - title: Personalized RSS Feeds
+    description:
+      Create RSS feeds from your Reddit upvotes to follow interesting content in
+      your preferred RSS reader.
+  - title: Cross-Subreddit Tracking
+    description:
+      Aggregate upvoted posts from multiple subreddits into a single RSS feed
+      for easy consumption.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your Reddit engagement data private on your own infrastructure
+      without relying on third-party services.
+  - title: RSS Reader Integration
+    description:
+      Subscribe to your upvote feeds in any RSS reader for a unified content
+      consumption experience.
+
+features:
+  - title: Reddit OAuth Integration
+    description:
+      Secure authentication with Reddit's API using OAuth to access your upvoted
+      posts.
+  - title: Feed Generation
+    description:
+      Automatically generates RSS feeds from your Reddit upvotes with proper RSS
+      2.0 format compatibility.
+  - title: Caching
+    description:
+      Built-in caching system improves performance and reduces API calls to
+      Reddit's servers.
+  - title: Web Interface
+    description:
+      Simple web interface for accessing and managing your personalized RSS
+      feeds.
+  - title: Multi-Subreddit Support
+    description:
+      Aggregate content from multiple subreddits based on your upvote activity
+      across Reddit.
+  - title: RSS Reader Compatible
+    description:
+      Standard RSS 2.0 format ensures compatibility with all major RSS readers
+      and feed aggregators.
+
+tags:
+  - RSS
+  - Reddit
+  - Feed Generator
+  - Self-Hosted
+  - Content Aggregation
