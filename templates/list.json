@@ -208,6 +208,23 @@
     ]
   },
   {
+    "slug": "arcadedb",
+    "logo": "logo.png",
+    "name": "ArcadeDB",
+    "description": "ArcadeDB is a multi-model database that supports multiple data models including Document, Graph, Key-Value, and Vector databases in a single engine. It's designed for high-performance applications with ACID transactions and real-time analytics capabilities.",
+    "tags": [
+      "Database",
+      "Multi-Model",
+      "Document",
+      "Graph",
+      "Key-Value",
+      "Vector",
+      "NoSQL",
+      "ACID",
+      "Analytics"
+    ]
+  },
+  {
     "slug": "archivebox",
     "logo": "logo.png",
     "name": "ArchiveBox",
@@ -345,6 +362,20 @@
       "Media",
       "Subtitles",
       "Download"
+    ]
+  },
+  {
+    "slug": "beaverhabits",
+    "logo": "logo.png",
+    "name": "BeaverHabits",
+    "description": "BeaverHabits is a self-hosted habit tracking application that helps you build and maintain positive habits through a simple, intuitive web interface. It provides visual tracking of your daily habits, customizable date columns, and supports both database and file-based storage options for flexibility in deployment and data management.",
+    "tags": [
+      "Habit Tracking",
+      "Productivity",
+      "Self-Hosted",
+      "Web Interface",
+      "Personal Development",
+      "Goal Setting"
     ]
   },
   {
@@ -494,6 +525,35 @@
     ]
   },
   {
+    "slug": "calibre-web-automated",
+    "logo": "logo.png",
+    "name": "Calibre Web Automated",
+    "description": "Calibre Web Automated (CWA) is an enhanced version of Calibre Web with automated book processing capabilities. It automatically adds books to your library from an ingest directory, supports Hardcover API integration for enhanced metadata, and provides network share compatibility. CWA processes books according to your configured settings and removes them from the ingest directory after processing, making it perfect for automated eBook management workflows.",
+    "tags": [
+      "eBook Management",
+      "Digital Library",
+      "Automation",
+      "Self-Hosted",
+      "Calibre",
+      "Books",
+      "Hardcover"
+    ]
+  },
+  {
+    "slug": "calibre-web",
+    "logo": "logo.png",
+    "name": "Calibre Web",
+    "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It is a Python web application that provides a web interface for the Calibre eBook library. It supports multiple users, user management, and provides a modern, responsive interface for accessing your eBook collection from any device.",
+    "tags": [
+      "eBook Management",
+      "Digital Library",
+      "Reading",
+      "Self-Hosted",
+      "Calibre",
+      "Books"
+    ]
+  },
+  {
     "slug": "calibre",
     "logo": "logo.png",
     "name": "Calibre",
@@ -501,6 +561,17 @@
     "tags": [
       "Documents",
       "E-Commerce"
+    ]
+  },
+  {
+    "slug": "cap",
+    "logo": "logo.png",
+    "name": "Cap",
+    "description": "Cap is an open source screen recording and sharing platform, providing a lightweight alternative to Loom. With Cap, you can create beautiful, shareable screen recordings with instant sharing capabilities or local recording with full editing features. It supports 4K recording, 60fps capture, and offers both cloud and self-hosted storage options. Perfect for creating tutorials, presentations, educational content, and team collaboration. Cap includes features like auto-generated captions, titles, summaries, chapters, and AI-powered transcriptions.",
+    "tags": [
+      "Productivity",
+      "Video",
+      "Developer Tools"
     ]
   },
   {
@@ -576,6 +647,18 @@
     "tags": [
       "Chat",
       "Customer Support"
+    ]
+  },
+  {
+    "slug": "checkmate",
+    "logo": "logo.png",
+    "name": "Checkmate",
+    "description": "Checkmate is a modern, open-source uptime monitoring solution designed to keep track of your websites, APIs, and services. Built with a focus on simplicity and reliability, it provides real-time monitoring capabilities with instant notifications when your services go down. The application features a clean, intuitive dashboard that displays the current status of all monitored services, historical uptime data, and detailed analytics. Perfect for businesses, developers, and system administrators who need to ensure their digital services remain accessible to users.",
+    "tags": [
+      "Monitoring",
+      "Uptime",
+      "Analytics",
+      "DevOps"
     ]
   },
   {
@@ -994,6 +1077,24 @@
     ]
   },
   {
+    "slug": "dockge",
+    "logo": "logo.png",
+    "name": "Dockge",
+    "description": "Dockge is a modern, self-hosted Docker Compose management tool that provides a beautiful and intuitive web interface for managing your Docker Compose stacks. It allows you to create, edit, start, stop, and monitor your Docker Compose applications through a user-friendly dashboard. Dockge simplifies Docker Compose management with features like real-time logs, stack monitoring, and easy configuration editing.",
+    "tags": [
+      "Docker Compose",
+      "Container Management",
+      "Self-Hosted",
+      "Web Interface",
+      "Monitoring",
+      "DevOps",
+      "Infrastructure",
+      "YAML Editor",
+      "Logs",
+      "Stack Management"
+    ]
+  },
+  {
     "slug": "docmost",
     "logo": "logo.png",
     "name": "Docmost",
@@ -1147,6 +1248,24 @@
       "Open Source",
       "Enterprise CMS",
       "Modular Architecture"
+    ]
+  },
+  {
+    "slug": "dumbdo",
+    "logo": "logo.png",
+    "name": "Dumbdo",
+    "description": "DumbDo is a stupidly simple todo list application that just works. No complex database, no unnecessary features - just todos. It features a clean, minimal interface with dark/light mode support, file-based storage, and PIN protection. Built with the \"Dumb\" design system principles, it's fast, lightweight, and fully responsive with PWA support.",
+    "tags": [
+      "Todo List",
+      "Task Management",
+      "Self-Hosted",
+      "Lightweight",
+      "PWA",
+      "Dark Mode",
+      "Simple",
+      "Docker",
+      "Fast",
+      "Minimal"
     ]
   },
   {
@@ -1368,6 +1487,33 @@
     ]
   },
   {
+    "slug": "filegator",
+    "logo": "logo.png",
+    "name": "Filegator",
+    "description": "Filegator is a free, open-source, self-hosted web application for managing files and folders. It provides a user-friendly interface for organizing, uploading, downloading, and sharing files with comprehensive file management capabilities. Built with PHP, it offers multi-user support with different access permissions, roles, and home folders. All basic file operations are supported including copy, move, rename, edit, create, delete, preview, zip, unzip, download, and upload. The file upload feature supports drag & drop, progress bar, pause and resume functionality with chunked uploads for large files. Perfect for teams, students, field workers, and anyone needing a simple yet powerful file sharing and management solution.",
+    "tags": [
+      "File Management",
+      "Storage",
+      "Collaboration"
+    ]
+  },
+  {
+    "slug": "filepizza",
+    "logo": "logo.png",
+    "name": "FilePizza",
+    "description": "FilePizza is a peer-to-peer file sharing platform that enables secure, direct file transfers between users without storing files on servers. Using WebRTC technology, it creates direct connections between browsers for fast, private file sharing. The platform includes Redis for session management and COTURN server for NAT traversal, ensuring reliable connections across different network configurations. Perfect for sharing large files securely without upload limits or storage concerns.",
+    "tags": [
+      "File Sharing",
+      "Peer-to-Peer",
+      "WebRTC",
+      "Privacy",
+      "Direct Transfer",
+      "Real-time",
+      "Secure",
+      "Cross-Platform"
+    ]
+  },
+  {
     "slug": "filerun",
     "logo": "logo.png",
     "name": "Filerun",
@@ -1557,6 +1703,19 @@
       "Survey",
       "Forms",
       "Experience Management"
+    ]
+  },
+  {
+    "slug": "frappe-lms",
+    "logo": "logo.png",
+    "name": "Frappe LMS",
+    "description": "LMS (Learning Management System) is a comprehensive educational platform built on the Frappe framework that enables organizations to create, manage, and deliver online learning content. The system provides course management, student enrollment, progress tracking, assessments, and interactive learning features. Built with modern web technologies, it offers a robust and scalable solution for educational institutions, corporate training programs, and online learning platforms. The Frappe-based architecture ensures reliability, extensibility, and ease of customization for specific learning requirements.",
+    "tags": [
+      "Learning Management",
+      "Education",
+      "E-Learning",
+      "Course Management",
+      "Student Portal"
     ]
   },
   {
@@ -2276,6 +2435,26 @@
     ]
   },
   {
+    "slug": "jumpserver",
+    "logo": "logo.png",
+    "name": "JumpServer",
+    "description": "JumpServer is an open-source, enterprise-grade bastion host and privileged access management (PAM) solution. It provides secure access to servers, databases, and other IT resources through a web-based interface. JumpServer supports multiple authentication methods, session recording, command auditing, and fine-grained access control. It's designed to help organizations manage and monitor privileged access to critical infrastructure while maintaining security compliance and audit trails.",
+    "tags": [
+      "Bastion Host",
+      "PAM",
+      "Privileged Access Management",
+      "Security",
+      "SSH",
+      "RDP",
+      "Session Recording",
+      "Audit",
+      "Compliance",
+      "Access Control",
+      "Web Interface",
+      "Enterprise"
+    ]
+  },
+  {
     "slug": "jupyter-notebook",
     "logo": "logo.svg",
     "name": "JupyterNotebook",
@@ -2733,6 +2912,20 @@
     ]
   },
   {
+    "slug": "lms",
+    "logo": null,
+    "name": "LMS",
+    "description": "LMS (Lightweight Music Server) is a self-hosted music streaming software that provides access to your music collection from anywhere using a web interface. It features Subsonic/OpenSubsonic API support, multi-valued tags, artist relationships, MusicBrainz integration, ListenBrainz support, recommendation engine, and comprehensive music discovery features.",
+    "tags": [
+      "Music Streaming",
+      "Subsonic",
+      "MusicBrainz",
+      "ListenBrainz",
+      "Self-Hosted",
+      "Audio Streaming"
+    ]
+  },
+  {
     "slug": "lobechat",
     "logo": "logo.png",
     "name": "LobeChat",
@@ -2968,6 +3161,20 @@
     ]
   },
   {
+    "slug": "mazanoke",
+    "logo": "logo.png",
+    "name": "Mazanoke",
+    "description": "Mazanoke is a self-hosted local image optimizer that runs in your browser. It works offline and keeps your images private without ever leaving your device. Created for everyday people and designed to be shared with family and friends, it serves as an alternative to questionable \"free\" online tools.",
+    "tags": [
+      "Image Optimization",
+      "Image Compression",
+      "Image Converter",
+      "Self-Hosted",
+      "Privacy",
+      "Offline"
+    ]
+  },
+  {
     "slug": "mcaptcha",
     "logo": "logo.png",
     "name": "mCaptcha",
@@ -3033,6 +3240,24 @@
       "In-Memory",
       "Performance",
       "Database"
+    ]
+  },
+  {
+    "slug": "memgraph",
+    "logo": "logo.png",
+    "name": "Memgraph",
+    "description": "Memgraph is a high-performance, in-memory graph database designed for real-time analytics and machine learning applications. It provides fast graph traversal, pattern matching, and complex graph algorithms with support for Cypher query language. Memgraph MAGE (Memgraph Advanced Graph Extensions) includes pre-built graph algorithms and machine learning modules. The platform comes with Memgraph Lab, a visual interface for database management, query development, and graph visualization.",
+    "tags": [
+      "Graph Database",
+      "Real-Time Analytics",
+      "Machine Learning",
+      "Cypher",
+      "Graph Algorithms",
+      "Visualization",
+      "MAGE",
+      "In-Memory",
+      "High Performance",
+      "Data Science"
     ]
   },
   {
@@ -3287,6 +3512,19 @@
     ]
   },
   {
+    "slug": "ngrok",
+    "logo": "logo.png",
+    "name": "ngrok",
+    "description": "ngrok is a secure tunneling service that creates secure tunnels from a public endpoint to a locally running web service. It's perfect for exposing local development servers, testing webhooks, and sharing your work with others. This template provides easy deployment of ngrok with configurable authentication, regions, and target services.",
+    "tags": [
+      "Tunneling",
+      "Development",
+      "Webhooks",
+      "Testing",
+      "Networking"
+    ]
+  },
+  {
     "slug": "nitropage",
     "logo": null,
     "name": "Nitropage",
@@ -3438,6 +3676,22 @@
     "tags": []
   },
   {
+    "slug": "once-campfire",
+    "logo": "logo.png",
+    "name": "Once Campfire",
+    "description": "Once Campfire is a modern, open-source team communication platform built by Basecamp. It provides a simple and intuitive interface for team messaging, file sharing, and collaboration. Once Campfire offers real-time messaging, threaded conversations, file uploads, and search functionality in a clean, distraction-free environment. It's designed to help teams communicate effectively without the complexity of larger enterprise platforms.",
+    "tags": [
+      "Team Communication",
+      "Messaging",
+      "Collaboration",
+      "Open Source",
+      "Basecamp",
+      "Real-Time",
+      "File Sharing",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "onedev",
     "logo": "logo.svg",
     "name": "OneDev",
@@ -3527,6 +3781,19 @@
     "description": "OpenSpeedTest is a powerful and accurate online bandwidth test application that works on any web browser without the need for Flash or Java. It is designed to replicate your real-world connection speed and is capable of testing any connection, from 1 Kbps to 1 Gbps+. The application uses the latest technology to automatically detect your stable download and upload speed from our servers. It also provides a guide on how to increase your internet speed and get more out of your connection. You can create your own network speed test without any client-side software or plugin. The application can also be embedded to your website or application, allowing your users to test their internet speed without leaving your page. It is also available as a standalone application for home or small office LAN and can be used for large-scale deployments as a self-hosted/on-premise network speed test.",
     "tags": [
       "Network Tools"
+    ]
+  },
+  {
+    "slug": "openvpn",
+    "logo": "logo.png",
+    "name": "OpenVPN Access Server",
+    "description": "OpenVPN Access Server is a full-featured SSL VPN software solution that integrates OpenVPN server capabilities, enterprise-grade user management, granular access controls, and an easy-to-use web interface for administration.",
+    "tags": [
+      "Network Tools",
+      "Security",
+      "VPN",
+      "OpenVPN",
+      "Remote Access"
     ]
   },
   {
@@ -3656,6 +3923,21 @@
     ]
   },
   {
+    "slug": "palmr",
+    "logo": "logo.png",
+    "name": "Palmr",
+    "description": "Palmr is a self-hosted file management and download application that provides a comprehensive solution for managing files and downloads. It features a modern web interface for file operations, download management, and file organization. Palmr supports various file operations including uploading, downloading, organizing, and managing your files in a centralized location.",
+    "tags": [
+      "File Management",
+      "Download Manager",
+      "Self-Hosted",
+      "Web Interface",
+      "File Storage",
+      "Download Queue",
+      "Memory Management"
+    ]
+  },
+  {
     "slug": "papercups",
     "logo": "logo.svg",
     "name": "Papercups",
@@ -3731,6 +4013,21 @@
       "Billing",
       "Payment",
       "Client Management"
+    ]
+  },
+  {
+    "slug": "pdfding",
+    "logo": "logo.png",
+    "name": "PdfDing",
+    "description": "PdfDing is a self-hosted PDF management and processing application that provides a comprehensive solution for handling PDF documents. It offers features for viewing, organizing, and managing PDF files with a clean web interface. PdfDing supports various PDF operations including viewing, searching, and organizing your PDF collection in a centralized location.",
+    "tags": [
+      "PDF Management",
+      "Document Viewer",
+      "Self-Hosted",
+      "Web Interface",
+      "SQLite",
+      "File Management",
+      "Document Organization"
     ]
   },
   {
@@ -3865,6 +4162,24 @@
     ]
   },
   {
+    "slug": "pinchflat",
+    "logo": "logo.png",
+    "name": "Pinchflat",
+    "description": "Pinchflat is a modern, self-hosted media management and download application designed for organizing and managing your digital media collection. It provides an intuitive web interface for downloading, organizing, and accessing your media files with support for various formats and sources. Pinchflat offers powerful features for media discovery, automated downloads, and collection management in a clean, user-friendly environment.",
+    "tags": [
+      "Media Management",
+      "Download Manager",
+      "Self-Hosted",
+      "Web Interface",
+      "File Organization",
+      "Media Collection",
+      "Automation",
+      "Search",
+      "Multi-Format",
+      "API"
+    ]
+  },
+  {
     "slug": "piwigo",
     "logo": "logo.png",
     "name": "piwigo",
@@ -3946,6 +4261,36 @@
       "Lifecycle Management",
       "Platform Management",
       "Security & Compliance"
+    ]
+  },
+  {
+    "slug": "portnote",
+    "logo": "logo.png",
+    "name": "PortNote",
+    "description": "PortNote is a self-hosted port tracking application that helps you keep track of used ports across your servers and VMs. Stop juggling spreadsheets and guessing which service uses which port — PortNote gives you a clear, organized view of your entire port landscape. Add your servers via a sleek web interface, assign and document port usage across all systems, and avoid conflicts before they happen.",
+    "tags": [
+      "Port Tracking",
+      "Infrastructure Management",
+      "Self-Hosted",
+      "Web Interface",
+      "PostgreSQL",
+      "JWT Authentication",
+      "DevOps"
+    ]
+  },
+  {
+    "slug": "portracker",
+    "logo": null,
+    "name": "Portracker",
+    "description": "Portracker is a self-hosted port tracking and monitoring application that provides real-time visibility into port usage across your infrastructure. It automatically discovers and tracks ports used by services running on your system, including Docker containers, and provides a comprehensive dashboard for port management and conflict detection. Perfect for DevOps teams and system administrators who need to maintain organized port assignments.",
+    "tags": [
+      "Port Tracking",
+      "Infrastructure Monitoring",
+      "Self-Hosted",
+      "Docker Integration",
+      "DevOps",
+      "System Administration",
+      "Port Management"
     ]
   },
   {
@@ -4220,6 +4565,19 @@
       "Remote Desktop",
       "System Administration",
       "Network Protocols"
+    ]
+  },
+  {
+    "slug": "remotely",
+    "logo": "logo.png",
+    "name": "Remotely",
+    "description": "Remotely is a free, open-source remote support and remote access solution that enables IT professionals to provide remote assistance to users and manage computers remotely. Built with ASP.NET Core, it offers secure remote desktop access, file transfer capabilities, remote command execution, and comprehensive device management features. The platform includes a web-based dashboard for managing connected devices, user authentication, and audit logging. Perfect for IT support teams, managed service providers, and organizations that need to provide remote technical support and system administration.",
+    "tags": [
+      "Remote Access",
+      "IT Support",
+      "Remote Desktop",
+      "System Administration",
+      "Remote Management"
     ]
   },
   {
@@ -4642,6 +5000,20 @@
     ]
   },
   {
+    "slug": "standardnotes",
+    "logo": "logo.png",
+    "name": "StandardNotes",
+    "description": "StandardNotes is a private, end-to-end encrypted notes app that provides a secure platform for writing and organizing your thoughts. It offers a clean, distraction-free interface with strong encryption to protect your privacy. The self-hosted version gives you complete control over your data while maintaining all the security features of the cloud version.",
+    "tags": [
+      "Notes App",
+      "Encryption",
+      "Self-Hosted",
+      "Privacy",
+      "Writing",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "statping-ng",
     "logo": "logo.png",
     "name": "Statping-ng",
@@ -4685,6 +5057,20 @@
     ]
   },
   {
+    "slug": "stump",
+    "logo": "logo.png",
+    "name": "Stump",
+    "description": "Stump is a fast, free and open source audiobook and e-book server. It provides a web interface for accessing and managing your digital book collection, supporting various formats including audiobooks and e-books. Stump offers streaming capabilities, library management, and a modern responsive interface for reading and listening to your books from any device.",
+    "tags": [
+      "Audiobook Server",
+      "E-book Reader",
+      "Digital Library",
+      "Self-Hosted",
+      "Web Interface",
+      "Books"
+    ]
+  },
+  {
     "slug": "substreamer",
     "logo": "logo.png",
     "name": "Substreamer",
@@ -4719,6 +5105,20 @@
     "tags": [
       "Developer Tools",
       "Security"
+    ]
+  },
+  {
+    "slug": "suwayomi-server",
+    "logo": "logo.png",
+    "name": "Suwayomi Server",
+    "description": "Suwayomi Server is a free and open source manga reader server that runs on the desktop and mobile. It provides a web interface for reading manga from various sources and supports multiple extensions. Suwayomi Server allows you to organize your manga library, track reading progress, and access your collection from any device through a modern web interface.",
+    "tags": [
+      "Manga Reader",
+      "Digital Library",
+      "Reading",
+      "Self-Hosted",
+      "Web Interface",
+      "Comics"
     ]
   },
   {
@@ -4872,12 +5272,19 @@
   {
     "slug": "tooljet",
     "logo": "logo.svg",
-    "name": "ToolJet",
-    "description": "ToolJet is an open-source low-code framework designed to help you build and deploy custom internal tools with ease. It comes with a built-in database, ToolJet DB, built on top of PostgreSQL, and also allows you to connect to external data sources such as PostgreSQL, MongoDB, MS SQL Server, Snowflake, BigQuery, and more. You can also connect to API/GraphQL endpoints, SaaS tools like Airtable, Stripe, Google Sheets, and cloud object storage services like AWS S3, Google Cloud Storage, and Minio. Once connected, ToolJet can run queries on these data sources to fetch and update data. The fetched data can be visualized and modified using UI widgets like tables, charts, forms, etc. You can also use Javascript or Python queries for writing business logic or interacting with the user interface of the application. With ToolJet, you can build apps in three simple steps: connect to data sources, build queries, and build the user interface using the visual App Builder. ToolJet binds together the data sources, queries, and components to convert business logic into custom applications.",
+    "name": "Tooljet",
+    "description": "Tooljet is an open-source low-code platform for building internal tools and business applications. It provides a visual interface builder, database connectors, API integrations, and workflow automation capabilities. With Tooljet, teams can quickly build custom dashboards, admin panels, CRUD applications, and complex business tools without extensive coding. The platform supports multiple data sources, real-time collaboration, and enterprise-grade security features.",
     "tags": [
-      "No-Code",
+      "Low-Code",
+      "Internal Tools",
+      "Business Applications",
+      "Dashboard",
       "Database",
-      "Custom Applications"
+      "API",
+      "Workflow",
+      "Automation",
+      "Visual Builder",
+      "Enterprise"
     ]
   },
   {
@@ -5173,6 +5580,21 @@
       "Productivity",
       "Reading",
       "Bookmarking"
+    ]
+  },
+  {
+    "slug": "warracker",
+    "logo": "logo.png",
+    "name": "Warracker",
+    "description": "Warracker is a self-hosted warranty tracking application that helps you manage and track warranties for your products and assets. It provides a comprehensive solution for storing warranty information, tracking expiration dates, managing documentation, and receiving notifications about upcoming warranty expirations. Built with a modern web interface and PostgreSQL database for reliable data storage.",
+    "tags": [
+      "Warranty Tracking",
+      "Asset Management",
+      "Self-Hosted",
+      "Web Interface",
+      "PostgreSQL",
+      "Email Notifications",
+      "Document Management"
     ]
   },
   {
