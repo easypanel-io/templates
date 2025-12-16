@@ -1,0 +1,99 @@
+name: Calibre Web
+description:
+  Calibre Web is a web app providing a clean interface for browsing, reading and
+  downloading eBooks using an existing Calibre database. It is a Python web
+  application that provides a web interface for the Calibre eBook library. It
+  supports multiple users, user management, and provides a modern, responsive
+  interface for accessing your eBook collection from any device.
+instructions: Default login credentials are admin/admin123
+changeLog:
+  - date: 2025-09-12
+    description: Template Release
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/linuxserver/calibre-web
+  - label: Github
+    url: https://github.com/janeczku/calibre-web
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: calibre-web
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/calibre-web:nightly-version-6b11d0b4
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+      description: Timezone for the application
+    enableDockerMods:
+      type: boolean
+      title: Enable Docker Mods
+      default: true
+      description:
+        Enable universal calibre docker mods for additional functionality
+    enableOAuthRelax:
+      type: boolean
+      title: Enable OAuth Relax Token Scope
+      default: true
+      description: Relax OAuth token scope for better compatibility
+
+benefits:
+  - title: Web-Based eBook Management
+    description:
+      Access your entire Calibre eBook library through a modern, responsive web
+      interface from any device without needing the Calibre desktop application.
+  - title: Multi-User Support
+    description:
+      Share your eBook collection with family and friends through user
+      management features with different permission levels and access controls.
+  - title: Cross-Platform Access
+    description:
+      Read and manage your eBooks from any device with a web browser, including
+      smartphones, tablets, and computers.
+
+features:
+  - title: eBook Library Browser
+    description:
+      Browse your entire eBook collection with advanced filtering, searching,
+      and categorization options to quickly find the books you want to read.
+  - title: Online Reading
+    description:
+      Read eBooks directly in your web browser with a built-in reader that
+      supports various formats including EPUB, PDF, and more.
+  - title: Download & Sync
+    description:
+      Download eBooks to your devices or sync them across multiple platforms for
+      offline reading convenience.
+  - title: User Management
+    description:
+      Create multiple user accounts with different permission levels, allowing
+      family members or team members to access the library with appropriate
+      restrictions.
+  - title: Metadata Management
+    description:
+      Edit book metadata, covers, and descriptions directly through the web
+      interface to keep your library organized and up-to-date.
+  - title: Reading Statistics
+    description:
+      Track your reading progress, statistics, and reading history to monitor
+      your reading habits and discover new books.
+
+tags:
+  - eBook Management
+  - Digital Library
+  - Reading
+  - Self-Hosted
+  - Calibre
+  - Books
