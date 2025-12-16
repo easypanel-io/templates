@@ -42,7 +42,7 @@ schema:
     minioServiceImage:
       type: string
       title: MinIO Service Image
-      default: bitnami/minio:latest
+      default: minio/minio:latest
     minioAccessKey:
       type: string
       title: MinIO Access Key
