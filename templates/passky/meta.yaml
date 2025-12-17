@@ -1,0 +1,85 @@
+name: Passky Server
+description:
+  Passky is a simple, modern, lightweight, open source and secure password manager.
+  It allows you to securely store and manage your passwords, ensuring your sensitive
+  credentials remain protected. This self-hosted server component works with the
+  Passky clients (web, desktop, and mobile apps) to provide a complete password 
+  management solution that puts you in control of your data.
+instructions: null
+changeLog:
+  - date: 2025-04-22
+    description: first release
+links:
+  - label: Website
+    url: https://passky.org
+  - label: GitHub
+    url: https://github.com/Rabbit-Company/Passky-Server
+  - label: Docker Hub
+    url: https://hub.docker.com/r/rabbitcompany/passky-server
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: passky-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: rabbitcompany/passky-server:8.1.8
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin
+benefits:
+  - title: Complete Privacy Control
+    description:
+      Self-host your password manager to maintain full control over your sensitive
+      credentials without relying on third-party services.
+  - title: Open Source Security
+    description:
+      Passky's open-source nature means the code can be audited by security
+      professionals, ensuring there are no hidden vulnerabilities or backdoors.
+  - title: Scalable Architecture
+    description:
+      Configure your server with SQLite for simplicity or scale up with MySQL and Redis
+      for improved performance and concurrent connections.
+features:
+  - title: Secure Password Storage
+    description:
+      Store passwords with strong encryption to keep your sensitive data protected
+      from unauthorized access.
+  - title: Two-Factor Authentication
+    description: 
+      Enhance security with optional two-factor authentication including YubiKey
+      support for hardware-based security.
+  - title: Multiple Database Options
+    description:
+      Choose between SQLite for simplicity or MySQL for better performance and
+      scalability depending on your needs.
+  - title: Rate Limiting Protection
+    description:
+      Built-in rate limiting protects your server from brute force attacks and
+      ensures stable performance under load.
+  - title: Cross-Platform Compatibility
+    description:
+      Works with all Passky clients including web, desktop (Windows, macOS, Linux),
+      and mobile (Android, iOS) applications.
+tags:
+  - Password Manager
+  - Security
+  - Authentication
+  - Self-Hosted
+  - Privacy 
