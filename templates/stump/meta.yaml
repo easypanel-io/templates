@@ -1,0 +1,84 @@
+name: Stump
+description:
+  Stump is a fast, free and open source audiobook and e-book server. It provides
+  a web interface for accessing and managing your digital book collection,
+  supporting various formats including audiobooks and e-books. Stump offers
+  streaming capabilities, library management, and a modern responsive interface
+  for reading and listening to your books from any device.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release (v0.0.11)
+links:
+  - label: Website
+    url: https://www.stumpapp.dev
+  - label: Documentation
+    url: https://www.stumpapp.dev/installation/docker
+  - label: Github
+    url: https://github.com/aaronleopold/stump
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: stump
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: aaronleopold/stump:0.0.11
+
+benefits:
+  - title: Fast and Lightweight
+    description:
+      Optimized for speed and performance with minimal resource usage, making it
+      perfect for running on various hardware configurations.
+  - title: Multi-Format Support
+    description:
+      Comprehensive support for both audiobooks and e-books in various formats,
+      providing a unified platform for your entire digital library.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your book collection completely private and secure on your own server
+      with no external dependencies or data sharing.
+
+features:
+  - title: Audiobook Streaming
+    description:
+      Stream audiobooks directly through the web interface with support for
+      various audio formats and quality settings.
+  - title: E-book Reader
+    description:
+      Built-in e-book reader with support for multiple formats and responsive
+      design for optimal reading experience across devices.
+  - title: Library Management
+    description:
+      Organize and manage your digital book collection with metadata support,
+      search functionality, and categorization features.
+  - title: Web-Based Access
+    description:
+      Access your entire library from any device with a web browser, providing
+      convenient reading and listening from anywhere.
+  - title: Responsive Design
+    description:
+      Modern, responsive interface that works seamlessly across different
+      devices and screen sizes for optimal user experience.
+  - title: Easy Setup
+    description:
+      Simple Docker-based deployment with minimal configuration required to get
+      your personal book server running quickly.
+
+tags:
+  - Audiobook Server
+  - E-book Reader
+  - Digital Library
+  - Self-Hosted
+  - Web Interface
+  - Books
