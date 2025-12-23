@@ -1,0 +1,82 @@
+name: LogChimp
+description:
+  LogChimp is an open-source feedback and changelog platform that lets you
+  collect product feedback, publish updates, and keep users informed from a
+  single place. It provides an API, a web UI, and a themed frontend for your
+  users to submit ideas, vote, and read announcements. Built with PostgreSQL and
+  Valkey (Redis), it supports self-hosted deployments with migrations,
+  background processing, and email notifications.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-23
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://logchimp.codecarrot.net
+  - label: Documentation
+    url: https://docs.logchimp.codecarrot.net/platform/what-is-logchimp
+  - label: GitHub
+    url: https://github.com/logchimp/logchimp
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - apiImage
+    - themeImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: logchimp
+    apiImage:
+      type: string
+      title: API Image
+      default: ghcr.io/logchimp/logchimp/api:0.7.1
+    themeImage:
+      type: string
+      title: Theme Image
+      default: ghcr.io/logchimp/logchimp/theme:0.7.1
+
+benefits:
+  - title: Unified Feedback & Changelog
+    description:
+      Collect feedback, votes, and publish changelog updates from one platform.
+  - title: Self-Hosted Ownership
+    description:
+      Keep feedback data, API, and frontend under your control on your own
+      infra.
+  - title: Ready-to-Run Stack
+    description:
+      Ships with PostgreSQL, Valkey (Redis), migrations job, API, and theme UI.
+  - title: Notifications & Email
+    description:
+      Supports mail configuration for notifications to keep users informed.
+
+features:
+  - title: Feedback Boards
+    description:
+      Collect ideas and feature requests, let users vote, and prioritize work.
+  - title: API + Themed Frontend
+    description:
+      Separate API service and themed UI for users to browse updates and submit
+      feedback.
+  - title: Database Migrations
+    description: Dedicated migrator job to keep the database schema up to date.
+  - title: Cache Layer
+    description: Valkey/Redis cache for performance and background jobs.
+  - title: Email Support
+    description: Configure SMTP credentials to send notifications and updates.
+
+tags:
+  - Feedback
+  - Changelog
+  - Product Management
+  - Self-Hosted
+  - PostgreSQL
