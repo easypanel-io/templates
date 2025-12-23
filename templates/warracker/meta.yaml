@@ -1,0 +1,137 @@
+name: Warracker
+description:
+  Warracker is a self-hosted warranty tracking application that helps you manage
+  and track warranties for your products and assets. It provides a comprehensive
+  solution for storing warranty information, tracking expiration dates, managing
+  documentation, and receiving notifications about upcoming warranty
+  expirations. Built with a modern web interface and PostgreSQL database for
+  reliable data storage.
+instructions: null
+changeLog:
+  - date: 2025-09-17
+    description: Template Release (v0.10.1.11)
+links:
+  - label: Github
+    url: https://github.com/sassanix/warracker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: warracker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/sassanix/warracker/main:0.10.1.11
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.email.com
+      description: SMTP server hostname for email notifications
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "465"
+      description: SMTP server port
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: youremail@email.com
+      description: SMTP authentication username
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: password
+      description: SMTP authentication password
+    maxUploadMb:
+      type: string
+      title: Max Upload Size (MB)
+      default: "32"
+      description: Maximum file upload size in megabytes
+    enableOidc:
+      type: boolean
+      title: Enable OIDC SSO
+      default: false
+      description: Enable OpenID Connect single sign-on authentication
+    oidcProviderName:
+      type: string
+      title: OIDC Provider Name
+      default: oidc
+      description: Name of the OIDC provider
+    oidcClientId:
+      type: string
+      title: OIDC Client ID
+      default: ""
+      description: OIDC client ID from your provider
+    oidcClientSecret:
+      type: string
+      title: OIDC Client Secret
+      default: ""
+      description: OIDC client secret from your provider
+    oidcIssuerUrl:
+      type: string
+      title: OIDC Issuer URL
+      default: ""
+      description:
+        OIDC issuer URL (e.g., https://your-provider.com/auth/realms/your-realm)
+    oidcScope:
+      type: string
+      title: OIDC Scope
+      default: "openid email profile"
+      description: OIDC scope for authentication
+
+benefits:
+  - title: Warranty Management
+    description:
+      Centralized tracking of all your product warranties with expiration
+      notifications and documentation management.
+  - title: Self-Hosted Control
+    description:
+      Keep your warranty data completely private and secure on your own server
+      with full control over your information.
+  - title: Email Notifications
+    description:
+      Receive email notifications about upcoming warranty expirations to ensure
+      you never miss important deadlines.
+
+features:
+  - title: Warranty Tracking
+    description:
+      Track warranty information, expiration dates, and product details with a
+      comprehensive database system.
+  - title: Document Management
+    description:
+      Upload and store warranty documents, receipts, and related files with
+      configurable upload size limits.
+  - title: Email Integration
+    description:
+      SMTP integration for sending warranty expiration notifications and system
+      alerts.
+  - title: OIDC SSO Support
+    description:
+      Optional OpenID Connect single sign-on integration for enterprise
+      authentication and user management.
+  - title: Memory Optimization
+    description:
+      Configurable memory optimization modes for different deployment scenarios
+      and resource constraints.
+  - title: Database Storage
+    description:
+      Reliable PostgreSQL database for storing warranty data, user information,
+      and application state with data persistence.
+
+tags:
+  - Warranty Tracking
+  - Asset Management
+  - Self-Hosted
+  - Web Interface
+  - PostgreSQL
+  - Email Notifications
+  - Document Management
