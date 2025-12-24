@@ -17,6 +17,8 @@ export function generate(input: Input): Output {
         `DL_PG_USER=postgres`,
         `DL_PG_PASSWORD=${postgresPassword}`,
         `DL_PG_NAME=$(PROJECT_NAME)`,
+        ...(input.ntfyUrl ? [`NOTIFY_WEBHOOK_BASE=${input.ntfyUrl}`] : []),
+        ...(input.ntfyTopic ? [`NOTIFY_WEBHOOK_TOPIC=${input.ntfyTopic}`] : []),
       ].join("\n"),
       source: {
         type: "image",
