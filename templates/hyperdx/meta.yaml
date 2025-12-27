@@ -1,0 +1,96 @@
+name: HyperDX
+description:
+  HyperDX is an open-source observability platform that unifies logs, metrics,
+  traces, and session replays in one place. Built on ClickHouse for blazing-fast
+  performance, it allows you to search terabytes of events in seconds without
+  complex syntax. Perfect for debugging production issues, monitoring
+  application performance, and correlating user sessions with backend traces.
+  Recently acquired by ClickHouse to accelerate the future of open-source
+  observability.
+
+instructions: null
+
+changeLog:
+  - date: "2025-07-01"
+    description: "Initial release"
+
+links:
+  - label: "HyperDX Official Site"
+    url: "https://www.hyperdx.io/"
+  - label: "Documentation"
+    url: "https://www.hyperdx.io/docs"
+  - label: "GitHub Repository"
+    url: "https://github.com/hyperdxio/hyperdx"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "hyperdx"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "docker.hyperdx.io/hyperdx/hyperdx-local:2-beta"
+    exposeClickHousePort:
+      type: string
+      title: "Expose ClickHouse HTTP Port (8123)"
+      default: "8123"
+      description:
+        "Expose ClickHouse HTTP interface for direct database access and queries"
+    exposeOtelPort:
+      type: string
+      title: "Expose OpenTelemetry gRPC Port (4317)"
+      default: "4317"
+      description:
+        "Expose OpenTelemetry gRPC endpoint for receiving telemetry data from
+        applications"
+benefits:
+  - title: "Unified Observability"
+    description:
+      "Correlate logs, metrics, traces, and session replays all in one platform
+      without jumping between multiple tools."
+  - title: "Blazing Fast Performance"
+    description:
+      "Search terabytes of events in seconds, powered by ClickHouse database for
+      exceptional query performance."
+  - title: "Cost-Effective"
+    description:
+      "Open-source solution that provides enterprise-grade observability without
+      the high costs of proprietary tools like Datadog."
+
+features:
+  - title: "Full-Text Search"
+    description:
+      "Search across all your events without complex syntax. Find logs and spans
+      with simple, intuitive queries."
+  - title: "Session Replay"
+    description:
+      "Automatically link user session replays with backend logs and traces for
+      complete debugging context."
+  - title: "OpenTelemetry Native"
+    description:
+      "Built on OpenTelemetry standards for vendor-neutral instrumentation and
+      easy migration from existing observability tools."
+  - title: "Real-Time Monitoring"
+    description:
+      "Live tail logs, create alerts, and visualize metrics in real-time with
+      intuitive dashboards and chart builders."
+
+tags:
+  - "Observability"
+  - "Monitoring"
+  - "Logging"
+  - "Tracing"
+  - "APM"
+  - "ClickHouse"
+  - "OpenTelemetry"
+  - "Session Replay"
