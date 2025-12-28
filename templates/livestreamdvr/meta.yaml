@@ -1,0 +1,54 @@
+name: LiveStreamDVR
+description: LiveStreamDVR (formerly TwitchAutomator) is a powerful tool for automatically recording and archiving live streams from Twitch. It provides a web interface to manage recordings, schedule streams to record, and organize your VOD library.
+instructions: After installation, access the web interface through the provided domain to start configuring your stream recordings.
+changeLog:
+  - date: 2024-04-09
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/MrBrax/LiveStreamDVR
+contributors:
+  - name: MrBrax
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: livestreamdvr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mrbrax/twitchautomator:master
+benefits:
+  - title: Automated Recording
+    description: Automatically record live streams from your favorite Twitch channels.
+  - title: Web Interface
+    description: Manage your recordings through an intuitive web interface.
+  - title: VOD Library
+    description: Build and organize your personal VOD library.
+  - title: Scheduling
+    description: Schedule recordings in advance for upcoming streams.
+  - title: Storage Management
+    description: Efficiently manage your recorded content with built-in storage tools.
+features:
+  - title: Stream Recording
+    description: Record live streams in their original quality.
+  - title: Channel Management
+    description: Add and manage multiple Twitch channels.
+  - title: Recording Schedule
+    description: Set up automatic recording schedules.
+  - title: Storage Options
+    description: Configure storage locations and manage space.
+  - title: Web Dashboard
+    description: Monitor and control recordings through a web interface.
+tags:
+  - Twitch
+  - Streaming
+  - Recording
+  - VOD
+  - Archive 
