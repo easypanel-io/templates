@@ -1,0 +1,78 @@
+name: OliveTin
+description:
+  OliveTin is a web interface for running Linux shell commands. It provides a 
+  simple, elegant dashboard that lets you execute predefined commands with a 
+  single click. Perfect for system administrators, home automation enthusiasts, 
+  or anyone who wants to simplify repetitive tasks without memorizing complex 
+  command-line syntax. OliveTin is lightweight, secure, and highly customizable, 
+  allowing you to create buttons for anything from system maintenance to home 
+  automation controls.
+instructions: null
+changeLog:
+  - date: 2025-04-18
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/OliveTin/OliveTin
+  - label: Documentation
+    url: https://docs.olivetin.app
+  - label: Docker Hub
+    url: https://hub.docker.com/r/jamesread/olivetin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: olivetin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jamesread/olivetin:2025.4.14
+benefits:
+  - title: Simple Command Execution
+    description:
+      Transform complex shell commands into simple buttons on a clean web interface,
+      making system administration tasks accessible to users of all skill levels.
+  - title: Secure Delegation
+    description:
+      Allow others to execute specific commands without giving them full shell access,
+      ensuring security while enabling collaboration.
+  - title: Streamlined Workflows
+    description:
+      Organize frequently used commands into an intuitive dashboard, saving time
+      and reducing errors in routine tasks.
+features:
+  - title: Web Dashboard
+    description:
+      Access your predefined commands through a clean, responsive web interface
+      that works on desktop and mobile devices.
+  - title: Customizable Commands
+    description: 
+      Define any shell command as a button with parameters, descriptions, and
+      visual customizations to create a personalized control panel.
+  - title: Actionable Output
+    description:
+      View the output of your commands directly in the web interface, with proper
+      formatting and error reporting.
+  - title: Lightweight Footprint
+    description:
+      Run OliveTin with minimal resource usage, making it ideal for both powerful
+      servers and resource-constrained environments.
+  - title: YAML Configuration
+    description:
+      Configure your command buttons using simple YAML files, making setup and
+      modification straightforward and version-controllable.
+tags:
+  - System Administration
+  - Web Interface
+  - Command Execution
+  - Automation
+  - Linux
+  - Dashboard 
