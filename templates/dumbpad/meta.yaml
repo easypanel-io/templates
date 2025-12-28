@@ -1,0 +1,63 @@
+name: DumbPad
+description:
+  DumbPad is a simple note-taking application for quick text storage and
+  sharing. It provides a clean web-based text editor with optional PIN
+  protection for secure note management. Perfect for quick notes, temporary text
+  storage, and collaborative text editing.
+instructions: null
+changeLog:
+  - date: 2025-09-24
+    description: First release (1.0.4)
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbpad
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbpad
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbpad
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbpad:1.0.4
+benefits:
+  - title: Simple Note Taking
+    description:
+      Clean, distraction-free interface for quick note creation and editing.
+  - title: Optional Security
+    description: Optional PIN protection to control access to your notes.
+  - title: Persistent Storage
+    description:
+      Notes are stored in persistent volumes and survive container restarts.
+  - title: No Database Required
+    description:
+      Stateless service that stores notes directly without requiring a database.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface for creating and editing notes.
+  - title: PIN Protection
+    description: Optional PIN-based access control for additional security.
+  - title: Auto Save
+    description: Notes are automatically saved as you type.
+  - title: URL Sharing
+    description: Each note gets a unique URL for easy sharing.
+  - title: Persistent Storage
+    description: Notes survive container restarts and updates.
+  - title: Simple Interface
+    description: Minimal, distraction-free writing environment.
+tags:
+  - Notes
+  - Text Editor
+  - Productivity
+  - Simple
+  - Web Interface
