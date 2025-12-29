@@ -1,0 +1,94 @@
+name: Remotely
+description:
+  Remotely is a free, open-source remote support and remote access solution that
+  enables IT professionals to provide remote assistance to users and manage
+  computers remotely. Built with ASP.NET Core, it offers secure remote desktop
+  access, file transfer capabilities, remote command execution, and
+  comprehensive device management features. The platform includes a web-based
+  dashboard for managing connected devices, user authentication, and audit
+  logging. Perfect for IT support teams, managed service providers, and
+  organizations that need to provide remote technical support and system
+  administration.
+instructions: null
+changeLog:
+  - date: 2025-08-05
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/immense/Remotely
+  - label: Documentation
+    url: https://github.com/immense/Remotely#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: remotely
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: immybot/remotely:589
+
+benefits:
+  - title: Secure Remote Access
+    description:
+      Provide secure remote desktop access to computers with encrypted
+      connections and comprehensive security features for safe remote support.
+  - title: Cross-Platform Support
+    description:
+      Support Windows, macOS, and Linux systems with a unified remote access
+      solution that works across different operating systems and devices.
+  - title: File Transfer Capabilities
+    description:
+      Transfer files securely between local and remote machines with built-in
+      file management tools for efficient remote support operations.
+  - title: Remote Command Execution
+    description:
+      Execute commands remotely on target machines for system administration,
+      troubleshooting, and automated maintenance tasks.
+  - title: User Management
+    description:
+      Manage user accounts, permissions, and access controls with role-based
+      security for team collaboration and access management.
+  - title: Audit Logging
+    description:
+      Comprehensive logging and audit trails for all remote sessions, file
+      transfers, and administrative actions for compliance and security.
+features:
+  - title: Remote Desktop Control
+    description:
+      Full remote desktop access with screen sharing, keyboard and mouse
+      control, and real-time collaboration capabilities for remote support.
+  - title: Device Management
+    description:
+      Centralized management of connected devices with system information,
+      status monitoring, and remote configuration capabilities.
+  - title: Session Recording
+    description:
+      Record remote sessions for training, compliance, and troubleshooting
+      purposes with playback and sharing functionality.
+  - title: Chat and Communication
+    description:
+      Built-in chat functionality for real-time communication between support
+      technicians and end users during remote sessions.
+  - title: Wake-on-LAN
+    description:
+      Wake up remote computers from sleep mode using Wake-on-LAN technology for
+      convenient remote access without physical presence.
+  - title: Multi-Monitor Support
+    description:
+      Support for multiple monitors on remote machines with seamless switching
+      and display management for comprehensive remote control.
+tags:
+  - Remote Access
+  - IT Support
+  - Remote Desktop
+  - System Administration
+  - Remote Management
