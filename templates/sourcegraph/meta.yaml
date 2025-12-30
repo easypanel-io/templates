@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sourcegraph/server:6.6.0
+      default: sourcegraph/server:6.11.0
 benefits:
   - title: Universal Code Search
     description:

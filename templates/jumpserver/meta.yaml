@@ -11,6 +11,8 @@ instructions: Login using the default admin credentials; admin/ChangeMe.
 changeLog:
   - date: 2025-09-06
     description: Initial Template Release (v4.10.7)
+  - date: 2025-12-25
+    description: Version bumped to v4.10.12
 links:
   - label: GitHub
     url: https://github.com/jumpserver/jumpserver
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jumpserver/jms_all:v4.10.7
+      default: jumpserver/jms_all:v4.10.12
       description: JumpServer Docker image
 benefits:
   - title: Privileged Access Management
