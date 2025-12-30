@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 24.8
   - date: 2025-07-15
     description: Version bumped to 25.6
+  - date: 2025-12-25
+    description: Version bumped to 25.11
 links:
   - label: Website
     url: https://clickhouse.com/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: clickhouse/clickhouse-server:25.6
+      default: clickhouse/clickhouse-server:25.11
 benefits:
   - title: Real-Time Analytics
     description:

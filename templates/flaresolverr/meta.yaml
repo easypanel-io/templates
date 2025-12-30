@@ -15,6 +15,8 @@ changeLog:
     description: Template added
   - date: 2025-07-21
     description: Version bumped to v3.3.25
+  - date: 2025-12-25
+    description: Version bumped to v3.4.6
 links:
   - label: Website
     url: https://github.com/FlareSolverr/FlareSolverr
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/flaresolverr/flaresolverr:v3.3.25
+      default: ghcr.io/flaresolverr/flaresolverr:v3.4.6
 benefits:
   - title: Bypass Web Protections
     description:
