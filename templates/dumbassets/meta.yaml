@@ -1,0 +1,72 @@
+name: DumbAssets
+description:
+  DumbAssets is a self-hosted asset management service that provides secure file
+  storage, organization, and sharing capabilities. It features PIN protection,
+  configurable access controls, and notification integration. Perfect for teams
+  and organizations that need centralized asset management.
+instructions: null
+changeLog:
+  - date: 2025-09-25
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbassets
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbassets
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbassets
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbassets:1.0.11
+benefits:
+  - title: Asset Management
+    description:
+      Centralized file storage, organization, and sharing with secure access
+      controls and user management.
+  - title: PIN Protection
+    description:
+      Optional PIN-based access control for additional security and controlled
+      access to assets.
+  - title: File Organization
+    description:
+      Organize files with categories, tags, and metadata for efficient asset
+      management and retrieval.
+  - title: Notification Integration
+    description:
+      Integration with Apprise for notifications about asset changes and system
+      events.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface for asset management.
+  - title: PIN Protection
+    description: Optional PIN-based access control for security.
+  - title: File Upload
+    description: Secure file upload with size and type restrictions.
+  - title: File Organization
+    description: Categorize and organize files with metadata.
+  - title: Access Control
+    description: Configurable access controls and permissions.
+  - title: CORS Support
+    description: Configurable cross-origin resource sharing.
+  - title: Notification Integration
+    description: Integration with Apprise notification service.
+  - title: Data Persistence
+    description: All assets and metadata persist across restarts.
+tags:
+  - Asset Management
+  - File Storage
+  - File Sharing
+  - Web Interface
+  - Security
