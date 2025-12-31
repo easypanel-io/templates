@@ -1,0 +1,58 @@
+name: AdGuard Home Sync
+description: AdGuard Home Sync is a tool designed to synchronize filters, blocklists, and configuration between multiple AdGuard Home instances. It allows you to maintain consistent filtering across different AdGuard Home deployments by synchronizing configuration from an origin instance to one or more replica instances.
+instructions: Modify the config file to add your own AdGuard Home instances and cron schedule.
+changeLog:
+  - date: 2025-05-09
+    description: first release
+links:
+  - label: Documentation
+    url: https://github.com/bakito/adguardhome-sync/wiki/FAQ
+  - label: Github
+    url: https://github.com/bakito/adguardhome-sync
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - apiUsername
+    - apiPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: adguardhome-sync
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/adguardhome-sync:0.7.5
+    apiUsername:
+      type: string
+      title: API Username
+      default: username
+    apiPassword:
+      type: string
+      title: API Password
+      default: password
+benefits:
+  - title: Consistent Filtering
+    description: Maintain consistent filtering rules across multiple AdGuard Home instances automatically.
+  - title: Automated Synchronization
+    description: Set it and forget it with customizable cron schedules that keep your AdGuard Home instances in sync without manual intervention.
+  - title: Centralized Management
+    description: Manage your filtering rules from a single origin instance and have them propagate to all your replica instances.
+features:
+  - title: Multi-Instance Synchronization
+    description: Sync configuration from one origin AdGuard Home instance to one or more replica instances.
+  - title: Scheduled Synchronization
+    description: Configure how frequently synchronization occurs using cron expressions.
+  - title: API Access
+    description: Access the synchronization process via a secure API with basic authentication.
+tags:
+  - AdGuard Home
+  - DNS
+  - Ad-blocking
+  - Synchronization
+  - Configuration Management
