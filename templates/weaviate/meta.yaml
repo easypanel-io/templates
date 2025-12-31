@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2023-06-30
     description: first release
+  - date: 2025-12-31
+    description: Version bumped to 1.35.0
 links:
   - label: Website
     url: https://weaviate.io
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: semitechnologies/weaviate:1.27.0
+      default: semitechnologies/weaviate:1.35.0
 benefits:
   - title: Powerful Vector Search
     description:

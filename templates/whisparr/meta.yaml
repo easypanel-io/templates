@@ -16,6 +16,8 @@ changeLog:
     description: Template added
   - date: 2025-03-03
     description: Version bumped to v3-41ddd1f
+  - date: 2025-12-31
+    description: Switched to ghcr.io/hotio/whisparr
 links:
   - label: Website
     url: https://whisparr.com/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hotio/whisparr:v3-41ddd1f
+      default: ghcr.io/hotio/whisparr
 benefits:
   - title: Automated Adult Video Management
     description:

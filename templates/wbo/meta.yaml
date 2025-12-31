@@ -14,6 +14,8 @@ changeLog:
     description: initial release
   - date: 2025-07-25
     description: Version bumped to v1.22.0
+  - date: 2025-12-31
+    description: Version bumped to v1.22.1
 links:
   - label: Website
     url: https://wbo.ophir.dev
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lovasoa/wbo:v1.22.0
+      default: lovasoa/wbo:v1.22.1
 benefits:
   - title: Real-time collaborative whiteboard
     description:
