@@ -16,6 +16,8 @@ changeLog:
     description: Template Release
   - date: 2025-02-21
     description: Version bumped to stable-780dd83
+  - date: 2025-12-24
+    description: Version bumped to stable-e98f035
 
 links:
   - label: Documentation
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine-graphql:stable-780dd83
+      default: ghcr.io/toeverything/affine-graphql:stable-e98f035
     mailerHost:
       type: string
       title: Mailer Host

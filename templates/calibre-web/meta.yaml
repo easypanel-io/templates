@@ -9,6 +9,8 @@ instructions: Default login credentials are admin/admin123
 changeLog:
   - date: 2025-09-12
     description: Template Release
+  - date: 2025-12-24
+    description: Updated to nightly-version-eb8b0096
 links:
   - label: Docker Hub
     url: https://hub.docker.com/r/linuxserver/calibre-web
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/calibre-web:nightly-version-6b11d0b4
+      default: lscr.io/linuxserver/calibre-web:nightly-version-eb8b0096
     timezone:
       type: string
       title: Timezone
