@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to version-v24.6
+  - date: 2025-12-29
+    description: Version bumped to version-v25.4
 links:
   - label: Website
     url: https://nzbget.net/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/nzbget:version-v25.2
+      default: lscr.io/linuxserver/nzbget:version-v25.4
     username:
       type: string
       title: Username
