@@ -1,0 +1,70 @@
+name: PAPI Whatsapp Automation
+description:
+  PAPI Whatsapp Automation is a self-hosted platform designed to empower small businesses,
+  entrepreneurs, and individuals by providing a robust API for integrating
+  messaging solutions such as WhatsApp™. Whatsapp Automation is a free and customizable manager
+  that allows users to maintain control over their messaging infrastructure.
+instructions: null
+changeLog:
+  - date: 2025-01-17
+    description: First Release
+links:
+  - label: Website
+    url: https://papi.mundoautomatik.com/
+  - label: Manager
+    url: https://padmin.intrategica.com.br
+  - label: Documentation
+    url: https://github.com/rafacpti23/papi
+contributors:
+  - name: ViFigueiredo
+    url: https://github.com/ViFigueiredo
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: papi-whatsapp-automation
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mgpastorini/pastorini-api:latest
+benefits:
+  - title: Seamless Messaging Integration
+    description:
+      PAPI Whatsapp Automation allows you to integrate messaging solutions like WhatsApp™
+      into your platform, enabling efficient communication with your audience
+      directly through a robust API.
+  - title: Highly Customizable
+    description:
+      With support for plugins and integration with tools like Typebot,
+      Chatwoot, and OpenAI, PAPI Whatsapp Automation can be tailored to meet the specific
+      needs of your business or project.
+  - title: Free and Open Source
+    description:
+      PAPI Whatsapp Automation is free to use and provides a fully open-source solution,
+      giving you control over your messaging infrastructure without incurring
+      additional costs.
+features:
+  - title: WhatsApp™ Messaging Support
+    description:
+      PAPI Whatsapp Automation integrates seamlessly with WhatsApp™ for efficient
+      communication, providing a platform for messaging automation and
+      interactions.
+  - title: Plugin Support
+    description:
+      PAPI Whatsapp Automation supports a range of plugins to extend functionality and
+      integrate with other tools like Typebot and Chatwoot for advanced use
+      cases.
+  - title: Multi-Language Support
+    description:
+      The platform supports multiple languages, making it suitable for global
+      businesses and diverse teams.
+tags:
+  - Messaging
+  - Communication
+  - Automation
+  - Open Source
