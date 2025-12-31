@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-09-17
     description: Template Release (v0.10.1.11)
+  - date: 2025-12-31
+    description: Version bumped to 0.10.1.14
 links:
   - label: Github
     url: https://github.com/sassanix/warracker
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/sassanix/warracker/main:0.10.1.11
+      default: ghcr.io/sassanix/warracker/main:0.10.1.14
     smtpHost:
       type: string
       title: SMTP Host
