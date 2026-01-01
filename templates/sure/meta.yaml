@@ -18,7 +18,8 @@ instructions: null
 changeLog:
   - date: 2025-11-17
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to v0.6.7-alpha.1
 links:
   - label: Github
     url: https://github.com/we-promise/sure
@@ -39,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/we-promise/sure:0.6.5-alpha.10
+      default: ghcr.io/we-promise/sure:0.6.7-alpha.1
     openaiToken:
       type: string
       title: OpenAI API Token (Optional - for AI features)
