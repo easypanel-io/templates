@@ -22,7 +22,8 @@ instructions: null
 changeLog:
   - date: 2025-12-11
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to 0.8.1
 links:
   - label: GitHub
     url: https://github.com/TheNickOfTime/handbrake-web
@@ -44,11 +45,11 @@ schema:
     appServiceImage:
       type: string
       title: Server Image
-      default: ghcr.io/thenickoftime/handbrake-web-server:latest
+      default: ghcr.io/thenickoftime/handbrake-web-server:0.8.1
     workerImage:
       type: string
       title: Worker Image
-      default: ghcr.io/thenickoftime/handbrake-web-worker:latest
+      default: ghcr.io/thenickoftime/handbrake-web-worker:0.8.1
     workerId:
       type: string
       title: Worker ID

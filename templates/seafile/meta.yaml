@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: 2025-09-11
     description: Initial Template Release
+  - date: 2026-01-01
+    description: Version bumped to v13.0.15
 links:
   - label: GitHub
     url: https://github.com/haiwen/seafile
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: seafileltd/seafile-mc:11.0-latest
+      default: seafileltd/seafile-mc:13.0.15
       description: Seafile Docker image
 benefits:
   - title: Secure File Synchronization

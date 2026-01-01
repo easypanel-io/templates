@@ -26,6 +26,8 @@ instructions: null
 changeLog:
   - date: 2025-12-04
     description: Template Release
+  - date: 2026-01-01
+    description: Version bumped to v10
 
 links:
   - label: Website
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ignisda/ryot:v9
+      default: ignisda/ryot:v10
 benefits:
   - title: All-in-One Media Tracking
     description:

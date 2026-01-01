@@ -17,7 +17,8 @@ instructions: Default credentials are admin/admin123.
 changeLog:
   - date: 2025-11-17
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to 0.24.11
 links:
   - label: Github
     url: https://github.com/FuzzyGrim/Yamtrack
@@ -40,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/fuzzygrim/yamtrack:0.24.7
+      default: ghcr.io/fuzzygrim/yamtrack:0.24.11
     timezone:
       type: string
       title: Timezone
