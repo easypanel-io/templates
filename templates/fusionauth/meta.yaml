@@ -41,6 +41,14 @@ schema:
       type: string
       title: OpenSearch Service Image
       default: opensearchproject/opensearch:3.1.0
+    searchPassword:
+      type: string
+      title: Search Password
+      default: "H@rmony12345alskdJASKLDJSLADnmsd12@#"
+      description:
+        The Password for the search must be strong 8 characters long, one
+        uppercase letter, one lowercase letter, one number, and one special
+        character
 benefits:
   - title: Comprehensive Identity Management
     description:
