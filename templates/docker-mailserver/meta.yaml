@@ -1,0 +1,53 @@
+name: Docker Mailserver
+description: A production-ready fullstack but simple containerized mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.). Only configuration files, no SQL database. Keep it simple and versioned. Easy to deploy and upgrade. Originally created by @tomav, this project is now maintained by volunteers since January 2021.
+instructions: null
+changeLog:
+  - date: 2023-07-15
+    description: first release
+links:
+  - label: Website
+    url: https://docker-mailserver.github.io/docker-mailserver/latest/
+  - label: Documentation
+    url: https://docker-mailserver.github.io/docker-mailserver/latest/
+  - label: Github
+    url: https://github.com/docker-mailserver/docker-mailserver
+contributors:
+  - name: Ignace Mella
+    url: https://github.com/ikbenignace
+  - name: Andrei Canta
+    url: https://github.com/deiucanta
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - hostname
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mailserver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mailserver/docker-mailserver:latest
+    hostname:
+      type: string
+      title: Hostname
+      description: mail.example.com
+    enableFail2ban:
+      type: boolean
+      title: Enable Fail2ban
+      default: false
+    enableClamav:
+      type: boolean
+      title: Enable Clamav
+      default: false
+    enableRspamd:
+      type: boolean
+      title: Enable Rspamd
+      default: false
