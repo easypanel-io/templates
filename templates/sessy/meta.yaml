@@ -1,0 +1,79 @@
+name: Sessy
+description:
+  Sessy is a self-hosted web application built with Ruby on Rails that provides
+  secure access through HTTP authentication. The application offers a simple and
+  straightforward deployment model with configurable authentication credentials
+  and SSL settings. With persistent storage for application data, Sessy ensures
+  your information is retained across container restarts. The application
+  supports customizable authentication credentials, allowing you to set your own
+  username and password for secure access. Perfect for individuals or teams
+  looking for a lightweight self-hosted solution with basic authentication
+  requirements, developers needing a simple Rails-based application, or anyone
+  seeking a straightforward web application deployment with minimal
+  configuration overhead.
+
+instructions: null
+
+changeLog:
+  - date: 2026-01-02
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/marckohlbrugge/sessy
+  - label: Docker Hub
+    url: https://hub.docker.com/r/marckohlbrugge/sessy
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sessy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/marckohlbrugge/sessy:sha-8d93bde
+
+benefits:
+  - title: Simple Deployment
+    description:
+      Easy-to-deploy Rails application with minimal configuration requirements
+      for quick setup and operation.
+  - title: Persistent Storage
+    description:
+      Application data is stored persistently ensuring your information is
+      retained across container restarts.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your application deployment and data with a
+      self-hosted solution.
+
+features:
+  - title: SSL Configuration
+    description:
+      Flexible SSL settings allowing you to enable or disable SSL based on your
+      deployment requirements.
+  - title: Rails-Based
+    description:
+      Built on Ruby on Rails framework providing a robust and reliable
+      application foundation.
+  - title: Persistent Data Storage
+    description:
+      Application data stored in persistent volumes ensuring data retention and
+      reliability.
+
+tags:
+  - AWS
+  - SES
+  - Web Application
+  - Rails
+  - Self-Hosted
