@@ -1,0 +1,69 @@
+name: Zulip
+description: Zulip is a modern, open-source team collaboration platform that redefines the way teams communicate and collaborate. Unlike traditional messaging tools, Zulip organizes conversations into topics, ensuring that important information is easily accessible and discussions remain focused.
+instructions: Please use the following credentials to login. changeme@easypanel.io|changeme
+changeLog:
+  - date: 2023-09-21
+    description: first release
+links:
+  - label: Website
+    url: https://zulip.com/
+  - label: Documentation
+    url: https://zulip.com/help/
+  - label: Github
+    url: https://github.com/zulip/zulip/
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+    - emailNoReply
+    - emailHost
+    - emailUsername
+    - emailPassword
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: weblate
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: weblate/weblate:4.16.2-1
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: weblate-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: weblate-redis
+    emailNoReply:
+      type: string
+      title: No Reply Email
+    emailHost:
+      type: string
+      title: Email Host
+    emailUsername:
+      type: string
+      title: Email Username
+    emailPassword:
+      type: string
+      title: Email Password
+benefits:
+  - title: TODO
+    description: TODO
+features:
+  - title: TODO
+    description: TODO
+tags:
+  - Chat
+  - Communication
