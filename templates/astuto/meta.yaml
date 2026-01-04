@@ -1,0 +1,101 @@
+name: Astuto
+description:
+  Astuto is a self-hosted customer feedback management platform that helps teams
+  collect, organize, and respond to customer feedback in one centralized
+  location. Built with modern web technologies, Astuto provides a clean and
+  intuitive interface for managing feature requests, bug reports, and customer
+  suggestions. The application enables teams to create public or private
+  feedback boards where customers can submit ideas, vote on features, and track
+  the status of their requests. With built-in categorization, tagging, and
+  status tracking, Astuto helps product teams prioritize development work based
+  on customer demand. The platform supports multiple boards, user
+  authentication, and integration capabilities to streamline the feedback
+  collection process. Perfect for product teams managing customer feedback,
+  startups building customer-driven products, SaaS companies wanting to engage
+  with their user base, or any organization that wants to centralize and manage
+  customer input effectively.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-23
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/riggraz/astuto
+  - label: Docker Hub
+    url: https://hub.docker.com/r/riggraz/astuto
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: astuto
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: riggraz/astuto:latest
+
+benefits:
+  - title: Customer Feedback Management
+    description:
+      Centralize all customer feedback, feature requests, and suggestions in one
+      organized platform.
+  - title: Customer Engagement
+    description:
+      Create public feedback boards where customers can submit ideas and vote on
+      features they want to see.
+  - title: Self-Hosted Control
+    description:
+      Complete ownership of customer feedback data without relying on
+      third-party services.
+  - title: Product Prioritization
+    description:
+      Use voting and categorization to prioritize development work based on
+      customer demand.
+
+features:
+  - title: Feedback Boards
+    description:
+      Create multiple public or private boards for different products or
+      features to organize feedback.
+  - title: Voting System
+    description:
+      Allow customers to vote on feature requests to help prioritize development
+      efforts.
+  - title: Status Tracking
+    description:
+      Track the status of feedback items from submitted to in-progress to
+      completed.
+  - title: Categorization
+    description:
+      Organize feedback with categories and tags for easy filtering and
+      management.
+  - title: User Authentication
+    description:
+      Support for user accounts to manage feedback submissions and track
+      contributions.
+  - title: Modern Interface
+    description:
+      Clean and intuitive web interface for both customers and administrators.
+  - title: PostgreSQL Backend
+    description:
+      Reliable PostgreSQL database for storing all feedback data and
+      configurations.
+
+tags:
+  - Customer Feedback
+  - Product Management
+  - Self-Hosted
+  - Feedback Management
+  - Feature Requests
