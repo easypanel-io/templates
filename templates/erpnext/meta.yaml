@@ -1,0 +1,46 @@
+name: ERPNext
+description: ERPNext is an open-source Enterprise Resource Planning (ERP) software that empowers businesses of all sizes with comprehensive tools to manage their operations efficiently. It offers a range of integrated applications to handle various aspects of business operations, including accounting, inventory management, human resources, customer relationship management (CRM), project management, and more.
+instructions: Please use the following credentials to login. changeme@easypanel.io|changeme
+changeLog:
+  - date: 2023-09-21
+    description: first release
+links:
+  - label: Website
+    url: https://erpnext.com/
+  - label: Documentation
+    url: https://docs.erpnext.com/
+  - label: Github
+    url: https://github.com/frappe/erpnext
+contributors:
+  - name: matbrgz
+    url: https://github.com/matbrgz
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: erpnext
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: frappe/bench:14
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: erpnext-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: erpnext-redis
+tags:
+  - Enterprise Resource Planning
