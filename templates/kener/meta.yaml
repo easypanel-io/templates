@@ -14,6 +14,8 @@ changeLog:
     description: First Release
   - date: 2025-07-22
     description: Version bumped to 3.2.18
+  - date: 2025-12-25
+    description: Version bumped to 3.2.19
 links:
   - label: Website
     url: https://kener.ing/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rajnandan1/kener:3.2.18
+      default: ghcr.io/rajnandan1/kener:3.2.19
 benefits:
   - title: Real-Time Service Monitoring
     description:

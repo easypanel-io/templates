@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2024-01-03
     description: First release
+  - date: 2025-12-25
+    description: Version bumped to 2025.12.22-5f84a5b
 links:
   - label: Website
     url: https://invidious.io/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/invidious/invidious:dbee027ed9b568469815b319332e029964bff7fb-quic
+      default: quay.io/invidious/invidious:2025.12.22-5f84a5b
 benefits:
   - title: Ad-Free and Privacy-Respecting
     description:

@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v5.0.4
   - date: 2025-07-15
     description: Version bumped to v5.4.20
+  - date: 2025-12-24
+    description: Version bumped to v6.0.5
 links:
   - label: Website
     url: https://cal.com
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: calcom/cal.com:v5.4.20
+      default: calcom/cal.com:v6.0.5
     databaseServiceName:
       type: string
       title: App Service Name

@@ -1,0 +1,85 @@
+name: LMS
+description:
+  LMS (Lightweight Music Server) is a self-hosted music streaming software that
+  provides access to your music collection from anywhere using a web interface.
+  It features Subsonic/OpenSubsonic API support, multi-valued tags, artist
+  relationships, MusicBrainz integration, ListenBrainz support, recommendation
+  engine, and comprehensive music discovery features.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release (v3.70.0)
+  - date: 2025-12-25
+    description: Version bumped to 3.73.0
+links:
+  - label: Demo
+    url: https://lms-demo.poupon.dev
+  - label: Github
+    url: https://github.com/epoupon/lms
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lms
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: epoupon/lms:3.73.0
+
+benefits:
+  - title: Subsonic/OpenSubsonic API Support
+    description:
+      Full compatibility with Subsonic and OpenSubsonic APIs, allowing you to
+      use any compatible music client or mobile app with your LMS server.
+  - title: Advanced Music Discovery
+    description:
+      Powerful recommendation engine with tag-based filters, radio mode, and
+      intelligent suggestions to help you discover new music from your
+      collection.
+  - title: MusicBrainz Integration
+    description:
+      Seamless integration with MusicBrainz identifiers to handle duplicated
+      artist and release names, ensuring accurate metadata and organization.
+
+features:
+  - title: Multi-Valued Tags Support
+    description:
+      Support for multi-valued tags including genre, mood, artists, and custom
+      tags for advanced music organization and filtering capabilities.
+  - title: Artist Relationships
+    description:
+      Comprehensive artist relationship support including composer, conductor,
+      lyricist, mixer, performer, producer, and remixer roles.
+  - title: ListenBrainz Integration
+    description:
+      Full ListenBrainz support for scrobbling, synchronizing listens, and
+      synchronizing 'love' feedbacks to enhance your music discovery.
+  - title: Release Groups Support
+    description:
+      Support for different versions of albums such as remasters, reissues, and
+      compilations with proper grouping and organization.
+  - title: Audio Transcoding
+    description:
+      Built-in audio transcoding for compatibility and reduced bandwidth,
+      supporting various audio formats and quality settings.
+  - title: User Management
+    description:
+      Comprehensive user management with multiple authentication backends,
+      allowing secure access control for different users.
+
+tags:
+  - Music Streaming
+  - Subsonic
+  - MusicBrainz
+  - ListenBrainz
+  - Self-Hosted
+  - Audio Streaming

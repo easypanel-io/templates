@@ -31,6 +31,8 @@ changeLog:
     description: Version bumped to 9.6.1
   - date: 2025-07-15
     description: Version bumped to 9.9.7
+  - date: 2025-12-25
+    description: Version bumped to 9.11.1
 links:
   - label: Website
     url: https://coralproject.net/
@@ -61,7 +63,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coralproject/talk:9.9.7
+      default: coralproject/talk:9.11.1
     redisServiceName:
       type: string
       title: Redis Service Name
