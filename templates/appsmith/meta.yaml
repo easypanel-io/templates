@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 1.55
   - date: 2025-02-21
     description: Version bumped to v1.62
+  - date: 2025-12-24
+    description: Version bumped to v1.94
 
 links:
   - label: Website
@@ -57,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: appsmith/appsmith-ce:v1.62
+      default: appsmith/appsmith-ce:v1.94
 benefits:
   - title: Streamlined Operations
     description:

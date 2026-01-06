@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-07-16
     description: first release
+  - date: 2025-12-29
+    description: Version bumped to 3.34.1
 links:
   - label: Website
     url: https://ngrok.com
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ngrok/ngrok:3.23.3-alpine
+      default: ngrok/ngrok:3.34.1-alpine
     ngrokAuthToken:
       type: string
       title: ngrok Auth Token

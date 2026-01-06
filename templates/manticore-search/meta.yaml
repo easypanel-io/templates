@@ -19,6 +19,8 @@ changeLog:
     description: Initial template release
   - date: 2025-07-22
     description: Version bumped to 13.2.3
+  - date: 2025-12-29
+    description: Version bumped to 15.1.0
 links:
   - label: Website
     url: https://manticoresearch.com/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: Manticore Image
-      default: manticoresearch/manticore:13.2.3
+      default: manticoresearch/manticore:15.1.0
 benefits:
   - title: High Performance
     description: Fast search and filtering of petabytes of text data.
