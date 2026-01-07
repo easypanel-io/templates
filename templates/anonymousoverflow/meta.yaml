@@ -1,0 +1,90 @@
+name: AnonymousOverflow
+description:
+  AnonymousOverflow is an anonymous question and answer platform inspired by
+  Stack Overflow, designed for creating a safe space where users can ask
+  questions without revealing their identity. The platform provides a
+  community-driven Q&A experience with features like upvoting, downvoting,
+  question categorization, and answer moderation. Built with privacy in mind,
+  AnonymousOverflow allows users to participate in discussions and share
+  knowledge while maintaining complete anonymity. Perfect for organizations
+  wanting to create internal Q&A forums, educational institutions seeking
+  anonymous student feedback platforms, or communities that value privacy in
+  knowledge sharing.
+
+instructions: null
+
+changeLog:
+  - date: 2026-01-07 (release)
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/httpjamesm/anonymousoverflow
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anonymousoverflow
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/httpjamesm/anonymousoverflow:release
+
+benefits:
+  - title: Anonymous Q&A Platform
+    description:
+      Create a safe space for anonymous questions and answers, encouraging open
+      communication without identity concerns.
+  - title: Community-Driven
+    description:
+      Leverage community voting and moderation to surface the best questions and
+      answers.
+  - title: Privacy-Focused
+    description:
+      Built with privacy in mind, allowing users to participate without
+      revealing their identity.
+  - title: Self-Hosted Control
+    description:
+      Deploy on your own infrastructure for complete control over your Q&A
+      platform and data.
+
+features:
+  - title: Question & Answer System
+    description:
+      Post questions and provide answers with support for markdown formatting
+      and code blocks.
+  - title: Voting System
+    description:
+      Upvote and downvote questions and answers to help surface the most
+      valuable content.
+  - title: Categorization
+    description:
+      Organize questions by categories and tags for better discoverability.
+  - title: Moderation Tools
+    description:
+      Built-in moderation capabilities to maintain quality and community
+      standards.
+  - title: Search Functionality
+    description:
+      Search through questions and answers to find relevant content quickly.
+  - title: User Management
+    description:
+      JWT-based authentication system for secure user sessions and access
+      control.
+
+tags:
+  - Q&A
+  - Forum
+  - Anonymous
+  - Community
+  - Self-Hosted
