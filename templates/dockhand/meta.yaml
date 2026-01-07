@@ -18,12 +18,16 @@ instructions: |
   necessary permissions to access the Docker daemon.
 
 changeLog:
-  - date: 2026-01-07
+  - date: 2026-01-07 (8d75d786)
     description: Template Release
 
 links:
   - label: GitHub
     url: https://github.com/fnsys/dockhand
+  - label: Website
+    url: https://dockhand.pro
+  - label: Docker Hub
+    url: https://hub.docker.com/r/fnsys/dockhand
 
 contributors:
   - name: Ahson Shaikh
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fnsys/dockhand:latest
+      default: fnsys/dockhand:8d75d786
 
 benefits:
   - title: Visual Docker Management
