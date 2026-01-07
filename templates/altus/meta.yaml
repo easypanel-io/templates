@@ -1,0 +1,67 @@
+name: Altus
+description:
+  Altus is a desktop application that brings WhatsApp Web to your desktop with
+  additional features and customization options. It provides a clean, native
+  desktop experience for WhatsApp Web, with support for multiple accounts,
+  themes, and enhanced functionality beyond the standard web interface.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-06
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-altus/
+  - label: Github
+    url: https://github.com/linuxserver/docker-altus
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: altus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/altus:5.7.1
+
+benefits:
+  - title: Enhanced WhatsApp Experience
+    description:
+      Access WhatsApp Web with additional features and customization options.
+  - title: Multi-Account Support
+    description:
+      Manage multiple WhatsApp accounts from a single desktop application.
+  - title: Native Desktop Feel
+    description:
+      Enjoy a native desktop application experience instead of browser tabs.
+
+features:
+  - title: WhatsApp Web Desktop
+    description:
+      Provides WhatsApp Web functionality in a dedicated desktop application.
+  - title: Theme Customization
+    description:
+      Customize the appearance with various themes and interface options.
+  - title: Enhanced Notifications
+    description:
+      Better notification management compared to browser-based WhatsApp Web.
+  - title: Multi-Instance Support
+    description: Support for multiple WhatsApp accounts simultaneously.
+
+tags:
+  - Messaging
+  - WhatsApp
+  - Desktop App
+  - Communication
