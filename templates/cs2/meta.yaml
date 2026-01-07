@@ -1,0 +1,127 @@
+name: Counter-Strike 2 Dedicated Server
+description:
+  Counter-Strike 2 Dedicated Server allows you to host your own CS2 game server
+  with full control over configuration and settings. This self-hosted gaming
+  solution provides a professional-grade server environment for competitive
+  matches, casual gameplay, or private practice sessions. The server supports
+  various game modes including casual, competitive, and deathmatch, with
+  extensive customization options for maps, player limits, server rules, and bot
+  configurations. Features include RCON remote administration, CSTV for
+  broadcasting matches, workshop map support, and comprehensive logging. Perfect
+  for gaming communities, esports teams, or anyone wanting to run their own CS2
+  server with dedicated resources and low latency.
+instructions:
+  IMPORTANT - You must obtain a Game Server Token from
+  https://steamcommunity.com/dev/managegameservers before your server can be
+  listed publicly.
+changeLog:
+  - date: 2025-11-04
+    description: Template Release
+links:
+  - label: Steam Game Server Account Management
+    url: https://steamcommunity.com/dev/managegameservers
+  - label: Docker Hub
+    url: https://hub.docker.com/r/joedwards32/cs2
+  - label: CS2 Dedicated Servers Wiki
+    url: https://developer.valvesoftware.com/wiki/Counter-Strike_2/Dedicated_Servers
+  - label: Github
+    url: https://github.com/joedwards32/CS2
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - udpPort
+    - tcpPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cs2-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: joedwards32/cs2:4.0.0
+    srcdToken:
+      type: string
+      title: Steam Game Server Token
+      default: ""
+    serverName:
+      type: string
+      title: Server Name
+      default: My CS2 Server
+    rconPassword:
+      type: string
+      title: RCON Password
+      default: changeme
+    serverPassword:
+      type: string
+      title: Server Password (Optional)
+      default: ""
+    maxPlayers:
+      type: string
+      title: Max Players
+      default: "10"
+    gameAlias:
+      type: string
+      title: Game Alias
+      default: casual
+    mapGroup:
+      type: string
+      title: Map Group
+      default: mg_active
+    startMap:
+      type: string
+      title: Start Map
+      default: de_inferno
+    tcpPort:
+      type: string
+      title: TCP/UDP Port
+      default: "27015"
+    udpPort:
+      type: string
+      title: TV UDP Port
+      default: "27020"
+benefits:
+  - title: Full Control & Customization
+    description:
+      Host your own CS2 server with complete control over game modes, maps,
+      rules, and server settings. Perfect for competitive teams and gaming
+      communities.
+  - title: Self-Hosted Performance
+    description:
+      Ensure low latency and optimal performance by hosting on your own
+      infrastructure. No reliance on third-party hosting services.
+  - title: Private & Secure
+    description:
+      Create password-protected servers for private matches, practice sessions,
+      or exclusive community events with full administrative control.
+
+features:
+  - title: Multiple Game Modes
+    description:
+      Support for casual, competitive, deathmatch, and custom game modes with
+      configurable settings for each type of gameplay.
+  - title: Workshop Integration
+    description:
+      Load custom maps and collections directly from the Steam Workshop to
+      expand your server's content and provide unique experiences.
+  - title: RCON Administration
+    description:
+      Remote console access for server administration, allowing you to manage
+      your server, execute commands, and monitor activity from anywhere.
+  - title: CSTV Broadcasting
+    description:
+      Built-in SourceTV support for broadcasting matches with configurable
+      delay, recording, and spectator settings for tournaments and events.
+
+tags:
+  - Gaming
+  - Game Server
+  - Counter-Strike
+  - FPS
+  - Multiplayer

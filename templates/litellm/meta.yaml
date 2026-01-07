@@ -12,6 +12,8 @@ changeLog:
     description: Initial Template Release for LiteLLM
   - date: 2025-02-28
     description: Version bumped to main-v1.61.20-nightly
+  - date: 2025-12-25
+    description: Version bumped to main-v1.80.11.rc.1
 links:
   - label: Documentation
     url: https://docs.litellm.ai/docs/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/berriai/litellm:main-v1.61.20-nightly
+      default: ghcr.io/berriai/litellm:main-v1.80.11.rc.1
 benefits:
   - title: Easy Integration
     description:
