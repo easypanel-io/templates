@@ -1,0 +1,82 @@
+name: ZincSearch
+description:
+  ZincSearch is a lightweight, fast, and modern search engine built in Go. It
+  provides full-text search capabilities with a simple REST API, making it an
+  excellent alternative to Elasticsearch for smaller to medium-scale
+  applications. ZincSearch offers easy deployment, low resource consumption, and
+  compatibility with Elasticsearch APIs.
+
+instructions:
+
+changeLog:
+  - date: 2025-10-13
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://zincsearch-docs.zinc.dev/
+  - label: Github
+    url: https://github.com/zinclabs/zincsearch
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zincsearch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: public.ecr.aws/zinclabs/zincsearch:0.4.10
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: "123"
+
+benefits:
+  - title: Lightweight Search Engine
+    description:
+      Fast and resource-efficient search engine perfect for small to medium
+      applications.
+  - title: Elasticsearch Compatible
+    description:
+      Compatible with Elasticsearch APIs, making migration and integration
+      easier.
+  - title: Easy Deployment
+    description:
+      Simple setup with minimal configuration required to get started.
+
+features:
+  - title: Full-Text Search
+    description:
+      Provides powerful full-text search capabilities with indexing support.
+  - title: REST API
+    description:
+      Simple and intuitive REST API for all search and indexing operations.
+  - title: Low Resource Usage
+    description:
+      Designed to be lightweight and efficient with minimal resource
+      consumption.
+  - title: Built-in Dashboard
+    description:
+      Includes a web-based dashboard for managing indexes and searching data.
+
+tags:
+  - Search Engine
+  - Full-Text Search
+  - API
+  - Elasticsearch Alternative
