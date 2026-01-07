@@ -1,0 +1,86 @@
+name: WAHA
+description:
+  WAHA (WhatsApp HTTP API) is a self-hosted, privacy-focused WhatsApp API that
+  you can run in a click! It provides a REST API to send and receive WhatsApp
+  messages, manage groups, channels, and status updates. WAHA runs a real
+  instance of WhatsApp Web to avoid getting blocked and supports automation
+  through HTTP API. The core version is completely free with no limits on
+  messages or time, making it perfect for WhatsApp automation, chatbots, and
+  integrations.
+instructions: null
+changeLog:
+  - date: 2025-06-04
+    description: First Release
+links:
+  - label: Website
+    url: https://waha.devlike.pro/
+  - label: Github
+    url: https://github.com/devlikeapro/waha
+  - label: Documentation
+    url: https://waha.devlike.pro/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: waha
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: devlikeapro/waha:latest-2025.5.6
+benefits:
+  - title: Self-hosted WhatsApp API
+    description:
+      Run your own WhatsApp API server without relying on third-party services.
+      Complete control over your data and privacy with no suspicious SaaS
+      solutions.
+  - title: Free and unlimited
+    description:
+      WAHA Core version is completely free with no limits on messages or time.
+      No license expiration or subscription fees required.
+  - title: Easy to use REST API
+    description:
+      Simple HTTP/REST API that works with any programming language - Python,
+      JavaScript, PHP, C#, Go, Java, and more. Well-documented with Swagger.
+  - title: Real WhatsApp Web instance
+    description:
+      Uses a real instance of WhatsApp Web under the hood to avoid getting
+      blocked, ensuring reliable message delivery.
+features:
+  - title: Send and receive messages
+    description:
+      Send and receive text messages, images, videos, voice messages, and
+      documents through simple HTTP API calls.
+  - title: Groups and channels management
+    description:
+      Create and manage WhatsApp groups, channels, and status updates. Automate
+      group operations and channel broadcasting.
+  - title: Built-in dashboard
+    description:
+      Web interface to easily manage your WhatsApp sessions, scan QR codes, and
+      monitor your API usage.
+  - title: Webhook support
+    description:
+      Receive real-time notifications via webhooks when new messages arrive or
+      other events occur.
+  - title: Multiple sessions
+    description:
+      Support for multiple WhatsApp accounts (sessions) within a single
+      instance, perfect for scaling your automation.
+  - title: No blocking protection
+    description:
+      Designed to minimize the risk of WhatsApp blocking by using real WhatsApp
+      Web instances and following best practices.
+tags:
+  - WhatsApp
+  - API
+  - Messaging
+  - Automation
+  - Chatbot
