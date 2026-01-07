@@ -30,6 +30,8 @@ changeLog:
     description: Updated to use Redis instead of MinIO, simplified configuration
   - date: 2025-07-28
     description: Updated the template.
+  - date: 2025-12-29
+    description: Version bumped to 3.14.2
 links:
   - label: Website
     url: https://typebot.io
@@ -61,11 +63,11 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:3.9
+      default: baptistearno/typebot-builder:3.14.2
     viewerServiceImage:
       type: string
       title: Viewer Service Image
-      default: baptistearno/typebot-viewer:3.9.0
+      default: baptistearno/typebot-viewer:3.14.2
     adminEmail:
       type: string
       title: Admin Email

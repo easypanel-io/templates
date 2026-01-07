@@ -14,6 +14,8 @@ changeLog:
     description: update to v5.11
   - date: 2025-07-22
     description: Version bumped to v5.12
+  - date: 2025-12-25
+    description: Version bumped to v5.12.40
 links:
   - label: Github
     url: https://github.com/invoiceninja/invoiceninja
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceninja/invoiceninja:5.12
+      default: invoiceninja/invoiceninja:5.12.40
     nginxImage:
       type: string
       title: Nginx Image

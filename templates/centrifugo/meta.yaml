@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-04-03
     description: Initial template release
+  - date: 2025-12-24
+    description: Updated to Centrifugo v6.5.2
 links:
   - label: Website
     url: https://centrifugal.dev/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: Centrifugo Image
-      default: centrifugo/centrifugo:v6.1.0
+      default: centrifugo/centrifugo:v6.5.2
     adminPassword:
       type: string
       title: Admin Password

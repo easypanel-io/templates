@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to 4.97.2
   - date: 2025-07-25
     description: Version bumped to 4.102.2
+  - date: 2025-12-29
+    description: Version bumped to 4.107.0
 links:
   - label: Documentation
     url: https://github.com/linuxserver/docker-code-server/blob/master/README.md
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/code-server:4.102.2
+      default: lscr.io/linuxserver/code-server:4.107.0
 benefits:
   - title: Access VS Code from anywhere
     description:

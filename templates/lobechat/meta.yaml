@@ -45,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lobehub/lobe-chat:1.103.0
+      default: lobehub/lobe-chat:1.143.2
     openAiKey:
       type: string
       title: OpenAI API Key

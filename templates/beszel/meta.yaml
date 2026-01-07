@@ -10,6 +10,8 @@ changeLog:
     description: Template Release
   - date: 2025-07-15
     description: Version bumped to 0.11
+  - date: 2025-12-24
+    description: Updated to 0.17
 
 links:
   - label: Documentation
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: henrygd/beszel:0.11
+      default: henrygd/beszel:0.17
 benefits:
   - title: Comprehensive Monitoring
     description:

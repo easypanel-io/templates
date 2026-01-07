@@ -1,0 +1,116 @@
+name: Zerobyte
+description:
+  Zerobyte is a self-hosted backup and restore management solution that provides
+  a unified web interface for managing your backup repositories across multiple
+  storage backends. It supports various cloud storage providers including
+  S3-compatible storage, Google Cloud Storage, Azure Blob Storage, and local
+  directories through rclone integration. With its intuitive web interface, you
+  can configure backup sources, manage multiple repositories, schedule backups,
+  and perform restores with ease. The application leverages FUSE filesystem
+  capabilities to mount and interact with cloud storage as if it were local
+  storage, enabling seamless backup and restore operations. Zerobyte features
+  automatic backup scheduling, support for multiple storage backends, encrypted
+  backup repositories, incremental backups for efficient storage usage, and
+  comprehensive restore capabilities. The web-based dashboard allows you to
+  monitor backup status, view repository statistics, and manage your backup
+  configurations without command-line tools. Perfect for home lab enthusiasts
+  who need reliable backup solutions, system administrators managing multiple
+  backup repositories, organizations requiring self-hosted backup
+  infrastructure, or anyone who wants to maintain control over their backup data
+  with support for various cloud providers and local storage options.
+
+instructions:
+  Zerobyte requires access to the /dev/fuse device for FUSE filesystem
+  operations. After deploying this template, you may need to manually configure
+  device access on your host system.
+
+changeLog:
+  - date: 2025-12-02
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/nicotsx/zerobyte
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zerobyte
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/nicotsx/zerobyte:v0.15
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+
+benefits:
+  - title: Unified Backup Management
+    description:
+      Manage all your backup repositories from a single web interface with
+      support for multiple cloud storage providers and local directories.
+  - title: Multi-Cloud Support
+    description:
+      Backup to S3-compatible storage, Google Cloud Storage, Azure Blob Storage,
+      or any storage provider supported by rclone.
+  - title: Self-Hosted Privacy
+    description:
+      Keep complete control over your backup infrastructure and data without
+      relying on third-party backup services.
+  - title: FUSE Integration
+    description:
+      Leverages FUSE filesystem capabilities for seamless interaction with cloud
+      storage as if it were mounted locally.
+
+features:
+  - title: Web-Based Interface
+    description:
+      Intuitive web dashboard for configuring backups, managing repositories,
+      and performing restore operations without command-line tools.
+  - title: Multiple Storage Backends
+    description:
+      Support for local directories, S3-compatible storage, Google Cloud
+      Storage, Azure Blob Storage, and rclone remotes.
+  - title: Automatic Scheduling
+    description:
+      Configure automated backup schedules to ensure your data is regularly
+      backed up without manual intervention.
+  - title: Incremental Backups
+    description:
+      Efficient backup strategy with incremental backups to minimize storage
+      usage and backup time.
+  - title: Encryption Support
+    description:
+      Create encrypted backup repositories to ensure your data remains secure
+      both in transit and at rest.
+  - title: Flexible Restore
+    description:
+      Easily restore individual files, directories, or entire backup snapshots
+      from your repositories through the web interface.
+  - title: Repository Management
+    description:
+      Create and manage multiple backup repositories across different storage
+      backends from a centralized interface.
+  - title: Backup Monitoring
+    description:
+      Monitor backup status, view repository statistics, and track backup
+      history to ensure your data protection strategy is working effectively.
+
+tags:
+  - Backup
+  - Storage
+  - Cloud Storage
+  - Data Management
+  - Self-Hosted
+  - Disaster Recovery

@@ -13,6 +13,8 @@ instructions: Login using username; root and password specified in the envs.
 changeLog:
   - date: 2025-02-03
     description: First Release
+  - date: 2025-12-24
+    description: Updated to ArangoDB version 3.12.7
 links:
   - label: Documentation
     url: https://www.arangodb.com/docs/stable/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: arangodb:3.12.4
+      default: arangodb:3.12.7
 benefits:
   - title: Multi-Model Database
     description:
