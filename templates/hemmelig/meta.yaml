@@ -1,0 +1,132 @@
+name: Hemmelig
+description:
+  Hemmelig is a secure, self-hosted secret sharing platform that allows you to
+  share sensitive information like passwords, API keys, and confidential
+  documents safely. Built with security in mind, Hemmelig provides end-to-end
+  encryption, expiration dates, and access controls to ensure your secrets
+  remain protected. Perfect for teams, developers, and organizations who need to
+  share sensitive information securely without relying on external services.
+instructions: null
+changeLog:
+  - date: 2025-07-16
+    description: First Release
+links:
+  - label: Website
+    url: https://hemmelig.app
+  - label: GitHub
+    url: https://github.com/HemmeligOrg/Hemmelig.app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - rootUser
+    - rootPassword
+    - rootEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hemmelig
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hemmeligapp/hemmelig:v5.19.17
+    rootUser:
+      type: string
+      title: Root User
+      default: groot
+      description: Username for the root admin user
+    rootPassword:
+      type: string
+      title: Root Password
+      default: iamroot
+      description:
+        Password for the root admin user (change this after first login)
+    rootEmail:
+      type: string
+      title: Root Email
+      default: groot@hemmelig.app
+      description: Email address for the root admin user
+    fileSize:
+      type: string
+      title: File Size Limit
+      default: "4"
+      description: Maximum file upload size in MB
+    forcedLanguage:
+      type: string
+      title: Forced Language
+      default: en
+      description: Default language for the application
+    maxTextSize:
+      type: string
+      title: Max Text Size
+      default: "256"
+      description: Maximum text size for secrets in KB
+benefits:
+  - title: Secure Secret Sharing
+    description:
+      Share sensitive information like passwords, API keys, and confidential
+      documents with end-to-end encryption and security controls.
+  - title: Self-Hosted Security
+    description:
+      Maintain complete control over your sensitive data by hosting Hemmelig on
+      your own infrastructure instead of relying on external services.
+  - title: End-to-End Encryption
+    description:
+      Your secrets are encrypted at rest and in transit, ensuring maximum
+      security for your sensitive information.
+  - title: Access Controls
+    description:
+      Control who can access your shared secrets with configurable permissions,
+      expiration dates, and access logs.
+  - title: File and Text Support
+    description:
+      Share both text-based secrets and file uploads with configurable size
+      limits and security settings.
+  - title: Audit Trail
+    description:
+      Track access to your shared secrets with comprehensive logging and audit
+      capabilities.
+features:
+  - title: Secret Management
+    description:
+      Create, share, and manage secrets with secure encryption and access
+      controls for sensitive information.
+  - title: File Uploads
+    description:
+      Upload and share confidential files with configurable size limits and
+      security settings.
+  - title: Text Sharing
+    description:
+      Share text-based secrets like passwords, API keys, and configuration data
+      with encryption.
+  - title: Expiration Dates
+    description:
+      Set automatic expiration dates for your shared secrets to ensure they
+      don't remain accessible indefinitely.
+  - title: Access Controls
+    description:
+      Configure who can access your shared secrets with password protection and
+      access permissions.
+  - title: Admin Dashboard
+    description:
+      Manage your Hemmelig instance through a comprehensive admin dashboard with
+      user and secret management.
+  - title: Multi-Language Support
+    description:
+      Support for multiple languages with configurable default language
+      settings.
+  - title: Data Persistence
+    description:
+      Your secrets, files, and configuration are stored securely and persist
+      across container restarts and updates.
+tags:
+  - Security
+  - Secret Sharing
+  - Encryption
+  - Self-Hosted
+  - Password Management
