@@ -1,0 +1,73 @@
+name: QloApps
+description:
+  QloApps is a comprehensive hotel booking and property management system built on
+  PrestaShop. It provides a complete solution for hoteliers to manage their properties,
+  bookings, and customers. The system includes features like room management, booking
+  engine, customer management, and payment processing. QloApps is designed to help
+  hotels streamline their operations and improve guest experience.
+instructions: Login email admin@qloapps.local and password 12345678
+changeLog:
+  - date: 2025-04-07
+    description: First Release
+links:
+  - label: Website
+    url: https://qloapps.com/
+  - label: Documentation
+    url: https://qloapps.com/hotel-website/
+  - label: Github
+    url: https://github.com/Qloapps/QloApps
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qloapps
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: webkul/qloapps_docker:1.6.0
+benefits:
+  - title: Complete Hotel Management
+    description:
+      Manage all aspects of your hotel business from a single platform.
+  - title: Booking Engine
+    description:
+      Powerful booking engine with real-time availability and pricing.
+  - title: Customer Management
+    description:
+      Comprehensive customer profiles and booking history.
+  - title: Payment Processing
+    description:
+      Integrated payment processing with multiple payment gateways.
+  - title: Mobile Responsive
+    description:
+      Mobile-friendly interface for both guests and staff.
+features:
+  - title: Room Management
+    description:
+      Manage room types, rates, and availability with ease.
+  - title: Booking Management
+    description:
+      Handle reservations, check-ins, and check-outs efficiently.
+  - title: Customer Portal
+    description:
+      Self-service portal for guests to manage their bookings.
+  - title: Reporting
+    description:
+      Generate detailed reports on occupancy, revenue, and more.
+  - title: Multi-language Support
+    description:
+      Support for multiple languages to serve international guests.
+tags:
+  - Hotel Management
+  - Booking System
+  - Property Management
+  - Hospitality
+  - E-commerce 
