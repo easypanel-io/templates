@@ -1,0 +1,84 @@
+name: Dnote
+description:
+  Dnote is a simple command-line notebook application that helps you capture and
+  organize your thoughts. It provides a clean interface for taking notes and
+  organizing them into books.
+instructions: Configure the SMTP server to send verification emails.
+changeLog:
+  - date: 2025-04-11
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/dnote/dnote
+  - label: Website
+    url: https://dnote.io
+  - label: Documentation
+    url: https://www.getdnote.com/blog/introducing-dnote-web/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - SmtpHost
+    - SmtpPort
+    - SmtpUser
+    - SmtpPassword
+    - SmtpFrom
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dnote
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dnote/dnote:2.1.1
+    SmtpHost:
+      type: string
+      title: SMTP Host
+      default: smtp.gmail.com
+    SmtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    SmtpUser:
+      type: string
+      title: SMTP User
+      default: your-email@gmail.com
+    SmtpPassword:
+      type: string
+      title: SMTP Password
+      default: your-password
+    SmtpFrom:
+      type: string
+      title: SMTP From
+      default: your-email@gmail.com
+benefits:
+  - title: Note Taking
+    description: Simple and efficient note-taking
+  - title: Organization
+    description: Organize notes into books
+  - title: Command Line
+    description: Access notes from the command line
+  - title: Self-Hosted
+    description: Keep your notes private and secure
+features:
+  - title: Note Management
+    description: Create and manage notes easily
+  - title: Book Organization
+    description: Organize notes into books
+  - title: Search
+    description: Search through your notes
+  - title: CLI Access
+    description: Access notes from the command line
+  - title: Web Interface
+    description: Access notes through a web interface
+tags:
+  - Note Taking
+  - CLI
+  - Organization
+  - Self-Hosted
+  - Productivity
