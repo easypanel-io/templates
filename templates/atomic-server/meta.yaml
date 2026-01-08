@@ -1,0 +1,54 @@
+name: Atomic Server
+description: Atomic Server is a powerful and flexible server for managing and serving atomic data. It provides a robust platform for data management with support for various protocols and formats.
+instructions: null
+changeLog:
+  - date: 2025-04-24
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/joepmeneer/atomic-server
+  - label: Documentation
+    url: https://docs.atomicdata.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: atomic-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: joepmeneer/atomic-server:v0.38.0
+benefits:
+  - title: Powerful Data Management
+    description: Atomic Server provides a robust platform for managing and serving atomic data with support for various protocols and formats.
+  - title: Flexible Configuration
+    description: Highly configurable with support for custom domains, ports, and storage options.
+  - title: Secure by Default
+    description: Built with security in mind, providing secure data access and management capabilities.
+features:
+  - title: Multiple Protocols
+    description: Supports various protocols for data access and management.
+  - title: Customizable Storage
+    description: Flexible storage options with support for custom storage paths.
+  - title: Web Interface
+    description: Includes a web interface for easy management and monitoring.
+  - title: REST API
+    description: Provides a REST API for programmatic access and automation.
+  - title: SSL Support
+    description: Built-in support for SSL/TLS encryption.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Atomic
+  - Server
+  - Data Management
+  - API
+  - Web Interface
