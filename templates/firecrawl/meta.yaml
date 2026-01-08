@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-06-04
     description: First Release
+  - date: 2026-01-07
+    description: Updated to new architecture with RabbitMQ and nuq-postgres
 links:
   - label: Website
     url: https://firecrawl.dev/
@@ -34,11 +36,56 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/mendableai/firecrawl:latest
+      default: ghcr.io/firecrawl/firecrawl
     playwrightServiceImage:
       type: string
       title: Playwright Service Image
-      default: ghcr.io/mendableai/playwright-service:latest
+      default: ghcr.io/firecrawl/playwright-service:latest
+    postgresImage:
+      type: string
+      title: PostgreSQL Image
+      default: ghcr.io/firecrawl/nuq-postgres:latest
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key (optional)
+      description: API key for OpenAI integration
+      default: ""
+    openaiBaseUrl:
+      type: string
+      title: OpenAI Base URL (optional)
+      description: Custom OpenAI API base URL
+      default: ""
+    modelName:
+      type: string
+      title: Model Name (optional)
+      description: Default model name for AI operations
+      default: ""
+    modelEmbeddingName:
+      type: string
+      title: Model Embedding Name (optional)
+      description: Model name for embeddings
+      default: ""
+    ollamaBaseUrl:
+      type: string
+      title: Ollama Base URL (optional)
+      description: Ollama API base URL for local models
+      default: ""
+    numWorkersPerQueue:
+      type: string
+      title: Number of Workers Per Queue
+      default: "8"
+    crawlConcurrentRequests:
+      type: string
+      title: Crawl Concurrent Requests
+      default: "10"
+    maxConcurrentJobs:
+      type: string
+      title: Max Concurrent Jobs
+      default: "5"
+    browserPoolSize:
+      type: string
+      title: Browser Pool Size
+      default: "5"
 benefits:
   - title: LLM-Ready Data Extraction
     description:
@@ -84,6 +131,7 @@ features:
       Search the web and optionally scrape search results in one operation.
       Perfect for research and content discovery.
 tags:
+  - Self-Hosted
   - Web Scraping
   - Data Extraction
   - AI
