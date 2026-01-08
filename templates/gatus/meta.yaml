@@ -1,0 +1,110 @@
+name: Gatus
+description:
+  Gatus is a self-hosted automated service health dashboard that monitors the
+  uptime and performance of your services, APIs, and websites. The application
+  provides a clean, modern web interface to visualize the health status of all
+  your monitored endpoints in real-time. Gatus performs periodic health checks
+  on configured endpoints, evaluating custom conditions like HTTP status codes,
+  response body content, response times, and more. The dashboard displays
+  detailed metrics including uptime percentages, average response times, and
+  historical status data. With support for various alerting integrations
+  including Discord, Slack, PagerDuty, and custom webhooks, Gatus can notify you
+  immediately when services go down or fail health checks. The application
+  supports complex condition evaluation using JSON path queries, pattern
+  matching, and response time thresholds. Perfect for DevOps teams monitoring
+  microservices infrastructure, system administrators tracking critical
+  services, developers needing uptime monitoring for their applications, or
+  anyone who wants a simple, self-hosted alternative to commercial monitoring
+  services with complete control over their health checks and data.
+
+instructions:
+  you can modify the config from the config.yaml file in the storage section.
+
+changeLog:
+  - date: 2025-12-17
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/TwiN/gatus
+  - label: Docker Hub
+    url: https://hub.docker.com/r/twinproduction/gatus
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gatus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: twinproduction/gatus:v5.33.1
+
+benefits:
+  - title: Automated Health Monitoring
+    description:
+      Continuously monitor your services, APIs, and websites with automated
+      health checks and real-time status updates.
+  - title: Custom Condition Evaluation
+    description:
+      Define complex health check conditions using status codes, response body
+      content, JSON path queries, and response time thresholds.
+  - title: Alerting Integrations
+    description:
+      Get notified immediately when services fail through Discord, Slack,
+      PagerDuty, email, or custom webhooks.
+  - title: Self-Hosted Control
+    description:
+      Complete ownership of your monitoring data and health check configurations
+      without relying on external services.
+
+features:
+  - title: Health Dashboard
+    description:
+      Clean, modern web interface displaying real-time health status of all
+      monitored endpoints with uptime percentages and metrics.
+  - title: Flexible Health Checks
+    description:
+      Configure health checks with custom intervals, conditions, and evaluation
+      criteria for each endpoint.
+  - title: Response Time Monitoring
+    description:
+      Track and alert on response times to ensure services meet performance
+      requirements.
+  - title: JSON Path Queries
+    description:
+      Evaluate complex conditions using JSON path queries to check specific
+      fields in API responses.
+  - title: Pattern Matching
+    description:
+      Use pattern matching to verify response body content meets expected
+      criteria.
+  - title: Historical Data
+    description:
+      View historical status data and trends to identify patterns and recurring
+      issues.
+  - title: Multiple Alert Channels
+    description:
+      Configure alerts through Discord, Slack, PagerDuty, email, Teams,
+      Mattermost, and custom webhooks.
+  - title: YAML Configuration
+    description:
+      Simple YAML-based configuration for easy setup and management of
+      monitoring endpoints.
+
+tags:
+  - Monitoring
+  - Health Check
+  - Uptime
+  - Dashboard
+  - Self-Hosted
+  - DevOps
