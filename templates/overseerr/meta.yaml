@@ -1,0 +1,64 @@
+name: Overseerr
+description:
+  Overseerr is a request management and media discovery tool for the Plex ecosystem.
+  It provides a clean, modern interface for users to browse and request content
+  for Plex, seamlessly integrating with services like Sonarr, Radarr, and Jellyfin.
+instructions: null
+changeLog:
+  - date: 2025-04-25
+    description: Initial release
+links:
+  - label: Website
+    url: https://overseerr.dev
+  - label: Documentation
+    url: https://docs.overseerr.dev
+  - label: GitHub
+    url: https://github.com/sct/overseerr
+  - label: Docker Hub
+    url: https://hub.docker.com/r/linuxserver/overseerr
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: overseerr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/overseerr:develop-7f868f38e6f2f1834ea12dc8f5c095000c7a3c09-ls368
+benefits:
+  - title: Streamlined Media Requests
+    description: Allow users to easily request movies and TV shows through an intuitive interface
+  - title: Automated Content Management
+    description: Integrates with Sonarr and Radarr to automatically download and manage requested content
+  - title: User Management
+    description: Manage users with customizable permission levels for different request capabilities
+  - title: Plex Integration
+    description: Connect to your Plex server to track available content and viewing status
+features:
+  - title: Modern UI
+    description: Clean, responsive web interface built with React for desktop and mobile use
+  - title: Content Discovery
+    description: Browse popular and trending content from various streaming platforms
+  - title: Request Management
+    description: Review, approve, and manage user media requests in one place
+  - title: Email Notifications
+    description: Send automated emails for request status updates and new content availability
+  - title: Multi-language Support
+    description: Interface available in multiple languages through community translations
+  - title: Issue Reporting
+    description: Built-in system for users to report problems with media
+tags:
+  - Media
+  - Plex
+  - Requests
+  - Content Management
+  - Sonarr
+  - Radarr 
