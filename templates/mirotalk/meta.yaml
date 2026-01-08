@@ -1,0 +1,114 @@
+name: MiroTalk P2P
+description:
+  MiroTalk P2P is a powerful WebRTC-based peer-to-peer video conferencing
+  platform that enables secure, real-time communication directly between
+  participants without requiring external servers for media transmission. It
+  offers advanced features like screen sharing, file transfer, chat messaging,
+  and room protection, making it perfect for businesses, educational
+  institutions, and personal use that require privacy-focused video conferencing
+  solutions.
+instructions: null
+changeLog:
+  - date: 2025-07-23
+    description: Initial release
+links:
+  - label: Website
+    url: https://p2p.mirotalk.com
+  - label: Documentation
+    url: https://docs.mirotalk.com
+  - label: GitHub
+    url: https://github.com/miroslavpejic85/mirotalk
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mirotalk
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mirotalk/p2p:latest
+
+benefits:
+  - title: Privacy-Focused Communication
+    description:
+      Peer-to-peer architecture ensures your video calls remain private and
+      secure, with no data passing through external servers.
+  - title: Zero Installation Required
+    description:
+      Web-based platform that works directly in browsers without requiring
+      participants to download or install any software.
+  - title: Advanced Collaboration Tools
+    description:
+      Built-in screen sharing, file transfer, interactive whiteboard, and
+      real-time chat enhance meeting productivity.
+  - title: Scalable Room Management
+    description:
+      Support for multiple participants with configurable room limits and host
+      protection features for controlled access.
+  - title: Enterprise-Ready Security
+    description:
+      OIDC authentication, JWT tokens, IP whitelisting, and host protection
+      provide enterprise-grade security controls.
+  - title: Extensive Integration Options
+    description:
+      Built-in support for Slack, Mattermost, ChatGPT, email notifications, and
+      analytics tracking for seamless workflow integration.
+features:
+  - title: WebRTC Peer-to-Peer Video
+    description:
+      High-quality video conferencing using WebRTC technology for direct
+      participant-to-participant communication without server relay.
+  - title: Screen Sharing & Recording
+    description:
+      Share your screen, specific applications, or browser tabs with
+      participants, plus recording capabilities for important meetings.
+  - title: Interactive Whiteboard
+    description:
+      Collaborative whiteboard tool for drawing, annotations, and visual
+      collaboration during meetings.
+  - title: File Transfer
+    description:
+      Secure peer-to-peer file sharing between participants without uploading to
+      external servers.
+  - title: Real-time Chat
+    description:
+      Text messaging with emoji support, private messaging, and chat history for
+      enhanced communication.
+  - title: Room Protection
+    description:
+      Password-protected rooms, host authentication, and user access controls
+      for secure meeting environments.
+  - title: STUN/TURN Support
+    description:
+      Configurable STUN and TURN servers for reliable connections across
+      different network configurations and firewalls.
+  - title: Multi-Platform Support
+    description:
+      Cross-platform compatibility across desktop browsers, mobile devices, and
+      tablets for maximum accessibility.
+  - title: API Integration
+    description:
+      RESTful API for programmatic room creation and management, plus webhook
+      support for external integrations.
+  - title: Analytics & Monitoring
+    description:
+      Built-in analytics, error tracking with Sentry, and customizable
+      monitoring for usage insights and troubleshooting.
+tags:
+  - Video Conferencing
+  - WebRTC
+  - Peer-to-Peer
+  - Communication
+  - Collaboration
+  - Screen Sharing
+  - Real-time
+  - Privacy
+  - Security
