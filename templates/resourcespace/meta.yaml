@@ -1,0 +1,61 @@
+name: ResourceSpace
+description:
+  ResourceSpace is an open-source Digital Asset Management (DAM) system that
+  helps organizations manage, organize, and share their digital assets
+  efficiently. It provides a web-based interface for managing files, images,
+  videos, and other digital resources with features like metadata management,
+  version control, and access control.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-26
+    description: Initial template release
+links:
+  - label: Website
+    url: https://www.resourcespace.com/
+  - label: Documentation
+    url: https://www.resourcespace.com/documentation
+  - label: GitHub
+    url: https://github.com/ResourceSpace/ResourceSpace
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: resourcespace
+    appServiceImage:
+      type: string
+      title: ResourceSpace Image
+      default: creecros/resourcespace-docker:v9.2
+benefits:
+  - title: Digital Asset Management
+    description: Efficient management of digital assets and resources.
+  - title: Web-Based Interface
+    description: User-friendly web interface for asset management.
+  - title: Flexible Storage
+    description: Support for multiple storage locations and configurations.
+  - title: Access Control
+    description: Granular access control and user permissions.
+features:
+  - title: Asset Management
+    description: Comprehensive digital asset management capabilities.
+  - title: Metadata Support
+    description: Rich metadata management for assets.
+  - title: Version Control
+    description: Track and manage asset versions.
+  - title: Search & Filter
+    description: Advanced search and filtering capabilities.
+tags:
+  - DAM
+  - Asset Management
+  - File Management
+  - Web Interface
+  - Database
