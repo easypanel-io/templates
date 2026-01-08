@@ -1,0 +1,122 @@
+name: Lago
+description:
+  Lago is an open-source metered billing and usage-based pricing platform that
+  helps businesses implement complex pricing models with precision and
+  transparency. Built for modern SaaS companies, Lago provides real-time usage
+  tracking, flexible pricing configurations, automated invoicing, and
+  comprehensive billing analytics. Perfect for businesses that need to implement
+  usage-based pricing, hybrid pricing models, or complex billing scenarios with
+  features like prepaid credits, graduated pricing, and multi-dimensional
+  metering.
+
+instructions:
+  You have to generate a RSA private key "openssl genrsa 2048 | base64" and
+  provide it to the service, otherwise the service will not work. You can
+  contact Easypanel support if you need help.
+
+changeLog:
+  - date: "2025-07-04"
+    description: "Initial release"
+
+links:
+  - label: "Github"
+    url: "https://github.com/getlago/lago"
+  - label: "Website"
+    url: "https://getlago.com"
+  - label: "Documentation"
+    url: "https://docs.getlago.com"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - frontendServiceImage
+    - pdfServiceImage
+    - rsaPrivateKey
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "lago"
+    appServiceImage:
+      type: string
+      title: "Backend Service Image"
+      default: "getlago/api:v1.31.0"
+    frontendServiceImage:
+      type: string
+      title: "Frontend Service Image"
+      default: "getlago/front:v1.31.0"
+    pdfServiceImage:
+      type: string
+      title: "PDF Service Image"
+      default: "getlago/lago-gotenberg:7.8.2"
+    rsaPrivateKey:
+      type: string
+      title: "RSA Private Key"
+
+benefits:
+  - title: "Usage-Based Billing"
+    description:
+      "Implement complex metered billing models with real-time usage tracking
+      and flexible pricing configurations."
+  - title: "Automated Invoicing"
+    description:
+      "Generate and send invoices automatically based on usage data with
+      customizable billing cycles and payment terms."
+  - title: "Developer-Friendly APIs"
+    description:
+      "Comprehensive REST APIs and webhooks for seamless integration with
+      existing systems and applications."
+
+features:
+  - title: "Real-Time Usage Tracking"
+    description:
+      "Track customer usage in real-time with high-throughput event ingestion
+      and processing capabilities."
+  - title: "Flexible Pricing Models"
+    description:
+      "Support for graduated pricing, package pricing, percentage-based pricing,
+      and complex hybrid models."
+  - title: "Automated Billing Engine"
+    description:
+      "Automated invoice generation, payment processing, and dunning management
+      with configurable billing cycles."
+  - title: "Customer Management"
+    description:
+      "Comprehensive customer portal with usage analytics, invoice history, and
+      subscription management."
+  - title: "Analytics & Reporting"
+    description:
+      "Detailed analytics dashboard with revenue tracking, usage patterns, and
+      business intelligence insights."
+  - title: "Multi-Currency Support"
+    description:
+      "Support for multiple currencies with automatic currency conversion and
+      localized pricing."
+  - title: "API & Webhooks"
+    description:
+      "RESTful APIs for all operations and webhooks for real-time event
+      notifications and integrations."
+  - title: "Prepaid Credits"
+    description:
+      "Wallet system for prepaid credits with automatic top-ups and usage
+      deduction capabilities."
+
+tags:
+  - "Billing"
+  - "Metered Billing"
+  - "Usage-Based Pricing"
+  - "SaaS"
+  - "Invoicing"
+  - "Payment Processing"
+  - "Analytics"
+  - "API"
+  - "Open Source"
+  - "Revenue Management"
+  - "Subscription Management"
+  - "Financial Technology"
