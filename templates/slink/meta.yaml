@@ -1,0 +1,75 @@
+name: Slink
+description:
+  Slink is a self-hosted image hosting service that provides secure image
+  upload, storage, and sharing capabilities. It features user management with
+  approval workflows, configurable password requirements, and image processing
+  options. Perfect for teams and organizations that need controlled image
+  sharing.
+instructions: null
+changeLog:
+  - date: 2025-09-25
+    description: First release (v1.6.7)
+links:
+  - label: GitHub
+    url: https://github.com/anirdev/slink
+  - label: Documentation
+    url: https://docs.slinkapp.io
+  - label: DockerHub
+    url: https://hub.docker.com/r/anirdev/slink
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: slink
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: anirdev/slink:v1.6.7
+benefits:
+  - title: Image Hosting
+    description:
+      Secure image upload, storage, and sharing with user management and
+      approval workflows.
+  - title: User Management
+    description:
+      Controlled user registration with approval requirements and configurable
+      password policies.
+  - title: Image Processing
+    description:
+      Automatic image compression, EXIF metadata removal, and size optimization
+      for efficient storage.
+  - title: Self-Hosted
+    description:
+      Complete control over your image data with no external dependencies or
+      data sharing.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface for image management.
+  - title: User Approval System
+    description: Admin approval required for new user registrations.
+  - title: Password Requirements
+    description: Configurable password strength requirements.
+  - title: Image Processing
+    description: Automatic compression and metadata removal.
+  - title: Size Limits
+    description: Configurable maximum image size limits.
+  - title: Storage Options
+    description: Support for local and cloud storage providers.
+  - title: Data Persistence
+    description: Database and image storage persist across restarts.
+  - title: Security Features
+    description: EXIF metadata removal and secure image handling.
+tags:
+  - Image Hosting
+  - File Sharing
+  - User Management
+  - Image Processing
+  - Web Interface
