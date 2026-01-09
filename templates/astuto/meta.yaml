@@ -1,0 +1,100 @@
+name: Astuto
+description:
+  Astuto is an open-source customer feedback tool that helps you collect, organize, and
+  prioritize product feedback and feature requests from your users. It provides a simple
+  and effective platform where users can submit their ideas, vote on existing suggestions,
+  and track the status of feature implementations. Astuto is designed for product managers,
+  developers, and founders who want to make data-driven decisions based on user feedback
+  and build products that better meet their users' needs.
+instructions: null
+changeLog:
+  - date: 2025-04-18
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/riggraz/astuto
+  - label: Docker
+    url: https://hub.docker.com/r/riggraz/astuto
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - emailDeliveryMethod
+    - emailSmtpHost
+    - emailSmtpPort
+    - emailSmtpUser
+    - emailSmtpPass
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: astuto
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: riggraz/astuto:v1.1.2
+    emailDeliveryMethod:
+      type: string
+      title: Email Delivery Method
+      default: smtp
+    emailSmtpHost:
+      type: string
+      title: Email SMTP Host
+      default: smtp.gmail.com
+    emailSmtpPort:
+      type: string
+      title: Email SMTP Port
+      default: "587"
+    emailSmtpUser:
+      type: string
+      title: Email SMTP User
+      default: your-email@example.com
+    emailSmtpPass:
+      type: string
+      title: Email SMTP Password
+      default: your-password
+    
+benefits:
+  - title: User-Driven Development
+    description:
+      Astuto helps you build products that users actually want by collecting and
+      organizing customer feedback in a structured way.
+  - title: Transparent Roadmap
+    description:
+      Keep your users engaged and informed about what features are being considered,
+      planned, or implemented with a transparent product roadmap.
+  - title: Prioritize Features
+    description:
+      Use voting mechanisms to understand which features are most requested by your
+      users, helping you prioritize your development efforts effectively.
+features:
+  - title: Feedback Collection
+    description:
+      Provide a dedicated platform where users can submit their feature requests
+      and feedback in an organized manner.
+  - title: Voting System
+    description: 
+      Allow users to vote on feature requests, helping you identify the most
+      popular ideas and prioritize development accordingly.
+  - title: Roadmap Board
+    description:
+      Display the status of feature requests with customizable boards that show
+      what's planned, in progress, or completed.
+  - title: User Authentication
+    description:
+      Control who can submit feedback with built-in user authentication and
+      registration features.
+  - title: Admin Interface
+    description:
+      Manage feedback, update statuses, and communicate with users through an
+      intuitive admin interface.
+tags:
+  - Feedback
+  - Product Management
+  - User Requests
+  - Feature Tracking
+  - Customer Engagement 
