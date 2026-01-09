@@ -1,0 +1,84 @@
+name: Nanote
+description:
+  Nanote is a lightweight, self-hosted note-taking application that provides a
+  simple and clean interface for managing your notes. Built with privacy-focused
+  design, Nanote allows you to store and organize your notes locally or on your
+  own server. It features markdown support, file uploads, and a minimalistic
+  interface that focuses on productivity without distractions.
+instructions: null
+
+changeLog:
+  - date: 2026-01-09
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/omarmir/nanote
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nanote
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: omarmir/nanote:0.11.0
+
+benefits:
+  - title: Privacy-Focused
+    description:
+      Self-hosted solution ensures your notes remain private and under your
+      complete control.
+  - title: Lightweight and Fast
+    description:
+      Minimal resource usage with a fast, responsive interface for quick
+      note-taking.
+  - title: Markdown Support
+    description:
+      Write notes in markdown format for rich text formatting and better
+      organization.
+  - title: File Uploads
+    description:
+      Attach files and images to your notes for comprehensive documentation.
+  - title: Self-Hosted Control
+    description:
+      Deploy on your own infrastructure with full control over your data and
+      access.
+
+features:
+  - title: Simple Interface
+    description:
+      Clean, distraction-free interface designed for focused note-taking and
+      organization.
+  - title: Markdown Editor
+    description:
+      Built-in markdown editor with syntax highlighting for enhanced writing
+      experience.
+  - title: File Management
+    description:
+      Organize notes and uploads with separate directories for better file
+      management.
+  - title: Health Monitoring
+    description:
+      Built-in health check endpoint for monitoring application status and
+      reliability.
+  - title: Easy Deployment
+    description:
+      Simple Docker-based deployment with minimal configuration required.
+
+tags:
+  - Notes
+  - Markdown
+  - Self-Hosted
+  - Productivity
+  - Documentation
