@@ -14,7 +14,8 @@ changeLog:
     description: Initial Template Release
   - date: 2025-05-23
     description: update to v1.133.0
-
+  - date: 2025-12-25
+    description: Version bumped to v2.4.1
 links:
   - label: Documentation
     url: https://immich.app/docs
@@ -39,11 +40,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/immich-app/immich-server:v1.133.0
+      default: ghcr.io/immich-app/immich-server:v2.4.1
     mlServiceImage:
       type: string
       title: ML Service Image
-      default: ghcr.io/immich-app/immich-machine-learning:v1.133.0
+      default: ghcr.io/immich-app/immich-machine-learning:v2.4.1
 
 benefits:
   - title: Secure Media Backup

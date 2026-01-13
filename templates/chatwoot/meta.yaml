@@ -24,6 +24,8 @@ changeLog:
       v4.0.1
   - date: 2025-07-15
     description: Version bumped to v4.3.0 
+  - date: 2025-12-24
+    description: Version bumped to v4.9.1
 links:
   - label: Documentation
     url: https://www.chatwoot.com/help-center
@@ -55,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chatwoot/chatwoot:v4.3.0
+      default: chatwoot/chatwoot:v4.9.1
     sidekiqServiceName:
       type: string
       title: Sidekiq Service Name

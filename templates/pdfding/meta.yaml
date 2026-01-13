@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-09-18
     description: Template Release
+  - date: 2025-12-29
+    description: Version bumped to v1.4.1
 links:
   - label: Github
     url: https://github.com/mrmn2/PdfDing
@@ -28,7 +30,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mrmn/pdfding:v1.3.1
+      default: mrmn/pdfding:v1.4.1
 benefits:
   - title: PDF Management
     description:
