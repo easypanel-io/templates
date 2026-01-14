@@ -1,0 +1,100 @@
+name: OpenVPN Access Server
+description:
+  OpenVPN Access Server is a full-featured SSL VPN software solution that
+  integrates OpenVPN server capabilities, enterprise-grade user management,
+  granular access controls, and an easy-to-use web interface for administration.
+instructions:
+  Please use the Guide given below to get the password and access the portal.
+  For admin portal access, use the following URL;
+  https://$(EASYPANEL_HOST_IP):$(mgmtServicePort)/admin
+changeLog:
+  - date: 2025-09-03
+    description: First Release (2.14.3-5936bcd7-Ubuntu24)
+links:
+  - label: Website
+    url: https://openvpn.net/access-server/
+  - label: Documentation
+    url: https://openvpn.net/vpn-server-resources/access-server-manager/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/openvpn/openvpn-as
+  - label: Guide
+    url: https://openvpn.net/as-docs/docker.html#run-the-docker-container
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openvpn-as
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: openvpn/openvpn-as:2.14.3-5936bcd7-Ubuntu24
+    mgmtServicePort:
+      type: string
+      title: Management Service Port
+      default: "8943"
+    accessServicePort:
+      type: string
+      title: Access Service Port
+      default: "8443"
+    vpnServicePort:
+      type: string
+      title: VPN Service Port
+      default: "1194"
+benefits:
+  - title: Enterprise-grade VPN solution
+    description:
+      Full-featured SSL VPN with enterprise-grade user management and access
+      controls.
+  - title: Easy web administration
+    description:
+      User-friendly web interface for easy VPN server administration and user
+      management.
+  - title: Secure remote access
+    description:
+      Provide secure remote access to your network resources with strong
+      encryption.
+  - title: Multi-platform support
+    description:
+      Supports clients on Windows, macOS, Linux, iOS, and Android platforms.
+  - title: Flexible authentication
+    description:
+      Support for various authentication methods including LDAP, RADIUS, and
+      local user accounts.
+  - title: Network segmentation
+    description:
+      Granular access controls to segment network access based on user groups
+      and policies.
+features:
+  - title: Web-based administration
+    description:
+      Easy-to-use web interface for server configuration and user management.
+  - title: User management
+    description:
+      Create and manage VPN users with different access levels and permissions.
+  - title: Client configuration
+    description:
+      Automatic client configuration generation for easy setup on various
+      platforms.
+  - title: Network access control
+    description:
+      Configure which network resources users can access through the VPN.
+  - title: Authentication integration
+    description:
+      Integrate with existing authentication systems like LDAP and RADIUS.
+  - title: Monitoring and logging
+    description:
+      Comprehensive logging and monitoring of VPN connections and activities.
+tags:
+  - Network Tools
+  - Security
+  - VPN
+  - OpenVPN
+  - Remote Access

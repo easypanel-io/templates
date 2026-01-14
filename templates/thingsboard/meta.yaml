@@ -14,6 +14,8 @@ changeLog:
     description: Template Release
   - date: 2025-03-03
     description: Version bumped to 3.9.1
+  - date: 2025-12-29
+    description: Version bumped to 4.2.1
 links:
   - label: Documentation
     url: https://thingsboard.io/docs/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: thingsboard/tb-postgres:4.1.0
+      default: thingsboard/tb-postgres:4.2.1
 benefits:
   - title: Real-Time Device Management
     description:
