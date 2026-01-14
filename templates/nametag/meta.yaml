@@ -1,0 +1,104 @@
+name: Nametag
+description:
+  Nametag is a self-hosted application built with Next.js that provides a modern
+  web interface for managing and organizing data. It features authentication via
+  NextAuth, Redis for session management and caching, and PostgreSQL for
+  persistent data storage. The application includes automated cron jobs for
+  sending reminders and notifications, making it ideal for task management,
+  reminders, and data organization workflows.
+instructions: null
+
+changeLog:
+  - date: 2026-01-14
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/mattogodoy/nametag
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nametag
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/mattogodoy/nametag:0.12.3
+    resendApiKey:
+      type: string
+      title: Resend API Key
+      description:
+        "Optional Resend API key for email functionality (password resets and
+        reminders). Sign up at https://resend.com"
+    emailDomain:
+      type: string
+      title: Email Domain
+      description:
+        "Optional email domain for sending emails (required if using Resend)"
+
+benefits:
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your data with no reliance on external cloud
+      services or third-party providers.
+  - title: Next.js Application
+    description:
+      Modern, fast web application built with Next.js for optimal performance
+      and user experience.
+  - title: Automated Reminders
+    description:
+      Built-in cron job system for sending automated reminders and notifications
+      on a schedule.
+  - title: Secure Authentication
+    description:
+      NextAuth integration provides secure authentication with support for
+      multiple providers and session management.
+  - title: Scalable Architecture
+    description:
+      PostgreSQL for reliable data storage and Redis for fast session management
+      and caching.
+
+features:
+  - title: Next.js Web Interface
+    description:
+      Modern, responsive web interface built with Next.js, accessible from any
+      device.
+  - title: PostgreSQL Database
+    description:
+      Reliable PostgreSQL database for persistent data storage with automatic
+      backups and data integrity.
+  - title: Redis Integration
+    description:
+      Redis for session management, caching, and improved application
+      performance.
+  - title: Automated Cron Jobs
+    description:
+      Scheduled cron jobs for sending reminders and notifications, running daily
+      at 8 AM UTC.
+  - title: Email Support
+    description:
+      Optional email functionality via Resend for password resets and reminder
+      notifications.
+  - title: NextAuth Authentication
+    description:
+      Secure authentication system with support for email/password and OAuth
+      providers.
+
+tags:
+  - Next.js
+  - Self-Hosted
+  - PostgreSQL
+  - Redis
+  - Authentication
+  - Reminders
+  - Task Management
