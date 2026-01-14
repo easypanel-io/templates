@@ -53,7 +53,7 @@ schema:
       type: string
       title: App Service Image
       default: rocketchat/rocket.chat:7.12.3
-    databaseServiceName:
+    databaseServiceImage:
       type: string
       title: Database Service Image
       default: docker.io/bitnamilegacy/mongodb:5.0
