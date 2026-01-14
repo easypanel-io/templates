@@ -1,11 +1,13 @@
 name: Nametag
 description:
-  Nametag is a self-hosted application built with Next.js that provides a modern
-  web interface for managing and organizing data. It features authentication via
-  NextAuth, Redis for session management and caching, and PostgreSQL for
-  persistent data storage. The application includes automated cron jobs for
-  sending reminders and notifications, making it ideal for task management,
-  reminders, and data organization workflows.
+  Nametag is a simple, yet effective Personal Relationship Manager (PRM) - like
+  a CRM, but for your actual relationships instead of sales prospects. Built
+  with Next.js, it helps you manage your personal network by tracking contacts,
+  mapping relationships between people, and visualizing your network with
+  interactive graphs. Remember when you last talked to an old friend, their
+  kids' names, or their birthday. Organize contacts into custom groups, set
+  reminders for important dates and staying in touch, and keep all your
+  relationship data in one secure, self-hosted location.
 instructions: null
 
 changeLog:
@@ -47,58 +49,64 @@ schema:
         "Optional email domain for sending emails (required if using Resend)"
 
 benefits:
-  - title: Self-Hosted Solution
+  - title: Personal Relationship Management
     description:
-      Complete control over your data with no reliance on external cloud
-      services or third-party providers.
-  - title: Next.js Application
+      Keep track of all your personal relationships in one place - friends,
+      family, colleagues, and more. Never forget important details about the
+      people you care about.
+  - title: Network Visualization
     description:
-      Modern, fast web application built with Next.js for optimal performance
-      and user experience.
-  - title: Automated Reminders
+      Visualize your entire personal network with interactive graphs powered by
+      D3.js, making it easy to see relationships and connections at a glance.
+  - title: Stay Connected
     description:
-      Built-in cron job system for sending automated reminders and notifications
-      on a schedule.
-  - title: Secure Authentication
+      Set reminders for important dates, birthdays, and when to reach out to
+      people, helping you maintain meaningful relationships over time.
+  - title: Self-Hosted Privacy
     description:
-      NextAuth integration provides secure authentication with support for
-      multiple providers and session management.
-  - title: Scalable Architecture
+      Complete control over your relationship data with no reliance on external
+      cloud services. All your personal information stays on your server.
+  - title: Unlimited Contacts
     description:
-      PostgreSQL for reliable data storage and Redis for fast session management
-      and caching.
+      Self-hosted instances have no account limits - store unlimited contacts
+      and relationships without restrictions.
 
 features:
-  - title: Next.js Web Interface
+  - title: Contact Management
     description:
-      Modern, responsive web interface built with Next.js, accessible from any
-      device.
-  - title: PostgreSQL Database
+      Track people with flexible attributes including names, birthdays,
+      important dates, and custom notes for everything else.
+  - title: Relationship Mapping
     description:
-      Reliable PostgreSQL database for persistent data storage with automatic
-      backups and data integrity.
-  - title: Redis Integration
+      Define and visualize relationships between people - family, friends,
+      colleagues, and custom relationship types.
+  - title: Interactive Network Graphs
     description:
-      Redis for session management, caching, and improved application
-      performance.
-  - title: Automated Cron Jobs
+      Visualize your entire personal network with interactive D3.js-powered
+      graphs showing connections and relationships.
+  - title: Custom Groups
     description:
-      Scheduled cron jobs for sending reminders and notifications, running daily
-      at 8 AM UTC.
-  - title: Email Support
+      Organize contacts into custom groups for better organization and
+      management of your personal network.
+  - title: Automated Reminders
     description:
-      Optional email functionality via Resend for password resets and reminder
-      notifications.
-  - title: NextAuth Authentication
+      Scheduled cron jobs send automated reminders for important dates and
+      staying in touch, running daily at 8 AM UTC.
+  - title: Multi-Language Support
     description:
-      Secure authentication system with support for email/password and OAuth
-      providers.
+      Available in multiple languages including English and Spanish, with
+      mobile-responsive design for access from any device.
+  - title: Dark Mode
+    description:
+      Full dark mode support for comfortable viewing in any lighting condition.
 
 tags:
+  - Personal Relationship Manager
+  - PRM
+  - CRM
+  - Contacts
+  - Relationships
   - Next.js
   - Self-Hosted
-  - PostgreSQL
-  - Redis
-  - Authentication
+  - Network Visualization
   - Reminders
-  - Task Management
