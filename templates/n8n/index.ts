@@ -79,7 +79,7 @@ export function generate(input: Input): Output {
       `DB_POSTGRESDB_POOL_SIZE=10`,
     ];
 
-    envs.push(postgres_envs);
+    envs.push(...postgres_envs);
   }
   
   // Redis
@@ -102,7 +102,7 @@ export function generate(input: Input): Output {
       `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true`
     ];
 
-    envs.push(redis_envs);
+    envs.push(...redis_envs);
   }
 
   // Worker
@@ -126,8 +126,8 @@ export function generate(input: Input): Output {
       `N8N_LOG_FORMAT=json`,
     ];
 
-    worker_envs.push(postgres_envs);
-    worker_envs.push(redis_envs);
+    worker_envs.push(...postgres_envs);
+    worker_envs.push(...redis_envs);
 
     const worker_name = input.appServiceName + '-worker';
 
