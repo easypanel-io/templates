@@ -70,10 +70,18 @@ schema:
       type: boolean
       title: Redis
       default: true
+    workerInstance:
+      type: boolean
+      title: Queue Mode with Worker (Need Redis and Postgres)
+      default: false
     appTimezone:
       type: string
       title: App Timezone
       default: UTC
+    appLanguage:
+      type: string
+      title: App Language
+      default: en
 benefits:
   - title: Workflow Automation
     description:
