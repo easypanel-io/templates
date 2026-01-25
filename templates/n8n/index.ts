@@ -94,12 +94,12 @@ export function generate(input: Input): Output {
 
     const redis_envs = [
       `# Redis`,
-      `QUEUE_BULL_REDIS_HOST=$(PROJECT_NAME)_${redisServiceName}`
-      `QUEUE_BULL_REDIS_PORT=6379`
-      `QUEUE_BULL_REDIS_USERNAME=default`
-      `QUEUE_BULL_REDIS_PASSWORD=${redisPassword}`
-      `QUEUE_BULL_PREFIX=n8n`
-      `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true`
+      `QUEUE_BULL_REDIS_HOST=$(PROJECT_NAME)_${redisServiceName}`,
+      `QUEUE_BULL_REDIS_PORT=6379`,
+      `QUEUE_BULL_REDIS_USERNAME=default`,
+      `QUEUE_BULL_REDIS_PASSWORD=${redisPassword}`,
+      `QUEUE_BULL_PREFIX=n8n`,
+      `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true`,
     ];
 
     envs.push(...redis_envs);
