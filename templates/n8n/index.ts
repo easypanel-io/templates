@@ -8,7 +8,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const encryptionKey = randomString(32);
+  const encryptionKey = randomString(64);
   
   const databaseServiceName = input.appServiceName + '-db';
   const databasePassword = randomPassword();
@@ -19,6 +19,7 @@ export function generate(input: Input): Output {
   const envs = [
     `# Base URL`,
     `N8N_HOST=$(PRIMARY_DOMAIN)`,
+    `N8N_PORT=5678`,
     `N8N_PROTOCOL=https`,
     `WEBHOOK_URL=https://$(PRIMARY_DOMAIN)/`,
     `N8N_EDITOR_BASE_URL=https://$(PRIMARY_DOMAIN)`,
@@ -38,7 +39,7 @@ export function generate(input: Input): Output {
     `# N8N_PUBLIC_API_DISABLED=true`,
 
     `# Settings`,
-    `N8N_RUNNERS_ENABLED=true`,
+    `N8N_RUNNERS_ENABLED=false`,
     `EXECUTIONS_DATA_PRUNE=true`,
     `EXECUTIONS_DATA_MAX_AGE=336`,
     `EXECUTIONS_DATA_PRUNE_MAX_COUNT=10000`,
@@ -57,6 +58,8 @@ export function generate(input: Input): Output {
     `N8N_LOG_FORMAT=json`,
     `N8N_LOG_LEVEL=info`,
   ];
+  const postgres_envs = [];
+  const redis_envs = [];
 
   // Postgres
   if (input.databaseType === 'postgres') {
@@ -68,7 +71,7 @@ export function generate(input: Input): Output {
       },
     });
 
-    const postgres_envs = [
+    postgres_envs.push(
       `# Database`,
       `DB_TYPE=postgresdb`,
       `DB_POSTGRESDB_HOST=$(PROJECT_NAME)_${databaseServiceName}`,
@@ -77,7 +80,7 @@ export function generate(input: Input): Output {
       `DB_POSTGRESDB_USER=postgres`,
       `DB_POSTGRESDB_PASSWORD=${databasePassword}`,
       `DB_POSTGRESDB_POOL_SIZE=10`,
-    ];
+    );
 
     envs.push(...postgres_envs);
   }
@@ -92,7 +95,7 @@ export function generate(input: Input): Output {
       },
     });
 
-    const redis_envs = [
+    redis_envs.push(
       `# Redis`,
       `QUEUE_BULL_REDIS_HOST=$(PROJECT_NAME)_${redisServiceName}`,
       `QUEUE_BULL_REDIS_PORT=6379`,
@@ -100,9 +103,7 @@ export function generate(input: Input): Output {
       `QUEUE_BULL_REDIS_PASSWORD=${redisPassword}`,
       `QUEUE_BULL_PREFIX=n8n`,
       `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS=true`,
-    ];
-
-    envs.push(...redis_envs);
+    );
   }
 
   // Worker
@@ -111,12 +112,19 @@ export function generate(input: Input): Output {
     && input.databaseType === 'postgres'
     && input.redisService
   ) {
-    envs.push('# Queue Worker');
-    envs.push('EXECUTIONS_MODE=queue');
-
+    envs.push(
+      '# Queue Mode',
+      'EXECUTIONS_MODE=queue',
+      'N8N_DEFAULT_BINARY_DATA_MODE=database',
+      'N8N_AVAILABLE_BINARY_DATA_MODES=database',
+      ...redis_envs,
+    );
+    
     const worker_envs = [
-      `# Queue Worker`,
+      `# Queue Mode`,
       `EXECUTIONS_MODE=queue`,
+      `N8N_DEFAULT_BINARY_DATA_MODE=database`,
+      `N8N_AVAILABLE_BINARY_DATA_MODES=database`,
       `# Security`,
       `N8N_ENCRYPTION_KEY=${encryptionKey}`,
       `# Timezone`,
@@ -124,10 +132,9 @@ export function generate(input: Input): Output {
       `# Logs`,
       `N8N_LOG_LEVEL=info`,
       `N8N_LOG_FORMAT=json`,
+      ...postgres_envs,
+      ...redis_envs,
     ];
-
-    worker_envs.push(...postgres_envs);
-    worker_envs.push(...redis_envs);
 
     const worker_name = input.appServiceName + '-worker';
 
@@ -136,10 +143,18 @@ export function generate(input: Input): Output {
       data: {
         serviceName: worker_name,
         env: worker_envs.join("\n"),
+        deploy: {
+          command: "n8n worker --concurrency=20"
+        },
         source: {
           type: "image",
           image: input.appServiceImage,
         },
+        mounts: [{
+          type: "volume",
+          name: "data",
+          mountPath: "/home/node/.n8n",
+        }],
       },
     });
   }
@@ -156,12 +171,12 @@ export function generate(input: Input): Output {
       domains: [{
         host: "$(EASYPANEL_DOMAIN)",
         port: 5678,
-      }, ],
+      }],
       mounts: [{
         type: "volume",
         name: "data",
         mountPath: "/home/node/.n8n",
-      }, ],
+      }],
     },
   });
 
