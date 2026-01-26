@@ -107,11 +107,7 @@ export function generate(input: Input): Output {
   }
 
   // Worker
-  if (
-    input.workerInstance
-    && input.databaseType === 'postgres'
-    && input.redisService
-  ) {
+  if (input.workerInstance) {
     envs.push(
       '# Queue Mode',
       'EXECUTIONS_MODE=queue',
