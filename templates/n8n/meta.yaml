@@ -68,11 +68,11 @@ schema:
           title: Postgres
     redisService:
       type: boolean
-      title: Redis
-      default: true
+      title: Redis (for using in Node and Worker)
+      default: false
     workerInstance:
       type: boolean
-      title: Queue Mode with Worker (Need Redis and Postgres)
+      title: Queue Mode with Worker (include Redis, Postgres and N8N Worker)
       default: false
     appTimezone:
       type: string

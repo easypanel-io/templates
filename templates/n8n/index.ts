@@ -62,7 +62,7 @@ export function generate(input: Input): Output {
   const redis_envs = [];
 
   // Postgres
-  if (input.databaseType === 'postgres') {
+  if (input.databaseType === 'postgres' || input.workerInstance) {
     services.push({
       type: "postgres",
       data: {
@@ -86,7 +86,7 @@ export function generate(input: Input): Output {
   }
   
   // Redis
-  if (input.redisService) {
+  if (input.redisService || input.workerInstance) {
     services.push({
       type: "redis",
       data: {
