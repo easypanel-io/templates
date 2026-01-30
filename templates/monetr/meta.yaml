@@ -1,0 +1,115 @@
+name: Monetr
+description:
+  Monetr is a self-hosted personal finance management application that helps you
+  track your spending, manage budgets, and gain insights into your financial
+  habits. Built with modern architecture, Monetr provides a comprehensive
+  solution for managing your personal finances with features like transaction
+  tracking, budget management, spending analysis, and financial goal setting.
+  The system uses PostgreSQL for data persistence and Valkey (Redis-compatible)
+  for caching and session management. Perfect for individuals looking for a
+  self-hosted alternative to commercial personal finance applications.
+instructions: null
+changeLog:
+  - date: 2025-01-28
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/monetr/monetr
+  - label: Website
+    url: https://monetr.app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - valkeyImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: monetr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/monetr/monetr:1.9.0
+    postgresImage:
+      type: string
+      title: PostgreSQL Image
+      default: postgres:17
+      description: PostgreSQL database image version
+    valkeyImage:
+      type: string
+      title: Valkey Image
+      default: valkey/valkey:9
+      description: Valkey (Redis-compatible) image version
+    allowSignUp:
+      type: string
+      title: Allow Sign Up
+      default: "true"
+      description: Allow new user registrations (recommended to disable if exposed to public internet)
+    storageEnabled:
+      type: string
+      title: Storage Enabled
+      default: "true"
+      description: Enable file storage functionality
+    storageProvider:
+      type: string
+      title: Storage Provider
+      default: filesystem
+      description: Storage provider type (e.g., filesystem, s3)
+benefits:
+  - title: Personal Finance Management
+    description:
+      Track your spending, manage budgets, and gain insights into your
+      financial habits with a comprehensive personal finance application.
+  - title: Self-Hosted Solution
+    description:
+      Keep your financial data private and under your control with a
+      self-hosted deployment.
+  - title: Modern Architecture
+    description:
+      Built with PostgreSQL for reliable data persistence and Valkey for
+      efficient caching and session management.
+  - title: Automatic Migrations
+    description:
+      Database migrations run automatically on startup, ensuring your
+      database schema is always up to date.
+features:
+  - title: Transaction Tracking
+    description:
+      Track and categorize your income and expenses with detailed transaction
+      management.
+  - title: Budget Management
+    description:
+      Create and manage budgets to help you stay on track with your financial
+      goals.
+  - title: Spending Analysis
+    description:
+      Analyze your spending patterns with detailed reports and visualizations.
+  - title: PostgreSQL Database
+    description:
+      Reliable PostgreSQL database for persistent storage of all financial data
+      and user information.
+  - title: Valkey Caching
+    description:
+      Valkey (Redis-compatible) for efficient caching and session management,
+      improving application performance.
+  - title: Certificate Generation
+    description:
+      Automatically generates SSL certificates on startup for secure
+      communication.
+  - title: Web-Based Interface
+    description:
+      Access and manage your finances through a modern web interface
+      accessible on port 4000.
+tags:
+  - Finance
+  - Personal Finance
+  - Budgeting
+  - Self-Hosted
+  - PostgreSQL
+  - Valkey
+  - Docker
