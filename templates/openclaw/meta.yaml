@@ -1,0 +1,124 @@
+name: OpenClaw
+description:
+  OpenClaw is your own personal AI assistant. Any OS. Any Platform. The lobster
+  way. 🦞 An open-source personal AI assistant platform that gives you complete
+  control over your data and AI interactions. Built for Molty, OpenClaw provides
+  a gateway service for WebSocket connections, CLI tools for management, and
+  support for multiple channels including WhatsApp, Telegram, Slack, Discord,
+  and more. Deploy your personal AI assistant with full data ownership and
+  privacy.
+
+instructions:
+  Once deployed, the gateway service will start automatically. To complete setup,
+  you can run the onboarding wizard by executing `node dist/index.js onboard --no-install-daemon`
+  in the gateway service console. The gateway runs with `--allow-unconfigured` flag
+  to enable initial setup.
+
+changeLog:
+  - date: 2026-02-02
+    description: Initial Template Release
+
+links:
+  - label: Website
+    url: https://openclaw.ai
+  - label: GitHub
+    url: https://github.com/openclaw/openclaw
+  - label: Documentation
+    url: https://docs.openclaw.ai
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - gatewayToken
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openclaw
+    appServiceImage:
+      type: string
+      title: OpenClaw Image
+      default: ghcr.io/openclaw/openclaw:2026.2.1
+      description: Docker image for OpenClaw
+    gatewayToken:
+      type: string
+      title: Gateway Token
+      description: Token for authenticating with the gateway service
+    gatewayBind:
+      type: string
+      title: Gateway Bind
+      default: lan
+      description: Network interface to bind to (e.g., lan, localhost)
+    gatewayPort:
+      type: number
+      title: Gateway Port
+      default: 18789
+      description: Published port for the gateway service
+    bridgePort:
+      type: number
+      title: Bridge Port
+      default: 18790
+      description: Published port for the bridge service
+    claudeAiSessionKey:
+      type: string
+      title: Claude AI Session Key
+      default: ""
+      description: Claude AI session key (optional)
+    claudeWebSessionKey:
+      type: string
+      title: Claude Web Session Key
+      default: ""
+      description: Claude Web session key (optional)
+    claudeWebCookie:
+      type: string
+      title: Claude Web Cookie
+      default: ""
+      description: Claude Web cookie (optional)
+
+benefits:
+  - title: Your Own Personal AI Assistant
+    description: Deploy your personal AI assistant with complete data ownership and privacy. No cloud dependencies, your data stays yours.
+  - title: Multi-Platform Support
+    description: Works on any OS and platform. Connect via WhatsApp, Telegram, Slack, Discord, Microsoft Teams, and more through the gateway.
+  - title: Open Source & Self-Hosted
+    description: MIT licensed open-source project. Full control over your AI assistant with no vendor lock-in or data sharing.
+  - title: Gateway Architecture
+    description: WebSocket-based gateway service enables real-time communication with your AI assistant across all connected channels and devices.
+
+features:
+  - title: WebSocket Gateway
+    description: High-performance WebSocket gateway service for real-time communication with your AI assistant. Supports configurable bind addresses and ports.
+  - title: Multi-Channel Support
+    description: Connect your AI assistant to WhatsApp, Telegram, Slack, Discord, Microsoft Teams, SMS, and more through unified channel management.
+  - title: Skills & Workspace
+    description: Extensible skills system and workspace management for customizing your AI assistant's capabilities and behavior.
+  - title: Agent Control Protocol
+    description: Full agent control protocol (ACP) for managing AI agents, routing, and isolated agent workspaces with authentication.
+  - title: Control UI & Dashboard
+    description: Web-based control UI and dashboard for managing your AI assistant, viewing logs, configuring channels, and monitoring health.
+  - title: Claude AI Integration
+    description: Native support for Claude AI and Claude Web with session key and cookie authentication for seamless AI interactions.
+  - title: Persistent Configuration
+    description: All configuration, workspace data, and agent state are persisted in volumes for reliable operation across restarts.
+  - title: Health Monitoring
+    description: Built-in health checks, system events, heartbeat monitoring, and presence tracking for reliable operation.
+
+tags:
+  - AI Assistant
+  - Personal Assistant
+  - Self-Hosted
+  - Open Source
+  - Privacy
+  - Claude
+  - WhatsApp
+  - Telegram
+  - Slack
+  - Discord
+  - WebSocket
+  - Automation
