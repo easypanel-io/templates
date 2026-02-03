@@ -10,8 +10,8 @@ export function generate(input: Input): Output {
       serviceName: input.serviceName,
       source: {
         type: "git",
-        repo: "https://github.com/easypanel-io/compose.git",
-        ref: "29-12-2025",
+        repo: "https://github.com/Ahson-Shaikh/compose.git",
+        ref: "19-01-2026",
         rootPath: "/plane/code",
         composeFile: "docker-compose.yml",
       },
