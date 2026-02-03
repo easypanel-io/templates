@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to stable-780dd83
   - date: 2025-10-09
     description: Updated to the newer image and to latest version
+  - date: 2025-12-24
+    description: Version bumped to stable-e98f035
 
 links:
   - label: Documentation
@@ -42,7 +44,22 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine:0.24.3
+      default: ghcr.io/toeverything/affine-graphql:stable-e98f035
+    mailerHost:
+      type: string
+      title: Mailer Host
+    mailerHostPort:
+      type: string
+      title: Mailer Host Port
+    mailerHostUser:
+      type: string
+      title: Mailer Host User
+    mailerPassword:
+      type: string
+      title: Mailer Password
+    mailerSender:
+      type: string
+      title: Mailer Sender
 
 benefits:
   - title: Streamlined Collaboration

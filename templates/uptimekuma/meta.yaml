@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 2.0.0-beta.1
   - date: 2025-07-25
     description: Version bumped to 2.0.0-beta.3
+  - date: 2025-12-29
+    description: Version bumped to 2.1.0-beta.0
 links:
   - label: Website
     url: https://uptime.kuma.pet
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: louislam/uptime-kuma:2.0.0-beta.3
+      default: louislam/uptime-kuma:2.1.0-beta.0
 benefits:
   - title: Easy-to-use monitoring tool
     description:
