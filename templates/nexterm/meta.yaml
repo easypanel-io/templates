@@ -11,6 +11,8 @@ changeLog:
 links:
   - label: Github
     url: https://github.com/gnmyt/Nexterm
+  - label: Website
+    url: https://nexterm.dev
   - label: Documentation
     url: https://docs.nexterm.dev
 contributors:
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: germannewsmaker/nexterm:1.0.2-OPEN-PREVIEW
+      default: germannewsmaker/nexterm:1.0.9-OPEN-PREVIEW
 benefits:
   - title: Web-Based Access
     description:

@@ -18,6 +18,13 @@ export function generate(input: Input): Output {
           port: 6989,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "nexterm-data",
+          mountPath: "/app/data",
+        },
+      ],
     },
   });
 
