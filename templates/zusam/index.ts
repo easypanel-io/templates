@@ -1,8 +1,9 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const initPassword = input.initPassword || randomPassword();
 
   services.push({
     type: "app",
@@ -21,7 +22,7 @@ export function generate(input: Input): Output {
       env: [
         `DATABASE_NAME=data.db`,
         `INIT_GROUP=${input.initGroup}`,
-        `INIT_PASSWORD=${input.initPassword}`,
+        `INIT_PASSWORD=${initPassword}`,
         `INIT_USER=${input.initUser}`,
         `SUBPATH=`,
       ].join("\n"),

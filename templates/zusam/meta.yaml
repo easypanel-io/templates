@@ -22,7 +22,6 @@ schema:
     - appServiceName
     - appServiceImage
     - initGroup
-    - initPassword
     - initUser
   properties:
     appServiceName:
@@ -40,7 +39,8 @@ schema:
     initPassword:
       type: string
       title: Initial Password
-      default: zusam
+      default: ""
+      description: Leave empty to generate a random password
     initUser:
       type: string
       title: Initial Username
