@@ -27,6 +27,28 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      mounts: [
+        {
+          type: "volume",
+          name: "log-nginx",
+          mountPath: "/var/log/nginx",
+        },
+        {
+          type: "volume",
+          name: "log-php",
+          mountPath: "/var/log/php",
+        },
+        {
+          type: "volume",
+          name: "log-supervisord",
+          mountPath: "/var/log/supervisord",
+        },
+        {
+          type: "volume",
+          name: "fonts",
+          mountPath: "/usr/local/share/cypht/site/fonts",
+        },
+      ],
       env: [
         `AUTH_USERNAME=${input.authUsername}`,
         `AUTH_PASSWORD=${input.authPassword}`,
