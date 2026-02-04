@@ -25,6 +25,11 @@ export function generate(input: Input): Output {
           hostPath: `${input.mediaPath}`,
           mountPath: "/media_data",
         },
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/app/storage",
+        },
       ],
     },
   });
