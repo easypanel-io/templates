@@ -39,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: formio/formio:v4.6.0-rc.2
+      default: formio/formio:4.6.0
       description: Form.io Docker image
     rootEmail:
       type: string
