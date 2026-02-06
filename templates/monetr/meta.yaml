@@ -17,6 +17,8 @@ links:
     url: https://github.com/monetr/monetr
   - label: Website
     url: https://monetr.app
+  - label: Documentation
+    url: https://monetr.app/documentation/
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -35,15 +37,10 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/monetr/monetr:1.9.0
-    postgresImage:
-      type: string
-      title: PostgreSQL Image
-      default: postgres:17
-      description: PostgreSQL database image version
     valkeyImage:
       type: string
       title: Valkey Image
-      default: valkey/valkey:9
+      default: valkey/valkey:9.0.2
       description: Valkey (Redis-compatible) image version
     allowSignUp:
       type: string
