@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: OpenClaw Image
-      default: ghcr.io/openclaw/openclaw:2026.2.1
+      default: ghcr.io/openclaw/openclaw:2026.2.3
       description: Docker image for OpenClaw
     gatewayToken:
       type: string
