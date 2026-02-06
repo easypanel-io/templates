@@ -1,13 +1,14 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const gatewayToken = input.gatewayToken || randomString(64);
 
   const gatewayEnv = [
     "HOME=/home/node",
     "TERM=xterm-256color",
-    `OPENCLAW_GATEWAY_TOKEN=${input.gatewayToken}`,
+    `OPENCLAW_GATEWAY_TOKEN=${gatewayToken}`,
   ];
 
   if (input.claudeAiSessionKey) {

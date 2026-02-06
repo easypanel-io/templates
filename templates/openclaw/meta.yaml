@@ -35,7 +35,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - gatewayToken
   properties:
     appServiceName:
       type: string
@@ -49,7 +48,8 @@ schema:
     gatewayToken:
       type: string
       title: Gateway Token
-      description: Token for authenticating with the gateway service
+      default: ""
+      description: Token for authenticating with the gateway service (auto-generated if empty)
     gatewayBind:
       type: string
       title: Gateway Bind
