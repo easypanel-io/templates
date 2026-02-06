@@ -50,11 +50,21 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/nicotsx/zerobyte:v0.20
+      default: ghcr.io/nicotsx/zerobyte:v0.25.1
     timezone:
       type: string
       title: Timezone
       default: UTC
+    appSecret:
+      type: string
+      title: App Secret
+      default: ""
+      description: Secret key for the application (auto-generated if empty)
+    baseUrl:
+      type: string
+      title: Base URL
+      default: ""
+      description: Base URL for the application (defaults to primary domain if empty)
 
 benefits:
   - title: Unified Backup Management
