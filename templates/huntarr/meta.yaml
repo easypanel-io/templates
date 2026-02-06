@@ -51,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: huntarr/huntarr:latest
+      default: huntarr/huntarr:9.2.1
     timezone:
       type: string
       title: Timezone
