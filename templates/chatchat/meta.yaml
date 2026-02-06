@@ -1,0 +1,52 @@
+name: ChatChat
+description:
+  "ChatChat is a simple chat application built on modern technologies. It
+  provides a lightweight and responsive chat interface for real-time
+  communication."
+instructions: null
+changeLog:
+  - date: 2025-05-20
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/okisdev/chatchat
+  - label: Website
+    url: https://chat.okis.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chatchat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/okisdev/chatchat:0.1.9
+benefits:
+  - title: Simple and Lightweight
+    description:
+      A streamlined chat application with minimal resource requirements.
+  - title: Real-time Communication
+    description: Instant messaging capabilities for seamless conversations.
+  - title: Modern Interface
+    description: Clean, responsive design for a pleasant user experience.
+
+features:
+  - title: Web-based Chat
+    description: Accessible from any modern web browser.
+  - title: Docker Deployment
+    description: Easy deployment and management using containerization.
+  - title: Responsive Design
+    description: Works on desktop and mobile devices.
+
+tags:
+  - Chat
+  - Communication
+  - Web Application
