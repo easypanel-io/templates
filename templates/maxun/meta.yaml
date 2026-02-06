@@ -32,6 +32,7 @@ schema:
     - appServiceName
     - backendImage
     - frontendImage
+    - minioImage
   properties:
     appServiceName:
       type: string
@@ -45,6 +46,10 @@ schema:
       type: string
       title: Frontend Image
       default: getmaxun/maxun-frontend:v0.0.30
+    minioImage:
+      type: string
+      title: Minio Image
+      default: minio/minio:RELEASE.2025-07-23T15-54-02Z
 
 benefits:
   - title: Full Stack Included

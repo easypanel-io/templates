@@ -55,7 +55,7 @@ export default defineConfig(() => {
       serviceName: `${input.appServiceName}-minio`,
       source: {
         type: "image",
-        image: "minio/minio:latest",
+        image: input.minioImage,
       },
       domains: [
         {
