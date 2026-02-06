@@ -30,6 +30,7 @@ schema:
     - appServiceName
     - apiImage
     - themeImage
+    - valkeyImage
   properties:
     appServiceName:
       type: string
@@ -43,6 +44,10 @@ schema:
       type: string
       title: Theme Image
       default: ghcr.io/logchimp/logchimp/theme:0.7.1
+    valkeyImage:
+      type: string
+      title: Valkey Image
+      default: valkey/valkey:9.0.2
 
 benefits:
   - title: Unified Feedback & Changelog

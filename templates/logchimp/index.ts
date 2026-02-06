@@ -18,7 +18,6 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: dbPassword,
-      image: "postgres:12",
     },
   });
 
@@ -28,7 +27,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-cache`,
       source: {
         type: "image",
-        image: "valkey/valkey:8",
+        image: input.valkeyImage,
       },
       deploy: {
         command: "valkey-server --save 60 1 --loglevel warning --dir /data",
