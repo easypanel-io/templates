@@ -24,7 +24,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - systemUserPassword
   properties:
     appServiceName:
       type: string
@@ -37,8 +36,8 @@ schema:
     systemUserPassword:
       type: string
       title: System User Password
-      default: b^J=81Z>I3%$kVB[
-      description: Password for the System User should match the same pattern.
+      default: ""
+      description: Password must be 10-72 characters long should contain at least one uppercase letter, one lowercase letter, one number, and one special character. Auto-generated if empty.
 benefits:
   - title: Self-Hosted Helpdesk
     description:

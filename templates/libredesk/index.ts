@@ -1,10 +1,30 @@
 import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
+function generateLibredeskPassword(): string {
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercase = "abcdefghijklmnopqrstuvwxyz";
+  const numbers = "0123456789";
+  const special = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+  const allChars = uppercase + lowercase + numbers + special;
+  
+  let password = 
+    uppercase[Math.floor(Math.random() * uppercase.length)] +
+    lowercase[Math.floor(Math.random() * lowercase.length)] +
+    numbers[Math.floor(Math.random() * numbers.length)] +
+    special[Math.floor(Math.random() * special.length)];
+  
+  for (let i = password.length; i < 20; i++) {
+    password += allChars[Math.floor(Math.random() * allChars.length)];
+  }
+  return password.split('').sort(() => Math.random() - 0.5).join('');
+}
+
 export function generate(input: Input): Output {
   const services: Services = [];
   const dbPassword = randomPassword();
   const redisPassword = randomPassword();
+  const systemUserPassword = input.systemUserPassword || generateLibredeskPassword();
 
   const configToml = `[app]
 # Log level: info, debug, warn, error, fatal
@@ -136,7 +156,6 @@ evaluation_interval = "5m"`;
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: dbPassword,
-      image: "postgres:17-alpine",
     },
   });
 
@@ -144,7 +163,6 @@ evaluation_interval = "5m"`;
     type: "redis",
     data: {
       serviceName: `${input.appServiceName}-redis`,
-      image: "redis:7-alpine",
       password: redisPassword,
     },
   });
@@ -175,7 +193,7 @@ evaluation_interval = "5m"`;
           mountPath: "/libredesk/config.toml",
         },
       ],
-      env: [`LIBREDESK_SYSTEM_USER_PASSWORD=${input.systemUserPassword}`].join(
+      env: [`LIBREDESK_SYSTEM_USER_PASSWORD=${systemUserPassword}`].join(
         "\n"
       ),
       deploy: {
