@@ -1,39 +1,68 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { randomBytes } from "crypto";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 function generateLibredeskPassword(): string {
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const numbers = "0123456789";
-  const special = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+  const special = "!@#$%^&*_+-=[]{}|;:,.<>?";
   const allChars = uppercase + lowercase + numbers + special;
   
+  const getRandomChar = (chars: string): string => {
+    const randomIndex = randomBytes(1)[0] % chars.length;
+    return chars[randomIndex];
+  };
+  
   let password = 
-    uppercase[Math.floor(Math.random() * uppercase.length)] +
-    lowercase[Math.floor(Math.random() * lowercase.length)] +
-    numbers[Math.floor(Math.random() * numbers.length)] +
-    special[Math.floor(Math.random() * special.length)];
+    getRandomChar(uppercase) +
+    getRandomChar(lowercase) +
+    getRandomChar(numbers) +
+    getRandomChar(special);
   
   for (let i = password.length; i < 20; i++) {
-    password += allChars[Math.floor(Math.random() * allChars.length)];
+    password += getRandomChar(allChars);
   }
-  return password.split('').sort(() => Math.random() - 0.5).join('');
+  
+  const passwordArray = password.split('');
+  for (let i = passwordArray.length - 1; i > 0; i--) {
+    const j = randomBytes(1)[0] % (i + 1);
+    [passwordArray[i], passwordArray[j]] = [passwordArray[j], passwordArray[i]];
+  }
+  
+  return passwordArray.join('');
+}
+
+function isValidPassword(password: string): boolean {
+  if (password.length < 10 || password.length > 72) return false;
+  if (!/[A-Z]/.test(password)) return false;
+  if (!/[a-z]/.test(password)) return false;
+  if (!/[0-9]/.test(password)) return false;
+  if (!/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password)) return false;
+  return true;
 }
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const dbPassword = randomPassword();
   const redisPassword = randomPassword();
-  const systemUserPassword = input.systemUserPassword || generateLibredeskPassword();
+  // Password Validation and Generation
+  const systemUserPassword = 
+    (input.systemUserPassword && isValidPassword(input.systemUserPassword))
+      ? input.systemUserPassword
+      : generateLibredeskPassword();
+  const encryptionKey = input.encryptionKey || randomString(32);
 
   const configToml = `[app]
 # Log level: info, debug, warn, error, fatal
 log_level = "debug"
 # Environment: dev, prod.
 # Setting to "dev" will enable color logging in terminal.
-env = "dev"
+env = "prod"
 # Whether to automatically check for application updates on start up, app updates are shown as a banner in the admin panel.
 check_updates = true
+# Encryption key. Generate using \`openssl rand -hex 16\` must be 32 characters long.
+encryption_key = "${encryptionKey}"
 
 # HTTP server.
 [app.server]
