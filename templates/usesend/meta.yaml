@@ -1,0 +1,119 @@
+name: Usesend
+description:
+  Usesend is a self-hosted email marketing and transactional email platform that
+  gives you complete control over your email infrastructure. It provides a
+  modern, user-friendly interface for creating, sending, and tracking email
+  campaigns, newsletters, and transactional emails. Usesend features advanced
+  segmentation, email automation, template management, analytics, and subscriber
+  management. Built with Next.js and powered by PostgreSQL, Redis, and MinIO for
+  reliable storage, it offers enterprise-grade features without vendor lock-in
+  or usage-based pricing. Usesend supports GitHub OAuth for authentication and
+  includes API rate limiting and SMTP configuration for sending emails. Perfect
+  for businesses and developers who want full ownership of their email marketing
+  infrastructure.
+
+instructions:
+  After deployment, configure your GitHub OAuth app credentials and AWS Access
+  Key and Secret Key.
+
+changeLog:
+  - date: 2025-11-13
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://usesend.com/
+  - label: Documentation
+    url: https://docs.usesend.com/
+  - label: Github
+    url: https://github.com/usesend/usesend
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - githubId
+    - githubSecret
+    - awsAccessKey
+    - awsSecretKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: usesend
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: usesend/usesend:v1.7.1
+    githubId:
+      type: string
+      title: GitHub OAuth App ID
+      default: ""
+    githubSecret:
+      type: string
+      title: GitHub OAuth App Secret
+      default: ""
+    awsAccessKey:
+      type: string
+      title: AWS Access Key
+      default: ""
+    awsSecretKey:
+      type: string
+      title: AWS Secret Key
+      default: ""
+    apiRateLimit:
+      type: string
+      title: API Rate Limit (requests per minute)
+      default: "60"
+
+benefits:
+  - title: Self-Hosted & Private
+    description:
+      Complete control over your email infrastructure and subscriber data. No
+      vendor lock-in, no usage limits, and full data privacy.
+  - title: Cost-Effective
+    description:
+      Eliminate expensive per-email or per-subscriber pricing. Pay only for your
+      infrastructure, not for every email you send.
+  - title: Enterprise Features
+    description:
+      Advanced segmentation, automation, analytics, and API access typically
+      found in expensive SaaS platforms, available in your self-hosted instance.
+
+features:
+  - title: Email Campaign Management
+    description:
+      Create and send beautiful email campaigns with a modern editor, template
+      management, and scheduling capabilities.
+  - title: Subscriber Management
+    description:
+      Organize subscribers with advanced segmentation, custom fields, tags, and
+      list management for targeted campaigns.
+  - title: Email Automation
+    description:
+      Set up automated email workflows triggered by subscriber actions, dates,
+      or custom events.
+  - title: Analytics & Tracking
+    description:
+      Comprehensive email analytics including open rates, click rates, bounces,
+      and engagement metrics with detailed reporting.
+  - title: API & Integrations
+    description:
+      RESTful API for integrating email sending into your applications with rate
+      limiting and authentication.
+  - title: Transactional Emails
+    description:
+      Send transactional emails like password resets, order confirmations, and
+      notifications through the API.
+
+tags:
+  - Email Marketing
+  - Newsletter
+  - Transactional Email
+  - SMTP
+  - Self-Hosted

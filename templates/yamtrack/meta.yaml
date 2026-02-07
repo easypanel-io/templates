@@ -1,0 +1,96 @@
+name: Yamtrack
+description:
+  Yamtrack is a self-hosted media tracking application designed to help you keep
+  track of your movies, TV shows, books, video games, and other media
+  consumption. It provides a clean, modern interface for logging what you're
+  watching, reading, or playing, along with ratings, reviews, and personal
+  notes. Yamtrack features automatic metadata fetching from popular databases,
+  progress tracking, viewing statistics, and customizable lists. The application
+  supports multiple media types and offers detailed analytics about your
+  consumption habits. Built with a focus on privacy and simplicity, Yamtrack
+  keeps all your tracking data under your control. Perfect for media enthusiasts
+  who want to maintain a comprehensive log of their entertainment without
+  relying on third-party services.
+
+instructions: Default credentials are admin/admin123.
+
+changeLog:
+  - date: 2025-11-17
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/FuzzyGrim/Yamtrack
+  - label: Documentation
+    url: https://github.com/FuzzyGrim/Yamtrack/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: yamtrack
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/fuzzygrim/yamtrack:0.24.7
+    timezone:
+      type: string
+      title: Timezone
+      default: Europe/Berlin
+
+benefits:
+  - title: Comprehensive Media Tracking
+    description:
+      Track movies, TV shows, books, video games, and more in one unified
+      platform. Keep detailed logs of everything you consume with ratings and
+      reviews.
+  - title: Privacy-Focused
+    description:
+      Your tracking data stays on your server. No third-party services, no data
+      mining, and complete control over your entertainment history.
+  - title: Statistics & Analytics
+    description:
+      Gain insights into your media consumption habits with detailed statistics,
+      charts, and analytics about what you watch, read, and play.
+
+features:
+  - title: Multi-Media Support
+    description:
+      Track various types of media including movies, TV shows, books, video
+      games, and more, all from a single interface.
+  - title: Automatic Metadata
+    description:
+      Automatically fetch metadata, posters, descriptions, and information from
+      popular databases to enrich your tracking logs.
+  - title: Progress Tracking
+    description:
+      Monitor your progress through TV series, book series, and multi-part
+      content with automatic progress calculation.
+  - title: Ratings & Reviews
+    description:
+      Rate and review everything you consume. Add personal notes, thoughts, and
+      detailed reviews to your tracked items.
+  - title: Custom Lists
+    description:
+      Create custom lists and collections to organize your media. Build
+      watchlists, reading lists, and curated collections.
+  - title: Viewing Statistics
+    description:
+      View detailed statistics about your consumption patterns, favorite genres,
+      time spent, and completion rates.
+
+tags:
+  - Media Tracker
+  - Movies
+  - TV Shows
+  - Books
+  - Gaming
+  - Analytics

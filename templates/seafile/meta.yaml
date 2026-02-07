@@ -1,0 +1,92 @@
+name: Seafile
+description:
+  Seafile is a professional, open-source file synchronization and sharing
+  platform with privacy protection and teamwork features. It provides secure
+  file storage, synchronization, and sharing capabilities with end-to-end
+  encryption, making it perfect for teams and organizations that need to
+  collaborate on files while maintaining data security. Seafile supports file
+  versioning, online editing, and mobile access across all platforms.
+instructions:
+  Please go to this document
+  https://ahsonshaikh616.medium.com/deploying-seafile-via-easypanel-feature-rich-file-sync-share-1d2df0a37345
+changeLog:
+  - date: 2025-09-11
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/haiwen/seafile
+  - label: Documentation
+    url: https://manual.seafile.com/
+  - label: Website
+    url: https://hub.docker.com/r/seafileltd/seafile-mc
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: seafile-mc
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: seafileltd/seafile-mc:11.0-latest
+      description: Seafile Docker image
+benefits:
+  - title: Secure File Synchronization
+    description:
+      End-to-end encryption and secure file synchronization across all devices
+      and platforms with client-side encryption for maximum privacy.
+  - title: Team Collaboration
+    description:
+      Advanced team collaboration features with shared libraries, file
+      versioning, and granular permission controls for effective teamwork.
+  - title: Cross-Platform Access
+    description:
+      Access your files from any device with native clients for Windows, macOS,
+      Linux, iOS, and Android, plus web interface.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your data with a self-hosted solution that keeps
+      your files private and secure on your own infrastructure.
+features:
+  - title: File Versioning
+    description:
+      Automatic file versioning with configurable retention policies to track
+      changes and recover previous versions of your files.
+  - title: Online Editing
+    description:
+      Built-in online document editor with support for Office documents,
+      allowing you to edit files directly in the browser.
+  - title: Mobile Apps
+    description:
+      Native mobile applications for iOS and Android with full synchronization
+      and offline access capabilities.
+  - title: WebDAV Support
+    description:
+      WebDAV protocol support for seamless integration with third-party
+      applications and file managers.
+  - title: Advanced Search
+    description:
+      Powerful full-text search across all your files with content indexing and
+      metadata search capabilities.
+  - title: API Integration
+    description:
+      Comprehensive REST API for integration with other applications and custom
+      development workflows.
+tags:
+  - File Sync
+  - File Sharing
+  - Collaboration
+  - Self-Hosted
+  - Encryption
+  - Team Work
+  - Document Management
+  - Cloud Storage
+  - WebDAV
+  - Mobile Access
