@@ -16,8 +16,8 @@ changeLog:
     description: Version bumped to 3.2.18
   - date: 2025-11-03
     description:
-      Added database type selection (SQLite, PostgreSQL, MySQL, MariaDB), volume
-      mounts, timezone configuration, and Resend email integration support
+      Added database type selection (SQLite, PostgreSQL, MySQL), volume mounts,
+      timezone configuration, and Resend email integration support
 links:
   - label: Website
     url: https://kener.ing/
@@ -58,9 +58,6 @@ schema:
         - enum:
             - mysql
           title: MySQL
-        - enum:
-            - mariadb
-          title: MariaDB
     timezone:
       type: string
       title: Timezone

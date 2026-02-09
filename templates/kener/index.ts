@@ -17,18 +17,13 @@ export function generate(input: Input): Output {
     `ORIGIN=https://$(PRIMARY_DOMAIN)`,
   ];
 
-  // Add database URL based on database type
   if (input.databaseType === "postgres") {
     appEnv.push(
       `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`
     );
-  } else if (
-    input.databaseType === "mysql" ||
-    input.databaseType === "mariadb"
-  ) {
-    const dbType = input.databaseType === "mysql" ? "mysql" : "mysql";
+  } else if (input.databaseType === "mysql") {
     appEnv.push(
-      `DATABASE_URL=${dbType}://mysql:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:3306/$(PROJECT_NAME)`
+      `DATABASE_URL=mysql://mysql:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:3306/$(PROJECT_NAME)`
     );
   }
   if (input.resendApiKey) {
@@ -80,14 +75,6 @@ export function generate(input: Input): Output {
   } else if (input.databaseType === "mysql") {
     services.push({
       type: "mysql",
-      data: {
-        serviceName: `${input.appServiceName}-db`,
-        password: databasePassword,
-      },
-    });
-  } else if (input.databaseType === "mariadb") {
-    services.push({
-      type: "mariadb",
       data: {
         serviceName: `${input.appServiceName}-db`,
         password: databasePassword,
