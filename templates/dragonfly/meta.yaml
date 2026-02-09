@@ -1,0 +1,103 @@
+name: DragonflyDB
+description:
+  DragonflyDB is a modern, high-performance, Redis-compatible in-memory
+  datastore that's designed for cloud workloads. It offers superior performance
+  with up to 25x higher throughput than Redis while using fewer resources.
+  DragonflyDB is fully compatible with Redis APIs and commands, making it a
+  drop-in replacement that doesn't require code changes. It features automatic
+  snapshots, optional persistence to disk, built-in replication, and efficient
+  memory management. Perfect for caching, session storage, real-time analytics,
+  and any use case that requires blazing-fast data access with lower operational
+  costs.
+
+instructions:
+  After deployment, you can connect to DragonflyDB using any Redis client on
+  port 6379. Make sure to use the password you configured for secure access.
+  Data is automatically persisted to the mounted volume based on the snapshot
+  schedule.
+
+changeLog:
+  - date: 2025-11-04
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://www.dragonflydb.io/
+  - label: Documentation
+    url: https://www.dragonflydb.io/docs
+  - label: Docker Hub
+    url: https://hub.docker.com/r/docker/dragonflydb/dragonfly
+  - label: Github
+    url: https://github.com/dragonflydb/dragonfly
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dragonfly
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.dragonflydb.io/dragonflydb/dragonfly:v1.34.2
+    password:
+      type: string
+      title: Password
+      default: ""
+    snapshotCron:
+      type: string
+      title: Snapshot Cron Schedule
+      default: "*/5 * * * *"
+    maxMemory:
+      type: string
+      title: Max Memory (e.g., 8gb, leave empty for no limit)
+      default: ""
+
+benefits:
+  - title: Superior Performance
+    description:
+      Experience up to 25x higher throughput compared to Redis with vertical
+      scalability that maximizes multi-core CPU utilization.
+  - title: Redis Compatible
+    description:
+      Drop-in replacement for Redis with full API compatibility. No code changes
+      required - just point your existing Redis clients to DragonflyDB.
+  - title: Resource Efficient
+    description:
+      Use significantly less memory and CPU resources compared to Redis while
+      handling more operations, reducing infrastructure costs.
+
+features:
+  - title: Automatic Snapshots
+    description:
+      Configure automatic snapshot intervals to persist data to disk, ensuring
+      data durability without manual intervention.
+  - title: Multi-threaded Architecture
+    description:
+      Efficiently utilizes all available CPU cores with a shared-nothing
+      architecture that eliminates the need for Redis clustering for vertical
+      scaling.
+  - title: Built-in Persistence
+    description:
+      Supports RDB-style snapshots with customizable scheduling and automatic
+      backup rotation for reliable data persistence.
+  - title: Memory Management
+    description:
+      Advanced memory management with optional memory limits and efficient
+      eviction policies to optimize resource usage.
+
+tags:
+  - Database
+  - Cache
+  - In-Memory
+  - Redis
+  - Performance
