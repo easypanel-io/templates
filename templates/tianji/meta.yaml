@@ -10,6 +10,8 @@ changeLog:
     description: Version bumped to 1.18.11
   - date: 2025-07-25
     description: Version bumped to 1.24.6
+  - date: 2025-12-29
+    description: Version bumped to 1.31.1
 links:
   - label: Website
     url: https://tianji.msgbyte.com/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: moonrailgun/tianji:1.24.6
+      default: moonrailgun/tianji:1.31.1
 tags:
   - Website Monitor
   - Analytics

@@ -1,0 +1,97 @@
+name: Koito
+description:
+  Koito is a self-hosted, themeable ListenBrainz-compatible scrobbler for
+  tracking music listening history and visualizing listening habits. It supports
+  relay of listens to other ListenBrainz-compatible servers, import from
+  Last.fm, Maloja, Spotify, and ListenBrainz, and features like artist
+  statistics, interest-over-time graphs, and Spotify-wrapped-style rewinds.
+  Built with Go and featuring a sleek modern UI with multiple built-in themes
+  and custom theme support, Koito provides comprehensive music listening
+  analytics while maintaining complete control over your scrobbling data.
+instructions: null
+
+changeLog:
+  - date: 2026-01-17
+    description: Tempalate Release (v0.1.4)
+links:
+  - label: Website
+    url: https://koito.io
+  - label: GitHub
+    url: https://github.com/gabehf/koito
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: koito
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gabehf/koito:v0.1.4
+
+benefits:
+  - title: Music Listening Tracking
+    description:
+      Track your music listening history across all your devices and music
+      services with comprehensive scrobbling support.
+  - title: ListenBrainz Compatible
+    description:
+      Fully compatible with ListenBrainz and any service that supports
+      scrobbling to custom ListenBrainz URLs.
+  - title: Data Import
+    description:
+      Import historical listening data from Last.fm, Maloja, Spotify, and
+      ListenBrainz to consolidate your music history in one place.
+  - title: Visual Analytics
+    description:
+      Beautiful visualizations including artist statistics, interest-over-time
+      graphs, and Spotify-wrapped-style rewinds for insights into your listening
+      habits.
+  - title: Self-Hosted Privacy
+    description:
+      Complete control over your listening data with no reliance on external
+      services or data sharing.
+
+features:
+  - title: ListenBrainz Compatibility
+    description:
+      Fully compatible with ListenBrainz protocol, allowing integration with any
+      ListenBrainz-compatible client or server.
+  - title: Listen Relay
+    description:
+      Optionally relay listens submitted to your Koito instance to other
+      compatible services for backup or synchronization.
+  - title: Themed Interface
+    description:
+      Sleek, modern UI with multiple built-in themes and support for custom
+      themes to personalize your experience.
+  - title: Historical Data Import
+    description:
+      Import listening history from Last.fm, Maloja, Spotify, and ListenBrainz
+      to build a comprehensive music listening database.
+  - title: PostgreSQL Database
+    description:
+      Reliable PostgreSQL database for persistent storage of listening data and
+      user preferences.
+  - title: Artist Analytics
+    description:
+      Detailed artist and album metrics, listening trends, and personalized
+      insights into your music preferences.
+
+tags:
+  - Music
+  - Scrobbler
+  - ListenBrainz
+  - Self-Hosted
+  - Analytics
+  - Music Tracking
+  - Last.fm

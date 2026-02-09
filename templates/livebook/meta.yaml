@@ -1,0 +1,83 @@
+name: Livebook
+description:
+  Livebook is a web application for writing interactive and collaborative code
+  notebooks for Elixir. It features an intuitive and interactive workflow for
+  data science and machine learning in Elixir, with support for rich output
+  including charts, maps, tables, and more. Livebook allows you to create,
+  share, and collaborate on notebooks that combine narrative, code, and results
+  in a single document.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-17
+    description: Initial template release
+
+links:
+  - label: Documentation
+    url: https://livebook.dev/
+  - label: GitHub
+    url: https://github.com/livebook-dev/livebook
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - livebookPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: livebook
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/livebook-dev/livebook:0.16.2
+      description: Livebook Docker image
+    livebookPassword:
+      type: string
+      title: Livebook Password
+      description: Password must be at least 12 characters long.
+benefits:
+  - title: Interactive Development
+    description:
+      Write and execute Elixir code in an interactive notebook environment with
+      rich output support.
+  - title: Collaborative
+    description:
+      Share and collaborate on notebooks with team members in real-time.
+  - title: Data Science Ready
+    description:
+      Built-in support for data visualization, charts, maps, and machine
+      learning workflows in Elixir.
+  - title: Persistent Storage
+    description:
+      Your notebooks and data are stored persistently in mounted volumes.
+
+features:
+  - title: Rich Output
+    description:
+      Support for charts, maps, tables, images, and interactive widgets directly
+      in notebooks.
+  - title: Code Execution
+    description:
+      Execute Elixir code cells with real-time output and error handling.
+  - title: File Management
+    description:
+      Built-in file explorer and management for organizing notebooks and data
+      files.
+  - title: Export Options
+    description:
+      Export notebooks in various formats including standalone Elixir scripts.
+
+tags:
+  - Development
+  - Elixir
+  - Notebook
+  - Data Science
+  - Interactive
