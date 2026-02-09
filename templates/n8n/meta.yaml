@@ -20,8 +20,8 @@ changeLog:
     description: first release
   - date: 2024-10-19
     description: Update to 1.64.0
-  - date: 2025-07-22
-    description: Update to 1.103.2
+  - date: 2025-03-05
+    description: Update to stable version and addition of redis and postgress database inclusion option
 links:
   - label: Website
     url: https://n8n.io/
@@ -36,11 +36,16 @@ contributors:
     url: https://github.com/deiucanta
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: Alan Mosko
+    url: https://github.com/moskoweb
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
+    - databaseType
+    - redisService
+    - appTimezone
   properties:
     appServiceName:
       type: string
@@ -49,7 +54,34 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n8nio/n8n:1.103.2
+      default: n8nio/n8n:stable
+    databaseType:
+      type: string
+      title: Database Type
+      default: postgres
+      oneOf:
+        - enum:
+            - sqlite
+          title: SQLite
+        - enum:
+            - postgres
+          title: Postgres
+    redisService:
+      type: boolean
+      title: Redis (for using in Node and Worker)
+      default: false
+    workerInstance:
+      type: boolean
+      title: Queue Mode with Worker (include Redis, Postgres and N8N Worker)
+      default: false
+    appTimezone:
+      type: string
+      title: App Timezone
+      default: UTC
+    appLanguage:
+      type: string
+      title: App Language
+      default: en
 benefits:
   - title: Workflow Automation
     description:
