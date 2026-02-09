@@ -78,13 +78,33 @@
   {
     "slug": "affinepro",
     "logo": "logo.png",
-    "name": "Affine Pro",
-    "description": "Affine Pro is a modern, self-hosted platform designed for collaborative content creation and project management. It offers an intuitive interface, seamless real-time collaboration, and powerful tools for organizing tasks, notes, and ideas. With Affine Pro, you can centralize your workflows and enhance productivity.",
+    "name": "Affine",
+    "description": "Affine is a modern, self-hosted platform designed for collaborative content creation and project management. It offers an intuitive interface, seamless real-time collaboration, and powerful tools for organizing tasks, notes, and ideas. With Affine, you can centralize your workflows and enhance productivity. The platform features a comprehensive workspace that combines note-taking, task management, and project planning in one unified environment.",
     "tags": [
       "Collaboration",
       "Self-Hosted",
       "Productivity",
-      "Project Management"
+      "Project Management",
+      "PostgreSQL",
+      "Vector Search"
+    ]
+  },
+  {
+    "slug": "airsonic-advanced",
+    "logo": "logo.png",
+    "name": "Airsonic Advanced",
+    "description": "Airsonic Advanced is a more modern implementation of the Airsonic fork with several key performance and feature enhancements. It's a free, web-based media streamer providing ubiquitous access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room. It supports very large music collections and works with any audio or video format that can stream over HTTP.",
+    "tags": [
+      "Music Streaming",
+      "Media Server",
+      "Self-hosted",
+      "Airsonic",
+      "Audio",
+      "Video",
+      "Podcast",
+      "Sonos",
+      "Chromecast",
+      "DLNA"
     ]
   },
   {
@@ -140,6 +160,16 @@
     "tags": [
       "File Management",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "anse",
+    "logo": "logo.png",
+    "name": "Anse",
+    "description": "Anse is a modern web application that provides a clean and intuitive interface. It's a lightweight and efficient solution for your needs.",
+    "tags": [
+      "Web Application",
+      "UI"
     ]
   },
   {
@@ -262,6 +292,18 @@
       "Machine Learning",
       "Data Labeling",
       "AI Tools"
+    ]
+  },
+  {
+    "slug": "ariang",
+    "logo": "logo.png",
+    "name": "AriaNg",
+    "description": "AriaNg is a modern web frontend for aria2, a lightweight multi-protocol & multi-source command-line download utility. It provides a beautiful web interface for managing downloads.",
+    "tags": [
+      "Download Manager",
+      "File Transfer",
+      "Self-hosted",
+      "Open Source"
     ]
   },
   {
@@ -435,6 +477,24 @@
     ]
   },
   {
+    "slug": "blackcandy",
+    "logo": "logo.png",
+    "name": "BlackCandy",
+    "description": "BlackCandy is a self-hosted music streaming server built with Rails and Hotwire. It provides a clean, modern web interface for streaming your personal music collection. The goal of the project is to create a real personal music center that you can access from anywhere. It features mobile apps for iOS and Android, supports multiple audio formats, and offers a beautiful, responsive interface.",
+    "tags": [
+      "Music Streaming",
+      "Self-hosted",
+      "Ruby",
+      "Rails",
+      "Hotwire",
+      "Media Server",
+      "Audio",
+      "Music Player",
+      "Personal Music",
+      "Mobile Apps"
+    ]
+  },
+  {
     "slug": "blender",
     "logo": "logo.png",
     "name": "Blender",
@@ -537,6 +597,18 @@
       "Internal tools",
       "Forms",
       "Workflows"
+    ]
+  },
+  {
+    "slug": "bugsink",
+    "logo": "logo.png",
+    "name": "Bugsink",
+    "description": "Bugsink is a self-hosted error tracking system compatible with Sentry SDKs.",
+    "tags": [
+      "Error Tracking",
+      "Self-Hosted",
+      "Monitoring",
+      "Sentry Compatible"
     ]
   },
   {
@@ -699,6 +771,30 @@
       "AI",
       "Design Tool",
       "Documentation"
+    ]
+  },
+  {
+    "slug": "chatchat",
+    "logo": "logo.png",
+    "name": "ChatChat",
+    "description": "ChatChat is a simple chat application built on modern technologies. It provides a lightweight and responsive chat interface for real-time communication.",
+    "tags": [
+      "Chat",
+      "Communication",
+      "Web Application"
+    ]
+  },
+  {
+    "slug": "chatgpt-next-web",
+    "logo": "logo.png",
+    "name": "ChatGPT Next Web",
+    "description": "ChatGPT Next Web is a well-designed, feature-rich web interface for ChatGPT and other LLMs. It provides a clean and intuitive interface for interacting with OpenAI's ChatGPT, with support for multiple conversation modes, custom prompts, and various AI models. The application is self-hosted, allowing you to maintain control over your conversations and API usage while providing a superior user experience compared to the official ChatGPT web interface.",
+    "tags": [
+      "ChatGPT",
+      "AI",
+      "OpenAI",
+      "LLM",
+      "Self-Hosted"
     ]
   },
   {
@@ -1033,6 +1129,19 @@
     ]
   },
   {
+    "slug": "cypht",
+    "logo": "logo.png",
+    "name": "Cypht",
+    "description": "Cypht is a modern, open-source webmail client that allows you to access multiple email accounts from a single interface. It supports various email protocols and provides a clean, intuitive user experience.",
+    "tags": [
+      "Email",
+      "Webmail",
+      "Self-hosted",
+      "Open Source",
+      "Communication"
+    ]
+  },
+  {
     "slug": "daapd",
     "logo": "logo.png",
     "name": "Daapd",
@@ -1295,6 +1404,18 @@
     ]
   },
   {
+    "slug": "doublecommander",
+    "logo": "logo.png",
+    "name": "Double Commander",
+    "description": "A cross-platform open-source file manager with two panels side by side. It is inspired by Total Commander and features a modern interface with extensive file management capabilities.",
+    "tags": [
+      "File Manager",
+      "FTP Client",
+      "Self-hosted",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "dozzle",
     "logo": "logo.png",
     "name": "Dozzle",
@@ -1302,6 +1423,24 @@
     "tags": [
       "Monitoring",
       "Logging"
+    ]
+  },
+  {
+    "slug": "drawdb",
+    "logo": "logo.png",
+    "name": "DrawDB",
+    "description": "DrawDB is a free, simple, and intuitive online database schema editor and SQL generator.  It provides a robust and user-friendly database entity relationship (ER) editor that runs  directly in your browser. With DrawDB, you can build database diagrams with a few clicks,  export SQL scripts, customize your editor, and manage database schemas without creating an  account. The tool supports multiple database types including MySQL, PostgreSQL, SQLite, SQL Server, and more.",
+    "tags": [
+      "Database",
+      "Schema Design",
+      "ER Diagram",
+      "SQL Generator",
+      "Database Design",
+      "Entity Relationship",
+      "MySQL",
+      "PostgreSQL",
+      "SQLite",
+      "Visual Editor"
     ]
   },
   {
@@ -1637,6 +1776,17 @@
     ]
   },
   {
+    "slug": "fileshelter",
+    "logo": null,
+    "name": "FileShelter",
+    "description": "A simple and secure file sharing application that allows users to upload and share files with a clean web interface. Files are stored on the server and can be accessed through unique URLs.",
+    "tags": [
+      "File Sharing",
+      "Self-hosted",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "filestash",
     "logo": "logo.png",
     "name": "Filestash",
@@ -1815,6 +1965,20 @@
       "Survey",
       "Forms",
       "Experience Management"
+    ]
+  },
+  {
+    "slug": "formio",
+    "logo": "logo.png",
+    "name": "Form.io",
+    "description": "Form.io is a form and data management platform for progressive web applications. It provides a drag-and-drop form builder, API platform, and data management system that allows developers to rapidly build complex forms and workflows. Form.io combines the power of JSON Schema with a robust API to create dynamic, data-driven applications.",
+    "tags": [
+      "Forms",
+      "Form Builder",
+      "API Platform",
+      "Data Management",
+      "Workflow",
+      "MongoDB"
     ]
   },
   {
@@ -1998,6 +2162,30 @@
     "description": "Gogs is a self-hosted Git service designed to be simple, stable, and extensible. It allows you to set up your own Git service in the most painless way possible. The app is built with Go, enabling it to run on all platforms that Go supports, including Linux, macOS, Windows, and ARM-based systems. Gogs is lightweight and has low minimal requirements, making it possible to run even on an inexpensive Raspberry Pi. It offers a range of features including user dashboard, access to repositories via SSH, HTTP and HTTPS protocols, repository and organization management, and more. Gogs is 100% open source and free of charge, with all source code available under the MIT License.",
     "tags": [
       "Code Hosting"
+    ]
+  },
+  {
+    "slug": "gokapi",
+    "logo": "logo.png",
+    "name": "Gokapi",
+    "description": "Gokapi is a lightweight file-sharing server that allows you to easily upload and share files with others. It provides a simple web interface for file uploads, generates shareable links, and supports features like password protection, automatic file expiration, and customizable download limits.",
+    "tags": [
+      "File Sharing",
+      "Upload Server",
+      "File Transfer",
+      "Temporary Storage"
+    ]
+  },
+  {
+    "slug": "gopeed",
+    "logo": "logo.png",
+    "name": "GoPeed",
+    "description": "GoPeed is a high-performance download manager that supports HTTP, HTTPS, FTP, BitTorrent, and other protocols. It features a modern web interface and supports multiple download task.",
+    "tags": [
+      "Download Manager",
+      "File Transfer",
+      "Self-hosted",
+      "Open Source"
     ]
   },
   {
@@ -3066,6 +3254,19 @@
     ]
   },
   {
+    "slug": "livebook",
+    "logo": "logo.png",
+    "name": "Livebook",
+    "description": "Livebook is a web application for writing interactive and collaborative code notebooks for Elixir. It features an intuitive and interactive workflow for data science and machine learning in Elixir, with support for rich output including charts, maps, tables, and more. Livebook allows you to create, share, and collaborate on notebooks that combine narrative, code, and results in a single document.",
+    "tags": [
+      "Development",
+      "Elixir",
+      "Notebook",
+      "Data Science",
+      "Interactive"
+    ]
+  },
+  {
     "slug": "llana",
     "logo": "logo.png",
     "name": "llana",
@@ -3114,6 +3315,19 @@
       "Customizable",
       "Open Source",
       "Conversational AI"
+    ]
+  },
+  {
+    "slug": "localai",
+    "logo": "logo.png",
+    "name": "LocalAI",
+    "description": "LocalAI is a drop-in replacement REST API that's compatible with OpenAI API specifications for local inferencing. It allows you to run LLMs, generate images, audio (and not only) locally or on-premises with consumer grade hardware, supporting multiple model families and not requiring GPU.",
+    "tags": [
+      "AI",
+      "LLM",
+      "OpenAI",
+      "Local Inference",
+      "Machine Learning"
     ]
   },
   {
@@ -3595,6 +3809,23 @@
     ]
   },
   {
+    "slug": "morphic",
+    "logo": "logo.png",
+    "name": "Morphic",
+    "description": "Morphic is an AI-powered search and answer engine that combines the power of multiple AI models with real-time web search capabilities. It provides intelligent answers to user queries by leveraging various AI providers including OpenAI, Anthropic, Google, and Groq, while using SearxNG for privacy-focused web search. Morphic offers a conversational interface that delivers comprehensive, well-sourced answers with citations and follow-up questions, making it an excellent alternative to traditional search engines.",
+    "tags": [
+      "AI",
+      "Search Engine",
+      "Chat",
+      "OpenAI",
+      "Anthropic",
+      "Google",
+      "Groq",
+      "Redis",
+      "Next.js"
+    ]
+  },
+  {
     "slug": "mstream",
     "logo": "logo.svg",
     "name": "Mstream",
@@ -3660,6 +3891,19 @@
     ]
   },
   {
+    "slug": "nats",
+    "logo": "logo.png",
+    "name": "NATS",
+    "description": "NATS is a simple, secure and performant messaging system for cloud native applications, IoT messaging, and microservices architectures. It provides lightweight publish-subscribe, request-reply, and point-to-point messaging patterns with high performance and minimal footprint.",
+    "tags": [
+      "Messaging",
+      "Message Broker",
+      "Pub-Sub",
+      "Microservices",
+      "Cloud Native"
+    ]
+  },
+  {
     "slug": "navidrome",
     "logo": "logo.png",
     "name": "Navidrome",
@@ -3714,6 +3958,17 @@
       "File Management",
       "Collaboration",
       "Data Control"
+    ]
+  },
+  {
+    "slug": "nexterm",
+    "logo": "logo.png",
+    "name": "Nexterm",
+    "description": "Nexterm is a powerful web-based terminal emulator that provides secure and convenient terminal access through your web browser. It offers a modern interface for remote terminal operations, making it ideal for developers and system administrators who need reliable terminal access from anywhere.",
+    "tags": [
+      "Terminal",
+      "Development",
+      "Web-Based"
     ]
   },
   {
@@ -3783,6 +4038,26 @@
     "description": "Node-RED is a unique programming tool designed for creating event-driven applications in a low-code environment. It allows you to connect hardware devices, APIs, and online services in innovative ways. The app features a browser-based editor that simplifies the process of creating flows using a wide array of nodes available in the palette. These flows can be deployed to its runtime with just a single click. Node-RED also allows you to create JavaScript functions within the editor using a rich text editor and save useful functions, templates, or flows for future use. Built on Node.js, Node-RED is lightweight and can run on low-cost hardware like Raspberry Pi or in the cloud. It also supports the import and export of flows in JSON format for easy sharing.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "novu",
+    "logo": "logo.png",
+    "name": "Novu",
+    "description": "Novu is an open-source notification infrastructure platform that provides a unified API for managing notifications across multiple channels including email, SMS, push notifications, in-app notifications, and chat. This template deploys a complete Novu infrastructure with separate services for API, Worker, WebSocket, and Dashboard components, backed by MongoDB and Redis. Built for developers who need reliable, scalable notification delivery with features like workflow automation, template management, subscriber management, and real-time analytics. Perfect for applications that require sophisticated notification systems with multi-channel delivery, personalization, and comprehensive tracking capabilities.",
+    "tags": [
+      "Notifications",
+      "Multi-Channel",
+      "Email",
+      "SMS",
+      "Push Notifications",
+      "In-App Messaging",
+      "Workflow Automation",
+      "API",
+      "Open Source",
+      "Developer Tools",
+      "Analytics",
+      "Templates"
     ]
   },
   {
@@ -4313,6 +4588,20 @@
     ]
   },
   {
+    "slug": "pghero",
+    "logo": null,
+    "name": "PgHero",
+    "description": "PgHero is a powerful performance dashboard for PostgreSQL databases that provides real-time insights into query performance, slow queries, index usage, and database health metrics. It helps database administrators and developers optimize their PostgreSQL databases by identifying performance bottlenecks, unused indexes, and query patterns. The dashboard features an intuitive web interface with detailed analytics and recommendations for database optimization.",
+    "tags": [
+      "PostgreSQL",
+      "Database",
+      "Monitoring",
+      "Performance",
+      "Analytics",
+      "Dashboard"
+    ]
+  },
+  {
     "slug": "pgvector",
     "logo": null,
     "name": "pgvector",
@@ -4706,6 +4995,18 @@
     ]
   },
   {
+    "slug": "pyload-ng",
+    "logo": "logo.png",
+    "name": "pyLoad-NG",
+    "description": "pyLoad-NG is a modern download manager with a web interface, supporting various download services and protocols. It features a clean interface, download scheduling, and extensive plugin support.",
+    "tags": [
+      "Download Manager",
+      "File Transfer",
+      "Self-hosted",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "qbitorrent",
     "logo": "logo.png",
     "name": "qBittorrent",
@@ -5031,6 +5332,19 @@
     ]
   },
   {
+    "slug": "sftpgo",
+    "logo": "logo.png",
+    "name": "SFTPGo",
+    "description": "SFTPGo is a fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support. It supports local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.",
+    "tags": [
+      "SFTP",
+      "File Transfer",
+      "Self-hosted",
+      "Open Source",
+      "Security"
+    ]
+  },
+  {
     "slug": "shaarli",
     "logo": "logo.png",
     "name": "Shaarli",
@@ -5038,6 +5352,19 @@
     "tags": [
       "Bookmarks",
       "Documentation"
+    ]
+  },
+  {
+    "slug": "shelf",
+    "logo": "logo.png",
+    "name": "Shelf",
+    "description": "Shelf.nu is an open-source asset management platform designed to help organizations track and manage their physical assets efficiently. It provides features for asset tracking, inventory management, check-in/check-out functionality, and reporting. The platform includes location tracking with maps, user management, and email notifications for asset-related activities.",
+    "tags": [
+      "Asset Management",
+      "Inventory",
+      "Tracking",
+      "Business",
+      "PostgreSQL"
     ]
   },
   {
@@ -5111,6 +5438,21 @@
       "File Management",
       "Media",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "simstudio",
+    "logo": "logo.png",
+    "name": "SimStudio AI",
+    "description": "SimStudio AI is an advanced AI simulation platform that combines cutting-edge artificial intelligence with intuitive design tools. It provides a comprehensive environment for creating, running, and analyzing AI-powered simulations with support for various AI models and integrations. The platform features authentication, email notifications, and extensible AI provider support including local models via Ollama.",
+    "tags": [
+      "AI",
+      "Simulation",
+      "Machine Learning",
+      "PostgreSQL",
+      "Vector Database",
+      "OAuth",
+      "Next.js"
     ]
   },
   {
@@ -5198,6 +5540,19 @@
     "tags": [
       "Developer Tools",
       "Communication"
+    ]
+  },
+  {
+    "slug": "solr",
+    "logo": "logo.png",
+    "name": "Apache Solr",
+    "description": "Apache Solr is a highly reliable, scalable and fault-tolerant search platform that provides distributed indexing, replication and load-balanced querying, automated failover and recovery, centralized configuration and more. Solr powers the search and navigation features of many of the world's largest internet sites.",
+    "tags": [
+      "Search Engine",
+      "Full-Text Search",
+      "Apache",
+      "Indexing",
+      "Enterprise Search"
     ]
   },
   {
@@ -5299,6 +5654,21 @@
       "Performance",
       "Self-Hosted",
       "Tracking"
+    ]
+  },
+  {
+    "slug": "sqlchat",
+    "logo": "logo.png",
+    "name": "SQLChat",
+    "description": "SQLChat is a chat-based SQL client powered by ChatGPT that allows you to interact with your databases using natural language. It provides an intuitive interface for querying databases, exploring data, and learning SQL through conversational interactions. SQLChat supports multiple database types and integrates with OpenAI's GPT models to translate natural language queries into SQL statements, making database interactions more accessible for both beginners and experienced developers.",
+    "tags": [
+      "Database",
+      "SQL",
+      "AI",
+      "ChatGPT",
+      "Query Tool",
+      "Natural Language",
+      "Next.js"
     ]
   },
   {
@@ -5727,6 +6097,19 @@
       "Customer Support",
       "Ticketing System",
       "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "trufflehog",
+    "logo": "logo.png",
+    "name": "TruffleHog",
+    "description": "TruffleHog is a security tool that finds secrets in your code, repositories, and files. It uses pattern matching, entropy analysis, and other methods to detect potential secrets and credentials.",
+    "tags": [
+      "Security",
+      "Code Analysis",
+      "Secret Detection",
+      "Self-hosted",
+      "Open Source"
     ]
   },
   {
@@ -6322,6 +6705,19 @@
       "Load Balancer",
       "Docker",
       "Security"
+    ]
+  },
+  {
+    "slug": "zusam",
+    "logo": "logo.png",
+    "name": "Zusam",
+    "description": "Zusam is a free and open-source way to self-host private forums for friends and family. It's a simple, modern, and privacy-focused platform for group discussions.",
+    "tags": [
+      "Forum",
+      "Discussion",
+      "Self-hosted",
+      "Open Source",
+      "Privacy"
     ]
   }
 ]

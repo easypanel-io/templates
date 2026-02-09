@@ -1,21 +1,23 @@
-name: Affine Pro
+name: Affine
 description:
-  Affine Pro is a modern, self-hosted platform designed for collaborative
-  content creation and project management. It offers an intuitive interface,
-  seamless real-time collaboration, and powerful tools for organizing tasks,
-  notes, and ideas. With Affine Pro, you can centralize your workflows and
-  enhance productivity.
+  Affine is a modern, self-hosted platform designed for collaborative content
+  creation and project management. It offers an intuitive interface, seamless
+  real-time collaboration, and powerful tools for organizing tasks, notes, and
+  ideas. With Affine, you can centralize your workflows and enhance
+  productivity. The platform features a comprehensive workspace that combines
+  note-taking, task management, and project planning in one unified environment.
 
 instructions:
-  The migration service can be safely removed once the process is complete. You
-  may configure the Mailer to receive email notifications, or leave it unset if
-  notifications are not required.
+  The migration service runs automatically during deployment to set up the
+  database schema. It can be safely removed once the process is complete.
 
 changeLog:
   - date: 2025-01-14
     description: Template Release
   - date: 2025-02-21
     description: Version bumped to stable-780dd83
+  - date: 2025-10-09
+    description: Updated to the newer image and to latest version
   - date: 2025-12-24
     description: Version bumped to stable-e98f035
 
@@ -38,7 +40,7 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: affinepro
+      default: affine
     appServiceImage:
       type: string
       title: App Service Image
@@ -62,37 +64,51 @@ schema:
 benefits:
   - title: Streamlined Collaboration
     description:
-      Affine Pro offers real-time collaborative tools, enabling teams to work
-      together seamlessly on projects.
+      Affine offers real-time collaborative tools, enabling teams to work
+      together seamlessly on projects and documents.
   - title: Self-Hosted Control
     description:
-      Maintain control over your data with a secure, self-hosted solution for
-      enhanced privacy and flexibility.
+      Maintain complete control over your data with a secure, self-hosted
+      solution for enhanced privacy and flexibility.
   - title: Comprehensive Workspace
     description:
-      Centralize notes, tasks, and project plans in one place for better
-      organization and productivity.
+      Centralize notes, tasks, and project plans in one unified workspace for
+      better organization and productivity.
+  - title: Vector Search Capabilities
+    description:
+      Leverage pgvector integration for advanced search and AI-powered features
+      to enhance content discovery and organization.
 
 features:
   - title: Real-Time Collaboration
     description:
       Work together with your team in real time, ensuring everyone stays aligned
-      and productive.
+      and productive with live editing capabilities.
   - title: Customizable Workflows
     description:
       Adapt the platform to your specific needs with flexible task and note
-      management options.
-  - title: Integration Support
+      management options and customizable templates.
+  - title: Advanced Database Features
     description:
-      Connect Affine Pro with your existing tools and services for a seamless
-      workflow.
+      Built on PostgreSQL with pgvector support for enhanced performance and
+      AI-powered search capabilities.
+  - title: Migration Management
+    description:
+      Automated database migration service ensures smooth updates and schema
+      changes without manual intervention.
   - title: Secure and Scalable
     description:
       Benefit from a secure and scalable architecture, designed to handle teams
-      of any size.
+      of any size with robust data protection.
+  - title: Modern Web Interface
+    description:
+      Clean, responsive interface that works seamlessly across desktop and
+      mobile devices for optimal user experience.
 
 tags:
   - Collaboration
   - Self-Hosted
   - Productivity
   - Project Management
+  - PostgreSQL
+  - Vector Search

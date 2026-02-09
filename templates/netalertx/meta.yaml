@@ -1,0 +1,99 @@
+name: NetAlertX
+description:
+  NetAlertX is a network monitoring and notification framework that scans your
+  Wi-Fi/LAN network and alerts you when new or unknown devices are detected. It
+  provides real-time network device discovery, ARP scanning, and customizable
+  alert notifications. Built for network administrators and security-conscious
+  users, NetAlertX helps you maintain visibility over your network by tracking
+  connected devices and identifying unauthorized access. The application
+  features a web-based dashboard, GraphQL API, and supports various notification
+  methods to keep you informed about network changes.
+instructions: null
+
+changeLog:
+  - date: 2026-01-15
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://netalertx.com
+  - label: GitHub
+    url: https://github.com/jokob-sk/NetAlertX
+  - label: Documentation
+    url: https://docs.netalertx.com
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: netalertx
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/jokob-sk/netalertx:25.11
+
+benefits:
+  - title: Network Device Discovery
+    description:
+      Automatically scan and discover all devices on your Wi-Fi/LAN network,
+      providing complete visibility into connected devices.
+  - title: Real-Time Alerts
+    description:
+      Receive immediate notifications when new or unknown devices join your
+      network, helping you detect unauthorized access.
+  - title: Network Security Monitoring
+    description:
+      Maintain awareness of all devices on your network to identify potential
+      security threats or unauthorized connections.
+  - title: Self-Hosted Privacy
+    description:
+      All network scanning and monitoring happens locally on your
+      infrastructure, ensuring complete privacy and data control.
+  - title: Customizable Notifications
+    description:
+      Configure alert notifications through various methods to stay informed
+      about network changes.
+
+features:
+  - title: ARP Network Scanning
+    description:
+      Advanced ARP scanning capabilities for comprehensive network device
+      discovery and monitoring.
+  - title: Web Dashboard
+    description:
+      Modern web-based interface for viewing network devices, managing alerts,
+      and configuring monitoring settings.
+  - title: GraphQL API
+    description:
+      Powerful GraphQL API for programmatic access to network data and
+      integration with other tools.
+  - title: Device Tracking
+    description:
+      Track known and unknown devices, maintain device history, and identify new
+      connections in real-time.
+  - title: Customizable Alerts
+    description:
+      Configure alert rules and notification methods to be notified when
+      specific network events occur.
+  - title: Network Visualization
+    description:
+      Visual representation of your network topology and connected devices for
+      better understanding of network structure.
+
+tags:
+  - Network Monitoring
+  - Security
+  - Device Discovery
+  - ARP Scanning
+  - Self-Hosted
+  - Network Management
+  - Alerts

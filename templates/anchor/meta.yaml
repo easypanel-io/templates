@@ -1,0 +1,86 @@
+name: Anchor
+description:
+  Anchor is a self-hosted application designed to provide a modern web interface
+  for managing and organizing your data. It offers a clean, intuitive user
+  experience with persistent storage capabilities, ensuring your data is safely
+  stored and accessible. Built with privacy and self-hosting in mind, Anchor
+  gives you complete control over your information without relying on external
+  cloud services.
+instructions: null
+
+changeLog:
+  - date: 2026-01-13
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/zhfahim/anchor
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anchor
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/zhfahim/anchor:0.4
+
+benefits:
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your data with no reliance on external cloud
+      services or third-party providers.
+  - title: Persistent Storage
+    description:
+      Data is stored in a persistent volume, ensuring your information survives
+      container restarts and updates.
+  - title: Modern Web Interface
+    description:
+      Clean, responsive web interface accessible from any device for managing
+      your data and settings.
+  - title: Privacy-Focused
+    description:
+      All your data stays on your server, ensuring complete privacy and security
+      for sensitive information.
+  - title: Easy Deployment
+    description:
+      Simple, one-click deployment with minimal configuration required to get
+      started quickly.
+
+features:
+  - title: Web-Based Interface
+    description:
+      Access your application through a modern web browser from any device, with
+      a clean and intuitive user interface.
+  - title: Data Persistence
+    description:
+      Persistent volume storage ensures your data is safely stored and
+      accessible across container restarts and updates.
+  - title: Self-Hosted Architecture
+    description:
+      Run entirely on your infrastructure with no external dependencies or data
+      transmission to third parties.
+  - title: Containerized Deployment
+    description:
+      Easy deployment using Docker containers with minimal configuration and
+      setup requirements.
+  - title: Restart Policy
+    description:
+      Automatic restart on failure ensures high availability and reliability for
+      your application.
+
+tags:
+  - Self-Hosted
+  - Web Application
+  - Data Management
+  - Privacy
