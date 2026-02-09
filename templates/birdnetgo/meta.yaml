@@ -1,0 +1,107 @@
+name: BirdNET-Go
+description:
+  BirdNET-Go is a real-time bird sound identification and monitoring system that
+  uses advanced AI and machine learning to recognize bird species from audio
+  recordings. It analyzes ambient sounds from microphones or audio files to
+  identify and catalog bird species in your area. BirdNET-Go features automatic
+  species detection with confidence scoring, location-based range filtering to
+  show only birds likely in your region, real-time audio streaming, and
+  comprehensive logging of all detected species. The application supports custom
+  sensitivity settings, overlap detection for better accuracy, and can utilize
+  XNNPACK acceleration for improved performance. Perfect for bird enthusiasts,
+  ornithologists, researchers, and anyone interested in monitoring local bird
+  populations and creating automated bird sound databases.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-18
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/tphakala/birdnet-go
+  - label: Docker Hub
+    url: https://github.com/tphakala/birdnet-go/pkgs/container/birdnet-go
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: birdnetgo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/tphakala/birdnet-go:nightly-20251028
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+    latitude:
+      type: string
+      title: Latitude (Optional - for location filtering)
+      default: ""
+    longitude:
+      type: string
+      title: Longitude (Optional - for location filtering)
+      default: ""
+    locale:
+      type: string
+      title: Locale (e.g., en-us)
+      default: en-us
+
+benefits:
+  - title: Automated Bird Identification
+    description:
+      AI-powered real-time identification of bird species from audio using
+      advanced BirdNET machine learning models with high accuracy.
+  - title: Location-Aware Filtering
+    description:
+      Configure your GPS coordinates to filter detections showing only bird
+      species likely to be in your region, reducing false positives.
+  - title: Continuous Monitoring
+    description:
+      24/7 automated monitoring and logging of bird species in your area. Build
+      comprehensive databases of local bird populations over time.
+
+features:
+  - title: Real-Time Audio Analysis
+    description:
+      Process live audio streams from microphones or audio files to identify
+      bird sounds in real-time with configurable sensitivity.
+  - title: Species Confidence Scoring
+    description:
+      Each detection includes confidence scores and threshold filtering to
+      ensure accurate species identification.
+  - title: Geographic Range Filtering
+    description:
+      Location-based filtering shows only birds expected in your area based on
+      latitude/longitude coordinates.
+  - title: Audio Streaming
+    description:
+      HLS streaming support for live audio playback and monitoring of detected
+      bird sounds through web interface.
+  - title: Detection Logging
+    description:
+      Comprehensive logging and database of all detected species with
+      timestamps, confidence scores, and audio clips.
+  - title: Customizable Settings
+    description:
+      Adjust sensitivity, detection thresholds, audio overlap, and model
+      parameters to optimize for your environment.
+
+tags:
+  - Bird Watching
+  - Audio Recognition
+  - AI
+  - Wildlife Monitoring
+  - Ornithology

@@ -9,6 +9,10 @@ instructions: null
 changeLog:
   - date: 2025-03-26
     description: Initial template release
+  - date: 2025-07-24
+    description: Update to Neo4j 5.26.9
+  - date: 2025-12-29
+    description: Version bumped to 5.26.19
 links:
   - label: Website
     url: https://neo4j.com/
@@ -34,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: Neo4j Image
-      default: neo4j:4.4.42
+      default: neo4j:5.26.19
     neo4jPassword:
       type: string
       title: Neo4j Password

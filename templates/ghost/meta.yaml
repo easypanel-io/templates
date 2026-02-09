@@ -29,6 +29,8 @@ changeLog:
     description: Version bumped to 5.106.1-alpine
   - date: 2025-02-25
     description: Version bumped to 5.110.1
+  - date: 2025-07-21
+    description: Version bumped to 5.130.1
 links:
   - label: Website
     url: https://ghost.org/
@@ -45,12 +47,19 @@ contributors:
     url: https://github.com/siriokun
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - smtpServerHost
+    - smtpServerPort
+    - smtpServerUsername
+    - smtpServerPassword
+    - smtpFromEmail
   properties:
     appServiceName:
       type: string
@@ -59,11 +68,31 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghost:5.110.1
+      default: ghost:5.130.1
     databaseServiceName:
       type: string
       title: Database Service Name
       default: ghost-db
+    smtpServerHost:
+      type: string
+      title: SMTP Server Host
+      default: smtp.example.com
+    smtpServerPort:
+      type: string
+      title: SMTP Server Port
+      default: "587"
+    smtpServerUsername:
+      type: string
+      title: SMTP Server Username
+      default: example
+    smtpServerPassword:
+      type: string
+      title: SMTP Server Password
+      default: password
+    smtpFromEmail:
+      type: string
+      title: SMTP From Email
+      default: no-reply@example.com
 benefits:
   - title: Turn Your Audience into a Business
     description:

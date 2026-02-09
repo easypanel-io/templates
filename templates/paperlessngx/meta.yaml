@@ -20,6 +20,10 @@ instructions: Please use the following credentials to login. admin|password
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2025-07-24
+    description: Update to 2.17
+  - date: 2025-12-29
+    description: Version bumped to 2.20
 links:
   - label: Documentation
     url: https://paperless-ngx.readthedocs.io/en/latest/
@@ -28,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: paperlessngx/paperless-ngx:2.11.6
+      default: paperlessngx/paperless-ngx:2.20
     redisServiceName:
       type: string
       title: Redis Service Name

@@ -1,40 +1,33 @@
-name: ToolJet
+name: Tooljet
 description:
-  "ToolJet is an open-source low-code framework designed to help you build and
-  deploy custom internal tools with ease. It comes with a built-in database,
-  ToolJet DB, built on top of PostgreSQL, and also allows you to connect to
-  external data sources such as PostgreSQL, MongoDB, MS SQL Server, Snowflake,
-  BigQuery, and more. You can also connect to API/GraphQL endpoints, SaaS tools
-  like Airtable, Stripe, Google Sheets, and cloud object storage services like
-  AWS S3, Google Cloud Storage, and Minio. Once connected, ToolJet can run
-  queries on these data sources to fetch and update data. The fetched data can
-  be visualized and modified using UI widgets like tables, charts, forms, etc.
-  You can also use Javascript or Python queries for writing business logic or
-  interacting with the user interface of the application. With ToolJet, you can
-  build apps in three simple steps: connect to data sources, build queries, and
-  build the user interface using the visual App Builder. ToolJet binds together
-  the data sources, queries, and components to convert business logic into
-  custom applications."
-instructions: null
+  Tooljet is an open-source low-code platform for building internal tools and
+  business applications. It provides a visual interface builder, database
+  connectors, API integrations, and workflow automation capabilities. With
+  Tooljet, teams can quickly build custom dashboards, admin panels, CRUD
+  applications, and complex business tools without extensive coding. The
+  platform supports multiple data sources, real-time collaboration, and
+  enterprise-grade security features.
+instructions:
+  Please run migrations inside the tooljet container if required, it will take
+  2-3 minutes to complete. "npm run db:migrate:prod"
 changeLog:
-  - date: 2023-07-09
-    description: First Release
+  - date: 2025-09-09
+    description: Initial Template Release (v3.15.1)
 links:
-  - label: Website
-    url: https://docs.tooljet.com
-  - label: Docs
-    url: https://docs.tooljet.com
-  - label: Github
+  - label: GitHub
     url: https://github.com/ToolJet/ToolJet
+  - label: Documentation
+    url: https://docs.tooljet.com/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/tooljet/tooljet
 contributors:
-  - name: Berk Sümbül
-    url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceName
   properties:
     appServiceName:
       type: string
@@ -43,58 +36,65 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tooljet/tooljet-ce:v2.9.6
-    databaseServiceName:
+      default: tooljet/tooljet-ce:v3.15.1
+      description: Tooljet Docker image
+    temporalImage:
       type: string
-      title: App Service Name
-      default: tooljet-db
+      title: Temporal Image
+      default: temporalio/auto-setup:1.25.1
+      description: Temporal server Docker image
 benefits:
-  - title: Build custom internal tools
+  - title: Low-Code Development
     description:
-      ToolJet is a low-code framework that allows you to build and deploy custom
-      internal tools for your organization. You can create apps to manage
-      orders, update inventory, track revenue, and more.
-  - title: Connect to various data sources
+      Build complex business applications and internal tools using a visual
+      interface builder without extensive coding knowledge or development
+      resources.
+  - title: Rapid Prototyping
     description:
-      ToolJet allows you to connect to various data sources such as databases,
-      API endpoints, SaaS tools, and cloud object storage services. You can
-      fetch and update data from these sources to power your apps.
-  - title: Visualize and modify data
+      Quickly prototype and iterate on business ideas with drag-and-drop
+      components, pre-built integrations, and real-time collaboration features.
+  - title: Data Source Integration
     description:
-      With ToolJet, you can visualize and modify data using UI widgets like
-      tables, charts, and forms. You can easily create a user-friendly interface
-      to interact with your data.
-  - title: Write custom business logic
+      Connect to multiple data sources including databases, APIs, cloud
+      services, and third-party tools through pre-built connectors and custom
+      integrations.
+  - title: Enterprise Security
     description:
-      ToolJet provides the flexibility to write custom business logic using
-      JavaScript or Python queries. You can add complex functionality and
-      interact with the user interface of your application.
-  - title: Secure your apps
-    description:
-      ToolJet allows you to secure your apps with group and permissions
-      settings. You can control access to your apps and ensure data privacy.
+      Built-in security features including authentication, authorization, audit
+      logs, and compliance tools for enterprise-grade applications.
 features:
-  - title: Connect to datasources
+  - title: Visual Interface Builder
     description:
-      Easily connect to various data sources like databases, API endpoints, SaaS
-      tools, and cloud object storage services.
-  - title: Build queries
+      Drag-and-drop interface builder with pre-built components for forms,
+      tables, charts, and custom widgets for creating rich user interfaces.
+  - title: Database Connectors
     description:
-      Use query builders or write JavaScript/Python queries to fetch and update
-      data from connected data sources.
-  - title: Build user interface
+      Support for multiple database types including PostgreSQL, MySQL, MongoDB,
+      and cloud databases with real-time data synchronization.
+  - title: API Integration
     description:
-      Drag and drop components like tables, charts, and forms to quickly build
-      the user interface of your apps.
-  - title: Bind data to UI
+      Built-in API client with support for REST, GraphQL, and webhook
+      integrations for connecting to external services and data sources.
+  - title: Workflow Automation
     description:
-      Bind data from queries to UI components to visualize and modify data in
-      your apps.
-  - title: Preview, release, and share apps
+      Visual workflow builder powered by Temporal for creating complex business
+      processes and automated workflows.
+  - title: Real-Time Collaboration
     description:
-      Preview your app, release it to production, and share it with others.
-      Control access to your apps using group and permissions settings.
+      Multi-user collaboration features with real-time updates, comments, and
+      version control for team-based development.
+  - title: Custom Components
+    description:
+      Extend functionality with custom components, plugins, and integrations
+      using JavaScript and React for advanced use cases.
 tags:
-  - No-Code
+  - Low-Code
+  - Internal Tools
+  - Business Applications
+  - Dashboard
   - Database
-  - Custom Applications
+  - API
+  - Workflow
+  - Automation
+  - Visual Builder
+  - Enterprise

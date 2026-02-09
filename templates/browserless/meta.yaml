@@ -18,6 +18,10 @@ instructions:
 changeLog:
   - date: 2025-01-29
     description: First Release
+  - date: 2025-07-15
+    description: Version bumped to 2.33.0
+  - date: 2025-12-24
+    description: Version bumped to 2.38.2
 
 links:
   - label: Documentation
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/browserless/chromium
+      default: ghcr.io/browserless/chromium:v2.38.2
     concurrentSessions:
       type: string
       title: Concurrent Sessions

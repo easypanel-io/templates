@@ -21,6 +21,10 @@ changeLog:
     description: Version changed to v4.1.4
   - date: 2025-01-14
     description: Version bumped to v4.2
+  - date: 2025-07-21
+    description: Version bumped to v5.0
+  - date: 2025-12-25
+    description: Version bumped to v5.2.1
 links:
   - label: Website
     url: https://glitchtip.com/
@@ -33,6 +37,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -56,7 +62,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glitchtip/glitchtip:v4.2
+      default: glitchtip/glitchtip:v5.2.1
     databaseServiceName:
       type: string
       title: Redis Service Name

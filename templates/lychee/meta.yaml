@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2022-10-28
     description: first release
+  - date: 2025-12-25
+    description: Version bumped to v6.10.4
 links:
   - label: Website
     url: https://lycheeorg.github.io/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lycheeorg/lychee:v5.3.0
+      default: lycheeorg/lychee:v6.10.4
     databaseType:
       type: string
       title: Database Type

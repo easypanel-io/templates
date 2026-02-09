@@ -18,6 +18,10 @@ instructions:
 changeLog:
   - date: 2023-03-26
     description: First Release
+  - date: 2025-07-22
+    description: Version bumped to v4.4.1
+  - date: 2025-12-29
+    description: Version bumped to v4.5.3
 links:
   - label: Website
     url: https://joinmastodon.org
@@ -28,6 +32,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -62,7 +68,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/mastodon/mastodon:v4.2.9
+      default: ghcr.io/mastodon/mastodon:v4.5.3
 benefits:
   - title: Control Your Own Social Media Experience
     description:

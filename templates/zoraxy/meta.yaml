@@ -1,0 +1,89 @@
+name: Zoraxy
+description:
+  Zoraxy is a general-purpose reverse proxy and web application gateway designed
+  for self-hosting enthusiasts. It offers an intuitive web interface for
+  managing multiple web services with features like automatic SSL certificate
+  management via ACME/Let's Encrypt, virtual directory hosting, HTTP to HTTPS
+  redirection, and built-in authentication. Zoraxy supports WebSocket proxying,
+  custom error pages, rate limiting, geographic access control with GeoIP, and
+  Docker integration for seamless container management. Perfect for hosting
+  multiple services on a single server with professional-grade routing,
+  security, and access control.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-07
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://zoraxy.arozos.com/
+  - label: Github
+    url: https://github.com/tobychui/zoraxy
+  - label: Docker Hub
+    url: https://hub.docker.com/r/zoraxydocker/zoraxy
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zoraxy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zoraxydocker/zoraxy:v3.2.9
+
+benefits:
+  - title: Easy to Use
+    description:
+      Intuitive web-based interface for managing reverse proxy rules, SSL
+      certificates, and access control without complex configuration files.
+  - title: Automatic SSL Management
+    description:
+      Built-in ACME/Let's Encrypt integration for automatic SSL certificate
+      provisioning and renewal, ensuring secure connections for all your
+      services.
+  - title: Docker Integration
+    description:
+      Native Docker socket integration for automatic service discovery and
+      management, making it perfect for containerized environments.
+
+features:
+  - title: Reverse Proxy
+    description:
+      Route traffic to multiple backend services based on domain names, paths,
+      or custom rules with support for HTTP/HTTPS and WebSocket protocols.
+  - title: SSL/TLS Termination
+    description:
+      Automatic SSL certificate management with Let's Encrypt, including
+      HTTP-to-HTTPS redirection and secure TLS termination.
+  - title: Geographic Access Control
+    description:
+      Fast GeoIP-based access control to restrict or allow traffic from specific
+      countries or regions, enhancing security for your services.
+  - title: Authentication & Authorization
+    description:
+      Built-in authentication system with support for basic auth, custom login
+      pages, and user management for securing your applications.
+  - title: Rate Limiting & Security
+    description:
+      Protect your services with configurable rate limiting, custom error pages,
+      and advanced security features to prevent abuse.
+
+tags:
+  - Reverse Proxy
+  - Gateway
+  - SSL
+  - Load Balancer
+  - Docker
+  - Security

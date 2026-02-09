@@ -1,13 +1,17 @@
 name: Postiz
 description:
-  Postiz is a modern, self-hosted social media management platform that helps you
-  schedule, publish, and analyze content across multiple social networks. It provides
-  a unified dashboard for managing posts, tracking engagement, and optimizing your
-  social media strategy.
-instructions: You can modify the settings by adding the env variables provided. 
+  Postiz is a modern, self-hosted social media management platform that helps
+  you schedule, publish, and analyze content across multiple social networks. It
+  provides a unified dashboard for managing posts, tracking engagement, and
+  optimizing your social media strategy.
+instructions: You can modify the settings by adding the env variables provided.
 changeLog:
   - date: 2025-04-28
     description: Initial release
+  - date: 2025-07-24
+    description: Version bumped to v1.65.7
+  - date: 2025-12-29
+    description: Version bumped to v2.11.3
 links:
   - label: Website
     url: https://postiz.com
@@ -35,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gitroomhq/postiz-app:v1.40.1
+      default: ghcr.io/gitroomhq/postiz-app:v2.11.3
 benefits:
   - title: Centralized Management
     description: Manage all your social media accounts from a single dashboard
@@ -65,4 +69,4 @@ tags:
   - Content Management
   - Scheduling
   - Analytics
-  - Marketing 
+  - Marketing

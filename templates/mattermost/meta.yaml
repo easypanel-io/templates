@@ -27,6 +27,8 @@ changeLog:
     description: Update mattermost to 10.0
   - date: 2025-02-28
     description: Version bumped to release-9
+  - date: 2025-12-29
+    description: Version bumped to 11.1.2
 links:
   - label: Website
     url: https://mattermost.com/
@@ -57,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mattermost/mattermost-team-edition:release-9
+      default: mattermost/mattermost-team-edition:11.1.2
     databaseServiceName:
       type: string
       title: Database Service Name

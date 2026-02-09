@@ -16,6 +16,10 @@ changeLog:
     description: First Release
   - date: 2025-02-28
     description: Version bumped to 2.40.1
+  - date: 2025-07-22
+    description: Version bumped to 2.43.2
+  - date: 2025-12-25
+    description: Version bumped to 2.50.0
 links:
   - label: Website
     url: https://kuzzle.io/
@@ -40,11 +44,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kuzzleio/kuzzle:2.40.1
+      default: kuzzleio/kuzzle:2.50.0
     elasticServiceImage:
       type: string
       title: Elastic Service Image
-      default: kuzzleio/elasticsearch:7.4.0
+      default: kuzzleio/elasticsearch:7.17.26
 benefits:
   - title: Real-Time Data Synchronization
     description:

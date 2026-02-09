@@ -12,6 +12,8 @@ instructions: Set the SMTP password for email submissions on the server.
 changeLog:
   - date: 2025-02-06
     description: Template Release
+  - date: 2025-12-25
+    description: Version bumped to v2.61
 links:
   - label: Website
     url: https://emailengine.app
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: postalsys/emailengine:latest
+      default: postalsys/emailengine:v2.61
     smtpMessageSubmission:
       type: string
       title: SMTP Message Submission

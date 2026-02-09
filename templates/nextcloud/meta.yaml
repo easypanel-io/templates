@@ -20,6 +20,10 @@ changeLog:
     description: Update to 30.0.1
   - date: 2025-02-28
     description: Version bumped to 31.0.0
+  - date: 2025-07-24
+    description: Update to 31.0.7
+  - date: 2025-12-29
+    description: Version bumped to 32.0.3
 links:
   - label: Website
     url: https://nextcloud.com/
@@ -49,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nextcloud:31.0.0
+      default: nextcloud:32.0.3
     databaseType:
       type: string
       title: Database Type

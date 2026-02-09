@@ -21,6 +21,10 @@ changeLog:
     description: First Release
   - date: 2025-02-28
     description: Version bumped to 1.10.3
+  - date: 2025-07-24
+    description: Update to 1.11.2
+  - date: 2025-12-29
+    description: Version bumped to 1.11.5
 links:
   - label: Website
     url: https://octoprint.org
@@ -31,6 +35,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -48,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: octoprint/octoprint:1.10.3
+      default: octoprint/octoprint:1.11.5
 benefits:
   - title: Full Remote Control & Monitoring
     description:

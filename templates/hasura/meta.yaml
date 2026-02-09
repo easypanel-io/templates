@@ -19,6 +19,10 @@ changeLog:
     description: first release
   - date: 2025-02-25
     description: Version bumped to v2.8.4
+  - date: 2025-07-22
+    description: Version bumped to v2.36.10-2
+  - date: 2025-12-25
+    description: Version bumped to v2.48.9
 links:
   - label: Website
     url: https://hasura.io/
@@ -29,6 +33,8 @@ links:
 contributors:
   - name: Amit Gadhia
     url: https://github.com/amitoo7
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -46,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hasura/graphql-engine:v2.8.4
+      default: hasura/graphql-engine:v2.48.9
     databaseServiceName:
       type: string
       title: Database Service Name

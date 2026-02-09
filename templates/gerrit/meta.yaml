@@ -1,7 +1,7 @@
 name: Gerrit
 description:
-  Gerrit is a web-based code review tool that integrates with Git. It provides
-  a framework for reviewing code changes before they are merged into the codebase,
+  Gerrit is a web-based code review tool that integrates with Git. It provides a
+  framework for reviewing code changes before they are merged into the codebase,
   making it an essential tool for collaborative software development.
 
 instructions: null
@@ -9,6 +9,10 @@ instructions: null
 changeLog:
   - date: 2025-04-03
     description: Initial template release
+  - date: 2025-07-21
+    description: Version bumped to 3.12.1
+  - date: 2025-12-25
+    description: Version bumped to 3.13.1
 links:
   - label: Website
     url: https://www.gerritcodereview.com/
@@ -32,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: Gerrit Image
-      default: gerritcodereview/gerrit:3.11.2
+      default: gerritcodereview/gerrit:3.13.1
 benefits:
   - title: Code Review
     description: Streamlined code review process with inline comments.
@@ -56,4 +60,4 @@ tags:
   - Code Review
   - Version Control
   - Collaboration
-  - Development 
+  - Development

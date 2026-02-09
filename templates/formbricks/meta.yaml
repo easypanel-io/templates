@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2024-03-28
     description: First Release
+  - date: 2025-07-21
+    description: Version bumped to v3.16.0
 links:
   - label: Website
     url: https://formbricks.com
@@ -18,20 +20,27 @@ links:
 contributors:
   - name: Shubham Palriwala
     url: https://github.com/ShubhamPalriwala
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
+    - appServiceName
     - appServiceImage
-    - databaseServiceName
+    - databaseServiceImage
   properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: formbricks
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/formbricks/formbricks:v2.0.3
-    databaseServiceName:
+      default: ghcr.io/formbricks/formbricks:v3.16.0
+    databaseServiceImage:
       type: string
-      title: Database Service Name
-      default: formbricks-db
+      title: Database Service Image
+      default: pgvector/pgvector:pg17
     enterpriseLicenseKey:
       type: string
       title: Enterprise License Key

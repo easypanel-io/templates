@@ -9,6 +9,10 @@ instructions: null
 changeLog:
   - date: 2025-01-17
     description: Template Release
+  - date: 2025-07-21
+    description: Version bumped to 1.57.1
+  - date: 2025-12-25
+    description: Version bumped to 1.62.0
 links:
   - label: Documentation
     url: https://fusionauth.io/docs
@@ -32,11 +36,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fusionauth/fusionauth-app:1.55.1
+      default: fusionauth/fusionauth-app:1.62.0
     opensearchServiceImage:
       type: string
       title: OpenSearch Service Image
-      default: opensearchproject/opensearch:2.11.0
+      default: opensearchproject/opensearch:3.1.0
 benefits:
   - title: Comprehensive Identity Management
     description:

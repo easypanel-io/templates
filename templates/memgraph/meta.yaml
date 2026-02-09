@@ -1,0 +1,97 @@
+name: Memgraph
+description:
+  Memgraph is a high-performance, in-memory graph database designed for
+  real-time analytics and machine learning applications. It provides fast graph
+  traversal, pattern matching, and complex graph algorithms with support for
+  Cypher query language. Memgraph MAGE (Memgraph Advanced Graph Extensions)
+  includes pre-built graph algorithms and machine learning modules. The platform
+  comes with Memgraph Lab, a visual interface for database management, query
+  development, and graph visualization.
+instructions: null
+changeLog:
+  - date: 2025-09-10
+    description: Initial Template Release
+  - date: 2025-12-29
+    description: Version bumped to 3.7.2
+links:
+  - label: GitHub
+    url: https://github.com/memgraph/memgraph
+  - label: Docker Hub
+    url: https://hub.docker.com/r/memgraph/memgraph
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - dbServiceImage
+    - labImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: memgraph
+    dbServiceImage:
+      type: string
+      title: App Service Image
+      default: memgraph/memgraph-mage:3.7.2
+      description: Memgraph MAGE Docker image
+    labImage:
+      type: string
+      title: Lab Image
+      default: memgraph/lab:3.5.0
+      description: Memgraph Lab Docker image
+benefits:
+  - title: High-Performance Graph Database
+    description:
+      In-memory graph database optimized for real-time analytics and complex
+      graph operations with sub-millisecond query response times.
+  - title: Advanced Graph Algorithms
+    description:
+      Pre-built graph algorithms and machine learning modules through MAGE
+      extensions for complex graph analytics and data science workflows.
+  - title: Visual Graph Management
+    description:
+      Memgraph Lab provides an intuitive visual interface for database
+      management, query development, and interactive graph visualization.
+  - title: Cypher Query Language
+    description:
+      Industry-standard Cypher query language support for expressive and
+      efficient graph data manipulation and analysis.
+features:
+  - title: Real-Time Analytics
+    description:
+      Optimized for real-time graph analytics with fast data ingestion and query
+      processing capabilities for streaming data applications.
+  - title: Graph Visualization
+    description:
+      Interactive graph visualization tools in Memgraph Lab for exploring
+      complex relationships and patterns in your data.
+  - title: Machine Learning Integration
+    description:
+      Built-in machine learning algorithms and extensions for graph-based ML
+      workflows and predictive analytics.
+  - title: Scalable Architecture
+    description:
+      Horizontal scaling capabilities and distributed graph processing for
+      handling large-scale graph datasets and high-throughput applications.
+  - title: Developer-Friendly
+    description:
+      Comprehensive APIs, drivers for multiple programming languages, and
+      extensive documentation for easy integration and development.
+  - title: Enterprise Features
+    description:
+      Enterprise-grade security, monitoring, and management features for
+      production deployments and mission-critical applications.
+tags:
+  - Graph Database
+  - Real-Time Analytics
+  - Machine Learning
+  - Cypher
+  - Graph Algorithms
+  - Visualization
+  - MAGE
+  - In-Memory
+  - High Performance
+  - Data Science

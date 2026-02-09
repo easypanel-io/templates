@@ -16,7 +16,10 @@ instructions: Login using the email; lisa@simpson.com, password; secret42
 changeLog:
   - date: 2025-03-21
     description: Initial template release (1.0)
-
+  - date: 2025-07-25
+    description: Version bumped to 0.2.7
+  - date: 2025-12-29
+    description: Version bumped to 0.4.5
 links:
   - label: Website
     url: https://www.usertour.io/
@@ -42,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: usertour/usertour:0.1.6
+      default: usertour/usertour:0.4.5
 benefits:
   - title: Code-Free Product Tours
     description:
