@@ -36,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tanq16/expenseowl:main
+      default: tanq16/expenseowl:v4.1
       description: ExpenseOwl Docker image
 benefits:
   - title: Simple Expense Tracking
