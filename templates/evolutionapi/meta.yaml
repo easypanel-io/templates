@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-01-17
     description: First Release
+  - date: 2025-12-25
+    description: Version bumped to v2.3.7
 links:
   - label: Website
     url: https://evolution-api.com
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: evoapicloud/evolution-api:v2.3.0
+      default: evoapicloud/evolution-api:v2.3.7
 benefits:
   - title: Seamless Messaging Integration
     description:

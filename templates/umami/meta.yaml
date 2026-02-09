@@ -14,6 +14,8 @@ changeLog:
     description: first release
   - date: 2025-07-25
     description: Version bumped to v2.18.1
+  - date: 2025-12-29
+    description: Version bumped to v2.20.2
 links:
   - label: Website
     url: https://umami.is/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/umami-software/umami:postgresql-v2.18.1
+      default: ghcr.io/umami-software/umami:postgresql-v2.20.2
     databaseServiceName:
       type: string
       title: Database Service Name

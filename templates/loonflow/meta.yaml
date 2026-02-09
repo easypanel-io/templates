@@ -1,0 +1,125 @@
+name: Loonflow
+description:
+  Loonflow is a comprehensive workflow management system that provides
+  end-to-end workflow automation and process management capabilities. Built with
+  Django and React, Loonflow offers a complete solution for designing,
+  executing, and monitoring business workflows. The system consists of a
+  PostgreSQL database for data persistence, Redis for task queue management, a
+  Django backend API, a React frontend UI, and Celery workers for asynchronous
+  task processing. Perfect for organizations looking to automate business
+  processes and manage complex workflows with a self-hosted solution.
+  
+instructions: You can change the lanaguage by clicking the admin icon, click the first option, and then change it to American English in the dropdown. 
+changeLog:
+  - date: 2025-01-22
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/blackholll/loonflow
+  - label: Documentation
+    url: https://loonflow.readthedocs.io/en/r3.0/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - backendImage
+    - uiImage
+    - postgresDb
+    - adminEmail
+    - adminName
+    - adminPassword
+    - tenantName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: loonflow
+    backendImage:
+      type: string
+      title: Backend Image
+      default: blackholll/loonflow-backend:r3.0.1
+    uiImage:
+      type: string
+      title: UI Image
+      default: blackholll/loonflow-ui:r3.0.1
+    postgresDb:
+      type: string
+      title: PostgreSQL Database Name
+      default: loonflow
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description: Email address for the Django superuser
+    adminName:
+      type: string
+      title: Admin Name
+      default: admin
+      description: Username for the Django superuser
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin123
+      description: Password for the Django superuser
+    tenantName:
+      type: string
+      title: Tenant Name
+      default: Default Tenant
+      description: Name of the tenant/organization
+benefits:
+  - title: Workflow Automation
+    description:
+      Design and execute complex business workflows with visual workflow
+      designer and automated process execution.
+  - title: Self-Hosted Solution
+    description:
+      Maintain complete control over your workflow data and processes with a
+      self-hosted deployment.
+  - title: Scalable Architecture
+    description:
+      Built with microservices architecture including separate backend, frontend,
+      and task worker services for scalability.
+  - title: Task Queue Management
+    description:
+      Redis-powered task queue with Celery workers for reliable asynchronous
+      task processing and workflow execution.
+features:
+  - title: Workflow Designer
+    description:
+      Visual workflow designer for creating and managing complex business
+      processes with drag-and-drop interface.
+  - title: PostgreSQL Database
+    description:
+      Reliable PostgreSQL database for persistent storage of workflow
+      definitions, execution history, and system data.
+  - title: Redis Task Queue
+    description:
+      Redis-based task queue for managing asynchronous workflow tasks and
+      ensuring reliable task execution.
+  - title: Celery Workers
+    description:
+      Dedicated Celery worker service for processing workflow tasks with
+      configurable concurrency and queue management.
+  - title: Django Backend API
+    description:
+      Robust Django REST API backend with automatic database migrations and
+      superuser creation on startup.
+  - title: React Frontend UI
+    description:
+      Modern React-based user interface for workflow management, monitoring,
+      and administration.
+  - title: Multi-Tenant Support
+    description:
+      Built-in multi-tenant support with configurable tenant names and domains
+      for organizational isolation.
+tags:
+  - Workflow
+  - Automation
+  - Process Management
+  - Self-Hosted
+  - Django
+  - Celery
+  - Enterprise

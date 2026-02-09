@@ -1,0 +1,111 @@
+name: Frappe Helpdesk
+description:
+  Frappe Helpdesk is a comprehensive customer support and ticketing system built
+  on the Frappe framework. It provides a complete solution for managing customer
+  inquiries, support tickets, and service requests. The platform offers
+  multi-channel support, automated workflows, knowledge base integration, and
+  detailed analytics to help teams deliver exceptional customer service. Frappe
+  Helpdesk features a modern, responsive interface that works seamlessly across
+  desktop and mobile devices, making it easy for support agents to manage
+  tickets and for customers to submit and track their requests. The system
+  supports team collaboration, SLA management, and integration with various
+  communication channels including email, chat, and social media platforms.
+instructions: null
+changeLog:
+  - date: 2025-10-08
+    description: First Release
+links:
+  - label: Website
+    url: https://frappe.io/
+  - label: Documentation
+    url: https://frappe.io/docs
+  - label: GitHub
+    url: https://github.com/frappe/frappe
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: frappe-helpdesk
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: frappe/bench:v5.25.9
+benefits:
+  - title: Comprehensive Ticket Management
+    description:
+      Manage customer support tickets efficiently with features like ticket
+      routing, priority assignment, status tracking, and automated workflows to
+      ensure timely resolution of customer issues.
+  - title: Multi-Channel Support
+    description:
+      Handle customer inquiries from multiple channels including email, web
+      forms, chat, and social media platforms, all centralized in one unified
+      interface for better organization and response management.
+  - title: Team Collaboration
+    description:
+      Enable seamless collaboration among support team members with features
+      like internal notes, ticket assignment, escalation workflows, and
+      real-time updates to improve team efficiency and knowledge sharing.
+  - title: Customer Self-Service
+    description:
+      Provide customers with self-service options including knowledge base
+      access, ticket status tracking, and FAQ sections to reduce support load
+      and improve customer satisfaction.
+features:
+  - title: Modern Web Interface
+    description:
+      Clean, responsive web interface that works perfectly on desktop and mobile
+      devices, providing an intuitive experience for both support agents and
+      customers accessing the helpdesk system.
+  - title: Automated Workflows
+    description:
+      Create automated workflows for ticket routing, escalation, and
+      notifications to ensure consistent service delivery and reduce manual
+      overhead in support operations.
+  - title: SLA Management
+    description:
+      Set and monitor Service Level Agreements (SLAs) with automatic alerts and
+      reporting to ensure support teams meet their performance targets and
+      customer expectations.
+  - title: Knowledge Base Integration
+    description:
+      Built-in knowledge base functionality to create, organize, and share
+      support articles, FAQs, and documentation to help customers find answers
+      independently.
+  - title: Analytics and Reporting
+    description:
+      Comprehensive analytics and reporting features to track support metrics,
+      team performance, customer satisfaction, and identify areas for
+      improvement in support operations.
+  - title: Email Integration
+    description:
+      Seamless email integration for ticket creation, updates, and
+      notifications, allowing customers to interact with the helpdesk through
+      their preferred email client.
+  - title: Customizable Fields
+    description:
+      Customize ticket fields, forms, and workflows to match your specific
+      support processes and requirements, ensuring the system adapts to your
+      business needs.
+  - title: Multi-Language Support
+    description:
+      Support for multiple languages to serve global customers and support
+      teams, making the helpdesk accessible to users worldwide.
+tags:
+  - Helpdesk
+  - Customer Support
+  - Ticketing
+  - CRM
+  - Open Source
+  - Web App
+  - Self-hosted
+  - MariaDB
+  - Redis

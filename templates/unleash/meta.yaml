@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 6.7
   - date: 2025-07-25
     description: Version bumped to 7.0
+  - date: 2025-12-29
+    description: Version bumped to 7.4
 links:
   - label: Website
     url: https://getunleash.io
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: unleashorg/unleash-server:7.0
+      default: unleashorg/unleash-server:7.4
     databaseServiceName:
       type: string
       title: Database Service Name

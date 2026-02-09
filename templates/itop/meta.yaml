@@ -15,6 +15,8 @@ instructions: On the installation wizard, please connect to the DB.
 changeLog:
   - date: 2025-03-18
     description: Template Release
+  - date: 2025-12-25
+    description: Version bumped to 3.2.2
 links:
   - label: Documentation
     url: https://www.itophub.io/wiki/page
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vbkunin/itop:3.2.0
+      default: vbkunin/itop:3.2.2
 benefits:
   - title: Comprehensive IT Asset Management
     description:

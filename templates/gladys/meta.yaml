@@ -1,0 +1,94 @@
+name: Gladys Assistant
+description:
+  Gladys Assistant is a privacy-first, open-source home automation platform that
+  allows you to control and automate your smart home devices. Built with Node.js,
+  Gladys provides a comprehensive solution for managing IoT devices, creating
+  automation scenarios, and monitoring your home environment. The system supports
+  a wide range of devices including Zigbee, Z-Wave, Bluetooth, WiFi, and more.
+  Gladys stores all data locally in SQLite, ensuring your home automation data
+  remains private. Perfect for home automation enthusiasts looking for a
+  self-hosted alternative to commercial smart home platforms.
+instructions: null
+changeLog:
+  - date: 2025-01-29
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://gladysassistant.com
+  - label: GitHub
+    url: https://github.com/GladysAssistant/Gladys
+  - label: Documentation
+    url: https://gladysassistant.com/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gladys
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gladysassistant/gladys:sha-c6bc0ba
+    timezone:
+      type: string
+      title: Timezone
+      default: Asia/Karachi
+      description: Timezone for the application (e.g., Asia/Karachi, America/New_York, Europe/London)
+benefits:
+  - title: Home Automation
+    description:
+      Control and automate your smart home devices with a comprehensive,
+      privacy-first home automation platform.
+  - title: Privacy-First
+    description:
+      All data is stored locally in SQLite, ensuring your home automation data
+      remains private and under your control.
+  - title: Wide Device Support
+    description:
+      Support for a wide range of devices including Zigbee, Z-Wave, Bluetooth,
+      WiFi, and more through various integrations.
+  - title: Self-Hosted Solution
+    description:
+      Keep your home automation data private and under your control with a
+      self-hosted deployment.
+features:
+  - title: Device Management
+    description:
+      Connect and manage a wide variety of smart home devices including lights,
+      sensors, switches, and more.
+  - title: Automation Scenarios
+    description:
+      Create complex automation scenarios with triggers, conditions, and actions
+      to automate your home.
+  - title: Local Data Storage
+    description:
+      All data is stored locally in SQLite, ensuring privacy and data ownership.
+  - title: Hardware Access
+    description:
+      Direct access to hardware devices through Docker socket and device mounts
+      for comprehensive device control.
+  - title: Web-Based Interface
+    description:
+      Access and manage your home automation system through a modern web
+      interface accessible on port 8080.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Gladys Assistant in any environment that supports Docker with
+      hardware access capabilities.
+tags:
+  - Home Automation
+  - IoT
+  - Smart Home
+  - Self-Hosted
+  - Privacy
+  - Zigbee
+  - Z-Wave
+  - Docker

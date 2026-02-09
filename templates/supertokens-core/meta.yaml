@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 10.0.2
   - date: 2025-07-25
     description: Version bumped to 11.0.4
+  - date: 2025-12-29
+    description: Version bumped to 11.3.0
 links:
   - label: Website
     url: https://supertokens.com/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: supertokens/supertokens-postgresql:11.0.4
+      default: supertokens/supertokens-postgresql:11.3.0
     databaseServiceName:
       type: string
       title: Database Service Name
