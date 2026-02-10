@@ -1,0 +1,76 @@
+name: SHM
+description:
+  SHM is a self-hosted metrics and monitoring application that provides
+  comprehensive tracking and analysis of system metrics and performance data.
+  Built with modern architecture, SHM offers a web-based interface accessible on
+  port 8080 for viewing and managing your metrics. The system uses PostgreSQL for
+  data persistence, storing all metrics data in a dedicated database. Perfect for
+  developers and system administrators looking for a self-hosted solution to
+  track and monitor their application and system metrics.
+instructions: null
+changeLog:
+  - date: 2025-01-29
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/btouchard/shm
+  - label: Container
+    url: https://github.com/btouchard/shm/pkgs/container/shm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/btouchard/shm:sha-bc6621e
+benefits:
+  - title: Metrics Tracking
+    description:
+      Track and monitor system metrics and performance data with a comprehensive
+      self-hosted solution.
+  - title: Self-Hosted Solution
+    description:
+      Keep your metrics data private and under your control with a self-hosted
+      deployment.
+  - title: PostgreSQL Storage
+    description:
+      Reliable PostgreSQL database for persistent storage of all metrics data,
+      ensuring data integrity across restarts.
+  - title: Web-Based Interface
+    description:
+      Access and manage your metrics through a modern web interface accessible on
+      port 8080.
+features:
+  - title: Metrics Management
+    description:
+      View, analyze, and manage your system and application metrics from a
+      single dashboard.
+  - title: PostgreSQL Database
+    description:
+      Reliable PostgreSQL database for persistent storage of all metrics data and
+      historical records.
+  - title: Custom Database Configuration
+    description:
+      Configure custom database user and database name for flexible deployment
+      options.
+  - title: Containerized Deployment
+    description:
+      Easily deploy SHM in any environment that supports Docker with minimal
+      configuration requirements.
+tags:
+  - Metrics
+  - Monitoring
+  - Self-Hosted
+  - PostgreSQL
+  - Analytics
+  - Docker
