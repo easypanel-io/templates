@@ -1,0 +1,32 @@
+name: Frappe CRM
+description:
+  Frappe CRM is an open-source customer relationship management system built on the
+  Frappe framework. It offers seamless integration with Twilio, Exotel, WhatsApp, 
+  ERPNext and other Frappe applications, delivering a flexible, scalable, and
+  customizable solution for managing customer interactions.
+instructions:
+  Follow the installation and configuration guide.
+  https://docs.frappe.io/crm/setting-up
+
+changeLog:
+  - date: 2025-02-24
+    description: initial release
+links:
+  - label: Website
+    url: https://frappe.io/crm
+  - label: Documentation
+    url: https://docs.frappe.io/crm/introduction
+  - label: Github
+    url: https://github.com/frappe/crm
+contributors:
+  - name: Eloi Marques da Silva
+    url: https://github.com/eloimarquessilva
+schema:
+  type: object
+  required:
+    - serviceName
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: frappecrm
