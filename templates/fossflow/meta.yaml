@@ -19,7 +19,8 @@ instructions: null
 changeLog:
   - date: 2025-11-24
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to master-5e6a732
 links:
   - label: Docker Hub
     url: https://hub.docker.com/r/stnsmith/fossflow
@@ -43,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: stnsmith/fossflow:latest
+      default: stnsmith/fossflow:master-5e6a732
     enableServerStorage:
       type: string
       title: Enable Server Storage

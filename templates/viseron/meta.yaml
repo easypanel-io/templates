@@ -17,7 +17,8 @@ instructions: null
 changeLog:
   - date: 2025-11-10
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to 3.4.1
 links:
   - label: Website
     url: https://viseron.netlify.app/
@@ -45,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: roflcoopter/viseron:3.3.1
+      default: roflcoopter/viseron:3.4.1
 
 benefits:
   - title: Privacy-First Design

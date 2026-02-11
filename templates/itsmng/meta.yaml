@@ -17,7 +17,8 @@ instructions: Default login credentials are itsm/itsm
 changeLog:
   - date: 2025-11-07
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to 1.6.11
 links:
   - label: Website
     url: https://www.itsm-ng.org/
@@ -43,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itsmng/itsm-ng:1.6.10
+      default: itsmng/itsm-ng:1.6.11
 
 benefits:
   - title: Complete ITSM Solution

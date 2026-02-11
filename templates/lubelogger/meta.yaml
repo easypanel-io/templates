@@ -26,7 +26,8 @@ instructions: null
 changeLog:
   - date: 2025-12-02
     description: Template Release
-
+  - date: 2026-01-01
+    description: Version bumped to v1.5.6
 links:
   - label: Website
     url: https://lubelogger.com
@@ -52,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/hargata/lubelogger:v1.5.5
+      default: ghcr.io/hargata/lubelogger:v1.5.6
 
 benefits:
   - title: Complete Maintenance History
