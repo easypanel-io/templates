@@ -1,0 +1,91 @@
+name: Stremio
+description:
+  Stremio is a modern media center application that provides a unified platform
+  for streaming movies, TV shows, and live TV content. The self-hosted Docker
+  version allows you to run your own Stremio server, giving you complete control
+  over your media streaming experience. With support for various content sources
+  and add-ons, Stremio aggregates content from multiple providers into a single
+  interface. The application features automatic server URL configuration and
+  CORS handling, making it easy to access from any device. With persistent
+  storage for server data and configurations, Stremio ensures your settings and
+  preferences are retained across container restarts. Perfect for media
+  enthusiasts who want a centralized streaming solution, users looking for a
+  self-hosted alternative to commercial streaming services, or anyone seeking a
+  flexible media center that can aggregate content from multiple sources.
+
+instructions: null
+
+changeLog:
+  - date: 2026-01-05
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/Stremio/stremio-server
+  - label: Website
+    url: https://www.stremio.com
+  - label: Docker Hub
+    url: https://hub.docker.com/r/tsaridas/stremio-docker
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: stremio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ttsaridas/stremio-docker:v1.2.7
+
+benefits:
+  - title: Unified Media Center
+    description:
+      Aggregate and stream movies, TV shows, and live TV content from multiple
+      sources in a single, unified interface.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your media streaming experience with a self-hosted
+      solution that keeps your data private.
+  - title: Persistent Storage
+    description:
+      Server data and configurations are stored persistently ensuring your
+      settings and preferences are retained across container restarts.
+  - title: Easy Access
+    description:
+      Automatic server URL configuration and CORS handling make it easy to
+      access your Stremio server from any device.
+
+features:
+  - title: Media Streaming
+    description:
+      Stream movies, TV shows, and live TV content from various sources through
+      a single interface.
+  - title: Add-on Support
+    description:
+      Extend functionality with add-ons that provide access to additional
+      content sources and features.
+  - title: Automatic Configuration
+    description:
+      Automatic server URL configuration and CORS handling for seamless access
+      from any device.
+  - title: Web Interface
+    description:
+      Access your Stremio server through a web interface that works on any
+      device with a browser.
+
+tags:
+  - Media
+  - Streaming
+  - Movies
+  - TV Shows
+  - Self-Hosted
+  - Media Center
