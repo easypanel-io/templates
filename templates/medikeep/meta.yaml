@@ -1,0 +1,139 @@
+name: MediKeep
+description:
+  MediKeep is a lightweight, self-hosted application for managing your personal
+  medical information. Keep your health records organized and accessible while
+  maintaining complete control over your data privacy. Built with React frontend
+  and FastAPI backend, MediKeep provides a secure platform for tracking
+  medications, generating health reports, and managing your medical records with
+  ease.
+instructions: null
+changeLog:
+  - date: 2025-02-09
+    description: Initial template release
+links:
+  - label: GitHub
+    url: https://github.com/afairgiant/MediKeep
+  - label: Documentation
+    url: https://github.com/afairgiant/MediKeep/tree/main/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: medikeep
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/afairgiant/medikeep:latest
+    adminDefaultPassword:
+      type: string
+      title: Admin Default Password (Optional)
+      default: ""
+      description:
+        Default password for the admin user on fresh installations. Auto-generated
+        if not provided.
+    secretKey:
+      type: string
+      title: Secret Key (Auto-generated if empty)
+      default: ""
+      description:
+        JWT secret key for authentication. Auto-generated if not provided.
+    timezone:
+      type: string
+      title: Timezone
+      default: America/New_York
+    logLevel:
+      type: string
+      title: Log Level
+      default: INFO
+      oneOf:
+        - enum:
+            - INFO
+          title: INFO
+        - enum:
+            - DEBUG
+          title: DEBUG
+    ssoEnabled:
+      type: boolean
+      title: Enable SSO
+      default: false
+      description:
+        Enable Single Sign-On authentication (Google, GitHub, or OIDC)
+    ssoProviderType:
+      type: string
+      title: SSO Provider Type
+      default: ""
+      description:
+        SSO provider type (e.g., oidc, google, github). Required if SSO is
+        enabled.
+    ssoClientId:
+      type: string
+      title: SSO Client ID
+      default: ""
+      description: SSO client ID. Required if SSO is enabled.
+    ssoClientSecret:
+      type: string
+      title: SSO Client Secret
+      default: ""
+      description: SSO client secret. Required if SSO is enabled.
+    ssoIssuerUrl:
+      type: string
+      title: SSO Issuer URL
+      default: ""
+      description: SSO issuer URL (for OIDC providers). Required for OIDC SSO.
+    ssoRedirectUri:
+      type: string
+      title: SSO Redirect URI
+      default: ""
+      description:
+        SSO redirect URI. Usually https://your-domain/api/v1/auth/sso/callback
+    ssoAllowedDomains:
+      type: string
+      title: SSO Allowed Domains
+      default: ""
+      description:
+        Comma-separated list of allowed domains for SSO (e.g.,
+        example.com,example.org)
+benefits:
+  - title: Complete Data Privacy
+    description:
+      Keep your medical records secure and private with self-hosted deployment.
+      You maintain complete control over your sensitive health information.
+  - title: Medication Tracking
+    description:
+      Track and manage all your medications, dosages, and schedules in one
+      convenient location, helping you stay on top of your health regimen.
+  - title: Health Report Generation
+    description:
+      Generate custom health reports and export your medical data for sharing
+      with healthcare providers, making medical visits more efficient.
+features:
+  - title: React Frontend
+    description:
+      Modern, responsive user interface built with React for an intuitive user
+      experience across desktop and mobile devices.
+  - title: FastAPI Backend
+    description:
+      High-performance backend built with FastAPI, ensuring fast and reliable
+      access to your medical records.
+  - title: SSO Support
+    description:
+      Optional Single Sign-On integration with Google, GitHub, or OIDC providers
+      for seamless authentication.
+  - title: Backup and Restore
+    description:
+      Built-in backup and restore functionality with CLI support for automated
+      scheduled backups, ensuring your data is always protected.
+tags:
+  - Medical Records
+  - Health Management
+  - Self-Hosted
+  - Privacy
