@@ -32,14 +32,14 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/afairgiant/medikeep:latest
+      default: ghcr.io/afairgiant/medikeep:v0.51.0
     adminDefaultPassword:
       type: string
       title: Admin Default Password (Optional)
       default: ""
       description:
-        Default password for the admin user on fresh installations. Auto-generated
-        if not provided.
+        Default password for the admin user on fresh installations.
+        Auto-generated if not provided.
     secretKey:
       type: string
       title: Secret Key (Auto-generated if empty)
