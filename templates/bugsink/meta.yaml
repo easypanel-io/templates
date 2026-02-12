@@ -1,0 +1,65 @@
+name: Bugsink
+description: Bugsink is a self-hosted error tracking system compatible with Sentry SDKs.
+instructions: null
+changeLog:
+  - date: 2025-05-08
+    description: First Release
+links:
+  - label: Website
+    url: https://www.bugsink.com/
+  - label: Github
+    url: https://github.com/bugsink/bugsink
+  - label: Documentation
+    url: https://www.bugsink.com/docs/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bugsink
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bugsink/bugsink:1.5.3
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+      description: Admin username
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin
+      description: Admin password
+benefits:
+  - title: Self-Hosted Solution
+    description: Full control over your data by running on your own servers
+  - title: Sentry SDK Compatible
+    description: Works with popular Sentry SDKs across multiple programming languages
+  - title: Scalable Performance
+    description: Handles millions of events per day on minimal hardware
+features:
+  - title: Error Tracking
+    description: Catch and monitor errors with detailed stacktraces and context
+  - title: Issue Grouping
+    description: Automatically group related errors for better management
+  - title: Alerting System
+    description: Get notified when new errors occur in your application
+  - title: Search and Tags
+    description: Search through errors by release, environment, user, and more
+  - title: Sourcemaps Support
+    description: Link minified code to original source for better debugging
+tags:
+  - Error Tracking
+  - Self-Hosted
+  - Monitoring
+  - Sentry Compatible 
