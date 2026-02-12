@@ -4,7 +4,6 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const redisPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -20,7 +19,6 @@ export function generate(input: Input): Output {
         `PGSQL_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `PGSQL_DBNAME=$(PROJECT_NAME)`,
         `REDIS_SERVER=$(PROJECT_NAME)_${input.appServiceName}-redis`,
-        `REDIS_PASSWD=${redisPassword}`,
       ].join("\n"),
       domains: [
         {
@@ -50,10 +48,23 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: "redis",
+    type: "app",
     data: {
       serviceName: `${input.appServiceName}-redis`,
-      password: redisPassword,
+      source: {
+        type: "image",
+        image: input.redisImage,
+      },
+      deploy: {
+        command: "redis-server",
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "redis-data",
+          mountPath: "/data",
+        },
+      ],
     },
   });
 
