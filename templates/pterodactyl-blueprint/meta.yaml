@@ -1,0 +1,115 @@
+name: Pterodactyl Panel with Blueprint Framework
+description:
+  Pterodactyl Panel enhanced with the Blueprint Framework — an advanced
+  extension system that enhances the game server management experience. Please
+  note Blueprint is not official or affiliated with Pterodactyl Panel. It is an
+  independent framework for creating and managing extensions, allowing you to
+  customize the panel with themes, add-ons, and advanced features. This template
+  offers a complete installation of Pterodactyl Panel with Blueprint already
+  configured, providing access to a wide variety of extensions created by the
+  community. With Blueprint, you can easily install themes, dashboard widgets,
+  administrative tools, and custom features. Ideal for hosting providers, gaming
+  communities, and administrators who want to extend the panel's capabilities
+  with advanced configuration options and custom database naming.
+instructions:
+  After installation, access the console and run "php artisan p:user:make" to
+  create an admin user. Blueprint extensions can be installed via the admin
+  panel or using the "blueprint -install" command. Visit the Blueprint
+  marketplace to discover available themes and extensions. You can customize the
+  database name during setup for better organization and management.
+changeLog:
+  - date: 2025-10-01
+    description: Template Release
+links:
+  - label: Website - Pterodactyl
+    url: https://pterodactyl.io/
+  - label: Documentation - Pterodactyl
+    url: https://pterodactyl.io/project/introduction.html
+  - label: Github - Pterodactyl
+    url: https://github.com/pterodactyl/panel
+  - label: Website - Blueprint
+    url: https://blueprint.zip
+  - label: Documentation - Blueprint
+    url: https://blueprint.zip/docs/
+  - label: Github - Blueprint
+    url: https://github.com/blueprintframework
+contributors:
+  - name: Richards0nd (Template Author)
+    url: https://github.com/Richards0nd
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: blueprint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/blueprintframework/blueprint:v1.11.11
+benefits:
+  - title: Custom Database Configuration
+    description:
+      Enhanced template with customizable database naming options, allowing you
+      to organize your databases with meaningful names instead of using default
+      project names. Perfect for managing multiple Pterodactyl installations
+      with clear database identification.
+  - title: Blueprint Extension System
+    description:
+      Blueprint Framework provides a comprehensive extension system that allows
+      you to customize your Pterodactyl Panel with themes, widgets, and addons.
+      Install community-created extensions with one click or develop your own
+      using Blueprint's developer-friendly API.
+  - title: Enhanced Administrative Tools
+    description:
+      Access powerful administrative features through Blueprint extensions,
+      including advanced user management, server monitoring tools, automated
+      backups, and custom dashboard widgets that provide deeper insights into
+      your game servers.
+  - title: Theme Customization
+    description:
+      Transform your panel's appearance with professionally designed themes
+      available through Blueprint. Create a unique brand experience for your
+      users with custom colors, layouts, and UI components.
+  - title: Community-Driven Ecosystem
+    description:
+      Benefit from a thriving community of developers creating extensions,
+      themes, and tools. Blueprint's marketplace offers solutions for every
+      need, from simple UI tweaks to complex server management features.
+features:
+  - title: Enhanced Configuration Options
+    description:
+      Improved template with additional configuration options including custom
+      database naming, better environment variable management, and optimized
+      settings for both development and production environments.
+  - title: Blueprint Framework Integration
+    description:
+      Pre-installed Blueprint Framework enables seamless extension management,
+      theme installation, and custom addon development. Access the Blueprint CLI
+      and web interface for managing your panel customizations.
+  - title: Extension Marketplace
+    description:
+      Browse and install extensions directly from the Blueprint marketplace,
+      including themes, dashboard widgets, server management tools, and
+      administrative utilities. All extensions are community-vetted and secure.
+  - title: Developer-Friendly API
+    description:
+      Blueprint provides comprehensive APIs for creating custom extensions,
+      themes, and integrations. Extensive documentation and development tools
+      make it easy to build and distribute your own panel enhancements.
+  - title: One-Click Extension Management
+    description:
+      Install, update, and remove extensions with simple commands or through the
+      web interface. Blueprint handles dependencies, database migrations, and
+      file management automatically for a seamless experience.
+  - title: Theme System
+    description:
+      Transform your panel's look and feel with professionally designed themes.
+      Blueprint's theme system supports complete UI overhauls while maintaining
+      full compatibility with Pterodactyl's core functionality.
+tags:
+  - Gaming
+  - Developer Tools
