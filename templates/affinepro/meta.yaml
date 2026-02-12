@@ -44,22 +44,32 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine-graphql:stable-e98f035
+      default: ghcr.io/toeverything/affine:0.26.2
     mailerHost:
       type: string
-      title: Mailer Host
+      title: Mailer Host (Optional)
+      default: ""
+      description: SMTP host for email notifications. Leave empty to disable.
     mailerHostPort:
       type: string
-      title: Mailer Host Port
+      title: Mailer Port (Optional)
+      default: "587"
+      description: SMTP port (e.g., 587, 465). Used when Mailer Host is set.
     mailerHostUser:
       type: string
-      title: Mailer Host User
+      title: Mailer User (Optional)
+      default: ""
+      description: SMTP username. Leave empty for open relay.
     mailerPassword:
       type: string
-      title: Mailer Password
+      title: Mailer Password (Optional)
+      default: ""
+      description: SMTP password.
     mailerSender:
       type: string
-      title: Mailer Sender
+      title: Mailer Sender (Optional)
+      default: ""
+      description: Email address to send from (e.g., no-reply@example.com)
 
 benefits:
   - title: Streamlined Collaboration
