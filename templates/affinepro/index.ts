@@ -65,12 +65,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3010,
-        },
-      ],
       deploy: {
         command: "node ./scripts/self-host-predeploy.js",
       },
@@ -94,6 +88,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      user: "affine",
+      image: "pgvector/pgvector:pg16",
     },
   });
 

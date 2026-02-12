@@ -1,0 +1,68 @@
+name: Cypht
+description: Cypht is a modern, open-source webmail client that allows you to access multiple email accounts from a single interface. It supports various email protocols and provides a clean, intuitive user experience.
+instructions: null
+changeLog:
+  - date: 2025-04-30
+    description: Initial release
+links:
+  - label: Website
+    url: https://cypht.org
+  - label: Documentation
+    url: https://www.cypht.org/documentation/
+  - label: GitHub
+    url: https://github.com/jasonmunro/cypht
+  - label: Docker Hub
+    url: https://hub.docker.com/r/cypht/cypht
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cypht
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: cypht/cypht:2.4.0
+    authUsername:
+      type: string
+      title: Auth Username
+      default: admin
+    authPassword:
+      type: string
+      title: Auth Password
+      default: admin
+benefits:
+  - title: Unified Email Access
+    description: Access multiple email accounts from a single, modern interface
+  - title: Self-hosted Solution
+    description: Keep your email data private by hosting your own webmail client
+  - title: Modern Interface
+    description: Clean and intuitive user interface for better email management
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: Multi-account Support
+    description: Connect and manage multiple email accounts simultaneously
+  - title: Email Protocols
+    description: Support for IMAP, POP3, and SMTP protocols
+  - title: Database Storage
+    description: Secure storage of user configurations and session data
+  - title: Customizable Interface
+    description: Personalize your email experience with various settings
+  - title: Mobile Friendly
+    description: Responsive design for access from any device
+  - title: Security Features
+    description: Built-in security measures for safe email handling
+tags:
+  - Email
+  - Webmail
+  - Self-hosted
+  - Open Source
+  - Communication 
