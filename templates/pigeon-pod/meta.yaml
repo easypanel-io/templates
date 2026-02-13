@@ -1,0 +1,97 @@
+name: Pigeon Pod
+description:
+  Pigeon Pod is a self-hosted application that converts YouTube channels or
+  playlists into podcast feeds. It supports automatic syncing of new uploads,
+  backfilling historical content, media downloads, and secure RSS feeds
+  compatible with standard podcast players. Built with Spring Boot, Pigeon Pod
+  provides a web interface for managing YouTube subscriptions and generates
+  podcast-compatible RSS feeds that work with any standard podcast player.
+  Perfect for podcast enthusiasts who want to listen to YouTube content as
+  podcasts while maintaining complete control over their data and subscriptions.
+instructions: Login using the credentials; username=root, password=Root@123
+
+changeLog:
+  - date: 2026-01-15
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/aizhimou/pigeon-pod
+  - label: Website
+    url: https://pigeonpod.cloud
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pigeon-pod
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/aizhimou/pigeon-pod:release-1.19.10
+
+benefits:
+  - title: YouTube to Podcast Conversion
+    description:
+      Convert any YouTube channel or playlist into a podcast feed that works
+      with standard podcast players and apps.
+  - title: Automatic Syncing
+    description:
+      Automatically sync new uploads from subscribed YouTube channels, keeping
+      your podcast feed up-to-date without manual intervention.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your podcast feeds and downloaded media with no
+      reliance on external services or subscriptions.
+  - title: Historical Content
+    description:
+      Backfill historical content from YouTube channels, allowing you to access
+      older videos as podcast episodes.
+  - title: Standard RSS Feeds
+    description:
+      Generates standard RSS feeds compatible with all major podcast players
+      including Apple Podcasts, Spotify, and more.
+
+features:
+  - title: YouTube Channel Subscription
+    description:
+      Subscribe to YouTube channels or playlists and automatically convert them
+      into podcast feeds.
+  - title: Media Download
+    description:
+      Download audio and video files from YouTube for offline access and podcast
+      playback.
+  - title: Web Interface
+    description:
+      User-friendly web interface for managing subscriptions, viewing download
+      progress, and configuring settings.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database for storing subscription data and metadata
+      without requiring a separate database server.
+  - title: RSS Feed Generation
+    description:
+      Automatically generates secure RSS feeds that work with any standard
+      podcast player application.
+  - title: Cover Art Management
+    description:
+      Downloads and manages cover art for podcast episodes, enhancing the
+      listening experience.
+
+tags:
+  - Podcast
+  - YouTube
+  - RSS
+  - Self-Hosted
+  - Media
+  - Audio
+  - Video
