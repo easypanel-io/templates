@@ -1,0 +1,92 @@
+name: Gameyfin
+description:
+  Gameyfin is a modern game library management application inspired by Jellyfin,
+  designed to organize, catalog, and stream your game collection. It provides a
+  beautiful web interface for browsing games, managing metadata, and accessing
+  your game library from any device. Features include automatic game detection,
+  metadata fetching from IGDB, and support for various game platforms.
+instructions: null
+changeLog:
+  - date: 2025-10-02
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/gameyfin/gameyfin
+  - label: DockerHub
+    url: https://hub.docker.com/r/gameyfin/gameyfin
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gameyfin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/gameyfin/gameyfin:2.1
+benefits:
+  - title: Game Library Management
+    description:
+      Organize and catalog your entire game collection with automatic detection
+      and metadata fetching from IGDB for comprehensive game information.
+  - title: Web-Based Interface
+    description:
+      Beautiful and responsive web interface accessible from any device with a
+      browser for easy game library browsing and management.
+  - title: Metadata Integration
+    description:
+      Automatic metadata fetching from IGDB including game descriptions, covers,
+      screenshots, and release information for rich game profiles.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your game library with no external dependencies or
+      data sharing with third parties.
+features:
+  - title: Web Interface
+    description:
+      Modern web-based interface accessible from any device with a browser for
+      easy game library browsing and management.
+  - title: Automatic Game Detection
+    description:
+      Automatic detection and scanning of games in your library with support for
+      various game platforms and formats.
+  - title: IGDB Integration
+    description:
+      Integration with IGDB (Internet Game Database) for automatic metadata
+      fetching including descriptions, covers, and game information.
+  - title: Game Streaming
+    description:
+      Built-in game streaming capabilities for accessing your games remotely
+      through the web interface.
+  - title: Library Organization
+    description:
+      Advanced library organization with custom collections, tags, and
+      categorization options.
+  - title: Multi-Platform Support
+    description:
+      Support for various game platforms including PC, console games, and
+      different game formats.
+  - title: User Management
+    description:
+      Multi-user support with individual game libraries and preferences for
+      family or team use.
+  - title: Data Persistence
+    description:
+      All game metadata, library data, and user preferences persist across
+      container restarts and updates.
+tags:
+  - Game Library
+  - Game Management
+  - Gaming
+  - Self-hosted
+  - Web Interface
+  - IGDB
+  - Game Streaming
+  - Metadata
