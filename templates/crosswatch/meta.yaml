@@ -1,0 +1,81 @@
+name: Crosswatch
+description:
+  Crosswatch is a self-hosted monitoring and watch service that provides
+  comprehensive tracking and monitoring capabilities. Built with modern
+  architecture, Crosswatch offers a web-based interface accessible on port 8787
+  for monitoring your services and applications. The system stores all
+  configuration data in a persistent volume, ensuring your settings are
+  preserved across restarts. Perfect for developers and organizations looking
+  for a self-hosted solution to monitor and track their applications and
+  services.
+instructions: null
+changeLog:
+  - date: 2025-01-21
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/cenodude/crosswatch
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: crosswatch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cenodude/crosswatch:0.7.3
+    timezone:
+      type: string
+      title: Timezone
+      default: Asia/Karachi
+      description: Timezone for the application (e.g., Asia/Karachi, America/New_York, Europe/London)
+benefits:
+  - title: Self-Hosted Monitoring
+    description:
+      Monitor and track your services and applications with a self-hosted
+      platform that gives you complete control over your monitoring data.
+  - title: Web-Based Interface
+    description:
+      Access and manage your monitoring dashboard through a modern web interface
+      accessible on port 8787.
+  - title: Persistent Configuration
+    description:
+      All configuration data is stored in a persistent volume, ensuring your
+      settings and monitoring configurations are preserved across container
+      restarts.
+  - title: Timezone Support
+    description:
+      Configure your preferred timezone for accurate time tracking and
+      scheduling of monitoring tasks.
+features:
+  - title: Service Monitoring
+    description:
+      Monitor multiple services and applications from a single dashboard with
+      comprehensive tracking capabilities.
+  - title: Persistent Storage
+    description:
+      Configuration data is stored in a dedicated volume at /config for
+      reliable data persistence.
+  - title: Timezone Configuration
+    description:
+      Set your preferred timezone for accurate time-based monitoring and
+      scheduling.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Crosswatch in any environment that supports Docker with
+      minimal configuration requirements.
+tags:
+  - Monitoring
+  - Watch
+  - Self-Hosted
+  - Tracking
+  - Docker
