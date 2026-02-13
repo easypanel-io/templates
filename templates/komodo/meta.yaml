@@ -1,0 +1,85 @@
+name: Komodo
+description:
+  Komodo is a comprehensive server management platform that provides monitoring
+  and control capabilities for Docker containers and system processes. It offers
+  a unified dashboard to manage your infrastructure, with features including
+  container management, process monitoring, resource tracking, and system
+  metrics visualization.
+instructions: null
+changeLog:
+  - date: 2025-08-25
+    description: First release
+links:
+  - label: Website
+    url: https://komo.do
+  - label: GitHub
+    url: https://github.com/moghtech/komodo
+  - label: Documentation
+    url: https://komo.do/docs/intro
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - peripheryImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: komodo
+    appServiceImage:
+      type: string
+      title: Komodo Core Image
+      default: ghcr.io/moghtech/komodo-core:1.19.4
+    peripheryImage:
+      type: string
+      title: Komodo Periphery Image
+      default: ghcr.io/moghtech/komodo-periphery:1.19.4
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: changeme
+benefits:
+  - title: Server Management
+    description:
+      Comprehensive platform for monitoring and managing Docker containers and
+      system processes.
+  - title: Docker Integration
+    description:
+      Deep integration with Docker for container management and monitoring.
+  - title: System Monitoring
+    description: Monitor system processes, resources, and performance metrics.
+  - title: Automation
+    description: Automate server tasks and container management workflows.
+features:
+  - title: MongoDB Database
+    description:
+      Reliable MongoDB database for storing configuration and monitoring data.
+  - title: Komodo Core
+    description:
+      Main application providing web interface and core functionality.
+  - title: Komodo Periphery
+    description: Agent for Docker integration and system process monitoring.
+  - title: Docker Socket Access
+    description: Direct access to Docker socket for container management.
+  - title: Process Monitoring
+    description: Monitor system processes outside of containers.
+  - title: Backup System
+    description: Automated database backups with configurable storage paths.
+  - title: Web Interface
+    description: Clean web interface for server management and monitoring.
+tags:
+  - Server Management
+  - Docker
+  - Monitoring
+  - Automation
+  - MongoDB
