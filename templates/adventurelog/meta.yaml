@@ -1,0 +1,105 @@
+name: AdventureLog
+description:
+  AdventureLog is a comprehensive travel tracking and adventure logging
+  application that helps you document and organize your journeys around the
+  world. Built with modern web technologies and PostGIS for geographic data
+  management, it allows you to record your adventures, track visited locations,
+  and create a visual map of your travels. The application features a clean,
+  intuitive interface for logging trips, storing photos and memories, and
+  analyzing your travel patterns. With support for geographic data through
+  PostGIS, you can visualize your adventures on interactive maps and maintain a
+  complete history of your explorations. Perfect for travelers, adventurers, and
+  anyone who wants to keep a detailed record of their journeys.
+instructions: null
+changeLog:
+  - date: 2025-10-30
+    description: Initial Template Release
+links:
+  - label: GitHub Frontend
+    url: https://github.com/seanmorley15/adventurelog-frontend
+  - label: GitHub Backend
+    url: https://github.com/seanmorley15/adventurelog-backend
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - backendServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: adventurelog
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/seanmorley15/adventurelog-frontend:v0.11.0
+      description: AdventureLog App Docker image
+    backendServiceImage:
+      type: string
+      title: Backend Service Image
+      default: ghcr.io/seanmorley15/adventurelog-backend:v0.11.0
+      description: AdventureLog Backend Docker image
+benefits:
+  - title: Travel Documentation
+    description:
+      Keep a comprehensive record of all your travels and adventures in one
+      centralized location with detailed logging capabilities.
+  - title: Geographic Visualization
+    description:
+      Utilize PostGIS-powered geographic data to visualize your travels on
+      interactive maps and see where you've been around the world.
+  - title: Media Storage
+    description:
+      Store photos, notes, and memories from your adventures with persistent
+      media storage that keeps your travel history safe.
+  - title: Modern Architecture
+    description:
+      Built with a modern three-tier architecture featuring a dedicated
+      frontend, backend API, and geographic database for optimal performance.
+features:
+  - title: Adventure Logging
+    description:
+      Record detailed information about your trips, adventures, and travels with
+      an intuitive interface designed for travel documentation.
+  - title: PostGIS Database
+    description:
+      Leverages PostGIS (PostgreSQL with geographic extensions) for advanced
+      location tracking, spatial queries, and map-based visualization.
+  - title: Media Management
+    description:
+      Store and organize photos and media files from your adventures with
+      persistent volume storage for all your travel memories.
+  - title: REST API Backend
+    description:
+      Powerful backend API that handles all data operations, user management,
+      and provides seamless integration with the frontend.
+  - title: Modern Web Interface
+    description:
+      Clean, responsive web interface accessible from any device, making it easy
+      to log adventures whether at home or on the go.
+  - title: Location Tracking
+    description:
+      Track and visualize the places you've visited with geographic data support
+      and mapping capabilities powered by PostGIS.
+  - title: Data Persistence
+    description:
+      All your travel data, photos, and database information are stored in
+      persistent volumes ensuring nothing is ever lost.
+  - title: Self-Hosted
+    description:
+      Keep complete control of your travel data by hosting AdventureLog on your
+      own infrastructure with full privacy and ownership.
+tags:
+  - Travel
+  - Logging
+  - Geographic
+  - Maps
+  - PostGIS
+  - Self-Hosted
+  - Adventure
+  - Documentation
+  - Media Storage

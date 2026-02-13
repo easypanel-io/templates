@@ -17,6 +17,8 @@ changeLog:
     description: Update to 2024.10.2
   - date: 2025-02-28
     description: Version bumped to 2025.2.1
+  - date: 2025-12-29
+    description: Version bumped to 2025.12.1
 links:
   - label: Github
     url: https://github.com/itzg/docker-minecraft-server
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-server:2025.2.1
+      default: itzg/minecraft-server:2025.12.1
     serverName:
       type: string
       title: Server Name

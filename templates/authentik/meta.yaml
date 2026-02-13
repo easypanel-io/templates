@@ -7,6 +7,8 @@ instructions: Change this URL /if/flow/default-authentication-flow/?next=%2F to 
 changeLog:
   - date: 2025-04-23
     description: Initial release
+  - date: 2025-12-24
+    description: Updated to version 2025.10.3
 links:
   - label: Website
     url: https://goauthentik.io
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/goauthentik/server:2025.2.4
+      default: ghcr.io/goauthentik/server:2025.10.3
 benefits:
   - title: Centralized Identity Management
     description: Manage users, groups, and permissions from a single dashboard
