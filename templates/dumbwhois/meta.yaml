@@ -1,0 +1,68 @@
+name: DumbWhois
+description:
+  DumbWhois is a simple WHOIS lookup service for domain information queries. It
+  provides both a web interface and API endpoint for retrieving domain
+  registration details, nameserver information, and other domain-related data.
+  Perfect for developers and system administrators who need quick domain
+  lookups.
+instructions: null
+changeLog:
+  - date: 2025-09-24
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbwhois
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbwhois
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbwhois
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbwhois:latest
+benefits:
+  - title: Domain Information
+    description:
+      Quick access to domain registration details, nameservers, and contact
+      information for any domain.
+  - title: API Access
+    description:
+      RESTful API endpoint for programmatic domain lookups and integration with
+      other services.
+  - title: CORS Support
+    description:
+      Configurable cross-origin resource sharing for web application
+      integration.
+  - title: No Storage Required
+    description:
+      Stateless service that performs real-time lookups without storing data.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface for performing WHOIS lookups.
+  - title: REST API
+    description: RESTful API endpoint for programmatic access to WHOIS data.
+  - title: CORS Configuration
+    description: Configurable CORS settings for web application integration.
+  - title: Real-time Lookups
+    description: Performs live WHOIS queries for up-to-date domain information.
+  - title: JSON Response
+    description: API returns structured JSON data for easy integration.
+  - title: Simple Setup
+    description: Easy deployment with minimal configuration required.
+tags:
+  - WHOIS
+  - Domain
+  - Lookup
+  - API
+  - Developer Tools
