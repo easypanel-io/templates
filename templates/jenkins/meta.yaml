@@ -12,6 +12,8 @@ changeLog:
     description: Version bumped to 2.499
   - date: 2025-07-22
     description: Version bumped to 2.519
+  - date: 2025-12-25
+    description: Version bumped to 2.543
 links:
   - label: Website
     url: https://www.jenkins.io/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jenkins/jenkins:2.519
+      default: jenkins/jenkins:2.543
 benefits:
   - title: Automate Everything
     description:

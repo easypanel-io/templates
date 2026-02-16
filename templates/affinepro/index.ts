@@ -9,14 +9,8 @@ export function generate(input: Input): Output {
   const common_envs = [
     `REDIS_SERVER_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
     `REDIS_SERVER_PASSWORD=${redisPassword}`,
-    `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-    `AFFINE_SERVER_HOST=$(PRIMARY_DOMAIN)`,
-    `#SMTP CONFIGURATION`,
-    `MAILER_HOST=${input.mailerHost}`,
-    `MAILER_PORT=${input.mailerHostPort}`,
-    `MAILER_USER=${input.mailerHostUser}`,
-    `MAILER_PASSWORD=${input.mailerPassword}`,
-    `MAILER_SENDER=${input.mailerSender}`,
+    `DATABASE_URL=postgresql://affine:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `AFFINE_INDEXER_ENABLED=false`,
   ].join("\n");
 
   services.push({
@@ -58,12 +52,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3010,
-        },
-      ],
       deploy: {
         command: "node ./scripts/self-host-predeploy.js",
       },
@@ -87,6 +75,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      user: "affine",
+      image: "pgvector/pgvector:pg16",
     },
   });
 

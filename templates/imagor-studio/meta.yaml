@@ -1,0 +1,105 @@
+name: Imagor Studio
+description:
+  Imagor Studio is a self-hosted image gallery and live editing web application
+  designed for photographers, content creators, and digital artists. It provides
+  a modern web interface for browsing, organizing, and editing your image
+  collections with real-time image transformation capabilities. Built on top of
+  the Imagor image processing server, the studio interface offers intuitive
+  tools for image manipulation including resizing, cropping, filtering, and
+  format conversion without modifying original files. All edits are performed
+  on-demand using URL-based parameters, ensuring your source images remain
+  untouched while generating optimized versions for different use cases. The
+  application features a responsive gallery view for browsing images, a built-in
+  editor with live preview, support for various image formats, and SQLite
+  database for managing metadata and user preferences. With its lightweight
+  architecture and flexible storage options, Imagor Studio enables you to
+  maintain a private image library with professional editing capabilities
+  accessible from any web browser. Perfect for photographers managing personal
+  portfolios, content creators organizing media assets, web developers
+  optimizing images for websites, or anyone needing a self-hosted alternative to
+  cloud-based image management services with built-in editing tools.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-27
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://imagor.net/
+  - label: Documentation
+    url: https://docs.studio.imagor.net/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/shumc/imagor-studio
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: imagor-studio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: shumc/imagor-studio:0.8.13
+
+benefits:
+  - title: Non-Destructive Editing
+    description:
+      Edit images with real-time transformations using URL parameters without
+      modifying original files, preserving your source images indefinitely.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your entire image library and editing workflow on your own
+      infrastructure, ensuring complete privacy and control over your visual
+      content.
+  - title: On-Demand Processing
+    description:
+      Generate optimized image versions only when needed, saving storage space
+      and processing resources while maintaining flexibility.
+  - title: Web-Based Access
+    description:
+      Access your image gallery and editing tools from any device with a web
+      browser, no software installation required.
+
+features:
+  - title: Image Gallery
+    description:
+      Browse and organize your image collections through a responsive, modern
+      web interface with thumbnail previews.
+  - title: Live Image Editor
+    description:
+      Edit images in real-time with immediate visual feedback using built-in
+      tools for resizing, cropping, filtering, and format conversion.
+  - title: URL-Based Transformations
+    description:
+      Apply image transformations via URL parameters, enabling programmatic
+      image processing and integration with other applications.
+  - title: Format Support
+    description:
+      Work with various image formats including JPEG, PNG, WebP, and more, with
+      automatic format conversion capabilities.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database stores metadata, preferences, and
+      organizational information without requiring external database servers.
+  - title: Read-Only Gallery Mount
+    description:
+      Mount your existing image directories as read-only to safely browse and
+      edit without risk of accidental modifications to originals.
+
+tags:
+  - Image Gallery
+  - Image Editor
+  - Photography
+  - Media Management
+  - Image Processing

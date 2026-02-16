@@ -1,0 +1,90 @@
+name: Shelfmark
+description:
+  Shelfmark is a self-hosted book management and organization application that
+  provides comprehensive tools for managing your digital book library. Built with
+  modern architecture, Shelfmark offers a web-based interface accessible on port
+  8084 for organizing, cataloging, and managing your book collection. The system
+  supports book downloads, configuration management, and integration with torrent
+  and usenet download clients. Perfect for book enthusiasts and libraries looking
+  for a self-hosted solution to manage their digital book collections.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/calibrain/shelfmark
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - puid
+    - pgid
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shelfmark
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/calibrain/shelfmark:sha-03c364e
+    puid:
+      type: string
+      title: User ID (PUID)
+      default: "0"
+      description: User ID for file permissions (0 for root)
+    pgid:
+      type: string
+      title: Group ID (PGID)
+      default: "0"
+      description: Group ID for file permissions (0 for root)
+benefits:
+  - title: Digital Book Management
+    description:
+      Organize and manage your digital book library with comprehensive
+      cataloging and organization tools.
+  - title: Self-Hosted Solution
+    description:
+      Keep your book collection private and under your control with a
+      self-hosted deployment.
+  - title: Book Downloads
+    description:
+      Download and organize books with support for integration with torrent and
+      usenet download clients.
+  - title: Persistent Storage
+    description:
+      All books and configuration data are stored in persistent volumes,
+      ensuring your library is preserved across container restarts.
+features:
+  - title: Book Library Management
+    description:
+      Catalog, organize, and manage your digital book collection with an
+      intuitive web interface.
+  - title: Book Downloads
+    description:
+      Download books to a dedicated volume with support for various download
+      sources and formats.
+  - title: Configuration Management
+    description:
+      Store application configuration in a persistent volume for reliable
+      settings management.
+  - title: Download Client Integration
+    description:
+      Integrate with torrent and usenet download clients for automated book
+      downloads.
+  - title: File Permissions
+    description:
+      Configure user and group IDs for proper file permissions on downloaded
+      books and configuration files.
+tags:
+  - Books
+  - Library
+  - Self-Hosted
+  - E-Books
+  - Management
+  - Docker
