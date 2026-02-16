@@ -1,0 +1,123 @@
+name: Vexa Dashboard
+description: |
+  Vexa Dashboard is a complete, all-in-one solution for self-hosted meeting transcription. This template deploys both the Vexa API (real-time meeting transcription engine) and its web dashboard in a single click.
+
+  Vexa captures audio from Google Meet and Microsoft Teams meetings, transcribes it in real-time using Whisper AI, and provides a beautiful web interface to manage everything. Own your data, self-host everything, no cloud dependencies.
+
+  This template includes:
+  - Vexa API: The transcription engine with bot management
+  - Vexa Dashboard: Web interface for managing meetings and transcripts
+  - PostgreSQL: Database for storing all your data
+
+  Perfect for teams who want enterprise-grade meeting transcription without sending data to third parties.
+
+instructions: |
+  After deployment, open the Vexa Dashboard URL in your browser. You can immediately start joining meetings and transcribing them.
+
+  To enable AI-powered transcript analysis, edit the vexa-dashboard service environment variables and uncomment the AI_MODEL and AI_API_KEY lines.
+
+  For better transcription quality (requires GPU), edit the vexa-api service and change WHISPER_MODEL_SIZE from "tiny" to "medium" or "large-v3", and set DEVICE to "gpu".
+
+changeLog:
+  - date: 2025-01-01
+    description:
+      First release - All-in-one deployment with Vexa API and Dashboard
+
+links:
+  - label: Website
+    url: https://vexa.ai
+  - label: Documentation
+    url: https://github.com/Vexa-ai/vexa
+  - label: Dashboard GitHub
+    url: https://github.com/Vexa-ai/vexa-dashboard
+  - label: API GitHub
+    url: https://github.com/Vexa-ai/vexa
+
+contributors:
+  - name: Vexa Team
+    url: https://github.com/Vexa-ai
+  - name: Loan Talvat
+    url: https://github.com/loan-talvat
+
+schema:
+  type: object
+  required:
+    - projectName
+    - dashboardServiceName
+    - dashboardServiceImage
+    - apiServiceName
+    - databaseServiceName
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    dashboardServiceName:
+      type: string
+      title: Dashboard Service Name
+      default: vexa-dashboard
+    dashboardServiceImage:
+      type: string
+      title: Dashboard Docker Image
+      default: synapsr/vexa-dashboard:latest
+    apiServiceName:
+      type: string
+      title: API Service Name
+      default: vexa-api
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: vexa-database
+    defaultBotName:
+      type: string
+      title: Default Bot Name (appears in meetings)
+      default: Vexa Transcription Bot
+
+benefits:
+  - title: All-in-One Deployment
+    description:
+      Deploy the complete Vexa stack (API + Dashboard + Database) with a single
+      click. No complex configuration required.
+  - title: 100% Self-Hosted
+    description:
+      All your meeting data stays on your infrastructure. No data sent to
+      third-party services. Complete privacy and control.
+  - title: Real-Time Transcription
+    description:
+      Get live transcriptions as meetings happen via WebSocket. Support for 100+
+      languages with Whisper AI.
+  - title: AI-Powered Analysis
+    description:
+      Optional AI assistant to chat with your transcripts. Supports OpenAI,
+      Anthropic, Groq, and local Ollama.
+
+features:
+  - title: Multi-Platform Support
+    description:
+      Send transcription bots to Google Meet and Microsoft Teams meetings. Zoom
+      support coming soon.
+  - title: Live Transcription
+    description:
+      Watch transcriptions appear in real-time via WebSocket connection with
+      sub-second latency.
+  - title: Export Options
+    description:
+      Download transcripts in multiple formats including TXT, JSON, SRT
+      subtitles, and VTT captions.
+  - title: User Management
+    description:
+      Admin dashboard for managing users, API tokens, and monitoring active
+      transcription bots.
+  - title: Magic Link Auth
+    description:
+      Secure passwordless authentication via email. Just configure SMTP and
+      users get sign-in links.
+  - title: Dark Mode
+    description:
+      System-aware theme switching for comfortable viewing in any environment.
+
+tags:
+  - Transcription
+  - Meetings
+  - AI
+  - Productivity
+  - Self-Hosted
