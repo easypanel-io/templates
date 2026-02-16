@@ -1,0 +1,88 @@
+name: Wallos
+description:
+  Wallos is an open-source, self-hosted network monitoring and management
+  platform that provides comprehensive network visibility, device discovery, and
+  network analytics. It helps network administrators monitor network health,
+  track bandwidth usage, and manage network devices efficiently.
+instructions: null
+changeLog:
+  - date: 2025-08-26
+    description: First release
+links:
+  - label: Website
+    url: https://wallos.app/
+  - label: Documentation
+    url: https://docs.wallos.app/
+  - label: Github
+    url: https://github.com/ellite/Wallos
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wallos
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bellamy/wallos:4.1.1
+benefits:
+  - title: Network Visibility
+    description:
+      Gain complete visibility into your network infrastructure with real-time
+      monitoring and detailed analytics.
+  - title: Device Discovery
+    description:
+      Automatically discover and inventory all devices on your network for
+      comprehensive asset management.
+  - title: Bandwidth Monitoring
+    description:
+      Track bandwidth usage patterns and identify potential bottlenecks or
+      unusual network activity.
+  - title: Self-Hosted
+    description:
+      Keep your network data secure and private by hosting the monitoring
+      platform on your own infrastructure.
+  - title: Open Source
+    description:
+      Full transparency and customization capabilities with an active
+      open-source community and regular updates.
+features:
+  - title: Network Monitoring
+    description:
+      Real-time monitoring of network devices, services, and infrastructure with
+      customizable alerts and notifications.
+  - title: Device Management
+    description:
+      Comprehensive device inventory with detailed information about hardware,
+      software, and network configuration.
+  - title: Performance Analytics
+    description:
+      Advanced analytics and reporting tools to track network performance trends
+      and identify optimization opportunities.
+  - title: Custom Dashboards
+    description:
+      Create personalized dashboards to monitor specific aspects of your network
+      infrastructure.
+  - title: API Integration
+    description:
+      RESTful API support for integrating with existing network management tools
+      and automation workflows.
+  - title: Multi-User Support
+    description:
+      Role-based access control and multi-user support for team collaboration
+      and secure network management.
+tags:
+  - Network Monitoring
+  - Network Management
+  - Device Discovery
+  - Bandwidth Monitoring
+  - Network Analytics
+  - Infrastructure
+  - DevOps
