@@ -2,15 +2,15 @@ name: OxiCloud
 description:
   OxiCloud is an ultra-fast, secure, and lightweight self-hosted cloud storage
   written in Rust. It serves as a lightweight alternative to NextCloud, designed
-  for low-resource environments. OxiCloud runs on just 512MB RAM with
-  sub-second response times, offering file management, user authentication,
-  file deduplication, search, CalDAV calendars, CardDAV contacts, and
-  multi-language support. Built with Clean Architecture, it provides a clean UI
-  that works on desktop and mobile.
+  for low-resource environments. OxiCloud runs on just 512MB RAM with sub-second
+  response times, offering file management, user authentication, file
+  deduplication, search, CalDAV calendars, CardDAV contacts, and multi-language
+  support. Built with Clean Architecture, it provides a clean UI that works on
+  desktop and mobile.
 instructions: null
 changeLog:
-  - date: 2026-02-09
-    description: Initial template release
+  - date: 2026-02-16
+    description: Template Release (v0.3.4)
 links:
   - label: GitHub
     url: https://github.com/DioCrafts/OxiCloud
@@ -58,12 +58,12 @@ features:
       drag-and-drop, trash bin, and file deduplication.
   - title: CalDAV & CardDAV
     description:
-      Calendars and contacts with standard CalDAV/CardDAV support for
-      sync with mobile and desktop clients.
+      Calendars and contacts with standard CalDAV/CardDAV support for sync with
+      mobile and desktop clients.
   - title: User Authentication
     description:
-      JWT-based authentication with personal folders per user, favorites,
-      and recent files.
+      JWT-based authentication with personal folders per user, favorites, and
+      recent files.
   - title: Search & Multi-Language
     description:
       Search across files and folders. Supports English, Spanish, and Persian
