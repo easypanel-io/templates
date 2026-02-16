@@ -9,7 +9,9 @@ description:
   organizations of all sizes. By providing a self-hosted solution, Dittofeed
   ensures data privacy and compliance while giving you full control over your
   infrastructure and customer data.
-instructions: null
+instructions:
+  Please remove the bootstrap environment variable after the initial setup is
+  complete.
 changeLog:
   - date: 2025-01-03
     description: Template Release
@@ -17,6 +19,8 @@ changeLog:
     description: Version bumped to v0.22.0
   - date: 2025-12-25
     description: Version bumped to v0.23.0
+  - date: 2026-02-16
+    description: Added Bootstrap environment variable
 links:
   - label: Documentation
     url: https://docs.dittofeed.com/introduction
