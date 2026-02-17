@@ -1,0 +1,89 @@
+name: KitchenOwl
+description:
+  KitchenOwl is a self-hosted grocery list and recipe manager designed to help
+  you organize your kitchen and meal planning. It provides a clean web interface
+  for managing shopping lists, recipes, and inventory. Perfect for families and
+  individuals who want to streamline their grocery shopping and meal
+  preparation.
+instructions: null
+changeLog:
+  - date: 2025-09-25
+    description: First release (v0.7.4)
+links:
+  - label: Website
+    url: https://kitchenowl.org/
+  - label: GitHub
+    url: https://github.com/Tombursch/kitchenowl
+  - label: Documentation
+    url: https://docs.kitchenowl.org/latest/
+  - label: DockerHub Frontend
+    url: https://hub.docker.com/r/tombursch/kitchenowl-web
+  - label: DockerHub Backend
+    url: https://hub.docker.com/r/tombursch/kitchenowl-backend
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - backendImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kitchenowl
+    appServiceImage:
+      type: string
+      title: Frontend Image
+      default: tombursch/kitchenowl-web:v0.7.4
+    backendImage:
+      type: string
+      title: Backend Image
+      default: tombursch/kitchenowl-backend:v0.7.4
+benefits:
+  - title: Grocery List Management
+    description:
+      Create and manage shopping lists with categories, quantities, and
+      automatic suggestions based on your recipes.
+  - title: Recipe Organization
+    description:
+      Store and organize your favorite recipes with ingredients, instructions,
+      and nutritional information.
+  - title: Meal Planning
+    description:
+      Plan your meals and automatically generate shopping lists based on your
+      planned recipes.
+  - title: Family Collaboration
+    description:
+      Share lists and recipes with family members for collaborative meal
+      planning and shopping.
+features:
+  - title: Web Interface
+    description: Clean, responsive web interface accessible from any device.
+  - title: Shopping Lists
+    description:
+      Create categorized shopping lists with quantities and check-off
+      functionality.
+  - title: Recipe Management
+    description:
+      Store recipes with ingredients, instructions, cooking times, and
+      nutritional information.
+  - title: Inventory Tracking
+    description:
+      Track your pantry inventory and get suggestions for what to cook.
+  - title: Meal Planning
+    description:
+      Plan meals for the week and automatically generate shopping lists.
+  - title: Data Persistence
+    description:
+      All data is stored locally and persists across container restarts.
+  - title: JWT Authentication
+    description: Secure authentication system for protecting your data.
+tags:
+  - Grocery Lists
+  - Recipe Management
+  - Meal Planning
+  - Family
+  - Web Interface
