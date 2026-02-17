@@ -1,0 +1,91 @@
+name: Termix
+description:
+  Termix is a lightweight, web-based terminal emulator and SSH client that
+  allows you to access and manage remote servers directly from your browser. It
+  provides a modern, intuitive interface for executing commands, managing files,
+  and administering systems without needing a traditional terminal application.
+  Termix features session persistence, multiple connection management,
+  customizable themes, and secure SSH connections. The web interface is
+  responsive and works seamlessly across desktop and mobile devices, making it
+  perfect for system administrators who need remote access on the go. All
+  connection data is stored locally, ensuring your credentials and sessions
+  remain private and secure.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-13
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/lukegus/termix
+  - label: Documentation
+    url: https://docs.termix.site
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: termix
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/lukegus/termix:release-1.8.0
+
+benefits:
+  - title: Browser-Based Access
+    description:
+      Access your terminal and SSH connections from any device with a web
+      browser. No need to install traditional terminal applications or SSH
+      clients.
+  - title: Secure & Private
+    description:
+      All connection data and credentials are stored locally in your self-hosted
+      instance. Your sensitive information never leaves your infrastructure.
+  - title: Mobile-Friendly
+    description:
+      Responsive design allows you to manage servers and execute commands from
+      your smartphone or tablet when you're away from your desk.
+
+features:
+  - title: Web Terminal
+    description:
+      Full-featured web-based terminal emulator accessible from any modern
+      browser with support for colors, formatting, and keyboard shortcuts.
+  - title: SSH Client
+    description:
+      Connect to remote servers via SSH directly from the web interface. Manage
+      multiple connections and switch between them seamlessly.
+  - title: Session Persistence
+    description:
+      Save your SSH sessions and connection details for quick access. Resume
+      your work exactly where you left off.
+  - title: Connection Management
+    description:
+      Organize and manage multiple server connections with saved credentials,
+      custom names, and connection profiles.
+  - title: Customizable Interface
+    description:
+      Choose from various themes and customize the terminal appearance to match
+      your preferences and improve readability.
+  - title: Cross-Platform
+    description:
+      Works on any device with a modern web browser including Windows, macOS,
+      Linux, iOS, and Android.
+
+tags:
+  - Terminal
+  - SSH
+  - Remote Access
+  - Web Terminal
+  - System Admin

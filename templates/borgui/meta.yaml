@@ -1,0 +1,105 @@
+name: Borg UI
+description:
+  Borg UI is a modern web-based interface for BorgBackup, the popular
+  deduplicating backup program with compression and authenticated encryption. It
+  provides an intuitive dashboard for managing backup repositories, creating and
+  scheduling backups, monitoring backup status, and restoring files through a
+  user-friendly web interface. BorgBackup is known for its efficiency through
+  deduplication at the chunk level, strong encryption using AES-256, and data
+  integrity verification. Borg UI simplifies the complexity of command-line
+  operations by offering visual repository management, backup job configuration,
+  automated scheduling, space-efficient storage tracking, and easy file
+  restoration. The self-hosted solution gives you complete control over your
+  backup infrastructure while maintaining the security and reliability of
+  BorgBackup. With access to your entire filesystem, it can protect any data on
+  your server including application files, databases, configurations, and user
+  data. Perfect for system administrators, developers, and anyone who needs
+  reliable, encrypted, and space-efficient backup solutions without relying on
+  proprietary cloud backup services or complex command-line interfaces.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-25
+    description: Template Release
+
+links:
+  - label: BorgBackup Docs
+    url: https://borgbackup.readthedocs.io/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/ainullcode/borg-ui
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: borgui
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ainullcode/borg-ui:1.17
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+
+benefits:
+  - title: User-Friendly Backup Management
+    description:
+      Simplified web interface for BorgBackup eliminates the need for complex
+      command-line operations while maintaining full backup capabilities.
+  - title: Space-Efficient Storage
+    description:
+      Advanced deduplication and compression technology significantly reduces
+      storage requirements by storing only unique data chunks across all
+      backups.
+  - title: Security and Encryption
+    description:
+      Built-in AES-256 encryption ensures your backup data remains secure with
+      authenticated encryption and data integrity verification.
+  - title: Complete Filesystem Access
+    description:
+      Full access to your server's filesystem enables comprehensive backup
+      coverage for all applications, databases, and system files.
+
+features:
+  - title: Web-Based Interface
+    description:
+      Modern, intuitive dashboard for managing all aspects of your backup
+      operations without touching the command line.
+  - title: Repository Management
+    description:
+      Create, configure, and manage multiple backup repositories with visual
+      tools for monitoring storage usage and repository health.
+  - title: Automated Scheduling
+    description:
+      Schedule automatic backups at regular intervals with flexible timing
+      options to ensure your data is consistently protected.
+  - title: Deduplication Engine
+    description:
+      Advanced chunk-level deduplication identifies and stores only unique data,
+      dramatically reducing storage space and backup times.
+  - title: Easy Restoration
+    description:
+      Browse backup archives and restore individual files or entire directories
+      through the web interface with point-in-time recovery.
+  - title: Backup Monitoring
+    description:
+      Real-time status updates, backup history, storage statistics, and alerts
+      keep you informed about your backup infrastructure health.
+
+tags:
+  - Backup
+  - BorgBackup
+  - Deduplication
+  - Encryption
+  - System Administration

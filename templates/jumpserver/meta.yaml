@@ -1,0 +1,95 @@
+name: JumpServer
+description:
+  JumpServer is an open-source, enterprise-grade bastion host and privileged
+  access management (PAM) solution. It provides secure access to servers,
+  databases, and other IT resources through a web-based interface. JumpServer
+  supports multiple authentication methods, session recording, command auditing,
+  and fine-grained access control. It's designed to help organizations manage
+  and monitor privileged access to critical infrastructure while maintaining
+  security compliance and audit trails.
+instructions: Login using the default admin credentials; admin/ChangeMe.
+changeLog:
+  - date: 2025-09-06
+    description: Initial Template Release (v4.10.7)
+  - date: 2025-12-25
+    description: Version bumped to v4.10.12
+links:
+  - label: GitHub
+    url: https://github.com/jumpserver/jumpserver
+  - label: Documentation
+    url: https://docs.jumpserver.org/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/jumpserver/jms_all
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jumpserver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jumpserver/jms_all:v4.10.12
+      description: JumpServer Docker image
+benefits:
+  - title: Privileged Access Management
+    description:
+      Centralized management of privileged access to servers, databases, and
+      other IT resources with comprehensive audit trails and access controls.
+  - title: Session Recording
+    description:
+      Complete session recording and playback capabilities for security auditing
+      and compliance requirements.
+  - title: Multi-Protocol Support
+    description:
+      Support for SSH, RDP, VNC, and other protocols with a unified web-based
+      interface for all connections.
+  - title: Enterprise Security
+    description:
+      Enterprise-grade security features including MFA, RBAC, and integration
+      with LDAP/AD for user management.
+features:
+  - title: Web-Based Interface
+    description:
+      Modern, responsive web interface for managing users, assets, and access
+      policies without requiring client software installation.
+  - title: Command Auditing
+    description:
+      Detailed command auditing and logging for all privileged operations with
+      searchable command history and real-time monitoring.
+  - title: Asset Management
+    description:
+      Comprehensive asset management for servers, databases, and network devices
+      with automated discovery and inventory capabilities.
+  - title: User Management
+    description:
+      Flexible user management with support for local users, LDAP/AD
+      integration, and role-based access control (RBAC).
+  - title: Session Management
+    description:
+      Advanced session management with real-time monitoring, session sharing,
+      and automatic session termination capabilities.
+  - title: Compliance & Reporting
+    description:
+      Built-in compliance reporting and audit capabilities to meet regulatory
+      requirements and security standards.
+tags:
+  - Bastion Host
+  - PAM
+  - Privileged Access Management
+  - Security
+  - SSH
+  - RDP
+  - Session Recording
+  - Audit
+  - Compliance
+  - Access Control
+  - Web Interface
+  - Enterprise

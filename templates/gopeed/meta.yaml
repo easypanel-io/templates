@@ -1,0 +1,55 @@
+name: GoPeed
+description: GoPeed is a high-performance download manager that supports HTTP, HTTPS, FTP, BitTorrent, and other protocols. It features a modern web interface and supports multiple download task.
+instructions: null
+changeLog:
+  - date: 2025-05-02
+    description: Initial release
+links:
+  - label: Website
+    url: https://gopeed.com/
+  - label: GitHub
+    url: https://github.com/GopeedLab/gopeed
+  - label: Docker Hub
+    url: https://hub.docker.com/r/liwei2633/gopeed
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gopeed
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: liwei2633/gopeed:v1.7.0
+benefits:
+  - title: High Performance
+    description: Fast and efficient download management with support for multiple protocols
+  - title: Modern Interface
+    description: Clean and intuitive web-based user interface
+  - title: Multi-protocol Support
+    description: Download from HTTP, HTTPS, FTP, BitTorrent, and more
+  - title: Open Source
+    description: Free and open-source platform with active development
+features:
+  - title: Web Interface
+    description: Access and manage downloads through a modern web UI
+  - title: Multiple Protocols
+    description: Support for various download protocols
+  - title: Download Management
+    description: Pause, resume, and manage multiple download tasks
+  - title: Progress Tracking
+    description: Real-time download progress monitoring
+  - title: Custom Storage
+    description: Configurable download storage location
+tags:
+  - Download Manager
+  - File Transfer
+  - Self-hosted
+  - Open Source 
