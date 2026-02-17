@@ -1,0 +1,77 @@
+name: Sortarr
+description:
+  Sortarr is a read-only analytics and organization tool for Sonarr and Radarr
+  media libraries. It provides a data-driven management layer that helps you
+  identify missing media, mismatches, and optimization opportunities using real
+  playback data from providers like Tautulli, Jellystat, or Plex. Sortarr
+  supports multiple Sonarr and Radarr instances, presents a unified PowerBI-like
+  spreadsheet interface with actionable insights, and never modifies, moves, or
+  renames your media files. All operations are strictly read-only and safe.
+instructions:
+  On first launch, add your Sonarr/Radarr instances, a history provider
+  (Tautulli, Jellystat, or Plex), and a playback provider (Plex). Test
+  connections, save configuration, and Sortarr will begin analyzing your
+  libraries immediately.
+changeLog:
+  - date: 2026-02-17
+    description: Template Release (v0.1.1)
+links:
+  - label: GitHub
+    url: https://github.com/Jaredharper1/Sortarr
+  - label: Documentation
+    url: https://github.com/Jaredharper1/Sortarr/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sortarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/jaredharper1/sortarr:0.8.1
+benefits:
+  - title: Read-Only & Safe
+    description:
+      Sortarr never modifies, moves, or renames your media files. It never
+      deletes media or changes Sonarr/Radarr configuration. All operations are
+      strictly read-only.
+  - title: Data-Driven Insights
+    description:
+      Identify missing media, mismatches, and optimization opportunities using
+      real playback data from Tautulli, Jellystat, or Plex.
+  - title: Unified Library View
+    description:
+      Analyze multiple Sonarr and Radarr instances in a single PowerBI-like
+      spreadsheet interface with filtering, sorting, and actionable insights.
+features:
+  - title: Multi-Instance Support
+    description:
+      Connect multiple Sonarr and Radarr instances and analyze them in a unified
+      interface with shows and movies views.
+  - title: Playback History Integration
+    description:
+      Integrate playback data from Tautulli, Jellystat, or Plex to understand
+      viewing patterns and spot underused media.
+  - title: Advanced Filtering
+    description:
+      Audio and subtitle language columns with filters and quick chips. Sort and
+      filter by any column to find outliers and issues.
+  - title: Background Data Refresh
+    description:
+      Caches results for performance. Supports background data refresh with live
+      processing indicators.
+tags:
+  - Media
+  - Sonarr
+  - Radarr
+  - Analytics
+  - Self-Hosted
+  - Plex
