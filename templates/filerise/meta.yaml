@@ -1,0 +1,89 @@
+name: Filerise
+description:
+  Filerise is a modern file sharing and management platform that allows you to
+  upload, organize, and share files securely. It provides a clean web interface
+  for file management with features like user authentication, file uploads,
+  metadata management, and configurable upload limits.
+instructions: null
+changeLog:
+  - date: 2025-09-22
+    description: First release
+links:
+  - label: Website
+    url: https://filerise.net
+  - label: Github
+    url: https://github.com/error311/filerise
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: filerise
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: error311/filerise-docker:v3.5.0
+    totalUploadSize:
+      type: string
+      title: Total Upload Size
+      description: Maximum total upload size allowed
+      default: "10G"
+benefits:
+  - title: Modern File Management
+    description:
+      Filerise provides a modern, intuitive interface for managing and sharing
+      files with advanced features.
+  - title: User Authentication
+    description:
+      Built-in user authentication system allows you to control access to your
+      files and manage multiple users.
+  - title: Configurable Upload Limits
+    description:
+      Set custom upload size limits to control storage usage and prevent abuse.
+  - title: Metadata Management
+    description:
+      Advanced metadata tracking and management for better file organization and
+      search capabilities.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your file sharing platform with no external
+      dependencies or data sharing.
+features:
+  - title: File Upload & Download
+    description:
+      Easy file upload and download with progress tracking and error handling.
+  - title: User Management
+    description:
+      Create and manage user accounts with different access levels and
+      permissions.
+  - title: File Organization
+    description:
+      Organize files in folders and categories with advanced search and
+      filtering options.
+  - title: Metadata Tracking
+    description:
+      Comprehensive metadata collection and management for all uploaded files.
+  - title: Security Features
+    description:
+      Secure file sharing with configurable access controls and persistent token
+      management.
+  - title: Web Interface
+    description:
+      Clean, responsive web interface that works on desktop and mobile devices.
+  - title: Upload Size Control
+    description:
+      Configurable upload size limits to manage storage and prevent system
+      overload.
+tags:
+  - File Management
+  - File Sharing
+  - Web Interface
+  - Self-Hosted
+  - Storage
