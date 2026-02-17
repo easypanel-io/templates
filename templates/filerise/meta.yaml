@@ -9,6 +9,8 @@ changeLog:
   - date: 2025-09-22
     description: First release
 links:
+  - label: Website
+    url: https://filerise.net
   - label: Github
     url: https://github.com/error311/filerise
 contributors:
@@ -27,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: error311/filerise-docker:latest
+      default: error311/filerise-docker:v3.5.0
     totalUploadSize:
       type: string
       title: Total Upload Size
