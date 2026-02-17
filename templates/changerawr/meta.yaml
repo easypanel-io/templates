@@ -1,0 +1,119 @@
+name: Changerawr
+description:
+  Changerawr is a modern, open-source change management platform designed to
+  help organizations track, manage, and implement changes efficiently. Built
+  with Next.js and PostgreSQL, it provides a comprehensive solution for change
+  requests, approval workflows, impact assessment, and rollback procedures. The
+  platform features real-time collaboration, automated notifications, audit
+  trails, and detailed reporting capabilities. Perfect for DevOps teams, IT
+  departments, and organizations that need to maintain control over their change
+  management processes while ensuring transparency and accountability.
+instructions:
+  To enable automatic updates for Changerawr, configure the Easypanel Project
+  ID, Service ID, panel URL and API token in Environment Variables of Changerawr
+  App Service. These configurations allow the system to automatically detect and
+  apply new updates. Make sure not to use CloudFlare Zero Trust, that will
+  causes issues.
+changeLog:
+  - date: 2025-08-08
+    description: First Release (v1.0.4)
+links:
+  - label: Github
+    url: https://github.com/supernova3339/changerawr
+  - label: Documentation
+    url: https://github.com/supernova3339/changerawr#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: changerawr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/supernova3339/changerawr:v1.0.4
+    enableOAuth2:
+      type: boolean
+      title: Enable OAuth2 Server
+      description: Enable OAuth2 server for Easypanel integration
+      default: false
+    oauth2ServiceImage:
+      type: string
+      title: OAuth2 Service Image
+      description:
+        Docker image for OAuth2 server (required if OAuth2 is enabled)
+      default: ghcr.io/supernova3339/ep-oauth2-serv:latest
+    easypanelApiToken:
+      type: string
+      title: Easypanel API Token
+      description:
+        API token for Easypanel integration (required if OAuth2 is enabled)
+      default: "xxxx-xxxx-xxxx-xxxx"
+    easypanelUrl:
+      type: string
+      title: Easypanel URL
+      description:
+        URL of your Easypanel instance (required if OAuth2 is enabled)
+      default: https://$(EASYPANEL_HOST)
+
+benefits:
+  - title: Integrated with Easypanel
+    description:
+      Enjoy a seamless experience with Changerawr on Easypanel with SSO and
+      automatic updates.
+  - title: Full-text search
+    description:
+      Effortlessly browse everything, immediately. All your knowledge in one
+      place, just a key bind away.
+  - title: Powerful Content Editor
+    description:
+      Buttons, Embeds, Alerts, and more! Write changelogs that look professional
+      to your team and your customers. efficiency.
+  - title: Audit Logs
+    description:
+      Know everything that happens, when it happens. From approving a request to
+      logging in, you get to know everything that has ever happened.
+  - title: AI Powered
+    description: Optional AI Integration for increasing your workflow 10x.
+  - title: Tags & Versioning
+    description:
+      Organize your changelogs exactly how you want with colorful tags and
+      modern versioning.
+features:
+  - title: Change Request Management
+    description:
+      Create, track, and manage change requests with detailed information,
+      attachments, and categorization for organized change handling.
+  - title: Approval Workflows
+    description:
+      Configure custom approval workflows with multi-stage approvals, escalation
+      rules, and role-based access control for proper governance.
+  - title: Risk Assessment
+    description:
+      Built-in risk assessment tools with impact analysis, dependency mapping,
+      and rollback planning for safer change implementation.
+  - title: Calendar & Scheduling
+    description:
+      Integrated calendar system for scheduling changes, avoiding conflicts, and
+      coordinating implementation timelines across teams.
+  - title: Integration Support
+    description:
+      GitHub integration and API support for connecting with existing
+      development tools and CI/CD pipelines for seamless workflows.
+  - title: Notification System
+    description:
+      Automated email and in-app notifications keep stakeholders informed about
+      change status updates, approvals, and deadlines.
+tags:
+  - Change Management
+  - DevOps
+  - Project Management
+  - Workflow
+  - Compliance
