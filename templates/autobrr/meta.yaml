@@ -1,0 +1,97 @@
+name: Autobrr
+description:
+  Autobrr is a modern download automation tool for torrent indexers and
+  trackers. It monitors IRC announce channels and RSS feeds from various torrent
+  trackers, automatically downloading torrents that match your custom filters
+  and rules. Autobrr acts as a bridge between torrent indexers and your download
+  clients, enabling advanced automation workflows. It supports numerous torrent
+  clients including qBittorrent, Deluge, Transmission, and rTorrent, and
+  integrates with media management tools like Sonarr, Radarr, and Lidarr. With
+  powerful filtering capabilities based on resolution, codec, release group, and
+  custom regex patterns, Autobrr ensures you only download exactly what you
+  want. Perfect for automating private tracker workflows, racing releases, and
+  maintaining ratio requirements.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-19
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://autobrr.com/
+  - label: Documentation
+    url: https://autobrr.com/introduction
+  - label: Github
+    url: https://github.com/autobrr/autobrr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: autobrr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/autobrr/autobrr:v1.69
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+
+benefits:
+  - title: Advanced Automation
+    description:
+      Automate torrent downloads with powerful filtering rules based on quality,
+      release group, codec, and custom patterns.
+  - title: Multi-Client Support
+    description:
+      Works with all major torrent clients including qBittorrent, Deluge,
+      Transmission, and rTorrent for flexible setup.
+  - title: Private Tracker Optimization
+    description:
+      Perfect for private trackers with IRC announce monitoring, fast releases,
+      and ratio management features.
+
+features:
+  - title: IRC Announce Monitoring
+    description:
+      Monitor IRC announce channels from multiple trackers simultaneously to
+      catch new releases instantly.
+  - title: RSS Feed Support
+    description:
+      Track RSS feeds from torrent indexers and trackers for sites without IRC
+      announce channels.
+  - title: Smart Filtering
+    description:
+      Create complex filters with conditions for resolution, codec, release
+      group, size limits, and custom regex patterns.
+  - title: Download Client Integration
+    description:
+      Send torrents directly to qBittorrent, Deluge, Transmission, rTorrent, or
+      other supported clients.
+  - title: Arr Integration
+    description:
+      Integrate with Sonarr, Radarr, Lidarr, and Whisparr for seamless media
+      management automation.
+  - title: Release Racing
+    description:
+      Optimized for fast release grabbing to maintain ratio requirements on
+      private trackers.
+
+tags:
+  - Automation
+  - Torrent
+  - Download Manager
+  - Private Tracker
+  - Media Management

@@ -17,6 +17,8 @@ changeLog:
     description: Update to v1.6.2
   - date: 2025-01-14
     description: Version bumped to 1.8.9
+  - date: 2025-07-21
+    description: Version bumped to 1.8.10
 
 links:
   - label: Website
@@ -30,6 +32,8 @@ contributors:
     url: https://github.com/D8vjork
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: crazymax/flarum:1.8.9
+      default: crazymax/flarum:1.8.10
     databaseType:
       type: string
       title: Database Type

@@ -25,6 +25,13 @@ export function generate(input: Input): Output {
         `database__connection__user=mysql`,
         `database__connection__password=${databasePassword}`,
         `database__connection__database=$(PROJECT_NAME)`,
+
+        `mail__transport=SMTP`,
+        `mail__options__host=${input.smtpServerHost}`,
+        `mail__options__port=${input.smtpServerPort}`,
+        `mail__options__auth__user=${input.smtpServerUsername}`,
+        `mail__options__auth__pass=${input.smtpServerPassword}`,
+        `mail__from=${input.smtpFromEmail}`,
       ].join("\n"),
     },
   });

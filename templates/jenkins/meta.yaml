@@ -10,6 +10,10 @@ changeLog:
     description: First Release of Version 2.474
   - date: 2025-02-28
     description: Version bumped to 2.499
+  - date: 2025-07-22
+    description: Version bumped to 2.519
+  - date: 2025-12-25
+    description: Version bumped to 2.543
 links:
   - label: Website
     url: https://www.jenkins.io/
@@ -19,7 +23,7 @@ links:
     url: https://github.com/jenkinsci/jenkins
 contributors:
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -33,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jenkins/jenkins:2.499
+      default: jenkins/jenkins:2.543
 benefits:
   - title: Automate Everything
     description:

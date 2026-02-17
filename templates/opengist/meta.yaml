@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-06-12
     description: First Release
+  - date: 2025-12-29
+    description: Version bumped to 1.11.1
 links:
   - label: Website
     url: https://opengist.io/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/thomiceli/opengist:1.10.0
+      default: ghcr.io/thomiceli/opengist:1.11.1
 benefits:
   - title: Git-Powered Storage
     description:

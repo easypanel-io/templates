@@ -16,12 +16,21 @@ description:
   metadata from images and videos, and optimizes videos for the web. It also
   generates thumbnails automatically and ensures that your media is secure and
   private.
-instructions:
-  You will need to mount the location where your photos are to complete the
-  installation.
+
+instructions: |
+  After deployment, you need to mount your photos directory to the /photos path.
+  This can be done using bind mounts in Easypanel's advanced settings.
+  On first access, you will be prompted to create an admin user and configure
+  the photo source path (use /photos as the path).
+
 changeLog:
   - date: 2023-03-16
     description: First Release
+  - date: 2025-07-24
+    description: Version bumped to sha-84c642c
+  - date: 2025-12-05
+    description: Updated to photoview/photoview:2 with new volume paths
+
 links:
   - label: Website
     url: https://photoview.github.io/
@@ -29,9 +38,13 @@ links:
     url: https://github.com/photoview/photoview
   - label: Demo
     url: https://photos.qpqp.dk/
+
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
 schema:
   type: object
   required:
@@ -47,7 +60,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: viktorstrate/photoview:sha-6693920
+      default: photoview/photoview:2
     databaseType:
       type: string
       title: Database Type
@@ -69,6 +82,11 @@ schema:
       type: string
       title: Database Service Name
       default: photoview-db
+    mapboxToken:
+      type: string
+      title: Mapbox Token (Optional)
+      default: ""
+
 benefits:
   - title: Easy Media Organization
     description:
@@ -91,6 +109,7 @@ benefits:
       Photoview ensures the security of your media resources with a
       cookie-token, properly hashed passwords, and a strict CORS policy. Your
       media is valuable, and with Photoview, nothing leaves your server.
+
 features:
   - title: File System Sync
     description:
@@ -102,12 +121,11 @@ features:
       Photoview allows multiple users, each with their own directory of photos
       and videos. Albums and individual photos or videos can easily be shared by
       generating a public or password-protected link.
-  - title: Maps
+  - title: Maps Integration
     description:
       When photos are analyzed for EXIF metadata, this information is displayed
-      next to the photo. If the photo is taken with a mobile phone, it most
-      likely includes the coordinates of where the picture was taken. This is
-      used to automatically present the photos on a map.
+      next to the photo. If the photo includes GPS coordinates, Photoview
+      presents the photos on a map using Mapbox integration.
   - title: Mobile App
     description:
       Photoview has an official iOS app that allows you to quickly access your
@@ -123,9 +141,16 @@ features:
       shows it in the sidebar. It's also used to present images on a map.
   - title: Video Support
     description:
-      Photoview uses Ffmpeg under the hood to convert videos and optimize them
-      for the web.
+      Photoview uses FFmpeg under the hood to convert videos and optimize them
+      for the web with hardware acceleration support.
+  - title: Multi-Database Support
+    description:
+      Choose between MariaDB, MySQL, PostgreSQL, or SQLite as your database
+      backend based on your needs and infrastructure.
+
 tags:
   - Gallery
   - Media
   - Photography
+  - Photos
+  - Self-Hosted

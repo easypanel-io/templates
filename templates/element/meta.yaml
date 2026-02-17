@@ -22,6 +22,10 @@ changeLog:
     description: Update to v1.11.23
   - date: 2024-10-04
     description: Update to v1.11.79
+  - date: 2025-07-21
+    description: Version bumped to v1.11.106
+  - date: 2025-12-25
+    description: Version bumped to v1.12.7
 links:
   - label: Website
     url: https://element.io/
@@ -33,7 +37,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.11.79
+      default: vectorim/element-web:v1.12.7
 benefits:
   - title: Secure Communications
     description:

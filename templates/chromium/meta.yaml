@@ -19,6 +19,10 @@ changeLog:
     description: Version changed to version-dc5fa092
   - date: 2025-01-09
     description: Version bumped to 5f5dd27e-ls102
+  - date: 2025-07-15
+    description: Version bumped to 7a928a3a
+  - date: 2025-12-25
+    description: Version bumped to 110b1523
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-chromium
@@ -28,7 +32,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/chromium:5f5dd27e-ls102
+      default: lscr.io/linuxserver/chromium:version-110b1523
 benefits:
   - title: Open-Source Browser
     description:

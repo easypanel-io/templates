@@ -15,6 +15,10 @@ changeLog:
     description: Version 5.1.1 (First Release)
   - date: 2025-06-05
     description: Update to 5.2.6
+  - date: 2025-07-22
+    description: Update to 6.0.3-20250721-apache
+  - date: 2025-12-29
+    description: Version bumped to 6.0.7-20251229-apache
 links:
   - label: Github
     url: https://github.com/mautic/mautic
@@ -35,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mautic/mautic:5.2.6-apache
+      default: mautic/mautic:6.0.7-20251229-apache
     databaseServiceName:
       type: string
       title: Database Service Name

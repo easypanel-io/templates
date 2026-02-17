@@ -15,12 +15,18 @@ changeLog:
     description: first release
   - date: 2025-03-03
     description: Version bumped to 0.3.18-beta-release
+  - date: 2025-07-25
+    description: Version bumped to 0.3.25-beta-release
+  - date: 2025-12-29
+    description: Version bumped to 0.4.2-beta-release
 links:
   - label: Github
     url: https://github.com/nirui/sshwifty
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -34,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: niruix/sshwifty:0.3.18-beta-release
+      default: niruix/sshwifty:0.4.2-beta-release
 benefits:
   - title: Web-Based SSH and Telnet Access
     description:

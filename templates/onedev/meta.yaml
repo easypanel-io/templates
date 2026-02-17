@@ -18,6 +18,10 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 11.7.2
+  - date: 2025-07-24
+    description: Version bumped to 12.0
+  - date: 2025-12-29
+    description: Version bumped to 13.1
 links:
   - label: Website
     url: https://code.onedev.io/
@@ -28,6 +32,8 @@ links:
 contributors:
   - name: spaceb0t
     url: https://github.com/spacec0de
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 1dev/server:11.7.2
+      default: 1dev/server:13.1
     databaseServiceName:
       type: string
       title: Database Service Name

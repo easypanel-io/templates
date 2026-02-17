@@ -25,6 +25,10 @@ changeLog:
     description: Version bumped to 24.05.1
   - date: 2024-09-30
     description: Version bumped to 24.05.4
+  - date: 2025-07-15
+    description: Version bumped to 25.05.2
+  - date: 2025-12-24
+    description: Version bumped to 25.11.6
 links:
   - label: Website
     url: https://www.bookstackapp.com/
@@ -42,7 +46,7 @@ contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -57,7 +61,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/bookstack:24.12.1
+      default: lscr.io/linuxserver/bookstack:25.11.6
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -1,0 +1,84 @@
+name: Suwayomi Server
+description:
+  Suwayomi Server is a free and open source manga reader server that runs on the
+  desktop and mobile. It provides a web interface for reading manga from various
+  sources and supports multiple extensions. Suwayomi Server allows you to
+  organize your manga library, track reading progress, and access your
+  collection from any device through a modern web interface.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release
+  - date: 2025-12-29
+    description: Version bumped to v2.1.2031
+links:
+  - label: Documentation
+    url: https://suwayomi.org/
+  - label: Github
+    url: https://github.com/Suwayomi/Suwayomi-Server
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: suwayomi-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/suwayomi/suwayomi-server:v2.1.2031
+
+benefits:
+  - title: Free and Open Source
+    description:
+      Suwayomi Server is completely free and open source, giving you full
+      control over your manga reading experience without any subscription fees.
+  - title: Multi-Source Support
+    description:
+      Access manga from various sources through a unified interface with support
+      for multiple extensions and catalogs.
+  - title: Cross-Platform Access
+    description:
+      Read your manga collection from any device with a web browser, including
+      desktop computers, tablets, and smartphones.
+
+features:
+  - title: Web-Based Reader
+    description:
+      Modern web interface for reading manga with features like zoom, page
+      navigation, and reading progress tracking.
+  - title: Library Management
+    description:
+      Organize your manga collection with categories, favorites, and custom
+      reading lists for easy browsing and management.
+  - title: Extension Support
+    description:
+      Extend functionality with various extensions to access different manga
+      sources and catalogs from around the web.
+  - title: Reading Progress Tracking
+    description:
+      Track your reading progress across different manga series and resume
+      reading from where you left off on any device.
+  - title: Download Management
+    description:
+      Download manga chapters for offline reading with automatic organization
+      and storage management.
+  - title: User Management
+    description:
+      Support for multiple users with individual reading progress and
+      personalized library organization.
+
+tags:
+  - Manga Reader
+  - Digital Library
+  - Reading
+  - Self-Hosted
+  - Web Interface
+  - Comics

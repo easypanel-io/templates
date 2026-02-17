@@ -9,6 +9,10 @@ instructions:
 changeLog:
   - date: 2025-02-14
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to 4.5
+  - date: 2025-12-29
+    description: Version bumped to 4.6.0
 links:
   - label: Website
     url: https://shlink.io/
@@ -33,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shlinkio/shlink:4
+      default: shlinkio/shlink:4.6.0
     geolite2ApiKey:
       type: string
       title: GeoLite2 API Key

@@ -27,6 +27,8 @@ changeLog:
     description: Update to v.1.80.1
   - date: 2023-05-25
     description: Update to latest + EE
+  - date: 2025-07-28
+    description: Update to v.1.514
 links:
   - label: Website
     url: https://windmill.dev
@@ -37,22 +39,25 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
-    - domain
     - appServiceName
     - appServiceImage
     - workerReplicas
     - nativeWorkerReplicas
+    - lspServiceImage
   properties:
-    domain:
-      type: string
-      title: Domain
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/windmill-labs/windmill:main
+      default: ghcr.io/windmill-labs/windmill:1.514
+    lspServiceImage:
+      type: string
+      title: LSP Service Image
+      default: ghcr.io/windmill-labs/windmill-lsp:1.514
     appServiceName:
       type: string
       title: App Service Name

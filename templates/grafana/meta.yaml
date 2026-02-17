@@ -18,6 +18,10 @@ changeLog:
     description: Version changed to 11.2.2
   - date: 2025-01-14
     description: Version bumped to 11.4.0
+  - date: 2025-07-21
+    description: Version bumped to 12.0.2
+  - date: 2025-12-29
+    description: Version bumped to 12.3.1
 links:
   - label: Website
     url: https://grafana.com
@@ -29,7 +33,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: grafana/grafana-oss:11.4.0
+      default: grafana/grafana-oss:12.3.1
 benefits:
   - title: Comprehensive Data Visualization
     description:

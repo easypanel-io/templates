@@ -18,6 +18,10 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to february-2025
+  - date: 2025-07-24
+    description: Update to july-2025
+  - date: 2025-12-29
+    description: Version bumped to december-2025
 links:
   - label: Website
     url: https://octobox.io
@@ -28,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: octoboxio/octobox:february-2025
+      default: octoboxio/octobox:december-2025
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -1,9 +1,11 @@
 name: Evo AI
 description: AI-powered API platform for conversational applications
-instructions: Use admin email - admin@evoai.com and configure the password.
+instructions: Use admin email - admin@evoai.com and password admin123 to login.
 changeLog:
   - date: 2025-05-27
     description: First release
+  - date: 2025-07-21
+    description: Version bumped to 0.1.0
 links:
   - label: Website
     url: https://evoai.co/
@@ -33,7 +35,7 @@ schema:
     frontendImage:
       type: string
       title: Frontend Image
-      default: evoapicloud/evo-ai-frontend:v0.0.7
+      default: evoapicloud/evo-ai-frontend:0.1.0
     adminInitialPassword:
       type: string
       title: Admin Initial Password

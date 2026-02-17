@@ -19,6 +19,10 @@ changeLog:
     description: Version changed to core-2.9.3
   - date: 2025-01-09
     description: Version bumped to core-2.10.3
+  - date: 2025-07-15
+    description: Version bumped to core-2.11.4
+  - date: 2025-12-25
+    description: Version bumped to core-2.13.0
 links:
   - label: Website
     url: https://getcockpit.com
@@ -30,7 +34,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cockpithq/cockpit:core-2.11.0
+      default: cockpithq/cockpit:core-2.13.0
     databaseServiceName:
       type: string
       title: Database Service Name

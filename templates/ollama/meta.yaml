@@ -18,6 +18,10 @@ changeLog:
     description: Version bumped to 0.5.12
   - date: 2025-02-28
     description: Version bumped to v0.5.18
+  - date: 2025-07-24
+    description: Version bumped to 0.9.6
+  - date: 2025-12-29
+    description: Version bumped to 0.13.5
 links:
   - label: Website
     url: https://ollama.com
@@ -43,11 +47,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ollama/ollama:0.5.12
+      default: ollama/ollama:0.13.5
     uiServiceImage:
       type: string
       title: Ollama UI Service Image
-      default: ghcr.io/open-webui/open-webui:v0.5.18
+      default: ghcr.io/open-webui/open-webui:0.6.43
     webuiName:
       type: string
       title: Ollama UI Name
