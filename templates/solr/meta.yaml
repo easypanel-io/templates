@@ -1,0 +1,84 @@
+name: Apache Solr
+description:
+  Apache Solr is a highly reliable, scalable and fault-tolerant search platform
+  that provides distributed indexing, replication and load-balanced querying,
+  automated failover and recovery, centralized configuration and more. Solr
+  powers the search and navigation features of many of the world's largest
+  internet sites.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-23
+    description: Initial Template Release
+
+links:
+  - label: Official Website
+    url: https://solr.apache.org/
+  - label: Documentation
+    url: https://solr.apache.org/guide/
+  - label: GitHub
+    url: https://github.com/apache/solr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: solr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: solr:9.8.1
+      description: Apache Solr Docker image
+
+benefits:
+  - title: Enterprise Search
+    description:
+      Powerful full-text search capabilities with advanced features like
+      faceting, highlighting, and spell checking.
+  - title: Scalable Architecture
+    description:
+      Built for high performance and scalability with distributed search and
+      automatic failover capabilities.
+  - title: Rich Query Language
+    description:
+      Supports complex queries with Boolean operators, phrase queries, wildcard
+      searches, and more.
+  - title: Easy Integration
+    description:
+      RESTful APIs and comprehensive documentation make integration
+      straightforward with any application.
+
+features:
+  - title: Full-Text Search
+    description:
+      Advanced text search with stemming, synonyms, spell checking, and
+      relevance scoring.
+  - title: Faceted Search
+    description:
+      Dynamic navigation with facets and filters to help users refine search
+      results.
+  - title: Real-time Indexing
+    description:
+      Add, update, and delete documents in real-time with near-instantaneous
+      search availability.
+  - title: Admin Interface
+    description:
+      Web-based administration interface for managing cores, schemas, and
+      monitoring performance.
+
+tags:
+  - Search Engine
+  - Full-Text Search
+  - Apache
+  - Indexing
+  - Enterprise Search

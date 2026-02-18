@@ -15,7 +15,6 @@ export function generate(input: Input): Output {
         `DB_DATABASE=$(PROJECT_NAME)`,
         `DB_USER=postgres`,
         `DB_PASSWORD=${databasePassword}`,
-        `LOCAL_STORAGE_BASE_URL=/storage/uploads`,
       ].join("\n"),
       source: {
         type: "image",
@@ -30,8 +29,8 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "uploads",
-          mountPath: "/storage/uploads",
+          name: "storage",
+          mountPath: "/app/nocobase/storage",
         },
       ],
     },

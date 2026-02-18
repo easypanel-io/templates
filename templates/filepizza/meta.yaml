@@ -1,0 +1,119 @@
+name: FilePizza
+description:
+  FilePizza is a peer-to-peer file sharing platform that enables secure, direct
+  file transfers between users without storing files on servers. Using WebRTC
+  technology, it creates direct connections between browsers for fast, private
+  file sharing. The platform includes Redis for session management and COTURN
+  server for NAT traversal, ensuring reliable connections across different
+  network configurations. Perfect for sharing large files securely without
+  upload limits or storage concerns.
+instructions: null
+changeLog:
+  - date: 2025-07-23
+    description: Initial release (8ea276d)
+  - date: 2025-12-25
+    description: Version bumped to 60704b4
+links:
+  - label: Website
+    url: https://file.pizza
+  - label: GitHub
+    url: https://github.com/kern/filepizza
+  - label: Documentation
+    url: https://github.com/kern/filepizza#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - coturnServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: filepizza
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kern/filepizza:60704b4
+    coturnServiceImage:
+      type: string
+      title: COTURN Service Image
+      default: coturn/coturn:4.7
+benefits:
+  - title: Direct Peer-to-Peer Transfer
+    description:
+      Files are transferred directly between users using WebRTC technology,
+      ensuring maximum privacy and speed without server-side storage.
+  - title: No File Size Limits
+    description:
+      Transfer files of any size without worrying about upload limits or storage
+      quotas imposed by traditional file sharing services.
+  - title: Enhanced Privacy & Security
+    description:
+      Files never touch external servers during transfer, providing end-to-end
+      encryption and complete data privacy.
+  - title: Real-time Transfer Status
+    description:
+      Monitor transfer progress in real-time with detailed status updates and
+      connection information for both sender and receiver.
+  - title: Cross-Platform Compatibility
+    description:
+      Works seamlessly across all modern browsers and operating systems without
+      requiring additional software installation.
+  - title: NAT Traversal Support
+    description:
+      Built-in COTURN server ensures reliable connections even through firewalls
+      and NAT configurations.
+features:
+  - title: WebRTC File Sharing
+    description:
+      Utilizes WebRTC technology for direct browser-to-browser file transfers
+      with automatic connection establishment.
+  - title: Redis Session Management
+    description:
+      Persistent session storage using Redis for reliable connection tracking
+      and metadata management.
+  - title: COTURN STUN/TURN Server
+    description:
+      Integrated COTURN server provides STUN/TURN services for NAT traversal and
+      firewall bypass capabilities.
+  - title: Real-time Progress Tracking
+    description:
+      Live transfer progress indicators with speed metrics and estimated
+      completion times for ongoing transfers.
+  - title: Multiple File Support
+    description:
+      Support for transferring multiple files simultaneously with individual
+      progress tracking for each file.
+  - title: Connection Status Monitoring
+    description:
+      Real-time connection status with detailed network information and
+      troubleshooting capabilities.
+  - title: Automatic Network Detection
+    description:
+      External IP detection and relay IP configuration for optimal connection
+      establishment across networks.
+  - title: Browser Compatibility
+    description:
+      Compatible with all modern browsers supporting WebRTC, including Chrome,
+      Firefox, Safari, and Edge.
+  - title: Responsive Web Interface
+    description:
+      Clean, intuitive web interface that works perfectly on desktop and mobile
+      devices for easy file sharing.
+  - title: Zero Server Storage
+    description:
+      No files are stored on servers, ensuring complete privacy and eliminating
+      storage costs and concerns.
+tags:
+  - File Sharing
+  - Peer-to-Peer
+  - WebRTC
+  - Privacy
+  - Direct Transfer
+  - Real-time
+  - Secure
+  - Cross-Platform

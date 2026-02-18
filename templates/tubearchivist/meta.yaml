@@ -13,6 +13,8 @@ changeLog:
     description: First Release
   - date: 2025-07-25
     description: Version bumped to v0.5.4
+  - date: 2025-12-29
+    description: Version bumped to v0.5.8, 8.18.2
 links:
   - label: Documentation
     url: https://github.com/tubearchivist/tubearchivist/wiki
@@ -38,11 +40,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bbilly1/tubearchivist:v0.5.4
+      default: bbilly1/tubearchivist:v0.5.8
     elasticsearchServiceImage:
       type: string
       title: Elasticsearch Service Image
-      default: bbilly1/tubearchivist-es:8.18.0
+      default: bbilly1/tubearchivist-es:8.18.2
     redisServiceImage:
       type: string
       title: Redis Service Image

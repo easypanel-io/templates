@@ -1,0 +1,106 @@
+name: Reitti
+description:
+  Reitti is a self-hosted journey planning and route optimization application
+  designed for public transportation, cycling, and walking routes. Built on
+  OpenStreetMap data, it provides intelligent route calculations using the
+  Photon geocoding engine for address lookups and PostGIS for spatial data
+  processing. The application features a web-based interface for planning
+  multi-modal journeys, real-time route optimization, and comprehensive mapping
+  capabilities. With RabbitMQ for task queuing and Redis for high-performance
+  caching, Reitti delivers fast and responsive route calculations even with
+  complex multi-leg journeys. The system can be configured for specific regions
+  to optimize data storage and performance, making it suitable for cities,
+  regions, or entire countries depending on your needs. Perfect for
+  organizations wanting to provide their own journey planning services,
+  transportation agencies developing custom routing solutions, smart city
+  initiatives requiring private routing infrastructure, or developers building
+  location-based applications with routing capabilities without relying on
+  commercial APIs or sharing user data with third-party services.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-26
+    description: Template Release
+
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/dedicatedcode/reitti
+  - label: Github
+    url: https://github.com/dedicatedcode/reitti
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: reitti
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dedicatedcode/reitti:2.5.0
+    regionCode:
+      type: string
+      title: Region Code (e.g., de, us, fi - leave empty for worldwide)
+      default: "de"
+
+benefits:
+  - title: Self-Hosted Route Planning
+    description:
+      Complete control over your routing infrastructure with no dependency on
+      commercial APIs or third-party services for journey planning.
+  - title: OpenStreetMap Based
+    description:
+      Leverages the comprehensive and community-maintained OpenStreetMap
+      database for accurate, up-to-date geographic data.
+  - title: Multi-Modal Routing
+    description:
+      Calculate optimal routes combining public transportation, walking,
+      cycling, and other transportation modes for comprehensive journey
+      planning.
+  - title: Privacy-Focused
+    description:
+      Keep all route planning and user data on your own infrastructure, ensuring
+      complete privacy and data sovereignty.
+
+features:
+  - title: Photon Geocoding
+    description:
+      Integrated Photon geocoding engine provides fast and accurate
+      address-to-coordinate conversion using OpenStreetMap data.
+  - title: PostGIS Spatial Database
+    description:
+      Advanced spatial data processing with PostGIS enables complex geographic
+      queries and efficient route calculations.
+  - title: Asynchronous Processing
+    description:
+      RabbitMQ message queue handles complex routing calculations asynchronously
+      for responsive user experience.
+  - title: High-Performance Caching
+    description:
+      Redis caching layer dramatically speeds up repeated route queries and
+      reduces database load.
+  - title: Regional Configuration
+    description:
+      Configure the system for specific geographic regions to optimize storage
+      space and improve performance.
+  - title: RESTful API
+    description:
+      Programmatic access to routing capabilities enables integration with
+      custom applications and services.
+
+tags:
+  - Route Planning
+  - Journey Planner
+  - Navigation
+  - OpenStreetMap
+  - Geocoding
+  - Transportation

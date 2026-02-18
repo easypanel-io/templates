@@ -15,6 +15,8 @@ changeLog:
     description: First Release
   - date: 2025-07-24
     description: Version bumped to 5.1.2
+  - date: 2025-12-29
+    description: Version bumped to 5.1.4
 links:
   - label: Website
     url: https://www.qbittorrent.org
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/qbittorrent:5.1.2
+      default: lscr.io/linuxserver/qbittorrent:5.1.4
     qBittorrentPort:
       type: string
       title: Torrenting Port

@@ -1,0 +1,96 @@
+name: Cinephage
+description:
+  Cinephage is a self-hosted media management and streaming application designed
+  for organizing and accessing your movie and TV show collection. It provides a
+  modern web interface for browsing your media library, with features like
+  metadata management, watch tracking, and streaming capabilities. Built with
+  privacy and self-hosting in mind, Cinephage gives you complete control over
+  your media collection without relying on external services.
+instructions: null
+
+changeLog:
+  - date: 2026-01-12
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/moldytaint/cinephage
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - mediaPath
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cinephage
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/moldytaint/cinephage:sha-7e755e4
+    mediaPath:
+      type: string
+      title: Media Path
+      description: Host path to your media directory (movies, TV shows, etc.)
+      default: /media
+    timezone:
+      type: string
+      title: Timezone
+      description: Timezone for the application (e.g., America/New_York, UTC)
+      default: "UTC"
+
+benefits:
+  - title: Self-Hosted Media Management
+    description:
+      Complete control over your media library with no reliance on external
+      services or cloud providers.
+  - title: Privacy-Focused
+    description:
+      All your media and metadata stays on your own server, ensuring complete
+      privacy and data ownership.
+  - title: Modern Web Interface
+    description:
+      Clean, responsive web interface for browsing and managing your media
+      collection from any device.
+  - title: Streaming Capabilities
+    description:
+      Stream your media directly through the web interface without additional
+      software.
+  - title: Metadata Management
+    description:
+      Automatic metadata fetching and organization for movies and TV shows.
+
+features:
+  - title: Media Library Organization
+    description:
+      Automatically organize and catalog your movie and TV show collection with
+      rich metadata.
+  - title: Watch Tracking
+    description:
+      Track what you've watched and manage your viewing history across your
+      media library.
+  - title: Multi-Format Support
+    description:
+      Supports various video formats and codecs for flexible media playback.
+  - title: Secure Access
+    description:
+      Access your media library securely through the web interface with
+      configurable authentication.
+  - title: Easy Deployment
+    description:
+      Simple Docker-based deployment with minimal configuration required.
+
+tags:
+  - Media
+  - Streaming
+  - Movies
+  - TV Shows
+  - Self-Hosted
+  - Plex Alternative

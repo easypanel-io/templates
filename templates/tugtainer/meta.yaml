@@ -1,0 +1,144 @@
+name: Tugtainer
+description:
+  Tugtainer is a self-hosted Docker container management application that
+  provides a web-based interface for managing Docker containers and images.
+  Built with modern architecture, Tugtainer offers comprehensive container
+  management capabilities including container lifecycle management, image
+  management, and network configuration. The system uses a secure socket proxy
+  service to safely access the Docker socket, providing an additional layer of
+  security. Perfect for developers and system administrators looking for a
+  self-hosted alternative to manage Docker containers with a user-friendly
+  interface.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/quenary/tugtainer
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - socketProxyImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tugtainer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/quenary/tugtainer:v1.17.1
+    socketProxyImage:
+      type: string
+      title: Socket Proxy Image
+      default: ghcr.io/linuxserver/socket-proxy:3.2.10-r0-ls66
+    timezone:
+      type: string
+      title: Timezone
+      default: Asia/Karachi
+      description: Timezone for the application (e.g., Asia/Karachi, America/New_York, Europe/London)
+    socketProxyContainers:
+      type: string
+      title: Socket Proxy Containers
+      default: "1"
+      description: Enable container operations (0 or 1)
+    socketProxyEvents:
+      type: string
+      title: Socket Proxy Events
+      default: "1"
+      description: Enable event streaming (0 or 1)
+    socketProxyImages:
+      type: string
+      title: Socket Proxy Images
+      default: "1"
+      description: Enable image operations (0 or 1)
+    socketProxyInfo:
+      type: string
+      title: Socket Proxy Info
+      default: "1"
+      description: Enable info endpoint (0 or 1)
+    socketProxyLogLevel:
+      type: string
+      title: Socket Proxy Log Level
+      default: warning
+      description: Log level for socket proxy (debug, info, warning, error)
+    socketProxyPing:
+      type: string
+      title: Socket Proxy Ping
+      default: "1"
+      description: Enable ping endpoint (0 or 1)
+    socketProxyNetworks:
+      type: string
+      title: Socket Proxy Networks
+      default: "1"
+      description: Enable network operations (0 or 1)
+    socketProxyPost:
+      type: string
+      title: Socket Proxy Post
+      default: "1"
+      description: Enable POST operations (0 or 1)
+    socketProxyVersion:
+      type: string
+      title: Socket Proxy Version
+      default: "1"
+      description: Enable version endpoint (0 or 1)
+benefits:
+  - title: Docker Container Management
+    description:
+      Manage Docker containers, images, and networks through a user-friendly
+      web interface with comprehensive management capabilities.
+  - title: Self-Hosted Solution
+    description:
+      Keep your container management private and under your control with a
+      self-hosted deployment.
+  - title: Secure Socket Proxy
+    description:
+      Uses a secure socket proxy service to safely access the Docker socket,
+      providing an additional layer of security compared to direct socket
+      mounting.
+  - title: Persistent Storage
+    description:
+      All application data is stored in a persistent volume, ensuring your
+      configurations and settings are preserved across container restarts.
+features:
+  - title: Container Management
+    description:
+      Start, stop, restart, and manage Docker containers with an intuitive
+      web interface.
+  - title: Image Management
+    description:
+      View, pull, and manage Docker images with comprehensive image
+      management tools.
+  - title: Network Management
+    description:
+      Configure and manage Docker networks through the web interface.
+  - title: Secure Socket Access
+    description:
+      Socket proxy service provides secure access to Docker socket with
+      configurable permissions and access controls.
+  - title: Web-Based Interface
+    description:
+      Access and manage your Docker environment through a modern web
+      interface accessible on port 80.
+  - title: Persistent Storage
+    description:
+      Application data is stored in a dedicated volume at /tugtainer for
+      reliable data persistence.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Tugtainer in any environment that supports Docker with
+      minimal configuration requirements.
+tags:
+  - Docker
+  - Container Management
+  - Self-Hosted
+  - Management
+  - DevOps
+  - Infrastructure
