@@ -1,0 +1,89 @@
+name: BookHeaven
+description:
+  BookHeaven Server is a self-hosted ebook library manager that lets you
+  organize, read, and manage your ebook collection with a modern responsive UI.
+  It reads metadata directly from ebook files (title, author, cover), allows
+  editing and persists changes back into the file. Features include
+  auto-discovery by the companion Android e-ink reader app, metadata fetching
+  from the internet, reading progress tracking, font management for your
+  devices, multiple profiles, OPDS support, and book importing via a dedicated
+  folder. Built with .NET and Blazor.
+instructions: null
+changeLog:
+  - date: 2026-02-18
+    description: Template Release (v0.15.0)
+links:
+  - label: GitHub
+    url: https://github.com/BookHeaven/BookHeaven.Server
+  - label: Website
+    url: https://bookheaven.ggarrido.dev
+  - label: Documentation
+    url: https://bookheaven.ggarrido.dev/getting-started
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bookheaven
+    appServiceImage:
+      type: string
+      title: BookHeaven Image
+      default: ghcr.io/bookheaven/bookheaven-server:0.15.0
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+      description:
+        Container timezone (e.g. America/New_York, Europe/Madrid, Asia/Karachi)
+benefits:
+  - title: Simple & Lightweight
+    description:
+      Single container deployment with no database required. All data (books,
+      covers, fonts, metadata) is stored in a single persistent data directory.
+  - title: Modern Responsive UI
+    description:
+      Clean, modern web interface built with Blazor and MudBlazor that works on
+      desktop and mobile browsers.
+  - title: E-Ink Reader Companion
+    description:
+      Companion Android app (BookHeaven Reader) for e-ink devices with
+      auto-discovery, font downloads, and reading progress sync.
+features:
+  - title: Metadata Management
+    description:
+      Reads metadata from ebook files automatically. Edit titles, authors,
+      covers, and more—changes are persisted back into the file.
+  - title: Internet Metadata Fetching
+    description:
+      Fetch covers and metadata from the internet to enrich your library without
+      manual editing.
+  - title: Reading Progress Tracking
+    description:
+      Track start date, last read date, percentage, elapsed time, and finished
+      date. Set progress manually or sync from the reader app.
+  - title: OPDS Support
+    description:
+      Built-in OPDS endpoint at /opds for browsing and downloading books with
+      any compatible e-reader app.
+  - title: Font Management
+    description:
+      Upload and manage fonts so your e-ink devices can easily download and use
+      them. Supports multiple styles and weights.
+  - title: Multiple Profiles
+    description:
+      Create separate profiles to keep reading progress independent across
+      different users or devices.
+tags:
+  - Ebooks
+  - Library
+  - Self-Hosted
+  - E-Reader
+  - OPDS
+  - Books
