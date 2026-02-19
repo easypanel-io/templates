@@ -1,0 +1,101 @@
+name: RustFS
+description:
+  RustFS is a high-performance, S3-compatible object storage system built in
+  Rust. It is 2.3x faster than MinIO for small object payloads and offers full
+  S3 API compatibility, a built-in web management console, erasure coding with
+  Reed-Solomon for data protection, bitrot detection via HighwayHash, and
+  server-side encryption with AES-256-GCM and ChaCha20-Poly1305. RustFS supports
+  event notifications, bucket versioning, object lifecycle management, bucket
+  replication, and CORS configuration. Licensed under the permissive Apache 2.0
+  license, it is designed for data lakes, AI workloads, and large-scale storage
+  with a user-friendly deployment experience.
+instructions: null
+changeLog:
+  - date: 2026-02-19
+    description: Template Release
+links:
+  - label: GitHub
+    url: https://github.com/rustfs/rustfs
+  - label: Documentation
+    url: https://docs.rustfs.com
+  - label: Website
+    url: https://rustfs.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rustfs
+    appServiceImage:
+      type: string
+      title: RustFS Image
+      default: rustfs/rustfs:1.0.0-alpha.83
+    accessKey:
+      type: string
+      title: Access Key
+      default: rustfsadmin
+      description: Root access key for the S3 API and console login.
+    secretKey:
+      type: string
+      title: Secret Key
+      default: rustfsadmin
+      description: Root secret key for the S3 API and console login.
+benefits:
+  - title: Blazing Fast Performance
+    description:
+      Built in Rust for maximum speed and memory safety. 2.3x faster than MinIO
+      for 4KB object payloads with efficient resource utilization on standard
+      hardware.
+  - title: Full S3 Compatibility
+    description:
+      Strict adherence to S3 API standards with AWS Signature V4 support.
+      Drop-in replacement for MinIO, Ceph, or any S3-compatible storage with
+      seamless migration.
+  - title: Enterprise Data Protection
+    description:
+      Erasure coding with Reed-Solomon, bitrot protection via HighwayHash, and
+      server-side encryption with AES-256-GCM and ChaCha20-Poly1305 keep your
+      data safe and intact.
+  - title: Permissive Apache 2.0 License
+    description:
+      No AGPL restrictions or license traps. Fully open-source under Apache 2.0
+      for unrestricted commercial and community use.
+features:
+  - title: Web Management Console
+    description:
+      Built-in browser-based console for managing buckets, objects, users,
+      policies, and monitoring server health and performance.
+  - title: Bucket Versioning & Replication
+    description:
+      Version your objects for point-in-time recovery and replicate buckets
+      across sites for disaster recovery and high availability.
+  - title: Event Notifications
+    description:
+      Configure event notifications for object operations to trigger downstream
+      workflows via webhooks, AMQP, Kafka, NATS, and more.
+  - title: Object Caching
+    description:
+      Built-in object cache with configurable TTL for improved read performance
+      on frequently accessed data.
+  - title: S3 Select
+    description:
+      Query CSV, Parquet, and JSON objects directly with SIMD-optimized S3
+      Select without downloading entire files.
+  - title: TLS & Encryption
+    description:
+      Network encryption with TLS 1.2+ and server-side encryption at rest.
+      Supports external KMS providers including HashiCorp Vault.
+tags:
+  - Object Storage
+  - S3
+  - Self-Hosted
+  - Rust
+  - Cloud Storage
+  - MinIO Alternative
