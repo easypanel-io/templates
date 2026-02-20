@@ -1,0 +1,110 @@
+name: Grafana OTEL LGTM
+description:
+  Grafana OTEL LGTM is an all-in-one OpenTelemetry backend bundled into a single
+  Docker image. It includes the OpenTelemetry Collector, Prometheus for metrics,
+  Grafana Loki for logs, Grafana Tempo for traces, Grafana Pyroscope for
+  application profiles, and Grafana for unified visualization. The collector
+  automatically routes telemetry signals to the correct backend — metrics to
+  Prometheus, logs to Loki, traces to Tempo, and profiles to Pyroscope. It works
+  out of the box with OpenTelemetry's default settings, so applications
+  instrumented with any OpenTelemetry SDK can send data immediately. Optional
+  eBPF auto-instrumentation (OBI) can generate traces and RED metrics for
+  HTTP/gRPC services with zero code changes.
+instructions: |
+  After deployment, access the Grafana dashboard via the service domain. 
+  Log in with the default credentials: username "admin", password
+  "admin". All data sources (Prometheus, Loki, Tempo, Pyroscope) are
+  pre-configured. Point your OpenTelemetry-instrumented applications to the
+  OTLP endpoints — port 4317 for gRPC and port 4318 for HTTP. No additional
+  configuration is needed; the image works with OpenTelemetry defaults.
+changeLog:
+  - date: 2026-02-20
+    description: Template Release
+links:
+  - label: GitHub
+    url: https://github.com/grafana/docker-otel-lgtm
+  - label: Documentation
+    url: https://grafana.com/docs/opentelemetry/docker-lgtm
+  - label: Docker Hub
+    url: https://hub.docker.com/r/grafana/otel-lgtm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: grafana-otel-lgtm
+    appServiceImage:
+      type: string
+      title: Grafana OTEL LGTM Image
+      default: grafana/otel-lgtm:0.19.0
+    otlpPort:
+      type: number
+      title: OTLP Port
+      default: 4317
+    otlpHttpPort:
+      type: number
+      title: OTLP HTTP Port
+      default: 4318
+benefits:
+  - title: Complete Observability in One Container
+    description:
+      Bundles OpenTelemetry Collector, Prometheus, Loki, Tempo, Pyroscope, and
+      Grafana into a single image. Deploy a full observability stack in seconds
+      with zero configuration.
+  - title: Zero-Config OpenTelemetry Backend
+    description:
+      Works with OpenTelemetry's default settings out of the box. Any
+      application instrumented with an OpenTelemetry SDK can send data
+      immediately without endpoint configuration.
+  - title: Unified Visualization
+    description:
+      Grafana comes pre-configured with all data sources connected. Explore
+      metrics, logs, traces, and profiles from a single dashboard with built-in
+      correlation between signals.
+  - title: Multi-Language Support
+    description:
+      Compatible with OpenTelemetry SDKs for Java, Go, Python, .NET, Node.js,
+      Ruby, and any language with OTLP support.
+features:
+  - title: Automatic Signal Routing
+    description:
+      The OpenTelemetry Collector automatically routes metrics to Prometheus,
+      logs to Loki, traces to Tempo, and profiles to Pyroscope without manual
+      pipeline configuration.
+  - title: OTLP gRPC & HTTP Endpoints
+    description:
+      Accepts telemetry data on port 4317 (gRPC) and port 4318 (HTTP) using the
+      standard OpenTelemetry Protocol for maximum SDK compatibility.
+  - title: Application Profiling
+    description:
+      Grafana Pyroscope captures continuous application profiles for CPU,
+      memory, and other runtime metrics to identify performance bottlenecks.
+  - title: eBPF Auto-Instrumentation
+    description:
+      Optional OBI support uses eBPF to automatically generate traces and RED
+      metrics for HTTP/gRPC services with zero code changes (Linux kernel 5.8+
+      required).
+  - title: Persistent Data Storage
+    description:
+      All components write to a single /data directory. Mount a volume to
+      persist metrics, logs, traces, and profiles across container restarts.
+  - title: Configurable Logging
+    description:
+      Enable debug logging for individual components (Grafana, Loki, Prometheus,
+      Tempo, Pyroscope, OTel Collector) or all at once via environment
+      variables.
+tags:
+  - Observability
+  - OpenTelemetry
+  - Grafana
+  - Prometheus
+  - Monitoring
+  - Logging
+  - Tracing
