@@ -1,0 +1,94 @@
+name: YakGPT
+description:
+  YakGPT is a simple, locally running ChatGPT UI that makes your text generation
+  faster and chatting even more engaging! This hands-free interface provides
+  direct access to OpenAI's GPT models with advanced voice capabilities,
+  including Speech-to-Text via Azure & OpenAI Whisper and Text-to-Speech via
+  Azure & Eleven Labs. Run locally in your browser with no need to install
+  applications, featuring faster performance than the official ChatGPT UI by
+  connecting directly to the API. Perfect for users who want privacy, speed, and
+  voice interaction with their AI assistant.
+
+instructions: null
+
+changeLog:
+  - date: "2025-07-02"
+    description: "Initial release"
+
+links:
+  - label: "GitHub Repository"
+    url: "https://github.com/yakGPT/yakGPT"
+  - label: "Live Demo"
+    url: "https://yakgpt.vercel.app"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "yakgpt"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "yakgpt/yakgpt:latest"
+
+benefits:
+  - title: "Hands-Free Voice Interaction"
+    description:
+      "Advanced speech-to-text and text-to-speech capabilities for seamless
+      voice conversations with AI."
+  - title: "Privacy & Data Control"
+    description:
+      "Use your own OpenAI API keys and store all data locally - no external
+      analytics or tracking."
+  - title: "Faster Than Official UI"
+    description:
+      "Direct API connection provides faster response times compared to the
+      official ChatGPT interface."
+
+features:
+  - title: "GPT 3.5 & GPT 4 Support"
+    description:
+      "Full access to OpenAI's latest language models via direct API
+      integration."
+  - title: "Speech-to-Text Integration"
+    description:
+      "Convert your voice to text using Azure or OpenAI Whisper for hands-free
+      input."
+  - title: "Text-to-Speech Responses"
+    description:
+      "Have AI responses read aloud using Azure or Eleven Labs text-to-speech."
+  - title: "Browser-Based Interface"
+    description:
+      "No installation required - runs entirely in your web browser with local
+      storage."
+  - title: "Microphone Integration"
+    description:
+      "Easy mic integration with browser permissions for seamless voice
+      interaction."
+  - title: "Local Data Storage"
+    description:
+      "All conversation history stored locally in localStorage with complete
+      privacy control."
+
+tags:
+  - "AI Chat"
+  - "ChatGPT"
+  - "OpenAI"
+  - "Voice Interface"
+  - "Speech-to-Text"
+  - "Text-to-Speech"
+  - "GPT-4"
+  - "GPT-3.5"
+  - "Hands-Free"
+  - "Privacy-Focused"
+  - "Local Storage"
+  - "Next.js"
