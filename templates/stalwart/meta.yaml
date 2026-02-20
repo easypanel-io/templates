@@ -1,0 +1,146 @@
+name: Stalwart
+description:
+  Stalwart is a modern, all-in-one mail and collaboration server written in Rust
+  for security and performance. It bundles SMTP, IMAP, JMAP, POP3, CalDAV,
+  CardDAV, and WebDAV into a single binary with a unified configuration.
+  Features include a built-in spam and phishing filter with LLM-driven analysis,
+  DMARC/DKIM/SPF/ARC authentication, encryption at rest with S/MIME or OpenPGP,
+  automatic TLS via ACME, full-text search in 17 languages, Sieve scripting, and
+  a web-based admin dashboard. It supports pluggable storage backends (RocksDB,
+  FoundationDB, PostgreSQL, MySQL, SQLite, S3, Redis) and scales from a single
+  instance to thousands of nodes with built-in clustering, load balancing, and
+  fault tolerance.
+instructions:
+  On first boot, Stalwart auto-generates admin credentials and prints them to
+  the container logs. Check the service logs to find the admin username and
+  password. Then access the web admin at the service domain and log in. From
+  there, configure your domain under Management > Directory > Domains, and
+  Stalwart will generate the required DNS records (MX, DKIM, SPF, DMARC) for
+  you. Set the correct server hostname in Settings > Server > Network. Mail
+  ports (SMTP 25, submission 587/465, IMAP 143/993, POP3 110/995, ManageSieve
+  4190) are exposed for direct access.
+changeLog:
+  - date: 2026-02-20
+    description: Template Release
+links:
+  - label: Website
+    url: https://stalw.art
+  - label: GitHub
+    url: https://github.com/stalwartlabs/stalwart
+  - label: Documentation
+    url: https://stalw.art/docs/install/get-started
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: stalwart
+    appServiceImage:
+      type: string
+      title: Stalwart Image
+      default: ghcr.io/stalwartlabs/stalwart:v0.15.5
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 25
+      description: Inbound mail delivery (SMTP)
+    smtpSubmissionPort:
+      type: number
+      title: SMTP Submission Port
+      default: 587
+      description: Mail submission (SMTP with STARTTLS)
+    smtpTlsPort:
+      type: number
+      title: SMTP Submission TLS Port
+      default: 465
+      description: Mail submission over implicit TLS
+    imapPort:
+      type: number
+      title: IMAP Port
+      default: 143
+      description: IMAP with STARTTLS
+    imapsPort:
+      type: number
+      title: IMAPS Port
+      default: 993
+      description: IMAP over implicit TLS
+    pop3Port:
+      type: number
+      title: POP3 Port
+      default: 110
+      description: POP3 with STARTTLS
+    pop3sPort:
+      type: number
+      title: POP3S Port
+      default: 995
+      description: POP3 over implicit TLS
+    sievePort:
+      type: number
+      title: ManageSieve Port
+      default: 4190
+      description: ManageSieve protocol for server-side mail filtering
+benefits:
+  - title: All-in-One Server
+    description:
+      SMTP, IMAP, JMAP, POP3, CalDAV, CardDAV, WebDAV, spam filter, and web
+      admin all in a single Rust binary. No need to stitch together multiple
+      components.
+  - title: Written in Rust
+    description:
+      Memory-safe by design with excellent performance. Security audited and
+      built to handle everything from small personal setups to large-scale
+      enterprise deployments.
+  - title: Built-in Spam & Phishing Filter
+    description:
+      Comprehensive spam filtering with LLM-driven analysis, statistical
+      classifier, DNS blocklists, greylisting, sender reputation, phishing
+      protection, and collaborative filtering.
+  - title: Scales Seamlessly
+    description:
+      From a single instance to thousands of nodes with peer-to-peer cluster
+      coordination, load balancing, fault tolerance, and support for Kubernetes,
+      Docker Swarm, and Apache Mesos.
+features:
+  - title: Complete Protocol Support
+    description:
+      Full JMAP, IMAP4rev2, POP3, and SMTP support with DMARC, DKIM, SPF, ARC
+      authentication and DANE, MTA-STS transport security.
+  - title: Calendars, Contacts & Files
+    description:
+      Native CalDAV and CardDAV support for calendars and contacts, plus WebDAV
+      for file storage and sharing with fine-grained access controls.
+  - title: Pluggable Storage Backends
+    description:
+      Choose from RocksDB, FoundationDB, PostgreSQL, MySQL, SQLite,
+      S3-compatible storage, Azure, or Redis. Full-text search via built-in
+      engine, Meilisearch, or ElasticSearch.
+  - title: Encryption & Security
+    description:
+      Encryption at rest with S/MIME or OpenPGP, automatic TLS via ACME,
+      two-factor authentication, OAuth 2.0, OpenID Connect, LDAP, and
+      fail2ban-style blocking.
+  - title: Web Admin Dashboard
+    description:
+      Real-time monitoring, account and domain management, SMTP queue
+      management, DMARC/TLS report visualization, log viewer, and self-service
+      portal.
+  - title: Sieve Scripting
+    description:
+      Full Sieve scripting language support with all registered extensions for
+      powerful server-side email filtering and automation.
+tags:
+  - Email
+  - Mail Server
+  - SMTP
+  - IMAP
+  - CalDAV
+  - CardDAV
+  - Self-Hosted
+  - Collaboration
