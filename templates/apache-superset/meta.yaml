@@ -1,0 +1,58 @@
+name: Apache Superset
+description: Apache Superset is a modern, enterprise-ready business intelligence web application. It's fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple line charts to highly detailed geospatial charts.
+instructions: Migrate database with "superset db upgrade", adjust roles and permissions with "superset init", create admin user with "superset fab create-admin". Follow the guide for further references.
+changeLog:
+  - date: 2024-04-22
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/apache/superset
+  - label: Documentation
+    url: https://superset.apache.org/docs/intro
+  - label: Guide
+    url: https://www.restack.io/docs/superset-knowledge-apache-superset-default-login
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: apache-superset
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: apache/superset:ae48dba
+benefits:
+  - title: Data Visualization
+    description: Create beautiful, interactive visualizations of your data.
+  - title: SQL Editor
+    description: Powerful SQL editor with syntax highlighting and autocomplete.
+  - title: Dashboard Creation
+    description: Create and share interactive dashboards with your team.
+  - title: Data Exploration
+    description: Explore and analyze your data with an intuitive interface.
+  - title: Enterprise Ready
+    description: Scalable and secure solution for business intelligence.
+features:
+  - title: Rich Visualizations
+    description: Wide variety of visualization types to represent your data.
+  - title: SQL Lab
+    description: Advanced SQL editor for data exploration and preparation.
+  - title: Dashboard Builder
+    description: Drag-and-drop interface for creating interactive dashboards.
+  - title: Security
+    description: Role-based access control and authentication options.
+  - title: Data Source Integration
+    description: Connect to various data sources including SQL databases.
+tags:
+  - Business Intelligence
+  - Data Visualization
+  - Analytics
+  - Dashboard
+  - SQL 
