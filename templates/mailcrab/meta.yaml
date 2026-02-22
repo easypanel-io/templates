@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to v1.6.1
   - date: 2025-12-29
     description: Version bumped to v1.6.2
+  - date: 2026-02-21
+    description: Version bumped to v1.6.4
 links:
   - label: Github
     url: https://github.com/tweedegolf/mailcrab
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: marlonb/mailcrab:v1.6.2
+      default: marlonb/mailcrab:v1.6.4
 benefits:
   - title: Efficient Email Testing
     description:

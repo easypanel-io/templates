@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to 3.12.1
   - date: 2025-12-25
     description: Version bumped to 3.13.1
+  - date: 2026-02-21
+    description: Version bumped to 3.13.3
 links:
   - label: Website
     url: https://www.gerritcodereview.com/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: Gerrit Image
-      default: gerritcodereview/gerrit:3.13.1
+      default: gerritcodereview/gerrit:3.13.3
 benefits:
   - title: Code Review
     description: Streamlined code review process with inline comments.
