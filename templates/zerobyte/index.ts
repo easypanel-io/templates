@@ -1,8 +1,15 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const appSecret = input.appSecret || randomString(64);
+
+  const env = [
+    `TZ=${input.timezone || "UTC"}`,
+    `APP_SECRET=${appSecret}`,
+    `BASE_URL=${input.baseUrl || "https://$(PRIMARY_DOMAIN)"}`,
+  ];
 
   services.push({
     type: "app",
@@ -18,7 +25,7 @@ export function generate(input: Input): Output {
           port: 4096,
         },
       ],
-      env: [`TZ=${input.timezone || "UTC"}`].join("\n"),
+      env: env.join("\n"),
       mounts: [
         {
           type: "volume",

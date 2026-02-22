@@ -13,8 +13,6 @@ changeLog:
     description: Initial Template Release (v4.10.7)
   - date: 2025-12-25
     description: Version bumped to v4.10.12
-  - date: 2026-02-21
-    description: Version bumped to v4.10.15
 links:
   - label: GitHub
     url: https://github.com/jumpserver/jumpserver
@@ -38,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jumpserver/jms_all:v4.10.15
+      default: jumpserver/jms_all:v4.10.12
       description: JumpServer Docker image
 benefits:
   - title: Privileged Access Management

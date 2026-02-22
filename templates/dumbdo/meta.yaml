@@ -10,8 +10,6 @@ changeLog:
   - date: 2025-09-11
     description:
       Initial Template Release (af4532890ed0613d4cb4a35931d436cea63180ff)
-  - date: 2026-02-18
-    description: Version bumped to d4dff81e4eab16de0974a94742e1cd3bc51a369a
 links:
   - label: Website
     url: https://www.dumbware.io/DumbDo
@@ -35,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbdo:d4dff81e4eab16de0974a94742e1cd3bc51a369a
+      default: dumbwareio/dumbdo:af4532890ed0613d4cb4a35931d436cea63180ff
       description: Dumbdo Docker image
 benefits:
   - title: Stupidly Simple

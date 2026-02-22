@@ -13,8 +13,6 @@ changeLog:
     description: Initial Template Release
   - date: 2025-12-29
     description: Version bumped to 3.7.2
-  - date: 2026-02-21
-    description: Version bumped to 3.8.1
 links:
   - label: GitHub
     url: https://github.com/memgraph/memgraph
@@ -37,7 +35,7 @@ schema:
     dbServiceImage:
       type: string
       title: App Service Image
-      default: memgraph/memgraph-mage:3.8.1
+      default: memgraph/memgraph-mage:3.7.2
       description: Memgraph MAGE Docker image
     labImage:
       type: string

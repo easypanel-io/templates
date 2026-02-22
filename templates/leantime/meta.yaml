@@ -20,8 +20,6 @@ changeLog:
     description: Version bumped to 3.5.10
   - date: 2025-12-25
     description: Version bumped to 3.5.12
-  - date: 2026-02-21
-    description: Version bumped to 3.7.0
 links:
   - label: Website
     url: https://leantime.io/
@@ -45,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: leantime/leantime:3.7.0
+      default: leantime/leantime:3.5.12
 benefits:
   - title: Streamlined Project Management
     description:

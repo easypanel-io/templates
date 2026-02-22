@@ -18,8 +18,6 @@ changeLog:
     description: Version bumped to v1.4
   - date: 2025-12-25
     description: Version bumped to v1.8.0
-  - date: 2026-02-21
-    description: Version bumped to v1.10.1
 links:
   - label: Website
     url: https://gethomepage.dev/
@@ -43,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gethomepage/homepage:v1.10.1
+      default: ghcr.io/gethomepage/homepage:v1.8.0
 benefits:
   - title: Centralized Dashboard
     description:

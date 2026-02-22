@@ -23,8 +23,6 @@ changeLog:
     description: Version bumped to 2.25.0
   - date: 2025-05-26
     description: Version bumped to 2.26.0
-  - date: 2026-02-18
-    description: Version bumped to 2.27.0
 links:
   - label: Website
     url: https://drone.io/
@@ -56,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: drone/drone:2.27.0
+      default: drone/drone:2.26.0
     runnerServiceName:
       type: string
       title: Runner Service Name

@@ -16,8 +16,6 @@ instructions: null
 changeLog:
   - date: 2025-10-30
     description: Initial Template Release
-  - date: 2026-02-18
-    description: Version bumped to 1.19.0
 links:
   - label: Website
     url: https://chartdb.io
@@ -39,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/chartdb/chartdb:1.19.0
+      default: ghcr.io/chartdb/chartdb:1.17.0
       description: ChartDB Docker image
     openaiApiKey:
       type: string

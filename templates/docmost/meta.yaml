@@ -18,8 +18,6 @@ changeLog:
     description: Version bumped to 0.21.0
   - date: 2025-12-25
     description: Version bumped to 0.24.1
-  - date: 2026-02-18
-    description: Version bumped to 0.25.3
 links:
   - label: Documentation
     url: https://docmost.com/docs/
@@ -41,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docmost/docmost:0.25.3
+      default: docmost/docmost:0.24.1
 benefits:
   - title: Secure Document Management
     description:

@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: Manticore Image
-      default: manticoresearch/manticore:17.5.100
+      default: manticoresearch/manticore:15.1.0
 benefits:
   - title: High Performance
     description: Fast search and filtering of petabytes of text data.

@@ -15,8 +15,6 @@ changeLog:
     description: First Release
   - date: 2025-02-25
     description: Version bumped to 10.0.1
-  - date: 2026-02-21
-    description: Version bumped to 14.0.2
 links:
   - label: Website
     url: https://forgejo.org/
@@ -41,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: codeberg.org/forgejo/forgejo:14.0.2
+      default: codeberg.org/forgejo/forgejo:10.0.1
     databaseType:
       type: string
       title: Select Database Type

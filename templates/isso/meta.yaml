@@ -17,8 +17,6 @@ changeLog:
     description: first release
   - date: 2025-05-23
     description: update to v0.13.1.dev0
-  - date: 2026-02-21
-    description: Version updated to v0.13.0
 links:
   - label: Documentation
     url: https://isso-comments.de/docs/
@@ -41,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/isso-comments/isso:0.13.0
+      default: ghcr.io/isso-comments/isso:0.13.1.dev0
     adminPassword:
       type: string
       title: Admin Password

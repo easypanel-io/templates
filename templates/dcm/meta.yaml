@@ -13,8 +13,7 @@ instructions: null
 changeLog:
   - date: 2025-12-11
     description: Template Release
-  - date: 2026-02-18
-    description: Version bumped to sha-6d86fd5
+
 links:
   - label: GitHub
     url: https://github.com/ajnart/dcm
@@ -38,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/ajnart/dcm:sha-6d86fd5
+      default: ghcr.io/ajnart/dcm:sha-a42eb18
 
 benefits:
   - title: Simple Container Dashboard

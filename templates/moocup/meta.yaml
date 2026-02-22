@@ -21,8 +21,7 @@ instructions: null
 changeLog:
   - date: 2025-11-26
     description: Template Release
-  - date: 2026-02-21
-    description: Version bumped to 1.0.13
+
 links:
   - label: Website
     url: https://moocup.jaydip.me
@@ -48,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jellydeck/moocup:1.0.13
+      default: jellydeck/moocup:1.0.12
 
 benefits:
   - title: Stunning Screenshots in Seconds

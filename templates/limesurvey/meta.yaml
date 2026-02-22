@@ -17,8 +17,6 @@ changeLog:
     description: first release
   - date: 2025-07-22
     description: Version bumped to 6-1.6.72
-  - date: 2026-02-21
-    description: Version bumped to 6-1.6.74
 links:
   - label: Website
     url: https://limesurvey.org/
@@ -47,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/limesurvey:6-1.6.74
+      default: tiredofit/limesurvey:6-1.6.72
     databaseServiceName:
       type: string
       title: Database Service Name

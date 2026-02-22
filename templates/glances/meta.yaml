@@ -19,8 +19,6 @@ changeLog:
     description: Version bumped to 4.3.3
   - date: 2025-12-25
     description: Version bumped to 4.4.1
-  - date: 2026-02-21
-    description: Version bumped to 4.5.0.4
 links:
   - label: Website
     url: https://nicolargo.github.io/glances/
@@ -44,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nicolargo/glances:4.5.0.4
+      default: nicolargo/glances:4.4.1
 benefits:
   - title: Real-Time System Monitoring
     description:

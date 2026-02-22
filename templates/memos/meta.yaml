@@ -20,8 +20,6 @@ changeLog:
     description: Version bumped to 0.24
   - date: 2025-07-22
     description: Update to 0.25
-  - date: 2026-02-21
-    description: Version bumped to 0.26
 links:
   - label: Website
     url: https://usememos.com/
@@ -45,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: neosmemo/memos:0.26
+      default: neosmemo/memos:0.25
     serviceTimezone:
       type: string
       title: Timezone

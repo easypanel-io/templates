@@ -15,8 +15,6 @@ changeLog:
     description: First Release
   - date: 2025-12-24
     description: Updated to ArangoDB version 3.12.7
-  - date: 2026-02-18
-    description: Version bumped to 3.12.7.2
 links:
   - label: Documentation
     url: https://www.arangodb.com/docs/stable/
@@ -38,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: arangodb:3.12.7.2
+      default: arangodb:3.12.7
 benefits:
   - title: Multi-Model Database
     description:
