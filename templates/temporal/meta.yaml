@@ -18,11 +18,8 @@ changeLog:
     description:
       Version bumped to 2.36.0 for UI, 1.27.1.0 for server, 1.27 for admin
       tools.
-  - date: 2025-10-14
-    description:
-      Updated to match docker-compose configuration with correct versions and
-      PostgreSQL credentials. Removed unnecessary domain configurations for
-      internal services.
+  - date: 2025-12-29
+    description: Version bumped to 1.28.2, 2.44.0, 1.29
 links:
   - label: Documentation
     url: https://docs.temporal.io/
@@ -47,15 +44,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: temporalio/auto-setup:1.29.0
+      default: temporalio/auto-setup:1.28.2
     elasticsearchImage:
       type: string
       title: Elasticsearch Service Image
-      default: elasticsearch:9.1.0
+      default: elasticsearch:9.0.4
     temporalUiImage:
       type: string
       title: Temporal UI Service Image
-      default: temporalio/ui:2.34.0
+      default: temporalio/ui:2.44.0
     temporalAdminImage:
       type: string
       title: Temporal Admin Service Image

@@ -20,8 +20,6 @@ changeLog:
     description: Version bumped to 4.5.2
   - date: 2025-07-10
     description: Version bumped to 5.0.0
-  - date: 2026-02-06
-    description: Version bumped to 5.0.2
 links:
   - label: Website
     url: https://moodle.org/
@@ -45,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnamilegacy/moodle:5.0.2
+      default: docker.io/bitnami/moodle:5.0.0
 benefits:
   - title: Personalized Learning Experience
     description:

@@ -10,11 +10,8 @@ export function generate(input: Input): Output {
     constraints: {}
 system.forceSearchAttributesCacheRefreshOnRead:
   - value: true # Dev setup only. Please don't turn this on in production.
-    constraints: {}`;
-
-  const development_cass = `system.forceSearchAttributesCacheRefreshOnRead:
-  - value: true # Dev setup only. Please don't turn this on in production.
-    constraints: {}`;
+    constraints: {}
+`;
 
   services.push({
     type: "app",
@@ -48,7 +45,7 @@ system.forceSearchAttributesCacheRefreshOnRead:
         `POSTGRES_USER=postgres`,
         `POSTGRES_PWD=${databasePassword}`,
         `POSTGRES_SEEDS=$(PROJECT_NAME)_${input.appServiceName}-db`,
-        `DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml`,
+        `DYNAMIC_CONFIG_FILE_PATH=/config/dynamicconfig/development-sql.yaml`,
         `ENABLE_ES=true`,
         `ES_SEEDS=$(PROJECT_NAME)_${input.appServiceName}-elasticsearch`,
         `ES_VERSION=v7`,
@@ -57,16 +54,18 @@ system.forceSearchAttributesCacheRefreshOnRead:
         type: "image",
         image: input.appServiceImage,
       },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          path: "/",
+          port: 80,
+        },
+      ],
       mounts: [
         {
           type: "file",
           content: development_sql,
-          mountPath: "/etc/temporal/config/dynamicconfig/development-sql.yaml",
-        },
-        {
-          type: "file",
-          content: development_cass,
-          mountPath: "/etc/temporal/config/dynamicconfig/development-cass.yaml",
+          mountPath: "/config/dynamicconfig/development-sql.yaml",
         },
       ],
     },
@@ -112,6 +111,13 @@ system.forceSearchAttributesCacheRefreshOnRead:
         type: "image",
         image: input.elasticsearchImage,
       },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          path: "/",
+          port: 8080,
+        },
+      ],
       mounts: [
         {
           type: "volume",

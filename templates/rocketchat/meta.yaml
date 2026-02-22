@@ -43,7 +43,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceImage
+    - databaseServiceName
   properties:
     appServiceName:
       type: string
@@ -53,10 +53,10 @@ schema:
       type: string
       title: App Service Image
       default: rocketchat/rocket.chat:7.12.3
-    databaseServiceImage:
+    databaseServiceName:
       type: string
-      title: Database Service Image
-      default: docker.io/bitnamilegacy/mongodb:5.0
+      title: Database Service Name
+      default: rocketchat-db
 benefits:
   - title: Secure and Compliant Collaboration
     description:

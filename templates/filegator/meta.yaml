@@ -14,6 +14,8 @@ instructions: Login using credentials - admin/admin123
 changeLog:
   - date: 2025-08-04
     description: First release
+  - date: 2026-02-21
+    description: Version bumped to 7.13.3
 links:
   - label: Github
     url: https://github.com/filegator/filegator
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filegator/filegator:v7.13.0
+      default: filegator/filegator:v7.13.3
 benefits:
   - title: User-Friendly File Management
     description:

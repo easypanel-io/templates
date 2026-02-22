@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 25.04.3.2.1
   - date: 2025-12-25
     description: Version bumped to 25.04.8.1.1
+  - date: 2026-02-18
+    description: Version bumped to 25.04.9.1.1
 links:
   - label: Website
     url: https://collaboraonline.com
@@ -59,7 +61,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: collabora/code:25.04.8.1.1
+      default: collabora/code:25.04.9.1.1
 benefits:
   - title: Digital Sovereignty
     description:

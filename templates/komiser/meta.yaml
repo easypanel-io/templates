@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: "2025-03-26"
     description: Initial template release
+  - date: 2026-02-21
+    description: Version bumped to 3.1.22
 links:
   - label: Website
     url: https://komiser.io/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: Komiser Image
-      default: tailwarden/komiser:3.0.0
+      default: tailwarden/komiser:3.1.22
 benefits:
   - title: Cloud Cost Optimization
     description: Identify and optimize cloud resource costs across providers.
