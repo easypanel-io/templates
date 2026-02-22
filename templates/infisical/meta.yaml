@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to v0.130.1-postgres
   - date: 2025-12-25
     description: Version bumped to v0.154.6
+  - date: 2026-02-21
+    description: Version bumped to v0.158.5
 links:
   - label: Documentation
     url: https://infisical.com/docs
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: infisical/infisical:v0.154.6
+      default: infisical/infisical:v0.158.5
 benefits:
   - title: Secure Secret Management
     description:

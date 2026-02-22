@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to v2.23.3
   - date: 2025-12-25
     description: Version bumped to v2.27.9
+  - date: 2026-02-18
+    description: Version bumped to v2.30.1
 links:
   - label: Website
     url: https://coder.com
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/coder/coder:v2.27.9
+      default: ghcr.io/coder/coder:v2.30.1
     databaseServiceName:
       type: string
       title: Database Service Name
