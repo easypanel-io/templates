@@ -1,18 +1,19 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+
+  const adminPassword = input.adminPassword || randomPassword();
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       env: [
-        `DEFAULT_ADMIN_USERNAME=${input.adminUsername}`,
-        `DEFAULT_ADMIN_PASSWORD=${input.adminPassword}`,
-        `DEBUG=1`,
-        `IS_CONTAINER=true`,
+        `ZINC_FIRST_ADMIN_USER=${input.adminUsername}`,
+        `ZINC_FIRST_ADMIN_PASSWORD=${adminPassword}`,
+        `ZINC_DATA_PATH=/data`,
       ].join("\n"),
       source: {
         type: "image",

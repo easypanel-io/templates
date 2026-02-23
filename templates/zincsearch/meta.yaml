@@ -7,6 +7,7 @@ description:
   compatibility with Elasticsearch APIs.
 
 instructions:
+  Provide the admin password, or leave it blank to generate a random one.
 
 changeLog:
   - date: 2025-10-13
@@ -16,7 +17,7 @@ links:
   - label: Documentation
     url: https://zincsearch-docs.zinc.dev/
   - label: Github
-    url: https://github.com/zinclabs/zincsearch
+    url: https://github.com/zincsearch/zincsearch
 
 contributors:
   - name: Ahson Shaikh
@@ -28,7 +29,6 @@ schema:
     - appServiceName
     - appServiceImage
     - adminUsername
-    - adminPassword
   properties:
     appServiceName:
       type: string
@@ -45,7 +45,8 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
-      default: "123"
+      default: ""
+      description: Automatically generated if not provided
 
 benefits:
   - title: Lightweight Search Engine
