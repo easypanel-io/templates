@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2024-11-26
     description: Template Release
+  - date: 2025-03-03
+    description: Version bumped to 3.8.1
 
 links:
   - label: Website
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/xbackbone:3.7.0
+      default: linuxserver/xbackbone:3.8.1
 
 benefits:
   - title: Secure File Sharing

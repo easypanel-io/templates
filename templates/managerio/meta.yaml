@@ -1,0 +1,73 @@
+name: Manager.io
+description:
+  Manager.io is a versatile accounting software designed for small businesses.
+  It allows you to manage your finances, track expenses, issue invoices, and
+  generate comprehensive financial reports. The software supports multi-currency
+  transactions, inventory tracking, payroll management, and tax calculations.
+  With Manager.io, you can handle all your business accounting needs through an
+  intuitive and user-friendly interface. It's available for desktop, server, and
+  cloud deployment, offering flexibility and scalability for businesses of all
+  sizes.
+instructions: null
+changeLog:
+  - date: 2025-01-10
+    description: first release
+links:
+  - label: Official Website
+    url: https://www.manager.io/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: managerio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: cronet/manager.io:latest
+benefits:
+  - title: Comprehensive Financial Management
+    description:
+      Manager.io provides a robust platform for managing all aspects of your
+      business finances, from tracking expenses to generating detailed financial
+      reports.
+  - title: Multi-Platform Availability
+    description:
+      Manager.io is available for desktop, server, and cloud deployments,
+      offering flexibility to work in various environments.
+  - title: Intuitive User Interface
+    description:
+      The software is designed with a user-friendly interface that simplifies
+      accounting tasks for business owners and accountants alike.
+features:
+  - title: Multi-Currency Support
+    description:
+      Manager.io supports multi-currency transactions, making it ideal for
+      businesses dealing with international clients or suppliers.
+  - title: Inventory Management
+    description:
+      The software includes inventory tracking features, enabling you to manage
+      stock levels, costs, and reordering.
+  - title: Payroll Management
+    description:
+      With built-in payroll functionality, Manager.io helps you calculate wages,
+      taxes, and generate pay slips.
+  - title: Tax Reporting
+    description:
+      Manager.io simplifies tax calculations and reporting, ensuring compliance
+      with local tax regulations.
+  - title: Data Backup and Restore
+    description:
+      Manager.io allows you to back up your data securely and restore it easily
+      in case of data loss.
+tags:
+  - Accounting
+  - Business Management
+  - Finance

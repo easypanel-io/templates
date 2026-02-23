@@ -21,6 +21,10 @@ changeLog:
     description: first release
   - date: 2023-03-04
     description: Version bumped to 0.75.2
+  - date: 2025-02-28
+    description: Version bumped to 0.82.0
+  - date: 2025-07-24
+    description: Version bumped to 0.85
 links:
   - label: Website
     url: https://www.getoutline.com/
@@ -33,6 +37,8 @@ contributors:
     url: https://github.com/DrMxrcy
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -53,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: outlinewiki/outline:0.80.2
+      default: outlinewiki/outline:0.85
     domainURL:
       type: string
       title: Domain Url

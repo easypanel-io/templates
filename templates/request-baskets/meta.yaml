@@ -1,0 +1,67 @@
+name: Request Baskets
+description:
+  Request Baskets is a lightweight application designed for developers to
+  capture and inspect HTTP requests. It allows creating disposable endpoints to
+  test webhooks, APIs, or any HTTP-based interaction. The application provides
+  an intuitive web interface for monitoring and debugging incoming requests in
+  real time.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: First Release
+links:
+  - label: Demo
+    url: https://rbaskets.in/web
+  - label: Github
+    url: https://github.com/darklynx/request-baskets
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: request-baskets
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: darklynx/request-baskets:v1.2.3
+benefits:
+  - title: HTTP Request Inspection
+    description:
+      Request Baskets allows developers to monitor and debug HTTP requests
+      efficiently, aiding in API testing and development workflows.
+  - title: Disposable Endpoints
+    description:
+      The app enables the creation of temporary endpoints for testing webhooks,
+      providing a simple and effective solution for temporary integrations.
+  - title: Intuitive User Interface
+    description:
+      Request Baskets offers a clean and user-friendly interface for viewing and
+      analyzing incoming requests in real time.
+features:
+  - title: Multi-Platform Awareness
+    description:
+      Request Baskets uses the docker manifest for multi-platform support,
+      ensuring compatibility across various architectures.
+  - title: Easy Access
+    description:
+      The application can be accessed at specified host addresses, making it
+      straightforward to set up and use.
+  - title: Environment Variables
+    description:
+      Request Baskets allows for the customization of its behavior through
+      environment variables, offering flexibility for diverse use cases.
+  - title: Real-Time Monitoring
+    description:
+      The app provides real-time monitoring of HTTP requests, allowing immediate
+      feedback and debugging for developers.
+tags:
+  - HTTP Requests
+  - API Testing
+  - Webhooks

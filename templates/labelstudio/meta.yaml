@@ -1,0 +1,84 @@
+name: Label Studio
+description:
+  Label Studio is an open source data labeling tool. It lets you label data
+  types like audio, text, images, videos, and time series with a simple and
+  straightforward UI and export to various model formats. It can be used to
+  prepare raw data or improve existing training data to get more accurate ML
+  models.
+instructions: null
+changeLog:
+  - date: 2025-02-14
+    description: First Release
+links:
+  - label: Website
+    url: https://labelstud.io/
+  - label: Documentation
+    url: https://labelstud.io/guide/
+  - label: Github
+    url: https://github.com/HumanSignal/label-studio/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - labelStudioUsername
+    - labelStudioPassword
+    - appServiceName
+    - appServiceImage
+  properties:
+    labelStudioUsername:
+      type: string
+      title: Email
+      default: admin@example.com
+    labelStudioPassword:
+      type: string
+      title: Password
+      default: password
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: labelstudio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: heartexlabs/label-studio:20250722.133548-develop-cc90fa143
+benefits:
+  - title: Effortless Data Labeling
+    description:
+      Label Studio provides an effortless way to label and annotate data for
+      machine learning models. It allows users to easily create, manage, and
+      configure labeling projects, making it an ideal tool for those who want to
+      experiment with different data types and labeling workflows.
+  - title: Easy Project Setup
+    description:
+      With Label Studio, setting up annotation projects is a breeze. Users can
+      define custom labeling interfaces and quickly start annotating their data.
+      This makes it easy to visualize, organize, and manage labeled datasets.
+  - title: Flexible Deployment
+    description:
+      Label Studio offers flexible deployment options. It can be deployed
+      locally, on-premises, or in the cloud, giving users the freedom to choose
+      the deployment strategy that best suits their data security and
+      infrastructure requirements.
+features:
+  - title: Command Line Interface
+    description:
+      Label Studio provides a command-line interface for easy management and
+      configuration. It offers a variety of options for project setup, data
+      import, and server configuration, including the host, port, and storage
+      settings.
+  - title: Multi-Format Support
+    description:
+      Label Studio supports multiple data types, including text, images, audio,
+      video, and time series data. This makes it a versatile tool for labeling
+      diverse datasets across different machine learning tasks.
+  - title: Exporting Annotations
+    description:
+      Once the annotations are complete, they can be exported in multiple
+      formats such as JSON, CSV, and COCO. This makes it easy to integrate
+      labeled data into machine learning workflows.
+tags:
+  - Machine Learning
+  - Data Annotation
+  - Developer Tools

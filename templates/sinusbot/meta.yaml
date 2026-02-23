@@ -1,0 +1,95 @@
+name: Sinusbot
+description:
+  Sinusbot is a powerful and versatile music bot designed for communication
+  platforms like TeamSpeak and Discord. It allows users to stream high-quality
+  audio, manage playlists, and automate music playback seamlessly. Sinusbot is
+  lightweight, highly customizable, and provides an intuitive web interface for
+  managing audio playback. With support for plugins and scripting, Sinusbot can
+  be tailored to meet the needs of any community, enhancing the audio experience
+  for gaming, collaboration, or leisure activities.
+instructions:
+  Create a user using this command "useradd --no-create-home -s /sbin/nologin -U
+  sinusbot", then create directories using this command "mkdir -p
+  /opt/sinusbot/data /opt/sinusbot/scripts", then give user permissions to this
+  folder using this command "chown -R sinusbot:sinusbot /opt/sinusbot", then run
+  echo $(id -u sinusbot) and echo $(id -g sinusbot) and copy the uid and guid,
+  paste the given ids in the Environmental Section and redeploy, if UID/GUID
+  is"1000"/"1000", then just redeploy after performing the above instructions
+changeLog:
+  - date: 2025-01-21
+    description: First Release
+links:
+  - label: Documentation
+    url: https://sinusbot.github.io/docs/
+  - label: Github
+    url: https://github.com/SinusBot
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sinusbot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sinusbot/docker:1.0.2
+    password:
+      type: string
+      title: App Service Password
+      default: password
+benefits:
+  - title: High-Quality Audio Streaming
+    description:
+      Sinusbot delivers crystal-clear audio for your community, ensuring a
+      top-notch listening experience.
+  - title: Easy-to-Use Interface
+    description:
+      Manage playlists, stream audio, and control playback effortlessly with the
+      user-friendly web interface.
+  - title: Customizable with Plugins
+    description:
+      Extend Sinusbot’s functionality with plugins and scripts to meet your
+      specific requirements.
+  - title: Multi-Platform Support
+    description:
+      Compatible with both Discord and TeamSpeak, making it versatile for
+      various communication needs.
+  - title: Lightweight and Efficient
+    description:
+      Sinusbot is resource-friendly, ensuring smooth performance without
+      overloading your server.
+features:
+  - title: Playlist Management
+    description:
+      Create and manage playlists easily, supporting multiple audio formats and
+      streaming sources.
+  - title: Auto-DJ Mode
+    description:
+      Enable Auto-DJ to keep the music playing continuously without manual
+      intervention.
+  - title: Scripting Support
+    description:
+      Use JavaScript-based scripts to automate and customize your bot's
+      behavior.
+  - title: Multi-Instance Support
+    description:
+      Run multiple bot instances on the same server to cater to different
+      channels or platforms.
+  - title: Advanced Permissions System
+    description:
+      Assign roles and permissions to control who can manage the bot or access
+      specific features.
+tags:
+  - Music Bot
+  - Audio Streaming
+  - TeamSpeak
+  - Discord
+  - Automation

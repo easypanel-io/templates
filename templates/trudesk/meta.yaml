@@ -1,0 +1,86 @@
+name: Trudesk
+description:
+  Trudesk is a self-hosted, open-source help desk and ticketing system designed
+  for businesses and teams to efficiently manage customer support inquiries. It
+  provides a modern and user-friendly web interface for tracking, organizing,
+  and resolving support tickets. Trudesk includes role-based user management,
+  real-time notifications, reporting tools, and an API for integration with
+  other services. It supports multiple authentication methods, including OAuth
+  and LDAP, making it suitable for enterprise environments. Additionally,
+  Trudesk offers email integration, enabling automatic ticket creation from
+  emails. With its containerized deployment, it ensures scalability and ease of
+  management.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-18
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.trudesk.io
+  - label: Github
+    url: https://github.com/polonel/trudesk
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trudesk
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: polonel/trudesk:1.2.11
+
+benefits:
+  - title: Efficient Ticket Management
+    description:
+      Trudesk provides an intuitive help desk system that allows teams to track,
+      assign, and resolve customer support tickets in an organized manner.
+  - title: Self-Hosted Support Solution
+    description:
+      Businesses can maintain full control over their support system, ensuring
+      security, privacy, and customization without relying on third-party
+      services.
+  - title: Automation & Integrations
+    description:
+      Trudesk supports automation workflows, APIs, and third-party integrations
+      to streamline customer service processes.
+
+features:
+  - title: Role-Based Access Control
+    description:
+      Trudesk provides multi-user role management, allowing teams to define
+      access levels and permissions for agents, managers, and administrators.
+  - title: Real-Time Notifications
+    description:
+      Get instant alerts for new tickets, updates, and responses through in-app,
+      email, or push notifications.
+  - title: API & Third-Party Integrations
+    description:
+      Trudesk provides a RESTful API for integrating with CRM, monitoring tools,
+      and other business applications.
+  - title: Email-to-Ticket System
+    description:
+      Automatically convert incoming emails into support tickets to streamline
+      customer inquiries.
+  - title: Reporting & Analytics
+    description:
+      Track agent performance, ticket resolution times, and other key support
+      metrics through built-in reports and analytics.
+
+tags:
+  - Help Desk
+  - Customer Support
+  - Ticketing System
+  - Self-Hosted

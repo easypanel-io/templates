@@ -1,0 +1,89 @@
+name: Usermemos
+description:
+  Usermemos is a lightweight, self-hosted note-taking application designed for
+  simplicity, accessibility, and efficiency. It provides an intuitive interface
+  for capturing and organizing memos with support for markdown formatting,
+  tagging, and searching. This app is a Docker containerized version of
+  Usermemos, making it easy to deploy and manage in various environments. The
+  app supports multiple architectures, including x86-64 and arm64, and can be
+  accessed via HTTP or HTTPS. It offers additional environment variables and
+  configurations to enable customization. Usermemos is designed for both
+  personal and collaborative usage, ensuring that users can manage their notes
+  effectively.
+instructions: null
+changeLog:
+  - date: 2025-02-17
+    description: first release
+  - date: 2025-07-25
+    description: Version bumped to 0.25
+links:
+  - label: Documentation
+    url: https://www.usememos.com/docs
+  - label: Github
+    url: https://github.com/usememos/memos
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: usermemos
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: neosmemo/memos:0.25
+benefits:
+  - title: Self-Hosted Note-Taking
+    description:
+      Usermemos is a self-hosted note-taking solution that ensures privacy and
+      data ownership. Users have full control over their notes without relying
+      on third-party cloud services.
+  - title: Lightweight & Fast
+    description:
+      Designed with performance in mind, Usermemos runs efficiently with minimal
+      system resources, making it ideal for both personal and business use.
+  - title: Multi-Platform Support
+    description:
+      The app is compatible with multiple architectures, including x86-64 and
+      arm64, ensuring broad deployment possibilities.
+  - title: Customizable & Extensible
+    description:
+      Usermemos offers configuration options, allowing users to tailor the
+      application to their specific needs, including theme customization and
+      integration with external services.
+features:
+  - title: Intuitive Interface
+    description:
+      Usermemos provides a clean and minimalistic interface, allowing users to
+      focus on their notes without distractions.
+  - title: Markdown Support
+    description:
+      The app supports markdown formatting, enabling users to structure their
+      notes efficiently with headings, lists, links, and code snippets.
+  - title: Tagging & Organization
+    description:
+      Users can categorize their notes using tags, making it easier to find and
+      organize important memos.
+  - title: Search Functionality
+    description:
+      A built-in search feature helps users quickly locate specific notes,
+      improving efficiency and accessibility.
+  - title: Secure Access
+    description:
+      The application supports authentication options to restrict access and
+      enhance data security.
+  - title: Easy Deployment with Docker
+    description:
+      Usermemos is containerized for quick and seamless deployment, simplifying
+      the installation and management process.
+tags:
+  - Productivity
+  - Note-Taking
+  - Self-Hosted
+  - Developer Tools

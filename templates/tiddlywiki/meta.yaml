@@ -1,0 +1,83 @@
+name: Tiddlywiki
+description:
+  Tiddlywiki is a unique open-source, single-file wiki designed to help you
+  organize, capture, and share information effectively. It is a versatile
+  personal notebook that allows you to create, organize, and navigate your notes
+  in a self-contained HTML file. Tiddlywiki is highly customizable, enabling
+  users to tweak layouts, styles, and functionality through plugins and scripts.
+  It works offline and can be hosted online for collaboration or personal use.
+  Whether you're creating a personal knowledge base, journaling, or managing
+  projects, Tiddlywiki provides a flexible platform to meet your needs.
+instructions: null
+changeLog:
+  - date: 2025-01-21
+    description: First Release
+links:
+  - label: Website
+    url: https://tiddlywiki.com
+  - label: Docs
+    url: https://tiddlywiki.com/#Documentation
+  - label: Github
+    url: https://github.com/Jermolene/TiddlyWiki5
+contributors:
+  - name: Ahson-Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tiddlywiki
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nicolaw/tiddlywiki:5.3.6
+benefits:
+  - title: Portable and Self-Contained
+    description:
+      Tiddlywiki is a single-file wiki that can be easily carried around,
+      shared, or hosted online, offering unmatched portability and simplicity.
+  - title: Works Offline
+    description:
+      Tiddlywiki operates entirely offline, making it perfect for personal use,
+      note-taking, and managing data without needing an internet connection.
+  - title: Customizable
+    description:
+      With plugins, themes, and custom scripting options, you can fully tailor
+      Tiddlywiki to your specific needs and preferences.
+  - title: Flexible Use Cases
+    description:
+      Tiddlywiki supports a wide range of applications, from personal knowledge
+      management to project tracking, journaling, and task organization.
+  - title: Free and Open Source
+    description:
+      Tiddlywiki is free to use and open source, encouraging contributions and
+      community-driven development.
+features:
+  - title: Single-File Wiki
+    description:
+      A self-contained HTML file that includes your data, layout, and
+      functionality in one place.
+  - title: Fully Customizable
+    description:
+      Customize your Tiddlywiki using plugins, themes, and JavaScript to create
+      the perfect tool for your needs.
+  - title: Works Offline
+    description:
+      Save your Tiddlywiki locally and use it without an internet connection.
+  - title: Open Source Community
+    description:
+      Leverage a rich ecosystem of plugins and themes developed by the
+      community.
+  - title: Easy Sharing
+    description:
+      Share your Tiddlywiki as a single HTML file or host it online for others
+      to access.
+tags:
+  - Wiki
+  - Personal Knowledge Management
+  - Note-Taking

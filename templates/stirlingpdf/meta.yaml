@@ -17,6 +17,10 @@ instructions: null
 changeLog:
   - date: 2024-11-13
     description: Initial release of StirlingPDF
+  - date: 2025-03-03
+    description: Version bumped to 0.43.2
+  - date: 2025-07-25
+    description: Version bumped to 1.1.0
 links:
   - label: Website
     url: https://stirlingpdf.io/
@@ -40,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: PDF Service Image
-      default: frooodle/s-pdf:0.32.0
+      default: frooodle/s-pdf:1.1.0
 benefits:
   - title: Comprehensive PDF Management
     description:

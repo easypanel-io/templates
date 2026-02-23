@@ -1,0 +1,77 @@
+name: Droppy
+description:
+  Droppy is a self-hosted file storage and sharing server with a modern,
+  web-based interface. It allows you to securely upload, manage, and share files
+  and folders from any device with a browser. Droppy supports drag-and-drop
+  uploads, real-time updates, and previews for a variety of file types including
+  images, videos, and documents. With its user-friendly interface and robust
+  feature set, Droppy is ideal for personal or team file management. It is
+  lightweight, written in Node.js, and supports customization through
+  environment variables and themes.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: First Release
+links:
+  - label: Documentation
+    url: https://github.com/silverwind/droppy/wiki
+  - label: Github
+    url: https://github.com/silverwind/droppy
+  - label: Website
+    url: https://www.droppyjs.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: droppy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: silverwind/droppy:12.2.0
+benefits:
+  - title: Secure File Storage
+    description:
+      Droppy offers a self-hosted platform for securely storing files, ensuring
+      your data remains private and under your control.
+  - title: Real-Time File Management
+    description:
+      Droppy provides real-time updates to file operations, allowing for an
+      interactive and seamless file management experience.
+  - title: Cross-Platform Accessibility
+    description:
+      Access and manage your files from any device with a web browser, making it
+      convenient and flexible for users on various platforms.
+features:
+  - title: Drag-and-Drop Uploads
+    description:
+      Upload files and folders with a simple drag-and-drop interface, making it
+      easy to use even for non-technical users.
+  - title: File Previews
+    description:
+      Preview a wide range of file types directly in the browser, including
+      images, videos, and documents.
+  - title: Customizable Interface
+    description:
+      Personalize Droppy with themes and configuration options to match your
+      preferences or branding needs.
+  - title: Real-Time Collaboration
+    description:
+      Collaborate with others by sharing links or folders in real time, making
+      it an excellent tool for team file management.
+  - title: Lightweight and Efficient
+    description:
+      Droppy is written in Node.js, making it lightweight and efficient,
+      suitable for deployment on low-resource servers.
+tags:
+  - File Sharing
+  - Storage
+  - Productivity
+  - Collaboration

@@ -1,0 +1,73 @@
+name: DCM
+description:
+  DCM is a lightweight self-hosted web interface for managing and monitoring
+  Docker containers. It provides a simple dashboard to view container status,
+  start/stop operations, and inspect basic container details. Designed to be
+  minimal and easy to deploy, DCM helps you keep an eye on your containers
+  without exposing the full Docker API or using heavier management stacks. Ideal
+  for small home labs or users who want a quick overview of their running
+  services via a browser.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-11
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/ajnart/dcm
+  - label: Docker Hub
+    url: https://hub.docker.com/r/ajnart/dcm
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dcm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/ajnart/dcm:sha-a42eb18
+
+benefits:
+  - title: Simple Container Dashboard
+    description:
+      Monitor Docker containers from a minimal web UI without complex setups.
+  - title: Lightweight & Easy
+    description:
+      Small footprint and quick deployment for home labs and small servers.
+  - title: Safe Visibility
+    description:
+      View status and basic controls without exposing full Docker API access.
+  - title: Self-Hosted Control
+    description:
+      Keep container visibility on your own infrastructure with no third-party
+      dependencies.
+
+features:
+  - title: Container Overview
+    description: See running containers, status, and basic info at a glance.
+  - title: Start/Stop Controls
+    description:
+      Basic lifecycle controls to start or stop containers from the UI.
+  - title: Minimal Config
+    description:
+      No external databases or complex setup required; deploy and use.
+  - title: Web Access
+    description: Access the dashboard via browser on the exposed port.
+
+tags:
+  - Docker
+  - Dashboard
+  - Monitoring
+  - Self-Hosted

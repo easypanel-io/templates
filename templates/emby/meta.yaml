@@ -20,6 +20,10 @@ changeLog:
     description: Upgrade to v4.7.11
   - date: 2024-10-04
     description: Update to 4.8.10
+  - date: 2025-07-21
+    description: Version bumped to 4.8.11
+  - date: 2025-12-25
+    description: Version bumped to 4.9.1
 links:
   - label: Website
     url: https://emby.media/
@@ -31,7 +35,7 @@ contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/emby:4.8.10
+      default: lscr.io/linuxserver/emby:4.9.1
 benefits:
   - title: Easy Access to Personal Media
     description:

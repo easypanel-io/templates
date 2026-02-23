@@ -1,0 +1,92 @@
+name: Dolibarr
+description:
+  Dolibarr ERP/CRM is an open-source platform designed for small to medium-sized
+  enterprises (SMEs) to manage business operations seamlessly. It offers a
+  comprehensive suite of tools for managing customers, invoices, orders,
+  products, projects, and more. With its modular architecture and user-friendly
+  interface, Dolibarr provides flexibility and scalability for businesses
+  looking for an efficient and customizable ERP/CRM solution.
+instructions: Default Credentials; username; admin, password; admin
+changeLog:
+  - date: 2024-12-17
+    description: First release
+  - date: 2025-05-26
+    description: Version bumped to 21
+links:
+  - label: Website
+    url: https://www.dolibarr.org/
+  - label: Documentation
+    url: https://wiki.dolibarr.org/
+  - label: Compose Docs
+    url: https://github.com/Dolibarr/dolibarr/blob/develop/README.md
+  - label: GitHub
+    url: https://github.com/Dolibarr/dolibarr
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dolibarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dolibarr/dolibarr:21
+benefits:
+  - title: All-in-One ERP and CRM Solution
+    description:
+      Dolibarr integrates ERP and CRM functionalities, providing tools for
+      customer relationship management, inventory, and accounting in a single
+      platform.
+  - title: Modular and Scalable
+    description:
+      Dolibarr offers a modular structure, allowing businesses to enable only
+      the features they need, ensuring scalability and flexibility.
+  - title: Open-Source and Customizable
+    description:
+      As an open-source platform, Dolibarr can be fully customized to match
+      specific business workflows and requirements.
+  - title: User-Friendly Interface
+    description:
+      Enjoy an intuitive and straightforward user experience, ensuring easy
+      navigation and minimal learning curve for teams.
+  - title: Secure and Reliable
+    description:
+      Benefit from Dolibarr’s security features, such as user access control and
+      permissions, ensuring data integrity and confidentiality.
+features:
+  - title: Customer and Contact Management
+    description:
+      Manage customer relationships, contacts, and interactions efficiently,
+      enhancing productivity and service delivery.
+  - title: Sales and Invoicing
+    description:
+      Automate your sales workflow with quotes, orders, and invoice management
+      to streamline billing and payments.
+  - title: Inventory and Product Management
+    description:
+      Track and manage your inventory, products, and stock levels effortlessly
+      with Dolibarr’s inventory module.
+  - title: Project Management
+    description:
+      Plan, track, and manage projects, tasks, and milestones, ensuring
+      efficient team collaboration.
+  - title: Accounting and Finance
+    description:
+      Simplify financial management with built-in tools for managing expenses,
+      income, and reporting.
+tags:
+  - ERP
+  - CRM
+  - Open Source
+  - Invoicing
+  - Inventory Management
+  - Project Management
+  - Small Business
+  - Customizable

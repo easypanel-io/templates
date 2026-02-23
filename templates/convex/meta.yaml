@@ -1,0 +1,222 @@
+name: Convex
+description:
+  Convex is the open-source reactive database and backend platform designed for
+  modern app developers. It provides real-time data synchronization,
+  TypeScript-first development, and built-in features like authentication, file
+  storage, and serverless functions. The self-hosted version includes the main
+  backend service, dashboard for data management, and PostgreSQL database
+  support. Perfect for building full-stack applications with automatic caching,
+  real-time updates, and strong consistency guarantees.
+instructions: You have to generate the admin key from the backend bash console. Run "./generate_admin_key.sh" and copy it. Go to the dashboard and login. 
+changeLog:
+  - date: 2026-02-02
+    description: Template Release (1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35)
+links:
+  - label: Website
+    url: https://www.convex.dev
+  - label: Documentation
+    url: https://docs.convex.dev
+  - label: GitHub
+    url: https://github.com/get-convex/convex-backend
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dashboardServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: convex
+    appServiceImage:
+      type: string
+      title: Backend Service Image
+      default: ghcr.io/get-convex/convex-backend:1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35
+    dashboardServiceImage:
+      type: string
+      title: Dashboard Service Image
+      default: ghcr.io/get-convex/convex-dashboard:1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35
+    convexCloudOrigin:
+      type: string
+      title: Convex Cloud Origin
+      default: "https://$(PRIMARY_DOMAIN)"
+      description: Public URL for the Convex backend API
+    convexSiteOrigin:
+      type: string
+      title: Convex Site Origin
+      default: "https://$(PRIMARY_DOMAIN):3211"
+      description: Public URL for the Convex site proxy
+    nextPublicDeploymentUrl:
+      type: string
+      title: Next Public Deployment URL
+      default: "https://$(PRIMARY_DOMAIN)"
+      description: Public URL for the deployment (used by dashboard)
+    instanceSecret:
+      type: string
+      title: Instance Secret
+      default: ""
+      description: Secret key for instance authentication (auto-generated if empty)
+    databaseType:
+      type: string
+      title: Database Type
+      default: none
+      description: Select the database type to use
+      oneOf:
+        - enum:
+            - none
+          title: None (No Database)
+        - enum:
+            - DATABASE_URL
+          title: Generic Database URL
+        - enum:
+            - POSTGRES_URL
+          title: PostgreSQL
+        - enum:
+            - MYSQL_URL
+          title: MySQL
+    databaseUrl:
+      type: string
+      title: Database URL
+      default: ""
+      description: Full database connection URL (required if database type is selected)
+    rustLog:
+      type: string
+      title: Rust Log Level
+      default: info
+      description: Logging level for Rust backend (e.g., info, debug, warn, error)
+    documentRetentionDelay:
+      type: string
+      title: Document Retention Delay
+      default: "172800"
+      description: "Document retention delay in seconds (default: 2 days)"
+    instanceName:
+      type: string
+      title: Instance Name
+      default: ""
+      description: Name for this Convex instance (optional)
+    awsAccessKeyId:
+      type: string
+      title: AWS Access Key ID
+      default: ""
+      description: AWS access key for S3 storage (optional)
+    awsSecretAccessKey:
+      type: string
+      title: AWS Secret Access Key
+      default: ""
+      description: AWS secret key for S3 storage (optional)
+    awsRegion:
+      type: string
+      title: AWS Region
+      default: ""
+      description: AWS region for S3 storage (optional)
+    s3EndpointUrl:
+      type: string
+      title: S3 Endpoint URL
+      default: ""
+      description: Custom S3 endpoint URL (for S3-compatible storage, optional)
+    s3StorageFilesBucket:
+      type: string
+      title: S3 Files Bucket
+      default: ""
+      description: S3 bucket name for file storage (optional)
+    s3StorageModulesBucket:
+      type: string
+      title: S3 Modules Bucket
+      default: ""
+      description: S3 bucket name for modules storage (optional)
+    nextPublicLoadMonacoInternally:
+      type: string
+      title: Load Monaco Internally
+      default: ""
+      description: Load Monaco editor internally (optional)
+benefits:
+  - title: Real-time Data Synchronization
+    description:
+      Automatic real-time updates across all clients with optimistic concurrency
+      control and conflict resolution for seamless user experiences.
+  - title: TypeScript-First Development
+    description:
+      Write your entire backend in TypeScript with full type safety from
+      database schema to client-side queries and mutations.
+  - title: Built-in Reactive Queries
+    description:
+      Database queries automatically cache and subscribe to data changes,
+      eliminating the need for manual cache invalidation or WebSocket
+      management.
+  - title: Strong Consistency Guarantees
+    description:
+      ACID compliance with immediate consistency, serializable isolation, and
+      automatic conflict resolution using optimistic multi-version concurrency
+      control.
+  - title: Serverless Functions Runtime
+    description:
+      Deploy server functions with automatic scaling, hot reloads, and
+      integrated development workflow using the Convex CLI.
+  - title: Integrated Development Experience
+    description:
+      Built-in dashboard for data browsing, function testing, log viewing, and
+      environment variable management with cloud-first development workflow.
+features:
+  - title: Reactive Database
+    description:
+      NoSQL-style documents with relationships, custom indexes, and real-time
+      subscriptions that automatically update your UI when data changes.
+  - title: TypeScript Functions
+    description:
+      Write queries, mutations, and actions in TypeScript with full type safety
+      and automatic code generation for client-side usage.
+  - title: Real-time Subscriptions
+    description:
+      Automatic real-time data synchronization across all connected clients with
+      optimistic updates and conflict resolution.
+  - title: Built-in Authentication
+    description:
+      Integrated user authentication system with support for various providers
+      and secure session management.
+  - title: File Storage
+    description:
+      Built-in file upload and storage capabilities with automatic URL
+      generation and secure access controls.
+  - title: Background Jobs
+    description:
+      Schedule functions to run in the background with cron job support and
+      automatic retry mechanisms for reliable task execution.
+  - title: HTTP Endpoints
+    description:
+      Create HTTP endpoints for webhooks and external API integrations with
+      automatic request routing and response handling.
+  - title: Vector Search
+    description:
+      Built-in vector search capabilities for AI and machine learning
+      applications with efficient similarity matching.
+  - title: Development Dashboard
+    description:
+      Web-based interface for browsing data, testing functions, viewing logs,
+      and managing environment variables during development.
+  - title: CLI Integration
+    description:
+      Command-line tools for deployment, function management, schema migrations,
+      and local development with hot reloading.
+  - title: Import/Export Tools
+    description:
+      Streaming import and export capabilities for data migration and backup
+      with snapshot support for point-in-time recovery.
+  - title: Runtime Validation
+    description:
+      Automatic validation for function arguments and database data with schema
+      enforcement and type checking at runtime.
+tags:
+  - Database
+  - Backend
+  - Real-time
+  - TypeScript
+  - Serverless
+  - Full-stack
+  - Reactive
+  - WebSocket
+  - API
+  - Authentication

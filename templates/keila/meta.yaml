@@ -18,6 +18,10 @@ instructions:
 changeLog:
   - date: 2023-3-3
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to 0.16
+  - date: 2025-07-22
+    description: Version bumped to 0.17
 links:
   - label: Website
     url: https://keila.io
@@ -28,12 +32,16 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - username
+    - password
     - emailFrom
     - emailHost
     - emailPort
@@ -47,11 +55,19 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: pentacent/keila:0.14.7
+      default: pentacent/keila:0.17
     databaseServiceName:
       type: string
       title: Database Service Name
       default: keila-db
+    username:
+      type: string
+      title: Username
+      default: changeme@easypanel.io
+    password:
+      type: string
+      title: Password
+      default: password123
     emailFrom:
       type: string
       title: System From Email

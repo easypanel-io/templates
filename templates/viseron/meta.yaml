@@ -1,0 +1,97 @@
+name: Viseron
+description:
+  Viseron is a self-hosted, local network video recorder (NVR) and AI-powered
+  video surveillance system designed for privacy-conscious users. It supports
+  multiple camera streams with advanced features like object detection, motion
+  detection, face recognition, and license plate recognition using machine
+  learning models. Viseron can record continuous video, create event-based
+  clips, generate timelapses, and send real-time notifications. It integrates
+  seamlessly with Home Assistant and supports various camera protocols including
+  RTSP, HTTP, and USB cameras. The system features a modern web interface for
+  live viewing, playback, and configuration. All processing happens locally on
+  your hardware, ensuring your video data never leaves your network. Perfect for
+  home security, surveillance systems, and smart home automation.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-10
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://viseron.netlify.app/
+  - label: Documentation
+    url: https://viseron.netlify.app/latest/
+  - label: Github
+    url: https://github.com/roflcoopter/viseron
+  - label: Docker Hub
+    url: https://hub.docker.com/r/roflcoopter/viseron
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: viseron
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: roflcoopter/viseron:3.3.1
+
+benefits:
+  - title: Privacy-First Design
+    description:
+      All video processing and AI analysis happens locally on your hardware.
+      Your video footage never leaves your network, ensuring complete privacy
+      and security.
+  - title: AI-Powered Detection
+    description:
+      Advanced object detection, motion detection, face recognition, and license
+      plate recognition using state-of-the-art machine learning models.
+  - title: Home Assistant Integration
+    description:
+      Native integration with Home Assistant for seamless smart home automation,
+      allowing you to trigger actions based on detected events.
+
+features:
+  - title: Multi-Camera Support
+    description:
+      Monitor multiple camera streams simultaneously with support for RTSP,
+      HTTP, and USB cameras. Configure each camera independently.
+  - title: Object & Motion Detection
+    description:
+      Intelligent object detection with customizable zones and filters. Detect
+      people, vehicles, animals, and more with high accuracy.
+  - title: Event Recording & Clips
+    description:
+      Automatically record event-based clips when motion or objects are
+      detected. Configure pre and post-recording buffers for complete context.
+  - title: Timelapse & Continuous Recording
+    description:
+      Create beautiful timelapses and maintain continuous recording segments for
+      comprehensive surveillance coverage.
+  - title: Real-Time Notifications
+    description:
+      Receive instant notifications with snapshots and thumbnails when events
+      are detected via multiple notification channels.
+  - title: Web Interface
+    description:
+      Modern, responsive web interface for live viewing, playback, event
+      browsing, and system configuration accessible from any device.
+
+tags:
+  - NVR
+  - Video Surveillance
+  - AI
+  - Security Camera
+  - Home Assistant
+  - Object Detection

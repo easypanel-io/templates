@@ -1,0 +1,96 @@
+name: ArcadeDB
+description:
+  ArcadeDB is a multi-model database that supports multiple data models
+  including Document, Graph, Key-Value, and Vector databases in a single engine.
+  It's designed for high-performance applications with ACID transactions and
+  real-time analytics capabilities.
+instructions: null
+changeLog:
+  - date: 2025-08-26
+    description: First release
+  - date: 2025-12-24
+    description: Updated to ArcadeDB version 25.11.1
+links:
+  - label: Website
+    url: https://arcadedb.com/
+  - label: Documentation
+    url: https://docs.arcadedb.com/
+  - label: Github
+    url: https://github.com/ArcadeData/arcadedb
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: arcadedb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: arcadedata/arcadedb:25.11.1
+    binaryPort:
+      type: string
+      title: Binary Port
+      default: "2480"
+benefits:
+  - title: Multi-Model Database
+    description:
+      Support for Document, Graph, Key-Value, and Vector databases in a single
+      engine, eliminating the need for multiple database systems.
+  - title: High Performance
+    description:
+      Built for high-performance applications with optimized data structures and
+      efficient query processing.
+  - title: ACID Transactions
+    description:
+      Full ACID compliance ensuring data consistency and reliability for
+      critical applications.
+  - title: Real-time Analytics
+    description:
+      Built-in support for real-time analytics and complex queries with powerful
+      indexing capabilities.
+  - title: Open Source
+    description:
+      Completely open-source with an active community, providing transparency
+      and customization options.
+features:
+  - title: Document Database
+    description:
+      Store and query JSON-like documents with flexible schema and powerful
+      indexing options.
+  - title: Graph Database
+    description:
+      Native graph database capabilities for complex relationship queries and
+      graph analytics.
+  - title: Key-Value Store
+    description:
+      High-performance key-value storage for caching and simple data retrieval
+      scenarios.
+  - title: Vector Database
+    description:
+      Support for vector operations and similarity search for AI and machine
+      learning applications.
+  - title: SQL Support
+    description:
+      Full SQL support with extensions for graph and document operations, making
+      it familiar for developers.
+  - title: REST API
+    description:
+      Comprehensive REST API for easy integration with web applications and
+      microservices.
+tags:
+  - Database
+  - Multi-Model
+  - Document
+  - Graph
+  - Key-Value
+  - Vector
+  - NoSQL
+  - ACID
+  - Analytics

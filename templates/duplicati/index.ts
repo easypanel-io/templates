@@ -1,8 +1,10 @@
-import { Output, Services } from "~templates-utils";
+import { Output, Services, randomString } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+
+  const encryptionKey = randomString(32);
 
   services.push({
     type: "app",
@@ -18,7 +20,11 @@ export function generate(input: Input): Output {
           port: 8200,
         },
       ],
-      env: "TZ=Europe/London",
+      env: [
+        `TZ=Europe/London`,
+        `SETTINGS_ENCRYPTION_KEY=${encryptionKey}`,
+        `DUPLICATI__WEBSERVICE_PASSWORD=${input.appPassword}`,
+      ].join("\n"),
       mounts: [
         {
           type: "bind",

@@ -6,6 +6,8 @@ instructions: default login is admin/admin
 changeLog:
   - date: 2024-04-27
     description: first release
+  - date: 2025-07-25
+    description: Version bumped to 1.10.1
 links:
   - label: Website
     url: https://github.com/linuxserver
@@ -16,6 +18,8 @@ links:
 contributors:
   - name: LinuxServer.io Team
     url: https://linuxserver.io/
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -32,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/znc:1.9.1
+      default: lscr.io/linuxserver/znc:1.10.1
     PUID:
       type: string
       title: PUID

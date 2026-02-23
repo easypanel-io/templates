@@ -17,6 +17,8 @@ instructions: Admin Dashboard can be accessed via "DOMAIN/_/""
 changeLog:
   - date: 2022-12-03
     description: First Release
+  - date: 2025-07-24
+    description: Version bumped to 0.23.12
 links:
   - label: Website
     url: https://pocketbase.io
@@ -27,6 +29,8 @@ links:
 contributors:
   - name: Ponkhy
     url: https://github.com/Ponkhy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -40,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: spectado/pocketbase:latest
+      default: spectado/pocketbase:0.23.12
 benefits:
   - title: Realtime Database
     description:

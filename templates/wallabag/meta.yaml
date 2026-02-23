@@ -1,0 +1,76 @@
+name: Wallabag
+description:
+  Wallabag is a self-hosted read-it-later application that allows you to save
+  web articles and access them later in a clean, distraction-free format.
+  Written in PHP, it enables you to store and organize articles, categorize them
+  with tags, and sync across multiple devices. Wallabag is privacy-focused,
+  supports importing from services like Pocket and Instapaper, and provides a
+  RESTful API for integration with other tools. The app offers browser
+  extensions, a mobile-friendly interface, and multiple export options,
+  including PDF, ePub, and plain text.
+instructions: null
+changeLog:
+  - date: 2025-01-31
+    description: First Release
+links:
+  - label: Documentation
+    url: https://doc.wallabag.org
+  - label: Github
+    url: https://github.com/wallabag/wallabag
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wallabag
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: wallabag/wallabag:2.6.13
+benefits:
+  - title: Save Articles for Later
+    description:
+      Wallabag allows you to save web articles and read them later in a clean
+      and ad-free format. This ensures distraction-free reading and improved
+      focus on content.
+  - title: Multi-Device Synchronization
+    description:
+      Your saved articles sync across multiple devices, allowing seamless
+      reading on desktop, tablet, or smartphone. You can access your articles
+      anywhere.
+  - title: Open-Source and Self-Hosted
+    description:
+      Wallabag is fully open-source and can be self-hosted, ensuring complete
+      control over your data while maintaining privacy and security.
+features:
+  - title: Browser Extensions
+    description:
+      Wallabag offers browser extensions for Chrome, Firefox, and other
+      browsers, making it easy to save articles with a single click.
+  - title: Full-Text Search
+    description:
+      The built-in full-text search feature helps you find saved articles
+      quickly by searching within the content.
+  - title: Tag Organization
+    description:
+      Articles can be categorized with tags, making it easier to find relevant
+      content and organize saved items efficiently.
+  - title: Multiple Export Formats
+    description:
+      Wallabag allows you to export your saved articles in various formats,
+      including PDF, ePub, and plain text, for offline access or backup.
+  - title: Import from Other Services
+    description:
+      You can import your saved articles from Pocket, Instapaper, and other
+      read-it-later services, making the transition seamless.
+tags:
+  - Productivity
+  - Reading
+  - Bookmarking

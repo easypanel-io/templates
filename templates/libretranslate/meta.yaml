@@ -14,6 +14,10 @@ instructions: null
 changeLog:
   - date: 2020-12-20
     description: first release
+  - date: 2025-07-22
+    description: Version bumped to v1.7.2
+  - date: 2025-12-25
+    description: Version bumped to v1.8.3
 links:
   - label: Documentation
     url: https://github.com/LibreTranslate/LibreTranslate/blob/master/README.md
@@ -22,6 +26,8 @@ links:
 contributors:
   - name: kaname-png
     url: https://github.com/kaname-png
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -40,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: libretranslate/libretranslate:latest
+      default: libretranslate/libretranslate:v1.8.3
     chartLimit:
       type: number
       title: Character limit for each translation

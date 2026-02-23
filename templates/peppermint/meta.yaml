@@ -1,0 +1,77 @@
+name: Peppermint
+description:
+  Peppermint is a cutting-edge, open-source issue management and helpdesk
+  platform designed to rival Jira and Zendesk while remaining cost-effective and
+  highly customizable. Built with the user in mind, Peppermint empowers teams to
+  manage support tickets, customer requests, and projects with efficiency and
+  ease.
+instructions: Default credentials are; email; admin@admin.com, password; 1234
+changeLog:
+  - date: 2024-12-25
+    description: Template Release
+links:
+  - label: Website
+    url: https://peppermint.sh/
+  - label: Github
+    url: https://github.com/Peppermint-Lab/peppermint
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: peppermint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pepperlabs/peppermint:latest
+
+bbenefits:
+  - title: Efficient Issue Management
+    description:
+      Peppermint simplifies the process of managing tickets and customer support
+      requests, making it easier for teams to stay organized and productive.
+  - title: Open-Source and Self-Hosted
+    description:
+      Retain full control of your data with a self-hosted platform, ensuring
+      security, privacy, and flexibility for your organization.
+  - title: Cost-Effective Solution
+    description:
+      Benefit from a feature-rich, open-source platform designed to offer a
+      budget-friendly alternative to traditional helpdesk solutions.
+
+features:
+  - title: Mailbox Integration
+    description:
+      Automatically convert emails into support tickets using SMTP/IMAP for
+      streamlined ticket management.
+  - title: Third-Party Integrations
+    description:
+      Connect Peppermint to external tools and services through webhooks and
+      integrations with providers like email.
+  - title: Analytics and Reporting
+    description:
+      Gain insights into ticket performance, customer trends, and team
+      productivity with built-in analytics and reporting tools.
+  - title: OIDC Authentication
+    description:
+      Securely authenticate users by connecting to your existing identity
+      provider through OIDC.
+  - title: Lightweight and Scalable
+    description:
+      Designed to run efficiently on low-end hardware while being scalable for
+      larger deployments using Docker and Kubernetes.
+
+tags:
+  - Issue Management
+  - Helpdesk
+  - Open-Source
+  - Self-Hosted
+  - Analytics

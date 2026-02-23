@@ -1,0 +1,84 @@
+name: Baikal
+description:
+  Baikal is a lightweight, self-hosted CalDAV and CardDAV server that enables
+  users to manage calendars and contacts efficiently. It provides a simple and
+  effective solution for syncing and sharing events, tasks, and address books
+  across multiple devices. Baikal is designed to be easy to install and
+  maintain, making it an excellent choice for individuals and organizations
+  looking for a private, secure, and open-source alternative to cloud-based
+  calendar and contact management services.
+instructions: null
+changeLog:
+  - date: 2025-02-04
+    description: First release
+links:
+  - label: Website
+    url: https://sabre.io/baikal/
+  - label: Documentation
+    url: https://sabre.io/baikal/install/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: baikal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ckulka/baikal:nginx-php8.2
+benefits:
+  - title: Self-Hosted Calendar & Contacts
+    description:
+      Baikal provides a self-hosted CalDAV and CardDAV server, allowing users to
+      store and manage calendars and contacts securely without relying on
+      third-party cloud services.
+  - title: Privacy & Security
+    description:
+      Baikal ensures complete control over personal data by allowing users to
+      host their own calendar and contact management system, protecting
+      sensitive information from external tracking.
+  - title: Seamless Synchronization
+    description:
+      The server is compatible with various CalDAV and CardDAV clients, enabling
+      seamless synchronization across desktops, mobile devices, and other
+      applications.
+  - title: Lightweight & Efficient
+    description:
+      Baikal is designed to be lightweight and requires minimal system
+      resources, making it an ideal solution for small businesses, individuals,
+      and self-hosting enthusiasts.
+features:
+  - title: CalDAV & CardDAV Support
+    description:
+      Baikal fully supports the CalDAV and CardDAV protocols, enabling efficient
+      calendar and contact management.
+  - title: Multi-User & Multi-Calendar Support
+    description:
+      Users can create multiple calendars and address books while managing
+      different access levels for various users.
+  - title: Easy Installation & Maintenance
+    description:
+      Baikal is simple to set up and maintain, with a lightweight database and
+      minimal dependencies, making it suitable for both beginners and advanced
+      users.
+  - title: Compatibility with Popular Clients
+    description:
+      The server integrates with various CalDAV and CardDAV clients, including
+      Apple Calendar, Thunderbird, Evolution, DAVx⁵, and more.
+  - title: Secure Data Storage
+    description:
+      Baikal supports SSL/TLS encryption and secure authentication methods to
+      ensure data integrity and privacy.
+tags:
+  - Calendar
+  - Contacts
+  - Self-Hosting
+  - Productivity
+  - Privacy

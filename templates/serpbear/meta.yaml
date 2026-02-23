@@ -20,6 +20,8 @@ instructions: null
 changeLog:
   - date: 2023-1-5
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 2.0.7
 links:
   - label: Documentation
     url: https://docs.serpbear.com
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: towfiqi/serpbear:2.0.2
+      default: towfiqi/serpbear:2.0.7
     serpUser:
       type: string
       title: Username

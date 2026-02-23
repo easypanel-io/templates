@@ -12,22 +12,22 @@ instructions: null
 changeLog:
   - date: 2022-12-20
     description: first release
+  - date: 2025-06-25
+    description: Fixed the Access Issue
 links:
-  - label: Website
-    url: https://github.com/WeeJeWel/wg-easy
-  - label: Documentation
-    url: https://github.com/WeeJeWel/wg-easy/wiki
   - label: Github
-    url: https://github.com/WeeJeWel/wg-easy
+    url: https://github.com/wg-easy/wg-easy
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
-    - appPassword
+    - appServicePort
   properties:
     appServiceName:
       type: string
@@ -36,10 +36,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/wg-easy/wg-easy
-    appPassword:
+      default: ghcr.io/wg-easy/wg-easy:15
+    appServicePort:
       type: string
-      title: Admin Password
+      title: App Service Port
+      default: "51820"
 benefits:
   - title: Easy installation and management
     description: Install and manage WireGuard on any Linux host with ease.
@@ -77,6 +78,7 @@ features:
   - title: Gravatar support
     description: Display client avatars using Gravatar.
 tags:
-  - VPN
   - Network Tools
   - Security
+  - VPN
+  - WireGuard

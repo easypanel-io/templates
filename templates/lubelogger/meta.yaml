@@ -1,0 +1,123 @@
+name: LubeLogger
+description:
+  LubeLogger is a self-hosted vehicle maintenance and service tracking
+  application that helps you keep comprehensive records of all your vehicle's
+  maintenance activities, repairs, and modifications. Designed for car
+  enthusiasts, fleet managers, and anyone who wants to maintain detailed service
+  histories, LubeLogger provides an intuitive web interface to log oil changes,
+  tire rotations, repairs, upgrades, and more. The application allows you to
+  track multiple vehicles, set maintenance reminders based on mileage or time
+  intervals, and maintain a complete history of all service records with costs
+  and notes. With support for uploading receipts and documents, you can keep all
+  your vehicle maintenance information in one centralized location. LubeLogger
+  features automatic odometer tracking, service interval reminders, cost
+  analysis and reporting, tax deduction calculations for business use, and
+  comprehensive search and filtering capabilities. Built with ASP.NET, it
+  provides a responsive web interface that works seamlessly across desktop and
+  mobile devices, allowing you to update maintenance records from anywhere.
+  Perfect for vehicle owners who want to maintain detailed service histories,
+  car collectors managing multiple vehicles, fleet managers tracking maintenance
+  across multiple assets, mechanics and auto shops offering service tracking to
+  customers, or anyone preparing to sell a vehicle and wanting to demonstrate a
+  complete maintenance history to potential buyers.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-02
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://lubelogger.com
+  - label: GitHub
+    url: https://github.com/hargata/lubelog
+  - label: Documentation
+    url: https://docs.lubelogger.com
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lubelogger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/hargata/lubelogger:v1.5.5
+
+benefits:
+  - title: Complete Maintenance History
+    description:
+      Keep detailed records of all maintenance, repairs, and modifications for
+      all your vehicles in one centralized, searchable location.
+  - title: Service Reminders
+    description:
+      Set automatic reminders based on mileage or time intervals to never miss
+      important maintenance tasks like oil changes or inspections.
+  - title: Cost Tracking & Analysis
+    description:
+      Track all maintenance costs, analyze spending patterns, and calculate tax
+      deductions for business vehicle use.
+  - title: Self-Hosted Privacy
+    description:
+      Keep your vehicle information and maintenance records private on your own
+      infrastructure without relying on third-party services.
+
+features:
+  - title: Multi-Vehicle Support
+    description:
+      Track maintenance records for unlimited vehicles including cars,
+      motorcycles, trucks, boats, and other motorized assets.
+  - title: Comprehensive Service Logging
+    description:
+      Log all types of maintenance activities including oil changes, tire
+      rotations, brake work, repairs, modifications, and general inspections.
+  - title: Odometer Tracking
+    description:
+      Automatically track odometer readings over time and calculate
+      mileage-based service intervals for accurate maintenance scheduling.
+  - title: Maintenance Reminders
+    description:
+      Configure reminders based on mileage intervals, time periods, or both to
+      ensure timely maintenance and prevent missed service appointments.
+  - title: Document Storage
+    description:
+      Upload and store receipts, invoices, service records, and other documents
+      directly with each maintenance entry for complete documentation.
+  - title: Cost Analysis
+    description:
+      View detailed cost breakdowns by vehicle, service type, or time period
+      with built-in reporting and visualization tools.
+  - title: Tax Calculation
+    description:
+      Calculate business mileage and maintenance deductions for tax purposes
+      with detailed reporting for business vehicle use.
+  - title: Mobile-Friendly Interface
+    description:
+      Responsive web design allows you to log maintenance records and check
+      service history from any device, anywhere.
+  - title: Search & Filter
+    description:
+      Powerful search and filtering capabilities let you quickly find specific
+      maintenance records across all vehicles and time periods.
+  - title: Export Capabilities
+    description:
+      Export your maintenance records and reports in various formats for backup,
+      analysis, or sharing with mechanics and potential buyers.
+
+tags:
+  - Productivity
+  - Vehicle Management
+  - Maintenance Tracking
+  - Self-Hosted
+  - Fleet Management
+  - Record Keeping

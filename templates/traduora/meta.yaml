@@ -1,0 +1,78 @@
+name: Traduora
+description:
+  Traduora is a modern, self-hosted translation management platform designed for
+  teams and developers. It provides a clean and intuitive interface for managing
+  translation projects across multiple languages. With Traduora, you can easily
+  import and export translations in various formats, collaborate with
+  translators, and integrate translations into your applications via API. The
+  platform supports real-time updates, version control of translations, and
+  role-based access control to manage translator permissions. Traduora helps
+  streamline the localization workflow by providing a centralized place to
+  manage all your translation needs while maintaining full control over your
+  translation data and processes.
+
+instructions: null
+changeLog:
+  - date: 2025-03-19
+    description: Template Release
+  - date: 2025-07-25
+    description: Version bumped to v0.21.0
+links:
+  - label: Documentation
+    url: https://docs.traduora.co/docs/getting-started
+  - label: Github
+    url: https://github.com/traduora/traduora
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: traduora
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: everco/ever-traduora:v0.21.0
+
+benefits:
+  - title: Centralized Translation Management
+    description:
+      Traduora provides a centralized platform to manage all your translation
+      projects and content in one place.
+  - title: Self-Hosted Solution
+    description:
+      Maintain full control over your translation data with a secure,
+      self-hosted platform.
+  - title: Team Collaboration
+    description:
+      Enable efficient collaboration between developers, translators and project
+      managers with role-based access.
+
+features:
+  - title: API Integration
+    description:
+      Seamlessly integrate translations into your applications using the
+      comprehensive REST API.
+  - title: Multiple Format Support
+    description:
+      Import and export translations in various formats including JSON, YAML,
+      and CSV.
+  - title: Version Control
+    description: Track changes and maintain version history of all translations.
+  - title: Real-time Updates
+    description:
+      See translation changes instantly with real-time synchronization across
+      the platform.
+
+tags:
+  - Translation Management
+  - Self-Hosted
+  - Localization

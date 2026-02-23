@@ -1,0 +1,73 @@
+name: Organizer
+description:
+  Organizer is a self-hosted service designed to help you manage and organize
+  your various web applications efficiently. It serves as a centralized portal
+  where you can categorize and access all your self-hosted apps in a simple and
+  intuitive way. Written in PHP, Organizer provides a dashboard for quick
+  navigation, supports authentication for security, and integrates with various
+  third-party applications. It offers a customizable interface, supports mobile
+  devices, and ensures a seamless experience for managing multiple services
+  within your home or business environment.
+instructions: null
+changeLog:
+  - date: 2025-01-30
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/causefx/Organizr
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: organizer
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/organizr:version-f6d984d2
+benefits:
+  - title: Centralized App Management
+    description:
+      Organizer acts as a single portal to access and manage all your
+      self-hosted applications. This helps streamline navigation and enhances
+      productivity.
+  - title: Secure Authentication
+    description:
+      Supports user authentication to restrict access and ensure only authorized
+      users can manage and access applications.
+  - title: Customizable Interface
+    description:
+      Provides options to customize the look and feel, allowing users to tailor
+      the dashboard according to their preferences.
+features:
+  - title: Dashboard View
+    description:
+      Offers a simple and intuitive dashboard where users can quickly access
+      various self-hosted applications.
+  - title: Multi-User Support
+    description:
+      Supports multiple users with different permission levels, making it ideal
+      for shared environments.
+  - title: API Integration
+    description:
+      Integrates with external APIs for enhanced functionality, such as fetching
+      data from other applications.
+  - title: Mobile-Friendly Design
+    description:
+      Designed to work seamlessly on mobile devices, allowing users to manage
+      their applications from anywhere.
+  - title: Authentication & Security
+    description:
+      Provides authentication mechanisms, including OAuth and LDAP integration,
+      to secure access to the portal.
+tags:
+  - Dashboard
+  - Productivity
+  - App Management

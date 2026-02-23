@@ -19,6 +19,12 @@ changeLog:
     description: First Release
   - date: 2024-10-04
     description: Version Updated to 8.4.1-apache
+  - date: 2025-01-11
+    description: Version bumped to 8.4.2-apache
+  - date: 2025-07-21
+    description: Version bumped to 9.1.7-apache
+  - date: 2025-12-25
+    description: Version bumped to 9.2.5-apache
 links:
   - label: Website
     url: https://espocrm.com
@@ -31,6 +37,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 
 schema:
   type: object
@@ -55,7 +63,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: espocrm/espocrm:8.4.1-apache
+      default: espocrm/espocrm:9.2.5-apache
     databaseServiceType:
       type: string
       title: Database Service Type

@@ -1,0 +1,131 @@
+name: Keeper
+description:
+  Keeper is a simple and open-source calendar synchronization and booking tool
+  that allows you to pull events from remotely hosted iCal or ICS links and push
+  them to one or many calendars. Built with modern architecture using Next.js and
+  Bun, Keeper provides a comprehensive solution for calendar management and
+  synchronization. The standalone version includes all services (web, API, cron)
+  in a single container, making it easy to deploy. Keeper supports multiple
+  calendar providers including Google Calendar, iCloud, Outlook, CalDAV, and
+  Fastmail. Perfect for individuals and organizations looking to synchronize
+  calendars across different platforms with a self-hosted solution.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://keeper.sh
+  - label: GitHub
+    url: https://github.com/ridafkih/keeper.sh
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: keeper
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/ridafkih/keeper-standalone:1.11.5
+    betterAuthSecret:
+      type: string
+      title: Better Auth Secret
+      default: ""
+      description: Required secret key for Better Auth authentication. Auto-generated if empty for easy deployment.
+    encryptionKey:
+      type: string
+      title: Encryption Key
+      default: ""
+      description: Required encryption key for data encryption. Auto-generated if empty for easy deployment.
+    commercialMode:
+      type: string
+      title: Commercial Mode
+      default: "false"
+      description: Enable commercial mode features
+    googleClientId:
+      type: string
+      title: Google Client ID
+      default: ""
+      description: Google OAuth Client ID (optional)
+    googleClientSecret:
+      type: string
+      title: Google Client Secret
+      default: ""
+      description: Google OAuth Client Secret (optional)
+    microsoftClientId:
+      type: string
+      title: Microsoft Client ID
+      default: ""
+      description: Microsoft OAuth Client ID (optional)
+    microsoftClientSecret:
+      type: string
+      title: Microsoft Client Secret
+      default: ""
+      description: Microsoft OAuth Client Secret (optional)
+benefits:
+  - title: Calendar Synchronization
+    description:
+      Synchronize events from multiple calendar sources (iCal, ICS links) and
+      push them to one or many destination calendars seamlessly.
+  - title: Self-Hosted Solution
+    description:
+      Keep your calendar data private and under your control with a
+      self-hosted deployment.
+  - title: Multiple Provider Support
+    description:
+      Support for Google Calendar, iCloud, Outlook, CalDAV, and Fastmail
+      calendar providers for comprehensive calendar management.
+  - title: Standalone Deployment
+    description:
+      All-in-one standalone image includes web, API, and cron services in a
+      single container for easy deployment and management.
+features:
+  - title: Calendar Sync
+    description:
+      Pull events from remotely hosted iCal or ICS links and synchronize them
+      across multiple calendar destinations automatically.
+  - title: Web-Based Interface
+    description:
+      Access and manage your calendar synchronizations through a modern web
+      interface accessible on port 80.
+  - title: Multiple Calendar Providers
+    description:
+      Support for Google Calendar, iCloud, Outlook, CalDAV, and Fastmail with
+      OAuth authentication for seamless integration.
+  - title: Automated Synchronization
+    description:
+      Background cron service automatically synchronizes calendars on a
+      schedule to keep your events up to date.
+  - title: PostgreSQL Storage
+    description:
+      Calendar data and synchronization configurations are stored in a
+      dedicated PostgreSQL volume at /var/lib/postgresql/data for reliable
+      persistence.
+  - title: OAuth Integration
+    description:
+      Optional OAuth authentication with Google and Microsoft providers for
+      secure calendar access and synchronization.
+  - title: Encryption Support
+    description:
+      Built-in encryption support for securing calendar data and
+      synchronization credentials.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Keeper in any environment that supports Docker with
+      minimal configuration requirements.
+tags:
+  - Calendar
+  - Synchronization
+  - Self-Hosted
+  - iCal
+  - ICS
+  - Booking
+  - Docker

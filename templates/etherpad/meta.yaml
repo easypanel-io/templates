@@ -10,6 +10,12 @@ instructions: null
 changeLog:
   - date: 2023-3-16
     description: first release
+  - date: 2025-01-11
+    description: Version bumped to 2.2.7
+  - date: 2025-07-21
+    description: Version bumped to 2.3.2
+  - date: 2025-12-25
+    description: Version bumped to 2.5.3
 links:
   - label: Website
     url: https://etherpad.org
@@ -22,6 +28,8 @@ contributors:
     url: https://github.com/Supernova3339
   - name: Ponkhy
     url: https://github.com/Ponkhy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -36,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: etherpad/etherpad:2.2.5
+      default: etherpad/etherpad:2.5.3
     databaseServiceName:
       type: string
       title: Database Service Name

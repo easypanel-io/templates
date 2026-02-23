@@ -1,0 +1,97 @@
+name: Habridge
+description:
+  Habridge is an open-source software solution that emulates Philips Hue
+  bridges, enabling the integration of various smart devices with home
+  automation systems. It provides a simple yet powerful interface for
+  controlling and managing smart lights, switches, and other IoT devices.
+  Habridge supports a wide range of integrations, including Amazon Alexa, Google
+  Home, and custom APIs, allowing users to create a seamless smart home
+  experience. With its focus on flexibility and ease of use, Habridge empowers
+  users to control their home automation setup with precision and efficiency.
+instructions: null
+changeLog:
+  - date: 2024-12-27
+    description: First Release
+links:
+  - label: Website
+    url: https://github.com/bwssytems/ha-bridge
+  - label: Github
+    url: https://github.com/bwssytems/ha-bridge
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: habridge
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/habridge:5.4.1
+benefits:
+  - title: Seamless Smart Home Integration
+    description:
+      Habridge acts as a virtual bridge, enabling seamless integration of smart
+      devices with popular home automation platforms.
+  - title: Open-Source and Customizable
+    description:
+      As an open-source tool, Habridge is free to use and customize, making it
+      accessible and adaptable to unique user needs.
+  - title: Broad Compatibility
+    description:
+      Supports integrations with Amazon Alexa, Google Home, and custom APIs for
+      controlling a wide range of smart devices.
+  - title: User-Friendly Interface
+    description:
+      Provides an intuitive interface for managing devices, commands, and
+      automation rules without requiring advanced technical knowledge.
+  - title: Community-Driven Development
+    description:
+      Habridge benefits from a passionate community of developers and users who
+      contribute to its growth and provide valuable support.
+features:
+  - title: Device Emulation
+    description:
+      Habridge emulates a Philips Hue bridge, enabling control of non-Hue
+      devices via Hue-compatible platforms.
+  - title: Voice Assistant Integration
+    description:
+      Works seamlessly with Amazon Alexa and Google Home for voice-controlled
+      automation.
+  - title: Custom Command Support
+    description:
+      Allows users to create custom commands and scripts for advanced automation
+      scenarios.
+  - title: Broad Device Support
+    description:
+      Supports a wide range of smart devices, including lights, switches, and
+      other IoT products.
+  - title: API Integration
+    description:
+      Provides API support for connecting with custom applications and
+      third-party services.
+  - title: Configurable Scenes and Groups
+    description:
+      Users can create and manage scenes and groups for dynamic control of
+      multiple devices simultaneously.
+  - title: Community Support
+    description:
+      An active community offers extensive documentation, tutorials, and forums
+      for troubleshooting and enhancements.
+tags:
+  - Smart Home
+  - Home Automation
+  - IoT
+  - Device Integration
+  - Open-Source
+  - Alexa Integration
+  - Google Home Integration
+  - Custom Commands
+  - Philips Hue Emulation
+  - Voice-Controlled Automation

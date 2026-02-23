@@ -1,0 +1,81 @@
+name: Grocy
+description:
+  Grocy is a self-hosted groceries and household management solution. It helps
+  you streamline your daily chores, track inventory, manage shopping lists, plan
+  meals, and keep tabs on household tasks. With Grocy, you can efficiently
+  manage your pantry, reduce waste, and optimize your shopping experience. Grocy
+  provides a user-friendly interface to organize your household activities and
+  track consumables with expiration dates, giving you better control over your
+  time and resources.
+instructions: default credentials; username; admin, password; admin
+changeLog:
+  - date: 2024-12-24
+    description: First release
+  - date: 2025-07-21
+    description: Version bumped to 4.5.0
+links:
+  - label: Website
+    url: https://grocy.info/
+  - label: Documentation
+    url: https://github.com/grocy/docs
+  - label: Github
+    url: https://github.com/grocy/grocy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: grocy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/grocy:4.5.0
+benefits:
+  - title: Efficient Inventory Management
+    description:
+      Keep track of your pantry and household inventory, ensuring you never run
+      out of essentials or waste expired items.
+  - title: Meal Planning and Shopping Lists
+    description:
+      Plan meals and automatically generate shopping lists based on your
+      recipes, saving you time and reducing waste.
+  - title: Task and Chore Management
+    description:
+      Stay organized by assigning and tracking household chores, ensuring
+      nothing gets overlooked.
+  - title: Reduce Food Waste
+    description:
+      Monitor expiration dates for perishable items, helping you reduce food
+      waste and save money.
+features:
+  - title: Comprehensive Inventory Tracking
+    description:
+      Grocy lets you track all your household consumables with detailed
+      information, including expiration dates, quantity, and usage.
+  - title: Recipe Management
+    description:
+      Store and organize your favorite recipes, linking them with inventory
+      items for seamless meal planning.
+  - title: Barcode Scanning
+    description:
+      Use barcode scanning to quickly add or remove items from your inventory.
+  - title: Task and Chore Scheduler
+    description:
+      Assign tasks and manage recurring chores with a built-in scheduler.
+  - title: Mobile Access
+    description:
+      Access Grocy on the go using mobile apps or a responsive web interface.
+tags:
+  - ERP
+  - Groceries
+  - Household Management
+  - Inventory
+  - Meal Planning
+  - Tasks

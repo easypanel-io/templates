@@ -1,0 +1,81 @@
+name: Sickchill
+description:
+  SickChill is a self-hosted personal video recorder (PVR) application designed
+  to automate the process of downloading and managing TV shows. It supports a
+  wide range of sources to download content, including torrents and Usenet. With
+  its intuitive interface, you can search for and schedule episodes, track your
+  show library, and get detailed information about your favorite series.
+  SickChill integrates with various media players and tools to organize and play
+  content seamlessly. It also includes features like automatic quality
+  selection, subtitles, and episode renaming for a streamlined viewing
+  experience.
+instructions: null
+changeLog:
+  - date: 2025-01-22
+    description: First Release
+links:
+  - label: Documentation
+    url: https://github.com/SickChill/SickChill/wiki
+  - label: Github
+    url: https://github.com/SickChill/SickChill
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sickchill
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/sickchill:2024.3.1
+benefits:
+  - title: Automated TV Show Management
+    description:
+      SickChill automates the process of managing your TV shows. It tracks your
+      favorite series and automatically downloads new episodes as they become
+      available, saving you time and effort.
+  - title: Broad Download Source Support
+    description:
+      SickChill supports both torrent and Usenet downloads. This versatility
+      ensures that you can use your preferred downloading method for acquiring
+      content efficiently.
+  - title: Smart Quality Management
+    description:
+      With SickChill, you can define quality preferences for your downloads. It
+      will automatically select and download episodes in the desired quality,
+      ensuring the best viewing experience.
+features:
+  - title: Automatic Subtitles
+    description:
+      SickChill includes support for automatically downloading subtitles for
+      your episodes. This ensures that your content is accessible and enjoyable
+      for a global audience.
+  - title: Episode Renaming
+    description:
+      This feature renames episodes according to a user-defined format. It keeps
+      your media library organized and makes it easier to find and play your
+      content.
+  - title: Integration with Media Players
+    description:
+      SickChill integrates seamlessly with popular media players, allowing you
+      to play your downloaded content directly. This creates a cohesive
+      entertainment experience.
+  - title: Extensive Show Library Tracking
+    description:
+      SickChill provides detailed tracking of your show library, including
+      upcoming episodes, previously watched content, and missing episodes.
+  - title: Notifications and Alerts
+    description:
+      Receive notifications and alerts when new episodes are available or when
+      downloads are complete. Stay updated without needing to check manually.
+tags:
+  - TV Shows
+  - Media
+  - Automation

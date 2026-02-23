@@ -15,6 +15,8 @@ instructions: null
 changeLog:
   - date: 2023-01-24
     description: first release
+  - date: 2025-07-22
+    description: Version bumped to 6-1.6.72
 links:
   - label: Website
     url: https://limesurvey.org/
@@ -25,6 +27,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/limesurvey:6-1.6.33
+      default: tiredofit/limesurvey:6-1.6.72
     databaseServiceName:
       type: string
       title: Database Service Name

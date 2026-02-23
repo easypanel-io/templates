@@ -1,0 +1,86 @@
+name: Filegator
+description:
+  Filegator is a free, open-source, self-hosted web application for managing
+  files and folders. It provides a user-friendly interface for organizing,
+  uploading, downloading, and sharing files with comprehensive file management
+  capabilities. Built with PHP, it offers multi-user support with different
+  access permissions, roles, and home folders. All basic file operations are
+  supported including copy, move, rename, edit, create, delete, preview, zip,
+  unzip, download, and upload. The file upload feature supports drag & drop,
+  progress bar, pause and resume functionality with chunked uploads for large
+  files. Perfect for teams, students, field workers, and anyone needing a simple
+  yet powerful file sharing and management solution.
+instructions: Login using credentials - admin/admin123
+changeLog:
+  - date: 2025-08-04
+    description: First release
+links:
+  - label: Github
+    url: https://github.com/filegator/filegator
+  - label: Documentation
+    url: https://docs.filegator.io
+  - label: Website
+    url: https://filegator.io
+contributors:
+  - name: Assistant
+    url: https://github.com
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: filegator
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: filegator/filegator:v7.13.0
+benefits:
+  - title: User-Friendly File Management
+    description:
+      Simple and intuitive interface that makes file management easy for users
+      of all technical levels. No complex navigation or confusing menus.
+  - title: Multi-User Support
+    description:
+      Support for multiple users with different access permissions, roles, and
+      individual home folders for organized file sharing.
+  - title: Comprehensive File Operations
+    description:
+      All essential file operations including copy, move, rename, edit, create,
+      delete, preview, zip, unzip, download, and upload functionality.
+  - title: Advanced Upload Features
+    description:
+      Drag & drop file uploads with progress bars, pause and resume capability,
+      and chunked uploads for handling large files efficiently.
+  - title: Flexible Storage Options
+    description:
+      Manage files in your local repository or connect to other storage adapters
+      for extended storage capabilities.
+  - title: Perfect for Teams and Organizations
+    description:
+      Ideal for sharing folders with colleagues, students uploading work, field
+      workers submitting data, or as a cloud backup solution.
+features:
+  - title: File Browser
+    description:
+      Clean and responsive file browser interface with folder navigation, file
+      previews, and search capabilities.
+  - title: User Management
+    description:
+      Administrative panel for managing users, permissions, and access controls
+      with role-based security.
+  - title: Bulk Operations
+    description:
+      Select multiple files and folders for batch operations like download,
+      delete, move, or copy to save time.
+  - title: File Sharing
+    description:
+      Easy file and folder sharing with download links and access control for
+      secure collaboration.
+tags:
+  - File Management
+  - Storage
+  - Collaboration

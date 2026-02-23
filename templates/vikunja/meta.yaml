@@ -1,0 +1,68 @@
+name: Vikunja
+description:
+  Vikunja is a self-hosted To-Do list application and task management tool. It
+  provides a clean and intuitive interface for organizing tasks, projects, and
+  team collaboration. With features like task lists, labels, assignees, due
+  dates, and more, Vikunja helps individuals and teams stay organized and
+  productive.
+
+instructions: Create a new user and login to the application.
+
+changeLog:
+  - date: 2025-06-10
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://vikunja.io/docs/
+  - label: Github
+    url: https://github.com/go-vikunja/vikunja
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: vikunja
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: vikunja/vikunja:0.24.6
+
+benefits:
+  - title: Self-Hosted Task Management
+    description:
+      Keep your tasks and projects private with complete control over your data.
+  - title: Team Collaboration
+    description:
+      Share projects and collaborate with team members on tasks and goals.
+  - title: Feature Rich
+    description:
+      Comprehensive task management with labels, due dates, assignees, and more.
+
+features:
+  - title: Task Lists & Projects
+    description: Organize tasks into lists and projects for better structure.
+  - title: Labels & Categories
+    description:
+      Use labels and categories to classify and filter tasks efficiently.
+  - title: Team Sharing
+    description:
+      Share projects with team members and assign tasks to specific users.
+  - title: Due Dates & Reminders
+    description: Set due dates and get reminders to stay on top of deadlines.
+
+tags:
+  - Task Management
+  - To-Do List
+  - Project Management
+  - Productivity
+  - Self-Hosted

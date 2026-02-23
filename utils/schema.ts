@@ -132,6 +132,10 @@ const appSourceSchema = z
       ref: z.string().min(1),
       path: z.string().regex(/^\//),
     }),
+    z.object({
+      type: z.literal("dockerfile"),
+      dockerfile: z.string().min(1),
+    }),
   ])
   .optional();
 

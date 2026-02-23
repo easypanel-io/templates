@@ -1,0 +1,75 @@
+name: Filestash
+description:
+  Filestash is a self-hosted file management and sharing platform designed for
+  individuals and teams. It offers a secure, user-friendly interface to store,
+  organize, and access all your files from one centralized location. With
+  support for multiple file types, seamless integration with popular storage
+  backends, tagging, and powerful search functionality, Filestash simplifies
+  file management and boosts productivity. Whether working on personal projects
+  or collaborating with your team, Filestash ensures your files are always
+  accessible and easy to manage.
+instructions: null
+changeLog:
+  - date: 2025-02-10
+    description: First Release
+links:
+  - label: Documentation
+    url: https://www.filestash.app/docs/
+  - label: Github
+    url: https://github.com/mickael-kerjean/filestash
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: filestash
+    appServiceImage:
+      type: string
+      title: Service Image
+      default: machines/filestash:latest
+benefits:
+  - title: Centralized File Management
+    description:
+      Filestash provides a single, secure location to store all your files,
+      making it easy to manage and access them whenever you need.
+  - title: Enhanced Productivity
+    description:
+      With features like tagging, powerful search functionality, and integration
+      with various storage providers, Filestash helps you quickly locate and
+      reuse your files, improving your workflow.
+  - title: Collaboration and Sharing
+    description:
+      Easily share files with teammates or external collaborators, enabling
+      efficient teamwork and improving project outcomes.
+features:
+  - title: File Preview and Editing
+    description:
+      View and edit your files directly in the browser without needing
+      additional software.
+  - title: Storage Backend Support
+    description:
+      Connect and manage files from a variety of storage backends, including
+      FTP, SFTP, WebDAV, and cloud services.
+  - title: Secure Access
+    description:
+      Implement user authentication and role-based access controls to keep your
+      files private and secure.
+  - title: Powerful Search
+    description:
+      Use advanced search features to quickly locate files by name, tags, or
+      metadata.
+  - title: Integration Options
+    description:
+      Integrate Filestash with other tools and services through its API and
+      plugins, allowing seamless workflows.
+tags:
+  - File Management
+  - Collaboration
+  - Productivity

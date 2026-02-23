@@ -18,6 +18,12 @@ instructions: Find your API key in the environment tab
 changeLog:
   - date: 2023-1-25
     description: first release
+  - date: 2025-03-03
+    description: Version bumped to 29.0.rc4
+  - date: 2025-07-25
+    description: Version bumped to 30.0.rc5
+  - date: 2025-12-29
+    description: Version bumped to 30.0.rca36
 links:
   - label: Documentation
     url: https://typesense.org/docs/
@@ -28,6 +34,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -41,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:27.0.rc15
+      default: typesense/typesense:30.0.rca36
 tags:
   - Documentation
   - Developer Tools
