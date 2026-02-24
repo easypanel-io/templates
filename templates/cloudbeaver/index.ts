@@ -1,9 +1,8 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secretKey = randomString(64);
 
   services.push({
     type: "app",
@@ -16,21 +15,16 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 7574,
+          port: 8978,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "app-data",
-          mountPath: "/appdata",
+          name: "cloudbeaver-workspace",
+          mountPath: "/opt/cloudbeaver/workspace",
         },
       ],
-      env: [
-        `SECRET_ENCRYPTION_KEY=${secretKey}`,
-        `TZ=${input.timezone}`,
-        `PORT=7574`,
-      ].join("\n"),
     },
   });
 

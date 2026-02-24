@@ -1,14 +1,19 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secretKey = randomString(64);
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
+      env: [
+        `SQLITE_DATABASE=/var/www/html/data/database/poznote.db`,
+        `POZNOTE_USERNAME=${input.username}`,
+        `POZNOTE_PASSWORD=${input.password}`,
+        `HTTP_WEB_PORT=80`,
+      ].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -16,21 +21,16 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 7574,
+          port: 80,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "app-data",
-          mountPath: "/appdata",
+          name: "data",
+          mountPath: "/var/www/html/data",
         },
       ],
-      env: [
-        `SECRET_ENCRYPTION_KEY=${secretKey}`,
-        `TZ=${input.timezone}`,
-        `PORT=7574`,
-      ].join("\n"),
     },
   });
 

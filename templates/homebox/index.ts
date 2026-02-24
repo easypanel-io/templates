@@ -1,9 +1,8 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const secretKey = randomString(64);
 
   services.push({
     type: "app",
@@ -16,21 +15,21 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 7574,
-        },
-      ],
-      mounts: [
-        {
-          type: "volume",
-          name: "app-data",
-          mountPath: "/appdata",
+          port: 7745,
         },
       ],
       env: [
-        `SECRET_ENCRYPTION_KEY=${secretKey}`,
-        `TZ=${input.timezone}`,
-        `PORT=7574`,
+        `HBOX_LOG_LEVEL=info`,
+        `HBOX_LOG_FORMAT=text`,
+        `HBOX_WEB_MAX_UPLOAD_SIZE=10`,
       ].join("\n"),
+      mounts: [
+        {
+          type: "volume",
+          name: `homebox-data`,
+          mountPath: "/data/",
+        },
+      ],
     },
   });
 
