@@ -1,0 +1,120 @@
+name: Corsfix
+description:
+  Corsfix is a CORS proxy that eliminates cross-origin errors and lets you fetch
+  any data for your website with zero hassle. It acts as an intermediary between
+  your applications and target servers, automatically adding the necessary CORS
+  headers to responses. Corsfix handles your requests securely while keeping API
+  keys and credentials safe.
+instructions: null
+changeLog:
+  - date: 2026-02-24
+    description: Initial template
+links:
+  - label: Corsfix CORS proxy
+    url: https://corsfix.com
+  - label: Documentation
+    url: https://corsfix.com/docs
+  - label: Github
+    url: https://github.com/corsfix/corsfix-app
+contributors:
+  - name: Corsfix
+    url: https://github.com/corsfix
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - proxyServiceName
+    - proxyServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: corsfix-app
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/corsfix/corsfix-app:e0ff7b3472256650afc547a672d0a2ffafba34e8
+    proxyServiceName:
+      type: string
+      title: Proxy Service Name
+      default: corsfix-proxy
+    proxyServiceImage:
+      type: string
+      title: Proxy Service Image
+      default: ghcr.io/corsfix/corsfix-proxy:e0ff7b3472256650afc547a672d0a2ffafba34e8
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: corsfix-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: corsfix-redis
+benefits:
+  - title: Fix CORS Errors Instantly
+    description:
+      Eliminate cross-origin errors that prevent browsers from accessing
+      resources. Just one line change to your code and Corsfix handles the rest,
+      no complex server-side workarounds needed.
+  - title: Self-Hosted and Private
+    description:
+      Run Corsfix on your own infrastructure with full control over your data
+      and proxy configurations. No third-party dependencies or external services
+      involved.
+  - title: Secure by Design
+    description:
+      Protected against SSRF with DNS-level validation to block access to
+      localhost, private networks, and local files. Cookie leakage is prevented
+      by renaming Set-Cookie headers to X-Corsfix-Set-Cookie, stopping
+      unintended cookie sharing across proxied domains.
+  - title: Minimal Latency
+    description:
+      Responses are streamed directly from the target server through the proxy,
+      ensuring minimal latency without buffering the entire response first.
+  - title: Seamless Integration
+    description:
+      Add the proxy URL before your target API endpoint and you're done. No SDK
+      or library required — works with any HTTP client or frontend framework.
+features:
+  - title: App Dashboard
+    description:
+      A web interface for managing which website domains can access your proxy
+      and which target domains the proxy is allowed to fetch.
+  - title: CORS Proxy Server
+    description:
+      A high-performance proxy server that acts as an intermediary between your
+      applications and target servers, automatically adding the necessary CORS
+      headers to responses for seamless cross-origin communication.
+  - title: Secure API Key Management
+    description:
+      Securely manage API keys and credentials without exposing them in your
+      frontend code. Keep sensitive data safe while still accessing the services
+      you need.
+  - title: Override Request Headers
+    description:
+      Override forbidden headers that browsers normally restrict, giving you
+      full control over the request headers sent to the target server.
+  - title: Cached Responses
+    description:
+      Set cache headers on proxied responses to speed up repeated requests and
+      reduce load on target servers.
+  - title: JSONP Response
+    description:
+      Support for JSONP responses, enabling cross-origin data fetching for
+      legacy applications that rely on JSONP callbacks.
+  - title: Playground
+    description:
+      A built-in playground to test proxy requests directly from the dashboard,
+      making it easy to debug and verify your configurations before deploying.
+  - title: Metrics
+    description:
+      Monitor traffic and request volume to your proxy with built-in metrics,
+      giving you visibility into usage patterns and performance.
+tags:
+  - Proxy
+  - CORS
+  - Networking
+  - Developer Tools
