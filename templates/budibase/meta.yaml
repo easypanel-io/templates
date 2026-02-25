@@ -28,6 +28,8 @@ changeLog:
     description: Updated to multi-service architecture
   - date: 2025-12-24
     description: Version bumped to 3.23.46
+  - date: 2026-02-18
+    description: Version bumped to 3.30.0
 links:
   - label: Website
     url: https://budibase.com/
@@ -58,11 +60,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: "budibase/apps:3.23.46"
+      default: "budibase/apps:3.30.0"
     workerServiceImage:
       type: string
       title: Worker Service Image
-      default: "budibase/worker:3.23.46"
+      default: "budibase/worker:3.30.0"
     adminEmail:
       type: string
       title: Admin Email

@@ -1,0 +1,88 @@
+name: Darktable
+description:
+  Darktable is an open-source photography workflow application and raw
+  developer. It manages your digital negatives in a database, lets you view them
+  through a zoomable lighttable, and enables you to develop raw images and
+  enhance them with powerful editing tools. This browser-accessible version
+  provides the full Darktable desktop application through a web interface,
+  allowing you to edit photos from anywhere without local installation.
+
+instructions: null
+
+changeLog:
+  - date: 2025-10-13
+    description: Initial Template Release (2025-07-12-ls220)
+
+links:
+  - label: Website
+    url: https://www.darktable.org/
+  - label: Documentation
+    url: https://docs.darktable.org/
+  - label: GitHub
+    url: https://github.com/darktable-org/darktable
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: darktable
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/darktable:2025-07-12-ls220
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+
+benefits:
+  - title: Professional Photo Editing
+    description:
+      Industry-standard tools for professional photographers including
+      non-destructive RAW development and advanced color management.
+  - title: Web-Based Access
+    description:
+      Access the full Darktable application through your browser from any device
+      without installing software locally.
+  - title: RAW Image Support
+    description:
+      Native support for hundreds of RAW formats from various camera
+      manufacturers for optimal image quality.
+  - title: Non-Destructive Workflow
+    description:
+      All edits are non-destructive and stored separately, allowing unlimited
+      experimentation without damaging original files.
+
+features:
+  - title: Lighttable Mode
+    description:
+      Organize and manage your photo collection with filtering, tagging, and
+      rating capabilities in an intuitive interface.
+  - title: Darkroom Mode
+    description:
+      Powerful editing tools including exposure, color correction, sharpening,
+      noise reduction, and dozens of other modules.
+  - title: Color Management
+    description:
+      Professional color management with support for ICC profiles and various
+      color spaces for accurate color reproduction.
+  - title: Export Options
+    description:
+      Export images in multiple formats with customizable settings for print,
+      web, or further processing in other applications.
+
+tags:
+  - Photography
+  - Image Editing
+  - RAW
+  - Desktop
+  - Browser

@@ -11,6 +11,8 @@ changeLog:
     description: Template Release (v3.70.0)
   - date: 2025-12-25
     description: Version bumped to 3.73.0
+  - date: 2026-02-21
+    description: Version bumped to 3.74.0
 links:
   - label: Demo
     url: https://lms-demo.poupon.dev
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: epoupon/lms:3.73.0
+      default: epoupon/lms:3.74.0
 
 benefits:
   - title: Subsonic/OpenSubsonic API Support
