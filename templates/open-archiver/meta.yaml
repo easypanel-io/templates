@@ -1,0 +1,92 @@
+name: Open Archiver
+description: |
+  Open Archiver is a secure, sovereign, and open-source platform for email
+  archiving and eDiscovery. It provides universal ingestion from IMAP, Google
+  Workspace, Microsoft 365, PST files, mbox files, and zipped .eml files.
+  Emails are stored in standard .eml format with deduplication, compression,
+  and optional AES-256 encryption at rest. Features include full-text search
+  across emails and attachments (PDF, DOCX, etc.), thread discovery, file
+  integrity verification, immutable audit trails, role-based access control,
+  and pluggable storage backends (local or S3-compatible). Built with
+  SvelteKit, Node.js, PostgreSQL, Meilisearch, and BullMQ.
+instructions:
+  After deployment, navigate to the main service URL. On first visit you will be
+  redirected to /setup to create your admin account. Be sure you are the first
+  person to access the instance. The default encryption key and JWT secret are
+  auto-generated. Configure your email ingestion sources (IMAP, Google
+  Workspace, Microsoft 365) from the dashboard after setup.
+changeLog:
+  - date: 2026-02-09
+    description: First Release (v0.4.2)
+links:
+  - label: Website
+    url: https://openarchiver.com
+  - label: GitHub
+    url: https://github.com/LogicLabs-OU/OpenArchiver
+  - label: Documentation
+    url: https://docs.openarchiver.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: open-archiver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: logiclabshq/open-archiver:v0.4.2
+benefits:
+  - title: Legally Compliant Email Archiving
+    description:
+      Store emails in standard .eml format with file hash verification,
+      integrity reports, and immutable audit trails for regulatory compliance.
+  - title: Universal Email Ingestion
+    description:
+      Connect to any email provider including IMAP, Google Workspace, Microsoft
+      365, PST files, mbox files, and zipped .eml imports.
+  - title: Secure by Design
+    description:
+      AES-256 encryption at rest, deduplication, compression, and role-based
+      access control with fine-grained AWS IAM-style policies.
+  - title: Self-Hosted & Open Source
+    description:
+      Full control over your email archive data with no vendor lock-in. AGPL-3.0
+      licensed and free to deploy on your own infrastructure.
+features:
+  - title: Full-Text Search
+    description:
+      Powered by Meilisearch for blazingly fast search across email content and
+      attachments including PDF, DOCX, and more via Apache Tika.
+  - title: Thread Discovery
+    description:
+      Automatically identifies email conversations and presents full context for
+      eDiscovery and compliance review.
+  - title: Pluggable Storage
+    description:
+      Supports local filesystem or S3-compatible object storage (AWS S3, MinIO)
+      with optional encryption at rest.
+  - title: Integrity Verification
+    description:
+      File hash values stored on ingestion with integrity reports to detect any
+      unauthorized modifications to archived content.
+  - title: Audit Trail
+    description:
+      Immutable logging of all system activities including who accessed what and
+      when for compliance and accountability.
+  - title: Retention Policies
+    description:
+      Define granular retention policies to automatically manage the lifecycle
+      of archived email data.
+tags:
+  - Email
+  - Archiving
+  - eDiscovery
+  - Compliance
+  - Self-Hosted
