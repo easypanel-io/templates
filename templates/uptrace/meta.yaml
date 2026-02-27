@@ -1,0 +1,115 @@
+name: Uptrace
+description:
+  Uptrace is an open-source APM (Application Performance Monitoring) platform
+  that supports distributed tracing, metrics, and logs using OpenTelemetry. It
+  provides a single UI for traces, metrics, and logs with 50+ pre-built
+  dashboards, service graphs, alerting with notifications (Email, Slack,
+  Telegram, AlertManager), SQL-like query language for spans, and PromQL-like
+  language for metrics. Built on ClickHouse for storage and PostgreSQL for
+  metadata, Uptrace can process billions of spans on a single server at 10x
+  lower cost than commercial APM solutions. It supports data ingestion from
+  OpenTelemetry, Prometheus, Vector, FluentBit, and CloudWatch, and is
+  compatible with Grafana as a Tempo/Prometheus datasource.
+
+instructions:
+  After the deployment is complete, you can access the Uptrace user interface
+  through the primary service domain. Log in to Uptrace to begin setup and
+  monitoring. For further configuration options, refer to the Uptrace storage
+  section where the main configuration file is mounted.
+
+changeLog:
+  - date: 2026-02-27
+    description: First Release
+links:
+  - label: Website
+    url: https://uptrace.dev
+  - label: GitHub
+    url: https://github.com/uptrace/uptrace
+  - label: Documentation
+    url: https://uptrace.dev/get
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: uptrace
+    appServiceImage:
+      type: string
+      title: Uptrace Image
+      default: "uptrace/uptrace:2.1.0-beta"
+    adminName:
+      type: string
+      title: Admin Name
+      default: Admin
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@uptrace.local
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: ""
+      description: Generated randomly if not provided.
+    orgName:
+      type: string
+      title: Organization Name
+      default: Org1
+    projectName:
+      type: string
+      title: Project Name
+      default: Project1
+benefits:
+  - title: All-in-One Observability
+    description:
+      Single UI for distributed traces, metrics, and logs with 50+ pre-built
+      dashboards that auto-create when metrics start flowing.
+  - title: Cost-Effective at Scale
+    description:
+      Process billions of spans on a single server using ClickHouse's efficient
+      columnar storage with ZSTD compression (1KB span compresses to ~40 bytes).
+  - title: OpenTelemetry Native
+    description:
+      Built on the OpenTelemetry standard with support for OTLP, Prometheus,
+      Vector, FluentBit, and CloudWatch ingestion.
+  - title: Self-Hosted & Open Source
+    description:
+      Full control over your observability data with no vendor lock-in. Deploy
+      on your own infrastructure with complete data sovereignty.
+features:
+  - title: Distributed Tracing
+    description:
+      Visualize request flows across services with service graphs, faceted
+      filters, and SQL-like query language for span analysis.
+  - title: Metrics & Dashboards
+    description:
+      PromQL-like language for metrics aggregation with 50+ auto-created
+      dashboards and chart annotations.
+  - title: Alerting & Notifications
+    description:
+      Monitor spans, logs, and metrics with alerts via Email, Slack, Telegram,
+      WebHook, and AlertManager integration.
+  - title: Grafana Compatible
+    description:
+      Use Uptrace as a Tempo and Prometheus datasource in Grafana for seamless
+      integration with existing dashboards.
+  - title: Multi-Tenant Support
+    description:
+      Manage multiple organizations and projects with SSO support via OpenID
+      Connect (Keycloak, Google, Cloudflare).
+  - title: High Performance
+    description:
+      More than 10K spans/second on a single core with excellent on-disk
+      compression for cost-effective long-term retention.
+tags:
+  - Monitoring
+  - APM
+  - OpenTelemetry
+  - Observability
+  - Tracing
