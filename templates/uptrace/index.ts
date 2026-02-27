@@ -17,7 +17,7 @@ const UPTRACE_CONFIG = (
   adminEmail: string,
   adminPassword: string,
   orgName: string,
-  projectName: string,
+  projectName: string
 ) => `
 service:
   env: hosted
@@ -310,7 +310,6 @@ export function generate(input: Input): Output {
   const pgHost = `$(PROJECT_NAME)_${input.appServiceName}-db`;
   const redisHost = `$(PROJECT_NAME)_${input.appServiceName}-redis`;
 
-  // Uptrace
   services.push({
     type: "app",
     data: {
@@ -331,7 +330,7 @@ export function generate(input: Input): Output {
             adminEmail,
             adminPassword,
             input.orgName || "Org1",
-            input.projectName || "Project1",
+            input.projectName || "Project1"
           ),
           mountPath: "/etc/uptrace/config.yml",
         },
@@ -340,7 +339,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // ClickHouse
   services.push({
     type: "app",
     data: {
@@ -368,7 +366,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // PostgreSQL (managed)
   services.push({
     type: "postgres",
     data: {
@@ -377,7 +374,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Redis (managed)
   services.push({
     type: "redis",
     data: {
@@ -386,7 +382,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // OpenTelemetry Collector
   services.push({
     type: "app",
     data: {
@@ -409,7 +404,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Alertmanager
   services.push({
     type: "app",
     data: {
@@ -434,7 +428,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Vector
   services.push({
     type: "app",
     data: {
@@ -450,7 +443,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Grafana
   services.push({
     type: "app",
     data: {
@@ -472,7 +464,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Prometheus
   services.push({
     type: "app",
     data: {
@@ -501,7 +492,6 @@ export function generate(input: Input): Output {
     },
   });
 
-  // Mailpit
   services.push({
     type: "app",
     data: {
