@@ -16,8 +16,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "mongo",
     data: {
-      serviceName: input.databaseServiceName,
-      image: "mongo:8",
+      serviceName: `${input.appServiceName}-db`,
       password: mongoPassword,
     },
   });
@@ -25,7 +24,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "redis",
     data: {
-      serviceName: input.redisServiceName,
+      serviceName: `${input.appServiceName}-redis`,
       password: redisPassword,
     },
   });
@@ -33,7 +32,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: input.appServiceName,
+      serviceName: `${input.appServiceName}-app`,
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -45,14 +44,14 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `MONGODB_URI=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017/?tls=false`,
-        `REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `MONGODB_URI=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:27017/?tls=false`,
+        `REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
         `KEK_VERSION=KEK_VERSION_1`,
         `KEK_VERSION_1=${kekVersion1}`,
         `AUTH_SECRET=${authSecret}`,
         `AUTH_TRUST_HOST=true`,
         `AUTH_URL=https://$(PRIMARY_DOMAIN)`,
-        `PROXY_DOMAIN=$(PROJECT_NAME)-${input.proxyServiceName}.$(EASYPANEL_HOST)`,
+        `PROXY_DOMAIN=$(PROJECT_NAME)-${input.appServiceName}-proxy.$(EASYPANEL_HOST)`,
       ].join("\n"),
     },
   });
@@ -60,7 +59,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: input.proxyServiceName,
+      serviceName: `${input.appServiceName}-proxy`,
       source: {
         type: "image",
         image: input.proxyServiceImage,
@@ -72,10 +71,10 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `MONGODB_URI=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.databaseServiceName}:27017/?tls=false`,
-        `REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `MONGODB_URI=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:27017/?tls=false`,
+        `REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
         `KEK_VERSION_1=${kekVersion1}`,
-        `APP_DOMAIN=$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
+        `APP_DOMAIN=$(PROJECT_NAME)-${input.appServiceName}-app.$(EASYPANEL_HOST)`,
       ].join("\n"),
     },
   });
