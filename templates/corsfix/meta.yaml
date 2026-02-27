@@ -24,35 +24,20 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - proxyServiceName
     - proxyServiceImage
-    - databaseServiceName
-    - redisServiceName
   properties:
     appServiceName:
       type: string
       title: App Service Name
-      default: corsfix-app
+      default: corsfix
     appServiceImage:
       type: string
       title: App Service Image
       default: ghcr.io/corsfix/corsfix-app:e0ff7b3472256650afc547a672d0a2ffafba34e8
-    proxyServiceName:
-      type: string
-      title: Proxy Service Name
-      default: corsfix-proxy
     proxyServiceImage:
       type: string
       title: Proxy Service Image
       default: ghcr.io/corsfix/corsfix-proxy:e0ff7b3472256650afc547a672d0a2ffafba34e8
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: corsfix-db
-    redisServiceName:
-      type: string
-      title: Redis Service Name
-      default: corsfix-redis
 benefits:
   - title: Fix CORS Errors Instantly
     description:
