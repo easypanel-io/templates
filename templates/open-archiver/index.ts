@@ -78,23 +78,11 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: "app",
+    type: "redis",
     data: {
       serviceName: `${input.appServiceName}-valkey`,
-      source: {
-        type: "image",
-        image: "valkey/valkey:8-alpine",
-      },
-      deploy: {
-        command: `valkey-server --requirepass ${redisPassword}`,
-      },
-      mounts: [
-        {
-          type: "volume",
-          name: "valkey-data",
-          mountPath: "/data",
-        },
-      ],
+      password: redisPassword,
+      image: "valkey/valkey:8-alpine",
     },
   });
 
