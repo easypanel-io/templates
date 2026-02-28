@@ -1,0 +1,67 @@
+name: TimescaleDB
+description:
+  TimescaleDB is an open-source time-series database optimized for fast ingest
+  and complex queries. It is built on top of PostgreSQL and provides automatic
+  partitioning across time and space, making it ideal for IoT, monitoring,
+  analytics, and other time-series data applications. It offers native
+  time-series functionality while maintaining the reliability and flexibility of
+  PostgreSQL.
+
+instructions: null
+
+changeLog:
+  - date: 2025-03-26
+    description: Initial template release
+links:
+  - label: Website
+    url: https://www.timescale.com/
+  - label: Documentation
+    url: https://docs.timescale.com/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/timescale/timescaledb-ha
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dbPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: timescaledb
+    appServiceImage:
+      type: string
+      title: TimescaleDB Image
+      default: timescale/timescaledb-ha:pg17
+    dbPassword:
+      type: string
+      title: Database Password
+      default: postgres
+benefits:
+  - title: Time-Series Optimization
+    description: Optimized for handling time-series data efficiently.
+  - title: PostgreSQL Compatibility
+    description: Full compatibility with PostgreSQL ecosystem.
+  - title: High Availability
+    description: Built-in high availability features.
+  - title: Scalability
+    description: Automatic partitioning for better performance.
+features:
+  - title: Time-Series Functions
+    description: Native time-series functions and operators.
+  - title: Automatic Partitioning
+    description: Automatic partitioning across time and space.
+  - title: Continuous Aggregates
+    description: Efficient aggregation of time-series data.
+  - title: Compression
+    description: Built-in data compression capabilities.
+tags:
+  - Database
+  - Time-Series
+  - PostgreSQL
+  - Analytics
+  - IoT
