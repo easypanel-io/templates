@@ -1,0 +1,107 @@
+name: LinkedOut
+description:
+  A comprehensive LinkedIn automation platform that helps streamline your
+  LinkedIn outreach and engagement. The platform combines a modern Next.js
+  frontend for managing campaigns and contacts, a robust PocketBase backend for
+  secure data storage and user management, and powerful n8n workflow automation
+  for handling LinkedIn interactions and follow-ups. With optional ngrok
+  tunneling support for local development and testing, and easy deployment via
+  Docker and Easypanel, LinkedOut provides everything needed to automate and
+  scale your LinkedIn presence effectively.
+instructions: null
+changeLog:
+  - date: 2025-07-16
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/maxt-n8n/linkedout
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - backendServiceImage
+    - n8nServiceImage
+    - ngrokServiceImage
+    - ngrokAuthToken
+    - pbAdminEmail
+    - pbAdminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: linkedout
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dockeriddonuts/easypanel-linkedout-frontend:1.0
+    backendServiceImage:
+      type: string
+      title: Backend Service Image
+      default: dockeriddonuts/easypanel-linkedout-backend:1.0
+    n8nServiceImage:
+      type: string
+      title: n8n Service Image
+      default: n8nio/n8n:1.102.3
+    ngrokServiceImage:
+      type: string
+      title: ngrok Service Image
+      default: ngrok/ngrok:3.23.3-alpine
+    ngrokAuthToken:
+      type: string
+      title: ngrok Auth Token
+      default:
+      description: create a token for ngrok service
+    pbAdminEmail:
+      type: string
+      title: PocketBase Admin Email
+      default: admin@example.com
+    pbAdminPassword:
+      type: string
+      title: PocketBase Admin Password
+      default: changeme123
+benefits:
+  - title: LinkedIn Automation Platform
+    description:
+      LinkedOut provides a comprehensive platform for automating LinkedIn
+      activities including outreach, connection management, and workflow
+      automation through an intuitive web interface.
+  - title: Modern Tech Stack
+    description:
+      Built with Next.js frontend, PocketBase backend, and n8n workflow
+      automation, providing a robust and scalable architecture for LinkedIn
+      automation needs.
+  - title: Workflow Automation
+    description:
+      Integrated n8n workflow automation allows you to create complex automation
+      workflows for LinkedIn activities, data processing, and integration with
+      other services.
+features:
+  - title: LinkedIn Outreach Automation
+    description:
+      Automate your LinkedIn outreach campaigns with customizable messaging,
+      connection requests, and follow-up sequences to maximize your networking
+      efforts.
+  - title: PocketBase Backend
+    description:
+      Powerful backend database with built-in authentication, real-time
+      subscriptions, and REST API for storing and managing LinkedIn automation
+      data and user information.
+  - title: n8n Workflow Engine
+    description:
+      Advanced workflow automation engine that enables complex automation
+      scenarios, webhook integrations, and custom logic for LinkedIn automation
+      workflows.
+  - title: Optional ngrok Tunneling
+    description:
+      Optional ngrok integration provides secure tunneling for external access
+      to your n8n workflows, enabling webhook callbacks and remote workflow
+      management.
+tags:
+  - LinkedIn
+  - Automation
+  - Workflow
+  - Social Media
