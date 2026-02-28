@@ -1,0 +1,91 @@
+name: AutoCaliWeb
+description:
+  AutoCaliWeb is a self-hosted web application for browsing, reading, and
+  managing your eBook, eComic, and PDF library through a clean, modern
+  interface. Built on Calibre-Web with automated enhancements, it provides
+  automatic book ingestion from a watch folder, multi-format conversion,
+  metadata enforcement, and cover generation. Features include an in-browser
+  reader for EPUB, PDF, and CBR formats, OPDS catalog for e-reader apps, Kobo
+  and KOReader sync, Send-to-Kindle, multi-user management with fine-grained
+  permissions, OAuth/OIDC authentication, automatic backups, and support for 20+
+  languages. It works with any existing Calibre database or creates one
+  automatically.
+instructions: null
+changeLog:
+  - date: 2026-02-18
+    description: Template Release (v0.11.3)
+links:
+  - label: GitHub
+    url: https://github.com/gelbphoenix/autocaliweb
+  - label: Docker Hub
+    url: https://hub.docker.com/r/gelbphoenix/autocaliweb
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: autocaliweb
+    appServiceImage:
+      type: string
+      title: AutoCaliWeb Image
+      default: gelbphoenix/autocaliweb:v0.11.3
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+      description:
+        Container timezone (e.g. America/New_York, Europe/Berlin, Asia/Karachi)
+benefits:
+  - title: Automated Book Management
+    description:
+      Drop books into the ingest folder and they are automatically imported,
+      converted to multiple formats, enriched with metadata, and added to your
+      Calibre library.
+  - title: Read Anywhere
+    description:
+      Built-in browser reader supports EPUB, PDF, CBR, and more. OPDS catalog
+      lets you browse and download from any compatible e-reader app.
+  - title: E-Reader Sync
+    description:
+      Native sync with Kobo devices, KOReader, and Send-to-Kindle functionality
+      keeps your reading progress and library in sync across all devices.
+features:
+  - title: Automatic Ingest & Conversion
+    description:
+      Watch folder monitors for new books and automatically imports them with
+      multi-format conversion, metadata fetching, and cover enforcement.
+  - title: Comprehensive User Management
+    description:
+      Fine-grained per-user permissions, public registration support, LDAP,
+      Google/GitHub OAuth, OIDC, and proxy authentication.
+  - title: Metadata Enrichment
+    description:
+      Fetch metadata and covers from multiple sources including Goodreads,
+      Hardcover, ISBNDB, Amazon JP, and LitRes. Automatically enrich newly added
+      books.
+  - title: OPDS Catalog
+    description:
+      Built-in OPDS feed at /opds lets any compatible e-reader app browse and
+      download books from your library.
+  - title: Duplicate Management
+    description:
+      Dedicated management system for identifying and handling duplicate books
+      in your library.
+  - title: Self-Update & Backups
+    description:
+      Built-in self-update capability, automated backup service, and server
+      stats tracking keep your instance healthy and up to date.
+tags:
+  - Ebooks
+  - Library
+  - Self-Hosted
+  - Calibre
+  - OPDS
+  - E-Reader
