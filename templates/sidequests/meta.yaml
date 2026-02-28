@@ -1,0 +1,64 @@
+name: SideQuests
+description:
+  SideQuests is a task management application that helps you organize and track your tasks and projects.
+  It provides a simple and intuitive interface for managing your daily activities and side projects.
+instructions: null
+changeLog:
+  - date: 2025-04-09
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/need4swede/sidequests
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appAdminUsername
+    - appAdminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sidequests
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: need4swede/sidequests:1.1
+    appAdminUsername:
+      type: string
+      title: Admin Username
+      default: adminuser
+    appAdminPassword:
+      type: string
+      title: Admin Password
+      default: adminpassword
+benefits:
+  - title: Task Management
+    description: Organize and track your tasks efficiently
+  - title: Simple Interface
+    description: User-friendly interface for easy task management
+  - title: Project Organization
+    description: Keep your projects and tasks well-organized
+  - title: Self-Hosted
+    description: Keep your data private and secure
+features:
+  - title: Task Creation
+    description: Create and manage tasks with ease
+  - title: Project Organization
+    description: Organize tasks into projects
+  - title: User Management
+    description: Manage user access and permissions
+  - title: Data Persistence
+    description: Save your tasks and projects securely
+  - title: Customizable
+    description: Configure to your specific needs
+tags:
+  - Task Management
+  - Project Management
+  - Organization
+  - Productivity
+  - Self-Hosted 
