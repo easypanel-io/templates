@@ -1,0 +1,93 @@
+name: Omni Tools
+description:
+  Omni Tools is a comprehensive collection of web-based utilities and tools
+  designed to simplify everyday tasks for developers, designers, and general
+  users. It provides a unified interface for accessing dozens of useful tools
+  including text converters, encoders/decoders, formatters, generators,
+  calculators, image processors, and more. With no need for installation or
+  external dependencies, Omni Tools offers instant access to commonly needed
+  utilities without leaving your browser. The self-hosted solution ensures your
+  data remains private and never leaves your infrastructure, making it ideal for
+  handling sensitive information. All tools run entirely in the web interface
+  with a clean, intuitive design that makes finding and using utilities
+  effortless. Perfect for development teams, content creators, system
+  administrators, and anyone who regularly needs quick access to conversion,
+  formatting, encoding, or calculation tools without relying on multiple online
+  services or installing separate applications.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-24
+    description: Template Release
+
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/iib0011/omni-tools
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: omnitools
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: iib0011/omni-tools:0.6
+
+benefits:
+  - title: All-in-One Utility Suite
+    description:
+      Access dozens of commonly needed tools from a single interface,
+      eliminating the need to search for and switch between multiple online
+      services.
+  - title: Privacy-Focused
+    description:
+      Self-hosted solution ensures your data never leaves your infrastructure,
+      making it safe to process sensitive information.
+  - title: Zero Installation
+    description:
+      Browser-based tools require no software installation or plugins, providing
+      instant access from any device with a web browser.
+
+features:
+  - title: Text Processing
+    description:
+      Convert, format, and manipulate text with tools for case conversion,
+      encoding/decoding, formatting, and text generation.
+  - title: Data Converters
+    description:
+      Convert between different data formats, number systems, units of
+      measurement, and character encodings with ease.
+  - title: Encoders and Decoders
+    description:
+      Encode and decode various formats including Base64, URL encoding, HTML
+      entities, JWT tokens, and cryptographic hashes.
+  - title: Code Formatters
+    description:
+      Format and beautify code in multiple languages including JSON, XML, HTML,
+      CSS, JavaScript, and SQL for better readability.
+  - title: Generators
+    description:
+      Generate random data, passwords, UUIDs, lorem ipsum text, QR codes, and
+      other commonly needed values for development and testing.
+  - title: Calculators
+    description:
+      Perform various calculations including mathematical operations, date/time
+      conversions, and specialized calculations for different use cases.
+
+tags:
+  - Utilities
+  - Developer Tools
+  - Converters
+  - Productivity
+  - Tools
