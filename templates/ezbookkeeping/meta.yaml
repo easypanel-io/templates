@@ -1,0 +1,56 @@
+name: ezBookkeeping
+description: ezBookkeeping is a simple and easy-to-use personal bookkeeping application that helps you manage your personal finances. It provides features for tracking income, expenses, and account balances.
+instructions: null
+changeLog:
+  - date: 2025-04-21
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/mayswind/ezbookkeeping
+  - label: Documentation
+    url: https://github.com/mayswind/ezbookkeeping/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ezbookkeeping
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mayswind/ezbookkeeping:SNAPSHOT-20250420
+benefits:
+  - title: Personal Finance Management
+    description: Track and manage your personal finances with ease.
+  - title: Simple Interface
+    description: User-friendly interface for managing income and expenses.
+  - title: Data Persistence
+    description: Secure storage of your financial data with volume mounts.
+  - title: Easy Setup
+    description: Quick and simple setup process for personal bookkeeping.
+  - title: Open Source
+    description: Free and open-source personal finance management solution.
+features:
+  - title: Income Tracking
+    description: Record and categorize your income sources.
+  - title: Expense Management
+    description: Track and categorize your expenses.
+  - title: Account Balances
+    description: Monitor your account balances and financial health.
+  - title: Data Export
+    description: Export your financial data for backup or analysis.
+  - title: Multi-Currency Support
+    description: Support for multiple currencies in your financial records.
+tags:
+  - Finance
+  - Bookkeeping
+  - Personal Finance
+  - Budgeting
+  - Open Source 
