@@ -1,0 +1,66 @@
+name: Accent
+description:
+  Accent is a free and open-source web-based collaboration platform for
+  translation and localization projects. It provides a clean interface for
+  translators to work together on various file formats including JSON, YAML,
+  Properties, Gettext PO, and many more. Accent supports real-time
+  collaboration, version control integration, and automated workflows to
+  streamline the translation process. It features role-based access control,
+  translation memory, and comprehensive reporting tools to help manage
+  translation projects efficiently.
+instructions: null
+
+changeLog:
+  - date: 2025-07-14
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://www.accent.reviews
+  - label: Documentation
+    url: https://www.accent.reviews/guides/getting-started
+  - label: GitHub
+    url: https://github.com/mirego/accent
+  - label: Docker Hub
+    url: https://hub.docker.com/r/mirego/accent
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: accent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mirego/accent:v1.26.0
+
+benefits:
+  - title: Real-time Collaboration
+    description:
+      Multiple translators can work on the same project simultaneously with
+      real-time updates and conflict resolution.
+  - title: Version Control Integration
+    description:
+      Seamlessly integrates with Git repositories to sync translations with your
+      development workflow.
+  - title: Multiple File Formats
+    description:
+      Supports JSON, YAML, Properties, Gettext PO, and many other translation
+      file formats.
+  - title: Translation Memory
+    description:
+      Leverage previous translations to speed up the translation process and
+      ensure consistency across projects.
+  - title: API and CLI Tools
+    description:
+      Comprehensive API and command-line tools for automation and integration
+      with existing development workflows.
