@@ -1,0 +1,176 @@
+name: Kafka
+description:
+  Apache Kafka is a distributed event streaming platform designed for 
+  high-throughput, fault-tolerant, and real-time data processing. It enables 
+  you to publish and subscribe to streams of records, store streams of records 
+  in a fault-tolerant way, and process streams of records as they occur. 
+  Kafka is commonly used for building real-time streaming data pipelines and 
+  applications. This template deploys a Kafka cluster using the new KRaft mode 
+  (no Zookeeper required), with configurable number of broker/controller nodes 
+  and an optional Kafka UI for management.
+
+instructions: |
+  After deployment, you can connect to Kafka using the internal bootstrap 
+  servers: kafka1:9092,kafka2:9092,kafka3:9092 (depending on number of nodes).
+  For external access, use the configured external ports.
+  The Kafka UI is available at the configured domain.
+
+changeLog:
+  - date: 2024-11-29
+    description: First release with KRaft mode support
+
+links:
+  - label: Website
+    url: https://kafka.apache.org/
+  - label: Documentation
+    url: https://kafka.apache.org/documentation/
+  - label: GitHub
+    url: https://github.com/apache/kafka
+
+contributors:
+  - name: lucksjb
+    url: https://github.com/lucksjb
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - numberOfNodes
+    - externalBrokerPortStart
+    - internalBrokerPort
+    - controllerPort
+    - clusterId
+    - enableKafkaUI
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kafka
+    appServiceImage:
+      type: string
+      title: Kafka Docker Image
+      default: apache/kafka:4.1.1
+    numberOfNodes:
+      type: integer
+      title: Number of Kafka Nodes
+      default: 3
+      oneOf:
+        - enum:
+            - 1
+          title: 1 Node (Dev)
+        - enum:
+            - 3
+          title: 3 Nodes (Recommended)
+        - enum:
+            - 5
+          title: 5 Nodes
+        - enum:
+            - 7
+          title: 7 Nodes
+        - enum:
+            - 10
+          title: 10 Nodes
+        - enum:
+            - 15
+          title: 15 Nodes
+        - enum:
+            - 20
+          title: 20 Nodes
+        - enum:
+            - 30
+          title: 30 Nodes
+    externalBrokerPortStart:
+      type: integer
+      title: External Broker Port Start
+      default: 9094
+      description: External port for first broker. Subsequent nodes use +1 for each.
+    internalBrokerPort:
+      type: integer
+      title: Internal Broker Port
+      default: 9092
+    controllerPort:
+      type: integer
+      title: Controller Port
+      default: 9093
+    clusterId:
+      type: string
+      title: Cluster ID
+      default: kafka-cluster-easypanel
+      description: Unique identifier for the Kafka cluster.
+    replicationFactor:
+      type: integer
+      title: Replication Factor
+      default: 3
+      oneOf:
+        - enum:
+            - 1
+          title: One Replica
+        - enum:
+            - 2
+          title: Two Replicas
+        - enum:
+            - 3
+          title: Three Replicas (Recommended)
+        - enum:
+            - 5
+          title: Five Replicas
+        - enum:
+            - 7
+          title: Seven Replicas
+        - enum:
+            - 10
+          title: Ten Replicas
+      description: Number of replicas for each partition. Should be <= number of nodes.
+    enableKafkaUI:
+      type: boolean
+      title: Enable Kafka UI
+      default: true
+    kafkaUIImage:
+      type: string
+      title: Kafka UI Docker Image
+      default: provectuslabs/kafka-ui:v0.7.2
+
+benefits:
+  - title: High Throughput
+    description:
+      Kafka can handle millions of messages per second, making it ideal for 
+      high-volume data streaming applications.
+  - title: Fault Tolerant
+    description:
+      With built-in replication and partition distribution, Kafka ensures 
+      data durability and availability even when nodes fail.
+  - title: Scalable
+    description:
+      Kafka can scale horizontally by adding more brokers to handle 
+      increased load without downtime.
+  - title: KRaft Mode (No Zookeeper)
+    description:
+      This template uses Kafka's native consensus protocol, eliminating 
+      the need for a separate Zookeeper cluster.
+
+features:
+  - title: Distributed Cluster
+    description:
+      Deploy a multi-node Kafka cluster with combined broker and controller 
+      roles for simplified architecture.
+  - title: Configurable Nodes
+    description:
+      Choose between 1, 2, or 3 nodes depending on your fault tolerance 
+      and performance requirements.
+  - title: Kafka UI
+    description:
+      Optional web-based management interface for monitoring topics, 
+      consumers, and cluster health.
+  - title: External Access
+    description:
+      Configure external ports for accessing Kafka from outside the 
+      Docker network.
+
+tags:
+  - Message Broker
+  - Event Streaming
+  - High Availability
+  - Queue Management
+  - Real-time
+
