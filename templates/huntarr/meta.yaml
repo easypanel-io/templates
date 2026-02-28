@@ -1,0 +1,110 @@
+name: Huntarr
+description:
+  Huntarr is an automated media library enhancement tool that continuously
+  monitors and improves your Radarr, Sonarr, and Lidarr collections. It works by
+  periodically scanning your media libraries to identify missing items, failed
+  downloads, and opportunities for quality upgrades, then automatically
+  triggering searches to fill gaps and improve your collection. Huntarr acts as
+  an intelligent automation layer on top of your existing *arr stack, ensuring
+  your media library stays complete and up-to-date without manual intervention.
+  The application features configurable scan intervals, customizable search
+  triggers, support for multiple quality profiles, and detailed logging for
+  tracking improvements. With its set-it-and-forget-it approach, Huntarr
+  continuously works in the background to enhance your media collection by
+  finding better quality versions, locating missing episodes or movies, and
+  automatically requesting upgrades based on your configured quality
+  preferences. The web interface provides visibility into scan history, search
+  statistics, and library health metrics. Perfect for users who want their media
+  libraries to automatically improve over time, home media server enthusiasts
+  managing large collections, or anyone running Radarr/Sonarr/Lidarr who wants
+  to ensure their libraries are always complete and optimized without constant
+  manual searching.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-27
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://huntarr.io/
+  - label: GitHub
+    url: https://github.com/plexguide/Huntarr.io
+  - label: Docker Hub
+    url: https://hub.docker.com/r/huntarr/huntarr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: huntarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: huntarr/huntarr:9.2.1
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+
+benefits:
+  - title: Automated Library Enhancement
+    description:
+      Continuously improve your media collection without manual intervention by
+      automatically triggering searches for missing items and quality upgrades.
+  - title: Set-It-and-Forget-It Operation
+    description:
+      Configure once and let Huntarr work in the background, ensuring your media
+      libraries stay complete and optimized 24/7.
+  - title: Quality Optimization
+    description:
+      Automatically find and request better quality versions of your media based
+      on your configured quality profiles and preferences.
+  - title: Multi-Service Support
+    description:
+      Works seamlessly with Radarr, Sonarr, and Lidarr, providing comprehensive
+      automation across your entire media stack.
+
+features:
+  - title: Continuous Library Scanning
+    description:
+      Periodically scans your Radarr, Sonarr, and Lidarr libraries on a
+      configurable schedule to identify improvement opportunities.
+  - title: Missing Item Detection
+    description:
+      Automatically identifies missing movies, TV episodes, and music albums,
+      then triggers searches to complete your collection.
+  - title: Quality Upgrade Automation
+    description:
+      Monitors for higher quality versions of existing media and automatically
+      requests upgrades based on your quality profiles.
+  - title: Failed Download Recovery
+    description:
+      Detects failed or stalled downloads and automatically retriggers searches
+      to ensure content acquisition completes successfully.
+  - title: Configurable Scan Intervals
+    description:
+      Customize how frequently Huntarr scans your libraries to balance
+      automation with system resource usage.
+  - title: Detailed Logging & Statistics
+    description:
+      Track scan history, search triggers, and library improvements with
+      comprehensive logs and statistics.
+
+tags:
+  - Media Automation
+  - Radarr
+  - Sonarr
+  - Lidarr
+  - Library Management
+  - Media Server
