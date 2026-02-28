@@ -1,0 +1,119 @@
+name: Ubooquity
+description:
+  Ubooquity is a free, lightweight and easy-to-use home server for your comics
+  and ebooks. It provides a clean web interface to browse, read, and organize
+  your digital library from any device. Ubooquity supports various formats
+  including CBZ, CBR, CB7, PDF, EPUB, and many more. It features user
+  management, reading progress tracking, and can serve your media collection to
+  multiple users simultaneously. The server includes both a library interface
+  for browsing and an admin interface for configuration, making it perfect for
+  managing your digital book and comic collection at home.
+instructions: null
+
+changeLog:
+  - date: 2025-07-14
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://vaemendis.net/ubooquity/
+  - label: Documentation
+    url: https://vaemendis.github.io/ubooquity-doc/pages/installation-guide.html
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appServicePort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ubooquity
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/ubooquity:2.1.5
+    appServicePort:
+      type: string
+      title: App Service Port
+      default: "2202"
+benefits:
+  - title: Easy Digital Library Management
+    description:
+      Organize and browse your comics and ebooks through a clean web interface
+      accessible from any device.
+  - title: Multiple Format Support
+    description:
+      Supports CBZ, CBR, CB7, PDF, EPUB, and many other digital book and comic
+      formats.
+  - title: User Management
+    description:
+      Create multiple user accounts with different access levels for family
+      members or friends.
+  - title: Reading Progress Tracking
+    description:
+      Keep track of your reading progress across devices and resume where you
+      left off.
+  - title: Lightweight and Fast
+    description:
+      Minimal resource usage with fast browsing and reading experience for large
+      libraries.
+
+features:
+  - title: Media Server
+    description:
+      Serves your digital book and comic collection through a centralized
+      web-based platform accessible from any device
+  - title: Ebook Reader
+    description:
+      Built-in web reader supporting EPUB, PDF, MOBI, and other popular ebook
+      formats with customizable reading experience
+  - title: Comic Reader
+    description:
+      Dedicated comic reader with page-by-page navigation supporting CBZ, CBR,
+      CB7, and PDF comic formats
+  - title: Library Management
+    description:
+      Organize and categorize your digital collection with automatic metadata
+      extraction and custom folder structures
+  - title: Web Interface
+    description:
+      Clean, responsive web interface that works seamlessly across desktop,
+      tablet, and mobile devices
+  - title: User Management
+    description:
+      Create multiple user accounts with different access levels and reading
+      permissions for family or shared use
+  - title: Reading Progress
+    description:
+      Automatic bookmark system that tracks reading progress across devices and
+      allows resuming from where you left off
+  - title: Multi-Format Support
+    description:
+      Comprehensive support for various digital book and comic formats including
+      CBZ, CBR, CB7, PDF, EPUB, MOBI, and more
+  - title: Digital Library
+    description:
+      Transform your local book and comic collection into a professionally
+      organized digital library with search capabilities
+  - title: Home Server
+    description:
+      Self-hosted solution that keeps your digital media collection private and
+      accessible only to authorized users
+
+tags:
+  - Books
+  - Comics
+  - Digital Library
+  - Media Server
+  - Reading
+  - Home Server
+  - Web Interface
+  - Library Management
+  - PDF Reader
+  - Comic Reader
