@@ -1,0 +1,69 @@
+name: DumbDrop
+description:
+  DumbDrop is a simple file sharing service for quick file uploads and
+  downloads. It provides a clean web interface for sharing files with optional
+  PIN protection and configurable file size limits. Perfect for temporary file
+  sharing and quick document distribution.
+instructions: null
+changeLog:
+  - date: 2025-09-24
+    description: First release (sha-54cdf4be36b85a7146685841c567cb6b4e96b69e)
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbdrop
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbdrop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbdrop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbdrop:sha-54cdf4be36b85a7146685841c567cb6b4e96b69e
+  benefits:
+    - title: Simple File Sharing
+      description:
+        Easy-to-use web interface for quick file uploads and sharing with direct
+        download links.
+    - title: Optional Security
+      description:
+        Optional PIN protection to control access to your file sharing service.
+    - title: Configurable Limits
+      description:
+        Set custom file size limits to control storage usage and bandwidth.
+    - title: No Database Required
+      description:
+        Stateless service that stores files directly without requiring a
+        database.
+features:
+  - title: Web Interface
+    description:
+      Clean, responsive web interface for uploading and managing files.
+  - title: PIN Protection
+    description: Optional PIN-based access control for additional security.
+  - title: File Size Limits
+    description: Configurable maximum file size limits to control storage usage.
+  - title: Auto Upload
+    description:
+      Option to automatically upload files without clicking upload button.
+  - title: Direct Links
+    description: Generate direct download links for easy file sharing.
+  - title: Persistent Storage
+    description:
+      Files are stored in persistent volumes and survive container restarts.
+tags:
+  - File Sharing
+  - Upload
+  - Download
+  - Simple
+  - Web Interface
