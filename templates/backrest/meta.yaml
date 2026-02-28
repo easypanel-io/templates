@@ -1,0 +1,91 @@
+name: Backrest
+description:
+  Backrest is a modern backup and restore application that provides reliable
+  data protection with support for multiple storage backends including local
+  storage, cloud providers, and rclone-compatible services. It features a clean
+  web interface for managing backups, scheduling, and monitoring backup status.
+instructions: null
+changeLog:
+  - date: 2025-09-29
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/garethgeorge/backrest
+  - label: DockerHub
+    url: https://hub.docker.com/r/garethgeorge/backrest
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: backrest
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: garethgeorge/backrest:v1.9.2
+benefits:
+  - title: Reliable Backup Solution
+    description:
+      Provides robust backup and restore capabilities with support for multiple
+      storage backends and comprehensive data protection strategies.
+  - title: Multiple Storage Options
+    description:
+      Supports local storage, cloud providers, and rclone-compatible services
+      for flexible backup destination options.
+  - title: Web-Based Management
+    description:
+      Clean and intuitive web interface for managing backups, scheduling, and
+      monitoring backup status and health.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your backup data with no external dependencies or
+      data sharing with third parties.
+features:
+  - title: Web Interface
+    description:
+      Modern web-based interface accessible from any device with a browser for
+      easy backup management.
+  - title: Multiple Storage Backends
+    description:
+      Support for various storage options including local filesystem, cloud
+      providers, and rclone-compatible services.
+  - title: Backup Scheduling
+    description:
+      Flexible scheduling options for automated backups with customizable
+      intervals and retention policies.
+  - title: Data Encryption
+    description:
+      Built-in encryption capabilities to secure your backup data both in
+      transit and at rest.
+  - title: Backup Monitoring
+    description:
+      Comprehensive monitoring and reporting of backup status, health, and
+      performance metrics.
+  - title: Restore Capabilities
+    description:
+      Easy restore functionality with point-in-time recovery options and
+      selective file restoration.
+  - title: Configuration Management
+    description:
+      Centralized configuration management with JSON-based settings and
+      environment variable support.
+  - title: Cache Management
+    description:
+      Efficient caching system for improved performance and reduced storage
+      overhead during backup operations.
+tags:
+  - Backup
+  - Restore
+  - Data Protection
+  - Self-hosted
+  - Web Interface
+  - Cloud Storage
+  - Rclone
+  - Scheduling
