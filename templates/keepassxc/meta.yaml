@@ -1,0 +1,58 @@
+name: KeePassXC
+description:
+  KeePassXC is a modern, secure, and open-source password manager that stores and manages your passwords in an encrypted database.
+  It provides strong security features and cross-platform compatibility.
+instructions: null
+changeLog:
+  - date: 2025-04-09
+    description: First Release
+links:
+  - label: Website
+    url: https://keepassxc.org
+  - label: Documentation
+    url: https://keepassxc.org/docs
+  - label: GitHub
+    url: https://github.com/keepassxreboot/keepassxc
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: keepassxc
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/keepassxc:2.7.9
+benefits:
+  - title: Security
+    description: Strong encryption and security features
+  - title: Cross-Platform
+    description: Works on Windows, macOS, and Linux
+  - title: Open Source
+    description: Transparent and community-driven development
+  - title: Password Management
+    description: Secure storage and management of passwords
+features:
+  - title: Strong Encryption
+    description: AES-256 encryption for password databases
+  - title: Auto-Type
+    description: Automatically fill in passwords
+  - title: Password Generator
+    description: Create strong, random passwords
+  - title: Browser Integration
+    description: Integrate with web browsers
+  - title: Two-Factor Authentication
+    description: Support for 2FA and TOTP
+tags:
+  - Security
+  - Password Manager
+  - Encryption
+  - Open Source
+  - Cross-Platform 
