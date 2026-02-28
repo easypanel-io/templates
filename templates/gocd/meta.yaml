@@ -1,0 +1,74 @@
+name: GoCD
+description:
+  GoCD is a continuous delivery and release automation server. It helps you automate
+  and streamline your build-test-release cycle, making it easy to manage complex
+  deployment pipelines. GoCD provides end-to-end visibility and traceability from
+  commit to deployment, with the ability to model complex workflows and dependencies
+  with ease. It supports parallel and sequential execution, and provides powerful
+  value stream visualization to help you optimize your delivery process.
+instructions: null
+changeLog:
+  - date: 2024-03-04
+    description: First Release
+links:
+  - label: Website
+    url: https://www.gocd.org/
+  - label: Documentation
+    url: https://docs.gocd.org/
+  - label: Github
+    url: https://github.com/gocd/gocd
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gocd-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gocd/gocd-server:v24.3.0
+benefits:
+  - title: Continuous Delivery
+    description:
+      Model and visualize complex workflows with ease, from commit to deployment.
+  - title: Value Stream Map
+    description:
+      Trace a commit from check-in to deployment and understand dependencies.
+  - title: Pipeline Organization
+    description:
+      Group pipelines into pipeline groups for better organization and management.
+  - title: Advanced Workflows
+    description:
+      Support for parallel and sequential execution, fan-in/fan-out, and dependencies.
+  - title: Security & Access Control
+    description:
+      Role-based access control and authentication integration with LDAP/AD.
+features:
+  - title: Pipeline Management
+    description:
+      Create and manage complex deployment pipelines with ease.
+  - title: Environment Management
+    description:
+      Define and manage different environments for testing and deployment.
+  - title: Agent Management
+    description:
+      Manage build agents and their resources efficiently.
+  - title: Artifact Management
+    description:
+      Store and version artifacts with built-in artifact repository.
+  - title: Plugin System
+    description:
+      Extend functionality with a wide range of plugins.
+tags:
+  - CI/CD
+  - Continuous Delivery
+  - DevOps
+  - Automation
+  - Pipeline Management 
