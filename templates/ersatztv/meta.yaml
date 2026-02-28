@@ -1,0 +1,95 @@
+name: ErsatzTV
+description:
+  ErsatzTV is a modern, web-based IPTV server that creates custom TV channels
+  from your local media library. It streams your movies, TV shows, and other
+  content as continuous TV channels that can be watched on any IPTV-compatible
+  device or application. ErsatzTV provides a sophisticated scheduling system,
+  allowing you to create program guides, manage commercial breaks, and simulate
+  a real TV experience with your personal media collection. Perfect for home
+  entertainment setups, media centers, and creating personalized TV channels
+  from your existing content library.
+
+instructions:
+  The application uses /transcode as a temporary directory for processing media
+  files, which is mounted as a volume for optimal performance.
+
+changeLog:
+  - date: 2025-10-14
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/ersatztv/ersatztv
+  - label: Documentation
+    url: https://ersatztv.github.io/ersatztv/
+  - label: Docker Hub
+    url: https://github.com/ersatztv/ersatztv/pkgs/container/ersatztv
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ersatztv
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/ersatztv/ersatztv:9bae8e73bf58ee80d7667a148b147957a30116dc
+    timezone:
+      type: string
+      title: Timezone
+      default: "America/Chicago"
+      description: Timezone for scheduling and program guides
+
+benefits:
+  - title: Custom TV Channels
+    description:
+      Transform your personal media library into continuous TV channels with
+      professional scheduling and program guides.
+  - title: IPTV Compatibility
+    description:
+      Generates standard M3U playlists compatible with any IPTV player or device
+      for seamless viewing experience.
+  - title: Advanced Scheduling
+    description:
+      Sophisticated scheduling system with program guides, commercial breaks,
+      and realistic TV channel simulation.
+  - title: Web-Based Management
+    description:
+      Modern web interface for easy channel configuration, media management, and
+      real-time monitoring of your TV streams.
+
+features:
+  - title: Media Library Integration
+    description:
+      Automatically scans and organizes your local media files into customizable
+      TV channels with intelligent scheduling.
+  - title: Program Guide Generation
+    description:
+      Creates detailed EPG (Electronic Program Guide) data for your channels
+      with accurate scheduling and program information.
+  - title: Commercial Management
+    description:
+      Insert commercials, bumpers, and station identification between programs
+      to create authentic TV channel experience.
+  - title: Multi-Channel Support
+    description:
+      Run multiple TV channels simultaneously, each with its own schedule,
+      content, and configuration settings.
+
+tags:
+  - IPTV
+  - Media Server
+  - TV Channels
+  - Streaming
+  - Home Entertainment
+  - Media Center
+  - Plex Alternative
