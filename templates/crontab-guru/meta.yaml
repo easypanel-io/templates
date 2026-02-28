@@ -1,0 +1,81 @@
+name: Crontab Guru
+description:
+  Crontab Guru is a simple web interface for managing and testing cron
+  expressions. It provides an intuitive dashboard for creating, editing, and
+  validating crontab entries with real-time feedback. Perfect for system
+  administrators and developers who need to schedule tasks and want to ensure
+  their cron expressions are correct before deployment.
+instructions: Login using the default credentials; admin/secret123
+changeLog:
+  - date: 2025-07-21
+    description: Initial release (dockeriddonuts/crontab-dashboard:1.0)
+links:
+  - label: Website
+    url: https://crontab.guru
+  - label: Documentation
+    url: https://crontab.guru/examples.html
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: crontab-guru
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dockeriddonuts/crontab-dashboard:1.0
+benefits:
+  - title: Cron Expression Validation
+    description:
+      Test and validate your cron expressions before deployment to ensure they
+      run at the correct times.
+  - title: Visual Cron Builder
+    description:
+      Build cron expressions visually with an intuitive interface that shows
+      next run times.
+  - title: Crontab Management
+    description:
+      Manage your crontab entries through a clean web interface with persistent
+      storage.
+  - title: Real-time Feedback
+    description:
+      Get immediate feedback on your cron expressions with human-readable
+      descriptions.
+features:
+  - title: Cron Expression Editor
+    description:
+      Visual editor for creating and modifying cron expressions with syntax
+      highlighting and validation.
+  - title: Schedule Preview
+    description:
+      Preview when your cron jobs will run with a clear timeline view of
+      upcoming executions.
+  - title: Expression Validation
+    description:
+      Real-time validation of cron expressions with detailed error messages and
+      suggestions.
+  - title: Persistent Storage
+    description:
+      Store your crontab configurations persistently with volume mounting for
+      data retention.
+  - title: Web Interface
+    description:
+      Clean, responsive web interface accessible from any browser for easy cron
+      management.
+  - title: Example Library
+    description:
+      Built-in library of common cron expression examples for quick reference
+      and learning.
+tags:
+  - Cron
+  - Scheduling
+  - System Administration
+  - Task Management
+  - Developer Tools
