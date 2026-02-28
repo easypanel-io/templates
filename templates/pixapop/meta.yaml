@@ -1,0 +1,103 @@
+name: Pixapop
+description:
+  Pixapop is a modern photo management and sharing application that provides a
+  beautiful web interface for organizing, viewing, and sharing your photo
+  collection. It features automatic photo organization, metadata extraction, and
+  a clean, responsive interface for browsing your photos from any device.
+instructions:
+  You need to mount the photos volume to the container to make the application
+  work.
+changeLog:
+  - date: 2025-10-06
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/linuxserver/docker-pixapop
+  - label: DockerHub
+    url: https://hub.docker.com/r/linuxserver/pixapop
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appUsername
+    - appPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pixapop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: linuxserver/pixapop:1.2.20221014
+    appUsername:
+      type: string
+      title: App Username
+      default: admin
+    appPassword:
+      type: string
+      title: App Password
+      default: admin
+benefits:
+  - title: Photo Management
+    description:
+      Organize and manage your photo collection with automatic organization,
+      metadata extraction, and advanced search capabilities.
+  - title: Web-Based Interface
+    description:
+      Clean and intuitive web interface accessible from any device with a
+      browser for easy photo browsing and management.
+  - title: Photo Sharing
+    description:
+      Share your photos with friends and family through secure links and
+      customizable sharing options.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your photo collection with no external dependencies
+      or data sharing with third parties.
+features:
+  - title: Web Interface
+    description:
+      Modern web-based interface accessible from any device with a browser for
+      easy photo browsing and management.
+  - title: Photo Organization
+    description:
+      Automatic photo organization with folder structure management and
+      intelligent categorization.
+  - title: Metadata Extraction
+    description:
+      Automatic extraction of photo metadata including EXIF data, GPS
+      coordinates, and camera information.
+  - title: Search and Filter
+    description:
+      Advanced search and filtering capabilities to quickly find specific photos
+      in your collection.
+  - title: Photo Sharing
+    description:
+      Secure photo sharing with customizable access controls and sharing
+      options.
+  - title: Responsive Design
+    description:
+      Mobile-responsive design that works seamlessly across desktop and mobile
+      devices.
+  - title: User Authentication
+    description:
+      Built-in user authentication system with username and password protection
+      for secure access.
+  - title: Data Persistence
+    description:
+      All photo metadata, user settings, and configuration data persists across
+      container restarts.
+tags:
+  - Photo Management
+  - Photo Sharing
+  - Self-hosted
+  - Web Interface
+  - Metadata
+  - Organization
+  - Gallery
+  - LinuxServer
