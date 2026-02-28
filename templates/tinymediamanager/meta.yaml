@@ -1,0 +1,72 @@
+name: TinyMediaManager
+description:
+  TinyMediaManager is a media management tool designed to organize and manage your 
+  movie and TV show collections. It automatically fetches metadata from various sources,
+  downloads artwork, and helps keep your media library well-organized with proper naming
+  conventions and metadata files for media servers like Plex, Emby, and Jellyfin.
+instructions: null
+changeLog:
+  - date: 2025-04-25
+    description: Initial release
+links:
+  - label: Website
+    url: https://www.tinymediamanager.org/
+  - label: Documentation
+    url: https://www.tinymediamanager.org/docs/
+  - label: GitHub
+    url: https://github.com/tinyMediaManager/tinyMediaManager
+  - label: Docker Hub
+    url: https://hub.docker.com/r/tinymediamanager/tinymediamanager
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - password
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tinymediamanager
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tinymediamanager/tinymediamanager:5.1.5
+    password:
+      type: string
+      title: VNC Password
+      default: password
+      description: Password for accessing the VNC interface
+benefits:
+  - title: Automated Metadata Retrieval
+    description: Automatically fetch movie and TV show metadata from online sources like TMDB, TVDB, and IMDB
+  - title: Artwork Management
+    description: Download and manage posters, fanart, banners, and other artwork for your media
+  - title: Media Organization
+    description: Rename and organize files based on customizable templates
+  - title: NFO File Generation
+    description: Create NFO files for optimal compatibility with media servers
+features:
+  - title: Batch Processing
+    description: Process multiple movies or TV shows at once
+  - title: Multi-language Support
+    description: Support for multiple languages for both the UI and metadata
+  - title: Image Management
+    description: Advanced image manipulation including poster selection and artwork downloading
+  - title: Flexible Scraping Options
+    description: Configure how metadata is fetched and which sources to prioritize
+  - title: Remote Access
+    description: Access through web interface or VNC from any device
+  - title: Persistent Storage
+    description: Maintains configuration and data between restarts
+tags:
+  - Media Manager
+  - Movies
+  - TV Shows
+  - Metadata
+  - Plex
+  - Emby
+  - Jellyfin 
