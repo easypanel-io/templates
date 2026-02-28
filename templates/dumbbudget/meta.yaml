@@ -1,0 +1,73 @@
+name: DumbBudget
+description:
+  DumbBudget is a simple, self-hosted budget management application that helps
+  you track expenses, manage income, and monitor your financial health. It
+  features PIN protection, multi-currency support, and intuitive expense
+  tracking. Perfect for individuals and families who want to take control of
+  their finances.
+instructions: null
+changeLog:
+  - date: 2025-09-26
+    description: First release (d44543bf67ecedb416138ac4de93759d3a324999)
+links:
+  - label: GitHub
+    url: https://github.com/dumbwareio/dumbbudget
+  - label: DockerHub
+    url: https://hub.docker.com/r/dumbwareio/dumbbudget
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dumbbudget
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dumbwareio/dumbbudget:d44543bf67ecedb416138ac4de93759d3a324999
+benefits:
+  - title: Budget Management
+    description:
+      Track income, expenses, and savings with intuitive budget management tools
+      and financial insights.
+  - title: PIN Protection
+    description:
+      Optional PIN-based access control for additional security and privacy
+      protection of your financial data.
+  - title: Multi-Currency Support
+    description:
+      Support for different currencies to match your local financial environment
+      and preferences.
+  - title: Self-Hosted
+    description:
+      Complete control over your financial data with no external dependencies or
+      data sharing with third parties.
+features:
+  - title: Expense Tracking
+    description: Track and categorize your daily expenses and purchases.
+  - title: Income Management
+    description: Record and monitor your income sources and patterns.
+  - title: Budget Planning
+    description: Create and manage budgets for different categories.
+  - title: Financial Reports
+    description: Generate reports and insights about your spending habits.
+  - title: PIN Protection
+    description: Optional PIN-based access control for security.
+  - title: Multi-Currency
+    description: Support for different currencies and exchange rates.
+  - title: Data Persistence
+    description: All financial data persists across container restarts.
+  - title: Web Interface
+    description: Clean, responsive web interface for budget management.
+tags:
+  - Budget Management
+  - Personal Finance
+  - Expense Tracking
+  - Financial Planning
+  - Web Interface
