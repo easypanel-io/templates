@@ -1,0 +1,87 @@
+name: Surmai
+description:
+  Surmai is a self-hosted application server that provides a comprehensive
+  platform for managing and deploying applications. Built with modern
+  architecture, Surmai offers a web-based interface accessible on port 8080 for
+  managing your applications and services. The system stores all application data
+  in a persistent volume, ensuring your configuration and data are preserved
+  across restarts. Perfect for developers and organizations looking for a
+  self-hosted solution to manage their application infrastructure.
+instructions: null
+changeLog:
+  - date: 2025-01-21
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://surmai.app/
+  - label: GitHub
+    url: https://github.com/rohitkumbhar/surmai
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: surmai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rohitkumbhar/surmai:v0.4.8
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description: Default administrator email address
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: admin123
+      description: Admin password (minimum 9 characters with mixed case, numbers, and special characters)
+benefits:
+  - title: Self-Hosted Application Server
+    description:
+      Manage and deploy your applications with a self-hosted platform that gives
+      you complete control over your infrastructure.
+  - title: Web-Based Interface
+    description:
+      Access and manage your applications through a modern web interface
+      accessible on port 8080.
+  - title: Persistent Data Storage
+    description:
+      All application data is stored in a persistent volume, ensuring your
+      configuration and data are preserved across container restarts.
+  - title: Easy Administration
+    description:
+      Simple admin interface with email and password authentication for easy
+      management of your applications.
+features:
+  - title: Application Management
+    description:
+      Deploy and manage multiple applications from a single interface with
+      comprehensive management capabilities.
+  - title: Persistent Storage
+    description:
+      Application data is stored in a dedicated volume at /pb_data for reliable
+      data persistence.
+  - title: Admin Authentication
+    description:
+      Secure admin access with email and password authentication for managing
+      your Surmai instance.
+  - title: Containerized Deployment
+    description:
+      Easily deploy Surmai in any environment that supports Docker with minimal
+      configuration requirements.
+tags:
+  - Application Server
+  - Self-Hosted
+  - Management
+  - Deployment
+  - Docker
