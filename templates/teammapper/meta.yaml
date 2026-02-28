@@ -1,0 +1,103 @@
+name: TeamMapper
+description:
+  TeamMapper is a powerful team mapping and visualization tool designed to help
+  organizations understand team structures, relationships, and collaboration
+  patterns. It provides an intuitive interface for creating interactive team
+  maps that visualize team members, their roles, departments, and connections.
+  TeamMapper enables teams to better understand their organizational structure,
+  identify collaboration opportunities, and optimize team dynamics. The platform
+  supports real-time updates, customizable visualizations, and comprehensive
+  team analytics to help organizations make data-driven decisions about team
+  composition and workflow optimization.
+instructions: null
+changeLog:
+  - date: 2025-10-07
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/b310-digital/teammapper
+  - label: Docker Hub
+    url: https://github.com/b310-digital/teammapper/pkgs/container/teammapper
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: teammapper
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/b310-digital/teammapper:v0.2.0-9
+benefits:
+  - title: Team Structure Visualization
+    description:
+      Create clear, interactive visualizations of your team structure that help
+      everyone understand roles, responsibilities, and reporting relationships
+      at a glance.
+  - title: Collaboration Insights
+    description:
+      Identify collaboration patterns and opportunities within your organization
+      to optimize team dynamics and improve cross-functional communication.
+  - title: Organizational Clarity
+    description:
+      Provide transparency into team composition and structure, helping new team
+      members understand the organization and existing members stay aligned.
+  - title: Data-Driven Team Decisions
+    description:
+      Use comprehensive team analytics and insights to make informed decisions
+      about team composition, resource allocation, and workflow optimization.
+features:
+  - title: Interactive Team Maps
+    description:
+      Create dynamic, interactive team maps with drag-and-drop functionality,
+      customizable layouts, and real-time updates to reflect organizational
+      changes.
+  - title: Role and Department Mapping
+    description:
+      Map team members to their roles, departments, and reporting structures
+      with visual indicators and customizable categorization options.
+  - title: Real-Time Updates
+    description:
+      Keep team maps current with real-time updates that automatically reflect
+      organizational changes, new hires, role changes, and department
+      restructuring.
+  - title: Customizable Visualizations
+    description:
+      Customize the appearance of team maps with different layouts, color
+      schemes, and visual elements to match your organization's branding and
+      preferences.
+  - title: Team Analytics
+    description:
+      Access comprehensive analytics about team composition, collaboration
+      patterns, and organizational metrics to support data-driven decision
+      making.
+  - title: Export and Sharing
+    description:
+      Export team maps in various formats and share them with stakeholders,
+      making it easy to communicate organizational structure across teams.
+  - title: Secure Data Management
+    description:
+      Built-in data retention policies and secure database storage ensure
+      sensitive organizational information is protected and managed according to
+      your policies.
+  - title: Multi-User Support
+    description:
+      Support for multiple users with role-based access control, allowing
+      different team members to view and edit team maps based on their
+      permissions.
+tags:
+  - Team Management
+  - Visualization
+  - Organization
+  - Collaboration
+  - Analytics
+  - Web App
+  - Self-hosted
+  - PostgreSQL
