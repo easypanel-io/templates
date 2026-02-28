@@ -1,0 +1,93 @@
+name: Glass Keep
+description:
+  Glass Keep is a lightweight, self-hosted note-taking and organization
+  application designed for personal knowledge management. It provides a clean,
+  intuitive interface for creating, organizing, and managing notes, thoughts,
+  and ideas. Glass Keep features markdown support, rich text editing,
+  categories, tags, and powerful search capabilities to help you find
+  information quickly. Built with Node.js and SQLite, it offers fast performance
+  and easy deployment without requiring complex database setup. All your notes
+  are stored locally in a SQLite database, ensuring privacy and complete control
+  over your data. Perfect for individuals who want a simple, fast, and private
+  note-taking solution without the complexity of larger systems.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-17
+    description: Template Release
+
+links:
+  - label: Github
+    url: https://github.com/nikunjsingh/glass-keep
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glasskeep
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nikunjsingh/glass-keep:latest
+    adminEmail:
+      type: string
+      title: Admin Email/Username
+      default: ""
+
+benefits:
+  - title: Simple & Lightweight
+    description:
+      Minimalist design focused on note-taking essentials. Fast, responsive
+      interface with no bloat or unnecessary features.
+  - title: Privacy-First
+    description:
+      All notes stored locally in SQLite database on your own server. Your
+      thoughts and ideas remain completely private.
+  - title: Easy Deployment
+    description:
+      Single container deployment with no external database required. SQLite
+      provides reliable storage with zero configuration.
+
+features:
+  - title: Note Management
+    description:
+      Create, edit, and organize notes with a clean interface. Support for rich
+      text, markdown, and structured content.
+  - title: Categories & Tags
+    description:
+      Organize notes with categories and tags for easy retrieval. Build a
+      structured knowledge base that grows with you.
+  - title: Search Functionality
+    description:
+      Powerful search across all your notes to quickly find the information you
+      need when you need it.
+  - title: User Authentication
+    description:
+      Secure access with JWT-based authentication. Admin controls for managing
+      users and permissions.
+  - title: SQLite Storage
+    description:
+      Reliable, fast SQLite database for storing all your notes. No complex
+      database setup or maintenance required.
+  - title: Markdown Support
+    description:
+      Write notes in markdown format for structured, formatted content that's
+      easy to read and portable.
+
+tags:
+  - Notes
+  - Knowledge Management
+  - Note Taking
+  - Markdown
+  - SQLite
