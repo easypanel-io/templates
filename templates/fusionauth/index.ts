@@ -52,6 +52,7 @@ export function generate(input: Input): Output {
         `plugins.security.disabled=true`,
         `bootstrap.memory_lock=true`,
         `opensearch_java_opts=-Xms512m -Xmx512m`,
+        `OPENSEARCH_INITIAL_ADMIN_PASSWORD=${input.searchPassword}`,
       ].join("\n"),
       source: {
         type: "image",
