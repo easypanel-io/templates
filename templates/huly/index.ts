@@ -13,7 +13,8 @@ const NGINX_CONFIG = (
   collaboratorHost: string,
   rekoniHost: string,
   statsHost: string,
-  minioHost: string
+  minioHost: string,
+  loveHost?: string
 ) => `server {
   listen 80;
   server_name _;
@@ -96,7 +97,17 @@ const NGINX_CONFIG = (
     rewrite ^/_stats(/.*)$ $1 break;
     proxy_pass http://${statsHost}:4900/;
   }
-
+${loveHost ? `
+  location /_love {
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    rewrite ^/_love(/.*)$ $1 break;
+    proxy_pass http://${loveHost}:8096/;
+  }
+` : ""}
   location /files {
     proxy_http_version 1.1;
     proxy_set_header Host $host;
@@ -123,12 +134,19 @@ export function generate(input: Input): Output {
   const rekoniHost = `${base}-rekoni`;
   const statsHost = `${base}-stats`;
   const minioHost = `${base}-minio`;
+  const loveHost = `${base}-love`;
   const cockroachHost = `${base}-cockroach`;
   const elasticHost = `${base}-elastic`;
   const fulltextHost = `${base}-fulltext`;
   const redpandaHost = `${base}-redpanda`;
 
   const hostAddress = `https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`;
+
+  const loveEnabled =
+    input.enableLove &&
+    input.livekitHost &&
+    input.livekitApiKey &&
+    input.livekitApiSecret;
 
   services.push({
     type: "app",
@@ -146,7 +164,8 @@ export function generate(input: Input): Output {
             collaboratorHost,
             rekoniHost,
             statsHost,
-            minioHost
+            minioHost,
+            loveEnabled ? loveHost : undefined
           ),
           mountPath: "/etc/nginx/conf.d/default.conf",
         },
@@ -344,6 +363,29 @@ export function generate(input: Input): Output {
     },
   });
 
+  if (loveEnabled) {
+    services.push({
+      type: "app",
+      data: {
+        serviceName: `${input.appServiceName}-love`,
+        source: {
+          type: "image",
+          image: `hardcoreeng/love:${hulyVersion}`,
+        },
+        env: [
+          "PORT=8096",
+          `SECRET=${secret}`,
+          `ACCOUNTS_URL=http://${accountHost}:3000`,
+          `DB_URL=${crDbUrl}`,
+          `STORAGE_CONFIG=${storageConfig}`,
+          `LIVEKIT_HOST=${input.livekitHost}`,
+          `LIVEKIT_API_KEY=${input.livekitApiKey}`,
+          `LIVEKIT_API_SECRET=${input.livekitApiSecret}`,
+        ].join("\n"),
+      },
+    });
+  }
+
   services.push({
     type: "app",
     data: {
@@ -377,7 +419,12 @@ export function generate(input: Input): Output {
       env: [
         "SERVER_PORT=8080",
         `SERVER_SECRET=${secret}`,
-        `LOVE_ENDPOINT=${hostAddress}/_love`,
+        ...(loveEnabled
+          ? [
+              `LOVE_ENDPOINT=${hostAddress}/_love`,
+              `LIVEKIT_WS=${input.livekitHost}`,
+            ]
+          : []),
         `ACCOUNTS_URL=${hostAddress}/_accounts`,
         `ACCOUNTS_URL_INTERNAL=http://${accountHost}:3000`,
         `REKONI_URL=${hostAddress}/_rekoni`,
