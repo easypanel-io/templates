@@ -1,0 +1,88 @@
+name: Huly
+description:
+  Huly is an all-in-one project management platform and self-hosted alternative
+  to Linear, Jira, Slack, Notion, and Motion. It combines issue tracking, CRM,
+  HRM, ATS (Applicant Tracking), chat, documents, and team collaboration in a
+  single platform. Built on a robust framework for business applications, Huly
+  offers real-time document collaboration with Y.js CRDT, full-text search via
+  Elasticsearch, S3-compatible file storage with MinIO, and event-driven
+  architecture with Redpanda (Kafka). Requires 2+ vCPUs and 8+ GB RAM minimum.
+instructions:
+  After deployment, access Huly via the main service domain. On first visit,
+  click "Sign up" to create your account, then create a workspace. Email
+  notifications (password recovery, etc.) are disabled by default—add the mail
+  service and SMTP config for production. Allow ~60 seconds for all services to
+  initialize on first startup.
+changeLog:
+  - date: 2026-03-02
+    description: v0.7.382 - Latest release
+links:
+  - label: Website
+    url: https://huly.io
+  - label: GitHub
+    url: https://github.com/hcengineering/platform
+  - label: Documentation
+    url: https://docs.huly.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: huly
+    appServiceImage:
+      type: string
+      title: Huly Version
+      default: "v0.7.382"
+      description: Use production tags (v*) from GitHub Releases
+benefits:
+  - title: All-in-One Platform
+    description:
+      Combined issue tracking, CRM, HRM, ATS, chat, documents, and team
+      collaboration—replacing Linear, Jira, Slack, Notion, and Motion.
+  - title: Real-Time Collaboration
+    description:
+      Y.js CRDT-based document editing with presence awareness. Multiple users
+      edit simultaneously with automatic conflict resolution.
+  - title: Self-Hosted & Open Source
+    description:
+      Full control over your data. EPL-2.0 licensed. Deploy on your own
+      infrastructure with no vendor lock-in.
+  - title: Enterprise-Ready Architecture
+    description:
+      CockroachDB for distributed SQL, Redpanda for event streaming,
+      Elasticsearch for full-text search, MinIO for object storage.
+features:
+  - title: Issue Tracking
+    description:
+      Kanban boards, sprints, custom fields, and workflows for project
+      management. Jira and Linear alternative.
+  - title: CRM & Contacts
+    description:
+      Customer relationship management with contacts, deals, and pipelines.
+  - title: HRM & ATS
+    description:
+      Human resources and applicant tracking for recruitment workflows.
+  - title: Chat & Documents
+    description:
+      Real-time chat and collaborative document editing with rich formatting.
+  - title: Full-Text Search
+    description:
+      Instant search across projects, issues, documents, and chat via
+      Elasticsearch.
+  - title: API & Integrations
+    description:
+      Typed API client for programmatic access. Built-in integrations for Gmail,
+      Calendar, Telegram.
+tags:
+  - Project Management
+  - CRM
+  - Self-Hosted
+  - Collaboration
+  - Issue Tracking
