@@ -1,0 +1,91 @@
+name: DrawDB
+description:
+  DrawDB is a free, simple, and intuitive online database schema editor and SQL
+  generator.  It provides a robust and user-friendly database entity
+  relationship (ER) editor that runs  directly in your browser. With DrawDB, you
+  can build database diagrams with a few clicks,  export SQL scripts, customize
+  your editor, and manage database schemas without creating an  account. The
+  tool supports multiple database types including MySQL, PostgreSQL, SQLite, SQL
+  Server, and more.
+instructions: null
+changeLog:
+  - date: "2025-06-26"
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/drawdb-io/drawdb
+  - label: Documentation
+    url: https://github.com/drawdb-io/drawdb#readme
+  - label: Demo
+    url: https://drawdb.app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: drawdb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/drawdb-io/drawdb:v1.4.0
+      description: DrawDB Docker image
+benefits:
+  - title: Browser-Based Editor
+    description:
+      No installation required - access a full-featured database schema editor
+      directly in your web browser with no account creation needed.
+  - title: Multi-Database Support
+    description:
+      Design schemas for multiple database types including MySQL, PostgreSQL,
+      SQLite, SQL Server, MariaDB, and Oracle with database-specific features.
+  - title: SQL Export Capabilities
+    description:
+      Generate and export SQL scripts for your database schemas, making it easy
+      to implement your designs in actual database systems.
+  - title: Intuitive Visual Design
+    description:
+      Create complex database relationships and schemas using an intuitive
+      drag-and-drop interface with visual entity relationship diagrams.
+features:
+  - title: Entity Relationship Diagrams
+    description:
+      Create comprehensive ER diagrams with tables, columns, relationships, and
+      constraints using a visual editor with drag-and-drop functionality.
+  - title: SQL Script Generation
+    description:
+      Automatically generate SQL DDL scripts from your visual diagrams,
+      supporting  multiple database syntaxes and export formats.
+  - title: Schema Validation
+    description:
+      Built-in validation ensures your database schema is logically consistent
+      with proper relationships and constraints.
+  - title: Customizable Interface
+    description:
+      Customize the editor appearance, themes, and layout to match your
+      preferences  and workflow requirements.
+  - title: Import/Export Options
+    description:
+      Import existing database schemas and export your designs in various
+      formats  including SQL, JSON, and image files.
+  - title: No Account Required
+    description:
+      Start designing database schemas immediately without registration, account
+      creation, or personal information requirements.
+tags:
+  - Database
+  - Schema Design
+  - ER Diagram
+  - SQL Generator
+  - Database Design
+  - Entity Relationship
+  - MySQL
+  - PostgreSQL
+  - SQLite
+  - Visual Editor

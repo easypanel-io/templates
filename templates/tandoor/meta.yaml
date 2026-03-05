@@ -17,6 +17,8 @@ changeLog:
     description: first release
   - date: 2025-03-03
     description: Version bumped to 1.5.31
+  - date: 2025-07-25
+    description: Version bumped to 1.5.35
 links:
   - label: Website
     url: https://tandoor.dev
@@ -27,6 +29,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vabene1111/recipes:1.5.31
+      default: vabene1111/recipes:1.5.35
     databaseServiceName:
       type: string
       title: Database Service Name

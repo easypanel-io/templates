@@ -17,6 +17,8 @@ changeLog:
     description: Template Release
   - date: 2025-03-03
     description: Version bumped to 1.9.2
+  - date: 2025-07-25
+    description: Version bumped to 1.10.1
 
 links:
   - label: Documentation
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: yourls:1.9.2
+      default: yourls:1.10.1
     databaseServiceName:
       type: string
       title: Database Service Name

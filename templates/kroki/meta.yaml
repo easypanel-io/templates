@@ -1,0 +1,91 @@
+name: Kroki
+description:
+  Kroki is a self-hosted diagramming and visualization service that allows users
+  to generate diagrams from textual descriptions. It supports multiple
+  diagramming formats, including Mermaid, BPMN, Excalidraw, PlantUML, Graphviz,
+  and more. With Kroki, users can convert structured text into graphical
+  representations quickly and efficiently. The application provides a simple
+  API, making it easy to integrate with other tools. It is lightweight, supports
+  multiple diagram rendering engines, and ensures full control over your data
+  with a self-hosted deployment.
+instructions: null
+changeLog:
+  - date: 2025-02-27
+    description: Template Release
+links:
+  - label: Documentation
+    url: https://kroki.io/#docs
+  - label: Github
+    url: https://github.com/yuzutech/kroki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - mermaidServiceImage
+    - bpmnServiceImage
+    - excalidrawServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kroki
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: yuzutech/kroki
+    mermaidServiceImage:
+      type: string
+      title: Mermaid Service Image
+      default: yuzutech/kroki-mermaid
+    bpmnServiceImage:
+      type: string
+      title: BPMN Service Image
+      default: yuzutech/kroki-bpmn
+    excalidrawServiceImage:
+      type: string
+      title: Excalidraw Service Image
+      default: yuzutech/kroki-excalidraw
+
+benefits:
+  - title: Versatile Diagram Generation
+    description:
+      Kroki supports various diagram formats, including UML, BPMN, Graphviz,
+      Mermaid, and more, allowing users to create diverse visual
+      representations.
+  - title: API-Based Integration
+    description:
+      With its powerful API, Kroki enables seamless integration with
+      documentation tools, wikis, and other platforms for automated diagram
+      generation.
+  - title: Self-Hosted & Secure
+    description:
+      Deploy Kroki on your own infrastructure to maintain full control over your
+      data and ensure privacy.
+
+features:
+  - title: Multi-Format Support
+    description:
+      Kroki allows users to generate diagrams using multiple text-based
+      languages, including PlantUML, Graphviz, Mermaid, and Excalidraw.
+  - title: Lightweight & Efficient
+    description:
+      Kroki is optimized for fast rendering, ensuring quick processing of
+      diagram requests.
+  - title: Open-Source & Extensible
+    description:
+      The platform is open-source, allowing customization and enhancements
+      through additional rendering engines.
+  - title: No External Dependencies
+    description:
+      Kroki does not require external services or connections, making it ideal
+      for offline or secure environments.
+
+tags:
+  - Diagramming
+  - Visualization
+  - Self-Hosted
+  - API-Based

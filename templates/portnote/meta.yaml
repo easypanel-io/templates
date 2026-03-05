@@ -1,0 +1,99 @@
+name: PortNote
+description:
+  PortNote is a self-hosted port tracking application that helps you keep track
+  of used ports across your servers and VMs. Stop juggling spreadsheets and
+  guessing which service uses which port — PortNote gives you a clear, organized
+  view of your entire port landscape. Add your servers via a sleek web
+  interface, assign and document port usage across all systems, and avoid
+  conflicts before they happen.
+instructions: null
+changeLog:
+  - date: 2025-09-17
+    description: Template Release (1.2.0)
+links:
+  - label: Github
+    url: https://github.com/crocofied/PortNote
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - webServiceImage
+    - agentServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: portnote
+    webServiceImage:
+      type: string
+      title: Web Service Image
+      default: haedlessdev/portnote:1.2.0
+    agentServiceImage:
+      type: string
+      title: Agent Service Image
+      default: haedlessdev/portnote-agent:1.2.0
+    loginUsername:
+      type: string
+      title: Login Username
+      default: admin
+      description: Username for accessing the application
+    loginPassword:
+      type: string
+      title: Login Password
+      default: ""
+      description:
+        Password for accessing the application (leave empty for auto-generation)
+
+benefits:
+  - title: Port Conflict Prevention
+    description:
+      Avoid port conflicts before they happen by maintaining a clear, organized
+      view of your entire port landscape across all servers and VMs.
+  - title: Infrastructure Organization
+    description:
+      Replace spreadsheets and manual tracking with a structured, web-based
+      interface for managing port assignments and documentation.
+  - title: Self-Hosted Control
+    description:
+      Keep your port tracking data completely private and secure on your own
+      server with no external dependencies or data sharing.
+
+features:
+  - title: Server and VM Management
+    description:
+      Add and manage your servers and VMs through a sleek web interface,
+      organizing your entire infrastructure in one centralized location.
+  - title: Port Assignment Tracking
+    description:
+      Assign and document port usage across all systems with detailed
+      information about which services use which ports.
+  - title: Random Port Generator
+    description:
+      Generate random available ports to help you find unused ports for new
+      services and avoid conflicts.
+  - title: Secure Authentication
+    description:
+      JWT-based authentication system with secure login credentials to protect
+      your infrastructure data and port assignments.
+  - title: Background Processing
+    description:
+      Dedicated agent service for handling background tasks, automation, and
+      advanced port management features.
+  - title: Database Storage
+    description:
+      Reliable PostgreSQL database for storing server information, port
+      assignments, and application state with data persistence.
+
+tags:
+  - Port Tracking
+  - Infrastructure Management
+  - Self-Hosted
+  - Web Interface
+  - PostgreSQL
+  - JWT Authentication
+  - DevOps

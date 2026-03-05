@@ -144,7 +144,6 @@ export function generate(input: Input): Output {
         `WEBHOOK_EVENTS_ERRORS_WEBHOOK=`,
         `CONFIG_SESSION_PHONE_CLIENT=Evolution API`,
         `CONFIG_SESSION_PHONE_NAME=Chrome`,
-        `CONFIG_SESSION_PHONE_VERSION=2.3000.1015901307`,
         `QRCODE_LIMIT=30`,
         `QRCODE_COLOR=#175197`,
         `TYPEBOT_ENABLED=false`,

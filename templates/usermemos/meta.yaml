@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2025-02-17
     description: first release
+  - date: 2025-07-25
+    description: Version bumped to 0.25
 links:
   - label: Documentation
     url: https://www.usememos.com/docs
@@ -21,7 +23,7 @@ links:
     url: https://github.com/usememos/memos
 contributors:
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: neosmemo/memos:0.24
+      default: neosmemo/memos:0.25
 benefits:
   - title: Self-Hosted Note-Taking
     description:

@@ -19,6 +19,8 @@ instructions: Login with aaronsw:password
 changeLog:
   - date: 2023-5-18
     description: first release
+  - date: 2025-06-05
+    description: Update to v0.1.0
 links:
   - label: Website
     url: https://mcaptcha.org
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mcaptcha/mcaptcha:latest
+      default: mcaptcha/mcaptcha:v0.1.0
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2025-01-29
     description: Template Release
+  - date: 2025-07-25
+    description: Version bumped to 7.21.0
 links:
   - label: Documentation
     url: https://docs.squidex.io/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: squidex/squidex:7
+      default: squidex/squidex:7.21.0
     adminEmailAddress:
       type: string
       title: Admin Email Address

@@ -7,6 +7,10 @@ instructions: null
 changeLog:
   - date: 2025-03-12
     description: First Release
+  - date: 2025-07-25
+    description: Version bumped to 17.4.2-mysql-tomcat
+  - date: 2025-10-30
+    description: Updated to use PostgreSQL with stable-postgres-tomcat image
 links:
   - label: Github
     url: https://github.com/xwiki/xwiki-platform
@@ -18,6 +22,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - databaseServiceImage
   properties:
     appServiceName:
       type: string
@@ -26,7 +31,13 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: xwiki:16.4.7-mysql-tomcat
+      default: xwiki:17.9.0-postgres-tomcat
+      description: XWiki Docker image with PostgreSQL support
+    databaseServiceImage:
+      type: string
+      title: Database Service Image
+      default: postgres:17
+      description: PostgreSQL Docker image
 benefits:
   - title: Collaborative Editing
     description:

@@ -24,6 +24,10 @@ changeLog:
     description: Version bumped to 1.23.1
   - date: 2025-02-25
     description: Version bumped to 1.23.4
+  - date: 2025-07-21
+    description: Version bumped to 1.24
+  - date: 2025-12-25
+    description: Version bumped to 1.25.3
 links:
   - label: Website
     url: https://gitea.io/en-us/
@@ -38,6 +42,8 @@ contributors:
     url: https://github.com/deiucanta
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -53,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gitea/gitea:1.23.4
+      default: gitea/gitea:1.25.3
     databaseType:
       type: string
       title: Database Type

@@ -17,6 +17,8 @@ export function generate(input: Input): Output {
         `MONGO_URI=mongodb://$(PROJECT_NAME)_${input.appServiceName}-db:27017/heyform`,
         `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `REDIS_PORT=6379`,
+        `GOOGLE_RECAPTCHA_KEY=${input.googleRecaptchaKey}`,
+        `GOOGLE_RECAPTCHA_SECRET=${input.googleRecaptchaSecret}`,
       ].join("\n"),
       source: {
         type: "image",

@@ -1,0 +1,122 @@
+name: Khoj
+description:
+  Khoj is an AI-powered personal search and chat application that helps you find
+  and organize your personal knowledge. It supports various AI models, web
+  search integration, and code execution capabilities.
+instructions:
+  Configure your chat model provider and search api providers with khoj
+  environment variables.
+changeLog:
+  - date: 2025-04-14
+    description: First Release
+links:
+  - label: Website
+    url: https://khoj.dev
+  - label: Documentation
+    url: https://docs.khoj.dev
+  - label: GitHub
+    url: https://github.com/khoj-ai/khoj
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseImage
+    - sandboxImage
+    - searxngImage
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: khoj
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/khoj-ai/khoj:1.42.9
+    databaseImage:
+      type: string
+      title: Database Image
+      default: pgvector/pgvector:0.8.1-pg15
+    sandboxImage:
+      type: string
+      title: Sandbox Image
+      default: ghcr.io/khoj-ai/terrarium:latest
+    searxngImage:
+      type: string
+      title: SearxNG Image
+      default: searxng/searxng:2025.4.12-391bb1268
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: username@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: ""
+      description: Auto-generated if not provided.
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      default: ""
+    geminiApiKey:
+      type: string
+      title: Gemini API Key
+      default: ""
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      default: ""
+    openaiBaseUrl:
+      type: string
+      title: OpenAI Base URL
+      default: ""
+    jinaApiKey:
+      type: string
+      title: Jina API Key
+      default: ""
+    serperDevApiKey:
+      type: string
+      title: Serper Dev API Key
+      default: ""
+    firecrawlApiKey:
+      type: string
+      title: Firecrawl API Key
+      default: ""
+    olostepApiKey:
+      type: string
+      title: OloStep API Key
+      default: ""
+benefits:
+  - title: Personal Search
+    description: Search through your personal knowledge and documents
+  - title: AI-Powered
+    description: Get intelligent answers and insights from your data
+  - title: Code Execution
+    description: Run code in a secure sandbox environment
+  - title: Web Search Integration
+    description: Combine personal and web search results
+  - title: Self-Hosted
+    description: Keep your data private and secure
+features:
+  - title: Document Search
+    description: Search through your personal documents and notes
+  - title: AI Chat
+    description: Chat with AI about your personal knowledge
+  - title: Code Sandbox
+    description: Run code in a secure environment
+  - title: Web Search
+    description: Search the web with privacy
+  - title: Multi-Model Support
+    description: Use various AI models for different tasks
+  - title: Admin Interface
+    description: Manage your Khoj instance
+tags:
+  - AI
+  - Search
+  - Chat
+  - Self-Hosted
+  - Knowledge Management

@@ -20,6 +20,8 @@ instructions:
 changeLog:
   - date: 2023-3-16
     description: First release
+  - date: 2025-12-25
+    description: Version bumped to 0.24.16 and 4.0.6
 links:
   - label: Website
     url: https://killbill.io
@@ -44,11 +46,11 @@ schema:
     appServiceImage:
       type: string
       title: KillBill Service Image
-      default: killbill/killbill:0.24.10
+      default: killbill/killbill:0.24.16
     kauiAppServiceImage:
       type: string
       title: Kaui Admin Console Image
-      default: killbill/kaui:3.0.9
+      default: killbill/kaui:4.0.6
 benefits:
   - title: Flexible Billing Engine
     description:

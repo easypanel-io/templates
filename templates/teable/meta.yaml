@@ -13,7 +13,10 @@ instructions:
 changeLog:
   - date: 2025-02-12
     description: Initial Template Release
-
+  - date: 2025-07-25
+    description: Version bumped to 753fb6ad997f70693688bce057f0c8cf5da8e6ee
+  - date: 2025-12-29
+    description: Version bumped to d23050009b835ee12b36085b0146b0206c9489d4
 links:
   - label: Documentation
     url: https://teable.io/docs
@@ -38,11 +41,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/teableio/teable:sha-c1ea587c7a09b262a24002c8809488f5b9b92393
+      default: ghcr.io/teableio/teable:d23050009b835ee12b36085b0146b0206c9489d4
     migrationServiceImage:
       type: string
       title: Migration Service Image
-      default: ghcr.io/teableio/teable-db-migrate:sha-c1ea587c7a09b262a24002c8809488f5b9b92393
+      default: ghcr.io/teableio/teable-db-migrate:d23050009b835ee12b36085b0146b0206c9489d4
     enableArm:
       type: boolean
       title: Enable Arm

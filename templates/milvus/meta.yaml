@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-03-27
     description: Initial template release (v2.0.2)
+  - date: 2026-02-21
+    description: Version bumped to v2.6.11
 links:
   - label: Website
     url: https://milvus.io/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: Milvus Image
-      default: milvusdb/milvus:v2.0.2
+      default: milvusdb/milvus:v2.6.11
     etcdImage:
       type: string
       title: ETCD Image

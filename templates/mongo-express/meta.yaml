@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2023-07-10
     description: First Release
+  - date: 2025-06-05
+    description: Update to 1.0.2-20-alpine3.19
 links:
   - label: Github
     url: https://github.com/mongo-express/mongo-express
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mongo-express:1.0.2-18
+      default: mongo-express:1.0.2-20-alpine3.19
 benefits:
   - title: Efficient Database Management
     description:

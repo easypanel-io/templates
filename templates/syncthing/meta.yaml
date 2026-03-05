@@ -19,6 +19,8 @@ changeLog:
     description: First Release
   - date: 2025-03-03
     description: Version bumped to 1.29
+  - date: 2025-07-25
+    description: Version bumped to 1.30
 links:
   - label: Website
     url: https://syncthing.net
@@ -29,6 +31,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -42,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1.29
+      default: syncthing/syncthing:1.30
 benefits:
   - title: Continuous File Synchronization
     description:

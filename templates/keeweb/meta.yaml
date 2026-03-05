@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2024-01-07
     description: First Release
+  - date: 2025-07-22
+    description: Version bumped to 1.19.0-amd64
 links:
   - label: Website
     url: https://keeweb.info/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/keeweb/keeweb:latest
+      default: ghcr.io/keeweb/keeweb:1.19.0-amd64
 benefits:
   - title: Secure Password Management
     description:

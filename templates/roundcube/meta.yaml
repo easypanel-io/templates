@@ -18,6 +18,10 @@ changeLog:
     description: First Release
   - date: 2025-02-28
     description: Version bumped to 1.6.10-apache
+  - date: 2025-07-24
+    description: Version bumped to 1.6.11-apache
+  - date: 2025-12-29
+    description: Version bumped to 1.6.12-apache
 links:
   - label: Website
     url: https://roundcube.net/
@@ -28,6 +32,8 @@ links:
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: roundcube/roundcubemail:1.6.10-apache
+      default: roundcube/roundcubemail:1.6.12-apache
     roundcubeDefaultHost:
       type: string
       title: Default Host

@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-02-03
     description: First Release
+  - date: 2025-06-05
+    description: Update to 2.2.1
 links:
   - label: Documentation
     url: https://github.com/maildev/maildev
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: maildev/maildev
+      default: maildev/maildev:2.2.1
 benefits:
   - title: Email Testing Without Spam
     description:

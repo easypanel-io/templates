@@ -18,7 +18,9 @@ changeLog:
   - date: 2023-01-20
     description: First Release
   - date: 2023-03-22
-    description: First Release
+    description: Version bumped to 4.0.0
+  - date: 2025-07-25
+    description: Version bumped to 4.2.0
 links:
   - label: Website
     url: https://zipline.diced.tech/
@@ -29,6 +31,8 @@ links:
 contributors:
   - name: DrMxrcy
     url: https://github.com/DrMxrcy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -43,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/diced/zipline:4.0.0
+      default: ghcr.io/diced/zipline:4.2.0
     databaseServiceName:
       type: string
       title: Database Service Name

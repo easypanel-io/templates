@@ -21,6 +21,10 @@ instructions:
 changeLog:
   - date: 2023-04-03
     description: first release
+  - date: 2025-07-24
+    description: Update to 5.3.2
+  - date: 2025-12-29
+    description: Update to 5.8.0
 links:
   - label: Website
     url: https://passbolt.com
@@ -31,6 +35,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -45,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: passbolt/passbolt:4.8.0-1-ce
+      default: passbolt/passbolt:5.8.0-1-ce
     databaseServiceName:
       type: string
       title: Database Service Name

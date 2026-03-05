@@ -22,6 +22,10 @@ changeLog:
     description: Template Release
   - date: 2025-02-28
     description: Version bumped to 2.4.3
+  - date: 2025-07-24
+    description: Version bumped to 2.8.0
+  - date: 2025-12-29
+    description: Version bumped to 2.12.1
 links:
   - label: Website
     url: https://penpot.app
@@ -49,15 +53,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: penpotapp/frontend:2.4.3
+      default: penpotapp/frontend:2.12.1
     appBackendServiceImage:
       type: string
       title: App Backend Service Image
-      default: penpotapp/backend:2.4.3
+      default: penpotapp/backend:2.12.1
     appExporterServiceImage:
       type: string
       title: App Exporter Service Image
-      default: penpotapp/exporter:2.4.3
+      default: penpotapp/exporter:2.12.1
     redisServiceName:
       type: string
       title: Redis Service Name

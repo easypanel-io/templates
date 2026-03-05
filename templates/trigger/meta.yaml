@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2024-11-16
     description: First Release
+  - date: 2025-07-25
+    description: Version bumped to v3.3.18
 links:
   - label: Website
     url: https://trigger.dev/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/triggerdotdev/trigger.dev:v2.2.39
+      default: ghcr.io/triggerdotdev/trigger.dev:v3.3.18
     databaseServiceName:
       type: string
       title: Database Service Name

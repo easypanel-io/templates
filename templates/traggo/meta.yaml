@@ -12,6 +12,8 @@ changeLog:
     description: Template Release
   - date: 2025-03-03
     description: Version bumped to 0.6.1
+  - date: 2025-07-25
+    description: Version bumped to 0.7.1
 
 links:
   - label: Website
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: traggo/server:0.6.1
+      default: traggo/server:0.7.1
     traggoUsername:
       type: string
       title: Traggo Username

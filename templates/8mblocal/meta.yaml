@@ -1,0 +1,76 @@
+name: 8MB Local
+description:
+  8MB Local is a self-hosted file processing and conversion application that
+  provides tools for handling files and generating outputs. Built with modern
+  architecture, 8MB Local offers a web-based interface accessible on port 8001
+  for processing files and managing uploads and outputs. The system stores
+  uploaded files and generated outputs in separate persistent volumes, ensuring
+  your data is preserved across container restarts. Perfect for individuals and
+  organizations looking for a self-hosted solution for file processing and
+  management.
+instructions: null
+changeLog:
+  - date: 2025-01-23
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://8mb.campuscal.tech/
+  - label: GitHub
+    url: https://github.com/JMS1717/8mb.local
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: 8mblocal
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jms1717/8mblocal:v133
+benefits:
+  - title: File Processing
+    description:
+      Process and convert files with a self-hosted solution that gives you
+      complete control over your file processing workflows.
+  - title: Self-Hosted Solution
+    description:
+      Keep your files and processing data private and under your control with a
+      self-hosted deployment.
+  - title: Separate Storage Volumes
+    description:
+      Uploads and outputs are stored in separate persistent volumes, making it
+      easy to manage and backup your data.
+  - title: Web-Based Interface
+    description:
+      Access and manage your file processing through a modern web interface
+      accessible on port 8001.
+features:
+  - title: File Upload Management
+    description:
+      Upload and manage files through the web interface with dedicated storage
+      for uploads.
+  - title: Output Generation
+    description:
+      Generate and manage processed outputs with dedicated storage for output
+      files.
+  - title: Persistent Storage
+    description:
+      Uploads are stored in a dedicated volume at /app/uploads and outputs at
+      /app/outputs for reliable data persistence.
+  - title: Containerized Deployment
+    description:
+      Easily deploy 8MB Local in any environment that supports Docker with
+      minimal configuration requirements.
+tags:
+  - File Processing
+  - Self-Hosted
+  - File Management
+  - Conversion
+  - Docker
