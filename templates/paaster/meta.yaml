@@ -1,0 +1,71 @@
+name: Paaster
+description:
+  Paaster is a secure and user-friendly pastebin application with end-to-end
+  encryption. Content is encrypted locally in your browser—the key never reaches
+  the server. Features paste history, delete-after-view, file drag & drop, and
+  API. Supports MinIO, S3, R2, and other S3-compatible storage.
+instructions: |
+  After deployment, access Paaster via the main domain. Pastes are E2EE by
+  default. Uses built-in MinIO for storage. If using MinIO, create the bucket
+  "paaster" in the MinIO console (minio-$(domain):9001) or via mc CLI:
+  mc mb minio_instance/paaster; mc anonymous set none minio_instance/paaster.
+  For external S3/R2, set S3 env vars on the Paaster service.
+changeLog:
+  - date: 2026-03-09
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/WardPearce/paaster
+  - label: Website
+    url: https://paaster.com
+  - label: Documentation
+    url: https://github.com/WardPearce/paaster/blob/main/README.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: paaster
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: wardpearce/paaster:3.1.7
+    mongoImage:
+      type: string
+      title: MongoDB Image
+      default: mongo:8
+    minioImage:
+      type: string
+      title: MinIO Image
+      default: quay.io/minio/minio:RELEASE.2025-09-07T16-13-09Z
+benefits:
+  - title: End-to-End Encryption
+    description: Content encrypted in browser, key never sent to server
+  - title: Privacy-First
+    description: Your pastes stay confidential and under your control
+  - title: Paste History
+    description: Unix-like search across your paste history
+  - title: Flexible Storage
+    description: MinIO, S3, R2, or other S3-compatible backends
+features:
+  - title: Delete After View
+    description: Auto-delete pastes after views or expiration
+  - title: File Drag & Drop
+    description: Easy file upload support
+  - title: API & CLI
+    description: REST API and pip CLI for terminal uploads
+  - title: QR Code Sharing
+    description: Share pastes via QR codes
+tags:
+  - Pastebin
+  - Privacy
+  - Encryption
+  - Open Source
+  - Self-hosted
