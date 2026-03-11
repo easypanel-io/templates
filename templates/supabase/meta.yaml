@@ -4,12 +4,14 @@ description:
   Postgres, and it's easy to set up and use. Supabase is also completely free to
   use, and it's completely open source.
 instructions:
-  Username is `supabase` and password is
-  `this_password_is_insecure_and_should_be_updated`. You can change these by
-  editing the environment variables.
+  Username is `supabase` and the password is the one you set in the
+  `Dashboard Password` field during installation. You can change it later by
+  editing the environment variables and restarting the Kong service.
 changeLog:
   - date: 2024-7-26
     description: first release
+  - date: 2026-3-11
+    description: auto-generate secure passwords on install
 links:
   - label: Website
     url: https://supabase.com/
@@ -24,8 +26,26 @@ schema:
   type: object
   required:
     - serviceName
+    - postgresPassword
+    - dashboardPassword
+    - jwtSecret
   properties:
     serviceName:
       type: string
       title: Service Name
       default: supabase
+    postgresPassword:
+      type: string
+      title: Postgres Password
+      description: Password for the PostgreSQL database (all internal users)
+      generatePassword: true
+    dashboardPassword:
+      type: string
+      title: Dashboard Password
+      description: Password to access the Supabase Studio dashboard (username is "supabase")
+      generatePassword: true
+    jwtSecret:
+      type: string
+      title: JWT Secret
+      description: Secret used to sign JWT tokens for the API
+      generatePassword: true
