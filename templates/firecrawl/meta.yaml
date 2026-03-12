@@ -16,7 +16,9 @@ changeLog:
   - date: 2025-06-04
     description: First Release
   - date: 2026-03-11
-    description: Align with official compose; add RabbitMQ; single harness container; nuq-postgres image
+    description:
+      Align with official compose; add RabbitMQ; single harness container;
+      nuq-postgres image
 links:
   - label: Website
     url: https://firecrawl.dev/
@@ -58,26 +60,47 @@ schema:
       default: ghcr.io/firecrawl/nuq-postgres:latest
 benefits:
   - title: LLM-Ready Data Extraction
-    description: Converts any website into clean markdown or structured data optimized for use with language models and AI applications.
+    description:
+      Converts any website into clean markdown or structured data optimized for
+      use with language models and AI applications.
   - title: Advanced Web Scraping
-    description: Handles the hard stuff - proxies, anti-bot mechanisms, dynamic content (JS-rendered), output parsing, and orchestration automatically.
+    description:
+      Handles the hard stuff - proxies, anti-bot mechanisms, dynamic content
+      (JS-rendered), output parsing, and orchestration automatically.
   - title: Multiple Extraction Modes
-    description: Supports scraping single pages, crawling entire websites, mapping site structures, web search, and AI-powered data extraction.
+    description:
+      Supports scraping single pages, crawling entire websites, mapping site
+      structures, web search, and AI-powered data extraction.
   - title: Self-Hosted & Scalable
-    description: Deploy on your own infrastructure with full control over your data. Matches official stack (Redis, RabbitMQ, NuQ Postgres, Playwright).
+    description:
+      Deploy on your own infrastructure with full control over your data.
+      Matches official stack (Redis, RabbitMQ, NuQ Postgres, Playwright).
 features:
   - title: Multiple Content Formats
-    description: Extract content in markdown, HTML, structured JSON, screenshots, and more. Perfect for different use cases and AI model requirements.
+    description:
+      Extract content in markdown, HTML, structured JSON, screenshots, and more.
+      Perfect for different use cases and AI model requirements.
   - title: Intelligent Crawling
-    description: Smart crawling with depth control, URL filtering, deduplication, and respect for robots.txt. Efficiently discover and extract content from entire websites.
+    description:
+      Smart crawling with depth control, URL filtering, deduplication, and
+      respect for robots.txt. Efficiently discover and extract content from
+      entire websites.
   - title: AI-Powered Extraction
-    description: Use AI to extract structured data with custom prompts and schemas. Perfect for extracting specific information like prices, names, and details.
+    description:
+      Use AI to extract structured data with custom prompts and schemas. Perfect
+      for extracting specific information like prices, names, and details.
   - title: Dynamic Content Support
-    description: Renders JavaScript-heavy pages with Playwright, handles SPAs, performs actions like clicking and scrolling before extraction.
+    description:
+      Renders JavaScript-heavy pages with Playwright, handles SPAs, performs
+      actions like clicking and scrolling before extraction.
   - title: Batch Processing
-    description: Process thousands of URLs simultaneously with built-in queuing, rate limiting, and parallel processing capabilities.
+    description:
+      Process thousands of URLs simultaneously with built-in queuing, rate
+      limiting, and parallel processing capabilities.
   - title: Web Search Integration
-    description: Search the web and optionally scrape search results in one operation. Perfect for research and content discovery.
+    description:
+      Search the web and optionally scrape search results in one operation.
+      Perfect for research and content discovery.
 tags:
   - Web Scraping
   - Data Extraction

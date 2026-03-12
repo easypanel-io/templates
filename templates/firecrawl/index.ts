@@ -40,7 +40,6 @@ export function generate(input: Input): Output {
     "ENV=local",
   ].join("\n");
 
-  // Single API service: harness runs api, workers, extract-worker, nuq-workers inside one container
   services.push({
     type: "app",
     data: {
@@ -52,12 +51,9 @@ export function generate(input: Input): Output {
       deploy: {
         command: "node dist/src/harness.js --start-docker",
       },
-      env: [
-        "HOST=0.0.0.0",
-        "PORT=3002",
-        "INTERNAL_PORT=3002",
-        commonEnvs,
-      ].join("\n"),
+      env: ["HOST=0.0.0.0", "PORT=3002", "INTERNAL_PORT=3002", commonEnvs].join(
+        "\n"
+      ),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
@@ -80,13 +76,13 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-playwright`,
       source: {
         type: "image",
-        image: input.playwrightServiceImage ?? "ghcr.io/firecrawl/playwright-service:latest",
+        image:
+          input.playwrightServiceImage ??
+          "ghcr.io/firecrawl/playwright-service:latest",
       },
-      env: [
-        "PORT=3000",
-        "BLOCK_MEDIA=false",
-        "MAX_CONCURRENT_PAGES=10",
-      ].join("\n"),
+      env: ["PORT=3000", "BLOCK_MEDIA=false", "MAX_CONCURRENT_PAGES=10"].join(
+        "\n"
+      ),
     },
   });
 
