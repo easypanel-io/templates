@@ -1,0 +1,66 @@
+name: Tyk Gateway
+description:
+  Tyk Gateway is an open-source API gateway for securing, scaling, and observing
+  APIs. It sits in front of your upstream services and handles rate limiting,
+  authentication, analytics, and transformations. This template runs the gateway
+  in standalone mode with Redis for storage.
+instructions: |
+  After deployment, access Tyk Gateway on the main domain (port 8080). Add API
+  definitions by placing JSON files in the apps volume (mounted at
+  /opt/tyk-gateway/apps). Configure policies in the policies volume and
+  middleware in the middleware volume. TYK_GW_SECRET is auto-generated; use it
+  when calling the Gateway API or with the Dashboard.
+changeLog:
+  - date: 2026-03-11
+    description: First Release
+links:
+  - label: Documentation
+    url: https://tyk.io/docs/
+  - label: GitHub
+    url: https://github.com/TykTechnologies/tyk-gateway
+  - label: Docker
+    url: https://github.com/TykTechnologies/tyk-gateway-docker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tyk-gateway
+    gatewayImage:
+      type: string
+      title: Gateway Image
+      default: docker.tyk.io/tyk-gateway/tyk-gateway:v5.5.0
+    redisImage:
+      type: string
+      title: Redis Image
+      default: redis:6.2.20-alpine
+benefits:
+  - title: API Security
+    description: Protect and authenticate APIs with keys, JWT, and policies
+  - title: Rate Limiting
+    description: Built-in rate limiting and quotas per API and key
+  - title: Self-Hosted
+    description: Full control over your API traffic and data
+  - title: Extensible
+    description: Middleware, plugins, and file-based API definitions
+features:
+  - title: Standalone Mode
+    description: Runs with Redis; no Dashboard or Pump required
+  - title: File-Based Config
+    description: APIs and policies loaded from mounted volumes
+  - title: Redis Storage
+    description: Session and rate-limit state in Redis
+  - title: WebSocket & REST
+    description: Proxy HTTP, HTTPS, and WebSocket upstreams
+tags:
+  - API Gateway
+  - API
+  - Redis
+  - Open Source
+  - Self-hosted
