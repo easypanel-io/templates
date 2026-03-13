@@ -1,0 +1,77 @@
+name: OxiCloud
+description:
+  OxiCloud is an ultra-fast, secure, and lightweight self-hosted cloud storage
+  written in Rust. It serves as a lightweight alternative to NextCloud, designed
+  for low-resource environments. OxiCloud runs on just 512MB RAM with sub-second
+  response times, offering file management, user authentication, file
+  deduplication, search, CalDAV calendars, CardDAV contacts, and multi-language
+  support. Built with Clean Architecture, it provides a clean UI that works on
+  desktop and mobile.
+instructions: null
+changeLog:
+  - date: 2026-02-16
+    description: Template Release (v0.3.4)
+links:
+  - label: GitHub
+    url: https://github.com/DioCrafts/OxiCloud
+  - label: Docker Hub
+    url: https://hub.docker.com/r/diocrafts/oxicloud
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: oxicloud
+    appServiceImage:
+      type: string
+      title: OxiCloud Image
+      default: diocrafts/oxicloud:0.3.4
+    databaseImage:
+      type: string
+      title: PostgreSQL Image
+      default: postgres:17.4-alpine
+benefits:
+  - title: Lightweight & Fast
+    description:
+      Runs on 512MB RAM with sub-second responses. Built in Rust with LTO
+      optimization—no PHP overhead or garbage collection.
+  - title: NextCloud Alternative
+    description:
+      A simpler, faster alternative to NextCloud for home servers and
+      low-resource hardware like Raspberry Pi.
+  - title: Complete Data Ownership
+    description:
+      Self-hosted solution with full control over your files, calendars, and
+      contacts. No third-party cloud dependency.
+features:
+  - title: File Storage
+    description:
+      Upload, download, and organize files with folder management,
+      drag-and-drop, trash bin, and file deduplication.
+  - title: CalDAV & CardDAV
+    description:
+      Calendars and contacts with standard CalDAV/CardDAV support for sync with
+      mobile and desktop clients.
+  - title: User Authentication
+    description:
+      JWT-based authentication with personal folders per user, favorites, and
+      recent files.
+  - title: Search & Multi-Language
+    description:
+      Search across files and folders. Supports English, Spanish, and Persian
+      out of the box.
+tags:
+  - File Storage
+  - Cloud Storage
+  - Self-Hosted
+  - NextCloud Alternative
+  - CalDAV
+  - CardDAV
