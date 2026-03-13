@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 2.15.2
   - date: 2025-12-29
     description: Version bumped to 2.16.0
+  - date: 2026-02-24
+    description: Version bumped to 2.16.1
 links:
   - label: Website
     url: https://tautulli.com/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/tautulli:2.16.0
+      default: lscr.io/linuxserver/tautulli:2.16.1
 benefits:
   - title: Comprehensive Monitoring
     description:

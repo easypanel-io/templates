@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v1.39.1
   - date: 2025-12-29
     description: Version bumped to v1.41.3
+  - date: 2026-02-24
+    description: Version bumped to v1.42.0
 links:
   - label: Documentation
     url: https://rotki.readthedocs.io/en/latest/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rotki/rotki:v1.41.3
+      default: rotki/rotki:v1.42.0
 benefits:
   - title: Asset Management
     description:
