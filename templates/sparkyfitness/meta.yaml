@@ -1,0 +1,173 @@
+name: SparkyFitness
+description:
+  SparkyFitness is a self-hosted, privacy-first alternative to MyFitnessPal.
+  Track nutrition, exercise, hydration, and body metrics while keeping full
+  control of your data. Built for families with AI-powered features,
+  SparkyFitness offers comprehensive health tracking with integrations for Apple
+  Health, Google Health Connect, Fitbit, Garmin Connect, and Withings. Features
+  include goal setting, interactive charts, long-term reports, and optional AI
+  chatbot for conversational data logging.
+instructions: null
+changeLog:
+  - date: 2025-02-13
+    description: Initial template release
+links:
+  - label: GitHub
+    url: https://github.com/CodeWithCJ/SparkyFitness
+  - label: Documentation
+    url: https://codewithcj.github.io/SparkyFitness
+  - label: Docker Hub Server
+    url: https://hub.docker.com/r/codewithcj/sparkyfitness_server
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - serverImage
+    - appServiceImage
+
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sparkyfitness
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: codewithcj/sparkyfitness:v0.16.4.2
+    serverImage:
+      type: string
+      title: Server Image
+      default: codewithcj/sparkyfitness_server:v0.16.4.2
+    apiEncryptionKey:
+      type: string
+      title: API Encryption Key (Auto-generated if empty)
+      default: ""
+      description:
+        "A 64-character hex string for data encryption. Auto-generated if not
+        provided. Changing this will invalidate existing encrypted data."
+    betterAuthSecret:
+      type: string
+      title: Better Auth Secret (Auto-generated if empty)
+      default: ""
+      description:
+        Secret key for Better Auth authentication. Auto-generated if not
+        provided.
+    logLevel:
+      type: string
+      title: Log Level
+      default: ERROR
+      oneOf:
+        - enum:
+            - ERROR
+          title: ERROR
+        - enum:
+            - WARN
+          title: WARN
+        - enum:
+            - INFO
+          title: INFO
+        - enum:
+            - DEBUG
+          title: DEBUG
+    allowPrivateNetworkCors:
+      type: boolean
+      title: Allow Private Network CORS
+      default: false
+      description:
+        "Allow CORS from private network addresses. Only enable on
+        private/self-hosted networks. Do NOT enable on shared hosting or cloud."
+    disableSignup:
+      type: boolean
+      title: Disable Signup
+      default: false
+      description: Set to true to disable new user registrations
+    forceEmailLogin:
+      type: boolean
+      title: Force Email Login
+      default: true
+      description:
+        "Force email/password login to be enabled. Fail-safe to prevent being
+        locked out if OIDC is misconfigured."
+    adminEmail:
+      type: string
+      title: Admin Email (Optional)
+      default: ""
+      description:
+        "Email of a user to automatically grant admin privileges on server
+        startup."
+    extraTrustedOrigins:
+      type: string
+      title: Extra Trusted Origins (Optional)
+      default: ""
+      description:
+        "Comma-separated list of additional URLs that Better Auth should trust
+        (e.g., http://192.168.1.175:8080)"
+    emailHost:
+      type: string
+      title: Email Host (Optional)
+      default: ""
+      description: SMTP host for email notifications (e.g., smtp.example.com)
+    emailPort:
+      type: string
+      title: Email Port (Optional)
+      default: ""
+      description: SMTP port (e.g., 587)
+    emailSecure:
+      type: boolean
+      title: Email Secure (Optional)
+      default: true
+      description: Use TLS/SSL for email (true) or plain text (false)
+    emailUser:
+      type: string
+      title: Email User (Optional)
+      default: ""
+      description: SMTP username
+    emailPass:
+      type: string
+      title: Email Password (Optional)
+      default: ""
+      description: SMTP password
+    emailFrom:
+      type: string
+      title: Email From (Optional)
+      default: ""
+      description: Email address to send from (e.g., no-reply@example.com)
+benefits:
+  - title: Privacy-First Health Tracking
+    description:
+      Keep complete control of your health data with self-hosted deployment. No
+      third-party services have access to your sensitive health information.
+  - title: Family-Friendly Platform
+    description:
+      Built for families with multiple user profiles and shared access features,
+      making it easy to track health together.
+  - title: Comprehensive Health Integration
+    description:
+      Sync data from Apple Health, Google Health Connect, Fitbit, Garmin
+      Connect, and Withings for a complete view of your health metrics.
+features:
+  - title: Nutrition & Exercise Tracking
+    description:
+      Track food intake, exercise, hydration, and body measurements with
+      interactive charts and long-term reports.
+  - title: AI-Powered Features
+    description:
+      Optional AI chatbot for conversational data logging, meal logging from
+      images, and progress reviews.
+  - title: Goal Setting & Check-ins
+    description:
+      Set health goals and perform daily check-ins to stay on track with your
+      fitness journey.
+  - title: Light & Dark Themes
+    description:
+      Customizable interface with light and dark themes for comfortable viewing
+      at any time of day.
+tags:
+  - Fitness
+  - Health Tracking
+  - Self-Hosted
+  - Privacy
+  - Nutrition
