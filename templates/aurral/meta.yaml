@@ -1,0 +1,71 @@
+name: Aurral
+description:
+  Aurral is a self-hosted music discovery and request management app for Lidarr.
+  Search artists via MusicBrainz, add them to Lidarr with granular monitoring
+  options, browse your library, and discover new artists from recommendations.
+  Features include Weekly Flow playlists (powered by Soulseek + Navidrome),
+  multi-user support with permissions, Gotify notifications, and PWA support.
+  Aurral is designed to be safe for your collection—library changes go through
+  Lidarr's API.
+instructions: null
+changeLog:
+  - date: 2026-02-16
+    description: Template Release (v1.1.0)
+links:
+  - label: GitHub
+    url: https://github.com/lklynet/aurral
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: aurral
+    appServiceImage:
+      type: string
+      title: Aurral Image
+      default: ghcr.io/lklynet/aurral:1.1.0
+benefits:
+  - title: Lidarr Integration
+    description:
+      Add artists to Lidarr with granular monitor options. Track requests and
+      download progress. Library changes go through Lidarr's API—safe for your
+      main collection.
+  - title: Music Discovery
+    description:
+      Daily Discover recommendations based on your library, tags, and trends.
+      Deep artist pages with types, tags, release groups, and tracklists.
+  - title: Weekly Flow Playlists
+    description:
+      Auto-curated playlists from your library. Built-in Soulseek client
+      downloads tracks into a dedicated Weekly Flow library. Optional Navidrome
+      integration.
+features:
+  - title: Artist Search
+    description:
+      Real-time artist search via MusicBrainz. Add artists with monitor options
+      (None, All, Future, Missing, Latest, First).
+  - title: Multi-User Support
+    description:
+      First-run onboarding creates an admin account. Multiple local users with
+      roles and granular permissions. Optional reverse-proxy auth.
+  - title: Gotify Notifications
+    description:
+      Push notifications for key events like Discover updates and Weekly Flow
+      completion.
+  - title: PWA Support
+    description:
+      Installable web app with auto-update support. Web-based configuration.
+tags:
+  - Music
+  - Lidarr
+  - Self-Hosted
+  - Music Discovery
+  - Soulseek
+  - Navidrome
