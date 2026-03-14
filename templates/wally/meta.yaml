@@ -1,0 +1,87 @@
+name: Wally
+description:
+  Wally is a lightweight web application designed for data management and
+  tracking. It provides a clean web interface accessible through your browser,
+  with persistent data storage to ensure your information is safely retained
+  across restarts. The application can be pre-loaded with demo data for testing
+  and evaluation purposes, making it easy to explore its features before using
+  it with your own data. Wally runs efficiently in a containerized environment
+  and requires minimal configuration to get started.
+instructions: null
+changeLog:
+  - date: 2025-10-29
+    description: Initial Template Release
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/poliuscorp/wally
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wally
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: poliuscorp/wally:1.4
+      description: Wally Docker image
+    enableDemo:
+      type: boolean
+      title: Enable Demo Mode
+      default: true
+      description: Pre-load the app with random demo data
+benefits:
+  - title: Simple Deployment
+    description:
+      Get started quickly with minimal configuration required. Deploy Wally with
+      just a few settings and start using it immediately.
+  - title: Persistent Storage
+    description:
+      All your data is stored persistently in a dedicated volume, ensuring
+      nothing is lost when the container restarts or updates.
+  - title: Demo Mode
+    description:
+      Test and explore the application with pre-loaded demo data before
+      committing your own information, making evaluation easy.
+  - title: Web-Based Interface
+    description:
+      Access Wally from any device with a web browser, no additional software
+      installation required.
+features:
+  - title: Data Management
+    description:
+      Store and manage your data with a user-friendly web interface that makes
+      organization simple and efficient.
+  - title: Persistent Storage
+    description:
+      All data is stored in a persistent volume mounted at /wally/data, ensuring
+      your information survives container restarts and updates.
+  - title: Demo Mode
+    description:
+      Optional demo mode that pre-loads the application with sample data,
+      perfect for testing and evaluation before production use.
+  - title: Lightweight Container
+    description:
+      Runs efficiently in a Docker container with minimal resource requirements,
+      making it suitable for various hosting environments.
+  - title: Web Interface
+    description:
+      Clean, modern web interface accessible through standard web browsers,
+      providing easy access from desktop and mobile devices.
+  - title: Easy Configuration
+    description:
+      Simple environment variable configuration allows you to customize the
+      application behavior without complex setup procedures.
+tags:
+  - Web App
+  - Data Management
+  - Self-Hosted
+  - Lightweight
+  - Docker
