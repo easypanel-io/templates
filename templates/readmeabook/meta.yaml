@@ -1,0 +1,79 @@
+name: ReadMeABook
+description:
+  ReadMeABook is a self-hosted audiobook request and automation platform—like
+  Radarr/Sonarr + Overseerr for audiobooks. Integrates with Plex or
+  Audiobookshelf, supports torrents (qBittorrent) and Usenet (SABnzbd), Prowlarr
+  for search. Features multi-file chapter merging, e-book sidecars, AI
+  recommendations (BookDate), and admin approval workflows. Includes PostgreSQL
+  and Redis.
+instructions: |
+  After deployment, access the web UI and run the setup wizard. Set PUBLIC_URL
+  to your domain (e.g. https://readmeabook.yourdomain.com) for OAuth (Plex/OIDC).
+  Mount downloads and media volumes for audiobook storage. Connect to Plex or
+  Audiobookshelf, and configure qBittorrent/SABnzbd for downloads.
+changeLog:
+  - date: 2026-02-09
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/kikootwo/readmeabook
+  - label: Documentation
+    url: https://github.com/kikootwo/readmeabook/tree/main/documentation
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: readmeabook
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/kikootwo/readmeabook:1.1.6
+    puid:
+      type: string
+      title: User ID (PUID)
+      default: "1000"
+      description: Host user ID for file ownership
+    pgid:
+      type: string
+      title: Group ID (PGID)
+      default: "1000"
+      description: Host group ID for file ownership
+    publicUrl:
+      type: string
+      title: Public URL
+      description: Required for OAuth. e.g. https://readmeabook.yourdomain.com
+benefits:
+  - title: Audiobook Automation
+    description:
+      Request, search, download, and organize audiobooks automatically
+  - title: Plex & Audiobookshelf
+    description: Integrates with popular media servers
+  - title: All-in-One
+    description: PostgreSQL and Redis included; no external database required
+  - title: Self-Hosted
+    description: Full control over your audiobook library
+features:
+  - title: Torrent & Usenet
+    description: qBittorrent and SABnzbd support
+  - title: Prowlarr Integration
+    description: Search across indexers via Prowlarr
+  - title: AI Recommendations
+    description: BookDate with Tinder-style swipe (OpenAI, Claude, local models)
+  - title: Multi-User & Admin
+    description: Request approval workflows
+  - title: Chapter Merging
+    description: Multi-file chapter merging, e-book sidecar (EPUB/PDF)
+tags:
+  - Audiobook
+  - Media
+  - Plex
+  - Automation
+  - Open Source
+  - Self-hosted
