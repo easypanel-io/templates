@@ -1,0 +1,79 @@
+name: Lingva Translate
+description:
+  Lingva Translate is a free, open-source alternative front-end for Google
+  Translate. Supports 100+ languages via scraping—no direct Google access, no
+  user tracking. Built with Next.js and ChakraUI. Provides REST API for
+  translation, audio, and language detection. Privacy-focused translation.
+instructions: |
+  After deployment, access the web UI on your assigned domain. Set the site
+  domain to your public URL (e.g. https://lingva.yourdomain.com) for correct
+  API links. Use the REST API at /api/v1/:source/:target/:query for translations.
+changeLog:
+  - date: 2026-03-17
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/TheDavidDelta/lingva-translate
+  - label: Docker Hub
+    url: https://hub.docker.com/r/thedaviddelta/lingva-translate
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lingva
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thedaviddelta/lingva-translate:latest
+    siteDomain:
+      type: string
+      title: Site Domain
+      description:
+        Your public URL (e.g. https://lingva.yourdomain.com). Leave blank to use
+        assigned domain.
+    defaultTheme:
+      type: string
+      title: Default Theme
+      default: light
+      enum: [light, dark]
+    defaultSourceLang:
+      type: string
+      title: Default Source Language
+      default: auto
+      description: Initial source language (auto for detection)
+    defaultTargetLang:
+      type: string
+      title: Default Target Language
+      default: en
+benefits:
+  - title: Privacy-Focused
+    description: No direct Google access; no user tracking
+  - title: 100+ Languages
+    description: Full Google Translate language support
+  - title: REST API
+    description: Translation, audio, and language detection endpoints
+  - title: Self-Hosted
+    description: Your own translation front-end
+features:
+  - title: Web Interface
+    description: Clean UI for text translation
+  - title: API Endpoints
+    description: /api/v1/:source/:target/:query, /api/v1/audio/:lang/:query
+  - title: Theme Support
+    description: Light or dark theme
+  - title: Language Detection
+    description: Auto-detect source language
+tags:
+  - Translation
+  - Google Translate
+  - Privacy
+  - Open Source
+  - Self-hosted
+  - API
