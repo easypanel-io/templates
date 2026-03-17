@@ -9,6 +9,22 @@
     ]
   },
   {
+    "slug": "4gaboards",
+    "logo": "logo.png",
+    "name": "4ga Boards",
+    "description": "4ga Boards is a modern, open-source project management and collaboration platform inspired by Trello. It provides a powerful Kanban-style board system for organizing tasks, projects, and workflows. With its intuitive drag-and-drop interface, 4ga Boards makes it easy to visualize work, track progress, and collaborate with teams. The application features customizable boards, lists, and cards, along with support for attachments, user avatars, and project backgrounds. Built with modern web technologies, 4ga Boards offers a seamless experience for managing projects of any size. It's perfect for teams looking for a self-hosted alternative to commercial project management tools, providing full control over your data and workflows. Whether you're managing software development sprints, marketing campaigns, or personal todo lists, 4ga Boards provides the flexibility and features you need.",
+    "tags": [
+      "Project Management",
+      "Kanban",
+      "Productivity",
+      "Collaboration",
+      "Task Management",
+      "Self-Hosted",
+      "Team Tools",
+      "Workflow"
+    ]
+  },
+  {
     "slug": "8mblocal",
     "logo": null,
     "name": "8MB Local",
@@ -153,6 +169,18 @@
       "Media",
       "Video",
       "Downloader"
+    ]
+  },
+  {
+    "slug": "altus",
+    "logo": "logo.png",
+    "name": "Altus",
+    "description": "Altus is a desktop application that brings WhatsApp Web to your desktop with additional features and customization options. It provides a clean, native desktop experience for WhatsApp Web, with support for multiple accounts, themes, and enhanced functionality beyond the standard web interface.",
+    "tags": [
+      "Messaging",
+      "WhatsApp",
+      "Desktop App",
+      "Communication"
     ]
   },
   {
@@ -963,6 +991,24 @@
     ]
   },
   {
+    "slug": "cloudbeaver",
+    "logo": "logo.png",
+    "name": "CloudBeaver",
+    "description": "CloudBeaver is a web-based database management tool developed by DBeaver team. It provides a modern, intuitive interface for managing databases through your web browser. CloudBeaver supports multiple database types including PostgreSQL, MySQL, MariaDB, SQLite, Oracle, SQL Server, and many others. Perfect for teams who need collaborative database management without installing desktop software.",
+    "tags": [
+      "Database",
+      "SQL",
+      "Management",
+      "Web Interface",
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "Development",
+      "Analytics",
+      "Team Collaboration"
+    ]
+  },
+  {
     "slug": "cloudcommander",
     "logo": "logo.png",
     "name": "Cloud Commander",
@@ -1261,6 +1307,19 @@
     ]
   },
   {
+    "slug": "darktable",
+    "logo": "logo.png",
+    "name": "Darktable",
+    "description": "Darktable is an open-source photography workflow application and raw developer. It manages your digital negatives in a database, lets you view them through a zoomable lighttable, and enables you to develop raw images and enhance them with powerful editing tools. This browser-accessible version provides the full Darktable desktop application through a web interface, allowing you to edit photos from anywhere without local installation.",
+    "tags": [
+      "Photography",
+      "Image Editing",
+      "RAW",
+      "Desktop",
+      "Browser"
+    ]
+  },
+  {
     "slug": "dashdot",
     "logo": "logo.png",
     "name": "Dashdot",
@@ -1501,6 +1560,19 @@
     ]
   },
   {
+    "slug": "domainlocker",
+    "logo": "logo.png",
+    "name": "Domain Locker",
+    "description": "Domain Locker is a self-hosted domain portfolio management and monitoring application designed to help you keep track of all your registered domains. It provides centralized management for domain registrations, expiration dates, renewal reminders, DNS records, SSL certificates, and hosting information. Domain Locker features automated WHOIS lookups, expiration notifications via email, domain health checks, and comprehensive reporting. With scheduled updates and monitoring, you'll never miss a domain renewal deadline again. The application includes automatic daily checks for domain updates and sends timely expiration reminders. Perfect for domain investors, web developers, agencies, and anyone managing multiple domain portfolios who needs a reliable system to track and monitor their digital assets.",
+    "tags": [
+      "Domain Management",
+      "Domain Monitoring",
+      "WHOIS",
+      "DNS",
+      "Domain Portfolio"
+    ]
+  },
+  {
     "slug": "domainmod",
     "logo": "logo.png",
     "name": "DomainMod",
@@ -1531,6 +1603,19 @@
     "tags": [
       "Monitoring",
       "Logging"
+    ]
+  },
+  {
+    "slug": "dragonfly",
+    "logo": "logo.png",
+    "name": "DragonflyDB",
+    "description": "DragonflyDB is a modern, high-performance, Redis-compatible in-memory datastore that's designed for cloud workloads. It offers superior performance with up to 25x higher throughput than Redis while using fewer resources. DragonflyDB is fully compatible with Redis APIs and commands, making it a drop-in replacement that doesn't require code changes. It features automatic snapshots, optional persistence to disk, built-in replication, and efficient memory management. Perfect for caching, session storage, real-time analytics, and any use case that requires blazing-fast data access with lower operational costs.",
+    "tags": [
+      "Database",
+      "Cache",
+      "In-Memory",
+      "Redis",
+      "Performance"
     ]
   },
   {
@@ -1885,6 +1970,19 @@
       "Real-time",
       "Secure",
       "Cross-Platform"
+    ]
+  },
+  {
+    "slug": "filerise",
+    "logo": "logo.png",
+    "name": "Filerise",
+    "description": "Filerise is a modern file sharing and management platform that allows you to upload, organize, and share files securely. It provides a clean web interface for file management with features like user authentication, file uploads, metadata management, and configurable upload limits.",
+    "tags": [
+      "File Management",
+      "File Sharing",
+      "Web Interface",
+      "Self-Hosted",
+      "Storage"
     ]
   },
   {
@@ -2347,6 +2445,19 @@
     ]
   },
   {
+    "slug": "gonic",
+    "logo": "logo.png",
+    "name": "Gonic",
+    "description": "Gonic is a music streaming server / subsonic server API implementation, written in Go. It provides a simple and efficient way to stream your music collection through a web interface or compatible clients. Gonic supports various audio formats and offers features like transcoding, cover art, and playlist management.",
+    "tags": [
+      "Media",
+      "Music",
+      "Streaming",
+      "Subsonic",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "gopeed",
     "logo": "logo.png",
     "name": "GoPeed",
@@ -2616,11 +2727,18 @@
   },
   {
     "slug": "homarr",
-    "logo": "logo.svg",
+    "logo": "logo.png",
     "name": "Homarr",
     "description": "Homarr is a powerful dashboard designed to simplify the management of your server. It provides a sleek, modern interface that brings all your apps and services together in one place, allowing you to access and control everything with ease. Homarr seamlessly integrates with the apps you've added, offering valuable insights and complete control. You can add your self-hosted applications or favorite websites to your dashboard and organize them as you like. Homarr supports integration with many popular applications to enhance your user experience. It is customizable, accessible, and supports 23 languages. With Homarr, you can control and monitor your network directly, use integrations to display data and control apps, and even create your own dashboard using a comprehensible and easy-to-use visual editor. Homarr is open-source and allows commercial usage. It features a quick search function to easily navigate through your apps and supported integrations.",
     "tags": [
-      "Dashboard"
+      "Dashboard",
+      "Homepage",
+      "Self-hosted",
+      "Widgets",
+      "Bookmarks",
+      "Monitoring",
+      "Customizable",
+      "Web App"
     ]
   },
   {
@@ -2632,6 +2750,19 @@
       "Home Automation",
       "Open Source",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "homebox",
+    "logo": "logo.png",
+    "name": "Homebox",
+    "description": "Homebox is an inventory management system that helps you keep track of your belongings, their location, and other details to simplify home organization.",
+    "tags": [
+      "Inventory",
+      "Organization",
+      "Home Management",
+      "Self-Hosted",
+      "Personal"
     ]
   },
   {
@@ -2657,6 +2788,18 @@
     ]
   },
   {
+    "slug": "honey",
+    "logo": "logo.png",
+    "name": "Honey",
+    "description": "Honey is a lightweight web application developed by dani3l0. It provides a clean and intuitive interface for accessing and managing your data. The application is containerized for easy deployment and configuration, making it ideal for self-hosted environments. Honey uses a file-based configuration system, allowing for simple customization and persistence across container restarts. With its efficient design and minimal resource requirements, Honey is a great addition to any self-hosted service collection.",
+    "tags": [
+      "Web Application",
+      "Self-hosted",
+      "Docker",
+      "Lightweight"
+    ]
+  },
+  {
     "slug": "hortusfox",
     "logo": "logo.png",
     "name": "HortusFox",
@@ -2666,6 +2809,19 @@
       "Collaboration",
       "Self-Hosted",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "httplaceholder",
+    "logo": "logo.png",
+    "name": "HTTP Placeholder",
+    "description": "HTTP Placeholder is a powerful API mocking tool that allows you to create mock HTTP endpoints for testing and development purposes. It provides a simple way to simulate API responses and test your applications without relying on real backend services.",
+    "tags": [
+      "API",
+      "Testing",
+      "Development",
+      "Mocking",
+      "HTTP"
     ]
   },
   {
@@ -3101,6 +3257,19 @@
     ]
   },
   {
+    "slug": "khoj",
+    "logo": "logo.png",
+    "name": "Khoj",
+    "description": "Khoj is an AI-powered personal search and chat application that helps you find and organize your personal knowledge. It supports various AI models, web search integration, and code execution capabilities.",
+    "tags": [
+      "AI",
+      "Search",
+      "Chat",
+      "Self-Hosted",
+      "Knowledge Management"
+    ]
+  },
+  {
     "slug": "kicad",
     "logo": "logo.png",
     "name": "KiCad",
@@ -3154,6 +3323,19 @@
     ]
   },
   {
+    "slug": "kitchenowl",
+    "logo": "logo.png",
+    "name": "KitchenOwl",
+    "description": "KitchenOwl is a self-hosted grocery list and recipe manager designed to help you organize your kitchen and meal planning. It provides a clean web interface for managing shopping lists, recipes, and inventory. Perfect for families and individuals who want to streamline their grocery shopping and meal preparation.",
+    "tags": [
+      "Grocery Lists",
+      "Recipe Management",
+      "Meal Planning",
+      "Family",
+      "Web Interface"
+    ]
+  },
+  {
     "slug": "koito",
     "logo": "logo.png",
     "name": "Koito",
@@ -3200,6 +3382,19 @@
       "Resource Monitoring",
       "Security",
       "Multi-Cloud"
+    ]
+  },
+  {
+    "slug": "komodo",
+    "logo": "logo.png",
+    "name": "Komodo",
+    "description": "Komodo is a comprehensive server management platform that provides monitoring and control capabilities for Docker containers and system processes. It offers a unified dashboard to manage your infrastructure, with features including container management, process monitoring, resource tracking, and system metrics visualization.",
+    "tags": [
+      "Server Management",
+      "Docker",
+      "Monitoring",
+      "Automation",
+      "MongoDB"
     ]
   },
   {
@@ -3742,6 +3937,18 @@
     ]
   },
   {
+    "slug": "mathesar",
+    "logo": "logo.png",
+    "name": "Mathesar",
+    "description": "Mathesar is an open-source database GUI that makes PostgreSQL accessible to non-technical users. It provides an intuitive interface for working with databases without requiring SQL knowledge. Users can visually create and edit tables, modify schemas, browse and manipulate data, and collaborate with team members. Built on PostgreSQL, it leverages the power and reliability of this proven database while adding user-friendly features like spreadsheet-like data editing, relationship visualization, and automated schema management. Mathesar is perfect for teams that need to work with data collaboratively but don't have extensive database expertise. As a self-hosted solution, it gives organizations complete control over their data and infrastructure. Whether you're managing content, organizing research data, or building internal tools, Mathesar makes database operations approachable while maintaining the full capabilities of PostgreSQL.",
+    "tags": [
+      "Database GUI",
+      "PostgreSQL",
+      "No-code/Low-code",
+      "Self-hosted"
+    ]
+  },
+  {
     "slug": "matomo",
     "logo": "logo.png",
     "name": "Matomo",
@@ -4082,6 +4289,19 @@
     ]
   },
   {
+    "slug": "motoradmin",
+    "logo": "logo.png",
+    "name": "MotorAdmin",
+    "description": "MotorAdmin is a modern, open-source database administration tool that provides a user-friendly interface for managing and interacting with your databases. It offers features for data visualization, query building, and database management.",
+    "tags": [
+      "Database",
+      "Administration",
+      "Data Management",
+      "Visualization",
+      "Query Builder"
+    ]
+  },
+  {
     "slug": "mstream",
     "logo": "logo.svg",
     "name": "Mstream",
@@ -4410,6 +4630,19 @@
       "Meta Search",
       "Automation",
       "Media Management"
+    ]
+  },
+  {
+    "slug": "obsidian",
+    "logo": "logo.png",
+    "name": "Obsidian",
+    "description": "Obsidian is a powerful knowledge base that works on top of a local folder of plain text Markdown files. It provides a flexible and extensible platform for note-taking, knowledge management, and personal knowledge base creation.",
+    "tags": [
+      "Note Taking",
+      "Knowledge Base",
+      "Markdown",
+      "Self-Hosted",
+      "Productivity"
     ]
   },
   {
@@ -4751,6 +4984,19 @@
     ]
   },
   {
+    "slug": "paisa",
+    "logo": "logo.png",
+    "name": "Paisa",
+    "description": "Paisa is a personal finance manager and expense tracker that helps you manage your finances, track expenses, and visualize your financial data.",
+    "tags": [
+      "Finance",
+      "Budgeting",
+      "Expense Tracker",
+      "Self-Hosted",
+      "Personal Finance"
+    ]
+  },
+  {
     "slug": "palmr",
     "logo": "logo.png",
     "name": "Palmr",
@@ -4799,6 +5045,24 @@
     ]
   },
   {
+    "slug": "papra",
+    "logo": "logo.png",
+    "name": "Papra",
+    "description": "Papra is a modern, open-source project management and collaboration platform designed to help teams organize their work, track progress, and collaborate effectively. It provides a comprehensive suite of tools for task management, team communication, file sharing, and project tracking in a single, integrated platform. Papra offers an intuitive interface with powerful features for managing complex projects and workflows.",
+    "tags": [
+      "Project Management",
+      "Team Collaboration",
+      "Task Management",
+      "Self-Hosted",
+      "Productivity",
+      "Workflow",
+      "Communication",
+      "File Sharing",
+      "Progress Tracking",
+      "Mobile Access"
+    ]
+  },
+  {
     "slug": "passbolt",
     "logo": "logo.png",
     "name": "Passbolt",
@@ -4807,6 +5071,19 @@
       "Security",
       "Password Manager",
       "Collaboration"
+    ]
+  },
+  {
+    "slug": "passky",
+    "logo": "logo.png",
+    "name": "Passky Server",
+    "description": "Passky is a simple, modern, lightweight, open source and secure password manager. It allows you to securely store and manage your passwords, ensuring your sensitive credentials remain protected. This self-hosted server component works with the Passky clients (web, desktop, and mobile apps) to provide a complete password management solution that puts you in control of your data.",
+    "tags": [
+      "Password Manager",
+      "Security",
+      "Authentication",
+      "Self-Hosted",
+      "Privacy"
     ]
   },
   {
@@ -5254,6 +5531,19 @@
     ]
   },
   {
+    "slug": "poznote",
+    "logo": "logo.png",
+    "name": "Poznote",
+    "description": "Poznote is a lightweight, self-hosted note-taking application designed for personal knowledge management and quick note capture. It provides a simple, clean interface for creating, organizing, and managing notes without unnecessary complexity. Poznote uses SQLite for data storage, making it easy to deploy without requiring external database setup. The application features secure authentication, markdown support, and fast search capabilities to help you find information quickly. All your notes are stored locally in a SQLite database file, ensuring privacy and complete control over your data. Perfect for individuals who want a straightforward, fast, and private note-taking solution that can be accessed from any browser.",
+    "tags": [
+      "Notes",
+      "Note Taking",
+      "Knowledge Management",
+      "Markdown",
+      "SQLite"
+    ]
+  },
+  {
     "slug": "prestashop",
     "logo": "logo.png",
     "name": "Prestashop",
@@ -5340,6 +5630,22 @@
       "Game Server Management",
       "Open Source",
       "Easy to Use"
+    ]
+  },
+  {
+    "slug": "pwndrop",
+    "logo": "logo.png",
+    "name": "Pwndrop",
+    "description": "Pwndrop is a self-deployable file hosting service for red teamers, designed for sending payloads and collecting loot in penetration testing operations. It provides a lightweight, standalone solution for hosting and managing files during security assessments. With its simple web interface, you can easily upload, organize, and share files with customizable download links. Pwndrop offers features like file tracking, download notifications, and an admin portal protected by a secret path for enhanced security.",
+    "tags": [
+      "File Sharing",
+      "Security Tools",
+      "Red Team",
+      "Penetration Testing",
+      "File Hosting",
+      "Self-Hosted",
+      "Lightweight",
+      "Admin Portal"
     ]
   },
   {
@@ -5593,6 +5899,20 @@
     ]
   },
   {
+    "slug": "rstudio",
+    "logo": "logo.png",
+    "name": "RStudio",
+    "description": "RStudio is a powerful integrated development environment (IDE) for R programming and statistical computing. It provides a comprehensive set of tools for data analysis, visualization, and statistical modeling. This server-based version allows you to access RStudio through your web browser, enabling collaborative work and remote access to your R projects from anywhere. Perfect for data scientists, statisticians, and researchers working with R.",
+    "tags": [
+      "Development",
+      "IDE",
+      "R",
+      "Statistics",
+      "Data Science",
+      "Analytics"
+    ]
+  },
+  {
     "slug": "rustdesk",
     "logo": "logo.png",
     "name": "Rustdesk",
@@ -5601,6 +5921,20 @@
       "Remote Desktop",
       "Productivity",
       "Security"
+    ]
+  },
+  {
+    "slug": "rustfs",
+    "logo": "logo.svg",
+    "name": "RustFS",
+    "description": "RustFS is a high-performance, S3-compatible object storage system built in Rust. It is 2.3x faster than MinIO for small object payloads and offers full S3 API compatibility, a built-in web management console, erasure coding with Reed-Solomon for data protection, bitrot detection via HighwayHash, and server-side encryption with AES-256-GCM and ChaCha20-Poly1305. RustFS supports event notifications, bucket versioning, object lifecycle management, bucket replication, and CORS configuration. Licensed under the permissive Apache 2.0 license, it is designed for data lakes, AI workloads, and large-scale storage with a user-friendly deployment experience.",
+    "tags": [
+      "Object Storage",
+      "S3",
+      "Self-Hosted",
+      "Rust",
+      "Cloud Storage",
+      "MinIO Alternative"
     ]
   },
   {
@@ -5677,6 +6011,19 @@
     "tags": [
       "Bookmarks",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "sessy",
+    "logo": "logo.png",
+    "name": "Sessy",
+    "description": "Sessy is a self-hosted web application built with Ruby on Rails designed for managing and interacting with AWS Simple Email Service (SES). The application provides a user-friendly interface for managing email sending operations, monitoring email delivery, and working with AWS SES configurations. With persistent storage for application data, Sessy ensures your settings and configurations are retained across container restarts. The application offers a straightforward deployment model with minimal configuration requirements, making it easy to set up and operate. Built on the robust Ruby on Rails framework, Sessy provides a reliable foundation for email service management. Perfect for developers and teams working with AWS SES who want a self-hosted management interface, organizations needing a simple way to interact with their email service infrastructure, or anyone looking for a lightweight self-hosted solution for AWS SES operations without relying on external services.",
+    "tags": [
+      "AWS",
+      "SES",
+      "Web Application",
+      "Rails",
+      "Self-Hosted"
     ]
   },
   {
@@ -6053,6 +6400,22 @@
       "Developer Tools",
       "SSH",
       "Telnet"
+    ]
+  },
+  {
+    "slug": "stalwart",
+    "logo": "logo.svg",
+    "name": "Stalwart",
+    "description": "Stalwart is a modern, all-in-one mail and collaboration server written in Rust for security and performance. It bundles SMTP, IMAP, JMAP, POP3, CalDAV, CardDAV, and WebDAV into a single binary with a unified configuration. Features include a built-in spam and phishing filter with LLM-driven analysis, DMARC/DKIM/SPF/ARC authentication, encryption at rest with S/MIME or OpenPGP, automatic TLS via ACME, full-text search in 17 languages, Sieve scripting, and a web-based admin dashboard. It supports pluggable storage backends (RocksDB, FoundationDB, PostgreSQL, MySQL, SQLite, S3, Redis) and scales from a single instance to thousands of nodes with built-in clustering, load balancing, and fault tolerance.",
+    "tags": [
+      "Email",
+      "Mail Server",
+      "SMTP",
+      "IMAP",
+      "CalDAV",
+      "CardDAV",
+      "Self-Hosted",
+      "Collaboration"
     ]
   },
   {
@@ -6698,6 +7061,19 @@
     ]
   },
   {
+    "slug": "waha",
+    "logo": "logo.png",
+    "name": "WAHA",
+    "description": "WAHA (WhatsApp HTTP API) is a self-hosted, privacy-focused WhatsApp API that you can run in a click! It provides a REST API to send and receive WhatsApp messages, manage groups, channels, and status updates. WAHA runs a real instance of WhatsApp Web to avoid getting blocked and supports automation through HTTP API. The core version is completely free with no limits on messages or time, making it perfect for WhatsApp automation, chatbots, and integrations.",
+    "tags": [
+      "WhatsApp",
+      "API",
+      "Messaging",
+      "Automation",
+      "Chatbot"
+    ]
+  },
+  {
     "slug": "wakatime",
     "logo": "logo.png",
     "name": "Wakapi",
@@ -6716,6 +7092,21 @@
       "Productivity",
       "Reading",
       "Bookmarking"
+    ]
+  },
+  {
+    "slug": "wallos",
+    "logo": "logo.png",
+    "name": "Wallos",
+    "description": "Wallos is an open-source, self-hosted network monitoring and management platform that provides comprehensive network visibility, device discovery, and network analytics. It helps network administrators monitor network health, track bandwidth usage, and manage network devices efficiently.",
+    "tags": [
+      "Network Monitoring",
+      "Network Management",
+      "Device Discovery",
+      "Bandwidth Monitoring",
+      "Network Analytics",
+      "Infrastructure",
+      "DevOps"
     ]
   },
   {
@@ -6979,6 +7370,20 @@
       "Container Management",
       "DevOps",
       "Self-Hosting"
+    ]
+  },
+  {
+    "slug": "yacy",
+    "logo": "logo.png",
+    "name": "YaCy",
+    "description": "YaCy is a free distributed search engine built on principles of peer-to-peer networks. Unlike traditional search engines that rely on centralized servers, YaCy operates in a decentralized manner where each user can contribute to the search index. It allows you to run your own search portal, create your own web index, and be independent from commercial search engine providers. YaCy is perfect for organizations that need private search capabilities, intranet search solutions, or those who value privacy and freedom in their search experience.",
+    "tags": [
+      "Search Engine",
+      "Decentralized",
+      "P2P",
+      "Privacy",
+      "Indexing",
+      "Web Crawler"
     ]
   },
   {
