@@ -13,6 +13,10 @@ changeLog:
   - date: 2025-01-21
     description: Initial Template Release
 links:
+  - label: Website
+    url: https://crosswatch.app
+  - label: Documentation
+    url: https://wiki.crosswatch.app
   - label: GitHub
     url: https://github.com/cenodude/crosswatch
 contributors:
@@ -37,7 +41,9 @@ schema:
       type: string
       title: Timezone
       default: Asia/Karachi
-      description: Timezone for the application (e.g., Asia/Karachi, America/New_York, Europe/London)
+      description:
+        Timezone for the application (e.g., Asia/Karachi, America/New_York,
+        Europe/London)
 benefits:
   - title: Self-Hosted Monitoring
     description:
@@ -63,8 +69,8 @@ features:
       comprehensive tracking capabilities.
   - title: Persistent Storage
     description:
-      Configuration data is stored in a dedicated volume at /config for
-      reliable data persistence.
+      Configuration data is stored in a dedicated volume at /config for reliable
+      data persistence.
   - title: Timezone Configuration
     description:
       Set your preferred timezone for accurate time-based monitoring and
