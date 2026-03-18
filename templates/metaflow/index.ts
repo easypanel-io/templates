@@ -13,9 +13,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image:
-          input.metadataServiceImage ||
-          "netflixoss/metaflow_metadata_service:v2.5.0",
+        image: input.metadataServiceImage,
       },
       env: [
         `MF_METADATA_DB_HOST=${dbHost}`,
