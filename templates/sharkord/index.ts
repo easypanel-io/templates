@@ -21,12 +21,12 @@ export function generate(input: Input): Output {
       ports: [
         {
           protocol: "tcp",
-          published: 40000,
+          published: Number(input.appServicePort) ?? 40000,
           target: 40000,
         },
         {
           protocol: "udp",
-          published: 40000,
+          published: Number(input.appServicePort) ?? 40000,
           target: 40000,
         },
       ],

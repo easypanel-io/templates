@@ -27,6 +27,8 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
+    - appServicePort
   properties:
     appServiceName:
       type: string
@@ -36,9 +38,15 @@ schema:
       type: string
       title: App Service Image
       default: sharkord/sharkord:v0.0.11
+    appServicePort:
+      type: string
+      title: App Service Port
+      default: "40000"
 benefits:
   - title: Data Ownership
-    description: All conversations and files stay on your server with no corporate data collection
+    description:
+      All conversations and files stay on your server with no corporate data
+      collection
   - title: Lightweight
     description: Runs on modest hardware, even a Raspberry Pi 4
   - title: Fully Open Source
