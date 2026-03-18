@@ -21,7 +21,7 @@ changeLog:
 
 links:
   - label: GitHub
-    url: https://github.com/Stremio/stremio-server
+    url: https://github.com/Stremio/stremio-web
   - label: Website
     url: https://www.stremio.com
   - label: Blog
@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ttsaridas/stremio-docker:v1.2.7
+      default: tsaridas/stremio-docker:v1.2.11
 
 benefits:
   - title: Unified Media Center
