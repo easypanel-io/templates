@@ -3,10 +3,10 @@ description:
   Surmai is a self-hosted application server that provides a comprehensive
   platform for managing and deploying applications. Built with modern
   architecture, Surmai offers a web-based interface accessible on port 8080 for
-  managing your applications and services. The system stores all application data
-  in a persistent volume, ensuring your configuration and data are preserved
-  across restarts. Perfect for developers and organizations looking for a
-  self-hosted solution to manage their application infrastructure.
+  managing your applications and services. The system stores all application
+  data in a persistent volume, ensuring your configuration and data are
+  preserved across restarts. Perfect for developers and organizations looking
+  for a self-hosted solution to manage their application infrastructure.
 instructions: null
 changeLog:
   - date: 2025-01-21
@@ -14,6 +14,8 @@ changeLog:
 links:
   - label: Website
     url: https://surmai.app/
+  - label: Documentation
+    url: https://surmai.app/documentation/
   - label: GitHub
     url: https://github.com/rohitkumbhar/surmai
 contributors:
@@ -44,7 +46,9 @@ schema:
       type: string
       title: Admin Password
       default: admin123
-      description: Admin password (minimum 9 characters with mixed case, numbers, and special characters)
+      description:
+        Admin password (minimum 9 characters with mixed case, numbers, and
+        special characters)
 benefits:
   - title: Self-Hosted Application Server
     description:
