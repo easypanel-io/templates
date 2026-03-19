@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
       serviceName: input.databaseServiceName,
       password: databasePassword,
       image: "pgvector/pgvector:pg18",
-      env: [`PGDATA=/var/lib/postgresql/data`],
+      env: ['PGDATA=/var/lib/postgresql/data'],
     },
   });
 
