@@ -25,10 +25,11 @@ instructions:
 changeLog:
   - date: 2026-02-27
     description: First Release
-  - date: 2026-02-09
+  - date: 2026-03-20
     description:
       Square logo, image pin 2.1.0-beta.4, random project token, richer
-      instructions, vector/timberio parity note
+      instructions, vector/timberio parity note. Vector pin 0.28.1-alpine,
+      Grafana admin password randomized.
 
 links:
   - label: Website
@@ -70,6 +71,13 @@ schema:
       title: Admin Password
       default: ""
       description: Generated randomly if not provided.
+    grafanaAdminPassword:
+      type: string
+      title: Grafana admin password
+      default: ""
+      description:
+        Grafana login user is admin. Leave empty for a random password (written
+        to grafana.ini), or set explicitly.
     orgName:
       type: string
       title: Organization Name

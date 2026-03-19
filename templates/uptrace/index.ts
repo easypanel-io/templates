@@ -230,10 +230,6 @@ datasources:
 `;
 
 const GRAFANA_INI = `
-[security]
-admin_user = admin
-admin_password = admin
-
 [users]
 default_theme = dark
 `;
@@ -306,6 +302,9 @@ export function generate(input: Input): Output {
   const pgPassword = randomPassword();
   const redisPassword = randomPassword();
   const projectToken = randomString(32);
+  const grafanaAdminPassword = `${
+    input.grafanaAdminPassword || randomPassword()
+  }`;
 
   const uptraceHost = `$(PROJECT_NAME)_${input.appServiceName}`;
   const chHost = `$(PROJECT_NAME)_${input.appServiceName}-clickhouse`;
@@ -435,7 +434,10 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-vector`,
-      source: { type: "image", image: "timberio/vector:0.28.X-alpine" },
+      source: {
+        type: "image",
+        image: "timberio/vector:0.28.1-alpine",
+      },
       mounts: [
         {
           type: "file",
@@ -452,6 +454,10 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-grafana`,
       source: { type: "image", image: "grafana/grafana:12.0.0" },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
+      env: [
+        "GF_SECURITY_ADMIN_USER=admin",
+        `GF_SECURITY_ADMIN_PASSWORD=${grafanaAdminPassword}`,
+      ].join("\n"),
       mounts: [
         {
           type: "file",
