@@ -1,27 +1,51 @@
 name: DumbBudget
 description:
-  DumbBudget is a simple, self-hosted budget management application that helps
-  you track expenses, manage income, and monitor your financial health. It
-  features PIN protection, multi-currency support, and intuitive expense
-  tracking. Perfect for individuals and families who want to take control of
-  their finances.
-instructions: null
+  DumbBudget is a simple, self-hosted personal budgeting app from DumbWare.io.
+  Track income and expenses with categories, PIN protection, multi-currency
+  support, CSV export, and a responsive PWA UI. Data persists under /app/data.
+
+instructions: |
+  **BASE_URL** is set to your primary HTTPS domain—required for correct links and
+  auth behind a reverse proxy.
+  **DUMBBUDGET_PIN:** Leave the template default empty for open access (no PIN
+  gate), or set a PIN in the form / env to require it at login (see upstream
+  security notes on rate limits and lockouts).
+  **SITE_TITLE** appears in the UI header; **INSTANCE_NAME** is optional metadata
+  for multi-instance setups (matches upstream docker-compose).
+  **CURRENCY** must be a supported ISO code (see documentation link). After
+  deploy, open the app and complete any first-run prompts.
+
 changeLog:
   - date: 2025-09-26
     description: First release (d44543bf67ecedb416138ac4de93759d3a324999)
+  - date: 2026-03-20
+    description:
+      Screenshot, website/docs links, SITE_TITLE & INSTANCE_NAME env parity,
+      configurable PIN/currency/titles
+
 links:
+  - label: Website
+    url: https://dumbware.io
+  - label: Documentation
+    url: https://github.com/dumbwareio/dumbbudget/blob/main/README.md
   - label: GitHub
     url: https://github.com/dumbwareio/dumbbudget
-  - label: DockerHub
+  - label: Docker Hub
     url: https://hub.docker.com/r/dumbwareio/dumbbudget
+
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
+    - dumbbudgetPin
+    - currency
+    - siteTitle
+    - instanceName
   properties:
     appServiceName:
       type: string
@@ -31,6 +55,32 @@ schema:
       type: string
       title: App Service Image
       default: dumbwareio/dumbbudget:d44543bf67ecedb416138ac4de93759d3a324999
+    dumbbudgetPin:
+      type: string
+      title: DUMBBUDGET_PIN
+      default: ""
+      description:
+        Optional. Empty = no PIN. Set a numeric PIN to protect the app at login.
+    currency:
+      type: string
+      title: Currency code
+      default: USD
+      description:
+        ISO currency code (USD, EUR, GBP, …). See README for full supported
+        list.
+    siteTitle:
+      type: string
+      title: SITE_TITLE
+      default: DumbBudget
+      description: Title shown in the app UI (upstream default DumbBudget).
+    instanceName:
+      type: string
+      title: INSTANCE_NAME
+      default: ""
+      description:
+        Optional label for this instance/account when running multiple
+        deployments.
+
 benefits:
   - title: Budget Management
     description:
@@ -48,6 +98,7 @@ benefits:
     description:
       Complete control over your financial data with no external dependencies or
       data sharing with third parties.
+
 features:
   - title: Expense Tracking
     description: Track and categorize your daily expenses and purchases.
@@ -65,6 +116,7 @@ features:
     description: All financial data persists across container restarts.
   - title: Web Interface
     description: Clean, responsive web interface for budget management.
+
 tags:
   - Budget Management
   - Personal Finance

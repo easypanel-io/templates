@@ -26,10 +26,11 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `DUMBBUDGET_PIN=`,
+        `DUMBBUDGET_PIN=${input.dumbbudgetPin}`,
         `BASE_URL=https://$(PRIMARY_DOMAIN)`,
-        `CURRENCY=USD`,
-        `INSTANCE_NAME=My Account`,
+        `CURRENCY=${input.currency}`,
+        `SITE_TITLE=${input.siteTitle}`,
+        `INSTANCE_NAME=${input.instanceName}`,
       ].join("\n"),
     },
   });
