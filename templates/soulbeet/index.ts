@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
         serviceName: `${input.appServiceName}-slskd`,
         source: {
           type: "image",
-          image: "slskd/slskd:latest",
+          image: "slskd/slskd:0.24.5",
         },
         domains: [
           {
