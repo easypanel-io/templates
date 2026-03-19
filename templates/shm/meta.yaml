@@ -3,17 +3,21 @@ description:
   SHM is a self-hosted metrics and monitoring application that provides
   comprehensive tracking and analysis of system metrics and performance data.
   Built with modern architecture, SHM offers a web-based interface accessible on
-  port 8080 for viewing and managing your metrics. The system uses PostgreSQL for
-  data persistence, storing all metrics data in a dedicated database. Perfect for
-  developers and system administrators looking for a self-hosted solution to
-  track and monitor their application and system metrics.
+  port 8080 for viewing and managing your metrics. The system uses PostgreSQL
+  for data persistence, storing all metrics data in a dedicated database.
+  Perfect for developers and system administrators looking for a self-hosted
+  solution to track and monitor their application and system metrics.
 instructions: null
 changeLog:
   - date: 2025-01-29
     description: Initial Template Release
 links:
+  - label: Website
+    url: https://self-hosted-metrics.com
   - label: GitHub
     url: https://github.com/btouchard/shm
+  - label: Documentation
+    url: https://self-hosted-metrics.com/#how-it-works
   - label: Container
     url: https://github.com/btouchard/shm/pkgs/container/shm
 contributors:
@@ -48,8 +52,8 @@ benefits:
       ensuring data integrity across restarts.
   - title: Web-Based Interface
     description:
-      Access and manage your metrics through a modern web interface accessible on
-      port 8080.
+      Access and manage your metrics through a modern web interface accessible
+      on port 8080.
 features:
   - title: Metrics Management
     description:
@@ -57,8 +61,8 @@ features:
       single dashboard.
   - title: PostgreSQL Database
     description:
-      Reliable PostgreSQL database for persistent storage of all metrics data and
-      historical records.
+      Reliable PostgreSQL database for persistent storage of all metrics data
+      and historical records.
   - title: Custom Database Configuration
     description:
       Configure custom database user and database name for flexible deployment
