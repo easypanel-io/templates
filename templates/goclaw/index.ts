@@ -1,11 +1,11 @@
-import { Output, Services, randomPassword } from "~templates-utils";
+import { Output, Services, randomPassword, randomString } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const gatewayToken = input.gatewayToken || randomPassword();
-  const encryptionKey = input.encryptionKey || randomPassword();
+  const encryptionKey = input.encryptionKey || randomString(32);
 
   services.push({
     type: "postgres",
