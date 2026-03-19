@@ -35,10 +35,7 @@ export function generate(input: Input): Output {
         `GOCLAW_SESSIONS_DIR=/app/sessions`,
         `GOCLAW_GATEWAY_TOKEN=${gatewayToken}`,
         `GOCLAW_ENCRYPTION_KEY=${encryptionKey}`,
-        `ENABLE_PYTHON=true`,
-        `ENABLE_NODE=true`,
-        `ENABLE_FULL_SKILLS=true`,
-        `ENABLE_REDIS=true`,
+        `ROD_CHROME_BIN=/usr/bin/chromium-browser`,
         `GOCLAW_POSTGRES_DSN=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         providerKeyEnv,
       ]
@@ -68,6 +65,12 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "sessions",
           mountPath: "/app/sessions",
+        },
+        {
+          type: "file",
+          mountPath: "/app/data/.runtime/apk-packages",
+          content: ["chromium","nss","freetype","harfbuzz","font-ubuntu"]
+            .join("\n"),
         },
       ],
     },
