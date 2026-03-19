@@ -17,13 +17,21 @@ description:
   management solution, or anyone looking for a lightweight self-hosted
   alternative to complex media management systems.
 
-instructions: null
+instructions: |
+  After deploy, edit the mounted config.toml on the MediaManager app service.
+  Set [auth].admin_emails and [misc] library paths to match your setup.
+  Configure SMTP, OpenID, torrents, or indexers only if you use those features.
+  See https://maxdorninger.github.io/MediaManager/configuration-overview.html for details.
 
 changeLog:
   - date: 2025-12-10
     description: Template Release
 
 links:
+  - label: Website
+    url: https://maxdorninger.github.io/MediaManager/
+  - label: Documentation
+    url: https://maxdorninger.github.io/MediaManager/introduction.html
   - label: GitHub
     url: https://github.com/maxdorninger/mediamanager
 
@@ -44,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/maxdorninger/mediamanager/mediamanager:1.10
+      default: ghcr.io/maxdorninger/mediamanager:1.12.3
 
 benefits:
   - title: Organized Media Library
