@@ -1,17 +1,39 @@
 name: Backrest
 description:
-  Backrest is a modern backup and restore application that provides reliable
-  data protection with support for multiple storage backends including local
-  storage, cloud providers, and rclone-compatible services. It features a clean
-  web interface for managing backups, scheduling, and monitoring backup status.
-instructions: null
+  Backrest is a web UI and orchestrator for restic backups. It supports
+  scheduling, browsing snapshots, restores, notifications, and any restic-backed
+  storage (S3, B2, rclone remotes, local, etc.). This template keeps the
+  standard data/config/cache/tmp/rclone volumes and optionally bind-mounts host
+  paths at /userdata and /repos like the upstream Docker Compose examples.
+
+instructions: |
+  Port; Backrest's default listen port is 9898 in bare Docker/docs; this
+  template uses 8080 so Easypanel's domain mapping matches the process
+  (BACKREST_PORT=0.0.0.0:8080). To use 9898 instead, change both the app domain
+  port and BACKREST_PORT in the service env to stay in sync. Backup sources; Use
+  template fields Host path → /userdata and/or Host path → /repos for directories
+  you want visible inside the container (same as path/to/backup/data:/userdata
+  and path/to/local/repos:/repos in the official compose). You can also add more
+  bind mounts in Easypanel for other paths, then reference them in backup plans
+  inside Backrest. First run; Open the UI, complete setup (credentials), and
+  configure repos and schedules per the documentation.
+
 changeLog:
   - date: 2025-09-29
     description: First release
+  - date: 2026-02-09
+    description:
+      Website/docs links, instructions (port 8080 vs 9898, bind mounts),
+      optional /userdata & /repos, TZ default Etc/UTC
+
 links:
+  - label: Website
+    url: https://garethgeorge.github.io/backrest/
+  - label: Documentation
+    url: https://garethgeorge.github.io/backrest/introduction/getting-started
   - label: GitHub
     url: https://github.com/garethgeorge/backrest
-  - label: DockerHub
+  - label: Docker Hub
     url: https://hub.docker.com/r/garethgeorge/backrest
 contributors:
   - name: Ahson Shaikh
@@ -21,6 +43,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - timezone
   properties:
     appServiceName:
       type: string
@@ -29,7 +52,28 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: garethgeorge/backrest:v1.9.2
+      default: ghcr.io/garethgeorge/backrest:v1.12.1
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+      description: Container TZ (e.g. America/New_York, Europe/Berlin).
+    backupUserdataHostPath:
+      type: string
+      title: Host path mounted at /userdata (optional)
+      default: ""
+      description:
+        Absolute host path to files or folders you want Backrest to back up,
+        mounted read/write at /userdata inside the container. Leave empty to
+        skip.
+    backupReposHostPath:
+      type: string
+      title: Host path mounted at /repos (optional)
+      default: ""
+      description:
+        Absolute host path for local restic repos, mounted at /repos. Leave
+        empty to skip.
+
 benefits:
   - title: Reliable Backup Solution
     description:
