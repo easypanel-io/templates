@@ -25,7 +25,7 @@ export function generate(input: Input): Output {
     gatewayEnv.push(`CLAUDE_WEB_COOKIE=${input.claudeWebCookie}`);
   }
 
-  const mounts = [
+  const mounts: any[] = [
     {
       type: "volume",
       name: "config",
