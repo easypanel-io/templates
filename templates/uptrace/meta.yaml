@@ -1,25 +1,35 @@
 name: Uptrace
 description:
-  Uptrace is an open-source APM (Application Performance Monitoring) platform
-  that supports distributed tracing, metrics, and logs using OpenTelemetry. It
-  provides a single UI for traces, metrics, and logs with 50+ pre-built
-  dashboards, service graphs, alerting with notifications (Email, Slack,
-  Telegram, AlertManager), SQL-like query language for spans, and PromQL-like
-  language for metrics. Built on ClickHouse for storage and PostgreSQL for
-  metadata, Uptrace can process billions of spans on a single server at 10x
-  lower cost than commercial APM solutions. It supports data ingestion from
-  OpenTelemetry, Prometheus, Vector, FluentBit, and CloudWatch, and is
-  compatible with Grafana as a Tempo/Prometheus datasource.
+  Uptrace is an open-source APM platform for traces, metrics, and logs using
+  OpenTelemetry, with ClickHouse storage and PostgreSQL metadata. This template
+  follows the official example/docker compose stack (Uptrace, ClickHouse,
+  Postgres, Redis, OTel Collector, Vector, Grafana, Prometheus, Alertmanager,
+  Mailpit). The Vector image uses timberio/vector:0.28.X-alpine to match that
+  upstream example (legacy Docker Hub namespace); migrate to distroless/vector
+  only when you intentionally diverge from upstream.
 
 instructions:
-  After the deployment is complete, you can access the Uptrace user interface
-  through the primary service domain. Log in to Uptrace to begin setup and
-  monitoring. For further configuration options, refer to the Uptrace storage
-  section where the main configuration file is mounted.
+  Login; Use the admin name/email/password from the template form (password is
+  random if left blank). The project DSN token is generated once per deploy and
+  embedded in `/etc/uptrace/config.yml`, OTel Collector, Grafana datasource,
+  Prometheus remote_write, and Vector—keep file mounts stable or regenerate
+  configs together. Ingestion; Published host ports match the upstream
+  example—14317→4317 (Uptrace gRPC, referenced in `site.ingest_url`), 4317/4318
+  (OTLP on the collector). On shared hosts these can conflict; change published
+  ports in Easypanel and update `ingest_url` / client endpoints accordingly.
+  Grafana & Mailpit use separate app domains on ports 3000 and 8025; assign
+  subdomains or paths in Easypanel as needed. TLS; Upstream compose mounts TLS
+  certs; this template omits them for HTTPS termination at the proxy—see Uptrace
+  docs if you need in-container TLS.
 
 changeLog:
   - date: 2026-02-27
     description: First Release
+  - date: 2026-02-09
+    description:
+      Square logo, image pin 2.1.0-beta.4, random project token, richer
+      instructions, vector/timberio parity note
+
 links:
   - label: Website
     url: https://uptrace.dev
@@ -43,7 +53,10 @@ schema:
     appServiceImage:
       type: string
       title: Uptrace Image
-      default: "uptrace/uptrace:2.1.0-beta"
+      default: "uptrace/uptrace:2.1.0-beta.4"
+      description:
+        Pinned to the tag used in github.com/uptrace/uptrace example/docker
+        docker-compose.yml; bump only with a tested exact tag.
     adminName:
       type: string
       title: Admin Name

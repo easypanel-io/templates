@@ -17,7 +17,8 @@ const UPTRACE_CONFIG = (
   adminEmail: string,
   adminPassword: string,
   orgName: string,
-  projectName: string
+  projectName: string,
+  projectToken: string
 ) => `
 service:
   env: hosted
@@ -63,7 +64,7 @@ seed_data:
   project_tokens:
     - key: project_token1
       project_key: project1
-      token: project1_secret
+      token: "${projectToken}"
   project_users:
     - key: project_user1
       project_key: project1
@@ -115,13 +116,13 @@ mailer:
     from: no-reply@uptrace.local
 
 self_monitoring:
-  dsn: http://project1_secret@${uptraceHost}:80?grpc=14317
+  dsn: http://${projectToken}@${uptraceHost}:80?grpc=14317
 
 logging:
   level: INFO
 `;
 
-const OTEL_COLLECTOR_CONFIG = (uptraceHost: string) => `
+const OTEL_COLLECTOR_CONFIG = (uptraceHost: string, projectToken: string) => `
 extensions:
   health_check:
 
@@ -152,7 +153,7 @@ exporters:
   otlp/uptrace:
     endpoint: http://${uptraceHost}:4317
     tls: { insecure_skip_verify: true }
-    headers: { 'uptrace-dsn': 'http://project1_secret@localhost?grpc=14317' }
+    headers: { 'uptrace-dsn': 'http://${projectToken}@localhost?grpc=14317' }
 
 service:
   telemetry:
@@ -189,7 +190,7 @@ receivers:
   - name: 'default'
 `;
 
-const VECTOR_CONFIG = (uptraceHost: string) => `
+const VECTOR_CONFIG = (uptraceHost: string, projectToken: string) => `
 [sources.syslog_logs]
 type = "demo_logs"
 format = "syslog"
@@ -210,10 +211,10 @@ framing.method = "newline_delimited"
 compression = "gzip"
 uri = "http://${uptraceHost}:80/api/v1/vector/logs"
 tls.verify_certificate = false
-request.headers.uptrace-dsn = "http://project1_secret@localhost?grpc=14317"
+request.headers.uptrace-dsn = "http://${projectToken}@localhost?grpc=14317"
 `;
 
-const GRAFANA_DATASOURCE = (uptraceHost: string) => `
+const GRAFANA_DATASOURCE = (uptraceHost: string, projectToken: string) => `
 apiVersion: 1
 
 datasources:
@@ -225,7 +226,7 @@ datasources:
     jsonData:
       httpHeaderName1: 'uptrace-dsn'
     secureJsonData:
-      httpHeaderValue1: 'http://project1_secret@localhost?grpc=14317'
+      httpHeaderValue1: 'http://${projectToken}@localhost?grpc=14317'
 `;
 
 const GRAFANA_INI = `
@@ -237,7 +238,7 @@ admin_password = admin
 default_theme = dark
 `;
 
-const PROMETHEUS_CONFIG = (uptraceHost: string) => `
+const PROMETHEUS_CONFIG = (uptraceHost: string, projectToken: string) => `
 global:
   scrape_interval: 15s
   evaluation_interval: 15s
@@ -253,7 +254,7 @@ scrape_configs:
 remote_write:
   - url: 'http://${uptraceHost}:80/api/v1/prometheus/write'
     headers:
-      'uptrace-dsn': 'http://project1_secret@localhost?grpc=14317'
+      'uptrace-dsn': 'http://${projectToken}@localhost?grpc=14317'
 `;
 
 const CLICKHOUSE_CONFIG = `
@@ -304,6 +305,7 @@ export function generate(input: Input): Output {
 
   const pgPassword = randomPassword();
   const redisPassword = randomPassword();
+  const projectToken = randomString(32);
 
   const uptraceHost = `$(PROJECT_NAME)_${input.appServiceName}`;
   const chHost = `$(PROJECT_NAME)_${input.appServiceName}-clickhouse`;
@@ -330,7 +332,8 @@ export function generate(input: Input): Output {
             adminEmail,
             adminPassword,
             input.orgName || "Org1",
-            input.projectName || "Project1"
+            input.projectName || "Project1",
+            projectToken
           ),
           mountPath: "/etc/uptrace/config.yml",
         },
@@ -393,7 +396,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "file",
-          content: OTEL_COLLECTOR_CONFIG(uptraceHost),
+          content: OTEL_COLLECTOR_CONFIG(uptraceHost, projectToken),
           mountPath: "/etc/otelcol-contrib/config.yaml",
         },
       ],
@@ -436,7 +439,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "file",
-          content: VECTOR_CONFIG(uptraceHost),
+          content: VECTOR_CONFIG(uptraceHost, projectToken),
           mountPath: "/etc/vector/vector.toml",
         },
       ],
@@ -452,7 +455,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "file",
-          content: GRAFANA_DATASOURCE(uptraceHost),
+          content: GRAFANA_DATASOURCE(uptraceHost, projectToken),
           mountPath: "/etc/grafana/provisioning/datasources/datasource.yml",
         },
         {
@@ -480,7 +483,7 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "file",
-          content: PROMETHEUS_CONFIG(uptraceHost),
+          content: PROMETHEUS_CONFIG(uptraceHost, projectToken),
           mountPath: "/etc/prometheus/prometheus.yml",
         },
         {
