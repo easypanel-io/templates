@@ -1,0 +1,110 @@
+name: GoClaw
+description:
+  Multi-agent AI gateway with teams, delegation & orchestration. Single Go
+  binary, 11+ LLM providers, 5 channels.
+instructions: |
+  After installation, access the web dashboard via your configured domain.
+  To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
+  Secure tokens like the Gateway Token and Encryption Key are auto-generated.
+changeLog:
+  - date: 2026-03-19
+    description: Initial release
+links:
+  - label: Website
+    url: https://github.com/nextlevelbuilder/goclaw
+  - label: Documentation
+    url: https://github.com/nextlevelbuilder/goclaw#readme
+  - label: Github
+    url: https://github.com/nextlevelbuilder/goclaw
+contributors:
+  - name: Alan Mosko
+    url: https://github.com/moskoweb
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - provider
+    - providerApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: goclaw
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/nextlevelbuilder/goclaw:latest
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: goclaw-db
+    uiServiceName:
+      type: string
+      title: Web UI Service Name
+      default: goclaw-ui
+    gatewayToken:
+      type: string
+      title: Gateway Token (GOCLAW_GATEWAY_TOKEN)
+      description: Leave blank to auto-generate
+    encryptionKey:
+      type: string
+      title: Encryption Key (GOCLAW_ENCRYPTION_KEY)
+      description: Leave blank to auto-generate
+    provider:
+      type: string
+      title: Default LLM Provider
+      default: openrouter
+      oneOf:
+        - enum: [openrouter]
+          title: OpenRouter
+        - enum: [anthropic]
+          title: Anthropic Claude
+        - enum: [openai]
+          title: OpenAI
+        - enum: [groq]
+          title: Groq
+        - enum: [deepseek]
+          title: DeepSeek
+        - enum: [gemini]
+          title: Gemini
+        - enum: [mistral]
+          title: Mistral
+        - enum: [xai]
+          title: XAI Grok
+        - enum: [minimax]
+          title: MiniMax
+        - enum: [cohere]
+          title: Cohere
+        - enum: [perplexity]
+          title: Perplexity
+        - enum: [dashscope]
+          title: DashScope (Qwen)
+        - enum: [bailian]
+          title: Bailian Coding
+    providerApiKey:
+      type: string
+      title: Provider API Key
+      description: Optional - API Key for the selected provider
+      default: ""
+benefits:
+  - title: Multi-Agent AI Gateway
+    description:
+      Teams, delegation and orchestration managed through a single Go binary.
+  - title: 11+ LLM Providers
+    description:
+      Supports multiple models easily swappable (OpenAI, Anthropic, Gemini,
+      Groq, local models...).
+  - title: Secure and Fast
+    description: Built in Go for high performance and minimal memory footprint.
+features:
+  - title: Team Collaboration
+    description: Multiple agents working together.
+  - title: Database Vector
+    description: Integrated semantic search memory via PostgreSQL with pgvector.
+tags:
+  - AI
+  - Gateway
+  - Multi-Agent
+  - LLM
