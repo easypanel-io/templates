@@ -31,6 +31,8 @@ links:
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: Alan Mosko
+    url: https://github.com/moskoweb
 
 schema:
   type: object
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: OpenClaw Image
-      default: ghcr.io/openclaw/openclaw:2026.2.3
+      default: ghcr.io/openclaw/openclaw:latest
       description: Docker image for OpenClaw
     gatewayToken:
       type: string
