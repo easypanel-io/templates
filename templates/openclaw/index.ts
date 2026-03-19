@@ -4,6 +4,9 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const gatewayToken = input.gatewayToken || randomPassword();
+  const gatewayBind = input.gatewayBind ?? "0.0.0.0";
+  const gatewayPort = input.gatewayPort ?? 18789;
+  const bridgePort = input.bridgePort ?? 18790;
 
   const gatewayEnv = [
     "NODE_ENV=production",
@@ -55,17 +58,17 @@ export function generate(input: Input): Output {
       },
       env: gatewayEnv.join("\n"),
       deploy: {
-        command: `node dist/index.js gateway --bind ${input.gatewayBind} --port ${input.gatewayPort} --allow-unconfigured`,
+        command: `node dist/index.js gateway --bind ${gatewayBind} --port ${gatewayPort} --allow-unconfigured`,
       },
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: input.gatewayPort,
+          port: gatewayPort,
         },
       ],
       ports: [
         {
-          published: input.bridgePort,
+          published: bridgePort,
           target: 18790,
         }
       ],
