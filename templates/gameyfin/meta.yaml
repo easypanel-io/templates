@@ -1,27 +1,53 @@
 name: Gameyfin
 description:
-  Gameyfin is a modern game library management application inspired by Jellyfin,
-  designed to organize, catalog, and stream your game collection. It provides a
-  beautiful web interface for browsing games, managing metadata, and accessing
-  your game library from any device. Features include automatic game detection,
-  metadata fetching from IGDB, and support for various game platforms.
-instructions: null
+  Gameyfin is a free and open-source application for managing your video game
+  library. Track installed and wanted games, fetch metadata (e.g. IGDB, Steam),
+  and use plugins for downloads and extra providers. It runs as a Kotlin /
+  Spring Boot app with a web UI, PF4J plugins, and optional OIDC. Docker is the
+  recommended install path; persist db, data, plugin data, logs, and mount at
+  least one folder for your game files.
+
+instructions: |
+  APP_KEY is generated on deploy (32 random bytes, Base64). Do not change it
+  after data exists or the app cannot decrypt secrets in the database; if you
+  recreate the service, restore the same APP_KEY from a backup.
+  Libraries: Put (or bind) your games under the library volume; inside
+  Gameyfin, add libraries whose paths are under `/library`
+  (https://gameyfin.org/installation/getting-started/).
+  PUID / PGID default to 1000; set them to your host user/group if file
+  permissions on mounted volumes are wrong.
+  Optional: for the bundled torrent plugin, publish host ports 6969 and 6881
+  on this service.
+
 changeLog:
   - date: 2025-10-02
     description: First Release
+  - date: 2026-03-20
+    description:
+      Website/docs links, setup instructions, plugindata volume, /library mount,
+      Base64 APP_KEY, APP_URL, configurable PUID/PGID (1000), image pin 2.4.0
+
 links:
+  - label: Website
+    url: https://gameyfin.org
+  - label: Documentation
+    url: https://gameyfin.org/installation/docker/
   - label: GitHub
     url: https://github.com/gameyfin/gameyfin
-  - label: DockerHub
-    url: https://hub.docker.com/r/gameyfin/gameyfin
+  - label: Container registry (GHCR)
+    url: https://github.com/gameyfin/gameyfin/pkgs/container/gameyfin
+
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
+    - puid
+    - pgid
   properties:
     appServiceName:
       type: string
@@ -29,64 +55,51 @@ schema:
       default: gameyfin
     appServiceImage:
       type: string
-      title: App Service Image
-      default: ghcr.io/gameyfin/gameyfin:2.1
+      title: Gameyfin Image
+      default: ghcr.io/gameyfin/gameyfin:2.4.0
+    puid:
+      type: string
+      title: PUID
+      default: "1000"
+      description: Container user ID for file ownership (non-root).
+    pgid:
+      type: string
+      title: PGID
+      default: "1000"
+      description: Container group ID for file ownership (non-root).
+
 benefits:
-  - title: Game Library Management
+  - title: Self-hosted library
     description:
-      Organize and catalog your entire game collection with automatic detection
-      and metadata fetching from IGDB for comprehensive game information.
-  - title: Web-Based Interface
+      Own your metadata and library layout without relying on a hosted service.
+  - title: Metadata & plugins
     description:
-      Beautiful and responsive web interface accessible from any device with a
-      browser for easy game library browsing and management.
-  - title: Metadata Integration
+      Multiple metadata sources and a plugin system with data under plugindata.
+  - title: Reverse-proxy ready
     description:
-      Automatic metadata fetching from IGDB including game descriptions, covers,
-      screenshots, and release information for rich game profiles.
-  - title: Self-Hosted Control
-    description:
-      Complete control over your game library with no external dependencies or
-      data sharing with third parties.
+      APP_URL is set from your primary domain for correct links and first-run
+      logs.
+
 features:
-  - title: Web Interface
+  - title: Library & metadata
+    description: Organize games and enrich them with IGDB and other providers.
+  - title: Plugin system
     description:
-      Modern web-based interface accessible from any device with a browser for
-      easy game library browsing and management.
-  - title: Automatic Game Detection
+      Download and metadata plugins; state persists in /opt/gameyfin/plugindata.
+  - title: Docker layout
     description:
-      Automatic detection and scanning of games in your library with support for
-      various game platforms and formats.
-  - title: IGDB Integration
+      Matches upstream compose for db, data, plugindata, logs, plus a library
+      path.
+  - title: Encrypted DB fields
     description:
-      Integration with IGDB (Internet Game Database) for automatic metadata
-      fetching including descriptions, covers, and game information.
-  - title: Game Streaming
-    description:
-      Built-in game streaming capabilities for accessing your games remotely
-      through the web interface.
-  - title: Library Organization
-    description:
-      Advanced library organization with custom collections, tags, and
-      categorization options.
-  - title: Multi-Platform Support
-    description:
-      Support for various game platforms including PC, console games, and
-      different game formats.
-  - title: User Management
-    description:
-      Multi-user support with individual game libraries and preferences for
-      family or team use.
-  - title: Data Persistence
-    description:
-      All game metadata, library data, and user preferences persist across
-      container restarts and updates.
+      APP_KEY secures sensitive values stored in the embedded database.
+  - title: Authentication
+    description: Local accounts and optional OpenID Connect.
+
 tags:
-  - Game Library
-  - Game Management
-  - Gaming
-  - Self-hosted
-  - Web Interface
-  - IGDB
-  - Game Streaming
+  - Games
+  - Library
+  - Self-Hosted
   - Metadata
+  - Docker
+  - IGDB

@@ -1,9 +1,10 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { randomBytes } from "crypto";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const appKey = randomString(32);
+  const appKey = randomBytes(32).toString("base64");
 
   services.push({
     type: "app",
@@ -19,29 +20,39 @@ export function generate(input: Input): Output {
           port: 8080,
         },
       ],
+      env: [
+        `APP_KEY=${appKey}`,
+        `APP_URL=https://$(PRIMARY_DOMAIN)`,
+        `PUID=${input.puid}`,
+        `PGID=${input.pgid}`,
+      ].join("\n"),
       mounts: [
         {
           type: "volume",
-          name: "gameyfin-db",
+          name: "db",
           mountPath: "/opt/gameyfin/db",
         },
         {
           type: "volume",
-          name: "gameyfin-data",
+          name: "data",
           mountPath: "/opt/gameyfin/data",
         },
         {
           type: "volume",
-          name: "gameyfin-logs",
+          name: "plugindata",
+          mountPath: "/opt/gameyfin/plugindata",
+        },
+        {
+          type: "volume",
+          name: "logs",
           mountPath: "/opt/gameyfin/logs",
         },
         {
           type: "volume",
-          name: "gameyfin-library",
-          mountPath: "/opt/gameyfin/library",
+          name: "library",
+          mountPath: "/library",
         },
       ],
-      env: [`APP_KEY=${appKey}`, `PUID=0`, `PGID=0`].join("\n"),
     },
   });
 
