@@ -14,11 +14,13 @@ changeLog:
   - date: 2026-03-11
     description: First Release
 links:
+  - label: Website
+    url: https://tyk.io/
   - label: Documentation
     url: https://tyk.io/docs/
   - label: GitHub
-    url: https://github.com/TykTechnologies/tyk-gateway
-  - label: Docker
+    url: https://github.com/TykTechnologies/tyk
+  - label: Docker examples
     url: https://github.com/TykTechnologies/tyk-gateway-docker
 contributors:
   - name: Ahson Shaikh
@@ -27,6 +29,8 @@ schema:
   type: object
   required:
     - appServiceName
+    - gatewayImage
+    - redisImage
   properties:
     appServiceName:
       type: string
@@ -35,7 +39,7 @@ schema:
     gatewayImage:
       type: string
       title: Gateway Image
-      default: docker.tyk.io/tyk-gateway/tyk-gateway:v5.5.0
+      default: docker.tyk.io/tyk-gateway/tyk-gateway:v5.11.0
     redisImage:
       type: string
       title: Redis Image

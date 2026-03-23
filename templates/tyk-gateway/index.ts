@@ -34,7 +34,10 @@ export function generate(input: Input): Output {
       },
       enable_analytics: false,
       analytics_config: { type: "", ignored_ips: [] },
-      health_check: { enable_health_checks: false, health_check_value_timeouts: 60 },
+      health_check: {
+        enable_health_checks: false,
+        health_check_value_timeouts: 60,
+      },
       enable_non_transactional_rate_limiter: true,
       enable_sentinel_rate_limiter: false,
       enable_redis_rolling_limiter: false,
@@ -65,7 +68,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.gatewayImage ?? "docker.tyk.io/tyk-gateway/tyk-gateway:v5.5.0",
+        image: input.gatewayImage,
       },
       env: `TYK_GW_SECRET=${gwSecret}`,
       domains: [
@@ -109,7 +112,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-redis`,
       password: redisPassword,
-      image: input.redisImage ?? "redis:6.2.20-alpine",
+      image: input.redisImage,
     },
   });
 
