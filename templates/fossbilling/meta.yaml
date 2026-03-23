@@ -1,0 +1,93 @@
+name: FOSSBilling
+description:
+  FOSSBilling is a free, open-source billing and client management system
+  designed for hosting providers, service providers, and freelancers. It
+  provides comprehensive tools for managing clients, products, services,
+  invoices, and payments. FOSSBilling features automated billing cycles, support
+  ticket management, domain registration integration, customizable invoice
+  templates, and multi-currency support. The platform includes a client portal
+  where customers can manage their services, view invoices, and submit support
+  tickets. With support for multiple payment gateways including PayPal, Stripe,
+  and others, FOSSBilling streamlines the entire billing workflow. Perfect for
+  web hosting companies, SaaS providers, and service-based businesses who need
+  professional billing automation without expensive licensing fees.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-21
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://fossbilling.org/
+  - label: Documentation
+    url: https://fossbilling.org/docs
+  - label: Github
+    url: https://github.com/FOSSBilling/FOSSBilling
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fossbilling
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: fossbilling/fossbilling:0.7.2
+
+benefits:
+  - title: Complete Billing Automation
+    description:
+      Automate recurring billing, invoice generation, payment processing, and
+      service provisioning with customizable billing cycles.
+  - title: Client Self-Service Portal
+    description:
+      Professional client portal allows customers to manage services, pay
+      invoices, submit tickets, and access account information 24/7.
+  - title: Open Source & Cost-Free
+    description:
+      Fully open-source with no licensing fees or per-client charges. Complete
+      control over your billing system with community support.
+
+features:
+  - title: Invoice Management
+    description:
+      Generate professional invoices automatically with customizable templates,
+      multiple currencies, and tax configuration.
+  - title: Product & Service Management
+    description:
+      Create and manage products, services, and pricing plans with flexible
+      configuration and automated provisioning.
+  - title: Payment Gateway Integration
+    description:
+      Accept payments through multiple gateways including PayPal, Stripe, and
+      other popular payment processors.
+  - title: Support Ticket System
+    description:
+      Built-in helpdesk with ticket management, email piping, canned responses,
+      and customer communication tracking.
+  - title: Client Portal
+    description:
+      Self-service portal where clients can manage services, view invoices, make
+      payments, and submit support requests.
+  - title: Domain Registration
+    description:
+      Integrate with domain registrars for automated domain registration,
+      renewal, and management within the platform.
+
+tags:
+  - Billing
+  - Invoice
+  - Client Management
+  - Payment Processing
+  - Hosting
