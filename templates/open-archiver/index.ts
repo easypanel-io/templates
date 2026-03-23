@@ -8,72 +8,20 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-
-  const pgPassword = randomPassword();
+  const dbPassword = randomPassword();
   const redisPassword = randomPassword();
   const meiliMasterKey = randomString(32);
   const jwtSecret = randomString(64);
   const encryptionKey = randomString(64);
   const storageEncryptionKey = randomString(64);
 
-  const pgHost = `$(PROJECT_NAME)_${input.appServiceName}-db`;
-  const redisHost = `$(PROJECT_NAME)_${input.appServiceName}-valkey`;
-  const meiliHost = `$(PROJECT_NAME)_${input.appServiceName}-meilisearch`;
-  const tikaHost = `$(PROJECT_NAME)_${input.appServiceName}-tika`;
-
-  services.push({
-    type: "app",
-    data: {
-      serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
-      env: [
-        "NODE_ENV=production",
-        "PORT_BACKEND=4000",
-        "PORT_FRONTEND=3000",
-        "APP_URL=https://$(PRIMARY_DOMAIN)",
-        "ORIGIN=https://$(PRIMARY_DOMAIN)",
-        `SYNC_FREQUENCY=* * * * *`,
-        "ALL_INCLUSIVE_ARCHIVE=false",
-        `POSTGRES_DB=$(PROJECT_NAME)`,
-        `POSTGRES_USER=postgres`,
-        `POSTGRES_PASSWORD=${pgPassword}`,
-        `DATABASE_URL=postgresql://postgres:${pgPassword}@${pgHost}:5432/$(PROJECT_NAME)`,
-        `MEILI_MASTER_KEY=${meiliMasterKey}`,
-        `MEILI_HOST=http://${meiliHost}:7700`,
-        "MEILI_INDEXING_BATCH=500",
-        `REDIS_HOST=${redisHost}`,
-        "REDIS_PORT=6379",
-        `REDIS_PASSWORD=${redisPassword}`,
-        "REDIS_TLS_ENABLED=false",
-        "STORAGE_TYPE=local",
-        "BODY_SIZE_LIMIT=100M",
-        "STORAGE_LOCAL_ROOT_PATH=/var/data/open-archiver",
-        `ENCRYPTION_KEY=${encryptionKey}`,
-        `STORAGE_ENCRYPTION_KEY=${storageEncryptionKey}`,
-        `JWT_SECRET=${jwtSecret}`,
-        "JWT_EXPIRES_IN=7d",
-        "ENABLE_DELETION=false",
-        `TIKA_URL=http://${tikaHost}:9998`,
-      ].join("\n"),
-      mounts: [
-        {
-          type: "volume",
-          name: "archiver-data",
-          mountPath: "/var/data/open-archiver",
-        },
-      ],
-    },
-  });
+  const base = `$(PROJECT_NAME)_${input.appServiceName}`;
 
   services.push({
     type: "postgres",
     data: {
       serviceName: `${input.appServiceName}-db`,
-      password: pgPassword,
+      password: dbPassword,
     },
   });
 
@@ -82,7 +30,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-valkey`,
       password: redisPassword,
-      image: "valkey/valkey:8-alpine",
+      image: input.valkeyImage,
     },
   });
 
@@ -92,16 +40,16 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-meilisearch`,
       source: {
         type: "image",
-        image: "getmeili/meilisearch:v1.15",
+        image: input.meilisearchImage,
       },
       env: [
         `MEILI_MASTER_KEY=${meiliMasterKey}`,
-        "MEILI_SCHEDULE_SNAPSHOT=86400",
+        `MEILI_NO_ANALYTICS=true`,
       ].join("\n"),
       mounts: [
         {
           type: "volume",
-          name: "meili-data",
+          name: "meilisearch_data",
           mountPath: "/meili_data",
         },
       ],
@@ -114,8 +62,55 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-tika`,
       source: {
         type: "image",
-        image: "apache/tika:3.2.2.0-full",
+        image: input.tikaImage ?? "apache/tika:3.2.2.0-full",
       },
+    },
+  });
+
+  const appEnv = [
+    `NODE_ENV=production`,
+    `PORT_FRONTEND=3000`,
+    `APP_URL=https://$(PRIMARY_DOMAIN)`,
+    `ORIGIN=https://$(PRIMARY_DOMAIN)`,
+    `DATABASE_URL=postgresql://postgres:${dbPassword}@${base}-db:5432/$(PROJECT_NAME)?sslmode=disable`,
+    `MEILI_HOST=http://${base}-meilisearch:7700`,
+    `MEILI_MASTER_KEY=${meiliMasterKey}`,
+    `MEILI_INDEXING_BATCH=500`,
+    `REDIS_HOST=${base}-valkey`,
+    `REDIS_PORT=6379`,
+    `REDIS_PASSWORD=${redisPassword}`,
+    `REDIS_TLS_ENABLED=false`,
+    `TIKA_URL=http://${base}-tika:9998`,
+    `STORAGE_TYPE=local`,
+    `STORAGE_LOCAL_ROOT_PATH=/var/data/open-archiver`,
+    `BODY_SIZE_LIMIT=100M`,
+    `JWT_SECRET=${jwtSecret}`,
+    `ENCRYPTION_KEY=${encryptionKey}`,
+    `STORAGE_ENCRYPTION_KEY=${storageEncryptionKey}`,
+  ].join("\n");
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: input.appServiceName,
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+        },
+      ],
+      env: appEnv,
+      mounts: [
+        {
+          type: "volume",
+          name: "storage",
+          mountPath: "/var/data/open-archiver",
+        },
+      ],
     },
   });
 
