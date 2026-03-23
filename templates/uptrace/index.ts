@@ -301,6 +301,7 @@ export function generate(input: Input): Output {
 
   const pgPassword = randomPassword();
   const redisPassword = randomPassword();
+  const clickhousePassword = randomPassword();
   const projectToken = randomString(32);
   const grafanaAdminPassword = `${
     input.grafanaAdminPassword || randomPassword()
@@ -352,7 +353,7 @@ export function generate(input: Input): Output {
       env: [
         "CLICKHOUSE_DB=uptrace",
         "CLICKHOUSE_USER=uptrace",
-        "CLICKHOUSE_PASSWORD=uptrace",
+        `CLICKHOUSE_PASSWORD=${clickhousePassword}`,
         "SHARD=shard1",
         "REPLICA=replica1",
         "KEEPER_ID=1",
@@ -505,7 +506,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-mailpit`,
-      source: { type: "image", image: "axllent/mailpit" },
+      source: { type: "image", image: "axllent/mailpit:v1.29" },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8025 }],
       env: [
         "MP_MAX_MESSAGES=5000",
