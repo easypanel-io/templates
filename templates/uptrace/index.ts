@@ -8,6 +8,7 @@ import { Input } from "./meta";
 
 const UPTRACE_CONFIG = (
   chHost: string,
+  chPassword: string,
   pgHost: string,
   pgPassword: string,
   redisHost: string,
@@ -80,7 +81,7 @@ ch_cluster:
         - addr: ${chHost}:9000
           database: uptrace
           user: uptrace
-          password: uptrace
+          password: ${JSON.stringify(chPassword)}
 
 pg:
   addr: ${pgHost}:5432
@@ -323,6 +324,7 @@ export function generate(input: Input): Output {
           type: "file",
           content: UPTRACE_CONFIG(
             chHost,
+            clickhousePassword,
             pgHost,
             pgPassword,
             redisHost,
@@ -506,7 +508,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-mailpit`,
-      source: { type: "image", image: "axllent/mailpit:v1.29" },
+      source: { type: "image", image: "axllent/mailpit:v1.29.4" },
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8025 }],
       env: [
         "MP_MAX_MESSAGES=5000",
