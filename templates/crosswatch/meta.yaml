@@ -1,13 +1,14 @@
 name: Crosswatch
 description:
-  Crosswatch is a self-hosted monitoring and watch service that provides
-  comprehensive tracking and monitoring capabilities. Built with modern
-  architecture, Crosswatch offers a web-based interface accessible on port 8787
-  for monitoring your services and applications. The system stores all
-  configuration data in a persistent volume, ensuring your settings are
-  preserved across restarts. Perfect for developers and organizations looking
-  for a self-hosted solution to monitor and track their applications and
-  services.
+  CrossWatch is a self-hosted synchronization engine that keeps Plex, Jellyfin,
+  Emby, SIMKL, Trakt, AniList, TMDb, MDBList, and Tautulli aligned. It runs
+  locally with a web UI on port 8787 where you link accounts, define sync pairs,
+  run them manually or on a schedule, and review stats and history. It includes
+  a built-in tracker with snapshots, profiles for separate setups (e.g. family
+  or different servers), watchlist and progress sync, scrobbling and webhooks to
+  trackers, and tools like Analyzer, Editor, and Captures for stuck or
+  inconsistent items. Configuration persists under /config; set TZ for your
+  timezone.
 instructions: null
 changeLog:
   - date: 2025-01-21
@@ -18,7 +19,7 @@ links:
   - label: Documentation
     url: https://wiki.crosswatch.app
   - label: GitHub
-    url: https://github.com/cenodude/crosswatch
+    url: https://github.com/cenodude/CrossWatch
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -36,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/cenodude/crosswatch:0.7.3
+      default: ghcr.io/cenodude/crosswatch:0.9.15
     timezone:
       type: string
       title: Timezone
@@ -45,43 +46,42 @@ schema:
         Timezone for the application (e.g., Asia/Karachi, America/New_York,
         Europe/London)
 benefits:
-  - title: Self-Hosted Monitoring
+  - title: One sync hub
     description:
-      Monitor and track your services and applications with a self-hosted
-      platform that gives you complete control over your monitoring data.
-  - title: Web-Based Interface
+      Configure Plex, Jellyfin, Emby, and multiple trackers from a single web UI
+      with profiles for separate users or servers.
+  - title: Rich sync & scrobble
     description:
-      Access and manage your monitoring dashboard through a modern web interface
-      accessible on port 8787.
-  - title: Persistent Configuration
+      Watchlists, ratings, history, progress between servers, and scrobbling to
+      Trakt, SIMKL, MDBList—without requiring Plex Pass or Emby Premiere for
+      watcher flows.
+  - title: Data safety
     description:
-      All configuration data is stored in a persistent volume, ensuring your
-      settings and monitoring configurations are preserved across container
-      restarts.
-  - title: Timezone Support
+      Built-in tracker snapshots and Captures help you inspect, adjust, or roll
+      back provider data when something looks wrong.
+  - title: Persistent config
     description:
-      Configure your preferred timezone for accurate time tracking and
-      scheduling of monitoring tasks.
+      State lives in /config so accounts, pairs, and schedules survive restarts.
 features:
-  - title: Service Monitoring
+  - title: Sync pairs & scheduling
     description:
-      Monitor multiple services and applications from a single dashboard with
-      comprehensive tracking capabilities.
-  - title: Persistent Storage
+      Define what syncs between which services; run on demand or on simple or
+      advanced schedules.
+  - title: Analyzer & Editor
     description:
-      Configuration data is stored in a dedicated volume at /config for reliable
-      data persistence.
-  - title: Timezone Configuration
+      Find stuck or inconsistent items across providers; inspect and fix or
+      block entries.
+  - title: Unified watchlist & player card
     description:
-      Set your preferred timezone for accurate time-based monitoring and
-      scheduling.
-  - title: Containerized Deployment
-    description:
-      Easily deploy Crosswatch in any environment that supports Docker with
-      minimal configuration requirements.
+      See combined watchlists and what is playing across your setup in real
+      time.
+  - title: Timezone support
+    description: Set TZ so schedules and timestamps match your region.
 tags:
-  - Monitoring
-  - Watch
+  - Media
+  - Sync
+  - Plex
+  - Jellyfin
+  - Emby
+  - Trakt
   - Self-Hosted
-  - Tracking
-  - Docker
