@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage ?? "sharkord/sharkord:v0.0.11",
+        image: input.appServiceImage,
       },
       domains: [
         {
@@ -34,7 +34,7 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/root/.config/sharkord",
+          mountPath: "/home/bun/.config/sharkord",
         },
       ],
     },
