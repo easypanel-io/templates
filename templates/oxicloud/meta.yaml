@@ -7,15 +7,18 @@ description:
   deduplication, search, CalDAV calendars, CardDAV contacts, and multi-language
   support. Built with Clean Architecture, it provides a clean UI that works on
   desktop and mobile.
-instructions: null
+instructions: |
+  Set OXICLOUD_BASE_URL on the app service to your public URL (e.g. https://cloud.example.com)
+  if you access OxiCloud via a domain; otherwise auth and share links can break. Database
+  migrations run automatically on first start. JWT signing uses a generated OXICLOUD_JWT_SECRET.
 changeLog:
   - date: 2026-02-16
     description: Template Release (v0.3.4)
 links:
-  - label: Website
-    url: https://github.com/DioCrafts/OxiCloud/tree/main/doc
-  - label: GitHub
+  - label: Github
     url: https://github.com/DioCrafts/OxiCloud
+  - label: Documentation
+    url: https://github.com/DioCrafts/OxiCloud/tree/main/doc
   - label: Docker Hub
     url: https://hub.docker.com/r/diocrafts/oxicloud
 contributors:
@@ -35,11 +38,11 @@ schema:
     appServiceImage:
       type: string
       title: OxiCloud Image
-      default: diocrafts/oxicloud:0.3.4
+      default: diocrafts/oxicloud:0.5.1
     databaseImage:
       type: string
       title: PostgreSQL Image
-      default: postgres:17.4-alpine
+      default: postgres:17.9-alpine3.23
 benefits:
   - title: Lightweight & Fast
     description:
