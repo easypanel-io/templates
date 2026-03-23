@@ -13,8 +13,8 @@ instructions:
   connections, save configuration, and Sortarr will begin analyzing your
   libraries immediately.
 changeLog:
-  - date: 2026-02-17
-    description: Template Release (v0.1.1)
+  - date: 2026-03-17
+    description: Template Release (v0.8.7)
 links:
   - label: GitHub
     url: https://github.com/Jaredharper1/Sortarr
@@ -36,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/jaredharper1/sortarr:0.8.1
+      default: ghcr.io/jaredharper1/sortarr:0.8.7
 benefits:
   - title: Read-Only & Safe
     description:
