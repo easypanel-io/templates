@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.appServiceImage ?? "ghcr.io/johnwarne/upvote-rss:v1.8.1",
       },
       domains: [
         {
