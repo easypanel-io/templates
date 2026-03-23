@@ -14,6 +14,10 @@ changeLog:
 links:
   - label: GitHub
     url: https://github.com/lklynet/aurral
+  - label: Container Registry
+    url: https://github.com/lklynet/aurral/pkgs/container/aurral
+  - label: Discord
+    url: https://discord.gg/cpPYfgVURJ
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -30,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: Aurral Image
-      default: ghcr.io/lklynet/aurral:1.1.0
+      default: ghcr.io/lklynet/aurral:1.34.2
 benefits:
   - title: Lidarr Integration
     description:
