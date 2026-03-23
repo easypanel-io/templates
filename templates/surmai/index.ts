@@ -1,8 +1,9 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const adminPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -20,7 +21,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         `SURMAI_ADMIN_EMAIL=${input.adminEmail}`,
-        `SURMAI_ADMIN_PASSWORD=${input.adminPassword}`,
+        `SURMAI_ADMIN_PASSWORD=${adminPassword}`,
         `PB_DATA_DIRECTORY=/pb_data`,
       ].join("\n"),
       mounts: [
