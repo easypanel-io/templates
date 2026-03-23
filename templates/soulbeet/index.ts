@@ -67,7 +67,7 @@ paths:
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.appServiceImage ?? "docker.io/docccccc/soulbeet:0.3.4",
       },
       domains: [
         {
