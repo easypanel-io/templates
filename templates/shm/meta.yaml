@@ -1,25 +1,23 @@
 name: SHM
 description:
-  SHM is a self-hosted metrics and monitoring application that provides
-  comprehensive tracking and analysis of system metrics and performance data.
-  Built with modern architecture, SHM offers a web-based interface accessible on
-  port 8080 for viewing and managing your metrics. The system uses PostgreSQL
-  for data persistence, storing all metrics data in a dedicated database.
-  Perfect for developers and system administrators looking for a self-hosted
-  solution to track and monitor their application and system metrics.
+  SHM (Self-Hosted Metrics) is privacy-first, agnostic telemetry for self-hosted
+  software—collect usage stats, verify active instances, and understand adoption
+  without spying on users. Instances sign payloads with Ed25519; PostgreSQL
+  stores JSON metrics behind a single Go binary with an embedded dashboard (port
+  8080). AGPL-3.0; upstream lives under the kOlapsis GitHub organization.
 instructions: null
 changeLog:
   - date: 2025-01-29
     description: Initial Template Release
 links:
   - label: Website
-    url: https://self-hosted-metrics.com
+    url: https://self-hosted-metrics.com/
   - label: GitHub
-    url: https://github.com/btouchard/shm
+    url: https://github.com/kOlapsis/shm
   - label: Documentation
-    url: https://self-hosted-metrics.com/#how-it-works
-  - label: Container
-    url: https://github.com/btouchard/shm/pkgs/container/shm
+    url: https://github.com/kOlapsis/shm/blob/main/docs/DEPLOYMENT.md
+  - label: Container registry
+    url: https://github.com/kOlapsis/shm/pkgs/container/shm
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -36,45 +34,36 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/btouchard/shm:sha-bc6621e
+      default: ghcr.io/kolapsis/shm:sha-fd3affa
 benefits:
-  - title: Metrics Tracking
+  - title: Privacy-first telemetry
     description:
-      Track and monitor system metrics and performance data with a comprehensive
-      self-hosted solution.
-  - title: Self-Hosted Solution
+      Aggregate counters and signed snapshots—no user content; built for
+      self-hosted product owners who need adoption insight.
+  - title: Agnostic payloads
     description:
-      Keep your metrics data private and under your control with a self-hosted
-      deployment.
-  - title: PostgreSQL Storage
+      Send JSON metrics; the dashboard adapts with dynamic KPIs and tables.
+  - title: PostgreSQL backend
     description:
-      Reliable PostgreSQL database for persistent storage of all metrics data,
-      ensuring data integrity across restarts.
-  - title: Web-Based Interface
-    description:
-      Access and manage your metrics through a modern web interface accessible
-      on port 8080.
+      Stores payloads in PostgreSQL via SHM_DB_DSN; Easypanel provisions a
+      postgres service.
+  - title: Embedded UI
+    description: Single container serves API and dashboard on port 8080.
 features:
-  - title: Metrics Management
+  - title: Ed25519 instance identity
     description:
-      View, analyze, and manage your system and application metrics from a
-      single dashboard.
-  - title: PostgreSQL Database
+      Cryptographic registration and signed snapshots reduce spoofing.
+  - title: Multi-app tracking
+    description: Track several products on one SHM server.
+  - title: Badges & GitHub stars
     description:
-      Reliable PostgreSQL database for persistent storage of all metrics data
-      and historical records.
-  - title: Custom Database Configuration
-    description:
-      Configure custom database user and database name for flexible deployment
-      options.
-  - title: Containerized Deployment
-    description:
-      Easily deploy SHM in any environment that supports Docker with minimal
-      configuration requirements.
+      Optional embeddable badges and GitHub star integration when configured.
+  - title: SDKs
+    description: Go and Node clients for integrating telemetry into your apps.
 tags:
+  - Telemetry
   - Metrics
-  - Monitoring
   - Self-Hosted
   - PostgreSQL
-  - Analytics
-  - Docker
+  - Privacy
+  - Go

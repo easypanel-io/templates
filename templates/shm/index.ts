@@ -1,8 +1,4 @@
-import {
-    Output,
-    randomPassword,
-    Services,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -14,7 +10,7 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       serviceName: `${input.appServiceName}-db`,
-      password: databasePassword,   
+      password: databasePassword,
     },
   });
 
@@ -34,10 +30,7 @@ export function generate(input: Input): Output {
           port: 8080,
         },
       ],
-      env: [
-        `SHM_DB_DSN=${dbDsn}`,
-        `PORT=8080`,
-      ].join("\n"),
+      env: [`SHM_DB_DSN=${dbDsn}`, `PORT=8080`].join("\n"),
     },
   });
 
