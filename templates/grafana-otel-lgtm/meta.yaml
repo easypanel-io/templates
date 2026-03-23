@@ -21,6 +21,8 @@ changeLog:
   - date: 2026-02-20
     description: Template Release
 links:
+  - label: Website
+    url: https://grafana.com/
   - label: GitHub
     url: https://github.com/grafana/docker-otel-lgtm
   - label: Documentation
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: Grafana OTEL LGTM Image
-      default: grafana/otel-lgtm:0.19.0
+      default: grafana/otel-lgtm:0.22.0
     otlpPort:
       type: number
       title: OTLP Port
