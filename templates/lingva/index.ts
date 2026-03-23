@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage ?? "thedaviddelta/lingva-translate:latest",
+        image: input.appServiceImage,
       },
       domains: [
         {

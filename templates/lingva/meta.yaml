@@ -12,6 +12,8 @@ changeLog:
   - date: 2026-03-17
     description: First Release
 links:
+  - label: Website
+    url: https://lingva.thedaviddelta.com
   - label: GitHub
     url: https://github.com/TheDavidDelta/lingva-translate
   - label: Docker Hub
@@ -23,6 +25,7 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
   properties:
     appServiceName:
       type: string
