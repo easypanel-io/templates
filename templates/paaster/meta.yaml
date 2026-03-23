@@ -28,6 +28,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - mongoImage
+    - minioImage
   properties:
     appServiceName:
       type: string
@@ -40,7 +42,7 @@ schema:
     mongoImage:
       type: string
       title: MongoDB Image
-      default: mongo:8
+      default: mongo:8.2.6
     minioImage:
       type: string
       title: MinIO Image

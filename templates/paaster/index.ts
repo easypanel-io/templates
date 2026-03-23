@@ -47,7 +47,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: mongoPassword,
-      image: input.mongoImage ?? "mongo:8.2.6",
+      image: input.mongoImage,
     },
   });
 
@@ -57,9 +57,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-minio`,
       source: {
         type: "image",
-        image:
-          input.minioImage ??
-          "quay.io/minio/minio:RELEASE.2025-07-23T15-54-02Z",
+        image: input.minioImage,
       },
       deploy: {
         command: 'minio server /data --console-address ":9001"',
