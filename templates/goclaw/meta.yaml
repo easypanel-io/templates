@@ -1,19 +1,21 @@
 name: GoClaw
 description:
-  Multi-agent AI gateway with teams, delegation & orchestration. Single Go
-  binary, 11+ LLM providers, 5 channels.
+  Enterprise AI agent platform with teams, delegation & orchestration. Single Go
+  binary, 13+ LLM providers, 10+ channels, browser automation, and memory system.
 instructions: |
   After installation, access the web dashboard via your configured domain.
   To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
   Secure tokens like the Gateway Token and Encryption Key are auto-generated.
 changeLog:
+  - date: 2026-03-24
+    description: Redesigned with Chrome CDP sidecar, removed permission-fixer hack
   - date: 2026-03-19
     description: Initial release
 links:
   - label: Website
-    url: https://github.com/nextlevelbuilder/goclaw
+    url: https://goclaw.sh
   - label: Documentation
-    url: https://github.com/nextlevelbuilder/goclaw#readme
+    url: https://docs.goclaw.sh
   - label: Github
     url: https://github.com/nextlevelbuilder/goclaw
 contributors:
@@ -45,6 +47,10 @@ schema:
       type: string
       title: Web UI Service Name
       default: goclaw-ui
+    browserServiceName:
+      type: string
+      title: Browser Sidecar Service Name
+      default: goclaw-chrome
     gatewayToken:
       type: string
       title: Gateway Token (GOCLAW_GATEWAY_TOKEN)
@@ -93,10 +99,10 @@ benefits:
   - title: Multi-Agent AI Gateway
     description:
       Teams, delegation and orchestration managed through a single Go binary.
-  - title: 11+ LLM Providers
+  - title: 13+ LLM Providers
     description:
       Supports multiple models easily swappable (OpenAI, Anthropic, Gemini,
-      Groq, local models...).
+      Groq, DeepSeek, local models...).
   - title: Secure and Fast
     description: Built in Go for high performance and minimal memory footprint.
 features:

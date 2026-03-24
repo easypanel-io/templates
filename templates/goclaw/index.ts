@@ -6,7 +6,9 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const gatewayToken = input.gatewayToken || randomPassword();
   const encryptionKey = input.encryptionKey || randomString(32);
+  const browserServiceName = input.browserServiceName || "goclaw-chrome";
 
+  // ── 1. PostgreSQL with pgvector ──
   services.push({
     type: "postgres",
     data: {
@@ -17,6 +19,7 @@ export function generate(input: Input): Output {
     },
   });
 
+  // ── 2. GoClaw Gateway (main service) ──
   const providerKeyEnv = input.providerApiKey
     ? `GOCLAW_${input.provider.toUpperCase()}_API_KEY=${input.providerApiKey}`
     : ``;
@@ -32,10 +35,9 @@ export function generate(input: Input): Output {
         `GOCLAW_DATA_DIR=/app/data`,
         `GOCLAW_WORKSPACE=/app/workspace`,
         `GOCLAW_SKILLS_DIR=/app/skills`,
-        `GOCLAW_SESSIONS_DIR=/app/sessions`,
         `GOCLAW_GATEWAY_TOKEN=${gatewayToken}`,
         `GOCLAW_ENCRYPTION_KEY=${encryptionKey}`,
-        `ROD_CHROME_BIN=/usr/bin/chromium-browser`,
+        `GOCLAW_BROWSER_REMOTE_URL=ws://$(PROJECT_NAME)_${browserServiceName}:9222`,
         `GOCLAW_POSTGRES_DSN=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
         providerKeyEnv,
       ]
@@ -47,35 +49,46 @@ export function generate(input: Input): Output {
       },
       mounts: [
         {
-          type: "volume",
+          type: "volume" as const,
           name: "data",
           mountPath: "/app/data",
         },
         {
-          type: "volume",
+          type: "volume" as const,
           name: "workspace",
           mountPath: "/app/workspace",
         },
         {
-          type: "volume",
+          type: "volume" as const,
           name: "skills",
           mountPath: "/app/skills",
-        },
-        {
-          type: "volume",
-          name: "sessions",
-          mountPath: "/app/sessions",
-        },
-        {
-          type: "file",
-          mountPath: "/app/data/.runtime/apk-packages",
-          content: ["chromium","nss","freetype","harfbuzz","font-ubuntu"]
-            .join("\n"),
         },
       ],
     },
   });
 
+  // ── 3. Chrome CDP Sidecar (Browser Automation) ──
+  services.push({
+    type: "app",
+    data: {
+      serviceName: browserServiceName,
+      source: {
+        type: "image",
+        image: "zenika/alpine-chrome:124",
+      },
+      deploy: {
+        command: `chromium-browser --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --remote-allow-origins=* --disable-gpu --disable-dev-shm-usage --headless`,
+      },
+      ports: [
+        {
+          published: 9222,
+          target: 9222,
+        },
+      ],
+    },
+  });
+
+  // ── 4. Web Dashboard (UI) ──
   services.push({
     type: "app",
     data: {
@@ -92,7 +105,7 @@ export function generate(input: Input): Output {
       ],
       mounts: [
         {
-          type: "file",
+          type: "file" as const,
           mountPath: "/etc/nginx/conf.d/default.conf",
           content: `server {
     listen 80;
