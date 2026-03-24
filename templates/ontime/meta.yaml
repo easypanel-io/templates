@@ -41,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getontime/ontime:v4.5.0
+      default: getontime/ontime:v4.6.0
     oscInputPort:
       type: string
       title: OSC Input Port
