@@ -12,7 +12,15 @@ instructions: |
 changeLog:
   - date: 2026-03-17
     description: First Release
+  - date: 2026-03-24
+    description:
+      Pinned image fallback to getontime/ontime:v4.5.0 (was latest). Added
+      Website and GitHub links.
 links:
+  - label: Website
+    url: https://www.getontime.no/
+  - label: GitHub
+    url: https://github.com/cpvalente/ontime
   - label: Documentation
     url: https://docs.getontime.no/
   - label: Docker Hub
@@ -24,6 +32,7 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
   properties:
     appServiceName:
       type: string
