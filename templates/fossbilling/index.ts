@@ -5,6 +5,8 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   const databasePassword = randomPassword();
+  const databaseRootPassword = randomPassword();
+  const databaseHost = `$(PROJECT_NAME)_${input.appServiceName}-db`;
 
   services.push({
     type: "app",
@@ -20,6 +22,12 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      env: [
+        `DB_HOST=${databaseHost}`,
+        `DB_NAME=$(PROJECT_NAME)`,
+        `DB_USER=mysql`,
+        `DB_PASS=${databasePassword}`,
+      ].join("\n"),
       mounts: [
         {
           type: "volume",
@@ -35,6 +43,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      rootPassword: databaseRootPassword,
     },
   });
 

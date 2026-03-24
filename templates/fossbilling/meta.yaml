@@ -12,11 +12,15 @@ description:
   web hosting companies, SaaS providers, and service-based businesses who need
   professional billing automation without expensive licensing fees.
 
-instructions: null
+instructions: |
+  After deployment, open your domain and run the FOSSBilling web installer.
+  Use MySQL connection details, keep /var/www/html on persistent storage as configured.
 
 changeLog:
   - date: 2025-11-21
     description: Template Release
+  - date: 2026-03-24
+    description: Fixed instructions and added screenshot.
 
 links:
   - label: Website
