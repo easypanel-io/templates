@@ -9,7 +9,9 @@ export function generate(input: Input): Output {
 FROM node:20-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache git
-RUN git clone --depth 1 --branch main https://github.com/mddanishyusuf/traffic-source.git /app
+RUN git clone --filter=blob:none https://github.com/mddanishyusuf/traffic-source.git /app \
+  && cd /app \
+  && git checkout 57046909855c3dec7ef9a077ea03e64d681ae92d
 RUN npm install
 RUN npm run build
 
