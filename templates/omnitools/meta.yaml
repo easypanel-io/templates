@@ -20,8 +20,18 @@ instructions: null
 changeLog:
   - date: 2025-11-24
     description: Template Release
+  - date: 2026-03-25
+    description: Added missing links and pinned image from 0.6 to 0.6.0
 
 links:
+  - label: Website
+    url: https://omnitools.app
+  - label: GitHub
+    url: https://github.com/iib0011/omni-tools
+  - label: Documentation
+    url: https://github.com/iib0011/omni-tools#readme
+  - label: Releases
+    url: https://github.com/iib0011/omni-tools/releases
   - label: Docker Hub
     url: https://hub.docker.com/r/iib0011/omni-tools
 
@@ -42,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: iib0011/omni-tools:0.6
+      default: iib0011/omni-tools:0.6.0
 
 benefits:
   - title: All-in-One Utility Suite
