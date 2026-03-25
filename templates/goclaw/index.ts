@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
   });
 
   // ── 2. GoClaw Gateway (main service) ──
-  const providerKeyEnv = input.providerApiKey
+  const providerKeyEnv = input.providerApiKey && input.provider
     ? `GOCLAW_${input.provider.toUpperCase()}_API_KEY=${input.providerApiKey}`
     : ``;
 
