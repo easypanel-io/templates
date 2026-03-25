@@ -9,10 +9,14 @@ changeLog:
   - date: 2026-03-10
     description: First Release
 links:
+  - label: Website
+    url: https://doppelgangerdev.com
+  - label: Documentation
+    url: https://figranium.dev/docs/overview
   - label: GitHub
     url: https://github.com/mnemosynestack/doppelganger
   - label: Releases
-    url: https://doppelgangerdev.com/releases
+    url: https://figranium.dev/releases
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -20,6 +24,7 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
   properties:
     appServiceName:
       type: string

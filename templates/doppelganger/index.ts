@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage ?? "mnemosyneai/doppelganger:v0.9.3",
+        image: input.appServiceImage,
       },
       env: "NODE_ENV=production",
       domains: [
