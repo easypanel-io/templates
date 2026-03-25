@@ -11,6 +11,8 @@ changeLog:
     description: Template Release
   - date: 2025-12-24
     description: Updated to nightly-version-eb8b0096
+  - date: 2026-02-18
+    description: Version bumped to 0.6.26
 links:
   - label: Docker Hub
     url: https://hub.docker.com/r/linuxserver/calibre-web
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/calibre-web:nightly-version-eb8b0096
+      default: lscr.io/linuxserver/calibre-web:0.6.26
     timezone:
       type: string
       title: Timezone

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 208) rotate(90) scale(320)">
+      <stop offset="0" stop-color="#2B313A"/>
+      <stop offset="1" stop-color="#14181F"/>
+    </radialGradient>
+
+    <linearGradient id="accent" x1="120" y1="120" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC857"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer badge -->
+  <circle cx="256" cy="256" r="232" fill="url(#bg)" stroke="#2A2F38" stroke-width="8"/>
+
+  <!-- Subtle radar rings -->
+  <circle cx="256" cy="256" r="154" stroke="#2D3440" stroke-width="3"/>
+  <circle cx="256" cy="256" r="112" stroke="#2D3440" stroke-width="3"/>
+  <circle cx="256" cy="256" r="70"  stroke="#2D3440" stroke-width="3"/>
+
+  <!-- Crosshair lines -->
+  <path d="M256 92V420" stroke="#252B35" stroke-width="3"/>
+  <path d="M92 256H420" stroke="#252B35" stroke-width="3"/>
+
+  <!-- “Sort” mark: stacked chevrons + bar (clean, app-icon style) -->
+  <g filter="url(#softShadow)">
+    <path d="M188 205L256 145L324 205" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M188 307L256 367L324 307" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M256 190V322" stroke="url(#accent)" stroke-width="18" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small highlight dot -->
+  <circle cx="352" cy="168" r="8" fill="#FFC857" opacity="0.9"/>
+</svg>

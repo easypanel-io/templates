@@ -1,0 +1,92 @@
+name: SeaweedFS
+description:
+  SeaweedFS is a fast, simple, and highly scalable distributed file system for
+  storing and serving billions of files. Starting as an object store with O(1)
+  disk seek performance, it has grown into a full-featured storage platform
+  supporting S3 API, WebDAV, FUSE mount, HDFS, and Hadoop integration. The
+  architecture separates concerns into a master server for volume management, a
+  volume server for blob storage, a filer for directory/file abstraction, an S3
+  gateway for S3 compatibility, and a WebDAV server for mounted drive access.
+  Features include erasure coding, cloud tiering, cross-datacenter replication,
+  AES-256-GCM encryption, automatic compaction, file TTL, and a built-in admin
+  UI. Licensed under Apache 2.0 with 30k+ GitHub stars.
+instructions: Open the admin UI.
+changeLog:
+  - date: 2026-02-19
+    description: Template Release (4.13)
+links:
+  - label: GitHub
+    url: https://github.com/seaweedfs/seaweedfs
+  - label: Documentation
+    url: https://github.com/seaweedfs/seaweedfs/wiki
+  - label: Website
+    url: https://seaweedfs.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: seaweedfs
+    appServiceImage:
+      type: string
+      title: SeaweedFS Image
+      default: chrislusf/seaweedfs:4.13
+benefits:
+  - title: Billion-File Scale
+    description:
+      Designed from the ground up to store billions of files with O(1) disk seek
+      performance. Each file lookup requires just one disk read operation with
+      only 40 bytes of metadata overhead per file.
+  - title: Multi-Protocol Access
+    description:
+      Access your data via S3 API, WebDAV, FUSE mount, HDFS, or the built-in
+      Filer HTTP interface. Use the right protocol for every use case without
+      data duplication.
+  - title: Cloud Tiering & Replication
+    description:
+      Transparently tier warm data to cloud storage (AWS S3, Google Cloud,
+      Azure) while keeping hot data local. Cross-datacenter active-active
+      replication ensures high availability.
+  - title: Apache 2.0 Licensed
+    description:
+      Fully open-source under the permissive Apache 2.0 license with no
+      restrictive copyleft clauses. Free for commercial and community use.
+features:
+  - title: S3-Compatible Gateway
+    description:
+      Full Amazon S3 API compatibility lets you use existing S3 tools, SDKs, and
+      applications. Drop-in replacement for cloud object storage.
+  - title: WebDAV Server
+    description:
+      Mount your SeaweedFS storage as a network drive on macOS, Windows, and
+      Linux, or access it from mobile devices via WebDAV.
+  - title: Admin UI
+    description:
+      Built-in web administration console for monitoring cluster health,
+      managing volumes, viewing topology, and performing maintenance.
+  - title: Erasure Coding
+    description:
+      Reed-Solomon erasure coding (10.4 by default, customizable in Enterprise)
+      reduces storage overhead while maintaining data durability across racks.
+  - title: Encryption at Rest
+    description:
+      AES-256-GCM encrypted storage protects data at rest. Combined with TLS for
+      data in transit, your files are secured end to end.
+  - title: Automatic Compaction
+    description:
+      Automatically reclaims disk space after file deletion or updates. Combined
+      with file TTL support for automatic expiration of temporary data.
+tags:
+  - Object Storage
+  - Distributed Storage
+  - S3
+  - WebDAV
+  - Self-Hosted
+  - File System

@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2025-11-18
     description: Template Release
+  - date: 2026-02-18
+    description: Version bumped to nightly-20260118
 
 links:
   - label: Github
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/tphakala/birdnet-go:nightly-20251028
+      default: ghcr.io/tphakala/birdnet-go:nightly-20260118
     timezone:
       type: string
       title: Timezone

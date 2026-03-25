@@ -1,0 +1,82 @@
+name: Surmai
+description:
+  Surmai is a personal and family travel organizer—a Progressive Web App for
+  collaborative trip planning with privacy-first, self-hosted data. Built on
+  PocketBase, it helps you keep itineraries, bookings, documents, and trip
+  details in one place, with multi-user collaboration and offline-friendly
+  access. The stack exposes the web UI on port 8080 and persists PocketBase
+  data under /pb_data.
+instructions: |
+  After deploy, sign in with the admin email you configured and the password
+  shown in the service environment (SURMAI_ADMIN_PASSWORD)—it is auto-generated
+  for a strong default. Change it after first login if you like. See
+  https://surmai.app/documentation/installation for Docker details.
+changeLog:
+  - date: 2026-03-23
+    description: Accurate travel-organizer description; image v0.4.16; auto-generated admin password (randomPassword).
+  - date: 2025-01-21
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://surmai.app/
+  - label: Documentation
+    url: https://surmai.app/documentation/
+  - label: GitHub
+    url: https://github.com/rohitkumbhar/surmai
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: surmai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rohitkumbhar/surmai:v0.4.16
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description: Initial Surmai administrator email (PocketBase admin)
+benefits:
+  - title: Trip planning in one place
+    description:
+      Organize itineraries, bookings, and trip artifacts collaboratively instead
+      of scattered inboxes and notes.
+  - title: Privacy
+    description:
+      Self-hosted PocketBase backend—your travel data stays on your server.
+  - title: Collaborative
+    description:
+      Multiple people can plan together while keeping access under your control.
+  - title: PWA & mobile-friendly
+    description:
+      Installable as a Progressive Web App for easier access on phones during travel.
+features:
+  - title: PocketBase backend
+    description:
+      PocketBase powers the API; data lives in /pb_data with a volume for persistence.
+  - title: Travel-focused workflow
+    description:
+      Built for real trip planning (alpha-stage; project under active development).
+  - title: Admin bootstrap
+    description:
+      SURMAI_ADMIN_EMAIL and a strong auto-generated SURMAI_ADMIN_PASSWORD on first deploy.
+  - title: Docker deployment
+    description:
+      Official image from ghcr.io/rohitkumbhar/surmai with documented installation.
+tags:
+  - Travel
+  - Trip Planning
+  - Self-Hosted
+  - PocketBase
+  - PWA
+  - Collaboration
