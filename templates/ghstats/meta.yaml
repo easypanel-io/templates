@@ -11,10 +11,22 @@ description:
   presence. GHStats requires a GitHub personal access token to fetch repository
   statistics and stores all collected data persistently for historical analysis
   and visualization.
-instructions: null
+instructions:
+  Create a GitHub personal access token before deploying. Open
+  https://github.com/settings/tokens and generate a classic token with at least
+  the public_repo scope so GHStats can collect repository traffic data. If you
+  want private repositories included, use repo scope and set
+  GHS_INCLUDE_PRIVATE=true in a custom environment override. Paste the token
+  into the GitHub Token field in this template. The app reads it as GITHUB_TOKEN
+  and starts collecting metrics into /app/data. After deployment, open the
+  assigned domain on port 8080. The first sync may take a little time depending
+  on repository count, then dashboard history updates on the hourly scheduler.
 changeLog:
   - date: 2025-10-30
     description: Initial Template Release
+  - date: 2026-03-25
+    description:
+      Added setup instructions for required githubToken and token scopes
 links:
   - label: GitHub
     url: https://github.com/vladkens/ghstats
