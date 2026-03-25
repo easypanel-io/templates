@@ -14,6 +14,10 @@ instructions:
   service and SMTP config for production. Allow ~60 seconds for all services to
   initialize on first startup.
 changeLog:
+  - date: 2026-03-25
+    description: >
+      Pinned MinIO and CockroachDB images to immutable tags (no minio:latest or
+      cockroach latest-v24.2).
   - date: 2026-03-02
     description: v0.7.382 - Latest release
   - date: 2026-02-09
@@ -33,6 +37,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - cockroachImage
+    - minioImage
   if:
     properties:
       enableLove:
@@ -54,6 +60,14 @@ schema:
       title: Huly Version
       default: "v0.7.382"
       description: Use production tags (v*) from GitHub Releases
+    cockroachImage:
+      type: string
+      title: CockroachDB Image
+      default: "cockroachdb/cockroach:v24.2.10"
+    minioImage:
+      type: string
+      title: MinIO Image
+      default: "minio/minio:RELEASE.2025-09-07T16-13-09Z"
     enableLove:
       type: boolean
       title: Enable Love (Audio & Video Calls)
@@ -62,15 +76,18 @@ schema:
     livekitHost:
       type: string
       title: LiveKit Host
-      description: e.g. wss://your-project.livekit.cloud (required when Love enabled)
+      description:
+        e.g. wss://your-project.livekit.cloud (required when Love enabled)
     livekitApiKey:
       type: string
       title: LiveKit API Key
-      description: From LiveKit Cloud or your LiveKit server (required when Love enabled)
+      description:
+        From LiveKit Cloud or your LiveKit server (required when Love enabled)
     livekitApiSecret:
       type: string
       title: LiveKit API Secret
-      description: From LiveKit Cloud or your LiveKit server (required when Love enabled)
+      description:
+        From LiveKit Cloud or your LiveKit server (required when Love enabled)
 benefits:
   - title: All-in-One Platform
     description:

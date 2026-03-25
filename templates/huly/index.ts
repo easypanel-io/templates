@@ -6,6 +6,9 @@ import {
 } from "~templates-utils";
 import { Input } from "./meta";
 
+const COCKROACH_IMAGE = "cockroachdb/cockroach:v24.2.10";
+const MINIO_IMAGE = "minio/minio:RELEASE.2025-09-07T16-13-09Z";
+
 const NGINX_CONFIG = (
   frontHost: string,
   accountHost: string,
@@ -179,7 +182,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-cockroach`,
       source: {
         type: "image",
-        image: "cockroachdb/cockroach:latest-v24.2",
+        image: COCKROACH_IMAGE,
       },
       deploy: {
         command:
@@ -250,7 +253,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: `${input.appServiceName}-minio`,
-      source: { type: "image", image: "minio/minio:latest" },
+      source: { type: "image", image: MINIO_IMAGE },
       deploy: {
         command: " minio server /data --address :9000 --console-address :9001",
       },
