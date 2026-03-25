@@ -23,13 +23,17 @@ description:
 instructions: null
 
 changeLog:
+  - date: 2026-03-25
+    description: Added official logo asset and corrected registry link label
   - date: 2025-11-26
     description: Template Release
 
 links:
+  - label: Website
+    url: https://alexgustafsson.github.io/cupdate
   - label: GitHub
     url: https://github.com/alexgustafsson/cupdate
-  - label: Docker Hub
+  - label: Container registry
     url: https://github.com/alexgustafsson/cupdate/pkgs/container/cupdate
 
 contributors:
