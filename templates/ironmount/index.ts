@@ -23,12 +23,16 @@ export function generate(input: Input): Output {
           type: "bind",
           hostPath: "/etc/localtime",
           mountPath: "/etc/localtime",
-          readOnly: true,
         },
         {
           type: "bind",
           hostPath: "/var/lib/ironmount",
           mountPath: "/var/lib/ironmount",
+        },
+        {
+          type: "bind",
+          hostPath: "/dev/fuse",
+          mountPath: "/dev/fuse",
         },
       ],
       deploy: {
