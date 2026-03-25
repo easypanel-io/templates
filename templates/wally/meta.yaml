@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-10-29
     description: Initial Template Release
+  - date: 2026-03-25
+    description: Pinned Wally image to immutable 1.14 digest
 links:
   - label: Docker Hub
     url: https://hub.docker.com/r/poliuscorp/wally
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: poliuscorp/wally:1.4
+      default: poliuscorp/wally:1.14
       description: Wally Docker image
     enableDemo:
       type: boolean
