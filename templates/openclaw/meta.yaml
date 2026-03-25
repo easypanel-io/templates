@@ -53,11 +53,6 @@ schema:
       type: string
       title: Gateway Token
       description: Token for authenticating with the gateway service (leave empty to securely auto-generate)
-    gatewayBind:
-      type: string
-      title: Gateway Bind
-      default: "0.0.0.0"
-      description: Network interface to bind to (use 0.0.0.0 for Docker container resolution)
     gatewayPort:
       type: number
       title: Gateway Port

@@ -1,10 +1,9 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const gatewayToken = input.gatewayToken || randomPassword();
-  const gatewayBind = input.gatewayBind ?? "0.0.0.0";
+  const gatewayToken = input.gatewayToken || randomString(64);
   const gatewayPort = input.gatewayPort ?? 18789;
   const bridgePort = input.bridgePort ?? 18790;
 
@@ -58,7 +57,7 @@ export function generate(input: Input): Output {
       },
       env: gatewayEnv.join("\n"),
       deploy: {
-        command: `node dist/index.js gateway --bind ${gatewayBind} --port ${gatewayPort} --allow-unconfigured`,
+        command: `node dist/index.js gateway --bind "lan" --port ${gatewayPort} --allow-unconfigured`,
       },
       domains: [
         {
