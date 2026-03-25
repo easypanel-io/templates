@@ -9,11 +9,8 @@ export function generate(input: Input): Output {
     `PUID=${input.puid ?? "1000"}`,
     `PGID=${input.pgid ?? "1000"}`,
     `POSTGRES_PASSWORD=${postgresPassword}`,
+    `PUBLIC_URL=${input.publicUrl ?? "https://$(PRIMARY_DOMAIN)"}`,
   ];
-
-  if (input.publicUrl) {
-    envVars.push(`PUBLIC_URL=${input.publicUrl}`);
-  }
 
   services.push({
     type: "app",
@@ -21,7 +18,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage ?? "ghcr.io/kikootwo/readmeabook:latest",
+        image: input.appServiceImage,
       },
       domains: [
         {
