@@ -7,6 +7,8 @@ instructions: |
   To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
   Secure tokens like the Gateway Token and Encryption Key are auto-generated.
 changeLog:
+  - date: 2026-03-25
+    description: Applied review feedback — pinned images, simplified service naming, added proxy headers
   - date: 2026-03-24
     description: Redesigned with Chrome CDP sidecar, removed permission-fixer hack
   - date: 2026-03-19
@@ -26,9 +28,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceName
-    - provider
-    - providerApiKey
+    - uiServiceName
   properties:
     appServiceName:
       type: string
@@ -37,20 +37,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/nextlevelbuilder/goclaw:full
-      description: Use the "full" tag for Python/Node included, or "latest" for minimal.
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: goclaw-db
+      default: ghcr.io/nextlevelbuilder/goclaw:v2.18.1-full
+      description: Use a "-full" tag for Python/Node included, or a base version tag for minimal.
     uiServiceName:
       type: string
-      title: Web UI Service Name
-      default: goclaw-ui
-    browserServiceName:
-      type: string
-      title: Browser Sidecar Service Name
-      default: goclaw-chrome
+      title: Web Service Image
+      default: ghcr.io/nextlevelbuilder/goclaw-web:v2.18.1
     gatewayToken:
       type: string
       title: Gateway Token (GOCLAW_GATEWAY_TOKEN)

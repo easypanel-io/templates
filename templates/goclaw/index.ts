@@ -6,16 +6,15 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const gatewayToken = input.gatewayToken || randomPassword();
   const encryptionKey = input.encryptionKey || randomString(32);
-  const browserServiceName = input.browserServiceName || "goclaw-chrome";
 
   // ── 1. PostgreSQL with pgvector ──
   services.push({
     type: "postgres",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
       image: "pgvector/pgvector:pg18",
-      env: 'PGDATA=/var/lib/postgresql/data',
+      env: "PGDATA=/var/lib/postgresql/data",
     },
   });
 
@@ -37,8 +36,8 @@ export function generate(input: Input): Output {
         `GOCLAW_SKILLS_DIR=/app/skills`,
         `GOCLAW_GATEWAY_TOKEN=${gatewayToken}`,
         `GOCLAW_ENCRYPTION_KEY=${encryptionKey}`,
-        `GOCLAW_BROWSER_REMOTE_URL=ws://$(PROJECT_NAME)_${browserServiceName}:9222`,
-        `GOCLAW_POSTGRES_DSN=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
+        `GOCLAW_BROWSER_REMOTE_URL=ws://$(PROJECT_NAME)_${input.appServiceName}-chrome:9222`,
+        `GOCLAW_POSTGRES_DSN=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?sslmode=disable`,
         providerKeyEnv,
       ]
         .filter(Boolean)
@@ -63,6 +62,12 @@ export function generate(input: Input): Output {
           name: "skills",
           mountPath: "/app/skills",
         },
+        {
+          type: "file",
+          mountPath: "/app/data/.runtime/apk-packages",
+          content: ["chromium","nss","freetype","harfbuzz","font-ubuntu"]
+            .join("\n"),
+        }
       ],
     },
   });
@@ -71,7 +76,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: browserServiceName,
+      serviceName: `${input.appServiceName}-chrome`,
       source: {
         type: "image",
         image: "zenika/alpine-chrome:124",
@@ -92,10 +97,10 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: input.uiServiceName || "goclaw-ui",
+      serviceName: `${input.appServiceName}-ui`,
       source: {
         type: "image",
-        image: "ghcr.io/nextlevelbuilder/goclaw-web:latest",
+        image: input.uiServiceName,
       },
       domains: [
         {
@@ -130,6 +135,8 @@ export function generate(input: Input): Output {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
         proxy_read_timeout 86400s;
     }
     
@@ -138,6 +145,8 @@ export function generate(input: Input): Output {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $host;
     }
     
     location /health {
