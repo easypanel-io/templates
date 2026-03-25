@@ -11,15 +11,34 @@ description:
   over your data. Perfect for individuals who want a simple, fast, and private
   note-taking solution without the complexity of larger systems.
 
-instructions: null
+instructions:
+  Open the web app on your assigned domain. The application uses the
+  ADMIN_EMAILS value from this template to mark admin users. This template uses
+  the Docker image name recommended by the upstream README and pins it to a
+  static version tag instead of latest.For a fresh deployment, the default admin
+  username is admin and the default password is admin. If you set the Admin
+  Email/Username field before first start, that value is used to auto-promote
+  the corresponding admin user(s). Create or manage users using the admin route
+  at https://<your-domain>/#/admin. After login you can change admin settings in
+  the Admin Panel and create additional users as needed.
 
 changeLog:
   - date: 2025-11-17
     description: Template Release
+  - date: 2026-03-25
+    description:
+      Added logo, pinned Docker image to a static tag, confirmed image name from
+      upstream README, and completed links and instructions.
 
 links:
-  - label: Github
-    url: https://github.com/nikunjsingh/glass-keep
+  - label: Website
+    url: https://github.com/nikunjsingh93/react-glass-keep
+  - label: Documentation
+    url: https://github.com/nikunjsingh93/react-glass-keep#readme
+  - label: GitHub
+    url: https://github.com/nikunjsingh93/react-glass-keep
+  - label: Docker Hub
+    url: https://hub.docker.com/r/nikunjsingh/glass-keep
 
 contributors:
   - name: Ahson Shaikh
@@ -39,7 +58,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nikunjsingh/glass-keep:latest
+      default: nikunjsingh/glass-keep:v20260114-1008
     adminEmail:
       type: string
       title: Admin Email/Username
