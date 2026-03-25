@@ -14,10 +14,6 @@ instructions:
   service and SMTP config for production. Allow ~60 seconds for all services to
   initialize on first startup.
 changeLog:
-  - date: 2026-03-25
-    description: >
-      Pinned MinIO and CockroachDB images to immutable tags (no minio:latest or
-      cockroach latest-v24.2).
   - date: 2026-03-02
     description: v0.7.382 - Latest release
   - date: 2026-02-09
