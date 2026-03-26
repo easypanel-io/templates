@@ -28,6 +28,7 @@ export function generate(input: Input): Output {
     `SPARKY_FITNESS_FRONTEND_URL=https://${
       input.customDomain || "$(PRIMARY_DOMAIN)"
     }`,
+    `SPARKY_FITNESS_DISABLE_SIGNUP=${input.disableSignup}`,
     `SPARKY_FITNESS_FORCE_EMAIL_LOGIN=${input.forceEmailLogin}`,
   ];
 
