@@ -25,8 +25,9 @@ export function generate(input: Input): Output {
     `SPARKY_FITNESS_DB_PORT=5432`,
     `SPARKY_FITNESS_API_ENCRYPTION_KEY=${apiEncryptionKey}`,
     `BETTER_AUTH_SECRET=${betterAuthSecret}`,
-    `SPARKY_FITNESS_FRONTEND_URL=https://$(PROJECT_NAME)-${input.appServiceName}-frontend.$(EASYPANEL_HOST)`,
-    `SPARKY_FITNESS_DISABLE_SIGNUP=${input.disableSignup}`,
+    `SPARKY_FITNESS_FRONTEND_URL=https://${
+      input.customDomain || "$(PRIMARY_DOMAIN)"
+    }`,
     `SPARKY_FITNESS_FORCE_EMAIL_LOGIN=${input.forceEmailLogin}`,
   ];
 
@@ -60,7 +61,9 @@ export function generate(input: Input): Output {
   }
 
   const frontendEnv = [
-    `SPARKY_FITNESS_FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
+    `SPARKY_FITNESS_FRONTEND_URL=https://${
+      input.customDomain || "$(PRIMARY_DOMAIN)"
+    }`,
     `SPARKY_FITNESS_SERVER_HOST=$(PROJECT_NAME)_${input.appServiceName}-server`,
     `SPARKY_FITNESS_SERVER_PORT=3010`,
   ];
@@ -113,7 +116,7 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: "$(EASYPANEL_DOMAIN)",
+          host: `https://${input.customDomain || "$(EASYPANEL_DOMAIN)"}`,
           port: 80,
         },
       ],
