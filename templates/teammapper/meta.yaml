@@ -9,14 +9,25 @@ description:
   supports real-time updates, customizable visualizations, and comprehensive
   team analytics to help organizations make data-driven decisions about team
   composition and workflow optimization.
-instructions: null
+instructions:
+  Deploy the stack and open your assigned domain to complete TeamMapper setup.
+  The application connects automatically to the internal PostgreSQL service
+  created by this template. On first startup, create your initial account in the
+  web interface and then configure your organization and team structure. Data is
+  persisted in /app/data and in PostgreSQL volumes, so updates and restarts keep
+  existing content. DELETE_AFTER_DAYS is set to 30 by default in this template.
+  Change it after deploy if your retention requirements differ.
 changeLog:
   - date: 2025-10-07
     description: First Release
+  - date: 2026-03-26
+    description: Added setup instructions and corrected registry link label
 links:
+  - label: Website
+    url: https://teammapper.io
   - label: GitHub
     url: https://github.com/b310-digital/teammapper
-  - label: Docker Hub
+  - label: Container registry
     url: https://github.com/b310-digital/teammapper/pkgs/container/teammapper
 contributors:
   - name: Ahson Shaikh
