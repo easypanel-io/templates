@@ -5,8 +5,8 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   const env = [
-    `PUID=0`,
-    `PGID=0`,
+    `PUID=1000`,
+    `PGID=1000`,
     `TZ=Etc/UTC`,
     `PASSWORD=${input.password || randomPassword()}`,
     `CUSTOM_RESULTS=${input.customResults}`,

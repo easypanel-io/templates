@@ -9,13 +9,19 @@ description:
   connection performance without relying on third-party services. The
   application stores test results and provides analytics to track connection
   quality over time.
-instructions: null
+instructions:
+  Leave "Results Password" empty to auto-generate a strong password at deploy
+  time, or set your own value if you want a fixed credential. After deployment,
+  open LibreSpeed from your app domain and use the configured password to access
+  historical test results.
 changeLog:
   - date: 2025-10-21
     description: Initial Template Release (v5.4.1)
 links:
   - label: GitHub
     url: https://github.com/librespeed/speedtest
+  - label: Documentation
+    url: https://docs.linuxserver.io/images/docker-librespeed/
   - label: Demo
     url: https://librespeed.org/
 contributors:
@@ -39,8 +45,10 @@ schema:
     password:
       type: string
       title: Results Password
-      default: PASSWORD
-      description: Password to access test results and statistics
+      default: ""
+      description:
+        Leave empty to auto-generate a random password, or set one manually to
+        access test results and statistics
     customResults:
       type: boolean
       title: Enable Custom Results
