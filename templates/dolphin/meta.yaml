@@ -7,11 +7,18 @@ description:
   version provides the full Dolphin emulator through a web interface, enabling
   you to play retro games from anywhere without local installation.
 
-instructions: null
+instructions:
+  Open Dolphin in your browser and complete the first-run wizard. Add your game
+  files under `/config` (for example in `/config/roms`) so they persist across
+  updates/redeploys, then configure that path in Dolphin's game directories. For
+  best performance, run this template on a host with hardware acceleration
+  enabled and use a gamepad when possible.
 
 changeLog:
   - date: 2025-10-13
     description: Initial Template Release
+  - date: 2026-03-26
+    description: Added setup instructions and screenshot asset
 
 links:
   - label: Website
