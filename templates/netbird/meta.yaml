@@ -1,20 +1,17 @@
 name: NetBird
 description:
-  NetBird is a WireGuard-based mesh network platform that connects your devices
-  into a secure private network. It provides zero-configuration VPN with
-  automatic peer discovery, NAT traversal, and end-to-end encryption. NetBird
-  eliminates the need for complex VPN server setups by creating a peer-to-peer
-  mesh network where devices can communicate directly with each other. Perfect
-  for remote access, secure site-to-site connections, and building private
-  networks without exposing infrastructure to the internet. Built on modern
-  WireGuard protocol for maximum performance and security.
+  This template deploys a headless NetBird client/peer container that joins an
+  existing NetBird network using a setup key. It does not deploy the NetBird
+  management service, signal relay, or web dashboard. Use it to bootstrap a
+  node on your private mesh for remote access, site-to-site connectivity, or
+  secure service reachability over WireGuard.
 
 instructions:
-  To use NetBird, first create an account at https://netbird.io or deploy your
-  own NetBird management server. Then generate a setup key from your NetBird
-  dashboard. When deploying this template, enter the setup key in the
-  NB_SETUP_KEY field. The client will automatically connect to your NetBird
-  network.
+  This template runs only the NetBird client (peer). Before deploying, create
+  an account at https://netbird.io or run your own NetBird management stack,
+  then generate a reusable setup key. Enter that key in the NB_SETUP_KEY field
+  during deployment. The container will join your existing NetBird network and
+  persist client state in /var/lib/netbird.
 
 changeLog:
   - date: 2025-10-14
