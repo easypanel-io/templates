@@ -23,10 +23,12 @@ changeLog:
     description: Initial Template Release
 
 links:
+  - label: Website
+    url: https://tunarr.com
   - label: GitHub
     url: https://github.com/chrisbenincasa/tunarr
   - label: Documentation
-    url: https://tunarr.com
+    url: https://tunarr.com/api-docs
   - label: Docker Hub
     url: https://hub.docker.com/r/chrisbenincasa/tunarr
 
@@ -57,7 +59,7 @@ schema:
     timezone:
       type: string
       title: Timezone
-      default: "Asia/Karachi"
+      default: "Etc/UTC"
       description: Timezone for accurate guide data and scheduling
     databasePath:
       type: string
