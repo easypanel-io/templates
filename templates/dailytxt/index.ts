@@ -28,7 +28,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         `PORT=8765`,
-        `SECRET_KEY=${input.secretKey}`,
+        `SECRET_TOKEN=${secretKey}`,
         `ALLOW_REGISTRATION=${input.allowRegistration}`,
         `DATA_INDENT=2`,
         `JWT_EXP_DAYS=${input.jwtExpDays}`,
