@@ -18,12 +18,12 @@ changeLog:
     description: Initial Template Release
 
 links:
+  - label: Website
+    url: https://ersatztv.org
   - label: GitHub
     url: https://github.com/ersatztv/ersatztv
   - label: Documentation
     url: https://ersatztv.github.io/ersatztv/
-  - label: Docker Hub
-    url: https://github.com/ersatztv/ersatztv/pkgs/container/ersatztv
 
 contributors:
   - name: Ahson Shaikh
@@ -46,7 +46,7 @@ schema:
     timezone:
       type: string
       title: Timezone
-      default: "America/Chicago"
+      default: "Etc/UTC"
       description: Timezone for scheduling and program guides
 
 benefits:
