@@ -7,7 +7,13 @@ description:
   straightforward solution for sharing code, logs, or text data with automatic
   expiration and configurable storage limits.
 
-instructions: null
+instructions:
+  Bytebin exposes a simple HTTP API on port 8080. After deployment, open GET
+  /health for a quick health check, POST /post with your content in the request
+  body to create a paste. Data is persisted in /opt/bytebin/content and
+  /opt/bytebin/db, so existing keys survive restarts and upgrades. Adjust
+  BYTEBIN_MISC_KEYLENGTH and BYTEBIN_CONTENT_MAXSIZE if you need longer keys or
+  larger payload limits.
 
 changeLog:
   - date: 2025-10-13
