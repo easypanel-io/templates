@@ -31,11 +31,13 @@ export function generate(input: Input): Output {
       env: [
         `MINIO_ROOT_USER=${minioRootUser}`,
         `MINIO_ROOT_PASSWORD=${minioRootPassword}`,
-        `MINIO_BROWSER=on`,
+        `MINIO_BROWSER=off`,
       ].join("\n"),
       source: {
         type: "image",
-        image: "minio/minio:latest",
+        image:
+          input.minioServiceImage ||
+          "minio/minio:RELEASE.2025-10-15T17-29-55Z",
       },
       mounts: [
         {
@@ -44,18 +46,8 @@ export function generate(input: Input): Output {
           mountPath: "/data",
         },
       ],
-      domains: [
-        {
-          host: "console-$(EASYPANEL_DOMAIN)",
-          port: 9001,
-        },
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 9000,
-        },
-      ],
       deploy: {
-        command: `minio server /data --console-address ":9001"`,
+        command: `minio server /data`,
       },
     },
   });
@@ -63,7 +55,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: `${input.appServiceName}-chrome`,
+      serviceName: `${input.appServiceName}-printer`,
       env: [
         `TIMEOUT=10000`,
         `CONCURRENT=10`,
@@ -82,14 +74,14 @@ export function generate(input: Input): Output {
     `PORT=3000`,
     `NODE_ENV=production`,
     `PUBLIC_URL=https://$(EASYPANEL_DOMAIN)`,
-    `STORAGE_URL=https://console-$(PROJECT_NAME)-${input.appServiceName}-minio.$(EASYPANEL_HOST)/default`,
-    `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `STORAGE_URL=http://${input.appServiceName}-minio:9000/default`,
+    `DATABASE_URL=postgresql://postgres:${databasePassword}@${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `CHROME_TOKEN=${chromeToken}`,
-    `CHROME_URL=ws://$(PROJECT_NAME)_${input.appServiceName}-chrome:3000`,
+    `CHROME_URL=ws://${input.appServiceName}-printer:3000`,
     `ACCESS_TOKEN_SECRET=${accessTokenSecret}`,
     `REFRESH_TOKEN_SECRET=${refreshTokenSecret}`,
     `MAIL_FROM=noreply@$(EASYPANEL_HOST)`,
-    `STORAGE_ENDPOINT=$(PROJECT_NAME)-${input.appServiceName}-minio`,
+    `STORAGE_ENDPOINT=${input.appServiceName}-minio`,
     `STORAGE_PORT=9000`,
     `STORAGE_REGION=us-east-1`,
     `STORAGE_BUCKET=default`,
@@ -115,6 +107,13 @@ export function generate(input: Input): Output {
         {
           host: "$(EASYPANEL_DOMAIN)",
           port: 3000,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/app/data",
         },
       ],
     },

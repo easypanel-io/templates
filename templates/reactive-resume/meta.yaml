@@ -11,7 +11,12 @@ description:
   employers, track its views or downloads, and customise your page layout by
   dragging-and-dropping sections.
 
-instructions: null
+instructions:
+  Deploy the stack and open the app on your domain then create the first account
+  and start building resumes, this template uses the Reactive Resume v4.4.5
+  legacy compatible environment schema with PostgreSQL printer and internal
+  MinIO storage services, and only the main app is exposed on
+  $(EASYPANEL_DOMAIN) while storage remains internal.
 
 changeLog:
   - date: "2025-06-30"
@@ -21,8 +26,8 @@ links:
   - label: "Website"
     url: "https://rxresu.me/"
   - label: "Documentation"
-    url: "https://docs.rxresu.me/"
-  - label: "Github"
+    url: "https://docs.rxresume.org/self-hosting/docker"
+  - label: "GitHub"
     url: "https://github.com/AmruthPillai/Reactive-Resume"
   - label: "Demo"
     url: "https://rxresu.me/"
@@ -46,6 +51,11 @@ schema:
       title: "App Service Image"
       default: "amruthpillai/reactive-resume:v4.4.5"
       description: "Image for the app service"
+    minioServiceImage:
+      type: string
+      title: "MinIO Service Image"
+      default: "minio/minio:RELEASE.2025-09-07T16-13-09Z"
+      description: "Image for the internal MinIO storage service"
     disableSignups:
       type: boolean
       title: "Disable Public Signups"
