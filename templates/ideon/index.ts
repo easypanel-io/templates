@@ -14,7 +14,7 @@ export function generate(input: Input): Output {
   });
 
   const appEnv = [
-    `APP_PORT=${input.appPort}`,
+    `APP_PORT=3000`,
     `APP_URL=https://$(PRIMARY_DOMAIN)`,
     `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
     `DB_PORT=5432`,
@@ -37,7 +37,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: Number(input.appPort || "3000"),
+          port: 3000,
         },
       ],
       mounts: [
