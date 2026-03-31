@@ -1,0 +1,99 @@
+name: Kan
+description:
+  Kan is a self-hosted Kanban app (Trello-style) built with Next.js, tRPC,
+  Better Auth, and PostgreSQL. It supports boards, workspaces, labels, comments,
+  Trello import, and optional email, Redis, S3, and OAuth. The published web
+  container does not apply database migrations on startup; upstream expects a
+  separate migrate image (Drizzle) to run before the web process, matching their
+  Docker Compose stack.
+
+instructions: |
+  Deploy order matches upstream: Postgres → migrate (kan-migrate, runs
+  `drizzle-kit migrate` once) → web. If the web app errors on first boot,
+  wait for the migrate service to finish successfully, then restart the web service.
+  Secrets: BETTER_AUTH_SECRET is generated for you; keep it stable across
+  restarts. Auth: With defaults, use sign-up on the login page unless you set
+  NEXT_PUBLIC_DISABLE_SIGN_UP in env (see docs). Optional: Redis, SMTP, S3, and
+  OAuth env vars are documented upstream.
+
+changeLog:
+  - date: 2025-09-30
+    description: First release
+  - date: 2026-03-20
+    description:
+      Website/docs links, setup instructions, kan-migrate service parity,
+      BETTER_AUTH_SECRET via randomBytes, note stateless web (no app volumes)
+
+links:
+  - label: Website
+    url: https://kan.bn
+  - label: Documentation
+    url: https://docs.kan.bn/
+  - label: GitHub
+    url: https://github.com/kanbn/kan
+  - label: Container registry (GHCR)
+    url: https://github.com/kanbn/kan/pkgs/container/kan
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - migrateServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kan-web
+    appServiceImage:
+      type: string
+      title: Web Image
+      default: ghcr.io/kanbn/kan:0.5.6
+      description:
+        Kan web application (Next.js). Pin to the same release family as
+        migrate.
+    migrateServiceImage:
+      type: string
+      title: Migrate Image
+      default: ghcr.io/kanbn/kan-migrate:0.5.6
+      description:
+        One-shot Drizzle migrations; must match your web image version. See
+        https://github.com/kanbn/kan/pkgs/container/kan-migrate for tags.
+
+benefits:
+  - title: Modern Kanban
+    description:
+      Familiar boards, lists, and cards with a clean web UI and team features.
+  - title: Self-hosted
+    description:
+      Your data stays on your infrastructure with PostgreSQL you control.
+  - title: Auth-ready
+    description:
+      Email/password via Better Auth; extend with OAuth and OIDC using env vars.
+
+features:
+  - title: Boards & workspaces
+    description:
+      Organize work with visibility controls, members, and activity history.
+  - title: Imports & metadata
+    description: Trello import, labels, filters, comments, and templates.
+  - title: Database migrations
+    description:
+      Dedicated migrate container aligns with official Docker Compose before web
+      starts.
+  - title: Optional integrations
+    description:
+      Redis rate limiting, SMTP, S3 uploads, and social login when configured.
+
+tags:
+  - Project Management
+  - Kanban
+  - Task Tracking
+  - Self-hosted
+  - Next.js
+  - PostgreSQL
+  - Team Collaboration
