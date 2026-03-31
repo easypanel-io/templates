@@ -1,0 +1,68 @@
+name: CookCLI
+description:
+  CookCLI is a command line recipe manager for Cooklang files that can also run
+  a local web interface for browsing and working with recipe collections. This
+  template deploys the CookCLI server mode with persistent recipe storage.
+
+instructions:
+  Deploy the template and open the app URL to access the CookCLI web interface.
+
+changeLog:
+  - date: "2026-03-31"
+    description: "Initial template release"
+
+links:
+  - label: Website
+    url: https://cooklang.org/cli/
+  - label: Documentation
+    url: https://cooklang.org/cli/help/
+  - label: GitHub
+    url: https://github.com/cooklang/cookcli
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cookcli
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cooklang/cookcli:0.27.1
+
+benefits:
+  - title: Self-Hosted Recipe Workspace
+    description:
+      Keep your Cooklang recipe collection in your own infrastructure with full
+      control over files and updates.
+  - title: Web and CLI Friendly
+    description:
+      Run the same CookCLI toolchain while exposing a browser-based recipe UI.
+  - title: Simple Persistent Storage
+    description:
+      Store recipes in a mounted volume at /recipes for reliable long-term use.
+
+features:
+  - title: Cooklang Native
+    description:
+      Works directly with Cooklang recipe files without proprietary formats.
+  - title: Lightweight Service
+    description: Single-container deployment with straightforward configuration.
+  - title: Persistent Recipe Mount
+    description:
+      Volume-backed /recipes path ensures files survive redeployments.
+
+tags:
+  - Recipes
+  - Cooklang
+  - CLI
+  - Productivity
+  - Self-Hosted
