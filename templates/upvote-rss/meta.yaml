@@ -1,0 +1,101 @@
+name: Upvote RSS
+description:
+  Upvote RSS is a self-hosted RSS feed generator for popular posts from social
+  aggregation sites. It supports Reddit, Hacker News, Lemmy, Lobsters, PieFed,
+  Mbin, and GitHub—build rich RSS feeds with filtering (e.g. average posts per
+  day), embedded media, optional AI summaries (Ollama, OpenAI, Gemini,
+  Anthropic, and more), article content parsing, and top comments. Reddit OAuth
+  env vars are optional and only needed for Reddit-specific feeds; other
+  platforms are configured in the web UI. Cache data under /app/cache for
+  performance across container updates.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-15
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/johnwarne/upvote-rss
+  - label: Website
+    url: https://www.upvote-rss.com/
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: upvote-rss
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/johnwarne/upvote-rss:v1.8.1
+    redditUser:
+      type: string
+      title: Reddit Username
+      default: ""
+      description:
+        Optional—for Reddit feeds only (see upstream Reddit app setup).
+    redditClientId:
+      type: string
+      title: Reddit Client ID
+      default: ""
+    redditClientSecret:
+      type: string
+      title: Reddit Client Secret
+      default: ""
+
+benefits:
+  - title: Multi-platform feeds
+    description:
+      One tool for Reddit, Hacker News, Lemmy, Lobsters, PieFed, Mbin, and
+      GitHub—tune volume with filters like average posts per day.
+  - title: Rich feed output
+    description:
+      Media embeds, parsers for clean content, optional AI summaries, reading
+      time, scores, permalinks, and top comments.
+  - title: Self-hosted
+    description:
+      Run on your own infra; optional Redis and many AI/parser integrations via
+      environment variables.
+  - title: Works in any RSS reader
+    description:
+      Copy the generated feed URL into Reeder, NetNewsWire, or any RSS client.
+
+features:
+  - title: Platform selection
+    description:
+      Choose Reddit, Hacker News, Lemmy, Lobsters, PieFed, Mbin, or GitHub with
+      the right fields per platform (subreddit, community, HN lists, GitHub
+      language/topic, etc.).
+  - title: Optional Reddit API
+    description:
+      Set Reddit OAuth env vars when you want authenticated Reddit feeds; other
+      platforms do not require them.
+  - title: Filtering & NSFW
+    description:
+      Score, threshold, or posts-per-day filters; NSFW options for Reddit feeds.
+  - title: Caching
+    description:
+      Filesystem cache on /app/cache by default; Redis supported via env vars.
+  - title: Feed preview UI
+    description:
+      Web UI to preview posts and copy the RSS URL—light/dark preview themes.
+
+tags:
+  - RSS
+  - Reddit
+  - Hacker News
+  - Lemmy
+  - Self-Hosted
+  - Feed Generator
+  - Open Source
