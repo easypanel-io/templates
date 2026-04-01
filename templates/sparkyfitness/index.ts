@@ -117,7 +117,7 @@ export function generate(input: Input): Output {
       },
       domains: [
         {
-          host: `https://${input.customDomain || "$(EASYPANEL_DOMAIN)"}`,
+          host: input.customDomain || "$(EASYPANEL_DOMAIN)",
           port: 80,
         },
       ],
