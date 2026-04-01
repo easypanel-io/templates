@@ -16,10 +16,11 @@ instructions:
   and start building resumes, this template uses the Reactive Resume v4.4.5
   legacy compatible environment schema with PostgreSQL printer and internal
   MinIO storage services, and only the main app is exposed on
-  $(EASYPANEL_DOMAIN) while storage remains internal.
+  $(EASYPANEL_DOMAIN). Check the documentation for further optional
+  configurations with S3 storage.
 
 changeLog:
-  - date: "2025-06-30"
+  - date: "2026-04-01"
     description: "Initial release"
 
 links:
@@ -41,6 +42,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - minioServiceImage
   properties:
     appServiceName:
       type: string
