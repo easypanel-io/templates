@@ -79,7 +79,7 @@ export function generate(input: Input): Output {
     `NODE_ENV=production`,
     `APP_URL=https://$(EASYPANEL_DOMAIN)`,
     `PUBLIC_URL=https://$(EASYPANEL_DOMAIN)`,
-    `STORAGE_URL=https://storage-$(EASYPANEL_DOMAIN)/default`,
+    `STORAGE_URL=https://$(PROJECT_NAME)-${input.appServiceName}-minio.$(EASYPANEL_HOST)/default`,
     `DATABASE_URL=postgresql://postgres:${databasePassword}@${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `PRINTER_ENDPOINT=ws://${input.appServiceName}-printer:3000?token=${chromeToken}`,
     `CHROME_TOKEN=${chromeToken}`,
