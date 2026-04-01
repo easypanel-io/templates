@@ -47,6 +47,12 @@ export function generate(input: Input): Output {
       deploy: {
         command: `minio server /data`,
       },
+      domains: [
+        {
+          host: `$(EASYPANEL_DOMAIN)`,
+          port: 9000,
+        },
+      ],
     },
   });
 
@@ -73,7 +79,7 @@ export function generate(input: Input): Output {
     `NODE_ENV=production`,
     `APP_URL=https://$(EASYPANEL_DOMAIN)`,
     `PUBLIC_URL=https://$(EASYPANEL_DOMAIN)`,
-    `STORAGE_URL=http://${input.appServiceName}-minio:9000/default`,
+    `STORAGE_URL=https://storage-$(EASYPANEL_DOMAIN)/default`,
     `DATABASE_URL=postgresql://postgres:${databasePassword}@${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `PRINTER_ENDPOINT=ws://${input.appServiceName}-printer:3000?token=${chromeToken}`,
     `CHROME_TOKEN=${chromeToken}`,

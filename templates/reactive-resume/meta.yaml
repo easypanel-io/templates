@@ -14,10 +14,7 @@ description:
 instructions:
   Deploy the stack and open the app on your domain then create the first account
   and start building resumes, this template uses the Reactive Resume v4.4.5
-  legacy compatible environment schema with PostgreSQL printer and internal
-  MinIO storage services, and only the main app is exposed on
-  $(EASYPANEL_DOMAIN). Check the documentation for further optional
-  configurations with S3 storage.
+  legacy compatible environment schema with PostgreSQL printer.
 
 changeLog:
   - date: "2026-04-01"
