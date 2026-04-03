@@ -8,9 +8,12 @@ instructions:
   After deploy open your domain on port 8000. For local trusted use keep Local
   only enabled. To use OIDC authentication set Local only to false then add
   OAuth settings in settings.yml.
+
 changeLog:
   - date: "2026-04-03"
     description: "Initial Template Release"
+
+links:
   - label: Documentation
     url: https://github.com/LoredCast/filewizard/wiki
   - label: GitHub
