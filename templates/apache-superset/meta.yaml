@@ -1,9 +1,18 @@
 name: Apache Superset
-description: Apache Superset is a modern, enterprise-ready business intelligence web application. It's fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple line charts to highly detailed geospatial charts.
-instructions: Migrate database with "superset db upgrade", adjust roles and permissions with "superset init", create admin user with "superset fab create-admin". Follow the guide for further references.
+description:
+  Apache Superset is a modern, enterprise-ready business intelligence web
+  application. It's fast, lightweight, intuitive, and loaded with options that
+  make it easy for users of all skill sets to explore and visualize their data,
+  from simple line charts to highly detailed geospatial charts.
+instructions:
+  Migrate database with "superset db upgrade", adjust roles and permissions with
+  "superset init", create admin user with "superset fab create-admin". Follow
+  the guide for further references.
 changeLog:
   - date: 2024-04-22
     description: First Release
+  - date: 2026-04-03
+    description: Update to 6.0.0
 links:
   - label: Github
     url: https://github.com/apache/superset
@@ -27,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: apache/superset:ae48dba
+      default: apache/superset:6.0.0
 benefits:
   - title: Data Visualization
     description: Create beautiful, interactive visualizations of your data.
@@ -55,4 +64,4 @@ tags:
   - Data Visualization
   - Analytics
   - Dashboard
-  - SQL 
+  - SQL
