@@ -12,17 +12,23 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      mounts: [
-        {
-          type: "volume",
-          name: "promethus_data",
-          mountPath: "/prometheus",
-        },
-      ],
+      env: [`PANELIO_ADMIN_PASSWORD=${input.adminPassword}`].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 9090,
+          port: 80,
+        },
+      ],
+      mounts: [
+        {
+          type: "bind",
+          hostPath: "/var/run/docker.sock",
+          mountPath: "/var/run/docker.sock",
+        },
+        {
+          type: "volume",
+          name: "config",
+          mountPath: "/app/config",
         },
       ],
     },
