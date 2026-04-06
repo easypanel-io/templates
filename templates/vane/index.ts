@@ -4,7 +4,6 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  const appPort = input.appPort || "3000";
   const env: string[] = [];
 
   if (input.searxngApiUrl) {
@@ -23,7 +22,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: Number(appPort),
+          port: 3000,
         },
       ],
       mounts: [
