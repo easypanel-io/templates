@@ -1,0 +1,74 @@
+name: Vane
+description:
+  Vane is a privacy focused AI answering engine that combines web search with
+  local and cloud LLM providers. It supports cited answers, file uploads, search
+  history, and configurable model backends while running on your own hardware.
+instructions:
+  Deploy and open your domain on port 3000 to complete setup from the in-app
+  onboarding screen. The default image includes bundled SearxNG, so no extra
+  search service is required. To use your own SearxNG instance, set SearxNG API
+  URL in the template form. Data persists in /home/vane/data through the mounted
+  volume.
+changeLog:
+  - date: 2025-04-06
+    description: Initial Template release
+links:
+  - label: Website
+    url: https://vane.app/
+  - label: Documentation
+    url: https://github.com/ItzCrazyKns/Vane/tree/master/docs
+  - label: GitHub
+    url: https://github.com/ItzCrazyKns/Vane
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: vane
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: itzcrazykns1337/vane:latest
+      description: Official Vane image pinned to a digest from Docker Hub
+    searxngApiUrl:
+      type: string
+      title: SearxNG API URL (optional)
+      description: Use only when running Vane slim or external SearxNG
+      default: ""
+benefits:
+  - title: Privacy Focused Search
+    description:
+      Runs locally with search history and app data stored on your own
+      infrastructure.
+  - title: Flexible AI Providers
+    description:
+      Supports local models via Ollama and cloud providers including OpenAI,
+      Claude, Gemini, and Groq.
+  - title: Cited Answers and Research
+    description:
+      Delivers source cited responses with multiple search modes for speed,
+      balance, or quality.
+features:
+  - title: Bundled SearxNG
+    description:
+      Default image includes integrated SearxNG web search without extra service
+      setup.
+  - title: File Upload Q&A
+    description:
+      Upload documents and ask questions directly from the Vane interface.
+  - title: Persistent Local Data
+    description:
+      Stores settings and history in /home/vane/data using the mounted volume.
+tags:
+  - AI
+  - Search Engine
+  - LLM
+  - RAG
+  - Privacy
