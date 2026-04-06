@@ -4,17 +4,14 @@ description:
   local and cloud LLM providers. It supports cited answers, file uploads, search
   history, and configurable model backends while running on your own hardware.
 instructions:
-  Deploy and open your domain on port 3000 to complete setup from the in-app
-  onboarding screen. The default image includes bundled SearxNG, so no extra
-  search service is required. To use your own SearxNG instance, set SearxNG API
-  URL in the template form. Data persists in /home/vane/data through the mounted
-  volume.
+  Deploy and open your domain to complete setup from the in-app onboarding
+  screen. The default image includes bundled SearxNG, so no extra search service
+  is required. To use your own SearxNG instance, set SearxNG API URL in the
+  template form. Data persists in /home/vane/data through the mounted volume.
 changeLog:
   - date: 2025-04-06
     description: Initial Template release
 links:
-  - label: Website
-    url: https://vane.app/
   - label: Documentation
     url: https://github.com/ItzCrazyKns/Vane/tree/master/docs
   - label: GitHub
