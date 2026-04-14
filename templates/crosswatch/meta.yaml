@@ -1,0 +1,87 @@
+name: Crosswatch
+description:
+  CrossWatch is a self-hosted synchronization engine that keeps Plex, Jellyfin,
+  Emby, SIMKL, Trakt, AniList, TMDb, MDBList, and Tautulli aligned. It runs
+  locally with a web UI on port 8787 where you link accounts, define sync pairs,
+  run them manually or on a schedule, and review stats and history. It includes
+  a built-in tracker with snapshots, profiles for separate setups (e.g. family
+  or different servers), watchlist and progress sync, scrobbling and webhooks to
+  trackers, and tools like Analyzer, Editor, and Captures for stuck or
+  inconsistent items. Configuration persists under /config; set TZ for your
+  timezone.
+instructions: null
+changeLog:
+  - date: 2025-01-21
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://crosswatch.app
+  - label: Documentation
+    url: https://wiki.crosswatch.app
+  - label: GitHub
+    url: https://github.com/cenodude/CrossWatch
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: crosswatch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cenodude/crosswatch:0.9.15
+    timezone:
+      type: string
+      title: Timezone
+      default: Asia/Karachi
+      description:
+        Timezone for the application (e.g., Asia/Karachi, America/New_York,
+        Europe/London)
+benefits:
+  - title: One sync hub
+    description:
+      Configure Plex, Jellyfin, Emby, and multiple trackers from a single web UI
+      with profiles for separate users or servers.
+  - title: Rich sync & scrobble
+    description:
+      Watchlists, ratings, history, progress between servers, and scrobbling to
+      Trakt, SIMKL, MDBList—without requiring Plex Pass or Emby Premiere for
+      watcher flows.
+  - title: Data safety
+    description:
+      Built-in tracker snapshots and Captures help you inspect, adjust, or roll
+      back provider data when something looks wrong.
+  - title: Persistent config
+    description:
+      State lives in /config so accounts, pairs, and schedules survive restarts.
+features:
+  - title: Sync pairs & scheduling
+    description:
+      Define what syncs between which services; run on demand or on simple or
+      advanced schedules.
+  - title: Analyzer & Editor
+    description:
+      Find stuck or inconsistent items across providers; inspect and fix or
+      block entries.
+  - title: Unified watchlist & player card
+    description:
+      See combined watchlists and what is playing across your setup in real
+      time.
+  - title: Timezone support
+    description: Set TZ so schedules and timestamps match your region.
+tags:
+  - Media
+  - Sync
+  - Plex
+  - Jellyfin
+  - Emby
+  - Trakt
+  - Self-Hosted

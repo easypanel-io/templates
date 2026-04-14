@@ -1,0 +1,95 @@
+name: NetBird
+description:
+  This template deploys a headless NetBird client/peer container that joins an
+  existing NetBird network using a setup key. It does not deploy the NetBird
+  management service, signal relay, or web dashboard. Use it to bootstrap a
+  node on your private mesh for remote access, site-to-site connectivity, or
+  secure service reachability over WireGuard.
+
+instructions:
+  This template runs only the NetBird client (peer). Before deploying, create
+  an account at https://netbird.io or run your own NetBird management stack,
+  then generate a reusable setup key. Enter that key in the NB_SETUP_KEY field
+  during deployment. The container will join your existing NetBird network and
+  persist client state in /var/lib/netbird.
+
+changeLog:
+  - date: 2025-10-14
+    description: Initial Template Release
+
+links:
+  - label: Website
+    url: https://netbird.io
+  - label: Documentation
+    url: https://docs.netbird.io
+  - label: GitHub
+    url: https://github.com/netbirdio/netbird
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - setupKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: netbird
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: netbirdio/netbird:0.59.6
+    setupKey:
+      type: string
+      title: NetBird Setup Key
+      description: Setup key from your NetBird dashboard to connect this client
+
+benefits:
+  - title: Zero Configuration VPN
+    description:
+      Automatically creates secure peer-to-peer connections without complex VPN
+      server setup or port forwarding.
+  - title: WireGuard Performance
+    description:
+      Built on modern WireGuard protocol providing superior speed and security
+      compared to traditional VPN solutions.
+  - title: NAT Traversal
+    description:
+      Automatically punches through NAT and firewalls to establish direct
+      connections between peers whenever possible.
+  - title: Mesh Network Topology
+    description:
+      Creates a decentralized mesh network where devices communicate directly,
+      reducing latency and single points of failure.
+
+features:
+  - title: Peer-to-Peer Connectivity
+    description:
+      Direct device-to-device connections within your private network with
+      automatic peer discovery and connection.
+  - title: Secure Encryption
+    description:
+      End-to-end encryption using WireGuard's state-of-the-art cryptography for
+      all network traffic between peers.
+  - title: Cross-Platform Support
+    description:
+      Connect devices across different platforms and networks into a unified
+      secure private network.
+  - title: Network Management
+    description:
+      Centralized management dashboard for controlling access, monitoring
+      connections, and managing your private network.
+
+tags:
+  - VPN
+  - WireGuard
+  - Mesh Network
+  - Networking
+  - Security
+  - Remote Access
+  - Peer-to-Peer
