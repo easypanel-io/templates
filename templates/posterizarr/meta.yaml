@@ -1,0 +1,89 @@
+name: Posterizarr
+description:
+  Posterizarr automates creation and management of textless posters for Plex,
+  Jellyfin, and Emby libraries. This template deploys the official Posterizarr
+  container with persistent paths for config and generated assets.
+
+instructions:
+  After deployment, open your domain and complete setup in the web UI. Mounts
+  are already configured for /config, /assets, /assetsbackup, and /manualassets.
+
+changeLog:
+  - date: 2026-04-07
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://fscorrupt.github.io/posterizarr/
+  - label: Documentation
+    url: https://fscorrupt.github.io/posterizarr/installation/
+  - label: GitHub
+    url: https://github.com/fscorrupt/posterizarr
+  - label: Container registry
+    url: https://github.com/fscorrupt/posterizarr/pkgs/container/posterizarr
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: posterizarr
+    appServiceImage:
+      type: string
+      title: Posterizarr Image
+      default: ghcr.io/fscorrupt/posterizarr:2.2.35
+    timezone:
+      type: string
+      title: Timezone
+      default: Europe/Berlin
+    runTime:
+      type: string
+      title: RUN_TIME
+      default: disabled
+      description: Keep disabled for always-on mode
+    arrWaitTime:
+      type: number
+      title: ARR_WAIT_TIME (seconds)
+      default: 300
+    disableUi:
+      type: boolean
+      title: Disable UI
+      default: false
+
+benefits:
+  - title: Automated poster workflows
+    description:
+      Build and refresh media artwork automatically from your configured
+      sources.
+  - title: Works with major media servers
+    description: Supports Plex, Jellyfin, and Emby workflows in one application.
+  - title: Persistent asset storage
+    description:
+      Keeps config and generated poster assets across restarts and upgrades.
+
+features:
+  - title: Web UI control panel
+    description:
+      Configure providers, monitor runs, and manage poster processing
+      in-browser.
+  - title: External automation hooks
+    description: Integrates with Sonarr, Radarr, and Tautulli automation flows.
+  - title: Multiple asset directories
+    description:
+      Separate mounts for active assets, backups, and manual asset overrides.
+
+tags:
+  - Media
+  - Posters
+  - Plex
+  - Jellyfin
+  - Emby
+  - Automation
