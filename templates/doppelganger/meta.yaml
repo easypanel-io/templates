@@ -4,7 +4,9 @@ description:
   platform built on Playwright. It offers a visual task editor, structured JSON
   task format, and execution modes for simple scraping to complex, human-like
   browser interactions. Includes noVNC for remote browser viewing.
-instructions: null
+instructions: |
+  Open your app domain to access the Doppelganger web interface and create your first automation task.
+  Data persistence is enabled in the mounted `/app/data` volume and update to a newer image tag when available.
 changeLog:
   - date: 2026-03-10
     description: First Release
