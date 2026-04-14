@@ -100,7 +100,9 @@ const NGINX_CONFIG = (
     rewrite ^/_stats(/.*)$ $1 break;
     proxy_pass http://${statsHost}:4900/;
   }
-${loveHost ? `
+${
+  loveHost
+    ? `
   location /_love {
     proxy_http_version 1.1;
     proxy_set_header Host $host;
@@ -110,7 +112,9 @@ ${loveHost ? `
     rewrite ^/_love(/.*)$ $1 break;
     proxy_pass http://${loveHost}:8096/;
   }
-` : ""}
+`
+    : ""
+}
   location /files {
     proxy_http_version 1.1;
     proxy_set_header Host $host;
