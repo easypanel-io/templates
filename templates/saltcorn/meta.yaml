@@ -11,6 +11,8 @@ changeLog:
     description: Template Release
   - date: 2025-07-24
     description: Version bumped to 1.3.0
+  - date: 2025-12-29
+    description: Version bumped to 1.4.0
 links:
   - label: Documentation
     url: https://saltcorn.com/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: saltcorn/saltcorn:1.3.0
+      default: saltcorn/saltcorn:1.4.0
 
 benefits:
   - title: No-Code Database Application Builder

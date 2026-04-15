@@ -9,7 +9,8 @@ instructions: Configure the API Domain in the GUI.
 changeLog:
   - date: 2024-12-13
     description: Template Release
-
+  - date: 2025-12-29
+    description: Version bumped to 1.1.17
 links:
   - label: Documentation
     url: https://docs.tracardi.com
@@ -39,19 +40,19 @@ schema:
     guiServiceImage:
       type: string
       title: GUI Service Image
-      default: tracardi/tracardi-gui:1.1.2
+      default: tracardi/tracardi-gui:1.1.17
     apiServiceImage:
       type: string
       title: API Service Image
-      default: tracardi/tracardi-api:1.1.2
+      default: tracardi/tracardi-api:1.1.17
     apmServiceImage:
       type: string
       title: APM Service Image
-      default: tracardi/apm:1.1.2
+      default: tracardi/apm:1.1.17
     workerServiceImage:
       type: string
       title: Worker Service Image
-      default: tracardi/update-worker:1.1.2
+      default: tracardi/update-worker:1.1.17
     elasticsearchServiceImage:
       type: string
       title: Elasticsearch Service Image

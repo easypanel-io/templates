@@ -1,0 +1,128 @@
+name: SimStudio AI
+description:
+  SimStudio AI is an advanced AI simulation platform that combines cutting-edge
+  artificial intelligence with intuitive design tools. It provides a
+  comprehensive environment for creating, running, and analyzing AI-powered
+  simulations with support for various AI models and integrations. The platform
+  features authentication, email notifications, and extensible AI provider
+  support including local models via Ollama.
+
+instructions: Please provide the OAuth credentials for Google or GitHub or both.
+
+changeLog:
+  - date: 2025-06-24
+    description: Initial Template Release
+
+links:
+  - label: Website
+    url: https://simstudio.ai
+  - label: GitHub
+    url: https://github.com/simstudioai/sim
+  - label: Documentation
+    url: https://docs.simstudio.ai/introduction
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - migrationsServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: simstudio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/simstudioai/simstudio:v0.5.79
+      description: SimStudio AI main application Docker image
+    migrationsServiceImage:
+      type: string
+      title: Migrations Service Image
+      default: ghcr.io/simstudioai/migrations:v0.5.79
+      description: SimStudio AI database migrations Docker image
+    freestyleApiKey:
+      type: string
+      title: Freestyle API Key
+      default: ""
+      description: Optional API key for Freestyle AI services
+    googleClientId:
+      type: string
+      title: Google OAuth Client ID
+      default: ""
+      description: Optional Google OAuth client ID for authentication
+    googleClientSecret:
+      type: string
+      title: Google OAuth Client Secret
+      default: ""
+      description: Optional Google OAuth client secret for authentication
+    githubClientId:
+      type: string
+      title: GitHub OAuth Client ID
+      default: ""
+      description: Optional GitHub OAuth client ID for authentication
+    githubClientSecret:
+      type: string
+      title: GitHub OAuth Client Secret
+      default: ""
+      description: Optional GitHub OAuth client secret for authentication
+    resendApiKey:
+      type: string
+      title: Resend API Key
+      default: ""
+      description: Optional Resend API key for email notifications
+    ollamaUrl:
+      type: string
+      title: Ollama URL
+      default: "http://localhost:11434"
+      description: URL for Ollama server for local AI models
+
+benefits:
+  - title: AI-Powered Simulations
+    description:
+      Create and run sophisticated AI simulations with support for multiple AI
+      providers and models including local options.
+  - title: Comprehensive Authentication
+    description:
+      Built-in authentication system with support for Google and GitHub OAuth
+      providers for secure user management.
+  - title: Vector Database Support
+    description:
+      PostgreSQL with pgvector extension for advanced AI and machine learning
+      workloads requiring vector operations.
+  - title: Flexible AI Integration
+    description:
+      Support for various AI providers including OpenAI-compatible APIs and
+      local models via Ollama for maximum flexibility.
+
+features:
+  - title: Multi-Provider AI Support
+    description:
+      Integrate with various AI providers and services, including local models
+      through Ollama for privacy and control.
+  - title: OAuth Authentication
+    description:
+      Secure user authentication with Google and GitHub OAuth integration for
+      easy user onboarding.
+  - title: Email Notifications
+    description:
+      Built-in email notification system using Resend API for user communication
+      and alerts.
+  - title: Database Migrations
+    description:
+      Automated database schema management with dedicated migration service for
+      smooth updates and deployments.
+
+tags:
+  - AI
+  - Simulation
+  - Machine Learning
+  - PostgreSQL
+  - Vector Database
+  - OAuth
+  - Next.js

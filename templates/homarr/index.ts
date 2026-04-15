@@ -1,14 +1,14 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const secretKey = randomString(64);
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env: [`PUID=1000`, `PGID=1000`, `TZ=${input.serviceTimezone}`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -16,21 +16,21 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 7574,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "config",
-          mountPath: "/app/data/configs",
-        },
-        {
-          type: "volume",
-          name: "icons",
-          mountPath: "/app/public/icons",
+          name: "app-data",
+          mountPath: "/appdata",
         },
       ],
+      env: [
+        `SECRET_ENCRYPTION_KEY=${secretKey}`,
+        `TZ=${input.timezone}`,
+        `PORT=7574`,
+      ].join("\n"),
     },
   });
 

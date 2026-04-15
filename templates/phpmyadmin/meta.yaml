@@ -19,6 +19,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 5.2.2
+  - date: 2025-12-29
+    description: Version bumped to 5.2.3
 links:
   - label: Website
     url: https://www.phpmyadmin.net/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: phpmyadmin:5.2.2
+      default: phpmyadmin:5.2.3
 benefits:
   - title: Efficient MySQL Management
     description:

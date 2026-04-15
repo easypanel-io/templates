@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 4.2.0
+  - date: 2025-12-29
+    description: Version bumped to 4.5.13
 links:
   - label: Website
     url: https://rallly.co
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lukevella/rallly:4.2.0
+      default: lukevella/rallly:4.5.13
     databaseServiceName:
       type: string
       title: Database Service Name

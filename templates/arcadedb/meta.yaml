@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-08-26
     description: First release
+  - date: 2025-12-24
+    description: Updated to ArcadeDB version 25.11.1
 links:
   - label: Website
     url: https://arcadedb.com/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: arcadedata/arcadedb:25.7.1
+      default: arcadedata/arcadedb:25.11.1
     binaryPort:
       type: string
       title: Binary Port

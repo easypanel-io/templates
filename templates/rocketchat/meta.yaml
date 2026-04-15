@@ -20,6 +20,8 @@ changeLog:
     description: Update to v5.4.5
   - date: 2025-07-24
     description: Version bumped to 7.8.2
+  - date: 2025-12-29
+    description: Version bumped to 7.12.3
 links:
   - label: Website
     url: https://rocket.chat/
@@ -41,7 +43,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceName
+    - databaseServiceImage
   properties:
     appServiceName:
       type: string
@@ -50,11 +52,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rocketchat/rocket.chat:7.8.2
-    databaseServiceName:
+      default: rocketchat/rocket.chat:7.12.3
+    databaseServiceImage:
       type: string
-      title: Database Service Name
-      default: rocketchat-db
+      title: Database Service Image
+      default: docker.io/bitnamilegacy/mongodb:5.0
 benefits:
   - title: Secure and Compliant Collaboration
     description:

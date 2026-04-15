@@ -10,6 +10,8 @@ changeLog:
     description: First Release
   - date: 2025-07-21
     description: Version bumped to v3.16.0
+  - date: 2026-02-21
+    description: Version bumped to 4.7.2
 links:
   - label: Website
     url: https://formbricks.com
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/formbricks/formbricks:v3.16.0
+      default: ghcr.io/formbricks/formbricks:4.7.2
     databaseServiceImage:
       type: string
       title: Database Service Image
