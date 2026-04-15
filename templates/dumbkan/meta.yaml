@@ -9,9 +9,13 @@ changeLog:
   - date: 2025-09-26
     description: First release
 links:
+  - label: Website
+    url: https://www.dumbware.io/DumbKan
+  - label: Documentation
+    url: https://github.com/dumbwareio/dumbkan#readme
   - label: GitHub
     url: https://github.com/dumbwareio/dumbkan
-  - label: DockerHub
+  - label: Container Registry
     url: https://hub.docker.com/r/dumbwareio/dumbkan
 contributors:
   - name: Ahson Shaikh
@@ -29,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbkan:latest
+      default: dumbwareio/dumbkan:nightly-20250303-051955
 benefits:
   - title: Project Management
     description:
