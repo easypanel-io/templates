@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2024-12-02
     description: Template added
+  - date: 2025-12-29
+    description: Version bumped to sha-ba98178
 links:
   - label: Website
     url: https://github.com/redlib-org/redlib
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/redlib/redlib:sha-00dee52
+      default: quay.io/redlib/redlib:sha-ba98178
 benefits:
   - title: Enhanced Privacy
     description:

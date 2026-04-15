@@ -1,0 +1,131 @@
+name: Backrest
+description:
+  Backrest is a web UI and orchestrator for restic backups. It supports
+  scheduling, browsing snapshots, restores, notifications, and any restic-backed
+  storage (S3, B2, rclone remotes, local, etc.). This template keeps the
+  standard data/config/cache/tmp/rclone volumes and optionally bind-mounts host
+  paths at /userdata and /repos like the upstream Docker Compose examples.
+
+instructions:
+  Backup sources; Use template fields Host path → /userdata and/or Host path →
+  /repos for directories you want visible inside the container (same as
+  path/to/backup/data:/userdata and path/to/local/repos:/repos in the official
+  compose). You can also add more bind mounts in Easypanel for other paths, then
+  reference them in backup plans inside Backrest. First run; Open the UI,
+  complete setup (credentials), and configure repos and schedules per the
+  documentation.
+
+changeLog:
+  - date: 2025-09-29
+    description: First release
+  - date: 2026-03-20
+    description:
+      Website/docs links, optional /userdata & /repos, TZ default Etc/UTC
+
+links:
+  - label: Website
+    url: https://garethgeorge.github.io/backrest/
+  - label: Documentation
+    url: https://garethgeorge.github.io/backrest/introduction/getting-started
+  - label: GitHub
+    url: https://github.com/garethgeorge/backrest
+  - label: Docker Hub
+    url: https://hub.docker.com/r/garethgeorge/backrest
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: backrest
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/garethgeorge/backrest:v1.12.1
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+      description: Container TZ (e.g. America/New_York, Europe/Berlin).
+    backupUserdataHostPath:
+      type: string
+      title: Host path mounted at /userdata (optional)
+      default: ""
+      description:
+        Absolute host path to files or folders you want Backrest to back up,
+        mounted read/write at /userdata inside the container. Leave empty to
+        skip.
+    backupReposHostPath:
+      type: string
+      title: Host path mounted at /repos (optional)
+      default: ""
+      description:
+        Absolute host path for local restic repos, mounted at /repos. Leave
+        empty to skip.
+
+benefits:
+  - title: Reliable Backup Solution
+    description:
+      Provides robust backup and restore capabilities with support for multiple
+      storage backends and comprehensive data protection strategies.
+  - title: Multiple Storage Options
+    description:
+      Supports local storage, cloud providers, and rclone-compatible services
+      for flexible backup destination options.
+  - title: Web-Based Management
+    description:
+      Clean and intuitive web interface for managing backups, scheduling, and
+      monitoring backup status and health.
+  - title: Self-Hosted Control
+    description:
+      Complete control over your backup data with no external dependencies or
+      data sharing with third parties.
+features:
+  - title: Web Interface
+    description:
+      Modern web-based interface accessible from any device with a browser for
+      easy backup management.
+  - title: Multiple Storage Backends
+    description:
+      Support for various storage options including local filesystem, cloud
+      providers, and rclone-compatible services.
+  - title: Backup Scheduling
+    description:
+      Flexible scheduling options for automated backups with customizable
+      intervals and retention policies.
+  - title: Data Encryption
+    description:
+      Built-in encryption capabilities to secure your backup data both in
+      transit and at rest.
+  - title: Backup Monitoring
+    description:
+      Comprehensive monitoring and reporting of backup status, health, and
+      performance metrics.
+  - title: Restore Capabilities
+    description:
+      Easy restore functionality with point-in-time recovery options and
+      selective file restoration.
+  - title: Configuration Management
+    description:
+      Centralized configuration management with JSON-based settings and
+      environment variable support.
+  - title: Cache Management
+    description:
+      Efficient caching system for improved performance and reduced storage
+      overhead during backup operations.
+tags:
+  - Backup
+  - Restore
+  - Data Protection
+  - Self-hosted
+  - Web Interface
+  - Cloud Storage
+  - Rclone
+  - Scheduling

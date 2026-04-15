@@ -9,6 +9,9 @@ export function generate(input: Input): Output {
   switch (input.databaseType) {
     case "sqlite": {
       appEnv.push(`PHOTOVIEW_DATABASE_DRIVER=sqlite`);
+      appEnv.push(
+        `PHOTOVIEW_SQLITE_PATH=/home/photoview/database/photoview.db`
+      );
       break;
     }
     case "postgres": {
@@ -28,7 +31,7 @@ export function generate(input: Input): Output {
     default: {
       appEnv.push(
         `PHOTOVIEW_DATABASE_DRIVER=mysql`,
-        `PHOTOVIEW_MYSQL_URL=${input.databaseType}:${databasePassword}@tcp($(PROJECT_NAME)_${input.databaseServiceName})/$(PROJECT_NAME)`
+        `PHOTOVIEW_MYSQL_URL=${input.databaseServiceName}:${databasePassword}@tcp($(PROJECT_NAME)_${input.databaseServiceName})/$(PROJECT_NAME)`
       );
       services.push({
         type: input.databaseType,
@@ -39,6 +42,12 @@ export function generate(input: Input): Output {
       });
       break;
     }
+  }
+
+  appEnv.push(`PHOTOVIEW_LISTEN_IP=0.0.0.0`);
+
+  if (input.mapboxToken) {
+    appEnv.push(`MAPBOX_TOKEN=${input.mapboxToken}`);
   }
 
   services.push({
@@ -59,8 +68,18 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "app",
-          mountPath: "/app",
+          name: "media-cache",
+          mountPath: "/home/photoview/media-cache",
+        },
+        {
+          type: "volume",
+          name: "database",
+          mountPath: "/home/photoview/database",
+        },
+        {
+          type: "volume",
+          name: "photos",
+          mountPath: "/photos",
         },
       ],
     },

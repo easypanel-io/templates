@@ -23,6 +23,8 @@ changeLog:
     description: First Release
   - date: 2025-06-21
     description: Update the instructions for the setup phase
+  - date: 2025-12-24
+    description: Switched from latest to v0.107.71
 links:
   - label: Website
     url: https://adguard.com
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: adguard/adguardhome:latest
+      default: adguard/adguardhome:v0.107.71
 benefits:
   - title: Ad-Free Browsing
     description:

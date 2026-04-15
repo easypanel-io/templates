@@ -19,8 +19,8 @@ instructions:
 changeLog:
   - date: 2023
     description: first release
-  - date: 2025-09-03
-    description: Updated to Managed Database
+  - date: 2025-12-29
+    description: Version bumped to 19.0
 links:
   - label: Website
     url: https://www.odoo.com
@@ -46,7 +46,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: odoo:18.0
+      default: odoo:19.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: odoo-db
 benefits:
   - title: Integrated Business Management
     description:

@@ -1,0 +1,79 @@
+name: NATS
+description:
+  NATS is a simple, secure and performant messaging system for cloud native
+  applications, IoT messaging, and microservices architectures. It provides
+  lightweight publish-subscribe, request-reply, and point-to-point messaging
+  patterns with high performance and minimal footprint.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-11
+    description: Template Release
+
+links:
+  - label: Documentation
+    url: https://docs.nats.io/
+  - label: Github
+    url: https://github.com/nats-io/nats-server
+  - label: Website
+    url: https://nats.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appServicePort
+    - appServiceClusterPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nats
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nats:2.11.4
+    appServicePort:
+      type: string
+      title: App Service Port
+      default: "4222"
+    appServiceClusterPort:
+      type: string
+      title: App Service Cluster Port
+      default: "6222"
+
+benefits:
+  - title: High Performance
+    description:
+      Extremely fast and lightweight messaging with minimal resource usage.
+  - title: Simple Architecture
+    description:
+      Easy to deploy and manage with zero-configuration default setup.
+  - title: Cloud Native
+    description: Built for modern cloud-native applications and microservices.
+
+features:
+  - title: Publish-Subscribe
+    description:
+      Efficient pub-sub messaging pattern for decoupled communication.
+  - title: Request-Reply
+    description:
+      Synchronous request-reply pattern for service-to-service communication.
+  - title: Monitoring Dashboard
+    description:
+      Built-in HTTP monitoring interface for server health and metrics.
+  - title: Clustering Support
+    description:
+      Native clustering capabilities for high availability and scalability.
+
+tags:
+  - Messaging
+  - Message Broker
+  - Pub-Sub
+  - Microservices
+  - Cloud Native

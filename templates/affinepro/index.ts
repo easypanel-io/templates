@@ -6,18 +6,25 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
 
-  const common_envs = [
+  const appEnv = [
     `REDIS_SERVER_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
     `REDIS_SERVER_PASSWORD=${redisPassword}`,
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `AFFINE_SERVER_HOST=$(PRIMARY_DOMAIN)`,
-    `#SMTP CONFIGURATION`,
-    `MAILER_HOST=${input.mailerHost}`,
-    `MAILER_PORT=${input.mailerHostPort}`,
-    `MAILER_USER=${input.mailerHostUser}`,
-    `MAILER_PASSWORD=${input.mailerPassword}`,
-    `MAILER_SENDER=${input.mailerSender}`,
-  ].join("\n");
+  ];
+
+  if (input.mailerHost) {
+    appEnv.push(
+      `#SMTP CONFIGURATION`,
+      `MAILER_HOST=${input.mailerHost}`,
+      `MAILER_PORT=${input.mailerHostPort || "587"}`,
+      `MAILER_USER=${input.mailerHostUser || ""}`,
+      `MAILER_PASSWORD=${input.mailerPassword || ""}`,
+      `MAILER_SENDER=${input.mailerSender || ""}`
+    );
+  }
+
+  const common_envs = appEnv.join("\n");
 
   services.push({
     type: "app",
@@ -58,12 +65,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3010,
-        },
-      ],
       deploy: {
         command: "node ./scripts/self-host-predeploy.js",
       },
@@ -87,6 +88,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      user: "affine",
+      image: "pgvector/pgvector:pg16",
     },
   });
 

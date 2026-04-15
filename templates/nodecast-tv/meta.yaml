@@ -1,0 +1,79 @@
+name: NodeCast TV
+description:
+  NodeCast TV is a self-hosted media casting and streaming application that
+  allows you to cast and stream media content to various devices. Built with
+  Node.js, NodeCast TV provides a simple and efficient way to manage and stream
+  your media library. It features a web-based interface accessible on port 3000
+  and stores application data in a persistent volume for reliable operation.
+  Perfect for home media servers and self-hosting enthusiasts looking for a
+  lightweight media casting solution.
+instructions: null
+changeLog:
+  - date: 2025-01-17
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/technomancer702/nodecast-tv
+  - label: Container
+    url: https://github.com/technomancer702/nodecast-tv/pkgs/container/nodecast-tv
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nodecast-tv
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/technomancer702/nodecast-tv:1.4.4
+benefits:
+  - title: Media Casting
+    description:
+      Stream and cast your media content to various devices with a simple and
+      intuitive web interface.
+  - title: Self-Hosted Solution
+    description:
+      Keep your media streaming private and under your control with a
+      self-hosted deployment.
+  - title: Lightweight and Fast
+    description:
+      Built with Node.js for efficient performance with minimal resource
+      requirements.
+  - title: Persistent Storage
+    description:
+      Application data is stored in a persistent volume, ensuring your
+      configuration and media library are preserved across restarts.
+features:
+  - title: Web-Based Interface
+    description:
+      Access your media casting application through a modern web interface on
+      port 3000.
+  - title: Media Streaming
+    description:
+      Stream and cast media content to compatible devices on your network.
+  - title: Data Persistence
+    description:
+      Application data is stored in a dedicated volume at /app/data for reliable
+      data management.
+  - title: Production Ready
+    description:
+      Configured for production deployment with optimized Node.js environment
+      settings.
+  - title: Containerized Deployment
+    description:
+      Easily deploy NodeCast TV in any environment that supports Docker with
+      minimal configuration.
+tags:
+  - Media
+  - Streaming
+  - Casting
+  - Self-Hosted
+  - Node.js
+  - Media Server

@@ -16,7 +16,8 @@ changeLog:
     description: Initial template release
   - date: 2025-07-22
     description: Update to 1.6.38
-
+  - date: 2025-12-29
+    description: Version bumped to 1.6.40
 links:
   - label: Website
     url: https://memcached.org/
@@ -42,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: memcached:1.6.38
+      default: memcached:1.6.40
 
 benefits:
   - title: High Performance
