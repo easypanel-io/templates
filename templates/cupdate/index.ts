@@ -29,7 +29,6 @@ export function generate(input: Input): Output {
           type: "bind",
           hostPath: "/var/run/docker.sock",
           mountPath: "/var/run/docker.sock",
-          readOnly: true,
         },
         {
           type: "volume",
