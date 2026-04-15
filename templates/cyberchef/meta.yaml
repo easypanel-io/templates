@@ -19,6 +19,8 @@ changeLog:
     description: Version changed to v10.9.0
   - date: 2025-01-09
     description: Version bumped to v10.19.4
+  - date: 2026-02-18
+    description: Version bumped to v10.22.1
 links:
   - label: Documentation
     url: https://github.com/gchq/CyberChef/wiki
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mpepping/cyberchef:v10.19.4
+      default: mpepping/cyberchef:v10.22.1
 benefits:
   - title: Data Manipulation
     description:

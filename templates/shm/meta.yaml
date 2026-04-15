@@ -1,0 +1,69 @@
+name: SHM
+description:
+  SHM (Self-Hosted Metrics) is privacy-first, agnostic telemetry for self-hosted
+  software—collect usage stats, verify active instances, and understand adoption
+  without spying on users. Instances sign payloads with Ed25519; PostgreSQL
+  stores JSON metrics behind a single Go binary with an embedded dashboard (port
+  8080). AGPL-3.0; upstream lives under the kOlapsis GitHub organization.
+instructions: null
+changeLog:
+  - date: 2025-01-29
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://self-hosted-metrics.com/
+  - label: GitHub
+    url: https://github.com/kOlapsis/shm
+  - label: Documentation
+    url: https://github.com/kOlapsis/shm/blob/main/docs/DEPLOYMENT.md
+  - label: Container registry
+    url: https://github.com/kOlapsis/shm/pkgs/container/shm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: shm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/kolapsis/shm:sha-fd3affa
+benefits:
+  - title: Privacy-first telemetry
+    description:
+      Aggregate counters and signed snapshots—no user content; built for
+      self-hosted product owners who need adoption insight.
+  - title: Agnostic payloads
+    description:
+      Send JSON metrics; the dashboard adapts with dynamic KPIs and tables.
+  - title: PostgreSQL backend
+    description:
+      Stores payloads in PostgreSQL via SHM_DB_DSN; Easypanel provisions a
+      postgres service.
+  - title: Embedded UI
+    description: Single container serves API and dashboard on port 8080.
+features:
+  - title: Ed25519 instance identity
+    description:
+      Cryptographic registration and signed snapshots reduce spoofing.
+  - title: Multi-app tracking
+    description: Track several products on one SHM server.
+  - title: Badges & GitHub stars
+    description:
+      Optional embeddable badges and GitHub star integration when configured.
+  - title: SDKs
+    description: Go and Node clients for integrating telemetry into your apps.
+tags:
+  - Telemetry
+  - Metrics
+  - Self-Hosted
+  - PostgreSQL
+  - Privacy
+  - Go

@@ -1,0 +1,94 @@
+name: OtterWiki
+description:
+  OtterWiki is a simple, easy-to-use wiki software for personal use and small
+  teams. It's designed to be minimalist, focusing on the essentials without
+  unnecessary complexity. OtterWiki stores all content as Markdown files in a
+  Git repository, providing automatic version control and the ability to edit
+  pages using your favorite text editor. It features a clean, modern interface
+  with syntax highlighting, file attachments, full-text search, and dark mode
+  support. The wiki requires no database setup - everything is stored in plain
+  text files, making backups and migrations simple. OtterWiki supports user
+  authentication, page permissions, and comes with a built-in editor with live
+  preview. Perfect for documentation, note-taking, knowledge management, and
+  collaborative writing in small teams.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-10
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://otterwiki.com/
+  - label: Github
+    url: https://github.com/redimp/otterwiki
+  - label: Docker Hub
+    url: https://hub.docker.com/r/redimp/otterwiki
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: otterwiki
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: redimp/otterwiki:2.14
+
+benefits:
+  - title: Simple & Lightweight
+    description:
+      Minimalist design focusing on essential wiki features without unnecessary
+      complexity. No database required - everything stored in plain text files.
+  - title: Git-Based Version Control
+    description:
+      All content automatically stored in Git repository, providing complete
+      version history, rollback capabilities, and the ability to edit using any
+      text editor.
+  - title: Easy to Deploy
+    description:
+      Single container deployment with no complex configuration or database
+      setup. Just deploy and start writing your documentation.
+
+features:
+  - title: Markdown Editor
+    description:
+      Built-in editor with live preview, syntax highlighting, and support for
+      Markdown formatting for easy content creation.
+  - title: File Attachments
+    description:
+      Upload and manage images and files directly through the web interface,
+      with all files stored alongside your wiki content.
+  - title: Full-Text Search
+    description:
+      Quickly find information across all wiki pages with powerful full-text
+      search capabilities.
+  - title: User Authentication
+    description:
+      Built-in user management with authentication and page-level permissions to
+      control access to your content.
+  - title: Dark Mode Support
+    description:
+      Modern interface with both light and dark themes for comfortable viewing
+      in any environment.
+  - title: Version History
+    description:
+      View complete page history, compare versions, and revert changes thanks to
+      Git-based storage.
+
+tags:
+  - Wiki
+  - Documentation
+  - Markdown
+  - Git
+  - Knowledge Base

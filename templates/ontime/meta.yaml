@@ -1,0 +1,82 @@
+name: Ontime
+description:
+  Ontime is free, open-source software for managing rundowns and event timers.
+  Real-time rundown and timer management for broadcast and live events.
+  Multi-device web access, delay workflow management, team collaboration, and
+  automated or operator-controlled playback. HTTP API, WebSockets, and OSC (Open
+  Sound Control) for integration with Qlab, OBS, disguise, and other tools.
+instructions: |
+  After deployment, access the web UI on your assigned domain. Port 4001 serves
+  the web interface and WebSockets. Ports 8888 and 9999 (UDP) are for OSC input
+  and output—expose them if you need external control integration.
+changeLog:
+  - date: 2026-03-17
+    description: First Release
+  - date: 2026-03-24
+    description:
+      Pinned image fallback to getontime/ontime:v4.5.0 (was latest). Added
+      Website and GitHub links.
+links:
+  - label: Website
+    url: https://www.getontime.no/
+  - label: GitHub
+    url: https://github.com/cpvalente/ontime
+  - label: Documentation
+    url: https://docs.getontime.no/
+  - label: Docker Hub
+    url: https://hub.docker.com/r/getontime/ontime
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ontime
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: getontime/ontime:v4.6.0
+    oscInputPort:
+      type: string
+      title: OSC Input Port
+      default: "8888"
+    oscOutputPort:
+      type: string
+      title: OSC Output Port
+      default: "9999"
+    timezone:
+      type: string
+      title: Timezone
+      default: "UTC"
+      description: e.g. America/New_York, Europe/London, Asia/Singapore
+benefits:
+  - title: Rundown Management
+    description: Real-time rundown and event timer control
+  - title: Multi-Device
+    description: Access from any device via web browser
+  - title: Integration Ready
+    description: HTTP API, WebSockets, OSC for external control
+  - title: Lightweight
+    description: ~58 MB image; runs on Raspberry Pi or cloud
+features:
+  - title: Web UI & WebSockets
+    description: Port 4001 for interface and real-time data
+  - title: OSC Support
+    description: Ports 8888 (input) and 9999 (output) for protocol control
+  - title: Delay Workflows
+    description: Manage broadcast delays and operator-controlled playback
+  - title: Team Collaboration
+    description: Real-time collaboration across devices
+tags:
+  - Broadcast
+  - Timer
+  - Rundown
+  - Events
+  - Open Source
+  - OSC

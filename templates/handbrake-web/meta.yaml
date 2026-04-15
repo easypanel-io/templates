@@ -1,0 +1,115 @@
+name: Handbrake Web
+description:
+  Handbrake Web is a self-hosted video transcoding solution that provides a
+  web-based interface for managing and processing video encoding jobs using the
+  powerful HandBrake video transcoder. The application features a distributed
+  architecture with a central server for job management and dedicated workers
+  for processing, allowing you to scale encoding capacity by adding more
+  workers. The web interface enables you to upload videos, configure encoding
+  presets, monitor job progress, and manage your transcoding queue from any
+  browser. Handbrake Web supports all the encoding formats and options available
+  in HandBrake, including H.264, H.265/HEVC, VP9, and AV1 codecs, as well as
+  various container formats like MP4, MKV, and WebM. The worker-based
+  architecture allows for parallel processing of multiple videos and can
+  leverage hardware acceleration when available. Perfect for media enthusiasts
+  who need to convert video collections to different formats, content creators
+  preparing videos for multiple platforms, home server administrators managing
+  media libraries, or anyone who needs a reliable self-hosted solution for batch
+  video transcoding without installing desktop applications.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-11
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/TheNickOfTime/handbrake-web
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: handbrake-web
+    appServiceImage:
+      type: string
+      title: Server Image
+      default: ghcr.io/thenickoftime/handbrake-web-server:latest
+    workerImage:
+      type: string
+      title: Worker Image
+      default: ghcr.io/thenickoftime/handbrake-web-worker:latest
+    workerId:
+      type: string
+      title: Worker ID
+      default: worker-1
+
+benefits:
+  - title: Web-Based Transcoding
+    description:
+      Manage all your video encoding jobs through an intuitive web interface
+      accessible from any browser without installing desktop software.
+  - title: Distributed Processing
+    description:
+      Scale your encoding capacity by deploying multiple workers that process
+      jobs in parallel from a central queue.
+  - title: HandBrake Power
+    description:
+      Access all HandBrake encoding options including modern codecs like H.265,
+      VP9, and AV1 with full preset customization.
+  - title: Self-Hosted Control
+    description:
+      Keep your video files private on your own infrastructure without uploading
+      to third-party cloud transcoding services.
+
+features:
+  - title: Job Queue Management
+    description:
+      Submit, prioritize, pause, and monitor video encoding jobs through the
+      centralized web interface.
+  - title: Multiple Workers
+    description:
+      Deploy multiple worker containers to process encoding jobs in parallel and
+      speed up large batch operations.
+  - title: Encoding Presets
+    description:
+      Use built-in presets or create custom encoding profiles for consistent
+      output across all your videos.
+  - title: Format Support
+    description:
+      Support for modern video codecs including H.264, H.265/HEVC, VP9, AV1 and
+      containers like MP4, MKV, WebM.
+  - title: Progress Monitoring
+    description:
+      Real-time progress tracking for all encoding jobs with estimated time
+      remaining and detailed status information.
+  - title: Hardware Acceleration
+    description:
+      Leverage GPU hardware encoding when available for significantly faster
+      transcoding performance.
+  - title: Batch Processing
+    description:
+      Queue multiple videos for encoding and let workers process them
+      automatically without manual intervention.
+  - title: Shared Storage
+    description:
+      Workers and server share the same media volume ensuring seamless access to
+      input files and encoded outputs.
+
+tags:
+  - Video
+  - Transcoding
+  - Media
+  - HandBrake
+  - Encoding
+  - Self-Hosted

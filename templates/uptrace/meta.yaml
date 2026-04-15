@@ -1,0 +1,140 @@
+name: Uptrace
+description:
+  Uptrace is an open-source APM platform for traces, metrics, and logs using
+  OpenTelemetry, with ClickHouse storage and PostgreSQL metadata. This template
+  follows the official example/docker compose stack (Uptrace, ClickHouse,
+  Postgres, Redis, OTel Collector, Vector, Grafana, Prometheus, Alertmanager,
+  Mailpit). The Vector image uses timberio/vector:0.28.X-alpine to match that
+  upstream example (legacy Docker Hub namespace); migrate to distroless/vector
+  only when you intentionally diverge from upstream.
+
+instructions:
+  Login; Use the admin name/email/password from the template form (password is
+  random if left blank). The project DSN token is generated once per deploy and
+  embedded in `/etc/uptrace/config.yml`, OTel Collector, Grafana datasource,
+  Prometheus remote_write, and Vector—keep file mounts stable or regenerate
+  configs together. Ingestion; Published host ports match the upstream
+  example—14317→4317 (Uptrace gRPC, referenced in `site.ingest_url`), 4317/4318
+  (OTLP on the collector). On shared hosts these can conflict; change published
+  ports in Easypanel and update `ingest_url` / client endpoints accordingly.
+  Grafana & Mailpit use separate app domains on ports 3000 and 8025; assign
+  subdomains or paths in Easypanel as needed. TLS; Upstream compose mounts TLS
+  certs; this template omits them for HTTPS termination at the proxy—see Uptrace
+  docs if you need in-container TLS.
+
+changeLog:
+  - date: 2026-03-23
+    description:
+      Fix ClickHouse password in config.yml to match CLICKHOUSE_PASSWORD
+      (was hardcoded uptrace). Pin Mailpit to axllent/mailpit:v1.29.4.
+  - date: 2026-02-27
+    description: First Release
+  - date: 2026-03-20
+    description:
+      Square logo, image pin 2.1.0-beta.4, random project token, richer
+      instructions, vector/timberio parity note. Vector pin 0.28.1-alpine,
+      Grafana admin password randomized.
+
+links:
+  - label: Website
+    url: https://uptrace.dev
+  - label: GitHub
+    url: https://github.com/uptrace/uptrace
+  - label: Documentation
+    url: https://uptrace.dev/get
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: uptrace
+    appServiceImage:
+      type: string
+      title: Uptrace Image
+      default: "uptrace/uptrace:2.1.0-beta.4"
+      description:
+        Pinned to the tag used in github.com/uptrace/uptrace example/docker
+        docker-compose.yml; bump only with a tested exact tag.
+    adminName:
+      type: string
+      title: Admin Name
+      default: Admin
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@uptrace.local
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: ""
+      description: Generated randomly if not provided.
+    grafanaAdminPassword:
+      type: string
+      title: Grafana admin password
+      default: ""
+      description:
+        Grafana login user is admin. Leave empty for a random password (written
+        to grafana.ini), or set explicitly.
+    orgName:
+      type: string
+      title: Organization Name
+      default: Org1
+    projectName:
+      type: string
+      title: Project Name
+      default: Project1
+benefits:
+  - title: All-in-One Observability
+    description:
+      Single UI for distributed traces, metrics, and logs with 50+ pre-built
+      dashboards that auto-create when metrics start flowing.
+  - title: Cost-Effective at Scale
+    description:
+      Process billions of spans on a single server using ClickHouse's efficient
+      columnar storage with ZSTD compression (1KB span compresses to ~40 bytes).
+  - title: OpenTelemetry Native
+    description:
+      Built on the OpenTelemetry standard with support for OTLP, Prometheus,
+      Vector, FluentBit, and CloudWatch ingestion.
+  - title: Self-Hosted & Open Source
+    description:
+      Full control over your observability data with no vendor lock-in. Deploy
+      on your own infrastructure with complete data sovereignty.
+features:
+  - title: Distributed Tracing
+    description:
+      Visualize request flows across services with service graphs, faceted
+      filters, and SQL-like query language for span analysis.
+  - title: Metrics & Dashboards
+    description:
+      PromQL-like language for metrics aggregation with 50+ auto-created
+      dashboards and chart annotations.
+  - title: Alerting & Notifications
+    description:
+      Monitor spans, logs, and metrics with alerts via Email, Slack, Telegram,
+      WebHook, and AlertManager integration.
+  - title: Grafana Compatible
+    description:
+      Use Uptrace as a Tempo and Prometheus datasource in Grafana for seamless
+      integration with existing dashboards.
+  - title: Multi-Tenant Support
+    description:
+      Manage multiple organizations and projects with SSO support via OpenID
+      Connect (Keycloak, Google, Cloudflare).
+  - title: High Performance
+    description:
+      More than 10K spans/second on a single core with excellent on-disk
+      compression for cost-effective long-term retention.
+tags:
+  - Monitoring
+  - APM
+  - OpenTelemetry
+  - Observability
+  - Tracing

@@ -1,0 +1,71 @@
+name: Troddit
+description:
+  Troddit is a web-based Reddit client that provides a clean, modern interface
+  for browsing Reddit. It offers an alternative frontend experience with
+  improved user interface design and functionality. Troddit allows users to
+  browse subreddits, view posts, and navigate Reddit content through a
+  streamlined web interface without requiring the official Reddit app or
+  website.
+instructions: null
+changeLog:
+  - date: 2025-07-09
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/burhan-syed/troddit
+  - label: Website
+    url: https://www.troddit.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: troddit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bsyed/troddit:latest
+benefits:
+  - title: Modern Reddit Interface
+    description:
+      Clean and modern web interface for browsing Reddit content with improved
+      user experience compared to the official Reddit website.
+  - title: Self-hosted Solution
+    description:
+      Host your own instance of Troddit for privacy and customization, giving
+      you control over your Reddit browsing experience.
+  - title: Lightweight Alternative
+    description:
+      A lightweight alternative to the official Reddit app and website,
+      providing faster loading times and better performance.
+  - title: Easy Deployment
+    description:
+      Simple Docker-based deployment that gets you up and running quickly with
+      minimal configuration required.
+features:
+  - title: Subreddit Browsing
+    description: Browse any public subreddit with an intuitive interface
+  - title: Post Viewing
+    description: View Reddit posts, comments, and media content seamlessly
+  - title: Clean Design
+    description:
+      Modern, clean interface that enhances the Reddit browsing experience
+  - title: Responsive Layout
+    description: Works well on both desktop and mobile devices
+  - title: Fast Performance
+    description: Optimized for speed and performance with efficient loading
+  - title: Privacy Focused
+    description: Self-hosted solution that keeps your browsing data private
+tags:
+  - Reddit
+  - Social Media
+  - Web Client
+  - Frontend
+  - Privacy

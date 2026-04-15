@@ -1,0 +1,97 @@
+name: PostgresUS
+description:
+  PostgresUS is a self-hosted PostgreSQL management and administration tool that
+  provides a web-based interface for managing PostgreSQL databases. The
+  application offers a user-friendly dashboard for database operations, query
+  execution, schema management, and database administration tasks. With its
+  intuitive interface, PostgresUS makes it easy to interact with PostgreSQL
+  databases without requiring command-line tools or complex database management
+  software. The application supports multiple database connections, query
+  building, data visualization, and common database administration operations.
+  Perfect for database administrators who need a simple web interface for
+  PostgreSQL management, developers looking for a lightweight database tool,
+  teams requiring a self-hosted alternative to cloud database management
+  platforms, or anyone who wants a convenient way to manage PostgreSQL databases
+  through a browser.
+
+instructions: null
+
+changeLog:
+  - date: 2025-12-15
+    description: Template Release
+
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/rostislavdugin/postgresus
+  - label: GitHub
+    url: https://github.com/RostislavDugin/postgresus
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: postgresus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rostislavdugin/charts/postgresus:2.5.1
+
+benefits:
+  - title: Web-Based Database Management
+    description:
+      Manage PostgreSQL databases through an intuitive web interface without
+      installing desktop applications or using command-line tools.
+  - title: Self-Hosted Control
+    description:
+      Keep your database management tools on your own infrastructure with
+      complete control over access and data.
+  - title: Easy Database Access
+    description:
+      Connect to and manage multiple PostgreSQL databases from a single unified
+      interface.
+  - title: Simple Deployment
+    description:
+      Quick setup with minimal configuration required to start managing your
+      PostgreSQL databases.
+
+features:
+  - title: Database Dashboard
+    description:
+      Visual dashboard for monitoring database status, connections, and
+      performance metrics.
+  - title: Query Execution
+    description:
+      Execute SQL queries directly through the web interface with syntax
+      highlighting and result visualization.
+  - title: Schema Management
+    description:
+      Browse and manage database schemas, tables, indexes, and other database
+      objects.
+  - title: Data Visualization
+    description:
+      View and export query results in various formats for analysis and
+      reporting.
+  - title: Multiple Connections
+    description:
+      Manage connections to multiple PostgreSQL databases from a single
+      interface.
+  - title: Persistent Storage
+    description:
+      Data and configuration are stored persistently ensuring settings and
+      connections are preserved.
+
+tags:
+  - Database
+  - PostgreSQL
+  - Database Management
+  - Self-Hosted
+  - Admin Tool

@@ -110,6 +110,15 @@ export const appRedirectsSchema = z
   )
   .optional();
 
+export const appScriptsSchema = z
+  .array(
+    z.object({
+      name: z.string().min(1),
+      script: z.string().min(1),
+    })
+  )
+  .optional();
+
 const appSourceSchema = z
   .union([
     z.object({
@@ -617,6 +626,7 @@ export const appSchema = z.object({
   ports: appPortsSchema,
   resources: resourcesSchema,
   maintenance: maintenanceSchema,
+  scripts: appScriptsSchema,
 });
 
 export const composeSchema = z.object({

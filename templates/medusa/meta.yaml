@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-03-04
     description: First Release
+  - date: 2025-12-29
+    description: Version bumped to 1.0.25
 links:
   - label: Documentation
     url: https://github.com/pymedusa/Medusa/wiki
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/medusa:1.0.22
+      default: lscr.io/linuxserver/medusa:1.0.25
 benefits:
   - title: Automated TV Show Management
     description:

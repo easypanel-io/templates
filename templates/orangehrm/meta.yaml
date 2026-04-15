@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-01-23
     description: Template Release
+  - date: 2025-12-29
+    description: Version bumped to 5.8
 links:
   - label: Website
     url: https://www.orangehrm.com/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: orangehrm/orangehrm:5.7
+      default: orangehrm/orangehrm:5.8
 
 benefits:
   - title: Comprehensive HR Management

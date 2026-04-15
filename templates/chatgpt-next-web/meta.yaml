@@ -1,0 +1,94 @@
+name: ChatGPT Next Web
+description:
+  ChatGPT Next Web is a well-designed, feature-rich web interface for ChatGPT
+  and other LLMs. It provides a clean and intuitive interface for interacting
+  with OpenAI's ChatGPT, with support for multiple conversation modes, custom
+  prompts, and various AI models. The application is self-hosted, allowing you
+  to maintain control over your conversations and API usage while providing a
+  superior user experience compared to the official ChatGPT web interface.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-17
+    description: Initial Template Release
+
+links:
+  - label: Documentation
+    url: https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web#readme
+  - label: GitHub
+    url: https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+  - label: Website
+    url: https://nextchat.club/login
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - openaiApiKey
+    - accessCode
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chatgpt-next-web
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: yidadaa/chatgpt-next-web:v2.16.0
+      description: ChatGPT Next Web Docker image
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: Your OpenAI API key (starts with sk-)
+    accessCode:
+      type: string
+      title: Access Code
+      description: Password to protect your ChatGPT instance
+
+benefits:
+  - title: Self-Hosted ChatGPT Interface
+    description:
+      Run your own ChatGPT web interface with full control over conversations
+      and API usage.
+  - title: Enhanced User Experience
+    description:
+      Feature-rich interface with better design and functionality compared to
+      the official ChatGPT web interface.
+  - title: Privacy and Control
+    description:
+      Keep your conversations private and maintain full control over your data
+      and API usage.
+  - title: Multiple AI Models
+    description:
+      Support for various OpenAI models including GPT-3.5, GPT-4, and other
+      compatible APIs.
+
+features:
+  - title: Clean Interface
+    description:
+      Modern, responsive web interface optimized for desktop and mobile devices.
+  - title: Conversation Management
+    description:
+      Organize and manage multiple conversations with easy switching and
+      history.
+  - title: Custom Prompts
+    description:
+      Create and use custom system prompts to enhance AI responses for specific
+      use cases.
+  - title: Password Protection
+    description:
+      Secure your instance with password protection to prevent unauthorized
+      access.
+
+tags:
+  - ChatGPT
+  - AI
+  - OpenAI
+  - LLM
+  - Self-Hosted

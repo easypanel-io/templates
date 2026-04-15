@@ -1,0 +1,90 @@
+name: Papra
+description:
+  Papra is a modern, open-source project management and collaboration platform
+  designed to help teams organize their work, track progress, and collaborate
+  effectively. It provides a comprehensive suite of tools for task management,
+  team communication, file sharing, and project tracking in a single, integrated
+  platform. Papra offers an intuitive interface with powerful features for
+  managing complex projects and workflows.
+instructions: null
+changeLog:
+  - date: 2025-09-11
+    description: Initial Template Release (0.9.1-rootless)
+links:
+  - label: GitHub
+    url: https://github.com/papra-hq/papra
+  - label: Documentation
+    url: https://docs.papra.app
+  - label: Website
+    url: https://papra.app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: papra
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/papra-hq/papra:0.9.1-rootless
+      description: Papra Docker image
+benefits:
+  - title: Comprehensive Project Management
+    description:
+      All-in-one platform for project management with task tracking, team
+      collaboration, and progress monitoring in a single, integrated solution.
+  - title: Team Collaboration
+    description:
+      Advanced collaboration features with real-time communication, file
+      sharing, and team coordination tools for effective teamwork.
+  - title: Intuitive Interface
+    description:
+      User-friendly interface designed for productivity with clean layouts,
+      intuitive navigation, and customizable dashboards.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your data with a self-hosted solution that keeps
+      your projects and team information private and secure.
+features:
+  - title: Task Management
+    description:
+      Powerful task management system with priority settings, due dates,
+      assignments, and progress tracking for organized project execution.
+  - title: Team Communication
+    description:
+      Built-in communication tools with messaging, comments, and notifications
+      to keep your team connected and informed.
+  - title: File Sharing
+    description:
+      Secure file sharing and document management with version control and
+      collaborative editing capabilities.
+  - title: Project Tracking
+    description:
+      Comprehensive project tracking with timelines, milestones, and progress
+      reports for better project visibility and control.
+  - title: Customizable Workflows
+    description:
+      Flexible workflow customization to match your team's processes and project
+      requirements.
+  - title: Mobile Access
+    description:
+      Mobile-responsive design with native app support for accessing your
+      projects and tasks from anywhere.
+tags:
+  - Project Management
+  - Team Collaboration
+  - Task Management
+  - Self-Hosted
+  - Productivity
+  - Workflow
+  - Communication
+  - File Sharing
+  - Progress Tracking
+  - Mobile Access
