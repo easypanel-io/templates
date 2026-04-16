@@ -1,0 +1,72 @@
+name: Sharkord
+description:
+  Sharkord is a lightweight, open-source, self-hosted chat platform designed as
+  a privacy-focused alternative to Discord for small groups. It provides voice,
+  video, text chat, and screen sharing—all running on your own server. Supports
+  screen sharing up to 4K@60fps. Designed for 5-25 users.
+instructions: |
+  After deployment, access Sharkord via the main domain. Create your server and
+  invite others. Voice and video use port 40000. Data is stored in the data volume.
+  Note: Sharkord is in alpha—expect bugs and breaking changes.
+changeLog:
+  - date: 2026-02-09
+    description: First Release
+links:
+  - label: Website
+    url: https://sharkord.com/
+  - label: Documentation
+    url: https://sharkord.com/docs
+  - label: GitHub
+    url: https://github.com/Sharkord/sharkord
+  - label: Demo
+    url: https://demo.sharkord.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appServicePort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sharkord
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sharkord/sharkord:v0.0.11
+    appServicePort:
+      type: string
+      title: App Service Port
+      default: "40000"
+benefits:
+  - title: Data Ownership
+    description:
+      All conversations and files stay on your server with no corporate data
+      collection
+  - title: Lightweight
+    description: Runs on modest hardware, even a Raspberry Pi 4
+  - title: Fully Open Source
+    description: MIT License—inspect, customize, and contribute
+  - title: No Artificial Limits
+    description: No paywalls, user caps, or premium tiers
+features:
+  - title: Voice & Video
+    description: High-quality voice and video chat
+  - title: Screen Sharing
+    description: Screen sharing up to 4K@60fps
+  - title: Text Chat
+    description: Real-time text messaging
+  - title: Self-Hosted
+    description: Complete control over your data and infrastructure
+tags:
+  - Chat
+  - Voice
+  - Video
+  - Open Source
+  - Self-hosted
+  - Discord Alternative
+  - Privacy

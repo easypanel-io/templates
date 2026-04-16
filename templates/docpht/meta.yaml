@@ -1,0 +1,59 @@
+name: DocPHT
+description:
+  DocPHT is a document management system that helps you organize and manage your
+  documents. It provides a simple and intuitive interface for storing,
+  organizing, and sharing documents.
+instructions: null
+changeLog:
+  - date: 2025-04-11
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/docpht/docpht
+  - label: Website
+    url: https://docpht.org
+  - label: Documentation
+    url: https://docs.docpht.org
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: docpht
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docpht/docpht:v1.3.2
+benefits:
+  - title: Document Management
+    description: Organize and manage your documents efficiently
+  - title: Simple Interface
+    description: User-friendly interface for document management
+  - title: Organization
+    description: Organize documents into categories and tags
+  - title: Self-Hosted
+    description: Keep your documents private and secure
+features:
+  - title: Document Storage
+    description: Store and manage your documents
+  - title: Categories
+    description: Organize documents into categories
+  - title: Tags
+    description: Add tags to documents for better organization
+  - title: Search
+    description: Search through your documents
+  - title: Export
+    description: Export documents in various formats
+tags:
+  - Document Management
+  - Organization
+  - Self-Hosted
+  - Web Application
+  - Productivity

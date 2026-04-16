@@ -397,6 +397,20 @@
     ]
   },
   {
+    "slug": "aurral",
+    "logo": "logo.png",
+    "name": "Aurral",
+    "description": "Aurral is a self-hosted music discovery and request management app for Lidarr. Search artists via MusicBrainz, add them to Lidarr with granular monitoring options, browse your library, and discover new artists from recommendations. Features include Weekly Flow playlists (powered by Soulseek + Navidrome), multi-user support with permissions, Gotify notifications, and PWA support. Aurral is designed to be safe for your collection—library changes go through Lidarr's API.",
+    "tags": [
+      "Music",
+      "Lidarr",
+      "Self-Hosted",
+      "Music Discovery",
+      "Soulseek",
+      "Navidrome"
+    ]
+  },
+  {
     "slug": "authentik",
     "logo": "logo.png",
     "name": "Authentik",
@@ -435,6 +449,20 @@
     ]
   },
   {
+    "slug": "autocaliweb",
+    "logo": "logo.svg",
+    "name": "AutoCaliWeb",
+    "description": "AutoCaliWeb is a self-hosted web application for browsing, reading, and managing your eBook, eComic, and PDF library through a clean, modern interface. Built on Calibre-Web with automated enhancements, it provides automatic book ingestion from a watch folder, multi-format conversion, metadata enforcement, and cover generation. Features include an in-browser reader for EPUB, PDF, and CBR formats, OPDS catalog for e-reader apps, Kobo and KOReader sync, Send-to-Kindle, multi-user management with fine-grained permissions, OAuth/OIDC authentication, automatic backups, and support for 20+ languages. It works with any existing Calibre database or creates one automatically.",
+    "tags": [
+      "Ebooks",
+      "Library",
+      "Self-Hosted",
+      "Calibre",
+      "OPDS",
+      "E-Reader"
+    ]
+  },
+  {
     "slug": "automatisch",
     "logo": "logo.png",
     "name": "Automatisch",
@@ -469,6 +497,22 @@
       "Tracking",
       "Child Development",
       "Family Management"
+    ]
+  },
+  {
+    "slug": "backrest",
+    "logo": "logo.png",
+    "name": "Backrest",
+    "description": "Backrest is a web UI and orchestrator for restic backups. It supports scheduling, browsing snapshots, restores, notifications, and any restic-backed storage (S3, B2, rclone remotes, local, etc.). This template keeps the standard data/config/cache/tmp/rclone volumes and optionally bind-mounts host paths at /userdata and /repos like the upstream Docker Compose examples.",
+    "tags": [
+      "Backup",
+      "Restore",
+      "Data Protection",
+      "Self-hosted",
+      "Web Interface",
+      "Cloud Storage",
+      "Rclone",
+      "Scheduling"
     ]
   },
   {
@@ -615,6 +659,20 @@
       "Deployment",
       "Open Source",
       "Community"
+    ]
+  },
+  {
+    "slug": "bookheaven",
+    "logo": "logo.svg",
+    "name": "BookHeaven",
+    "description": "BookHeaven Server is a self-hosted ebook library manager that lets you organize, read, and manage your ebook collection with a modern responsive UI. It reads metadata directly from ebook files (title, author, cover), allows editing and persists changes back into the file. Features include auto-discovery by the companion Android e-ink reader app, metadata fetching from the internet, reading progress tracking, font management for your devices, multiple profiles, OPDS support, and book importing via a dedicated folder. Built with .NET and Blazor.",
+    "tags": [
+      "Ebooks",
+      "Library",
+      "Self-Hosted",
+      "E-Reader",
+      "OPDS",
+      "Books"
     ]
   },
   {
@@ -1203,6 +1261,21 @@
     ]
   },
   {
+    "slug": "crosswatch",
+    "logo": "logo.png",
+    "name": "Crosswatch",
+    "description": "CrossWatch is a self-hosted synchronization engine that keeps Plex, Jellyfin, Emby, SIMKL, Trakt, AniList, TMDb, MDBList, and Tautulli aligned. It runs locally with a web UI on port 8787 where you link accounts, define sync pairs, run them manually or on a schedule, and review stats and history. It includes a built-in tracker with snapshots, profiles for separate setups (e.g. family or different servers), watchlist and progress sync, scrobbling and webhooks to trackers, and tools like Analyzer, Editor, and Captures for stuck or inconsistent items. Configuration persists under /config; set TZ for your timezone.",
+    "tags": [
+      "Media",
+      "Sync",
+      "Plex",
+      "Jellyfin",
+      "Emby",
+      "Trakt",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "cryptgeon",
     "logo": "logo.png",
     "name": "Cryptgeon",
@@ -1692,6 +1765,19 @@
       "Open Source",
       "Enterprise CMS",
       "Modular Architecture"
+    ]
+  },
+  {
+    "slug": "dumbbudget",
+    "logo": "logo.png",
+    "name": "DumbBudget",
+    "description": "DumbBudget is a simple, self-hosted personal budgeting app from DumbWare.io. Track income and expenses with categories, PIN protection, multi-currency support, CSV export, and a responsive PWA UI. Data persists under /app/data.",
+    "tags": [
+      "Budget Management",
+      "Personal Finance",
+      "Expense Tracking",
+      "Financial Planning",
+      "Web Interface"
     ]
   },
   {
@@ -2290,6 +2376,20 @@
     ]
   },
   {
+    "slug": "gameyfin",
+    "logo": "logo.png",
+    "name": "Gameyfin",
+    "description": "Gameyfin is a free and open-source application for managing your video game library. Track installed and wanted games, fetch metadata (e.g. IGDB, Steam), and use plugins for downloads and extra providers. It runs as a Kotlin / Spring Boot app with a web UI, PF4J plugins, and optional OIDC. Docker is the recommended install path; persist db, data, plugin data, logs, and mount at least one folder for your game files.",
+    "tags": [
+      "Games",
+      "Library",
+      "Self-Hosted",
+      "Metadata",
+      "Docker",
+      "IGDB"
+    ]
+  },
+  {
     "slug": "gatus",
     "logo": "logo.png",
     "name": "Gatus",
@@ -2512,6 +2612,21 @@
     "description": "GoToSocial is a lightweight, customizable, and safety-focused social network server that provides a fun and fast entryway into the Fediverse. It is written in Golang and allows you to keep in touch with friends, post, read, and share images and articles without being tracked or advertised to. If you've used platforms like Twitter or Tumblr, GoToSocial will feel familiar. You can follow people, have followers, make posts that others can favorite, reply to, and share, and scroll through posts from people you follow using a timeline. You can write long or short posts, post images, and even block people or limit unwanted interactions by posting just to your friends. GoToSocial is not designed for influencers with tens of thousands of followers, nor is it designed to be addictive. Your timeline and experience are shaped by who you follow and how you interact with people, not by engagement metrics. GoToSocial is ideal for small or single-user instances running on low-powered devices, like single-board computers or old laptops repurposed as home servers. It is simple to install and maintain, and prioritizes good security and sensible defaults.",
     "tags": [
       "Social Networking"
+    ]
+  },
+  {
+    "slug": "grafana-otel-lgtm",
+    "logo": "logo.svg",
+    "name": "Grafana OTEL LGTM",
+    "description": "Grafana OTEL LGTM is an all-in-one OpenTelemetry backend bundled into a single Docker image. It includes the OpenTelemetry Collector, Prometheus for metrics, Grafana Loki for logs, Grafana Tempo for traces, Grafana Pyroscope for application profiles, and Grafana for unified visualization. The collector automatically routes telemetry signals to the correct backend — metrics to Prometheus, logs to Loki, traces to Tempo, and profiles to Pyroscope. It works out of the box with OpenTelemetry's default settings, so applications instrumented with any OpenTelemetry SDK can send data immediately. Optional eBPF auto-instrumentation (OBI) can generate traces and RED metrics for HTTP/gRPC services with zero code changes.",
+    "tags": [
+      "Observability",
+      "OpenTelemetry",
+      "Grafana",
+      "Prometheus",
+      "Monitoring",
+      "Logging",
+      "Tracing"
     ]
   },
   {
@@ -2848,6 +2963,20 @@
     ]
   },
   {
+    "slug": "huntarr",
+    "logo": "logo.png",
+    "name": "Huntarr",
+    "description": "Huntarr is an automated media library enhancement tool that continuously monitors and improves your Radarr, Sonarr, and Lidarr collections. It works by periodically scanning your media libraries to identify missing items, failed downloads, and opportunities for quality upgrades, then automatically triggering searches to fill gaps and improve your collection. Huntarr acts as an intelligent automation layer on top of your existing *arr stack, ensuring your media library stays complete and up-to-date without manual intervention. The application features configurable scan intervals, customizable search triggers, support for multiple quality profiles, and detailed logging for tracking improvements. With its set-it-and-forget-it approach, Huntarr continuously works in the background to enhance your media collection by finding better quality versions, locating missing episodes or movies, and automatically requesting upgrades based on your configured quality preferences. The web interface provides visibility into scan history, search statistics, and library health metrics. Perfect for users who want their media libraries to automatically improve over time, home media server enthusiasts managing large collections, or anyone running Radarr/Sonarr/Lidarr who wants to ensure their libraries are always complete and optimized without constant manual searching.",
+    "tags": [
+      "Media Automation",
+      "Radarr",
+      "Sonarr",
+      "Lidarr",
+      "Library Management",
+      "Media Server"
+    ]
+  },
+  {
     "slug": "icecoder",
     "logo": "logo.png",
     "name": "ICEcoder",
@@ -3173,6 +3302,21 @@
       "Numerical Simulation",
       "Interactive Computing",
       "Data Analysis"
+    ]
+  },
+  {
+    "slug": "kan",
+    "logo": "logo.png",
+    "name": "Kan",
+    "description": "Kan is a self-hosted Kanban app (Trello-style) built with Next.js, tRPC, Better Auth, and PostgreSQL. It supports boards, workspaces, labels, comments, Trello import, and optional email, Redis, S3, and OAuth. The published web container does not apply database migrations on startup; upstream expects a separate migrate image (Drizzle) to run before the web process, matching their Docker Compose stack.",
+    "tags": [
+      "Project Management",
+      "Kanban",
+      "Task Tracking",
+      "Self-hosted",
+      "Next.js",
+      "PostgreSQL",
+      "Team Collaboration"
     ]
   },
   {
@@ -3621,6 +3765,20 @@
     ]
   },
   {
+    "slug": "lingva",
+    "logo": "logo.png",
+    "name": "Lingva Translate",
+    "description": "Lingva Translate is a free, open-source alternative front-end for Google Translate. Supports 100+ languages via scraping—no direct Google access, no user tracking. Built with Next.js and ChakraUI. Provides REST API for translation, audio, and language detection. Privacy-focused translation.",
+    "tags": [
+      "Translation",
+      "Google Translate",
+      "Privacy",
+      "Open Source",
+      "Self-hosted",
+      "API"
+    ]
+  },
+  {
     "slug": "linkding",
     "logo": "logo.png",
     "name": "linkding",
@@ -4017,6 +4175,19 @@
     ]
   },
   {
+    "slug": "maxun",
+    "logo": "logo.png",
+    "name": "Maxun",
+    "description": "Maxun is a self-hosted data automation platform that combines a modern frontend with a backend capable of browser automation (Playwright), file storage via MinIO, and PostgreSQL persistence. It lets you run data collection and integration workflows with headless Chromium, store assets in S3-compatible storage, and manage everything from a web interface. Ideal for teams who need a self-hosted automation stack with database, object storage, and browser automation included.",
+    "tags": [
+      "Automation",
+      "Playwright",
+      "PostgreSQL",
+      "MinIO",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "maybe-finance",
     "logo": "logo.png",
     "name": "Maybe Finance",
@@ -4062,6 +4233,21 @@
       "Food & Drink",
       "Recipe Manager",
       "Meal Planner"
+    ]
+  },
+  {
+    "slug": "mediamanager",
+    "logo": "logo.png",
+    "name": "MediaManager",
+    "description": "MediaManager is a self-hosted media management application designed to help you organize, catalog, and manage your media collection. The application provides a clean web interface for browsing and managing your media files including movies, TV shows, music, and other digital content. With support for custom metadata, tagging, and categorization, MediaManager makes it easy to keep your media library organized and accessible. The application features automatic media scanning, metadata extraction, thumbnail generation, and search capabilities to quickly find content in large collections. Built with a PostgreSQL backend for reliable data storage, MediaManager can handle extensive media libraries with thousands of items. The flexible configuration system allows you to customize media directories, scanning behavior, and display preferences to match your needs. Perfect for home media enthusiasts who want to organize their digital collections, content creators managing large media archives, small organizations needing a simple media asset management solution, or anyone looking for a lightweight self-hosted alternative to complex media management systems.",
+    "tags": [
+      "Media",
+      "File Management",
+      "Organization",
+      "Self-Hosted",
+      "Library",
+      "Metadata",
+      "TV Shows"
     ]
   },
   {
@@ -4146,6 +4332,19 @@
     "tags": [
       "Analytics",
       "Business Apps"
+    ]
+  },
+  {
+    "slug": "metaflow",
+    "logo": "logo.svg",
+    "name": "Metaflow",
+    "description": "Metaflow is an open-source framework for building and managing real-life ML, AI, and data science projects. Originally developed at Netflix and now supported by Outerbounds, Metaflow streamlines the entire development lifecycle—from rapid prototyping in notebooks to reliable production deployments. It unifies code, data, and compute at every stage, enabling teams to iterate quickly and deliver robust AI/ML systems. Used by Amazon, Doordash, Goldman Sachs, and many others.",
+    "tags": [
+      "Machine Learning",
+      "AI",
+      "Data Science",
+      "MLOps",
+      "Self-Hosted"
     ]
   },
   {
@@ -4757,6 +4956,19 @@
     ]
   },
   {
+    "slug": "open-archiver",
+    "logo": "logo.svg",
+    "name": "Open Archiver",
+    "description": "Open Archiver is a secure, sovereign, and open-source platform for email archiving and eDiscovery. It provides universal ingestion from IMAP, Google Workspace, Microsoft 365, PST files, mbox files, and zipped .eml files. Emails are stored in standard .eml format with deduplication, compression, and optional AES-256 encryption at rest. Features include full-text search across emails and attachments (PDF, DOCX, etc.), thread discovery, file integrity verification, immutable audit trails, role-based access control, and pluggable storage backends (local or S3-compatible). Built with SvelteKit, Node.js, PostgreSQL, Meilisearch, and BullMQ.",
+    "tags": [
+      "Email",
+      "Archiving",
+      "eDiscovery",
+      "Compliance",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "openblocks",
     "logo": "logo.png",
     "name": "Openblocks",
@@ -4976,6 +5188,20 @@
     ]
   },
   {
+    "slug": "oxicloud",
+    "logo": "logo.png",
+    "name": "OxiCloud",
+    "description": "OxiCloud is an ultra-fast, secure, and lightweight self-hosted cloud storage written in Rust. It serves as a lightweight alternative to NextCloud, designed for low-resource environments. OxiCloud runs on just 512MB RAM with sub-second response times, offering file management, user authentication, file deduplication, search, CalDAV calendars, CardDAV contacts, and multi-language support. Built with Clean Architecture, it provides a clean UI that works on desktop and mobile.",
+    "tags": [
+      "File Storage",
+      "Cloud Storage",
+      "Self-Hosted",
+      "NextCloud Alternative",
+      "CalDAV",
+      "CardDAV"
+    ]
+  },
+  {
     "slug": "oxigen",
     "logo": "logo.svg",
     "name": "Oxigen",
@@ -4983,6 +5209,19 @@
     "tags": [
       "Social Networking",
       "Image Generator"
+    ]
+  },
+  {
+    "slug": "paaster",
+    "logo": "logo.svg",
+    "name": "Paaster",
+    "description": "Paaster is a secure and user-friendly pastebin application with end-to-end encryption. Content is encrypted locally in your browser—the key never reaches the server. Features paste history, delete-after-view, file drag & drop, and API. Supports MinIO, S3, R2, and other S3-compatible storage.",
+    "tags": [
+      "Pastebin",
+      "Privacy",
+      "Encryption",
+      "Open Source",
+      "Self-hosted"
     ]
   },
   {
@@ -5313,6 +5552,21 @@
     ]
   },
   {
+    "slug": "pigeon-pod",
+    "logo": "logo.png",
+    "name": "Pigeon Pod",
+    "description": "Pigeon Pod is a self-hosted application that converts YouTube channels or playlists into podcast feeds. It supports automatic syncing of new uploads, backfilling historical content, media downloads, and secure RSS feeds compatible with standard podcast players. Built with Spring Boot, Pigeon Pod provides a web interface for managing YouTube subscriptions and generates podcast-compatible RSS feeds that work with any standard podcast player. Perfect for podcast enthusiasts who want to listen to YouTube content as podcasts while maintaining complete control over their data and subscriptions.",
+    "tags": [
+      "Podcast",
+      "YouTube",
+      "RSS",
+      "Self-Hosted",
+      "Media",
+      "Audio",
+      "Video"
+    ]
+  },
+  {
     "slug": "pihole",
     "logo": "logo.png",
     "name": "Pi-hole",
@@ -5617,6 +5871,20 @@
     ]
   },
   {
+    "slug": "prunemate",
+    "logo": "logo.png",
+    "name": "PruneMate",
+    "description": "PruneMate is a self-hosted Docker cleanup and management tool that provides a web-based interface for pruning unused Docker resources from your system. It helps you reclaim disk space by identifying and removing unused containers, images, volumes, networks, and build cache. With its intuitive dashboard, you can easily monitor Docker resource usage, schedule automatic cleanup tasks, and manually trigger pruning operations without using command-line tools. PruneMate connects directly to your Docker daemon via the Docker socket, allowing it to safely analyze and clean up orphaned resources that accumulate over time. The application features configurable cleanup schedules, selective pruning options to choose which resource types to clean, detailed logging of all cleanup operations, and real-time statistics showing disk space recovered. With timezone support and customizable time format settings, you can schedule cleanup operations to run during off-peak hours. Perfect for developers and system administrators who manage Docker environments and want to automate the cleanup of unused resources, homelab enthusiasts running multiple containers who need to manage disk space efficiently, CI/CD environments where frequent image builds create significant cleanup overhead, or anyone looking for a simple web interface to manage Docker resource cleanup without remembering complex docker system prune commands.",
+    "tags": [
+      "Docker",
+      "DevOps",
+      "System Administration",
+      "Cleanup",
+      "Disk Management",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "psitransfer",
     "logo": "logo.png",
     "name": "PsiTransfer",
@@ -5685,6 +5953,19 @@
       "File Sharing",
       "Open Source",
       "Remote Management"
+    ]
+  },
+  {
+    "slug": "qbitwebui",
+    "logo": "logo.png",
+    "name": "qBitWebUI",
+    "description": "qBitWebUI is a modern web interface for qBittorrent, providing an enhanced user experience for managing your torrent downloads. It offers a clean, responsive design with advanced features like dark mode, mobile support, and improved usability compared to the default qBittorrent web UI. Perfect for users who want a better way to manage their torrents remotely through a web browser.",
+    "tags": [
+      "Torrent",
+      "qBittorrent",
+      "Web UI",
+      "Download Manager",
+      "Self-Hosted"
     ]
   },
   {
@@ -6008,6 +6289,20 @@
     ]
   },
   {
+    "slug": "seaweedfs",
+    "logo": "logo.svg",
+    "name": "SeaweedFS",
+    "description": "SeaweedFS is a fast, simple, and highly scalable distributed file system for storing and serving billions of files. Starting as an object store with O(1) disk seek performance, it has grown into a full-featured storage platform supporting S3 API, WebDAV, FUSE mount, HDFS, and Hadoop integration. The architecture separates concerns into a master server for volume management, a volume server for blob storage, a filer for directory/file abstraction, an S3 gateway for S3 compatibility, and a WebDAV server for mounted drive access. Features include erasure coding, cloud tiering, cross-datacenter replication, AES-256-GCM encryption, automatic compaction, file TTL, and a built-in admin UI. Licensed under Apache 2.0 with 30k+ GitHub stars.",
+    "tags": [
+      "Object Storage",
+      "Distributed Storage",
+      "S3",
+      "WebDAV",
+      "Self-Hosted",
+      "File System"
+    ]
+  },
+  {
     "slug": "serpbear",
     "logo": "logo.png",
     "name": "SerpBear",
@@ -6064,6 +6359,21 @@
     ]
   },
   {
+    "slug": "sharkord",
+    "logo": "logo.png",
+    "name": "Sharkord",
+    "description": "Sharkord is a lightweight, open-source, self-hosted chat platform designed as a privacy-focused alternative to Discord for small groups. It provides voice, video, text chat, and screen sharing—all running on your own server. Supports screen sharing up to 4K@60fps. Designed for 5-25 users.",
+    "tags": [
+      "Chat",
+      "Voice",
+      "Video",
+      "Open Source",
+      "Self-hosted",
+      "Discord Alternative",
+      "Privacy"
+    ]
+  },
+  {
     "slug": "shelf",
     "logo": "logo.png",
     "name": "Shelf",
@@ -6109,6 +6419,20 @@
       "URL Shortener",
       "Analytics",
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "shm",
+    "logo": "logo.png",
+    "name": "SHM",
+    "description": "SHM (Self-Hosted Metrics) is privacy-first, agnostic telemetry for self-hosted software—collect usage stats, verify active instances, and understand adoption without spying on users. Instances sign payloads with Ed25519; PostgreSQL stores JSON metrics behind a single Go binary with an embedded dashboard (port 8080). AGPL-3.0; upstream lives under the kOlapsis GitHub organization.",
+    "tags": [
+      "Telemetry",
+      "Metrics",
+      "Self-Hosted",
+      "PostgreSQL",
+      "Privacy",
+      "Go"
     ]
   },
   {
@@ -6315,6 +6639,34 @@
     ]
   },
   {
+    "slug": "sortarr",
+    "logo": "logo.svg",
+    "name": "Sortarr",
+    "description": "Sortarr is a read-only analytics and organization tool for Sonarr and Radarr media libraries. It provides a data-driven management layer that helps you identify missing media, mismatches, and optimization opportunities using real playback data from providers like Tautulli, Jellystat, or Plex. Sortarr supports multiple Sonarr and Radarr instances, presents a unified PowerBI-like spreadsheet interface with actionable insights, and never modifies, moves, or renames your media files. All operations are strictly read-only and safe.",
+    "tags": [
+      "Media",
+      "Sonarr",
+      "Radarr",
+      "Analytics",
+      "Self-Hosted",
+      "Plex"
+    ]
+  },
+  {
+    "slug": "soulbeet",
+    "logo": null,
+    "name": "Soulbeet",
+    "description": "Soulbeet is a self-hosted music management and downloading application that integrates with slskd (Soulseek daemon) and beets to create a seamless music acquisition and organization workflow. The application provides a web interface for searching and downloading music through the Soulseek peer-to-peer network, then automatically organizing your downloads using beets' powerful music library management capabilities. Soulbeet connects to your slskd instance to handle the actual Soulseek network communication, allowing you to search for tracks, browse user shares, and queue downloads. Once files are downloaded, beets integration enables automatic tagging, metadata correction, album art fetching, and file organization based on your configured rules. The application uses SQLite for lightweight data persistence and supports custom beets configurations for advanced music library management. Perfect for music enthusiasts who want to build and maintain a well-organized digital music collection, users looking for a self-hosted alternative to music streaming services, audiophiles who prefer to own their music with proper metadata and organization, or anyone who wants to combine the power of Soulseek's peer-to-peer network with beets' music library management in a single unified interface.",
+    "tags": [
+      "Music",
+      "Downloads",
+      "Media",
+      "Self-Hosted",
+      "Soulseek",
+      "Library Management"
+    ]
+  },
+  {
     "slug": "soulsync",
     "logo": null,
     "name": "SoulSync",
@@ -6364,6 +6716,19 @@
       "Decentralized Storage",
       "Security",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "sparkyfitness",
+    "logo": "logo.png",
+    "name": "SparkyFitness",
+    "description": "SparkyFitness is a self-hosted, privacy-first alternative to MyFitnessPal. Track nutrition, exercise, hydration, and body metrics while keeping full control of your data. Built for families with AI-powered features, SparkyFitness offers comprehensive health tracking with integrations for Apple Health, Google Health Connect, Fitbit, Garmin Connect, and Withings. Features include goal setting, interactive charts, long-term reports, and optional AI chatbot for conversational data logging.",
+    "tags": [
+      "Fitness",
+      "Health Tracking",
+      "Self-Hosted",
+      "Privacy",
+      "Nutrition"
     ]
   },
   {
@@ -6490,6 +6855,20 @@
     ]
   },
   {
+    "slug": "stremio",
+    "logo": "logo.png",
+    "name": "Stremio",
+    "description": "Stremio is a modern media center application that provides a unified platform for streaming movies, TV shows, and live TV content. This template uses the community Docker image tsaridas/stremio-docker (server and web UI). The self-hosted setup lets you run your own Stremio server, giving you complete control over your media streaming experience. With support for various content sources and add-ons, Stremio aggregates content from multiple providers into a single interface. The application features automatic server URL configuration and CORS handling, making it easy to access from any device. With persistent storage for server data and configurations, Stremio ensures your settings and preferences are retained across container restarts. Perfect for media enthusiasts who want a centralized streaming solution, users looking for a self-hosted alternative to commercial streaming services, or anyone seeking a flexible media center that can aggregate content from multiple sources.",
+    "tags": [
+      "Media",
+      "Streaming",
+      "Movies",
+      "TV Shows",
+      "Self-Hosted",
+      "Media Center"
+    ]
+  },
+  {
     "slug": "stump",
     "logo": "logo.png",
     "name": "Stump",
@@ -6554,6 +6933,20 @@
     ]
   },
   {
+    "slug": "surmai",
+    "logo": "logo.svg",
+    "name": "Surmai",
+    "description": "Surmai is a personal and family travel organizer—a Progressive Web App for collaborative trip planning with privacy-first, self-hosted data. Built on PocketBase, it helps you keep itineraries, bookings, documents, and trip details in one place, with multi-user collaboration and offline-friendly access. The stack exposes the web UI on port 8080 and persists PocketBase data under /pb_data.",
+    "tags": [
+      "Travel",
+      "Trip Planning",
+      "Self-Hosted",
+      "PocketBase",
+      "PWA",
+      "Collaboration"
+    ]
+  },
+  {
     "slug": "suwayomi-server",
     "logo": "logo.png",
     "name": "Suwayomi Server",
@@ -6578,6 +6971,22 @@
       "Self-Hosted",
       "Real-time",
       "Dashboard"
+    ]
+  },
+  {
+    "slug": "swingmusic",
+    "logo": "logo.png",
+    "name": "Swingmusic",
+    "description": "Swingmusic is a beautiful, self-hosted music player and streaming server for your personal music collection. It provides a modern, intuitive web interface that allows you to stream your music library from anywhere. With support for various audio formats and a clean, responsive design, Swingmusic makes it easy to enjoy your music collection across all your devices. The application offers features like playlist management, search functionality, and album artwork display, making it a perfect alternative to commercial streaming services for those who want to keep their music library private and under their control.",
+    "tags": [
+      "Music",
+      "Media Server",
+      "Self-Hosted",
+      "Streaming",
+      "Music Player",
+      "Audio",
+      "Entertainment",
+      "Personal Media"
     ]
   },
   {
@@ -6902,6 +7311,19 @@
     ]
   },
   {
+    "slug": "tyk-gateway",
+    "logo": "logo.svg",
+    "name": "Tyk Gateway",
+    "description": "Tyk Gateway is an open-source API gateway for securing, scaling, and observing APIs. It sits in front of your upstream services and handles rate limiting, authentication, analytics, and transformations. This template runs the gateway in standalone mode with Redis for storage.",
+    "tags": [
+      "API Gateway",
+      "API",
+      "Redis",
+      "Open Source",
+      "Self-hosted"
+    ]
+  },
+  {
     "slug": "typebot",
     "logo": "logo.svg",
     "name": "Typebot",
@@ -6965,6 +7387,47 @@
       "Monitoring",
       "Self-hosted",
       "Uptime"
+    ]
+  },
+  {
+    "slug": "uptrace",
+    "logo": "logo.svg",
+    "name": "Uptrace",
+    "description": "Uptrace is an open-source APM platform for traces, metrics, and logs using OpenTelemetry, with ClickHouse storage and PostgreSQL metadata. This template follows the official example/docker compose stack (Uptrace, ClickHouse, Postgres, Redis, OTel Collector, Vector, Grafana, Prometheus, Alertmanager, Mailpit). The Vector image uses timberio/vector:0.28.X-alpine to match that upstream example (legacy Docker Hub namespace); migrate to distroless/vector only when you intentionally diverge from upstream.",
+    "tags": [
+      "Monitoring",
+      "APM",
+      "OpenTelemetry",
+      "Observability",
+      "Tracing"
+    ]
+  },
+  {
+    "slug": "upvote-rss",
+    "logo": "logo.png",
+    "name": "Upvote RSS",
+    "description": "Upvote RSS is a self-hosted RSS feed generator for popular posts from social aggregation sites. It supports Reddit, Hacker News, Lemmy, Lobsters, PieFed, Mbin, and GitHub—build rich RSS feeds with filtering (e.g. average posts per day), embedded media, optional AI summaries (Ollama, OpenAI, Gemini, Anthropic, and more), article content parsing, and top comments. Reddit OAuth env vars are optional and only needed for Reddit-specific feeds; other platforms are configured in the web UI. Cache data under /app/cache for performance across container updates.",
+    "tags": [
+      "RSS",
+      "Reddit",
+      "Hacker News",
+      "Lemmy",
+      "Self-Hosted",
+      "Feed Generator",
+      "Open Source"
+    ]
+  },
+  {
+    "slug": "urocissa",
+    "logo": "logo.png",
+    "name": "Urocissa",
+    "description": "Urocissa is a self-hosted photo and video gallery designed to serve massive collections, capable of handling millions of images and videos. Built with Rust and Vue, it features blazing fast performance with an in-memory cached database that can instantly serve, search, and filter one million photos in under a second. It runs on as little as 4 GB of RAM even with a million photos, offers infinite scrolling without pagination using advanced virtual scrolling, and supports instant boolean search (and, or, not) across your entire library. Features include upload support, auto-sync from local folders, EXIF data extraction, user-defined tags, duplicate handling, shareable albums, and read-only mode.",
+    "tags": [
+      "Photos",
+      "Gallery",
+      "Self-Hosted",
+      "Media",
+      "Images"
     ]
   },
   {
@@ -7305,6 +7768,19 @@
     "description": "Windmill Cloud is a powerful tool that transforms scripts into workflows and user interfaces in just a few minutes. It is designed to help you create internal apps and robust workflows using code only where necessary. With Windmill Cloud, you can make your scripts production-grade and build all your internal tools using Python, Typescript, Go, Bash, Sql. You can compose your scripts as workflows using low-code and share an autogenerated UI or build one using low-code. The app is designed to run reliably at scale on your infrastructure or ours, with permissioning and monitoring included. It is a fully open-source alternative to Airplane, Superblocks & Retool, and it's easy to deploy on both small and large infrastructures. With Windmill Cloud, you can run long-running heavy background jobs, script with complex dependencies, endpoints with high rpm or simple one-off tasks without any overhead. You can trigger them from a webhook or the auto-generated UI and monitor them easily. Additionally, Windmill Cloud allows you to build complex flows without complexity, from atomic scripts, either from your workspace or the Hub. You can also build super fast and powerful apps using drag and drop components, connect your data and deploy your app in minutes. Windmill Cloud is designed to be super performant, ensuring your app is always running smoothly, even when running complex apps.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "wishlist",
+    "logo": "logo.png",
+    "name": "Wishlist",
+    "description": "Wishlist is a self-hosted gift registry and wishlist management application that simplifies gift-giving for families, friends, and special occasions. It provides a centralized platform where users can create and share wishlists, claim items to prevent duplicate gifts, and track purchase status. The application features automatic product data fetching from URLs, user-friendly interfaces accessible to all ages, and support for multiple groups to separate different circles like family, friends, or coworkers. Wishlist includes registry mode for wedding registries or single comprehensive lists, item claiming with privacy to prevent gift spoilers, purchase tracking for claimed items, gift suggestions from friends and family, and user invitation via email with SMTP integration. Built with a modern web interface and Progressive Web App support, Wishlist offers seamless access across devices with offline capabilities. The application uses SQLite for lightweight data storage and stores user-uploaded images locally, ensuring all data remains on your infrastructure. With OAuth authentication support and customizable token expiration, Wishlist provides secure access control while maintaining ease of use. Perfect for families coordinating holidays and birthdays, couples managing wedding registries, friend groups organizing gift exchanges, or anyone who wants a private alternative to public wishlist services with complete control over their data and privacy.",
+    "tags": [
+      "Wishlist",
+      "Gift Registry",
+      "Family",
+      "Gift Management",
+      "Self-Hosted"
     ]
   },
   {
