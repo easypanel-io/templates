@@ -4,7 +4,12 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  const command = input.gatewayMode ? "gateway run" : "sleep infinity";
+  // Must use the full venv path — the entrypoint does `exec "$@"` so the
+  // command is executed directly, not via a shell. "gateway" alone is not a
+  // binary; it is a subcommand of the hermes CLI inside the venv.
+  const command = input.gatewayMode
+    ? "/opt/hermes/.venv/bin/hermes gateway run"
+    : "sleep infinity";
 
   // Auto-generate a strong API server key if none provided
   const apiServerKey = input.apiServerKey || randomPassword();
