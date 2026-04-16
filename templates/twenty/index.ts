@@ -52,6 +52,8 @@ export function generate(input: Input): Output {
       env: [
         common_envs,
         `SERVER_URL=https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
+        `DISABLE_DB_MIGRATIONS=true`,
+        `DISABLE_CRON_JOBS_REGISTRATION=true`,
       ].join("\n"),
       source: {
         type: "image",

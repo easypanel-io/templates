@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <linearGradient id="iris" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff6ec4"/>
+            <stop offset="100%" stop-color="#7873f5"/>
+        </linearGradient>
+        <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fdf6f0"/>
+            <stop offset="100%" stop-color="#eae0d9"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="100" height="100" rx="20" fill="url(#bg1)"/>
+
+    <!-- Gallery frame -->
+    <rect x="20" y="20" width="60" height="60" rx="10"
+                fill="none" stroke="#ffffff" stroke-width="3"/>
+
+    <!-- Outer segmented iris -->
+    <circle cx="50" cy="50" r="28" fill="none"
+                    stroke="url(#iris)" stroke-width="7"
+                    stroke-dasharray="60 20" stroke-linecap="round"/>
+
+    <!-- Middle soft ring -->
+    <circle cx="50" cy="50" r="20" fill="none"
+                    stroke="url(#iris)" stroke-width="5" opacity="0.5"/>
+
+    <!-- Inner solid lens -->
+    <circle cx="50" cy="50" r="9" fill="url(#iris)"/>
+</svg>
