@@ -9,20 +9,22 @@ export function generate(input: Input): Output {
 
   // ── Service 1: Hermes Agent ──────────────────────────────────────────────────
   //
-  // The Hermes Agent image stores its data volume at /opt/data (confirmed by
-  // the Dockerfile: ENV HERMES_HOME=/opt/data). The source code lives at
-  // /opt/hermes. The entrypoint script bootstraps the data volume on first run
-  // and then executes whatever command you pass.
+  // Mirrors the official docker-compose.two-container.yml from the WebUI repo.
   //
-  // IMPORTANT: we do NOT run `hermes gateway run` as the default command.
-  // On a fresh install no messaging platform is configured, so the gateway
-  // exits immediately with a "gateway not found" style error. Users who want
-  // the gateway should run `hermes gateway setup` first and then switch the
-  // service command.
+  // Critical points:
+  //   1. HERMES_HOME is overridden to /root/.hermes — this matches what the
+  //      WebUI expects to share, and is what the official compose uses.
+  //   2. The hermes-agent-src volume is mounted at /opt/hermes (the path the
+  //      agent's Dockerfile COPYs the source to). On first creation, Docker
+  //      populates an empty named volume from the image's contents at that
+  //      mount point, so the agent source is copied into the volume.
+  //   3. We keep the default image entrypoint and override the command with
+  //      `tail -f /dev/null`. The entrypoint still runs and bootstraps
+  //      /root/.hermes with default config, then `tail` keeps the container
+  //      alive so users can `docker exec` in to run setup.
   //
-  // Instead we run `tail -f /dev/null` which keeps the container alive after
-  // the entrypoint has bootstrapped the volume, so users can exec in and run
-  // `hermes setup`, `hermes chat`, or start the gateway once configured.
+  // Do NOT use `gateway run` as the default — it requires a configured
+  // messaging platform and exits with "gateway not found" on a fresh install.
   //
   services.push({
     type: "app",
@@ -32,13 +34,12 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.agentServiceImage,
       },
-      // Keep the container alive after entrypoint bootstrap so users can
-      // `docker exec` to run setup, configure providers, or start the gateway.
       deploy: {
         command: "tail -f /dev/null",
       },
       env: [
-        `HERMES_HOME=/opt/data`,
+        // Match the official two-container compose exactly
+        `HERMES_HOME=/root/.hermes`,
         ...(input.anthropicApiKey
           ? [`ANTHROPIC_API_KEY=${input.anthropicApiKey}`]
           : []),
@@ -47,17 +48,16 @@ export function generate(input: Input): Output {
           : []),
       ].join("\n"),
       mounts: [
-        // Shared Hermes state — bootstrapped by the agent entrypoint on first
-        // boot with default config.yaml, SOUL.md, and directory structure.
-        // The WebUI reads from this same volume.
+        // Shared Hermes state — bootstrapped by the agent entrypoint with
+        // default config.yaml, SOUL.md, and directory structure.
         {
           type: "volume",
           name: "hermes-home",
-          mountPath: "/opt/data",
+          mountPath: "/root/.hermes",
         },
         // Agent source code — the Dockerfile COPYs the agent to /opt/hermes.
-        // This volume exposes that source to the WebUI container, which runs
-        // `uv pip install` from it on first boot to get all agent deps.
+        // Docker auto-populates this empty volume from the image contents on
+        // first creation, exposing the source to the WebUI container.
         {
           type: "volume",
           name: "hermes-agent-src",
@@ -69,11 +69,15 @@ export function generate(input: Input): Output {
 
   // ── Service 2: Hermes WebUI ──────────────────────────────────────────────────
   //
-  // Serves the browser interface on port 8787. On first boot, docker_init.bash
-  // installs the agent's Python deps from the shared hermes-agent-src volume.
+  // On boot, docker_init.bash:
+  //   1. Looks for the agent at HERMES_WEBUI_AGENT_DIR
+  //      (= /home/hermeswebui/.hermes/hermes-agent — the source-volume mount)
+  //   2. Runs `uv pip install` from that path to get all agent Python deps
+  //   3. Starts server.py on HERMES_WEBUI_HOST:HERMES_WEBUI_PORT
   //
-  // The WebUI imports Hermes Python modules directly (run_agent, config,
-  // models) — no HTTP port needed on the agent container.
+  // The WebUI then imports Hermes Python modules directly (run_agent, config,
+  // models). No HTTP needed between containers — interop is purely via the
+  // two shared named volumes.
   //
   services.push({
     type: "app",
@@ -89,7 +93,7 @@ export function generate(input: Input): Output {
         `HERMES_WEBUI_PASSWORD=${webuiPassword}`,
         `HERMES_HOME=/home/hermeswebui/.hermes`,
         `HERMES_WEBUI_STATE_DIR=/home/hermeswebui/.hermes/webui-mvp`,
-        // The WebUI init script pip-installs the agent from this path
+        // Path the WebUI init script pip-installs the agent from
         `HERMES_WEBUI_AGENT_DIR=/home/hermeswebui/.hermes/hermes-agent`,
         `HERMES_WEBUI_DEFAULT_WORKSPACE=/workspace`,
         `HERMES_WEBUI_DEFAULT_MODEL=${input.defaultModel ?? "openai/gpt-4o-mini"}`,
@@ -101,14 +105,15 @@ export function generate(input: Input): Output {
         },
       ],
       mounts: [
-        // Shared state volume — same data the agent wrote to /opt/data,
-        // mounted here at the WebUI's expected Hermes home path.
+        // Same hermes-home volume as the agent — gives WebUI access to config,
+        // sessions, memory, skills written by the agent container.
         {
           type: "volume",
           name: "hermes-home",
           mountPath: "/home/hermeswebui/.hermes",
         },
-        // Agent source — populated by the agent container at /opt/hermes
+        // Same hermes-agent-src volume as the agent — gives WebUI access to
+        // the agent Python source for `uv pip install`.
         {
           type: "volume",
           name: "hermes-agent-src",
