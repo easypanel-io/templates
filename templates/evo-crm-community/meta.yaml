@@ -47,6 +47,8 @@ schema:
     - smtpUsername
     - smtpPassword
     - mfaIssuer
+    - appDomain
+    - apiDomain
     - sidekiqConcurrency
     - activeStorageService
     - organizationName
@@ -123,6 +125,14 @@ schema:
       type: string
       title: MFA Issuer
       default: EvoCRM
+    appDomain:
+      type: string
+      title: App Domain (Frontend)
+      default: ""
+    apiDomain:
+      type: string
+      title: API Domain (Gateway)
+      default: ""
     sidekiqConcurrency:
       type: string
       title: Sidekiq Concurrency

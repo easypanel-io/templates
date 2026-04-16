@@ -1,4 +1,3 @@
-import { randomUUID } from "crypto";
 import {
   Output,
   randomPassword,
@@ -16,7 +15,7 @@ export function generate(input: Input): Output {
   const secretKeyBase = randomString(128);
   const jwtSecretKey = secretKeyBase;
   const doorkeeperJwtSecretKey = secretKeyBase;
-  const evoaiCrmApiToken = randomUUID();
+  const evoaiCrmApiToken = randomString(64);
   const botRuntimeSecret = randomString(64);
   const encryptionKey = randomString(32);
 
@@ -35,8 +34,11 @@ export function generate(input: Input): Output {
   const postgresHost = `$(PROJECT_NAME)_${postgresServiceName}`;
   const redisHost = `$(PROJECT_NAME)_${redisServiceName}`;
 
-  const frontendPublicUrl = `https://$(PROJECT_NAME)-${frontendServiceName}.$(EASYPANEL_HOST)`;
-  const gatewayPublicUrl = `https://$(PROJECT_NAME)-${gatewayServiceName}.$(EASYPANEL_HOST)`;
+  const appDomainHost = input.appDomain || `$(EASYPANEL_DOMAIN)`;
+  const apiDomainHost = input.apiDomain || `$(PROJECT_NAME)-${gatewayServiceName}.$(EASYPANEL_HOST)`;
+
+  const frontendPublicUrl = `https://${appDomainHost}`;
+  const gatewayPublicUrl = `https://${apiDomainHost}`;
   const corsOrigins = `${frontendPublicUrl},${gatewayPublicUrl}`;
 
   const sharedAuthEnv = [
@@ -326,7 +328,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       domains: [
         {
-          host: `$(PROJECT_NAME)-${gatewayServiceName}.$(EASYPANEL_HOST)`,
+          host: apiDomainHost,
           port: 3030,
         },
       ],
@@ -352,7 +354,7 @@ export function generate(input: Input): Output {
       ].join("\n"),
       domains: [
         {
-          host: "$(EASYPANEL_DOMAIN)",
+          host: appDomainHost,
           port: 80,
         },
       ],
