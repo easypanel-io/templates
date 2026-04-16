@@ -1,82 +1,88 @@
 name: Hermes WebUI
 description: |
-  Hermes WebUI is a lightweight, dark-themed web browser interface for [Hermes Agent](https://hermes-agent.nousresearch.com/) — a sophisticated autonomous AI agent that remembers what it learns and gets more capable the longer it runs.
+  Deploy **Hermes Agent** + **Hermes WebUI** as two interoperating services on Easypanel.
 
-  This template deploys **both** the Hermes Agent and the Hermes WebUI in a single container using the official Docker image. The WebUI provides full 1:1 parity with the Hermes CLI, accessible from any browser with an optional password for secure remote access.
+  [Hermes Agent](https://hermes-agent.nousresearch.com/) (`nousresearch/hermes-agent`) is an autonomous AI agent that runs as a persistent gateway — handling CLI, cron jobs, Telegram/Discord messaging, memory, and skills.
 
-  **Features include:**
-  - Three-panel Claude-style layout (sessions, chat, workspace file browser)
-  - Streaming responses via SSE with multi-provider model support (OpenAI, Anthropic, Google, DeepSeek, Nous Portal, OpenRouter)
-  - Session management: create, rename, pin, archive, search, export/import
-  - Workspace file browser with preview, edit, create, and delete capabilities
-  - Cron job scheduling (Tasks panel) and skill management
-  - Persistent memory (MEMORY.md / USER.md) and agent state
-  - Password protection via `HERMES_WEBUI_PASSWORD`
+  [Hermes WebUI](https://github.com/nesquena/hermes-webui) (`ghcr.io/nesquena/hermes-webui`) is a lightweight dark-themed browser interface that gives you full 1:1 parity with the Hermes CLI — sessions, streaming chat, workspace file browser, cron tasks, skills, memory — all from any browser.
+
+  **How they interoperate:**
+  The two containers share two named volumes:
+  - `hermes-home` — shared Hermes state directory (config, API keys, sessions, memory, skills, cron). The agent writes to it; the WebUI reads from it.
+  - `hermes-agent-src` — the agent's source code, mounted into the WebUI container at startup so it can install the agent's Python dependencies via `uv pip install`.
+
+  The WebUI never runs the agent itself — it imports Hermes Python modules directly to invoke `run_agent()`, which means agent calls happen inside the WebUI process but use the agent's exact same code and config.
 
 instructions: |
-  ## Getting Started
+  ## First-time setup
 
-  1. **Configure your AI provider keys** — After deployment, open the Hermes config at the mounted state volume path. You need at least one provider API key (e.g. `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`) configured in `~/.hermes/config.yaml`.
+  1. **Run the Hermes Agent setup wizard first.** The agent container needs a valid `.env` with your API keys before the WebUI can use it.
+     Open a shell into the agent container and run:
+     ```
+     docker exec -it <project>_hermes-agent hermes setup
+     ```
+     Or set your API keys directly via the **Environment** tab of the `hermes-agent` service in Easypanel (e.g. `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`).
 
-  2. **Password protection** — The `HERMES_WEBUI_PASSWORD` you set during setup will be required to access the UI. Keep it secure.
+  2. **WebUI first boot takes 1–2 minutes** while the init script installs the Hermes Agent Python package from the shared `hermes-agent-src` volume into its own venv.
 
-  3. **First boot** — On first launch the container installs the Hermes Agent Python package and its dependencies. This may take 1–2 minutes. Check container logs if the page doesn't load immediately.
+  3. **Password** — The `HERMES_WEBUI_PASSWORD` you set is required to access the UI. Set a strong value — it is your only auth layer.
 
-  4. **State persistence** — Sessions, memory, skills, and agent state are stored in the `hermes-home` volume mounted at `/home/hermeswebui/.hermes`.
+  4. Visit your Easypanel domain for the `hermes-webui` service. You will be prompted to enter the password.
 
-  5. **Workspace** — The `/workspace` volume is mounted as the default workspace and is browsable from the WebUI's right panel.
+  ## Adding API keys after deployment
+  Edit the `hermes-agent` service environment variables in Easypanel and redeploy, or write them directly to the `hermes-home` volume at `.hermes/config.yaml` / `.hermes/.env`.
 
-  ## Useful environment variables (add via Easypanel env editor)
-  - `HERMES_WEBUI_DEFAULT_MODEL` — override the default model (e.g. `anthropic/claude-sonnet-4-5`)
-  - `HERMES_WEBUI_BOT_NAME` — display name for the assistant (default: `Hermes`)
-  - `HERMES_HOME` — base directory for Hermes state (default: `/home/hermeswebui/.hermes`)
+  ## Important notes
+  - **Never run two agent containers against the same `hermes-home` volume** — the session store is not designed for concurrent writes.
+  - The `hermes-agent` service runs in `gateway run` mode — it handles Telegram/Discord/cron in the background.
+  - The WebUI connects to the agent by importing its Python modules (shared via `hermes-agent-src`), not via HTTP.
 
 benefits:
-  - title: Autonomous AI Agent in Your Browser
-    description: Access the full power of Hermes Agent — autonomous tool use, shell commands, file operations, web search, and memory — from any browser. No terminal needed.
+  - title: Full Agent + UI Stack
+    description: Both the autonomous Hermes Agent (gateway, cron, messaging) and the browser WebUI deploy together as a production-ready stack with a single click.
+  - title: Shared State via Volumes
+    description: Agent and WebUI share a single Hermes home volume — sessions, memory, skills, and config are always in sync between the two containers without any network API.
+  - title: Password-Protected Remote Access
+    description: The WebUI enforces password authentication, making it safe to expose publicly via your Easypanel domain over HTTPS.
   - title: Persistent Memory & Learning
-    description: Hermes remembers conversations, learns your preferences, and stores skills across sessions. The agent gets more capable the longer it runs.
-  - title: Multi-Provider Model Support
-    description: Switch between OpenAI, Anthropic, Google, DeepSeek, Nous Portal, and OpenRouter models from a dynamic dropdown in the UI. No reconfiguration required.
-  - title: Self-Hosted & Private
-    description: All conversations, memory, and files stay on your own server. Password protection keeps the UI secure when exposed to the internet.
-  - title: Cron Scheduling & Background Tasks
-    description: Schedule recurring tasks via the Tasks panel. Receive toast notifications and badge alerts when background agent jobs complete.
+    description: Hermes remembers your conversations, builds skills from experience, and retains context across sessions — all stored in a persistent volume on your own server.
+  - title: Multi-Provider AI Models
+    description: Switch between OpenAI, Anthropic, Google, DeepSeek, Nous Portal, and OpenRouter models from the UI without reconfiguring the agent.
 
 features:
-  - title: Three-Panel Chat Interface
-    description: Claude-style layout with a sessions sidebar, central chat window, and a resizable workspace file browser panel on the right.
-  - title: Streaming Chat with Tool Cards
-    description: Tokens stream in real time via SSE. Tool calls (shell, file ops, web search) appear inline as collapsible cards showing name, args, and result snippets.
+  - title: Hermes Agent Gateway
+    description: The agent container runs in gateway mode — handling background tasks, cron schedules, Telegram/Discord/Slack messaging, and event hooks independently of the WebUI.
+  - title: Three-Panel WebUI
+    description: Claude-style browser interface with a sessions sidebar, streaming chat with tool call cards, and a resizable workspace file browser with syntax-highlighted preview and editing.
+  - title: Shared Volume Interop
+    description: Two named Docker volumes (hermes-home and hermes-agent-src) provide the interop bridge — no network ports between services, just shared filesystem state.
   - title: Session Management
-    description: Create, rename, duplicate, delete, pin, archive, and tag sessions. Search across titles and message content. Export as Markdown or JSON.
-  - title: Workspace File Browser
-    description: Browse, preview, edit, create, delete, and rename files directly in the right panel with syntax highlighting via Prism.js and Markdown rendering.
-  - title: Password Protection
-    description: Set HERMES_WEBUI_PASSWORD to require authentication before accessing the UI — essential for public-facing deployments.
-  - title: Mermaid Diagram Rendering
-    description: Flowcharts, sequence diagrams, and Gantt charts embedded in agent responses render inline automatically.
+    description: Create, rename, pin, archive, tag, search, export (Markdown/JSON), and import sessions directly from the browser.
+  - title: Tasks, Skills & Memory Panels
+    description: Manage cron jobs, browse and edit skills, and view/edit MEMORY.md and USER.md directly from the WebUI's side panels.
+  - title: Mermaid & File Preview
+    description: Flowcharts and sequence diagrams render inline. The workspace panel previews text, Markdown, code (Prism.js), and images.
 
 tags:
   - ai
   - agent
   - llm
   - chat
-  - productivity
   - autonomous
+  - productivity
   - self-hosted
 
 changeLog:
   - date: "2025-01-01"
-    description: Initial Easypanel template for Hermes WebUI
+    description: Initial two-service Easypanel template (Hermes Agent + Hermes WebUI)
 
 links:
-  - label: Website
-    url: https://hermes-agent.nousresearch.com/
-  - label: GitHub
-    url: https://github.com/nesquena/hermes-webui
-  - label: Documentation
+  - label: Hermes Agent Docs
     url: https://hermes-agent.nousresearch.com/docs
+  - label: Hermes WebUI GitHub
+    url: https://github.com/nesquena/hermes-webui
+  - label: Docker Guide
+    url: https://hermes-agent.nousresearch.com/docs/user-guide/docker
 
 contributors:
   - name: Community
@@ -85,31 +91,51 @@ contributors:
 schema:
   type: object
   required:
-    - appServiceName
-    - appServiceImage
+    - agentServiceName
+    - agentServiceImage
+    - webuiServiceName
+    - webuiServiceImage
     - hermesWebUIPassword
   properties:
-    appServiceName:
+    agentServiceName:
       type: string
-      title: App Service Name
+      title: Agent Service Name
+      default: hermes-agent
+      description: Easypanel service name for the Hermes Agent container.
+    agentServiceImage:
+      type: string
+      title: Agent Docker Image
+      default: nousresearch/hermes-agent:latest
+      description: Official Hermes Agent image from Docker Hub.
+    webuiServiceName:
+      type: string
+      title: WebUI Service Name
       default: hermes-webui
-      description: Name for the Hermes WebUI service in Easypanel.
-    appServiceImage:
+      description: Easypanel service name for the Hermes WebUI container.
+    webuiServiceImage:
       type: string
-      title: Docker Image
+      title: WebUI Docker Image
       default: ghcr.io/nesquena/hermes-webui:latest
-      description: Docker image to use. The official GHCR image bundles both the WebUI and the Hermes Agent.
+      description: Official Hermes WebUI image from GitHub Container Registry.
     hermesWebUIPassword:
       type: string
       title: WebUI Password
-      description: Password required to access the Hermes WebUI. Set a strong password — this is your only authentication layer.
+      description: Password required to access the browser UI. Set a strong value — this is your only authentication layer.
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      description: "Your Anthropic API key (sk-ant-...). Used by Hermes Agent for Claude models. Can also be configured post-deployment in the agent's .hermes/.env file."
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: "Your OpenAI API key (sk-...). Used by Hermes Agent for GPT models. Can also be configured post-deployment."
     defaultModel:
       type: string
       title: Default AI Model
       default: openai/gpt-4o-mini
-      description: "Default model shown in the UI model selector. Examples: openai/gpt-4o, anthropic/claude-sonnet-4-5, google/gemini-2.0-flash"
+      description: "Default model shown in the WebUI model selector. Examples: openai/gpt-4o, anthropic/claude-sonnet-4-5, google/gemini-2.0-flash"
     botName:
       type: string
       title: Bot Display Name
       default: Hermes
-      description: Display name for the assistant shown in the chat interface.
+      description: Display name for the assistant shown in the WebUI chat interface.
