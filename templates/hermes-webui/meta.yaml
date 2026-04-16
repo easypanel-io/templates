@@ -1,8 +1,8 @@
-name: Hermes WebUI
+name: Hermes Agent
 description: |
-  Hermes WebUI is a lightweight, dark-themed browser interface for Hermes Agent — an autonomous AI agent by Nous Research that remembers what it learns, executes shell commands, manages files, schedules cron tasks, and integrates with Telegram, Discord, and Slack. This template deploys the Hermes Agent container alongside the Hermes WebUI, with the two sharing a state volume so the WebUI can run the agent directly from your browser with password-protected access.
+  Hermes Agent is an autonomous AI agent by Nous Research that runs persistently on your server, remembers what it learns, executes shell commands, manages files, browses the web, schedules cron tasks, and integrates with Telegram, Discord, Slack, and WhatsApp. It supports over 200 models through OpenRouter and direct integrations with Anthropic, OpenAI, Google, and DeepSeek. All sessions, memory, skills, and configuration are stored in a persistent volume so the agent grows more capable over time.
 instructions: |
-  On first boot, the agent container bootstraps the shared /opt/data volume with default config and the agent source. The WebUI then installs the agent Python package from that volume (this takes 1–2 minutes on first start). Open a terminal into the hermes-agent service and run "hermes setup" to configure API keys and model provider, or set ANTHROPIC_API_KEY / OPENAI_API_KEY in the agent service environment. Messaging gateways (Telegram, Discord, Slack) are optional — configure them later with "hermes gateway setup".
+  Access the Hermes TUI by opening a terminal into the container from the Easypanel dashboard (Service → Terminal) and running: hermes setup (first-time only, to configure your API keys and model), then hermes to start chatting. To run the messaging gateway for Telegram/Discord/Slack, first run hermes gateway setup, then change the service start command to: hermes gateway run
 changeLog:
   - date: "2025-04-16"
     description: Initial release
@@ -12,95 +12,50 @@ links:
   - label: Documentation
     url: https://hermes-agent.nousresearch.com/docs
   - label: Github
-    url: https://github.com/nesquena/hermes-webui
+    url: https://github.com/NousResearch/hermes-agent
 contributors:
   - name: Community
-    url: https://github.com/nesquena/hermes-webui/graphs/contributors
+    url: https://github.com/NousResearch/hermes-agent/graphs/contributors
 schema:
   type: object
   required:
-    - agentServiceName
-    - agentServiceImage
-    - webuiServiceName
-    - webuiServiceImage
+    - appServiceName
+    - appServiceImage
   properties:
-    agentServiceName:
+    appServiceName:
       type: string
-      title: Agent Service Name
+      title: App Service Name
       default: hermes-agent
-    agentServiceImage:
+    appServiceImage:
       type: string
-      title: Agent Image
+      title: App Service Image
       default: nousresearch/hermes-agent:latest
-    webuiServiceName:
-      type: string
-      title: WebUI Service Name
-      default: hermes-webui
-    webuiServiceImage:
-      type: string
-      title: WebUI Image
-      default: ghcr.io/nesquena/hermes-webui:latest
-    webuiPassword:
-      type: string
-      title: WebUI Password
-      description: Password to protect the browser UI. Auto-generated if left blank.
-    defaultModel:
-      type: string
-      title: Default AI Model
-      oneOf:
-        - enum:
-            - openai/gpt-4o-mini
-          title: GPT-4o Mini (OpenAI)
-        - enum:
-            - openai/gpt-4o
-          title: GPT-4o (OpenAI)
-        - enum:
-            - anthropic/claude-opus-4-5
-          title: Claude Opus 4.5 (Anthropic)
-        - enum:
-            - anthropic/claude-sonnet-4-5
-          title: Claude Sonnet 4.5 (Anthropic)
-        - enum:
-            - anthropic/claude-haiku-4-5
-          title: Claude Haiku 4.5 (Anthropic)
-        - enum:
-            - google/gemini-2.0-flash
-          title: Gemini 2.0 Flash (Google)
-        - enum:
-            - google/gemini-2.5-pro
-          title: Gemini 2.5 Pro (Google)
-        - enum:
-            - deepseek/deepseek-chat
-          title: DeepSeek Chat
-      default: openai/gpt-4o-mini
     anthropicApiKey:
       type: string
       title: Anthropic API Key
-      description: "Optional: injected as ANTHROPIC_API_KEY into the agent container."
+      description: "Optional: your Anthropic API key (sk-ant-...). Can also be configured later via hermes setup inside the container."
     openaiApiKey:
       type: string
       title: OpenAI API Key
-      description: "Optional: injected as OPENAI_API_KEY into the agent container."
+      description: "Optional: your OpenAI API key (sk-...). Can also be configured later via hermes setup inside the container."
 benefits:
-  - title: Autonomous AI Agent in Your Browser
-    description: Access the full Hermes Agent — autonomous tool use, shell commands, file operations, web search, and memory — from any browser with password-protected HTTPS access.
   - title: Persistent Memory & Skills
-    description: The agent remembers your conversations, builds skills from experience, and retains context across sessions — all stored on your own server in a persistent Docker volume.
+    description: The agent remembers your conversations, builds skills from experience, and retains context across sessions — all stored in a persistent volume on your own server.
   - title: Multi-Provider Model Support
-    description: Switch between OpenAI, Anthropic, Google, DeepSeek, and other providers from the UI model selector without reconfiguring the agent.
+    description: Works with over 200 models via OpenRouter plus direct integrations with Anthropic, OpenAI, Google, DeepSeek, and more. Switch models at any time with hermes model.
+  - title: Messaging Gateway
+    description: Connect the agent to Telegram, Discord, Slack, or WhatsApp so it responds to messages, runs scheduled tasks, and delivers results to your phone.
   - title: Self-Hosted & Private
-    description: All conversations, memory, files, and API keys stay on your own server. No data leaves your infrastructure.
+    description: All conversations, memory, API keys, and files stay on your own infrastructure. Nothing is sent to third-party services beyond your chosen LLM provider.
 features:
-  - title: Hermes Agent
-    description: The full Hermes Agent runtime with shell, file, web-search, memory, and skill tools — optionally extensible with MCP servers and Telegram/Discord/Slack gateways.
-  - title: Three-Panel Chat Interface
-    description: Claude-style browser UI with sessions sidebar, streaming chat with inline tool-call cards, and a resizable workspace file browser.
-  - title: Shared Volume Interop
-    description: Agent and WebUI share named Docker volumes for config, sessions, and memory — no inter-service HTTP required, everything syncs via the filesystem.
-  - title: Session Management
-    description: Create, rename, pin, archive, tag, search, and export sessions as Markdown or JSON from the browser.
-  - title: Tasks, Skills & Memory Panels
-    description: Manage cron jobs, browse and edit skills, and view or edit MEMORY.md and USER.md directly from the WebUI side panels.
+  - title: Autonomous Tool Use
+    description: Built-in tools for shell execution, file operations, web search, and code running — the agent decides which tools to use and chains them together to complete tasks.
+  - title: Cron Scheduling
+    description: Schedule recurring tasks with natural-language prompts and have results delivered to your messaging platform of choice.
+  - title: Skills System
+    description: Install community skills from agentskills.io or write your own. Skills extend the agent with new capabilities and are persisted in the data volume.
+  - title: MCP Server Support
+    description: Connect any MCP-compatible server for additional tool integrations, or expose Hermes itself as an MCP server to Claude Code, Cursor, or other editors.
 tags:
   - AI
   - Automation
