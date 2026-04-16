@@ -1,0 +1,184 @@
+name: Evo CRM
+description:
+  Evo CRM Community is an open-source, single-tenant CRM platform focused on
+  AI-assisted customer support. This template deploys the full production stack
+  on Easypanel with dedicated services for frontend, API gateway,
+  authentication, CRM, AI core, AI processor, bot runtime, PostgreSQL with
+  pgvector, and Redis.
+instructions:
+  This template runs Evo CRM in production mode, auto-generates all shared
+  secrets, and uses pinned image tags by default. After deploy, configure SMTP,
+  and if needed, attach a custom domain to the gateway service for API access.
+changeLog:
+  - date: 2026-04-16
+    description: First release
+  - date: 2026-04-16
+    description:
+      Switched to pinned image tags, updated PostgreSQL default to pg18 with
+      PGDATA, reordered service creation flow, and updated screenshot.
+links:
+  - label: Website
+    url: https://evolutionfoundation.com.br
+  - label: Self-Hosted Docs
+    url: https://docs.evolutionfoundation.com.br/self-hosted
+  - label: GitHub
+    url: https://github.com/EvolutionAPI/evo-crm-community
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - serviceName
+    - frontendImage
+    - gatewayImage
+    - authImage
+    - crmImage
+    - coreImage
+    - processorImage
+    - botRuntimeImage
+    - postgresImage
+    - mailerSenderEmail
+    - smtpAddress
+    - smtpPort
+    - smtpDomain
+    - smtpAuthentication
+    - smtpEnableStarttlsAuto
+    - smtpUsername
+    - smtpPassword
+    - mfaIssuer
+    - appDomain
+    - apiDomain
+    - sidekiqConcurrency
+    - activeStorageService
+    - organizationName
+  properties:
+    serviceName:
+      type: string
+      title: Base Service Name
+      default: evo-crm
+    frontendImage:
+      type: string
+      title: Frontend Image
+      default: evoapicloud/evo-ai-frontend-community:main-9c24427
+    gatewayImage:
+      type: string
+      title: Gateway Image
+      default: evoapicloud/evo-crm-gateway:main-3735857
+    authImage:
+      type: string
+      title: Auth Service Image
+      default: evoapicloud/evo-auth-service-community:main-ed6affd
+    crmImage:
+      type: string
+      title: CRM Service Image
+      default: evoapicloud/evo-ai-crm-community:main-984bd38
+    coreImage:
+      type: string
+      title: Core Service Image
+      default: evoapicloud/evo-ai-core-service-community:main-33230bb
+    processorImage:
+      type: string
+      title: Processor Service Image
+      default: evoapicloud/evo-ai-processor-community:main-54fdb52
+    botRuntimeImage:
+      type: string
+      title: Bot Runtime Image
+      default: evoapicloud/evo-bot-runtime:main-c9a986a
+    postgresImage:
+      type: string
+      title: PostgreSQL Image
+      default: pgvector/pgvector:pg18
+    mailerSenderEmail:
+      type: string
+      title: Mailer Sender Email
+      default: noreply@example.com
+    smtpAddress:
+      type: string
+      title: SMTP Address
+      default: ""
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpDomain:
+      type: string
+      title: SMTP Domain
+      default: ""
+    smtpAuthentication:
+      type: string
+      title: SMTP Authentication
+      default: plain
+    smtpEnableStarttlsAuto:
+      type: string
+      title: SMTP Enable STARTTLS Auto
+      default: "true"
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: ""
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
+    mfaIssuer:
+      type: string
+      title: MFA Issuer
+      default: EvoCRM
+    appDomain:
+      type: string
+      title: App Domain (Frontend)
+      default: ""
+    apiDomain:
+      type: string
+      title: API Domain (Gateway)
+      default: ""
+    sidekiqConcurrency:
+      type: string
+      title: Sidekiq Concurrency
+      default: "10"
+    activeStorageService:
+      type: string
+      title: Active Storage Service
+      default: local
+    organizationName:
+      type: string
+      title: Organization Name
+      default: Evo CRM
+benefits:
+  - title: Full Production Topology
+    description:
+      Deploys the complete Evo CRM Community stack, including frontend, gateway,
+      auth, CRM, AI core, AI processor, bot runtime, PostgreSQL, and Redis.
+  - title: Secure-by-Default Setup
+    description:
+      Shared secrets and service credentials are generated automatically during
+      deployment, reducing insecure default configurations.
+  - title: AI-Ready Database Layer
+    description:
+      Uses PostgreSQL with pgvector image support, aligned with Evo CRM
+      requirements for AI-related data and embeddings.
+features:
+  - title: API Gateway Included
+    description:
+      Routes frontend API traffic through a dedicated Evo CRM gateway service,
+      following the official production architecture.
+  - title: Background Workers Enabled
+    description:
+      Includes Auth and CRM Sidekiq workers for asynchronous processing and
+      better production throughput.
+  - title: Processor Bootstrap Command
+    description:
+      Runs database migration and seed bootstrap for the AI processor before
+      starting the API server.
+  - title: Persistent App Storage
+    description:
+      Persists Rails storage directories and processor logs to keep uploaded data
+      and operational logs durable.
+tags:
+  - CRM
+  - AI
+  - Customer Support
+  - PostgreSQL
+  - Redis
+  - Open Source
