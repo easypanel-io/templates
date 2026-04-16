@@ -9,13 +9,20 @@ export function generate(input: Input): Output {
 
   // ── Service 1: Hermes Agent ──────────────────────────────────────────────────
   //
-  // Runs "gateway run" — a persistent background process handling Telegram,
-  // Discord, Slack, cron jobs, and event hooks.
+  // The Hermes Agent image stores its data volume at /opt/data (confirmed by
+  // the Dockerfile: ENV HERMES_HOME=/opt/data). The source code lives at
+  // /opt/hermes. The entrypoint script bootstraps the data volume on first run
+  // and then executes whatever command you pass.
   //
-  // Interop with the WebUI is filesystem-only via two shared named volumes:
-  //   hermes-home      — config, .env, sessions, memory, skills, cron, logs
-  //   hermes-agent-src — agent Python source; WebUI runs `uv pip install` from
-  //                      here on first boot to get all agent dependencies
+  // IMPORTANT: we do NOT run `hermes gateway run` as the default command.
+  // On a fresh install no messaging platform is configured, so the gateway
+  // exits immediately with a "gateway not found" style error. Users who want
+  // the gateway should run `hermes gateway setup` first and then switch the
+  // service command.
+  //
+  // Instead we run `tail -f /dev/null` which keeps the container alive after
+  // the entrypoint has bootstrapped the volume, so users can exec in and run
+  // `hermes setup`, `hermes chat`, or start the gateway once configured.
   //
   services.push({
     type: "app",
@@ -25,11 +32,13 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.agentServiceImage,
       },
+      // Keep the container alive after entrypoint bootstrap so users can
+      // `docker exec` to run setup, configure providers, or start the gateway.
       deploy: {
-        command: "gateway run",
+        command: "tail -f /dev/null",
       },
       env: [
-        `HERMES_HOME=/root/.hermes`,
+        `HERMES_HOME=/opt/data`,
         ...(input.anthropicApiKey
           ? [`ANTHROPIC_API_KEY=${input.anthropicApiKey}`]
           : []),
@@ -38,13 +47,17 @@ export function generate(input: Input): Output {
           : []),
       ].join("\n"),
       mounts: [
-        // Shared Hermes state: config, .env, sessions, memory, skills, cron
+        // Shared Hermes state — bootstrapped by the agent entrypoint on first
+        // boot with default config.yaml, SOUL.md, and directory structure.
+        // The WebUI reads from this same volume.
         {
           type: "volume",
           name: "hermes-home",
-          mountPath: "/root/.hermes",
+          mountPath: "/opt/data",
         },
-        // Agent source code exposed to WebUI for Python dependency install
+        // Agent source code — the Dockerfile COPYs the agent to /opt/hermes.
+        // This volume exposes that source to the WebUI container, which runs
+        // `uv pip install` from it on first boot to get all agent deps.
         {
           type: "volume",
           name: "hermes-agent-src",
@@ -57,11 +70,10 @@ export function generate(input: Input): Output {
   // ── Service 2: Hermes WebUI ──────────────────────────────────────────────────
   //
   // Serves the browser interface on port 8787. On first boot, docker_init.bash
-  // runs `uv pip install /home/hermeswebui/.hermes/hermes-agent` to install
-  // agent Python deps from the shared hermes-agent-src volume.
+  // installs the agent's Python deps from the shared hermes-agent-src volume.
   //
-  // The WebUI imports Hermes Python modules directly (run_agent, config, models)
-  // — no HTTP port needed on the agent container.
+  // The WebUI imports Hermes Python modules directly (run_agent, config,
+  // models) — no HTTP port needed on the agent container.
   //
   services.push({
     type: "app",
@@ -89,7 +101,8 @@ export function generate(input: Input): Output {
         },
       ],
       mounts: [
-        // Shared state volume — same data as agent, different container path
+        // Shared state volume — same data the agent wrote to /opt/data,
+        // mounted here at the WebUI's expected Hermes home path.
         {
           type: "volume",
           name: "hermes-home",

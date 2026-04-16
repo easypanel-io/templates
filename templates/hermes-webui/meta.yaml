@@ -1,8 +1,8 @@
 name: Hermes WebUI
 description: |
-  Hermes WebUI is a lightweight, dark-themed browser interface for Hermes Agent — an autonomous AI agent by Nous Research that remembers what it learns, executes shell commands, manages files, schedules cron tasks, and integrates with Telegram, Discord, and Slack. This template deploys both the Hermes Agent (gateway mode) and the Hermes WebUI as two services sharing a common state volume, giving you full CLI parity from any browser with password-protected access.
+  Hermes WebUI is a lightweight, dark-themed browser interface for Hermes Agent — an autonomous AI agent by Nous Research that remembers what it learns, executes shell commands, manages files, schedules cron tasks, and integrates with Telegram, Discord, and Slack. This template deploys the Hermes Agent container alongside the Hermes WebUI, with the two sharing a state volume so the WebUI can run the agent directly from your browser with password-protected access.
 instructions: |
-  Run the Hermes setup wizard on first boot to configure your API keys: exec into the hermes-agent container and run "hermes setup", or set ANTHROPIC_API_KEY / OPENAI_API_KEY directly in the agent service environment. The WebUI takes 1–2 minutes on first start while it installs the agent Python package.
+  On first boot, the agent container bootstraps the shared /opt/data volume with default config and the agent source. The WebUI then installs the agent Python package from that volume (this takes 1–2 minutes on first start). Open a terminal into the hermes-agent service and run "hermes setup" to configure API keys and model provider, or set ANTHROPIC_API_KEY / OPENAI_API_KEY in the agent service environment. Messaging gateways (Telegram, Discord, Slack) are optional — configure them later with "hermes gateway setup".
 changeLog:
   - date: "2025-04-16"
     description: Initial release
@@ -82,21 +82,21 @@ schema:
       title: OpenAI API Key
       description: "Optional: injected as OPENAI_API_KEY into the agent container."
 benefits:
-  - title: Full Agent + UI in One Stack
-    description: Deploy the Hermes Agent gateway and the browser WebUI together in a single click, fully wired via shared volumes with no manual networking configuration.
+  - title: Autonomous AI Agent in Your Browser
+    description: Access the full Hermes Agent — autonomous tool use, shell commands, file operations, web search, and memory — from any browser with password-protected HTTPS access.
   - title: Persistent Memory & Skills
-    description: The agent remembers your conversations, builds skills from experience, and retains context across sessions — all stored on your own server.
-  - title: Password-Protected Remote Access
-    description: The WebUI enforces password authentication over your Easypanel HTTPS domain, keeping your autonomous agent safe from unauthorized access.
+    description: The agent remembers your conversations, builds skills from experience, and retains context across sessions — all stored on your own server in a persistent Docker volume.
   - title: Multi-Provider Model Support
     description: Switch between OpenAI, Anthropic, Google, DeepSeek, and other providers from the UI model selector without reconfiguring the agent.
+  - title: Self-Hosted & Private
+    description: All conversations, memory, files, and API keys stay on your own server. No data leaves your infrastructure.
 features:
-  - title: Hermes Agent Gateway
-    description: Runs in gateway mode to handle background tasks, cron jobs, Telegram/Discord/Slack messaging, and event hooks independently of the WebUI.
+  - title: Hermes Agent
+    description: The full Hermes Agent runtime with shell, file, web-search, memory, and skill tools — optionally extensible with MCP servers and Telegram/Discord/Slack gateways.
   - title: Three-Panel Chat Interface
     description: Claude-style browser UI with sessions sidebar, streaming chat with inline tool-call cards, and a resizable workspace file browser.
   - title: Shared Volume Interop
-    description: Agent and WebUI share named Docker volumes (hermes-home and hermes-agent-src) for config, sessions, and memory — no inter-service HTTP required.
+    description: Agent and WebUI share named Docker volumes for config, sessions, and memory — no inter-service HTTP required, everything syncs via the filesystem.
   - title: Session Management
     description: Create, rename, pin, archive, tag, search, and export sessions as Markdown or JSON from the browser.
   - title: Tasks, Skills & Memory Panels
