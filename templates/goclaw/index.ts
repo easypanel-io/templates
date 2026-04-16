@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
-      image: "pgvector/pgvector:pg18",
+      image: input.databaseServiceImage,
       env: "PGDATA=/var/lib/postgresql/data",
     },
   });
@@ -62,12 +62,6 @@ export function generate(input: Input): Output {
           name: "skills",
           mountPath: "/app/skills",
         },
-        {
-          type: "file",
-          mountPath: "/app/data/.runtime/apk-packages",
-          content: ["chromium","nss","freetype","harfbuzz","font-ubuntu"]
-            .join("\n"),
-        }
       ],
     },
   });
@@ -79,7 +73,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-chrome`,
       source: {
         type: "image",
-        image: "zenika/alpine-chrome:124",
+        image: input.chromeServiceImage,
       },
       deploy: {
         command: `chromium-browser --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --remote-allow-origins=* --disable-gpu --disable-dev-shm-usage --headless`,

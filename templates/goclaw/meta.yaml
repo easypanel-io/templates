@@ -7,6 +7,8 @@ instructions: |
   To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
   Secure tokens like the Gateway Token and Encryption Key are auto-generated.
 changeLog:
+  - date: 2026-04-16
+    description: Updated to GoClaw v3.8.5, moved all Docker images to meta.yaml inputs
   - date: 2026-03-25
     description: Applied review feedback — pinned images, simplified service naming, added proxy headers
   - date: 2026-03-24
@@ -29,6 +31,8 @@ schema:
     - appServiceName
     - appServiceImage
     - uiServiceName
+    - databaseServiceImage
+    - chromeServiceImage
   properties:
     appServiceName:
       type: string
@@ -37,12 +41,21 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/nextlevelbuilder/goclaw:v2.18.1-full
+      default: ghcr.io/nextlevelbuilder/goclaw:v3.8.5-full
       description: Use a "-full" tag for Python/Node included, or a base version tag for minimal.
     uiServiceName:
       type: string
       title: Web Service Image
-      default: ghcr.io/nextlevelbuilder/goclaw-web:v2.18.1
+      default: ghcr.io/nextlevelbuilder/goclaw-web:v3.8.5
+    databaseServiceImage:
+      type: string
+      title: Database Service Image
+      default: pgvector/pgvector:pg17
+    chromeServiceImage:
+      type: string
+      title: Chrome CDP Service Image
+      default: zenika/alpine-chrome:124
+      description: Headless Chrome sidecar for browser automation via CDP.
     gatewayToken:
       type: string
       title: Gateway Token (GOCLAW_GATEWAY_TOKEN)
