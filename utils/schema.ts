@@ -1,7 +1,15 @@
-import { randomBytes } from "crypto";
 import { z } from "zod";
 
-export const randomPassword = () => randomBytes(10).toString("hex");
+const randomString = (length: number = 10) => {
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return result;
+};
+
+export const randomPassword = () => randomString(20);
 
 const emptyToUndefined = (value: any) => {
   if (typeof value !== "string") return value;
@@ -334,7 +342,7 @@ server {
 export const boxIdeSchema = z
   .object({
     defaultFolder: z.string().default("/code"),
-    token: z.string().default(() => randomBytes(10).toString("hex")),
+    token: z.string().default(() => randomString(20)),
     enabled: z.boolean().default(true),
   })
   .optional();
@@ -416,7 +424,7 @@ export const boxModulesSchema = z
 export const boxDeploymentSchema = z
   .object({
     script: z.string().default(""),
-    token: z.string().default(() => randomBytes(10).toString("hex")),
+    token: z.string().default(() => randomString(20)),
   })
   .default({});
 
@@ -564,7 +572,7 @@ export const wordpressIdeSchema = z
   .object({
     enabled: z.boolean().default(true),
     defaultFolder: z.string().default("/code"),
-    token: z.string().default(() => randomBytes(10).toString("hex")),
+    token: z.string().default(() => randomString(20)),
   })
   .optional();
 

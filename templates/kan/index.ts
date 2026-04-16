@@ -1,11 +1,15 @@
-import { randomBytes } from "crypto";
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const authSecret = randomBytes(32).toString("base64");
+  const authSecret = randomString(32);
   const postgresUrl = `postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`;
 
   services.push({
