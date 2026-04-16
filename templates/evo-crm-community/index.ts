@@ -1,4 +1,4 @@
-import { randomBytes, randomUUID } from "crypto";
+import { randomUUID } from "crypto";
 import {
   Output,
   randomPassword,
@@ -18,7 +18,7 @@ export function generate(input: Input): Output {
   const doorkeeperJwtSecretKey = secretKeyBase;
   const evoaiCrmApiToken = randomUUID();
   const botRuntimeSecret = randomString(64);
-  const encryptionKey = randomBytes(32).toString("base64");
+  const encryptionKey = randomString(32);
 
   const frontendServiceName = `${input.serviceName}-frontend`;
   const gatewayServiceName = `${input.serviceName}-gateway`;
