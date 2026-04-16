@@ -1,0 +1,74 @@
+name: Ferron
+description:
+  Ferron is a fast, memory-safe web server written in Rust. This template
+  deploys Ferron with the official Docker image and exposes it through your
+  Easypanel domain so you can start serving web traffic quickly.
+
+instructions:
+  Deploy the template, then configure Ferron by mounting your own configuration
+  and content files as needed for your use case.
+
+changeLog:
+  - date: 2026-04-10
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://www.ferronweb.org/
+  - label: Documentation
+    url: https://www.ferronweb.org/docs/
+  - label: GitHub
+    url: https://github.com/ferronweb/ferron
+  - label: Docker Hub
+    url: https://hub.docker.com/r/ferronserver/ferron
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ferron
+    appServiceImage:
+      type: string
+      title: Ferron Image
+      default: ferronserver/ferron:2-debian
+
+benefits:
+  - title: Fast Rust web server
+    description:
+      Run a high-performance, memory-safe web server designed for modern
+      workloads.
+  - title: Simple deployment
+    description:
+      Start Ferron quickly with the official container image and default
+      networking setup.
+  - title: Flexible hosting
+    description:
+      Use Ferron for static hosting, reverse proxying, or mixed web server
+      setups.
+
+features:
+  - title: Official image deployment
+    description:
+      Uses the official `ferronserver/ferron` Docker image for predictable
+      deployments.
+  - title: Domain-ready setup
+    description: Routes your Easypanel domain directly to the Ferron service.
+  - title: Production-oriented server
+    description:
+      Supports modern web server use cases with a focus on reliability and
+      safety.
+
+tags:
+  - Web Server
+  - Reverse Proxy
+  - Rust
+  - Self-Hosted
