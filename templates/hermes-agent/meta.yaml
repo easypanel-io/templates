@@ -1,0 +1,101 @@
+name: Hermes Agent
+description: |
+  Hermes Agent is an autonomous AI agent by Nous Research that runs persistently on your server, remembers what it learns, executes shell commands, manages files, browses the web, schedules cron tasks, and integrates with Telegram, Discord, Slack, and WhatsApp. It supports 200+ models through OpenRouter and direct integrations with Anthropic, OpenAI, Google, and DeepSeek. All sessions, memory, skills, and configuration are stored in a persistent volume so the agent grows more capable over time.
+instructions: |
+  Deploy with Gateway Mode OFF first. SSH in and run: docker exec -it $(docker ps --filter name=hermes-agent --format "{{.Names}}" | head -1) /opt/hermes/.venv/bin/hermes setup to configure API keys and model. For messaging platforms run hermes gateway setup then redeploy with Gateway Mode ON.
+
+  API Server: enable to expose Hermes as an OpenAI-compatible endpoint (port 8642) for Claude Code, Open WebUI, or Cursor. The API Server Key is auto-generated if left blank — find it in the service environment variables after deployment.
+
+  MCPorter OAuth: enable ONLY while completing an OAuth flow for a hosted MCP server (Linear, Vercel, Supabase etc.). Run "mcporter auth <server>" on your machine, open the printed URL in your browser, then IMMEDIATELY redeploy with MCPorter OAuth Port disabled. Leaving port 3000 open permanently is a security risk.
+changeLog:
+  - date: "2025-04-16"
+    description: Initial release
+links:
+  - label: Website
+    url: https://hermes-agent.nousresearch.com/
+  - label: Documentation
+    url: https://hermes-agent.nousresearch.com/docs
+  - label: Github
+    url: https://github.com/NousResearch/hermes-agent
+  - label: MCPorter
+    url: https://github.com/steipete/mcporter
+contributors:
+  - name: Community
+    url: https://github.com/NousResearch/hermes-agent/graphs/contributors
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hermes-agent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nousresearch/hermes-agent:latest
+    gatewayMode:
+      type: boolean
+      title: Enable Gateway Mode
+      description: "ON: runs hermes gateway run (Telegram/Discord/Slack/cron). OFF: idles so you can SSH in and run hermes setup first."
+      default: false
+    apiServerEnabled:
+      type: boolean
+      title: Enable API Server (port 8642)
+      description: "Exposes an OpenAI-compatible HTTPS endpoint. Required for Claude Code, Open WebUI, Cursor, or MCPorter to connect to Hermes as an LLM/MCP server."
+      default: false
+    apiServerKey:
+      type: string
+      title: API Server Key
+      description: "Bearer token protecting the API server. Auto-generated if left blank — check the service env vars after deployment. Clients must send this as their OPENAI_API_KEY."
+    mcporterOauthEnabled:
+      type: boolean
+      title: Enable MCPorter OAuth Port (port 3000) — TEMPORARY USE ONLY
+      description: "WARNING: Only enable this while actively completing an OAuth flow for a hosted MCP server (Linear, Vercel, Supabase, Notion). Disable and redeploy immediately after. Leaving this on permanently exposes an unauthenticated port."
+      default: false
+    mcporterCallbackHost:
+      type: string
+      title: MCPorter OAuth Callback Host
+      description: "Your server's public hostname (e.g. agent.example.com). MCPorter uses this in the OAuth redirect_uri so the callback reaches your container on port 3000."
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      description: "Optional: injected as ANTHROPIC_API_KEY. Can also be set later via hermes setup."
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: "Optional: injected as OPENAI_API_KEY. Can also be set later via hermes setup."
+    telegramBotToken:
+      type: string
+      title: Telegram Bot Token
+      description: "Optional: your Telegram bot token from @BotFather. Injected as TELEGRAM_BOT_TOKEN."
+    discordBotToken:
+      type: string
+      title: Discord Bot Token
+      description: "Optional: your Discord bot token. Injected as DISCORD_BOT_TOKEN."
+benefits:
+  - title: Persistent Memory & Skills
+    description: The agent remembers your conversations, builds skills from experience, and retains context across sessions — all stored in a persistent volume on your own server.
+  - title: Multi-Provider Model Support
+    description: Works with 200+ models via OpenRouter plus direct integrations with Anthropic, OpenAI, Google, DeepSeek, and more. Switch models at any time with hermes model.
+  - title: Messaging Gateway
+    description: Connect the agent to Telegram, Discord, Slack, or WhatsApp so it responds to messages, runs scheduled tasks, and delivers results to your phone — no open ports required.
+  - title: MCPorter & API Server Integration
+    description: Expose Hermes as an OpenAI-compatible API server for Claude Code, Open WebUI, or Cursor, and complete OAuth flows for hosted MCP servers like Linear, Vercel, and Supabase.
+features:
+  - title: Autonomous Tool Use
+    description: Built-in tools for shell execution, file operations, web search, and code running — the agent decides which tools to use and chains them together to complete tasks.
+  - title: Cron Scheduling
+    description: Schedule recurring tasks with natural-language prompts and have results delivered to your messaging platform of choice.
+  - title: Skills System
+    description: Install community skills from agentskills.io or write your own. Skills extend the agent with new capabilities and are persisted in the data volume.
+  - title: MCP Server Support
+    description: Connect any MCP-compatible server for additional tool integrations, or expose Hermes itself as an MCP/API server to Claude Code, Cursor, or other editors.
+tags:
+  - AI
+  - Automation
+  - Self-Hosted
+  - Developer Tools
+  - Productivity
