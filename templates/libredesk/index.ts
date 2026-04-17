@@ -1,5 +1,10 @@
 import { randomBytes } from "crypto";
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 function generateLibredeskPassword(): string {
@@ -8,29 +13,29 @@ function generateLibredeskPassword(): string {
   const numbers = "0123456789";
   const special = "!@#$%^&*_+-=[]{}|;:,.<>?";
   const allChars = uppercase + lowercase + numbers + special;
-  
+
   const getRandomChar = (chars: string): string => {
     const randomIndex = randomBytes(1)[0] % chars.length;
     return chars[randomIndex];
   };
-  
-  let password = 
+
+  let password =
     getRandomChar(uppercase) +
     getRandomChar(lowercase) +
     getRandomChar(numbers) +
     getRandomChar(special);
-  
+
   for (let i = password.length; i < 20; i++) {
     password += getRandomChar(allChars);
   }
-  
-  const passwordArray = password.split('');
+
+  const passwordArray = password.split("");
   for (let i = passwordArray.length - 1; i > 0; i--) {
     const j = randomBytes(1)[0] % (i + 1);
     [passwordArray[i], passwordArray[j]] = [passwordArray[j], passwordArray[i]];
   }
-  
-  return passwordArray.join('');
+
+  return passwordArray.join("");
 }
 
 function isValidPassword(password: string): boolean {
@@ -47,8 +52,8 @@ export function generate(input: Input): Output {
   const dbPassword = randomPassword();
   const redisPassword = randomPassword();
   // Password Validation and Generation
-  const systemUserPassword = 
-    (input.systemUserPassword && isValidPassword(input.systemUserPassword))
+  const systemUserPassword =
+    input.systemUserPassword && isValidPassword(input.systemUserPassword)
       ? input.systemUserPassword
       : generateLibredeskPassword();
   const encryptionKey = input.encryptionKey || randomString(32);
@@ -222,9 +227,7 @@ evaluation_interval = "5m"`;
           mountPath: "/libredesk/config.toml",
         },
       ],
-      env: [`LIBREDESK_SYSTEM_USER_PASSWORD=${systemUserPassword}`].join(
-        "\n"
-      ),
+      env: [`LIBREDESK_SYSTEM_USER_PASSWORD=${systemUserPassword}`].join("\n"),
       deploy: {
         command:
           "sh -c './libredesk --install --idempotent-install --yes --config /libredesk/config.toml && ./libredesk --upgrade --yes --config /libredesk/config.toml && ./libredesk --config /libredesk/config.toml'",
