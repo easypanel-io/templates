@@ -1,10 +1,10 @@
 name: Passky Server
 description:
-  Passky is a simple, modern, lightweight, open source and secure password manager.
-  It allows you to securely store and manage your passwords, ensuring your sensitive
-  credentials remain protected. This self-hosted server component works with the
-  Passky clients (web, desktop, and mobile apps) to provide a complete password 
-  management solution that puts you in control of your data.
+  Passky is a simple, modern, lightweight, open source and secure password
+  manager. It allows you to securely store and manage your passwords, ensuring
+  your sensitive credentials remain protected. This self-hosted server component
+  works with the Passky clients (web, desktop, and mobile apps) to provide a
+  complete password management solution that puts you in control of your data.
 instructions: null
 changeLog:
   - date: 2025-04-22
@@ -46,23 +46,23 @@ schema:
 benefits:
   - title: Complete Privacy Control
     description:
-      Self-host your password manager to maintain full control over your sensitive
-      credentials without relying on third-party services.
+      Self-host your password manager to maintain full control over your
+      sensitive credentials without relying on third-party services.
   - title: Open Source Security
     description:
       Passky's open-source nature means the code can be audited by security
       professionals, ensuring there are no hidden vulnerabilities or backdoors.
   - title: Scalable Architecture
     description:
-      Configure your server with SQLite for simplicity or scale up with MySQL and Redis
-      for improved performance and concurrent connections.
+      Configure your server with SQLite for simplicity or scale up with MySQL
+      and Redis for improved performance and concurrent connections.
 features:
   - title: Secure Password Storage
     description:
-      Store passwords with strong encryption to keep your sensitive data protected
-      from unauthorized access.
+      Store passwords with strong encryption to keep your sensitive data
+      protected from unauthorized access.
   - title: Two-Factor Authentication
-    description: 
+    description:
       Enhance security with optional two-factor authentication including YubiKey
       support for hardware-based security.
   - title: Multiple Database Options
@@ -75,11 +75,11 @@ features:
       ensures stable performance under load.
   - title: Cross-Platform Compatibility
     description:
-      Works with all Passky clients including web, desktop (Windows, macOS, Linux),
-      and mobile (Android, iOS) applications.
+      Works with all Passky clients including web, desktop (Windows, macOS,
+      Linux), and mobile (Android, iOS) applications.
 tags:
   - Password Manager
   - Security
   - Authentication
   - Self-Hosted
-  - Privacy 
+  - Privacy
