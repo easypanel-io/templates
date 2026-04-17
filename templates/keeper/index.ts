@@ -1,8 +1,4 @@
-import {
-    Output,
-    randomString,
-    Services,
-} from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {

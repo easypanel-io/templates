@@ -1,4 +1,9 @@
-import { Output, Services, randomPassword, randomString } from "~templates-utils";
+import {
+  Output,
+  Services,
+  randomPassword,
+  randomString,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -20,7 +25,7 @@ export function generate(input: Input): Output {
         `CREATE_SUPERUSER=${input.adminUsername}:${input.adminPassword}`,
         `PORT=8000`,
         `DATABASE_URL=mysql://root:${rootDatabasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:3306/$(PROJECT_NAME)`,
-        `BASE_URL=https://$(PRIMARY_DOMAIN)`
+        `BASE_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       domains: [
         {
@@ -47,4 +52,4 @@ export function generate(input: Input): Output {
   });
 
   return { services };
-} 
+}
