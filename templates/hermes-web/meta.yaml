@@ -1,0 +1,88 @@
+name: Hermes Agent + Web UI
+description: |
+  Deploys Hermes Agent (nousresearch/hermes-agent) alongside the EKKO Hermes Web UI — a Vue 3 dashboard for chat interaction and scheduled job management. The Web UI connects to the Hermes Agent API server (port 8642) over HTTPS. Both services run in the same Easypanel project and communicate internally through the agent's OpenAI-compatible API.
+instructions: |
+  Deploy with Gateway Mode OFF first. SSH in and run: docker exec -it $(docker ps --filter name=hermes-agent --format "{{.Names}}" | head -1) /opt/hermes/.venv/bin/hermes setup to configure your API keys and model. Then enable the API Server in config.yaml (platforms.api_server.enabled: true) or set API_SERVER_ENABLED=true in the agent service env, and redeploy. The Web UI will then be available at its Easypanel domain. Set the same API Server Key in both services so the Web UI can authenticate against the agent.
+changeLog:
+  - date: "2025-04-17"
+    description: Initial release
+links:
+  - label: Hermes Agent
+    url: https://hermes-agent.nousresearch.com/
+  - label: Hermes Web UI
+    url: https://github.com/EKKOLearnAI/hermes-web-ui
+  - label: Documentation
+    url: https://hermes-agent.nousresearch.com/docs
+contributors:
+  - name: Community
+    url: https://github.com/NousResearch/hermes-agent/graphs/contributors
+schema:
+  type: object
+  required:
+    - agentServiceName
+    - agentServiceImage
+    - webuiServiceName
+  properties:
+    agentServiceName:
+      type: string
+      title: Agent Service Name
+      default: hermes-agent
+    agentServiceImage:
+      type: string
+      title: Agent Service Image
+      default: nousresearch/hermes-agent:latest
+    webuiServiceName:
+      type: string
+      title: Web UI Service Name
+      default: hermes-web-ui
+    gatewayMode:
+      type: boolean
+      title: Enable Gateway Mode
+      description: "ON: runs hermes gateway run (Telegram/Discord/Slack/cron). OFF: idles so you can SSH in and run hermes setup first."
+      default: false
+    apiServerKey:
+      type: string
+      title: API Server Key
+      description: "Bearer token protecting the agent API server on port 8642. Auto-generated if blank. The Web UI uses this to authenticate. Find it in the agent service env vars after deployment."
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      description: "Optional: injected as ANTHROPIC_API_KEY into the agent. Can also be set later via hermes setup."
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: "Optional: injected as OPENAI_API_KEY into the agent. Can also be set later via hermes setup."
+    telegramBotToken:
+      type: string
+      title: Telegram Bot Token
+      description: "Optional: your Telegram bot token from @BotFather."
+    discordBotToken:
+      type: string
+      title: Discord Bot Token
+      description: "Optional: your Discord bot token."
+benefits:
+  - title: Browser-Based Agent Dashboard
+    description: The EKKO Web UI gives you a full chat interface and scheduled job manager in your browser — no SSH or terminal required for day-to-day use.
+  - title: Persistent Memory & Skills
+    description: The agent remembers conversations, builds skills from experience, and retains context across sessions — all stored in a persistent volume on your server.
+  - title: Scheduled Jobs from the Browser
+    description: Create, edit, pause, resume, and trigger cron jobs directly from the Web UI's Jobs panel with cron expression presets and real-time status.
+  - title: Messaging Gateway
+    description: Connect to Telegram, Discord, Slack, or WhatsApp for mobile access — runs alongside the Web UI from the same agent instance.
+features:
+  - title: Real-Time Streaming Chat
+    description: The Web UI uses the agent's SSE run event stream for live tool-call progress and streaming responses, with Markdown and code syntax highlighting.
+  - title: Multi-Session Management
+    description: Create and switch between multiple chat sessions. Sessions persist in localStorage and are linked to the agent's session store.
+  - title: Scheduled Job Management
+    description: Full CRUD for cron jobs — create with natural-language prompts, set delivery targets, pause/resume, and trigger runs on demand.
+  - title: OpenAI-Compatible API
+    description: The agent exposes a standard /v1/chat/completions and /v1/runs endpoint so any OpenAI-compatible client (Claude Code, Cursor, Open WebUI) can also connect.
+  - title: Autonomous Tool Use
+    description: Terminal, file operations, web search, and code execution — the agent chains tools automatically to complete tasks.
+tags:
+  - AI
+  - Automation
+  - Self-Hosted
+  - Developer Tools
+  - Productivity
