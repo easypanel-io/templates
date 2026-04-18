@@ -1,0 +1,62 @@
+name: Panelio
+description:
+  Panelio is a self-hosted services dashboard with a built-in admin UI. Forked
+  from Homepage, it adds a full web-based configuration interface — manage
+  services, bookmarks, widgets and settings from your browser, no more editing
+  YAML files by hand.
+instructions:
+  Set `PANELIO_ADMIN_PASSWORD` to secure the admin panel. Open `/admin` to
+  configure your dashboard visually.
+changeLog:
+  - date: 2026-04-04
+    description: First Release (v1.0.0)
+links:
+  - label: Website
+    url: https://github.com/Vellis59/panelio
+  - label: Demo
+    url: https://demo-panelio.vellis.cc
+  - label: GitHub
+    url: https://github.com/Vellis59/panelio
+contributors:
+  - name: Vellis59
+    url: https://github.com/Vellis59
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: panelio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/vellis59/panelio:latest
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: changeme
+benefits:
+  - title: Visual Admin Panel
+    description:
+      Manage services, bookmarks, widgets and settings through a modern web UI
+      instead of editing YAML configuration files.
+  - title: One-Click Config
+    description:
+      Add, edit, reorder and delete services and bookmarks with instant live
+      preview — no restarts needed.
+  - title: Import & Export
+    description:
+      Backup and restore your entire configuration with a single click.
+  - title: Based on Homepage
+    description:
+      Built on top of the popular Homepage dashboard with all its integrations,
+      widgets and monitoring features.
+tags:
+  - dashboard
+  - self-hosted
+  - homepage
+  - admin
