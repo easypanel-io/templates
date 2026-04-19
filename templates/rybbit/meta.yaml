@@ -7,7 +7,15 @@ description:
   features a sleek dashboard for visualizing analytics data, user management
   with authentication, and configurable signup settings. Perfect for businesses
   looking to gain deep insights into their applications and user interactions.
-instructions: null
+instructions:
+  After deployment, open your mapped domain to reach the Rybbit UI (Caddy serves
+  the web app and proxies API traffic to the backend). The template generates
+  PostgreSQL and ClickHouse passwords and a Better Auth secret automatically;
+  you do not need to set them by hand unless you rotate credentials later in the
+  services. Create the first account from the UI when sign-up is enabled. To
+  send email (invites, password reset, etc.), add a Resend API key in the
+  backend service environment. For custom domains or HTTPS, finish DNS and
+  routing in Easypanel so the public URL matches how you access the app.
 changeLog:
   - date: 2025-06-03
     description: First release
