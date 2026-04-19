@@ -11,7 +11,13 @@ changeLog:
     description: Template Release
   - date: 2025-07-21
     description: Version bumped to 1.57.1
+  - date: 2026-04-18
+    description:
+      OpenSearch admin password is generated when not provided instead of a
+      static default
 links:
+  - label: Website
+    url: https://fusionauth.io
   - label: Documentation
     url: https://fusionauth.io/docs
   - label: Github
@@ -42,11 +48,11 @@ schema:
     searchPassword:
       type: string
       title: Search Password
-      default: "H@rmony12345alskdJASKLDJSLADnmsd12@#"
       description:
-        The Password for the search must be strong 8 characters long, one
-        uppercase letter, one lowercase letter, one number, and one special
-        character
+        OpenSearch initial admin password. Must be at least 8 characters with
+        uppercase, lowercase, a number, and a special character. If you leave
+        this empty, a random password that meets these rules is generated when
+        the template is applied.
 benefits:
   - title: Comprehensive Identity Management
     description:

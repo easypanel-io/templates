@@ -4,6 +4,8 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const searchPassword =
+    input.searchPassword?.trim() || `${randomPassword()}A#`;
 
   services.push({
     type: "app",
@@ -52,7 +54,7 @@ export function generate(input: Input): Output {
         `plugins.security.disabled=true`,
         `bootstrap.memory_lock=true`,
         `opensearch_java_opts=-Xms512m -Xmx512m`,
-        `OPENSEARCH_INITIAL_ADMIN_PASSWORD=${input.searchPassword}`,
+        `OPENSEARCH_INITIAL_ADMIN_PASSWORD=${searchPassword}`,
       ].join("\n"),
       source: {
         type: "image",
