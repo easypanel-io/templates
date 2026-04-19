@@ -6,6 +6,10 @@ import {
 } from "~templates-utils";
 import { Input } from "./meta";
 
+/** Matches `oauth2ServiceImage` default in meta.yaml (immutable digest). */
+const DEFAULT_OAUTH2_IMAGE =
+  "ghcr.io/supernova3339/ep-oauth2-serv@sha256:81832fa28a9e109b619f61514b930b3fb7a588845469b5c291297af236209785";
+
 export function generate(input: Input): Output {
   const services: Services = [];
   const jwtSecret = randomString(32);
@@ -31,14 +35,12 @@ export function generate(input: Input): Output {
         serviceName: `${input.appServiceName}-oauth2`,
         source: {
           type: "image",
-          image:
-            input.oauth2ServiceImage ||
-            "ghcr.io/supernova3339/oauth2-server:latest",
+          image: input.oauth2ServiceImage || DEFAULT_OAUTH2_IMAGE,
         },
         env: [
           `EASYPANEL_URL=${input.easypanelUrl}`,
           `SESSION_SECRET=${sessionSecret}`,
-          `API_TOKEN=${input.easypanelApiToken}`,
+          `API_TOKEN=${input.easypanelApiToken ?? ""}`,
           "NODE_ENV=production",
           "PORT=3000",
           `CLIENT_API_KEY=${clientApiKey}`,
@@ -81,10 +83,10 @@ export function generate(input: Input): Output {
         `GITHUB_ENCRYPTION_KEY=${githubEncryptionKey}`,
         `ANALYTICS_SALT=${analyticsSalt}`,
         "NODE_ENV=production",
-        `EASYPANEL_PROJECT_ID=xxxxx`,
-        `EASYPANEL_SERVICE_ID=xxxxx`,
+        `EASYPANEL_PROJECT_ID=${input.easypanelProjectId ?? ""}`,
+        `EASYPANEL_SERVICE_ID=${input.easypanelServiceId ?? ""}`,
         `EASYPANEL_PANEL_URL=https://$(EASYPANEL_HOST)`,
-        `EASYPANEL_API_KEY=xxxxx`,
+        `EASYPANEL_API_KEY=${input.easypanelApiKey ?? ""}`,
         `CHR_EPOA2_SERV_URL=https://$(PROJECT_NAME)-${input.appServiceName}-oauth2.$(EASYPANEL_HOST)`,
         `CHR_EPOA2_SERV_API_KEY=${clientApiKey}`,
       ].join("\n"),

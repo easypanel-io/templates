@@ -17,7 +17,13 @@ instructions:
 changeLog:
   - date: 2025-08-08
     description: First Release (v1.0.4)
+  - date: 2026-04-19
+    description:
+      Added website link; pinned OAuth2 sidecar image by digest; removed
+      placeholder Easypanel secrets from schema and generated env
 links:
+  - label: Website
+    url: https://github.com/supernova3339/changerawr
   - label: Github
     url: https://github.com/supernova3339/changerawr
   - label: Documentation
@@ -47,21 +53,39 @@ schema:
     oauth2ServiceImage:
       type: string
       title: OAuth2 Service Image
-      description:
-        Docker image for OAuth2 server (required if OAuth2 is enabled)
-      default: ghcr.io/supernova3339/ep-oauth2-serv:latest
+      default: ghcr.io/supernova3339/ep-oauth2-serv@sha256:81832fa28a9e109b619f61514b930b3fb7a588845469b5c291297af236209785
     easypanelApiToken:
       type: string
-      title: Easypanel API Token
+      title: Easypanel API Token (OAuth2 sidecar)
       description:
-        API token for Easypanel integration (required if OAuth2 is enabled)
-      default: "xxxx-xxxx-xxxx-xxxx"
+        Easypanel API token for the OAuth2 service (required when OAuth2 is
+        enabled). Create a token in your Easypanel instance; do not use a
+        placeholder.
     easypanelUrl:
       type: string
       title: Easypanel URL
       description:
-        URL of your Easypanel instance (required if OAuth2 is enabled)
+        Base URL of your Easypanel instance for the OAuth2 sidecar (when OAuth2
+        is enabled).
       default: https://$(EASYPANEL_HOST)
+    easypanelProjectId:
+      type: string
+      title: Easypanel Project ID
+      description:
+        Project ID from Easypanel for automatic updates (optional; set in the
+        template or later in the app service environment).
+    easypanelServiceId:
+      type: string
+      title: Easypanel Service ID
+      description:
+        Service ID from Easypanel for automatic updates (optional; set in the
+        template or later in the app service environment).
+    easypanelApiKey:
+      type: string
+      title: Easypanel API Key (main app)
+      description:
+        API key the Changerawr app uses for Easypanel automatic updates
+        (optional; set in the template or later in the app service environment).
 
 benefits:
   - title: Integrated with Easypanel
