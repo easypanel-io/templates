@@ -1,0 +1,82 @@
+name: Metaflow
+description:
+  Metaflow is an open-source framework for building and managing real-life ML,
+  AI, and data science projects. Originally developed at Netflix and now
+  supported by Outerbounds, Metaflow streamlines the entire development
+  lifecycle—from rapid prototyping in notebooks to reliable production
+  deployments. It unifies code, data, and compute at every stage, enabling teams
+  to iterate quickly and deliver robust AI/ML systems. Used by Amazon, Doordash,
+  Goldman Sachs, and many others.
+instructions:
+  Deploy Metaflow metadata service to track your flows. Configure your Metaflow
+  client with METAFLOW_SERVICE_URL pointing to your deployment URL and
+  METAFLOW_DEFAULT_METADATA=service. Run flows with `python myflow.py run` and
+  metadata will be stored. Allow ~30 seconds for the metadata service to start.
+changeLog:
+  - date: 2026-02-09
+    description: Initial release
+links:
+  - label: Website
+    url: https://metaflow.org/
+  - label: Documentation
+    url: https://docs.metaflow.org/
+  - label: GitHub
+    url: https://github.com/Netflix/metaflow
+  - label: Metaflow Service
+    url: https://github.com/Netflix/metaflow-service
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - metadataServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: metaflow
+    metadataServiceImage:
+      type: string
+      title: Metadata Service Image
+      default: netflixoss/metaflow_metadata_service:v2.5.0
+      description: Docker image for the Metaflow metadata service
+benefits:
+  - title: Human-Centric ML Framework
+    description:
+      Metaflow is designed to boost productivity for research and engineering
+      teams, from classical statistics to state-of-the-art deep learning.
+  - title: Prototype to Production
+    description:
+      Seamlessly move from rapid prototyping in notebooks to reliable,
+      maintainable production deployments with built-in versioning and tracking.
+  - title: Battle-Tested at Scale
+    description:
+      Powers thousands of AI/ML projects at Netflix and beyond, processing
+      hundreds of millions of compute jobs and petabytes of data.
+  - title: Self-Hosted & Open Source
+    description:
+      Full control over your metadata and infrastructure. Apache 2.0 licensed.
+features:
+  - title: Experiment Tracking
+    description:
+      Built-in support for experiment tracking, versioning, and visualization of
+      flows, runs, steps, and artifacts.
+  - title: Remote Execution
+    description:
+      Scale horizontally and vertically in your cloud, utilizing both CPUs and
+      GPUs with fast data access.
+  - title: Production Orchestration
+    description:
+      One-click deploy to production orchestrators with reactive orchestration
+      and event-triggering support.
+  - title: Dependency Management
+    description:
+      Easily manage dependencies and deploy with reproducible environments.
+tags:
+  - Machine Learning
+  - AI
+  - Data Science
+  - MLOps
+  - Self-Hosted

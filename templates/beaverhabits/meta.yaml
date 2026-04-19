@@ -11,6 +11,8 @@ changeLog:
     description: Template Release (v0.7.0)
   - date: 2024-12-24
     description: Updated version to 0.8.0
+  - date: 2026-02-18
+    description: Version bumped to 0.8.2
 links:
   - label: Demo
     url: https://beaverhabits.com/demo
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: daya0576/beaverhabits:0.8.0
+      default: daya0576/beaverhabits:0.8.2
     trustedLocalEmail:
       type: string
       title: Trusted Local Email

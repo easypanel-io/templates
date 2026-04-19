@@ -84,10 +84,12 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-worker`,
       source: {
         type: "image",
-        image: "dockeriddonuts/authentik-worker:2.0",
+        image: input.appServiceImage,
+      },
+      deploy: {
+        command: "dumb-init -- ak worker",
       },
       env: [commonEnv].join("\n"),
-
       mounts: [
         {
           type: "bind",

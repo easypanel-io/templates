@@ -23,6 +23,8 @@ changeLog:
     description: Update to 2025-07-22
   - date: 2025-12-29
     description: Version bumped to 2025.12.27
+  - date: 2026-02-21
+    description: Version bumped to 2026.02.19
 links:
   - label: Documentation
     url: https://github.com/alexta69/metube
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: alexta69/metube:2025.12.27
+      default: alexta69/metube:2026.02.19
     downloadPath:
       type: string
       title: Downloads Volume Name
