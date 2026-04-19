@@ -5,14 +5,20 @@ description:
   advertisements, and other unwanted traffic while providing a clean web
   interface for management.
 instructions:
-  The login credentials are user = admin and password is genrated on the startup
+  The login credentials are user = admin and password is generated on the startup
   logs of GoAway inside overview section. In order to mount the DNS port, you
   have to make sure your host machine has the port 53 not being used by any
   other service.
 changeLog:
   - date: 2025-07-09
     description: Initial release
+  - date: 2026-04-19
+    description: Square logo; website and documentation links
 links:
+  - label: Website
+    url: https://pommee.github.io/goaway/
+  - label: Documentation
+    url: https://pommee.github.io/goaway/getting-started/
   - label: GitHub
     url: https://github.com/pommee/goaway
 contributors:
