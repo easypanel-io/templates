@@ -1,6 +1,11 @@
 name: SteamCMD
-description: SteamCMD is a command-line version of the Steam client for installing and updating Steam games and dedicated servers. It's perfect for managing game servers and game installations.
-instructions: After installation, you can use SteamCMD to install and update games. The installation directory can be configured in the settings.
+description:
+  SteamCMD is a command-line version of the Steam client for installing and
+  updating Steam games and dedicated servers. It's perfect for managing game
+  servers and game installations.
+instructions:
+  After installation, you can use SteamCMD to install and update games. The
+  installation directory can be configured in the settings.
 changeLog:
   - date: 2025-05-05
     description: Initial release
@@ -13,7 +18,7 @@ contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
 schema:
-  type: object  
+  type: object
   required:
     - appServiceName
     - appServiceImage
@@ -62,4 +67,4 @@ tags:
   - Steam
   - Game Server
   - Self-hosted
-  - Gaming 
+  - Gaming
