@@ -1,6 +1,13 @@
 name: AdGuard Home Sync
-description: AdGuard Home Sync is a tool designed to synchronize filters, blocklists, and configuration between multiple AdGuard Home instances. It allows you to maintain consistent filtering across different AdGuard Home deployments by synchronizing configuration from an origin instance to one or more replica instances.
-instructions: Modify the config file to add your own AdGuard Home instances and cron schedule.
+description:
+  AdGuard Home Sync is a tool designed to synchronize filters, blocklists, and
+  configuration between multiple AdGuard Home instances. It allows you to
+  maintain consistent filtering across different AdGuard Home deployments by
+  synchronizing configuration from an origin instance to one or more replica
+  instances.
+instructions:
+  Modify the config file to add your own AdGuard Home instances and cron
+  schedule.
 changeLog:
   - date: 2025-05-09
     description: first release
@@ -38,18 +45,29 @@ schema:
       default: password
 benefits:
   - title: Consistent Filtering
-    description: Maintain consistent filtering rules across multiple AdGuard Home instances automatically.
+    description:
+      Maintain consistent filtering rules across multiple AdGuard Home instances
+      automatically.
   - title: Automated Synchronization
-    description: Set it and forget it with customizable cron schedules that keep your AdGuard Home instances in sync without manual intervention.
+    description:
+      Set it and forget it with customizable cron schedules that keep your
+      AdGuard Home instances in sync without manual intervention.
   - title: Centralized Management
-    description: Manage your filtering rules from a single origin instance and have them propagate to all your replica instances.
+    description:
+      Manage your filtering rules from a single origin instance and have them
+      propagate to all your replica instances.
 features:
   - title: Multi-Instance Synchronization
-    description: Sync configuration from one origin AdGuard Home instance to one or more replica instances.
+    description:
+      Sync configuration from one origin AdGuard Home instance to one or more
+      replica instances.
   - title: Scheduled Synchronization
-    description: Configure how frequently synchronization occurs using cron expressions.
+    description:
+      Configure how frequently synchronization occurs using cron expressions.
   - title: API Access
-    description: Access the synchronization process via a secure API with basic authentication.
+    description:
+      Access the synchronization process via a secure API with basic
+      authentication.
 tags:
   - AdGuard Home
   - DNS
