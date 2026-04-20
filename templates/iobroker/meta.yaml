@@ -1,9 +1,13 @@
 name: ioBroker
-description: ioBroker is a powerful open-source IoT platform that allows you to connect different smart home systems and devices into one platform. It supports a wide range of protocols and devices, making it a versatile solution for home automation.
+description:
+  ioBroker is a powerful open-source IoT platform that allows you to connect
+  different smart home systems and devices into one platform. It supports a wide
+  range of protocols and devices, making it a versatile solution for home
+  automation.
 instructions: null
 changeLog:
   - date: 2025-04-30
-    description: Initial release   
+    description: Initial release
 links:
   - label: Website
     url: https://www.iobroker.net
@@ -32,9 +36,11 @@ schema:
       default: buanet/iobroker:v10.0.0
 benefits:
   - title: Unified Smart Home Platform
-    description: Connect and control all your smart home devices from a single interface
+    description:
+      Connect and control all your smart home devices from a single interface
   - title: Extensive Protocol Support
-    description: Supports multiple protocols including Zigbee, Z-Wave, MQTT, and more
+    description:
+      Supports multiple protocols including Zigbee, Z-Wave, MQTT, and more
   - title: Customizable Automation
     description: Create complex automation rules and scenarios
   - title: Open Source
@@ -59,4 +65,4 @@ tags:
   - Home Automation
   - Smart Home
   - Automation
-  - Self-hosted 
+  - Self-hosted
