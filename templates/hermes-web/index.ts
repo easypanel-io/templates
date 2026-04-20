@@ -10,7 +10,12 @@ export function generate(input: Input): Output {
     ? "/opt/hermes/.venv/bin/hermes gateway run"
     : "sleep infinity";
 
-  // ── Service 1: Hermes Agent ──────────────────────────────────────────────
+  // ── Service 1: Hermes Agent (app service — image source) ──────────────────
+  //
+  // All app services in the Easypanel template system must use source.type
+  // "image". The "git" source type on app services requires a `path` property
+  // and is not used by any published template — only compose services support
+  // git sources correctly.
   services.push({
     type: "app",
     data: {
@@ -25,6 +30,8 @@ export function generate(input: Input): Output {
       env: [
         `PATH=/opt/hermes/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`,
         `HERMES_HOME=/opt/data`,
+        // API server must be enabled — the Workspace reaches it via Docker
+        // internal DNS (http://$(PROJECT_NAME)_agentServiceName:8642)
         `API_SERVER_ENABLED=true`,
         `API_SERVER_HOST=0.0.0.0`,
         `API_SERVER_PORT=8642`,
@@ -43,8 +50,8 @@ export function generate(input: Input): Output {
           ? [`DISCORD_BOT_TOKEN=${input.discordBotToken}`]
           : []),
       ].join("\n"),
-      // Only expose publicly when explicitly requested.
-      // The Workspace reaches the agent via internal Docker DNS regardless.
+      // Only expose a public HTTPS domain when explicitly requested.
+      // The Workspace connects internally regardless of this setting.
       ...(input.apiServerEnabled
         ? { domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 8642 }] }
         : {}),
@@ -58,42 +65,50 @@ export function generate(input: Input): Output {
     },
   });
 
-  // ── Service 2: Hermes Workspace ──────────────────────────────────────────
-  // Built from outsourc-e/hermes-workspace using its own Dockerfile.
-  // source.type must be "git" — the only valid literal for a remote repo
-  // in the Easypanel template schema. The Dockerfile path is passed via
-  // the build config, not inside source.
+  // ── Service 2: Hermes Workspace (compose service — git source) ───────────
   //
-  // HERMES_API_URL uses Docker Swarm internal DNS:
-  //   http://$(PROJECT_NAME)_agentServiceName:8642
-  // The Workspace Node.js server proxies requests to the agent server-side,
-  // so the API key is never exposed to the browser.
+  // The compose service type is the only correct way to deploy from a git
+  // repository in the Easypanel template system. It clones the repo, finds
+  // the docker-compose.yml, and runs it. The `source.type: "git"` is valid
+  // here (unlike on app services where it requires an unusable `path` field).
+  //
+  // Environment variables are injected via `env` + `createDotEnv: true`,
+  // which writes a .env file next to the compose file before startup so
+  // docker-compose can read them as substitutions.
+  //
+  // HERMES_API_URL uses Docker Swarm internal DNS so the Workspace Node.js
+  // server proxies requests to the agent without going via the public internet.
+  // The API key never reaches the browser — it stays server-side in Node.js.
   services.push({
-    type: "app",
+    type: "compose",
     data: {
       serviceName: input.workspaceServiceName,
       source: {
         type: "git",
         repo: "https://github.com/outsourc-e/hermes-workspace",
         ref: "main",
+        rootPath: "/",
+        composeFile: "docker-compose.yml",
       },
-      build: {
-        type: "dockerfile",
-        // The repo ships a dedicated workspace Dockerfile
-        dockerfile: "docker/workspace/Dockerfile",
-      },
+      // createDotEnv writes env vars into a .env file that docker-compose
+      // picks up automatically for variable substitution
+      createDotEnv: true,
       env: [
-        // Internal Docker network — resolves via Swarm DNS, never hits internet
+        // Internal Docker Swarm DNS — never hits the public internet
         `HERMES_API_URL=http://$(PROJECT_NAME)_${input.agentServiceName}:8642`,
-        // Server-side only — proxied by Node.js, not sent to browser
+        // Server-side auth token — proxied by Node.js, not sent to browser
         `HERMES_API_KEY=${apiServerKey}`,
         ...(input.workspacePassword
           ? [`HERMES_PASSWORD=${input.workspacePassword}`]
           : []),
-        `PORT=3000`,
       ].join("\n"),
       domains: [
-        { host: "$(EASYPANEL_DOMAIN)", port: 3000 },
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3000,
+          // "hermes-workspace" is the service name inside the docker-compose.yml
+          service: "hermes-workspace",
+        },
       ],
     },
   });
