@@ -1,9 +1,10 @@
 name: TinyMediaManager
 description:
-  TinyMediaManager is a media management tool designed to organize and manage your 
-  movie and TV show collections. It automatically fetches metadata from various sources,
-  downloads artwork, and helps keep your media library well-organized with proper naming
-  conventions and metadata files for media servers like Plex, Emby, and Jellyfin.
+  TinyMediaManager is a media management tool designed to organize and manage
+  your movie and TV show collections. It automatically fetches metadata from
+  various sources, downloads artwork, and helps keep your media library
+  well-organized with proper naming conventions and metadata files for media
+  servers like Plex, Emby, and Jellyfin.
 instructions: null
 changeLog:
   - date: 2025-04-25
@@ -42,9 +43,13 @@ schema:
       description: Password for accessing the VNC interface
 benefits:
   - title: Automated Metadata Retrieval
-    description: Automatically fetch movie and TV show metadata from online sources like TMDB, TVDB, and IMDB
+    description:
+      Automatically fetch movie and TV show metadata from online sources like
+      TMDB, TVDB, and IMDB
   - title: Artwork Management
-    description: Download and manage posters, fanart, banners, and other artwork for your media
+    description:
+      Download and manage posters, fanart, banners, and other artwork for your
+      media
   - title: Media Organization
     description: Rename and organize files based on customizable templates
   - title: NFO File Generation
@@ -55,9 +60,12 @@ features:
   - title: Multi-language Support
     description: Support for multiple languages for both the UI and metadata
   - title: Image Management
-    description: Advanced image manipulation including poster selection and artwork downloading
+    description:
+      Advanced image manipulation including poster selection and artwork
+      downloading
   - title: Flexible Scraping Options
-    description: Configure how metadata is fetched and which sources to prioritize
+    description:
+      Configure how metadata is fetched and which sources to prioritize
   - title: Remote Access
     description: Access through web interface or VNC from any device
   - title: Persistent Storage
@@ -69,4 +77,4 @@ tags:
   - Metadata
   - Plex
   - Emby
-  - Jellyfin 
+  - Jellyfin
