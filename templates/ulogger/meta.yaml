@@ -1,5 +1,8 @@
 name: uLogger
-description: uLogger is a lightweight, self-hosted GPS tracking platform that allows you to track and visualize your location data. It's perfect for personal use, fleet management, or tracking outdoor activities.
+description:
+  uLogger is a lightweight, self-hosted GPS tracking platform that allows you to
+  track and visualize your location data. It's perfect for personal use, fleet
+  management, or tracking outdoor activities.
 instructions: null
 changeLog:
   - date: 2025-04-30
@@ -28,9 +31,11 @@ schema:
       default: bfabiszewski/ulogger:v1.0
 benefits:
   - title: Self-hosted GPS Tracking
-    description: Keep your location data private by hosting your own GPS tracking platform
+    description:
+      Keep your location data private by hosting your own GPS tracking platform
   - title: Lightweight Solution
-    description: Minimal resource requirements make it perfect for small deployments
+    description:
+      Minimal resource requirements make it perfect for small deployments
   - title: Multi-language Support
     description: Available in multiple languages for global accessibility
   - title: Open Source
@@ -53,4 +58,4 @@ tags:
   - Location
   - Self-hosted
   - Open Source
-  - Mobile 
+  - Mobile
