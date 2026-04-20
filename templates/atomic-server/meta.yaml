@@ -1,5 +1,8 @@
 name: Atomic Server
-description: Atomic Server is a powerful and flexible server for managing and serving atomic data. It provides a robust platform for data management with support for various protocols and formats.
+description:
+  Atomic Server is a powerful and flexible server for managing and serving
+  atomic data. It provides a robust platform for data management with support
+  for various protocols and formats.
 instructions: null
 changeLog:
   - date: 2025-04-24
@@ -28,11 +31,17 @@ schema:
       default: joepmeneer/atomic-server:v0.38.0
 benefits:
   - title: Powerful Data Management
-    description: Atomic Server provides a robust platform for managing and serving atomic data with support for various protocols and formats.
+    description:
+      Atomic Server provides a robust platform for managing and serving atomic
+      data with support for various protocols and formats.
   - title: Flexible Configuration
-    description: Highly configurable with support for custom domains, ports, and storage options.
+    description:
+      Highly configurable with support for custom domains, ports, and storage
+      options.
   - title: Secure by Default
-    description: Built with security in mind, providing secure data access and management capabilities.
+    description:
+      Built with security in mind, providing secure data access and management
+      capabilities.
 features:
   - title: Multiple Protocols
     description: Supports various protocols for data access and management.
