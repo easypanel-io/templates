@@ -1,6 +1,11 @@
 name: TeamCity
-description: TeamCity is a build management and continuous integration server from JetBrains.
-instructions: null
+description:
+  TeamCity is a build management and continuous integration server from
+  JetBrains.
+instructions:
+  After setup, connect your Git repository and create a Build Configuration. If
+  you enabled the bundled agent, it will auto-register to the server; approve it
+  in **Agents** before running your first build.
 changeLog:
   - date: 2025-04-29
     description: First Release
@@ -39,20 +44,33 @@ schema:
       description: Set to true to deploy a TeamCity agent alongside the server
 benefits:
   - title: Powerful CI/CD
-    description: TeamCity provides a robust platform for continuous integration and deployment with support for various build tools and version control systems.
+    description:
+      TeamCity provides a robust platform for continuous integration and
+      deployment with support for various build tools and version control
+      systems.
   - title: User-Friendly Interface
-    description: Intuitive web interface makes it easy to configure and monitor your builds and deployments.
+    description:
+      Intuitive web interface makes it easy to configure and monitor your builds
+      and deployments.
   - title: Scalable Architecture
-    description: Built to scale with support for multiple build agents and distributed builds.
+    description:
+      Built to scale with support for multiple build agents and distributed
+      builds.
 features:
   - title: Build Management
-    description: Comprehensive build management with support for various build tools and frameworks.
+    description:
+      Comprehensive build management with support for various build tools and
+      frameworks.
   - title: Version Control Integration
-    description: Seamless integration with popular version control systems like Git, SVN, and Mercurial.
+    description:
+      Seamless integration with popular version control systems like Git, SVN,
+      and Mercurial.
   - title: Build Agents
-    description: Support for multiple build agents to distribute and parallelize builds.
+    description:
+      Support for multiple build agents to distribute and parallelize builds.
   - title: Build History
-    description: Detailed build history and statistics for better project insights.
+    description:
+      Detailed build history and statistics for better project insights.
   - title: Customizable Workflows
     description: Flexible build configurations and customizable build workflows.
   - title: Containerized
@@ -62,4 +80,4 @@ tags:
   - Build Server
   - Continuous Integration
   - Deployment
-  - Automation 
+  - Automation
