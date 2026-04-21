@@ -1,6 +1,12 @@
 name: dPaste
-description: dPaste is a simple and lightweight pastebin service that allows you to share text snippets, code, and other content quickly. It provides a clean interface for creating, sharing, and managing pastes with support for syntax highlighting and expiration times.
-instructions: After installation, access the web interface through the provided domain to start creating and sharing pastes.
+description:
+  dPaste is a simple and lightweight pastebin service that allows you to share
+  text snippets, code, and other content quickly. It provides a clean interface
+  for creating, sharing, and managing pastes with support for syntax
+  highlighting and expiration times.
+instructions:
+  After installation, access the web interface through the provided domain to
+  start creating and sharing pastes.
 changeLog:
   - date: 2025-04-10
     description: First Release
@@ -51,4 +57,4 @@ tags:
   - Code Sharing
   - Text Sharing
   - Self-Hosted
-  - Development Tools 
+  - Development Tools
