@@ -1,16 +1,21 @@
 name: Huginn
 description:
-  Huginn is a system for building agents that perform automated tasks for you online.
-  They can read the web, watch for events, and take actions on your behalf.
-instructions: null
+  Huginn is a system for building agents that perform automated tasks for you
+  online. They can read the web, watch for events, and take actions on your
+  behalf.
+instructions:
+  Open Huginn from your domain, complete the initial account setup, then create
+  or import agents and configure credentials for the external services they use.
 changeLog:
   - date: 2024-04-08
     description: First Release
 links:
   - label: Website
-    url: https://github.com/huginn/huginn
+    url: https://huginn.io/
   - label: Documentation
     url: https://github.com/huginn/huginn/wiki
+  - label: GitHub
+    url: https://github.com/huginn/huginn
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -53,4 +58,4 @@ tags:
   - Web Scraping
   - API
   - Data Processing
-  - Self-Hosted 
+  - Self-Hosted
