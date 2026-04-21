@@ -7,7 +7,13 @@ description:
   time-series functionality while maintaining the reliability and flexibility of
   PostgreSQL.
 
-instructions: null
+instructions:
+  After deployment, connect to TimescaleDB using your app domain on port 5432
+  with username `postgres`, password set in Database Password, and database
+  `postgres`; for example, `psql
+  "postgresql://postgres:<YOUR_PASSWORD>@<YOUR_DOMAIN>:5432/postgres"`;
+  TimescaleDB is PostgreSQL-compatible, so any PostgreSQL client or ORM can use
+  the same connection details.
 
 changeLog:
   - date: 2025-03-26
