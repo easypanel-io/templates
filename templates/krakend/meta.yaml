@@ -4,8 +4,9 @@ description:
   architecture. It's designed to be ultra-fast and lightweight, aggregating
   multiple services into a single API endpoint. It's perfect for building
   microservices, mobile backends, and public APIs.
-
-instructions: Please follow the official documentation for more information and customizations. 
+instructions:
+  Please follow the official documentation for more information and
+  customizations.
 changeLog:
   - date: 2025-04-03
     description: Initial template release
@@ -32,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: KrakenD Image
-      default: devopsfaith/krakend:2.9.3
+      default: krakend:2.9
 benefits:
   - title: High Performance
     description: Ultra-fast API Gateway with minimal latency.
@@ -56,4 +57,4 @@ tags:
   - Microservices
   - Backend
   - High Performance
-  - Open Source 
+  - Open Source
