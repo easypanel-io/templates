@@ -1,0 +1,83 @@
+name: Discourse
+description:
+  Discourse is a modern, open-source discussion platform that provides a clean,
+  intuitive interface for community discussions. It's perfect for forums,
+  mailing lists, chat rooms, and more.
+instructions:
+  Once clicked, please wait for the installation to complete, it will take time.
+  It is also resource intensive, so make sure you have more than 8GB of RAM.
+changeLog:
+  - date: 2025-04-30
+    description: Initial release
+  - date: 2025-07-15
+    description: Version bumped to 3.4.5
+links:
+  - label: Website
+    url: https://www.discourse.org
+  - label: Documentation
+    url: https://docs.discourse.org
+  - label: GitHub
+    url: https://github.com/discourse/discourse
+  - label: Docker Hub
+    url: https://hub.docker.com/r/bitnami/discourse
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - discourseUsername
+    - discoursePassword
+    - discourseEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: discourse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bitnami/discourse:3.4.5
+    discourseEmail:
+      type: string
+      title: Discourse Email
+      default: admin@example.com
+    discourseUsername:
+      type: string
+      title: Discourse Username
+      default: admin
+    discoursePassword:
+      type: string
+      title: Discourse Password
+      default: adminpassword123
+      description: Passwort must be at least 10 characters long
+benefits:
+  - title: Modern Discussion Platform
+    description: Clean, intuitive interface for community discussions and forums
+  - title: Self-hosted Solution
+    description: Keep your community data private by hosting your own platform
+  - title: Scalable Architecture
+    description: Built with performance and scalability in mind
+  - title: Open Source
+    description: Free and open-source platform with active community support
+features:
+  - title: Rich Text Editor
+    description: Advanced text editing with markdown support
+  - title: Real-time Updates
+    description: Live updates and notifications
+  - title: Mobile Responsive
+    description: Fully responsive design for all devices
+  - title: User Management
+    description: Comprehensive user and permission management
+  - title: Search Functionality
+    description: Powerful search capabilities
+  - title: Plugin System
+    description: Extensible through plugins and themes
+tags:
+  - Forum
+  - Discussion
+  - Self-hosted
+  - Open Source
+  - Community

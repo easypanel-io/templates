@@ -1,0 +1,55 @@
+name: Web-Check
+description: A comprehensive OSINT tool for analyzing websites, providing insights into security configurations, server architecture, and technologies.
+instructions: null
+changeLog:
+  - date: 2025-05-12
+    description: First Release
+links:
+  - label: Website
+    url: https://web-check.xyz/
+  - label: Github
+    url: https://github.com/Lissy93/web-check
+  - label: Documentation
+    url: https://web-check.xyz/about
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: web-check
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lissy93/web-check
+benefits:
+  - title: Comprehensive Analysis
+    description: Get detailed insights into any website's security, configuration, and technology stack.
+  - title: Easy Deployment
+    description: Simple deployment with Docker and automatic setup.
+  - title: Open Source
+    description: Free and open source with active community support.
+features:
+  - title: Security Analysis
+    description: Check SSL certificates, security headers, DNS security, and firewall configurations.
+  - title: Server Information
+    description: View IP info, server location, open ports, and infrastructure details.
+  - title: Technology Stack
+    description: Identify technologies, frameworks, and services used by the website.
+  - title: Performance Metrics
+    description: Analyze site performance, quality metrics, and carbon footprint.
+  - title: Domain Intelligence
+    description: Access DNS records, WHOIS data, associated domains, and more.
+tags:
+  - OSINT
+  - Security
+  - Web Analysis
+  - DNS
+  - SSL
+  - Performance 

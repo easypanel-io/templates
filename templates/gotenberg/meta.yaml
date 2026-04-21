@@ -15,6 +15,14 @@ changeLog:
     description: first release
   - date: 2025-01-14
     description: Version bumped to 8.15.3
+  - date: 2025-02-25
+    description: Version bumped to 8.17.1
+  - date: 2025-07-21
+    description: Version bumped to 8.21
+  - date: 2025-12-25
+    description: Version bumped to 8.25.1
+  - date: 2026-02-21
+    description: Version bumped to 8.26.0
 links:
   - label: Website
     url: https://gotenberg.dev/
@@ -27,6 +35,8 @@ contributors:
     url: https://github.com/TheoCouss
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -40,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:8.15.3
+      default: gotenberg/gotenberg:8.26.0
 benefits:
   - title: Efficient Document Conversion
     description:

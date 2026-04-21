@@ -18,6 +18,10 @@ changeLog:
     description: first release
   - date: 2024-10-19
     description: Update to 5.12.2
+  - date: 2025-02-28
+    description: Version bumped to 5.13.1
+  - date: 2026-02-21
+    description: Version bumped to 5.14.3
 links:
   - label: Website
     url: https://mstream.io
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/mstream:5.12.2
+      default: lscr.io/linuxserver/mstream:5.14.3
 benefits:
   - title: Own Your Music
     description:

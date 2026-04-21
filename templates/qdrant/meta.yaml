@@ -15,6 +15,12 @@ instructions: null
 changeLog:
   - date: 2023-06-30
     description: first release
+  - date: 2025-02-28
+    description: Version bumped to v1.13.4
+  - date: 2025-07-24
+    description: Version bumped to v1.15
+  - date: 2025-12-29
+    description: Version bumped to v1.16
 links:
   - label: Website
     url: https://qdrant.tech/
@@ -25,6 +31,8 @@ links:
 contributors:
   - name: AlexSerban
     url: https://github.com/serban-alexandru
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -38,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: qdrant/qdrant:v1.9.4
+      default: qdrant/qdrant:v1.16
 benefits:
   - title: Advanced Vector Similarity Search
     description:

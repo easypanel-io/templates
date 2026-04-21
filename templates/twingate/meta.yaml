@@ -1,0 +1,121 @@
+name: Twingate
+description:
+  Twingate Connector securely bridges your private network resources to the
+  Twingate Zero Trust platform without exposing inbound ports. Deploy a
+  lightweight connector container and authenticate it with your tenant network
+  and connector tokens.
+instructions:
+  Before deploying, create a Connector in your Twingate Admin Console and copy
+  the generated tokens. Set `Twingate Network` to your tenant name (the
+  subdomain part of your Twingate URL), then paste the connector `Access Token`
+  and `Refresh Token` into the template fields. Deploy at least one connector;
+  for production, run two connectors on separate hosts for high availability.
+changeLog:
+  - date: 2026-03-27
+    description: Initial template release
+links:
+  - label: Website
+    url: https://www.twingate.com
+  - label: GitHub
+    url: https://github.com/Twingate/docker
+  - label: Docker Hub
+    url: https://hub.docker.com/r/twingate/connector
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - twingateNetwork
+    - twingateAccessToken
+    - twingateRefreshToken
+    - twingateLogAnalytics
+    - twingateLogLevel
+  properties:
+    appServiceName:
+      type: string
+      title: Connector Name
+      default: twingate-connector
+    appServiceImage:
+      type: string
+      title: Connector Image
+      default: twingate/connector:1.85.0
+    twingateNetwork:
+      type: string
+      title: Twingate Network (Tenant Name)
+      default: ""
+    twingateAccessToken:
+      type: string
+      title: Twingate Access Token
+      default: ""
+    twingateRefreshToken:
+      type: string
+      title: Twingate Refresh Token
+      default: ""
+    twingateLogAnalytics:
+      type: string
+      title: Log Analytics Version
+      default: v2
+      oneOf:
+        - enum:
+            - v1
+          title: v1
+        - enum:
+            - v2
+          title: v2
+    twingateLogLevel:
+      type: string
+      title: Log Level
+      default: "3"
+      oneOf:
+        - enum:
+            - "0"
+          title: "0"
+        - enum:
+            - "1"
+          title: "1"
+        - enum:
+            - "2"
+          title: "2"
+        - enum:
+            - "3"
+          title: "3"
+        - enum:
+            - "4"
+          title: "4"
+        - enum:
+            - "5"
+          title: "5"
+benefits:
+  - title: Zero Trust Private Access
+    description:
+      Publish internal resources through Twingate without opening inbound
+      firewall ports or exposing services directly to the internet.
+  - title: Lightweight Deployment
+    description:
+      Run the connector as a single container with minimal configuration and
+      straightforward token-based authentication.
+  - title: Better Access Control
+    description:
+      Centralize remote access policies in Twingate while keeping workloads in
+      your own infrastructure.
+features:
+  - title: Token-Based Connector Authentication
+    description:
+      Configure tenant, access token, and refresh token values directly through
+      template inputs.
+  - title: Built-in Logging Controls
+    description:
+      Tune connector observability with configurable analytics version and log
+      level settings.
+  - title: Compose-Compatible Environment
+    description:
+      Mirrors the standard Docker Compose connector environment variable setup
+      for easy migration.
+tags:
+  - Security
+  - Zero Trust
+  - Networking
+  - Remote Access

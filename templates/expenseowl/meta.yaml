@@ -1,0 +1,98 @@
+name: ExpenseOwl
+description:
+  ExpenseOwl is a simple, self-hosted expense tracker designed for quick expense
+  entry and essential tracking features. Built with a modern UI and
+  user-friendly interface, it makes managing your personal finances
+  straightforward and efficient. The application focuses on simplicity and ease
+  of use, allowing you to quickly log expenses, categorize spending, and track
+  your budget without complexity. ExpenseOwl stores all your financial data
+  securely with persistent storage, ensuring your expense history is always
+  available. Perfect for individuals who want a lightweight, privacy-focused
+  expense tracking solution without the overhead of complex financial management
+  software. The application can be used with simple file-based storage or
+  connected to a PostgreSQL database for more advanced data management needs.
+instructions: null
+changeLog:
+  - date: 2025-10-30
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/Tanq16/ExpenseOwl
+  - label: Docker Hub
+    url: https://hub.docker.com/r/tanq16/expenseowl
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: expenseowl
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tanq16/expenseowl:v4.1
+      description: ExpenseOwl Docker image
+benefits:
+  - title: Simple Expense Tracking
+    description:
+      Focus on what matters with a clean, intuitive interface designed for quick
+      expense entry without unnecessary complexity or features.
+  - title: Self-Hosted Privacy
+    description:
+      Keep complete control of your financial data by hosting ExpenseOwl on your
+      own infrastructure with full privacy and data ownership.
+  - title: Modern User Interface
+    description:
+      Enjoy a modern, responsive web interface that makes expense tracking a
+      pleasant experience on any device.
+  - title: Data Persistence
+    description:
+      All your expense data is stored persistently in a dedicated volume,
+      ensuring your financial history is never lost across restarts or updates.
+features:
+  - title: Quick Expense Entry
+    description:
+      Log expenses quickly with a streamlined interface designed for efficient
+      data entry and minimal friction in daily use.
+  - title: Expense Categorization
+    description:
+      Organize your spending with categories to better understand where your
+      money goes and identify spending patterns.
+  - title: Budget Tracking
+    description:
+      Keep track of your spending against budgets and financial goals with
+      essential tracking features built into the application.
+  - title: Modern Web Interface
+    description:
+      Access your expense tracker from any device with a web browser, featuring
+      a clean, modern design that's easy to navigate.
+  - title: Persistent Storage
+    description:
+      All expense data is stored in a persistent volume mounted at /app/data,
+      ensuring your financial records are always safe and accessible.
+  - title: Lightweight Deployment
+    description:
+      Runs efficiently with minimal resource requirements, making it perfect for
+      home servers, Raspberry Pi, or any Docker-capable host.
+  - title: Self-Hosted Solution
+    description:
+      Complete control over your financial data with no third-party services or
+      cloud dependencies required for operation.
+  - title: Optional Database Support
+    description:
+      Can be configured to use PostgreSQL for advanced data management needs
+      while defaulting to simple file-based storage for easy setup.
+tags:
+  - Finance
+  - Expense Tracking
+  - Budget
+  - Self-Hosted
+  - Personal Finance
+  - Money Management
+  - Lightweight

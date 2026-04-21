@@ -12,6 +12,14 @@ changeLog:
     description: Version changed to 18.1.0
   - date: 2025-01-09
     description: Version bumped to 18.4.1
+  - date: 2025-02-24
+    description: Version bumped to 18.5.1
+  - date: 2025-07-15
+    description: Version bumped to 18.6.1
+  - date: 2025-12-25
+    description: Version bumped to 19.0.17
+  - date: 2026-02-18
+    description: Version bumped to 19.4.1
 links:
   - label: Website
     url: https://cloudcmd.io
@@ -21,7 +29,7 @@ contributors:
   - name: Serban Alexandru
     url: https://github.com/serban-alexandru
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -37,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: coderaiser/cloudcmd:18.4.1
+      default: coderaiser/cloudcmd:19.4.1
     username:
       type: string
       title: Username

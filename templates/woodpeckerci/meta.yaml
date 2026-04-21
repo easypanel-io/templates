@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-01-27
     description: First Release
+  - date: 2025-07-25
+    description: Version bumped to v3.8.0
 links:
   - label: Github
     url: https://github.com/woodpecker-ci/woodpecker
@@ -34,11 +36,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: woodpeckerci/woodpecker-server:v2.8.3
+      default: woodpeckerci/woodpecker-server:v3.8.0
     agentServiceImage:
       type: string
       title: Agent Service Image
-      default: woodpeckerci/woodpecker-agent:v2.8.3
+      default: woodpeckerci/woodpecker-agent:v3.8.0
     githubClient:
       type: string
       title: GitHub Client ID

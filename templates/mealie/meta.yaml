@@ -21,6 +21,16 @@ changeLog:
     description: first release
   - date: 2024-10-19
     description: Update to 12.0
+  - date: 2025-02-28
+    description: Version bumped to v2.7.1
+  - date: 2025-06-05
+    description: Update to v2.8.0
+  - date: 2025-07-22
+    description: Update to v3.0.2
+  - date: 2025-12-29
+    description: Version bumped to v3.8.0
+  - date: 2026-02-21
+    description: Version bumped to v3.11.0
 links:
   - label: Documentation
     url: https://nightly.mealie.io/
@@ -44,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hkotel/mealie:v1.12.0
+      default: hkotel/mealie:v3.11.0
 benefits:
   - title: Self-Hosted Recipe Manager
     description:

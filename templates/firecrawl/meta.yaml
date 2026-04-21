@@ -1,0 +1,110 @@
+name: Firecrawl
+description:
+  Firecrawl is an API service that takes a URL, crawls it, and converts it into
+  clean markdown or structured data. It crawls all accessible subpages and gives
+  you clean data for each. No sitemap required. Featuring advanced scraping,
+  crawling, and data extraction capabilities with LLM-ready formats, anti-bot
+  mechanisms, dynamic content handling, and powerful customization options.
+  Perfect for AI applications, data extraction, and web automation.
+instructions: |
+  After deployment, access Firecrawl at the main domain on port 3002. The API
+  runs in standalone mode with Redis, RabbitMQ, and NuQ Postgres. Use a fresh
+  deployment so the nuq-postgres image can run its init script and create the
+  nuq schema. If you see "relation nuq.queue_scrape does not exist", delete the
+  nuq-postgres volume and redeploy to re-run the schema setup.
+changeLog:
+  - date: 2025-06-04
+    description: First Release
+  - date: 2026-03-11
+    description:
+      Align with official compose; add RabbitMQ; single harness container;
+      nuq-postgres image
+links:
+  - label: Website
+    url: https://firecrawl.dev/
+  - label: GitHub
+    url: https://github.com/firecrawl/firecrawl
+  - label: Documentation
+    url: https://docs.firecrawl.dev/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: firecrawl
+    appServiceImage:
+      type: string
+      title: Firecrawl API Image
+      default: ghcr.io/firecrawl/firecrawl:latest
+    playwrightServiceImage:
+      type: string
+      title: Playwright Service Image
+      default: ghcr.io/firecrawl/playwright-service:latest
+    redisImage:
+      type: string
+      title: Redis Image
+      default: redis:alpine
+    rabbitmqImage:
+      type: string
+      title: RabbitMQ Image
+      default: rabbitmq:3-management
+    nuqPostgresImage:
+      type: string
+      title: NuQ Postgres Image
+      default: ghcr.io/firecrawl/nuq-postgres:latest
+benefits:
+  - title: LLM-Ready Data Extraction
+    description:
+      Converts any website into clean markdown or structured data optimized for
+      use with language models and AI applications.
+  - title: Advanced Web Scraping
+    description:
+      Handles the hard stuff - proxies, anti-bot mechanisms, dynamic content
+      (JS-rendered), output parsing, and orchestration automatically.
+  - title: Multiple Extraction Modes
+    description:
+      Supports scraping single pages, crawling entire websites, mapping site
+      structures, web search, and AI-powered data extraction.
+  - title: Self-Hosted & Scalable
+    description:
+      Deploy on your own infrastructure with full control over your data.
+      Matches official stack (Redis, RabbitMQ, NuQ Postgres, Playwright).
+features:
+  - title: Multiple Content Formats
+    description:
+      Extract content in markdown, HTML, structured JSON, screenshots, and more.
+      Perfect for different use cases and AI model requirements.
+  - title: Intelligent Crawling
+    description:
+      Smart crawling with depth control, URL filtering, deduplication, and
+      respect for robots.txt. Efficiently discover and extract content from
+      entire websites.
+  - title: AI-Powered Extraction
+    description:
+      Use AI to extract structured data with custom prompts and schemas. Perfect
+      for extracting specific information like prices, names, and details.
+  - title: Dynamic Content Support
+    description:
+      Renders JavaScript-heavy pages with Playwright, handles SPAs, performs
+      actions like clicking and scrolling before extraction.
+  - title: Batch Processing
+    description:
+      Process thousands of URLs simultaneously with built-in queuing, rate
+      limiting, and parallel processing capabilities.
+  - title: Web Search Integration
+    description:
+      Search the web and optionally scrape search results in one operation.
+      Perfect for research and content discovery.
+tags:
+  - Web Scraping
+  - Data Extraction
+  - AI
+  - LLM
+  - Crawler
+  - API

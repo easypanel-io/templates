@@ -13,12 +13,18 @@ instructions: Visit /register to create an account
 changeLog:
   - date: 2023-1-30
     description: first release
+  - date: 2025-07-24
+    description: Version bumped to 1.0.0
+  - date: 2025-12-29
+    description: Version bumped to 1.1.0
 links:
   - label: Github
     url: https://github.com/beromir/Servas
 contributors:
   - name: Supernova3339
     url: https://github.com/supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -33,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: beromir/servas:0.2.0
+      default: beromir/servas:1.1.0
     databaseServiceName:
       type: string
       title: Database Service Name

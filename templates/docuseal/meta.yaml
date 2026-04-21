@@ -11,6 +11,14 @@ changeLog:
     description: Version Changed to 1.7.4
   - date: 2025-01-09
     description: Version bumped to v1.8.6
+  - date: 2025-05-26
+    description: Version bumped to 2.0.1
+  - date: 2025-07-15
+    description: Version bumped to 2.0.7
+  - date: 2025-12-25
+    description: Version bumped to 2.2.7
+  - date: 2026-02-18
+    description: Version bumped to 2.3.4
 links:
   - label: Website
     url: https://www.docuseal.co/
@@ -22,7 +30,7 @@ contributors:
   - name: VinumWeb
     url: https://github.com/vinumweb
   - name: Ahson Shaikh
-    url: https://github.com/MuhammadAhsanDonuts
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -37,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docuseal/docuseal:1.8.6
+      default: docuseal/docuseal:2.3.4
     databaseServiceName:
       type: string
       title: Database Service Name

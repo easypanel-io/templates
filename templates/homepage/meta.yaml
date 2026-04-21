@@ -12,6 +12,14 @@ instructions: Configure settings.yaml for customization.
 changeLog:
   - date: 2024-12-22
     description: First Release
+  - date: 2025-02-25
+    description: Version bumped to v0.10.9
+  - date: 2025-07-22
+    description: Version bumped to v1.4
+  - date: 2025-12-25
+    description: Version bumped to v1.8.0
+  - date: 2026-02-21
+    description: Version bumped to v1.10.1
 links:
   - label: Website
     url: https://gethomepage.dev/
@@ -35,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gethomepage/homepage:v0.10.7
+      default: ghcr.io/gethomepage/homepage:v1.10.1
 benefits:
   - title: Centralized Dashboard
     description:

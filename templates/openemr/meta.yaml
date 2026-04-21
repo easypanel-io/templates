@@ -15,7 +15,10 @@ instructions:
 changeLog:
   - date: 2025-02-11
     description: Template Release
-
+  - date: 2025-07-24
+    description: Version bumped to 7.0.4
+  - date: 2025-12-29
+    description: Version bumped to 7.0.5
 links:
   - label: Documentation
     url: https://www.open-emr.org/wiki/index.php/OpenEMR_Wiki_Home_Page
@@ -41,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openemr/openemr:7.0.2
+      default: openemr/openemr:7.0.5
     adminUser:
       type: string
       title: Admin User

@@ -15,6 +15,8 @@ instructions:
 changeLog:
   - date: 2023-5-7
     description: first release
+  - date: 2025-07-25
+    description: Version bumped to 11.1.0
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-wps-office
@@ -23,6 +25,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -36,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/wps-office:latest
+      default: lscr.io/linuxserver/wps-office:11.1.0
 benefits:
   - title: Comprehensive Office Suite
     description:

@@ -1,0 +1,116 @@
+name: Morphic
+description:
+  Morphic is an AI-powered search and answer engine that combines the power of
+  multiple AI models with real-time web search capabilities. It provides
+  intelligent answers to user queries by leveraging various AI providers
+  including OpenAI, Anthropic, Google, and Groq, while using SearxNG for
+  privacy-focused web search. Morphic offers a conversational interface that
+  delivers comprehensive, well-sourced answers with citations and follow-up
+  questions, making it an excellent alternative to traditional search engines.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-25
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/miurla/morphic
+  - label: Documentation
+    url: https://github.com/miurla/morphic#readme
+  - label: Demo
+    url: https://morphic.sh
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - searxngServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: morphic
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/miurla/morphic:212c4a5cf94313b31b4b67fd85b6734ebc260a6c
+      description: Morphic Docker image
+    searxngServiceImage:
+      type: string
+      title: SearxNG Service Image
+      default: searxng/searxng:2025.6.25-39474b3
+      description: SearxNG Docker image
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      default: ""
+      description: Optional OpenAI API key for GPT models
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      default: ""
+      description: Optional Anthropic API key for Claude models
+    googleApiKey:
+      type: string
+      title: Google Generative AI API Key
+      default: ""
+      description: Optional Google API key for Gemini models
+    groqApiKey:
+      type: string
+      title: Groq API Key
+      default: ""
+      description: Optional Groq API key for fast inference
+
+benefits:
+  - title: Multi-Model AI Support
+    description:
+      Access multiple AI providers including OpenAI, Anthropic, Google, and Groq
+      for diverse AI capabilities and model selection.
+  - title: Privacy-Focused Search
+    description:
+      Integrated SearxNG search engine ensures private web search without
+      tracking or data collection from search providers.
+  - title: Intelligent Responses
+    description:
+      Get comprehensive answers with proper citations, sources, and follow-up
+      questions for deeper exploration of topics.
+  - title: Real-Time Information
+    description:
+      Combine AI knowledge with real-time web search results for up-to-date and
+      accurate information on current events and topics.
+
+features:
+  - title: Conversational Interface
+    description:
+      Chat-based interface that provides natural language interactions with AI
+      models for intuitive question-and-answer sessions.
+  - title: Source Citations
+    description:
+      All responses include proper citations and links to sources, ensuring
+      transparency and enabling fact verification.
+  - title: Follow-Up Questions
+    description:
+      AI-generated follow-up questions help users explore topics more deeply and
+      discover related information automatically.
+  - title: Multiple AI Providers
+    description:
+      Choose from various AI models and providers based on your needs, with
+      support for the latest language models from major providers.
+
+tags:
+  - AI
+  - Search Engine
+  - Chat
+  - OpenAI
+  - Anthropic
+  - Google
+  - Groq
+  - Redis
+  - Next.js

@@ -1,0 +1,103 @@
+name: PgBackWeb
+description:
+  PgBackWeb is a comprehensive web-based backup solution for PostgreSQL
+  databases. It provides an intuitive interface to manage, schedule, and monitor
+  PostgreSQL backups with support for multiple backup destinations including
+  local storage and S3-compatible object storage. The application allows you to
+  configure automated backup schedules, manage retention policies, and restore
+  databases through a user-friendly web interface. PgBackWeb ensures your
+  PostgreSQL databases are safely backed up with encryption support, making it
+  an essential tool for database administrators who need reliable backup
+  management without complex command-line operations. It supports multiple
+  PostgreSQL instances and provides detailed backup logs and notifications.
+instructions: null
+changeLog:
+  - date: 2025-10-22
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/eduardolat/pgbackweb
+  - label: Documentation
+    url: https://github.com/eduardolat/pgbackweb#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pgbackweb
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eduardolat/pgbackweb:0.5.1
+      description: PgBackWeb Docker image
+    connectionString:
+      type: string
+      title: Connection String
+      description: The connection string to the PostgreSQL database
+
+benefits:
+  - title: Web-Based Management
+    description:
+      Manage all your PostgreSQL backups through an intuitive web interface
+      without needing to write complex scripts or use command-line tools.
+  - title: Automated Backup Scheduling
+    description:
+      Configure automated backup schedules with flexible timing options and
+      retention policies to ensure your databases are always protected.
+  - title: Multiple Storage Options
+    description:
+      Store backups locally or in S3-compatible object storage services like AWS
+      S3, MinIO, or DigitalOcean Spaces for offsite backup redundancy.
+  - title: Encryption Support
+    description:
+      Protect sensitive data with built-in encryption capabilities, ensuring
+      your backup data remains secure both in transit and at rest.
+features:
+  - title: Backup Scheduling
+    description:
+      Create flexible backup schedules with cron-like expressions to automate
+      database backups at any frequency that suits your needs.
+  - title: Multiple Database Support
+    description:
+      Manage backups for multiple PostgreSQL databases from a single interface,
+      perfect for administrators managing several database instances.
+  - title: Retention Policies
+    description:
+      Configure automatic backup retention policies to manage storage space
+      efficiently by removing old backups based on your requirements.
+  - title: Restore Functionality
+    description:
+      Easily restore databases from backups through the web interface with
+      support for point-in-time recovery and selective restoration.
+  - title: S3 Integration
+    description:
+      Native support for S3-compatible storage backends allows you to store
+      backups in cloud object storage for disaster recovery scenarios.
+  - title: Backup Monitoring
+    description:
+      Monitor backup job status, view detailed logs, and receive notifications
+      about backup success or failures to ensure data protection.
+  - title: Local Storage Support
+    description:
+      Store backups on local volumes for quick access and recovery, ideal for
+      development environments or air-gapped deployments.
+  - title: User-Friendly Interface
+    description:
+      Clean, modern web interface makes backup management accessible to users of
+      all technical skill levels without sacrificing advanced features.
+tags:
+  - Database
+  - Backup
+  - PostgreSQL
+  - Data Management
+  - Database Tools
+  - Self-Hosted
+  - Disaster Recovery
+  - Automation

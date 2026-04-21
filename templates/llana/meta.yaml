@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2024-12-10
     description: First release
+  - date: 2025-07-22
+    description: Version bumped to v1.32
 links:
   - label: Website
     url: https://llana.io/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: Application Service Image
-      default: juicyllama/llana:v1.14
+      default: juicyllama/llana:v1.32
     databaseType:
       type: string
       title: Database Type
