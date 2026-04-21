@@ -1,11 +1,12 @@
 name: Astuto
 description:
-  Astuto is an open-source customer feedback tool that helps you collect, organize, and
-  prioritize product feedback and feature requests from your users. It provides a simple
-  and effective platform where users can submit their ideas, vote on existing suggestions,
-  and track the status of feature implementations. Astuto is designed for product managers,
-  developers, and founders who want to make data-driven decisions based on user feedback
-  and build products that better meet their users' needs.
+  Astuto is an open-source customer feedback tool that helps you collect,
+  organize, and prioritize product feedback and feature requests from your
+  users. It provides a simple and effective platform where users can submit
+  their ideas, vote on existing suggestions, and track the status of feature
+  implementations. Astuto is designed for product managers, developers, and
+  founders who want to make data-driven decisions based on user feedback and
+  build products that better meet their users' needs.
 instructions: null
 changeLog:
   - date: 2025-04-18
@@ -57,7 +58,7 @@ schema:
       type: string
       title: Email SMTP Password
       default: your-password
-    
+
 benefits:
   - title: User-Driven Development
     description:
@@ -65,19 +66,19 @@ benefits:
       organizing customer feedback in a structured way.
   - title: Transparent Roadmap
     description:
-      Keep your users engaged and informed about what features are being considered,
-      planned, or implemented with a transparent product roadmap.
+      Keep your users engaged and informed about what features are being
+      considered, planned, or implemented with a transparent product roadmap.
   - title: Prioritize Features
     description:
-      Use voting mechanisms to understand which features are most requested by your
-      users, helping you prioritize your development efforts effectively.
+      Use voting mechanisms to understand which features are most requested by
+      your users, helping you prioritize your development efforts effectively.
 features:
   - title: Feedback Collection
     description:
       Provide a dedicated platform where users can submit their feature requests
       and feedback in an organized manner.
   - title: Voting System
-    description: 
+    description:
       Allow users to vote on feature requests, helping you identify the most
       popular ideas and prioritize development accordingly.
   - title: Roadmap Board
@@ -97,4 +98,4 @@ tags:
   - Product Management
   - User Requests
   - Feature Tracking
-  - Customer Engagement 
+  - Customer Engagement
