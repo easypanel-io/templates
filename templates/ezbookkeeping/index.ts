@@ -34,4 +34,4 @@ export function generate(input: Input): Output {
   });
 
   return { services };
-} 
+}
