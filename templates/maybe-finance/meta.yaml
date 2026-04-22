@@ -14,6 +14,8 @@ changeLog:
     description: Update to 0.5.0
   - date: 2025-07-22
     description: Update to sha-347c0a790693031fdd3b32792b5b6792693d1805
+  - date: 2025-12-29
+    description: Version bumped to sha-77b5469832758d1cbee1a940f3012a1ae1c74cd3
 links:
   - label: GitHub
     url: https://github.com/maybe-finance/maybe
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/maybe-finance/maybe:sha-347c0a790693031fdd3b32792b5b6792693d1805
+      default: ghcr.io/maybe-finance/maybe:sha-77b5469832758d1cbee1a940f3012a1ae1c74cd3
 
 benefits:
   - title: Financial Control

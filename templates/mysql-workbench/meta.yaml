@@ -16,6 +16,8 @@ changeLog:
     description: Update to 8.0.42
   - date: 2025-07-22
     description: Update to 8.0.43
+  - date: 2025-12-29
+    description: Update to 8.0.45
 links:
   - label: Website
     url: https://www.mysql.com/products/workbench/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/mysql-workbench:8.0.43
+      default: lscr.io/linuxserver/mysql-workbench:8.0.45
 benefits:
   - title: Unified Database Management
     description:

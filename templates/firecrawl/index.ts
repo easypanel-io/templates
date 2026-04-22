@@ -14,13 +14,36 @@ export function generate(input: Input): Output {
   const bullAuthKey = randomString(32);
   const testApiKey = randomString(32);
 
-  services.push({
-    type: "redis",
-    data: {
-      serviceName: `${input.appServiceName}-redis`,
-      password: redisPassword,
-    },
-  });
+  const bullAuthKey = randomString(16);
+  const testApiKey = randomString(16);
+  const redisPassword = randomPassword();
+  const nuqDbPassword = randomPassword();
+
+  const base = `$(PROJECT_NAME)_${input.appServiceName}`;
+
+  const commonEnvs = [
+    `REDIS_URL=redis://default:${redisPassword}@${base}-redis:6379`,
+    `REDIS_RATE_LIMIT_URL=redis://default:${redisPassword}@${base}-redis:6379`,
+    `PLAYWRIGHT_MICROSERVICE_URL=http://${base}-playwright:3000/scrape`,
+    `NUQ_DATABASE_URL=postgres://postgres:${nuqDbPassword}@${base}-nuq-postgres:5432/postgres`,
+    "POSTGRES_USER=postgres",
+    `POSTGRES_PASSWORD=${nuqDbPassword}`,
+    "POSTGRES_DB=postgres",
+    `POSTGRES_HOST=${base}-nuq-postgres`,
+    "POSTGRES_PORT=5432",
+    `NUQ_RABBITMQ_URL=amqp://${base}-rabbitmq:5672`,
+    "USE_DB_AUTHENTICATION=false",
+    `BULL_AUTH_KEY=${bullAuthKey}`,
+    `TEST_API_KEY=${testApiKey}`,
+    "LOGGING_LEVEL=info",
+    "NUM_WORKERS_PER_QUEUE=8",
+    "CRAWL_CONCURRENT_REQUESTS=10",
+    "MAX_CONCURRENT_JOBS=5",
+    "BROWSER_POOL_SIZE=5",
+    "EXTRACT_WORKER_PORT=3004",
+    "WORKER_PORT=3005",
+    "ENV=local",
+  ].join("\n");
 
   services.push({
     type: "app",
@@ -28,12 +51,20 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-rabbitmq`,
       source: {
         type: "image",
-        image: "rabbitmq:3-management",
+        image: input.appServiceImage ?? "ghcr.io/firecrawl/firecrawl:latest",
       },
-      env: [
-        `RABBITMQ_DEFAULT_USER=firecrawl`,
-        `RABBITMQ_DEFAULT_PASS=${rabbitmqPassword}`,
-      ].join("\n"),
+      deploy: {
+        command: "node dist/src/harness.js --start-docker",
+      },
+      env: ["HOST=0.0.0.0", "PORT=3002", "INTERNAL_PORT=3002", commonEnvs].join(
+        "\n"
+      ),
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 3002,
+        },
+      ],
       mounts: [
         {
           type: "volume",
@@ -47,23 +78,25 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: `${input.appServiceName}-postgres`,
+      serviceName: `${input.appServiceName}-playwright`,
       source: {
         type: "image",
-        image: input.postgresImage || "ghcr.io/firecrawl/nuq-postgres:latest",
+        image:
+          input.playwrightServiceImage ??
+          "ghcr.io/firecrawl/playwright-service:latest",
       },
-      env: [
-        `POSTGRES_USER=postgres`,
-        `POSTGRES_PASSWORD=${postgresPassword}`,
-        `POSTGRES_DB=postgres`,
-      ].join("\n"),
-      mounts: [
-        {
-          type: "volume",
-          name: "postgres-data",
-          mountPath: "/var/lib/postgresql/data",
-        },
-      ],
+      env: ["PORT=3000", "BLOCK_MEDIA=false", "MAX_CONCURRENT_PAGES=10"].join(
+        "\n"
+      ),
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: redisPassword,
+      image: input.redisImage ?? "redis:alpine",
     },
   });
 
@@ -75,12 +108,14 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: `${input.appServiceName}-playwright`,
+      serviceName: `${input.appServiceName}-rabbitmq`,
       source: {
         type: "image",
-        image: input.playwrightServiceImage,
+        image: input.rabbitmqImage ?? "rabbitmq:3-management",
       },
-      env: playwrightEnv.join("\n"),
+      deploy: {
+        command: "rabbitmq-server",
+      },
     },
   });
 
@@ -121,30 +156,12 @@ export function generate(input: Input): Output {
   }
 
   services.push({
-    type: "app",
+    type: "postgres",
     data: {
-      serviceName: input.appServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3002,
-        },
-      ],
-      deploy: {
-        command: "node dist/src/harness.js --start-docker",
-      },
-      env: [
-        `HOST=0.0.0.0`,
-        `PORT=3002`,
-        `EXTRACT_WORKER_PORT=3004`,
-        `WORKER_PORT=3005`,
-        `ENV=production`,
-        ...commonEnv,
-      ].join("\n"),
+      serviceName: `${input.appServiceName}-nuq-postgres`,
+      password: nuqDbPassword,
+      image: input.nuqPostgresImage ?? "ghcr.io/firecrawl/nuq-postgres:latest",
+      databaseName: "postgres",
     },
   });
 

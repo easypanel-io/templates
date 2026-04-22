@@ -22,6 +22,10 @@ changeLog:
     description: Version bumped to 29.0.rc4
   - date: 2025-07-25
     description: Version bumped to 30.0.rc5
+  - date: 2025-12-29
+    description: Version bumped to 30.0.rca36
+  - date: 2026-02-24
+    description: Version bumped to 30.2.rc4
 links:
   - label: Documentation
     url: https://typesense.org/docs/
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:30.0.rc5
+      default: typesense/typesense:30.2.rc4
 tags:
   - Documentation
   - Developer Tools

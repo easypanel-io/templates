@@ -1,0 +1,80 @@
+name: Docker Mailserver
+description: A fullstack but simple mail server (SMTP, IMAP, LDAP, Antispam, Antivirus, etc.) running inside a container. It provides a complete email solution with features like spam filtering, virus scanning, and secure email delivery.
+instructions: Follow the guide to configure the mail server with environment variables.
+changeLog:
+  - date: 2025-04-24
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/docker-mailserver/docker-mailserver
+  - label: Guide
+    url: https://github.com/docker-mailserver/docker-mailserver/blob/master/mailserver.env
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - hostname
+    - relayHost
+    - relayPort
+    - relayUser
+    - relayPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mailserver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: docker.io/mailserver/docker-mailserver:v15.0.2
+    hostname:
+      type: string
+      title: Hostname
+      default: mail.example.com
+    relayHost:
+      type: string
+      title: Relay Host
+      default: smtp.example.com
+    relayPort:
+      type: string
+      title: Relay Port
+      default: "587"
+    relayUser:
+      type: string 
+      title: Relay User
+      default: user
+    relayPassword:
+      type: string
+      title: Relay Password
+      default: password
+benefits:
+  - title: Complete Email Solution
+    description: Docker Mailserver provides a full-featured email server with SMTP, IMAP, and LDAP support. It includes all the essential components needed for a production-ready email system.
+  - title: Advanced Security Features
+    description: Built-in support for ClamAV antivirus, SpamAssassin spam filtering, and Fail2ban protection ensures your email server is secure and protected against common threats.
+  - title: Easy Deployment and Maintenance
+    description: As a Docker container, it's easy to deploy and maintain. The configuration is simple and version-controlled, making it perfect for both development and production environments.
+features:
+  - title: SMTP and IMAP Support
+    description: Full support for SMTP (port 25), IMAP (port 143), Submission (port 587), and IMAPS (port 993) protocols, making it compatible with all standard email clients.
+  - title: Antivirus and Spam Protection
+    description: Integrated ClamAV antivirus and SpamAssassin spam filtering provide comprehensive protection against malicious content and unwanted emails.
+  - title: Security Features
+    description: Includes Fail2ban protection against brute force attacks and Postgrey greylisting to reduce spam. Supports Let's Encrypt for SSL certificates.
+  - title: LDAP Integration
+    description: Built-in LDAP support allows for easy integration with existing directory services and user management systems.
+  - title: Customizable Configuration
+    description: Extensive configuration options through environment variables allow you to customize the server to your specific needs.
+  - title: Persistent Storage
+    description: Uses Docker volumes for persistent storage of mail data, logs, and SSL certificates, ensuring data is preserved across container restarts.
+tags:
+  - Email
+  - SMTP
+  - IMAP
+  - LDAP
+  - Antispam
+  - Antivirus

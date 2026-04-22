@@ -1,0 +1,89 @@
+name: Ocular
+description:
+  Ocular is a self-hosted budget and finance app with dashboards, charts,
+  multi-year tracking, imports, and authentication. This template runs the
+  official container image, which bundles the static UI (Caddy) and the Genesis
+  API backend, with persistent data under /data/genesis.
+
+instructions:
+  After deploy, open your domain and sign in using the initial user from
+  GENESIS_CREATE_USERS (default is admin with a random password set at deploy
+  time; copy it from the service environment if you did not set your own value).
+  Use HTTPS in production; only enable HTTP cookies if you access the app
+  without TLS. Change GENESIS_JWT_SECRET only if you understand that existing
+  sessions will be invalidated.
+
+changeLog:
+  - date: 2026-04-06
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://simonwep.github.io/ocular/
+  - label: Documentation
+    url: https://simonwep.github.io/ocular/pages/quickstart
+  - label: Deploy guide
+    url: https://simonwep.github.io/ocular/pages/deploy.html
+  - label: GitHub
+    url: https://github.com/simonwep/ocular
+  - label: Container registry
+    url: https://github.com/simonwep/ocular/pkgs/container/ocular
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ocular
+    appServiceImage:
+      type: string
+      title: Ocular Image
+      default: ghcr.io/simonwep/ocular:v2.3.0
+    genesisJwtTokenExpiration:
+      type: number
+      title: JWT token expiration (ms)
+      default: 120000
+    genesisJwtCookieAllowHttp:
+      type: boolean
+      title: Allow JWT cookie over HTTP (not recommended behind HTTPS)
+      default: false
+    genesisCreateUsers:
+      type: string
+      title: Initial users (Genesis format)
+      description:
+        Comma-separated list of username!:password entries. Leave empty to
+        create a single admin user with a random password.
+
+benefits:
+  - title: Budget clarity
+    description:
+      Dashboards and analytics help you understand spending and plans over time.
+  - title: Self-hosted
+    description: Keep financial data on infrastructure you control.
+  - title: Official image
+    description: Uses the published GHCR image maintained by the project.
+
+features:
+  - title: Multi-year budgets
+    description:
+      Track and carry budgets across years with flexible financial calendars.
+  - title: Import and export
+    description: Bring data from common formats and export your work as JSON.
+  - title: Genesis backend
+    description:
+      API and authentication via the bundled Genesis server (JWT configurable).
+
+tags:
+  - Finance
+  - Budget
+  - Self-hosted
+  - PWA
+  - Analytics

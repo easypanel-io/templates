@@ -1,0 +1,96 @@
+name: BlackCandy
+description:
+  BlackCandy is a self-hosted music streaming server built with Rails and
+  Hotwire. It provides a clean, modern web interface for streaming your personal
+  music collection. The goal of the project is to create a real personal music
+  center that you can access from anywhere. It features mobile apps for iOS and
+  Android, supports multiple audio formats, and offers a beautiful, responsive
+  interface.
+instructions: default login is admin@admin.com and password is foobar
+changeLog:
+  - date: "2025-06-26"
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/blackcandy-org/blackcandy
+  - label: Documentation
+    url: https://github.com/blackcandy-org/blackcandy#readme
+  - label: Demo
+    url: https://demo.blackcandy.org
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - mediaPath
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: blackcandy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: blackcandy/blackcandy:3.1.0
+      description: BlackCandy Docker image
+    mediaPath:
+      type: string
+      title: Media Path
+      default: /tmp
+      description: Path to your media files
+benefits:
+  - title: Beautiful Web Interface
+    description:
+      Enjoy a clean, modern, and responsive web interface built with Rails and
+      Hotwire for an excellent user experience across all devices.
+  - title: Mobile App Support
+    description:
+      Access your music on the go with native mobile apps available for iOS (App
+      Store) and Android (F-Droid and GitHub releases).
+  - title: Easy Installation
+    description:
+      Simple Docker-based installation that gets you up and running quickly with
+      minimal configuration required.
+  - title: Personal Music Center
+    description:
+      Create your own personal music streaming service with full control over
+      your music library and user access.
+features:
+  - title: Modern Web Interface
+    description:
+      Clean and intuitive web interface built with Rails and Hotwire, providing
+      a smooth and responsive music browsing experience.
+  - title: Multiple Database Support
+    description:
+      Supports both SQLite (default) for simple setups and PostgreSQL for more
+      demanding installations or cloud deployments.
+  - title: Data Persistence
+    description:
+      All data is stored in `/app/storage` for easy backup and persistence
+      across container updates and restarts.
+  - title: Discogs Integration
+    description:
+      Optional integration with Discogs API to automatically fetch artist and
+      album artwork for your music collection.
+  - title: Demo Mode
+    description:
+      Built-in demo mode for testing and showcasing features without giving
+      users administrative privileges.
+  - title: Customizable Deployment
+    description:
+      Flexible configuration options including custom ports, media paths,
+      database options, and SSL enforcement.
+tags:
+  - Music Streaming
+  - Self-hosted
+  - Ruby
+  - Rails
+  - Hotwire
+  - Media Server
+  - Audio
+  - Music Player
+  - Personal Music
+  - Mobile Apps

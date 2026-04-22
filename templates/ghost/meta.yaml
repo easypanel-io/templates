@@ -55,6 +55,11 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - smtpServerHost
+    - smtpServerPort
+    - smtpServerUsername
+    - smtpServerPassword
+    - smtpFromEmail
   properties:
     appServiceName:
       type: string
@@ -68,6 +73,26 @@ schema:
       type: string
       title: Database Service Name
       default: ghost-db
+    smtpServerHost:
+      type: string
+      title: SMTP Server Host
+      default: smtp.example.com
+    smtpServerPort:
+      type: string
+      title: SMTP Server Port
+      default: "587"
+    smtpServerUsername:
+      type: string
+      title: SMTP Server Username
+      default: example
+    smtpServerPassword:
+      type: string
+      title: SMTP Server Password
+      default: password
+    smtpFromEmail:
+      type: string
+      title: SMTP From Email
+      default: no-reply@example.com
 benefits:
   - title: Turn Your Audience into a Business
     description:

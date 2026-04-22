@@ -6,17 +6,24 @@ description:
   crawling, and data extraction capabilities with LLM-ready formats, anti-bot
   mechanisms, dynamic content handling, and powerful customization options.
   Perfect for AI applications, data extraction, and web automation.
-instructions: null
+instructions: |
+  After deployment, access Firecrawl at the main domain on port 3002. The API
+  runs in standalone mode with Redis, RabbitMQ, and NuQ Postgres. Use a fresh
+  deployment so the nuq-postgres image can run its init script and create the
+  nuq schema. If you see "relation nuq.queue_scrape does not exist", delete the
+  nuq-postgres volume and redeploy to re-run the schema setup.
 changeLog:
   - date: 2025-06-04
     description: First Release
-  - date: 2026-01-07
-    description: Updated to new architecture with RabbitMQ and nuq-postgres
+  - date: 2026-03-11
+    description:
+      Align with official compose; add RabbitMQ; single harness container;
+      nuq-postgres image
 links:
   - label: Website
     url: https://firecrawl.dev/
-  - label: Github
-    url: https://github.com/mendableai/firecrawl
+  - label: GitHub
+    url: https://github.com/firecrawl/firecrawl
   - label: Documentation
     url: https://docs.firecrawl.dev/
 contributors:
@@ -26,8 +33,6 @@ schema:
   type: object
   required:
     - appServiceName
-    - appServiceImage
-    - playwrightServiceImage
   properties:
     appServiceName:
       type: string
@@ -35,57 +40,24 @@ schema:
       default: firecrawl
     appServiceImage:
       type: string
-      title: App Service Image
-      default: ghcr.io/firecrawl/firecrawl
+      title: Firecrawl API Image
+      default: ghcr.io/firecrawl/firecrawl:latest
     playwrightServiceImage:
       type: string
       title: Playwright Service Image
       default: ghcr.io/firecrawl/playwright-service:latest
-    postgresImage:
+    redisImage:
       type: string
-      title: PostgreSQL Image
+      title: Redis Image
+      default: redis:alpine
+    rabbitmqImage:
+      type: string
+      title: RabbitMQ Image
+      default: rabbitmq:3-management
+    nuqPostgresImage:
+      type: string
+      title: NuQ Postgres Image
       default: ghcr.io/firecrawl/nuq-postgres:latest
-    openaiApiKey:
-      type: string
-      title: OpenAI API Key (optional)
-      description: API key for OpenAI integration
-      default: ""
-    openaiBaseUrl:
-      type: string
-      title: OpenAI Base URL (optional)
-      description: Custom OpenAI API base URL
-      default: ""
-    modelName:
-      type: string
-      title: Model Name (optional)
-      description: Default model name for AI operations
-      default: ""
-    modelEmbeddingName:
-      type: string
-      title: Model Embedding Name (optional)
-      description: Model name for embeddings
-      default: ""
-    ollamaBaseUrl:
-      type: string
-      title: Ollama Base URL (optional)
-      description: Ollama API base URL for local models
-      default: ""
-    numWorkersPerQueue:
-      type: string
-      title: Number of Workers Per Queue
-      default: "8"
-    crawlConcurrentRequests:
-      type: string
-      title: Crawl Concurrent Requests
-      default: "10"
-    maxConcurrentJobs:
-      type: string
-      title: Max Concurrent Jobs
-      default: "5"
-    browserPoolSize:
-      type: string
-      title: Browser Pool Size
-      default: "5"
 benefits:
   - title: LLM-Ready Data Extraction
     description:
@@ -102,8 +74,7 @@ benefits:
   - title: Self-Hosted & Scalable
     description:
       Deploy on your own infrastructure with full control over your data.
-      Horizontally scalable architecture with separate API, worker, and
-      rendering services.
+      Matches official stack (Redis, RabbitMQ, NuQ Postgres, Playwright).
 features:
   - title: Multiple Content Formats
     description:

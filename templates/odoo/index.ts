@@ -6,6 +6,14 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
 
   services.push({
+    type: "postgres",
+    data: {
+      serviceName: `${input.appServiceName}-db`,
+      password: databasePassword,
+    },
+  });
+
+  services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
@@ -20,8 +28,8 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `USER=odoo`,
+        `HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
+        `USER=postgres`,
         `PASSWORD=${databasePassword}`,
         `PORT=5432`,
       ].join("\n"),
@@ -40,29 +48,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "odoo-addons",
           mountPath: "/mnt/extra-addons",
-        },
-      ],
-    },
-  });
-  services.push({
-    type: "app",
-    data: {
-      serviceName: input.databaseServiceName,
-      source: {
-        type: "image",
-        image: "postgres:13",
-      },
-      env: [
-        `POSTGRES_DB=postgres`,
-        `POSTGRES_PASSWORD=${databasePassword}`,
-        `POSTGRES_USER=odoo`,
-        `PGDATA=/var/lib/postgresql/data/pgdata`,
-      ].join("\n"),
-      mounts: [
-        {
-          type: "volume",
-          name: "odoo-db-data",
-          mountPath: "/var/lib/postgresql/data/pgdata",
         },
       ],
     },

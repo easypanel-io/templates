@@ -1,0 +1,65 @@
+name: Watchtower
+description:
+  Watchtower is a process for automating Docker container base image updates. It
+  monitors running containers and automatically updates them when their base
+  image changes.
+instructions:
+  Mount `/var/run/docker.sock` in the Watchtower service to let it inspect and
+  update running containers. Add the label
+  `com.centurylinklabs.watchtower.enable=true` to each container you want
+  Watchtower to manage, then enable label filtering in Watchtower. Set your
+  preferred check interval or schedule, and add `--cleanup` to remove old image
+  layers after successful updates.
+changeLog:
+  - date: 2025-05-05
+    description: Initial release
+links:
+  - label: Website
+    url: https://containrrr.dev/watchtower
+  - label: GitHub
+    url: https://github.com/containrrr/watchtower
+  - label: Documentation
+    url: https://containrrr.dev/watchtower/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: watchtower
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: containrrr/watchtower:1.7.1
+benefits:
+  - title: Automatic Updates
+    description: Automatically updates containers when new images are available
+  - title: Zero Downtime
+    description: Updates containers without service interruption
+  - title: Simple Setup
+    description: Easy to set up and requires minimal configuration
+  - title: Open Source
+    description: Free and open-source container update automation
+features:
+  - title: Container Monitoring
+    description: Monitors running containers for base image updates
+  - title: Automatic Updates
+    description: Automatically pulls and updates containers
+  - title: Docker Socket Access
+    description: Uses Docker socket to manage container updates
+  - title: Notification Support
+    description: Configurable notifications for update events
+  - title: Scheduling
+    description: Optional scheduling for update checks
+tags:
+  - Docker
+  - Automation
+  - Container
+  - Self-hosted
+  - Open Source

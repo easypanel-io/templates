@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 0.2.1
   - date: 2025-07-24
     description: Version bumped to 0.2.3
+  - date: 2026-02-24
+    description: Version bumped to 0.2.4
 links:
   - label: Website
     url: https://owncast.online/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gabekangas/owncast:0.2.3
+      default: gabekangas/owncast:0.2.4
 benefits:
   - title: Self-Hosted and Independent
     description:

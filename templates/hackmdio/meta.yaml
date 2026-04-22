@@ -10,6 +10,8 @@ changeLog:
     description: first release
   - date: 2025-07-21
     description: Version bumped to 2.6.0
+  - date: 2025-12-25
+    description: Version bumped to 2.6.1
 links:
   - label: Website
     url: https://hackmd.io/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nabo.codimd.dev/hackmdio/hackmd:2.6.0
+      default: hackmdio/hackmd:2.6.1
     databaseServiceName:
       type: string
       title: Database Service Name

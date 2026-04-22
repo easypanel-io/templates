@@ -9,13 +9,21 @@ description:
   organizations of all sizes. By providing a self-hosted solution, Dittofeed
   ensures data privacy and compliance while giving you full control over your
   infrastructure and customer data.
-instructions: null
+instructions:
+  Please remove the bootstrap environment variable after the initial setup is
+  complete.
 changeLog:
   - date: 2025-01-03
     description: Template Release
   - date: 2025-05-26
     description: Version bumped to v0.22.0
+  - date: 2025-12-25
+    description: Version bumped to v0.23.0
+  - date: 2026-02-16
+    description: Added Bootstrap environment variable
 links:
+  - label: Website
+    url: https://dittofeed.com
   - label: Documentation
     url: https://docs.dittofeed.com/introduction
   - label: Github
@@ -47,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dittofeed/dittofeed-lite:v0.22.0
+      default: dittofeed/dittofeed-lite:v0.23.0
     clickHouseImage:
       type: string
       title: Clickhouse Service Image
@@ -55,7 +63,7 @@ schema:
     minioImage:
       type: string
       title: Minio Service Image
-      default: minio/minio:latest
+      default: minio/minio:RELEASE.2025-07-23T15-54-02Z
     temporalImage:
       type: string
       title: Temporal Service Image

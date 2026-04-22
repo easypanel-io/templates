@@ -1,0 +1,82 @@
+name: qBitWebUI
+description:
+  qBitWebUI is a modern web interface for qBittorrent, providing an enhanced
+  user experience for managing your torrent downloads. It offers a clean,
+  responsive design with advanced features like dark mode, mobile support, and
+  improved usability compared to the default qBittorrent web UI. Perfect for
+  users who want a better way to manage their torrents remotely through a web
+  browser.
+instructions: null
+
+changeLog:
+  - date: 2026-01-09
+    description: Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/maciejonos/qbitwebui
+  - label: Website
+    url: https://maciejonos.github.io/qbitwebui/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qbitwebui
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/maciejonos/qbitwebui:2.21
+
+benefits:
+  - title: Modern Web Interface
+    description:
+      Enjoy a clean, modern web interface for qBittorrent with improved
+      usability and better user experience.
+  - title: Enhanced Features
+    description:
+      Access advanced features like dark mode, mobile support, and improved
+      torrent management capabilities.
+  - title: Remote Access
+    description:
+      Manage your torrents from anywhere through a web browser with secure
+      encryption.
+  - title: Self-Hosted Control
+    description:
+      Deploy on your own infrastructure for complete control over your torrent
+      management interface.
+
+features:
+  - title: Responsive Design
+    description:
+      Works seamlessly on desktop, tablet, and mobile devices with a responsive
+      layout.
+  - title: Dark Mode Support
+    description:
+      Built-in dark mode for comfortable viewing in low-light conditions.
+  - title: Secure Encryption
+    description:
+      Encrypted data storage with auto-generated encryption keys for enhanced
+      security.
+  - title: Easy Configuration
+    description:
+      Simple setup process with minimal configuration required to get started.
+  - title: qBittorrent Integration
+    description:
+      Seamlessly connects to your existing qBittorrent instance for complete
+      torrent management.
+
+tags:
+  - Torrent
+  - qBittorrent
+  - Web UI
+  - Download Manager
+  - Self-Hosted
