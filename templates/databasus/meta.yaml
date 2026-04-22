@@ -1,0 +1,75 @@
+name: Databasus
+description:
+  Databasus is a free, open source, self-hosted backup platform focused on
+  PostgreSQL with support for MySQL, MariaDB, and MongoDB. It helps you schedule
+  backups, apply retention policies, store backups in multiple destinations, and
+  receive notifications about backup progress.
+
+instructions:
+  After deployment, open your domain and complete the initial setup in the
+  Databasus UI. The template already mounts persistent storage at
+  /databasus-data so configuration and backup metadata survive restarts.
+
+changeLog:
+  - date: 2026-04-07
+    description: Initial template release
+
+links:
+  - label: Website
+    url: https://databasus.com
+  - label: Documentation
+    url: https://databasus.com/installation
+  - label: GitHub
+    url: https://github.com/databasus/databasus
+  - label: Container registry
+    url: https://hub.docker.com/r/databasus/databasus
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: databasus
+    appServiceImage:
+      type: string
+      title: Databasus Image
+      default: databasus/databasus:v3.32.0
+benefits:
+  - title: Automated backups
+    description:
+      Schedule reliable backups with flexible intervals and retention controls.
+  - title: Multi-database support
+    description:
+      Manage PostgreSQL, MySQL, MariaDB, and MongoDB backups in one interface.
+  - title: Self-hosted control
+    description: Keep backup data and operations on infrastructure you control.
+
+features:
+  - title: Storage destinations
+    description:
+      Send backups to local storage and cloud targets like S3-compatible
+      systems.
+  - title: Notifications
+    description:
+      Receive backup status alerts via channels such as email, Slack, or
+      Telegram.
+  - title: Web management UI
+    description:
+      Configure backup jobs, policies, and integrations from a browser
+      dashboard.
+
+tags:
+  - Backup
+  - Database
+  - PostgreSQL
+  - MySQL
+  - MongoDB
+  - DevOps

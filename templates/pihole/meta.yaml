@@ -1,0 +1,100 @@
+name: Pi-hole
+description:
+  Pi-hole is a network-wide ad blocker that acts as a DNS sinkhole to protect
+  your devices from unwanted content without installing any client-side
+  software. It blocks ads at the DNS level, meaning ads are blocked before they
+  even reach your devices, resulting in faster browsing, reduced bandwidth
+  usage, and enhanced privacy. Pi-hole provides a powerful web interface for
+  easy management and detailed statistics about your network's DNS queries. It
+  can block millions of ad-serving domains and supports custom block lists. The
+  application also includes features like DHCP server capabilities,
+  DNS-over-HTTPS (DoH) support, and comprehensive query logging. With Pi-hole,
+  you can monitor all DNS requests on your network, see which domains are being
+  blocked, and maintain complete control over your network's DNS filtering.
+instructions:
+  After the deployment of the Pi-Hole Service, it might not start straight away,
+  you have to stop the systemd-resolved.service, or service which would be
+  occupying the DNS port 53, make sure you also disable that so it doesn't
+  starts on boot.
+changeLog:
+  - date: 2025-11-03
+    description: First Release
+links:
+  - label: Website
+    url: https://pi-hole.net/
+  - label: Documentation
+    url: https://docs.pi-hole.net/
+  - label: GitHub
+    url: https://github.com/pi-hole/pi-hole
+  - label: Docker
+    url: https://hub.docker.com/r/pihole/pihole
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pihole
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pihole/pihole:2024.07.0
+    timezone:
+      type: string
+      title: Timezone
+      default: Europe/Vienna
+    webPassword:
+      type: string
+      title: Web Password
+      default: webPassword!@#123
+benefits:
+  - title: Network-Wide Ad Blocking
+    description:
+      Pi-hole blocks ads at the DNS level for all devices on your network
+      without requiring any client-side software installation.
+  - title: Faster Browsing Experience
+    description:
+      By blocking ads before they load, Pi-hole reduces bandwidth usage and
+      speeds up page loading times across all your devices.
+  - title: Enhanced Privacy Protection
+    description:
+      Pi-hole blocks tracking domains and prevents third-party services from
+      collecting data about your browsing habits and online activities.
+  - title: Comprehensive Network Monitoring
+    description:
+      Monitor all DNS queries on your network with detailed statistics and logs,
+      giving you complete visibility into network activity.
+features:
+  - title: DNS-Level Ad Blocking
+    description:
+      Pi-hole intercepts DNS requests and blocks domains known for serving ads,
+      trackers, and malicious content before they reach your devices.
+  - title: Intuitive Web Interface
+    description:
+      Manage your Pi-hole installation through a user-friendly web interface
+      with real-time statistics, query logs, and configuration options.
+  - title: Custom Block Lists
+    description:
+      Add custom block lists and whitelist specific domains to tailor the
+      filtering to your specific needs and preferences.
+  - title: DHCP Server Support
+    description:
+      Pi-hole includes a built-in DHCP server that can replace your router's
+      DHCP server for seamless network integration.
+  - title: Query Logging and Analytics
+    description:
+      View detailed logs of all DNS queries, see which domains are being
+      blocked, and analyze your network's DNS traffic patterns.
+tags:
+  - Privacy
+  - Security
+  - DNS
+  - Ad Blocker
+  - Network Tools

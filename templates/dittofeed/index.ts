@@ -1,13 +1,18 @@
-import crypto from "crypto";
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const secretKey = crypto.randomBytes(32).toString("base64");
+  const secretKey = randomString(32);
 
   const app_envs = [
+    `BOOTSTRAP=true`,
     `DATABASE_USER=postgres`,
     `DATABASE_PASSWORD=${databasePassword}`,
     `DATABASE_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
@@ -23,6 +28,7 @@ export function generate(input: Input): Output {
     `PASSWORD=${input.dittofeedPassword}`,
     `DASHBOARD_API_BASE=https://$(PRIMARY_DOMAIN)`,
     `SESSION_COOKIE_SECURE=true`,
+    `BOOTSTRAP=true`,
   ].join("\n");
 
   services.push({

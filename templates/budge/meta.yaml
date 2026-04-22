@@ -1,0 +1,54 @@
+name: Budge
+description: Budge is a personal finance management application that helps you track your expenses, manage budgets, and monitor your financial goals. It provides a user-friendly interface for managing your personal finances.
+instructions: null
+changeLog:
+  - date: 2025-04-29
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/linuxserver/budge
+  - label: Documentation
+    url: https://github.com/linuxserver/budge#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: budge
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lscr.io/linuxserver/budge:0.0.9
+benefits:
+  - title: Personal Finance Management
+    description: Budge provides a comprehensive solution for managing your personal finances with an intuitive interface.
+  - title: Budget Tracking
+    description: Track your expenses and manage budgets to achieve your financial goals.
+  - title: User-Friendly
+    description: Simple and intuitive interface makes it easy to manage your finances.
+features:
+  - title: Expense Tracking
+    description: Track your daily expenses and categorize them for better organization.
+  - title: Budget Management
+    description: Create and manage budgets for different categories and time periods.
+  - title: Financial Goals
+    description: Set and track your financial goals with progress monitoring.
+  - title: Reports and Analytics
+    description: Generate reports and analyze your spending patterns.
+  - title: Multi-Currency Support
+    description: Support for multiple currencies for international users.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Finance
+  - Budget
+  - Expense Tracking
+  - Personal Finance
+  - Management 

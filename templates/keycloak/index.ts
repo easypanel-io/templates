@@ -10,19 +10,20 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `KEYCLOAK_DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `KEYCLOAK_DATABASE_NAME=$(PROJECT_NAME)`,
-        `KEYCLOAK_DATABASE_USER=postgres`,
-        `KEYCLOAK_DATABASE_PASSWORD=${databasePassword}`,
-        `KEYCLOAK_ADMIN_USER=${input.keycloakUsername}`,
-        `KEYCLOAK_ADMIN_PASSWORD=${input.keycloakPassword}`,
+        `KC_DB=postgres`,
+        `KC_DB_URL_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
+        `KC_DB_URL_DATABASE=$(PROJECT_NAME)`,
+        `KC_DB_USERNAME=postgres`,
+        `KC_DB_PASSWORD=${databasePassword}`,
+        `KC_BOOTSTRAP_ADMIN_USERNAME=${input.keycloakUsername}`,
+        `KC_BOOTSTRAP_ADMIN_PASSWORD=${input.keycloakPassword}`,
         `KC_HOSTNAME_STRICT_HTTPS=false`,
-        `KC_HOSTNAME=$(PRIMARY_DOMAIN)`,
-        `KC_HOSTNAME_ADMIN=$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME=https://$(PRIMARY_DOMAIN)`,
+        `KC_HOSTNAME_ADMIN=https://$(PRIMARY_DOMAIN)`,
         `PROXY_ADDRESS_FORWARDING=true`,
         `KC_HTTP_ENABLED=false`,
         `KC_FEATURES=docker`,
-        `KC_PROXY_HEADERS=xforwarded`
+        `KC_PROXY_HEADERS=xforwarded`,
       ].join("\n"),
       source: {
         type: "image",
@@ -46,13 +47,16 @@ export function generate(input: Input): Output {
           mountPath: "/opt/bitnami/keycloak/themes",
         },
       ],
+      deploy: {
+        command: "/opt/keycloak/bin/kc.sh start-dev",
+      },
     },
   });
 
   services.push({
     type: "postgres",
     data: {
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
     },
   });

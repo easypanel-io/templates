@@ -1,0 +1,94 @@
+name: Urocissa
+description:
+  Urocissa is a self-hosted photo and video gallery designed to serve massive
+  collections, capable of handling millions of images and videos. Built with
+  Rust and Vue, it features blazing fast performance with an in-memory cached
+  database that can instantly serve, search, and filter one million photos in
+  under a second. It runs on as little as 4 GB of RAM even with a million
+  photos, offers infinite scrolling without pagination using advanced virtual
+  scrolling, and supports instant boolean search (and, or, not) across your
+  entire library. Features include upload support, auto-sync from local folders,
+  EXIF data extraction, user-defined tags, duplicate handling, shareable albums,
+  and read-only mode.
+instructions: Default password is generated automatically.
+changeLog:
+  - date: 2026-03-02
+    description: First Release (v2.0.12)
+links:
+  - label: Website
+    url: https://hsa00000.github.io/urocissa/
+  - label: GitHub
+    url: https://github.com/hsa00000/Urocissa
+  - label: Documentation
+    url: https://github.com/hsa00000/Urocissa/blob/main/docs/CONFIG.md
+  - label: Demo
+    url: https://demo.photoserver.tw
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: urocissa
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hsa00000/urocissa:2.0.12
+    password:
+      type: string
+      title: Password
+      default: ""
+benefits:
+  - title: Blazing Fast Performance
+    description:
+      Built with Rust for the backend. Instantly serve, search, and filter one
+      million photos in under a second using an in-memory cached database.
+  - title: Extremely Memory Efficient
+    description:
+      Runs seamlessly on a 4 GB RAM server even with one million photos. Linear
+      memory scaling (~1.2 GiB per million photos) ensures stability.
+  - title: Infinite Photo Stream
+    description:
+      Experience endless scrolling without pagination. Advanced virtual
+      scrolling overcomes browser DOM height limits for millions of items.
+  - title: Self-Hosted & Private
+    description:
+      You own your data with no external cloud dependencies. MIT-licensed,
+      privacy-focused, and secure with optional password protection.
+features:
+  - title: Instant Boolean Search
+    description:
+      Use and, or, and not operators to search your data instantly. Find exactly
+      what you need in milliseconds across your entire library.
+  - title: Upload & Auto-Sync
+    description:
+      Upload photos and videos directly or configure sync paths to automatically
+      watch local directories for new content.
+  - title: EXIF Data & Tags
+    description:
+      Automatically extracts EXIF metadata from images. Add user-defined tags
+      for custom organization and powerful filtering.
+  - title: Shareable Albums
+    description:
+      Create and share albums with others. Supports read-only mode for
+      public-facing galleries or demo instances.
+  - title: Duplicate Handling
+    description:
+      Intelligent duplicate detection prevents redundant storage and keeps your
+      library clean and organized.
+  - title: Video Support
+    description:
+      Full support for video files alongside photos with integrated playback
+      powered by FFmpeg.
+tags:
+  - Photos
+  - Gallery
+  - Self-Hosted
+  - Media
+  - Images

@@ -20,6 +20,10 @@ changeLog:
     description: Version bumped to 1.6.10-apache
   - date: 2025-07-24
     description: Version bumped to 1.6.11-apache
+  - date: 2025-12-29
+    description: Version bumped to 1.6.12-apache
+  - date: 2026-02-24
+    description: Version bumped to 1.6.13-apache
 links:
   - label: Website
     url: https://roundcube.net/
@@ -47,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: roundcube/roundcubemail:1.6.11-apache
+      default: roundcube/roundcubemail:1.6.13-apache
     roundcubeDefaultHost:
       type: string
       title: Default Host

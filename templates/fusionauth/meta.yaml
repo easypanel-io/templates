@@ -40,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fusionauth/fusionauth-app:1.57.1
+      default: fusionauth/fusionauth-app:1.62.0
     opensearchServiceImage:
       type: string
       title: OpenSearch Service Image

@@ -1,0 +1,118 @@
+name: Podfetch
+description:
+  Podfetch is a self-hosted podcast manager and aggregator that allows you to
+  subscribe to, download, and organize your favorite podcasts from a single
+  centralized interface. It automatically fetches new episodes from RSS feeds at
+  configurable intervals, stores podcast metadata and audio files locally, and
+  provides a web-based interface for browsing and managing your podcast library.
+  The application features automatic episode downloading, customizable polling
+  intervals for checking new content, SQLite database for lightweight data
+  management, and organized file storage for podcast episodes. With its built-in
+  audio player, you can stream episodes directly from the web interface without
+  needing external podcast clients. Podfetch supports multiple podcast
+  subscriptions, episode filtering, playback progress tracking, and automatic
+  cleanup of old episodes to manage storage. The Rust-based backend ensures
+  efficient performance and low resource usage, making it ideal for running on
+  home servers or low-powered devices. Perfect for podcast enthusiasts who want
+  complete control over their podcast library, users seeking privacy and
+  independence from commercial podcast platforms, home lab administrators
+  building media server ecosystems, or anyone who wants to archive and organize
+  podcast episodes without relying on third-party services or dealing with
+  platform-specific limitations.
+
+instructions: null
+
+changeLog:
+  - date: 2025-11-28
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://www.samtv.fyi/PodFetch/
+  - label: GitHub
+    url: https://github.com/SamTV12345/PodFetch
+  - label: Docker Hub
+    url: https://hub.docker.com/r/samuel19982/podfetch
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: podfetch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: samuel19982/podfetch:v4.9.0
+    pollingInterval:
+      type: string
+      title: Polling Interval (minutes)
+      default: "60"
+
+benefits:
+  - title: Complete Podcast Control
+    description:
+      Manage your entire podcast library from a single interface with automatic
+      episode downloads and organized storage.
+  - title: Privacy & Independence
+    description:
+      Keep your podcast subscriptions and listening habits private on your own
+      infrastructure, away from commercial tracking.
+  - title: Automatic Episode Management
+    description:
+      Automatically fetch new episodes from RSS feeds at configurable intervals,
+      ensuring you never miss new content.
+  - title: Lightweight & Efficient
+    description:
+      Rust-based backend provides excellent performance with minimal resource
+      usage, perfect for home servers and low-powered devices.
+
+features:
+  - title: RSS Feed Aggregation
+    description:
+      Subscribe to unlimited podcast RSS feeds and automatically aggregate
+      episodes from all your favorite shows.
+  - title: Automatic Downloads
+    description:
+      Automatically download new episodes as they become available, with
+      configurable polling intervals for feed updates.
+  - title: Web-Based Player
+    description:
+      Stream podcast episodes directly from the web interface with a built-in
+      audio player, no external apps required.
+  - title: Episode Management
+    description:
+      Filter episodes, mark as played/unplayed, and manage your podcast queue
+      with intuitive controls.
+  - title: Playback Progress Tracking
+    description:
+      Track listening progress across episodes and resume playback from where
+      you left off.
+  - title: SQLite Database
+    description:
+      Lightweight SQLite database stores podcast metadata, subscriptions, and
+      playback history without requiring external databases.
+  - title: Organized Storage
+    description:
+      Automatically organize downloaded episodes by podcast with structured file
+      storage for easy access and management.
+  - title: Storage Optimization
+    description:
+      Configure automatic cleanup of old or played episodes to manage disk space
+      efficiently.
+
+tags:
+  - Podcast
+  - Media Manager
+  - RSS Feed
+  - Audio
+  - Self-Hosted
+  - Media Server

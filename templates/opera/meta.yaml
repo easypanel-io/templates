@@ -17,6 +17,10 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 120.0.5543
+  - date: 2025-12-29
+    description: Version bumped to 125.0.5729
+  - date: 2026-02-24
+    description: Version bumped to 127.0.5778
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-opera
@@ -40,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/opera:120.0.5543
+      default: lscr.io/linuxserver/opera:127.0.5778
 benefits:
   - title: Multi-Platform Web Browser
     description:

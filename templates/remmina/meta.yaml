@@ -17,6 +17,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 1.4.35
+  - date: 2025-12-29
+    description: Version bumped to 1.4.40
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-remmina
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/remmina:1.4.35
+      default: lscr.io/linuxserver/remmina:1.4.40
 benefits:
   - title: Remote Access
     description:

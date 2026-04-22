@@ -1,0 +1,78 @@
+name: Traffic Source
+description:
+  Traffic Source is an open-source, self-hosted web analytics platform for
+  tracking pageviews, referrers, UTM attribution, visitor journeys, and
+  conversions. It is cookie-free by default, supports multi-site tracking, and
+  stores data locally in SQLite so you keep full ownership. It also includes
+  affiliate tracking and Stripe conversion syncing.
+instructions: |
+  After deploy, open the app and create the first user (registration is only
+  available for the first account). Then create a site and add the tracking
+  script snippet from your instance to your website. For geo data, place the
+  app behind Cloudflare proxy as documented upstream.
+changeLog:
+  - date: 2026-03-24
+    description: First Release
+links:
+  - label: Website
+    url: https://trafficsource.app
+  - label: GitHub
+    url: https://github.com/mddanishyusuf/traffic-source
+  - label: Documentation
+    url: https://github.com/mddanishyusuf/traffic-source#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: traffic-source
+    jwtExpiry:
+      type: string
+      title: JWT Expiry
+      default: 7d
+benefits:
+  - title: Privacy-first analytics
+    description:
+      Cookie-free tracking and fully self-hosted storage so your traffic data
+      stays on your infrastructure.
+  - title: Conversion attribution
+    description:
+      Link visits to conversions with built-in Stripe sync and referral
+      attribution support.
+  - title: Multi-site dashboard
+    description:
+      Track multiple websites from one dashboard with source and campaign
+      breakdowns.
+  - title: Simple operations
+    description:
+      SQLite-backed deployment with a single app service and persistent volume.
+features:
+  - title: Real-time analytics
+    description:
+      Live pageviews, sessions, bounce rate, session duration, and traffic
+      source insights.
+  - title: UTM and referrer tracking
+    description:
+      Capture source, medium, campaign, term, and content attribution data.
+  - title: Visitor journeys
+    description:
+      Inspect session paths to understand how visitors move before converting.
+  - title: Affiliate system
+    description:
+      Manage affiliate links, commissions, and public affiliate dashboards.
+  - title: Lightweight tracking script
+    description:
+      Small script with SPA navigation support to capture pageviews accurately.
+tags:
+  - Analytics
+  - Web Analytics
+  - Privacy
+  - Self-Hosted
+  - Marketing
+  - Attribution

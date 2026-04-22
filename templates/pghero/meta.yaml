@@ -1,0 +1,85 @@
+name: PgHero
+description:
+  PgHero is a powerful performance dashboard for PostgreSQL databases that
+  provides real-time insights into query performance, slow queries, index usage,
+  and database health metrics. It helps database administrators and developers
+  optimize their PostgreSQL databases by identifying performance bottlenecks,
+  unused indexes, and query patterns. The dashboard features an intuitive web
+  interface with detailed analytics and recommendations for database
+  optimization.
+
+instructions: null
+
+changeLog:
+  - date: 2025-06-25
+    description: Initial Template Release
+
+links:
+  - label: GitHub
+    url: https://github.com/ankane/pghero
+  - label: Documentation
+    url: https://github.com/ankane/pghero#readme
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pghero
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ankane/pghero:v3.7.0
+      description: PgHero Docker image
+
+benefits:
+  - title: Performance Monitoring
+    description:
+      Monitor PostgreSQL database performance in real-time with detailed metrics
+      on query execution times, database connections, and resource usage.
+  - title: Query Analysis
+    description:
+      Identify slow queries, analyze query patterns, and get recommendations for
+      optimizing database performance and query efficiency.
+  - title: Index Optimization
+    description:
+      Discover unused indexes, missing indexes, and get suggestions for index
+      optimization to improve database performance.
+  - title: Easy Setup
+    description:
+      Simple deployment with automatic PostgreSQL database provisioning and
+      seamless integration with existing database infrastructure.
+
+features:
+  - title: Real-time Dashboard
+    description:
+      Comprehensive web-based dashboard showing live database metrics,
+      performance graphs, and health indicators.
+  - title: Slow Query Detection
+    description:
+      Automatically detect and analyze slow queries with detailed execution
+      plans and optimization suggestions.
+  - title: Index Monitoring
+    description:
+      Monitor index usage, detect unused indexes, and identify missing indexes
+      that could improve query performance.
+  - title: Connection Monitoring
+    description:
+      Track database connections, connection pools, and identify potential
+      connection bottlenecks or issues.
+
+tags:
+  - PostgreSQL
+  - Database
+  - Monitoring
+  - Performance
+  - Analytics
+  - Dashboard

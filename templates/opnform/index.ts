@@ -1,4 +1,3 @@
-import { randomBytes } from "crypto";
 import {
   Output,
   Services,
@@ -12,7 +11,7 @@ export function generate(input: Input): Output {
   const postgresPassword = randomPassword();
   const redisPassword = randomPassword();
   const jwtSecret = randomString(64);
-  const appKey = `${randomBytes(32).toString("base64")}`;
+  const appKey = randomString(32);
 
   const commonEnv = [
     `APP_NAME=OpnForm`,

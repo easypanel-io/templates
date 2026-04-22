@@ -1,0 +1,108 @@
+name: Ziit
+description:
+  Ziit (pronounced 'tseet') is an open-source, self-hostable alternative to
+  WakaTime. It provides a clean, minimal, and fast dashboard for displaying
+  coding statistics, while ensuring privacy by keeping all data on your own
+  server. Ziit tracks coding activity such as projects, languages, editors,
+  files, branches, operating systems, and time spent coding, all presented in a
+  familiar interface inspired by Plausible Analytics.
+instructions: null
+changeLog:
+  - date: 2025-09-12
+    description: Template Release
+links:
+  - label: Web App
+    url: https://ziit.app/login
+  - label: Documentation
+    url: https://docs.ziit.app
+  - label: Github
+    url: https://github.com/0pandadev/ziit
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - postgresServiceImage
+    - githubClientId
+    - githubClientSecret
+    - pasetoKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ziit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/0pandadev/ziit:v1.0.2
+    postgresServiceImage:
+      type: string
+      title: PostgreSQL Service Image
+      default: timescale/timescaledb:latest-pg17
+    githubClientId:
+      type: string
+      title: GitHub Client ID
+      default: ""
+      description: GitHub OAuth application client ID
+    githubClientSecret:
+      type: string
+      title: GitHub Client Secret
+      default: ""
+      description: GitHub OAuth application client secret
+    pasetoKey:
+      type: string
+      title: PASETO Key
+      default: "CHaeP+t8UcMunRPMuHmQgL2VVU15q693VQxRu/BXnmM="
+      description: generate your own key with "openssl rand -base64 32"
+benefits:
+  - title: Privacy-First Time Tracking
+    description:
+      Keep all your coding statistics private and secure with a fully
+      self-hosted solution that ensures your data never leaves your own server.
+  - title: Clean & Minimal Dashboard
+    description:
+      Enjoy a clean, minimal interface inspired by Plausible Analytics that
+      shows only the information you need without clutter or distractions.
+  - title: Comprehensive Coding Analytics
+    description:
+      Track detailed coding activity including projects, languages, editors,
+      files, branches, operating systems, and time spent coding with beautiful
+      visualizations.
+
+features:
+  - title: IDE Integration
+    description:
+      Time tracking directly from VS Code and JetBrains IDEs to your Ziit
+      instance with seamless integration and real-time data synchronization.
+  - title: Data Import & Migration
+    description:
+      Import your existing coding data from WakaTime or WakAPI instances to
+      maintain continuity and historical statistics.
+  - title: Public Stats & Leaderboards
+    description:
+      Share your coding statistics publicly and compete with others on the
+      leaderboard to see who has the most coding hours.
+  - title: Embeddable Badges
+    description:
+      Generate badges to embed coding time for specific projects directly into
+      your README files or documentation.
+  - title: Flexible Time Filtering
+    description:
+      Filter and analyze your coding activity using different time ranges to
+      gain insights into your productivity patterns.
+  - title: Multi-Platform Support
+    description:
+      Track coding activity across different operating systems, editors, and
+      programming languages with detailed breakdowns.
+
+tags:
+  - Time Tracking
+  - Developer Tools
+  - Coding Statistics
+  - Self-Hosted
+  - WakaTime Alternative
+  - Productivity
