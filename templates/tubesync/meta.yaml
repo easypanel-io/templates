@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to v0.15.7
   - date: 2025-12-29
     description: Version bumped to v0.15.12
+  - date: 2026-02-24
+    description: Version bumped to v0.16.2
 links:
   - label: Github
     url: https://github.com/meeb/tubesync
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/meeb/tubesync:v0.15.12
+      default: ghcr.io/meeb/tubesync:v0.16.2
     username:
       type: string
       title: Username

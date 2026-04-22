@@ -4,6 +4,8 @@ instructions: Default credentials are pyload/pyload.
 changeLog:
   - date: 2025-05-02
     description: Initial release
+  - date: 2026-02-24
+    description: Version bumped to develop-version-38c80675
 links:
   - label: GitHub
     url: https://github.com/pyload/pyload
@@ -27,7 +29,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/pyload-ng:develop-version-a49dade9
+      default: lscr.io/linuxserver/pyload-ng:develop-version-38c80675
 benefits:
   - title: Modern Interface
     description: Clean and intuitive web-based user interface 
