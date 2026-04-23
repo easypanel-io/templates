@@ -5,26 +5,24 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const postgresPassword = randomPassword();
   const rabbitmqPassword = randomPassword();
-  const memcachedPassword = randomPassword();
   const redisPassword = randomPassword();
   const secretKey = randomPassword();
 
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
-      serviceName: input.databaseServiceName,
+      serviceName: `${input.appServiceName}-db`,
       image: "zulip/zulip-postgresql:14",
       password: postgresPassword,
-      env: ["POSTGRES_DB=zulip", "POSTGRES_USER=zulip"].join("\n"),
+      user: "zulip",
+      databaseName: "zulip",
     },
   });
 
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
-      serviceName: input.redisServiceName,
+      serviceName: `${input.appServiceName}-redis`,
       password: redisPassword,
     },
   });
@@ -32,8 +30,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
-      serviceName: input.memcachedServiceName,
+      serviceName: `${input.appServiceName}-memcached`,
       source: {
         type: "image",
         image: "memcached:alpine",
@@ -47,8 +44,7 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
-      serviceName: input.rabbitServiceName,
+      serviceName: `${input.appServiceName}-rabbitmq`,
       source: {
         type: "image",
         image: "rabbitmq:4.0.7",
@@ -70,20 +66,21 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
-      serviceName: input.zulipServiceName,
+      serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.zulipServiceImage,
+        image: input.appServiceImage,
       },
       env: [
-        `DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         "DB_HOST_PORT=5432",
         "DB_USER=zulip",
-        `SETTING_MEMCACHED_LOCATION=$(PROJECT_NAME)_${input.memcachedServiceName}:11211`,
-        `SETTING_RABBITMQ_HOST=$(PROJECT_NAME)_${input.rabbitServiceName}`,
-        `SETTING_REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
+        `SETTING_MEMCACHED_LOCATION=$(PROJECT_NAME)_${input.appServiceName}-memcached:11211`,
+        `SETTING_RABBITMQ_HOST=$(PROJECT_NAME)_${input.appServiceName}-rabbitmq`,
+        `SETTING_REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `SECRETS_postgres_password=${postgresPassword}`,
+        `SECRETS_postgres_user=postgres`,
+        `SECRETS_postgres_db=$(PROJECT_NAME)`,
         `SECRETS_rabbitmq_password=${rabbitmqPassword}`,
         `SECRETS_redis_password=${redisPassword}`,
         `SECRETS_secret_key=${secretKey}`,
@@ -110,6 +107,14 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "zulip-data",
           mountPath: "/data",
+        },
+      ],
+      scripts: [
+        {
+          name: "Generate Realm Creation Link",
+          script: [
+            "su -s /bin/bash zulip -c 'cd /home/zulip/deployments/current && ./manage.py generate_realm_creation_link'",
+          ].join("\n"),
         },
       ],
     },
