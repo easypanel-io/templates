@@ -5,11 +5,10 @@ import {
   Services,
 } from "~templates-utils";
 import { Input } from "./meta";
-
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const secretKeyBase = randomString(64);
+  const secretKeyBase = randomString(32);
 
   services.push({
     type: "postgres",
@@ -34,12 +33,18 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `POSTGRES_USER=postgres`,
+        "POSTGRES_USER=postgres",
         `POSTGRES_PASSWORD=${databasePassword}`,
         `POSTGRES_DB=$(PROJECT_NAME)`,
         `POSTGRES_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `BASE_URL=https://$(PRIMARY_DOMAIN)`,
         `SECRET_KEY_BASE=${secretKeyBase}`,
+        `EMAIL_DELIVERY_METHOD=${input.emailDeliveryMethod}`,
+        `EMAIL_SMTP_HOST=${input.emailSmtpHost}`,
+        `EMAIL_SMTP_PORT=${input.emailSmtpPort}`,
+        `EMAIL_SMTP_USER=${input.emailSmtpUser}`,
+        `EMAIL_SMTP_PASS=${input.emailSmtpPass}`,
+        "RAILS_LOG_TO_STDOUT=false",
       ].join("\n"),
     },
   });

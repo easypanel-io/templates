@@ -1,31 +1,31 @@
 name: Astuto
 description:
-  Astuto is a self-hosted customer feedback management platform that helps teams
-  collect, organize, and respond to customer feedback in one centralized
-  location. Built with modern web technologies, Astuto provides a clean and
-  intuitive interface for managing feature requests, bug reports, and customer
-  suggestions. The application enables teams to create public or private
-  feedback boards where customers can submit ideas, vote on features, and track
-  the status of their requests. With built-in categorization, tagging, and
-  status tracking, Astuto helps product teams prioritize development work based
-  on customer demand. The platform supports multiple boards, user
-  authentication, and integration capabilities to streamline the feedback
-  collection process. Perfect for product teams managing customer feedback,
-  startups building customer-driven products, SaaS companies wanting to engage
-  with their user base, or any organization that wants to centralize and manage
-  customer input effectively.
+  Astuto is an open-source customer feedback tool that helps you collect,
+  organize, and prioritize product feedback and feature requests from your
+  users. It provides a simple and effective platform where users can submit
+  their ideas, vote on existing suggestions, and track the status of feature
+  implementations. Astuto is designed for product managers, developers, and
+  founders who want to make data-driven decisions based on user feedback and
+  build products that better meet their users' needs.
 
-instructions: null
+instructions:
+  After deployment, open your Astuto domain and complete the first-run setup
+  flow to create your initial admin account. Configure outgoing SMTP details in
+  the template fields so Astuto can send account and notification emails. Invite
+  your team, create feedback boards, and start collecting and prioritizing
+  feature requests from users.
 
 changeLog:
-  - date: 2025-12-23
+  - date: 2026-04-23
     description: Template Release
 
 links:
+  - label: Website
+    url: https://github.com/astuto/astuto
+  - label: Documentation
+    url: https://github.com/astuto/astuto#readme
   - label: GitHub
-    url: https://github.com/riggraz/astuto
-  - label: Docker Hub
-    url: https://hub.docker.com/r/riggraz/astuto
+    url: https://github.com/astuto/astuto
 
 contributors:
   - name: Ahson Shaikh
@@ -36,6 +36,11 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - emailDeliveryMethod
+    - emailSmtpHost
+    - emailSmtpPort
+    - emailSmtpUser
+    - emailSmtpPass
   properties:
     appServiceName:
       type: string
@@ -44,58 +49,67 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: riggraz/astuto:ac6ad92f7ec3f2961c37f17fb090c1fe4184f194
+      default: riggraz/astuto:v1.1.2
+    emailDeliveryMethod:
+      type: string
+      title: Email Delivery Method
+      default: smtp
+    emailSmtpHost:
+      type: string
+      title: Email SMTP Host
+      default: smtp.gmail.com
+    emailSmtpPort:
+      type: string
+      title: Email SMTP Port
+      default: "587"
+    emailSmtpUser:
+      type: string
+      title: Email SMTP User
+      default: your-email@example.com
+    emailSmtpPass:
+      type: string
+      title: Email SMTP Password
+      default: your-password
 
 benefits:
-  - title: Customer Feedback Management
+  - title: User-Driven Development
     description:
-      Centralize all customer feedback, feature requests, and suggestions in one
-      organized platform.
-  - title: Customer Engagement
+      Astuto helps you build products that users actually want by collecting and
+      organizing customer feedback in a structured way.
+  - title: Transparent Roadmap
     description:
-      Create public feedback boards where customers can submit ideas and vote on
-      features they want to see.
-  - title: Self-Hosted Control
+      Keep your users engaged and informed about what features are being
+      considered, planned, or implemented with a transparent product roadmap.
+  - title: Prioritize Features
     description:
-      Complete ownership of customer feedback data without relying on
-      third-party services.
-  - title: Product Prioritization
-    description:
-      Use voting and categorization to prioritize development work based on
-      customer demand.
+      Use voting mechanisms to understand which features are most requested by
+      your users, helping you prioritize your development efforts effectively.
 
 features:
-  - title: Feedback Boards
+  - title: Feedback Collection
     description:
-      Create multiple public or private boards for different products or
-      features to organize feedback.
+      Provide a dedicated platform where users can submit their feature requests
+      and feedback in an organized manner.
   - title: Voting System
     description:
-      Allow customers to vote on feature requests to help prioritize development
-      efforts.
-  - title: Status Tracking
+      Allow users to vote on feature requests, helping you identify the most
+      popular ideas and prioritize development accordingly.
+  - title: Roadmap Board
     description:
-      Track the status of feedback items from submitted to in-progress to
-      completed.
-  - title: Categorization
-    description:
-      Organize feedback with categories and tags for easy filtering and
-      management.
+      Display the status of feature requests with customizable boards that show
+      what is planned, in progress, or completed.
   - title: User Authentication
     description:
-      Support for user accounts to manage feedback submissions and track
-      contributions.
-  - title: Modern Interface
+      Control who can submit feedback with built-in user authentication and
+      registration features.
+  - title: Admin Interface
     description:
-      Clean and intuitive web interface for both customers and administrators.
-  - title: PostgreSQL Backend
-    description:
-      Reliable PostgreSQL database for storing all feedback data and
-      configurations.
+      Manage feedback, update statuses, and communicate with users through an
+      intuitive admin interface.
 
 tags:
-  - Customer Feedback
+  - Feedback
   - Product Management
-  - Self-Hosted
-  - Feedback Management
-  - Feature Requests
+  - User Requests
+  - Feature Tracking
+  - Customer Engagement
