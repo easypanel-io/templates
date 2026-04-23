@@ -1,0 +1,72 @@
+name: WP AutoFlow
+description:
+  WP AutoFlow is the ultimate self-hosted orchestrator for WordPress automation.
+  It allows you to scrape content from any website, rewrite it using advanced AI
+  (GPT-5, o3-mini), handle media with custom watermarking, and publish directly
+  to multiple WordPress sites. Built for performance, it uses Redis and BullMQ
+  to handle heavy workloads asynchronously without slowing down your server.
+instructions: null
+changeLog:
+  - date: 2026-04-22
+    description: First Release
+links:
+  - label: Website
+    url: https://wpautoflow.com
+  - label: Documentation
+    url: https://docs.wpautoflow.com
+  - label: Github
+    url: https://github.com/wp-autoflow/wp-autoflow
+contributors:
+  - name: Fabio Selau
+    url: https://github.com/fabioselau077
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - openaiApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wp-autoflow
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: fabioselau/wp-autoflow:v1.0.0
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: Your secret key for AI rewriting (GPT-5/o3-mini)
+benefits:
+  - title: AI-Powered Content Creation
+    description:
+      Automatically transform scraped data into high-quality, SEO-optimized
+      articles using the latest LLMs while preserving HTML structure.
+  - title: Mass WordPress Management
+    description:
+      Connect and manage multiple WordPress instances via REST API. Publish,
+      update, and index posts in bulk from a single dashboard.
+  - title: Efficient Task Queuing
+    description:
+      Built on Node.js and Redis, it handles thousands of tasks in the
+      background ensuring your main application stays snappy and responsive.
+features:
+  - title: Advanced Web Scraper
+    description:
+      Supports custom selectors, residential proxies, and Scrape.do integration
+      to fetch content from even the most protected websites.
+  - title: Smart Media Processing
+    description:
+      Automatic image downloading, resizing, and watermarking before uploading
+      to the WordPress Media Library.
+  - title: Instant SEO Indexing
+    description:
+      Native integration with IndexNow and SpeedyIndex to notify search engines
+      as soon as your content is published.
+tags:
+  - Automation
+  - AI
+  - WordPress
+  - SEO
+  - Scraper
