@@ -9,7 +9,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-configurator`,
       env: [
         `REDIS_CACHE: ${input.redisServiceName}-cache:6379`,
@@ -50,7 +49,6 @@ bench set - config - gp socketio_port 9000;`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-create-site`,
       source: {
         type: "image",
@@ -96,7 +94,6 @@ bench new-site frontend --no-mariadb-socket --admin-password=admin --db-root-pas
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-frontend`,
       source: {
         type: "image",
@@ -151,7 +148,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-backend`,
       source: {
         type: "image",
@@ -181,7 +177,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-websocket`,
       source: {
         type: "image",
@@ -215,7 +210,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-scheduler`,
       source: {
         type: "image",
@@ -243,7 +237,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-default`,
       source: {
         type: "image",
@@ -271,7 +264,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-long`,
       source: {
         type: "image",
@@ -299,7 +291,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.appServiceName}-short`,
       source: {
         type: "image",
@@ -327,7 +318,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.redisServiceName}-cache`,
       password: redisPassword,
     },
@@ -336,7 +326,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.redisServiceName}-queue`,
       password: redisPassword,
     },
@@ -345,7 +334,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.redisServiceName}-socketio`,
       password: redisPassword,
     },
@@ -354,7 +342,6 @@ nginx -g 'daemon off;'`,
   services.push({
     type: "mariadb",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       password: databasePassword,
     },

@@ -61,7 +61,7 @@ export function generate(input: Input): Output {
       serviceName: input.rabbitmqServiceName,
       source: {
         type: "image",
-        image: input.rabbitmqServiceImage,
+        image: input.rabbitmqServiceImage ?? "rabbitmq:3-management-alpine",
       },
       env: [
         `RABBITMQ_DEFAULT_USER=wuzapi`,

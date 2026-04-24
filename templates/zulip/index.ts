@@ -12,7 +12,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "zulip/zulip-postgresql:14",
       password: postgresPassword,
@@ -23,7 +22,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "redis",
     data: {
-      projectName: input.projectName,
       serviceName: input.redisServiceName,
       password: redisPassword,
     },
@@ -32,7 +30,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.memcachedServiceName,
       source: {
         type: "image",
@@ -47,7 +44,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.rabbitServiceName,
       source: {
         type: "image",
@@ -70,7 +66,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: input.zulipServiceName,
       source: {
         type: "image",

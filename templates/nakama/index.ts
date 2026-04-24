@@ -7,7 +7,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      projectName: input.projectName,
       serviceName: input.databaseServiceName,
       image: "postgres:12.2-alpine",
       password: input.databasePassword,
@@ -17,7 +16,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: "nakama",
       source: {
         type: "image",
