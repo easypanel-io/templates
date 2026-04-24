@@ -8,7 +8,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.servicePrefix}`,
       env: [
         `OCIS_URL=https://${input.ocisDomain}`,
@@ -62,8 +61,7 @@ export function generate(input: Input): Output {
     services.push({
       type: "app",
       data: {
-        projectName: input.projectName,
-        serviceName: `${input.servicePrefix}-appprovider-onlyoffice`,
+          serviceName: `${input.servicePrefix}-appprovider-onlyoffice`,
         env: [
           `REVA_GATEWAY=${input.projectName}_${input.servicePrefix}:9142`,
           `APP_PROVIDER_GRPC_ADDR=0.0.0.0:9164`,
@@ -102,8 +100,7 @@ export function generate(input: Input): Output {
     services.push({
       type: "app",
       data: {
-        projectName: input.projectName,
-        serviceName: `${input.servicePrefix}-onlyoffice`,
+          serviceName: `${input.servicePrefix}-onlyoffice`,
         env: [`WOPI_ENABLED=true`, `USE_UNAUTHORIZED_STORAGE=false`].join("\n"),
         source: {
           type: "image",
@@ -138,7 +135,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.servicePrefix}-wopiserver`,
       source: {
         type: "image",
@@ -183,7 +179,6 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      projectName: input.projectName,
       serviceName: `${input.servicePrefix}-tika`,
       source: {
         type: "image",

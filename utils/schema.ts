@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const randomString = (length: number = 10) => {
+export const randomString = (length: number = 10) => {
   const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
   let result = "";
   for (let i = 0; i < length; i++) {

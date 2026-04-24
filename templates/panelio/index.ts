@@ -12,17 +12,23 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: [`PANELIO_ADMIN_PASSWORD=${input.adminPassword}`].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
+          port: 80,
         },
       ],
       mounts: [
         {
+          type: "bind",
+          hostPath: "/var/run/docker.sock",
+          mountPath: "/var/run/docker.sock",
+        },
+        {
           type: "volume",
-          name: "data",
-          mountPath: "/data",
+          name: "config",
+          mountPath: "/app/config",
         },
       ],
     },
