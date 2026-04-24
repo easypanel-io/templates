@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 2.32.0
   - date: 2025-12-29
     description: Version bumped to 2.33.6
+  - date: 2026-02-24
+    description: Version bumped to 2.38.1
 links:
   - label: Website
     url: https://www.portainer.io/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: portainer/portainer-ce:2.33.6
+      default: portainer/portainer-ce:2.38.1
 benefits:
   - title: Efficient Container Management
     description:

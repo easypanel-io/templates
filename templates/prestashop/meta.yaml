@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 8.2.1
   - date: 2025-12-29
     description: Version bumped to 9.0.2
+  - date: 2026-02-24
+    description: Version bumped to 9.0.3
 links:
   - label: Website
     url: https://www.prestashop.com
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: prestashop/prestashop:9.0.2
+      default: prestashop/prestashop:9.0.3
 benefits:
   - title: Comprehensive E-commerce Solution
     description:

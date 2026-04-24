@@ -34,7 +34,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.appServiceImage ?? "seafileltd/seafile-mc:13.0.19",
       },
       domains: [
         {
