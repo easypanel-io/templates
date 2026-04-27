@@ -35,6 +35,11 @@ schema:
   type: object
   required:
     - appServiceName
+    - appServiceImage
+    - playwrightServiceImage
+    - redisImage
+    - rabbitmqImage
+    - nuqPostgresImage
   properties:
     appServiceName:
       type: string
