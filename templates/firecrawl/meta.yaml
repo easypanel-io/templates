@@ -19,6 +19,8 @@ changeLog:
     description:
       Align with official compose; add RabbitMQ; single harness container;
       nuq-postgres image
+  - date: 2026-04-28
+    description: Version bumped to 1.3.0
 links:
   - label: Website
     url: https://firecrawl.dev/
@@ -49,7 +51,7 @@ schema:
     redisImage:
       type: string
       title: Redis Image
-      default: redis:alpine
+      default: redis:8.6.2
     rabbitmqImage:
       type: string
       title: RabbitMQ Image
