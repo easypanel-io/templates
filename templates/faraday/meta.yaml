@@ -36,6 +36,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - redisImage
   properties:
     appServiceName:
       type: string
@@ -45,6 +46,10 @@ schema:
       type: string
       title: App Service Image
       default: faradaysec/faraday:5.19.0
+    redisImage:
+      type: string
+      title: Redis Image
+      default: redis:7.4.1
 benefits:
   - title: Centralized Vulnerability Management
     description:
