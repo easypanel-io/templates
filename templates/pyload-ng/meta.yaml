@@ -1,5 +1,8 @@
 name: pyLoad-NG
-description: pyLoad-NG is a modern download manager with a web interface, supporting various download services and protocols. It features a clean interface, download scheduling, and extensive plugin support.
+description:
+  pyLoad-NG is a modern download manager with a web interface, supporting
+  various download services and protocols. It features a clean interface,
+  download scheduling, and extensive plugin support.
 instructions: Default credentials are pyload/pyload.
 changeLog:
   - date: 2025-05-02
@@ -32,7 +35,7 @@ schema:
       default: lscr.io/linuxserver/pyload-ng:develop-version-38c80675
 benefits:
   - title: Modern Interface
-    description: Clean and intuitive web-based user interface 
+    description: Clean and intuitive web-based user interface
   - title: Multi-service Support
     description: Download from various file hosting services and protocols
   - title: Plugin System
@@ -54,4 +57,4 @@ tags:
   - Download Manager
   - File Transfer
   - Self-hosted
-  - Open Source 
+  - Open Source

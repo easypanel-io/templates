@@ -1,18 +1,23 @@
 name: GoClaw
 description:
   Enterprise AI agent platform with teams, delegation & orchestration. Single Go
-  binary, 13+ LLM providers, 10+ channels, browser automation, and memory system.
+  binary, 13+ LLM providers, 10+ channels, browser automation, and memory
+  system.
 instructions: |
   After installation, access the web dashboard via your configured domain.
   To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
   Secure tokens like the Gateway Token and Encryption Key are auto-generated.
 changeLog:
   - date: 2026-04-16
-    description: Updated to GoClaw v3.8.5, moved all Docker images to meta.yaml inputs
+    description:
+      Updated to GoClaw v3.8.5, moved all Docker images to meta.yaml inputs
   - date: 2026-03-25
-    description: Applied review feedback — pinned images, simplified service naming, added proxy headers
+    description:
+      Applied review feedback — pinned images, simplified service naming, added
+      proxy headers
   - date: 2026-03-24
-    description: Redesigned with Chrome CDP sidecar, removed permission-fixer hack
+    description:
+      Redesigned with Chrome CDP sidecar, removed permission-fixer hack
   - date: 2026-03-19
     description: Initial release
 links:
@@ -42,7 +47,9 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/nextlevelbuilder/goclaw:v3.8.5-full
-      description: Use a "-full" tag for Python/Node included, or a base version tag for minimal.
+      description:
+        Use a "-full" tag for Python/Node included, or a base version tag for
+        minimal.
     uiServiceName:
       type: string
       title: Web Service Image
