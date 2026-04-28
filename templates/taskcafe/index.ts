@@ -39,10 +39,10 @@ export function generate(input: Input): Output {
   services.push({
     type: "postgres",
     data: {
-      serviceName: `${input.appServiceName}-db`,    
+      serviceName: `${input.appServiceName}-db`,
       password: dbPassword,
     },
   });
 
   return { services };
-} 
+}
