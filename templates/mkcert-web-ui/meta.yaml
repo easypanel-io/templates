@@ -1,0 +1,107 @@
+name: mkcert Web UI
+description:
+  mkcert Web UI provides a browser-based interface for managing local
+  certificates using mkcert. It helps you generate and manage development TLS
+  certificates with a simple web dashboard, optional local authentication, and
+  optional OIDC SSO.
+instructions:
+  Access the app on your project domain (port 3000). For Easypanel deployments,
+  keep ENABLE_HTTPS disabled by default because TLS is usually terminated at the
+  proxy layer. SMTP notifications and certificate monitoring are available as
+  commented lines in the env section. Uncomment them, provide real values, and
+  redeploy if you need those features.
+changeLog:
+  - date: 2026-04-28
+    description: First Release (3.1.2)
+links:
+  - label: GitHub
+    url: https://github.com/jeffcaldwellca/mkcertWeb
+  - label: Docker Hub
+    url: https://hub.docker.com/r/jeffcaldwellca/mkcertweb
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mkcert-web-ui
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jeffcaldwellca/mkcertweb:3.1.2
+    enableAuth:
+      type: boolean
+      title: Enable Built-in Authentication
+      default: false
+    authUsername:
+      type: string
+      title: Auth Username
+      default: admin
+    authPassword:
+      type: string
+      title: Auth Password
+      default: admin
+      description: If not provided, a random password will be generated.
+    enableOidc:
+      type: boolean
+      title: Enable OIDC
+      default: false
+    oidcIssuer:
+      type: string
+      title: OIDC Issuer
+    oidcClientId:
+      type: string
+      title: OIDC Client ID
+    oidcClientSecret:
+      type: string
+      title: OIDC Client Secret
+    oidcCallbackUrl:
+      type: string
+      title: OIDC Callback URL
+    oidcScope:
+      type: string
+      title: OIDC Scope
+      default: openid profile email
+benefits:
+  - title: Simple Certificate Management
+    description:
+      Manage and generate mkcert-based local development certificates from a
+      browser UI instead of manual CLI commands.
+  - title: Secure Access Options
+    description:
+      Supports optional built-in authentication and optional OIDC integration
+      for controlled access.
+  - title: Sane Defaults Out Of The Box
+    description:
+      Uses official defaults for HTTPS mode, theme, and rate limits so most
+      deployments work without additional tuning.
+  - title: Persistent Certificate Storage
+    description:
+      Certificates and app data are stored on persistent volumes so they survive
+      container restarts and redeployments.
+features:
+  - title: Web UI for mkcert Operations
+    description:
+      Perform certificate tasks through an intuitive dashboard with no manual
+      shell workflow required.
+  - title: Focused Configuration
+    description:
+      Exposes only critical runtime options (auth and OIDC) while keeping safe
+      defaults for non-critical environment values.
+  - title: OIDC Ready
+    description:
+      Includes configurable OIDC parameters so you can integrate SSO when
+      needed.
+tags:
+  - Certificates
+  - TLS
+  - mkcert
+  - Dev Tools
+  - Security
+  - Self-Hosted
