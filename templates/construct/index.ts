@@ -4,25 +4,33 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
+  const appEnv = [
+    `API_KEY=${input.apiKey}`,
+    `PROVIDER=${input.provider}`,
+    `CONSTRUCT_ALLOW_PUBLIC_BIND=true`,
+    `CONSTRUCT_GATEWAY_PORT=42617`,
+  ];
+
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
+      env: appEnv.join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
-      mounts: [
-        {
-          type: "volume",
-          name: "promethus_data",
-          mountPath: "/prometheus",
-        },
-      ],
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 9090,
+          port: 42617,
+        },
+      ],
+      mounts: [
+        {
+          type: "volume",
+          name: "data",
+          mountPath: "/construct-data",
         },
       ],
     },
