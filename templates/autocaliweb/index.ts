@@ -18,11 +18,7 @@ export function generate(input: Input): Output {
           port: 8083,
         },
       ],
-      env: [
-        `TZ=${input.timezone}`,
-        `PUID=0`,
-        `PGID=0`,
-      ].join("\n"),
+      env: [`TZ=${input.timezone}`, `PUID=0`, `PGID=0`].join("\n"),
       mounts: [
         {
           type: "volume",
