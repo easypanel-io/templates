@@ -25,8 +25,8 @@ instructions:
 changeLog:
   - date: 2026-03-23
     description:
-      Fix ClickHouse password in config.yml to match CLICKHOUSE_PASSWORD
-      (was hardcoded uptrace). Pin Mailpit to axllent/mailpit:v1.29.4.
+      Fix ClickHouse password in config.yml to match CLICKHOUSE_PASSWORD (was
+      hardcoded uptrace). Pin Mailpit to axllent/mailpit:v1.29.4.
   - date: 2026-02-27
     description: First Release
   - date: 2026-03-20
