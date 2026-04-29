@@ -1,5 +1,5 @@
 import { Output, Services, randomPassword } from "~templates-utils";
-import { Input } from './meta';
+import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
