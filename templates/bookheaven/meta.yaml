@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2026-02-18
     description: Template Release (v0.15.0)
+  - date: 2026-04-29
+    description: Version bumped to (v0.16.0)  
 links:
   - label: GitHub
     url: https://github.com/BookHeaven/BookHeaven.Server
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: BookHeaven Image
-      default: ghcr.io/bookheaven/bookheaven-server:0.15.0
+      default: ghcr.io/bookheaven/bookheaven-server:0.16.0
     timezone:
       type: string
       title: Timezone

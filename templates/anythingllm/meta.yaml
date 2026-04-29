@@ -12,6 +12,8 @@ changeLog:
     description: First release
   - date: 2026-02-18
     description: Version fixed to 1.11.0 from latest
+  - date: 2026-04-29
+    description: Version bumped to 1.12  
 links:
   - label: Website
     url: https://anythingllm.com/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mintplexlabs/anythingllm:1.11.0
+      default: mintplexlabs/anythingllm:1.12
 benefits:
   - title: Build Custom Knowledge Bases
     description:

@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2025-07-11
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to 26.0.3
 links:
   - label: Website
     url: https://cloudbeaver.io/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dbeaver/cloudbeaver:25.1.2
+      default: dbeaver/cloudbeaver:26.0.3
 benefits:
   - title: Web-Based Interface
     description:

@@ -18,6 +18,8 @@ changeLog:
     description:
       Fixed worker - use official server image with ak worker (fixes daphne/404
       setup)
+  - date: 2026-04-29
+    description: Version bumped to 2026.2.3-rc1    
 links:
   - label: Website
     url: https://goauthentik.io
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: Authentik Version
-      default: ghcr.io/goauthentik/server:2026.2.0
+      default: ghcr.io/goauthentik/server:2026.2.3-rc1
       description: Official image tag from ghcr.io/goauthentik/server
 benefits:
   - title: Centralized Identity Management

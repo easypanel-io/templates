@@ -19,6 +19,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-02-23
     description: Version bumped to v3.3.2
+  - date: 2026-04-29
+    description: Version bumped to v3.3.6
 links:
   - label: Website
     url: https://4gaboards.com/#home
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rargames/4gaboards:3.3.2
+      default: ghcr.io/rargames/4gaboards:3.3.6
       description: 4ga Boards Docker image from GitHub Container Registry
 benefits:
   - title: Self-Hosted Control

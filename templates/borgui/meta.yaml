@@ -24,6 +24,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-18
     description: Version bumped to 1.69
+  - date: 2026-04-29
+    description: Version bumped to 2.0.8  
 links:
   - label: BorgBackup Docs
     url: https://borgbackup.readthedocs.io/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ainullcode/borg-ui:1.69
+      default: ainullcode/borg-ui:2.0.8
     timezone:
       type: string
       title: Timezone

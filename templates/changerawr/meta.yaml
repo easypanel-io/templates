@@ -21,6 +21,8 @@ changeLog:
     description:
       Added website link; pinned OAuth2 sidecar image by digest; removed
       placeholder Easypanel secrets from schema and generated env
+  - date: 2026-04-29
+    description: First Release (v1.0.6)    
 links:
   - label: Website
     url: https://github.com/supernova3339/changerawr
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/supernova3339/changerawr:v1.0.4
+      default: ghcr.io/supernova3339/changerawr:v1.0.6
     enableOAuth2:
       type: boolean
       title: Enable OAuth2 Server
