@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 2.19.4
   - date: 2025-12-24
     description: Version bumped to 2.32.1
+  - date: 2026-04-29
+    description: Version bumped to 2.33.2  
 links:
   - label: Website
     url: https://www.audiobookshelf.org
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/advplyr/audiobookshelf:2.32.1
+      default: ghcr.io/advplyr/audiobookshelf:2.33.2
     hostPath:
       type: string
       title: Starter Host Path

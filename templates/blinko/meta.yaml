@@ -16,6 +16,8 @@ changeLog:
     description: Updated to 1.8.0
   - date: 2026-02-18
     description: Version bumped to 1.8.5
+  - date: 2026-04-29
+    description: Version bumped to 1.8.7  
 links:
   - label: Website
     url: https://blinko.space/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: blinkospace/blinko:1.8.5
+      default: blinkospace/blinko:1.8.7
 benefits:
   - title: Collaborative Space
     description: Create and manage shared workspaces for team collaboration.
