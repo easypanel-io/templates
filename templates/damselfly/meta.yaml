@@ -8,6 +8,8 @@ instructions: Add your photos and libraries in the respected volumes or change t
 changeLog:
   - date: 2025-04-28
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to 4.5.3  
 links:
   - label: GitHub
     url: https://github.com/Webreaper/Damselfly
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: webreaper/damselfly:4.2.3
+      default: webreaper/damselfly:4.5.3
 benefits:
   - title: AI-Powered Organization
     description: Automatically tag and categorize photos using machine learning

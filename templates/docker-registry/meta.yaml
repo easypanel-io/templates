@@ -18,6 +18,8 @@ changeLog:
     description: first release
   - date: 2025-05-26
     description: Version bumped to 3.0.0
+  - date: 2026-04-29
+    description: Version bumped to 3.1.0  
 links:
   - label: Website
     url: https://hub.docker.com/_/registry
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: registry:3.0.0
+      default: registry:3.1.0
     user:
       type: string
       title: User

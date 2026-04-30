@@ -22,6 +22,8 @@ changeLog:
     description: Version changed to v2.2
   - date: 2025-07-15
     description: Version bumped to v2.2.3
+  - date: 2026-04-29
+    description: Version bumped to v2.2.5  
 links:
   - label: Website
     url: https://codex.so
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/codex-team/codex.docs:v2.2.3
+      default: ghcr.io/codex-team/codex.docs:v2.2.5
     databaseServiceName:
       type: string
       title: Database Service Name

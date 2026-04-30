@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2025-11-04
     description: Template Release
+  - date: 2026-04-29
+    description: Version bumped to 4.0.1  
 links:
   - label: Steam Game Server Account Management
     url: https://steamcommunity.com/dev/managegameservers
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joedwards32/cs2:4.0.0
+      default: joedwards32/cs2:4.0.1
     srcdToken:
       type: string
       title: Steam Game Server Token
