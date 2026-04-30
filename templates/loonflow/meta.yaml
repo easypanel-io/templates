@@ -8,8 +8,10 @@ description:
   Django backend API, a React frontend UI, and Celery workers for asynchronous
   task processing. Perfect for organizations looking to automate business
   processes and manage complex workflows with a self-hosted solution.
-  
-instructions: You can change the lanaguage by clicking the admin icon, click the first option, and then change it to American English in the dropdown. 
+
+instructions:
+  You can change the lanaguage by clicking the admin icon, click the first
+  option, and then change it to American English in the dropdown.
 changeLog:
   - date: 2025-01-22
     description: Initial Template Release
@@ -80,8 +82,8 @@ benefits:
       self-hosted deployment.
   - title: Scalable Architecture
     description:
-      Built with microservices architecture including separate backend, frontend,
-      and task worker services for scalability.
+      Built with microservices architecture including separate backend,
+      frontend, and task worker services for scalability.
   - title: Task Queue Management
     description:
       Redis-powered task queue with Celery workers for reliable asynchronous
@@ -109,8 +111,8 @@ features:
       superuser creation on startup.
   - title: React Frontend UI
     description:
-      Modern React-based user interface for workflow management, monitoring,
-      and administration.
+      Modern React-based user interface for workflow management, monitoring, and
+      administration.
   - title: Multi-Tenant Support
     description:
       Built-in multi-tenant support with configurable tenant names and domains
