@@ -12,10 +12,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [
-        `COLLECTIONS=crowdsecurity/nginx`,
-        `GID=1000`,
-      ].join("\n"),
+      env: [`COLLECTIONS=crowdsecurity/nginx`, `GID=1000`].join("\n"),
       mounts: [
         {
           type: "file",
@@ -42,4 +39,4 @@ export function generate(input: Input): Output {
   });
 
   return { services };
-} 
+}
