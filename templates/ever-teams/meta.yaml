@@ -1,0 +1,124 @@
+name: Ever Teams
+description:
+  Ever Teams is an open work and project management platform focused on team
+  collaboration, time tracking, activity visibility, and task execution. This
+  template deploys the official Ever Teams web application container.
+instructions: |
+  After deployment, open the app on your project domain at port 3030.
+  Ever Teams requires a Gauzy API backend. By default this template points to
+  the hosted API at https://api.ever.team. If you run your own Gauzy backend,
+  set both API URL fields to your backend URL before deploying.
+  Critical: account registration can fail if CAPTCHA is not configured. Set
+  NEXT_PUBLIC_CAPTCHA_TYPE, NEXT_PUBLIC_CAPTCHA_SITE_KEY, and
+  CAPTCHA_SECRET_KEY with valid provider values.
+changeLog:
+  - date: "2026-04-29"
+    description: "First release"
+links:
+  - label: Website
+    url: https://ever.team/
+  - label: Documentation
+    url: https://docs.ever.team/
+  - label: GitHub
+    url: https://github.com/ever-co/ever-teams
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - gauzyApiServerUrl
+    - nextPublicGauzyApiServerUrl
+    - nextPublicCaptchaType
+    - nextPublicCaptchaSiteKey
+    - captchaSecretKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ever-teams
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/ever-co/ever-teams-webapp:latest
+    gauzyApiServerUrl:
+      type: string
+      title: Gauzy API Server URL
+      default: https://api.ever.team
+    nextPublicGauzyApiServerUrl:
+      type: string
+      title: Public Gauzy API Server URL
+      default: https://api.ever.team
+    nextPublicDemo:
+      type: boolean
+      title: Enable Demo Mode
+      default: true
+    nextPublicCaptchaType:
+      type: string
+      title: CAPTCHA Type
+      default: recaptcha
+    nextPublicCaptchaSiteKey:
+      type: string
+      title: CAPTCHA Site Key
+    captchaSecretKey:
+      type: string
+      title: CAPTCHA Secret Key
+    nextPublicGoogleAppName:
+      type: string
+      title: Google OIDC App Name
+      default: Ever Teams
+    googleClientId:
+      type: string
+      title: Google OIDC Client ID
+    googleClientSecret:
+      type: string
+      title: Google OIDC Client Secret
+    nextPublicGithubAppName:
+      type: string
+      title: GitHub OIDC App Name
+      default: ever-github
+    githubClientId:
+      type: string
+      title: GitHub OIDC Client ID
+    githubClientSecret:
+      type: string
+      title: GitHub OIDC Client Secret
+    nextPublicFacebookAppName:
+      type: string
+      title: Facebook OIDC App Name
+      default: Ever Teams
+    facebookClientId:
+      type: string
+      title: Facebook OIDC Client ID
+    facebookClientSecret:
+      type: string
+      title: Facebook OIDC Client Secret
+benefits:
+  - title: Open Work Platform
+    description:
+      Provides a modern interface for project and work management in teams with
+      self-hosting flexibility.
+  - title: Fast Deployment
+    description:
+      Runs directly from the official Ever Teams web image with minimal setup.
+  - title: Bring Your Own Backend
+    description:
+      Connect to hosted Gauzy APIs or your own self-hosted Gauzy backend.
+features:
+  - title: Project and Task Collaboration
+    description:
+      Organize team work with projects, tasks, and collaboration workflows.
+  - title: Time and Activity Tracking
+    description:
+      Track time, activity, and productivity metrics through the Ever Teams UI.
+  - title: API Endpoint Configuration
+    description:
+      Explicitly configure backend API URLs for hosted or self-hosted setups.
+tags:
+  - Project Management
+  - Team Collaboration
+  - Time Tracking
+  - Productivity
+  - Self-Hosted
