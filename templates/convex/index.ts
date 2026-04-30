@@ -1,8 +1,4 @@
-import {
-  Output,
-  randomString,
-  Services,
-} from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -10,8 +6,12 @@ export function generate(input: Input): Output {
   const instanceSecret = randomString(64);
 
   const backendEnv = [
-    `CONVEX_CLOUD_ORIGIN=${input.convexCloudOrigin || "https://$(PRIMARY_DOMAIN)"}`,
-    `CONVEX_SITE_ORIGIN=${input.convexSiteOrigin || "https://$(PRIMARY_DOMAIN):3211"}`,
+    `CONVEX_CLOUD_ORIGIN=${
+      input.convexCloudOrigin || "https://$(PRIMARY_DOMAIN)"
+    }`,
+    `CONVEX_SITE_ORIGIN=${
+      input.convexSiteOrigin || "https://$(PRIMARY_DOMAIN):3211"
+    }`,
     `INSTANCE_SECRET=${input.instanceSecret || instanceSecret}`,
     `RUST_LOG=${input.rustLog || "info"}`,
     `DOCUMENT_RETENTION_DELAY=${input.documentRetentionDelay || "172800"}`,
@@ -19,7 +19,11 @@ export function generate(input: Input): Output {
     `DISABLE_BEACON=true`,
   ];
 
-  if (input.databaseType && input.databaseType !== "none" && input.databaseUrl) {
+  if (
+    input.databaseType &&
+    input.databaseType !== "none" &&
+    input.databaseUrl
+  ) {
     backendEnv.push(`${input.databaseType}=${input.databaseUrl}`);
   }
   if (input.instanceName) {
@@ -41,7 +45,9 @@ export function generate(input: Input): Output {
     backendEnv.push(`S3_STORAGE_FILES_BUCKET=${input.s3StorageFilesBucket}`);
   }
   if (input.s3StorageModulesBucket) {
-    backendEnv.push(`S3_STORAGE_MODULES_BUCKET=${input.s3StorageModulesBucket}`);
+    backendEnv.push(
+      `S3_STORAGE_MODULES_BUCKET=${input.s3StorageModulesBucket}`
+    );
   }
 
   services.push({
@@ -86,7 +92,9 @@ export function generate(input: Input): Output {
   ];
 
   if (input.nextPublicLoadMonacoInternally) {
-    dashboardEnv.push(`NEXT_PUBLIC_LOAD_MONACO_INTERNALLY=${input.nextPublicLoadMonacoInternally}`);
+    dashboardEnv.push(
+      `NEXT_PUBLIC_LOAD_MONACO_INTERNALLY=${input.nextPublicLoadMonacoInternally}`
+    );
   }
 
   services.push({
