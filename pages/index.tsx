@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Stack,
-  Text,
-  useClipboard,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Stack, Text, useClipboard } from "@chakra-ui/react";
 import { Select } from "chakra-react-select";
 import Form from "@rjsf/chakra-ui";
 import validator from "@rjsf/validator-ajv8";
@@ -29,7 +22,8 @@ const Home: NextPage = () => {
     label: item.meta.name,
   }));
 
-  const selectedOption = templateOptions.find((opt) => opt.value === slug) || null;
+  const selectedOption =
+    templateOptions.find((opt) => opt.value === slug) || null;
 
   useEffect(() => {
     setFormData(null);
@@ -58,13 +52,15 @@ const Home: NextPage = () => {
             Templates
           </Text>
           <Select
-            key={slug as string || "no-selection"}
+            key={(slug as string) || "no-selection"}
             placeholder="Select Template"
             options={templateOptions}
             value={selectedOption}
             onChange={(option) => {
               if (option) {
-                router.push(`/?slug=${option.value}`, undefined, { shallow: false });
+                router.push(`/?slug=${option.value}`, undefined, {
+                  shallow: false,
+                });
               } else {
                 // Clear selection
                 router.push("/", undefined, { shallow: false });
@@ -77,7 +73,9 @@ const Home: NextPage = () => {
               }),
             }}
             isClearable
-            menuPortalTarget={typeof document !== 'undefined' ? document.body : null}
+            menuPortalTarget={
+              typeof document !== "undefined" ? document.body : null
+            }
             styles={{
               menuPortal: (base) => ({ ...base, zIndex: 9999 }),
             }}

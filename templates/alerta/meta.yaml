@@ -1,5 +1,7 @@
 name: Alerta
-description: Alerta is a monitoring system that consolidates and deduplicates alerts from multiple monitoring systems.
+description:
+  Alerta is a monitoring system that consolidates and deduplicates alerts from
+  multiple monitoring systems.
 instructions: null
 changeLog:
   - date: 2025-05-08
@@ -55,7 +57,8 @@ schema:
       description: Maximum age of admin API key in days
 benefits:
   - title: Alert Management
-    description: Consolidates and deduplicates alerts from multiple monitoring systems.
+    description:
+      Consolidates and deduplicates alerts from multiple monitoring systems.
   - title: User Management
     description: Built-in user authentication and authorization system.
   - title: API Access
@@ -76,4 +79,4 @@ tags:
   - Alert Management
   - Web Application
   - PostgreSQL
-  - API 
+  - API
