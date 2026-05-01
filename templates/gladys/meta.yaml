@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-01-29
     description: Initial Template Release
+  - date: 2026-04-29
+    description: Version bumped to sha-569dfde
 links:
   - label: Website
     url: https://gladysassistant.com
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gladysassistant/gladys:sha-c6bc0ba
+      default: gladysassistant/gladys:sha-569dfde
     timezone:
       type: string
       title: Timezone
