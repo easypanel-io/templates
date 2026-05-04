@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-09-25
     description: First release (v0.7.4)
+  - date: 2026-05-04
+    description: Version bumped to (v0.7.8)
 links:
   - label: Website
     url: https://kitchenowl.org/
@@ -37,11 +39,11 @@ schema:
     appServiceImage:
       type: string
       title: Frontend Image
-      default: tombursch/kitchenowl-web:v0.7.4
+      default: tombursch/kitchenowl-web:v0.7.8
     backendImage:
       type: string
       title: Backend Image
-      default: tombursch/kitchenowl-backend:v0.7.4
+      default: tombursch/kitchenowl-backend:v0.7.8
 benefits:
   - title: Grocery List Management
     description:

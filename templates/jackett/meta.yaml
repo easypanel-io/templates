@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to 0.24.545
   - date: 2026-02-21
     description: Version bumped to 0.24.1167
+  - date: 2026-02-21
+    description: Version bumped to 0.24.1815
 links:
   - label: Website
     url: https://jackett.sh/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/jackett:0.24.1167
+      default: lscr.io/linuxserver/jackett:0.24.1815
 
 benefits:
   - title: Seamless Integration
