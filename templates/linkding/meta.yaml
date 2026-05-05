@@ -54,8 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: - date: 2026-02-21
-    description: Version bumped to 6-1.6.74:1.45.0
+      default: sissbruecker/linkding:1.45.0
     linkdingSuperuserName:
       type: string
       title: Superuser Name
