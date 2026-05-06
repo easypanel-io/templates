@@ -4,6 +4,8 @@ instructions: Follow the guide to configure the mail server with environment var
 changeLog:
   - date: 2025-04-24
     description: First Release
+  - date: 2026-05-06
+    description: Version bumped to v15.1.0
 links:
   - label: Github
     url: https://github.com/docker-mailserver/docker-mailserver
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.io/mailserver/docker-mailserver:v15.0.2
+      default: docker.io/mailserver/docker-mailserver:v15.1.0
     hostname:
       type: string
       title: Hostname

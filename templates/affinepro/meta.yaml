@@ -20,6 +20,8 @@ changeLog:
     description: Updated to the newer image and to latest version
   - date: 2025-12-24
     description: Version bumped to stable-e98f035
+  - date: 2026-05-06
+    description: Version bumped to stable-43704d6
 
 links:
   - label: Documentation
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine:0.26.2
+      default: ghcr.io/toeverything/affine:0.26.6
     mailerHost:
       type: string
       title: Mailer Host (Optional)
