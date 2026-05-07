@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-04-18
     description: first release
+  - date: 2026-05-07
+    description: Version bumped to sha-f4509ae25923cf99f1b88467d17fc221d5b8d94f-alpine
 links:
   - label: GitHub
     url: https://github.com/yacy/yacy_search_server
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: yacy/yacy_search_server:1.93
+      default: yacy/yacy_search_server:sha-f4509ae25923cf99f1b88467d17fc221d5b8d94f-alpine
 benefits:
   - title: Decentralized Search
     description:

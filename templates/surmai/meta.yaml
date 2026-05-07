@@ -16,6 +16,8 @@ changeLog:
     description: Accurate travel-organizer description; image v0.4.16; auto-generated admin password (randomPassword).
   - date: 2025-01-21
     description: Initial Template Release
+  - date: 2026-05-07
+    description: Version bumped to v0.5.0
 links:
   - label: Website
     url: https://surmai.app/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rohitkumbhar/surmai:v0.4.16
+      default: ghcr.io/rohitkumbhar/surmai:v0.5.0
     adminEmail:
       type: string
       title: Admin Email

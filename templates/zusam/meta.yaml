@@ -6,6 +6,8 @@ changeLog:
     description: Initial release
   - date: 2026-02-24
     description: Version bumped to 0.6.0
+  - date: 2026-05-07
+    description: Version bumped to 0.6.1
 links:
   - label: Website
     url: https://zusam.org
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: zusam/zusam:0.6.0
+      default: zusam/zusam:0.6.1
     initGroup:
       type: string
       title: Initial Group Name

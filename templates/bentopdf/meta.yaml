@@ -48,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bentopdf/bentopdf:sha-fb8c8c0
+      default: bentopdfteam/bentopdf:sha-fb8c8c0
 
 benefits:
   - title: Self-Hosted PDF Processing

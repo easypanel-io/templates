@@ -15,6 +15,8 @@ changeLog:
     description: Latest release with enhanced language support and bug fixes
   - date: 2025-03-03
     description: Version bumped to 9.9.8-community
+  - date: 2026-05-07
+    description: Version bumped to 26.4.0.121862-community
 links:
   - label: Website
     url: https://www.sonarqube.org/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sonarqube:9.9.8-community
+      default: sonarqube:26.4.0.121862-community
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -21,8 +21,7 @@ changeLog:
     description: Version bumped to 7.0.5
   - date: 2026-02-24
     description: Version bumped to 8.0.1
-  - date: 2026-05-05
-    description: Version bumped to 8.1.1
+
 links:
   - label: Documentation
     url: https://www.open-emr.org/wiki/index.php/OpenEMR_Wiki_Home_Page
@@ -48,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openemr/openemr:8.1.1
+      default: openemr/openemr:8.0.1
     adminUser:
       type: string
       title: Admin User
