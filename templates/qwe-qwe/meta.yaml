@@ -1,0 +1,101 @@
+name: qwe-qwe
+description:
+  qwe-qwe is a self-hosted, offline-first AI agent that runs on your own
+  hardware with your own LLM. It works with LM Studio, Ollama, and any
+  OpenAI-compatible endpoint. Features include a Telegram bot, web UI with voice
+  support, long-term memory via Qdrant vector database, knowledge graph
+  synthesis, RAG with hybrid search (dense + sparse + BM25), scheduled tasks,
+  and skill plugins. No data leaves your machine — the agent runs entirely
+  locally, connecting only to the LLM provider you configure.
+instructions:
+  After deployment, open the Web UI and configure your LLM provider in Settings.
+  Point QWE_LLM_URL to your LM Studio or Ollama instance. For Telegram bot
+  support, set QWE_TELEGRAM_TOKEN via the environment variables.
+changeLog:
+  - date: 2025-07-10
+    description: first release
+links:
+  - label: Website
+    url: https://github.com/deepfounder-ai/qwe-qwe
+  - label: Documentation
+    url: https://github.com/deepfounder-ai/qwe-qwe/blob/main/README.md
+  - label: Github
+    url: https://github.com/deepfounder-ai/qwe-qwe
+contributors:
+  - name: deepfounder-ai
+    url: https://github.com/deepfounder-ai
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qwe-qwe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/deepfounder-ai/qwe-qwe:latest
+    llmUrl:
+      type: string
+      title: LLM Provider URL
+      default: http://host.docker.internal:1234/v1
+    llmModel:
+      type: string
+      title: LLM Model Name
+      default: qwen/qwen3.5-9b
+    llmKey:
+      type: string
+      title: LLM API Key
+      default: lm-studio
+    webPassword:
+      type: string
+      title: Web UI Password (optional)
+      default: ""
+benefits:
+  - title: Fully Self-Hosted
+    description:
+      qwe-qwe runs entirely on your own hardware. No data is sent to external
+      servers — your conversations, memory, and knowledge stay on your machine.
+  - title: Bring Your Own LLM
+    description:
+      Works with LM Studio, Ollama, OpenAI, OpenRouter, Groq, and any
+      OpenAI-compatible endpoint. Switch providers in seconds from the UI.
+  - title: Long-Term Memory
+    description:
+      Hybrid vector memory (dense + sparse + BM25) powered by Qdrant lets the
+      agent remember facts across sessions. Night synthesis builds a knowledge
+      graph automatically.
+  - title: Telegram + Web UI
+    description:
+      Chat via browser or Telegram. Voice mode (STT/TTS), camera capture, and
+      file uploads all work out of the box.
+features:
+  - title: Hybrid Memory Search
+    description:
+      Dense embeddings, SPLADE++ sparse vectors, and BM25 full-text search fused
+      via Reciprocal Rank Fusion for the most relevant recall.
+  - title: Knowledge Graph Synthesis
+    description:
+      Night synthesis worker extracts entities and relationships from
+      conversations, building a queryable knowledge graph over time.
+  - title: Skill Plugins
+    description:
+      Drop a Python file into the skills folder to extend the agent. Built-in
+      skills include notes, weather, timers, and a browser automation toolkit.
+  - title: Scheduled Tasks
+    description:
+      Cron-style recurring tasks with a heartbeat checker. Schedule anything the
+      agent can do — reports, reminders, data fetches.
+  - title: RAG Document Ingestion
+    description:
+      Index PDFs, DOCX, PPTX, URLs, and YouTube videos. Hybrid search makes your
+      knowledge base instantly searchable from any conversation.
+tags:
+  - AI
+  - LLM
+  - Self-Hosted
+  - Productivity
+  - Automation
