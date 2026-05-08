@@ -27,6 +27,16 @@ export function generate(input: Input): Output {
         {
           host: "$(EASYPANEL_DOMAIN)",
           port: 7860,
+          // Allow up to 50MB uploads (knowledge base files, images, documents)
+          // Default nginx client_max_body_size is 1MB which is too small
+          middlewares: [
+            {
+              type: "buffering",
+              options: {
+                maxRequestBodyBytes: 52428800, // 50MB
+              },
+            },
+          ],
         },
       ],
       mounts: [
