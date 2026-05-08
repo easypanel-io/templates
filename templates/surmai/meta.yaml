@@ -4,8 +4,8 @@ description:
   collaborative trip planning with privacy-first, self-hosted data. Built on
   PocketBase, it helps you keep itineraries, bookings, documents, and trip
   details in one place, with multi-user collaboration and offline-friendly
-  access. The stack exposes the web UI on port 8080 and persists PocketBase
-  data under /pb_data.
+  access. The stack exposes the web UI on port 8080 and persists PocketBase data
+  under /pb_data.
 instructions: |
   After deploy, sign in with the admin email you configured and the password
   shown in the service environment (SURMAI_ADMIN_PASSWORD)—it is auto-generated
@@ -13,7 +13,9 @@ instructions: |
   https://surmai.app/documentation/installation for Docker details.
 changeLog:
   - date: 2026-03-23
-    description: Accurate travel-organizer description; image v0.4.16; auto-generated admin password (randomPassword).
+    description:
+      Accurate travel-organizer description; image v0.4.16; auto-generated admin
+      password (randomPassword).
   - date: 2025-01-21
     description: Initial Template Release
 links:
@@ -59,20 +61,25 @@ benefits:
       Multiple people can plan together while keeping access under your control.
   - title: PWA & mobile-friendly
     description:
-      Installable as a Progressive Web App for easier access on phones during travel.
+      Installable as a Progressive Web App for easier access on phones during
+      travel.
 features:
   - title: PocketBase backend
     description:
-      PocketBase powers the API; data lives in /pb_data with a volume for persistence.
+      PocketBase powers the API; data lives in /pb_data with a volume for
+      persistence.
   - title: Travel-focused workflow
     description:
-      Built for real trip planning (alpha-stage; project under active development).
+      Built for real trip planning (alpha-stage; project under active
+      development).
   - title: Admin bootstrap
     description:
-      SURMAI_ADMIN_EMAIL and a strong auto-generated SURMAI_ADMIN_PASSWORD on first deploy.
+      SURMAI_ADMIN_EMAIL and a strong auto-generated SURMAI_ADMIN_PASSWORD on
+      first deploy.
   - title: Docker deployment
     description:
-      Official image from ghcr.io/rohitkumbhar/surmai with documented installation.
+      Official image from ghcr.io/rohitkumbhar/surmai with documented
+      installation.
 tags:
   - Travel
   - Trip Planning

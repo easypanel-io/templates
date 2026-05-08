@@ -28,7 +28,8 @@ changeLog:
   - date: 2025-12-02
     description: Template Release
   - date: 2025-12-31
-    description: Version bumped to v0.20, previous tag has been deleted by maintainers
+    description:
+      Version bumped to v0.20, previous tag has been deleted by maintainers
 links:
   - label: GitHub
     url: https://github.com/nicotsx/zerobyte
@@ -64,7 +65,8 @@ schema:
       type: string
       title: Base URL
       default: ""
-      description: Base URL for the application (defaults to primary domain if empty)
+      description:
+        Base URL for the application (defaults to primary domain if empty)
 
 benefits:
   - title: Unified Backup Management

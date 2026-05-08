@@ -43,7 +43,9 @@ schema:
       type: string
       title: Timezone
       default: Asia/Karachi
-      description: Timezone for the application (e.g., Asia/Karachi, America/New_York, Europe/London)
+      description:
+        Timezone for the application (e.g., Asia/Karachi, America/New_York,
+        Europe/London)
     socketProxyContainers:
       type: string
       title: Socket Proxy Containers
@@ -92,8 +94,8 @@ schema:
 benefits:
   - title: Docker Container Management
     description:
-      Manage Docker containers, images, and networks through a user-friendly
-      web interface with comprehensive management capabilities.
+      Manage Docker containers, images, and networks through a user-friendly web
+      interface with comprehensive management capabilities.
   - title: Self-Hosted Solution
     description:
       Keep your container management private and under your control with a
@@ -110,23 +112,22 @@ benefits:
 features:
   - title: Container Management
     description:
-      Start, stop, restart, and manage Docker containers with an intuitive
-      web interface.
+      Start, stop, restart, and manage Docker containers with an intuitive web
+      interface.
   - title: Image Management
     description:
-      View, pull, and manage Docker images with comprehensive image
-      management tools.
+      View, pull, and manage Docker images with comprehensive image management
+      tools.
   - title: Network Management
-    description:
-      Configure and manage Docker networks through the web interface.
+    description: Configure and manage Docker networks through the web interface.
   - title: Secure Socket Access
     description:
       Socket proxy service provides secure access to Docker socket with
       configurable permissions and access controls.
   - title: Web-Based Interface
     description:
-      Access and manage your Docker environment through a modern web
-      interface accessible on port 80.
+      Access and manage your Docker environment through a modern web interface
+      accessible on port 80.
   - title: Persistent Storage
     description:
       Application data is stored in a dedicated volume at /tugtainer for

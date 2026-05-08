@@ -1,12 +1,16 @@
 name: SFTPGo
-description: SFTPGo is a fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support. It supports local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
+description:
+  SFTPGo is a fully featured and highly configurable SFTP server with optional
+  HTTP/S, FTP/S and WebDAV support. It supports local filesystem, encrypted
+  local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure
+  Blob Storage, SFTP.
 instructions: null
 changeLog:
   - date: 2025-05-02
     description: Initial release
 links:
   - label: Website
-    url: https://sftpgo.com/  
+    url: https://sftpgo.com/
   - label: GitHub
     url: https://github.com/drakkan/sftpgo
   - label: Documentation
@@ -34,7 +38,8 @@ benefits:
   - title: Multiple Protocols
     description: Support for SFTP, HTTP/S, FTP/S, and WebDAV protocols
   - title: Multiple Storage Backends
-    description: Support for local filesystem, S3, Google Cloud Storage, and more
+    description:
+      Support for local filesystem, S3, Google Cloud Storage, and more
   - title: Security Features
     description: Built-in security features and encryption support
   - title: Open Source
@@ -57,4 +62,4 @@ tags:
   - File Transfer
   - Self-hosted
   - Open Source
-  - Security 
+  - Security
