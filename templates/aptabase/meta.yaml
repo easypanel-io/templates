@@ -1,8 +1,13 @@
 name: Aptabase
 description:
-  Aptabase is an open-source, privacy-focused analytics platform for mobile and desktop applications.
-  It provides real-time analytics, crash reporting, and user insights while respecting user privacy.
-instructions: Sign up and open the console logs where it will print the link to authorize the email. Copy the URL part that looks like this. [url, https://your-domain/api/_auth/continue?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiU2lnbkluIiwibmFtZSI6IkFoc29uIFNoYWlraCIsImVtYWlsIjoiYWhzb25zaGFpa2g2MTZAZ21haWwuY29tIiwibmJmIjoxNzQ0MTE5MDgyLCJleHAiOjE3NDQxMTk5ODIsImlhdCI6MTc0NDExOTA4MiwiaXNzIjoiYXB0YWJhc2Utc2gifQ.PxbVTiVOXsTkkxQKV1AOGaaEpLnMOOtgSRMqDY6dkIg]\u0027. Do not copy this part at the end ]\u0027
+  Aptabase is an open-source, privacy-focused analytics platform for mobile and
+  desktop applications. It provides real-time analytics, crash reporting, and
+  user insights while respecting user privacy.
+instructions:
+  Sign up and open the console logs where it will print the link to authorize
+  the email. Copy the URL part that looks like this. [url,
+  https://your-domain/api/_auth/continue?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiU2lnbkluIiwibmFtZSI6IkFoc29uIFNoYWlraCIsImVtYWlsIjoiYWhzb25zaGFpa2g2MTZAZ21haWwuY29tIiwibmJmIjoxNzQ0MTE5MDgyLCJleHAiOjE3NDQxMTk5ODIsImlhdCI6MTc0NDExOTA4MiwiaXNzIjoiYXB0YWJhc2Utc2gifQ.PxbVTiVOXsTkkxQKV1AOGaaEpLnMOOtgSRMqDY6dkIg]\u0027.
+  Do not copy this part at the end ]\u0027
 changeLog:
   - date: 2024-04-04
     description: First Release
@@ -62,4 +67,4 @@ tags:
   - Privacy
   - Monitoring
   - Self-hosted
-  - Open Source 
+  - Open Source
