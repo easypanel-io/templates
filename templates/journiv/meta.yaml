@@ -21,6 +21,8 @@ instructions: null
 changeLog:
   - date: 2025-12-16
     description: Template Release
+  - date: 2026-05-08
+    description: Version bumped to 009986de2b14260851f1eab3111e0dfb90445980
 
 links:
   - label: Website
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: swalabtech/journiv-app:latest
+      default: swalabtech/journiv-app:009986de2b14260851f1eab3111e0dfb90445980
 
 benefits:
   - title: Private Journaling
