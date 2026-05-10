@@ -47,7 +47,7 @@ schema:
     meilSearchImage:
       type: string
       title: Meilisearch Image
-      default: getmeili/meilisearch:v1.43.0
+      default: getmeili/meilisearch:v1.15.2
     openaiApiKey:
       type: string
       title: OpenAI API Key

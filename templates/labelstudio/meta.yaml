@@ -10,7 +10,7 @@ changeLog:
   - date: 2025-02-14
     description: First Release
   - date: 2026-05-08
-    description: Version bumped to 20260508.084644-fb-plt-1152-82fb5d3
+    description: Version bumped to 21.23.0
 links:
   - label: Website
     url: https://labelstud.io/
@@ -44,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: heartexlabs/label-studio:20260508.084644-fb-plt-1152-82fb5d3
+      default: heartexlabs/label-studio:1.23.0
 benefits:
   - title: Effortless Data Labeling
     description:
