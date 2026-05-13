@@ -21,6 +21,8 @@ changeLog:
     description: first release
   - date: 2025-07-24
     description: Version bumped to 10.15.3
+  - date: 2026-02-24
+    description: Version bumped to 10.16.1
 links:
   - label: Website
     url: https://owncloud.com/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: owncloud/server:10.16.0
+      default: owncloud/server:10.16.1
     databaseType:
       type: string
       title: Database Type

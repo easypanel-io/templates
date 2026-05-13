@@ -1,0 +1,122 @@
+name: GoClaw
+description:
+  Enterprise AI agent platform with teams, delegation & orchestration. Single Go
+  binary, 13+ LLM providers, 10+ channels, browser automation, and memory system.
+instructions: |
+  After installation, access the web dashboard via your configured domain.
+  To add more LLM API keys (e.g., Anthropic, Groq), edit the environment variables of the GoClaw App Service.
+  Secure tokens like the Gateway Token and Encryption Key are auto-generated.
+changeLog:
+  - date: 2026-04-16
+    description: Updated to GoClaw v3.8.5, moved all Docker images to meta.yaml inputs
+  - date: 2026-03-25
+    description: Applied review feedback — pinned images, simplified service naming, added proxy headers
+  - date: 2026-03-24
+    description: Redesigned with Chrome CDP sidecar, removed permission-fixer hack
+  - date: 2026-03-19
+    description: Initial release
+links:
+  - label: Website
+    url: https://goclaw.sh
+  - label: Documentation
+    url: https://docs.goclaw.sh
+  - label: Github
+    url: https://github.com/nextlevelbuilder/goclaw
+contributors:
+  - name: Alan Mosko
+    url: https://github.com/moskoweb
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - uiServiceName
+    - databaseServiceImage
+    - chromeServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: goclaw
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/nextlevelbuilder/goclaw:v3.8.5-full
+      description: Use a "-full" tag for Python/Node included, or a base version tag for minimal.
+    uiServiceName:
+      type: string
+      title: Web Service Image
+      default: ghcr.io/nextlevelbuilder/goclaw-web:v3.8.5
+    databaseServiceImage:
+      type: string
+      title: Database Service Image
+      default: pgvector/pgvector:pg17
+    chromeServiceImage:
+      type: string
+      title: Chrome CDP Service Image
+      default: zenika/alpine-chrome:124
+      description: Headless Chrome sidecar for browser automation via CDP.
+    gatewayToken:
+      type: string
+      title: Gateway Token (GOCLAW_GATEWAY_TOKEN)
+      description: Leave blank to auto-generate
+    encryptionKey:
+      type: string
+      title: Encryption Key (GOCLAW_ENCRYPTION_KEY)
+      description: Leave blank to auto-generate
+    provider:
+      type: string
+      title: Default LLM Provider
+      default: openrouter
+      oneOf:
+        - enum: [openrouter]
+          title: OpenRouter
+        - enum: [anthropic]
+          title: Anthropic Claude
+        - enum: [openai]
+          title: OpenAI
+        - enum: [groq]
+          title: Groq
+        - enum: [deepseek]
+          title: DeepSeek
+        - enum: [gemini]
+          title: Gemini
+        - enum: [mistral]
+          title: Mistral
+        - enum: [xai]
+          title: XAI Grok
+        - enum: [minimax]
+          title: MiniMax
+        - enum: [cohere]
+          title: Cohere
+        - enum: [perplexity]
+          title: Perplexity
+        - enum: [dashscope]
+          title: DashScope (Qwen)
+        - enum: [bailian]
+          title: Bailian Coding
+    providerApiKey:
+      type: string
+      title: Provider API Key
+      description: Optional - API Key for the selected provider
+      default: ""
+benefits:
+  - title: Multi-Agent AI Gateway
+    description:
+      Teams, delegation and orchestration managed through a single Go binary.
+  - title: 13+ LLM Providers
+    description:
+      Supports multiple models easily swappable (OpenAI, Anthropic, Gemini,
+      Groq, DeepSeek, local models...).
+  - title: Secure and Fast
+    description: Built in Go for high performance and minimal memory footprint.
+features:
+  - title: Team Collaboration
+    description: Multiple agents working together.
+  - title: Database Vector
+    description: Integrated semantic search memory via PostgreSQL with pgvector.
+tags:
+  - AI
+  - Gateway
+  - Multi-Agent
+  - LLM

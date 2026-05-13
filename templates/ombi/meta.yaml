@@ -13,6 +13,8 @@ changeLog:
     description: first release
   - date: 2025-02-28
     description: Version bumped to 4.47.1
+  - date: 2026-02-24
+    description: Version bumped to 4.53.4
 links:
   - label: Website
     url: https://ombi.io/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/ombi:4.47.1
+      default: linuxserver/ombi:4.53.4
     timezone:
       type: string
       title: Timezone

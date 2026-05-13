@@ -12,7 +12,8 @@ instructions: Please provide the OAuth credentials for Google or GitHub or both.
 changeLog:
   - date: 2025-06-24
     description: Initial Template Release
-
+  - date: 2026-02-24
+    description: Version bumped to v0.5.99
 links:
   - label: Website
     url: https://simstudio.ai
@@ -39,12 +40,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/simstudioai/simstudio:v0.5.79
+      default: ghcr.io/simstudioai/simstudio:v0.5.99
       description: SimStudio AI main application Docker image
     migrationsServiceImage:
       type: string
       title: Migrations Service Image
-      default: ghcr.io/simstudioai/migrations:v0.5.79
+      default: ghcr.io/simstudioai/migrations:v0.5.99
       description: SimStudio AI database migrations Docker image
     freestyleApiKey:
       type: string

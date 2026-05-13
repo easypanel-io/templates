@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-01-23
     description: Initial Template Release
+  - date: 2026-02-24
+    description: Version bumped to v1.23.1
 links:
   - label: GitHub
     url: https://github.com/quenary/tugtainer
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/quenary/tugtainer:v1.17.1
+      default: ghcr.io/quenary/tugtainer:v1.23.1
     socketProxyImage:
       type: string
       title: Socket Proxy Image

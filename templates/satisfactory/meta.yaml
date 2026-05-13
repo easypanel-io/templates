@@ -1,0 +1,100 @@
+name: Satisfactory Server
+description:
+  Satisfactory Server is a dedicated server for the popular factory building game
+  Satisfactory by Coffee Stain Studios. This containerized server allows you to host
+  your own multiplayer world for friends to join and collaborate on massive factory
+  projects. The server handles all game logic, world persistence, and player connections,
+  while requiring minimal setup and maintenance. Perfect for players who want reliable,
+  24/7 access to their factory world without having to host the game on their own computer.
+instructions: null
+changeLog:
+  - date: 2025-04-24
+    description: First Release
+links:
+  - label: Docker Hub
+    url: https://hub.docker.com/r/wolveix/satisfactory-server
+  - label: GitHub
+    url: https://github.com/wolveix/satisfactory-server
+  - label: Game Website
+    url: https://www.satisfactorygame.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - maxPlayers
+    - gamePort
+    - beaconPort
+    - queryPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: satisfactory-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: wolveix/satisfactory-server:v1.9
+    maxPlayers:
+      type: string
+      title: Maximum Players
+      default: "4"
+      description: Maximum number of players that can join the server simultaneously
+    gamePort:
+      type: string
+      title: Game Port
+      default: "7777"
+      description: Port for the game server
+    beaconPort:
+      type: string
+      title: Beacon Port
+      default: "15000"
+      description: Port for the beacon server
+    queryPort:
+      type: string
+      title: Query Port
+      default: "15777"
+      description: Port for the query server
+benefits:
+  - title: Dedicated Game Server
+    description:
+      Host your Satisfactory world on a dedicated server that runs 24/7, allowing
+      players to connect anytime without the host needing to be online.
+  - title: Performance Optimization
+    description:
+      Dedicated server improves game performance by offloading server processing from
+      player computers, resulting in smoother gameplay for everyone.
+  - title: Persistent World
+    description:
+      Your factory world remains online and accessible at all times, enabling continuous
+      progress and collaboration among players.
+features:
+  - title: Easy Multiplayer Setup
+    description:
+      Quickly set up and configure a multiplayer server without complex networking
+      or port forwarding requirements.
+  - title: Customizable Server Settings
+    description: 
+      Adjust player capacity, resource allocation, and other settings to match your
+      preferences and server capabilities.
+  - title: Save Management
+    description:
+      Automatic save handling ensures your factory progress is securely stored and
+      persisted between server restarts.
+  - title: Resource Control
+    description:
+      Define memory limits and reservations to optimize server performance and ensure
+      stability during gameplay.
+  - title: Experimental Support
+    description:
+      Option to run experimental versions of the game to access new features before
+      they're officially released.
+tags:
+  - Gaming
+  - Game Server
+  - Multiplayer
+  - Factory Simulation
+  - Dedicated Server 

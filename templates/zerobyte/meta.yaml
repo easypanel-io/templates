@@ -29,6 +29,8 @@ changeLog:
     description: Template Release
   - date: 2025-12-31
     description: Version bumped to v0.20, previous tag has been deleted by maintainers
+  - date: 2026-02-24
+    description: Version bumped to v0.28.2
 links:
   - label: GitHub
     url: https://github.com/nicotsx/zerobyte
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/nicotsx/zerobyte:v0.25.1
+      default: ghcr.io/nicotsx/zerobyte:v0.28.2
     timezone:
       type: string
       title: Timezone

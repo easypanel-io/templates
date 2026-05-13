@@ -11,6 +11,8 @@ changeLog:
     description: Template added
   - date: 2025-03-03
     description: Version bumped to 4.0.6
+  - date: 2026-02-24
+    description: Version bumped to 4.1.0
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-transmission/
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/transmission:4.0.6
+      default: linuxserver/transmission:4.1.0
 benefits:
   - title: Simple and Efficient Torrenting
     description:

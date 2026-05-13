@@ -16,6 +16,8 @@ changeLog:
     description: first release
   - date: 2025-07-25
     description: Version bumped to 0.25
+  - date: 2026-02-24
+    description: Version bumped to 0.26
 links:
   - label: Documentation
     url: https://www.usememos.com/docs
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: neosmemo/memos:0.25
+      default: neosmemo/memos:0.26
 benefits:
   - title: Self-Hosted Note-Taking
     description:

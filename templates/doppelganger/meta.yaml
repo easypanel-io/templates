@@ -1,0 +1,64 @@
+name: Doppelganger
+description:
+  Doppelganger (Figranium) is a self-hosted browser automation and scraping
+  platform built on Playwright. It offers a visual task editor, structured JSON
+  task format, and execution modes for simple scraping to complex, human-like
+  browser interactions. Includes noVNC for remote browser viewing.
+instructions: |
+  Open your app domain to access the Doppelganger web interface and create your first automation task.
+  Data persistence is enabled in the mounted `/app/data` volume and update to a newer image tag when available.
+changeLog:
+  - date: 2026-03-10
+    description: First Release
+links:
+  - label: Website
+    url: https://doppelgangerdev.com
+  - label: Documentation
+    url: https://figranium.dev/docs/overview
+  - label: GitHub
+    url: https://github.com/mnemosynestack/doppelganger
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: doppelganger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mnemosyneai/doppelganger:v0.9.3
+benefits:
+  - title: Self-Hosted Automation
+    description:
+      Run browser automation and scraping entirely on your own infrastructure
+  - title: Visual Task Editor
+    description: Build and manage tasks without writing code
+  - title: Playwright-Powered
+    description:
+      Reliable, modern browser automation with human-like interactions
+  - title: Remote Viewing
+    description: noVNC support to watch and debug browser sessions
+features:
+  - title: Visual Editor
+    description: Create and edit automation tasks in a structured UI
+  - title: JSON Task Format
+    description: Portable, version-controlled task definitions
+  - title: noVNC
+    description: Browser-based VNC client for remote session viewing
+  - title: Advanced Modes
+    description: From simple scraping to complex multi-step flows
+tags:
+  - Automation
+  - Scraping
+  - Playwright
+  - Browser
+  - Open Source
+  - Self-hosted

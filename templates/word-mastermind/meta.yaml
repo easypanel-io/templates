@@ -1,0 +1,71 @@
+name: Word Mastermind
+description:
+  Word Mastermind is a word-guessing game inspired by the classic Mastermind puzzle and 
+  games like Wordle. Players attempt to guess a hidden word within a limited number of 
+  attempts, receiving feedback after each guess to help narrow down the solution. This 
+  containerized version provides a clean web interface that allows you to host your own 
+  instance of the game for personal use, educational purposes, or family entertainment.
+instructions: null
+changeLog:
+  - date: 2025-04-22
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/clupasq/word-mastermind
+  - label: Container
+    url: https://github.com/clupasq/word-mastermind/pkgs/container/word-mastermind
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: word-mastermind
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/clupasq/word-mastermind:latest
+benefits:
+  - title: Educational Gaming
+    description:
+      Improve vocabulary and logical reasoning skills through an engaging 
+      word-guessing game suitable for players of all ages.
+  - title: Self-Hosted Entertainment
+    description:
+      Host your own instance of the game to enjoy with friends and family without 
+      relying on third-party services or dealing with advertisements.
+  - title: Lightweight Application
+    description:
+      The game requires minimal server resources while providing a responsive and
+      enjoyable gaming experience.
+features:
+  - title: Word Guessing Challenge
+    description:
+      Test your vocabulary and deduction skills by guessing hidden words with helpful
+      feedback after each attempt.
+  - title: Clean Web Interface
+    description: 
+      Enjoy the game through a simple, intuitive browser interface that works across
+      desktop and mobile devices.
+  - title: Customization Options
+    description:
+      Self-hosting allows for potential customization of game rules, word lists,
+      and difficulty levels.
+  - title: Unlimited Play
+    description:
+      Play as many games as you want without limitations, subscriptions, or hidden costs.
+  - title: Private Gaming
+    description:
+      Keep your gaming activity private by hosting the application on your own infrastructure.
+tags:
+  - Gaming
+  - Word Games
+  - Educational
+  - Browser Game
+  - Puzzle 

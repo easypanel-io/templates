@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2026-02-02
     description: Initial Template Release
+  - date: 2026-03-19
+    description: Improved variable descriptions and added agent sandboxing option
 
 links:
   - label: Website
@@ -29,6 +31,8 @@ links:
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: Alan Mosko
+    url: https://github.com/moskoweb
 
 schema:
   type: object
@@ -43,23 +47,17 @@ schema:
     appServiceImage:
       type: string
       title: OpenClaw Image
-      default: ghcr.io/openclaw/openclaw:2026.2.3
+      default: ghcr.io/openclaw/openclaw:2026.3.13-1
       description: Docker image for OpenClaw
     gatewayToken:
       type: string
       title: Gateway Token
-      default: ""
-      description: Token for authenticating with the gateway service (auto-generated if empty)
-    gatewayBind:
-      type: string
-      title: Gateway Bind
-      default: lan
-      description: Network interface to bind to (e.g., lan, localhost)
+      description: Token for authenticating with the gateway service (leave empty to securely auto-generate)
     gatewayPort:
       type: number
       title: Gateway Port
       default: 18789
-      description: Published port for the gateway service
+      description: Published HTTP port for the Gateway Service and Control UI
     bridgePort:
       type: number
       title: Bridge Port
@@ -80,6 +78,11 @@ schema:
       title: Claude Web Cookie
       default: ""
       description: Claude Web cookie (optional)
+    enableSandbox:
+      type: boolean
+      title: Enable Agent Sandboxing
+      default: false
+      description: Allows OpenClaw to securely spawn isolated Docker containers for agents to run code. (Requires Docker socket mount)
 
 benefits:
   - title: Your Own Personal AI Assistant

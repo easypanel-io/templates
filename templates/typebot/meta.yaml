@@ -32,6 +32,8 @@ changeLog:
     description: Updated the template.
   - date: 2025-12-29
     description: Version bumped to 3.14.2
+  - date: 2026-02-24
+    description: Version bumped to 3.15.2
 links:
   - label: Website
     url: https://typebot.io
@@ -63,11 +65,11 @@ schema:
     builderServiceImage:
       type: string
       title: Builder Service Image
-      default: baptistearno/typebot-builder:3.14.2
+      default: baptistearno/typebot-builder:3.15.2
     viewerServiceImage:
       type: string
       title: Viewer Service Image
-      default: baptistearno/typebot-viewer:3.14.2
+      default: baptistearno/typebot-viewer:3.15.2
     adminEmail:
       type: string
       title: Admin Email

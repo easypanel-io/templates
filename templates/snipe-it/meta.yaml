@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to v8.2.1
   - date: 2025-12-29
     description: Version bumped to v8.3.7
+  - date: 2026-02-24
+    description: Version bumped to v8.4.0
 links:
   - label: Documentation
     url: https://snipe-it.readme.io/
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: snipe/snipe-it:v8.3.7
+      default: snipe/snipe-it:v8.4.0
     smtpHost:
       type: string
       title: SMTP Host

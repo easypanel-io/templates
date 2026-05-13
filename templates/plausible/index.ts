@@ -20,6 +20,15 @@ export function generate(input: Input): Output {
         `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `CLICKHOUSE_DATABASE_URL=http://$(PROJECT_NAME)_${input.clickhouseServiceName}:8123/default`,
         `SECRET_KEY_BASE=${secret}`,
+
+        `MAILER_EMAIL=${input.mailerEmail}`,
+        `SMTP_HOST_ADDR=${input.smtpHostAddr}`,
+        `SMTP_HOST_PORT=${input.smtpHostPort}`,
+        `SMTP_USER_NAME=${input.smtpUserName}`,
+        `SMTP_USER_PWD=${input.smtpUserPwd}`,
+        `SMTP_HOST_SSL_ENABLED=false`,
+        `SMTP_RETRIES=20`,
+        `CRON_ENABLED=true`,
       ].join("\n"),
       source: {
         type: "image",

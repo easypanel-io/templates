@@ -1,0 +1,58 @@
+name: CrowdSec
+description: CrowdSec is a free, modern, and collaborative security engine utilizing crowdsourcing to generate cyber threat intelligence data. It analyzes visitor behavior & provides an adapted response to all kinds of attacks. It can read logs, spot malevolent visitors, and trigger appropriate remediation.
+instructions: null
+changeLog:
+  - date: 2024-04-09
+    description: First Release
+links:
+  - label: Website
+    url: https://www.crowdsec.net/
+  - label: Documentation
+    url: https://docs.crowdsec.net/
+  - label: Github
+    url: https://github.com/crowdsecurity/crowdsec
+contributors:
+  - name: CrowdSec
+    url: https://github.com/crowdsecurity
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: crowdsec
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: crowdsecurity/crowdsec
+benefits:
+  - title: Real-time Protection
+    description: Detect and block attacks in real-time using behavior analysis.
+  - title: Community-driven
+    description: Benefit from shared threat intelligence across the CrowdSec community.
+  - title: Easy Integration
+    description: Seamlessly integrates with popular services like Nginx, Apache, and more.
+  - title: Automated Response
+    description: Automatically block malicious IPs and protect your infrastructure.
+  - title: Open Source
+    description: Free, open-source solution with a strong community backing.
+features:
+  - title: Log Analysis
+    description: Advanced log parsing and analysis capabilities.
+  - title: Threat Detection
+    description: Detect various types of attacks including brute force, port scanning, and more.
+  - title: IP Reputation
+    description: Access to community-maintained IP reputation database.
+  - title: Multiple Backends
+    description: Support for various remediation backends like iptables, nginx, etc.
+  - title: API Access
+    description: RESTful API for integration with other security tools.
+tags:
+  - Security
+  - IDS
+  - IPS
+  - Firewall
+  - Protection 

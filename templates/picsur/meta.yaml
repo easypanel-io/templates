@@ -1,0 +1,53 @@
+name: Picsur
+description: Picsur is a simple and fast image hosting service. It provides a user-friendly interface for uploading, managing, and sharing images with support for various image formats and features.
+instructions: null
+changeLog:
+  - date: 2025-04-28
+    description: First Release
+links:
+  - label: Github
+    url: https://github.com/caramelfur/picsur
+  - label: Documentation
+    url: https://github.com/caramelfur/picsur#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: picsur
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/caramelfur/picsur:0.5.6
+benefits:
+  - title: Simple Image Hosting
+    description: Picsur provides a simple and fast way to host and share images with a user-friendly interface.
+  - title: Secure by Default
+    description: Built with security in mind, providing secure image storage and sharing capabilities.
+  - title: Easy to Use
+    description: Simple configuration and easy to set up, making it perfect for personal or small team use.
+features:
+  - title: Image Upload
+    description: Simple and fast image upload with support for various image formats.
+  - title: User Management
+    description: User authentication and management with admin capabilities.
+  - title: Image Management
+    description: Easy management of uploaded images with deletion and sharing options.
+  - title: Customizable
+    description: Configurable file size limits and JWT settings for security.
+  - title: PostgreSQL Backend
+    description: Uses PostgreSQL for reliable and scalable data storage.
+  - title: Containerized
+    description: Easy to deploy and manage in containerized environments.
+tags:
+  - Image Hosting
+  - File Sharing
+  - PostgreSQL
+  - Web Interface 

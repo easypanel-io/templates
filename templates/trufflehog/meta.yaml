@@ -4,6 +4,8 @@ instructions: After installation, TruffleHog will scan the specified directory f
 changeLog:
   - date: 2025-05-05
     description: Initial release
+  - date: 2026-02-24
+    description: Version bumped to 3.93.4
 links:
   - label: Website
     url: https://trufflesecurity.com 
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: trufflesecurity/trufflehog:3.92.5
+      default: trufflesecurity/trufflehog:3.93.4
     scanPath:
       type: string
       title: Scan Path
