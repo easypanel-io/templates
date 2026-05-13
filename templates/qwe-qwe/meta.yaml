@@ -1,4 +1,5 @@
 name: qwe-qwe
+
 description:
   qwe-qwe is a business-oriented AI agent designed to drop into real workflows —
   customer ops, internal automation, knowledge retrieval, scheduled reporting,
@@ -7,14 +8,17 @@ description:
   OpenRouter, DeepSeek, Together — or run a local model via LM Studio or Ollama
   for fully on-prem deployments. Chat via web UI, terminal, or Telegram. Your
   data, your provider, your rules.
+
 instructions:
   After deployment, open the Web UI and go to Settings → Model to configure your
-  LLM provider. Set QWE_LLM_URL to your provider endpoint (e.g.
-  https://api.openai.com/v1 for OpenAI) and QWE_LLM_KEY to your API key. For
+  LLM provider. Set the LLM Provider URL to your provider endpoint (e.g.
+  https://api.openai.com/v1 for OpenAI) and the LLM API Key to your key. For
   Telegram bot support, go to Settings → Telegram and follow the setup wizard.
+
 changeLog:
-  - date: 2025-07-10
+  - date: 2026-05-13
     description: first release
+
 links:
   - label: Website
     url: https://github.com/deepfounder-ai/qwe-qwe
@@ -24,9 +28,11 @@ links:
     url: https://github.com/deepfounder-ai/qwe-qwe
   - label: Community
     url: https://t.me/qwe_qwe_ai
+
 contributors:
   - name: deepfounder-ai
     url: https://github.com/deepfounder-ai
+
 schema:
   type: object
   required:
@@ -40,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/deepfounder-ai/qwe-qwe:latest
+      default: ghcr.io/deepfounder-ai/qwe-qwe:v0.22.0
     llmUrl:
       type: string
       title: LLM Provider URL
@@ -57,6 +63,7 @@ schema:
       type: string
       title: Web UI Password (optional)
       default: ""
+
 benefits:
   - title: Business-Ready from Day One
     description:
@@ -78,6 +85,7 @@ benefits:
       Routines are chat threads with a schedule — each firing is visible as a
       normal conversation. Debug misbehaving automations through dialogue, not
       log files. Natural schedule syntax — "weekdays 09:00", "every 2h".
+
 features:
   - title: Multi-Interface
     description:
@@ -109,6 +117,7 @@ features:
       qwe-qwe --doctor checks 20+ system components — provider connectivity, LLM
       latency, embeddings, memory, MCP servers, browser skill, Telegram,
       knowledge graph, BM25 index, and disk space. Green board before you ship.
+
 tags:
   - AI
   - Automation
