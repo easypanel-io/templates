@@ -1,0 +1,126 @@
+name: qwe-qwe
+
+description:
+  qwe-qwe is a business-oriented AI agent designed to drop into real workflows —
+  customer ops, internal automation, knowledge retrieval, scheduled reporting,
+  custom integrations. Deploy on your own infrastructure and bring any
+  OpenAI-compatible LLM provider — Azure OpenAI, AWS Bedrock, OpenAI, Groq,
+  OpenRouter, DeepSeek, Together — or run a local model via LM Studio or Ollama
+  for fully on-prem deployments. Chat via web UI, terminal, or Telegram. Your
+  data, your provider, your rules.
+
+instructions:
+  After deployment, open the Web UI and go to Settings → Model to configure your
+  LLM provider. Set the LLM Provider URL to your provider endpoint (e.g.
+  https://api.openai.com/v1 for OpenAI) and the LLM API Key to your key. For
+  Telegram bot support, go to Settings → Telegram and follow the setup wizard.
+
+changeLog:
+  - date: 2026-05-13
+    description: first release
+
+links:
+  - label: Website
+    url: https://github.com/deepfounder-ai/qwe-qwe
+  - label: Documentation
+    url: https://github.com/deepfounder-ai/qwe-qwe/blob/main/README.md
+  - label: Github
+    url: https://github.com/deepfounder-ai/qwe-qwe
+  - label: Community
+    url: https://t.me/qwe_qwe_ai
+
+contributors:
+  - name: deepfounder-ai
+    url: https://github.com/deepfounder-ai
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: qwe-qwe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/deepfounder-ai/qwe-qwe:v0.22.0
+    llmUrl:
+      type: string
+      title: LLM Provider URL
+      default: https://api.openai.com/v1
+    llmModel:
+      type: string
+      title: LLM Model Name
+      default: gpt-4o-mini
+    llmKey:
+      type: string
+      title: LLM API Key
+      default: ""
+    webPassword:
+      type: string
+      title: Web UI Password (optional)
+      default: ""
+
+benefits:
+  - title: Business-Ready from Day One
+    description:
+      Built for real workflows — customer ops, internal automation, knowledge
+      retrieval, scheduled reporting, and custom integrations. Not a demo
+      chatbot; an agent that does the work.
+  - title: Any LLM Provider, Your Infrastructure
+    description:
+      Works with Azure OpenAI, AWS Bedrock, OpenAI, Groq, OpenRouter, DeepSeek,
+      Together, or a local model via LM Studio / Ollama. Switch providers
+      without restarting — your data stays on your infrastructure.
+  - title: Long-Term Memory and Knowledge Base
+    description:
+      Hybrid vector memory (dense + sparse + BM25) powered by Qdrant remembers
+      facts across sessions. Index PDFs, DOCX, URLs, and YouTube videos; night
+      synthesis builds a knowledge graph automatically.
+  - title: Automation and Scheduling
+    description:
+      Routines are chat threads with a schedule — each firing is visible as a
+      normal conversation. Debug misbehaving automations through dialogue, not
+      log files. Natural schedule syntax — "weekdays 09:00", "every 2h".
+
+features:
+  - title: Multi-Interface
+    description:
+      Web UI (premium single-file SPA, zero JS dependencies), terminal CLI with
+      20+ slash commands, and a full-featured Telegram bot with streaming
+      responses and topic-to-thread mapping.
+  - title: Tool Search Architecture
+    description:
+      Only 8 core tools loaded by default — saves 75% tokens vs loading all 46.
+      The model calls tool_search("browser") or tool_search("notes") to activate
+      more tools on demand, keeping every turn lean.
+  - title: Knowledge Graph Synthesis
+    description:
+      Night synthesis worker extracts entities and typed relations from
+      conversations and documents, building a queryable knowledge graph. Wiki
+      summaries are searchable and saved as human-readable markdown.
+  - title: Extensible with Skills and MCP
+    description:
+      Drop a Python file into the skills folder to extend the agent — no
+      redeploy needed. Connect external tool servers via Model Context Protocol
+      (stdio and HTTP transports). Create new skills from chat in under a
+      minute.
+  - title: Encrypted Secrets Vault
+    description:
+      API keys and credentials stored with Fernet encryption in SQLite. Inject
+      secrets into tool calls by name — no plaintext keys in prompts or logs.
+  - title: Diagnostics Built In
+    description:
+      qwe-qwe --doctor checks 20+ system components — provider connectivity, LLM
+      latency, embeddings, memory, MCP servers, browser skill, Telegram,
+      knowledge graph, BM25 index, and disk space. Green board before you ship.
+
+tags:
+  - AI
+  - Automation
+  - Business
+  - Productivity
+  - Self-Hosted
