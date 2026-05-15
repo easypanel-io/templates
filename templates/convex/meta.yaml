@@ -7,10 +7,12 @@ description:
   backend service, dashboard for data management, and PostgreSQL database
   support. Perfect for building full-stack applications with automatic caching,
   real-time updates, and strong consistency guarantees.
-instructions: You have to generate the admin key from the backend bash console. Run "./generate_admin_key.sh" and copy it. Go to the dashboard and login. 
+instructions: Click the "Generate Admin Key" script on the backend service, copy the printed key, then use it to log into the Convex dashboard.
 changeLog:
   - date: 2026-02-02
     description: Template Release (1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35)
+  - date: 2026-05-15
+    description: Update to e03b3a72dc412eeff4c1a6958ef1879712fb70e6
 links:
   - label: Website
     url: https://www.convex.dev
@@ -35,11 +37,11 @@ schema:
     appServiceImage:
       type: string
       title: Backend Service Image
-      default: ghcr.io/get-convex/convex-backend:1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35
+      default: ghcr.io/get-convex/convex-backend:e03b3a72dc412eeff4c1a6958ef1879712fb70e6
     dashboardServiceImage:
       type: string
       title: Dashboard Service Image
-      default: ghcr.io/get-convex/convex-dashboard:1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35
+      default: ghcr.io/get-convex/convex-dashboard:e03b3a72dc412eeff4c1a6958ef1879712fb70e6
     convexCloudOrigin:
       type: string
       title: Convex Cloud Origin
@@ -97,7 +99,7 @@ schema:
       type: string
       title: Instance Name
       default: ""
-      description: Name for this Convex instance (optional)
+      description: Name for this Convex instance (defaults to the app service name if left empty)
     awsAccessKeyId:
       type: string
       title: AWS Access Key ID
