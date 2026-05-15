@@ -4,6 +4,8 @@ instructions: null
 changeLog:
   - date: 2025-05-08
     description: First Release
+  - date: 2026-05-15
+    description: Update to 2.1.3
 links:
   - label: Website
     url: https://www.bugsink.com/
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bugsink/bugsink:1.5.3
+      default: bugsink/bugsink:2.1.3
     adminUsername:
       type: string
       title: Admin Username
