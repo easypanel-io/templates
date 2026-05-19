@@ -3,8 +3,12 @@ description:
   Dnote is a simple command-line notebook application that helps you capture and
   organize your thoughts. It provides a clean interface for taking notes and
   organizing them into books.
-instructions: Configure the SMTP server to send verification emails.
+instructions: >-
+  Configure SMTP to enable email verification and password resets. Dnote v3
+  uses embedded SQLite — no external database is required.
 changeLog:
+  - date: 2026-05-19
+    description: Updated to v3.0.0
   - date: 2025-04-11
     description: First Release
 links:
@@ -35,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dnote/dnote:2.1.1
+      default: dnote/dnote:3.0.0
     SmtpHost:
       type: string
       title: SMTP Host
