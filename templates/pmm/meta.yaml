@@ -1,0 +1,82 @@
+name: Percona PMM
+description:
+  Percona Monitoring and Management (PMM) is an open-source monitoring and
+  observability platform for MySQL, PostgreSQL, MongoDB, and cloud-native
+  workloads. PMM provides metrics, query analytics, alerts, and dashboards to
+  help you understand database performance and troubleshoot issues quickly.
+instructions:
+  After deployment, open your Easypanel domain to access PMM. This template
+  routes traffic to PMM's internal HTTP port 8080 and relies on Easypanel for
+  TLS at the edge. Default login credentials are admin:admin; change the admin
+  password immediately after first login from the PMM UI. Data retention and
+  metrics resolution use Go duration syntax (e.g. 720h = 30 days, 1s, 60s).
+changeLog:
+  - date: 2026-05-06
+    description: First release
+links:
+  - label: Website
+    url: https://www.percona.com/software/database-tools/percona-monitoring-and-management
+  - label: Documentation
+    url: https://docs.percona.com/percona-monitoring-and-management/
+  - label: GitHub
+    url: https://github.com/percona/pmm
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - pmmDataRetention
+    - pmmMetricsResolution
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pmm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: percona/pmm-server:3
+    pmmDataRetention:
+      type: string
+      title: PMM Data Retention
+      default: 720h
+    pmmMetricsResolution:
+      type: string
+      title: PMM Metrics Resolution
+      default: 1s
+benefits:
+  - title: Unified Database Monitoring
+    description:
+      Monitor multiple database engines from one place with ready-to-use
+      dashboards for infrastructure and query performance.
+  - title: Query Analytics and Insights
+    description:
+      Use Query Analytics to identify slow queries, execution trends, and
+      bottlenecks affecting application performance.
+  - title: Long-Term Metrics Storage
+    description:
+      Persist PMM data in a dedicated volume so historical metrics and trends are
+      retained across restarts and upgrades.
+features:
+  - title: Built-in Dashboards
+    description:
+      Includes Grafana-based dashboards and exporters for MySQL, PostgreSQL,
+      MongoDB, and system metrics.
+  - title: Alerting and Advisors
+    description:
+      Proactive alerting and best-practice checks help you detect and resolve
+      issues before they impact production.
+  - title: Secure HTTPS Access
+    description:
+      Easypanel terminates HTTPS for your domain while PMM runs internally on
+      port 8080, keeping access secure and deployment-compatible.
+tags:
+  - Monitoring
+  - Observability
+  - Databases
+  - MySQL
+  - PostgreSQL
+  - MongoDB
