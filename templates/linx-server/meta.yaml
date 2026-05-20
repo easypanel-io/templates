@@ -1,0 +1,120 @@
+name: Linx Server
+description:
+  Linx Server is a lightweight, self-hosted file and media sharing platform
+  written in Go. It lets users upload files, code snippets, and images and
+  share them via a clean, minimalist web interface with no external dependencies
+  or databases required. Uploads can be given expiry times, deletion keys, and
+  per-file access passwords. Code paste gets automatic syntax highlighting,
+  and media files (images, video, audio) render inline in the browser. Files
+  can also be served as torrents via WebSeed for bandwidth-efficient distribution.
+  An HTTP API is available for scripted or CLI-driven uploads, making it a
+  popular drop-in replacement for Imgur, 0x0, or pastebin-style services on
+  a private server.
+instructions:
+  After deployment, open the app URL to access the upload interface. Drag-and-drop
+  or click to upload files. Each upload returns a direct link that you can share.
+  Files can be set to expire automatically — use the expiry drop-down on the
+  upload form. If you enabled remote uploads, you can POST a URL to the API
+  and linx-server will fetch and host the remote file for you. For programmatic
+  uploads see the /api/upload endpoint documented at the /api path on your instance.
+changeLog:
+  - date: 2026-05-20
+    description: Initial Template Release (v2.3.8)
+links:
+  - label: GitHub
+    url: https://github.com/andreimarcu/linx-server
+  - label: Demo
+    url: https://put.icu/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: linx-server
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: andreimarcu/linx-server:version-2.3.8
+      description: Linx Server Docker image
+    siteName:
+      type: string
+      title: Site Name
+      default: Linx
+      description: Name displayed in the UI header and page titles
+    maxFileSizeMb:
+      type: number
+      title: Max File Size (MB)
+      default: 1024
+      description:
+        Maximum allowed upload size in megabytes (default 1024 MB = 1 GB).
+        The hard limit of the original image is 4096 MB.
+    allowHotlink:
+      type: boolean
+      title: Allow Hotlinking
+      default: true
+      description:
+        Allow other sites to embed or hotlink files served by this instance.
+    remoteUploads:
+      type: boolean
+      title: Enable Remote Uploads
+      default: false
+      description:
+        Allow the API to accept a URL and have the server fetch and store
+        the remote file (useful for building paste/mirror workflows).
+benefits:
+  - title: No Database Required
+    description:
+      Linx stores file metadata in a flat file backend, making it trivially
+      easy to back up and restore without any database administration.
+  - title: Lightweight Go Binary
+    description:
+      The entire server is a single statically compiled Go binary under 12 MB.
+      Memory and CPU usage are minimal even under heavy upload traffic.
+  - title: Rich Media Preview
+    description:
+      Images, videos, audio, and code files render directly in the browser
+      with syntax highlighting — no plugins or JavaScript frameworks required.
+  - title: Flexible Expiry & Access Control
+    description:
+      Per-upload expiry times and optional access passwords give you fine-grained
+      control over who can reach each file and for how long.
+features:
+  - title: Drag-and-Drop Upload
+    description:
+      Upload one or many files at once by dragging them onto the browser
+      or using the file picker. Paste images directly from the clipboard.
+  - title: Syntax-Highlighted Paste
+    description:
+      Pasted text and code files get automatic language detection and
+      full syntax highlighting powered by the Highlight.js library.
+  - title: Torrent / WebSeed Support
+    description:
+      Every file can be downloaded as a torrent with WebSeed enabled,
+      letting clients use peer-to-peer bandwidth alongside direct HTTP download.
+  - title: Deletion Keys
+    description:
+      Each upload receives a secret deletion key so the uploader can remove
+      a file at any time without administrator intervention.
+  - title: HTTP API
+    description:
+      A simple REST API at /api/upload supports CLI tools, scripts, and custom
+      ShareX/ShareX-compatible upload configurations.
+  - title: Optional Auth
+    description:
+      Restrict uploads to trusted users via an API key file without requiring
+      a full account system or user database.
+tags:
+  - File Sharing
+  - Self-Hosted
+  - Pastebin
+  - Media Hosting
+  - Upload
+  - Go
+  - Lightweight
