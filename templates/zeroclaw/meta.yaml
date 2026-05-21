@@ -1,0 +1,79 @@
+name: ZeroClaw
+description:
+  ZeroClaw is a fast, small, and fully autonomous AI personal assistant
+  infrastructure. Deploy anywhere, swap any provider. It supports any OS
+  and any platform — a self-hosted AI agent gateway with a built-in web
+  dashboard for managing LLM providers, models, and conversations.
+instructions: |-
+  After deployment, you need to provide an LLM API key (e.g. OpenRouter,
+  Anthropic, or OpenAI) to start using ZeroClaw. The gateway will be
+  available on port 42617.
+changeLog:
+  - date: 2026-05-21
+    description: First release
+links:
+  - label: Website
+    url: https://zeroclaw.com
+  - label: Documentation
+    url: https://github.com/zeroclaw-labs/zeroclaw
+  - label: GitHub
+    url: https://github.com/zeroclaw-labs/zeroclaw
+contributors:
+  - name: ZeroClaw Labs
+    url: https://github.com/zeroclaw-labs
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - apiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zeroclaw
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/zeroclaw-labs/zeroclaw:latest
+    apiKey:
+      type: string
+      title: LLM API Key
+      description: API key for your LLM provider (OpenRouter, Anthropic, or OpenAI)
+benefits:
+  - title: Self-Hosted AI Agent
+    description:
+      Run your own AI assistant infrastructure with full control over data
+      and privacy. No third-party cloud dependency required.
+  - title: Multi-Provider Support
+    description:
+      Swap between OpenRouter, Anthropic, OpenAI, and more without changing
+      your setup. One gateway, any provider.
+  - title: Lightweight and Fast
+    description:
+      Built in Rust for minimal resource usage. Runs on as little as 32MB RAM
+      with a single Docker container.
+features:
+  - title: AI Agent Gateway
+    description:
+      A unified API gateway for managing LLM conversations and tool use
+      across multiple providers.
+  - title: Web Dashboard
+    description:
+      Built-in web UI for managing providers, models, conversations, and
+      monitoring usage.
+  - title: Docker-First Deployment
+    description:
+      Single container, single volume, single port. Deploy with one command
+      on any Docker-compatible platform.
+  - title: Provider Agnostic
+    description:
+      Supports OpenRouter, Anthropic, OpenAI, and custom endpoints. Switch
+      providers without redeploying.
+tags:
+  - AI
+  - Agent
+  - LLM
+  - Automation
+  - Self-Hosted
+  - Open Source
