@@ -6,17 +6,16 @@ export function generate(input: Input): Output {
 
   const maxBytes = Math.floor((input.maxFileSizeMb ?? 1024) * 1024 * 1024);
 
-  const flags = [
-    `-bind=0.0.0.0:8080`,
-    `-filespath=/data/files/`,
-    `-metapath=/data/meta/`,
-    `-sitename=${input.siteName || "Linx"}`,
-    `-maxsize=${maxBytes}`,
-    `-realip`,
-  ];
-
-  if (input.allowHotlink) flags.push(`-allowhotlink`);
-  if (input.remoteUploads) flags.push(`-remoteuploads`);
+  const configFile = [
+    `bind = 0.0.0.0:8080`,
+    `filespath = /data/files/`,
+    `metapath = /data/meta/`,
+    `sitename = ${input.siteName || "Linx"}`,
+    `maxsize = ${maxBytes}`,
+    `realip = true`,
+    input.allowHotlink ? `allowhotlink = true` : `# allowhotlink = false`,
+    input.remoteUploads ? `remoteuploads = true` : `# remoteuploads = false`,
+  ].join("\n");
 
   services.push({
     type: "app",
@@ -27,7 +26,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: `/usr/local/bin/linx-server ${flags.join(" ")}`,
+        command: `/usr/local/bin/linx-server -config /data/linx-server.conf`,
       },
       domains: [
         {
@@ -36,6 +35,11 @@ export function generate(input: Input): Output {
         },
       ],
       mounts: [
+        {
+          type: "file",
+          content: configFile,
+          mountPath: "/data/linx-server.conf",
+        },
         {
           type: "volume",
           name: "files",
