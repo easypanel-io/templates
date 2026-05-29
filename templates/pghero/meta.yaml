@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-06-25
     description: Initial Template Release
+  - date: 2026-05-05
+    description: Version bumped to v3.8.0
 
 links:
   - label: GitHub
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ankane/pghero:v3.7.0
+      default: ankane/pghero:v3.8.0
       description: PgHero Docker image
 
 benefits:

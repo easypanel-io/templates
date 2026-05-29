@@ -1,18 +1,21 @@
 name: Shelfmark
 description:
   Shelfmark is a self-hosted book management and organization application that
-  provides comprehensive tools for managing your digital book library. Built with
-  modern architecture, Shelfmark offers a web-based interface accessible on port
-  8084 for organizing, cataloging, and managing your book collection. The system
-  supports book downloads, configuration management, and integration with torrent
-  and usenet download clients. Perfect for book enthusiasts and libraries looking
-  for a self-hosted solution to manage their digital book collections.
+  provides comprehensive tools for managing your digital book library. Built
+  with modern architecture, Shelfmark offers a web-based interface accessible on
+  port 8084 for organizing, cataloging, and managing your book collection. The
+  system supports book downloads, configuration management, and integration with
+  torrent and usenet download clients. Perfect for book enthusiasts and
+  libraries looking for a self-hosted solution to manage their digital book
+  collections.
 instructions: null
 changeLog:
   - date: 2025-01-22
     description: Initial Template Release
   - date: 2026-02-24
     description: Version bumped to sha-91cbd51
+  - date: 2026-05-08
+    description: Version bumped to sha-ba62771
 links:
   - label: GitHub
     url: https://github.com/calibrain/shelfmark
@@ -34,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/calibrain/shelfmark:sha-91cbd51
+      default: ghcr.io/calibrain/shelfmark:sha-ba62771
     puid:
       type: string
       title: User ID (PUID)

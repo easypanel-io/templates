@@ -31,6 +31,8 @@ changeLog:
     description: Version bumped to 5.110.1
   - date: 2025-07-21
     description: Version bumped to 5.130.1
+  - date: 2026-04-29
+    description: Version bumped to 6.35.0
 links:
   - label: Website
     url: https://ghost.org/
@@ -68,7 +70,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghost:5.130.1
+      default: ghost:6.35.0
     databaseServiceName:
       type: string
       title: Database Service Name
