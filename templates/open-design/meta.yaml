@@ -1,0 +1,82 @@
+name: Open Design
+description:
+  An open-source, local-first alternative to Claude Artifacts — a web-based AI
+  design platform with 259+ built-in design skills, 142+ design systems, and 16+
+  AI agent integrations (Claude Code, Cursor, Copilot, Gemini CLI) for
+  generating prototypes, presentations, documents, and media assets.
+instructions:
+  After deployment, open the UI and use your API token (shown in the service
+  environment variables as OD_API_TOKEN) when prompted for authentication. The
+  token is auto-generated at deploy time. All project files and conversation
+  history are stored in the /app/.od volume.
+changeLog:
+  - date: "2026-05-29"
+    description: Initial release (latest)
+links:
+  - label: Website
+    url: https://open-design.ai
+  - label: GitHub
+    url: https://github.com/nexu-io/open-design
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: open-design
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: vanjayak/open-design:latest
+    apiToken:
+      type: string
+      title: API Token
+      description:
+        Secure token for authenticating API requests. Auto-generated if left
+        blank (recommended).
+tags:
+  - design
+  - ai
+  - productivity
+  - prototyping
+  - agents
+benefits:
+  - title: 16+ AI Agent Integrations
+    description:
+      Connect Claude Code, Cursor Agent, GitHub Copilot, Gemini CLI, and more to
+      generate design prototypes and code from a single interface.
+  - title: 259+ Built-In Design Skills
+    description:
+      Choose from hundreds of scenario-driven skills for UI design,
+      presentations, documents, and media — no prompt engineering required.
+  - title: 142+ Design Systems
+    description:
+      Reference real-world design systems from Linear, Stripe, Vercel, Notion,
+      Apple, and more to produce on-brand outputs instantly.
+  - title: Local-First & Private
+    description:
+      All project files, history, and outputs are stored on your own server. No
+      cloud sync, no data leaving your instance.
+features:
+  - title: Multi-Format Export
+    description:
+      Export designs as HTML, PDF, PowerPoint, ZIP, or Markdown directly from
+      the UI.
+  - title: SQLite Persistence
+    description:
+      Projects, conversation history, and agent outputs are persisted in a local
+      SQLite database with real filesystem integration.
+  - title: Interactive Discovery Form
+    description:
+      Guided design decision form helps scope requirements before handing off to
+      AI agents, improving output quality.
+  - title: CORS & Reverse-Proxy Ready
+    description:
+      Configure allowed origins and run safely behind Easypanel's HTTPS proxy
+      without any extra setup.
