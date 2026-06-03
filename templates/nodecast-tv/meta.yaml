@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-01-17
     description: Initial Template Release
+  - date: 2026-05-04
+    description: Version bumped to 2.1.1
 links:
   - label: GitHub
     url: https://github.com/technomancer702/nodecast-tv
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/technomancer702/nodecast-tv:1.4.4
+      default: ghcr.io/technomancer702/nodecast-tv:2.1.1
 benefits:
   - title: Media Casting
     description:
