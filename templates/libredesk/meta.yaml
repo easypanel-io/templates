@@ -10,7 +10,9 @@ changeLog:
   - date: 2025-09-24
     description: First release (v0.7.4-alpha)
   - date: 2026-02-07
-    description: Updated to v1.0.1 and added encryption key generation and auto-generation of system user password.
+    description:
+      Updated to v1.0.1 and added encryption key generation and auto-generation
+      of system user password.
 links:
   - label: Website
     url: https://libredesk.io
@@ -39,12 +41,17 @@ schema:
       type: string
       title: System User Password
       default: ""
-      description: Password must be 10-72 characters long should contain at least one uppercase letter, one lowercase letter, one number, and one special character. Auto-generated if empty.
+      description:
+        Password must be 10-72 characters long should contain at least one
+        uppercase letter, one lowercase letter, one number, and one special
+        character. Auto-generated if empty.
     encryptionKey:
       type: string
       title: Encryption Key
       default: ""
-      description: Encryption key must be 32 characters long (hex string). Generate using `openssl rand -hex 16`. Auto-generated if empty.
+      description:
+        Encryption key must be 32 characters long (hex string). Generate using
+        `openssl rand -hex 16`. Auto-generated if empty.
 benefits:
   - title: Self-Hosted Helpdesk
     description:

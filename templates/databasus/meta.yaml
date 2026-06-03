@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2026-04-07
     description: Initial template release
+  - date: 2026-04-29
+    description: Version bumped to v3.33.0
 
 links:
   - label: Website
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: Databasus Image
-      default: databasus/databasus:v3.32.0
+      default: databasus/databasus:v3.33.0
 benefits:
   - title: Automated backups
     description:

@@ -1,9 +1,14 @@
 name: GoPeed
-description: GoPeed is a high-performance download manager that supports HTTP, HTTPS, FTP, BitTorrent, and other protocols. It features a modern web interface and supports multiple download task.
+description:
+  GoPeed is a high-performance download manager that supports HTTP, HTTPS, FTP,
+  BitTorrent, and other protocols. It features a modern web interface and
+  supports multiple download task.
 instructions: null
 changeLog:
   - date: 2025-05-02
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to v1.9.3
 links:
   - label: Website
     url: https://gopeed.com/
@@ -27,10 +32,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: liwei2633/gopeed:v1.7.0
+      default: liwei2633/gopeed:v1.9.3
 benefits:
   - title: High Performance
-    description: Fast and efficient download management with support for multiple protocols
+    description:
+      Fast and efficient download management with support for multiple protocols
   - title: Modern Interface
     description: Clean and intuitive web-based user interface
   - title: Multi-protocol Support
@@ -52,4 +58,4 @@ tags:
   - Download Manager
   - File Transfer
   - Self-hosted
-  - Open Source 
+  - Open Source
