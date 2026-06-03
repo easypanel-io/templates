@@ -1,9 +1,10 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const instanceSecret = randomString(64);
+  const crypto = require("crypto");
+  const instanceSecret = crypto.randomBytes(32).toString("hex");
 
   const backendEnv = [
     `CONVEX_CLOUD_ORIGIN=${
@@ -12,6 +13,7 @@ export function generate(input: Input): Output {
     `CONVEX_SITE_ORIGIN=${
       input.convexSiteOrigin || "https://$(PRIMARY_DOMAIN):3211"
     }`,
+    `INSTANCE_NAME=${input.instanceName || input.appServiceName}`,
     `INSTANCE_SECRET=${input.instanceSecret || instanceSecret}`,
     `RUST_LOG=${input.rustLog || "info"}`,
     `DOCUMENT_RETENTION_DELAY=${input.documentRetentionDelay || "172800"}`,
@@ -25,9 +27,6 @@ export function generate(input: Input): Output {
     input.databaseUrl
   ) {
     backendEnv.push(`${input.databaseType}=${input.databaseUrl}`);
-  }
-  if (input.instanceName) {
-    backendEnv.push(`INSTANCE_NAME=${input.instanceName}`);
   }
   if (input.awsAccessKeyId) {
     backendEnv.push(`AWS_ACCESS_KEY_ID=${input.awsAccessKeyId}`);
@@ -65,6 +64,12 @@ export function generate(input: Input): Output {
         },
       ],
       env: backendEnv.join("\n"),
+      scripts: [
+        {
+          name: "Generate Admin Key",
+          script: "./generate_admin_key.sh",
+        },
+      ],
       mounts: [
         {
           type: "volume",
