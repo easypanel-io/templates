@@ -16,6 +16,8 @@ instructions: |
 changeLog:
   - date: 2025-06-04
     description: First Release
+  - date: 2026-05-07
+    description: Version bumped to latest-2026.4.3
 links:
   - label: Website
     url: https://waha.devlike.pro/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: devlikeapro/waha:latest-2026.2.2
+      default: devlikeapro/waha:latest-2026.4.3
     dashboardUsername:
       type: string
       title: Dashboard Username

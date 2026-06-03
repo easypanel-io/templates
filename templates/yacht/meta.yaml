@@ -10,6 +10,8 @@ instructions: Login using credentials admin@yacht.local/pass
 changeLog:
   - date: 2025-03-07
     description: First Release
+  - date: 2026-05-07
+    description: Version bumped to v0.0.7-alpha-2023-01-12--05
 links:
   - label: Website
     url: https://yacht.sh/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: selfhostedpro/yacht:v0.0.7-alpha-2023-01-12--04
+      default: selfhostedpro/yacht:v0.0.7-alpha-2023-01-12--05
 benefits:
   - title: Intuitive Container Management
     description:
