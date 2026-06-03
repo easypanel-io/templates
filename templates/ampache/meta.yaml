@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to 7.1.1
   - date: 2025-12-24
     description: Version bumped to 7.8.0
+  - date: 2026-04-29
+    description: Version bumped to 7.9.2  
 links:
   - label: Website
     url: http://ampache.org/
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ampache/ampache:7.8.0
+      default: ampache/ampache:7.9.2
     appMediaHostPath:
       type: string
       title: Media Host Path

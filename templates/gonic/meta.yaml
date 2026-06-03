@@ -9,6 +9,8 @@ instructions: Login credentials are admin/admin
 changeLog:
   - date: 2025-09-23
     description: Initial template release (v0.18.0)
+  - date: 2026-04-29
+    description: Version bumped to 4b3721b
 links:
   - label: Documentation
     url: https://github.com/sentriz/gonic/wiki
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sentriz/gonic:v0.18.0
+      default: sentriz/gonic:4b3721b
 benefits:
   - title: Self-Hosted Music Streaming
     description:
