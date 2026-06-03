@@ -1,15 +1,14 @@
 name: Habitat
 description:
-  Habitat is a free and open-source, self-hosted social platform built for
-  local communities. It is decentralised by design — each instance covers a
-  specific geographic area, letting residents discuss topics, share photos, and
-  discover conversations happening nearby. Location is at the heart of every
-  post; members can pin discussions to specific places and browse content sorted
-  by proximity. Built with PHP (Symfony) and served by FrankenPHP/Caddy, it
-  ships as a single Docker image that includes the web server, background
-  worker, and database migration logic. There are no ads, no algorithmic feeds,
-  and no data harvesting — just a community-owned space for the people who live
-  there.
+  Habitat is a free and open-source, self-hosted social platform built for local
+  communities. It is decentralised by design — each instance covers a specific
+  geographic area, letting residents discuss topics, share photos, and discover
+  conversations happening nearby. Location is at the heart of every post;
+  members can pin discussions to specific places and browse content sorted by
+  proximity. Built with PHP (Symfony) and served by FrankenPHP/Caddy, it ships
+  as a single Docker image that includes the web server, background worker, and
+  database migration logic. There are no ads, no algorithmic feeds, and no data
+  harvesting — just a community-owned space for the people who live there.
 instructions:
   After deployment, open your app domain and complete the first-run setup to
   create the administrator account and configure your community name, location
@@ -19,7 +18,7 @@ instructions:
   Keep the ENCRYPTION_KEY value safe — it must never change for an existing
   instance or encrypted data will become unreadable.
 changeLog:
-  - date: 2026-06-02
+  - date: 2026-06-03
     description: Initial Template Release (v1.4.0)
 links:
   - label: GitHub
@@ -48,17 +47,17 @@ benefits:
   - title: Truly Local Social Network
     description:
       Each Habitat instance serves a defined geographic area, so every
-      conversation is relevant to the people who actually live there — no
-      global noise, no irrelevant content.
+      conversation is relevant to the people who actually live there — no global
+      noise, no irrelevant content.
   - title: No Ads, No Tracking
     description:
       Completely free of advertising, data harvesting, and algorithmic
       manipulation. The community owns its platform and its data.
   - title: Decentralised by Design
     description:
-      Run your own instance for your neighbourhood, town, or city. Each
-      instance is independent, keeping communities in control of their own
-      moderation and governance.
+      Run your own instance for your neighbourhood, town, or city. Each instance
+      is independent, keeping communities in control of their own moderation and
+      governance.
   - title: Location-Aware Discussions
     description:
       Posts can be pinned to specific places on a map, and members can browse
