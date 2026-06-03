@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 0.6.43
   - date: 2026-02-24
     description: Version bumped to 0.8.5
+  - date: 2026-05-05
+    description: Version bumped to 0.9.2
 links:
   - label: Documentation
     url: https://docs.openwebui.com/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/open-webui/open-webui:0.8.5
+      default: ghcr.io/open-webui/open-webui:0.9.2
 benefits:
   - title: AI Model Interaction
     description:

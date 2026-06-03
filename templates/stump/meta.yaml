@@ -11,6 +11,8 @@ changeLog:
     description: Template Release (v0.0.11)
   - date: 2025-12-29
     description: Version bumped to 0.0.12
+  - date: 2026-05-07
+    description: Version bumped to 0.1.2
 links:
   - label: Website
     url: https://www.stumpapp.dev
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: aaronleopold/stump:0.0.12
+      default: aaronleopold/stump:0.1.2
 
 benefits:
   - title: Fast and Lightweight

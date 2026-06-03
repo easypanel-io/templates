@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2026-01-15
     description: Template Release
+  - date: 2026-05-04
+    description: Version bumped to 26.5.4
 
 links:
   - label: Website
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/jokob-sk/netalertx:25.11
+      default: ghcr.io/jokob-sk/netalertx:26.5.4
 
 benefits:
   - title: Network Device Discovery

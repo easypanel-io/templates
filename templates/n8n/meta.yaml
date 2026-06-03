@@ -24,6 +24,8 @@ changeLog:
     description: Update to 1.103.2
   - date: 2026-02-21
     description: Update to 1.123.21
+  - date: 2026-05-04
+    description: Update to 2.18.7
 links:
   - label: Website
     url: https://n8n.io/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: n8nio/n8n:1.123.21
+      default: n8nio/n8n:2.18.7
 benefits:
   - title: Workflow Automation
     description:

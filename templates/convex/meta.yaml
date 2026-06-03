@@ -7,7 +7,9 @@ description:
   backend service, dashboard for data management, and PostgreSQL database
   support. Perfect for building full-stack applications with automatic caching,
   real-time updates, and strong consistency guarantees.
-instructions: You have to generate the admin key from the backend bash console. Run "./generate_admin_key.sh" and copy it. Go to the dashboard and login. 
+instructions:
+  You have to generate the admin key from the backend bash console. Run
+  "./generate_admin_key.sh" and copy it. Go to the dashboard and login.
 changeLog:
   - date: 2026-02-02
     description: Template Release (1ece1b58fdb62ccd618f1d8183fa2d7ba414cc35)
@@ -59,7 +61,8 @@ schema:
       type: string
       title: Instance Secret
       default: ""
-      description: Secret key for instance authentication (auto-generated if empty)
+      description:
+        Secret key for instance authentication (auto-generated if empty)
     databaseType:
       type: string
       title: Database Type
@@ -82,12 +85,14 @@ schema:
       type: string
       title: Database URL
       default: ""
-      description: Full database connection URL (required if database type is selected)
+      description:
+        Full database connection URL (required if database type is selected)
     rustLog:
       type: string
       title: Rust Log Level
       default: info
-      description: Logging level for Rust backend (e.g., info, debug, warn, error)
+      description:
+        Logging level for Rust backend (e.g., info, debug, warn, error)
     documentRetentionDelay:
       type: string
       title: Document Retention Delay
