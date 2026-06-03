@@ -4,6 +4,8 @@ instructions: null
 changeLog:
   - date: 2025-05-08
     description: First Release
+  - date: 2026-04-29
+    description: Version bumped to 9.1.0  
 links:
   - label: Website
     url: https://alerta.io/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: alerta/alerta-web:9.0.4
+      default: alerta/alerta-web:9.1.0
       description: Image to use for the app service
     adminUsers:
       type: string
