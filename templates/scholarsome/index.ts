@@ -1,4 +1,9 @@
-import { Output, randomPassword, randomString, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -8,7 +13,7 @@ export function generate(input: Input): Output {
   const jwtSecret = randomString(40);
 
   const mariadbHostname = `$(PROJECT_NAME)_${input.appServiceName}-mariadb`;
-  const redisHostname = `$(PROJECT_NAME)_${input.appServiceName}-redis`;
+  const redisHostname = `$(PROJECT_NAME)-${input.appServiceName}-redis`;
 
   services.push({
     type: "app",
