@@ -61,7 +61,8 @@ schema:
       type: string
       title: Instance Secret
       default: ""
-      description: Secret key for instance authentication (auto-generated if empty)
+      description:
+        Secret key for instance authentication (auto-generated if empty)
     databaseType:
       type: string
       title: Database Type
@@ -84,12 +85,14 @@ schema:
       type: string
       title: Database URL
       default: ""
-      description: Full database connection URL (required if database type is selected)
+      description:
+        Full database connection URL (required if database type is selected)
     rustLog:
       type: string
       title: Rust Log Level
       default: info
-      description: Logging level for Rust backend (e.g., info, debug, warn, error)
+      description:
+        Logging level for Rust backend (e.g., info, debug, warn, error)
     documentRetentionDelay:
       type: string
       title: Document Retention Delay

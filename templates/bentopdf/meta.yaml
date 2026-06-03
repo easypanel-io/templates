@@ -22,6 +22,8 @@ changeLog:
     description: Template Release
   - date: 2026-03-25
     description: Added missing GitHub source link
+  - date: 2026-05-06
+    description: Version bumped to sha-fb8c8c0
 
 links:
   - label: Website
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bentopdf/bentopdf:v1.7.9
+      default: bentopdfteam/bentopdf:sha-fb8c8c0
 
 benefits:
   - title: Self-Hosted PDF Processing

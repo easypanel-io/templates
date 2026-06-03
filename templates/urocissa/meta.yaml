@@ -14,6 +14,8 @@ instructions: Default password is generated automatically.
 changeLog:
   - date: 2026-03-02
     description: First Release (v2.0.12)
+  - date: 2026-05-07
+    description: Version bumped to v2.0.14
 links:
   - label: Website
     url: https://hsa00000.github.io/urocissa/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hsa00000/urocissa:2.0.12
+      default: hsa00000/urocissa:2.0.14
     password:
       type: string
       title: Password
