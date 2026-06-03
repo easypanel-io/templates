@@ -1,0 +1,100 @@
+name: Habitat
+description:
+  Habitat is a free and open-source, self-hosted social platform built for
+  local communities. It is decentralised by design — each instance covers a
+  specific geographic area, letting residents discuss topics, share photos, and
+  discover conversations happening nearby. Location is at the heart of every
+  post; members can pin discussions to specific places and browse content sorted
+  by proximity. Built with PHP (Symfony) and served by FrankenPHP/Caddy, it
+  ships as a single Docker image that includes the web server, background
+  worker, and database migration logic. There are no ads, no algorithmic feeds,
+  and no data harvesting — just a community-owned space for the people who live
+  there.
+instructions:
+  After deployment, open your app domain and complete the first-run setup to
+  create the administrator account and configure your community name, location
+  boundaries, and community guidelines. The background worker service
+  (habitat-worker) handles asynchronous tasks such as email notifications; it
+  will restart every 10 minutes automatically as designed by Symfony Messenger.
+  Keep the ENCRYPTION_KEY value safe — it must never change for an existing
+  instance or encrypted data will become unreadable.
+changeLog:
+  - date: 2026-06-02
+    description: Initial Template Release (v1.4.0)
+links:
+  - label: GitHub
+    url: https://github.com/carlnewton/habitat
+  - label: Website
+    url: https://gethabitat.org
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: habitat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: carlnewton/habitat:1.4.0
+      description: Habitat Docker image
+benefits:
+  - title: Truly Local Social Network
+    description:
+      Each Habitat instance serves a defined geographic area, so every
+      conversation is relevant to the people who actually live there — no
+      global noise, no irrelevant content.
+  - title: No Ads, No Tracking
+    description:
+      Completely free of advertising, data harvesting, and algorithmic
+      manipulation. The community owns its platform and its data.
+  - title: Decentralised by Design
+    description:
+      Run your own instance for your neighbourhood, town, or city. Each
+      instance is independent, keeping communities in control of their own
+      moderation and governance.
+  - title: Location-Aware Discussions
+    description:
+      Posts can be pinned to specific places on a map, and members can browse
+      content sorted by proximity to discover what is happening nearby.
+features:
+  - title: Location-Based Posts
+    description:
+      Attach any post or discussion to a specific map location so residents can
+      find conversations about the exact streets, parks, or venues they care
+      about.
+  - title: Nearby Feed
+    description:
+      Browse posts sorted by distance from the user's current location, making
+      it easy to discover what is happening close by in real time.
+  - title: Community Guidelines
+    description:
+      Administrators can publish community guidelines directly in the sidebar,
+      setting expectations for tone and behaviour before members even sign up.
+  - title: Moderation Log
+    description:
+      A public moderation log gives the community full transparency into
+      moderation decisions, building trust without sacrificing accountability.
+  - title: Background Worker
+    description:
+      A Symfony Messenger worker handles asynchronous tasks such as email
+      notifications so the web interface stays responsive under load.
+  - title: Single-Image Deployment
+    description:
+      The same Docker image serves both the web app and the background worker,
+      keeping infrastructure simple — just the image, a Postgres database, and
+      your domain.
+tags:
+  - Social Network
+  - Community
+  - Location-Based
+  - Self-Hosted
+  - PHP
+  - Decentralised
+  - Open Source
