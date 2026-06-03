@@ -12,11 +12,35 @@ description:
   prioritize the development of features mainly useful to larger organizations
   such as single sign-on and directory syncing.
 instructions:
-  To access the administration interface, please go to /admin on your
-  installation url. The admin token is in your "Environment" tab.
+  "To access the administration interface go to /admin on your installation URL.
+  The admin token is in your Environment tab. SMTP is optional — if no SMTP host
+  is set, password hints are displayed in-app and email verification is disabled.
+
+
+  Common provider settings:
+
+  - SendGrid: host=smtp.sendgrid.net, port=587, security=starttls,
+    username=apikey, password=<SG.* API key>, auth_mechanism=Login
+
+  - Gmail: host=smtp.gmail.com, port=465, security=force_tls (use an App
+    Password, not your Google account password)
+
+  - Mailjet: host=in-v3.mailjet.com, port=587, security=starttls,
+    auth_mechanism=Plain
+
+  - Brevo (Sendinblue): host=smtp-relay.brevo.com, port=587,
+    security=starttls
+
+  - SMTP2GO: host=mail.smtp2go.com, port=587, security=starttls
+
+
+  Note: Microsoft Outlook/Office 365 no longer supports basic SMTP auth and
+  requires OAuth2, which Vaultwarden does not support."
 changeLog:
   - date: 2022-11-19
     description: first release
+  - date: 2026-06-03
+    description: Added SMTP email support fields
 links:
   - label: Documentation
     url: https://github.com/dani-garcia/vaultwarden/wiki
@@ -41,6 +65,52 @@ schema:
       type: string
       title: App Service Image
       default: vaultwarden/server:latest
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: ""
+      description:
+        Hostname of your SMTP server. Leave empty to disable email (password
+        hints will be shown in-app instead).
+    smtpFrom:
+      type: string
+      title: SMTP From Address
+      default: ""
+      description:
+        Email address used as the sender (e.g. vaultwarden@example.com).
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: Vaultwarden
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: ""
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
+    smtpSecurity:
+      type: string
+      title: SMTP Security
+      default: starttls
+      description:
+        "Secure connection type: starttls (port 587), force_tls (port 465), or
+        off (port 25)."
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpAuthMechanism:
+      type: string
+      title: SMTP Auth Mechanism
+      default: ""
+      description:
+        "Authentication mechanism used by your provider. Leave empty for the
+        default (Plain + Login for SSL, nothing for non-SSL). Set to \"Login\"
+        for SendGrid (username: apikey, password: your SG.* API key) and
+        Outlook/Office 365. Possible values: Plain, Login, Xoauth2 (comma-
+        separated for multiple)."
 benefits:
   - title: Self-hosted deployment
     description:
