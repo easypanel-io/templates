@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to v0.57.7.10
   - date: 2026-02-21
     description: Version bumped to v0.58.7
+  - date: 2026-05-04
+    description: Version bumped to v0.60.3.6
 links:
   - label: Website
     url: https://www.metabase.com/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: metabase/metabase:v0.58.7
+      default: metabase/metabase:v0.60.3.6
     metabaseSiteName:
       type: string
       title: Metabase Site Name (Title)
