@@ -26,6 +26,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-21
     description: Version bumped to 0.12.1
+  - date: 2026-05-01
+    description: Version bumped to 1.2.2
 links:
   - label: Website
     url: https://imagor.net/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shumc/imagor-studio:0.12.1
+      default: shumc/imagor-studio:1.2.2
 
 benefits:
   - title: Non-Destructive Editing

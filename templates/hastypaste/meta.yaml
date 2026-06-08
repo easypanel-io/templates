@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 2.1.0
   - date: 2025-12-25
     description: Version bumped to 2.3.0
+  - date: 2026-04-29
+    description: Version bumped to 2.3.1
 links:
   - label: Documentation
     url: https://enchantedcode.co.uk/hasty-paste/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/enchant97/hasty-paste:2.3.0
+      default: ghcr.io/enchant97/hasty-paste:2.3.1
     redisServiceName:
       type: string
       title: Redis Service Name
