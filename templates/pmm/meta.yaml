@@ -38,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: percona/pmm-server:3
+      default: percona/pmm-server:3.8.0
     pmmDataRetention:
       type: string
       title: PMM Data Retention
@@ -58,8 +58,8 @@ benefits:
       bottlenecks affecting application performance.
   - title: Long-Term Metrics Storage
     description:
-      Persist PMM data in a dedicated volume so historical metrics and trends are
-      retained across restarts and upgrades.
+      Persist PMM data in a dedicated volume so historical metrics and trends
+      are retained across restarts and upgrades.
 features:
   - title: Built-in Dashboards
     description:
