@@ -1,0 +1,96 @@
+name: Super Productivity
+description:
+  Super Productivity is an advanced open-source to-do list and time tracking app
+  with Timeboxing, Pomodoro/Flowtime timers, Eisenhower Matrix boards, Kanban
+  views, and scheduled tasks. It integrates with Jira, GitLab, GitHub, and
+  OpenProject to pull in issues directly as tasks. The self-hosted web version
+  includes a built-in WebDAV sync server so your data stays on your own
+  infrastructure, syncing seamlessly across all your devices.
+instructions:
+  After deploying, open the app and go to Settings → Sync → WebDAV to verify the
+  pre-configured sync. The WebDAV password you set in the template is used for
+  authentication. The WebDAV server is proxied through the app at the /webdav/
+  path — no separate port or domain is required.
+changeLog:
+  - date: 2026-06-08
+    description: First release
+links:
+  - label: Website
+    url: https://super-productivity.com
+  - label: Docs
+    url: https://github.com/super-productivity/super-productivity/blob/master/docs
+  - label: GitHub
+    url: https://github.com/super-productivity/super-productivity
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - webdavServiceImage
+    - webdavUsername
+    - webdavPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: super-productivity
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: johannesjo/super-productivity:v18.9.1
+    webdavServiceImage:
+      type: string
+      title: WebDAV Service Image
+      default: hacdias/webdav:v5.11.10
+    webdavUsername:
+      type: string
+      title: WebDAV Username
+      default: admin
+    webdavPassword:
+      type: string
+      title: WebDAV Password
+benefits:
+  - title: Local-First & Privacy-Focused
+    description:
+      Super Productivity stores all data locally in your browser. Sync via your
+      own WebDAV server — no third-party cloud service ever touches your tasks
+      or time logs.
+  - title: Powerful Time Tracking
+    description:
+      Built-in Timeboxing, Pomodoro, Flowtime, and Countdown timers help you
+      stay focused. Every task automatically tracks time spent so you have
+      accurate logs without extra effort.
+  - title: Issue Tracker Integrations
+    description:
+      Pull issues directly from Jira, GitLab, GitHub, and OpenProject into your
+      task list, update their status without leaving the app, and log time back
+      to the original issue.
+  - title: Flexible Views
+    description:
+      Switch between Today, Schedule, Eisenhower Matrix, Kanban boards, and a
+      full task list. Filter by project, tag, or due date to see exactly what
+      matters right now.
+features:
+  - title: WebDAV Sync
+    description:
+      Sync your tasks and time logs across devices using the bundled WebDAV
+      server. All traffic stays on your own infrastructure.
+  - title: Pomodoro & Flowtime Timers
+    description:
+      Choose between classic Pomodoro intervals, flexible Flowtime sessions, or
+      a plain countdown to match your work style.
+  - title: Eisenhower Matrix & Kanban
+    description:
+      Prioritize tasks visually with the Eisenhower Matrix or organize work with
+      Kanban boards — both available out of the box.
+  - title: Jira / GitLab / GitHub Integration
+    description:
+      Connect to issue trackers to import tasks, update statuses, and log time
+      directly without switching between tools.
+tags:
+  - Productivity
+  - Task Management
+  - Time Tracking
