@@ -19,7 +19,8 @@ instructions: null
 changeLog:
   - date: 2025-12-15
     description: Template Release
-
+  - date: 2026-02-24
+    description: Version bumped to 2.15.3
 links:
   - label: Docker Hub
     url: https://hub.docker.com/r/rostislavdugin/postgresus
@@ -43,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rostislavdugin/charts/postgresus:2.5.1
+      default: ghcr.io/rostislavdugin/charts/postgresus:2.15.3
 
 benefits:
   - title: Web-Based Database Management

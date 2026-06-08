@@ -36,6 +36,11 @@ schema:
     - appServiceImage
     - databaseServiceName
     - clickhouseServiceName
+    - mailerEmail
+    - smtpHostAddr
+    - smtpHostPort
+    - smtpUserName
+    - smtpUserPwd
   properties:
     appServiceName:
       type: string
@@ -53,6 +58,26 @@ schema:
       type: string
       title: Database Service Name
       default: plausible-clickhouse
+    mailerEmail:
+      type: string
+      title: Mailer Email
+      default: noreply@xxxxx.com
+    smtpHostAddr:
+      type: string
+      title: SMTP Host Address
+      default: smtp-relay.brevo.com
+    smtpHostPort:
+      type: string
+      title: SMTP Host Port
+      default: "587"
+    smtpUserName:
+      type: string
+      title: SMTP User Name
+      default: xxxxxxx@smtp-brevo.com
+    smtpUserPwd:
+      type: string
+      title: SMTP User Password
+      default: xxxxxxxxx
 benefits:
   - title: Simple and Intuitive Analytics
     description:

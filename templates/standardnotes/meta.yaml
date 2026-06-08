@@ -9,6 +9,10 @@ instructions: null
 changeLog:
   - date: 2025-09-16
     description: Template Release (9b023782830a4742b31cd3696cc2f8fff22e0936)
+  - date: 2026-02-24
+    description: Version bumped to ff58de30fb4d8093f5056b5c4789163e81edf632
+  - date: 2026-05-07
+    description: Version bumped to f4a94811848ea19550703d5dcd2b446091bf9536
 links:
   - label: Documentation
     url: https://docs.standardnotes.com/self-hosting/getting-started
@@ -31,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: Web Service Image
-      default: standardnotes/web:9b023782830a4742b31cd3696cc2f8fff22e0936
+      default: standardnotes/web:f4a94811848ea19550703d5dcd2b446091bf9536
 
 benefits:
   - title: End-to-End Encryption
