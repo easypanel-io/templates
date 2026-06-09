@@ -28,6 +28,8 @@ changeLog:
     description: Update to 2.2.15
   - date: 2026-02-21
     description: Update to 2.2.17
+  - date: 2026-05-04
+    description: Update to 2.2.19
 links:
   - label: Website
     url: https://miniflux.app/
@@ -64,7 +66,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: miniflux/miniflux:2.2.17
+      default: miniflux/miniflux:2.2.19
     databaseServiceName:
       type: string
       title: Database Service Name

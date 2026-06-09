@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 5.19.3
   - date: 2025-12-29
     description: Version bumped to 6.0.4
+  - date: 2026-05-05
+    description: Version bumped to 6.1.1
 links:
   - label: Website
     url: https://radarr.video/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/radarr:6.0.4
+      default: linuxserver/radarr:6.1.1
 benefits:
   - title: Automated Movie Management
     description:

@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 6
   - date: 2026-02-18
     description: Version bumped to 6.2.4
+  - date: 2026-04-29
+    description: Version bumped to 6.3.4
 links:
   - label: Website
     url: https://getdashdot.com/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mauricenino/dashdot:6.2.4
+      default: mauricenino/dashdot:6.3.4
 benefits:
   - title: Modern Server Dashboard
     description:

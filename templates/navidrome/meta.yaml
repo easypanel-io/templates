@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 0.59.0
   - date: 2026-02-21
     description: Version bumped to 0.60.3
+  - date: 2026-05-08
+    description: Version bumped to pr-5351
 links:
   - label: Website
     url: https://www.navidrome.org/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: deluan/navidrome:0.60.3
+      default: deluan/navidrome:pr-5351
 benefits:
   - title: Personal Streaming Service
     description:
