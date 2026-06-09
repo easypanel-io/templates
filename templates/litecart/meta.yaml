@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2024-04-04
     description: First Release
+  - date: 2026-05-04
+    description: Version bumped to v0.2.6
 links:
   - label: Website
     url: https://www.litecart.net/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shurco/litecart:v0.1.12
+      default: shurco/litecart:v0.2.6
 benefits:
   - title: User-Friendly
     description:

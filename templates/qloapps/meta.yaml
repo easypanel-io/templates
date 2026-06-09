@@ -10,6 +10,8 @@ instructions: Login email admin@qloapps.local and password 12345678
 changeLog:
   - date: 2025-04-07
     description: First Release
+  - date: 2026-05-08
+    description: Version bumped to 1.6.1
 links:
   - label: Website
     url: https://qloapps.com/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: webkul/qloapps_docker:1.6.0
+      default: webkul/qloapps_docker:1.6.1
 benefits:
   - title: Complete Hotel Management
     description:

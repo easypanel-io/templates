@@ -9,6 +9,8 @@ instructions:
 changeLog:
   - date: 2025-04-14
     description: First Release
+  - date: 2026-05-18
+    description: Update to v2.0.0-beta.28
 links:
   - label: Website
     url: https://khoj.dev
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/khoj-ai/khoj:1.42.9
+      default: ghcr.io/khoj-ai/khoj:2.0.0-beta.28
     databaseImage:
       type: string
       title: Database Image
@@ -48,7 +50,7 @@ schema:
     searxngImage:
       type: string
       title: SearxNG Image
-      default: searxng/searxng:2025.4.12-391bb1268
+      default: searxng/searxng:2026.1.16-697f53ecd
     adminEmail:
       type: string
       title: Admin Email

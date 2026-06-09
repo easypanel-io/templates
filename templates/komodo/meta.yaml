@@ -7,6 +7,8 @@ description:
   metrics visualization.
 instructions: null
 changeLog:
+  - date: 2026-05-19
+    description: Updated to v2.2.0
   - date: 2025-08-25
     description: First release
 links:
@@ -35,11 +37,11 @@ schema:
     appServiceImage:
       type: string
       title: Komodo Core Image
-      default: ghcr.io/moghtech/komodo-core:1.19.4
+      default: ghcr.io/moghtech/komodo-core:2.2.0
     peripheryImage:
       type: string
       title: Komodo Periphery Image
-      default: ghcr.io/moghtech/komodo-periphery:1.19.4
+      default: ghcr.io/moghtech/komodo-periphery:2.2.0
     adminUsername:
       type: string
       title: Admin Username
