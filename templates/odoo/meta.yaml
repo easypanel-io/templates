@@ -31,12 +31,13 @@ links:
 contributors:
   - name: DrMxrcy
     url: https://github.com/DrMxrcy
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
-    - databaseServiceName
   properties:
     appServiceName:
       type: string

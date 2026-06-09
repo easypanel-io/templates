@@ -1,0 +1,79 @@
+name: Rachoon
+description:
+  Rachoon is a self-hosted invoicing platform for creating and tracking
+  invoices, managing clients, and exporting professional PDFs. This template
+  deploys Rachoon with PostgreSQL and Gotenberg as required dependencies.
+
+instructions:
+  After deployment, open your domain and create your account in the Rachoon UI.
+  The APP_KEY is generated automatically unless you provide one. Database values
+  are wired automatically to the bundled PostgreSQL service.
+
+changeLog:
+  - date: 2026-04-07
+    description: Initial template release
+
+links:
+  - label: Documentation
+    url: https://github.com/ad-on-is/rachoon#readme
+  - label: GitHub
+    url: https://github.com/ad-on-is/rachoon
+  - label: Container registry
+    url: https://github.com/ad-on-is/rachoon/pkgs/container/rachoon
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dbServiceImage
+    - gotenbergServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rachoon
+    appServiceImage:
+      type: string
+      title: Rachoon Image
+      default: ghcr.io/ad-on-is/rachoon:v1.3.7
+    gotenbergServiceImage:
+      type: string
+      title: Gotenberg Image
+      default: gotenberg/gotenberg:8.30.1
+    appKey:
+      type: string
+      title: APP_KEY (optional)
+      description: Leave empty to auto-generate a secure key
+
+benefits:
+  - title: End-to-end invoicing stack
+    description:
+      Deploy invoice management app, PDF generation service, and database
+      together.
+  - title: Self-hosted billing data
+    description: Keep invoice and customer data on infrastructure you control.
+  - title: Ready for PDF workflows
+    description:
+      Includes Gotenberg integration used by Rachoon for document rendering.
+
+features:
+  - title: Invoice and client management
+    description:
+      Create, manage, and track invoices and client records from one UI.
+  - title: PDF export support
+    description: Built-in Gotenberg service enables invoice PDF generation.
+  - title: Persistent PostgreSQL storage
+    description: Data is stored in the PostgreSQL service volume for durability.
+
+tags:
+  - Invoicing
+  - Billing
+  - Finance
+  - PostgreSQL
+  - Gotenberg
+  - Self-hosted

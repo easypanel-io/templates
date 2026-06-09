@@ -1,0 +1,159 @@
+name: LibreChat
+description:
+  LibreChat is a free, open source clone of ChatGPT that supports multiple AI
+  providers and models. It offers a familiar chat interface with support for
+  OpenAI, Anthropic, Google, Azure OpenAI, and many other AI providers.
+  LibreChat features conversation management, preset configurations, plugin
+  support, multi-user authentication, and extensive customization options. It
+  includes advanced features like RAG (Retrieval Augmented Generation), web
+  search capabilities, file uploads, image generation, and comprehensive user
+  management. Perfect for organizations and individuals who want ChatGPT-like
+  functionality while maintaining full control over their data and
+  conversations.
+instructions: Configure the OpenAI API Key.
+changeLog:
+  - date: 2025-07-21
+    description: Initial release (aec1777a90c03314ff5dd9e218c7ce179181eba2)
+links:
+  - label: Website
+    url: https://librechat.ai
+  - label: Documentation
+    url: https://docs.librechat.ai
+  - label: GitHub
+    url: https://github.com/danny-avila/LibreChat
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - librechatImage
+    - meilisearchImage
+    - vectorDbImage
+    - ragApiImage
+    - appTitle
+    - allowEmailLogin
+    - allowRegistration
+    - openaiApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: librechat
+    librechatImage:
+      type: string
+      title: LibreChat Image
+      default: ghcr.io/danny-avila/librechat-dev:aec1777a90c03314ff5dd9e218c7ce179181eba2
+    meilisearchImage:
+      type: string
+      title: Meilisearch Image
+      default: getmeili/meilisearch:v1.12.3
+    vectorDbImage:
+      type: string
+      title: Vector Database Image
+      default: ankane/pgvector:v0.5.1
+    ragApiImage:
+      type: string
+      title: RAG API Image
+      default: ghcr.io/danny-avila/librechat-rag-api-dev-lite:8cc6695544457e4164d6f8275f0805f051f363af
+    appTitle:
+      type: string
+      title: Application Title
+      default: LibreChat
+      description: The title displayed in the application header
+    allowEmailLogin:
+      type: boolean
+      title: Allow Email Login
+      default: true
+      description: Enable email/password authentication
+    allowRegistration:
+      type: boolean
+      title: Allow Registration
+      default: true
+      description: Allow new users to register accounts
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: The API key for the OpenAI provider
+benefits:
+  - title: Multi-Provider AI Support
+    description:
+      Support for OpenAI, Anthropic, Google, Azure OpenAI, and many other AI
+      providers in a single interface with seamless model switching.
+  - title: ChatGPT-like Experience
+    description:
+      Familiar chat interface with conversation management, message editing, and
+      all the features you expect from modern AI chat applications.
+  - title: RAG Capabilities
+    description:
+      Upload and chat with your own documents using advanced Retrieval Augmented
+      Generation with vector search and semantic understanding.
+  - title: Self-Hosted Privacy
+    description:
+      Complete control over your conversations and data with self-hosted
+      deployment, ensuring privacy and compliance with your requirements.
+  - title: Advanced Features
+    description:
+      Plugin support, web search, image generation, file uploads, conversation
+      presets, and extensive customization options.
+  - title: Multi-User Support
+    description:
+      User authentication, role management, conversation sharing, and
+      administration tools for team and organizational use.
+  - title: Enterprise Ready
+    description:
+      Scalable architecture with database persistence, search capabilities, and
+      comprehensive configuration options for production use.
+features:
+  - title: Multiple AI Providers
+    description:
+      Connect to OpenAI, Anthropic, Google, Azure OpenAI, and dozens of other AI
+      providers through a unified chat interface.
+  - title: Conversation Management
+    description:
+      Organize conversations, search chat history, export conversations, and
+      manage multiple concurrent chats with different models.
+  - title: RAG Integration
+    description:
+      Upload documents and chat with your own data using vector embeddings and
+      semantic search for context-aware responses.
+  - title: Plugin System
+    description:
+      Extend functionality with plugins for web search, image generation, code
+      execution, and integration with external services.
+  - title: User Authentication
+    description:
+      Secure user management with email authentication, social login options,
+      and role-based access controls.
+  - title: Preset Configurations
+    description:
+      Create and share conversation presets with custom prompts, parameters, and
+      model configurations for consistent interactions.
+  - title: File Upload Support
+    description:
+      Upload and share files in conversations, including images, documents, and
+      other media with AI analysis capabilities.
+  - title: Search Functionality
+    description:
+      Powerful search across all conversations and uploaded content using
+      Meilisearch for fast and accurate results.
+  - title: Admin Dashboard
+    description:
+      Comprehensive administration interface for user management, system
+      configuration, and monitoring of application usage.
+  - title: API Integration
+    description:
+      RESTful API for programmatic access, webhook support, and integration with
+      external applications and workflows.
+tags:
+  - AI
+  - ChatGPT
+  - OpenAI
+  - Anthropic
+  - Google
+  - Multi-Provider
+  - RAG
+  - Chat Interface
+  - Self-Hosted
+  - Enterprise

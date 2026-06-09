@@ -22,6 +22,8 @@ changeLog:
   - date: 2026-02-16
     description: Added Bootstrap environment variable
 links:
+  - label: Website
+    url: https://dittofeed.com
   - label: Documentation
     url: https://docs.dittofeed.com/introduction
   - label: Github
@@ -61,7 +63,7 @@ schema:
     minioImage:
       type: string
       title: Minio Service Image
-      default: minio/minio:latest
+      default: minio/minio:RELEASE.2025-07-23T15-54-02Z
     temporalImage:
       type: string
       title: Temporal Service Image

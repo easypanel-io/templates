@@ -38,11 +38,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: codewithcj/sparkyfitness:v0.16.4.2
+      default: codewithcj/sparkyfitness:v0.16.5.4
     serverImage:
       type: string
       title: Server Image
-      default: codewithcj/sparkyfitness_server:v0.16.4.2
+      default: codewithcj/sparkyfitness_server:v0.16.5.4
     apiEncryptionKey:
       type: string
       title: API Encryption Key (Auto-generated if empty)
@@ -77,10 +77,10 @@ schema:
     allowPrivateNetworkCors:
       type: boolean
       title: Allow Private Network CORS
-      default: false
+      default: true
       description:
-        "Allow CORS from private network addresses. Only enable on
-        private/self-hosted networks. Do NOT enable on shared hosting or cloud."
+        "Required for current upstream behavior so EXTRA_TRUSTED_ORIGINS is
+        applied. Disable only if upstream removes this coupling."
     disableSignup:
       type: boolean
       title: Disable Signup
@@ -137,6 +137,11 @@ schema:
       title: Email From (Optional)
       default: ""
       description: Email address to send from (e.g., no-reply@example.com)
+    customDomain:
+      type: string
+      title: Custom Domain (Optional)
+      default: ""
+      description: Custom domain for the application (e.g., app.example.com)
 benefits:
   - title: Privacy-First Health Tracking
     description:

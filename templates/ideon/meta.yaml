@@ -1,0 +1,77 @@
+name: Ideon
+description:
+  Ideon is a self-hosted visual workspace that lets teams organize repositories,
+  notes, links, and files on an infinite collaborative canvas. It combines
+  spatial organization with real-time sync so project context stays visible and
+  connected.
+
+instructions:
+  Deploy the template and wait for the database and app services to start, then
+  open the app URL and create your account. Check the documentation for further
+  configurations
+
+changeLog:
+  - date: "2026-03-31"
+    description: "Initial template release"
+
+links:
+  - label: Website
+    url: https://theideon.com/
+  - label: Documentation
+    url: https://github.com/3xpyth0n/ideon#readme
+  - label: GitHub
+    url: https://github.com/3xpyth0n/ideon
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ideon
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/3xpyth0n/ideon:v0.7.7
+
+benefits:
+  - title: Spatial Project Context
+    description:
+      Organize related work on an infinite canvas instead of splitting context
+      across disconnected tabs and tools.
+  - title: Collaborative by Default
+    description:
+      Share workspaces with teammates and collaborate in real time on project
+      planning and documentation.
+  - title: Self-Hosted Data Control
+    description:
+      Run the full stack in your own infrastructure with persistent storage and
+      PostgreSQL-backed state.
+
+features:
+  - title: Infinite Canvas Workspace
+    description:
+      Place notes, repositories, links, and files visually to mirror how your
+      team thinks about projects.
+  - title: Git Provider Integrations
+    description:
+      Connect to GitHub, GitLab, and other providers to bring repository context
+      directly into your workspace.
+  - title: Persistent Storage
+    description:
+      Preserve workspace data and uploads across updates through mounted
+      persistent volumes.
+
+tags:
+  - Workspace
+  - Collaboration
+  - Productivity
+  - Knowledge Management
+  - Self-Hosted

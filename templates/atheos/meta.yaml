@@ -1,0 +1,94 @@
+name: Atheos
+description:
+  Atheos is a self-hosted browser-based cloud IDE, updated from Codiad IDE with
+  a modern approach to web development. This lightweight development environment
+  provides fast, interactive coding without the massive overhead of desktop
+  editors. Atheos features built-in Git integration, a comprehensive plugin
+  system, multi-user support with permissions, and supports multiple programming
+  languages. Perfect for developers who want a complete IDE that runs entirely
+  in the browser with minimal server requirements and maximum functionality.
+
+instructions: null
+
+changeLog:
+  - date: "2025-07-02"
+    description: "Initial release"
+
+links:
+  - label: "GitHub Repository"
+    url: "https://github.com/Atheos/Atheos"
+  - label: "Official Website"
+    url: "https://www.atheos.io"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/Ahson-Shaikh"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "atheos"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "hlsiira/atheos:latest"
+
+benefits:
+  - title: "Browser-Based Development"
+    description:
+      "Complete IDE running entirely in your browser - no desktop software
+      installation required."
+  - title: "Lightweight & Fast"
+    description:
+      "Minimal server footprint with fast, interactive development experience
+      without desktop editor overhead."
+  - title: "Self-Hosted Control"
+    description:
+      "Complete control over your development environment and code with
+      self-hosted deployment."
+
+features:
+  - title: "Modern Code Editor"
+    description:
+      "Advanced code editing with syntax highlighting, code completion, and
+      multiple language support."
+  - title: "Built-in Git Integration"
+    description:
+      "Seamless version control with integrated Git support for repository
+      management."
+  - title: "Plugin System"
+    description:
+      "Extensible architecture with support for themes, plugins, and
+      customizations."
+  - title: "Multi-User Support"
+    description:
+      "User permission system allowing multiple developers to work on projects
+      with proper access control."
+  - title: "File Management"
+    description:
+      "Complete file system management with upload, download, and directory
+      operations."
+  - title: "Project Management"
+    description:
+      "Organize and manage multiple projects with workspace functionality and
+      project switching."
+
+tags:
+  - "IDE"
+  - "Code Editor"
+  - "Cloud IDE"
+  - "Browser-Based"
+  - "Self-Hosted"
+  - "Git Integration"
+  - "Multi-User"
+  - "Plugin System"
+  - "Web Development"
+  - "PHP"
+  - "JavaScript"
+  - "Development Environment"
