@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
   const jwtAccessTokenSecret = randomString(64);
   const jwtRefreshTokenSecret = randomString(64);
   const redisPassword = randomPassword();
+  const clickhousePassword = randomPassword();
   const apiKey = randomString(64);
 
   services.push({
@@ -19,12 +20,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-frontend`,
       source: { type: "image", image: input.frontendImage },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
-        },
-      ],
+      domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 3000 }],
       env: [
         `API_URL=https://$(PROJECT_NAME)-${input.appServiceName}-api.$(EASYPANEL_HOST)`,
       ].join("\n"),
@@ -39,16 +35,15 @@ export function generate(input: Input): Output {
       env: [
         `JWT_ACCESS_TOKEN_SECRET=${jwtAccessTokenSecret}`,
         `JWT_REFRESH_TOKEN_SECRET=${jwtRefreshTokenSecret}`,
-        `EMAIL=${input.adminEmail}`,
-        `PASSWORD=${input.adminPassword}`,
         `API_KEY=${apiKey}`,
         `IP_GEOLOCATION_DB_PATH=`,
-        `REDIS_HOST=$(PROJECT_NAME)-${input.appServiceName}-redis`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `REDIS_PASSWORD=${redisPassword}`,
         `CLICKHOUSE_HOST=http://$(PROJECT_NAME)-${input.appServiceName}-clickhouse`,
-        `CLICKHOUSE_PASSWORD=`,
-        `CLICKHOUSE_DATABASE=analytics`,
+        `CLICKHOUSE_PORT=8123`,
         `CLICKHOUSE_USER=default`,
+        `CLICKHOUSE_PASSWORD=${clickhousePassword}`,
+        `CLICKHOUSE_DATABASE=analytics`,
       ].join("\n"),
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 5005 }],
     },
@@ -68,10 +63,9 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-clickhouse`,
       source: { type: "image", image: input.clickhouseImage },
       env: [
-        `CLICKHOUSE_DATABASE=analytics`,
+        `CLICKHOUSE_DB=analytics`,
         `CLICKHOUSE_USER=default`,
-        `CLICKHOUSE_PORT=8123`,
-        `CLICKHOUSE_PASSWORD=`,
+        `CLICKHOUSE_PASSWORD=${clickhousePassword}`,
       ].join("\n"),
       mounts: [
         {

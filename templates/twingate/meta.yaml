@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2026-03-27
     description: Initial template release
+  - date: 2026-03-27
+    description: Version bumped to 1.88.0
 links:
   - label: Website
     url: https://www.twingate.com
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: Connector Image
-      default: twingate/connector:1.85.0
+      default: twingate/connector:1.88.0
     twingateNetwork:
       type: string
       title: Twingate Network (Tenant Name)

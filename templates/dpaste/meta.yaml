@@ -10,6 +10,8 @@ instructions:
 changeLog:
   - date: 2025-04-10
     description: First Release
+  - date: 2026-04-29
+    description: Version bumped to 64068f7a
 links:
   - label: Github
     url: https://github.com/DarrenOfficial/dpaste
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: darrenofficial/dpaste:b24ab3fd
+      default: darrenofficial/dpaste:64068f7a
 benefits:
   - title: Simple Sharing
     description: Quickly share code snippets and text with others.
