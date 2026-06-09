@@ -1,0 +1,113 @@
+name: TREK
+description:
+  TREK is a self-hosted, real-time collaborative travel planner with interactive
+  maps, budgets, packing lists, a journey journal, and an AI/MCP server built
+  in. It supports OIDC/SSO, 2FA, WebSocket collaboration, PWA installation, and
+  runs as a single Docker container with no external database required.
+instructions:
+  Log in with the Admin Email and Admin Password you set in the template form.
+  You will be prompted to change your password after the first login. The
+  ENCRYPTION_KEY is auto-generated at deploy time — back it up from the service
+  environment variables if you need to migrate your data volume later. For
+  OIDC/SSO, add OIDC_ISSUER, OIDC_CLIENT_ID, OIDC_CLIENT_SECRET, and APP_URL
+  (your public domain) to the service environment variables after deploying.
+changeLog:
+  - date: 2026-06-09
+    description: First release
+links:
+  - label: Website
+    url: https://demo.liketrek.com
+  - label: GitHub
+    url: https://github.com/mauriceboe/TREK
+  - label: Docker Hub
+    url: https://hub.docker.com/r/mauriceboe/trek
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trek
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mauriceboe/trek:3.0.22
+    timezone:
+      type: string
+      title: Timezone (TZ database name)
+      default: UTC
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@trek.local
+    adminPassword:
+      type: string
+      title: Admin Password
+      description:
+        Initial admin password (any value works here — you will be forced to
+        change it after first login). Minimum 8 characters recommended.
+benefits:
+  - title: Real-Time Collaboration
+    description:
+      Multiple users can plan the same trip simultaneously via WebSocket —
+      changes appear instantly across all connected browsers with no refresh
+      needed.
+  - title: All-in-One Travel Suite
+    description:
+      Drag-and-drop day planner, interactive 3D maps, budget tracker, packing
+      lists, reservations, document manager, and a magazine-style journey
+      journal — everything in one container, no plugins required.
+  - title: Privacy-First Self-Hosting
+    description:
+      Runs entirely on your own server with no mandatory third-party services.
+      Data stays under your control with configurable OIDC/SSO, 2FA, and an
+      auto-generated encryption key for stored secrets.
+  - title: PWA & Offline Support
+    description:
+      Installable as a Progressive Web App on iOS and Android. A service worker
+      caches tiles and API responses so core features work even without a
+      network connection.
+features:
+  - title: Interactive Maps
+    description:
+      Leaflet or Mapbox GL maps with 3D buildings, terrain, photo markers,
+      clustering, and route visualization. Place search via Google Places or
+      free OpenStreetMap.
+  - title: Budget Tracking
+    description:
+      Category-based expense tracking with pie charts, per-person and per-day
+      splits, and multi-currency support for every trip.
+  - title: Packing Lists & Bag Tracker
+    description:
+      Template-based packing lists with member assignments, progress tracking,
+      and optional bag weight distribution.
+  - title: SSO / OIDC
+    description:
+      Integrate with any OpenID Connect provider (Google, Apple, Authentik,
+      Keycloak) for single sign-on. Supports OIDC-only mode and admin claim
+      mapping.
+  - title: MCP Server
+    description:
+      Built-in OAuth 2.1 authenticated MCP server exposes 150+ tools so AI
+      assistants can create trips, build packing lists, manage budgets, and
+      more.
+  - title: Atlas & Vacay Modules
+    description:
+      Track visited countries on a world map with travel stats and streaks
+      (Atlas), or plan time-off with a vacation calendar that respects country
+      holidays (Vacay).
+tags:
+  - Travel
+  - Planning
+  - Collaboration
+  - Maps
+  - PWA
