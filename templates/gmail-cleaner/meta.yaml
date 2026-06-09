@@ -1,0 +1,92 @@
+name: Gmail Cleaner
+description:
+  Gmail Cleaner is a privacy-focused self-hosted tool to bulk unsubscribe,
+  delete, archive, and mark Gmail messages as read by sender. It runs locally
+  with your own Google OAuth credentials and keeps auth tokens in persistent
+  storage.
+
+instructions:
+  Paste your downloaded Google OAuth client JSON into Credentials JSON before
+  deploying. In Google Cloud Console, add an Authorized redirect URI that uses
+  your OAuth host and external OAuth port (for example, https://your-domain/).
+  After deploy, open the app domain, click Sign In, and complete the OAuth flow.
+
+changeLog:
+  - date: 2026-04-09
+    description: Initial template release
+
+links:
+  - label: Documentation
+    url: https://github.com/Gururagavendra/gmail-cleaner#readme
+  - label: GitHub
+    url: https://github.com/gururagavendra/gmail-cleaner
+  - label: Setup video
+    url: https://youtu.be/CmOWn8Tm5ZE
+  - label: Container registry
+    url: https://github.com/gururagavendra/gmail-cleaner/pkgs/container/gmail-cleaner
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - credentialsJson
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gmail-cleaner
+    appServiceImage:
+      type: string
+      title: Gmail Cleaner Image
+      default: ghcr.io/gururagavendra/gmail-cleaner:v1.3.0
+    credentialsJson:
+      type: string
+      title: Credentials JSON
+      description: Paste the full Google OAuth client JSON content
+    oauthInternalPort:
+      type: number
+      title: OAuth Callback Internal Port
+      default: 8767
+    oauthExternalPort:
+      type: number
+      title: OAuth Callback External Port
+      default: 8767
+    oauthHost:
+      type: string
+      title: OAuth Host
+      default: $(PRIMARY_DOMAIN)
+      description: Hostname used when building OAuth redirect URI
+    webAuth:
+      type: boolean
+      title: Enable Web Authentication
+      default: true
+
+benefits:
+  - title: Inbox cleanup at scale
+    description:
+      Process large amounts of email by sender with bulk actions and filters.
+  - title: Privacy-first deployment
+    description: Runs on your infrastructure with your own Google credentials.
+  - title: Persistent auth and data
+    description: Stores OAuth token and app data in a mounted volume.
+
+features:
+  - title: Bulk unsubscribe and delete
+    description:
+      Remove unwanted newsletters and sender groups with progress tracking.
+  - title: Mark read, archive, and labels
+    description: Apply common Gmail mailbox actions in bulk.
+  - title: OAuth callback support
+    description: Exposes the callback listener port for Google OAuth login flow.
+
+tags:
+  - Gmail
+  - Email
+  - Cleanup
+  - Privacy
+  - Automation

@@ -1,0 +1,92 @@
+name: FileWizard
+description:
+  FileWizard is a self hosted browser based utility for file conversion OCR and
+  audio transcription. It wraps FFmpeg LibreOffice Pandoc ImageMagick
+  faster-whisper Tesseract and more behind a FastAPI backend and a simple web
+  UI.
+instructions:
+  After deploy open your domain on port 8000. For local trusted use keep Local
+  only enabled. To use OIDC authentication set Local only to false then add
+  OAuth settings in settings.yml.
+
+changeLog:
+  - date: "2026-04-03"
+    description: "Initial Template Release"
+
+links:
+  - label: Documentation
+    url: https://github.com/LoredCast/filewizard/wiki
+  - label: GitHub
+    url: https://github.com/LoredCast/filewizard
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: filewizard
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: loredcast/filewizard:0.4-latest
+    localOnly:
+      type: boolean
+      title: Local Only (disable for OIDC)
+      default: true
+    downloadKokoroOnStartup:
+      type: boolean
+      title: Download Kokoro on Startup
+      default: true
+    ompNumThreads:
+      type: string
+      title: OMP Threads
+      default: "1"
+    transcriptionDevice:
+      type: string
+      title: Transcription Device (optional)
+      description: cpu or cuda when using a GPU image
+    transcriptionComputeType:
+      type: string
+      title: Transcription Compute Type (optional)
+      description: e.g. int8 float16 int8_float16 for GPU builds
+    transcriptionDeviceIndex:
+      type: string
+      title: Transcription Device Index (optional)
+      description: GPU index when multiple devices are available
+benefits:
+  - title: Many Conversion Pipelines
+    description:
+      Convert documents media and images using well known CLI tools configured
+      from the UI and settings file.
+  - title: OCR and Transcription
+    description:
+      Run Tesseract OCR and Whisper style transcription for local speech to text
+      workflows.
+  - title: Self Hosted Control
+    description:
+      Keep files on your own storage volumes with a straightforward Docker image
+      from the upstream maintainers.
+features:
+  - title: Format Conversion
+    description:
+      Broad format support through LibreOffice Pandoc FFmpeg Ghostscript and
+      related tools.
+  - title: Job History
+    description:
+      Background jobs with status updates and persistent history in the app.
+  - title: Configurable Tools
+    description:
+      Extend or tune conversions using settings.yml in the mounted config
+      volume.
+tags:
+  - Files
+  - Conversion
+  - OCR
+  - Transcription
+  - FastAPI
