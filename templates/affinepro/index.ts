@@ -9,8 +9,9 @@ export function generate(input: Input): Output {
   const appEnv = [
     `REDIS_SERVER_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
     `REDIS_SERVER_PASSWORD=${redisPassword}`,
-    `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+    `DATABASE_URL=postgresql://affine:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/affine`,
     `AFFINE_SERVER_HOST=$(PRIMARY_DOMAIN)`,
+    `AFFINE_INDEXER_ENABLED=false`,
   ];
 
   if (input.mailerHost) {
@@ -89,6 +90,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
       user: "affine",
+      databaseName: "affine",
       image: "pgvector/pgvector:pg16",
     },
   });

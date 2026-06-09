@@ -1,5 +1,8 @@
 name: Budge
-description: Budge is a personal finance management application that helps you track your expenses, manage budgets, and monitor your financial goals. It provides a user-friendly interface for managing your personal finances.
+description:
+  Budge is a personal finance management application that helps you track your
+  expenses, manage budgets, and monitor your financial goals. It provides a
+  user-friendly interface for managing your personal finances.
 instructions: null
 changeLog:
   - date: 2025-04-29
@@ -28,16 +31,22 @@ schema:
       default: lscr.io/linuxserver/budge:0.0.9
 benefits:
   - title: Personal Finance Management
-    description: Budge provides a comprehensive solution for managing your personal finances with an intuitive interface.
+    description:
+      Budge provides a comprehensive solution for managing your personal
+      finances with an intuitive interface.
   - title: Budget Tracking
-    description: Track your expenses and manage budgets to achieve your financial goals.
+    description:
+      Track your expenses and manage budgets to achieve your financial goals.
   - title: User-Friendly
-    description: Simple and intuitive interface makes it easy to manage your finances.
+    description:
+      Simple and intuitive interface makes it easy to manage your finances.
 features:
   - title: Expense Tracking
-    description: Track your daily expenses and categorize them for better organization.
+    description:
+      Track your daily expenses and categorize them for better organization.
   - title: Budget Management
-    description: Create and manage budgets for different categories and time periods.
+    description:
+      Create and manage budgets for different categories and time periods.
   - title: Financial Goals
     description: Set and track your financial goals with progress monitoring.
   - title: Reports and Analytics
@@ -51,4 +60,4 @@ tags:
   - Budget
   - Expense Tracking
   - Personal Finance
-  - Management 
+  - Management
