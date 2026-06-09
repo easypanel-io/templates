@@ -3,7 +3,7 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const jwtSecret = randomString(32);
+  const betterAuthSecret = randomString(32);
 
   services.push({
     type: "app",
@@ -20,27 +20,21 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        "SECRET_LOCAL_HOSTNAME=0.0.0.0",
-        "SECRET_PORT=3000",
-        `SECRET_HOST=https://$(PRIMARY_DOMAIN)`,
-        `SECRET_ROOT_USER=${input.rootUser}`,
-        `SECRET_ROOT_PASSWORD=${input.rootPassword}`,
-        `SECRET_ROOT_EMAIL=${input.rootEmail}`,
-        `SECRET_FILE_SIZE=${input.fileSize}`,
-        `SECRET_FORCED_LANGUAGE=${input.forcedLanguage}`,
-        `SECRET_JWT_SECRET=${jwtSecret}`,
-        `SECRET_MAX_TEXT_SIZE=${input.maxTextSize}`,
+        `NODE_ENV=production`,
+        `DATABASE_URL=file:/app/database/hemmelig.db`,
+        `BETTER_AUTH_SECRET=${betterAuthSecret}`,
+        `BETTER_AUTH_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       mounts: [
         {
           type: "volume",
-          name: "hemmelig-files",
-          mountPath: "/var/tmp/hemmelig/upload/files",
+          name: "hemmelig-database",
+          mountPath: "/app/database",
         },
         {
           type: "volume",
-          name: "hemmelig-database",
-          mountPath: "/home/node/hemmelig/database",
+          name: "hemmelig-uploads",
+          mountPath: "/app/uploads",
         },
       ],
     },

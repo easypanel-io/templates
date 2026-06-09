@@ -25,6 +25,8 @@ changeLog:
     description: Fixed image URL and version bumped to 2.224.2
   - date: 2026-02-21
     description: Version bumped to 2.240.0
+  - date: 2026-04-29
+    description: Version bumped to 2.255.0
 links:
   - label: Documentation
     url: https://ghostfolio.dev/docs/
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghostfolio/ghostfolio:2.240.0
+      default: ghostfolio/ghostfolio:2.255.0
 benefits:
   - title: Personal Finance Management
     description:
