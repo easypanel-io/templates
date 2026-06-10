@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-09-24
     description: First release (sha-54cdf4be36b85a7146685841c567cb6b4e96b69e)
+  - date: 2026-04-29
+    description: Version bumped to sha-ff8f813f493e89c7da056e7a3101ce2ef48e3960
 links:
   - label: Website
     url: https://www.dumbware.io/DumbDrop
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbdrop:sha-54cdf4be36b85a7146685841c567cb6b4e96b69e
+      default: dumbwareio/dumbdrop:sha-ff8f813f493e89c7da056e7a3101ce2ef48e3960
   benefits:
     - title: Simple File Sharing
       description:
