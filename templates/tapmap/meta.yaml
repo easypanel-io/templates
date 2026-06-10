@@ -1,0 +1,91 @@
+name: TapMap
+description:
+  TapMap is a real-time network monitoring and visualization tool that displays
+  internet connections on an interactive world map. It watches local socket
+  data, enriches IP addresses with MaxMind GeoLite2 geolocation, and renders
+  network activity live in the browser.
+instructions:
+  TapMap requires MaxMind GeoLite2 database files to display map locations.
+  Download GeoLite2-City.mmdb and GeoLite2-ASN.mmdb from MaxMind (free account
+  at https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) and upload
+  them to the mounted /data volume. Important; Full host-level network
+  monitoring requires the container to run with network_mode:host and pid:host,
+  which are not available in standard Easypanel deployments. In a container
+  environment TapMap will show container-level connections only. For complete
+  host visibility run TapMap directly on the host machine using the official
+  Docker Compose configuration.
+changeLog:
+  - date: 2026-06-10
+    description: First Release
+links:
+  - label: Website
+    url: https://olalie.github.io/tapmap/
+  - label: Github
+    url: https://github.com/olalie/tapmap
+  - label: Docker Hub
+    url: https://hub.docker.com/r/olalie/tapmap
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dataDir
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tapmap
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: olalie/tapmap:v1.7.2
+    dataDir:
+      type: string
+      title: Data Directory (Host Path)
+      default: /opt/tapmap/data
+      description:
+        Absolute path on the host to bind-mount as /data in the container. Place
+        GeoLite2-City.mmdb and GeoLite2-ASN.mmdb in this directory.
+
+benefits:
+  - title: Real-Time Network Map
+    description:
+      Visualizes active internet connections on an interactive world map,
+      updated live as connections open and close.
+  - title: Local-Only Processing
+    description:
+      All data is processed locally on your host. No telemetry, no external
+      requests, no data leaves your machine.
+  - title: 30-Day Rolling History
+    description:
+      Insights panel surfaces new connections and frequent activity over a
+      30-day rolling window for trend analysis.
+features:
+  - title: World Map Visualization
+    description:
+      Interactive world map showing where your connections go geographically
+      with hover and click for connection details.
+  - title: Daily Activity Reports
+    description:
+      Application recurrence patterns and provider analysis in a daily summary
+      report.
+  - title: Open Ports Discovery
+    description:
+      Discovers and displays open ports and LAN/LOCAL services running on your
+      network.
+  - title: GeoIP Enrichment
+    description:
+      Uses MaxMind GeoLite2 City and ASN databases for city-level and AS-level
+      IP address enrichment.
+  - title: No External Dependencies
+    description:
+      No external database required. All persistent data is stored in the /data
+      volume alongside the GeoIP databases.
+tags:
+  - Network Monitoring
+  - Visualization
+  - Privacy
+  - Security
