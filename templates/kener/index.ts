@@ -15,6 +15,7 @@ export function generate(input: Input): Output {
     `TZ=${input.timezone}`,
     `KENER_SECRET_KEY=${kenerSecret}`,
     `ORIGIN=https://$(PRIMARY_DOMAIN)`,
+    `REDIS_URL=redis://$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
   ];
 
   if (input.databaseType === "postgres") {
@@ -54,16 +55,19 @@ export function generate(input: Input): Output {
           name: "database",
           mountPath: "/app/database",
         },
-        {
-          type: "volume",
-          name: "uploads",
-          mountPath: "/app/uploads",
-        },
       ],
     },
   });
 
-  // Add database service if not using SQLite
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: randomPassword(),
+      image: input.redisServiceImage,
+    },
+  });
+
   if (input.databaseType === "postgres") {
     services.push({
       type: "postgres",

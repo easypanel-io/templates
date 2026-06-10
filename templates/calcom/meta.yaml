@@ -12,7 +12,14 @@ description:
   doctors, companies, teachers, and experts. The app is available in over 26
   languages and can be embedded anywhere for easy access. It also offers simple
   rescheduling and requires confirmation to ensure smooth scheduling.
-instructions: null
+instructions: |
+  After deployment, open the app URL and complete the onboarding wizard to
+  create your admin account. SMTP credentials are required for booking
+  confirmation and reminder emails — set them in the form before deploying.
+  For Gmail, use an App Password (not your account password) and set the
+  SMTP host to smtp.gmail.com, port 587. For other providers check their
+  SMTP documentation. The Prisma Studio option exposes a database browser
+  on a separate domain — only enable it in trusted environments.
 changeLog:
   - date: 2023-04-03
     description: First Release
@@ -26,6 +33,10 @@ changeLog:
     description: Version bumped to v6.0.5
   - date: 2026-02-18
     description: Version bumped to v6.1.16
+  - date: 2026-04-29
+    description: Version bumped to v6.2.0
+  - date: 2026-05-13
+    description: Added SMTP credentials and NEXTAUTH_URL
 links:
   - label: Website
     url: https://cal.com
@@ -44,6 +55,12 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - smtpHost
+    - smtpPort
+    - smtpUser
+    - smtpPassword
+    - smtpFrom
+    - smtpFromName
   properties:
     enableStudio:
       type: boolean
@@ -56,11 +73,41 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: calcom/cal.com:v6.1.16
+      default: calcom/cal.com:v6.2.0
     databaseServiceName:
       type: string
-      title: App Service Name
+      title: Database Service Name
       default: calcom-db
+    smtpHost:
+      type: string
+      title: SMTP Host
+      description: Hostname of your SMTP server (e.g. smtp.gmail.com)
+      default: smtp.gmail.com
+    smtpPort:
+      type: number
+      title: SMTP Port
+      description: "465 for SSL, 587 for TLS/STARTTLS"
+      default: 587
+    smtpUser:
+      type: string
+      title: SMTP Username
+      description: Your SMTP login / email address
+      default: ""
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      description: Your SMTP password or app-specific password
+      default: ""
+    smtpFrom:
+      type: string
+      title: Email From Address
+      description: Address that booking emails are sent from
+      default: notifications@example.com
+    smtpFromName:
+      type: string
+      title: Email From Name
+      description: Display name shown in booking emails
+      default: Cal.com
 benefits:
   - title: Efficient Scheduling
     description:

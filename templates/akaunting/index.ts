@@ -1,5 +1,5 @@
 import { Output, Services, randomPassword } from "~templates-utils";
-import { Input } from './meta';
+import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
@@ -21,7 +21,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "docker.io/akaunting/akaunting:3.1.14-v",
+        image: input.appServiceImage,
       },
       env: [
         `AKAUNTING_SETUP=false`,

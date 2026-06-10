@@ -6,10 +6,13 @@ description:
 instructions:
   Please use the Guide given below to get the password and access the portal.
   For admin portal access, use the following URL;
-  https://$(EASYPANEL_HOST_IP):$(mgmtServicePort)/admin
+  https://$(EASYPANEL_HOST_IP):$(mgmtServicePort)/admin. User is openvpn and the
+  password can be searched in logs as "Auto-Generated pass"
 changeLog:
   - date: 2025-09-03
     description: First Release (2.14.3-5936bcd7-Ubuntu24)
+  - date: 2026-05-21
+    description: Version bumped to 3.1.0-e22fe316-Ubuntu24
 links:
   - label: Website
     url: https://openvpn.net/access-server/
@@ -35,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openvpn/openvpn-as:2.14.3-5936bcd7-Ubuntu24
+      default: openvpn/openvpn-as:3.1.0-e22fe316-Ubuntu24
     mgmtServicePort:
       type: string
       title: Management Service Port
