@@ -1,0 +1,87 @@
+name: ProxCenter
+description:
+  ProxCenter is an enterprise-grade web UI for managing multiple Proxmox VE
+  clusters and Proxmox Backup Server instances from a single pane of glass.
+  Built with Next.js, it provides centralized inventory, VM/CT management,
+  cross-cluster migration, live workload balancing (DRS), backup management,
+  Ceph storage management, firewall management, rolling updates, and monitoring.
+  The Community Edition is free and open-source, giving you a vCenter-like
+  experience for your Proxmox infrastructure without vendor lock-in.
+instructions:
+  After deployment, navigate to your app URL. On the first visit you will be
+  prompted to create an admin account. No default credentials are set. Add your
+  Proxmox VE nodes (port 8006) or Proxmox Backup Server instances (port 8007)
+  from the UI after logging in.
+changeLog:
+  - date: 2026-06-11
+    description: First release
+links:
+  - label: Website
+    url: https://www.proxcenter.io
+  - label: Documentation
+    url: https://docs.proxcenter.io
+  - label: GitHub
+    url: https://github.com/adminsyspro/proxcenter-ui
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: proxcenter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/adminsyspro/proxcenter-frontend:1.4.1
+benefits:
+  - title: Unified Proxmox Management
+    description:
+      Manage multiple Proxmox VE clusters and PBS instances from a single
+      dashboard — no need to log in to each node separately.
+  - title: Enterprise Features, Open Source Core
+    description:
+      The Community Edition is completely free. Get VM/CT management, backup
+      oversight, Ceph storage, and firewall control out of the box.
+  - title: Self-Hosted and Private
+    description:
+      Run entirely on your own infrastructure. All cluster credentials and
+      inventory data stay within your environment.
+features:
+  - title: Multi-Cluster Dashboard
+    description:
+      Aggregate inventory from multiple Proxmox VE clusters into one
+      consolidated view with real-time status.
+  - title: VM and Container Management
+    description:
+      Start, stop, migrate, and configure virtual machines and LXC containers
+      across clusters from the web UI.
+  - title: Backup Management
+    description:
+      Monitor and manage Proxmox Backup Server jobs, datastores, and restoration
+      tasks from a single interface.
+  - title: Ceph Storage Management
+    description:
+      Inspect and manage Ceph OSDs, pools, and overall cluster health directly
+      within ProxCenter.
+  - title: Firewall Management
+    description:
+      View and modify Proxmox firewall rules at the cluster, node, and VM level
+      without switching interfaces.
+  - title: Rolling Updates
+    description:
+      Orchestrate rolling OS updates across cluster nodes to minimize downtime
+      during maintenance windows.
+tags:
+  - Proxmox
+  - Virtualization
+  - Infrastructure
+  - Dashboard
+  - Monitoring
+  - Self-Hosted
+  - Management
