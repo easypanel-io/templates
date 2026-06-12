@@ -10,6 +10,8 @@ instructions: null
 changeLog:
   - date: 2025-02-09
     description: Initial template release
+  - date: 2026-05-04
+    description: Version bumped to v0.64.0
 links:
   - label: Website
     url: https://medikeeps.com
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/afairgiant/medikeep:v0.51.0
+      default: ghcr.io/afairgiant/medikeep:v0.64.0
     adminDefaultPassword:
       type: string
       title: Admin Default Password (Optional)

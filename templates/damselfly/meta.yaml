@@ -1,13 +1,17 @@
 name: Damselfly
 description:
-  Damselfly is a modern, self-hosted photo management system that helps you organize,
-  search, and share your photo collection. It uses AI-powered image recognition to
-  automatically tag and categorize your photos, making it easy to find specific images
-  in your collection.
-instructions: Add your photos and libraries in the respected volumes or change them to bind volumes as per your need. 
+  Damselfly is a modern, self-hosted photo management system that helps you
+  organize, search, and share your photo collection. It uses AI-powered image
+  recognition to automatically tag and categorize your photos, making it easy to
+  find specific images in your collection.
+instructions:
+  Add your photos and libraries in the respected volumes or change them to bind
+  volumes as per your need.
 changeLog:
   - date: 2025-04-28
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to 4.5.3
 links:
   - label: GitHub
     url: https://github.com/Webreaper/Damselfly
@@ -29,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: webreaper/damselfly:4.2.3
+      default: webreaper/damselfly:4.5.3
 benefits:
   - title: AI-Powered Organization
     description: Automatically tag and categorize photos using machine learning
@@ -59,4 +63,4 @@ tags:
   - AI
   - Image Recognition
   - Self-hosted
-  - Photography 
+  - Photography

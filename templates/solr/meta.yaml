@@ -13,6 +13,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-02-24
     description: Version bumped to 9.9.0
+  - date: 2026-05-07
+    description: Version bumped to 10.0.0
 links:
   - label: Official Website
     url: https://solr.apache.org/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: solr:9.9.0
+      default: solr:10.0.0
       description: Apache Solr Docker image
 
 benefits:

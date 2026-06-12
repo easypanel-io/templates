@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to v4.5.3
   - date: 2026-02-21
     description: Version bumped to v4.5.6
+  - date: 2026-05-04
+    description: Version bumped to v4.5.9
 links:
   - label: Website
     url: https://joinmastodon.org
@@ -70,7 +72,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/mastodon/mastodon:v4.5.6
+      default: ghcr.io/mastodon/mastodon:v4.5.9
 benefits:
   - title: Control Your Own Social Media Experience
     description:
