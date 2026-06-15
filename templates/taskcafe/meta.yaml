@@ -10,6 +10,8 @@ instructions:
 changeLog:
   - date: 2025-04-10
     description: First Release
+  - date: 2026-05-07
+    description: Version bumped to 0.3.6
 links:
   - label: Github
     url: https://github.com/JordanKnott/taskcafe
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: taskcafe/taskcafe:0.3.2
+      default: taskcafe/taskcafe:0.3.6
 benefits:
   - title: Project Management
     description: Organize and track projects with an intuitive interface.
