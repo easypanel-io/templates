@@ -22,6 +22,8 @@ changeLog:
     description:
       Screenshot, website/docs links, SITE_TITLE & INSTANCE_NAME env parity,
       configurable PIN/currency/titles
+  - date: 2026-04-29
+    description: Version bumped to b9db5cb32d14b7b78675d8be054611d4829253ef
 
 links:
   - label: Website
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbbudget:d44543bf67ecedb416138ac4de93759d3a324999
+      default: dumbwareio/dumbbudget:b9db5cb32d14b7b78675d8be054611d4829253ef
     dumbbudgetPin:
       type: string
       title: DUMBBUDGET_PIN

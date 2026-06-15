@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to 3.0.12
   - date: 2026-02-21
     description: Version bumped to 3.0.13
+  - date: 2026-05-06
+    description: Version bumped to 3.1.2
 links:
   - label: Website
     url: https://flowiseai.com
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: flowiseai/flowise:3.0.13
+      default: flowiseai/flowise:3.1.2
     username:
       type: string
       title: Username

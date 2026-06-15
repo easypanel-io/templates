@@ -14,6 +14,8 @@ changeLog:
     description: Template Release
   - date: 2025-12-29
     description: Version bumped to version-r1945
+  - date: 2026-05-05
+    description: Version bumped to version-r2029
 links:
   - label: Website
     url: https://www.projectsend.org/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/projectsend:version-r1945
+      default: lscr.io/linuxserver/projectsend:version-r2029
 benefits:
   - title: Secure File Sharing
     description:

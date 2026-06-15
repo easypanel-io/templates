@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 1.3.8
   - date: 2024-09-28
     description: Update to 1.4.4
+  - date: 2026-05-15
+    description: Major update to 2.2.1; v2 uses CLI flags instead of env vars
 links:
   - label: Website
     url: https://authorizer.dev
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lakhansamani/authorizer:1.4.4
+      default: lakhansamani/authorizer:2.2.1
     databaseServiceName:
       type: string
       title: Database Service Name
