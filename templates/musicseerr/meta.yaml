@@ -1,0 +1,74 @@
+name: Musicseerr
+description:
+  Musicseerr is a self-hosted music request and discovery platform built around
+  Lidarr. Users can search the MusicBrainz catalogue, request albums, stream
+  music via Jellyfin, Navidrome, Plex, local files, or YouTube, and discover
+  new content through personalized recommendations and charts.
+instructions:
+  After deployment, open the app to complete the one-time admin account setup.
+  Then go to Settings to configure your Lidarr URL and API key. Optionally
+  connect Jellyfin, Navidrome, or Plex for playback, and ListenBrainz or
+  Last.fm for scrobbling. API docs are available at /api/v1/docs.
+changeLog:
+  - date: 2026-06-16
+    description: Initial release
+links:
+  - label: Website
+    url: https://musicseerr.com
+  - label: GitHub
+    url: https://github.com/HabiRabbu/Musicseerr
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: musicseerr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: habirabbu/musicseerr:v1.4.2
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+benefits:
+  - title: Lidarr-Powered Music Requests
+    description:
+      Search the MusicBrainz catalogue and request albums directly into Lidarr
+      with tiered approval by user role.
+  - title: Multi-Source Playback
+    description:
+      Stream music from Jellyfin, Navidrome, Plex, local files, or YouTube
+      without leaving the app.
+  - title: Discovery & Recommendations
+    description:
+      Explore trending artists, personalized recommendations, genre browsing,
+      and charts to find new music.
+  - title: No External Database
+    description:
+      Runs entirely on SQLite — no Postgres or Redis dependency, making
+      deployment simple and lightweight.
+features:
+  - title: MusicBrainz Search
+    description: Full catalogue search with album request and Lidarr integration.
+  - title: Multi-User with OIDC
+    description:
+      Role-based access (Admin, Trusted, User) with optional OIDC single
+      sign-on support.
+  - title: Scrobbling
+    description: Automatic ListenBrainz and Last.fm scrobbling for played tracks.
+  - title: Playlist Management
+    description: Create and manage playlists across multiple music sources.
+  - title: Swagger API
+    description: Full REST API with documentation available at /api/v1/docs.
+tags:
+  - Media
+  - Music
+  - Self-hosted
