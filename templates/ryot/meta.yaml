@@ -28,6 +28,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-24
     description: Version bumped to v10
+  - date: 2026-05-05
+    description: Version bumped to v10.3.10
 links:
   - label: Website
     url: https://ryot.io
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ignisda/ryot:v10
+      default: ignisda/ryot:v10.3.10
 benefits:
   - title: All-in-One Media Tracking
     description:

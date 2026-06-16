@@ -1,7 +1,9 @@
 name: Redis Insight
 description:
-  Redis Insight is an ideal tool for developers who build with any Redis deployments and who want to optimize their development process. 
-  Redis Insight lets you visually browse and interact with data, take advantage of the advanced command line interface and diagnostic tools, and so much more.
+  Redis Insight is an ideal tool for developers who build with any Redis
+  deployments and who want to optimize their development process. Redis Insight
+  lets you visually browse and interact with data, take advantage of the
+  advanced command line interface and diagnostic tools, and so much more.
 instructions: null
 changeLog:
   - date: 2025-09-23
@@ -36,30 +38,37 @@ schema:
 benefits:
   - title: Visual Data Exploration
     description:
-      Easily browse, query, and manage Redis data structures through an intuitive graphical interface.
+      Easily browse, query, and manage Redis data structures through an
+      intuitive graphical interface.
   - title: Faster Development
     description:
-      Debug, test, and optimize Redis queries and workflows more efficiently with built-in tools.
+      Debug, test, and optimize Redis queries and workflows more efficiently
+      with built-in tools.
   - title: Enhanced Productivity
     description:
-      Gain insights into memory usage, performance, and data patterns to build scalable applications.
+      Gain insights into memory usage, performance, and data patterns to build
+      scalable applications.
 
 features:
   - title: Visual Browser
     description:
-      Navigate and manage keys, streams, hashes, sets, and other Redis data types interactively.
+      Navigate and manage keys, streams, hashes, sets, and other Redis data
+      types interactively.
   - title: Advanced CLI
     description:
-      Run Redis commands with autocomplete, syntax highlighting, and history support.
+      Run Redis commands with autocomplete, syntax highlighting, and history
+      support.
   - title: Performance Insights
     description:
       Analyze memory usage, latency, and command performance for optimization.
   - title: Data Visualization
     description:
-      View data trends, charts, and statistics directly from your Redis instance.
+      View data trends, charts, and statistics directly from your Redis
+      instance.
   - title: Multi-Deployment Support
     description:
-      Connect to multiple Redis servers, including standalone, clustered, and cloud-managed instances.
+      Connect to multiple Redis servers, including standalone, clustered, and
+      cloud-managed instances.
 
 tags:
   - Redis
@@ -67,4 +76,3 @@ tags:
   - Data Visualization
   - Performance Monitoring
   - Developer Tools
-
