@@ -13,6 +13,8 @@ instructions: |
 changeLog:
   - date: 2026-03-09
     description: First Release
+  - date: 2026-05-08
+    description: Version bumped to 3.2.0
 links:
   - label: GitHub
     url: https://github.com/WardPearce/paaster
@@ -38,11 +40,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: wardpearce/paaster:3.1.7
+      default: wardpearce/paaster:3.2.0
     mongoImage:
       type: string
       title: MongoDB Image
-      default: mongo:8.2.6
+      default: mongo:8.3.1
     minioImage:
       type: string
       title: MinIO Image

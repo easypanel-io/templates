@@ -18,10 +18,7 @@ export function generate(input: Input): Output {
           port: 8000,
         },
       ],
-      env: [
-        `DATABASE_URL=sqlite:////db/dpaste.sqlite`,
-        `PORT=8000`,
-      ].join("\n"),
+      env: [`DATABASE_URL=sqlite:////db/dpaste.sqlite`, `PORT=8000`].join("\n"),
       mounts: [
         {
           type: "volume",
@@ -33,4 +30,4 @@ export function generate(input: Input): Output {
   });
 
   return { services };
-} 
+}

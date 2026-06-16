@@ -21,6 +21,8 @@ changeLog:
   - date: 2026-03-20
     description:
       Website/docs links, optional /userdata & /repos, TZ default Etc/UTC
+  - date: 2026-05-06
+    description: Version bumped to v1.13.0
 
 links:
   - label: Website
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/garethgeorge/backrest:v1.12.1
+      default: ghcr.io/garethgeorge/backrest:v1.13.0
     timezone:
       type: string
       title: Timezone
