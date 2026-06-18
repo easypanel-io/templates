@@ -1,0 +1,83 @@
+name: XRSH
+description:
+  XRSH is a buildless, cross-platform XR (Extended Reality) terminal emulator
+  that runs entirely in the browser. It boots Linux distributions via a web
+  interface and supports immersive 3D terminal environments through WebXR and
+  A-Frame integration. Distributed as a single portable binary with a minimal
+  Docker image (~14 MB).
+instructions:
+  After deployment, open the app URL in any browser — the XR terminal interface
+  loads directly with no login required. Press Ctrl+Alt+0 or run man xrsh inside
+  the terminal to access the built-in manual. To use custom ISO images or
+  overlay files, place them in the /data volume.
+changeLog:
+  - date: 2026-06-17
+    description: Initial release
+links:
+  - label: Website
+    url: https://xrsh.isvery.ninja
+  - label: Repository
+    url: https://forgejo.isvery.ninja/xrsh/xrsh
+  - label: Docker Hub
+    url: https://hub.docker.com/r/coderofsalvation/xrsh
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: xrsh
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: coderofsalvation/xrsh:0.142
+benefits:
+  - title: Browser-Based XR Terminal
+    description:
+      Access a full Linux terminal in your browser with optional immersive 3D
+      WebXR mode — no native client installation required.
+  - title: Zero Dependencies
+    description:
+      Fully self-contained single binary with no database, cache, or external
+      service dependencies. Deploy and go.
+  - title: Tiny Footprint
+    description:
+      The compressed Docker image is only ~14 MB, making it one of the lightest
+      self-hosted terminal environments available.
+  - title: Embeddable in XR Scenes
+    description:
+      Drop the terminal as a component into any A-Frame WebXR application for
+      immersive mixed-reality computing environments.
+features:
+  - title: WebXR Integration
+    description:
+      Renders the terminal in 3D space via A-Frame, compatible with VR and AR
+      headsets that support the WebXR standard.
+  - title: ISO Boot Support
+    description:
+      Boot Linux distributions from ISO images placed in the /data volume with
+      the -D overlay flag.
+  - title: Buildless Architecture
+    description:
+      Built with Redbean technology — a single portable executable that runs
+      anywhere without Node, npm, or build steps.
+  - title: Optional SSL
+    description:
+      Mount TLS certificates to serve the terminal over HTTPS directly without a
+      reverse proxy.
+  - title: Cross-Platform
+    description:
+      Runs on Linux, macOS, and Windows through the container — accessible from
+      any WebXR-capable browser.
+tags:
+  - Terminal
+  - XR
+  - WebXR
+  - Self-hosted
+  - Developer Tools
