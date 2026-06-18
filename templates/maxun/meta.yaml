@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-12-15
     description: Template Release
+  - date: 2026-05-08
+    description: Version bumped to v0.0.49
 
 links:
   - label: GitHub
@@ -41,11 +43,11 @@ schema:
     backendImage:
       type: string
       title: Backend Image
-      default: getmaxun/maxun-backend:v0.0.30
+      default: getmaxun/maxun-backend:v0.0.49
     frontendImage:
       type: string
       title: Frontend Image
-      default: getmaxun/maxun-frontend:v0.0.30
+      default: getmaxun/maxun-frontend:v0.0.49
     minioImage:
       type: string
       title: Minio Image

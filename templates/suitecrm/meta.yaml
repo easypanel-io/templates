@@ -24,6 +24,8 @@ changeLog:
     description: Added default user registration
   - date: 2025-03-03
     description: Version bumped to 8.8.0
+  - date: 2026-05-07
+    description: Version bumped to 8.8.1-debian-12-r3
 links:
   - label: Website
     url: https://suitecrm.com/
@@ -61,7 +63,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnamilegacy/suitecrm:8.8.0
+      default: bitnamilegacy/suitecrm:8.8.1-debian-12-r3
     databaseServiceName:
       type: string
       title: Database Service Name
