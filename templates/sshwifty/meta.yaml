@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 0.4.2-beta-release
   - date: 2026-02-24
     description: Version bumped to 0.4.3-beta-release
+  - date: 2026-05-07
+    description: Version bumped to 0.4.5-beta-release
 links:
   - label: Github
     url: https://github.com/nirui/sshwifty
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: niruix/sshwifty:0.4.3-beta-release
+      default: niruix/sshwifty:0.4.5-beta-release
 benefits:
   - title: Web-Based SSH and Telnet Access
     description:

@@ -6,6 +6,8 @@ description:
   using Laravel & VueJS while the Mobile Apps are built using React Native.
 instructions: Visit the website to complete installation.
 changeLog:
+  - date: 2026-05-19
+    description: Updated to v2.3.3
   - date: 2024-03-23
     description: Template added
   - date: 2024-10-11
@@ -29,7 +31,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - dbServiceName
     - dbServiceImage
   properties:
     appServiceName:
@@ -39,11 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceshelf/invoiceshelf:2.1.1
-    dbServiceName:
-      type: string
-      title: Database Service Name
-      default: db
+      default: invoiceshelf/invoiceshelf:2.3.3
     dbServiceImage:
       type: string
       title: Database Service Image

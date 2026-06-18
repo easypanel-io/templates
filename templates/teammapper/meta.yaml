@@ -22,6 +22,8 @@ changeLog:
     description: First Release
   - date: 2026-03-26
     description: Added setup instructions and corrected registry link label
+  - date: 2026-05-07
+    description: Version bumped to v0.2.6-1
 links:
   - label: Website
     url: https://teammapper.io
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/b310-digital/teammapper:v0.2.0-9
+      default: ghcr.io/b310-digital/teammapper:v0.2.6-1
 benefits:
   - title: Team Structure Visualization
     description:
