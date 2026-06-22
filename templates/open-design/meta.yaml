@@ -15,6 +15,8 @@ changeLog:
 links:
   - label: Website
     url: https://open-design.ai
+  - label: Documentation
+    url: https://github.com/nexu-io/open-design/blob/main/docs/architecture.md
   - label: GitHub
     url: https://github.com/nexu-io/open-design
 contributors:
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vanjayak/open-design:latest
+      default: vanjayak/open-design:0.11.0
     apiToken:
       type: string
       title: API Token
