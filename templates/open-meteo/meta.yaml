@@ -1,0 +1,88 @@
+name: Open-Meteo
+description:
+  Open-Meteo is a free and open-source weather API that provides high-resolution
+  forecast data through a simple JSON interface. This template deploys both the
+  Open-Meteo API service and a background sync service that continuously updates
+  selected weather model data into local storage.
+instructions:
+  After deployment, Open-Meteo API is available on your project domain at port
+  8080. Example request;
+  /v1/forecast?latitude=47.1&longitude=8.6&hourly=temperature_2m&models=dwd_icon.
+  The sync service in this template downloads and refreshes dwd_icon
+  temperature_2m data on a repeating interval. You can customize models,
+  variables, and sync interval by editing the sync service command.
+changeLog:
+  - date: 2026-05-04
+    description: First Release
+links:
+  - label: Website
+    url: https://open-meteo.com/
+  - label: GitHub
+    url: https://github.com/open-meteo/open-meteo
+  - label: Documentation
+    url: https://github.com/open-meteo/open-meteo/blob/main/docs/getting-started.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - syncServiceName
+    - syncCommand
+  properties:
+    appServiceName:
+      type: string
+      title: API Service Name
+      default: open-meteo
+    appServiceImage:
+      type: string
+      title: Open-Meteo Image
+      default: ghcr.io/open-meteo/open-meteo:1.5.1
+    syncServiceName:
+      type: string
+      title: Sync Service Name
+      default: open-meteo-sync
+    syncCommand:
+      type: string
+      title: Sync Command
+      default:
+        ./openmeteo-api sync dwd_icon temperature_2m --past-days 2
+        --repeat-interval 1 --concurrent 1
+benefits:
+  - title: Self-Hosted Weather API
+    description:
+      Run a production-ready weather API in your own infrastructure with full
+      control over your deployment and data lifecycle.
+  - title: Continuous Data Synchronization
+    description:
+      Includes a dedicated sync service to continuously download and refresh
+      weather datasets for up-to-date forecasts.
+  - title: Simple JSON Forecast Endpoints
+    description:
+      Access weather forecasts with easy HTTP endpoints that integrate quickly
+      with dashboards, automation workflows, and applications.
+features:
+  - title: Open-Meteo API Server
+    description:
+      Exposes forecast endpoints compatible with Open-Meteo API query
+      parameters.
+  - title: Background Sync Worker
+    description:
+      Downloads weather model data on a repeat interval and stores it in a
+      shared volume.
+  - title: Shared Persistent Storage
+    description:
+      API and sync worker share the same `/app/data` volume so downloaded model
+      data remains available across restarts.
+  - title: Configurable Sync Behavior
+    description:
+      Customize weather models, variables, historical depth, and refresh
+      interval from template inputs.
+tags:
+  - Weather
+  - API
+  - Forecasting
+  - Data
+  - Self-Hosted
