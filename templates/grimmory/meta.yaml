@@ -1,0 +1,71 @@
+name: Grimmory
+description:
+  Grimmory is a self-hosted digital library for serious readers and a community
+  fork of Booklore. It lets you organize, read, and manage books across multiple
+  formats including EPUB, MOBI, AZW3, PDF, CBZ, and audiobook formats. Features
+  include metadata enrichment, a built-in browser reader, Kobo and KOReader
+  device sync, OPDS catalog, multi-user support, and a BookDrop watched folder
+  for automatic imports.
+instructions:
+  After deployment navigate to the provided domain. A setup wizard will guide
+  you through creating the initial admin account. Add your book library by
+  placing files in the /books volume or using the BookDrop auto-import folder
+  at /bookdrop.
+changeLog:
+  - date: 2026-06-12
+    description: First release
+links:
+  - label: Website
+    url: https://grimmory.org
+  - label: Docs
+    url: https://grimmory.org/docs
+  - label: GitHub
+    url: https://github.com/grimmory-tools/grimmory
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: grimmory
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/grimmory-tools/grimmory:v3.2.0
+benefits:
+  - title: Multi-Format Library
+    description:
+      Manage EPUB, MOBI, AZW3, PDF, CBZ, and audiobook files in one place.
+  - title: Device Synchronization
+    description:
+      Sync reading progress with Kobo, KOReader, and OPDS-compatible readers.
+  - title: Multi-User Support
+    description:
+      Create separate accounts with individual reading progress and shelves.
+features:
+  - title: Built-In Browser Reader
+    description: Read EPUB and other formats directly in the browser without plugins.
+  - title: Metadata Enrichment
+    description:
+      Automatically fetch and edit book metadata, covers, and descriptions.
+  - title: BookDrop Auto-Import
+    description:
+      Drop files into a watched folder and Grimmory imports them automatically.
+  - title: Magic Shelves
+    description:
+      Smart shelves that auto-populate based on tags, genres, or reading status.
+  - title: OPDS Catalog
+    description:
+      Expose your library as an OPDS feed for compatible e-reader applications.
+tags:
+  - Books
+  - Library
+  - Reading
+  - Self-Hosted
+  - Media

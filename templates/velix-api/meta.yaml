@@ -1,0 +1,97 @@
+name: Velix API
+description:
+  Velix is a self-hosted WhatsApp API built in Go. Connect multiple WhatsApp
+  numbers, send and receive messages via REST, get real-time webhooks, and
+  integrate with n8n and Chatwoot out of the box. It features a web-based admin
+  panel for managing instances, QR code pairing, per-instance API keys, and
+  automatic media download with local storage. Designed for agencies and
+  developers who need reliable WhatsApp automation at scale.
+instructions: |
+  After deployment, open the admin panel at your domain to register your first
+  account. Then create a WhatsApp instance and scan the QR code to connect your
+  phone number. Each instance gets its own API key for secure access.
+changeLog:
+  - date: 2026-04-14
+    description: first release
+links:
+  - label: Website
+    url: https://velix.dev
+  - label: Documentation
+    url: https://github.com/paulolinder/velix-api
+  - label: Github
+    url: https://github.com/paulolinder/velix-api
+contributors:
+  - name: Paulo Linder
+    url: https://github.com/paulolinder
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: velix-api
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/paulolinder/velix-api:0.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: velix-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: velix-redis
+benefits:
+  - title: Multi-Instance WhatsApp
+    description:
+      Run up to 200 WhatsApp connections from a single server. Each instance
+      is isolated with its own API key, webhook settings, and QR code pairing.
+  - title: Full REST API
+    description:
+      Send text, images, audio, video, documents, locations, contacts,
+      reactions, and polls through a clean REST API with OpenAPI documentation.
+  - title: Real-Time Webhooks
+    description:
+      Receive events in real time with HMAC-SHA256 signing, automatic retry
+      with exponential backoff, and per-instance event filtering.
+  - title: n8n and Chatwoot Integration
+    description:
+      Community node for n8n workflow automation (including AI Agent tool) and
+      built-in Chatwoot integration for customer support with history sync.
+features:
+  - title: Admin Panel
+    description:
+      Web-based dashboard for managing instances, viewing connection status,
+      configuring webhooks, and generating API keys.
+  - title: Per-Instance API Keys
+    description:
+      Each WhatsApp instance gets its own scoped API key. Keys are generated
+      from the admin panel and can be rotated at any time.
+  - title: QR Code Pairing
+    description:
+      Connect WhatsApp via QR code or pair code directly from the admin panel
+      with real-time SSE streaming.
+  - title: Media Storage
+    description:
+      Automatic media download from WhatsApp CDN with local storage and REST
+      endpoints for retrieval. Optional base64 encoding in webhook payloads.
+  - title: Chatwoot Integration
+    description:
+      Route WhatsApp messages to Chatwoot inboxes with automatic contact
+      creation, conversation management, and full history sync.
+  - title: Human Pause
+    description:
+      When an agent replies manually, bot automation is paused for a
+      configurable period so humans and bots can coexist seamlessly.
+tags:
+  - WhatsApp
+  - API
+  - Messaging
+  - Chatbot
+  - Automation

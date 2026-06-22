@@ -1,0 +1,88 @@
+name: Redash
+description:
+  Redash helps teams become data-driven by connecting to data sources, building
+  queries, creating visualizations, and sharing dashboards across the
+  organization.
+instructions:
+  After deployment, open your Redash domain and complete the initial setup in
+  the web UI. Configure SMTP fields if you want scheduled reports and email
+  delivery. You can disable mail transport by selecting "None". Redash workers
+  and scheduler are provisioned automatically in this template.
+changeLog:
+  - date: 2026-04-24
+    description: Template Release (v10.1.0)
+links:
+  - label: Website
+    url: https://redash.io/
+  - label: Documentation
+    url: https://redash.io/help/
+  - label: GitHub
+    url: https://github.com/getredash/redash
+contributors:
+  - name: tboulogne
+    url: https://github.com/tboulogne
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - mailTransport
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: redash
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: redash/redash:10.1.0.b50633
+    mailServer:
+      type: string
+      title: Mail Host
+      default: ""
+    mailUser:
+      type: string
+      title: Mail Auth User
+      default: ""
+    mailPassword:
+      type: string
+      title: Mail Auth Password
+      default: ""
+    mailPort:
+      type: integer
+      title: Mail Server Port
+      default: 587
+    mailTransport:
+      type: string
+      title: Mail Transport
+      oneOf:
+        - enum:
+            - NONE
+          title: None
+        - enum:
+            - SSL
+          title: SSL
+        - enum:
+            - TLS
+          title: TLS
+      default: TLS
+benefits:
+  - title: Query and Dashboard Sharing
+    description:
+      Build visual dashboards from SQL queries and share insights with your
+      team.
+  - title: Multiple Data Source Support
+    description:
+      Connect Redash to many data backends and centralize analysis in one UI.
+features:
+  - title: Built-In Worker Services
+    description:
+      Includes scheduler and worker services for background query execution.
+  - title: Optional Email Delivery
+    description:
+      Configure SMTP transport or disable it with a no-transport option.
+tags:
+  - Analytics
+  - Dashboard
+  - Business Intelligence
+  - SQL

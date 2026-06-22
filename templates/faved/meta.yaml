@@ -1,0 +1,89 @@
+name: Faved
+description:
+  Faved is a privately-hosted, open-source bookmark manager with customizable
+  nested tags, designed for handling large collections efficiently. It offers
+  automatic title and description fetching, duplicate detection, powerful search
+  and filtering, bulk actions, and a responsive design across all devices.
+instructions:
+  After deployment, access the web interface and click "Create Database" to
+  initialize the SQLite database. All bookmarks and data are stored in the
+  persistent storage volume.
+changeLog:
+  - date: 2026-06-15
+    description: First Release
+links:
+  - label: Website
+    url: https://faved.dev
+  - label: Documentation
+    url: https://faved.dev/docs/getting-started/introduction
+  - label: Github
+    url: https://github.com/denho/faved
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: faved
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: denho/faved:2.9.0
+benefits:
+  - title: Nested Tag System
+    description:
+      Organize bookmarks with customizable nested tags and color-coded
+      hierarchies for efficient collection management.
+  - title: Self-Hosted and Private
+    description:
+      All data stays on your server with no third-party dependencies. Your
+      bookmarks never leave your network.
+  - title: Auto-Fetch Metadata
+    description:
+      Automatically retrieves page titles, descriptions, and preview images when
+      saving bookmarks.
+  - title: Duplicate Detection
+    description:
+      Intelligently identifies and prevents duplicate bookmarks from cluttering
+      your collection.
+  - title: Lightweight SQLite Storage
+    description:
+      Uses file-based SQLite storage with no external database required, keeping
+      deployment simple and efficient.
+features:
+  - title: Bookmark Management
+    description:
+      Add, organize, search, and filter large bookmark collections efficiently
+      with a clean interface.
+  - title: Nested Tags
+    description:
+      Create hierarchical tag structures with color customization to categorize
+      bookmarks exactly how you think.
+  - title: Bulk Actions
+    description:
+      Perform operations on multiple bookmarks simultaneously to manage large
+      collections quickly.
+  - title: Responsive Design
+    description:
+      Clean, modern interface built with Tailwind CSS that works across desktop
+      and mobile devices.
+  - title: PWA Support
+    description:
+      Progressive Web App support for installation on iOS and Android devices
+      for a native app feel.
+  - title: Apple Shortcuts Integration
+    description:
+      Native integration with Apple Shortcuts for automated bookmark saving from
+      iOS and macOS.
+tags:
+  - Bookmarks
+  - Organization
+  - Productivity
+  - Self-Hosted
+  - Notes
