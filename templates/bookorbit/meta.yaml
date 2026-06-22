@@ -1,0 +1,71 @@
+name: BookOrbit
+description: >-
+  BookOrbit is a self-hosted book management and reading tracker application.
+  Organize your library, track reading progress, manage wishlists, and get
+  AI-powered book recommendations — all on your own server.
+instructions: >-
+  After deployment, open the app and complete the initial setup using your
+  SETUP_BOOTSTRAP_TOKEN (shown in the service environment variables). Create
+  your admin account during setup. The token is only needed once for the first
+  login bootstrap.
+changeLog:
+  - date: "2026-06-01"
+    description: Initial template release for BookOrbit v1.7.0
+links:
+  - label: Website
+    url: https://bookorbit.app
+  - label: Documentation
+    url: https://bookorbit.app/installation.html
+  - label: GitHub
+    url: https://github.com/bookorbit/bookorbit
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bookorbit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/bookorbit/bookorbit:1.7.0
+benefits:
+  - title: Self-Hosted Book Library
+    description: >-
+      Keep full control of your reading data. BookOrbit runs entirely on your
+      own server with no third-party data sharing.
+  - title: AI-Powered Recommendations
+    description: >-
+      Get personalized book recommendations using built-in AI features powered
+      by your reading history and preferences.
+  - title: Comprehensive Reading Tracker
+    description: >-
+      Track currently reading, finished, and wishlist books with reading stats,
+      progress updates, and collection management.
+features:
+  - title: Book Management
+    description:
+      Organize books into shelves and collections with metadata, covers, and
+      ratings.
+  - title: Reading Progress Tracking
+    description:
+      Log reading sessions and track progress page-by-page across your entire
+      library.
+  - title: Book Drop (Ingestion)
+    description:
+      Drop book files into a watched folder for automatic ingestion into your
+      library.
+  - title: PostgreSQL with pgvector
+    description:
+      Uses pgvector for semantic search and AI recommendation capabilities.
+tags:
+  - Books
+  - Reading
+  - Library
+  - Self-Hosted
