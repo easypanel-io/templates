@@ -29,6 +29,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - webdavServiceName
     - webdavServiceImage
     - webdavUsername
     - webdavPassword
@@ -41,6 +42,10 @@ schema:
       type: string
       title: App Service Image
       default: johannesjo/super-productivity:v18.9.1
+    webdavServiceName:
+      type: string
+      title: WebDAV Service Name
+      default: super-productivity-webdav
     webdavServiceImage:
       type: string
       title: WebDAV Service Image
