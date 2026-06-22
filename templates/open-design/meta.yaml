@@ -35,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vanjayak/open-design:0.11.0
+      default: vanjayak/open-design:latest
     apiToken:
       type: string
       title: API Token
