@@ -11,14 +11,18 @@ export function generate(input: Input): Output {
   const postgresPassword = randomPassword();
   const redisPassword = randomPassword();
   const jwtSecret = randomString(64);
+  const frontApiSecret = randomString(64);
   const appKey = randomString(32);
+  const appPublicUrl = `https://$(PROJECT_NAME)-${input.serviceName}-nginx.$(EASYPANEL_HOST)`;
 
   const commonEnv = [
     `APP_NAME=OpnForm`,
     `APP_ENV=production`,
     `APP_KEY=base64:${appKey}`,
-    `APP_DEBUG=true`,
-    `APP_URL=https://$(PROJECT_NAME)-${input.serviceName}-nginx.$(EASYPANEL_HOST)`,
+    `APP_DEBUG=false`,
+    `APP_URL=${appPublicUrl}`,
+    `FRONT_URL=${appPublicUrl}`,
+    `FRONT_API_SECRET=${frontApiSecret}`,
     `SELF_HOSTED=true`,
     `LOG_CHANNEL=errorlog`,
     `LOG_LEVEL=debug`,
@@ -44,7 +48,9 @@ export function generate(input: Input): Output {
     `AWS_BUCKET=null`,
     `JWT_TTL=1440`,
     `JWT_SECRET=${jwtSecret}`,
-    `JWT_SKIP_IP_UA_VALIDATION=true`,
+    `JWT_SKIP_IP_UA_VALIDATION=false`,
+    `PUBLIC_UPLOADS_RATE_LIMIT_PER_MINUTE=30`,
+    `PUBLIC_UPLOADS_RATE_LIMIT_PER_HOUR=300`,
     `OPEN_AI_API_KEY=null`,
     `H_CAPTCHA_SITE_KEY=null`,
     `H_CAPTCHA_SECRET_KEY=null`,
@@ -152,6 +158,8 @@ server {
         `NUXT_PUBLIC_API_BASE=/api`,
         `NUXT_PRIVATE_API_BASE=http://$(PROJECT_NAME)_${input.serviceName}-nginx/api`,
         `NUXT_PUBLIC_ENV=production`,
+        `NUXT_API_SECRET=${frontApiSecret}`,
+        `NUXT_PUBLIC_LICENSE_API_ENDPOINT=https://api.opnform.com`,
         `NUXT_PUBLIC_H_CAPTCHA_SITE_KEY=null`,
         `NUXT_PUBLIC_RE_CAPTCHA_SITE_KEY=null`,
         `NUXT_PUBLIC_ROOT_REDIRECT_URL=null`,
