@@ -12,7 +12,7 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
   const appSecret = randomString(32);
 
-  const serverUrl = `https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`;
+  const serverUrl = `https://$(PRIMARY_DOMAIN)`;
 
   const common_envs = [
     `NODE_PORT=3000`,

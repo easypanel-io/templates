@@ -1,0 +1,90 @@
+name: AniBridge
+description:
+  AniBridge is a media synchronization tool that keeps your anime watch activity
+  perfectly in sync across library providers (Plex, Jellyfin, Emby) and list
+  trackers (AniList, MyAnimeList). It includes a web dashboard with a real-time
+  sync timeline, profile manager, custom mapping editor, log viewer, and
+  automatic list backups — all powered by a database of over 250,000 anime
+  mappings.
+instructions:
+  After deploying, open the web UI on port 4848 and configure your providers and
+  profiles through the Settings page. On first boot with no config file, the web
+  UI is accessible without a password so you can complete the initial setup. Add
+  web.basic_auth.username and web.basic_auth.password in the config file (or via
+  AB_WEB__BASIC_AUTH__USERNAME / AB_WEB__BASIC_AUTH__PASSWORD env vars) to
+  secure the dashboard once configured.
+changeLog:
+  - date: 2026-06-09
+    description: First release
+links:
+  - label: Website
+    url: https://anibridge.eliasbenb.dev
+  - label: Docs
+    url: https://anibridge.eliasbenb.dev
+  - label: GitHub
+    url: https://github.com/anibridge/anibridge
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anibridge
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/anibridge/anibridge:v2.1.4
+benefits:
+  - title: Unified Anime Sync
+    description:
+      Automatically synchronizes watch status, progress, ratings, reviews, and
+      start/completion dates between your media server and any supported list
+      tracker — no manual updates needed.
+  - title: Smart Content Matching
+    description:
+      Uses a curated database of over 250,000 anime entries with fuzzy title
+      search fallback and support for custom mapping overrides, so even obscure
+      titles are matched correctly.
+  - title: Multi-User & Multi-Profile
+    description:
+      Define independent profiles for different users, libraries, and servers.
+      Each profile has its own sync rules, intervals, and provider configuration
+      running in parallel.
+  - title: Safe & Reversible
+    description:
+      Dry-run mode lets you preview every change before it is applied. Automatic
+      list backups with a configurable retention period let you restore previous
+      states directly from the web UI.
+features:
+  - title: Web Dashboard
+    description:
+      Intuitive UI with a real-time sync timeline, profile management, custom
+      mapping editor, and a live log viewer — accessible from any browser.
+  - title: Flexible Scan Modes
+    description:
+      Three scan modes — periodic full scans, incremental polling, and
+      webhook-triggered syncs — can be enabled simultaneously per profile.
+  - title: Provider Plugin System
+    description:
+      Modular architecture supports Plex, Jellyfin, Emby as library sources and
+      AniList and MyAnimeList as list targets, with more providers planned.
+  - title: Declarative Sync Rules
+    description:
+      Fine-grained YAML-based rules let you disable specific fields (status,
+      progress, rating, reviews, dates) or apply conditional overrides per
+      profile.
+  - title: Automatic Backups
+    description:
+      List state is backed up before every sync run. Backups are retained for a
+      configurable number of days and can be restored with one click in the UI.
+tags:
+  - Media
+  - Anime
+  - Synchronization
+  - Self-Hosted
