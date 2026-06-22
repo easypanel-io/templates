@@ -1,0 +1,104 @@
+name: BamBuddy
+description: >-
+  BamBuddy is a self-hosted command center for managing Bambu Lab 3D printers
+  locally, with no cloud dependency. It supports single printers up to
+  40-printer farms and includes real-time monitoring, live camera streaming,
+  print archive with 3D preview, timelapse editing, scheduling, multi-printer
+  dispatch, server-side slicing of STL/3MF files, spool tracking with usage
+  analytics, smart plug integration, HMS error alerts, and automated
+  notifications.
+
+instructions: >-
+  After deployment, access the BamBuddy web UI and run the setup wizard. Enable
+  Developer Mode on your Bambu Lab printer from the Bambu Lab app (Settings -
+  Device - Developer Mode) so BamBuddy can connect over your local network
+  without the cloud. By default BamBuddy uses SQLite. To use PostgreSQL instead,
+  add a DATABASE_URL environment variable in the format
+  postgresql+asyncpg://user:pass@host:5432/bambuddy after deployment. Note:
+  Virtual printer features (proxy mode, FTP, MQTT, RTSP camera relay) require
+  additional port mappings and NET_BIND_SERVICE capability beyond what this
+  template exposes; for full virtual printer support use the official Docker
+  Compose with host network mode.
+
+changeLog:
+  - date: "2026-06-01"
+    description: Initial template release for BamBuddy v0.2.4.4
+
+links:
+  - label: Website
+    url: https://bambuddy.cool
+  - label: GitHub
+    url: https://github.com/maziggy/bambuddy
+  - label: Documentation
+    url: https://github.com/maziggy/bambuddy/wiki
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bambuddy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/maziggy/bambuddy:0.2.4.4
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+      description: Container timezone (e.g. Europe/Berlin, America/New_York)
+
+benefits:
+  - title: Cloud-Free Printer Control
+    description:
+      Manage your Bambu Lab printers entirely on your local network with no
+      cloud dependency, using Bambu Lab's Developer Mode API.
+  - title: Full Print Lifecycle Management
+    description:
+      Archive every print with a 3D preview, re-print with AMS filament
+      remapping, edit timelapses, and track spool usage and costs.
+  - title: Advanced Automation
+    description:
+      Schedule prints, dispatch jobs across multiple printers, auto power-off
+      via smart plugs, and receive HMS error alerts and notifications.
+  - title: Server-Side Slicing
+    description:
+      Slice STL and 3MF files directly in BamBuddy without needing the
+      OrcaSlicer desktop app on every machine.
+
+features:
+  - title: Real-Time Monitoring
+    description:
+      Live printer status, live camera streams, build plate detection, and HMS
+      error alerts for all connected printers.
+  - title: Print Archive & 3D Preview
+    description:
+      Every completed print is archived with a Three.js 3D preview, timelapse
+      video, and full metadata for easy reference and re-printing.
+  - title: Spool & Inventory Tracking
+    description:
+      Track filament spools with usage analytics, remaining weight estimates,
+      and per-print cost accounting.
+  - title: Multi-Printer Dispatch
+    description:
+      Queue and dispatch print jobs across multiple printers with AMS filament
+      mapping and scheduling support.
+  - title: SQLite or PostgreSQL
+    description:
+      Ships with SQLite for zero-config deployments; optionally connect an
+      external PostgreSQL database for larger setups.
+
+tags:
+  - 3D Printing
+  - Bambu Lab
+  - Monitoring
+  - Automation
+  - Self-Hosted

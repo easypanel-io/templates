@@ -1,0 +1,69 @@
+name: Calagopus
+description:
+  Calagopus is a modern open-source game server management panel built in Rust
+  and React. It is a high-performance reimplementation of Pterodactyl Panel
+  featuring a refreshed UI, an extensible plugin architecture, and
+  container-based game server management. It supports Pterodactyl-compatible
+  eggs and migration from existing Pterodactyl or Pelican installations.
+instructions:
+  After deployment, navigate to the provided domain. An out-of-box experience
+  (OOBE) wizard will guide you through creating the initial admin account and
+  configuration. Do not change the APP_ENCRYPTION_KEY environment variable
+  after initial setup, as it is used to encrypt all stored secrets.
+changeLog:
+  - date: 2026-06-12
+    description: First release
+links:
+  - label: Website
+    url: https://calagopus.com
+  - label: Docs
+    url: https://calagopus.com/docs
+  - label: GitHub
+    url: https://github.com/calagopus/panel
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: calagopus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/calagopus/panel:1.0.9
+benefits:
+  - title: Game Server Management
+    description:
+      Manage and monitor game servers with a modern, high-performance interface.
+  - title: Pterodactyl Compatible
+    description:
+      Import existing Pterodactyl and Pelican eggs and migrate configurations.
+  - title: Rust-Powered Backend
+    description:
+      High-performance backend built with Tokio and Axum for speed and
+      reliability.
+features:
+  - title: Container-Based Management
+    description: Deploy and manage game servers using Docker containers.
+  - title: Plugin Architecture
+    description: Extend functionality with a built-in extensible plugin system.
+  - title: OOBE Setup Wizard
+    description: Guided out-of-box setup for initial admin account creation.
+  - title: Real-Time Monitoring
+    description:
+      View live CPU, memory, disk, and network stats for each game server.
+  - title: Automatic Migrations
+    description:
+      Database migrations run automatically on startup via DATABASE_MIGRATE.
+tags:
+  - Game Server
+  - Management
+  - Self-Hosted
+  - Gaming
+  - Infrastructure

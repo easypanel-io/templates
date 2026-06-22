@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to 2025.12.30-a5c946a3
   - date: 2026-02-24
     description: Version bumped to 2026.2.23-4964d664f
+  - date: 2026-05-05
+    description: Version bumped to 2026.5.5-d3566fe8a
 links:
   - label: Docs
     url: https://docs.searxng.org/
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: searxng/searxng:2026.2.23-4964d664f
+      default: searxng/searxng:2026.5.5-d3566fe8a
 benefits:
   - title: Privacy-Respecting Search
     description:
