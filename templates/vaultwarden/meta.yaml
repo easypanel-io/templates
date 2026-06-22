@@ -12,11 +12,16 @@ description:
   prioritize the development of features mainly useful to larger organizations
   such as single sign-on and directory syncing.
 instructions:
-  To access the administration interface, please go to /admin on your
-  installation url. The admin token is in your "Environment" tab.
+  To access the administration interface go to /admin on your installation URL.
+  The admin token is in your Environment tab. SMTP is optional — if no SMTP host
+  is set, password hints are displayed in-app and new-device email verification
+  is disabled. Set SMTP_SECURITY to "starttls" (port 587), "force_tls" (port
+  465), or "off" (port 25) to match your mail provider.
 changeLog:
   - date: 2022-11-19
     description: first release
+  - date: 2026-06-03
+    description: Added SMTP email support fields
 links:
   - label: Documentation
     url: https://github.com/dani-garcia/vaultwarden/wiki
@@ -27,6 +32,8 @@ links:
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
 schema:
   type: object
   required:
@@ -40,7 +47,48 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vaultwarden/server:latest
+      default: vaultwarden/server:1.36.0
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: ""
+      description:
+        Hostname of your SMTP server. Leave empty to disable email (password
+        hints will be shown in-app instead).
+    smtpFrom:
+      type: string
+      title: SMTP From Address
+      default: ""
+      description:
+        Email address used as the sender (e.g. vaultwarden@example.com).
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: Vaultwarden
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: ""
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
+    smtpSecurity:
+      type: string
+      title: SMTP Security
+      default: starttls
+      description:
+        "Secure connection type: starttls (port 587), force_tls (port 465), or
+        off (port 25)."
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpAuthMechanism:
+      type: string
+      title: SMTP Auth Mechanism
+      default: ""
+      description: "Optional. SMTP authentication mechanism (e.g. Plain, Login). Leave blank for default."
 benefits:
   - title: Self-hosted deployment
     description:
