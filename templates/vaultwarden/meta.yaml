@@ -86,6 +86,11 @@ schema:
       type: string
       title: SMTP Port
       default: "587"
+    smtpAuthMechanism:
+      type: string
+      title: SMTP Auth Mechanism
+      default: ""
+      description: "Optional. SMTP authentication mechanism (e.g. Plain, Login). Leave blank for default."
 benefits:
   - title: Self-hosted deployment
     description:
