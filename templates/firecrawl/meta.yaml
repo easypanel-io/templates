@@ -48,11 +48,11 @@ schema:
     appServiceImage:
       type: string
       title: Firecrawl API Image
-      default: ghcr.io/firecrawl/firecrawl:latest
+      default: ghcr.io/firecrawl/firecrawl:v2.11.8
     playwrightServiceImage:
       type: string
       title: Playwright Service Image
-      default: ghcr.io/firecrawl/playwright-service:latest
+      default: ghcr.io/firecrawl/playwright-service:v2.11.8
     redisImage:
       type: string
       title: Redis Image
@@ -64,7 +64,7 @@ schema:
     nuqPostgresImage:
       type: string
       title: NuQ Postgres Image
-      default: ghcr.io/firecrawl/nuq-postgres:latest
+      default: ghcr.io/firecrawl/nuq-postgres:v2.11.8
 benefits:
   - title: LLM-Ready Data Extraction
     description:
