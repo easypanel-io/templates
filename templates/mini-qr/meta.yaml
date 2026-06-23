@@ -1,0 +1,84 @@
+name: MiniQR
+description:
+  MiniQR is a lightweight, self-hostable QR code generator built with Vue 3
+  and Vite. It lets you create fully customised QR codes — changing dot shapes,
+  colours, corner styles, embedded logos, and decorative frames — and export
+  them as PNG or SVG. Presets, batch export, and a clean single-page interface
+  make it practical for both personal and branded use.
+instructions: |
+  After deployment, open your service URL. No login is required. Enter any URL
+  or text in the "Data to encode" field to generate a QR code. Use the
+  customisation panel on the right to adjust colours, dot styles, and frame
+  settings. Download the result as PNG or SVG.
+
+  Note: all VITE_* configuration variables (default presets, branding, etc.)
+  are baked into the pre-built image at build time and cannot be changed at
+  runtime. To use custom presets or hide credits, build your own image from
+  the source repository and pass the desired build arguments.
+changeLog:
+  - date: 2026-06-23
+    description: Initial release (v0.31.0)
+links:
+  - label: Website
+    url: https://mini-qr-code-generator.vercel.app
+  - label: GitHub
+    url: https://github.com/lyqht/mini-qr
+  - label: Documentation
+    url: https://github.com/lyqht/mini-qr/blob/main/SELF_HOSTING.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mini-qr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/lyqht/mini-qr:v0.31.0
+benefits:
+  - title: No Account or Backend Required
+    description:
+      Fully static single-page app — deploy once and generate QR codes
+      instantly with no server-side processing or user accounts.
+  - title: Full Visual Customisation
+    description:
+      Control every pixel of your QR code — dot shapes, corner styles, colours,
+      embedded logos, and decorative text frames.
+  - title: Export as PNG or SVG
+    description:
+      Download QR codes in high-resolution PNG or scalable SVG format, ready
+      for print, web, or presentation use.
+features:
+  - title: QR Code Generator
+    description:
+      Encode URLs, plain text, Wi-Fi credentials, contact cards, or any other
+      data into a scannable QR code in seconds.
+  - title: Style Presets
+    description:
+      Save and reload named style configurations so you can apply consistent
+      branding across multiple QR codes quickly.
+  - title: Batch Export
+    description:
+      Generate and download multiple QR codes at once from a CSV data source,
+      each using the same visual style.
+  - title: Frame Designer
+    description:
+      Add a decorative frame around the QR code with custom text, colours,
+      border radius, and padding for print-ready output.
+  - title: Internationalisation
+    description:
+      Interface available in multiple languages via Vue i18n with community
+      translations managed through Crowdin.
+tags:
+  - QR Code
+  - Generator
+  - Utilities
+  - Self-hosted
+  - Productivity
