@@ -1,0 +1,82 @@
+name: GoMFT
+description:
+  GoMFT is an open-source Go-based Managed File Transfer platform with a
+  built-in web UI. It lets you define transfer configurations, schedule jobs
+  with cron expressions, monitor transfer history, and manage users and roles —
+  all from the browser. It uses rclone under the hood, giving it support for
+  dozens of storage backends including S3, SFTP, Google Drive, Azure Blob, local
+  paths, and more.
+instructions:
+  After deployment, open your service URL and log in with the default
+  credentials, admin@example.com/admin
+changeLog:
+  - date: 2026-06-23
+    description: Initial release (0.2.11)
+links:
+  - label: Website
+    url: https://starfleetcptn.github.io/GoMFT/
+  - label: GitHub
+    url: https://github.com/StarFleetCPTN/GoMFT
+  - label: Documentation
+    url: https://starfleetcptn.github.io/GoMFT/docs/introduction/overview
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gomft
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: starfleetcptn/gomft:0.2.11
+benefits:
+  - title: Multi-Backend File Transfer
+    description:
+      Powered by rclone, GoMFT connects to S3, SFTP, Google Drive, Azure Blob,
+      Dropbox, local paths, and dozens more — all configured from the web UI.
+  - title: Scheduled Automation
+    description:
+      Define cron-based schedules for any transfer job so files move
+      automatically without manual intervention.
+  - title: Full Audit Trail
+    description:
+      Every transfer run is logged with status, duration, and file counts so you
+      can investigate failures and prove compliance.
+features:
+  - title: Transfer Configurations
+    description:
+      Create reusable named configs that pair a source and destination backend
+      with authentication credentials and transfer options.
+  - title: Job Scheduler
+    description:
+      Attach one or more cron schedules to a transfer config and GoMFT will run
+      the job automatically on the defined cadence.
+  - title: Transfer History
+    description:
+      Browse a paginated log of every past job run with per-file detail,
+      duration, byte counts, and error messages.
+  - title: User and Role Management
+    description:
+      Create multiple user accounts with role-based access control so operators
+      can view history without being able to change configs.
+  - title: Notification Services
+    description:
+      Configure email or webhook notifications to alert you when a job succeeds,
+      fails, or is skipped.
+  - title: Database Tools
+    description:
+      Built-in database viewer and backup utilities let you inspect the embedded
+      SQLite state and export snapshots.
+tags:
+  - File Transfer
+  - Automation
+  - MFT
+  - Storage
+  - Self-hosted
