@@ -1,0 +1,83 @@
+name: OpenBao
+description:
+  OpenBao is an open-source, community-driven secrets manager and fork of
+  HashiCorp Vault, stewarded by the Linux Foundation's OpenSSF. It manages,
+  stores, and distributes sensitive data — secrets, certificates, and encryption
+  keys — with fine-grained access control, dynamic secret generation, data
+  encryption as a service, and a full audit log. This template deploys OpenBao
+  in server mode with file-based storage and the built-in web UI enabled.
+instructions:
+  After deployment, open your service URL to reach the OpenBao web UI
+  initialisation wizard.
+changeLog:
+  - date: 2026-06-23
+    description: Initial release (2.5.5)
+links:
+  - label: Website
+    url: https://openbao.org
+  - label: Documentation
+    url: https://openbao.org/docs/
+  - label: GitHub
+    url: https://github.com/openbao/openbao
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openbao
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: quay.io/openbao/openbao:2.5.5
+benefits:
+  - title: Open-Source Vault Alternative
+    description:
+      A true community fork of HashiCorp Vault under an OSI-approved licence,
+      governed by the Linux Foundation — no BSL restrictions.
+  - title: Centralized Secret Management
+    description:
+      Store API keys, database passwords, certificates, and any sensitive string
+      in one encrypted, audited location accessible by your applications.
+  - title: Dynamic Secrets
+    description:
+      Generate short-lived, on-demand credentials for AWS, databases, and other
+      backends so static credentials never need to leave the vault.
+features:
+  - title: Key/Value Secret Store
+    description:
+      Store and retrieve arbitrary secrets with versioning, metadata, and
+      policy-based access control via the KV secrets engine.
+  - title: Data Encryption as a Service
+    description:
+      Encrypt and decrypt data without storing it, letting applications offload
+      cryptographic operations to OpenBao.
+  - title: PKI and Certificate Management
+    description:
+      Act as an internal certificate authority to issue, renew, and revoke TLS
+      certificates with configurable TTLs.
+  - title: Auth Methods
+    description:
+      Authenticate via tokens, AppRole, Kubernetes service accounts, LDAP,
+      GitHub, JWT, and more — integrating with your existing identity stack.
+  - title: Audit Logging
+    description:
+      Every request and response is recorded to a tamper-evident audit log for
+      compliance and forensic investigation.
+  - title: Web UI
+    description:
+      A built-in browser interface lets you browse secrets, manage policies,
+      monitor leases, and unseal the vault without the CLI.
+tags:
+  - Security
+  - Secrets Management
+  - Vault
+  - Encryption
+  - PKI
+  - Self-hosted
