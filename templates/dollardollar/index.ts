@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `SQLALCHEMY_DATABASE_URI=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+        `SQLALCHEMY_DATABASE_URI=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `SECRET_KEY=${secretKey}`,
         `FLASK_APP=app.py`,
         `DEVELOPMENT_MODE=False`,
