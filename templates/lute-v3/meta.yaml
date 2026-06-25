@@ -1,0 +1,91 @@
+name: Lute v3
+description:
+  Lute (Learning Using Texts) is a free, open-source web application for
+  learning foreign languages through reading. Import or paste texts in any
+  language, click unknown words to look them up, save definitions and
+  translations, and watch your comprehension grow as the app tracks each term's
+  learning status. It ships with built-in support for many European languages as
+  well as optional parsers for Japanese (MeCab) and Mandarin. All data is stored
+  in a local SQLite database — no account, no cloud, no subscription required.
+instructions:
+  Open the app at your domain after deployment. On first launch, Lute presents a
+  built-in tutorial. Go to Settings to add your languages, then create a Book
+  and paste or import a text to start reading. Two image variants are available
+  — choose "lean" if you are not studying Japanese or Mandarin (saves ~550 MB).
+  The full image includes MeCab and Mandarin parsers. Data is persisted in two
+  volumes; /lute_data (database and user images) and /lute_backup
+  (auto-backups). Both must be mounted or the container will refuse to start.
+changeLog:
+  - date: "2026-06-25"
+    description: First Release
+links:
+  - label: Website
+    url: https://luteorg.github.io/lute-manual/
+  - label: GitHub
+    url: https://github.com/LuteOrg/lute-v3
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lute-v3
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jzohrab/lute3:3.10.1
+benefits:
+  - title: Learn Languages Through Real Reading
+    description:
+      Read authentic texts in your target language. Click any word to look it
+      up, save a translation and status, and Lute colours each word by how well
+      you know it — giving you instant comprehension feedback as you read.
+  - title: Fully Self-Hosted, No Account Required
+    description:
+      Everything runs locally in a single container with a SQLite database.
+      There is no sign-up, no cloud sync, and no subscription — your vocabulary
+      data stays on your server forever.
+  - title: Supports Dozens of Languages
+    description:
+      Built-in parsers cover most European languages. The full image adds MeCab
+      for Japanese and a Mandarin parser, making Lute suitable for a wide range
+      of language learners.
+  - title: Anki Integration
+    description:
+      Export saved terms directly to Anki via AnkiConnect so you can reinforce
+      vocabulary you have encountered in real texts with spaced-repetition
+      flashcard review.
+features:
+  - title: Interactive Reading Pane
+    description:
+      Words are colour-coded by learning status (1–5 or well-known). Click a
+      word to open an inline definition form and lookup pane with dictionary
+      results; multi-word terms can be selected by shift-click.
+  - title: Term Tracking
+    description:
+      Every word you look up is saved with a status, translation, tags, and
+      parent form. Terms automatically advance through statuses as you mark them
+      known during reading sessions.
+  - title: Books and Text Import
+    description:
+      Organise reading material as Books. Import plain text files, paste text
+      directly, or use URLs — Lute splits long texts into pages automatically.
+  - title: Built-in Dictionary Lookup
+    description:
+      The reading pane embeds dictionary lookups (FreeDictionary, DeepL, and
+      others you configure) in a side panel so you never need to leave the page.
+  - title: Audio Support
+    description:
+      Attach audio files to books and listen while you read. Lute supports
+      sentence-level audio alignment for immersive listening-reading practice.
+tags:
+  - Education
+  - Language Learning
+  - Self-Hosted
+  - Productivity
