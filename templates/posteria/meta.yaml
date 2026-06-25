@@ -1,0 +1,89 @@
+name: Posteria
+description:
+  Posteria is a self-hosted, web-based media poster management system. It lets
+  you organise and store custom artwork for your movies, TV shows, seasons, and
+  collections. Posters can be uploaded from local files or URLs, pulled
+  automatically from TMDB, TVDB, and Fanart.tv, or synced directly from your
+  Plex server — with scheduled auto-imports and a full-screen poster wall for
+  browsing your library.
+instructions:
+  After deployment, open your service URL to reach the Posteria web UI.
+changeLog:
+  - date: 2026-06-24
+    description: Initial release (v1.7.5)
+links:
+  - label: Website
+    url: https://posteria.app
+  - label: GitHub
+    url: https://github.com/jeremehancock/Posteria
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - authUsername
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: posteria
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bozodev/posteria:1.7.5
+    authUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    authPassword:
+      type: string
+      title: Admin Password
+      default: password
+      description: Leave empty to auto-generate it.
+benefits:
+  - title: Centralised Poster Library
+    description:
+      Keep all your movie, TV show, season, and collection artwork in one
+      self-hosted location, accessible from any browser.
+  - title: Plex Integration
+    description:
+      Sync posters directly from your Plex server and push custom artwork back
+      with a single click or on an automated schedule.
+  - title: Multi-Source Artwork Import
+    description:
+      Pull artwork automatically from TMDB, TVDB, and Fanart.tv so you always
+      have the best available poster for every title.
+features:
+  - title: Poster Wall
+    description:
+      Browse your entire poster collection in a full-screen, mobile- responsive
+      wall view with fast fuzzy search.
+  - title: Upload from File or URL
+    description:
+      Add posters by uploading local images (JPG, JPEG, PNG, WebP) or pasting a
+      direct image URL.
+  - title: Scheduled Auto-Import
+    description:
+      Configure a cron-style schedule to automatically pull new artwork from
+      connected sources without manual intervention.
+  - title: Plex Poster Sync
+    description:
+      Import the current poster from Plex for any item, or push a chosen poster
+      back to update your Plex library artwork.
+  - title: Orphan Detection
+    description:
+      Identify poster files that no longer match any media item in your library
+      and clean them up in bulk.
+  - title: PWA Support
+    description:
+      Install Posteria as a Progressive Web App on mobile or desktop for a
+      native app-like experience.
+tags:
+  - Media
+  - Plex
+  - Posters
+  - Media Management
+  - Self-hosted
