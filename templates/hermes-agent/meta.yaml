@@ -1,0 +1,142 @@
+name: Hermes Agent
+description:
+  Hermes Agent is an autonomous AI agent by Nous Research that runs persistently
+  on your server, remembers what it learns, executes shell commands, manages
+  files, browses the web, schedules cron tasks, and integrates with Telegram,
+  Discord, Slack, and WhatsApp. It supports 200+ models through OpenRouter and
+  direct integrations with Anthropic, OpenAI, Google, and DeepSeek. The built-in
+  web dashboard provides a browser-based UI for managing configurations, API
+  keys, MCP servers, and chat sessions. All sessions, memory, skills, and
+  configuration are stored in a persistent volume so the agent grows more
+  capable over time.
+instructions:
+  The Hermes Agent web dashboard is accessible at your assigned domain. Log in
+  with the dashboard username and password you configured during deployment. The
+  OpenAI-compatible gateway API runs on port 8642 and the dashboard backend runs
+  on port 9119 — both are published for direct access. To configure API keys and
+  models after deployment, use the web dashboard or SSH into the container and
+  run; hermes setup For messaging platforms (Telegram, Discord, Slack,
+  WhatsApp), SSH in and run hermes gateway setup, then provide your bot tokens
+  in the service environment variables and redeploy.
+changeLog:
+  - date: "2026-06-17"
+    description: First Release
+links:
+  - label: Website
+    url: https://hermes-agent.nousresearch.com/
+  - label: Documentation
+    url: https://hermes-agent.nousresearch.com/docs
+  - label: Github
+    url: https://github.com/NousResearch/hermes-agent
+  - label: Docker Hub
+    url: https://hub.docker.com/r/nousresearch/hermes-agent
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - dashboardUsername
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hermes-agent
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: "nousresearch/hermes-agent:v2026.6.5"
+    dashboardUsername:
+      type: string
+      title: Dashboard Username
+      default: admin
+    dashboardPassword:
+      type: string
+      title: Dashboard Password
+      description:
+        "Basic-auth password for the web dashboard. Auto-generated if left blank
+        — find it in the service environment variables after deployment."
+    gatewayAllowAllUsers:
+      type: boolean
+      title: Allow All Gateway Users
+      description:
+        "When enabled, any authenticated user can send requests to the Hermes
+        gateway without an individual API key."
+      default: true
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      description:
+        "Optional: injected as ANTHROPIC_API_KEY. Can also be set later via
+        hermes setup or the web dashboard."
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description:
+        "Optional: injected as OPENAI_API_KEY. Can also be set later via hermes
+        setup or the web dashboard."
+    telegramBotToken:
+      type: string
+      title: Telegram Bot Token
+      description:
+        "Optional: your Telegram bot token from @BotFather. Injected as
+        TELEGRAM_BOT_TOKEN."
+    discordBotToken:
+      type: string
+      title: Discord Bot Token
+      description:
+        "Optional: your Discord bot token. Injected as DISCORD_BOT_TOKEN."
+benefits:
+  - title: Web Dashboard Included
+    description:
+      A built-in browser-based dashboard lets you manage API keys, MCP servers,
+      messaging channels, memory, and chat sessions without touching the CLI.
+      Protected by basic-auth and available at your domain immediately after
+      deployment.
+  - title: Persistent Memory & Skills
+    description:
+      The agent remembers your conversations, builds skills from experience, and
+      retains context across sessions — all stored in a persistent volume on
+      your own server.
+  - title: Multi-Provider Model Support
+    description:
+      Works with 200+ models via OpenRouter plus direct integrations with
+      Anthropic, OpenAI, Google, DeepSeek, and more. Switch models at any time
+      with hermes model or through the dashboard.
+  - title: Messaging Gateway
+    description:
+      Connect the agent to Telegram, Discord, Slack, or WhatsApp so it responds
+      to messages, runs scheduled tasks, and delivers results to your phone — no
+      open ports required.
+features:
+  - title: Browser-Based Admin Dashboard
+    description:
+      Configure settings, manage credentials, browse the MCP catalog, and chat
+      with the agent directly from a React-based web UI served at port 6432.
+  - title: OpenAI-Compatible API Server
+    description:
+      Port 8642 exposes an OpenAI-compatible gateway so Claude Code, Open WebUI,
+      Cursor, or any OpenAI SDK client can connect to Hermes as their LLM
+      backend.
+  - title: Autonomous Tool Use
+    description:
+      Built-in tools for shell execution, file operations, web search, and code
+      running — the agent decides which tools to use and chains them to complete
+      tasks.
+  - title: Cron Scheduling
+    description:
+      Schedule recurring tasks with natural-language prompts and have results
+      delivered to your messaging platform of choice.
+  - title: MCP Server Support
+    description:
+      Connect any MCP-compatible server for additional tool integrations, or
+      expose Hermes itself as an MCP server to Claude Code, Cursor, or other
+      editors.
+tags:
+  - AI
+  - Automation
+  - Self-Hosted
+  - Developer Tools
+  - Productivity
