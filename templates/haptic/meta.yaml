@@ -1,0 +1,85 @@
+name: Haptic
+description:
+  Haptic is a local-first, privacy-focused, open-source markdown note-taking
+  app built with Svelte and PGlite. All notes are stored directly in your
+  browser's IndexedDB — no account, no cloud sync, and no server-side database
+  required. It features an inline Markdown editor with live preview, a
+  file-tree sidebar, daily notes, a task tracker, and full-text search with
+  regex support. The Docker image is a tiny (~72 MB) nginx container that
+  serves the static web app; data lives entirely in the client.
+instructions:
+  Open the app at your domain after deployment. No login or setup is required
+  — Haptic runs entirely in your browser using PGlite (WebAssembly SQLite via
+  IndexedDB). Create your first note using the sidebar and start writing
+  Markdown immediately. Notes persist in your browser's local storage, so
+  clearing browser data will erase them.
+changeLog:
+  - date: "2026-06-26"
+    description: First Release
+links:
+  - label: Website
+    url: https://www.haptic.md/
+  - label: GitHub
+    url: https://github.com/chroxify/haptic
+  - label: Docker Hub
+    url: https://hub.docker.com/r/chroxify/haptic-web
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: haptic
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: chroxify/haptic-web:v0.1.4
+benefits:
+  - title: Truly Local-First
+    description:
+      Notes are stored in your browser's IndexedDB using PGlite (a WebAssembly
+      port of SQLite). No data ever leaves your device or hits a server —
+      Haptic is as private as a local desktop app, accessible from any browser.
+  - title: Minimal and Fast
+    description:
+      The entire Docker image is under 72 MB and is a simple nginx static
+      server. There is no database container, no backend process, and no
+      environment variables to configure — deploy and start writing in under a
+      minute.
+  - title: Distraction-Free Markdown Editing
+    description:
+      Haptic provides everything you need and nothing you don't — inline
+      Markdown editing with live preview, keyboard-driven navigation, and a
+      clean three-column layout that stays out of your way.
+features:
+  - title: Inline Markdown Editor
+    description:
+      Write and preview Markdown without switching modes. The editor renders
+      headings, bold, italic, code blocks, and lists inline as you type.
+  - title: Daily Notes
+    description:
+      A dedicated daily-notes section creates a dated entry for each day,
+      making it easy to keep a running journal or capture quick thoughts.
+  - title: Task Tracker
+    description:
+      A built-in tasks view lets you create and check off to-do items across
+      all your notes without leaving the app.
+  - title: Full-Text Search
+    description:
+      Search across all notes instantly with optional regular-expression
+      support via the command menu (Ctrl/Cmd+K).
+  - title: Appearance Customisation
+    description:
+      Switch between light and dark themes and adjust editor font settings
+      from the Settings panel.
+tags:
+  - Note Taking
+  - Productivity
+  - Markdown
+  - Self-Hosted
