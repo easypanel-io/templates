@@ -1,0 +1,115 @@
+name: MMP
+description:
+  Maker Management Platform (MMP) is an open-source self-hosted system for
+  organising and managing 3D printing and maker projects. It provides a web UI
+  with a visual library of STL and 3MF files, automatically renders 3D model
+  thumbnails, manages project collections with linked assets (models, slices,
+  images, and documents), and integrates with Klipper and OctoPrint to send
+  slices directly to your printer. Projects can be imported from Thingiverse via
+  the MMP Companion browser extension. The stack is two containers — a Go
+  backend agent and a React frontend — with all state stored in local volumes.
+instructions: Open the UI at your domain after deployment. On first load you
+  will see an empty library. The agent scans the /library volume for STL, 3MF,
+  and other maker files and renders 3D previews automatically in the background.
+
+  To use slicer integration, ensure port 8000 on the agent service is reachable
+  from your slicer (it is published as a host port). See the MMP documentation
+  for PrusaSlicer / Orca Slicer configuration.
+
+  To import projects from Thingiverse, add your Thingiverse API token to the
+  agentThingiverseToken field, or edit /data/config.toml inside the agent
+  container after first run.
+changeLog:
+  - date: "2026-06-26"
+    description: First Release
+links:
+  - label: GitHub (Agent)
+    url: https://github.com/maker-management-platform/agent
+  - label: GitHub (UI)
+    url: https://github.com/maker-management-platform/mmp-ui
+  - label: Documentation
+    url: https://github.com/Maker-Management-Platform/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - agentServiceImage
+    - uiServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mmp
+    agentServiceImage:
+      type: string
+      title: Agent Image
+      default: ghcr.io/maker-management-platform/agent:v1.3.2
+    uiServiceImage:
+      type: string
+      title: UI Image
+      default: ghcr.io/maker-management-platform/mmp-ui:v1.3.0
+    thingiverseToken:
+      type: string
+      title: Thingiverse API Token
+      description:
+        Optional. Allows MMP to import projects directly from Thingiverse. Get a
+        token at https://www.thingiverse.com/apps/create.
+      default: ""
+    modelRenderColor:
+      type: string
+      title: 3D Model Render Color
+      description: Hex colour used when rendering 3D model preview images.
+      default: "#167DF0"
+benefits:
+  - title: Visual 3D Library
+    description:
+      MMP automatically scans your library folder and renders colour-coded 3D
+      preview thumbnails for every STL and 3MF file, giving you a visual grid of
+      all your models without opening a slicer.
+  - title: Send Slices to Printer
+    description:
+      Integrates with Klipper and OctoPrint so you can send a slice file
+      directly to your printer from within the MMP UI — no file transfers or USB
+      sticks required.
+  - title: Project Collections
+    description:
+      Group related files into projects and attach any combination of models,
+      slice files, images, and documents. Everything stays together and
+      searchable in one place.
+  - title: Import from Thingiverse
+    description:
+      Use the MMP Companion browser extension or the built-in Thingiverse
+      importer (with an API token) to pull projects directly into your local
+      library.
+features:
+  - title: Automatic Model Rendering
+    description:
+      The Go agent renders STL and 3MF files to PNG thumbnails in parallel using
+      a configurable worker pool (default 5 workers) so large libraries are
+      processed quickly.
+  - title: Asset Management
+    description:
+      Each project can hold multiple asset types — models, print profiles,
+      reference images, and documents — all browsable from a single project
+      detail view.
+  - title: Printer Integration
+    description:
+      Add Klipper or OctoPrint printer endpoints and upload slice files (G-code)
+      directly from the MMP UI without leaving the browser.
+  - title: Thingiverse Import
+    description:
+      Provide a Thingiverse API token to import public projects (models, images,
+      descriptions) directly into your local MMP library.
+  - title: Slicer Integration
+    description:
+      Configure PrusaSlicer or Orca Slicer to post-process prints through MMP
+      via port 8000 for a seamless library-to-printer workflow.
+tags:
+  - 3D Printing
+  - Maker
+  - Self-Hosted
+  - Productivity
+  - File Management
