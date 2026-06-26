@@ -1,0 +1,111 @@
+name: Pwgen
+description:
+  Pwgen is a simple, self-hosted web application for generating secure passwords
+  and passphrases with customisable options. Users can generate random passwords
+  with configurable length and character sets (uppercase, digits, special
+  characters, homoglyph exclusion) or word-based passphrases with choices of
+  separator, capitalisation, and word count. All generated passwords are
+  optionally cross-checked against the haveibeenpwned database to confirm they
+  have not appeared in known data breaches. The app is a single container with
+  no database and supports a PWA install for offline use.
+instructions:
+  Open the app at your domain. Configure your desired password or passphrase
+  options using the toggles and sliders, then click Generate. Click "copy
+  password" to copy the result to your clipboard. By default the app checks
+  generated passwords against the haveibeenpwned API. Set NO_API_CHECK=true (the
+  default in this template) to disable that check for air-gapped or
+  privacy-sensitive deployments.
+changeLog:
+  - date: "2026-06-26"
+    description: First Release (v1.92.5)
+links:
+  - label: GitHub
+    url: https://github.com/jocxfin/pwgen
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pwgen
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jocxfin/pwgen:v1.92.5
+    noApiCheck:
+      type: boolean
+      title: Disable HaveIBeenPwned API Check
+      description:
+        When enabled, skips the online check against the haveibeenpwned
+        database. Recommended for air-gapped networks or enhanced privacy.
+      default: true
+    pwLength:
+      type: number
+      title: Default Password Length
+      default: 12
+    pwIncludeUppercase:
+      type: boolean
+      title: Include Uppercase Letters by Default
+      default: true
+    pwIncludeDigits:
+      type: boolean
+      title: Include Digits by Default
+      default: true
+    pwIncludeSpecial:
+      type: boolean
+      title: Include Special Characters by Default
+      default: true
+    multiGen:
+      type: boolean
+      title: Enable Multiple Generation (up to 5 at once)
+      default: true
+benefits:
+  - title: No Account, No Cloud
+    description:
+      Pwgen runs entirely in a single container with no external database or
+      account required. Generated passwords never leave your server unless you
+      choose to check them against haveibeenpwned.
+  - title: HaveIBeenPwned Integration
+    description:
+      Optionally cross-references every generated password against the
+      haveibeenpwned breach database using a k-anonymity API call so the full
+      password is never transmitted.
+  - title: Flexible Generation
+    description:
+      Supports both random character passwords and word-based passphrases with
+      English, Finnish, and French wordlists as well as custom wordlists from
+      URLs or local files.
+features:
+  - title: Password Generation
+    description:
+      Configurable length (slider), uppercase letters, digits, special
+      characters, and optional homoglyph exclusion (removes look-alike
+      characters such as 0/O and 1/l).
+  - title: Passphrase Generation
+    description:
+      Word-count control, capitalisation toggle, separator choice (space, dash,
+      number, special character, or user-defined), and optional inclusion of
+      numbers or special characters between words.
+  - title: Multiple Generation
+    description:
+      Generate up to 5 passwords or passphrases simultaneously with the
+      MULTI_GEN option so you can pick the one you prefer.
+  - title: Browser Settings Persistence
+    description:
+      Saves all generation preferences in a browser cookie so your settings are
+      remembered between visits.
+  - title: Progressive Web App
+    description:
+      Installable as a PWA for an app-like experience on mobile and desktop
+      without needing a native install.
+tags:
+  - Security
+  - Password Manager
+  - Utilities
+  - Self-Hosted
