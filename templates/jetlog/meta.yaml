@@ -1,0 +1,74 @@
+name: Jetlog
+description:
+  Jetlog is a self-hostable personal flight tracker and viewer. It provides a
+  world map view of all your flights, detailed statistics, and a clean
+  responsive interface for adding, editing, and deleting flight records. It
+  supports secure authentication with multiple users, data import from
+  MyFlightRadar24 and custom CSV files, and data export to CSV or iCal. Jetlog
+  optionally integrates with external APIs for automatic flight data fetching
+  from a flight number.
+instructions:
+  After deployment, log in with the default username and password "admin".
+  Change your password immediately after the first login.
+changeLog:
+  - date: 2026-06-29
+    description: first release
+links:
+  - label: Website
+    url: https://github.com/pbogre/jetlog
+  - label: Github
+    url: https://github.com/pbogre/jetlog
+  - label: Documentation
+    url: https://github.com/pbogre/jetlog/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jetlog
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: pbogre/jetlog:1.2
+benefits:
+  - title: Personal Flight Tracker
+    description:
+      Keep a detailed log of every flight you have taken in one place. Add,
+      edit, and delete records at any time with a simple, intuitive interface.
+  - title: World Map Visualization
+    description:
+      See all your flights plotted on an interactive world map, giving you a
+      clear picture of your travel history at a glance.
+  - title: Detailed Statistics
+    description:
+      Gain insights into your travel habits with aggregated statistics covering
+      total distance, number of flights, airports visited, and more.
+features:
+  - title: Secure Multi-User Authentication
+    description:
+      Protect your data with built-in authentication. Jetlog supports multiple
+      user accounts so everyone in your household can track their own flights.
+  - title: Import and Export
+    description:
+      Import flight history from MyFlightRadar24 or a custom CSV file. Export
+      your data back to CSV or iCal format for use in other tools.
+  - title: Responsive Design
+    description:
+      The interface adapts to any screen size, making it easy to log flights
+      from a desktop browser or a mobile device.
+  - title: Optional External API Integration
+    description:
+      Automatically fetch flight details from a flight number using the adsbdb
+      API. Disable external calls at any time via an environment variable for
+      maximum privacy.
+tags:
+  - Travel
+  - Productivity
+  - Self-Hosted
