@@ -1,16 +1,23 @@
 name: Discourse
 description:
-  Discourse is a modern, open-source discussion platform that provides a clean,
-  intuitive interface for community discussions. It's perfect for forums,
-  mailing lists, chat rooms, and more.
+  Discourse is a modern, open-source discussion platform built for the next
+  decade of the internet. It provides a clean, intuitive interface for community
+  discussions, forums, mailing lists, and chat. Discourse is fully self-hosted
+  and includes real-time notifications, a rich markdown editor, trust levels,
+  plugin support, and deep email integration. This template uses the official
+  Discourse Docker images with a bundled Postgres database and a Redis cache.
 instructions:
-  Once clicked, please wait for the installation to complete, it will take time.
-  It is also resource intensive, so make sure you have more than 8GB of RAM.
+  After deployment, the first setup wizard will walk you through creating your
+  admin account and configuring your site. Make sure your SMTP credentials are
+  correct before deploying — Discourse requires email to activate accounts.
+  Allow 5-10 minutes for the initial bootstrap to complete.
 changeLog:
   - date: 2025-04-30
     description: Initial release
   - date: 2025-07-15
     description: Version bumped to 3.4.5
+  - date: 2026-06-30
+    description: Switched to official discourse/discourse image
 links:
   - label: Website
     url: https://www.discourse.org
@@ -19,7 +26,7 @@ links:
   - label: GitHub
     url: https://github.com/discourse/discourse
   - label: Docker Hub
-    url: https://hub.docker.com/r/bitnami/discourse
+    url: https://hub.docker.com/r/discourse/discourse
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -28,9 +35,12 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - discourseUsername
-    - discoursePassword
+    - dbServiceImage
     - discourseEmail
+    - smtpAddress
+    - smtpPort
+    - smtpUsername
+    - smtpPassword
   properties:
     appServiceName:
       type: string
@@ -39,20 +49,31 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bitnami/discourse:3.4.5
+      default: discourse/discourse:2026.1.4
+    dbServiceImage:
+      type: string
+      title: Database Service Image
+      default: discourse/postgres:pg17
     discourseEmail:
       type: string
-      title: Discourse Email
+      title: Developer Email
       default: admin@example.com
-    discourseUsername:
+    smtpAddress:
       type: string
-      title: Discourse Username
-      default: admin
-    discoursePassword:
+      title: SMTP Address
+      default: smtp.gmail.com
+    smtpPort:
       type: string
-      title: Discourse Password
-      default: adminpassword123
-      description: Passwort must be at least 10 characters long
+      title: SMTP Port
+      default: "587"
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: user@gmail.com
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
 benefits:
   - title: Modern Discussion Platform
     description: Clean, intuitive interface for community discussions and forums
