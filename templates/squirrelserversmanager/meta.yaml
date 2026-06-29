@@ -1,0 +1,95 @@
+name: Squirrel Servers Manager
+description:
+  Squirrel Servers Manager (SSM) is a user-friendly, UI/UX-focused server and
+  configuration management tool. It lets you connect to remote servers over SSH,
+  manage Docker containers and Compose stacks, execute Ansible playbooks, and
+  monitor server health — all from a single web interface. SSM includes a
+  built-in Prometheus instance for metrics collection, a Redis cache, and a
+  MongoDB database for persistent storage. The architecture is a multi-service
+  deployment consisting of an Nginx proxy, a Node.js API server, a React client,
+  and supporting services.
+instructions:
+  After deployment, open the web UI. The default admin account is created on
+  first access. Connect your remote servers using SSH credentials in the Devices
+  section. Use the Playbooks section to run Ansible tasks and the Containers
+  section to manage Docker workloads on connected servers.
+changeLog:
+  - date: 2026-06-29
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/SquirrelCorporation/SquirrelServersManager
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - proxyServiceImage
+    - serverServiceImage
+    - clientServiceImage
+    - prometheusServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: squirrelserversmanager
+    proxyServiceImage:
+      type: string
+      title: Proxy Service Image
+      default: ghcr.io/squirrelcorporation/squirrelserversmanager-proxy:v0.5.2
+    serverServiceImage:
+      type: string
+      title: Server Service Image
+      default: ghcr.io/squirrelcorporation/squirrelserversmanager-server:v0.5.2
+    clientServiceImage:
+      type: string
+      title: Client Service Image
+      default: ghcr.io/squirrelcorporation/squirrelserversmanager-client:v0.5.2
+    prometheusServiceImage:
+      type: string
+      title: Prometheus Service Image
+      default: ghcr.io/squirrelcorporation/squirrelserversmanager-prometheus:v0.5.2
+benefits:
+  - title: Unified Server Management
+    description:
+      Manage all your remote servers from one place. SSM connects over SSH and
+      gives you a full-featured dashboard to monitor health, run commands, and
+      deploy workloads without juggling multiple tools.
+  - title: Ansible Playbook Execution
+    description:
+      Run Ansible playbooks directly from the UI. Import playbooks from remote
+      Git repositories or write them inline, then execute them against any
+      connected server with real-time output streaming.
+  - title: Docker and Compose Management
+    description:
+      View, start, stop, and restart Docker containers and Compose stacks on
+      every connected server. SSM pulls live status from the Docker daemon so
+      you always see the current state.
+features:
+  - title: SSH-Based Device Connectivity
+    description:
+      Add servers using SSH key or password authentication. SSM establishes
+      secure tunnels for all management operations and keeps credentials
+      encrypted at rest using a vault password.
+  - title: Real-Time Metrics with Prometheus
+    description:
+      A bundled Prometheus instance collects server and container metrics. The
+      dashboard surfaces CPU, memory, and disk usage so you can spot issues
+      before they become incidents.
+  - title: Multi-User with Role-Based Access
+    description:
+      Create multiple user accounts with different permission levels. Teams can
+      share a single SSM instance without granting everyone full administrative
+      access.
+  - title: Ansible Integration
+    description:
+      SSM ships with Ansible support out of the box. Connect remote playbook
+      repositories over Git, browse available roles and tasks, and execute them
+      on demand or on a schedule.
+tags:
+  - Server Management
+  - DevOps
+  - Monitoring
+  - Self-Hosted
