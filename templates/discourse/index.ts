@@ -3,22 +3,9 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const dbPassword = randomPassword();
 
-  const databasePassword = randomPassword();
-  const redisPassword = randomPassword();
-
-  const common_envs = [
-    `DISCOURSE_HOSTNAME=$(PRIMARY_DOMAIN)`,
-    `DISCOURSE_DATABASE_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
-    `DISCOURSE_DATABASE_PORT_NUMBER=5432`,
-    `DISCOURSE_DATABASE_NAME=$(PROJECT_NAME)`,
-    `DISCOURSE_DATABASE_USER=postgres`,
-    `DISCOURSE_DATABASE_PASSWORD=${databasePassword}`,
-    `DISCOURSE_REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
-    `DISCOURSE_REDIS_PORT_NUMBER=6379`,
-    `DISCOURSE_REDIS_PASSWORD=${redisPassword}`,
-  ].join("\n");
-
+  // Web application — official Discourse image, listens on port 80
   services.push({
     type: "app",
     data: {
@@ -27,60 +14,72 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
-        },
-      ],
       env: [
-        common_envs,
-        `DISCOURSE_USERNAME=${input.discourseUsername}`,
-        `DISCOURSE_PASSWORD=${input.discoursePassword}`,
-        `DISCOURSE_EMAIL=${input.discourseEmail}`,
+        `DISCOURSE_HOSTNAME=$(PRIMARY_DOMAIN)`,
+        `DISCOURSE_DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
+        `DISCOURSE_DB_PASSWORD=${dbPassword}`,
+        `DISCOURSE_REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
+        `DISCOURSE_DEVELOPER_EMAILS=${input.discourseEmail}`,
+        `DISCOURSE_SMTP_ADDRESS=${input.smtpAddress}`,
+        `DISCOURSE_SMTP_PORT=${input.smtpPort}`,
+        `DISCOURSE_SMTP_USER_NAME=${input.smtpUsername}`,
+        `DISCOURSE_SMTP_PASSWORD=${input.smtpPassword}`,
       ].join("\n"),
       mounts: [
         {
           type: "volume",
-          name: "discourse_data",
-          mountPath: "/bitnami/discourse",
+          name: "web-data",
+          mountPath: "/shared",
+        },
+      ],
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 80,
         },
       ],
     },
   });
 
+  // Discourse-flavoured Postgres — uses DB_PASSWORD, not the standard POSTGRES_PASSWORD
   services.push({
     type: "app",
     data: {
-      serviceName: `${input.appServiceName}-sidekiq`,
+      serviceName: `${input.appServiceName}-db`,
       source: {
         type: "image",
-        image: input.appServiceImage,
+        image: input.dbServiceImage,
       },
-      env: [common_envs, `DISCOURSE_SKIP_INSTALL=yes`].join("\n"),
+      env: [`DB_PASSWORD=${dbPassword}`].join("\n"),
       mounts: [
         {
-          type: "bind",
-          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/discourse_data`,
-          mountPath: "/bitnami/discourse",
+          type: "volume",
+          name: "db-data",
+          mountPath: "/var/lib/postgresql",
         },
       ],
     },
   });
 
+  // Redis — no auth required by the official Discourse image
   services.push({
-    type: "postgres",
-    data: {
-      serviceName: `${input.appServiceName}-db`,
-      password: databasePassword,
-    },
-  });
-
-  services.push({
-    type: "redis",
+    type: "app",
     data: {
       serviceName: `${input.appServiceName}-redis`,
-      password: redisPassword,
+      source: {
+        type: "image",
+        image: "redis:7-alpine",
+      },
+      deploy: {
+        command: "redis-server --save 60 1",
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "redis-data",
+          mountPath: "/data",
+        },
+      ],
     },
   });
 
