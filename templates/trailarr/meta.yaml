@@ -1,0 +1,88 @@
+name: Trailarr
+description:
+  Trailarr is a self-hosted application to automatically download and manage
+  trailers for your media libraries. It integrates with Radarr and Sonarr to
+  discover your movie and TV collections, detects existing trailers to skip
+  duplicates, and saves new trailers next to your media using Plex-compatible
+  naming conventions that also work with Emby and Jellyfin. Custom profiles let
+  you control trailer quality, format, and processing options, while a built-in
+  web UI lets you browse your library and manage trailers directly. Trailarr
+  supports multiple Radarr, Sonarr, and Plex instances and handles video
+  processing via yt-dlp and FFmpeg.
+instructions:
+  After deployment, open the web UI and log in with the default credentials —
+  username "admin" and password "trailarr". Change the password immediately after
+  the first login. Then navigate to Settings and add your Radarr and/or Sonarr
+  connection details. Map the media paths so Trailarr can locate and write trailer
+  files next to your media.
+changeLog:
+  - date: 2026-06-29
+    description: first release
+links:
+  - label: Website
+    url: https://nandyalu.github.io/trailarr/
+  - label: Github
+    url: https://github.com/nandyalu/trailarr
+  - label: Documentation
+    url: https://nandyalu.github.io/trailarr/getting-started/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/MuhammadAhsanDonuts
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: trailarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: nandyalu/trailarr:0.9.8
+    timezone:
+      type: string
+      title: Timezone
+      default: America/New_York
+benefits:
+  - title: Automatic Trailer Downloads
+    description:
+      Trailarr connects to your Radarr and Sonarr instances and automatically
+      downloads trailers for every movie and series in your collection, keeping
+      your media library enriched without manual effort.
+  - title: Duplicate Detection
+    description:
+      Before downloading, Trailarr checks whether a trailer already exists and
+      skips it, saving bandwidth and avoiding cluttered media folders.
+  - title: Plex, Emby, and Jellyfin Compatible
+    description:
+      Trailers are saved using Plex naming conventions and are automatically
+      recognized by Emby and Jellyfin, so they appear in the right place in your
+      media server without any extra configuration.
+features:
+  - title: Multi-Instance Support
+    description:
+      Connect multiple Radarr, Sonarr, and Plex instances to manage trailers
+      across separate servers or libraries from a single Trailarr deployment.
+  - title: Custom Quality Profiles
+    description:
+      Create profiles to control trailer resolution, format, codec, and other
+      processing options so every trailer meets your storage and quality
+      requirements.
+  - title: Web UI Library Browser
+    description:
+      Browse your entire movie and series library through a responsive web
+      interface, view trailer status for each item, and trigger downloads or
+      manage trailers manually.
+  - title: yt-dlp and FFmpeg Integration
+    description:
+      Trailarr uses yt-dlp to download trailers from video hosting sites and
+      FFmpeg for post-processing, giving you broad source support and flexible
+      output options.
+tags:
+  - Media
+  - Automation
+  - Self-Hosted
