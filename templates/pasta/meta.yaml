@@ -1,0 +1,75 @@
+name: Pasta
+description:
+  PASTA (Plex Audio and Subtitle Track Automation) is a browser-based tool that
+  connects directly to your Plex media server and lets you bulk-change audio and
+  subtitle tracks across an entire TV series, a single season, or individual
+  episodes. It solves the frustration of having to manually set preferred
+  audio/subtitle tracks on every episode after adding a new show. The app runs
+  entirely client-side — no backend processing, no user data sent to third-party
+  servers. Users authenticate against their own Plex server using a Plex token
+  or OAuth.
+instructions:
+  After deployment open the app URL in your browser. Enter your Plex server URL
+  (e.g. http://your-plex-ip:32400) and your Plex authentication token on the
+  settings page, then browse your libraries to select a show. PASTA works
+  fastest when the browser is on the same network as the Plex server.
+changeLog:
+  - date: 2026-07-01
+    description: first release
+links:
+  - label: Website
+    url: https://www.pastatool.com
+  - label: GitHub
+    url: https://github.com/cglatot/pasta
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pasta
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: cglatot/pasta:2.2.13
+benefits:
+  - title: Bulk Track Management
+    description:
+      Change audio and subtitle tracks across hundreds of episodes at once
+      instead of opening each file individually in Plex.
+  - title: Client-Side Only
+    description:
+      All communication happens directly between the browser and your Plex
+      server — nothing is routed through PASTA's server and no data is stored.
+  - title: No Configuration Required
+    description:
+      No database, no config files, no API keys. Just point it at your Plex
+      server and start managing tracks.
+features:
+  - title: Series, Season, and Episode Views
+    description:
+      Switch tracks for an entire series in one click, or drill down to a
+      specific season or individual episode.
+  - title: Audio Track Selection
+    description:
+      Lists all audio tracks with codec, language, and channel information so
+      you can pick the right dub or surround-sound track.
+  - title: Subtitle Track Selection
+    description:
+      Browse all subtitle tracks including forced, SDH, and foreign language
+      options, and set them as default across multiple episodes at once.
+  - title: Plex OAuth Login
+    description:
+      Authenticate with your Plex account via OAuth or paste a Plex token
+      directly — no additional credentials to manage.
+tags:
+  - Media
+  - Plex
+  - Automation
+  - Self-Hosted
