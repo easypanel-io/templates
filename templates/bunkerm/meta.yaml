@@ -1,0 +1,83 @@
+name: BunkerM
+description:
+  BunkerM is a free, open-source, containerized MQTT management platform that
+  bundles Eclipse Mosquitto with a full-featured web dashboard in a single
+  Docker image. It provides dynamic security management for clients, roles,
+  groups, and ACLs, real-time monitoring of connections and broker logs, a
+  built-in MQTT browser for exploring topics and payloads, message history with
+  replay, local automation through schedulers and watchers, anomaly detection,
+  and optional cloud AI integration via BunkerAI. Everything deploys with a
+  single container — no external database or message broker needed.
+instructions:
+  After deployment open the web UI at your configured domain. Log in with the
+  default credentials — email "admin@example.com" and password "password123".
+  Change the password immediately after the first login / signup using the
+  wizard. The MQTT broker is accessible on port 1900 (TCP). Use the MQTT
+  Username and MQTT Password environment variables to connect external IoT
+  clients.
+changeLog:
+  - date: 2026-07-01
+    description: first release
+links:
+  - label: Website
+    url: https://www.bunkerai.dev
+  - label: Documentation
+    url: https://github.com/bunkeriot/BunkerM#-table-of-contents
+  - label: GitHub
+    url: https://github.com/bunkeriot/BunkerM
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bunkerm
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bunkeriot/bunkerm:v2.1.0
+benefits:
+  - title: All-in-One MQTT Platform
+    description:
+      A complete MQTT broker and management dashboard in a single container — no
+      separate Mosquitto install, no external databases, no complex setup.
+  - title: Dynamic Security Management
+    description:
+      Create and manage MQTT clients, roles, groups, and ACLs at runtime through
+      the web UI without restarting the broker.
+  - title: Real-Time Monitoring
+    description:
+      Live dashboard shows connected clients, message throughput, subscription
+      counts, and byte transfer charts updated in real time.
+features:
+  - title: Eclipse Mosquitto Broker
+    description:
+      Runs a full production-grade Mosquitto MQTT broker on port 1900 with
+      dynamic security plugin enabled out of the box.
+  - title: MQTT Browser
+    description:
+      Explore topics, inspect payloads, and replay historical messages directly
+      from the web UI without a separate MQTT client.
+  - title: Local Automations
+    description:
+      Define schedulers and watchers to trigger MQTT publishes or alerts based
+      on time, topic patterns, or payload conditions.
+  - title: Anomaly Detection
+    description:
+      Built-in anomaly detection flags unusual message patterns or unauthorized
+      connection attempts in the broker log view.
+  - title: BunkerAI Integration
+    description:
+      Optionally connect to the BunkerAI cloud service to query broker state and
+      automate responses via web chat, Slack, or Telegram.
+tags:
+  - MQTT
+  - IoT
+  - Monitoring
+  - Self-Hosted
