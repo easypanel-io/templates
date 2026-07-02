@@ -1,0 +1,88 @@
+name: Cleanuparr
+description:
+  Cleanuparr is an advanced automated download manager for the Servarr ecosystem
+  (Sonarr, Radarr, Lidarr, Readarr, Whisparr). It monitors and cleans up
+  problematic downloads across qBittorrent, Transmission, Deluge, µTorrent, and
+  rTorrent clients. Core features include a strike-based system for failed
+  imports, stalled and slow downloads; automatic blocklist-based malware file
+  detection and removal; auto-triggered replacement searches when downloads are
+  removed; seeding duration and ratio cleanup; orphaned file detection with
+  hardlink checking; proactive missing-content and quality-upgrade searching;
+  and smart notifications for all events. All configuration and state are stored
+  in a single /config volume — no external database is required.
+instructions:
+  After deployment open the app URL. Create your Account. Configure your Sonarr,
+  Radarr, and download client connections under Settings. All automation rules
+  are managed from the web interface.
+changeLog:
+  - date: 2026-07-01
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/Cleanuparr/Cleanuparr
+  - label: Documentation
+    url: https://cleanuparr.github.io/Cleanuparr/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cleanuparr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cleanuparr/cleanuparr:2.9.14
+benefits:
+  - title: Automated Download Cleanup
+    description:
+      Automatically detects and removes stalled, slow, failed, or malware-
+      flagged downloads across every major torrent client — no manual
+      intervention needed.
+  - title: Servarr-Native Integration
+    description:
+      Deeply integrates with Sonarr, Radarr, Lidarr, Readarr, and Whisparr;
+      triggers replacement searches and blocklists entries directly through
+      their APIs when a download is removed.
+  - title: No External Dependencies
+    description:
+      Runs as a single container with an internal SQLite database. There is no
+      separate database or cache service to maintain.
+features:
+  - title: Strike-Based Removal
+    description:
+      Assigns strikes to failed imports, stalled downloads, and slow transfers.
+      Removals are triggered only after a configurable strike threshold,
+      reducing false positives.
+  - title: Blocklist File Detection
+    description:
+      Scans download contents against a malware / unwanted-file blocklist and
+      removes matching torrents before they import into your media library.
+  - title: Seeding Ratio and Duration Control
+    description:
+      Removes torrents that have hit your configured seeding ratio or time
+      limit, keeping your torrent client tidy after downloads complete.
+  - title: Orphaned File Detection
+    description:
+      Identifies orphaned files in your download client — with optional hardlink
+      checking — so disk space is reclaimed safely.
+  - title: Proactive Content Search
+    description:
+      Periodically triggers Sonarr/Radarr searches for missing episodes or
+      movies and queues quality upgrades without manual intervention.
+  - title: Smart Notifications
+    description:
+      Sends per-event notifications (removals, strikes, blocklist hits) via
+      webhooks, Discord, Apprise, and more.
+tags:
+  - Media
+  - Automation
+  - Download Manager
+  - Servarr
+  - Self-Hosted
