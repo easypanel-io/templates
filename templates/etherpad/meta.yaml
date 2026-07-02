@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 2.6.1
   - date: 2026-04-29
     description: Version bumped to 2.7.2
+  - date: 2026-07-02
+    description: Version bumped to 3.3.2
 links:
   - label: Website
     url: https://etherpad.org
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: etherpad/etherpad:2.7.2
+      default: etherpad/etherpad:3.3.2
     databaseServiceName:
       type: string
       title: Database Service Name

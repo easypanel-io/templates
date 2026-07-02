@@ -9,6 +9,8 @@ changeLog:
     description: Initial release
   - date: 2026-04-29
     description: Version bumped to version-9bcf3fdc
+  - date: 2026-07-02
+    description: Version bumped to version-9fa0e460
 links:
   - label: GitHub
     url: https://github.com/doublecmd/doublecmd
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/doublecommander:version-9bcf3fdc
+      default: lscr.io/linuxserver/doublecommander:version-9fa0e460
 benefits:
   - title: Dual Panel
     description: Two-panel file management interface

@@ -14,7 +14,9 @@ changeLog:
   - date: 2026-02-18
     description: Version bumped to v6.6.0
   - date: 2026-04-29
-    description: Version bumped to v6.7.1  
+    description: Version bumped to v6.7.1
+  - date: 2026-07-01
+    description: Version bumped to v6.8.4    
 links:
   - label: Website
     url: https://centrifugal.dev/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: Centrifugo Image
-      default: centrifugo/centrifugo:v6.7.1
+      default: centrifugo/centrifugo:v6.8.4
     adminPassword:
       type: string
       title: Admin Password

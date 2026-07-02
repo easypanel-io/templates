@@ -16,6 +16,8 @@ changeLog:
     description: First Release
   - date: 2026-03-25
     description: Added logo asset and fixed secret env wiring in template
+  - date: 2026-07-02
+    description: Version bumped to v2.6.2  
 links:
   - label: Demo
     url: https://dailytxt.phitux.de
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: phitux/dailytxt:2.6.1
+      default: phitux/dailytxt:2.6.2
     allowRegistration:
       type: boolean
       title: Allow Registration

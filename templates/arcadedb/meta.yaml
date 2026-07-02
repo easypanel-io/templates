@@ -12,6 +12,8 @@ changeLog:
     description: Updated to ArcadeDB version 25.11.1
   - date: 2026-04-29
     description: Updated to ArcadeDB version 26.4.2  
+  - date: 2026-07-01
+    description: Updated to ArcadeDB version 26.6.1
 links:
   - label: Website
     url: https://arcadedb.com/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: arcadedata/arcadedb:26.4.2
+      default: arcadedata/arcadedb:26.6.1
     binaryPort:
       type: string
       title: Binary Port

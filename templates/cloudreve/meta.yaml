@@ -31,6 +31,8 @@ changeLog:
     description: Version bumped to 4.14.1
   - date: 2026-04-29
     description: Version bumped to 4.15.0  
+  - date: 2026-07-02
+    description: Version bumped to 4.17.0
 links:
   - label: Website
     url: https://cloudreve.org
@@ -56,7 +58,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cloudreve/cloudreve:4.15.0
+      default: cloudreve/cloudreve:4.17.0
 
 benefits:
   - title: Complete Data Ownership

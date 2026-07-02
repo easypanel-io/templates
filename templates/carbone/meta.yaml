@@ -19,7 +19,9 @@ changeLog:
   - date: 2026-02-18
     description: Version bumped to 5.2.0
   - date: 2026-04-29
-    description: Version bumped to 5.4.5  
+    description: Version bumped to 5.4.5
+  - date: 2026-07-01
+    description: Version bumped to 5.9.1    
 links:
   - label: Documentation
     url: https://carbone.io/documentation/design/overview/getting-started.html
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: carbone/carbone-ee:full-5.4.5
+      default: carbone/carbone-ee:full-5.9.1
     carboneKey:
       type: string
       title: Carbone License Key

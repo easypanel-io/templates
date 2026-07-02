@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to 21
   - date: 2026-02-18
     description: Version bumped to 22
+  - date: 2026-07-02
+    description: Version bumped to 23.0.3
 links:
   - label: Website
     url: https://www.dolibarr.org/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dolibarr/dolibarr:23
+      default: dolibarr/dolibarr:23.0.3
 benefits:
   - title: All-in-One ERP and CRM Solution
     description:

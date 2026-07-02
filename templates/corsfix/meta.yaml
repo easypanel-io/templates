@@ -11,6 +11,8 @@ changeLog:
     description: Initial template
   - date: 2026-04-29
     description: Version bumped to b464c8b69d10e035c416df4bbe082ae896090c67
+  - date: 2026-07-02
+    description: Version bumped to 00ceb0bc0fb69c0a9559eddf1afb31ec4e741b6a
 links:
   - label: Corsfix CORS proxy
     url: https://corsfix.com
@@ -35,11 +37,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/corsfix/corsfix-app:b464c8b69d10e035c416df4bbe082ae896090c67
+      default: ghcr.io/corsfix/corsfix-app:00ceb0bc0fb69c0a9559eddf1afb31ec4e741b6a
     proxyServiceImage:
       type: string
       title: Proxy Service Image
-      default: ghcr.io/corsfix/corsfix-proxy:b464c8b69d10e035c416df4bbe082ae896090c67
+      default: ghcr.io/corsfix/corsfix-proxy:00ceb0bc0fb69c0a9559eddf1afb31ec4e741b6a
 benefits:
   - title: Fix CORS Errors Instantly
     description:

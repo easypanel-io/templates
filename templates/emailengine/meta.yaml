@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to v2.63
   - date: 2026-04-29
     description: Version bumped to v2.63.3
+  - date: 2026-07-02
+    description: Version bumped to v2.72.2
 links:
   - label: Website
     url: https://emailengine.app
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: postalsys/emailengine:v2.63.3
+      default: postalsys/emailengine:v2.72.2
     smtpMessageSubmission:
       type: string
       title: SMTP Message Submission

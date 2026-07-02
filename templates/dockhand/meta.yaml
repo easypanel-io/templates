@@ -22,6 +22,8 @@ changeLog:
     description: Template Release
   - date: 2026-04-29
     description: Version bumped to 48a80675
+  - date: 2026-07-02
+    description: Version bumped to 13ff4754  
 
 links:
   - label: GitHub
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fnsys/dockhand:48a80675
+      default: fnsys/dockhand:13ff4754
 
 benefits:
   - title: Visual Docker Management

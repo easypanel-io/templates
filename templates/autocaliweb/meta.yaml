@@ -16,6 +16,8 @@ changeLog:
     description: Template Release (v0.11.3)
   - date: 2026-04-29
     description: Version bumped to (v0.12.4)  
+  - date: 2026-07-01
+    description: Version bumped to (v0.12.11)
 links:
   - label: Codeberg
     url: https://codeberg.org/gelbphoenix/autocaliweb
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: AutoCaliWeb Image
-      default: gelbphoenix/autocaliweb:v0.12.4
+      default: gelbphoenix/autocaliweb:v0.12.11
     timezone:
       type: string
       title: Timezone

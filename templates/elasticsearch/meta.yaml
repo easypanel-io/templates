@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to 9.0.3
   - date: 2025-12-25
     description: Version bumped to 9.2.3
+  - date: 2026-07-02
+    description: Version bumped to 9.4.3
 links:
   - label: Website
     url: https://www.elastic.co
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.elastic.co/elasticsearch/elasticsearch:9.2.3
+      default: docker.elastic.co/elasticsearch/elasticsearch:9.4.3
     password:
       type: string
       title: Password
