@@ -4,6 +4,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const redisPassword = randomPassword();
 
   services.push({
     type: "app",
@@ -27,9 +28,13 @@ export function generate(input: Input): Output {
         `POSTGRES_USER=postgres`,
         `POSTGRES_PASSWORD=${databasePassword}`,
         `POSTGRES_DB=$(PROJECT_NAME)`,
-        `DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
+        `DATABASE_HOST=$(PROJECT_NAME)_${input.databaseServiceName}:5432`,
         `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `DIRECT_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
+        `REDIS_PORT=6379`,
+        `REDIS_TLS_DISABLED=true`,
+        `REDIS_PASSWORD=${redisPassword}`,
         `NODE_ENV=development`,
         `RUNTIME_PLATFORM=docker-compose`,
 
@@ -47,6 +52,14 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.databaseServiceName,
       password: databasePassword,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: input.redisServiceName,
+      password: redisPassword,
     },
   });
 

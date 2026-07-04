@@ -16,6 +16,10 @@ changeLog:
     description: First Release
   - date: 2025-07-25
     description: Version bumped to v3.3.18
+  - date: 2026-07-04
+    description:
+      Add required Redis service and append the port to DATABASE_HOST so the
+      startup database check passes
 links:
   - label: Website
     url: https://trigger.dev/
@@ -32,6 +36,7 @@ schema:
     - appServiceName
     - appServiceImage
     - databaseServiceName
+    - redisServiceName
   properties:
     appServiceName:
       type: string
@@ -45,6 +50,10 @@ schema:
       type: string
       title: Database Service Name
       default: trigger-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: trigger-redis
 benefits:
   - title: Code-First Workflow Automation
     description:
