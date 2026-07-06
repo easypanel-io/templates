@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 1.7.3
   - date: 2026-05-08
     description: Version bumped to 1.9.2
+  - date: 2026-07-03
+    description: Version bumped to 1.10.1  
 links:
   - label: Github
     url: https://github.com/logspace-ai/langflow
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: langflowai/langflow:1.9.2
+      default: langflowai/langflow:1.10.1
     username:
       type: string
       title: Username

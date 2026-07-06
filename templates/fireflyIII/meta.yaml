@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 6.4.23
   - date: 2026-04-29
     description: Version bumped to 6.6.2
+  - date: 2026-07-02
+    description: Version bumped to 6.6.6
 links:
   - label: Documentation
     url: https://firefly-iii.org/documentation/
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fireflyiii/core:version-6.6.2
+      default: fireflyiii/core:version-6.6.6
 
 benefits:
   - title: Comprehensive Financial Tracking

@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to v0.158.5
   - date: 2026-05-08
     description: Version bumped to v0.159.27
+  - date: 2026-07-03
+    description: Version bumped to v0.161.12
 links:
   - label: Documentation
     url: https://infisical.com/docs
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: infisical/infisical:v0.159.27
+      default: infisical/infisical:v0.161.12
 benefits:
   - title: Secure Secret Management
     description:

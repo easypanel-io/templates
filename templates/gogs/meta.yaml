@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 0.14
   - date: 2026-04-29
     description: Version bumped to 0.14.2
+  - date: 2026-07-03
+    description: Version bumped to 0.14.3
 links:
   - label: Website
     url: https://gogs.io/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gogs/gogs:0.14.2
+      default: gogs/gogs:0.14.3
     sshPort:
       type: number
       title: SSH Port

@@ -32,6 +32,8 @@ changeLog:
     description: Version bumped to 0.20.3
   - date: 2026-04-29
     description: Version bumped to 0.21.2
+  - date: 2026-07-03
+    description: Version bumped to 0.22.0
 links:
   - label: Website
     url: https://gotosocial.org/
@@ -57,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.21.2
+      default: superseriousbusiness/gotosocial:0.22.0
 benefits:
   - title: Privacy-Focused
     description:

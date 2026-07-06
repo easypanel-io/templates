@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: 2026-04-13
     description: Initial template release
+  - date: 2026-07-02
+    description: Version bumped to 4.0.3
 
 links:
   - label: Website
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: farmos/farmos:4.0.0
+      default: farmos/farmos:4.0.3
 benefits:
   - title: Purpose-built for farm records
     description:

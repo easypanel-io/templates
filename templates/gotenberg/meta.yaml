@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 8.26.0
   - date: 2026-04-29
     description: Version bumped to 8.32.0
+  - date: 2026-07-03
+    description: Version bumped to 8.34.0
 links:
   - label: Website
     url: https://gotenberg.dev/
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gotenberg/gotenberg:8.32.0
+      default: gotenberg/gotenberg:8.34.0
 benefits:
   - title: Efficient Document Conversion
     description:

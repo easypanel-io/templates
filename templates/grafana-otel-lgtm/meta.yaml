@@ -22,6 +22,8 @@ changeLog:
     description: Template Release
   - date: 2026-04-29
     description: Version bumped to 0.27.0
+  - date: 2026-07-03
+    description: Version bumped to 0.28.0
 links:
   - label: Website
     url: https://grafana.com/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: Grafana OTEL LGTM Image
-      default: grafana/otel-lgtm:0.27.0
+      default: grafana/otel-lgtm:0.28.0
     otlpPort:
       type: number
       title: OTLP Port

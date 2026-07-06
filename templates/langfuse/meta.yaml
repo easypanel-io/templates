@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 3.142
   - date: 2026-02-21
     description: Version bumped to 3.155
+  - date: 2026-07-03
+    description: Version bumped to 3.205  
 links:
   - label: Documentation
     url: https://langfuse.com/docs
@@ -50,11 +52,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: langfuse/langfuse:3.174.1
+      default: langfuse/langfuse:3.205
     workerImage:
       type: string
       title: App Service Image
-      default: langfuse/langfuse-worker:3.155
+      default: langfuse/langfuse-worker:3.205
     clickHouseImage:
       type: string
       title: App Service Image

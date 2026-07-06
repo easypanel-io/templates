@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2026-06-15
     description: First Release
+  - date: 2026-07-02
+    description: Version bumped to 2.9.1
 links:
   - label: Website
     url: https://faved.dev
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: denho/faved:2.9.0
+      default: denho/faved:2.9.1
 benefits:
   - title: Nested Tag System
     description:

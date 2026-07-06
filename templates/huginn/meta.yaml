@@ -11,6 +11,8 @@ changeLog:
     description: First Release
   - date: 2026-05-01
     description: Version bumped to 5dbeee394a982bd29ba63c06013cd9cb58191cc6
+  - date: 2026-07-03
+    description: Version bumped to 3faae62bfbbfe7b6a67c2ea2ce735785f48e0511  
 links:
   - label: Website
     url: https://huginn.io/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: huginn/huginn:5dbeee394a982bd29ba63c06013cd9cb58191cc6
+      default: huginn/huginn:3faae62bfbbfe7b6a67c2ea2ce735785f48e0511
 benefits:
   - title: Automation
     description: Automate repetitive tasks and workflows

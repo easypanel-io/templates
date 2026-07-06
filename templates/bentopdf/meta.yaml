@@ -24,8 +24,8 @@ changeLog:
     description: Added missing GitHub source link
   - date: 2026-05-06
     description: Version bumped to sha-fb8c8c0
-  - date: 2026-07-01
-    description: Version bumped to sha-b09fc21  
+  - date: 2026-07-02
+    description: Version bumped to v2.8.6  
 
 links:
   - label: Website
@@ -50,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bentopdfteam/bentopdf:sha-b09fc21
+      default: bentopdfteam/bentopdf:v2.8.6
 
 benefits:
   - title: Self-Hosted PDF Processing
