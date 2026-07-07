@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 6.0.7-20251229-apache
   - date: 2026-05-18
     description: Update to 7.1.1-apache
+  - date: 2026-07-06
+    description: Update to 7.1.2-apache  
 links:
   - label: Github
     url: https://github.com/mautic/mautic
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mautic/mautic:7.1.1-apache
+      default: mautic/mautic:7.1.2-apache
     databaseServiceName:
       type: string
       title: Database Service Name

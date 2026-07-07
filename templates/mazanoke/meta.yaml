@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-09-12
     description: Template Release (v1.1.5)
+  - date: 2026-07-06
+    description: Version bumped to v1.1.6 
 links:
   - label: Documentation
     url: https://github.com/civilblur/mazanoke
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/civilblur/mazanoke:v1.1.5
+      default: ghcr.io/civilblur/mazanoke:v1.1.6
     adminUsername:
       type: string
       title: Admin Username

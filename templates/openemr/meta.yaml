@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 7.0.5
   - date: 2026-02-24
     description: Version bumped to 8.0.1
+  - date: 2026-07-06
+    description: Version bumped to 8.2.0    
 
 links:
   - label: Documentation
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: openemr/openemr:8.0.1
+      default: openemr/openemr:8.2.0
     adminUser:
       type: string
       title: Admin User

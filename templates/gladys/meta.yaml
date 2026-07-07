@@ -14,8 +14,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-04-29
     description: Version bumped to sha-569dfde
-  - date: 2026-07-03
-    description: Version bumped to sha-58dc65e
+  - date: 2026-07-06
+    description: Version bumped to v4.81.0
 links:
   - label: Website
     url: https://gladysassistant.com
@@ -40,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gladysassistant/gladys:sha-58dc65e
+      default: gladysassistant/gladys:v4.81.0
     timezone:
       type: string
       title: Timezone

@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v1.9.0
   - date: 2026-05-04
     description: Version bumped to v1.9.5
+  - date: 2026-07-06
+    description: Version bumped to v1.9.6
 links:
   - label: Documentation
     url: https://github.com/LibreTranslate/LibreTranslate/blob/master/README.md
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: libretranslate/libretranslate:v1.9.5
+      default: libretranslate/libretranslate:v1.9.6
     chartLimit:
       type: number
       title: Character limit for each translation

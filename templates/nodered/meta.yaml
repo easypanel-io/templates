@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to 4.1.5-22
   - date: 2026-05-04
     description: Version bumped to 4.1.8-22
+  - date: 2026-07-06
+    description: Version bumped to 5.0.1
 links:
   - label: Website
     url: https://nodered.org/
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nodered/node-red:4.1.8-22
+      default: nodered/node-red:5.0.1
 benefits:
   - title: Low-Code Programming
     description:
