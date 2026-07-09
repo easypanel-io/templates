@@ -13,6 +13,8 @@ changeLog:
     description: First Release
   - date: 2025-12-29
     description: Version bumped to 1.5.1
+  - date: 2026-07-07
+    description: Version bumped to 1.5.2
 links:
   - label: Website
     url: https://picoshare.net/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mtlynch/picoshare:1.5.1
+      default: mtlynch/picoshare:1.5.2
     authPassphrase:
       type: string
       title: Auth Passphrase

@@ -15,6 +15,8 @@ changeLog:
     description: Initial Template Release (v3.15.1)
   - date: 2026-05-07
     description: Version bumped to v3.15.1
+  - date: 2026-07-08
+    description: Version bumped to v3.20.191-lts
 links:
   - label: GitHub
     url: https://github.com/ToolJet/ToolJet
@@ -38,12 +40,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tooljet/tooljet-ce:v3.20.154-lts
+      default: tooljet/tooljet-ce:v3.20.191-lts
       description: Tooljet Docker image
     temporalImage:
       type: string
       title: Temporal Image
-      default: temporalio/auto-setup:1.29.6.1
+      default: temporalio/auto-setup:1.29.7
       description: Temporal server Docker image
 benefits:
   - title: Low-Code Development

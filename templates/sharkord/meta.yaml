@@ -13,6 +13,8 @@ changeLog:
     description: First Release
   - date: 2026-05-08
     description: Version bumped to v0.0.19
+  - date: 2026-07-07
+    description: Version bumped to v0.0.22
 links:
   - label: Website
     url: https://sharkord.com/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sharkord/sharkord:v0.0.19
+      default: sharkord/sharkord:v0.0.22
     appServicePort:
       type: string
       title: App Service Port

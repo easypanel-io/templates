@@ -8,6 +8,8 @@ changeLog:
     description: first release
   - date: 2025-07-25
     description: Version bumped to 1.10.1
+  - date: 2026-07-08
+    description: Version bumped to 1.10.2
 links:
   - label: Website
     url: https://github.com/linuxserver
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/znc:1.10.1
+      default: lscr.io/linuxserver/znc:1.10.2
     PUID:
       type: string
       title: PUID

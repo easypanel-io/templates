@@ -15,7 +15,7 @@ changeLog:
     description: Template Release
   - date: 2026-05-08
     description: Version bumped to v0.0.49
-  - date: 2026-07-06
+  - date: 2026-07-07
     description: Version bumped to v0.0.57  
 
 links:
@@ -49,7 +49,7 @@ schema:
     frontendImage:
       type: string
       title: Frontend Image
-      default: getmaxun/maxun-frontend:v0.0.54
+      default: getmaxun/maxun-frontend:v0.0.57
     minioImage:
       type: string
       title: Minio Image

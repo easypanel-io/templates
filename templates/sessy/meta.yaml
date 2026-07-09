@@ -20,6 +20,8 @@ instructions: null
 changeLog:
   - date: 2026-01-02
     description: Template Release
+  - date: 2026-07-07
+    description: Version bumped to sha-e809fc1
 
 links:
   - label: Website
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/marckohlbrugge/sessy:sha-8d93bde
+      default: ghcr.io/marckohlbrugge/sessy:sha-e809fc1
 
 benefits:
   - title: AWS SES Management

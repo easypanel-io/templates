@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to 1.5.0
   - date: 2026-05-05
     description: Version bumped to 1.5.6
+  - date: 2026-07-07
+    description: Version bumped to 1.6.0
 links:
   - label: Documentation
     url: https://saltcorn.com/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: saltcorn/saltcorn:1.5.6
+      default: saltcorn/saltcorn:1.6.0
 
 benefits:
   - title: No-Code Database Application Builder

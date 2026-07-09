@@ -20,6 +20,8 @@ changeLog:
     description:
       Version bumped to v5.2.2, ClickHouse pinned to 24.8 (26.4 breaks user
       table)
+  - date: 2026-07-07
+    description: Version bumped to v5.3.1
 links:
   - label: GitHub
     url: https://github.com/Swetrix/swetrix
@@ -45,15 +47,15 @@ schema:
     frontendImage:
       type: string
       title: Frontend Image
-      default: swetrix/swetrix-fe:v5.2.2
+      default: swetrix/swetrix-fe:v5.3.1
     apiImage:
       type: string
       title: API Image
-      default: swetrix/swetrix-api:v5.2.2
+      default: swetrix/swetrix-api:v5.3.1
     clickhouseImage:
       type: string
       title: ClickHouse Image
-      default: clickhouse/clickhouse-server:24.8-alpine
+      default: clickhouse/clickhouse-server:25.8-alpine
 benefits:
   - title: Privacy-Focused
     description: Complete control over your analytics data with self-hosting.

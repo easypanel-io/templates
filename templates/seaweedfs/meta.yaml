@@ -16,6 +16,8 @@ changeLog:
     description: Template Release (4.13)
   - date: 2026-05-05
     description: Version bumped to 4.23
+  - date: 2026-07-07
+    description: Version bumped to 4.48
 links:
   - label: GitHub
     url: https://github.com/seaweedfs/seaweedfs
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: SeaweedFS Image
-      default: chrislusf/seaweedfs:4.23
+      default: chrislusf/seaweedfs:4.48
 benefits:
   - title: Billion-File Scale
     description:

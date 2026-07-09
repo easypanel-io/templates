@@ -36,6 +36,8 @@ changeLog:
       Grafana admin password randomized.
   - date: 2026-05-07
     description: Version bumped to 2.1.0-beta.5
+  - date: 2026-07-08
+    description: Version bumped to 2.0.3  
 
 links:
   - label: Website
@@ -60,7 +62,7 @@ schema:
     appServiceImage:
       type: string
       title: Uptrace Image
-      default: "uptrace/uptrace:2.1.0-beta.5"
+      default: "uptrace/uptrace:2.0.3"
       description:
         Pinned to the tag used in github.com/uptrace/uptrace example/docker
         docker-compose.yml; bump only with a tested exact tag.

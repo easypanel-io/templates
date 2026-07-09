@@ -11,6 +11,8 @@ changeLog:
     description: Version bumped to develop-version-38c80675
   - date: 2026-05-08
     description: Version bumped to develop-version-3c5e1c66
+  - date: 2026-07-07
+    description: Version bumped to 0.5.0
 links:
   - label: GitHub
     url: https://github.com/pyload/pyload
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/pyload-ng:develop-version-3c5e1c66
+      default: lscr.io/linuxserver/pyload-ng:0.5.0
 benefits:
   - title: Modern Interface
     description: Clean and intuitive web-based user interface

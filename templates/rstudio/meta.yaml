@@ -13,6 +13,8 @@ instructions: Default username is rstudio and password is 1234
 changeLog:
   - date: 2025-10-13
     description: Initial Template Release (4.5)
+  - date: 2026-07-07
+    description: Version bumped to 4.6.1  
 
 links:
   - label: Website
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rocker/rstudio:4.5.2
+      default: rocker/rstudio:4.6.1
     password:
       type: string
       title: Password

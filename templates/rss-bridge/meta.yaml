@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to sha-e213d95
   - date: 2026-05-05
     description: Version bumped to sha-ac2608a
+  - date: 2026-07-07
+    description: Version bumped to sha-68539df  
 links:
   - label: Website
     url: https://rss-bridge.github.io/rss-bridge/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: rssbridge/rss-bridge:sha-ac2608a
+      default: rssbridge/rss-bridge:sha-68539df
 benefits:
   - title: Generate RSS Feeds for Any Website
     description:

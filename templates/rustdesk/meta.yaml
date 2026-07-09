@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to 1.4.5
   - date: 2026-05-05
     description: Version bumped to 1.4.6
+  - date: 2026-07-07
+    description: Version bumped to 1.4.9  
 links:
   - label: Documentation
     url: https://rustdesk.com/docs/en/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/rustdesk:1.4.6
+      default: lscr.io/linuxserver/rustdesk:1.4.9
 benefits:
   - title: Secure Remote Access
     description:

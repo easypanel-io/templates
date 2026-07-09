@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to v1.23.1
   - date: 2026-05-07
     description: Version bumped to v1.29.1
+  - date: 2026-07-08
+    description: Version bumped to v1.30.8
 links:
   - label: GitHub
     url: https://github.com/quenary/tugtainer
@@ -38,11 +40,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/quenary/tugtainer:v1.29.1
+      default: ghcr.io/quenary/tugtainer:v1.30.8
     socketProxyImage:
       type: string
       title: Socket Proxy Image
-      default: ghcr.io/linuxserver/socket-proxy:3.2.17-r0-ls79
+      default: ghcr.io/linuxserver/socket-proxy:3.4.2-r0-ls88
     timezone:
       type: string
       title: Timezone

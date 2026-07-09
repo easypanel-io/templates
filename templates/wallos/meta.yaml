@@ -10,6 +10,8 @@ changeLog:
     description: First release
   - date: 2026-05-07
     description: Version bumped to 4.8.4
+  - date: 2026-07-08
+    description: Version bumped to 4.9.6  
 links:
   - label: Website
     url: https://wallos.app/
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bellamy/wallos:4.8.4
+      default: bellamy/wallos:4.9.6
 benefits:
   - title: Network Visibility
     description:

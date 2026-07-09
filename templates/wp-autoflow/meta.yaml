@@ -9,6 +9,8 @@ instructions: After installation, click on the URL that's using the port 3000 in
 changeLog:
   - date: 2026-04-22
     description: First Release
+  - date: 2026-07-08
+    description: Version bumped to v1.0.1  
 links:
   - label: Website
     url: https://wpautoflow.com
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fabioselau/wp-autoflow:v1.0.0
+      default: fabioselau/wp-autoflow:v1.0.1
     openaiApiKey:
       type: string
       title: OpenAI API Key
