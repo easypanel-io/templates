@@ -1,0 +1,90 @@
+name: AppBoard
+description:
+  AppBoard is an open-source, self-hostable ASO (App Store Optimization) tool.
+  Manage your App Store and Google Play listings, track keyword rankings day by
+  day, organize screenshots and publish metadata — all from one admin panel. It
+  ships as a Next.js admin panel backed by an Elysia/Bun REST API and a
+  PostgreSQL database. A bootstrap admin account is created on first boot, so you
+  can sign in with email + password without configuring SMTP. Optional SMTP
+  enables email login and rank/report emails, and an OpenRouter key enables
+  AI-assisted research.
+instructions:
+  After deploying, open the panel domain and sign in with the ADMIN_EMAIL and the
+  generated ADMIN_PASSWORD (Environment tab of the backend service) using "Sign
+  in with a password".
+changeLog:
+  - date: 2026-07-10
+    description: Initial template release
+links:
+  - label: GitHub
+    url: https://github.com/erykkruk/appboard_backend
+  - label: Website
+    url: https://appboard.dev
+contributors:
+  - name: Eryk Kruk
+    url: https://github.com/erykkruk
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - backendServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: appboard
+    appServiceImage:
+      type: string
+      title: Panel Image
+      default: ghcr.io/erykkruk/appboard-web:latest
+      description: AppBoard admin panel Docker image
+    backendServiceImage:
+      type: string
+      title: Backend Image
+      default: ghcr.io/erykkruk/appboard-backend:latest
+      description: AppBoard REST API Docker image
+benefits:
+  - title: Own Your ASO Data
+    description:
+      Keep every listing, keyword and ranking snapshot on your own
+      infrastructure with full privacy and control.
+  - title: Rank Tracking Over Time
+    description:
+      Track keyword positions on the App Store and Google Play day by day and see
+      how listing changes move your rankings.
+  - title: One Panel for Both Stores
+    description:
+      Manage App Store and Google Play listings, screenshots and metadata from a
+      single admin panel.
+  - title: No SMTP Needed to Start
+    description:
+      A bootstrap admin account lets you sign in with email and password on first
+      boot — configure SMTP later if you want email login.
+features:
+  - title: Listing Management
+    description:
+      Edit and organize App Store and Google Play listing metadata, screenshots
+      and localizations from one place.
+  - title: Keyword Rank Tracking
+    description:
+      Track keyword rankings over time with historical snapshots and
+      listing-change annotations.
+  - title: Market Research
+    description:
+      Research any store app, scrape reviews and keywords, and generate
+      AI-assisted insights (with an optional OpenRouter key).
+  - title: REST API Backend
+    description:
+      An Elysia/Bun REST API handles data, auth and store integrations behind the
+      panel.
+  - title: Self-Hosted
+    description:
+      Run the whole stack — panel, API and PostgreSQL — on your own server.
+tags:
+  - ASO
+  - App Store
+  - Google Play
+  - Marketing
+  - SEO
+  - Self-Hosted
