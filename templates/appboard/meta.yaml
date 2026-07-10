@@ -20,6 +20,8 @@ links:
     url: https://github.com/erykkruk/appboard_backend
   - label: Website
     url: https://appboard.dev
+  - label: Documentation
+    url: https://appboard.dev/docs
 contributors:
   - name: Eryk Kruk
     url: https://github.com/erykkruk
@@ -37,12 +39,12 @@ schema:
     appServiceImage:
       type: string
       title: Panel Image
-      default: ghcr.io/erykkruk/appboard-web:latest
+      default: ghcr.io/erykkruk/appboard-web:0.8.2
       description: AppBoard admin panel Docker image
     backendServiceImage:
       type: string
       title: Backend Image
-      default: ghcr.io/erykkruk/appboard-backend:latest
+      default: ghcr.io/erykkruk/appboard-backend:0.8.0
       description: AppBoard REST API Docker image
 benefits:
   - title: Own Your ASO Data
