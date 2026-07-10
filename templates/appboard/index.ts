@@ -46,7 +46,7 @@ export function generate(input: Input): Output {
         `NODE_ENV=production`,
         `PORT=6600`,
         `HOSTNAME=0.0.0.0`,
-        `BACKEND_URL=http://$(PROJECT_NAME)-${input.appServiceName}-backend:6680`,
+        `BACKEND_URL=http://$(PROJECT_NAME)_${input.appServiceName}-backend:6680`,
       ].join("\n"),
       source: {
         type: "image",
