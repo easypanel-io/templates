@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
       },
       env: [
         `DOCKER=true`,
-        `MONGODB_URL=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.appServiceName}-mongo:27017/mydrive?authSource=admin`,
+        `MONGODB_URL=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.appServiceName}-mongo:27017/$(PROJECT_NAME)?authSource=admin`,
         `DB_TYPE=fs`,
         `FS_DIRECTORY=/data/`,
         `TEMP_DIRECTORY=/temp/`,
