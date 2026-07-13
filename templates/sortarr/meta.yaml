@@ -15,6 +15,8 @@ instructions:
 changeLog:
   - date: 2026-03-17
     description: Template Release (v0.8.7)
+  - date: 2026-07-10
+    description: Version bumped to 0.8.9
 links:
   - label: GitHub
     url: https://github.com/Jaredharper1/Sortarr
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/jaredharper1/sortarr:0.8.7
+      default: ghcr.io/jaredharper1/sortarr:0.8.9
 benefits:
   - title: Read-Only & Safe
     description:

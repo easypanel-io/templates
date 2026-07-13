@@ -29,6 +29,8 @@ changeLog:
       Added setup instructions for required githubToken and token scopes
   - date: 2026-04-29
     description: Version bumped to v0.8.0
+  - date: 2026-07-09
+    description: Version bumped to v0.9.0
 links:
   - label: Documentation
     url: https://github.com/vladkens/ghstats/blob/main/readme.md
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/vladkens/ghstats:v0.8.0
+      default: ghcr.io/vladkens/ghstats:v0.9.0
       description: GHStats Docker image
     githubToken:
       type: string

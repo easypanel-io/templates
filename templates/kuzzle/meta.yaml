@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 2.52.0
   - date: 2026-05-08
     description: Version bumped to 2.54.4
+  - date: 2026-07-10
+    description: Version bumped to 2.56.0
 links:
   - label: Website
     url: https://kuzzle.io/
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kuzzleio/kuzzle:2.54.4
+      default: kuzzleio/kuzzle:2.56.0
     elasticServiceImage:
       type: string
       title: Elastic Service Image
