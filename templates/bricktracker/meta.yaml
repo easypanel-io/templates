@@ -1,0 +1,87 @@
+name: BrickTracker
+description:
+  BrickTracker is a self-hosted LEGO collection tracker. Add sets by number and
+  it pulls full part, minifigure, and instruction data from Rebrickable, then
+  lets you track missing or damaged parts, organize storage locations, and keep
+  a wishlist of sets you want next. Everything is stored locally in SQLite, so
+  there is no external database to run.
+instructions: |
+  Open the app URL — on first boot you will see a "Database error" screen
+  telling you the database needs to be upgraded from version 0. This is
+  expected on a brand-new install: click Administration, then Initialize/Upgrade
+  the database, and the app will reload normally. Adding sets works without any
+  configuration after that, but set a Rebrickable API key in the form above
+  first if you want to pull set data and images automatically instead of
+  entering everything by hand.
+changeLog:
+  - date: 2026-07-15
+    description: first release
+links:
+  - label: Website
+    url: https://bricktracker.baerentsen.space
+  - label: GitHub
+    url: https://gitea.baerentsen.space/FrederikBaerentsen/BrickTracker
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: bricktracker
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: gitea.baerentsen.space/frederikbaerentsen/bricktracker:1.4.2
+    rebrickableApiKey:
+      type: string
+      title: Rebrickable API Key
+      description:
+        Optional. Required only to pull set/part data and images automatically
+        when adding sets.
+    authenticationPassword:
+      type: string
+      title: Access Password
+      description:
+        Optional. Leave blank to keep the app fully open; set a password to
+        require it before editing (the app stays viewable read-only either way).
+benefits:
+  - title: Automatic Set Data
+    description:
+      Enter a set number and BrickTracker pulls its parts, minifigures, and
+      images from Rebrickable automatically, instead of manual data entry.
+  - title: Missing and Damaged Part Tracking
+    description:
+      Mark individual parts as missing or damaged per set, so incomplete builds
+      are easy to spot at a glance.
+  - title: No External Database
+    description:
+      Everything is stored in a local SQLite file, so there is nothing else to
+      provision or maintain beyond the app itself.
+features:
+  - title: Storage Locations
+    description:
+      Assign sets and parts to named storage locations to keep track of where
+      physical pieces actually live.
+  - title: Wishlist
+    description:
+      Keep a list of sets you want to add next, pulled from the same Rebrickable
+      data as owned sets.
+  - title: Minifigure and Parts Catalog
+    description:
+      Browse every minifigure and part across your whole collection, not just
+      set by set.
+  - title: Retired Set Tracking
+    description:
+      Cross-references an unofficial retired sets list so you can see which
+      owned or wishlisted sets are no longer in production.
+tags:
+  - Collection
+  - LEGO
+  - Self-Hosted
+  - Hobby
