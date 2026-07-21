@@ -1,0 +1,82 @@
+name: 13ft
+description:
+  13ft is a self-hosted paywall bypass and "read it later" style proxy. Paste an
+  article URL and it fetches the page the way a search engine crawler would see
+  it, falling back to Freedium or an archive.org/archive.today snapshot if the
+  direct fetch is blocked. It's fully stateless with no login of its own, so it
+  is protected with HTTP Basic Auth instead.
+instructions:
+  Open the app URL and sign in with the HTTP Basic Auth prompt using username
+  admin and the auto-generated password shown as this service's first basic auth
+  entry in Easypanel. Paste any article URL on the home page to fetch a
+  de-paywalled version of it.
+changeLog:
+  - date: 2026-07-21
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/wasi-master/13ft
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - locale
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: 13ft
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/wasi-master/13ft:0.4.1
+    locale:
+      type: string
+      title: Locale
+      oneOf:
+        - enum:
+            - en
+          title: English
+        - enum:
+            - de
+          title: German
+        - enum:
+            - fr
+          title: French
+        - enum:
+            - ko
+          title: Korean
+      default: en
+benefits:
+  - title: No Account, No Data Kept
+    description:
+      There's no database and no user accounts — the app is fully stateless, so
+      there's nothing to back up or lose.
+  - title: Multiple Fallback Sources
+    description:
+      If the direct crawler-style fetch is blocked, it automatically tries
+      Freedium, then archive.org and archive.today snapshots.
+  - title: Self-Hosted, No Third-Party Proxy
+    description:
+      Requests go straight from your own server instead of through a shared
+      public instance you don't control.
+features:
+  - title: Crawler-Style Fetching
+    description:
+      Requests pages with a search-engine-crawler user agent, which many
+      paywalls leave unblocked for indexing purposes.
+  - title: Archive Fallbacks
+    description:
+      Automatically retries against Freedium, archive.org, and archive.today
+      when the direct fetch fails or hits an anti-bot challenge.
+  - title: Multi-Language UI
+    description: Choose between English, German, French, and Korean.
+tags:
+  - Paywall Bypass
+  - Proxy
+  - Self-Hosted
+  - Privacy
