@@ -1,0 +1,64 @@
+name: Ghostboard
+description:
+  Ghostboard is a minimal shared scratchpad — open a board URL and anyone else
+  with that URL can type alongside you in real time, no account needed.
+  Everything is held in memory only and clears automatically a few minutes after
+  everyone disconnects, so there's nothing to back up and nothing to lose track
+  of. It has no login of its own, so this template protects it with HTTP Basic
+  Auth instead.
+instructions:
+  Open the app URL and sign in with the HTTP Basic Auth prompt using username
+  admin and the auto-generated password shown as this service's first basic auth
+  entry in Easypanel. From there, visit any board path (e.g. /my-notes) to start
+  a shared scratchpad — share that same URL with anyone you want editing
+  alongside you. Boards are purely in-memory and clear themselves about 5
+  minutes after the last person disconnects.
+changeLog:
+  - date: 2026-07-24
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/jon6fingrs/ghostboard
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ghostboard
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thehelpfulidiot/ghostboard-server:3.4.3
+benefits:
+  - title: Nothing to Set Up
+    description:
+      Just visit a board URL — no account, no database, no configuration needed
+      on either end.
+  - title: Leaves No Trace
+    description:
+      Boards live in memory only and clear themselves automatically after
+      everyone leaves, so there's nothing to purge or back up later.
+  - title: Lightweight
+    description:
+      A single small container with no database or persistent storage to
+      provision.
+features:
+  - title: Real-Time Shared Editing
+    description:
+      Everyone viewing the same board URL sees edits live, without refreshing.
+  - title: Markdown Support
+    description: Switch a board into Markdown mode for lightweight formatting.
+  - title: Light and Dark Mode
+    description: Toggle the editor theme to whatever's easiest on your eyes.
+tags:
+  - Collaboration
+  - Notes
+  - Self-Hosted
+  - Real-Time
