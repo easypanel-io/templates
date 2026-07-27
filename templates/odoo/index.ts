@@ -30,14 +30,8 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        command: `odoo -d ${input.appServiceName} -i base --without-demo=all`,
+        command: `odoo --db_host=$(PROJECT_NAME)_${input.appServiceName}-db --db_port=5432 --db_user=odoo --db_password=${databasePassword} -d ${input.appServiceName} -i base --without-demo=True`,
       },
-      env: [
-        `HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
-        `USER=odoo`,
-        `PASSWORD=${databasePassword}`,
-        `PORT=5432`,
-      ].join("\n"),
       mounts: [
         {
           type: "volume",

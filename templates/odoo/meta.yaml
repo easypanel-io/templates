@@ -32,8 +32,9 @@ changeLog:
     description:
       Fixed crash on startup caused by the database user being named "postgres",
       and Odoo now auto-creates and initializes its own database on first boot
-      instead of leaving an empty, un-initialized database that 500s on every
-      request
+      (with explicit connection flags, since a custom start command bypasses the
+      image's entrypoint.sh) instead of leaving an empty, un-initialized
+      database that 500s on every request
 links:
   - label: Website
     url: https://www.odoo.com
