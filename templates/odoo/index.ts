@@ -11,6 +11,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
       user: "odoo",
+      databaseName: input.appServiceName,
     },
   });
 
@@ -28,6 +29,9 @@ export function generate(input: Input): Output {
           port: 8069,
         },
       ],
+      deploy: {
+        command: `odoo -d ${input.appServiceName} -i base --without-demo=all`,
+      },
       env: [
         `HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `USER=odoo`,

@@ -16,13 +16,13 @@ description:
   accounting, inventory, project management, or any other business application,
   Odoo has got you covered.
 instructions: >-
-  Odoo does not ship with a database pre-created, so the home page will 500 with
-  a "Database ... not initialized" error until you set one up. Visit
-  /web/database/manager on your assigned domain — that page works even while the
-  home page is erroring, since it doesn't need an initialized database. If it
-  lists an existing empty database (e.g. matching your project name), delete it,
-  then use Create Database to set a master password and your first real
-  database. Once that finishes, the home page will load normally.
+  Odoo automatically creates and initializes its own database (with the base
+  module, no demo data) the first time the service boots, so the home page works
+  immediately without a manual database-manager step. If you deployed before
+  2026-07-27 and are stuck on a 500 "Database ... not initialized" error,
+  redeploy the service to pick up this fix — on restart Odoo will create its own
+  valid database alongside the old broken one, and /web/database/selector will
+  let you pick the new, working one.
 changeLog:
   - date: 2023
     description: first release
@@ -30,9 +30,10 @@ changeLog:
     description: Version bumped to 19.0
   - date: 2026-07-27
     description:
-      Fixed crash on startup — Odoo refuses to boot when the database user is
-      named "postgres", so the database user is now "odoo" — and added
-      instructions for setting up the first database via /web/database/manager
+      Fixed crash on startup caused by the database user being named "postgres",
+      and Odoo now auto-creates and initializes its own database on first boot
+      instead of leaving an empty, un-initialized database that 500s on every
+      request
 links:
   - label: Website
     url: https://www.odoo.com
