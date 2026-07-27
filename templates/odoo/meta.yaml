@@ -21,6 +21,10 @@ changeLog:
     description: first release
   - date: 2025-12-29
     description: Version bumped to 19.0
+  - date: 2026-07-27
+    description:
+      Fixed crash on startup — Odoo refuses to boot when the database user is
+      named "postgres", so the database user is now "odoo"
 links:
   - label: Website
     url: https://www.odoo.com

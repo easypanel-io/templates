@@ -10,6 +10,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      user: "odoo",
     },
   });
 
@@ -29,7 +30,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         `HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
-        `USER=postgres`,
+        `USER=odoo`,
         `PASSWORD=${databasePassword}`,
         `PORT=5432`,
       ].join("\n"),
