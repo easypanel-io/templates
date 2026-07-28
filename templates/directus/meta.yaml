@@ -25,8 +25,9 @@ changeLog:
     description: Version bumped to 11.15.4
   - date: 2026-04-29
     description: Version bumped to 11.17.3
-  - date: 2026-07-10
+  - date: 2026-07-27
     description: Version bumped to 12.1.1 
+    Added IP_TRUST_PROXY configuration required by Directus 12 when running behind the Easypanel Traefik reverse proxy.
 links:
   - label: Website
     url: https://directus.io/

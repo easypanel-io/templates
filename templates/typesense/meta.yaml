@@ -26,8 +26,10 @@ changeLog:
     description: Version bumped to 30.0.rca36
   - date: 2026-02-24
     description: Version bumped to 30.2.rc4
-  - date: 2026-07-13
-    description: Version bumped to 31.0.rc10
+  - date: 2026-07-27
+    description: Version bumped to 30.2
+    Changed image from 31.0.rc10 (release candidate) to 30.2 (stable).
+    Production templates should use a stable Typesense release by default.
 links:
   - label: Documentation
     url: https://typesense.org/docs/
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:31.0.rc10
+      default: typesense/typesense:30.2
 tags:
   - Documentation
   - Developer Tools

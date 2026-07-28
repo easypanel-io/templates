@@ -30,6 +30,7 @@ export function generate(input: Input): Output {
         `CACHE_ENABLED=true`,
         `CACHE_STORE=redis`,
         `REDIS=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `IP_TRUST_PROXY=loopback,linklocal,uniquelocal`,
         `ADMIN_EMAIL=${input.adminEmail}`,
         `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),

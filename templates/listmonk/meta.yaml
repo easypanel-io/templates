@@ -23,8 +23,11 @@ changeLog:
     description: Version bumped to v5.0.3
   - date: 2025-12-25
     description: Version bumped to v5.1.0
-  - date: 2026-07-06
+  - date: 2026-07-27
     description: Version bumped to v6.2.0
+    Automatic database migration on startup.
+    Back up PostgreSQL before upgrading.
+    Rollback may require restoring a database backup.
 links:
   - label: Website
     url: https://listmonk.app/
