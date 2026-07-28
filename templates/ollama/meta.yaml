@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 0.13.5
   - date: 2026-02-24
     description: Version bumped to 0.17.0
+  - date: 2026-05-05
+    description: Version bumped to 0.23.0
 links:
   - label: Website
     url: https://ollama.com
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ollama/ollama:0.17.0
+      default: ollama/ollama:0.23.0
     uiServiceImage:
       type: string
       title: Ollama UI Service Image

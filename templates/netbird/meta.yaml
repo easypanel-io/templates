@@ -2,16 +2,16 @@ name: NetBird
 description:
   This template deploys a headless NetBird client/peer container that joins an
   existing NetBird network using a setup key. It does not deploy the NetBird
-  management service, signal relay, or web dashboard. Use it to bootstrap a
-  node on your private mesh for remote access, site-to-site connectivity, or
-  secure service reachability over WireGuard.
+  management service, signal relay, or web dashboard. Use it to bootstrap a node
+  on your private mesh for remote access, site-to-site connectivity, or secure
+  service reachability over WireGuard.
 
 instructions:
-  This template runs only the NetBird client (peer). Before deploying, create
-  an account at https://netbird.io or run your own NetBird management stack,
-  then generate a reusable setup key. Enter that key in the NB_SETUP_KEY field
-  during deployment. The container will join your existing NetBird network and
-  persist client state in /var/lib/netbird.
+  This template runs only the NetBird client (peer). Before deploying, create an
+  account at https://netbird.io or run your own NetBird management stack, then
+  generate a reusable setup key. Enter that key in the NB_SETUP_KEY field during
+  deployment. The container will join your existing NetBird network and persist
+  client state in /var/lib/netbird.
 
 changeLog:
   - date: 2025-10-14

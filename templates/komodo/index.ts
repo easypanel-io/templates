@@ -41,6 +41,11 @@ export function generate(input: Input): Output {
           name: "komodo-backups",
           mountPath: "/backups",
         },
+        {
+          type: "volume",
+          name: "komodo-keys",
+          mountPath: "/config/keys",
+        },
       ],
       env: [
         `KOMODO_DATABASE_ADDRESS=$(PROJECT_NAME)_${input.appServiceName}-db:27017`,
@@ -48,8 +53,8 @@ export function generate(input: Input): Output {
         `KOMODO_DATABASE_PASSWORD=${dbPassword}`,
         `KOMODO_HOST=https://$(PRIMARY_DOMAIN)`,
         `KOMODO_TITLE=Komodo`,
-        `KOMODO_FIRST_SERVER=https://$(PROJECT_NAME)_${input.appServiceName}-periphery:8120`,
         `KOMODO_FIRST_SERVER_NAME=Local`,
+        `KOMODO_FIRST_SERVER_ADDRESS=https://$(PROJECT_NAME)_${input.appServiceName}-periphery:8120`,
         `KOMODO_DISABLE_CONFIRM_DIALOG=false`,
         `KOMODO_MONITORING_INTERVAL="15-sec"`,
         `KOMODO_RESOURCE_POLL_INTERVAL="1-hr"`,
@@ -93,11 +98,13 @@ export function generate(input: Input): Output {
           name: "komodo-periphery",
           mountPath: "/etc/komodo",
         },
+        {
+          type: "volume",
+          name: "komodo-keys",
+          mountPath: "/config/keys",
+        },
       ],
       env: [
-        `KOMODO_DATABASE_ADDRESS=$(PROJECT_NAME)_${input.appServiceName}-db:27017`,
-        `KOMODO_DATABASE_USERNAME=mongo`,
-        `KOMODO_DATABASE_PASSWORD=${dbPassword}`,
         `PERIPHERY_ROOT_DIRECTORY=/etc/komodo`,
         `PERIPHERY_PASSKEYS=${randomPasskey}`,
         `PERIPHERY_DISABLE_TERMINALS=false`,

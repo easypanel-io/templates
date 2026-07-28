@@ -7,13 +7,21 @@ description:
   maps, user management, and email notifications for asset-related activities.
 
 instructions:
-  Make sure to setup your Supabase instance before deploying this template.
+  Shelf.nu requires a Supabase project for file storage and authentication.
+  Before deploying, create a free project at supabase.com, then copy your
+  Project URL, anon public key, and service role key from Project Settings >
+  API. The app will refuse to start if any of the three Supabase fields are left
+  blank.
 
 changeLog:
   - date: 2025-06-17
     description: Initial Template Release
   - date: 2026-02-24
     description: Version bumped to main-e54458e
+  - date: 2026-06-01
+    description:
+      Fix DATABASE_URL (wrong pgbouncer port), make Supabase fields required,
+      bump image to 1.20.2
 links:
   - label: Documentation
     url: https://docs.shelf.nu/
@@ -31,6 +39,9 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - supabaseAnonPublic
+    - supabaseServiceRole
+    - supabaseUrl
   properties:
     appServiceName:
       type: string
@@ -39,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/shelf-nu/shelf.nu:main-e54458e
+      default: ghcr.io/shelf-nu/shelf.nu:1.20.2
       description: Shelf.nu Docker image
     supabaseAnonPublic:
       type: string

@@ -1,7 +1,7 @@
-name: qwe-qwe
+name: Castor
 
 description:
-  qwe-qwe is a business-oriented AI agent designed to drop into real workflows —
+  Castor is a business-oriented AI agent designed to drop into real workflows —
   customer ops, internal automation, knowledge retrieval, scheduled reporting,
   custom integrations. Deploy on your own infrastructure and bring any
   OpenAI-compatible LLM provider — Azure OpenAI, AWS Bedrock, OpenAI, Groq,
@@ -14,20 +14,24 @@ instructions:
   LLM provider. Set the LLM Provider URL to your provider endpoint (e.g.
   https://api.openai.com/v1 for OpenAI) and the LLM API Key to your key. For
   Telegram bot support, go to Settings → Telegram and follow the setup wizard.
+  All state (database, vector memory, wiki, skills) persists in the mounted
+  volume, so it survives restarts and image upgrades.
 
 changeLog:
+  - date: 2026-07-28
+    description: Rebrand to Castor, image v0.25.0, correct env vars + data volume
   - date: 2026-05-13
     description: first release
 
 links:
   - label: Website
-    url: https://github.com/deepfounder-ai/qwe-qwe
+    url: https://github.com/deepfounder-ai/castor
   - label: Documentation
-    url: https://github.com/deepfounder-ai/qwe-qwe/blob/main/README.md
+    url: https://github.com/deepfounder-ai/castor/blob/main/README.md
   - label: Github
-    url: https://github.com/deepfounder-ai/qwe-qwe
+    url: https://github.com/deepfounder-ai/castor
   - label: Community
-    url: https://t.me/qwe_qwe_ai
+    url: https://t.me/castor_ai
 
 contributors:
   - name: deepfounder-ai
@@ -42,11 +46,11 @@ schema:
     appServiceName:
       type: string
       title: App Service Name
-      default: qwe-qwe
+      default: castor
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/deepfounder-ai/qwe-qwe:v0.22.0
+      default: ghcr.io/deepfounder-ai/castor:0.25.0
     llmUrl:
       type: string
       title: LLM Provider URL
@@ -94,9 +98,10 @@ features:
       responses and topic-to-thread mapping.
   - title: Tool Search Architecture
     description:
-      Only 8 core tools loaded by default — saves 75% tokens vs loading all 46.
-      The model calls tool_search("browser") or tool_search("notes") to activate
-      more tools on demand, keeping every turn lean.
+      Only a handful of core tools loaded by default — saves ~75% tokens vs
+      loading everything. The model calls tool_search("browser") or
+      tool_search("notes") to activate more tools on demand, keeping every turn
+      lean.
   - title: Knowledge Graph Synthesis
     description:
       Night synthesis worker extracts entities and typed relations from
@@ -114,7 +119,7 @@ features:
       secrets into tool calls by name — no plaintext keys in prompts or logs.
   - title: Diagnostics Built In
     description:
-      qwe-qwe --doctor checks 20+ system components — provider connectivity, LLM
+      castor --doctor checks 20+ system components — provider connectivity, LLM
       latency, embeddings, memory, MCP servers, browser skill, Telegram,
       knowledge graph, BM25 index, and disk space. Green board before you ship.
 

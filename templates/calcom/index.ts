@@ -13,8 +13,15 @@ export function generate(input: Input): Output {
     `DATABASE_DIRECT_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
     `NEXTAUTH_SECRET=${btoa(randomString(32))}`,
+    `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
     `CALENDSO_ENCRYPTION_KEY=${btoa(randomString(24))}`,
     `NEXT_PUBLIC_WEBAPP_URL=https://$(PRIMARY_DOMAIN)`,
+    `EMAIL_FROM=${input.smtpFrom}`,
+    `EMAIL_FROM_NAME=${input.smtpFromName}`,
+    `EMAIL_SERVER_HOST=${input.smtpHost}`,
+    `EMAIL_SERVER_PORT=${input.smtpPort}`,
+    `EMAIL_SERVER_USER=${input.smtpUser}`,
+    `EMAIL_SERVER_PASSWORD=${input.smtpPassword}`,
   ];
 
   if (input.enableStudio) {

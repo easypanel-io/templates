@@ -1,9 +1,14 @@
 name: AriaNg
-description: AriaNg is a modern web frontend for aria2, a lightweight multi-protocol & multi-source command-line download utility. It provides a beautiful web interface for managing downloads.
+description:
+  AriaNg is a modern web frontend for aria2, a lightweight multi-protocol &
+  multi-source command-line download utility. It provides a beautiful web
+  interface for managing downloads.
 instructions: null
 changeLog:
   - date: 2025-05-05
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to 1.3.13  
 links:
   - label: Website
     url: https://ariang.mayswind.net
@@ -28,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hurlenko/aria2-ariang:1.3.10
+      default: hurlenko/aria2-ariang:1.3.13
     rpcSecret:
       type: string
       title: RPC Secret
@@ -57,4 +62,4 @@ tags:
   - Download Manager
   - File Transfer
   - Self-hosted
-  - Open Source 
+  - Open Source

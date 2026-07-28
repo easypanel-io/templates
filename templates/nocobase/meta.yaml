@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 1.9.32
   - date: 2026-01-24
     description: Version bumped to 1.9.39
+  - date: 2026-05-04
+    description: Version bumped to 2.0.48
 links:
   - label: Website
     url: https://www.nocobase.com/
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nocobase/nocobase:1.9.39
+      default: nocobase/nocobase:2.0.48
     databaseServiceName:
       type: string
       title: Database Service Name

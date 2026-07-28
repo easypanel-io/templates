@@ -25,13 +25,9 @@ export function generate(input: Input): Output {
           mountPath: "/config",
         },
       ],
-      env: [
-        `PUID=1000`,
-        `PGID=1000`,
-        `TZ=Etc/UTC`,
-      ].join("\n"),
+      env: [`PUID=1000`, `PGID=1000`, `TZ=Etc/UTC`].join("\n"),
     },
   });
 
   return { services };
-} 
+}

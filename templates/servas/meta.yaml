@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to 1.0.0
   - date: 2025-12-29
     description: Version bumped to 1.1.0
+  - date: 2026-05-05
+    description: Version bumped to 1.1.1
 links:
   - label: Github
     url: https://github.com/beromir/Servas
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: beromir/servas:1.1.0
+      default: beromir/servas:1.1.1
     databaseServiceName:
       type: string
       title: Database Service Name

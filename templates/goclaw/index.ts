@@ -1,4 +1,9 @@
-import { Output, Services, randomPassword, randomString } from "~templates-utils";
+import {
+  Output,
+  Services,
+  randomPassword,
+  randomString,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -19,9 +24,10 @@ export function generate(input: Input): Output {
   });
 
   // ── 2. GoClaw Gateway (main service) ──
-  const providerKeyEnv = input.providerApiKey && input.provider
-    ? `GOCLAW_${input.provider.toUpperCase()}_API_KEY=${input.providerApiKey}`
-    : ``;
+  const providerKeyEnv =
+    input.providerApiKey && input.provider
+      ? `GOCLAW_${input.provider.toUpperCase()}_API_KEY=${input.providerApiKey}`
+      : ``;
 
   services.push({
     type: "app",

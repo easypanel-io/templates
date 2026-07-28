@@ -6,6 +6,8 @@ instructions: null
 changeLog:
   - date: 2025-04-14
     description: First Release
+  - date: 2026-04-29
+    description: Version bumped to 0.25.0
 links:
   - label: Website
     url: https://homebox.software/en/
@@ -29,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/sysadminsmedia/homebox:0.11.1
+      default: ghcr.io/sysadminsmedia/homebox:0.25.0
 benefits:
   - title: Home Inventory Management
     description: Keep track of all your belongings in one place

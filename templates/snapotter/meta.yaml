@@ -1,0 +1,91 @@
+name: SnapOtter
+description:
+  SnapOtter is a self-hosted, privacy-first image manipulation platform packed
+  into a single Docker container. It offers 50+ image tools including resizing,
+  compression, format conversion, AI background removal, upscaling, OCR, and
+  more — all processing happens locally on your server with nothing leaving your
+  network.
+instructions:
+  After deployment, access the web interface. Default credentials are username
+  "admin" and password "admin". Change the password immediately after first
+  login. All image processing is performed locally — no data leaves your server.
+changeLog:
+  - date: 2026-06-15
+    description: First Release
+links:
+  - label: Website
+    url: https://snapotter.com
+  - label: Documentation
+    url: https://docs.snapotter.com
+  - label: Github
+    url: https://github.com/snapotter-hq/SnapOtter
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: snapotter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: snapotter/snapotter:1.17.2
+benefits:
+  - title: Privacy First
+    description:
+      All image processing happens locally on your server. Your files stay on
+      your network and are never sent to external services.
+  - title: 50+ Image Tools
+    description:
+      Resize, crop, compress, convert, watermark, vectorize, beautify
+      screenshots, generate memes, create GIFs, and much more.
+  - title: Local AI Capabilities
+    description:
+      Background removal, photo upscaling, restoration, object erasing, face
+      blur, OCR, and canvas expansion powered by local AI models.
+  - title: Single Container Deployment
+    description:
+      No Redis, no Postgres, no external dependencies. One Docker container
+      handles everything out of the box.
+  - title: REST API Access
+    description:
+      Full REST API with OpenAPI documentation so all tools can be integrated
+      into your workflows and automations.
+features:
+  - title: Format Conversion
+    description:
+      Convert between 55+ input formats including 23 camera RAW formats and 14
+      output formats in a single click.
+  - title: AI Background Removal
+    description:
+      Remove image backgrounds using locally running AI without sending data to
+      any external service.
+  - title: Batch Processing
+    description:
+      Process unlimited images simultaneously using bulk operations for
+      efficient workflows.
+  - title: Layer-Based Editor
+    description:
+      Built-in layer-based image editor for advanced composition and editing
+      tasks directly in the browser.
+  - title: Screenshot Beautification
+    description:
+      Transform plain screenshots into polished, professional visuals with
+      backgrounds, shadows, and padding.
+  - title: GPU Acceleration
+    description:
+      Optional NVIDIA GPU support for significantly faster AI processing tasks
+      when hardware is available.
+tags:
+  - Image Processing
+  - Media
+  - AI
+  - Privacy
+  - Self-Hosted
+  - Tools

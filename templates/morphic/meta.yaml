@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: 2025-06-25
     description: Initial Template Release
+  - date: 2026-05-21
+    description: Bumped to v1.3.0 (SHA e4fd783), SearXNG updated to 2026.5.17
 
 links:
   - label: GitHub
@@ -40,12 +42,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/miurla/morphic:212c4a5cf94313b31b4b67fd85b6734ebc260a6c
+      default: ghcr.io/miurla/morphic:e4fd78357afc685db17e6c27404b9728b3205624
       description: Morphic Docker image
     searxngServiceImage:
       type: string
       title: SearxNG Service Image
-      default: searxng/searxng:2025.6.25-39474b3
+      default: searxng/searxng:2026.5.17-d7e8b7cd1
       description: SearxNG Docker image
     openaiApiKey:
       type: string

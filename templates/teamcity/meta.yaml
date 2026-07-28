@@ -9,6 +9,8 @@ instructions:
 changeLog:
   - date: 2025-04-29
     description: First Release
+  - date: 2026-05-07
+    description: Version bumped to 2025.11.4
 links:
   - label: Github
     url: https://github.com/JetBrains/teamcity-docker-images
@@ -32,11 +34,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jetbrains/teamcity-server:2023.11.3
+      default: jetbrains/teamcity-server:2025.11.4
     agentServiceImage:
       type: string
       title: Agent Service Image
-      default: jetbrains/teamcity-agent:2023.11.3
+      default: jetbrains/teamcity-agent:2025.11.4
     enableAgent:
       type: boolean
       title: Enable TeamCity Agent

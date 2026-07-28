@@ -16,23 +16,20 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
+          port: 80,
         },
       ],
       mounts: [
         {
           type: "volume",
           name: "dailytxt-data",
-          mountPath: "/app/data",
+          mountPath: "/data",
         },
       ],
       env: [
-        `PORT=8765`,
         `SECRET_TOKEN=${secretKey}`,
         `ALLOW_REGISTRATION=${input.allowRegistration}`,
-        `DATA_INDENT=2`,
-        `JWT_EXP_DAYS=${input.jwtExpDays}`,
-        `ENABLE_UPDATE_CHECK=True`,
+        `LOGOUT_AFTER_DAYS=${input.logoutAfterDays}`,
       ].join("\n"),
     },
   });

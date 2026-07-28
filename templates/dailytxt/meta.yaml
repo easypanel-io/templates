@@ -10,6 +10,8 @@ instructions:
   After deployment, open DailyTxT from your app domain and create your first
   account (if allow registration is enabled).
 changeLog:
+  - date: 2026-05-19
+    description: Updated to v2.6.1
   - date: 2025-10-03
     description: First Release
   - date: 2026-03-25
@@ -30,7 +32,7 @@ schema:
     - appServiceName
     - appServiceImage
     - allowRegistration
-    - jwtExpDays
+    - logoutAfterDays
   properties:
     appServiceName:
       type: string
@@ -39,16 +41,16 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: phitux/dailytxt:1.0.15
+      default: phitux/dailytxt:2.6.1
     allowRegistration:
       type: boolean
       title: Allow Registration
       description: Allow new users to register
       default: true
-    jwtExpDays:
+    logoutAfterDays:
       type: number
-      title: JWT Expiration Days
-      description: Days until JWT token expires
+      title: Logout After Days
+      description: Days of inactivity before automatic logout
       default: 60
 benefits:
   - title: End-to-End Encryption

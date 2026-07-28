@@ -25,19 +25,13 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "celery -A app.core.celery_app worker --loglevel=info",
-      },
-      resources: {
-        memoryLimit: 1024,
-        memoryReservation: 256,
-        cpuLimit: 1,
-        cpuReservation: 0.5,
+        command: "/opt/venv/bin/python -m celery -A app.core.celery_app worker --loglevel=info",
       },
       env: [
         `SERVICE_ROLE=celery-worker`,
         `ENVIRONMENT=production`,
         `SECRET_KEY=${secretKey}`,
-        `DOMAIN_NAME=$(PRIMARY_DOMAIN)`,
+        `DOMAIN_NAME=$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
         `REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
         `CELERY_BROKER_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
         `CELERY_RESULT_BACKEND=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,
@@ -67,12 +61,6 @@ export function generate(input: Input): Output {
           port: 8000,
         },
       ],
-      resources: {
-        memoryLimit: 2048,
-        memoryReservation: 512,
-        cpuLimit: 2,
-        cpuReservation: 1,
-      },
       env: [
         `SERVICE_ROLE=app`,
         `ENVIRONMENT=production`,

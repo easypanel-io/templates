@@ -76,7 +76,9 @@ export function generate(input: Input): Output {
         `IS_API_IDEMPOTENCY_ENABLED=false`,
         `IS_API_RATE_LIMITING_ENABLED=false`,
         `IS_NEW_MESSAGES_API_RESPONSE_ENABLED=true`,
+        `STEP_RESOLVER_DISPATCH_URL=https://$(PROJECT_NAME)-${input.appServiceName}-api.$(EASYPANEL_HOST)`,
         `IS_V2_ENABLED=true`,
+        `IS_SELF_HOSTED=true`,
       ].join("\n"),
       domains: [
         {
@@ -98,10 +100,13 @@ export function generate(input: Input): Output {
       env: [
         ...commonEnv,
         ...apiWorkerCommonEnv,
+        `PORT=3004`,
         `BROADCAST_QUEUE_CHUNK_SIZE=100`,
         `MULTICAST_QUEUE_CHUNK_SIZE=100`,
         `IS_EMAIL_INLINE_CSS_DISABLED=false`,
         `IS_USE_MERGED_DIGEST_ID_ENABLED=false`,
+        `STEP_RESOLVER_DISPATCH_URL=https://$(PROJECT_NAME)-${input.appServiceName}-api.$(EASYPANEL_HOST)`,
+        `IS_SELF_HOSTED=true`,
       ].join("\n"),
     },
   });

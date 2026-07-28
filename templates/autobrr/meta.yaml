@@ -19,6 +19,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-18
     description: Version bumped to v1.73
+  - date: 2026-04-29
+    description: Version bumped to v1.75  
 links:
   - label: Website
     url: https://autobrr.com/
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/autobrr/autobrr:v1.73
+      default: ghcr.io/autobrr/autobrr:v1.75
     timezone:
       type: string
       title: Timezone

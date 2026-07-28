@@ -13,6 +13,8 @@ instructions: Login using the credentials; username=root, password=Root@123
 changeLog:
   - date: 2026-01-15
     description: Template Release
+  - date: 2026-05-08
+    description: Version bumped to release-1.28.0
 
 links:
   - label: GitHub
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/aizhimou/pigeon-pod:release-1.19.10
+      default: ghcr.io/aizhimou/pigeon-pod:release-1.28.0
 
 benefits:
   - title: YouTube to Podcast Conversion

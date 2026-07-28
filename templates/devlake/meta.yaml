@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to main_250513_0111_15eba06
   - date: 2025-07-15
     description: Version bumped to main_250711_1608_3684cdb
+  - date: 2026-04-29
+    description: Version bumped to main_260429_1235_e26c61b
 
 links:
   - label: Documentation
@@ -43,15 +45,15 @@ schema:
     uiServiceImage:
       type: string
       title: UI Service Image
-      default: devlake.docker.scarf.sh/apache/devlake-config-ui:main_250711_1608_3684cdb
+      default: devlake.docker.scarf.sh/apache/devlake-config-ui:main_260429_1235_e26c61b
     backendServiceImage:
       type: string
       title: Backend Service Image
-      default: devlake.docker.scarf.sh/apache/devlake:main_250711_1608_3684cdb
+      default: devlake.docker.scarf.sh/apache/devlake:main_260429_1235_e26c61b
     grafanaServiceImage:
       type: string
       title: Grafana Service Image
-      default: devlake.docker.scarf.sh/apache/devlake-dashboard:main_250711_1608_3684cdb
+      default: devlake.docker.scarf.sh/apache/devlake-dashboard:main_260429_1235_e26c61b
 
 benefits:
   - title: Centralized Data Integration

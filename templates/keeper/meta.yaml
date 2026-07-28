@@ -2,8 +2,8 @@ name: Keeper
 description:
   Keeper is a simple and open-source calendar synchronization and booking tool
   that allows you to pull events from remotely hosted iCal or ICS links and push
-  them to one or many calendars. Built with modern architecture using Next.js and
-  Bun, Keeper provides a comprehensive solution for calendar management and
+  them to one or many calendars. Built with modern architecture using Next.js
+  and Bun, Keeper provides a comprehensive solution for calendar management and
   synchronization. The standalone version includes all services (web, API, cron)
   in a single container, making it easy to deploy. Keeper supports multiple
   calendar providers including Google Calendar, iCloud, Outlook, CalDAV, and
@@ -39,12 +39,16 @@ schema:
       type: string
       title: Better Auth Secret
       default: ""
-      description: Required secret key for Better Auth authentication. Auto-generated if empty for easy deployment.
+      description:
+        Required secret key for Better Auth authentication. Auto-generated if
+        empty for easy deployment.
     encryptionKey:
       type: string
       title: Encryption Key
       default: ""
-      description: Required encryption key for data encryption. Auto-generated if empty for easy deployment.
+      description:
+        Required encryption key for data encryption. Auto-generated if empty for
+        easy deployment.
     commercialMode:
       type: string
       title: Commercial Mode
@@ -77,8 +81,8 @@ benefits:
       push them to one or many destination calendars seamlessly.
   - title: Self-Hosted Solution
     description:
-      Keep your calendar data private and under your control with a
-      self-hosted deployment.
+      Keep your calendar data private and under your control with a self-hosted
+      deployment.
   - title: Multiple Provider Support
     description:
       Support for Google Calendar, iCloud, Outlook, CalDAV, and Fastmail
@@ -102,25 +106,24 @@ features:
       OAuth authentication for seamless integration.
   - title: Automated Synchronization
     description:
-      Background cron service automatically synchronizes calendars on a
-      schedule to keep your events up to date.
+      Background cron service automatically synchronizes calendars on a schedule
+      to keep your events up to date.
   - title: PostgreSQL Storage
     description:
-      Calendar data and synchronization configurations are stored in a
-      dedicated PostgreSQL volume at /var/lib/postgresql/data for reliable
-      persistence.
+      Calendar data and synchronization configurations are stored in a dedicated
+      PostgreSQL volume at /var/lib/postgresql/data for reliable persistence.
   - title: OAuth Integration
     description:
       Optional OAuth authentication with Google and Microsoft providers for
       secure calendar access and synchronization.
   - title: Encryption Support
     description:
-      Built-in encryption support for securing calendar data and
-      synchronization credentials.
+      Built-in encryption support for securing calendar data and synchronization
+      credentials.
   - title: Containerized Deployment
     description:
-      Easily deploy Keeper in any environment that supports Docker with
-      minimal configuration requirements.
+      Easily deploy Keeper in any environment that supports Docker with minimal
+      configuration requirements.
 tags:
   - Calendar
   - Synchronization

@@ -13,6 +13,8 @@ changeLog:
     description: Updated to use PostgreSQL with stable-postgres-tomcat image
   - date: 2026-02-24
     description: Version bumped to 18.1.0-postgres-tomcat
+  - date: 2026-05-07
+    description: Version bumped to 18.2.1-postgres-tomcat
 links:
   - label: Github
     url: https://github.com/xwiki/xwiki-platform
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: xwiki:18.1.0-postgres-tomcat
+      default: xwiki:18.2.1-postgres-tomcat
       description: XWiki Docker image with PostgreSQL support
     databaseServiceImage:
       type: string

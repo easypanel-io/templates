@@ -7,12 +7,19 @@ description:
   performance monitoring, user session analysis, and customizable reports.
   Self-hosted solution that ensures complete data privacy and control while
   providing enterprise-grade analytics capabilities.
-instructions: null
+instructions:
+  After deployment, open the Swetrix frontend URL and click Sign Up to create
+  your account. Once registered, log in with your credentials to access the
+  dashboard.
 changeLog:
   - date: 2025-06-03
     description: First release (v3.3.1)
   - date: 2025-12-29
     description: Version bumped to v4.1.0
+  - date: 2026-05-21
+    description:
+      Version bumped to v5.2.2, ClickHouse pinned to 24.8 (26.4 breaks user
+      table)
 links:
   - label: GitHub
     url: https://github.com/Swetrix/swetrix
@@ -30,8 +37,6 @@ schema:
     - frontendImage
     - apiImage
     - clickhouseImage
-    - adminEmail
-    - adminPassword
   properties:
     appServiceName:
       type: string
@@ -40,25 +45,15 @@ schema:
     frontendImage:
       type: string
       title: Frontend Image
-      default: swetrix/swetrix-fe:v4.1.0
+      default: swetrix/swetrix-fe:v5.2.2
     apiImage:
       type: string
       title: API Image
-      default: swetrix/swetrix-api:v4.1.0
+      default: swetrix/swetrix-api:v5.2.2
     clickhouseImage:
       type: string
       title: ClickHouse Image
-      default: clickhouse/clickhouse-server:24.10-alpine
-    adminEmail:
-      type: string
-      title: Admin Email
-      default: admin@example.com
-      description: "Email address for the default admin user"
-    adminPassword:
-      type: string
-      title: Admin Password
-      default: admin1234567
-      description: "Password for the default admin user"
+      default: clickhouse/clickhouse-server:24.8-alpine
 benefits:
   - title: Privacy-Focused
     description: Complete control over your analytics data with self-hosting.

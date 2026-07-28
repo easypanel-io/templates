@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2025-04-29
     description: First Release
+  - date: 2026-05-08
+    description: Version bumped to v1.3.1
 links:
   - label: Github
     url: https://github.com/Casvt/Kapowarr
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mrcas/kapowarr:v1.2.0
+      default: mrcas/kapowarr:v1.3.1
 benefits:
   - title: Comic Book Management
     description:

@@ -1,16 +1,10 @@
-import {
-  Output,
-  randomPassword,
-  randomString,
-  Services,
-} from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
 
   const databasePassword = randomPassword();
-  const pasetoKey = randomString(64);
   const adminKey = randomPassword();
 
   services.push({

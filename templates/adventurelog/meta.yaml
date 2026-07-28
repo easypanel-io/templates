@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2025-10-30
     description: Initial Template Release
+  - date: 2026-04-29
+    description: Version bumped to v0.12.0  
 links:
   - label: GitHub Frontend
     url: https://github.com/seanmorley15/adventurelog-frontend
@@ -36,12 +38,12 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/seanmorley15/adventurelog-frontend:v0.11.0
+      default: ghcr.io/seanmorley15/adventurelog-frontend:v0.12.0
       description: AdventureLog App Docker image
     backendServiceImage:
       type: string
       title: Backend Service Image
-      default: ghcr.io/seanmorley15/adventurelog-backend:v0.11.0
+      default: ghcr.io/seanmorley15/adventurelog-backend:v0.12.0
       description: AdventureLog Backend Docker image
 benefits:
   - title: Travel Documentation

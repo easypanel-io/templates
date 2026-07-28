@@ -227,6 +227,12 @@ evaluation_interval = "5m"`;
         },
       ],
       env: [`LIBREDESK_SYSTEM_USER_PASSWORD=${systemUserPassword}`].join("\n"),
+      scripts: [
+        {
+          name: "Set System User Password",
+          script: `printf "$LIBREDESK_SYSTEM_USER_PASSWORD\\n" | ./libredesk --set-system-user-password --config /libredesk/config.toml`,
+        },
+      ],
       deploy: {
         command:
           "sh -c './libredesk --install --idempotent-install --yes --config /libredesk/config.toml && ./libredesk --upgrade --yes --config /libredesk/config.toml && ./libredesk --config /libredesk/config.toml'",

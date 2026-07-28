@@ -30,6 +30,8 @@ changeLog:
     description: Version bumped to sha-84c642c
   - date: 2025-12-05
     description: Updated to photoview/photoview:2 with new volume paths
+  - date: 2026-05-08
+    description: Version bumped to 2.4.0
 
 links:
   - label: Website
@@ -60,7 +62,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: photoview/photoview:2
+      default: photoview/photoview:2.4.0
     databaseType:
       type: string
       title: Database Type

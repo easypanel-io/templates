@@ -13,6 +13,8 @@ changeLog:
     description: First release
   - date: 2025-07-21
     description: Version bumped to 4.5.0
+  - date: 2026-04-29
+    description: Version bumped to 4.6.0
 links:
   - label: Website
     url: https://grocy.info/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/grocy:4.5.0
+      default: lscr.io/linuxserver/grocy:4.6.0
 benefits:
   - title: Efficient Inventory Management
     description:

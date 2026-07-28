@@ -7,6 +7,8 @@ instructions: null
 changeLog:
   - date: 2025-04-09
     description: First Release
+  - date: 2026-05-08
+    description: Version bumped to 1.1.5
 links:
   - label: GitHub
     url: https://github.com/need4swede/sidequests
@@ -28,7 +30,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: need4swede/sidequests:1.1
+      default: need4swede/sidequests:1.1.5
     appAdminUsername:
       type: string
       title: Admin Username

@@ -25,6 +25,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-24
     description: Version bumped to 1.6
+  - date: 2026-05-07
+    description: Version bumped to 2.4.1
 links:
   - label: GitHub
     url: https://github.com/Nezreka/SoulSync
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: boulderbadgedad/soulsync:1.6
+      default: boulderbadgedad/soulsync:2.4.1
     timezone:
       type: string
       title: Timezone

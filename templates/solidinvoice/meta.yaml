@@ -1,0 +1,84 @@
+name: SolidInvoice
+description:
+  SolidInvoice is a self-hosted invoicing and billing platform built with
+  Symfony and Vue.js. Create and send professional invoices and quotes, track
+  payments, manage clients and contacts, and accept online payments through
+  multiple payment gateways. It ships as a single container with an embedded
+  FrankenPHP server and uses MySQL for data storage.
+instructions:
+  After deployment, navigate to your domain — you will be automatically
+  redirected to the installation wizard at /install. Follow the steps to
+  configure the database connection (MySQL details are pre-filled via
+  environment variables), set your application URL, locale, and create the
+  initial admin account. Once the wizard completes you will be logged in and
+  ready to create your first invoice.
+changeLog:
+  - date: 2026-06-18
+    description: Initial release
+links:
+  - label: Website
+    url: https://solidinvoice.co
+  - label: Documentation
+    url: https://solidinvoice.co/docs
+  - label: GitHub
+    url: https://github.com/SolidInvoice/SolidInvoice
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: solidinvoice
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: solidinvoice/solidinvoice:3.0.0
+benefits:
+  - title: Professional Invoicing
+    description:
+      Create branded invoices and quotes with line items, tax rates, discounts,
+      and notes. Send them directly to clients via email from the app.
+  - title: Payment Tracking
+    description:
+      Record payments, partial payments, and credits. Automatically mark
+      invoices as paid and generate payment receipts.
+  - title: Client & Contact Management
+    description:
+      Manage clients with multiple contacts, addresses, and payment terms. All
+      invoices and quotes are linked to client profiles.
+  - title: Self-Hosted & Private
+    description:
+      All data stays on your own server. No SaaS fees, no vendor lock-in, and
+      full control over your billing data.
+features:
+  - title: Invoice & Quote Builder
+    description:
+      Drag-and-drop line item editor with support for products, services, taxes,
+      and discounts. Clone invoices to save time on recurring billing.
+  - title: Payment Gateways
+    description:
+      Accept online payments via Stripe, PayPal, and other gateways configured
+      directly in the admin settings.
+  - title: Tax Management
+    description:
+      Define multiple tax rates and apply them per line item or globally.
+      Supports compound taxes and tax-exempt clients.
+  - title: Recurring Invoices
+    description:
+      Schedule invoices to repeat daily, weekly, monthly, or yearly with
+      automatic generation and delivery.
+  - title: Multi-Currency Support
+    description:
+      Set a base currency and bill clients in their local currency with
+      configurable exchange rates.
+tags:
+  - Finance
+  - Invoicing
+  - Billing
+  - Business

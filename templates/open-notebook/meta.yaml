@@ -1,0 +1,95 @@
+name: Open Notebook
+description:
+  An open-source, privacy-focused alternative to Google's Notebook LM. Supports
+  18+ AI providers, multi-modal content (PDFs, videos, audio, web pages),
+  podcast generation, full-text and vector search, and a full REST API.
+instructions:
+  After deployment, open the Web UI at the assigned domain (port 8502).
+  Configure your AI provider API keys in the Settings page inside the app.
+  Supported providers include OpenAI, Anthropic, Ollama, LM Studio, and 14+
+  more. The REST API is available on port 5055.
+changeLog:
+  - date: "2026-05-25"
+    description: Initial release (v1.8.5)
+links:
+  - label: Website
+    url: https://www.open-notebook.ai
+  - label: GitHub
+    url: https://github.com/lfnovo/open-notebook
+  - label: Documentation
+    url: https://github.com/lfnovo/open-notebook/tree/main/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - surrealDbImage
+    - appServiceImage
+    - encryptionKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: open-notebook
+    surrealDbImage:
+      type: string
+      title: SurrealDB Image
+      default: surrealdb/surrealdb:v2.6.5-dev
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lfnovo/open_notebook:1.8.5
+    encryptionKey:
+      type: string
+      title: Encryption Key
+      description:
+        Secret key used to encrypt your AI provider API keys in the database.
+        Change this to a unique random string.
+      default: ""
+benefits:
+  - title: Privacy First
+    description:
+      Self-hosted deployment keeps your research data completely private and
+      under your control.
+  - title: Multi-Provider AI
+    description:
+      Connect to 18+ AI providers including OpenAI, Anthropic, Ollama, and LM
+      Studio — no vendor lock-in.
+  - title: Multi-Modal Content
+    description:
+      Import PDFs, YouTube videos, audio files, and web pages as notebook
+      sources.
+  - title: Podcast Generation
+    description:
+      Generate professional multi-speaker podcasts from your research with full
+      script control.
+  - title: Full REST API
+    description:
+      Automate and integrate via a complete REST API available alongside the Web
+      UI.
+features:
+  - title: AI-Powered Research
+    description:
+      Chat with your notes and sources using any supported AI provider. Includes
+      full-text and vector search across all content.
+  - title: SurrealDB Backend
+    description:
+      Powered by SurrealDB for fast, flexible, multi-model data storage with
+      GraphQL support.
+  - title: Multi-Language UI
+    description:
+      Interface available in English, Portuguese, Chinese, Japanese, Russian,
+      and Bengali.
+  - title: Open Source
+    description:
+      MIT-licensed and fully customizable. Modify, extend, and integrate as
+      needed.
+tags:
+  - ai
+  - notes
+  - notebook
+  - research
+  - llm

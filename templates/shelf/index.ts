@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:6543/$(PROJECT_NAME)?pgbouncer`,
+        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `DIRECT_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `SUPABASE_ANON_PUBLIC=${input.supabaseAnonPublic}`,
         `SUPABASE_SERVICE_ROLE=${input.supabaseServiceRole}`,

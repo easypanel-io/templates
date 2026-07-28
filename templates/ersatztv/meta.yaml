@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2025-10-14
     description: Initial Template Release
+  - date: 2026-04-29
+    description: Version bumped to v26.3.0
 
 links:
   - label: Website
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/ersatztv/ersatztv:9bae8e73bf58ee80d7667a148b147957a30116dc
+      default: ghcr.io/ersatztv/ersatztv:v26.3.0
     timezone:
       type: string
       title: Timezone

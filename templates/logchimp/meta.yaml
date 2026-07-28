@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-12-23
     description: Template Release
+  - date: 2026-05-08
+    description: Version bumped to 0.9.0
 
 links:
   - label: Website
@@ -39,15 +41,15 @@ schema:
     apiImage:
       type: string
       title: API Image
-      default: ghcr.io/logchimp/logchimp/api:0.7.1
+      default: ghcr.io/logchimp/logchimp/api:0.9.0
     themeImage:
       type: string
       title: Theme Image
-      default: ghcr.io/logchimp/logchimp/theme:0.7.1
+      default: ghcr.io/logchimp/logchimp/theme:0.9.0
     valkeyImage:
       type: string
       title: Valkey Image
-      default: valkey/valkey:9.0.2
+      default: valkey/valkey:9.0.4-alpine3.23
 
 benefits:
   - title: Unified Feedback & Changelog

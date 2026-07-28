@@ -10,6 +10,8 @@ instructions:
 changeLog:
   - date: 2025-04-10
     description: First Release
+  - date: 2026-04-29
+    description: Version bumped to 1.16.0
 links:
   - label: Github
     url: https://github.com/corentinth/enclosed
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: corentinth/enclosed:1.15.0
+      default: corentinth/enclosed:1.16.0
 benefits:
   - title: File Sharing
     description: Easy and secure file sharing capabilities.

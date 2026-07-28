@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-09-24
     description: First release (1.0.4)
+  - date: 2026-04-29
+    description: Version bumped to 1.0.5
 links:
   - label: Website
     url: https://www.dumbware.io/DumbPad
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbpad:1.0.4
+      default: dumbwareio/dumbpad:1.0.5
 benefits:
   - title: Simple Note Taking
     description:

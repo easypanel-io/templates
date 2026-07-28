@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2025-04-18
     description: first release
+  - date: 2026-05-05
+    description: Version bumped to 3000.11.3
 links:
   - label: GitHub
     url: https://github.com/OliveTin/OliveTin
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jamesread/olivetin:2025.4.14
+      default: jamesread/olivetin:3000.11.3
 benefits:
   - title: Simple Command Execution
     description:

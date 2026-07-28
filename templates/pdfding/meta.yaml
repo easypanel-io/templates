@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to v1.4.1
   - date: 2026-02-24
     description: Version bumped to v1.5.1
+  - date: 2026-05-05
+    description: Version bumped to v1.7.2
 links:
   - label: Github
     url: https://github.com/mrmn2/PdfDing
@@ -32,7 +34,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mrmn/pdfding:v1.5.1
+      default: mrmn/pdfding:v1.7.2
 benefits:
   - title: PDF Management
     description:

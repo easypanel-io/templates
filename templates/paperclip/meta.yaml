@@ -1,0 +1,98 @@
+name: Paperclip
+description:
+  Paperclip is an open-source orchestration platform for running autonomous
+  AI-powered businesses. It provides a Node.js server and React UI that
+  coordinates teams of AI agents — supporting Claude Code, Codex, Cursor, Bash,
+  and HTTP webhooks — through a structured org chart with roles, budgets,
+  governance, and goal alignment. Agents are assigned missions, given budgets,
+  and run on heartbeat schedules, while you monitor costs and audit every
+  tool-call from one dashboard.
+
+instructions:
+  After the deployment is complete, open the service console and go to the
+  Scripts tab. Run the Onboard script and copy the invite and paste it in the
+  browser and create the admin user.
+
+changeLog:
+  - date: 2026-05-11
+    description: first release
+
+links:
+  - label: Website
+    url: https://paperclip.ing
+  - label: Documentation
+    url: https://paperclip.ing/docs
+  - label: Github
+    url: https://github.com/paperclipai/paperclip
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: paperclip
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/paperclipai/paperclip:sha-8af38fb
+
+benefits:
+  - title: Autonomous AI Business Orchestration
+    description:
+      Define a mission, hire agents (Claude Code, Codex, Cursor, or any HTTP
+      endpoint), set budgets, and let Paperclip coordinate the entire operation
+      24/7 without manual intervention.
+  - title: Unified Cost Control
+    description:
+      Per-agent budgets with hard-stop enforcement prevent runaway API costs.
+      Track spend in real time and get full visibility into every tool call and
+      decision.
+  - title: Self-Hosted and Private
+    description:
+      All data stays on your own infrastructure. No third-party SaaS dependency
+      — full control over agents, tasks, secrets, and audit logs.
+  - title: Multi-Company Isolation
+    description:
+      Run multiple independent companies from a single deployment with complete
+      data isolation, company import/export, and secret scrubbing.
+
+features:
+  - title: Org Chart with Roles and Reporting Lines
+    description:
+      Model your AI company structurally with job titles, permissions, and
+      manager/report relationships so every agent knows its responsibilities.
+  - title: Goal-Traced Task System
+    description:
+      Every issue traces back to the company mission. Atomic checkout prevents
+      duplicate work, and structured dependencies keep tasks ordered correctly.
+  - title: Heartbeat Scheduling
+    description:
+      Agents wake on a configurable schedule, check their queue, and take
+      action. Delegation flows up and down the org chart automatically.
+  - title: Board Approval Workflows
+    description:
+      Require human sign-off before agents execute critical actions, giving you
+      governance control without micromanaging every step.
+  - title: Adapter-Agnostic Agent Support
+    description:
+      Connect any agent runtime — Claude Code, OpenAI Codex, Cursor, Gemini,
+      Bash scripts, or plain HTTP webhooks — through a unified adapter layer.
+  - title: Full Audit Logging
+    description:
+      Every tool call, cost event, and decision is logged and queryable, giving
+      you a complete history of what every agent did and why.
+
+tags:
+  - AI
+  - Automation
+  - Agents
+  - Orchestration
+  - Self-Hosted

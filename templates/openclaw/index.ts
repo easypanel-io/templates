@@ -69,7 +69,7 @@ export function generate(input: Input): Output {
         {
           published: bridgePort,
           target: 18790,
-        }
+        },
       ],
       mounts,
     },

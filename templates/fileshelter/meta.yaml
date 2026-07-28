@@ -1,9 +1,14 @@
 name: FileShelter
-description: A simple and secure file sharing application that allows users to upload and share files with a clean web interface. Files are stored on the server and can be accessed through unique URLs.
+description:
+  A simple and secure file sharing application that allows users to upload and
+  share files with a clean web interface. Files are stored on the server and can
+  be accessed through unique URLs.
 instructions: null
 changeLog:
   - date: 2025-05-05
     description: Initial release
+  - date: 2026-04-29
+    description: Version bumped to 6.4.0
 links:
   - label: GitHub
     url: https://github.com/epoupon/fileshelter
@@ -27,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: epoupon/fileshelter:6.2.0
+      default: epoupon/fileshelter:6.4.0
 benefits:
   - title: Simple Sharing
     description: Easy-to-use file sharing platform
@@ -51,4 +56,4 @@ features:
 tags:
   - File Sharing
   - Self-hosted
-  - Open Source 
+  - Open Source

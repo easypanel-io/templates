@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2023-03-24
     description: First Release
+  - date: 2026-05-04
+    description: Version bumped to 2.8.11
 links:
   - label: Website
     url: https://nodebb.org/
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nodebb/docker:1.19.12
+      default: nodebb/docker:2.8.11
     databaseServiceType:
       type: string
       title: Database Service Type

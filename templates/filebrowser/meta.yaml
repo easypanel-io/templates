@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to v2.52.0
   - date: 2026-02-21
     description: Version bumped to v2.59.0
+  - date: 2026-04-29
+    description: Version bumped to v2.63.2
 links:
   - label: Website
     url: https://filebrowser.org/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filebrowser/filebrowser:v2.59.0
+      default: filebrowser/filebrowser:v2.63.2
 benefits:
   - title: Efficient File Management
     description:

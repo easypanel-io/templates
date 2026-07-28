@@ -19,6 +19,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-03-26
     description: Added setup instructions and screenshot asset
+  - date: 2026-04-29
+    description: Version bumped to 40d9d3af-ls61
 
 links:
   - label: Website
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/dolphin:d7dc9d9e-ls28
+      default: lscr.io/linuxserver/dolphin:40d9d3af-ls61
     timezone:
       type: string
       title: Timezone

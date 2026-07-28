@@ -11,6 +11,8 @@ instructions: null
 changeLog:
   - date: 2026-02-16
     description: Template Release (1.34.2)
+  - date: 2026-04-29
+    description: Version bumped to (1.51.0)  
 links:
   - label: GitHub
     url: https://github.com/lklynet/aurral
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: Aurral Image
-      default: ghcr.io/lklynet/aurral:1.34.2
+      default: ghcr.io/lklynet/aurral:1.51.0
 benefits:
   - title: Lidarr Integration
     description:

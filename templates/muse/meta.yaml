@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 2.10.1
   - date: 2025-06-05
     description: Update to 2.11.1
+  - date: 2026-05-04
+    description: Update to 2.11.4
 links:
   - label: Github
     url: https://github.com/codetheweb/muse
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: codetheweb/muse:2.11.1
+      default: codetheweb/muse:2.11.4
     discordToken:
       type: string
       title: Discord Token

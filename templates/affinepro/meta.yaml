@@ -20,8 +20,12 @@ changeLog:
     description: Updated to the newer image and to latest version
   - date: 2025-12-24
     description: Version bumped to stable-e98f035
+  - date: 2026-05-12
+    description: Bumped to 0.26.6; fixed DATABASE_URL username and database name
 
 links:
+  - label: Website
+    url: https://affine.pro
   - label: Documentation
     url: https://affine.pro/docs
   - label: Github
@@ -44,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine:0.26.2
+      default: ghcr.io/toeverything/affine:0.26.6
     mailerHost:
       type: string
       title: Mailer Host (Optional)

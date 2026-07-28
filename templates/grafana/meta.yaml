@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 12.3.1
   - date: 2026-02-21
     description: Version bumped to 12.3.3
+  - date: 2026-04-29
+    description: Version bumped to 13.0.1
 links:
   - label: Website
     url: https://grafana.com
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: grafana/grafana-oss:12.3.3
+      default: grafana/grafana-oss:13.0.1
 benefits:
   - title: Comprehensive Data Visualization
     description:

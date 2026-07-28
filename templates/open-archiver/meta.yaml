@@ -16,6 +16,8 @@ instructions: |
 changeLog:
   - date: 2026-02-27
     description: First Release (v0.4.2)
+  - date: 2026-05-08
+    description: Version bumped to v0.5.0
 links:
   - label: Website
     url: https://openarchiver.com
@@ -42,19 +44,19 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: logiclabshq/open-archiver:v0.4.2
+      default: logiclabshq/open-archiver:v0.5.0
     meilisearchImage:
       type: string
       title: Meilisearch Image
-      default: getmeili/meilisearch:v1.15.2
+      default: getmeili/meilisearch:v1.43.0
     valkeyImage:
       type: string
       title: Valkey Image
-      default: valkey/valkey:8.1.6-alpine3.23
+      default: valkey/valkey:9.0.4-alpine3.23
     tikaImage:
       type: string
       title: Apache Tika Image
-      default: apache/tika:3.2.2.0-full
+      default: apache/tika:3.3.0.0-full
 benefits:
   - title: Legally compliant email archiving
     description:

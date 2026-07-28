@@ -17,6 +17,8 @@ instructions: null
 changeLog:
   - date: 2025-10-20
     description: Initial Release (v0.6.0)
+  - date: 2026-05-08
+    description: Version bumped to v0.10.0
 links:
   - label: Website
     url: https://www.mathesar.org
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mathesar/mathesar:0.6.0
+      default: mathesar/mathesar:0.10.1
     databaseServiceImage:
       type: string
       title: Database Image Service

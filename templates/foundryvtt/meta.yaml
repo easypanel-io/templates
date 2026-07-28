@@ -20,6 +20,8 @@ instructions:
   your FoundryVTT license. All persistent data is stored in `/data`.
 
 changeLog:
+  - date: 2026-05-19
+    description: Updated to v14.361.0
   - date: 2026-03-26
     description:
       Added container source links and documented why community image is used
@@ -58,7 +60,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: felddy/foundryvtt:sha-18b36bf
+      default: felddy/foundryvtt:14.361.0
     foundryReleaseUrl:
       type: string
       title: FoundryVTT Release URL

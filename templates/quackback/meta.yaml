@@ -1,0 +1,82 @@
+name: Quackback
+description:
+  An open-source alternative to Canny and UserVoice — a self-hosted feedback
+  management platform with public roadmaps, changelog notifications, AI-powered
+  triage, and 24+ integrations including Slack, Linear, Jira, and GitHub.
+instructions:
+  After deployment, open the UI and create your first admin account. Migrations
+  run automatically on startup. To enable email notifications configure the
+  EMAIL_SMTP_* variables in the service environment. For AI-powered duplicate
+  detection and summarization add an OPENAI_API_KEY. File uploads require S3 or
+  S3-compatible storage (MinIO) configured via the S3_* variables.
+changeLog:
+  - date: "2026-05-29"
+    description: Initial release (v0.10.5)
+links:
+  - label: Website
+    url: https://quackback.io
+  - label: GitHub
+    url: https://github.com/quackbackio/quackback
+  - label: Documentation
+    url: https://quackback.io/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: quackback
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/quackbackio/quackback:0.10.5
+tags:
+  - feedback
+  - roadmap
+  - changelog
+  - product
+  - self-hosted
+benefits:
+  - title: Self-Hosted Feedback Hub
+    description:
+      Collect, triage, and prioritize user feedback on your own infrastructure —
+      no third-party data sharing, no per-seat pricing.
+  - title: Public Roadmaps & Changelogs
+    description:
+      Automatically surface planned, in-progress, and shipped items to users and
+      notify them when their requested features ship.
+  - title: AI-Powered Triage
+    description:
+      Detect duplicate posts, analyze sentiment, and generate summaries with
+      OpenAI integration — keeping your feedback board clean and actionable.
+  - title: 24+ Integrations
+    description:
+      Connect to Slack, Linear, Jira, GitHub, Intercom, Zendesk, and more to
+      keep feedback flowing into your existing workflow.
+features:
+  - title: Feedback Boards
+    description:
+      Users submit and upvote feature requests through a branded portal,
+      embeddable widget, Slack, or email — all consolidated in one board.
+  - title: Role-Based Access Control
+    description:
+      Multi-tenant support with SSO, audit logs, and granular roles for admins,
+      team members, and external contributors.
+  - title: Background Job Queue
+    description:
+      BullMQ-powered queue backed by Redis handles webhooks, email
+      notifications, and integration syncs asynchronously.
+  - title: API & Webhooks
+    description:
+      REST API with webhook support for custom automations and integrations with
+      any tool in your stack.
+  - title: S3 File Storage
+    description:
+      Optional S3-compatible storage (AWS S3, MinIO) for file and image uploads
+      attached to feedback posts.

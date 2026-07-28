@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to v7.0.1-bookworm
   - date: 2025-12-29
     description: Version bumped to v7.3.0-bookworm
+  - date: 2026-05-05
+    description: Version bumped to v8.1.5
 links:
   - label: Website
     url: https://joinpeertube.org/
@@ -87,7 +89,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: chocobozzz/peertube:v7.3.0-bookworm
+      default: chocobozzz/peertube:v8.1.5
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -12,6 +12,8 @@ instructions: null
 changeLog:
   - date: 2025-10-13
     description: Initial Template Release (2025-07-12-ls220)
+  - date: 2026-04-29
+    description: Version bumped to 25.4.1
 
 links:
   - label: Website
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/darktable:2025-07-12-ls220
+      default: lscr.io/linuxserver/darktable:25.4.1
     timezone:
       type: string
       title: Timezone

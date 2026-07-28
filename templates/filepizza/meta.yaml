@@ -13,6 +13,8 @@ changeLog:
     description: Initial release (8ea276d)
   - date: 2025-12-25
     description: Version bumped to 60704b4
+  - date: 2026-04-29
+    description: Version bumped to 3258673
 links:
   - label: Website
     url: https://file.pizza
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kern/filepizza:60704b4
+      default: kern/filepizza:3258673
     coturnServiceImage:
       type: string
       title: COTURN Service Image

@@ -1,9 +1,12 @@
 name: Bugsink
-description: Bugsink is a self-hosted error tracking system compatible with Sentry SDKs.
+description:
+  Bugsink is a self-hosted error tracking system compatible with Sentry SDKs.
 instructions: null
 changeLog:
   - date: 2025-05-08
     description: First Release
+  - date: 2026-05-15
+    description: Update to 2.1.3
 links:
   - label: Website
     url: https://www.bugsink.com/
@@ -29,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: bugsink/bugsink:1.5.3
+      default: bugsink/bugsink:2.1.3
     adminUsername:
       type: string
       title: Admin Username
@@ -44,7 +47,8 @@ benefits:
   - title: Self-Hosted Solution
     description: Full control over your data by running on your own servers
   - title: Sentry SDK Compatible
-    description: Works with popular Sentry SDKs across multiple programming languages
+    description:
+      Works with popular Sentry SDKs across multiple programming languages
   - title: Scalable Performance
     description: Handles millions of events per day on minimal hardware
 features:
@@ -62,4 +66,4 @@ tags:
   - Error Tracking
   - Self-Hosted
   - Monitoring
-  - Sentry Compatible 
+  - Sentry Compatible
