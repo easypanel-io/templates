@@ -1,0 +1,69 @@
+name: Cap Captcha
+description:
+  Cap is a lightweight, open-source CAPTCHA alternative to reCAPTCHA, hCaptcha
+  and Cloudflare Turnstile. It uses proof-of-work and instrumentation challenges
+  instead of visual puzzles, so users are verified in the background without
+  picking out crosswalks or storefronts. The widget is about 250x smaller than
+  hCaptcha, sends zero telemetry, and this standalone server includes an admin
+  dashboard for managing site keys and viewing challenge analytics.
+instructions: >-
+  Open the dashboard at your assigned domain and log in with the admin key you
+  set below (auto-generated if left blank — find it in the service environment
+  variables after deployment). Create a site key from the dashboard, then drop
+  Cap's widget script into your site and point it at this server's domain, per
+  the integration guide at trycap.dev/guide.
+changeLog:
+  - date: 2026-07-27
+    description: first release
+links:
+  - label: Website
+    url: https://trycap.dev
+  - label: GitHub
+    url: https://github.com/tiagozip/cap
+  - label: Documentation
+    url: https://trycap.dev/guide
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cap-captcha
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tiago2/cap:3.1.8
+    adminKey:
+      type: string
+      title: Admin Key
+      description:
+        "Password for the admin dashboard. Auto-generated if left blank — find
+        it in the service environment variables after deployment."
+benefits:
+  - title: Lightweight Widget
+    description: About 250x smaller than hCaptcha, loading in milliseconds
+  - title: Privacy-First
+    description: No visual puzzles, no tracking, zero telemetry sent anywhere
+  - title: Self-Hosted
+    description: Run your own CAPTCHA infrastructure instead of a third party
+features:
+  - title: Proof-of-Work Challenges
+    description:
+      Verifies users invisibly instead of asking them to solve puzzles
+  - title: Admin Dashboard
+    description: Manage site keys and view challenge analytics from a browser
+  - title: Fully Customizable
+    description: Change colors, size, position and icons with CSS variables
+  - title: Drop-In Replacement
+    description: Swap out reCAPTCHA, hCaptcha or Turnstile with minimal changes
+tags:
+  - Security
+  - Captcha
+  - Developer Tools
+  - Self-Hosted
