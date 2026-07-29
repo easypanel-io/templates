@@ -21,8 +21,6 @@ changeLog:
     description: Version bumped to 5.18.0
   - date: 2026-02-21
     description: Version bumped to 5.19.0
-  - date: 2026-04-29
-    description: Version bumped to 5.20.0
 links:
   - label: Website
     url: https://www.faradaysec.com/
@@ -38,6 +36,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - redisImage
   properties:
     appServiceName:
       type: string
@@ -46,7 +45,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: faradaysec/faraday:5.20.0
+      default: faradaysec/faraday:5.19.0
+    redisImage:
+      type: string
+      title: Redis Image
+      default: redis:7.4.1
 benefits:
   - title: Centralized Vulnerability Management
     description:

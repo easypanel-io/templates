@@ -226,6 +226,18 @@
     ]
   },
   {
+    "slug": "anibridge",
+    "logo": "logo.png",
+    "name": "AniBridge",
+    "description": "AniBridge is a media synchronization tool that keeps your anime watch activity perfectly in sync across library providers (Plex, Jellyfin, Emby) and list trackers (AniList, MyAnimeList). It includes a web dashboard with a real-time sync timeline, profile manager, custom mapping editor, log viewer, and automatic list backups — all powered by a database of over 250,000 anime mappings.",
+    "tags": [
+      "Media",
+      "Anime",
+      "Synchronization",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "anonupload",
     "logo": "logo.png",
     "name": "AnonUpload",
@@ -595,6 +607,19 @@
     ]
   },
   {
+    "slug": "bambuddy",
+    "logo": "logo.png",
+    "name": "BamBuddy",
+    "description": "BamBuddy is a self-hosted command center for managing Bambu Lab 3D printers locally, with no cloud dependency. It supports single printers up to 40-printer farms and includes real-time monitoring, live camera streaming, print archive with 3D preview, timelapse editing, scheduling, multi-printer dispatch, server-side slicing of STL/3MF files, spool tracking with usage analytics, smart plug integration, HMS error alerts, and automated notifications.",
+    "tags": [
+      "3D Printing",
+      "Bambu Lab",
+      "Monitoring",
+      "Automation",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "barrage",
     "logo": "logo.png",
     "name": "Barrage",
@@ -755,6 +780,18 @@
     ]
   },
   {
+    "slug": "bookorbit",
+    "logo": "logo.png",
+    "name": "BookOrbit",
+    "description": "BookOrbit is a self-hosted book management and reading tracker application. Organize your library, track reading progress, manage wishlists, and get AI-powered book recommendations — all on your own server.",
+    "tags": [
+      "Books",
+      "Reading",
+      "Library",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "bookstack",
     "logo": "logo.svg",
     "name": "Bookstack",
@@ -881,6 +918,19 @@
     "tags": [
       "Monitoring",
       "Communication"
+    ]
+  },
+  {
+    "slug": "calagopus",
+    "logo": "logo.svg",
+    "name": "Calagopus",
+    "description": "Calagopus is a modern open-source game server management panel built in Rust and React. It is a high-performance reimplementation of Pterodactyl Panel featuring a refreshed UI, an extensible plugin architecture, and container-based game server management. It supports Pterodactyl-compatible eggs and migration from existing Pterodactyl or Pelican installations.",
+    "tags": [
+      "Game Server",
+      "Management",
+      "Self-Hosted",
+      "Gaming",
+      "Infrastructure"
     ]
   },
   {
@@ -2477,6 +2527,19 @@
     ]
   },
   {
+    "slug": "faved",
+    "logo": "logo.png",
+    "name": "Faved",
+    "description": "Faved is a privately-hosted, open-source bookmark manager with customizable nested tags, designed for handling large collections efficiently. It offers automatic title and description fetching, duplicate detection, powerful search and filtering, bulk actions, and a responsive design across all devices.",
+    "tags": [
+      "Bookmarks",
+      "Organization",
+      "Productivity",
+      "Self-Hosted",
+      "Notes"
+    ]
+  },
+  {
     "slug": "feedpushr",
     "logo": "logo.png",
     "name": "Feedpushr",
@@ -3306,6 +3369,19 @@
     "description": "Gray Duck Mail is a user-friendly email discussion list application that offers an alternative to traditional email discussion group software. It is designed to be simple to set up and manage, making the process of running an email discussion list effortless. Gray Duck Mail is perfect for managing mailing lists between small to medium size groups, such as neighborhoods, schools, workplaces, and families. With Gray Duck Mail, you can send one email and automatically keep everyone in the loop. The application monitors a remote mail server for messages and processes them by relaying the message to all list members. It also automatically handles user subscriptions, unsubscription requests, and email bounces. Gray Duck Mail works with any external email host that allows for POP3/SMTP connections and message forwarding or aliasing. It relies totally on an external mail provider, allowing you to use an existing web host or email account.",
     "tags": [
       "Email"
+    ]
+  },
+  {
+    "slug": "grimmory",
+    "logo": "logo.svg",
+    "name": "Grimmory",
+    "description": "Grimmory is a self-hosted digital library for serious readers and a community fork of Booklore. It lets you organize, read, and manage books across multiple formats including EPUB, MOBI, AZW3, PDF, CBZ, and audiobook formats. Features include metadata enrichment, a built-in browser reader, Kobo and KOReader device sync, OPDS catalog, multi-user support, and a BookDrop watched folder for automatic imports.",
+    "tags": [
+      "Books",
+      "Library",
+      "Reading",
+      "Self-Hosted",
+      "Media"
     ]
   },
   {
@@ -5978,6 +6054,19 @@
     ]
   },
   {
+    "slug": "open-notebook",
+    "logo": "logo.svg",
+    "name": "Open Notebook",
+    "description": "An open-source, privacy-focused alternative to Google's Notebook LM. Supports 18+ AI providers, multi-modal content (PDFs, videos, audio, web pages), podcast generation, full-text and vector search, and a full REST API.",
+    "tags": [
+      "ai",
+      "notes",
+      "notebook",
+      "research",
+      "llm"
+    ]
+  },
+  {
     "slug": "openblocks",
     "logo": "logo.png",
     "name": "Openblocks",
@@ -6118,7 +6207,7 @@
     "slug": "opnform",
     "logo": "logo.png",
     "name": "OpnForm",
-    "description": "OpnForm is an open-source form builder that allows you to create beautiful, customizable forms with ease. It provides an intuitive interface for building forms,  collecting submissions, and analyzing data.",
+    "description": "OpnForm is an open-source form builder that allows you to create beautiful, customizable forms with ease. It provides an intuitive interface for building forms, collecting submissions, and analyzing data.",
     "tags": [
       "Forms",
       "Web Apps",
@@ -6297,6 +6386,19 @@
       "File Storage",
       "Download Queue",
       "Memory Management"
+    ]
+  },
+  {
+    "slug": "paperclip",
+    "logo": "logo.png",
+    "name": "Paperclip",
+    "description": "Paperclip is an open-source orchestration platform for running autonomous AI-powered businesses. It provides a Node.js server and React UI that coordinates teams of AI agents — supporting Claude Code, Codex, Cursor, Bash, and HTTP webhooks — through a structured org chart with roles, budgets, governance, and goal alignment. Agents are assigned missions, given budgets, and run on heartbeat schedules, while you monitor costs and audit every tool-call from one dashboard.",
+    "tags": [
+      "AI",
+      "Automation",
+      "Agents",
+      "Orchestration",
+      "Self-Hosted"
     ]
   },
   {
@@ -6733,6 +6835,20 @@
     ]
   },
   {
+    "slug": "pmm",
+    "logo": "logo.png",
+    "name": "Percona PMM",
+    "description": "Percona Monitoring and Management (PMM) is an open-source monitoring and observability platform for MySQL, PostgreSQL, MongoDB, and cloud-native workloads. PMM provides metrics, query analytics, alerts, and dashboards to help you understand database performance and troubleshoot issues quickly.",
+    "tags": [
+      "Monitoring",
+      "Observability",
+      "Databases",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB"
+    ]
+  },
+  {
     "slug": "pocketbase",
     "logo": "logo.svg",
     "name": "PocketBase",
@@ -7082,6 +7198,19 @@
     ]
   },
   {
+    "slug": "quackback",
+    "logo": "logo.svg",
+    "name": "Quackback",
+    "description": "An open-source alternative to Canny and UserVoice — a self-hosted feedback management platform with public roadmaps, changelog notifications, AI-powered triage, and 24+ integrations including Slack, Linear, Jira, and GitHub.",
+    "tags": [
+      "feedback",
+      "roadmap",
+      "changelog",
+      "product",
+      "self-hosted"
+    ]
+  },
+  {
     "slug": "rabbitmq",
     "logo": "logo.svg",
     "name": "RabbitMQ",
@@ -7212,6 +7341,18 @@
       "Community",
       "Chat",
       "Dashboard"
+    ]
+  },
+  {
+    "slug": "redash",
+    "logo": "logo.svg",
+    "name": "Redash",
+    "description": "Redash helps teams become data-driven by connecting to data sources, building queries, creating visualizations, and sharing dashboards across the organization.",
+    "tags": [
+      "Analytics",
+      "Dashboard",
+      "Business Intelligence",
+      "SQL"
     ]
   },
   {
@@ -7848,6 +7989,20 @@
     ]
   },
   {
+    "slug": "snapotter",
+    "logo": "logo.png",
+    "name": "SnapOtter",
+    "description": "SnapOtter is a self-hosted, privacy-first image manipulation platform packed into a single Docker container. It offers 50+ image tools including resizing, compression, format conversion, AI background removal, upscaling, OCR, and more — all processing happens locally on your server with nothing leaving your network.",
+    "tags": [
+      "Image Processing",
+      "Media",
+      "AI",
+      "Privacy",
+      "Self-Hosted",
+      "Tools"
+    ]
+  },
+  {
     "slug": "snappymail",
     "logo": "logo.png",
     "name": "Snappymail",
@@ -7878,6 +8033,18 @@
     "tags": [
       "Developer Tools",
       "Communication"
+    ]
+  },
+  {
+    "slug": "solidinvoice",
+    "logo": "logo.png",
+    "name": "SolidInvoice",
+    "description": "SolidInvoice is a self-hosted invoicing and billing platform built with Symfony and Vue.js. Create and send professional invoices and quotes, track payments, manage clients and contacts, and accept online payments through multiple payment gateways. It ships as a single container with an embedded FrankenPHP server and uses MySQL for data storage.",
+    "tags": [
+      "Finance",
+      "Invoicing",
+      "Billing",
+      "Business"
     ]
   },
   {
@@ -8976,6 +9143,19 @@
     ]
   },
   {
+    "slug": "velix-api",
+    "logo": "logo.svg",
+    "name": "Velix API",
+    "description": "Velix is a self-hosted WhatsApp API built in Go. Connect multiple WhatsApp numbers, send and receive messages via REST, get real-time webhooks, and integrate with n8n and Chatwoot out of the box. It features a web-based admin panel for managing instances, QR code pairing, per-instance API keys, and automatic media download with local storage. Designed for agencies and developers who need reliable WhatsApp automation at scale.",
+    "tags": [
+      "WhatsApp",
+      "API",
+      "Messaging",
+      "Chatbot",
+      "Automation"
+    ]
+  },
+  {
     "slug": "verdaccio",
     "logo": "logo.png",
     "name": "Verdaccio",
@@ -9365,6 +9545,19 @@
     ]
   },
   {
+    "slug": "wp-autoflow",
+    "logo": "logo.svg",
+    "name": "WP AutoFlow",
+    "description": "WP AutoFlow is the ultimate self-hosted orchestrator for WordPress automation. It allows you to scrape content from any website, rewrite it using advanced AI (GPT-5, o3-mini), handle media with custom watermarking, and publish directly to multiple WordPress sites. Built for performance, it uses Redis and BullMQ to handle heavy workloads asynchronously without slowing down your server.",
+    "tags": [
+      "Automation",
+      "AI",
+      "WordPress",
+      "SEO",
+      "Scraper"
+    ]
+  },
+  {
     "slug": "wps-office",
     "logo": "logo.png",
     "name": "WPS Office",
@@ -9523,6 +9716,19 @@
     ]
   },
   {
+    "slug": "zeroclaw",
+    "logo": "logo.png",
+    "name": "ZeroClaw",
+    "description": "ZeroClaw is a fast, small, and fully autonomous AI personal assistant\ninfrastructure built in 100% Rust. Deploy anywhere, swap anything.\nConnect any LLM provider (OpenRouter, OpenAI, Anthropic, Ollama) and\ninteract via a built-in web dashboard, REST API, or WebSocket gateway.\nSupports multi-channel communication (Discord, Telegram, Matrix, Slack,\nWhatsApp, Nostr, Lark), persistent memory, scheduled tasks, and\nautonomous tool use.\n",
+    "tags": [
+      "AI",
+      "Self-Hosted",
+      "Chatbot",
+      "Agent",
+      "Assistant"
+    ]
+  },
+  {
     "slug": "ziit",
     "logo": "logo.png",
     "name": "Ziit",
@@ -9582,6 +9788,19 @@
       "Load Balancer",
       "Docker",
       "Security"
+    ]
+  },
+  {
+    "slug": "zulip",
+    "logo": "logo.png",
+    "name": "Zulip",
+    "description": "Zulip is a powerful team collaboration platform that combines the immediacy of chat with the organization of email. It features topic-based threading that makes it easy to catch up on conversations that happened while you were away. Zulip is designed for both live and asynchronous conversations, with advanced features like message formatting, file sharing, emoji reactions, and integrations with hundreds of tools. It's perfect for distributed teams, open source projects, and organizations that need organized, searchable communication. Zulip is open source and can be self-hosted for complete control over your data.",
+    "tags": [
+      "Chat",
+      "Communication",
+      "Collaboration",
+      "Team",
+      "Open Source"
     ]
   },
   {

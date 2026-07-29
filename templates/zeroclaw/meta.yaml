@@ -1,0 +1,129 @@
+name: ZeroClaw
+description: |
+  ZeroClaw is a fast, small, and fully autonomous AI personal assistant
+  infrastructure built in 100% Rust. Deploy anywhere, swap anything.
+  Connect any LLM provider (OpenRouter, OpenAI, Anthropic, Ollama) and
+  interact via a built-in web dashboard, REST API, or WebSocket gateway.
+  Supports multi-channel communication (Discord, Telegram, Matrix, Slack,
+  WhatsApp, Nostr, Lark), persistent memory, scheduled tasks, and
+  autonomous tool use.
+
+instructions: |
+  After deployment, access the ZeroClaw gateway at the assigned domain on
+  port 42617. Set your LLM provider API key via the API_KEY environment
+  variable. The default provider is OpenRouter — get a key at
+  https://openrouter.ai/keys. Switch providers by changing the PROVIDER
+  variable (openrouter, openai, anthropic, or ollama).
+
+changeLog:
+  - date: 2026-05-13
+    description: Initial template (v0.7.5)
+
+links:
+  - label: Website
+    url: https://www.zeroclawlabs.ai
+  - label: Documentation
+    url: https://docs.zeroclawlabs.ai
+  - label: Github
+    url: https://github.com/zeroclaw-labs/zeroclaw
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - apiKey
+    - provider
+    - model
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zeroclaw
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/zeroclaw-labs/zeroclaw:v0.7.5
+    apiKey:
+      type: string
+      title: LLM Provider API Key
+      description:
+        Your API key for the selected LLM provider (e.g. OpenRouter, OpenAI,
+        Anthropic)
+      default: ""
+    model:
+      type: string
+      title: Model
+      description: >-
+        Model ID for the selected provider. OpenRouter: e.g.
+        anthropic/claude-sonnet-4-20250514. OpenAI: e.g. gpt-4o. Anthropic: e.g.
+        claude-sonnet-4-20250514. Ollama: e.g. llama3.
+      default: anthropic/claude-sonnet-4-20250514
+    provider:
+      type: string
+      title: LLM Provider
+      default: openrouter
+      oneOf:
+        - enum:
+            - openrouter
+          title: OpenRouter
+        - enum:
+            - openai
+          title: OpenAI
+        - enum:
+            - anthropic
+          title: Anthropic
+        - enum:
+            - ollama
+          title: Ollama (Local)
+
+benefits:
+  - title: Lightning Fast
+    description:
+      Built in 100% Rust with an optimized ~15 MB binary. Starts in milliseconds
+      and runs on minimal resources.
+  - title: Deploy Anywhere
+    description:
+      Multi-arch images (linux/amd64, linux/arm64). Runs on servers, Raspberry
+      Pi, macOS, Windows, and Android.
+  - title: Provider Agnostic
+    description:
+      Swap between OpenRouter, OpenAI, Anthropic, Ollama, or any
+      OpenAI-compatible endpoint with a single environment variable.
+
+features:
+  - title: Web Dashboard
+    description:
+      Built-in web UI for chat, memory browsing, config editing, cron
+      management, and tool inspection — accessible on the gateway port.
+  - title: Multi-Channel
+    description:
+      One agent answering across Discord, Telegram, Matrix, Slack, WhatsApp,
+      Nostr, Lark, email, webhooks, and CLI simultaneously.
+  - title: Persistent Memory
+    description:
+      SQLite-backed memory and conversation history that survives container
+      restarts.
+  - title: Autonomous Tools
+    description:
+      Shell, browser, HTTP, file operations, web search, git, hardware GPIO, and
+      custom MCP servers.
+  - title: SOP Engine
+    description:
+      Event-triggered Standard Operating Procedures with approval gates and
+      resumable runs, driven by cron, webhooks, or MQTT.
+  - title: REST & WebSocket Gateway
+    description:
+      Full HTTP/WebSocket API for programmatic access and real-time streaming
+      responses.
+
+tags:
+  - AI
+  - Self-Hosted
+  - Chatbot
+  - Agent
+  - Assistant
