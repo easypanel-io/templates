@@ -3,34 +3,25 @@ description:
   Hermes Agent is an autonomous AI agent by Nous Research that runs persistently
   on your server, remembers what it learns, executes shell commands, manages
   files, browses the web, schedules cron tasks, and integrates with Telegram,
-  Discord, Slack, WhatsApp, and Email. It supports 200+ models through
-  OpenRouter and direct integrations with Anthropic, OpenAI, Google, and
-  DeepSeek. The built-in web dashboard provides a browser-based UI for managing
-  configurations, API keys, MCP servers, and chat sessions. All sessions,
-  memory, skills, and configuration are stored in a persistent volume so the
-  agent grows more capable over time.
+  Discord, Slack, and WhatsApp. It supports 200+ models through OpenRouter and
+  direct integrations with Anthropic, OpenAI, Google, and DeepSeek. The built-in
+  web dashboard provides a browser-based UI for managing configurations, API
+  keys, MCP servers, and chat sessions. All sessions, memory, skills, and
+  configuration are stored in a persistent volume so the agent grows more
+  capable over time.
 instructions: >-
   The Hermes Agent web dashboard is accessible at your assigned domain. Log in
   with the dashboard username and password you configured during deployment. The
   OpenAI-compatible gateway API runs on port 8642 and the dashboard backend runs
-  on port 9119 — both are published for direct access. Every field below (model
-  provider keys, and the Telegram/Discord/Slack/WhatsApp/Email tokens and
-  allowlists) is written straight into the container's environment, so for those
-  platforms you do not need to touch the console at all — just redeploy after
-  filling them in. WeChat is the one exception, since it uses QR-code pairing
-  that cannot be pre-filled, so if you want it, SSH into the service console and
-  run hermes gateway setup, then choose Weixin and scan the code. For anything
-  else not covered below (fine-tuning allowlists further, adding a provider that
-  isn't listed, or changing tool settings), SSH into the service console and run
-  hermes setup to open the full configuration wizard.
+  on port 9119 — both are published for direct access. The OpenRouter key below
+  is enough to get a model working immediately. For everything else — other
+  model providers, messaging platforms like Telegram, Discord, Slack and
+  WhatsApp, and especially setting up strict allowlists so only you (or your
+  team) can message the agent — SSH into the service console and run hermes
+  setup (or hermes gateway setup specifically for the messaging gateways).
 changeLog:
   - date: "2026-06-17"
     description: First Release
-  - date: "2026-07-27"
-    description:
-      Added OpenRouter, Google and DeepSeek API keys, plus fully
-      env-configurable Slack, WhatsApp (Cloud API) and Email gateways with
-      per-platform allowlists
 links:
   - label: Website
     url: https://hermes-agent.nousresearch.com/
@@ -66,149 +57,6 @@ schema:
       description:
         "Basic-auth password for the web dashboard. Auto-generated if left blank
         — find it in the service environment variables after deployment."
-    gatewayAllowAllUsers:
-      type: boolean
-      title: Allow All Gateway Users
-      description:
-        "When enabled, any authenticated user can send requests to the Hermes
-        gateway without an individual API key."
-      default: true
-    openRouterApiKey:
-      type: string
-      title: OpenRouter API Key
-      description:
-        "Recommended: the easiest way to get Hermes talking to 200+ models
-        behind one key with a generous free tier. Get one at openrouter.ai/keys.
-        Injected as OPENROUTER_API_KEY."
-    anthropicApiKey:
-      type: string
-      title: Anthropic API Key
-      description:
-        "Optional, direct integration instead of/alongside OpenRouter. Injected
-        as ANTHROPIC_API_KEY."
-    openaiApiKey:
-      type: string
-      title: OpenAI API Key
-      description:
-        "Optional, direct integration instead of/alongside OpenRouter. Injected
-        as OPENAI_API_KEY."
-    googleApiKey:
-      type: string
-      title: Google API Key
-      description:
-        "Optional, direct integration instead of/alongside OpenRouter. Injected
-        as GOOGLE_API_KEY."
-    deepseekApiKey:
-      type: string
-      title: DeepSeek API Key
-      description:
-        "Optional, direct integration instead of/alongside OpenRouter. Injected
-        as DEEPSEEK_API_KEY."
-    telegramBotToken:
-      type: string
-      title: Telegram Bot Token
-      description:
-        "Optional: your bot token from @BotFather. Injected as
-        TELEGRAM_BOT_TOKEN."
-    telegramAllowedUsers:
-      type: string
-      title: Telegram Allowed User IDs
-      description:
-        "Comma-separated numeric Telegram user IDs allowed to message the bot
-        (e.g. from @userinfobot). Leave blank to only allow yourself once
-        paired; set to * to allow anyone."
-    discordBotToken:
-      type: string
-      title: Discord Bot Token
-      description:
-        "Optional: your Discord bot token. Injected as DISCORD_BOT_TOKEN."
-    discordAllowedUsers:
-      type: string
-      title: Discord Allowed User IDs
-      description:
-        "Comma-separated Discord user IDs allowed to message the bot. Leave
-        blank to only allow yourself once paired; set to * to allow anyone."
-    slackBotToken:
-      type: string
-      title: Slack Bot Token
-      description:
-        "Optional: the xoxb- bot token from your Slack app. Injected as
-        SLACK_BOT_TOKEN."
-    slackAppToken:
-      type: string
-      title: Slack App-Level Token
-      description:
-        "Required alongside the bot token for Socket Mode — the xapp- token from
-        your Slack app. Injected as SLACK_APP_TOKEN."
-    slackAllowedUsers:
-      type: string
-      title: Slack Allowed User IDs
-      description:
-        "Comma-separated Slack member IDs (e.g. U01ABC2DEF3) allowed to message
-        the bot. Set to * to allow anyone."
-    whatsappAccessToken:
-      type: string
-      title: WhatsApp Cloud Access Token
-      description:
-        "Optional: Meta access token from WhatsApp Business Cloud API setup
-        (starts with EAA). Injected as WHATSAPP_CLOUD_ACCESS_TOKEN."
-    whatsappPhoneNumberId:
-      type: string
-      title: WhatsApp Phone Number ID
-      description:
-        "The 15-17 digit Phone Number ID from Meta's API Setup page (not your
-        phone number). Injected as WHATSAPP_CLOUD_PHONE_NUMBER_ID."
-    whatsappAppSecret:
-      type: string
-      title: WhatsApp App Secret
-      description:
-        "32-char hex secret from your Meta app's Settings > Basic. Required for
-        Meta to deliver messages. Injected as WHATSAPP_CLOUD_APP_SECRET."
-    whatsappVerifyToken:
-      type: string
-      title: WhatsApp Webhook Verify Token
-      description:
-        "A shared secret you invent and also paste into Meta's webhook setup
-        form. Injected as WHATSAPP_CLOUD_VERIFY_TOKEN."
-    whatsappAllowedUsers:
-      type: string
-      title: WhatsApp Allowed Numbers
-      description:
-        "Comma-separated phone numbers with country code, no + (e.g.
-        15551234567) allowed to message the bot. Set to * to allow anyone."
-    emailAddress:
-      type: string
-      title: Email Address
-      description:
-        "The mailbox Hermes checks and sends from. Injected as EMAIL_ADDRESS."
-    emailPassword:
-      type: string
-      title: Email Password
-      description:
-        "Use an app-specific password (e.g. Gmail App Password), not your
-        regular account password. Injected as EMAIL_PASSWORD."
-    emailImapHost:
-      type: string
-      title: Email IMAP Host
-      default: imap.gmail.com
-    emailImapPort:
-      type: string
-      title: Email IMAP Port
-      default: "993"
-    emailSmtpHost:
-      type: string
-      title: Email SMTP Host
-      default: smtp.gmail.com
-    emailSmtpPort:
-      type: string
-      title: Email SMTP Port
-      default: "587"
-    emailAllowedUsers:
-      type: string
-      title: Email Allowed Senders
-      description:
-        "Comma-separated email addresses allowed to message the bot. Set to * to
-        allow anyone."
 benefits:
   - title: Web Dashboard Included
     description:
@@ -226,11 +74,11 @@ benefits:
       Works with 200+ models via OpenRouter plus direct integrations with
       Anthropic, OpenAI, Google, DeepSeek, and more. Switch models at any time
       with hermes model or through the dashboard.
-  - title: Messaging Gateway With Allowlists
+  - title: Messaging Gateway
     description:
-      Connect the agent to Telegram, Discord, Slack, WhatsApp, or Email, each
-      locked down to a specific allowlist of users you set at deploy time — no
-      open ports required for Telegram, Discord or Slack.
+      Connect the agent to Telegram, Discord, Slack, or WhatsApp so it responds
+      to messages, runs scheduled tasks, and delivers results to your phone — no
+      open ports required.
 features:
   - title: Browser-Based Admin Dashboard
     description:
