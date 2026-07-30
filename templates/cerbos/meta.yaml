@@ -1,0 +1,67 @@
+name: Cerbos
+description:
+  Cerbos is an open-source authorization layer that lets you define
+  context-aware access control rules for your application in simple YAML
+  policies, managed through your existing Git-ops workflow. It runs as a
+  stateless Policy Decision Point (PDP) that your backend services call over
+  HTTP or gRPC to check whether a principal can perform an action on a resource,
+  supporting everything from simple RBAC to fully dynamic, attribute-based
+  rules.
+instructions: >-
+  Cerbos is an API service with no web dashboard — there is nothing to log into.
+  Write your policy YAML files into the "policies" volume (browse it from the
+  service's file manager); Cerbos watches that folder and picks up changes
+  automatically, no restart needed. Call the HTTP API at your assigned domain on
+  port 3592, or use the gRPC endpoint on the published port 3593 from other
+  services in this project.
+changeLog:
+  - date: 2026-07-30
+    description: first release
+links:
+  - label: Website
+    url: https://www.cerbos.dev
+  - label: GitHub
+    url: https://github.com/cerbos/cerbos
+  - label: Documentation
+    url: https://docs.cerbos.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: cerbos
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/cerbos/cerbos:0.54.0
+benefits:
+  - title: Policy As Code
+    description:
+      Define access rules in YAML, versioned in your own Git repository
+  - title: Stateless
+    description: No database required — policies are loaded straight from disk
+  - title: Self-Hosted
+    description:
+      Runs entirely on your own infrastructure, no data leaves your project
+features:
+  - title: RBAC and ABAC
+    description:
+      Start with simple roles, then add dynamic, attribute-based conditions
+  - title: HTTP and gRPC APIs
+    description: Call CheckResources and PlanResources from any language or SDK
+  - title: Live Policy Reloading
+    description: Edit policy files and Cerbos picks up the changes automatically
+  - title: Derived Roles
+    description: Extend RBAC roles dynamically based on request context
+tags:
+  - Security
+  - Authorization
+  - Developer Tools
+  - Self-Hosted
