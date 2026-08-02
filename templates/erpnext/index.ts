@@ -7,19 +7,25 @@ export function generate(input: Input): Output {
   const mariadbPassword = randomPassword();
   const redisPassword = randomPassword();
 
-  const initScript = `#!bin/bash
+  const initScript = `#!/bin/bash
 
-if [ -d "/home/frappe/frappe-bench/apps/frappe" ]; then
+set -e
+
+BENCH_DIR="/workspace/frappe-bench"
+
+if [ -d "$BENCH_DIR/apps/frappe" ]; then
     echo "Bench already exists, skipping init"
-    cd frappe-bench
-    bench start
+    cd "$BENCH_DIR"
+    exec bench start
 else
     echo "Creating new bench..."
 fi
 
+cd /workspace
+
 bench init --skip-redis-config-generation frappe-bench --version version-15
 
-cd frappe-bench
+cd "$BENCH_DIR"
 
 # Use containers instead of localhost
 bench set-mariadb-host $(PROJECT_NAME)_${input.appServiceName}-mariadb
