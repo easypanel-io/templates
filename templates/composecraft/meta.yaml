@@ -1,0 +1,65 @@
+name: Compose Craft
+description:
+  Compose Craft is a modern, open-source tool for managing, editing and sharing
+  docker-compose files through a visual, node-based editor. Services, networks,
+  volumes and env vars are laid out as interconnected nodes with automatic
+  layout, so multi-service stacks stay readable at a glance. Import an existing
+  docker-compose.yml, edit it visually, and export the result, or generate a
+  one-click public link to share a diagram with teammates.
+instructions:
+  Open the app and create an account — the first account you register becomes
+  your login for this instance. From there you can start a new project or import
+  an existing docker-compose.yml to begin editing it visually.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: Website
+    url: https://composecraft.com
+  - label: GitHub
+    url: https://github.com/composecraft/composecraft
+  - label: Documentation
+    url: https://composecraft.com/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: composecraft
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: composecraft/composecraft:1.1.3
+benefits:
+  - title: Visual Editing
+    description:
+      Build and edit docker-compose files as an interactive node diagram
+  - title: One-Click Sharing
+    description: Generate a public link to share a compose diagram with anyone
+  - title: Self-Hosted
+    description: Keep your compose files and diagrams on your own infrastructure
+features:
+  - title: Import and Export
+    description:
+      Load an existing docker-compose.yml or export your diagram back to it
+  - title: Automatic Layout
+    description:
+      Services, networks and volumes are arranged automatically as you edit
+  - title: Env Vars and Volumes
+    description:
+      Manage environment variables, volumes, networks and ports visually
+  - title: GitHub Integration
+    description:
+      Connect repositories to keep compose files in sync with your workflow
+tags:
+  - Developer Tools
+  - DevOps
+  - Docker Compose
+  - Self-Hosted
