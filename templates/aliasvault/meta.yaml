@@ -12,13 +12,14 @@ instructions: |
   right away, or set it to a domain you own if you also want the private
   email alias feature, which needs that domain's MX record(s) pointed at
   this server's public IP and inbound TCP ports 25 and 587 open on your
-  firewall. Open your domain and self-register your first account:
-  AliasVault is zero-knowledge and end-to-end encrypted, so your master
-  password never leaves your device and cannot be recovered if lost. The
-  separate admin panel (server administration only, not vault data) lives
-  at /admin — log in with username `admin` and the Admin Panel Password
-  below, which is stored only as a one-way hash, so choose it carefully
-  since it can only be reset via a redeploy.
+  firewall. Open your domain and self-register your first vault account,
+  separate from the admin login below: AliasVault is zero-knowledge and
+  end-to-end encrypted, so your master password never leaves your device
+  and cannot be recovered if lost. The separate admin panel (server
+  administration only, not vault data) lives at /admin — log in with
+  username `admin` and the Admin Panel Password below, which is stored
+  only as a one-way hash, so choose it carefully since it can only be
+  reset via a redeploy.
 changeLog:
   - date: 2026-08-03
     description: first release
