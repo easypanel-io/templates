@@ -1,0 +1,72 @@
+name: Faridoon
+description: >-
+  Faridoon is a self-hosted web app for saving and publishing your favourite
+  chat quotes, with user accounts, an approval queue for guest and
+  non-privileged submissions, admin-managed settings, header links, and outbound
+  webhooks. It stores data in MySQL and is built with a Go backend and a Vue 3
+  frontend.
+instructions: >-
+  Faridoon is deployed with a default admin login of admin / admin123 - log in
+  and change this password immediately from Account settings after your first
+  visit.
+changeLog:
+  - date: 2026-08-05
+    description: first release
+links:
+  - label: Website
+    url: https://github.com/jamesread/Faridoon
+  - label: GitHub Repo
+    url: https://github.com/jamesread/Faridoon
+  - label: Documentation
+    url: https://jamesread.github.io/Faridoon/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: faridoon
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/jamesread/faridoon:2.3.2
+    siteTitle:
+      type: string
+      title: Site Title
+      default: Faridoon
+benefits:
+  - title: Simple Quote Sharing
+    description:
+      Save and publish memorable chat quotes to a clean, searchable feed that
+      anyone can browse
+  - title: Moderation Built In
+    description:
+      An approval queue keeps guest and non-privileged submissions in check
+      before they go live
+  - title: No-Nonsense Open Source
+    description:
+      No tracking, paywalls, or premium tiers - all code and assets are fully
+      open source
+features:
+  - title: Admin Settings
+    description:
+      Control voting, registration, guest submissions, and syntax highlighting
+      from an admin settings panel
+  - title: Header Links and Webhooks
+    description:
+      Customize header navigation links and configure outbound webhooks for
+      events like new quote approval requests
+  - title: Privilege-Based Moderation
+    description:
+      Grant approval and bypass privileges to trusted users independently of
+      full admin access
+tags:
+  - Community
+  - Social
+  - Self-hosted
