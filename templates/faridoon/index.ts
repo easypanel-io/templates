@@ -9,8 +9,6 @@ export function generate(input: Input): Output {
     type: "mysql",
     data: {
       serviceName: `${input.appServiceName}-db`,
-      databaseName: "faridoon",
-      user: "faridoon",
       password: dbPassword,
     },
   });
@@ -25,8 +23,8 @@ export function generate(input: Input): Output {
       },
       env: [
         `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
-        `DB_NAME=faridoon`,
-        `DB_USER=faridoon`,
+        `DB_NAME=$(PROJECT_NAME)`,
+        `DB_USER=mysql`,
         `DB_PASS=${dbPassword}`,
         `SITE_TITLE=${input.siteTitle}`,
       ].join("\n"),
