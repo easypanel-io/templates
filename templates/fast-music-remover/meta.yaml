@@ -1,0 +1,65 @@
+name: Fast Music Remover
+description:
+  Fast Music Remover strips background music and noise from videos and audio
+  files using DeepFilterNet, so you keep the speech or content you actually
+  want. Submit a YouTube (or other) URL or upload a file through the built-in
+  web UI, and it downloads or accepts the media, runs it through a C++
+  MediaProcessor core, and serves back the cleaned result for playback or
+  download.
+instructions: >-
+  Open the app on the assigned domain to submit a video URL or upload a file for
+  processing; uploaded and processed media persist in the "uploads" volume.
+  Processing runs on CPU via DeepFilterNet's ONNX models, so no GPU is required,
+  but larger files will take longer and use more CPU/RAM — size resources
+  accordingly for heavier workloads.
+changeLog:
+  - date: 2026-08-05
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/omeryusufyagci/fast-music-remover
+  - label: Documentation
+    url: https://github.com/omeryusufyagci/fast-music-remover#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fast-music-remover
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/omeryusufyagci/fast-music-remover@sha256:7dde634bb634c8450e556e75444d28caee7a57b2f12cf447f7632ba85cb485b7
+benefits:
+  - title: Music and Noise Removal
+    description:
+      Uses DeepFilterNet to strip background music and noise from videos and
+      audio files while keeping speech intact
+  - title: URL or File Input
+    description:
+      Submit a YouTube (or other) video URL for automatic download, or upload a
+      local file directly through the web UI
+  - title: CPU-Only Processing
+    description:
+      Runs entirely on CPU via ONNX models, so no GPU is required to process
+      media
+features:
+  - title: Web UI
+    description:
+      A minimalistic frontend lets you submit media and preview the processed
+      result without touching the command line
+  - title: C++ MediaProcessor Core
+    description:
+      A dedicated C++ engine handles audio extraction, filtering, and re-muxing
+      for efficient processing
+tags:
+  - Media
+  - Audio
+  - AI
