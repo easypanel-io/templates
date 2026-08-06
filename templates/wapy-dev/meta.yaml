@@ -1,0 +1,126 @@
+name: Wapy.dev
+description:
+  Wapy.dev is a subscription management platform that helps you track
+  subscriptions, monitor recurring expenses, and get payment reminders in one
+  human readable dashboard. It notifies you via email or push notifications when
+  payments are due, lets you mark subscriptions as paid, and tracks your
+  spending across categories, currencies and time zones.
+instructions: >-
+  Wapy.dev signs users in with a magic link or code sent by email, so a working
+  SMTP server and the "From" email address below are required before anyone can
+  log in; GitHub and Google OAuth are optional alternatives you can add later by
+  setting their client ID and secret and redeploying. A dedicated Postgres
+  database is created automatically and a background "cron" service polls the
+  app every minute so payment reminders and notifications fire on schedule.
+changeLog:
+  - date: 2026-08-05
+    description: first release
+links:
+  - label: Website
+    url: https://www.wapy.dev
+  - label: GitHub
+    url: https://github.com/meceware/wapy.dev
+  - label: Documentation
+    url: https://github.com/meceware/wapy.dev/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - emailServerHost
+    - emailFrom
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wapy-dev
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/meceware/wapy.dev:2.2.0
+    emailServerHost:
+      type: string
+      title: Email Server Host
+    emailServerPort:
+      type: number
+      title: Email Server Port
+      default: 587
+    emailServerUser:
+      type: string
+      title: Email Server User
+    emailServerPassword:
+      type: string
+      title: Email Server Password
+    emailFrom:
+      type: string
+      title: From Email Address
+    emailContact:
+      type: string
+      title: Contact Form Email Address
+      description: "Optional. Where contact form submissions are sent."
+    disableUserRegistration:
+      type: boolean
+      title: Disable New User Registration
+      default: false
+    githubId:
+      type: string
+      title: GitHub OAuth Client ID
+      description: "Optional."
+    githubSecret:
+      type: string
+      title: GitHub OAuth Client Secret
+      description: "Optional."
+    googleId:
+      type: string
+      title: Google OAuth Client ID
+      description: "Optional."
+    googleSecret:
+      type: string
+      title: Google OAuth Client Secret
+      description: "Optional."
+    vapidPublicKey:
+      type: string
+      title: VAPID Public Key
+      description:
+        "Optional, needed only for web push notifications. Generate a pair with
+        `npx web-push generate-vapid-keys`."
+    vapidPrivateKey:
+      type: string
+      title: VAPID Private Key
+      description:
+        "Optional, needed only for web push notifications. Generate a pair with
+        `npx web-push generate-vapid-keys`."
+benefits:
+  - title: Never Miss a Payment
+    description:
+      Get email or push notifications before subscriptions renew, so recurring
+      charges never catch you off guard
+  - title: One Dashboard For Everything
+    description:
+      Track subscriptions and recurring expenses across categories, currencies
+      and time zones in a single, human readable view
+  - title: Flexible Sign-In
+    description:
+      Sign in with a magic link or code by email, or add GitHub and Google OAuth
+      for a faster login
+features:
+  - title: Detailed Analytics
+    description:
+      Reports break down spending across categories and time so you understand
+      exactly where your money goes
+  - title: Custom Categories and Payment Methods
+    description:
+      Organize subscriptions with color-coded categories and recognizable
+      payment method icons
+  - title: PWA Ready
+    description:
+      Fully responsive with light and dark mode, and installable to your home
+      screen for a native app feel
+tags:
+  - Finance
+  - Subscription Management
+  - Dashboard
+  - Self-hosted
