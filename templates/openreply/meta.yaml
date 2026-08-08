@@ -1,0 +1,126 @@
+name: OpenReply
+description:
+  OpenReply is an open-source Instagram comment-to-DM automation tool and
+  self-hosted ManyChat alternative. It watches Instagram post and reel comments
+  through Meta webhooks, matches configured keywords, queues delivery jobs, and
+  sends private replies through the official Meta API. The app includes a
+  Next.js dashboard, campaign templates, tracked links, DM logs, role-based
+  workspaces, email magic-link login, and a long-running worker process backed
+  by PostgreSQL and Redis.
+instructions:
+  Before deploying, create a Meta developer app and a Resend account. Set the
+  Meta and Resend values in the template form. After deployment, configure Meta
+  with the OAuth redirect URL https://your-domain/api/instagram/callback and
+  webhook callback URL https://your-domain/api/webhook using the same webhook
+  verify token entered here. The web service and worker must both stay running;
+  the worker sends DMs from the queue.
+changeLog:
+  - date: 2026-08-08
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/diwenne/openreply
+  - label: Documentation
+    url: https://github.com/diwenne/openreply/blob/main/docs/setup.md
+contributors:
+  - name: Yahya
+    url: https://github.com/yahya
+schema:
+  type: object
+  required:
+    - appServiceName
+    - sourceRef
+    - resendApiKey
+    - emailFrom
+    - instagramAppId
+    - instagramAppSecret
+    - facebookAppSecret
+    - webhookVerifyToken
+    - metaGraphApiVersion
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openreply
+    sourceRef:
+      type: string
+      title: Source Ref
+      default: main
+    resendApiKey:
+      type: string
+      title: Resend API Key
+    emailFrom:
+      type: string
+      title: Email From
+      default: OpenReply <login@example.com>
+    instagramAppId:
+      type: string
+      title: Instagram App ID
+    instagramAppSecret:
+      type: string
+      title: Instagram App Secret
+    facebookAppSecret:
+      type: string
+      title: Facebook App Secret
+    webhookVerifyToken:
+      type: string
+      title: Webhook Verify Token
+    metaGraphApiVersion:
+      type: string
+      title: Meta Graph API Version
+      default: v25.0
+benefits:
+  - title: Self-Hosted Instagram Automation
+    description:
+      Run Instagram comment-to-DM automation on your own infrastructure without
+      seat limits, plan caps, or a managed automation subscription.
+  - title: Official Meta API Flow
+    description:
+      Uses Meta webhooks and Instagram private replies instead of scraping,
+      browser automation, or Instagram password access.
+  - title: Reliable Queue Processing
+    description:
+      Separates the web app from a long-running worker so webhook receipt,
+      keyword matching, rate limiting, retries, and DM delivery are handled
+      reliably.
+  - title: Campaign and Link Tracking
+    description:
+      Build keyword campaigns, send tracked links, monitor clicks, and inspect
+      send logs from the dashboard.
+  - title: Multi-Account Workspaces
+    description:
+      Manage multiple Instagram professional accounts with workspace roles and
+      invite-based team access.
+features:
+  - title: Keyword to DM
+    description:
+      Match one or more keywords on Instagram comments and send private replies
+      through the official API.
+  - title: Public Reply Support
+    description:
+      Optionally post a public reply under the matched comment alongside the
+      private DM.
+  - title: Queue-Backed Worker
+    description:
+      Runs a separate worker process with BullMQ and Redis for delivery,
+      retries, polling reconciliation, and rate limiting.
+  - title: Email Magic-Link Login
+    description: Uses Auth.js and Resend for passwordless sign-in.
+  - title: PostgreSQL Persistence
+    description:
+      Stores workspaces, accounts, campaigns, logs, sessions, and tracked link
+      analytics in PostgreSQL through Prisma.
+  - title: Meta Webhook Endpoint
+    description:
+      Provides a webhook endpoint for Instagram comments and a callback endpoint
+      for Instagram OAuth connection.
+tags:
+  - Instagram
+  - Automation
+  - Social Media
+  - Marketing
+  - ManyChat Alternative
+  - Next.js
+  - PostgreSQL
+  - Redis
+  - Open Source
