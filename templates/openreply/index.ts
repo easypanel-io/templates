@@ -27,7 +27,7 @@ export function generate(input: Input): Output {
   const appUrl = "https://$(EASYPANEL_DOMAIN)";
 
   const commonEnv = [
-    `NIXPACKS_NODE_VERSION=22`,
+    `NIXPACKS_NODE_VERSION=24`,
     `NEXTAUTH_URL=${appUrl}`,
     `NEXTAUTH_SECRET=${nextAuthSecret}`,
     `CRON_SECRET=${cronSecret}`,
