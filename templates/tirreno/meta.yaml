@@ -1,0 +1,79 @@
+name: Tirreno
+description:
+  Tirreno is an open-source security framework that helps understand, monitor,
+  and protect your product from threats, fraud, and abuse. It ingests events
+  through a simple API, then gives you a real-time dashboard covering user risk
+  scoring, blacklists, rule-based detection, and behaviour analysis for account
+  takeover, credential stuffing, promo abuse, and other attacks against your
+  application logic.
+instructions: >-
+  Tirreno automatically creates its database schema on first boot using the
+  bundled PostgreSQL service, and its cron job runs inside the container, so no
+  manual setup is required there. Once the service is running, open
+  `https://your-domain/signup/` to create the administrator account, then start
+  sending events through the API or one of the official SDKs. The "data" volume
+  persists the app's config, uploads, and logs across restarts.
+changeLog:
+  - date: 2026-08-07
+    description: first release
+links:
+  - label: Website
+    url: https://www.tirreno.com
+  - label: GitHub
+    url: https://github.com/tirrenotechnologies/tirreno
+  - label: Documentation
+    url: https://docs.tirreno.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tirreno
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: tirreno/tirreno:v0.10.0
+    forceHttps:
+      type: boolean
+      title: Force HTTPS
+      description:
+        "Tirreno generates links and cookies as HTTPS by default, matching how
+        Easypanel serves the domain. Disable only if you're not using TLS."
+      default: true
+benefits:
+  - title: Real-Time Threat Dashboard
+    description:
+      Get a live view of activity, risk scores, and flagged users across your
+      product from a single interface
+  - title: Rule-Based Risk Scoring
+    description:
+      Detect account takeover, credential stuffing, promo abuse, bot traffic,
+      and other threats with preset or custom rules
+  - title: Single User View
+    description:
+      Drill into behaviour patterns, connected identities, risk scores, and full
+      activity timelines for any specific user
+features:
+  - title: Review Queue
+    description:
+      Automatically suspend risky accounts or flag them for manual review based
+      on configurable thresholds
+  - title: Field Audit Trail
+    description:
+      Track what changed and when across important fields to streamline audits
+      and compliance reviews
+  - title: Low-Dependency PHP Stack
+    description:
+      Hand-written, few-dependency PHP and PostgreSQL application that installs
+      in minutes and is easy to self-host
+tags:
+  - Security
+  - Analytics
+  - Monitoring
