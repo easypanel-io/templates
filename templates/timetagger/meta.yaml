@@ -1,0 +1,78 @@
+name: TimeTagger
+description:
+  TimeTagger is a fast, intuitive, and flexible time tracker. Tag your time with
+  hashtags to organize it your own way, view your time on an interactive
+  timeline, and generate reports to see where your hours went. It works great in
+  the browser and as an installable Progressive Web App on desktop and mobile.
+instructions: >-
+  Log in with the username and password you set below. Records are stored as a
+  local database on the "data" volume, which persists across restarts. Use HTTPS
+  in production, since TimeTagger sends the login password unencrypted over
+  plain HTTP.
+changeLog:
+  - date: 2026-08-12
+    description: first release
+links:
+  - label: Website
+    url: https://timetagger.app
+  - label: GitHub Repo
+    url: https://github.com/almarklein/timetagger
+  - label: Documentation
+    url: https://timetagger.readthedocs.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - authUsername
+    - authPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: timetagger
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/almarklein/timetagger:v26.1.3
+    authUsername:
+      type: string
+      title: Login Username
+      default: admin
+    authPassword:
+      type: string
+      title: Login Password
+      default: admin
+benefits:
+  - title: Hashtag-Based Tagging
+    description:
+      Tag time records with hashtags on the fly, letting you organize your time
+      your own way without rigid project hierarchies
+  - title: Interactive Timeline
+    description:
+      Zoom, drag, and edit time records directly on a visual timeline that makes
+      it easy to spot gaps and overlaps
+  - title: Installable PWA
+    description:
+      Works as a Progressive Web App so you can install it on desktop and mobile
+      and keep tracking time offline
+features:
+  - title: Flexible Reporting
+    description:
+      Generate reports filtered by tag or date range and export them for
+      invoicing or analysis
+  - title: Simple Built-In Login
+    description:
+      Ships with a lightweight username and bcrypt-password login, no external
+      auth provider required
+  - title: Local Data Storage
+    description:
+      Time records are stored in a local database file that stays entirely under
+      your control
+tags:
+  - Productivity
+  - Time Tracking
+  - Self-Hosted
