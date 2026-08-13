@@ -1,0 +1,94 @@
+name: PoeticMetric
+description:
+  PoeticMetric is an open-source, privacy-focused web analytics platform. It
+  gives you real-time visitor stats, custom events, and goal tracking without
+  cookies or invasive tracking, backed by ClickHouse for fast aggregation over
+  large volumes of events.
+instructions: >-
+  You need a working SMTP server to send the account verification email, since
+  PoeticMetric requires a verified account before you can sign in. After
+  deploying, open your domain, register an account, and verify it through the
+  email that gets sent. All service data (Postgres, ClickHouse, RabbitMQ) is
+  stored on persistent volumes.
+changeLog:
+  - date: 2026-08-13
+    description: first release
+links:
+  - label: Website
+    url: https://poeticmetric.com
+  - label: GitHub Repo
+    url: https://github.com/th0th/poeticmetric
+  - label: Documentation
+    url: https://poeticmetric.com/docs/self-hosting/installation
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - frontendServiceImage
+    - backendServiceImage
+    - smtpHost
+    - smtpPort
+    - smtpFromAddress
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: poeticmetric
+    frontendServiceImage:
+      type: string
+      title: Frontend Service Image
+      default: code.unius.sh/poeticmetric/frontend:2.0.0
+    backendServiceImage:
+      type: string
+      title: Backend Service Image
+      default: code.unius.sh/poeticmetric/backend:2.0.0
+    smtpHost:
+      type: string
+      title: SMTP Host
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUser:
+      type: string
+      title: SMTP User
+    smtpPassword:
+      type: string
+      title: SMTP Password
+    smtpFromAddress:
+      type: string
+      title: SMTP From Address
+      description: "Example: PoeticMetric <no-reply@yourdomain.com>"
+benefits:
+  - title: Cookieless, Privacy-First Analytics
+    description:
+      Tracks visitors without cookies or personal data, so you don't need a
+      cookie consent banner to stay compliant
+  - title: Fast at Scale
+    description:
+      Uses ClickHouse for event storage, so dashboards stay fast even as traffic
+      and event volume grow
+  - title: Custom Events and Goals
+    description:
+      Track conversions, form submissions, and custom events beyond page views,
+      and set goals to measure them against
+features:
+  - title: Real-Time Dashboard
+    description:
+      See visitor activity as it happens, with breakdowns by page, referrer,
+      device, and location
+  - title: Async Event Processing
+    description:
+      Ingests events through RabbitMQ and a dedicated worker so page load
+      tracking stays lightweight for visitors
+  - title: Self-Contained Stack
+    description:
+      Ships as a set of primitive services (Postgres, ClickHouse, RabbitMQ,
+      Valkey) with no external dependencies required
+tags:
+  - Analytics
+  - Privacy
+  - Self-Hosting
