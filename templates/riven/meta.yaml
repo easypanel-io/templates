@@ -1,0 +1,78 @@
+name: Riven
+description:
+  Riven is a media management system that scrapes content from your watchlists
+  (Plex, Trakt, Overseerr, and more), finds the best available sources through
+  configurable indexers and debrid services, and organizes everything for your
+  media server, backed by PostgreSQL.
+instructions: >-
+  Configure your indexers, scrapers, and debrid service from Riven's settings
+  page after deploying. Important limitation: Riven's core streaming feature
+  relies on an rclone-based FUSE mount to expose debrid content to your media
+  server, which requires access to the host's /dev/fuse device and privileged
+  mount propagation. Easypanel's app services don't expose either, so this mount
+  will fail to start; treat this template as a starting point for running
+  Riven's scraping and indexing pipeline rather than a fully working streaming
+  setup until that limitation is resolved. The "data" volume persists Riven's
+  state across restarts.
+changeLog:
+  - date: 2026-08-13
+    description: first release
+links:
+  - label: Website
+    url: https://rivenmedia.github.io/docs
+  - label: GitHub Repo
+    url: https://github.com/rivenmedia/riven
+  - label: Documentation
+    url: https://rivenmedia.github.io/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: riven
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: spoked/riven:0.23.6
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Automated Media Acquisition
+    description:
+      Scrapes your Plex, Trakt, and Overseerr watchlists and automatically finds
+      and grabs the best available sources
+  - title: Flexible Indexer and Debrid Support
+    description:
+      Works with configurable indexers and debrid services, so you control
+      exactly where content is sourced from
+  - title: Built for Automation
+    description:
+      Runs continuously in the background, keeping your media library up to date
+      without manual searching
+features:
+  - title: Watchlist Integration
+    description:
+      Syncs directly with Plex, Trakt, and Overseerr watchlists to know what to
+      acquire next
+  - title: Configurable Scraping Rules
+    description:
+      Fine-tune quality, format, and source preferences to match exactly what
+      you want downloaded
+  - title: Web Dashboard
+    description:
+      Manage settings, review logs, and monitor scraping activity from a
+      built-in web interface
+tags:
+  - Media
+  - Automation
+  - Self-Hosting
