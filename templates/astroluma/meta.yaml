@@ -4,11 +4,14 @@ description:
   helps you manage tasks, monitor devices, integrate apps, and track real-time
   weather from a single, customizable interface.
 instructions: >-
-  On first load, open the app and create your admin account. Uploaded files and
-  app assets persist on dedicated volumes. Astroluma's local network device
-  scanning feature relies on host networking, which Easypanel does not support
-  for app services, so that feature will not work in this deployment; all other
-  functionality works normally.
+  Astroluma seeds a default admin account on first boot rather than showing a
+  signup flow: log in with username "admin" and password "123456", then change
+  the password immediately from account settings, since this default is
+  hardcoded in the public source and not unique to your deployment. Uploaded
+  files and app assets persist on dedicated volumes. Astroluma's local network
+  device scanning feature relies on host networking, which Easypanel does not
+  support for app services, so that feature will not work in this deployment;
+  all other functionality works normally.
 changeLog:
   - date: 2026-08-13
     description: first release
