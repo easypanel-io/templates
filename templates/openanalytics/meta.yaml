@@ -1,0 +1,89 @@
+name: OpenAnalytics
+description:
+  OpenAnalytics is an open-source, privacy-first web analytics platform with a
+  lightweight tracker, realtime dashboards, funnels, visitor journeys, custom
+  events, revenue analytics, sharing, and an MCP interface. This template
+  deploys the complete official self-hosted stack with PostgreSQL, ClickHouse,
+  two isolated Valkey instances, migrations, key generation, GeoIP data, and all
+  application services.
+instructions:
+  Before deploying, create DNS records for app, api, c, and rt under the base
+  domain and point all four to your Easypanel server. The official v0.4.2 images
+  require an x86-64/amd64 host. Allow about 4 GB of RAM for the stack and keep
+  at least 25 GB of free disk for upgrades. The first deployment creates
+  fourteen native Easypanel resources and pulls the official v0.4.2 images. The
+  keygen, geoip, and migrate applications are idempotent initialization jobs;
+  the public edge starts responding once their dependent services are ready.
+  Open the app domain after deployment and claim the first account. GeoIP data
+  is provided by DB-IP City Lite under CC BY 4.0 and requires attribution where
+  it is displayed.
+changeLog:
+  - date: 2026-08-15
+    description:
+      First release, modeled as native Easypanel services from the official
+      OpenAnalytics v0.4.2 platform stack
+links:
+  - label: Website
+    url: https://openanalytics.io
+  - label: Documentation
+    url: https://github.com/OpenLabs-so/openanalytics/blob/v0.4.2/SELF-HOSTING.md
+  - label: GitHub
+    url: https://github.com/OpenLabs-so/openanalytics
+contributors:
+  - name: Teo
+    url: https://github.com/teo-goulois
+schema:
+  type: object
+  required:
+    - serviceName
+    - baseDomain
+    - emailFrom
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: openanalytics
+    baseDomain:
+      type: string
+      title: Base Domain
+      description:
+        The base domain without a scheme, for example analytics.example.com. The
+        template creates app, api, c, and rt subdomains.
+      pattern: '^(?!https?://)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,63}$'
+    emailFrom:
+      type: string
+      title: Email From
+      description:
+        Sender used until a mail provider is configured in the dashboard.
+      default: Open Analytics <analytics@analytics.example.com>
+benefits:
+  - title: Privacy-first analytics
+    description:
+      Own the infrastructure and analytics data while using a tracker designed
+      for privacy-conscious deployments.
+  - title: Complete one-click stack
+    description:
+      Create separate Easypanel resources for the official applications,
+      databases, queues, migrations, signing keys, GeoIP bootstrap, and edge.
+  - title: Official pinned release
+    description:
+      Pull only official OpenAnalytics images pinned to v0.4.2 for reproducible
+      deployments.
+features:
+  - title: Realtime dashboards
+    description:
+      Inspect live traffic, visitor journeys, and geographic activity.
+  - title: Product and revenue analytics
+    description: Track custom events, funnels, conversions, and revenue signals.
+  - title: Secure service boundaries
+    description:
+      Preserve OpenAnalytics least-privilege environment separation, isolated
+      queues, signing keys, and proxy identity-header hygiene.
+  - title: Self-hosting operations
+    description:
+      Includes idempotent migrations, persistent stores, GeoIP initialization,
+      internal service networking, and official upgrade-compatible images.
+tags:
+  - Analytics
+  - Privacy
+  - Self-Hosted
