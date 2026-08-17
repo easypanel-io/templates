@@ -1,0 +1,71 @@
+name: QuickDrop
+description:
+  QuickDrop is a self-hosted file sharing app for anonymous uploads with chunked
+  transfers, optional encryption at rest, per-file passwords, and share tokens
+  with expiry and download limits. Includes an admin console for storage
+  policies, cleanup schedules, and notifications.
+instructions: >-
+  Open the app to upload files right away. Set an admin password from the
+  settings UI to protect the admin console, and optionally enable whole-app
+  password mode from there too. Uploaded files, the SQLite database, and logs
+  are stored on persistent volumes.
+changeLog:
+  - date: 2026-08-17
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/RoastSlav/quickdrop
+  - label: Documentation
+    url: https://github.com/RoastSlav/quickdrop#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: quickdrop
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: roastslav/quickdrop:v1.5.3
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Anonymous, Chunked Uploads
+    description:
+      Accepts large-file uploads via chunked transfers with no account required
+      from the uploader
+  - title: Flexible Sharing Controls
+    description:
+      Share tokens support expiry dates and download limits, with QR codes
+      generated for quick sharing
+  - title: Privacy by Design
+    description:
+      Optional encryption at rest, per-file passwords, and the ability to hide
+      files from the public list or disable it entirely
+features:
+  - title: Admin Console
+    description:
+      Manage storage policies, cleanup schedules, and feature flags from a
+      single-page settings UI that applies changes without a restart
+  - title: Built-In Previews
+    description:
+      Preview images, text, PDF, JSON, and CSV files directly in the browser
+      with syntax highlighting for code
+  - title: Notifications and Logging
+    description:
+      Get email or Discord webhook notifications, with a unified history log of
+      uploads, downloads, and renewals
+tags:
+  - File Sharing
+  - Productivity
+  - Self-Hosting
