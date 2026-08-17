@@ -1,0 +1,72 @@
+name: PinePods
+description:
+  PinePods is a complete podcast management system that lets you play, download,
+  and keep track of the podcasts you enjoy, all self-hosted on your own server.
+  It syncs across devices and works as an installable Progressive Web App on
+  desktop and mobile.
+instructions: >-
+  Open the app and you'll be prompted to create the first admin account.
+  Downloaded episodes and backups are stored on persistent volumes, and Postgres
+  data persists across restarts.
+changeLog:
+  - date: 2026-08-17
+    description: first release
+links:
+  - label: Website
+    url: https://www.pinepods.online
+  - label: GitHub Repo
+    url: https://github.com/madeofpendletonwool/PinePods
+  - label: Documentation
+    url: https://www.pinepods.online/docs/intro
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: pinepods
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: madeofpendletonwool/pinepods:0.9.0
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Play, Download, and Track
+    description:
+      Stream or download episodes and keep listening progress synced across
+      every device you use
+  - title: Installable PWA
+    description:
+      Works as a Progressive Web App so you can install it on desktop and mobile
+      for a native-like experience
+  - title: Fully Self-Hosted
+    description:
+      Your subscriptions, downloads, and listening history stay entirely on your
+      own server
+features:
+  - title: Cross-Device Sync
+    description:
+      Keeps playback position and subscriptions in sync no matter which device
+      you're listening from
+  - title: Podcast Search
+    description:
+      Search and subscribe to new shows directly from the app using the built-in
+      search API
+  - title: Automatic Downloads
+    description:
+      Automatically downloads new episodes from your subscriptions so they're
+      ready to play offline
+tags:
+  - Media
+  - Podcasts
+  - Self-Hosting
