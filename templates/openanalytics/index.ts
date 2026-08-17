@@ -29,6 +29,8 @@ export function generate(input: Input): Output {
   const realtimeDomain = `rt.${input.baseDomain}`;
   const host = (suffix: string) =>
     `$(PROJECT_NAME)_${input.serviceName}-${suffix}`;
+  const appVolumePath = (serviceSuffix: string, volumeName: string) =>
+    `/etc/easypanel/projects/$(PROJECT_NAME)/${input.serviceName}-${serviceSuffix}/volumes/${volumeName}`;
 
   const postgresHost = host("postgres");
   const clickhouseHost = host("clickhouse");
@@ -282,7 +284,13 @@ chmod 444 /geoip/dbip-city-lite.mmdb
         `QUERY_SIGNING_KEY_ID=oa-selfhost-1`,
         `QUERY_SIGNING_PUBLIC_KEY_FILE=/keys/query.public.pem`,
       ].join("\n"),
-      mounts: [{ type: "volume", name: "keys-gateway", mountPath: "/keys" }],
+      mounts: [
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keys-gateway"),
+          mountPath: "/keys",
+        },
+      ],
     },
   });
 
@@ -313,8 +321,16 @@ chmod 444 /geoip/dbip-city-lite.mmdb
         `PREVIEW_TOKEN_SIGNING_KEY_FILE=/keys/preview.private.pem`,
       ].join("\n"),
       mounts: [
-        { type: "volume", name: "keys-api", mountPath: "/keys" },
-        { type: "volume", name: "keyring", mountPath: "/keyring" },
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keys-api"),
+          mountPath: "/keys",
+        },
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keyring"),
+          mountPath: "/keyring",
+        },
       ],
     },
   });
@@ -336,8 +352,16 @@ chmod 444 /geoip/dbip-city-lite.mmdb
         `GEOIP_DB_PATH=/geoip/dbip-city-lite.mmdb`,
       ].join("\n"),
       mounts: [
-        { type: "volume", name: "keys-collector", mountPath: "/keys" },
-        { type: "volume", name: "geoip", mountPath: "/geoip" },
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keys-collector"),
+          mountPath: "/keys",
+        },
+        {
+          type: "bind",
+          hostPath: appVolumePath("geoip", "geoip"),
+          mountPath: "/geoip",
+        },
       ],
     },
   });
@@ -353,7 +377,13 @@ chmod 444 /geoip/dbip-city-lite.mmdb
         `REALTIME_CACHE_REDIS_URL=redis://:${valkeyRealtimePassword}@${valkeyRealtimeHost}:6379`,
         `REALTIME_TOKEN_VERIFY_KEY_FILE=/keys/realtime.public.pem`,
       ].join("\n"),
-      mounts: [{ type: "volume", name: "keys-realtime", mountPath: "/keys" }],
+      mounts: [
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keys-realtime"),
+          mountPath: "/keys",
+        },
+      ],
     },
   });
 
@@ -380,7 +410,13 @@ chmod 444 /geoip/dbip-city-lite.mmdb
         `PRODUCT_NAME=Open Analytics`,
         `EMAIL_FROM=${input.emailFrom}`,
       ].join("\n"),
-      mounts: [{ type: "volume", name: "keyring", mountPath: "/keyring" }],
+      mounts: [
+        {
+          type: "bind",
+          hostPath: appVolumePath("keygen", "keyring"),
+          mountPath: "/keyring",
+        },
+      ],
     },
   });
 
