@@ -1,0 +1,72 @@
+name: Eddrit
+description:
+  Eddrit is a lightweight, ad-free alternative frontend for Reddit with a
+  compact design inspired by old.reddit.com. URLs follow the same structure as
+  Reddit, so you can just swap reddit.com for your own domain to browse any
+  page.
+instructions: >-
+  Open the app and browse Reddit through your own domain, no account or OAuth
+  setup required. Reddit sometimes blocks requests from hosting-provider IP
+  ranges; if you see errors fetching content, you may need to route requests
+  through a proxy (see the project's deployment docs for details).
+changeLog:
+  - date: 2026-08-18
+    description: first release
+links:
+  - label: Website
+    url: https://eddrit.com
+  - label: GitHub Repo
+    url: https://github.com/corenting/eddrit
+  - label: Documentation
+    url: https://github.com/corenting/eddrit/blob/master/doc/deployment/README.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - valkeyServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: eddrit
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/corenting/eddrit:0.19.0
+    valkeyServiceImage:
+      type: string
+      title: Valkey Service Image
+      default: valkey/valkey:alpine
+benefits:
+  - title: Lightweight and Ad-Free
+    description:
+      A fast, minimal Reddit frontend with no ads and no tracking, inspired by
+      the classic old.reddit.com design
+  - title: No Account Needed
+    description:
+      Mimics the official Android app to bypass rate-limiting, so there's no
+      OAuth2 registration required for self-hosting
+  - title: Drop-In URL Compatibility
+    description:
+      URLs mirror Reddit's own structure, so any reddit.com link works by just
+      swapping the domain
+features:
+  - title: Mobile-Friendly Design
+    description:
+      A compact, responsive layout that works well on both desktop and mobile
+      browsers
+  - title: RSS Support
+    description:
+      Basic RSS feeds for subreddits and posts, rewritten to point back to your
+      own instance
+  - title: Valkey-Backed Sessions
+    description:
+      Uses Valkey to store OAuth tokens, keeping the app itself stateless
+tags:
+  - Social
+  - Privacy
+  - Self-Hosting
