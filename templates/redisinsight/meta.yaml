@@ -33,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: redis/redisinsight:2.70.1
+      default: redis/redisinsight:latest
 
 benefits:
   - title: Visual Data Exploration
