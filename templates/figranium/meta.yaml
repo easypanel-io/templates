@@ -1,0 +1,92 @@
+name: Figranium
+description:
+  Figranium is a self-hosted browser automation and scraping
+  platform built on Playwright. It offers a visual task editor, structured JSON
+  task format, and execution modes for simple scraping to complex, human-like
+  browser interactions. Includes noVNC for remote browser viewing.
+instructions: |
+  Open your app domain to access the Figranium web interface and create your first automation task.
+  Data persistence is enabled in the mounted `/app/data` volume and update to a newer image tag when available.
+changeLog:
+  - date: 2026-08-17
+    description: Added Visual field-mapping mode for extraction scripts with JS toggle, auto-generated script syncing, and fixed canvas modal backdrop dismissals.
+  - date: 2026-08-15
+    description: Restored backdrop blur on dark themes, fixed VNC session reconnecting loops, normalized proxy URLs, and updated header layout polish.
+  - date: 2026-08-12
+    description: Added GithubStarPrompt, hardened proxy selection with cryptographic randomness, and fixed Docker Apple Silicon arm64 builds.
+  - date: 2026-08-10
+    description: Introduced programmatic browser/inspector API endpoints, multi-theme support (Dark, Light, Solarized), foundational CAPTCHA detection, and VNC auth hardening.
+  - date: 2026-08-05
+    description: Added initial programmatic API endpoints, automated demo walkthroughs, and adopted Space Mono font.
+  - date: 2026-07-30
+    description: Authenticated VNC and websockify proxy routes, remediated CodeQL security alerts, and improved tablet layout responsiveness.
+  - date: 2026-06-29
+    description: Retired NPM package in favor of strict Docker container sandboxes, fixed AI selector generation, and added PostgreSQL SSL support.
+  - date: 2026-04-11
+    description: Hardened Ollama routes against SSRF, optimized cron next-run calculations, and refined block settings double-click interaction.
+  - date: 2026-04-08
+    description: Blocked host.docker.internal in SSRF protection, added global AI provider settings, built-in get_content action, and upgraded to Vite 7.
+  - date: 2026-04-07
+    description: Implemented in-memory logging counters for PostgreSQL, optimized execution finalization, and memoized TaskCard rendering.
+  - date: 2026-04-01
+    description: Mitigated webhook redirect SSRF, enforced httpOnly session cookies, patched sandbox proxy escape, and added live Dashboard task search.
+  - date: 2026-03-25
+    description: Added support for optional task descriptions in Task Settings and canvas trigger cards.
+  - date: 2026-03-24
+    description: Introduced draggable Markdown sticky notes to canvas, fixed extraction script proxy bypass, and optimized editor change-detection speed by 23x.
+  - date: 2026-03-22
+    description: Added Origin validation against Cross-Site WebSocket Hijacking, local IP verification checks, and FigClaw backend integration infrastructure.
+  - date: 2026-03-19
+    description: Hardened URL protocol scheme validation, timing-safe login checks, migrated font stack to Questrial, and auto-enabled inspect mode for headful sessions.
+links:
+  - label: Website
+    url: https:/figranium.dev
+  - label: Documentation
+    url: https://figranium.dev/docs/overview
+  - label: GitHub
+    url: https://github.com/figranium/figranium
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: figranium
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/figranium/figranium:latest
+benefits:
+  - title: Self-Hosted Automation
+    description:
+      Run browser automation and scraping entirely on your own infrastructure
+  - title: Visual Task Editor
+    description: Build and manage tasks without writing code
+  - title: Playwright-Powered
+    description:
+      Reliable, modern browser automation with human-like interactions
+  - title: Remote Viewing
+    description: noVNC support to watch and debug browser sessions
+features:
+  - title: Visual Editor
+    description: Create and edit automation tasks in a structured UI
+  - title: JSON Task Format
+    description: Portable, version-controlled task definitions
+  - title: noVNC
+    description: Browser-based VNC client for remote session viewing
+  - title: Advanced Modes
+    description: From simple scraping to complex multi-step flows
+tags:
+  - Automation
+  - Scraping
+  - Playwright
+  - Browser
+  - Open Source
+  - Self-hosted
