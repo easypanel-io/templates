@@ -1,0 +1,70 @@
+name: Flood
+description:
+  Flood is a monitoring service for various torrent clients. It's a Node.js
+  service that communicates with your existing torrent client (rTorrent,
+  qBittorrent, Transmission, or Deluge) and serves a clean, modern web UI for
+  administering and monitoring torrents.
+instructions: >-
+  Open the app and register the first account. Flood doesn't bundle a torrent
+  client, so after logging in, go to Settings and add the connection details
+  (host, port, username/password, or RPC credentials) for your existing
+  rTorrent, qBittorrent, Transmission, or Deluge instance. If that client runs
+  elsewhere on your network, make sure this deployment can reach it. Flood's own
+  configuration is stored on a persistent volume.
+changeLog:
+  - date: 2026-08-20
+    description: first release
+links:
+  - label: Website
+    url: https://flood.js.org
+  - label: GitHub
+    url: https://github.com/jesec/flood
+  - label: Documentation
+    url: https://github.com/jesec/flood/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: flood
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jesec/flood:4.16.1
+benefits:
+  - title: Works With Your Existing Client
+    description:
+      Connects to rTorrent, qBittorrent, Transmission, or Deluge, so you keep
+      using the torrent client you already run
+  - title: Clean, Modern Web UI
+    description:
+      A fast, responsive interface for managing torrents that's a big step up
+      from most torrent clients' built-in web UIs
+  - title: Multi-User Support
+    description:
+      Create separate accounts for different users, each with their own torrent
+      client connection
+features:
+  - title: OpenAPI and Swagger UI
+    description:
+      Exposes a full OpenAPI specification with interactive Swagger docs for
+      building your own integrations
+  - title: Feed Automation
+    description:
+      Set up RSS feeds and rules to automatically add matching torrents to your
+      client
+  - title: Bandwidth and Disk Insights
+    description:
+      Visualize transfer speed, disk usage, and torrent status at a glance from
+      the dashboard
+tags:
+  - Media
+  - Downloads
+  - Self-Hosting
