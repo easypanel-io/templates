@@ -1,0 +1,73 @@
+name: Signature PDF
+description:
+  Signature PDF is a free, open-source web tool for signing PDFs alone or with
+  others, organizing pages (merge, sort, rotate, delete, extract), and editing
+  metadata or compressing files. No account required for basic signing.
+instructions: >-
+  Open the app to sign, organize, or compress a PDF right away. Multi-person
+  signing requires PDFs to be stored on the server temporarily; those files are
+  kept on a persistent volume and cleaned up automatically after the retention
+  period. Set the "Server Domain" field below to your actual domain so links and
+  shared PDFs resolve correctly.
+changeLog:
+  - date: 2026-08-20
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/24eme/signaturepdf
+  - label: Documentation
+    url: https://github.com/24eme/signaturepdf/blob/master/installation.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: signaturepdf
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: xgaia/signaturepdf:1.10.0
+    serverName:
+      type: string
+      title: Server Domain
+      description: "Example: pdf.example.com"
+    disableOrganization:
+      type: boolean
+      title: Disable Organize Mode
+      default: false
+benefits:
+  - title: Sign Without an Account
+    description:
+      Upload and sign a PDF immediately, no registration or login required for
+      single-signer use
+  - title: Full PDF Toolkit
+    description:
+      Merge, sort, rotate, delete, and extract pages, plus edit metadata and
+      compress files, all in one tool
+  - title: Multi-Person Signing
+    description:
+      Optionally enable server-side storage, with encryption support, so
+      multiple people can sign the same document
+features:
+  - title: Page Organization
+    description:
+      Rearrange, delete, or extract individual pages from a PDF directly in the
+      browser
+  - title: Metadata Editing
+    description:
+      Edit PDF metadata fields like title and author without needing separate
+      desktop software
+  - title: Configurable Retention
+    description:
+      Set a custom retention period for PDFs shared through multi-signature mode
+tags:
+  - Productivity
+  - Documents
+  - Self-Hosting
