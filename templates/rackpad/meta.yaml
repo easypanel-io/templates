@@ -1,0 +1,60 @@
+name: Rackpad
+description:
+  Rackpad is a self-hosted infrastructure inventory and rack management tool for
+  homelabs. Track racks, devices, cables, IP networks, and WiFi in one place,
+  with device discovery, port-level cabling, and monitoring built in.
+instructions: >-
+  Rackpad uses embedded SQLite — no external database is required. On first
+  visit, create the initial admin account to start managing your labs, racks,
+  and devices.
+changeLog:
+  - date: 2026-08-26
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/Kobii-git/rackpad
+  - label: Documentation
+    url: https://github.com/Kobii-git/rackpad#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rackpad
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/kobii-git/rackpad:1.7.3
+benefits:
+  - title: Rack Management
+    description: Visualize racks, rooms, and labs with drag-and-drop placement
+  - title: Device Discovery
+    description: Scan networks to find and import existing devices
+  - title: Cabling & Ports
+    description: Track port-level connections and cable runs between devices
+  - title: Self-Hosted
+    description: Keep your homelab inventory private and under your control
+features:
+  - title: Multi-Lab Support
+    description: Organize infrastructure across multiple labs and rooms
+  - title: Network Tracking
+    description: Manage IP networks, VLANs, and WiFi networks
+  - title: Monitoring
+    description: Monitor device status and get alerts when things go offline
+  - title: Audit Log
+    description: Review a history of changes made across your inventory
+  - title: Reports & Visualizer
+    description: Generate reports and visualize rack layouts
+tags:
+  - Homelab
+  - Infrastructure
+  - Networking
+  - Self-Hosted
+  - Monitoring
