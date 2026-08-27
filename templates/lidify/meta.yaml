@@ -1,0 +1,105 @@
+name: Lidify
+description:
+  Lidify is a music discovery tool that finds artists similar to the ones
+  already in your Lidarr library. It queries Last.fm for related artists, checks
+  them against Lidarr, and lets you add the ones you like with a single click,
+  including an optional auto mode that keeps discovering and adding new artists
+  on a schedule.
+instructions: >-
+  Fill in your Lidarr URL and API key (found under Lidarr Settings > General),
+  plus a Last.fm API key and secret (create one at
+  https://www.last.fm/api/account/create). The Spotify integration mentioned in
+  older Lidify docs no longer works since Spotify API changes in November 2024,
+  so Last.fm is the only supported discovery source. The "config" volume stores
+  app settings and persists across restarts.
+changeLog:
+  - date: 2026-08-27
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/TheWicklowWolf/Lidify
+  - label: Documentation
+    url: https://github.com/TheWicklowWolf/Lidify#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - lidarrAddress
+    - lidarrApiKey
+    - lastFmApiKey
+    - lastFmApiSecret
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lidify
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thewicklowwolf/lidify:0.2.11
+    lidarrAddress:
+      type: string
+      title: Lidarr Address
+      description: "Example: http://192.168.1.2:8686"
+    lidarrApiKey:
+      type: string
+      title: Lidarr API Key
+    rootFolderPath:
+      type: string
+      title: Music Root Folder Path
+      description: Root folder path for music, as configured in Lidarr.
+      default: /data/media/music/
+    lastFmApiKey:
+      type: string
+      title: Last.fm API Key
+    lastFmApiSecret:
+      type: string
+      title: Last.fm API Secret
+    fallbackToTopResult:
+      type: boolean
+      title: Fallback to Top Result
+      description: Use the top search result if no exact match is found.
+      default: false
+    autoStart:
+      type: boolean
+      title: Auto Start
+      description: Automatically run discovery on startup.
+      default: false
+benefits:
+  - title: Artist Discovery
+    description:
+      Finds artists similar to the ones already in your Lidarr library using
+      Last.fm's recommendation data.
+  - title: One-Click Adding
+    description:
+      Review suggested artists and add the ones you want straight to Lidarr,
+      with control over quality and metadata profiles.
+  - title: Automation
+    description:
+      Enable auto mode to keep discovering and adding new artists on a recurring
+      schedule without manual review.
+features:
+  - title: Last.fm Integration
+    description:
+      Uses the Last.fm API to find artists related to your existing library.
+  - title: Lidarr Sync
+    description:
+      Talks directly to your Lidarr instance to check what you already have and
+      add new artists with the correct profiles.
+  - title: Configurable Matching
+    description:
+      Tune quality profile, metadata profile, and fallback behavior for artist
+      matching to fit your setup.
+  - title: Web UI
+    description:
+      Simple browser-based interface for reviewing and adding recommended
+      artists.
+tags:
+  - Music
+  - Lidarr
+  - Media
+  - Self-Hosted
