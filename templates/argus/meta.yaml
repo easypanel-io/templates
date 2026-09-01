@@ -1,0 +1,66 @@
+name: Argus
+description:
+  Argus is a lightweight monitor that watches GitHub, Docker Hub, and other
+  sources for new software releases, then notifies you via Gotify, Slack,
+  Discord, and more — or triggers a webhook to auto-deploy the update.
+instructions: >-
+  Open your domain to reach the Argus dashboard. It starts with no watched
+  services configured; add them from the UI. Watched-service state and release
+  history live on the "data" volume, so they persist across restarts and
+  redeploys — the mounted config.yml itself resets to its starting template on
+  redeploy, so make ongoing changes through the UI rather than editing the file
+  directly.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: Website
+    url: https://release-argus.io
+  - label: GitHub
+    url: https://github.com/release-argus/Argus
+  - label: Documentation
+    url: https://release-argus.io/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: argus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/release-argus/argus:0.17.0
+benefits:
+  - title: Multi-Source Tracking
+    description:
+      Watch GitHub releases, Docker Hub tags, or any URL/command for version
+      changes.
+  - title: Flexible Notifications
+    description:
+      Send alerts via Gotify, Slack, Discord, Ntfy, and many other providers.
+  - title: Webhook Deploys
+    description:
+      Trigger a webhook when a new release is detected to auto-update your own
+      services.
+features:
+  - title: Approvals Dashboard
+    description:
+      Review and approve or skip detected updates from a web dashboard before
+      they notify or trigger anything.
+  - title: Config-as-Code
+    description:
+      Everything lives in a single YAML file, editable via the UI or directly on
+      disk.
+  - title: Self-Contained
+    description: No database required — state is stored in a local file.
+tags:
+  - Monitoring
+  - Notifications
+  - Self-Hosted
