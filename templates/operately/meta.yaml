@@ -1,0 +1,86 @@
+name: Operately
+description:
+  Operately is an open-source company operating system for managing goals,
+  projects, and work reviews. It gives every team a shared work map of goals and
+  projects, with structured check-ins and reviews instead of status meetings.
+instructions: >-
+  On first visit, create your company and admin account. Email delivery is
+  optional — leave the SMTP fields blank to skip it, or fill them in later to
+  enable invitations and notifications. Uploaded files are stored on the "media"
+  volume. Database creation and migrations run automatically every time the app
+  starts, before it begins serving requests; this is safe to repeat on every
+  restart.
+changeLog:
+  - date: 2026-09-03
+    description: first release
+links:
+  - label: Website
+    url: https://operately.com
+  - label: GitHub
+    url: https://github.com/operately/operately
+  - label: Documentation
+    url: https://github.com/operately/operately/blob/main/docs/installation/single-host.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: operately
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: operately/operately:1.9.0
+    allowSignupWithEmail:
+      type: boolean
+      title: Allow Signup With Email
+      default: true
+    smtpServer:
+      type: string
+      title: SMTP Server
+      description: Optional. Required to send invitations and notifications.
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpUsername:
+      type: string
+      title: SMTP Username
+    smtpPassword:
+      type: string
+      title: SMTP Password
+    smtpSsl:
+      type: boolean
+      title: SMTP Use SSL
+      default: false
+benefits:
+  - title: Shared Work Map
+    description:
+      Goals and projects in one hierarchical map instead of scattered docs and
+      spreadsheets.
+  - title: Async Reviews
+    description: Structured check-ins and reviews replace most status meetings.
+  - title: No Limits
+    description: Open source with no seat limits or paywalled core features.
+features:
+  - title: Goals & Projects
+    description:
+      Nest goals and projects arbitrarily deep, each with an owner, status, and
+      due date.
+  - title: Company Review
+    description:
+      A weekly review queue surfaces exactly what needs your attention across
+      the company.
+  - title: Rich Discussions
+    description:
+      Threaded discussions and documents attached directly to work items.
+tags:
+  - Project Management
+  - Productivity
+  - Self-Hosted
