@@ -1,8 +1,9 @@
 name: LibreDB Studio
 description:
   LibreDB Studio is the modern, AI-powered open-source SQL IDE. It lets you
-  connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB
-  and Redis directly from your browser, with an optional AI assistant to help
+  connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB,
+  Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and
+  Druid directly from your browser, with an optional AI assistant to help
   write and explain queries. It ships as a single container, stores its data in
   a local SQLite file by default, and creates an initial admin and user account
   on first start.
@@ -18,6 +19,8 @@ instructions: |
   querying. Application data is kept on the volume mounted at /app/data,
   so it survives restarts and redeploys.
 changeLog:
+  - date: 2026-09-06
+    description: bump to 0.14.0; adds Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and Druid
   - date: 2026-06-21
     description: first release
 links:
@@ -45,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/libredb/libredb-studio:0.9.61
+      default: ghcr.io/libredb/libredb-studio:0.14.0
     adminEmail:
       type: string
       title: Admin Email
