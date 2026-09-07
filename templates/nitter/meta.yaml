@@ -1,0 +1,98 @@
+name: Nitter
+description:
+  Nitter is a free and open source alternative front-end for Twitter/X, focused
+  on privacy and performance. It renders timelines, profiles, and search results
+  without JavaScript, ads, or tracking, and is on average around 15 times
+  lighter than Twitter, often loading pages 2-4x faster.
+instructions: >-
+  Nitter requires session tokens from a real Twitter/X account to authenticate
+  API requests — it will not start without them. Generate a "sessions.jsonl"
+  file by running the "tools/create_session_browser.py" script from the Nitter
+  repo against an account you control (or ask an AI assistant to walk you
+  through it), then paste its contents into the field below. A random HMAC key
+  is generated automatically to sign proxied media URLs, and a bundled Redis
+  service handles caching. Note: as of August 2026, X Corp has sent
+  cease-and-desist letters to Nitter's maintainer and public instances over
+  scraping claims, and upstream development has paused — functionality depends
+  on Twitter's guest API remaining reachable, which may change without notice.
+changeLog:
+  - date: 2026-09-07
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/zedeus/nitter
+  - label: Documentation
+    url: https://github.com/zedeus/nitter#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - sessionsJsonl
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nitter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zedeus/nitter:8142bab1a920d13589ab5e689d7623ac0ac7ec34
+    sessionsJsonl:
+      type: string
+      title: Sessions (sessions.jsonl content)
+      description:
+        Required — Nitter refuses to start without it. Paste the JSONL output of
+        "tools/create_session_browser.py <username> <password>" from the Nitter
+        repo, run against a Twitter/X account you control. One JSON object per
+        line.
+    siteTitle:
+      type: string
+      title: Site Title
+      default: nitter
+    theme:
+      type: string
+      title: Theme
+      default: Nitter
+    proxyVideos:
+      type: boolean
+      title: Proxy Videos
+      description:
+        Route video playback through the instance instead of Twitter's CDN.
+      default: true
+    infiniteScroll:
+      type: boolean
+      title: Infinite Scroll
+      default: false
+benefits:
+  - title: No JavaScript Required
+    description:
+      Browse full timelines, profiles, and search results with JavaScript
+      disabled.
+  - title: Privacy-Focused
+    description:
+      No ads, no JavaScript analytics, no IP-based tracking of your browsing.
+  - title: Lightweight & Fast
+    description:
+      Around 15 times lighter than Twitter, with pages typically loading 2-4x
+      faster.
+features:
+  - title: RSS Feeds
+    description:
+      Subscribe to user tweets, replies, media, search queries, and lists over
+      RSS.
+  - title: Media Proxying
+    description:
+      Images and videos are proxied through the instance, signed with a random
+      HMAC key.
+  - title: No Account Required
+    description:
+      Uses Twitter's unofficial guest API, so no developer account or API key is
+      needed.
+tags:
+  - Social Network
+  - Privacy
+  - Self-Hosted
