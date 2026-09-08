@@ -1,0 +1,69 @@
+name: Degoog
+description:
+  Degoog is a self-hosted search aggregator that queries Google, DuckDuckGo,
+  Brave Search, Wikipedia, and Reddit in parallel and merges the results into
+  one clean, ad-free, tracker-free page, with an optional AI-generated summary
+  on top.
+instructions: >-
+  Open your domain to search. Click the gear icon to open settings, which are
+  locked behind the password you set below — an unlocked instance lets anyone
+  install extensions that run code on the server, so keep this set on any public
+  deployment. Settings and extensions persist on the "data" volume.
+changeLog:
+  - date: 2026-09-08
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/degoog-org/degoog
+  - label: Documentation
+    url: https://github.com/degoog-org/degoog#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - settingsPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: degoog
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/degoog-org/degoog:0.25.0
+    settingsPassword:
+      type: string
+      title: Settings Password
+      description:
+        Locks the settings/extensions panel. Required before exposing this
+        instance publicly.
+    publicInstance:
+      type: boolean
+      title: Public Instance
+      description:
+        Enable extra hardening intended for publicly listed instances.
+      default: false
+benefits:
+  - title: Aggregated Results
+    description:
+      Merges results from Google, DuckDuckGo, Brave Search, Wikipedia, and
+      Reddit into a single page.
+  - title: No Tracking
+    description: No ads, no trackers, no search history tied to your identity.
+  - title: Extensible
+    description: Install extensions to customize or extend search behavior.
+features:
+  - title: AI Summary
+    description: Optional AI-generated summary shown above the results.
+  - title: Multiple Result Types
+    description: Web, image, video, and news results with source-specific tabs.
+  - title: Themeable
+    description: Switch between built-in themes from the settings panel.
+tags:
+  - Search Engine
+  - Privacy
+  - Self-Hosted
