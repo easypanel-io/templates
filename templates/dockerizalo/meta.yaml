@@ -1,0 +1,81 @@
+name: Dockerizalo
+description:
+  Dockerizalo is a lightweight, self-hosted deployment platform for homelabbers.
+  Point it at a Git repository and it clones, builds, and runs the app as a
+  container on your existing Docker host, while managing secrets, volumes,
+  ports, and build/runtime logs from a web dashboard. It has no built-in reverse
+  proxy for deployed apps, so pair it with your own domain routing on the
+  containers it creates.
+instructions: |
+  Open the app URL to reach the dashboard and create your first account.
+  The API service is given direct access to the host's Docker socket so it
+  can build and run containers on your behalf, so treat this deployment
+  with the same care as direct server access and keep it behind
+  authentication you trust.
+changeLog:
+  - date: 2026-07-13
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/undernightcore/dockerizalo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - proxyImage
+    - apiImage
+    - uiImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dockerizalo
+    proxyImage:
+      type: string
+      title: Proxy Image
+      description: Only a "latest" tag is published upstream for this image.
+      default: ghcr.io/undernightcore/dockerizalo-proxy:latest@sha256:6ae21c7b6f56e838626fbd35ef2945152c411f24e6494f69e2a1c097e26c2a6a
+    apiImage:
+      type: string
+      title: API Image
+      default: ghcr.io/undernightcore/dockerizalo:1.6.3
+    uiImage:
+      type: string
+      title: UI Image
+      default: ghcr.io/undernightcore/dockerizalo-ui:1.6.3
+benefits:
+  - title: Git-to-Container in One Step
+    description:
+      Point Dockerizalo at a Git repository and it clones, builds, and runs it
+      as a container, without you writing a Dockerfile or deploy script.
+  - title: Uses Your Existing Docker Host
+    description:
+      Apps are built and run directly on the same Docker daemon Dockerizalo
+      itself runs on, so there is no separate cluster or orchestrator to
+      operate.
+  - title: Centralized Logs and Secrets
+    description:
+      Build logs, runtime logs, environment variables, and port mappings for
+      every deployed app are managed from a single dashboard.
+features:
+  - title: Git-Based Deployments
+    description:
+      Deploy straight from a Git repository URL and redeploy by pushing new
+      commits.
+  - title: Volume and Port Management
+    description:
+      Configure persistent volumes and published ports for each deployed app
+      directly from the dashboard.
+  - title: Build and Runtime Logs
+    description:
+      Stream build output and container logs in real time to debug a deployment
+      without shelling into the host.
+tags:
+  - Self-Hosted
+  - PaaS
+  - Docker
+  - DevOps
+  - Homelab
