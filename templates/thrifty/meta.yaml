@@ -2,15 +2,14 @@ name: Thrifty
 description:
   Thrifty is a simple self-hosted budgeting and expense tracker for households.
   Track spending across multiple users without accounts or passwords — the app
-  itself has no login system of any kind, so this template protects the UI with
-  HTTP Basic Auth instead.
+  itself has no login system of any kind, so this template puts a Caddy proxy in
+  front of the UI and API and protects it with HTTP Basic Auth instead.
 instructions:
-  Open the UI's app URL and sign in with the HTTP Basic Auth prompt using
-  username admin and the auto-generated password shown as this service's first
-  basic auth entry in Easypanel. The API's own domain has no login prompt of its
-  own (the UI's JavaScript can't send Basic Auth credentials on its own to a
-  second domain), so don't share that URL; only the UI's URL is meant to be
-  visited directly.
+  Open the app URL and sign in with the HTTP Basic Auth prompt using username
+  admin and the auto-generated password shown as the proxy service's basic auth
+  entry in Easypanel. A Caddy proxy sits in front of the UI and API and is the
+  only service with a public domain, so the API is never reachable without those
+  credentials.
 changeLog:
   - date: 2026-07-21
     description: first release
@@ -32,14 +31,6 @@ schema:
       type: string
       title: App Service Name
       default: thrifty
-    apiDomain:
-      type: string
-      title: API Domain
-      description:
-        A second domain pointed at this project, without https:// or a trailing
-        slash (e.g. api.yourdomain.com). Add it under this project's domains in
-        Easypanel first — the UI calls the API directly on this domain from the
-        browser. If not provided, it will be automatically generated.
     uiServiceImage:
       type: string
       title: UI Service Image
