@@ -149,7 +149,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       source: {
         type: "image",
-        image: "caddy:2.8-alpine",
+        image: "caddy:2.8.4-alpine",
       },
       domains: [
         {
