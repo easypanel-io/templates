@@ -1,0 +1,76 @@
+name: Instatic
+description:
+  Instatic is a self-hosted CMS with an integrated visual canvas editor. Design
+  pages, reusable components, and content models in one Bun server backed by
+  SQLite, then publish plain semantic HTML and compact CSS with no builder
+  runtime shipped to visitors.
+instructions:
+  Open the app URL and the first visit walks you through creating your site and
+  owner account — there is no separate signup page, so do this before sharing
+  the URL with anyone else. Everything (database, uploads, and published output)
+  is stored on the persistent volume, so back it up if the site matters.
+changeLog:
+  - date: 2026-07-20
+    description: first release
+links:
+  - label: Website
+    url: https://instatic.com
+  - label: GitHub
+    url: https://github.com/corebunch/instatic
+  - label: Documentation
+    url: https://github.com/corebunch/instatic/tree/main/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: instatic
+    appServiceImage:
+      type: string
+      title: App Service Image
+      description:
+        The published image only targets linux/amd64. On an arm64 host you will
+        need to build the image from source instead.
+      default: ghcr.io/corebunch/instatic:0.0.11
+benefits:
+  - title: One Server, No Stack to Assemble
+    description:
+      The editor, content engine, media, auth, forms, and publisher all run from
+      a single Bun server, with no separate CMS, host, or CDN to wire together.
+  - title: Clean Published Output
+    description:
+      Published pages are plain semantic HTML and compact CSS with no editor
+      runtime, builder attributes, or hydration step left behind.
+  - title: No External Database Required
+    description:
+      Runs on SQLite by default, so there is nothing extra to provision or
+      manage for most sites.
+features:
+  - title: Canvas Visual Editor
+    description:
+      Design pages visually with breakpoint editing and a built-in design token
+      system for type, spacing, and color.
+  - title: Reusable Components
+    description:
+      Build typed components with parameters and slots that stay consistent
+      across every page that uses them.
+  - title: Native Forms and Media
+    description:
+      Collect form submissions straight into your own CMS data tables and manage
+      uploads in a dedicated media workspace.
+  - title: Sandboxed Plugin System
+    description:
+      Extend the CMS with permissioned plugins that can add admin pages, routes,
+      and frontend assets.
+tags:
+  - CMS
+  - Website Builder
+  - Self-Hosted
+  - No-Code
