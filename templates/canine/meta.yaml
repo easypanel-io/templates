@@ -36,7 +36,7 @@ schema:
       type: string
       title: App Service Image
       description: Only a "latest" tag is published upstream for this image.
-      default: ghcr.io/caninehq/canine:latest
+      default: ghcr.io/caninehq/canine:latest@sha256:a058034ca006d5899e95f2f07adbbf2aa3c4fa16475cf4e7e895d79d9355d9c3
 benefits:
   - title: Heroku-Style Workflow, Self-Hosted
     description:
