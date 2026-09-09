@@ -11,10 +11,10 @@ description:
   processing via yt-dlp and FFmpeg.
 instructions:
   After deployment, open the web UI and log in with the default credentials —
-  username "admin" and password "trailarr". Change the password immediately after
-  the first login. Then navigate to Settings and add your Radarr and/or Sonarr
-  connection details. Map the media paths so Trailarr can locate and write trailer
-  files next to your media.
+  username "admin" and password "trailarr". Change the password immediately
+  after the first login. Then navigate to Settings and add your Radarr and/or
+  Sonarr connection details. Map the media paths so Trailarr can locate and
+  write trailer files next to your media.
 changeLog:
   - date: 2026-06-29
     description: first release
