@@ -1,0 +1,86 @@
+name: Pingvin Share X
+description:
+  Pingvin Share X is a community-maintained fork of Pingvin Share, a secure and
+  easy-to-use self-hosted file sharing platform. It lets you share files with a
+  single link, set expiration dates, password protection, and download limits,
+  without ever giving your data to a third party. The platform supports
+  registration, reverse shares, S3-compatible storage, LDAP and OAuth/OIDC
+  authentication, SMTP email notifications, ClamAV virus scanning, and a fully
+  configurable, themeable web interface.
+instructions:
+  After deploying, open the application domain to create the first admin
+  account. To enable email sharing, password resets, and notifications,
+  configure SMTP under Admin → Email. If you place this service behind a reverse
+  proxy with TLS termination, set TRUST_PROXY to true and enable secure cookies
+  in the appearance/general settings.
+changeLog:
+  - date: 2026-07-06
+    description: First Release (v1.21.0)
+links:
+  - label: Docs
+    url: https://smp46.github.io/pingvin-share-x/
+  - label: GitHub
+    url: https://github.com/smp46/pingvin-share-x
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: pingvin-share-x
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: smp46/pingvin-share-x:v1.21.0
+    trustProxy:
+      type: boolean
+      title: Trust Proxy
+      description:
+        Enable this if Pingvin Share X is placed behind a reverse proxy
+        terminating TLS (recommended when using a domain through Easypanel).
+      default: true
+benefits:
+  - title: Self-Hosted & Private
+    description:
+      Host Pingvin Share X on your own infrastructure. Your files never pass
+      through a third-party service like WeTransfer, keeping your data fully
+      under your control.
+  - title: No Annoying Size Limits
+    description:
+      Upload and share files as large as you want — the only limit is your own
+      hard drive, not an arbitrary cap imposed by a provider.
+  - title: Flexible Sharing Controls
+    description:
+      Protect shares with passwords, set expiration dates and download limits,
+      create reverse share links, and notify recipients by email.
+  - title: Enterprise-Ready Authentication
+    description:
+      Sign in with local accounts, LDAP, or OAuth/OIDC providers like GitHub,
+      Google, Microsoft, and Discord, with optional two-factor authentication.
+features:
+  - title: S3 & Local Storage
+    description:
+      Store shared files on the local filesystem or in an S3-compatible bucket,
+      whichever fits your infrastructure best.
+  - title: Customizable Interface
+    description:
+      Tailor the look and feel with theme colors, border radius, color scheme,
+      and custom CSS injected directly into the frontend.
+  - title: ClamAV Integration
+    description:
+      Scan uploaded shares for malicious files using an optional ClamAV
+      integration to keep your platform safe.
+  - title: Email Notifications
+    description:
+      Configure SMTP to send share links, reverse-share notifications, password
+      resets, invites, and download notifications to users.
+tags:
+  - File Management
+  - Privacy
+  - Security
