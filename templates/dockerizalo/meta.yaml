@@ -37,7 +37,7 @@ schema:
       type: string
       title: Proxy Image
       description: Only a "latest" tag is published upstream for this image.
-      default: ghcr.io/undernightcore/dockerizalo-proxy:latest
+      default: ghcr.io/undernightcore/dockerizalo-proxy:latest@sha256:6ae21c7b6f56e838626fbd35ef2945152c411f24e6494f69e2a1c097e26c2a6a
     apiImage:
       type: string
       title: API Image
