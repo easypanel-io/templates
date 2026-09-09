@@ -76,6 +76,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      image: "postgres:16.15-alpine",
     },
   });
 
