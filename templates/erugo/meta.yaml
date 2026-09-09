@@ -1,0 +1,74 @@
+name: Erugo
+description:
+  Erugo is a self-hosted, open source alternative to WeTransfer for sharing
+  files and folders. Drag files into the browser to generate a share link with
+  an optional expiry date, download limit, and password, then track who has
+  downloaded what. It stores everything in a single SQLite database by default
+  and generates its own encryption key and JWT secret on first boot, so there is
+  no setup step beyond deploying the container.
+instructions:
+  Open the app URL and complete the interactive setup wizard to create the first
+  admin account. Uploaded files, the SQLite database, and the generated app key
+  are stored in the persistent storage volume, so back it up if you rely on
+  Erugo for anything important.
+changeLog:
+  - date: 2026-07-13
+    description: first release
+links:
+  - label: Website
+    url: https://erugo.io
+  - label: GitHub
+    url: https://github.com/ErugoOSS/Erugo
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: erugo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: wardy784/erugo:0.2.15
+benefits:
+  - title: Zero-Config First Boot
+    description:
+      The app key, JWT secret, and SQLite database are all generated
+      automatically on first start, so there is nothing to configure before
+      sharing your first file.
+  - title: Expiring, Password-Protected Links
+    description:
+      Every share can have a download limit, expiry date, and password set
+      independently, so files stop being accessible exactly when you want.
+  - title: Resumable Uploads
+    description:
+      Large files upload through a built-in tus server, so an interrupted
+      connection can resume instead of restarting from scratch.
+features:
+  - title: Drag-and-Drop Sharing
+    description:
+      Drop one or more files or folders into the browser to instantly generate a
+      shareable link, no CLI required.
+  - title: Download Tracking
+    description:
+      See exactly who downloaded a share and when, from the admin dashboard.
+  - title: Branding Controls
+    description:
+      Replace the logo and background image shown on the public share pages from
+      within the admin settings.
+  - title: Optional MySQL or PostgreSQL
+    description:
+      Ships with SQLite for zero-config deployments, but can be pointed at an
+      external MySQL or PostgreSQL database via environment variables for larger
+      installs.
+tags:
+  - File Sharing
+  - File Transfer
+  - Self-Hosted
+  - Productivity
