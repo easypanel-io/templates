@@ -12,10 +12,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [
-        `JETLOG_PORT=3000`,
-        `SECRET_KEY=${randomString(32)}`,
-      ].join("\n"),
+      env: [`JETLOG_PORT=3000`, `SECRET_KEY=${randomString(32)}`].join("\n"),
       mounts: [
         {
           type: "volume",
