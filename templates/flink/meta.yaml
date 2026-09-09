@@ -1,0 +1,83 @@
+name: Flink
+description:
+  Flink is a free, libre, and open source URL shortener built with ASP.NET Core.
+  It generates QR codes and embeddable link previews for every shortened URL,
+  supports password-protected and time-limited links, and ships with built-in
+  spam protection that checks submissions against AdBlock/phishing blocklists.
+  Short links can be created one at a time through the web UI or in bulk from
+  the terminal with curl, and a Prometheus metrics endpoint is available for
+  tracking click activity. This template runs Flink against a PostgreSQL
+  database for production-grade reliability.
+instructions:
+  Open the app URL and use the "flinkify" form to shorten a link, or POST to
+  /links with a JSON body of uri, creator, and either preferredId or
+  preferredIdLength. Swagger and Scalar API docs are linked in the top
+  navigation bar.
+changeLog:
+  - date: 2026-07-09
+    description: first release
+links:
+  - label: Website
+    url: https://flink.rtrace.io
+  - label: GitLab
+    url: https://gitlab.com/rtraceio/web/flink
+  - label: Documentation
+    url: https://gitlab.com/rtraceio/web/flink/-/blob/main/docs/install/install.md
+  - label: Container Registry
+    url: https://quay.io/repository/rtraceio/flink
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: flink
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: quay.io/rtraceio/flink:2.6.0-rc03
+benefits:
+  - title: Instant QR Codes
+    description:
+      Every shortened link automatically gets a scannable QR code, cached in
+      memory for fast repeat requests.
+  - title: Built-In Spam Protection
+    description:
+      Submitted URLs are checked against AdBlock-format phishing and spam
+      blocklists before they are shortened, out of the box.
+  - title: Production-Ready Database
+    description:
+      Runs against PostgreSQL instead of the SQLite default, so multiple Flink
+      replicas can safely share the same database.
+features:
+  - title: Embeddable Link Previews
+    description:
+      Shortened links generate iframe-embeddable previews with page metadata,
+      similar to how social platforms unfurl links.
+  - title: Password and Time-Limited Links
+    description:
+      Lock a short link behind a password or restrict it to a specific
+      activation and expiration window.
+  - title: CLI-Friendly Bulk Creation
+    description:
+      Create short links from the terminal with curl or wget, with a custom ID
+      or a randomly generated one of a chosen length.
+  - title: Prometheus Metrics
+    description:
+      A built-in /metrics endpoint (optionally behind HTTP basic auth) exposes
+      click and usage statistics for scraping.
+  - title: Event Webhooks
+    description:
+      Fire notifications to ntfy, Discord, Slack, Mattermost, or Rocket.Chat
+      whenever a link is created or deleted.
+tags:
+  - URL Shortener
+  - QR Code
+  - Utilities
+  - Self-Hosted
