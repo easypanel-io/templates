@@ -1,0 +1,78 @@
+name: Chiyogami
+description:
+  Chiyogami is a sleek, modern, self-hosted pastebin written in Go. It supports
+  client-side encryption via the WebCrypto API so passwords never reach the
+  server, configurable paste expiry, public and private paste visibility, syntax
+  highlighting via HighlightJS, Markdown rendering, user accounts and
+  authentication, a REST API for scripted access, QR code sharing, built-in rate
+  limiting, and a search and list view of public pastes. It uses SQLite for
+  storage, making it lightweight and easy to deploy with a single container and
+  one volume.
+instructions:
+  After deployment open the web UI at your configured domain. Anonymous paste
+  creation works immediately without an account. To create an account click the
+  Sign Up button and register — there are no default admin credentials.
+changeLog:
+  - date: 2026-07-01
+    description: first release
+links:
+  - label: Website
+    url: https://chiyogami.myaddr.dev
+  - label: GitHub
+    url: https://github.com/rhee876527/chiyogami
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: chiyogami
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/rhee876527/chiyogami:1.5.5
+benefits:
+  - title: Client-Side Encryption
+    description:
+      Paste content is encrypted in the browser with a user-supplied password
+      before it is sent to the server. The server never sees the plaintext or
+      the key.
+  - title: Lightweight and Self-Contained
+    description:
+      A single Go binary backed by SQLite — no PostgreSQL, no Redis, no external
+      services. One container and one volume is all you need.
+  - title: Full User Account System
+    description:
+      Register accounts to manage your own pastes, set expiry, control
+      visibility, and browse your paste history from the web UI.
+features:
+  - title: Syntax Highlighting
+    description:
+      Paste code in any language and get automatic syntax highlighting powered
+      by HighlightJS with language auto-detection.
+  - title: Markdown Rendering
+    description:
+      Write pastes in Markdown and view them rendered directly in the browser
+      without a separate preview step.
+  - title: REST API
+    description:
+      Create, read, and delete pastes programmatically via a JSON API suitable
+      for scripts, CLI tools, and CI pipelines.
+  - title: QR Code Sharing
+    description:
+      Every paste page includes a QR code for quick sharing with phones or
+      tablets without copying the URL.
+  - title: Configurable Rate Limiting
+    description:
+      Built-in rate limiting on create, register, login, and delete operations
+      protects public instances from abuse.
+tags:
+  - Pastebin
+  - Productivity
+  - Self-Hosted
