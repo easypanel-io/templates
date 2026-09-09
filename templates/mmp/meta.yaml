@@ -17,8 +17,8 @@ instructions: Open the UI at your domain after deployment. On first load you
   for PrusaSlicer / Orca Slicer configuration.
 
   To import projects from Thingiverse, add your Thingiverse API token to the
-  agentThingiverseToken field, or edit /data/config.toml inside the agent
-  container after first run.
+  thingiverseToken field, or edit /data/config.toml inside the agent container
+  after first run.
 changeLog:
   - date: "2026-06-26"
     description: First Release
