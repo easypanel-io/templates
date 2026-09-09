@@ -24,7 +24,7 @@ export function generate(input: Input): Output {
         `DEFAULT_HOST_URL=https://$(PRIMARY_DOMAIN)`,
         `FORCE_SSL=true`,
         `ASSUME_SSL_REVERSE_PROXY=true`,
-        `POSTGRES_HOST=${input.appServiceName}-db`,
+        `POSTGRES_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `POSTGRES_PORT=5432`,
         `POSTGRES_DB_USER=postgres`,
         `POSTGRES_DB_PASSWORD=${databasePassword}`,
