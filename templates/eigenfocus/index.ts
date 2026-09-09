@@ -10,8 +10,6 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const authPassword = randomString(20);
-  const dbServiceName = `${input.appServiceName}-db`;
-
   services.push({
     type: "app",
     data: {
