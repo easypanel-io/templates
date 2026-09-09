@@ -1,0 +1,74 @@
+name: MyDrive
+description:
+  MyDrive is a self-hosted, open source cloud file storage server similar to
+  Google Drive. Upload, organize, and browse files and folders from the browser,
+  preview images and videos inline, and share files or folders with others
+  through generated links. Files can optionally be encrypted at rest with a key
+  only you hold. This template stores uploaded files on a persistent volume and
+  uses MongoDB for metadata, matching the official Docker Compose setup.
+instructions:
+  Open the app URL and register the first account. Files are encrypted with the
+  randomly generated KEY set on the app service — back up this value from the
+  service's environment variables, since losing it makes all stored files
+  permanently unrecoverable.
+changeLog:
+  - date: 2026-07-10
+    description: first release
+links:
+  - label: Website
+    url: https://mydrive-storage.com
+  - label: GitHub
+    url: https://github.com/subnub/myDrive
+  - label: Docker Hub
+    url: https://hub.docker.com/r/kylehoell/mydrive
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mydrive
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kylehoell/mydrive:sha-bae5dbb
+benefits:
+  - title: Encrypted File Storage
+    description:
+      Files can be encrypted at rest with a private key that only you hold, so
+      stored data isn't readable without it.
+  - title: Google Drive-Like Interface
+    description:
+      A familiar browser UI for uploading, organizing into folders, and
+      previewing files, with no learning curve.
+  - title: Self-Hosted Sharing
+    description:
+      Generate share links for files and folders without relying on a
+      third-party cloud storage provider.
+features:
+  - title: Media Previews
+    description:
+      Preview images and videos directly in the browser, with optional thumbnail
+      generation for quick browsing.
+  - title: Drag-and-Drop Upload
+    description:
+      Upload files and entire nested folder structures by dragging them straight
+      into the browser.
+  - title: File and Folder Sharing
+    description:
+      Share individual files or whole folders with others via a generated link,
+      without giving them account access.
+  - title: Search
+    description:
+      Quickly locate files and folders across your storage with built-in search.
+tags:
+  - File Storage
+  - Cloud Storage
+  - Self-Hosted
+  - Privacy
