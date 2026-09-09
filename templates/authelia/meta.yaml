@@ -1,14 +1,14 @@
 name: Authelia
 description:
   Authelia is an open-source authentication and authorization server providing
-  two-factor authentication and single sign-on (SSO) for your applications via
-  a web portal. It acts as a companion to reverse proxies such as Traefik,
-  Nginx, or Caddy to control whether requests should pass through. Authelia is
-  also an OpenID Connect 1.0 certified identity provider, enabling modern
-  authentication flows for applications that support it. Key features include
-  multi-factor authentication via TOTP, WebAuthn, or Duo; fine-grained access
-  control rules; session management with configurable timeouts; LDAP and
-  file-based user backends; and SQLite, PostgreSQL, or MariaDB storage.
+  two-factor authentication and single sign-on (SSO) for your applications via a
+  web portal. It acts as a companion to reverse proxies such as Traefik, Nginx,
+  or Caddy to control whether requests should pass through. Authelia is also an
+  OpenID Connect 1.0 certified identity provider, enabling modern authentication
+  flows for applications that support it. Key features include multi-factor
+  authentication via TOTP, WebAuthn, or Duo; fine-grained access control rules;
+  session management with configurable timeouts; LDAP and file-based user
+  backends; and SQLite, PostgreSQL, or MariaDB storage.
 instructions:
   After deployment, open the Authelia URL you configured. Log in with username
   "admin" and the password you set during setup. On first login you will be
