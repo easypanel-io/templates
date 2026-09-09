@@ -59,7 +59,7 @@ export function generate(input: Input): Output {
       serviceName: caddyServiceName,
       source: {
         type: "image",
-        image: "caddy:2.10-alpine",
+        image: "caddy:2.10.2-alpine",
       },
       domains: [
         {
