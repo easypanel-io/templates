@@ -1,0 +1,155 @@
+name: Kitsu
+description:
+  Kitsu is a production tracker for animation and VFX studios, built by CGWire.
+  Organize projects, shots, and assets, track task progress across your
+  pipeline, and manage preview files, all from one collaborative dashboard. This
+  template deploys Kitsu's real production architecture — the Zou API, its event
+  stream, and the frontend behind an Nginx gateway, backed by Postgres and Redis
+  — built from CGWire's own reference Dockerfile rather than the all-in-one
+  image CGWire's own docs say is for testing only.
+instructions:
+  Open the app URL and sign in with the admin email you set and the
+  auto-generated password shown as ZOU_ADMIN_PASSWORD in the "-api" service's
+  Environment tab. If you left Public Domain blank, set it and redeploy before
+  inviting anyone else — until then, passkey/WebAuthn login won't work and
+  outgoing emails (invites, notifications) will link to a placeholder address
+  instead of your real one; normal password login and the app itself work fine
+  either way. Deploys build the Zou backend from source on first run, so the
+  initial rollout takes noticeably longer than a plain image pull — subsequent
+  redeploys are faster. Preview files and the database both live on persistent
+  volumes; back up the database with `zou dump-database` and keep a copy of the
+  previews volume if the production history matters to you.
+changeLog:
+  - date: 2026-07-20
+    description: first release
+links:
+  - label: Website
+    url: https://cg-wire.com
+  - label: GitHub
+    url: https://github.com/cgwire/zou
+  - label: Documentation
+    url: https://zou.cg-wire.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - adminEmail
+    - studioDomain
+    - enableJobQueue
+    - zouVersion
+    - kitsuVersion
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kitsu
+    publicDomain:
+      type: string
+      title: Public Domain
+      description:
+        Optional, without https:// or a trailing slash (e.g. kitsu.example.com).
+        Leave blank to deploy immediately on the domain Easypanel assigns
+        automatically — but until you set this (and redeploy), passkey/WebAuthn
+        login won't work and outgoing emails will link to a placeholder address
+        instead of your real one. Normal password login and the app itself are
+        unaffected either way.
+    adminEmail:
+      type: string
+      title: Admin Email
+      description: Used to sign in as the first admin user after deploying.
+    studioDomain:
+      type: string
+      title: Studio Type
+      description:
+        Selects the starter reference data seeded on first boot (task statuses,
+        task types, etc.).
+      oneOf:
+        - enum:
+            - 3d
+          title: 3D Animation
+        - enum:
+            - 2d
+          title: 2D Animation
+        - enum:
+            - vfx
+          title: VFX
+        - enum:
+            - games
+          title: Video Games
+      default: 3d
+    enableJobQueue:
+      type: boolean
+      title: Enable Background Job Worker
+      description:
+        Deploys a worker for background jobs like playlist building. Off by
+        default, matching Zou's own default.
+      default: false
+    zouVersion:
+      type: string
+      title: Zou (Backend) Version
+      default: "1.0.57"
+    kitsuVersion:
+      type: string
+      title: Kitsu (Frontend) Version
+      default: "1.0.53"
+    smtpHost:
+      type: string
+      title: SMTP Host
+      description:
+        Optional. Required for invite emails and notifications; leave blank to
+        disable outgoing mail entirely.
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      description: Optional.
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      description: Optional.
+    smtpSender:
+      type: string
+      title: SMTP From Address
+      description: Optional. Defaults to the admin email if left blank.
+benefits:
+  - title: Built From CGWire's Own Reference, Not a Test-Only Image
+    description:
+      The Zou API, event stream, and frontend are built as separate services
+      wired to real Postgres and Redis, mirroring CGWire's own production
+      systemd setup instead of their single-container trial image.
+  - title: Purpose-Built for Animation and VFX Pipelines
+    description:
+      Task statuses, shot/asset hierarchies, and preview review tools are
+      modeled around how animation and VFX studios actually track production.
+  - title: Realtime Collaboration
+    description:
+      Comments, notifications, and status changes propagate live over the event
+      stream instead of requiring a page refresh.
+features:
+  - title: Shot and Asset Tracking
+    description:
+      Break projects down into sequences, shots, and assets, each with their own
+      task pipeline and status history.
+  - title: Preview Review Tools
+    description:
+      Upload and review image, video, and PDF previews directly on each task,
+      with version history kept alongside them.
+  - title: Team and Studio Dashboards
+    description:
+      Track workload and progress across the whole studio, not just a single
+      project, from dashboards built for production managers.
+  - title: Optional Background Job Worker
+    description:
+      Turn on a dedicated worker for heavier background jobs like playlist
+      builds without blocking the main API.
+tags:
+  - Production Tracking
+  - Animation
+  - VFX
+  - Self-Hosted
