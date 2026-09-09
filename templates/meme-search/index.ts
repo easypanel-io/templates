@@ -43,7 +43,7 @@ production:
   const sharedEnv = [
     `DATABASE_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
     `DATABASE_PORT=5432`,
-    `DATABASE_NAME=$(PROEJCT_NAME)`,
+    `DATABASE_NAME=$(PROJECT_NAME)`,
     `DATABASE_USER=postgres`,
     `DATABASE_PASSWORD=${databasePassword}`,
     `IMAGE_DESCRIPTION_PROVIDER=${input.imageDescriptionProvider}`,
