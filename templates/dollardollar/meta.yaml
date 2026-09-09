@@ -1,0 +1,79 @@
+name: DollarDollar
+description:
+  DollarDollar (FinPal) is a self-hosted, open-source personal finance
+  management platform. It provides multi-currency expense tracking, flexible
+  bill-splitting, budget management with notifications, investment portfolio
+  tracking, SimpleFin account synchronisation, and OIDC authentication — all
+  with complete data privacy because your financial data never leaves your own
+  server.
+instructions:
+  After deployment, open your service URL, register your account, and start
+  adding expenses and categories. To disable public sign-ups once set up, set
+  DISABLE_SIGNUPS=True and redeploy.
+changeLog:
+  - date: 2026-06-24
+    description: Initial release (v4.4)
+links:
+  - label: GitHub
+    url: https://github.com/harung1993/dollardollar
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dollardollar
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: harung43/dollardollar:v4.4
+benefits:
+  - title: Complete Financial Privacy
+    description:
+      All your financial data stays on your own server — no third-party access,
+      no subscriptions, no tracking.
+  - title: Multi-Currency Expense Tracking
+    description:
+      Track expenses across multiple currencies with automatic conversion and
+      support for recurring transactions.
+  - title: Collaborative Bill Splitting
+    description:
+      Split bills with friends using equal, custom-amount, or percentage methods
+      and track outstanding balances easily.
+features:
+  - title: Expense Management
+    description:
+      Log, categorise, and search expenses with custom category hierarchies and
+      auto-categorisation rules.
+  - title: Budget Management
+    description:
+      Set budgets per category, receive notifications when approaching limits,
+      and visualise spending trends.
+  - title: Investment Portfolio Tracking
+    description:
+      Track stock and crypto portfolios with auto-updated pricing via Yahoo
+      Finance integration.
+  - title: SimpleFin Integration
+    description:
+      Sync bank account balances and transactions automatically via the
+      SimpleFin bridge.
+  - title: OIDC Authentication
+    description:
+      Integrate with any OIDC-compatible identity provider (Authelia, Keycloak,
+      Authentik) for single sign-on.
+  - title: Bill Splitting
+    description:
+      Collaborative expense splitting with multiple split methods, settlement
+      tracking, and group expense history.
+tags:
+  - Finance
+  - Expense Tracking
+  - Budgeting
+  - Self-hosted
+  - Personal Finance
