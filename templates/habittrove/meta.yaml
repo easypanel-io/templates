@@ -1,0 +1,69 @@
+name: HabitTrove
+description:
+  HabitTrove is a self-hosted habit and chore tracker that pays out virtual
+  coins for completed habits, which can then be redeemed against a wishlist you
+  define. It supports multiple household members with their own PINs, tracks
+  streaks and completion history, and stores everything in flat JSON files
+  rather than a database, so there is nothing extra to provision.
+instructions:
+  Open the app URL and pick the "admin" user from the first-run user picker (no
+  password is required until you set one). From Settings you can add more
+  household members, set up habits and the coin wishlist, and secure each
+  profile with its own password.
+changeLog:
+  - date: 2026-07-13
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/dohsimpson/HabitTrove
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: habittrove
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dohsimpson/habittrove:v0.2.31
+benefits:
+  - title: Coin-Based Rewards
+    description:
+      Completing a habit pays out coins that can be redeemed against a wishlist,
+      turning habit-building into a small game instead of a bare checklist.
+  - title: No Database to Manage
+    description:
+      All data is stored in flat JSON files inside a single data volume, so
+      there is no separate database service to provision or back up.
+  - title: Built for Households
+    description:
+      Multiple family members can each have their own PIN-protected profile,
+      habits, and wishlist under one shared instance.
+features:
+  - title: Streaks and History
+    description:
+      Every habit tracks its completion history and current streak, so progress
+      is visible at a glance.
+  - title: Wishlist Redemption
+    description:
+      Define rewards with a coin cost and redeem earned coins against them
+      directly from the app.
+  - title: Automatic Backups
+    description:
+      A daily backup of the JSON data store is written to a separate backups
+      volume automatically.
+  - title: Multi-Language UI
+    description:
+      The interface is available in multiple languages, selectable per user.
+tags:
+  - Habit Tracker
+  - Productivity
+  - Self-Hosted
+  - Household
