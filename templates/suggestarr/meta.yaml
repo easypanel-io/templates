@@ -1,0 +1,88 @@
+name: SuggestArr
+description:
+  SuggestArr is a self-hosted media automation tool that monitors recently
+  watched content from Jellyfin, Plex, or Emby, discovers similar movies and TV
+  shows via the TMDb API, and automatically submits download requests to
+  Jellyseerr or Overseerr. It runs on a configurable cron schedule, supports
+  AI-powered recommendations through any OpenAI-compatible LLM (Ollama,
+  OpenRouter, etc.), and provides a web UI for managing services, schedules,
+  users, and real-time logs. All data is persisted to a single SQLite database
+  stored in the config volume — no external database is required.
+instructions:
+  After deployment open the app URL. A setup wizard will guide you through
+  creating an admin account, entering your TMDb API key, connecting your media
+  server (Jellyfin, Plex, or Emby), and configuring your Jellyseerr or Overseerr
+  instance. Optionally link Trakt accounts per-user from the Profile page after
+  setup.
+changeLog:
+  - date: 2026-07-01
+    description: first release (v2.9.1)
+links:
+  - label: Website
+    url: https://giuseppe99barchetta.github.io/SuggestArr/
+  - label: GitHub
+    url: https://github.com/giuseppe99barchetta/SuggestArr
+  - label: Documentation
+    url: https://giuseppe99barchetta.github.io/SuggestArr/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: suggestarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ciuse99/suggestarr:v2.9.1
+benefits:
+  - title: Automatic Media Suggestions
+    description:
+      Monitors what you and your users recently watched and automatically
+      requests similar content — no manual searching or queue management needed.
+  - title: Multi-Server Support
+    description:
+      Works with Jellyfin, Plex, and Emby media servers and submits requests to
+      either Jellyseerr or Overseerr, fitting into your existing *arr stack
+      without changes.
+  - title: AI-Powered Recommendations
+    description:
+      Optionally routes suggestion queries through any OpenAI-compatible LLM
+      (Ollama, OpenRouter, OpenAI) for higher-quality, context-aware
+      recommendations beyond TMDb similarity.
+features:
+  - title: Cron-Scheduled Automation
+    description:
+      Runs discovery and request jobs on a configurable schedule so new
+      suggestions are queued regularly without manual triggers.
+  - title: Per-User Tracking
+    description:
+      Tracks watch history per user and tailors suggestions individually,
+      allowing fine-grained control over who gets automated requests.
+  - title: Trakt Integration
+    description:
+      Links Trakt accounts per-user via OAuth to enrich watch history with
+      ratings and list data for better recommendations.
+  - title: Real-Time Logs and Web UI
+    description:
+      Built-in web interface shows live job logs, request history, and service
+      connection status so you can monitor activity without SSHing into the
+      container.
+  - title: TMDb-Powered Discovery
+    description:
+      Uses the TMDb API to find similar titles, fetch metadata, and check
+      availability before submitting requests to your Seer instance.
+tags:
+  - Media
+  - Automation
+  - Recommendation
+  - Jellyfin
+  - Plex
+  - Servarr
+  - Self-Hosted
