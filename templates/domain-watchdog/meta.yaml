@@ -1,0 +1,68 @@
+name: Domain Watchdog
+description:
+  Domain Watchdog tracks domain name registrations and alerts you before they
+  expire. It pulls RDAP/WHOIS data on a schedule, visualizes ownership and
+  registrar relationships between domains, and can notify you by email or
+  webhook as an expiration date approaches.
+instructions:
+  Open the app URL and register the first account — this is the only way to
+  create a user, since there is no separate admin bootstrap command. Once you're
+  signed in, go to the Environment tab in Easypanel and set REGISTRATION_ENABLED
+  to false, then redeploy, so the sign-up page can't be used by anyone else who
+  finds this URL.
+changeLog:
+  - date: 2026-07-17
+    description: first release
+links:
+  - label: Website
+    url: https://domainwatchdog.eu
+  - label: GitHub
+    url: https://github.com/maelgangloff/domain-watchdog
+  - label: Documentation
+    url: https://domainwatchdog.eu/en/features/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: domain-watchdog
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: maelgangloff/domain-watchdog:v1.4.5
+benefits:
+  - title: Expiration Alerts Before It's Too Late
+    description:
+      Get notified as a domain's expiration date approaches, instead of finding
+      out when it's already gone.
+  - title: RDAP-Based, No API Keys
+    description:
+      Domain data comes from public RDAP/WHOIS servers, so there's no
+      third-party API key to manage or pay for.
+  - title: Ownership Relationship Graphs
+    description:
+      Visualize how tracked domains relate through shared registrants, name
+      servers, or registrars.
+features:
+  - title: Scheduled RDAP Lookups
+    description:
+      A background worker refreshes domain data on a schedule so tracked
+      information stays current without manual checks.
+  - title: Bulk Domain Registration
+    description: Add many domains to track at once instead of one at a time.
+  - title: Email and Webhook Notifications
+    description:
+      Configure SMTP or a webhook to receive expiration alerts wherever you
+      already get notifications.
+tags:
+  - Domain Monitoring
+  - WHOIS
+  - Self-Hosted
+  - Security
