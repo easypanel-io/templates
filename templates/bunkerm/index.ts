@@ -1,4 +1,9 @@
-import { Output, Services, randomPassword, randomString } from "~templates-utils";
+import {
+  Output,
+  Services,
+  randomPassword,
+  randomString,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -36,7 +41,11 @@ export function generate(input: Input): Output {
       ports: [{ published: 1900, target: 1900, protocol: "tcp" }],
       mounts: [
         { type: "volume", name: "next-data", mountPath: "/nextjs/data" },
-        { type: "volume", name: "mosquitto-data", mountPath: "/var/lib/mosquitto" },
+        {
+          type: "volume",
+          name: "mosquitto-data",
+          mountPath: "/var/lib/mosquitto",
+        },
         { type: "volume", name: "history-data", mountPath: "/var/lib/history" },
       ],
       domains: [{ host: "$(EASYPANEL_DOMAIN)", port: 2000 }],
