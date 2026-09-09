@@ -24,7 +24,7 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "data",
-          mountPath: "/app",
+          mountPath: "/app/config",
         },
         {
           type: "bind",
