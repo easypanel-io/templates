@@ -88,8 +88,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command:
-          "/cmd migrate up --config /convoy.json && /cmd server --config /convoy.json",
+        command: `/cmd migrate up --config /convoy.json && /cmd bootstrap --email ${input.adminEmail} --config /convoy.json && /cmd server --config /convoy.json`,
       },
       mounts: [
         convoyConfigMount,

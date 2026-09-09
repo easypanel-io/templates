@@ -7,11 +7,11 @@ description:
   behind a Caddy gateway, backed by Postgres and Redis — matching the project's
   own reference docker-compose rather than a single container.
 instructions:
-  Sign in with the default seeded account — email superuser@default.com,
-  password default — and change the password immediately, since these
-  credentials are publicly documented and self-signup is disabled by default.
-  Once signed in, create an organization and project to get your ingestion and
-  API endpoints.
+  On first boot, an admin account is created with the email you configured and a
+  randomly generated password printed to the web service's deploy logs. Open
+  those logs, copy the password, and sign in. Self-signup is disabled by
+  default. Once signed in, create an organization and project to get your
+  ingestion and API endpoints.
 changeLog:
   - date: 2026-07-21
     description: first release
@@ -30,6 +30,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - adminEmail
   properties:
     appServiceName:
       type: string
@@ -39,6 +40,13 @@ schema:
       type: string
       title: App Service Image
       default: getconvoy/convoy:v26.6.6
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description:
+        Email for the first admin account. Its password is generated on first
+        boot — find it in the web service's deploy logs.
     publicDomain:
       type: string
       title: Public Domain
