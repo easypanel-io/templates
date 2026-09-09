@@ -13,12 +13,13 @@ instructions: >-
   The Hermes Agent web dashboard is accessible at your assigned domain. Log in
   with the dashboard username and password you configured during deployment. The
   OpenAI-compatible gateway API runs on port 8642 and the dashboard backend runs
-  on port 9119 — both are published for direct access. The OpenRouter key below
-  is enough to get a model working immediately. For everything else — other
-  model providers, messaging platforms like Telegram, Discord, Slack and
-  WhatsApp, and especially setting up strict allowlists so only you (or your
-  team) can message the agent — SSH into the service console and run hermes
-  setup (or hermes gateway setup specifically for the messaging gateways).
+  on port 9119 — both are published for direct access. To get a model working,
+  set up a model provider (OpenRouter, Anthropic, OpenAI, Google, or DeepSeek)
+  from the dashboard or via the CLI. For messaging platforms like Telegram,
+  Discord, Slack and WhatsApp, and especially setting up strict allowlists so
+  only you (or your team) can message the agent — SSH into the service console
+  and run hermes setup (or hermes gateway setup specifically for the messaging
+  gateways).
 changeLog:
   - date: "2026-06-17"
     description: First Release
