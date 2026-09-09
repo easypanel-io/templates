@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
   const eventsServiceName = `${input.appServiceName}-events`;
   const workerServiceName = `${input.appServiceName}-worker`;
 
-  const zouDockerfile = `FROM python:3.11-slim-bookworm
+  const zouDockerfile = `FROM python:3.11.16-slim-bookworm
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \\
       build-essential ffmpeg git libjpeg-dev libpq-dev xmlsec1 \\
@@ -160,7 +160,7 @@ EXPOSE 5000 5001
 }
 `;
 
-  const frontendDockerfile = `FROM nginx:1.27-alpine
+  const frontendDockerfile = `FROM nginx:1.27.5-alpine
 RUN apk add --no-cache curl && \\
     mkdir -p /opt/zou/kitsu && \\
     curl -fsSL -o /tmp/kitsu.tgz https://github.com/cgwire/kitsu/releases/download/v${input.kitsuVersion}/kitsu-${input.kitsuVersion}.tgz && \\
