@@ -53,7 +53,7 @@ schema:
     dbServiceImage:
       type: string
       title: Database Service Image
-      default: discourse/postgres:pg17
+      default: discourse/postgres:pg17@sha256:75d07f64264da8499bae58cfe002d6de28509e9aca6817159984f0d62ef768be
     discourseEmail:
       type: string
       title: Developer Email

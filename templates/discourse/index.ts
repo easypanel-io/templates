@@ -68,7 +68,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-redis`,
       source: {
         type: "image",
-        image: "redis:7-alpine",
+        image: "redis:7.4.11-alpine",
       },
       deploy: {
         command: "redis-server --save 60 1",
