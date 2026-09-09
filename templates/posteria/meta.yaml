@@ -41,7 +41,6 @@ schema:
     authPassword:
       type: string
       title: Admin Password
-      default: password
       description: Leave empty to auto-generate it.
 benefits:
   - title: Centralised Poster Library
