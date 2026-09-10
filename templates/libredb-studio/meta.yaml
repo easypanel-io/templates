@@ -1,0 +1,88 @@
+name: LibreDB Studio
+description:
+  LibreDB Studio is the modern, AI-powered open-source SQL IDE. It lets you
+  connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB,
+  Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and
+  Druid directly from your browser, with an optional AI assistant to help
+  write and explain queries. It ships as a single container, stores its data in
+  a local SQLite file by default, and creates an initial admin and user account
+  on first start.
+instructions: |
+  Once the deployment is running, open the app at its domain.
+
+  Sign in with the admin account. The email is the Admin Email you set
+  (admin@libredb.org by default), and the password is the generated
+  ADMIN_PASSWORD value, which you can find under the service's Environment
+  tab.
+
+  After signing in you can add your database connections and start
+  querying. Application data is kept on the volume mounted at /app/data,
+  so it survives restarts and redeploys.
+changeLog:
+  - date: 2026-09-06
+    description: bump to 0.14.0; adds Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and Druid
+  - date: 2026-06-21
+    description: first release
+links:
+  - label: Website
+    url: https://libredb.org/
+  - label: Github
+    url: https://github.com/libredb/libredb-studio
+  - label: Documentation
+    url: https://github.com/libredb/libredb-studio/tree/main/docs
+contributors:
+  - name: Yusuf Gundogdu
+    url: https://github.com/yusuf-gundogdu
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+    - userEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: libredb-studio
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/libredb/libredb-studio:0.14.0
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@libredb.org
+    userEmail:
+      type: string
+      title: User Email
+      default: user@libredb.org
+benefits:
+  - title: Multi-Database Support
+    description:
+      Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB and Redis
+      from a single, unified browser-based interface.
+  - title: AI-Powered Queries
+    description:
+      An optional AI assistant helps you write, optimize and explain SQL
+      queries, lowering the barrier for complex database work.
+  - title: Simple Self-Hosting
+    description:
+      Runs as a single container with SQLite storage by default, so there is no
+      external database to manage for the IDE itself.
+features:
+  - title: Browser-Based SQL IDE
+    description:
+      Connect to your databases and run queries from anywhere using only a web
+      browser, with no desktop client to install.
+  - title: Built-in Authentication
+    description:
+      Creates an initial admin and user account on first start, with passwords
+      and JWT secret generated automatically.
+  - title: Persistent Storage
+    description:
+      Application data is stored on a persistent volume mounted at /app/data so
+      your configuration survives restarts and redeploys.
+tags:
+  - Databases
+  - Developer Tools
