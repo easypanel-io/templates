@@ -1,5 +1,17 @@
 [
   {
+    "slug": "13ft",
+    "logo": "logo.png",
+    "name": "13ft",
+    "description": "13ft is a self-hosted paywall bypass and \"read it later\" style proxy. Paste an article URL and it fetches the page the way a search engine crawler would see it, falling back to Freedium or an archive.org/archive.today snapshot if the direct fetch is blocked. It's fully stateless with no login of its own, so it is protected with HTTP Basic Auth instead.",
+    "tags": [
+      "Paywall Bypass",
+      "Proxy",
+      "Self-Hosted",
+      "Privacy"
+    ]
+  },
+  {
     "slug": "2fauth",
     "logo": "logo.png",
     "name": "2FAuth",
@@ -489,6 +501,25 @@
     ]
   },
   {
+    "slug": "authelia",
+    "logo": "logo.png",
+    "name": "Authelia",
+    "description": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion to reverse proxies such as Traefik, Nginx, or Caddy to control whether requests should pass through. Authelia is also an OpenID Connect 1.0 certified identity provider, enabling modern authentication flows for applications that support it. Key features include multi-factor authentication via TOTP, WebAuthn, or Duo; fine-grained access control rules; session management with configurable timeouts; LDAP and file-based user backends; and SQLite, PostgreSQL, or MariaDB storage.",
+    "tags": [
+      "Authentication",
+      "Authorization",
+      "2FA",
+      "MFA",
+      "SSO",
+      "Single Sign-On",
+      "OpenID Connect",
+      "OIDC",
+      "Security",
+      "Identity",
+      "Access Control"
+    ]
+  },
+  {
     "slug": "authentik",
     "logo": "logo.png",
     "name": "Authentik",
@@ -827,6 +858,18 @@
     ]
   },
   {
+    "slug": "bricktracker",
+    "logo": "logo.png",
+    "name": "BrickTracker",
+    "description": "BrickTracker is a self-hosted LEGO collection tracker. Add sets by number and it pulls full part, minifigure, and instruction data from Rebrickable, then lets you track missing or damaged parts, organize storage locations, and keep a wishlist of sets you want next. Everything is stored locally in SQLite, so there is no external database to run.",
+    "tags": [
+      "Collection",
+      "LEGO",
+      "Self-Hosted",
+      "Hobby"
+    ]
+  },
+  {
     "slug": "browserless",
     "logo": "logo.png",
     "name": "Browserless",
@@ -875,6 +918,18 @@
       "Self-Hosted",
       "Monitoring",
       "Sentry Compatible"
+    ]
+  },
+  {
+    "slug": "bunkerm",
+    "logo": "logo.png",
+    "name": "BunkerM",
+    "description": "BunkerM is a free, open-source, containerized MQTT management platform that bundles Eclipse Mosquitto with a full-featured web dashboard in a single Docker image. It provides dynamic security management for clients, roles, groups, and ACLs, real-time monitoring of connections and broker logs, a built-in MQTT browser for exploring topics and payloads, message history with replay, local automation through schedulers and watchers, anomaly detection, and optional cloud AI integration via BunkerAI. Everything deploys with a single container — no external database or message broker needed.",
+    "tags": [
+      "MQTT",
+      "IoT",
+      "Monitoring",
+      "Self-Hosted"
     ]
   },
   {
@@ -984,6 +1039,31 @@
     ]
   },
   {
+    "slug": "canine",
+    "logo": "logo.png",
+    "name": "Canine",
+    "description": "Canine is a self-hosted, Heroku-style dashboard for deploying and managing apps on your own Kubernetes cluster (or directly on this Docker host in local mode). Deploy straight from a Git repository using buildpacks or a Dockerfile, manage environment variables and one-off releases, stream build and runtime logs, and connect a real cluster later through the UI once you are ready to run production workloads.",
+    "tags": [
+      "Self-Hosted",
+      "PaaS",
+      "Kubernetes",
+      "Docker",
+      "DevOps"
+    ]
+  },
+  {
+    "slug": "cap-captcha",
+    "logo": "logo.png",
+    "name": "Cap Captcha",
+    "description": "Cap is a lightweight, open-source CAPTCHA alternative to reCAPTCHA, hCaptcha and Cloudflare Turnstile. It uses proof-of-work and instrumentation challenges instead of visual puzzles, so users are verified in the background without picking out crosswalks or storefronts. The widget is about 250x smaller than hCaptcha, sends zero telemetry, and this standalone server includes an admin dashboard for managing site keys and viewing challenge analytics.",
+    "tags": [
+      "Security",
+      "Captcha",
+      "Developer Tools",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "cap",
     "logo": "logo.png",
     "name": "Cap",
@@ -1035,6 +1115,18 @@
       "Messaging",
       "Communication",
       "Server"
+    ]
+  },
+  {
+    "slug": "cerbos",
+    "logo": "logo.png",
+    "name": "Cerbos",
+    "description": "Cerbos is an open-source authorization layer that lets you define context-aware access control rules for your application in simple YAML policies, managed through your existing Git-ops workflow. It runs as a stateless Policy Decision Point (PDP) that your backend services call over HTTP or gRPC to check whether a principal can perform an action on a resource, supporting everything from simple RBAC to fully dynamic, attribute-based rules.",
+    "tags": [
+      "Security",
+      "Authorization",
+      "Developer Tools",
+      "Self-Hosted"
     ]
   },
   {
@@ -1162,6 +1254,17 @@
     ]
   },
   {
+    "slug": "chiyogami",
+    "logo": "logo.png",
+    "name": "Chiyogami",
+    "description": "Chiyogami is a sleek, modern, self-hosted pastebin written in Go. It supports client-side encryption via the WebCrypto API so passwords never reach the server, configurable paste expiry, public and private paste visibility, syntax highlighting via HighlightJS, Markdown rendering, user accounts and authentication, a REST API for scripted access, QR code sharing, built-in rate limiting, and a search and list view of public pastes. It uses SQLite for storage, making it lightweight and easy to deploy with a single container and one volume.",
+    "tags": [
+      "Pastebin",
+      "Productivity",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "chromium",
     "logo": "logo.png",
     "name": "Chromium",
@@ -1205,6 +1308,19 @@
       "Content Management",
       "Developer Tools",
       "Open Source"
+    ]
+  },
+  {
+    "slug": "cleanuparr",
+    "logo": "logo.png",
+    "name": "Cleanuparr",
+    "description": "Cleanuparr is an advanced automated download manager for the Servarr ecosystem (Sonarr, Radarr, Lidarr, Readarr, Whisparr). It monitors and cleans up problematic downloads across qBittorrent, Transmission, Deluge, µTorrent, and rTorrent clients. Core features include a strike-based system for failed imports, stalled and slow downloads; automatic blocklist-based malware file detection and removal; auto-triggered replacement searches when downloads are removed; seeding duration and ratio cleanup; orphaned file detection with hardlink checking; proactive missing-content and quality-upgrade searching; and smart notifications for all events. All configuration and state are stored in a single /config volume — no external database is required.",
+    "tags": [
+      "Media",
+      "Automation",
+      "Download Manager",
+      "Servarr",
+      "Self-Hosted"
     ]
   },
   {
@@ -1368,6 +1484,18 @@
     ]
   },
   {
+    "slug": "convoy",
+    "logo": "logo.png",
+    "name": "Convoy",
+    "description": "Convoy is a self-hosted webhooks gateway. It receives, transforms, retries, and delivers webhooks between your services, with a dashboard for tracking every event and delivery. This template runs Convoy's real production architecture — separate control-plane (web) and data-plane (agent) processes behind a Caddy gateway, backed by Postgres and Redis — matching the project's own reference docker-compose rather than a single container.",
+    "tags": [
+      "Webhooks",
+      "API Gateway",
+      "Self-Hosted",
+      "Developer Tools"
+    ]
+  },
+  {
     "slug": "cookcli",
     "logo": "logo.png",
     "name": "CookCLI",
@@ -1378,6 +1506,18 @@
       "CLI",
       "Productivity",
       "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "copyparty",
+    "logo": "logo.png",
+    "name": "Copyparty",
+    "description": "Copyparty turns a server into a file server with resumable uploads and downloads, accessible from any web browser. It supports HTTP(S), WebDAV, FTP(S), SFTP and TFTP in a single lightweight process, with per-folder, per-user permissions, thumbnails, a media player, zip/tar folder downloads, full-text and tag search, a markdown viewer and editor, and RSS/OPDS feeds. It is built for turning almost any device into a capable, self-hosted alternative to cloud file-sharing services.",
+    "tags": [
+      "File Sharing",
+      "File Management",
+      "Self-Hosted",
+      "Developer Tools"
     ]
   },
   {
@@ -1767,7 +1907,7 @@
     "slug": "discourse",
     "logo": "logo.png",
     "name": "Discourse",
-    "description": "Discourse is a modern, open-source discussion platform that provides a clean, intuitive interface for community discussions. It's perfect for forums, mailing lists, chat rooms, and more.",
+    "description": "Discourse is a modern, open-source discussion platform built for the next decade of the internet. It provides a clean, intuitive interface for community discussions, forums, mailing lists, and chat. Discourse is fully self-hosted and includes real-time notifications, a rich markdown editor, trust levels, plugin support, and deep email integration. This template uses the official Discourse Docker images with a bundled Postgres database and a Redis cache.",
     "tags": [
       "Forum",
       "Discussion",
@@ -1824,6 +1964,19 @@
     "tags": [
       "Developer Tools",
       "Databases"
+    ]
+  },
+  {
+    "slug": "dockerizalo",
+    "logo": "logo.png",
+    "name": "Dockerizalo",
+    "description": "Dockerizalo is a lightweight, self-hosted deployment platform for homelabbers. Point it at a Git repository and it clones, builds, and runs the app as a container on your existing Docker host, while managing secrets, volumes, ports, and build/runtime logs from a web dashboard. It has no built-in reverse proxy for deployed apps, so pair it with your own domain routing on the containers it creates.",
+    "tags": [
+      "Self-Hosted",
+      "PaaS",
+      "Docker",
+      "DevOps",
+      "Homelab"
     ]
   },
   {
@@ -1948,6 +2101,19 @@
     ]
   },
   {
+    "slug": "dollardollar",
+    "logo": "logo.png",
+    "name": "DollarDollar",
+    "description": "DollarDollar (FinPal) is a self-hosted, open-source personal finance management platform. It provides multi-currency expense tracking, flexible bill-splitting, budget management with notifications, investment portfolio tracking, SimpleFin account synchronisation, and OIDC authentication — all with complete data privacy because your financial data never leaves your own server.",
+    "tags": [
+      "Finance",
+      "Expense Tracking",
+      "Budgeting",
+      "Self-hosted",
+      "Personal Finance"
+    ]
+  },
+  {
     "slug": "dolphin",
     "logo": "logo.png",
     "name": "Dolphin",
@@ -1960,6 +2126,18 @@
       "Nintendo",
       "Desktop",
       "Browser"
+    ]
+  },
+  {
+    "slug": "domain-watchdog",
+    "logo": "logo.png",
+    "name": "Domain Watchdog",
+    "description": "Domain Watchdog tracks domain name registrations and alerts you before they expire. It pulls RDAP/WHOIS data on a schedule, visualizes ownership and registrar relationships between domains, and can notify you by email or webhook as an expiration date approaches.",
+    "tags": [
+      "Domain Monitoring",
+      "WHOIS",
+      "Self-Hosted",
+      "Security"
     ]
   },
   {
@@ -2245,6 +2423,19 @@
     ]
   },
   {
+    "slug": "dweebui",
+    "logo": "logo.png",
+    "name": "DweebUI",
+    "description": "DweebUI is a free, open-source web UI for managing Docker and Podman containers. It provides a dynamically updating dashboard showing real-time CPU, RAM, network, and disk metrics alongside container cards with one-click start, stop, pause, restart, log, and detail controls. It also manages images, volumes, and networks, supports multi-user access with a permission system, includes an app template library compatible with Portainer, and works on Windows, Linux, and macOS. Built with Node.js, Express, HTMX, and EJS, the entire stack runs in a single container connected to the Docker socket.",
+    "tags": [
+      "Docker",
+      "Container Management",
+      "Dashboard",
+      "Self-Hosted",
+      "DevOps"
+    ]
+  },
+  {
     "slug": "easyappointments",
     "logo": "logo.png",
     "name": "EasyAppointments",
@@ -2266,6 +2457,18 @@
       "URL Shortener",
       "Link Management",
       "Security"
+    ]
+  },
+  {
+    "slug": "eigenfocus",
+    "logo": "logo.png",
+    "name": "Eigenfocus",
+    "description": "Eigenfocus is a self-hosted project management tool built around boards, issues, and time tracking, without the bloat of larger tools like Jira or Linear. It has no built-in login system by design, since it is meant for a single person or a small trusted team, so this template protects it with HTTP Basic Auth instead. This template runs Eigenfocus against a PostgreSQL database for production-grade reliability.",
+    "tags": [
+      "Project Management",
+      "Productivity",
+      "Self-Hosted",
+      "Time Tracking"
     ]
   },
   {
@@ -2376,6 +2579,18 @@
       "Home Entertainment",
       "Media Center",
       "Plex Alternative"
+    ]
+  },
+  {
+    "slug": "erugo",
+    "logo": "logo.svg",
+    "name": "Erugo",
+    "description": "Erugo is a self-hosted, open source alternative to WeTransfer for sharing files and folders. Drag files into the browser to generate a share link with an optional expiry date, download limit, and password, then track who has downloaded what. It stores everything in a single SQLite database by default and generates its own encryption key and JWT secret on first boot, so there is no setup step beyond deploying the container.",
+    "tags": [
+      "File Sharing",
+      "File Transfer",
+      "Self-Hosted",
+      "Productivity"
     ]
   },
   {
@@ -2825,12 +3040,36 @@
     ]
   },
   {
+    "slug": "flink",
+    "logo": "logo.png",
+    "name": "Flink",
+    "description": "Flink is a free, libre, and open source URL shortener built with ASP.NET Core. It generates QR codes and embeddable link previews for every shortened URL, supports password-protected and time-limited links, and ships with built-in spam protection that checks submissions against AdBlock/phishing blocklists. Short links can be created one at a time through the web UI or in bulk from the terminal with curl, and a Prometheus metrics endpoint is available for tracking click activity. This template runs Flink against a PostgreSQL database for production-grade reliability.",
+    "tags": [
+      "URL Shortener",
+      "QR Code",
+      "Utilities",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "flowise",
     "logo": "logo.png",
     "name": "Flowise",
     "description": "Flowise is an open-source UI visual tool that allows you to build your own customized LLM (Language Learning Model) flow with ease. It is built on top of LangChainJS and is written in Node Typescript/Javascript. With Flowise, you can see your LLM apps running live, making the process of building and testing faster and more efficient. The app is extensible, allowing for custom component integrations. It offers a variety of features such as QnA retrieval chain, language translation chain, and a conversational agent with memory for chat models. Flowise is designed to make the process of visualizing and building LLM apps simple and accessible.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "fluid-calendar",
+    "logo": "logo.svg",
+    "name": "FluidCalendar",
+    "description": "FluidCalendar is an open source calendar app that combines scheduling with task management. It syncs two-way with Google Calendar and Outlook, auto-schedules tasks into open slots on your calendar, and offers public booking pages so others can grab time on your calendar without an account. This template runs FluidCalendar against a PostgreSQL database.",
+    "tags": [
+      "Calendar",
+      "Productivity",
+      "Task Management",
+      "Self-Hosted"
     ]
   },
   {
@@ -3058,6 +3297,18 @@
     ]
   },
   {
+    "slug": "ghostboard",
+    "logo": "logo.png",
+    "name": "Ghostboard",
+    "description": "Ghostboard is a minimal shared scratchpad — open a board URL and anyone else with that URL can type alongside you in real time, no account needed. Everything is held in memory only and clears automatically a few minutes after everyone disconnects, so there's nothing to back up and nothing to lose track of. It has no login of its own, so this template protects it with HTTP Basic Auth instead.",
+    "tags": [
+      "Collaboration",
+      "Notes",
+      "Self-Hosted",
+      "Real-Time"
+    ]
+  },
+  {
     "slug": "ghostfolio",
     "logo": "logo.png",
     "name": "Ghostfolio",
@@ -3115,6 +3366,18 @@
     "description": "Github Desktop is an open-source, Electron-based application that simplifies the way you interact with GitHub. Written in TypeScript and using React, this app provides a user-friendly interface for managing your GitHub repositories. It allows you to access your GitHub account, manage your repositories, make changes, and track updates, all from the convenience of your desktop. The app is accessible via http://yourhost:3000/ or https://yourhost:3001/. It supports multiple architectures and can be easily deployed using Docker. Please note that this app requires specific environment variables and run configurations for optimal functionality.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "gitsave",
+    "logo": "logo.svg",
+    "name": "GitSave",
+    "description": "GitSave is a self-hosted and open-source application that backs up your Git repositories on a schedule. It supports GitHub, GitLab and other Git platforms, lets you choose how many backups to keep, and can back up to a local volume or an SMB share. GitSave includes an easy to use and responsive web interface for managing schedules, pausing or resuming backups, and viewing backup history.",
+    "tags": [
+      "Backup",
+      "Git",
+      "Developer Tools",
+      "Self-Hosted"
     ]
   },
   {
@@ -3271,6 +3534,19 @@
     ]
   },
   {
+    "slug": "gomft",
+    "logo": "logo.svg",
+    "name": "GoMFT",
+    "description": "GoMFT is an open-source Go-based Managed File Transfer platform with a built-in web UI. It lets you define transfer configurations, schedule jobs with cron expressions, monitor transfer history, and manage users and roles — all from the browser. It uses rclone under the hood, giving it support for dozens of storage backends including S3, SFTP, Google Drive, Azure Blob, local paths, and more.",
+    "tags": [
+      "File Transfer",
+      "Automation",
+      "MFT",
+      "Storage",
+      "Self-hosted"
+    ]
+  },
+  {
     "slug": "gonic",
     "logo": "logo.png",
     "name": "Gonic",
@@ -3417,6 +3693,18 @@
     ]
   },
   {
+    "slug": "habittrove",
+    "logo": "logo.png",
+    "name": "HabitTrove",
+    "description": "HabitTrove is a self-hosted habit and chore tracker that pays out virtual coins for completed habits, which can then be redeemed against a wishlist you define. It supports multiple household members with their own PINs, tracks streaks and completion history, and stores everything in flat JSON files rather than a database, so there is nothing extra to provision.",
+    "tags": [
+      "Habit Tracker",
+      "Productivity",
+      "Self-Hosted",
+      "Household"
+    ]
+  },
+  {
     "slug": "habridge",
     "logo": "logo.png",
     "name": "Habridge",
@@ -3466,6 +3754,18 @@
       "Media",
       "HandBrake",
       "Encoding",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "haptic",
+    "logo": "logo.svg",
+    "name": "Haptic",
+    "description": "Haptic is a local-first, privacy-focused, open-source markdown note-taking app built with Svelte and PGlite. All notes are stored directly in your browser's IndexedDB — no account, no cloud sync, and no server-side database required. It features an inline Markdown editor with live preview, a file-tree sidebar, daily notes, a task tracker, and full-text search with regex support. The Docker image is a tiny (~72 MB) nginx container that serves the static web app; data lives entirely in the client.",
+    "tags": [
+      "Note Taking",
+      "Productivity",
+      "Markdown",
       "Self-Hosted"
     ]
   },
@@ -3563,6 +3863,19 @@
       "Encryption",
       "Self-Hosted",
       "Password Management"
+    ]
+  },
+  {
+    "slug": "hermes-agent",
+    "logo": "logo.png",
+    "name": "Hermes Agent",
+    "description": "Hermes Agent is an autonomous AI agent by Nous Research that runs persistently on your server, remembers what it learns, executes shell commands, manages files, browses the web, schedules cron tasks, and integrates with Telegram, Discord, Slack, and WhatsApp. It supports 200+ models through OpenRouter and direct integrations with Anthropic, OpenAI, Google, and DeepSeek. The built-in web dashboard provides a browser-based UI for managing configurations, API keys, MCP servers, and chat sessions. All sessions, memory, skills, and configuration are stored in a persistent volume so the agent grows more capable over time.",
+    "tags": [
+      "AI",
+      "Automation",
+      "Self-Hosted",
+      "Developer Tools",
+      "Productivity"
     ]
   },
   {
@@ -3867,6 +4180,18 @@
     ]
   },
   {
+    "slug": "instatic",
+    "logo": "logo.svg",
+    "name": "Instatic",
+    "description": "Instatic is a self-hosted CMS with an integrated visual canvas editor. Design pages, reusable components, and content models in one Bun server backed by SQLite, then publish plain semantic HTML and compact CSS with no builder runtime shipped to visitors.",
+    "tags": [
+      "CMS",
+      "Website Builder",
+      "Self-Hosted",
+      "No-Code"
+    ]
+  },
+  {
     "slug": "invidious",
     "logo": "logo.svg",
     "name": "Invidious",
@@ -4026,6 +4351,17 @@
       "CI/CD",
       "DevOps",
       "Jenkins"
+    ]
+  },
+  {
+    "slug": "jetlog",
+    "logo": "logo.svg",
+    "name": "Jetlog",
+    "description": "Jetlog is a self-hostable personal flight tracker and viewer. It provides a world map view of all your flights, detailed statistics, and a clean responsive interface for adding, editing, and deleting flight records. It supports secure authentication with multiple users, data import from MyFlightRadar24 and custom CSV files, and data export to CSV or iCal. Jetlog optionally integrates with external APIs for automatic flight data fetching from a flight number.",
+    "tags": [
+      "Travel",
+      "Productivity",
+      "Self-Hosted"
     ]
   },
   {
@@ -4335,6 +4671,18 @@
       "Meal Planning",
       "Family",
       "Web Interface"
+    ]
+  },
+  {
+    "slug": "kitsu",
+    "logo": "logo.png",
+    "name": "Kitsu",
+    "description": "Kitsu is a production tracker for animation and VFX studios, built by CGWire. Organize projects, shots, and assets, track task progress across your pipeline, and manage preview files, all from one collaborative dashboard. This template deploys Kitsu's real production architecture — the Zou API, its event stream, and the frontend behind an Nginx gateway, backed by Postgres and Redis — built from CGWire's own reference Dockerfile rather than the all-in-one image CGWire's own docs say is for testing only.",
+    "tags": [
+      "Production Tracking",
+      "Animation",
+      "VFX",
+      "Self-Hosted"
     ]
   },
   {
@@ -4970,6 +5318,18 @@
     ]
   },
   {
+    "slug": "lute-v3",
+    "logo": "logo.png",
+    "name": "Lute v3",
+    "description": "Lute (Learning Using Texts) is a free, open-source web application for learning foreign languages through reading. Import or paste texts in any language, click unknown words to look them up, save definitions and translations, and watch your comprehension grow as the app tracks each term's learning status. It ships with built-in support for many European languages as well as optional parsers for Japanese (MeCab) and Mandarin. All data is stored in a local SQLite database — no account, no cloud, no subscription required.",
+    "tags": [
+      "Education",
+      "Language Learning",
+      "Self-Hosted",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "lychee",
     "logo": null,
     "name": "Lychee",
@@ -5072,6 +5432,18 @@
       "Open Source",
       "High Performance",
       "Scalable"
+    ]
+  },
+  {
+    "slug": "many-notes",
+    "logo": "logo.png",
+    "name": "Many Notes",
+    "description": "Many Notes is a Markdown note-taking web application designed for simplicity. Create or import vaults and organize your thoughts right away. It uses a database to power features like search, links, backlinks and tags, but your files are also saved to the filesystem as plain Markdown, giving you full control over your vault structure. Supports multiple users, multiple vaults per user, vault collaboration, an advanced Markdown editor with automatic saving, PDF export, and OAuth login.",
+    "tags": [
+      "Notes",
+      "Productivity",
+      "Markdown",
+      "Self-Hosted"
     ]
   },
   {
@@ -5296,6 +5668,18 @@
     ]
   },
   {
+    "slug": "meme-search",
+    "logo": "logo.svg",
+    "name": "Meme Search",
+    "description": "Meme Search is a self-hosted app for indexing and searching your local meme collection with natural language instead of scrolling through a camera roll. Every image gets an AI-generated description, embedded into PostgreSQL with pgvector, and made searchable by meaning rather than filename. Image descriptions can be generated locally with a bundled vision model or offloaded to any OpenAI-compatible API.",
+    "tags": [
+      "Media",
+      "Search",
+      "AI",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "memgraph",
     "logo": "logo.png",
     "name": "Memgraph",
@@ -5404,6 +5788,19 @@
     ]
   },
   {
+    "slug": "mini-qr",
+    "logo": "logo.svg",
+    "name": "MiniQR",
+    "description": "MiniQR is a lightweight, self-hostable QR code generator built with Vue 3 and Vite. It lets you create fully customised QR codes — changing dot shapes, colours, corner styles, embedded logos, and decorative frames — and export them as PNG or SVG. Presets, batch export, and a clean single-page interface make it practical for both personal and branded use.",
+    "tags": [
+      "QR Code",
+      "Generator",
+      "Utilities",
+      "Self-hosted",
+      "Productivity"
+    ]
+  },
+  {
     "slug": "miniflux",
     "logo": "logo.png",
     "name": "Miniflux",
@@ -5435,6 +5832,19 @@
       "Real-time",
       "Privacy",
       "Security"
+    ]
+  },
+  {
+    "slug": "mmp",
+    "logo": "logo.png",
+    "name": "MMP",
+    "description": "Maker Management Platform (MMP) is an open-source self-hosted system for organising and managing 3D printing and maker projects. It provides a web UI with a visual library of STL and 3MF files, automatically renders 3D model thumbnails, manages project collections with linked assets (models, slices, images, and documents), and integrates with Klipper and OctoPrint to send slices directly to your printer. Projects can be imported from Thingiverse via the MMP Companion browser extension. The stack is two containers — a Go backend agent and a React frontend — with all state stored in local volumes.",
+    "tags": [
+      "3D Printing",
+      "Maker",
+      "Self-Hosted",
+      "Productivity",
+      "File Management"
     ]
   },
   {
@@ -5483,6 +5893,19 @@
       "Design Tool",
       "Portfolio",
       "Image Editor"
+    ]
+  },
+  {
+    "slug": "moodist",
+    "logo": "logo.svg",
+    "name": "Moodist",
+    "description": "Moodist is a free, open-source ambient sound mixer for focus and calm. Choose from 84 carefully curated sounds — rain, forests, coffee shops, cities, and more — and layer them into a personalised soundscape. It runs entirely in the browser with no account required, making it an ideal productivity companion for deep work, meditation, or sleep.",
+    "tags": [
+      "Productivity",
+      "Ambient Sound",
+      "Focus",
+      "Wellness",
+      "Self-hosted"
     ]
   },
   {
@@ -5549,6 +5972,18 @@
       "Music",
       "Discord",
       "Bot"
+    ]
+  },
+  {
+    "slug": "mydrive",
+    "logo": "logo.png",
+    "name": "MyDrive",
+    "description": "MyDrive is a self-hosted, open source cloud file storage server similar to Google Drive. Upload, organize, and browse files and folders from the browser, preview images and videos inline, and share files or folders with others through generated links. Files can optionally be encrypted at rest with a key only you hold. This template stores uploaded files on a persistent volume and uses MongoDB for metadata, matching the official Docker Compose setup.",
+    "tags": [
+      "File Storage",
+      "Cloud Storage",
+      "Self-Hosted",
+      "Privacy"
     ]
   },
   {
@@ -6067,6 +6502,20 @@
     ]
   },
   {
+    "slug": "openbao",
+    "logo": "logo.png",
+    "name": "OpenBao",
+    "description": "OpenBao is an open-source, community-driven secrets manager and fork of HashiCorp Vault, stewarded by the Linux Foundation's OpenSSF. It manages, stores, and distributes sensitive data — secrets, certificates, and encryption keys — with fine-grained access control, dynamic secret generation, data encryption as a service, and a full audit log. This template deploys OpenBao in server mode with file-based storage and the built-in web UI enabled.",
+    "tags": [
+      "Security",
+      "Secrets Management",
+      "Vault",
+      "Encryption",
+      "PKI",
+      "Self-hosted"
+    ]
+  },
+  {
     "slug": "openblocks",
     "logo": "logo.png",
     "name": "Openblocks",
@@ -6098,6 +6547,19 @@
       "Discord",
       "WebSocket",
       "Automation"
+    ]
+  },
+  {
+    "slug": "opencloud",
+    "logo": "logo.svg",
+    "name": "OpenCloud",
+    "description": "OpenCloud is an open-source, GDPR-compliant platform for self-hosted file management, sharing, and collaboration. Built with a Go backend, it provides a full cloud-storage experience with WebDAV access, Spaces (team folders), fine-grained sharing controls, file versioning, and activity tracking. An embedded LibreGraph Connect OIDC identity provider handles authentication with no external database required — all user accounts and data are stored on the filesystem. Optional integrations include Collabora Online for real-time document editing and a bundled Radicale server for CalDAV/CardDAV.",
+    "tags": [
+      "Storage",
+      "File Sharing",
+      "Collaboration",
+      "WebDAV",
+      "Self-Hosted"
     ]
   },
   {
@@ -6156,6 +6618,18 @@
       "Project Management",
       "Open Source",
       "Data Security"
+    ]
+  },
+  {
+    "slug": "openreader-slim",
+    "logo": "logo.svg",
+    "name": "OpenReader (Slim)",
+    "description": "OpenReader is an open-source, self-host-friendly text-to-speech document reader built with Next.js. It supports EPUB, PDF, TXT, MD, and DOCX with multilingual, synchronized read-along playback. Features include layout-aware PDF parsing with PP-DocLayoutV3 (ONNX), word-by-word highlighting via ONNX Whisper alignment, segment-based read-along with cached audio, multi-provider TTS support (self-hosted and cloud), audiobook export in m4b/mp3, and flexible storage backends. The slim variant bundles the Kokoro-FastAPI CPU TTS engine for fully local text-to-speech without external API keys.",
+    "tags": [
+      "Documents",
+      "Text-to-Speech",
+      "AI",
+      "Self-Hosted"
     ]
   },
   {
@@ -6248,6 +6722,18 @@
       "Self-Hosted",
       "Workflow Automation",
       "SLA Management"
+    ]
+  },
+  {
+    "slug": "ots",
+    "logo": "logo.png",
+    "name": "Ots",
+    "description": "Ots (One-Time-Secret) lets you share a password or other sensitive text through a link that can only be opened once — the secret is deleted the moment it's viewed. It's fully open by design (anyone with the link can read it, that's the whole point), so it has no login of its own.",
+    "tags": [
+      "Secret Sharing",
+      "Privacy",
+      "Self-Hosted",
+      "Developer Tools"
     ]
   },
   {
@@ -6485,6 +6971,18 @@
       "Security",
       "Password Sharing",
       "Privacy"
+    ]
+  },
+  {
+    "slug": "pasta",
+    "logo": "logo.png",
+    "name": "Pasta",
+    "description": "PASTA (Plex Audio and Subtitle Track Automation) is a browser-based tool that connects directly to your Plex media server and lets you bulk-change audio and subtitle tracks across an entire TV series, a single season, or individual episodes. It solves the frustration of having to manually set preferred audio/subtitle tracks on every episode after adding a new show. The app runs entirely client-side — no backend processing, no user data sent to third-party servers. Users authenticate against their own Plex server using a Plex token or OAuth.",
+    "tags": [
+      "Media",
+      "Plex",
+      "Automation",
+      "Self-Hosted"
     ]
   },
   {
@@ -6759,6 +7257,17 @@
     ]
   },
   {
+    "slug": "pingvin-share-x",
+    "logo": "logo.svg",
+    "name": "Pingvin Share X",
+    "description": "Pingvin Share X is a community-maintained fork of Pingvin Share, a secure and easy-to-use self-hosted file sharing platform. It lets you share files with a single link, set expiration dates, password protection, and download limits, without ever giving your data to a third party. The platform supports registration, reverse shares, S3-compatible storage, LDAP and OAuth/OIDC authentication, SMTP email notifications, ClamAV virus scanning, and a fully configurable, themeable web interface.",
+    "tags": [
+      "File Management",
+      "Privacy",
+      "Security"
+    ]
+  },
+  {
     "slug": "piwigo",
     "logo": "logo.png",
     "name": "piwigo",
@@ -6873,6 +7382,18 @@
     ]
   },
   {
+    "slug": "poenskelisten",
+    "logo": "logo.png",
+    "name": "Pønskelisten",
+    "description": "Pønskelisten is a self-hosted, collaborative wishlist app for creating and sharing gift ideas with friends and family without ruining the surprise. Wishes can be claimed anonymously — other members see an item is taken, but the list owner never finds out who claimed it. Wishlists are organized into groups so the same list can be shared with multiple people, and the first registered user automatically becomes the admin. This template runs Pønskelisten with its built-in SQLite database, so there is nothing extra to provision.",
+    "tags": [
+      "Wishlist",
+      "Gift Planning",
+      "Collaboration",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "portainer",
     "logo": "logo.svg",
     "name": "Portainer",
@@ -6927,6 +7448,19 @@
       "Mail Server",
       "Security",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "posteria",
+    "logo": "logo.png",
+    "name": "Posteria",
+    "description": "Posteria is a self-hosted, web-based media poster management system. It lets you organise and store custom artwork for your movies, TV shows, seasons, and collections. Posters can be uploaded from local files or URLs, pulled automatically from TMDB, TVDB, and Fanart.tv, or synced directly from your Plex server — with scheduled auto-imports and a full-screen poster wall for browsing your library.",
+    "tags": [
+      "Media",
+      "Plex",
+      "Posters",
+      "Media Management",
+      "Self-hosted"
     ]
   },
   {
@@ -7117,6 +7651,18 @@
       "Game Server Management",
       "Open Source",
       "Easy to Use"
+    ]
+  },
+  {
+    "slug": "pwgen",
+    "logo": "logo.png",
+    "name": "Pwgen",
+    "description": "Pwgen is a simple, self-hosted web application for generating secure passwords and passphrases with customisable options. Users can generate random passwords with configurable length and character sets (uppercase, digits, special characters, homoglyph exclusion) or word-based passphrases with choices of separator, capitalisation, and word count. All generated passwords are optionally cross-checked against the haveibeenpwned database to confirm they have not appeared in known data breaches. The app is a single container with no database and supports a PWA install for offline use.",
+    "tags": [
+      "Security",
+      "Password Manager",
+      "Utilities",
+      "Self-Hosted"
     ]
   },
   {
@@ -8229,6 +8775,18 @@
     ]
   },
   {
+    "slug": "squirrelserversmanager",
+    "logo": "logo.svg",
+    "name": "Squirrel Servers Manager",
+    "description": "Squirrel Servers Manager (SSM) is a user-friendly, UI/UX-focused server and configuration management tool. It lets you connect to remote servers over SSH, manage Docker containers and Compose stacks, execute Ansible playbooks, and monitor server health — all from a single web interface. SSM includes a built-in Prometheus instance for metrics collection, a Redis cache, and a MongoDB database for persistent storage. The architecture is a multi-service deployment consisting of an Nginx proxy, a Node.js API server, a React client, and supporting services.",
+    "tags": [
+      "Server Management",
+      "DevOps",
+      "Monitoring",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "sshwifty",
     "logo": "logo.svg",
     "name": "Sshwifty",
@@ -8361,6 +8919,21 @@
       "Music",
       "Streaming",
       "Server"
+    ]
+  },
+  {
+    "slug": "suggestarr",
+    "logo": "logo.png",
+    "name": "SuggestArr",
+    "description": "SuggestArr is a self-hosted media automation tool that monitors recently watched content from Jellyfin, Plex, or Emby, discovers similar movies and TV shows via the TMDb API, and automatically submits download requests to Jellyseerr or Overseerr. It runs on a configurable cron schedule, supports AI-powered recommendations through any OpenAI-compatible LLM (Ollama, OpenRouter, etc.), and provides a web UI for managing services, schedules, users, and real-time logs. All data is persisted to a single SQLite database stored in the config volume — no external database is required.",
+    "tags": [
+      "Media",
+      "Automation",
+      "Recommendation",
+      "Jellyfin",
+      "Plex",
+      "Servarr",
+      "Self-Hosted"
     ]
   },
   {
@@ -8606,6 +9179,18 @@
     ]
   },
   {
+    "slug": "thrifty",
+    "logo": "logo.png",
+    "name": "Thrifty",
+    "description": "Thrifty is a simple self-hosted budgeting and expense tracker for households. Track spending across multiple users without accounts or passwords — the app itself has no login system of any kind, so this template puts a Caddy proxy in front of the UI and API and protects it with HTTP Basic Auth instead.",
+    "tags": [
+      "Budgeting",
+      "Personal Finance",
+      "Self-Hosted",
+      "Household"
+    ]
+  },
+  {
     "slug": "thumbor",
     "logo": "logo.png",
     "name": "Thumbor",
@@ -8755,6 +9340,17 @@
       "Self-Hosted",
       "Productivity",
       "Project Management"
+    ]
+  },
+  {
+    "slug": "trailarr",
+    "logo": "logo.png",
+    "name": "Trailarr",
+    "description": "Trailarr is a self-hosted application to automatically download and manage trailers for your media libraries. It integrates with Radarr and Sonarr to discover your movie and TV collections, detects existing trailers to skip duplicates, and saves new trailers next to your media using Plex-compatible naming conventions that also work with Emby and Jellyfin. Custom profiles let you control trailer quality, format, and processing options, while a built-in web UI lets you browse your library and manage trailers directly. Trailarr supports multiple Radarr, Sonarr, and Plex instances and handles video processing via yt-dlp and FFmpeg.",
+    "tags": [
+      "Media",
+      "Automation",
+      "Self-Hosted"
     ]
   },
   {
