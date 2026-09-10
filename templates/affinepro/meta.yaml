@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to stable-e98f035
   - date: 2026-05-12
     description: Bumped to 0.26.6; fixed DATABASE_URL username and database name
+  - date: 2026-07-01
+    description: Bumped to 0.26.7
 
 links:
   - label: Website
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/toeverything/affine:0.26.6
+      default: ghcr.io/toeverything/affine:0.26.7
     mailerHost:
       type: string
       title: Mailer Host (Optional)

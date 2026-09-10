@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to SHA_49128a57113c065edc6068bf568926a066c463e5
   - date: 2025-12-25
     description: Version bumped to v0.32.0
+  - date: 2026-07-02
+    description: Version bumped to v0.36.0
 links:
   - label: Website
     url: https://fider.io
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: getfider/fider:v0.35.0
+      default: getfider/fider:v0.36.0
     databaseServiceName:
       type: string
       title: Database Service Name

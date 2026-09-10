@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 11.15.4
   - date: 2026-04-29
     description: Version bumped to 11.17.3
+  - date: 2026-07-27
+    description: Version bumped to 12.1.1 
 links:
   - label: Website
     url: https://directus.io/
@@ -59,7 +61,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: directus/directus:11.17.3
+      default: directus/directus:12.1.1
     adminEmail:
       type: string
       title: Admin Email

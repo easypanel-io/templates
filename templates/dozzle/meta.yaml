@@ -28,6 +28,8 @@ changeLog:
     description: Version bumped to v10.0.2
   - date: 2026-04-29
     description: Version bumped to v10.5
+  - date: 2026-07-02
+    description: Version bumped to v10.6.7
 links:
   - label: Website
     url: https://dozzle.dev
@@ -76,7 +78,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: amir20/dozzle:v10.5
+      default: amir20/dozzle:v10.6.7
 benefits:
   - title: Real-time Monitoring
     description:

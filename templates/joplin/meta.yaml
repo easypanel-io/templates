@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to 3.5.2
   - date: 2026-05-08
     description: Version bumped to 3.6.1
+  - date: 2026-07-03
+    description: Version bumped to 3.7.1  
 links:
   - label: Website
     url: https://joplinapp.org/
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joplin/server:3.6.1
+      default: joplin/server:3.7.1
     databaseServiceName:
       type: string
       title: Database Service Name

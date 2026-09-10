@@ -6,6 +6,8 @@ instructions: null
 changeLog:
   - date: 2025-03-11
     description: First Release
+  - date: 2026-07-02
+    description: Version bumped to 2.9.3
 links:
   - label: Github
     url: https://github.com/cupcakearmy/cryptgeon
@@ -25,7 +27,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cupcakearmy/cryptgeon:2.9.1
+      default: cupcakearmy/cryptgeon:2.9.3
 benefits:
   - title: Secure Sharing
     description:

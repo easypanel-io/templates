@@ -13,6 +13,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-04-29
     description: Version bumped to 4.6.5
+  - date: 2026-07-02
+    description: Version bumped to 4.7.1  
 
 links:
   - label: Official Website
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: formio/formio:4.6.5
+      default: formio/formio:4.7.1
       description: Form.io Docker image
     rootEmail:
       type: string

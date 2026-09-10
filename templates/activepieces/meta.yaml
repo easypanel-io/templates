@@ -42,6 +42,8 @@ changeLog:
     description: Version bumped to 0.78.1
   - date: 2026-04-29
     description: Version bumped to 0.82.1  
+  - date: 2026-07-01
+    description: Version bumped to 0.86.0
 links:
   - label: Website
     url: https://activepieces.com
@@ -75,7 +77,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: activepieces/activepieces:0.82.1
+      default: activepieces/activepieces:0.86.0
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -9,6 +9,8 @@ changeLog:
     description: First Release
   - date: 2026-04-29
     description: Version bumped to SNAPSHOT-20260429
+  - date: 2026-07-02
+    description: Version bumped to SNAPSHOT-20260702
 links:
   - label: Github
     url: https://github.com/mayswind/ezbookkeeping
@@ -30,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mayswind/ezbookkeeping:SNAPSHOT-20260429
+      default: mayswind/ezbookkeeping:SNAPSHOT-20260702
 benefits:
   - title: Personal Finance Management
     description: Track and manage your personal finances with ease.

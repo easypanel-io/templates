@@ -27,6 +27,8 @@ changeLog:
     description: Switched from latest to v0.107.71
   - date: 2026-04-29
     description: Switched from latest to v0.107.74  
+  - date: 2026-07-01
+    description: Switched from latest to v0.107.77
 links:
   - label: Website
     url: https://adguard.com
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: adguard/adguardhome:v0.107.74
+      default: adguard/adguardhome:v0.107.77
 benefits:
   - title: Ad-Free Browsing
     description:

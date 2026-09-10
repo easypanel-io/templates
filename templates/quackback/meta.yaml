@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: "2026-05-29"
     description: Initial release (v0.10.5)
+  - date: 2026-07-07
+    description: Version bumped to (v0.13.1)
 links:
   - label: Website
     url: https://quackback.io
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/quackbackio/quackback:0.10.5
+      default: ghcr.io/quackbackio/quackback:0.13.1
 tags:
   - feedback
   - roadmap

@@ -13,6 +13,8 @@ changeLog:
     description: Template Release
   - date: 2026-05-07
     description: Version bumped to ubuntu-xfce-version-4e5d70f4
+  - date: 2026-07-08
+    description: Version bumped to ubuntu-xfce-version-533cc825  
 
 links:
   - label: Documentation
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/webtop:ubuntu-xfce-version-4e5d70f4
+      default: lscr.io/linuxserver/webtop:ubuntu-xfce-version-533cc825
 
 benefits:
   - title: Browser-Based Desktop

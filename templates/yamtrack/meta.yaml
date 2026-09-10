@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 0.25.0
   - date: 2026-05-07
     description: Version bumped to 0.25.2
+  - date: 2026-07-08
+    description: Version bumped to 0.25.3
 links:
   - label: Github
     url: https://github.com/FuzzyGrim/Yamtrack
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/fuzzygrim/yamtrack:0.25.2
+      default: ghcr.io/fuzzygrim/yamtrack:0.25.3
     timezone:
       type: string
       title: Timezone

@@ -13,6 +13,8 @@ changeLog:
     description: Update to Neo4j 5.26.9
   - date: 2025-12-29
     description: Version bumped to 5.26.19
+  - date: 2026-07-06
+    description: Version bumped to 5.26.28
 links:
   - label: Website
     url: https://neo4j.com/
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: Neo4j Image
-      default: neo4j:5.26.19
+      default: neo4j:5.26.28
     neo4jPassword:
       type: string
       title: Neo4j Password

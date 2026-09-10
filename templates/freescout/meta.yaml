@@ -28,6 +28,8 @@ changeLog:
     description: Version bumped to php8.1-1.17.145
   - date: 2026-04-29
     description: Version bumped to php8.1-1.17.158
+  - date: 2026-07-13
+    description: Version bumped to php8.2-1.17.159
 links:
   - label: Website
     url: https://freescout.net
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/freescout:php8.1-1.17.158
+      default: tiredofit/freescout:php8.2-1.17.159
     databaseServiceName:
       type: string
       title: Database Service Name

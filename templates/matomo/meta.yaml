@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to 5.6.2
   - date: 2026-02-21
     description: Version bumped to 5.7.1
+  - date: 2026-07-06
+    description: Version bumped to 5.11.2  
 links:
   - label: Website
     url: https://matomo.org/
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: matomo:5.7.1
+      default: matomo:5.11.2
     databaseServiceName:
       type: string
       title: Database Service Name

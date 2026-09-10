@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to v3.4.0
   - date: 2026-04-29
     description: Version bumped to v3.6.1  
+  - date: 2026-07-01
+    description: Version bumped to v3.8.1
 links:
   - label: Github
     url: https://github.com/bluewave-labs/checkmate
@@ -41,11 +43,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/bluewave-labs/checkmate-backend-mono:v3.6.1
+      default: ghcr.io/bluewave-labs/checkmate-backend-mono:v3.8.1
     mongoServiceImage:
       type: string
       title: MongoDB Service Image
-      default: ghcr.io/bluewave-labs/checkmate-mongo:v3.6.1
+      default: ghcr.io/bluewave-labs/checkmate-mongo:v3.8.1
 benefits:
   - title: Real-Time Monitoring
     description:

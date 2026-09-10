@@ -17,6 +17,8 @@ changeLog:
     description: First Release
   - date: 2026-05-06
     description: Version bumped to 0.7.3
+  - date: 2026-07-01
+    description: Version bumped to sha-2d7d22776b73
 links:
   - label: Documentation
     url: https://github.com/ArchiveBox/ArchiveBox/wiki
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: archivebox/archivebox:0.7.3
+      default: archivebox/archivebox:sha-2d7d22776b73
 benefits:
   - title: Webpage Archiving
     description:

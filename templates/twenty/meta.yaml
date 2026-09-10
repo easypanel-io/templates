@@ -18,6 +18,8 @@ changeLog:
     description: Major Update to v2.5.3 with new features and improvements
   - date: 2025-06-19
     description: Update to v2.14.3 fixing invalid v2.5.3
+  - date: 2026-07-13
+    description: Version bumped to v2.21.0
 links:
   - label: Website
     url: https://twenty.com/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: twentycrm/twenty:v2.14.3
+      default: twentycrm/twenty:v2.21.0
 benefits:
   - title: Modern User Interface
     description:

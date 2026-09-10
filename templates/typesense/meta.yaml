@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 30.0.rca36
   - date: 2026-02-24
     description: Version bumped to 30.2.rc4
+  - date: 2026-07-27
+    description: Version bumped to 30.2
 links:
   - label: Documentation
     url: https://typesense.org/docs/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: typesense/typesense:30.2.rc4
+      default: typesense/typesense:30.2
 tags:
   - Documentation
   - Developer Tools

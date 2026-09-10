@@ -18,6 +18,8 @@ changeLog:
     description: Pinned Seafile image to 13.0.19 and removed 13.0-latest
   - date: 2026-05-05
     description: Version bumped to 13.0.21
+  - date: 2026-07-07
+    description: Version bumped to 13.0.24
 links:
   - label: GitHub
     url: https://github.com/haiwen/seafile
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: seafileltd/seafile-mc:13.0.21
+      default: seafileltd/seafile-mc:13.0.24
       description: Seafile Docker image
 benefits:
   - title: Secure File Synchronization

@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 14.1
   - date: 2026-05-05
     description: Version bumped to 15.0.5
+  - date: 2026-07-13
+    description: Version bumped to 16.0.5
 links:
   - label: Website
     url: https://code.onedev.io/
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: 1dev/server:15.0.5
+      default: 1dev/server:16.0.5
     databaseServiceName:
       type: string
       title: Database Service Name

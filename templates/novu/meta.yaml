@@ -18,6 +18,8 @@ changeLog:
     description: Initial release
   - date: 2026-05-21
     description: Version bumped to 3.15.0
+  - date: 2026-07-06
+    description: Version bumped to 3.17.0
 
 links:
   - label: Github
@@ -47,19 +49,19 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/novuhq/novu/dashboard:3.15.0
+      default: ghcr.io/novuhq/novu/dashboard:3.17.0
     apiServiceImage:
       type: string
       title: API Service Image
-      default: ghcr.io/novuhq/novu/api:3.15.0
+      default: ghcr.io/novuhq/novu/api:3.17.0
     workerServiceImage:
       type: string
       title: Worker Service Image
-      default: ghcr.io/novuhq/novu/worker:3.15.0
+      default: ghcr.io/novuhq/novu/worker:3.17.0
     wsServiceImage:
       type: string
       title: WebSocket Service Image
-      default: ghcr.io/novuhq/novu/ws:3.15.0
+      default: ghcr.io/novuhq/novu/ws:3.17.0
 
 benefits:
   - title: Multi-Channel Notifications

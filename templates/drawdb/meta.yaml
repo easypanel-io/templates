@@ -13,6 +13,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-04-29
     description: Version bumped to v1.6.0
+  - date: 2026-07-02
+    description: Version bumped to v1.8.0
 links:
   - label: GitHub
     url: https://github.com/drawdb-io/drawdb
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/drawdb-io/drawdb:v1.6.0
+      default: ghcr.io/drawdb-io/drawdb:v1.8.0
       description: DrawDB Docker image
 benefits:
   - title: Browser-Based Editor

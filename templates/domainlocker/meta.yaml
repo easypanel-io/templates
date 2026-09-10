@@ -19,6 +19,8 @@ changeLog:
     description: Template Release
   - date: 2026-04-29
     description: Version bumped to 0.1.4
+  - date: 2026-07-02
+    description: Version bumped to 0.2.1
 
 links:
   - label: Github
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lissy93/domain-locker:0.1.4
+      default: lissy93/domain-locker:0.2.1
     ntfyUrl:
       type: string
       title: Ntfy Server URL (optional)

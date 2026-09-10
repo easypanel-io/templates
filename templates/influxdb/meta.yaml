@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 2.8.0
   - date: 2026-05-08
     description: Version bumped to 2.9.0
+  - date: 2026-07-03
+    description: Version bumped to 2.9.1
 links:
   - label: Website
     url: https://www.influxdata.com/
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: influxdb:2.9.0
+      default: influxdb:2.9.1
 benefits:
   - title: Optimized Time-Series Data Handling
     description:

@@ -15,6 +15,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-04-29
     description: Version bumped to 0.9.18
+  - date: 2026-07-02
+    description: Version bumped to 0.9.25
 links:
   - label: Website
     url: https://crosswatch.app
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/cenodude/crosswatch:0.9.18
+      default: ghcr.io/cenodude/crosswatch:0.9.25
     timezone:
       type: string
       title: Timezone

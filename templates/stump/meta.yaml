@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to 0.0.12
   - date: 2026-05-07
     description: Version bumped to 0.1.2
+  - date: 2026-07-07
+    description: Version bumped to 0.1.5
 links:
   - label: Website
     url: https://www.stumpapp.dev
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: aaronleopold/stump:0.1.2
+      default: aaronleopold/stump:0.1.5
 
 benefits:
   - title: Fast and Lightweight

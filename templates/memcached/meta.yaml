@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 1.6.40
   - date: 2026-05-04
     description: Version bumped to 1.6.41
+  - date: 2026-07-06
+    description: Version bumped to 1.6.42  
 links:
   - label: Website
     url: https://memcached.org/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: memcached:1.6.41
+      default: memcached:1.6.42
 
 benefits:
   - title: High Performance

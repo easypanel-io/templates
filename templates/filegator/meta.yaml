@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 7.13.3
   - date: 2026-04-29
     description: Version bumped to 7.14.0
+  - date: 2026-07-02
+    description: Version bumped to 7.14.3
 links:
   - label: Github
     url: https://github.com/filegator/filegator
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filegator/filegator:v7.14.0
+      default: filegator/filegator:v7.14.3
 benefits:
   - title: User-Friendly File Management
     description:

@@ -28,6 +28,8 @@ changeLog:
     description: Update to 2.18.7
   - date: 2026-05-12
     description: Major update to 2.21.0
+  - date: 2026-07-06
+    description: Major update to 2.28.7
 links:
   - label: Website
     url: https://n8n.io/
@@ -56,11 +58,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.n8n.io/n8nio/n8n:2.21.0
+      default: docker.n8n.io/n8nio/n8n:2.28.7
     n8nRunnerServiceImage:
       type: string
       title: N8n Runner Service Image
-      default: n8nio/runners:2.21.0
+      default: n8nio/runners:2.28.7
 benefits:
   - title: Workflow Automation
     description:

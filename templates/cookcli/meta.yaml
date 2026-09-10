@@ -12,6 +12,8 @@ changeLog:
     description: "Initial template release"
   - date: 2026-04-29
     description: Version Bumped to 0.29.1
+  - date: 2026-07-02
+    description: Version Bumped to 0.32.1
 
 links:
   - label: Website
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/cooklang/cookcli:0.29.1
+      default: ghcr.io/cooklang/cookcli:0.32.1
 
 benefits:
   - title: Self-Hosted Recipe Workspace

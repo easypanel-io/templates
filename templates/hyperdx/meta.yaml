@@ -13,6 +13,8 @@ instructions: null
 changeLog:
   - date: "2025-07-01"
     description: "Initial release"
+  - date: 2026-07-03
+    description: Version bumped to 2.29.0  
 
 links:
   - label: "HyperDX Official Site"
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: "App Service Image"
-      default: "docker.hyperdx.io/hyperdx/hyperdx-local:2-beta"
+      default: "docker.hyperdx.io/hyperdx/hyperdx-local:2.29.0"
     exposeClickHousePort:
       type: string
       title: "Expose ClickHouse HTTP Port (8123)"

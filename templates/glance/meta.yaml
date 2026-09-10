@@ -13,6 +13,8 @@ changeLog:
     description: First Release (v0.7.7)
   - date: 2025-07-21
     description: Version bumped to v0.8.4
+  - date: 2026-07-03
+    description: Version bumped to v0.8.5
 links:
   - label: Documentation
     url: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: glanceapp/glance:v0.8.4
+      default: glanceapp/glance:v0.8.5
 benefits:
   - title: Fully Customizable Dashboard
     description:

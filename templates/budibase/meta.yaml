@@ -31,7 +31,9 @@ changeLog:
   - date: 2026-02-18
     description: Version bumped to 3.30.0
   - date: 2026-04-29
-    description: Version bumped to 3.37.1  
+    description: Version bumped to 3.37.1 
+  - date: 2026-07-09
+    description: Version bumped to 3.39.29
 links:
   - label: Website
     url: https://budibase.com/
@@ -62,11 +64,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: "budibase/apps:3.37.1"
+      default: "budibase/apps:3.39.29"
     workerServiceImage:
       type: string
       title: Worker Service Image
-      default: "budibase/worker:3.37.1"
+      default: "budibase/worker:3.39.29"
     adminEmail:
       type: string
       title: Admin Email

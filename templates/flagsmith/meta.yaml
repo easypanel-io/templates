@@ -15,6 +15,8 @@ changeLog:
     description: Version bumped to 2.217.0
   - date: 2026-04-29
     description: Version bumped to 2.231.1
+  - date: 2026-07-02
+    description: Version bumped to 2.251.0
 links:
   - label: Documentation
     url: https://docs.flagsmith.com/
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: flagsmith/flagsmith:2.231.1
+      default: flagsmith/flagsmith:2.251.0
 benefits:
   - title: Centralized Feature Management
     description:

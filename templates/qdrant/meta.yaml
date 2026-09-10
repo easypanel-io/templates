@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to v1.16
   - date: 2026-02-24
     description: Version bumped to v1.17
+  - date: 2026-07-13
+    description: Version bumped to v1.18.0
 links:
   - label: Website
     url: https://qdrant.tech/
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: qdrant/qdrant:v1.17
+      default: qdrant/qdrant:v1.18.0
 benefits:
   - title: Advanced Vector Similarity Search
     description:

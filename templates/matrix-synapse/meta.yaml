@@ -25,6 +25,8 @@ changeLog:
     description: Version bumped to v1.147.1
   - date: 2026-04-08
     description: Version bumped to v1.152.1
+  - date: 2026-07-10
+    description: Version bumped to v1.156.0
 links:
   - label: Website
     url: https://matrix.org
@@ -56,7 +58,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: matrixdotorg/synapse:v1.152.1
+      default: matrixdotorg/synapse:v1.156.0
     databaseType:
       type: string
       title: Database Type

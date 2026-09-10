@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 9.2
   - date: 2026-05-05
     description: Version bumped to 9.3.1.2
+  - date: 2026-07-06
+    description: Version bumped to 9.4.0.1  
 links:
   - label: Documentation
     url: https://helpcenter.onlyoffice.com/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: onlyoffice/documentserver:9.3.1.2
+      default: onlyoffice/documentserver:9.4.0.1
 benefits:
   - title: Full Office Suite Functionality
     description:

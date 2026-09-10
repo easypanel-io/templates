@@ -11,6 +11,8 @@ changeLog:
     description: Initial release
   - date: 2026-05-07
     description: Version bumped to 5.2.11
+  - date: 2026-07-08
+    description: Version bumped to 5.2.12
 links:
   - label: Website
     url: https://www.tinymediamanager.org/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tinymediamanager/tinymediamanager:5.2.11
+      default: tinymediamanager/tinymediamanager:5.2.12
     password:
       type: string
       title: VNC Password

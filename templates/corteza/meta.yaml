@@ -27,6 +27,8 @@ changeLog:
     description: Version bumped to 2024.9.7
   - date: 2026-04-29
     description: Version bumped to 2024.9.8
+  - date: 2026-07-02
+    description: Version bumped to 2024.9.9
 links:
   - label: Website
     url: https://cortezaproject.org
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cortezaproject/corteza:2024.9.8
+      default: cortezaproject/corteza:2024.9.9
     databaseServiceName:
       type: string
       title: Database Service Name
