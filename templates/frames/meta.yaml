@@ -1,0 +1,89 @@
+name: Frames
+description:
+  Frames is a modern self-hosted SVOD (Subscription Video on Demand) streaming
+  platform. Stream your personal MP4 media collection from local storage,
+  Amazon S3, Dropbox, or Google Drive. It auto-fetches metadata from TMDB and
+  FanArt.tv, offers AI-powered recommendations via OpenAI embeddings, GroupWatch
+  synchronized viewing sessions, and an advanced video player with subtitle
+  support.
+instructions:
+  After deployment, navigate to your domain to complete the first-time setup
+  wizard. You will need a free TMDB API key (themoviedb.org/settings/api), a
+  FanArt.tv API key (fanart.tv), and optionally an OpenAI API key for
+  AI-powered recommendations. Create an admin account during setup and configure
+  your media storage location. Place media files in the /media volume following
+  the Movies/<Name (Year)>/movie.mp4 and TV Shows/<Name>/Season X/SxxExx.mp4
+  structure.
+changeLog:
+  - date: 2026-06-17
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/eleven-am/frames
+  - label: Docker Hub
+    url: https://hub.docker.com/r/elevenam/frames
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - dbServiceName
+    - redisServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: frames
+    dbServiceName:
+      type: string
+      title: Database Service Name
+      default: frames-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: frames-redis
+benefits:
+  - title: Stream from Any Storage
+    description:
+      Connect local disk, Amazon S3, Dropbox, or Google Drive as your media
+      source — no file copying or re-encoding required for MP4 files.
+  - title: Automatic Metadata Fetching
+    description:
+      Frames automatically pulls posters, backdrops, cast info, and ratings
+      from TMDB, FanArt.tv, and Apple's artwork collection.
+  - title: AI-Powered Recommendations
+    description:
+      OpenAI vector embeddings analyse your watch history to surface
+      personalized recommendations without any manual curation.
+  - title: GroupWatch Sessions
+    description:
+      Invite others to a synchronized viewing session with real-time chat —
+      everyone stays in sync regardless of their location.
+features:
+  - title: Advanced Video Player
+    description:
+      Picture-in-picture, AirPlay, download, and multi-language subtitle
+      support built into the player.
+  - title: Playlist Creation
+    description:
+      Build and share playlists across your media library for curated
+      viewing queues.
+  - title: Admin Panel
+    description:
+      Manage media metadata, auth keys, and custom home page categories from
+      the built-in admin interface.
+  - title: Swagger API
+    description:
+      Full REST API with auto-generated Swagger documentation at /swagger for
+      third-party integrations.
+  - title: Subtitle Support
+    description:
+      Load subtitles in any language via OpenSubtitles integration or manual
+      upload.
+tags:
+  - Media
+  - Streaming
+  - Video
+  - Self-hosted
