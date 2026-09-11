@@ -1,0 +1,104 @@
+name: BorgBackupServer
+description:
+  BorgBackupServer is a self-hosted web application for centrally managing
+  BorgBackup across Linux, Mac, and Windows endpoints. Features an agent-based
+  architecture where lightweight agents poll over HTTPS and back up via SSH,
+  with encryption, scheduling, restore, and reporting all in one dashboard.
+instructions: |
+  After deployment, check the container logs to retrieve the auto-generated
+  admin password, then log in with username admin. Install the agent on each
+  endpoint and point it to your server domain and SSH port. The APP_KEY is
+  auto-generated and saved to /var/bbs/config/.env — back up this file as losing
+  it makes all encrypted credentials unrecoverable. The APP_URL must exactly
+  match the public URL agents and browsers use to reach the server (include
+  https:// or http:// and port if non-standard).
+changeLog:
+  - date: 2026-06-10
+    description: First Release
+links:
+  - label: Website
+    url: https://www.borgbackupserver.com/
+  - label: Github
+    url: https://github.com/marcpope/borgbackupserver
+  - label: Documentation
+    url: https://github.com/marcpope/borgbackupserver/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appDomain
+    - sshPort
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: borgbackupserver
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: marcpope/borgbackupserver:2.60.5
+    appDomain:
+      type: string
+      title: App Domain
+      description:
+        Public URL where the web UI and agents reach this server (e.g.
+        https://backup.example.com). Must match exactly.
+    sshPort:
+      type: number
+      title: SSH Port
+      default: 2222
+      description: Host port published for agent SSH connections.
+    adminPassword:
+      type: string
+      title: Admin Password
+      description:
+        Optional. Admin password set at first run. If blank, a random password
+        is generated and printed in the container logs.
+benefits:
+  - title: Centralized Backup Management
+    description:
+      Manage BorgBackup across all Linux, Mac, and Windows endpoints from a
+      single web dashboard with full visibility into every backup job.
+  - title: Agent-Based Architecture
+    description:
+      Lightweight agents poll the server over HTTPS — no inbound SSH from the
+      server to endpoints is needed, simplifying firewall rules.
+  - title: Encryption at Rest
+    description:
+      All backup repositories are encrypted at rest with BorgBackup's native
+      encryption. Append-only SSH mode prevents ransomware deletion.
+features:
+  - title: Real-Time Monitoring
+    description:
+      Real-time backup progress monitoring with detailed per-job logs and status
+      across all registered endpoints.
+  - title: File-Level Restore
+    description:
+      ClickHouse-powered file catalog enables instant full-text search and
+      file-level restore without unpacking full archives.
+  - title: Flexible Scheduling
+    description:
+      Schedule backups from hourly to monthly with configurable retention
+      policies per endpoint or backup template.
+  - title: S3 Offsite Sync
+    description:
+      Sync repositories to S3-compatible object storage via rclone for
+      georedundant offsite backup copies.
+  - title: Multi-User with 2FA
+    description:
+      Role-based access control, multi-user support, and TOTP two-factor
+      authentication for secure team access.
+  - title: Database Pre-Dump Plugins
+    description:
+      Built-in plugins for MySQL and PostgreSQL pre-dump before backup to ensure
+      consistent database snapshots.
+tags:
+  - Backup
+  - BorgBackup
+  - File Management
+  - Security
+  - Self-Hosted
