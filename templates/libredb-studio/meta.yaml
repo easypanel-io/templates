@@ -19,6 +19,8 @@ instructions: |
   querying. Application data is kept on the volume mounted at /app/data,
   so it survives restarts and redeploys.
 changeLog:
+  - date: 2026-09-14
+    description: bump to 0.15.0
   - date: 2026-09-06
     description: bump to 0.14.0; adds Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and Druid
   - date: 2026-06-21
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/libredb/libredb-studio:0.14.0
+      default: ghcr.io/libredb/libredb-studio:0.15.0
     adminEmail:
       type: string
       title: Admin Email
