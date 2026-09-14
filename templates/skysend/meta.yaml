@@ -1,0 +1,63 @@
+name: SkySend
+description:
+  SkySend is a self-hosted, end-to-end encrypted file and note sharing tool.
+  Share files, text snippets, passwords, code, or SSH keys through links with
+  configurable expiry times, download limits, and optional password protection.
+instructions: >-
+  Open your domain and start sharing. Files and notes are stored on the "data"
+  and "uploads" volumes. Uploaded content is end-to-end encrypted in the browser
+  before it reaches the server, so links to shared items double as the
+  decryption key — anyone with the link can access the content.
+changeLog:
+  - date: 2026-09-08
+    description: first release
+links:
+  - label: Website
+    url: https://skysend.app
+  - label: GitHub
+    url: https://github.com/Skyfay/SkySend
+  - label: Documentation
+    url: https://docs.skysend.app
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: skysend
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: skyfay/skysend:v2.12.0
+    fileMaxSize:
+      type: string
+      title: Max File Size
+      default: 2GB
+benefits:
+  - title: End-to-End Encrypted
+    description:
+      Files and notes are encrypted in the browser before upload — the server
+      never sees plaintext content.
+  - title: Multiple Content Types
+    description: Share files, text, passwords, code snippets, and SSH keys.
+  - title: Self-Hosted
+    description: Full control over your data with no third-party storage.
+features:
+  - title: Configurable Expiry
+    description: Set how long a share stays available before it's deleted.
+  - title: Download Limits
+    description: Cap how many times a shared item can be downloaded or viewed.
+  - title: OIDC/SSO Support
+    description:
+      Optionally require SSO login before uploads via generic OIDC, Authentik,
+      Keycloak, or Pocket ID.
+tags:
+  - File Sharing
+  - Privacy
+  - Self-Hosted
