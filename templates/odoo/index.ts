@@ -10,6 +10,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+      user: "odoo",
+      databaseName: input.appServiceName,
     },
   });
 
@@ -27,12 +29,9 @@ export function generate(input: Input): Output {
           port: 8069,
         },
       ],
-      env: [
-        `HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
-        `USER=postgres`,
-        `PASSWORD=${databasePassword}`,
-        `PORT=5432`,
-      ].join("\n"),
+      deploy: {
+        command: `odoo --db_host=$(PROJECT_NAME)_${input.appServiceName}-db --db_port=5432 --db_user=odoo --db_password=${databasePassword} -d ${input.appServiceName} -i base --without-demo=True`,
+      },
       mounts: [
         {
           type: "volume",

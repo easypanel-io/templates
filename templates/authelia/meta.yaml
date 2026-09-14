@@ -1,0 +1,102 @@
+name: Authelia
+description:
+  Authelia is an open-source authentication and authorization server providing
+  two-factor authentication and single sign-on (SSO) for your applications via a
+  web portal. It acts as a companion to reverse proxies such as Traefik, Nginx,
+  or Caddy to control whether requests should pass through. Authelia is also an
+  OpenID Connect 1.0 certified identity provider, enabling modern authentication
+  flows for applications that support it. Key features include multi-factor
+  authentication via TOTP, WebAuthn, or Duo; fine-grained access control rules;
+  session management with configurable timeouts; LDAP and file-based user
+  backends; and SQLite, PostgreSQL, or MariaDB storage.
+instructions:
+  After deployment, open the Authelia URL you configured. Log in with username
+  "admin" and the password you set during setup. On first login you will be
+  prompted to register a TOTP authenticator app. The "Authelia URL" field must
+  exactly match the full HTTPS URL you use to reach Authelia (e.g.
+  https://auth.yourdomain.com) — a mismatch causes the "issue retrieving user
+  state" error. Password reset notifications are written to
+  /data/notification.txt inside the container; view them via the Easypanel
+  console if no SMTP is configured.
+changeLog:
+  - date: 2026-07-07
+    description: First Release
+links:
+  - label: Website
+    url: https://www.authelia.com
+  - label: Documentation
+    url: https://www.authelia.com/configuration/prologue/introduction/
+  - label: GitHub
+    url: https://github.com/authelia/authelia
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: authelia
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: authelia/authelia:4.39.20
+    adminPassword:
+      type: string
+      title: Admin Password
+      description: Password for the initial "admin" user account.
+benefits:
+  - title: Multi-Factor Authentication
+    description:
+      Add TOTP, WebAuthn (passkeys and hardware keys), and Duo push
+      notifications on top of any password-based login, without modifying the
+      protected application.
+  - title: Single Sign-On
+    description:
+      One login session covers all protected apps. Users authenticate once and
+      are silently passed through to every service on your domain without
+      re-entering credentials.
+  - title: OpenID Connect Identity Provider
+    description:
+      Act as an OIDC provider for any application that supports it, enabling
+      centralised identity management and delegated login flows across your
+      entire infrastructure.
+features:
+  - title: Reverse Proxy Integration
+    description:
+      Works natively with Traefik, Nginx, Caddy, HAProxy, and more via forward
+      authentication headers — no agents or sidecar containers required.
+  - title: Fine-Grained Access Control
+    description:
+      Define rules by domain, path, method, user, group, and network to allow,
+      bypass, or require one- or two-factor authentication per resource.
+  - title: File and LDAP User Backends
+    description:
+      Manage users with a simple YAML file for small deployments or connect to
+      an LDAP or Active Directory server for enterprise-scale user management.
+  - title: SQLite Storage
+    description:
+      Stores all persistent state — TOTP secrets, WebAuthn credentials, session
+      records — in a local SQLite database with no external DB required.
+  - title: Regulation and Brute-Force Protection
+    description:
+      Automatically bans accounts and IPs after configurable failed-attempt
+      thresholds, protecting against credential-stuffing and brute-force
+      attacks.
+tags:
+  - Authentication
+  - Authorization
+  - 2FA
+  - MFA
+  - SSO
+  - Single Sign-On
+  - OpenID Connect
+  - OIDC
+  - Security
+  - Identity
+  - Access Control

@@ -1,0 +1,64 @@
+name: Many Notes
+description:
+  Many Notes is a Markdown note-taking web application designed for simplicity.
+  Create or import vaults and organize your thoughts right away. It uses a
+  database to power features like search, links, backlinks and tags, but your
+  files are also saved to the filesystem as plain Markdown, giving you full
+  control over your vault structure. Supports multiple users, multiple vaults
+  per user, vault collaboration, an advanced Markdown editor with automatic
+  saving, PDF export, and OAuth login.
+instructions: >-
+  Register the first account after deployment to become its admin, since
+  registration is open by default. APP_URL is set to your assigned domain
+  automatically — if the app ever shows a blank white screen after changing the
+  domain, it almost always means APP_URL no longer matches the address you're
+  visiting, so redeploy after any domain change to keep it in sync.
+changeLog:
+  - date: 2026-07-30
+    description: first release
+links:
+  - label: Website
+    url: https://many-notes.com
+  - label: GitHub
+    url: https://github.com/brufdev/many-notes
+  - label: Documentation
+    url: https://github.com/brufdev/many-notes/blob/main/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: many-notes
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: brufdev/many-notes:0.16
+benefits:
+  - title: Files You Own
+    description:
+      Notes are saved as plain Markdown files, not locked in a database
+  - title: Multiple Vaults
+    description: Organize notes into as many separate vaults as you need
+  - title: Self-Hosted
+    description: Keep every note on your own server, with no cloud dependency
+features:
+  - title: Advanced Markdown Editor
+    description: Fast writing with automatic saving, no save button required
+  - title: Links, Backlinks and Tags
+    description: Connect related notes and navigate between them instantly
+  - title: Fast Search
+    description: Typo-tolerant full-text search across every vault
+  - title: Vault Collaboration
+    description: Invite other users to access and edit shared vaults
+tags:
+  - Notes
+  - Productivity
+  - Markdown
+  - Self-Hosted
