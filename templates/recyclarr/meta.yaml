@@ -1,0 +1,110 @@
+name: Recyclarr
+description:
+  Recyclarr is a command-line tool that syncs TRaSH Guides recommendations into
+  your existing Radarr and Sonarr instances. It keeps quality profiles, scoring,
+  and custom formats up to date automatically, on a schedule, so you don't have
+  to manually copy settings from the TRaSH Guides every time they change.
+instructions: >-
+  You need existing Radarr and/or Sonarr instances and their API keys before
+  deploying this template. Fill in the URL and API key for each service you want
+  to sync (leave the other blank if you only use one), and pick a trash_id for
+  the quality profile you want applied, found on the TRaSH Guides site.
+  Recyclarr has no web UI; it runs on the cron schedule you set below and writes
+  its logs to the "config" volume. The mounted /config/recyclarr.yml can be
+  edited further through Easypanel's file mount in storage section to add custom
+  formats or additional instances.
+changeLog:
+  - date: 2026-08-11
+    description: first release
+links:
+  - label: Website
+    url: https://recyclarr.dev
+  - label: GitHub Repo
+    url: https://github.com/recyclarr/recyclarr
+  - label: Documentation
+    url: https://recyclarr.dev/guide/installation/docker/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - cronSchedule
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: recyclarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/recyclarr/recyclarr:8.7.1
+    cronSchedule:
+      type: string
+      title: Sync Schedule (cron expression)
+      default: "@daily"
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: UTC
+    radarrUrl:
+      type: string
+      title: Radarr URL
+      description: "Optional. Example: http://radarr:7878"
+    radarrApiKey:
+      type: string
+      title: Radarr API Key
+      description: "Optional. Found in Radarr under Settings > General."
+    radarrQualityProfileTrashId:
+      type: string
+      title: Radarr Quality Profile trash_id
+      description:
+        "Optional. Found on the TRaSH Guides site for the profile you want to
+        sync."
+    sonarrUrl:
+      type: string
+      title: Sonarr URL
+      description: "Optional. Example: http://sonarr:8989"
+    sonarrApiKey:
+      type: string
+      title: Sonarr API Key
+      description: "Optional. Found in Sonarr under Settings > General."
+    sonarrQualityProfileTrashId:
+      type: string
+      title: Sonarr Quality Profile trash_id
+      description:
+        "Optional. Found on the TRaSH Guides site for the profile you want to
+        sync."
+benefits:
+  - title: Automated Quality Profile Sync
+    description:
+      Keeps Radarr and Sonarr quality profiles, scoring, and custom formats in
+      sync with the latest TRaSH Guides recommendations
+  - title: Scheduled, Hands-Off Operation
+    description:
+      Runs on a cron schedule inside the container, so profiles stay current
+      without any manual copy-pasting
+  - title: Works With Your Existing Setup
+    description:
+      Connects to Radarr and Sonarr instances you already run; no database or
+      additional services required
+features:
+  - title: Custom Format Scoring
+    description:
+      Applies TRaSH Guides custom format scores to your quality profiles so
+      releases are ranked the way the community recommends
+  - title: Multi-Instance Support
+    description:
+      The mounted config file can be extended to sync multiple Radarr or Sonarr
+      instances from a single container
+  - title: Editable Configuration
+    description:
+      recyclarr.yml is stored on a persistent volume and can be edited further
+      through Easypanel's file browser for advanced setups
+tags:
+  - Media
+  - Automation
+  - Utilities
