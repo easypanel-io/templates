@@ -1,0 +1,84 @@
+name: Zensical
+description:
+  Zensical is a modern static site generator built by the creators of Material
+  for MkDocs. It converts Markdown documentation into professional, searchable
+  static websites with multi-language support for over 60 languages, built-in
+  full-text search, a live preview server with auto-reload, and full
+  compatibility with existing MkDocs projects.
+instructions:
+  The template ships with a default zensical.toml and a placeholder index.md so
+  the server starts immediately. To add your own content you have two options.
+  Option 1 - edit file mounts directly in Easypanel; open the service, go to
+  Storage, and replace the content of the /docs/docs/index.md file mount with
+  your Markdown. Add more pages by creating additional file mounts under
+  /docs/docs/. Option 2 - swap the /docs/docs/index.md file mount for a volume
+  mount and manage your Markdown files via SFTP or a sidecar editor container.
+  To change the site title or other settings, edit the /docs/zensical.toml file
+  mount.
+changeLog:
+  - date: 2026-06-12
+    description: First release
+links:
+  - label: Website
+    url: https://zensical.org/
+  - label: Docs
+    url: https://zensical.org/docs/
+  - label: GitHub
+    url: https://github.com/zensical/zensical
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: zensical
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: zensical/zensical:0.0.45
+    siteName:
+      type: string
+      title: Site Name
+      description:
+        The title shown in the documentation site header and browser tab.
+      default: My Documentation
+benefits:
+  - title: Markdown-Based Documentation
+    description:
+      Write documentation in Markdown and publish it as a beautiful, searchable
+      static site.
+  - title: Material for MkDocs Heritage
+    description:
+      Built by the creators of Material for MkDocs with full compatibility for
+      existing projects.
+  - title: Multi-Language Support
+    description:
+      Native support for over 60 languages for international documentation
+      sites.
+features:
+  - title: Live Preview Server
+    description: Built-in server with auto-reload on every file change.
+  - title: Full-Text Search
+    description:
+      Fast, built-in search engine for instant in-page documentation lookup.
+  - title: MkDocs Compatible
+    description:
+      Drop-in compatible with existing MkDocs project configurations and themes.
+  - title: Responsive Design
+    description:
+      Generates responsive, mobile-friendly documentation sites automatically.
+  - title: Self-Hosted
+    description:
+      Host documentation on your own infrastructure for complete data control.
+tags:
+  - Documentation
+  - Static Site Generator
+  - Markdown
+  - Self-Hosted
+  - Developer Tools
