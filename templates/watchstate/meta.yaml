@@ -1,0 +1,69 @@
+name: WatchState
+description:
+  WatchState syncs play state between your Plex, Jellyfin, and Emby media
+  servers without relying on any third-party services. It supports many-to-many
+  or one-way sync, webhook-based updates, backups, and tools for finding and
+  fixing metadata issues across your backends.
+instructions: >-
+  Open the app and you'll be prompted to create a system user on first access, a
+  one-time step. From there, click the help button in the top-right corner to
+  add your Plex, Jellyfin, or Emby backends and choose one-way or two-way sync.
+  All configuration and the database are stored on a persistent volume. Note:
+  this image only publishes a single old "v1.0.0" tag alongside a continuously
+  updated "latest", so this template tracks "latest" as documented by the
+  project itself.
+changeLog:
+  - date: 2026-08-18
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/arabcoders/watchstate
+  - label: Documentation
+    url: https://github.com/arabcoders/watchstate#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: watchstate
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/arabcoders/watchstate:v1.10.2
+benefits:
+  - title: No Third-Party Dependency
+    description:
+      Syncs play state directly between your own media backends, with no
+      external service in the middle
+  - title: Flexible Sync Modes
+    description:
+      Choose many-to-many or one-way sync depending on which backend should be
+      the source of truth
+  - title: Multi-User Support
+    description:
+      Sync play state for every user on your media servers through backend
+      identities, not just a single account
+features:
+  - title: Webhook and Scheduled Sync
+    description:
+      Receive real-time updates via webhooks, backed by scheduled import tasks
+      that catch anything webhooks miss
+  - title: Media Health Reports
+    description:
+      Audit backend metadata for GUID conflicts, duplicate references, and path
+      disagreements from a single report
+  - title: Portable Backups
+    description:
+      Back up your backends' play state into a portable format you can restore
+      from later
+tags:
+  - Media
+  - Automation
+  - Self-Hosting
