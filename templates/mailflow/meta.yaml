@@ -1,0 +1,79 @@
+name: MailFlow
+description:
+  MailFlow is a self-hosted, unified webmail client that connects to your
+  existing IMAP/SMTP accounts and brings them together into one clean, fast
+  inbox — with theming, unified search, and a modern compose experience.
+instructions: >-
+  Open your domain and create your account on first visit, then connect your
+  existing email accounts (IMAP/SMTP) from Settings. Push notifications are
+  optional — leave the VAPID keys blank to skip them, or generate a pair with
+  `npx web-push generate-vapid-keys` and paste them in if you want
+  desktop/mobile push support.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/maathimself/mailflow
+  - label: Documentation
+    url: https://github.com/maathimself/mailflow#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - backendServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mailflow
+    appServiceImage:
+      type: string
+      title: Frontend Service Image
+      default: ghcr.io/maathimself/mailflow-frontend:latest
+    backendServiceImage:
+      type: string
+      title: Backend Service Image
+      default: ghcr.io/maathimself/mailflow-backend:latest
+    vapidPublicKey:
+      type: string
+      title: VAPID Public Key
+      description: Optional. Enables web push notifications.
+    vapidPrivateKey:
+      type: string
+      title: VAPID Private Key
+    vapidSubject:
+      type: string
+      title: VAPID Subject
+      description: "A mailto: address or URL identifying you to push services."
+benefits:
+  - title: Unified Inbox
+    description:
+      Bring multiple existing IMAP/SMTP accounts together into one fast, clean
+      inbox.
+  - title: You Control Your Mail
+    description:
+      MailFlow connects to your own mail accounts — it doesn't host mail itself,
+      so you keep using your existing provider.
+  - title: Modern UI
+    description:
+      A polished, themeable interface with unified search and a smooth
+      compose/reply flow.
+features:
+  - title: Multiple Themes
+    description:
+      Light, dark, and accent theme options including Catppuccin and Gruvbox.
+  - title: Web Push Notifications
+    description:
+      Optional VAPID-based push notifications for new mail, even with the tab
+      closed.
+  - title: Fast Search
+    description: Search across all connected inboxes at once.
+tags:
+  - Email
+  - Productivity
+  - Self-Hosted
