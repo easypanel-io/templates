@@ -1,0 +1,90 @@
+name: GLAuth
+description:
+  GLAuth is a lightweight, single-binary LDAP server that can be used as a
+  central authentication source for self-hosted services. It supports a
+  config-file backend where users and groups are defined in a TOML file, as
+  well as plugin-based backends for SQLite, MySQL, and PostgreSQL. It also
+  exposes a REST API for programmatic user management.
+instructions:
+  After deployment, GLAuth listens for LDAP on port 3893 (published to the
+  host). Point your applications at ldap://<server-ip>:3893 and bind with the
+  admin credentials you set during template configuration. To add users after
+  deployment, edit the config.cfg file mount in Easypanel and restart the
+  service. The baseDN and service account DN follow the pattern
+  cn=<adminUsername>,dc=<baseDN>.
+changeLog:
+  - date: 2026-06-18
+    description: Initial release
+links:
+  - label: Website
+    url: https://glauth.github.io
+  - label: GitHub
+    url: https://github.com/glauth/glauth
+  - label: Docker Hub
+    url: https://hub.docker.com/r/glauth/glauth
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - baseDN
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: glauth
+    baseDN:
+      type: string
+      title: Base DN
+      default: dc=glauth,dc=com
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: serviceuser
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: ""
+benefits:
+  - title: Lightweight LDAP Server
+    description:
+      A single static binary that serves LDAP without the complexity of
+      OpenLDAP or Active Directory. Perfect for self-hosted homelab setups.
+  - title: Centralized Authentication
+    description:
+      Acts as a single LDAP source for Gitea, Nextcloud, Grafana, Jellyfin,
+      and hundreds of other apps that support LDAP login.
+  - title: Config-File Simplicity
+    description:
+      All users and groups are defined in a human-readable TOML config file.
+      No database migrations or schema management required.
+features:
+  - title: LDAP and LDAPS
+    description:
+      Supports both plain LDAP (port 3893) and TLS-secured LDAPS (port 3894)
+      with custom certificates.
+  - title: REST API
+    description:
+      Built-in HTTP REST API on port 5555 for querying users and groups
+      programmatically without an LDAP client.
+  - title: Pluggable Backends
+    description:
+      Config-file backend is built in; plugin builds add SQLite, MySQL,
+      PostgreSQL, and LDAP-proxy backends.
+  - title: Capability-Based Access
+    description:
+      Define per-user LDAP operation capabilities (search, compare, add,
+      modify) to implement least-privilege access control.
+  - title: Brute-Force Protection
+    description:
+      Built-in failed-bind rate limiting blocks an IP after a configurable
+      number of failed authentication attempts.
+tags:
+  - Authentication
+  - LDAP
+  - Identity
+  - Security
