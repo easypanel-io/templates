@@ -1,0 +1,79 @@
+name: Lunalytics
+description:
+  Lunalytics is a self-hosted uptime monitoring and status page platform. Monitor
+  HTTP, TCP, DNS, and ping endpoints with configurable check intervals, get
+  notified via Discord, Slack, email, and more, and share a public status page
+  with your users. It stores all data locally using SQLite and runs entirely
+  within a single container.
+instructions:
+  After deployment, navigate to your domain and complete the setup wizard. You
+  will be asked to create an owner account (email, username, password), choose a
+  database name, enter the public website URL (must start with https://), and set
+  a data retention period (default 6 months). Once setup is complete you will be
+  redirected to the dashboard where you can add your first monitor.
+changeLog:
+  - date: 2026-06-18
+    description: Initial release
+links:
+  - label: Website
+    url: https://lunalytics.xyz
+  - label: GitHub
+    url: https://github.com/KSJaay/Lunalytics
+  - label: Documentation
+    url: https://github.com/KSJaay/Lunalytics#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lunalytics
+benefits:
+  - title: Uptime Monitoring
+    description:
+      Monitor HTTP, TCP, DNS, and ICMP ping endpoints from a single dashboard.
+      Set custom check intervals and see live uptime percentages and response
+      times.
+  - title: Public Status Page
+    description:
+      Share a public-facing status page with your team or customers so everyone
+      knows the health of your services at a glance.
+  - title: Multi-Channel Alerts
+    description:
+      Get notified instantly via Discord, Slack, email, Telegram, Pushover, and
+      more when a monitor goes down or recovers.
+  - title: Zero External Dependencies
+    description:
+      Runs entirely in a single container backed by SQLite — no external database
+      or cache service required.
+features:
+  - title: Monitor Types
+    description:
+      Supports HTTP/HTTPS, TCP port checks, DNS resolution, and ICMP ping
+      monitors with configurable timeouts and retry counts.
+  - title: Real-Time Dashboard
+    description:
+      Live WebSocket-powered dashboard shows current status, response time
+      graphs, and incident history without page refreshes.
+  - title: Incident History
+    description:
+      Automatic incident logging with configurable retention period keeps a full
+      history of outages and recoveries.
+  - title: Multi-User Support
+    description:
+      Invite team members with role-based access. The setup wizard creates the
+      owner account; additional users can be invited from the settings panel.
+  - title: Notification Integrations
+    description:
+      Built-in integrations for Discord webhooks, Slack, email (SMTP), Telegram,
+      Pushover, Ntfy, and Gotify.
+tags:
+  - Monitoring
+  - Uptime
+  - Status Page
+  - Observability
