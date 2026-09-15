@@ -1,0 +1,72 @@
+name: MedAssist
+description:
+  MedAssist is a simple, self-hosted medication management app. It tracks
+  medication inventory, sends email reminders when supplies run low, and can
+  generate a travel list of the medication and quantities you'll need for a
+  trip.
+instructions: >-
+  Open the app to see the dashboard right away, no account or login is required
+  by the app itself, so make sure access is otherwise restricted if needed. Add
+  your medications and, optionally, configure SMTP from the settings page to
+  enable low-supply and travel-list email reminders. The SQLite database is
+  stored on a persistent volume.
+changeLog:
+  - date: 2026-08-19
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/njic/medassist
+  - label: Documentation
+    url: https://github.com/njic/medassist#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: medassist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/njic/medassist:v0.16.1
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Never Run Out
+    description:
+      Tracks medication inventory against your schedule and sends email
+      reminders before supplies run low
+  - title: Travel-Ready Lists
+    description:
+      Generates a quick list of exactly how much of each medication you need for
+      an upcoming trip
+  - title: Simple by Design
+    description:
+      A focused dashboard for medication tracking, not a bloated health app with
+      features you'll never use
+features:
+  - title: Inventory Dashboard
+    description:
+      See medication status and upcoming schedules at a glance, and compare
+      expected versus actual stock
+  - title: Email Reminders
+    description:
+      Get notified by email when it's time to reorder or when a travel list is
+      ready
+  - title: Lightweight Footprint
+    description:
+      A single Node.js container backed by SQLite, with no external database to
+      manage
+tags:
+  - Health
+  - Productivity
+  - Self-Hosting
