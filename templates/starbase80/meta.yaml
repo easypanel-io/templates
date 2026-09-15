@@ -1,0 +1,96 @@
+name: Starbase 80
+description:
+  Starbase 80 is a fast, good-looking homepage for your Docker services and
+  links. It loads instantly, has no actual integration with Docker, and follows
+  your OS's dark mode automatically.
+instructions: >-
+  Open the app to see your service grid. Edit the "Config JSON" field below with
+  your list of categories and services (see the project's README for the full
+  JSON format), then redeploy to apply changes; the config is mounted as a file,
+  not a bind-mounted host path, which avoids a common Docker gotcha where an
+  empty host file gets mounted as a directory instead and crashes the container
+  on start. Icons can be referenced from selfh.st/icons by name, or you can add
+  your own to the "icons" volume and reference them as "/icons/yourfile.png".
+changeLog:
+  - date: 2026-08-24
+    description: Initial release
+links:
+  - label: GitHub
+    url: https://github.com/notclickable-jordan/starbase-80
+  - label: Documentation
+    url: https://github.com/notclickable-jordan/starbase-80#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - title
+    - configJson
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: starbase80
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: jordanroher/starbase-80:1.6.6
+    title:
+      type: string
+      title: Page Title
+      default: My Website
+    configJson:
+      type: string
+      title: Config JSON
+      description: "The list of categories and services shown on the homepage"
+      default: >-
+        [{"category": "Services", "services": [{"name": "Easypanel", "uri":
+        "https://easypanel.io", "description": "Server management panel",
+        "icon": "easypanel"}]}]
+    theme:
+      type: string
+      title: Theme
+      default: auto
+      oneOf:
+        - enum:
+            - auto
+          title: Auto (follows OS)
+        - enum:
+            - light
+          title: Light
+        - enum:
+            - dark
+          title: Dark
+benefits:
+  - title: Instant Load Times
+    description:
+      Serves a static homepage with no live Docker integration to poll, so pages
+      load immediately
+  - title: Dark Mode Built In
+    description:
+      Follows your OS's light or dark mode automatically, or can be forced
+      either way
+  - title: Fully Customizable Grid
+    description:
+      Organize services into categories with bubbles, custom colors, and
+      per-service icons
+features:
+  - title: Simple JSON Configuration
+    description:
+      Define your entire homepage layout in a single JSON config, no database or
+      admin UI required
+  - title: Icon Library Support
+    description:
+      Reference icons from the selfh.st icon library by name, or bring your own
+      images
+  - title: Flexible Styling
+    description:
+      Customize background colors, category bubble styling, and hover effects
+      through environment variables
+tags:
+  - Dashboard
+  - Self-Hosting
+  - Utilities
