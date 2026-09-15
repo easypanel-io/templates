@@ -1,0 +1,54 @@
+name: Didacta
+description: Didacta is a fair-code, self-hosted learning platform (LMS). It ships multi-tenant isolation enforced at the database level (PostgreSQL RLS), a public course catalog with checkout, enrollment and invitation flows, gamification, certificates, reporting and a module marketplace. The API and the web app run in a single container behind one domain.
+instructions: |
+  The first account is created through a one-time setup link. After the deploy
+  finishes, open:
+
+      https://<your-domain>/setup?token=<DIDACTA_SETUP_TOKEN>
+
+  `DIDACTA_SETUP_TOKEN` is in the Environment tab of the app service. The link
+  stops working as soon as the first account is created.
+
+  Email is not configured out of the box: fill in the `SMTP_*` variables in the
+  Environment tab so Didacta can send verification emails, invitations and
+  reminders. Until then the app runs fine and warns you in the UI.
+
+  Back up the `data` volume of the app service — it holds course uploads,
+  certificates and the auto-generated encryption key.
+changeLog:
+  - date: 2026-8-12
+    description: first release
+links:
+  - label: Website
+    url: https://didacta.io
+  - label: Documentation
+    url: https://docs.didacta.io
+  - label: Github
+    url: https://github.com/va360labs/didacta-io
+contributors:
+  - name: VA360 Labs
+    url: https://github.com/va360labs
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - redisServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: didacta
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/va360labs/didacta-community:0.0.1-alpha.107
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: didacta-db
+    redisServiceName:
+      type: string
+      title: Redis Service Name
+      default: didacta-redis
