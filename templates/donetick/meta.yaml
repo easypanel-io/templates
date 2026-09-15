@@ -1,0 +1,71 @@
+name: Donetick
+description:
+  Donetick is a collaborative task and chore management app for families and
+  households. It supports natural language task creation, flexible recurring
+  schedules, assignee rotation, subtasks, labels, priorities, and a built-in
+  points system to gamify getting things done.
+instructions: >-
+  Open the app and register the first account. Create a circle to start sharing
+  tasks and chores with family or roommates. The SQLite database and config are
+  stored on persistent volumes.
+changeLog:
+  - date: 2026-08-19
+    description: first release
+links:
+  - label: Website
+    url: https://donetick.com
+  - label: GitHub Repo
+    url: https://github.com/donetick/donetick
+  - label: Documentation
+    url: https://docs.donetick.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: donetick
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: donetick/donetick:v0.1.76
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Natural Language Task Creation
+    description:
+      Describe a task in plain English, like "change the water filter every 6
+      months," and Donetick extracts the schedule automatically
+  - title: Smart Recurring Schedules
+    description:
+      Supports adaptive scheduling that learns from completion history to
+      suggest due dates, plus assignee rotation
+  - title: Built for Households
+    description:
+      Share tasks and chores across a group, with points and analytics that make
+      staying on top of chores less of a chore
+features:
+  - title: Subtasks with Smart Reset
+    description:
+      Break tasks into steps that automatically reset on recurring tasks when
+      the main task is completed
+  - title: NFC Tag Support
+    description:
+      Write physical NFC tags that instantly mark tasks as complete when scanned
+  - title: Photo Attachments
+    description:
+      Attach photos to tasks with support for local storage or S3-compatible
+      cloud storage
+tags:
+  - Productivity
+  - Household
+  - Self-Hosting
