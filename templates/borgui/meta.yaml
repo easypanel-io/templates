@@ -25,12 +25,14 @@ changeLog:
   - date: 2026-02-18
     description: Version bumped to 1.69
   - date: 2026-04-29
-    description: Version bumped to 2.0.8  
+    description: Version bumped to 2.0.8
+  - date: 2026-09-15
+    description: Version bumped to 2.2.6
 links:
-  - label: BorgBackup Docs
-    url: https://borgbackup.readthedocs.io/
-  - label: Docker Hub
-    url: https://hub.docker.com/r/ainullcode/borg-ui
+  - label: GitHub Repo
+    url: https://github.com/karanhudia/borg-ui
+  - label: Documentation
+    url: https://docs.borgui.com
 
 contributors:
   - name: Ahson Shaikh
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ainullcode/borg-ui:2.0.8
+      default: ainullcode/borg-ui:2.2.6
     timezone:
       type: string
       title: Timezone
