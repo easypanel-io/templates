@@ -1,0 +1,195 @@
+name: Lingarr
+description:
+  Lingarr automatically translates subtitle files for your movie and TV library.
+  It watches the media folders you point it at, finds subtitles missing your
+  target language, and translates them using LibreTranslate, DeepL,
+  Google/Bing/Microsoft/Yandex, or an AI provider such as OpenAI, Anthropic,
+  Gemini, DeepSeek or a local OpenAI-compatible model. It can also connect to
+  Radarr and Sonarr to stay in sync with your library.
+instructions: >-
+  Mount your existing media library into the "movies" and "tv" volumes below (or
+  rebind them in Easypanel storage settings to the same host paths already used
+  by Radarr/Sonarr/Bazarr) so Lingarr can see the video and subtitle files it
+  needs to translate. Configuration and the SQLite database persist in the
+  "config" volume. Set a translation service and, if it needs one, its API key
+  in the form below — you can change these later by editing the service's
+  environment variables and redeploying. Source and target languages are set as
+  JSON arrays and can also be changed later from Lingarr's Settings page after
+  first login.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: Website
+    url: https://lingarr.com
+  - label: GitHub Repo
+    url: https://github.com/lingarr-translate/lingarr
+  - label: Documentation
+    url: https://lingarr.com/docs/api/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - serviceType
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lingarr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/lingarr-translate/lingarr:1.2.4
+    serviceType:
+      type: string
+      title: Translation Service
+      default: google
+      oneOf:
+        - enum:
+            - google
+          title: Google Translate
+        - enum:
+            - bing
+          title: Bing Translate
+        - enum:
+            - microsoft
+          title: Microsoft Translator
+        - enum:
+            - yandex
+          title: Yandex Translate
+        - enum:
+            - libretranslate
+          title: LibreTranslate
+        - enum:
+            - deepl
+          title: DeepL
+        - enum:
+            - openai
+          title: OpenAI
+        - enum:
+            - anthropic
+          title: Anthropic
+        - enum:
+            - gemini
+          title: Gemini
+        - enum:
+            - deepseek
+          title: DeepSeek
+        - enum:
+            - localai
+          title: Local AI (Ollama / OpenAI-compatible)
+    sourceLanguages:
+      type: string
+      title: Source Languages (JSON array)
+      default: '[{"name":"English","code":"en"}]'
+    targetLanguages:
+      type: string
+      title: Target Languages (JSON array)
+      default: '[{"name":"Spanish","code":"es"}]'
+    libreTranslateUrl:
+      type: string
+      title: LibreTranslate URL
+      description: "Only used when Translation Service is LibreTranslate."
+    libreTranslateApiKey:
+      type: string
+      title: LibreTranslate API Key
+      description: "Optional, only needed if your instance requires one."
+    deeplApiKey:
+      type: string
+      title: DeepL API Key
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+    openaiModel:
+      type: string
+      title: OpenAI Model
+      description: "Example: gpt-4o-mini"
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+    anthropicModel:
+      type: string
+      title: Anthropic Model
+      description: "Example: claude-3-5-sonnet-20241022"
+    geminiApiKey:
+      type: string
+      title: Gemini API Key
+    geminiModel:
+      type: string
+      title: Gemini Model
+      description: "Example: gemini-2.0-flash"
+    deepseekApiKey:
+      type: string
+      title: DeepSeek API Key
+    deepseekModel:
+      type: string
+      title: DeepSeek Model
+      description: "Example: deepseek-chat"
+    localAiEndpoint:
+      type: string
+      title: Local AI Endpoint
+      description: "Example: http://ollama:11434"
+    localAiApiKey:
+      type: string
+      title: Local AI API Key
+    localAiModel:
+      type: string
+      title: Local AI Model
+    aiPrompt:
+      type: string
+      title: AI Translation Prompt
+      description:
+        "Optional custom prompt template used by the AI providers above."
+    radarrUrl:
+      type: string
+      title: Radarr URL
+      description: "Optional. Example: http://radarr:7878"
+    radarrApiKey:
+      type: string
+      title: Radarr API Key
+    sonarrUrl:
+      type: string
+      title: Sonarr URL
+      description: "Optional. Example: http://sonarr:8989"
+    sonarrApiKey:
+      type: string
+      title: Sonarr API Key
+    maxConcurrentJobs:
+      type: number
+      title: Max Concurrent Jobs
+      default: 1
+benefits:
+  - title: Automated Subtitle Translation
+    description:
+      Scans your movie and TV library and translates missing subtitles into your
+      target language without manual intervention
+  - title: Multiple Translation Providers
+    description:
+      Choose between LibreTranslate, DeepL, Google/Bing/Microsoft/Yandex, or AI
+      providers like OpenAI, Anthropic, Gemini and DeepSeek
+  - title: Radarr and Sonarr Integration
+    description:
+      Optionally syncs with your existing Radarr and Sonarr libraries so newly
+      added media is picked up automatically
+features:
+  - title: Batch and Scheduled Translation
+    description:
+      Translate existing subtitles in bulk or let Lingarr translate new ones as
+      they appear on a schedule
+  - title: Local AI Support
+    description:
+      Works with Ollama or any OpenAI-compatible endpoint for fully local,
+      offline translation
+  - title: REST API
+    description:
+      A documented REST API lets you integrate subtitle translation into your
+      own automation
+tags:
+  - Media
+  - Subtitles
+  - Translation
+  - Automation
