@@ -1,0 +1,85 @@
+name: Datasette
+description:
+  Datasette is an open-source multi-tool for exploring and publishing data. It
+  instantly turns SQLite database files into an interactive, explorable website
+  with a built-in JSON API, full-text search, faceted browsing, CSV export, and
+  SQL query execution — with no backend code required.
+instructions:
+  Place your SQLite .db files in the /data volume. Datasette will automatically
+  serve all .db files found there. The instance is publicly readable by default.
+  To enable the admin root session, add --root to the deploy command to get a
+  one-time login URL in the container logs. Set DATASETTE_SECRET to a secure
+  random string to enable signed cookies and authentication plugins.
+changeLog:
+  - date: 2026-06-17
+    description: Initial release
+links:
+  - label: Website
+    url: https://datasette.io
+  - label: Documentation
+    url: https://docs.datasette.io
+  - label: GitHub
+    url: https://github.com/simonw/datasette
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: datasette
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: datasetteproject/datasette:0.65.2
+benefits:
+  - title: Instant Data Publishing
+    description:
+      Drop any SQLite file into the data directory and Datasette immediately
+      publishes it as an interactive website and JSON API — zero configuration
+      needed.
+  - title: Built-In JSON API
+    description:
+      Every table and query result is automatically available as a JSON
+      endpoint, making data accessible to other applications and scripts.
+  - title: No Backend Code Required
+    description:
+      Data journalists, archivists, and researchers can publish explorable
+      datasets without writing any server-side code.
+  - title: Extensible via Plugins
+    description:
+      A rich plugin ecosystem adds authentication, visualizations, full-text
+      search, and more to any Datasette instance.
+features:
+  - title: SQL Query Execution
+    description:
+      Run arbitrary SQL queries against your databases directly from the web
+      UI, with saved canned queries for repeated use.
+  - title: Faceted Browsing
+    description:
+      Automatically generates faceted filters for columns, making it easy to
+      drill into data without writing SQL.
+  - title: Full-Text Search
+    description:
+      Native SQLite FTS support lets users search across text columns with
+      relevance ranking.
+  - title: CSV Export
+    description: Export any table or query result as CSV with a single click.
+  - title: Authentication & Permissions
+    description:
+      Built-in permission system with root access, API tokens, and plugin-based
+      auth (GitHub, passwords, etc.).
+  - title: SpatiaLite Support
+    description:
+      Render geographic data stored in SpatiaLite columns as interactive maps.
+tags:
+  - Data
+  - Analytics
+  - SQLite
+  - Self-hosted
+  - Developer Tools
