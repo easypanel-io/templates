@@ -1,0 +1,79 @@
+name: Exercise Diary
+description:
+  Exercise Diary is a simple, self-hosted workout diary with a GitHub-style
+  year-long activity visualization. Log daily workouts, group exercises into
+  routines, and track progress over time without any external database.
+instructions: >-
+  Exercise Diary uses file-based storage — no external database is required. Set
+  the timezone so your workout dates line up correctly.
+changeLog:
+  - date: 2026-08-26
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/aceberg/ExerciseDiary
+  - label: Documentation
+    url: https://github.com/aceberg/ExerciseDiary#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+    - theme
+    - color
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: exercise-diary
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: aceberg/exercisediary:0.1.9
+    timezone:
+      type: string
+      title: Timezone
+      default: Etc/UTC
+    theme:
+      type: string
+      title: Theme
+      description: Bootstrap theme name from bootswatch.com (lowercase)
+      default: grass
+    color:
+      type: string
+      title: Background Color
+      oneOf:
+        - enum:
+            - light
+          title: Light
+        - enum:
+            - dark
+          title: Dark
+      default: light
+benefits:
+  - title: Workout Tracking
+    description: Log exercises, sets, weight, and reps day by day
+  - title: Year Visualization
+    description: See your consistency at a glance with a GitHub-style heatmap
+  - title: Self-Hosted
+    description: Keep your fitness data private with no external database
+  - title: Lightweight
+    description: File-based storage keeps the app simple and fast
+features:
+  - title: Routines
+    description: Group exercises into reusable day-based routines
+  - title: Progress Charts
+    description: Visualize weight and rep trends over time
+  - title: Themeable UI
+    description: Choose from Bootswatch themes with light or dark mode
+  - title: Multi-Day Tracking
+    description: Track separate workout days and stretch routines
+tags:
+  - Fitness
+  - Health
+  - Self-Hosted
+  - Tracking
