@@ -1,0 +1,82 @@
+name: SonaShow
+description:
+  SonaShow is a web GUI for discovering TV shows similar to the ones already in
+  your Sonarr library. It queries TVDB and TMDB for recommendations based on
+  your existing collection and can add matches straight to Sonarr.
+instructions: >-
+  Set your Sonarr URL and API key (found in Sonarr under Settings > General),
+  plus TVDB and TMDB API keys, to start getting recommendations.
+changeLog:
+  - date: 2026-08-26
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/TheWicklowWolf/SonaShow
+  - label: Documentation
+    url: https://github.com/TheWicklowWolf/SonaShow#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - sonarrAddress
+    - sonarrApiKey
+    - tvdbApiKey
+    - tmdbApiKey
+    - rootFolderPath
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sonashow
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: thewicklowwolf/sonashow:0.2.13
+    sonarrAddress:
+      type: string
+      title: Sonarr Address
+      default: http://192.168.1.2:8989
+    sonarrApiKey:
+      type: string
+      title: Sonarr API Key
+      default: ""
+    tvdbApiKey:
+      type: string
+      title: TVDB API Key
+      default: ""
+    tmdbApiKey:
+      type: string
+      title: TMDB API Key
+      default: ""
+    rootFolderPath:
+      type: string
+      title: Sonarr Root Folder Path
+      default: /data/media/shows/
+benefits:
+  - title: Smart Discovery
+    description: Find shows similar to what's already in your Sonarr library
+  - title: TVDB & TMDB Powered
+    description: Recommendations are sourced from TVDB and The Movie Database
+  - title: One-Click Add
+    description: Add discovered shows to Sonarr directly from the UI
+  - title: Self-Hosted
+    description: Runs entirely on your own infrastructure, no external DB
+features:
+  - title: Rating & Vote Filters
+    description: Filter recommendations by minimum rating and vote count
+  - title: Quality & Metadata Profiles
+    description: Choose which Sonarr quality and metadata profile to use
+  - title: Auto-Start
+    description: Optionally kick off a scan automatically on startup
+  - title: Dry Run Mode
+    description: Preview additions before they're sent to Sonarr
+tags:
+  - Media
+  - TV Shows
+  - Sonarr
+  - Self-Hosted
+  - Recommendations
