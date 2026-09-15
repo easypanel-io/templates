@@ -1,0 +1,71 @@
+name: Astroluma
+description:
+  Astroluma is a self-hosted home lab dashboard built with the MERN stack. It
+  helps you manage tasks, monitor devices, integrate apps, and track real-time
+  weather from a single, customizable interface.
+instructions: >-
+  Astroluma seeds a default admin account on first boot rather than showing a
+  signup flow: log in with username "admin" and password "123456", then change
+  the password immediately from account settings, since this default is
+  hardcoded in the public source and not unique to your deployment. Uploaded
+  files and app assets persist on dedicated volumes. Astroluma's local network
+  device scanning feature relies on host networking, which Easypanel does not
+  support for app services, so that feature will not work in this deployment;
+  all other functionality works normally.
+changeLog:
+  - date: 2026-08-13
+    description: first release
+links:
+  - label: Website
+    url: https://getastroluma.com
+  - label: GitHub Repo
+    url: https://github.com/Sanjeet990/Astroluma
+  - label: Documentation
+    url: https://getastroluma.com/docs/getting-started/installation/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: astroluma
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sanjeet990/astroluma:1.0.2
+benefits:
+  - title: Unified Home Lab Dashboard
+    description:
+      Manage tasks, apps, and devices from a single, responsive interface
+      instead of juggling separate tools
+  - title: Real-Time Monitoring
+    description:
+      Track device status and live weather updates alongside your daily tasks
+      and integrated apps
+  - title: Deep Customization
+    description:
+      Configure layouts, integrations, and widgets to match how you actually
+      work, not a fixed template
+features:
+  - title: Task Management
+    description:
+      Organize and track daily tasks directly inside the dashboard alongside
+      your other integrations
+  - title: App Integration
+    description:
+      Link out to and embed your self-hosted apps and services for one-click
+      access
+  - title: Persistent Storage
+    description:
+      Uploaded files and app assets are stored on dedicated volumes that survive
+      restarts
+tags:
+  - Dashboard
+  - Self-Hosting
+  - Productivity
