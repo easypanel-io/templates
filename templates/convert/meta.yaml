@@ -1,0 +1,93 @@
+name: Convert
+description:
+  Convert is a truly universal, privacy-focused online file converter that runs
+  entirely in your browser. Unlike traditional converters that upload your files
+  to a remote server, Convert processes everything locally — no data ever leaves
+  your machine. It supports conversion across vastly different media types, for
+  example turning a video into a PDF, going far beyond the same-medium limits of
+  most tools. Built on Bun, Vite, and a modular handler architecture, it is
+  lightweight, extensible, and free of any third-party data collection.
+instructions:
+  After deployment navigate to your app domain — you will be automatically
+  redirected to /convert/. Click the blue box (or drag-and-drop) to load a file,
+  choose an output format, and click Convert. No login or account is required.
+changeLog:
+  - date: 2026-06-02
+    description: Initial Template Release
+links:
+  - label: GitHub
+    url: https://github.com/p2r3/convert
+  - label: Website
+    url: https://convert.to.it/
+  - label: Documentation
+    url: https://github.com/p2r3/convert#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: convert
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/p2r3/convert:latest
+      description: Convert Docker image from GitHub Container Registry
+benefits:
+  - title: Complete Privacy
+    description:
+      All file conversion happens inside your browser — nothing is ever uploaded
+      to an external server, keeping your documents, media, and data private.
+  - title: Truly Universal Conversion
+    description:
+      Convert between formats that no other tool supports, including
+      cross-medium conversions like video to PDF, breaking the same-medium
+      barrier of conventional converters.
+  - title: Zero Configuration
+    description:
+      No accounts, API keys, or complex setup required. Deploy once and convert
+      files instantly from any modern browser.
+  - title: Self-Hosted Control
+    description:
+      Host your own instance on your infrastructure so you decide who can access
+      it and never depend on a third-party service going down or changing terms.
+features:
+  - title: Cross-Medium Conversion
+    description:
+      Convert files across completely different media types — images, video,
+      audio, documents, and more — in combinations most tools do not support.
+  - title: Drag-and-Drop Interface
+    description:
+      Simple, clean UI with drag-and-drop file loading and automatic input
+      format detection to minimise the steps needed before converting.
+  - title: Modular Handler Architecture
+    description:
+      Each conversion tool is a self-contained handler, making it easy to extend
+      the supported format list without touching core logic.
+  - title: Format Cache
+    description:
+      A pre-built format cache ships with the Docker image so the list of
+      supported conversions loads instantly without a slow build step on first
+      visit.
+  - title: Client-Side Processing
+    description:
+      Powered by WebAssembly and browser APIs, conversions run directly in the
+      visitor's browser, eliminating server-side processing costs and latency.
+  - title: GPL-2.0 Licensed
+    description:
+      Fully open-source under GPL-2.0 — inspect, modify, and redistribute the
+      code freely in accordance with the licence terms.
+tags:
+  - File Converter
+  - Privacy
+  - Self-Hosted
+  - Media
+  - Utilities
+  - Browser Tools
+  - Open Source
