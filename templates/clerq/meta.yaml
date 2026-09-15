@@ -1,0 +1,108 @@
+name: Clerq
+description:
+  Clerq is an open-source, self-hostable back office platform that automates the
+  administrative work for freelancers and small development studios, so you can
+  spend less time on busywork and more time on billable work. It connects the
+  whole workflow, from time tracking through invoice generation to payment
+  recording, eliminating manual data transfer between tools. Clerq offers time
+  tracking with a live timer and manual logging, full client management with
+  records and contacts, project management with Kanban and list views, and
+  multi-currency invoicing with automatic exchange rates, VAT handling, and
+  branded PDF invoices. Expense tracking supports receipt uploads and
+  categorization, with optional AI receipt scanning. Built on Next.js, Better
+  Auth, and PostgreSQL, Clerq applies its database migrations automatically on
+  first boot and keeps you in full control of your data.
+instructions: |
+  Required configuration is generated for you: a PostgreSQL database, a random
+  BETTER_AUTH_SECRET, and the DATABASE_URL wiring between them. BETTER_AUTH_URL
+  is set to your attached domain and is used for authentication
+  callbacks/redirects, so deploy with a domain attached. On first boot the
+  container applies the database migrations and starts serving, then you can
+  create your account from the sign-up page.
+
+  Optional integrations: set Google OAuth (Client ID/Secret) to enable
+  "Sign in with Google", and set a Groq API key to enable AI receipt scanning on
+  the expenses form. Leave these blank to keep the corresponding buttons hidden.
+changeLog:
+  - date: 2026-06-28
+    description: First release
+links:
+  - label: Website
+    url: https://useclerq.net
+  - label: Documentation
+    url: https://useclerq.net/docs/self-hosting/easypanel
+  - label: GitHub
+    url: https://github.com/punterdigital/clerq
+contributors:
+  - name: Shay Punter
+    url: https://github.com/ShayPunter
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: clerq
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/punterdigital/clerq:1.3.0
+    googleClientId:
+      type: string
+      title: Google OAuth Client ID (optional)
+      description:
+        Enables "Sign in with Google". Leave blank to hide the button.
+    googleClientSecret:
+      type: string
+      title: Google OAuth Client Secret (optional)
+      description: Required together with the Google OAuth Client ID.
+    groqApiKey:
+      type: string
+      title: Groq API Key (optional)
+      description:
+        Enables AI receipt scanning on the expenses form. Leave blank to hide
+        the button.
+benefits:
+  - title: Less back office, more billable work
+    description:
+      Clerq automates the administrative work for freelancers and small studios,
+      connecting time tracking, invoicing, and payments into one workflow so
+      nothing is re-entered by hand.
+  - title: Self-hosted and in your control
+    description:
+      Run Clerq on your own infrastructure with a PostgreSQL database you own,
+      keeping full control of your client, invoice, and financial data.
+  - title: Quick to deploy
+    description:
+      The published image applies its own database migrations on first boot, so
+      the stack is ready to use minutes after deploying.
+features:
+  - title: Time tracking
+    description:
+      Track billable time with a live timer or manual logging, then turn it
+      straight into invoices.
+  - title: Client & project management
+    description:
+      Keep full client records and contacts, and organize work with Kanban and
+      list views.
+  - title: Multi-currency invoicing
+    description:
+      Generate branded PDF invoices with automatic exchange rates and VAT
+      handling across currencies.
+  - title: Expense tracking
+    description:
+      Upload and categorize receipts, with optional AI receipt scanning powered
+      by Groq.
+  - title: Authentication
+    description:
+      Email/password sign-in via Better Auth, with optional Google OAuth.
+tags:
+  - Invoicing
+  - Time Tracking
+  - Freelance
+  - Self-hosted
+  - Next.js
+  - PostgreSQL
