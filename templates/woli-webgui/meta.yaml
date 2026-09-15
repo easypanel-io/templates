@@ -1,0 +1,63 @@
+name: WoLi WebGUI
+description:
+  WoLi WebGUI is an extremely lightweight web interface for sending Wake-on-LAN
+  magic packets to remote computers through a public WoL proxy such as the one
+  built into a Freebox router. Fill in a target MAC address, the proxy's public
+  IP, and a port, then click to wake the machine from any browser, desktop or
+  mobile.
+instructions: >-
+  You need a working WoL proxy with a public IP reachable over UDP, such as the
+  Freebox router's built-in proxy; the MAC address, proxy IP, and port are
+  entered directly in the web form each time and are not configured here.
+  Because the magic packet is sent to a specific public IP rather than broadcast
+  on the local network, this works fine over Easypanel's normal bridged
+  networking and does not require host networking.
+changeLog:
+  - date: 2026-08-12
+    description: first release
+links:
+  - label: GitHub Repo
+    url: https://github.com/RemyFV/WoLi-webgui
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: woli-webgui
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: remyfv/woli-webgui@sha256:1af91730a6b073dae111c6d282bb4b89c848f377d993623f21f177f9272aaff6
+benefits:
+  - title: Wake Over WAN
+    description:
+      Sends Wake-on-LAN magic packets to a remote computer through a public WoL
+      proxy, no VPN or LAN access required
+  - title: Bookmarkable
+    description:
+      The MAC address, proxy IP, and port are stored in the URL after sending,
+      so you can bookmark the page to wake the same machine again in one click
+  - title: Tiny Footprint
+    description:
+      Ships as an under 8MB Alpine image running mini_httpd, with no database or
+      persistent storage required
+features:
+  - title: Mobile Friendly
+    description:
+      Works from any modern browser, desktop or mobile, with no client software
+      required
+  - title: Auto-Send From URL
+    description:
+      Visiting a bookmarked link with mac, ip, and port query parameters
+      auto-fills the form and sends the packet on page load
+tags:
+  - Wake-on-LAN
+  - Network
+  - Web GUI
