@@ -1,0 +1,85 @@
+name: DeepSubX
+description:
+  DeepSubX is a self-hosted subtitle translation tool for your movie and TV show
+  library. It uses the DeepL API to translate existing subtitle files, and can
+  extract subtitles embedded in video files before translating them. Movies and
+  shows are browsed straight from your mounted media folders, so you can queue
+  up translations without leaving the browser. An optional Plex integration
+  refreshes your library automatically once new subtitles are written to disk.
+instructions: >-
+  Provide a DeepL API key below — this app calls the DeepL Free API endpoint, so
+  the key must be a Free plan key (it ends in ":fx"; Pro-only keys will not
+  work). Mount your TV show library into the "data" volume and your movie
+  library into the "movies" volume, following the folder structure described in
+  the project README (one folder per movie/show, video and subtitle files side
+  by side). Plex host, port and token are only needed if you want DeepSubX to
+  refresh your Plex library automatically after translating subtitles.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: GitHub Repo
+    url: https://github.com/garanda21/deepsubx
+  - label: Documentation
+    url: https://github.com/garanda21/deepsubx#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - deeplApiKey
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: deepsubx
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/garanda21/deepsubx@sha256:e56049b3cedf010b640a8ba8a5838d8185fed47a95c29992efdae2772a3751fa
+    deeplApiKey:
+      type: string
+      title: DeepL API Key
+      description:
+        Required. Get a Free plan key from deepl.com/pro-api — it must end in
+        ":fx".
+    plexHost:
+      type: string
+      title: Plex Host
+      description: Optional. Hostname or IP address of your Plex server.
+    plexPort:
+      type: string
+      title: Plex Port
+      description: Optional. Port of your Plex server, usually 32400.
+    plexToken:
+      type: string
+      title: Plex Token
+      description:
+        Optional. Plex API token used to trigger library refreshes after
+        translation.
+benefits:
+  - title: AI-Powered Translation
+    description: Translates subtitle files using the DeepL API
+  - title: Embedded Subtitle Extraction
+    description: Pulls subtitles out of video files before translating them
+  - title: Plex-Aware
+    description:
+      Optionally refreshes your Plex library once translation finishes
+features:
+  - title: Movie and TV Show Browser
+    description: Browse your mounted media folders directly from the web UI
+  - title: DeepL Integration
+    description: Translates .srt subtitles into any language DeepL supports
+  - title: FFmpeg Extraction
+    description: Extracts subtitle tracks embedded in video containers
+  - title: Optional Plex Sync
+    description:
+      Notifies Plex to refresh the library after subtitles are written
+tags:
+  - Media
+  - Productivity
+  - AI
+  - Self-Hosted
