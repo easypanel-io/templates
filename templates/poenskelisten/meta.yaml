@@ -1,0 +1,78 @@
+name: Pønskelisten
+description:
+  Pønskelisten is a self-hosted, collaborative wishlist app for creating and
+  sharing gift ideas with friends and family without ruining the surprise.
+  Wishes can be claimed anonymously — other members see an item is taken, but
+  the list owner never finds out who claimed it. Wishlists are organized into
+  groups so the same list can be shared with multiple people, and the first
+  registered user automatically becomes the admin. This template runs
+  Pønskelisten with its built-in SQLite database, so there is nothing extra to
+  provision.
+instructions:
+  Registration requires an invite code. Check the app container logs after first
+  deploy for the generated invite code, register the first account (it becomes
+  admin automatically), then create additional invite codes from the admin
+  panel.
+changeLog:
+  - date: 2026-07-10
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/aunefyren/poenskelisten
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: poenskelisten
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/aunefyren/poenskelisten:v2.3.0
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+benefits:
+  - title: Surprise-Safe Claiming
+    description:
+      Wishes can be claimed anonymously by group members. The list owner sees
+      nothing has changed, so gifts stay a surprise until they're opened.
+  - title: Zero-Config Database
+    description:
+      Runs on a built-in SQLite database that Pønskelisten manages itself — no
+      separate database service to provision or maintain.
+  - title: Group-Based Sharing
+    description:
+      Organize wishlists into groups so the same list can be shared with
+      multiple people at once, like an extended family or a friend circle.
+features:
+  - title: Collaborative Wishlists
+    description:
+      Create wishlists and add wishes, then invite friends and family to
+      collaborate on the same list.
+  - title: Anonymous Gift Claiming
+    description:
+      Members can claim a wish to signal it's taken without revealing their
+      identity to the list owner.
+  - title: Invite-Based Registration
+    description:
+      New accounts require an invite code, keeping the instance closed to people
+      you've actually invited.
+  - title: Admin Panel
+    description:
+      The first registered user becomes admin and can manage users, groups, and
+      generate additional invite codes.
+tags:
+  - Wishlist
+  - Gift Planning
+  - Collaboration
+  - Self-Hosted

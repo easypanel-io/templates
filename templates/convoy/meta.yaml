@@ -1,0 +1,88 @@
+name: Convoy
+description:
+  Convoy is a self-hosted webhooks gateway. It receives, transforms, retries,
+  and delivers webhooks between your services, with a dashboard for tracking
+  every event and delivery. This template runs Convoy's real production
+  architecture — separate control-plane (web) and data-plane (agent) processes
+  behind a Caddy gateway, backed by Postgres and Redis — matching the project's
+  own reference docker-compose rather than a single container.
+instructions:
+  On first boot, an admin account is created with the email you configured and a
+  randomly generated password printed to the web service's deploy logs. Open
+  those logs, copy the password, and sign in. Self-signup is disabled by
+  default. Once signed in, create an organization and project to get your
+  ingestion and API endpoints.
+changeLog:
+  - date: 2026-07-21
+    description: first release
+links:
+  - label: Website
+    url: https://getconvoy.io
+  - label: GitHub
+    url: https://github.com/frain-dev/convoy
+  - label: Documentation
+    url: https://getconvoy.io/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: convoy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: getconvoy/convoy:v26.6.6
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description:
+        Email for the first admin account. Its password is generated on first
+        boot — find it in the web service's deploy logs.
+    publicDomain:
+      type: string
+      title: Public Domain
+      description:
+        Optional, without https:// or a trailing slash (e.g.
+        convoy.example.com). Leave blank to deploy on the domain Easypanel
+        assigns automatically.
+benefits:
+  - title: Real Production Architecture
+    description:
+      Runs Convoy's actual control-plane and data-plane processes as separate
+      services, the way the project's own reference deployment does, instead of
+      a single do-everything container.
+  - title: Reliable Delivery With Retries
+    description:
+      Failed webhook deliveries are automatically retried with backoff, so a
+      subscriber's brief downtime doesn't mean a lost event.
+  - title: Full Event History
+    description:
+      Every inbound and outbound event is logged with its payload and delivery
+      attempts, so you can debug integrations without re-triggering them.
+features:
+  - title: Webhook Transformation
+    description:
+      Transform incoming payloads before they're forwarded to subscribers,
+      instead of forcing every consumer to handle the source format.
+  - title: Multi-Tenant Projects
+    description:
+      Organize sources, subscriptions, and event history into separate projects
+      and organizations from one instance.
+  - title: Delivery Dashboard
+    description:
+      Track event delivery status, retries, and failures from a web dashboard
+      instead of digging through logs.
+tags:
+  - Webhooks
+  - API Gateway
+  - Self-Hosted
+  - Developer Tools

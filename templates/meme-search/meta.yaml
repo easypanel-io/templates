@@ -1,0 +1,115 @@
+name: Meme Search
+description:
+  Meme Search is a self-hosted app for indexing and searching your local meme
+  collection with natural language instead of scrolling through a camera roll.
+  Every image gets an AI-generated description, embedded into PostgreSQL with
+  pgvector, and made searchable by meaning rather than filename. Image
+  descriptions can be generated locally with a bundled vision model or offloaded
+  to any OpenAI-compatible API.
+instructions: |
+  Open the app URL and drag memes into the direct-upload area, or mount
+  your own meme folders into the web and jobs services under
+  /rails/public/memes to bulk-import an existing collection. New uploads
+  are picked up by the background jobs service, described by the local
+  vision model (or your configured OpenAI-compatible API), and embedded
+  into Postgres automatically, after which they become searchable from the
+  home page.
+changeLog:
+  - date: 2026-07-13
+    description: first release
+links:
+  - label: Website
+    url: https://meme-search.neonwatty.com
+  - label: GitHub
+    url: https://github.com/neonwatty/meme-search
+  - label: Documentation
+    url: https://github.com/neonwatty/meme-search/blob/main/README.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - webImage
+    - generatorImage
+    - imageDescriptionProvider
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: meme-search
+    webImage:
+      type: string
+      title: Web/Jobs Image
+      default: ghcr.io/neonwatty/meme_search:v2.2.0
+    generatorImage:
+      type: string
+      title: Local Vision Model Image
+      default: ghcr.io/neonwatty/image_to_text_generator:v2.2.0
+    imageDescriptionProvider:
+      type: string
+      title: Image Description Provider
+      default: local
+      oneOf:
+        - enum:
+            - local
+          title: Local (bundled vision model, no API key needed)
+        - enum:
+            - openai
+          title: OpenAI-compatible API
+    openaiApiBaseUrl:
+      type: string
+      title: OpenAI-Compatible API Base URL
+      description:
+        Only used when Image Description Provider is set to OpenAI-compatible
+        API.
+    openaiApiKey:
+      type: string
+      title: OpenAI-Compatible API Key
+      description:
+        Only used when Image Description Provider is set to OpenAI-compatible
+        API.
+    openaiVisionModel:
+      type: string
+      title: OpenAI-Compatible Vision Model
+      description:
+        Only used when Image Description Provider is set to OpenAI-compatible
+        API.
+benefits:
+  - title: Search by Meaning, Not Filename
+    description:
+      Every meme is described by a vision model and embedded with pgvector, so a
+      search for "cat looking confused" finds it even if the file is named
+      IMG_4213.jpg.
+  - title: No External API Required
+    description:
+      The bundled local vision model generates image descriptions on your own
+      hardware by default, so nothing leaves your server unless you choose to
+      switch to an OpenAI-compatible API.
+  - title: Bulk Import Existing Collections
+    description:
+      Mount an existing folder of memes straight into the container to index a
+      whole collection at once, instead of uploading files one by one.
+features:
+  - title: Drag-and-Drop Uploads
+    description:
+      Drop new memes directly into the browser and they are picked up by the
+      background jobs service automatically.
+  - title: Natural Language Search
+    description:
+      Search results are ranked by semantic similarity to your query using
+      pgvector, not just keyword matching.
+  - title: Pluggable Vision Backend
+    description:
+      Switch between the bundled local model and any OpenAI-compatible vision
+      API by changing a single environment variable.
+  - title: Rescan and Re-Index
+    description:
+      Trigger a rescan from the UI to pick up new files added to a mounted meme
+      directory or regenerate descriptions after switching providers.
+tags:
+  - Media
+  - Search
+  - AI
+  - Self-Hosted

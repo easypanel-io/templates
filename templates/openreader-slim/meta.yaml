@@ -1,0 +1,90 @@
+name: OpenReader (Slim)
+description:
+  OpenReader is an open-source, self-host-friendly text-to-speech document
+  reader built with Next.js. It supports EPUB, PDF, TXT, MD, and DOCX with
+  multilingual, synchronized read-along playback. Features include layout-aware
+  PDF parsing with PP-DocLayoutV3 (ONNX), word-by-word highlighting via ONNX
+  Whisper alignment, segment-based read-along with cached audio, multi-provider
+  TTS support (self-hosted and cloud), audiobook export in m4b/mp3, and flexible
+  storage backends. The slim variant bundles the Kokoro-FastAPI CPU TTS engine
+  for fully local text-to-speech without external API keys.
+instructions:
+  After deployment, open the web UI at your configured domain. On first access
+  you will be prompted to set up an account using the AUTH_SECRET you provided.
+  The Kokoro TTS service starts automatically alongside the reader — allow a
+  minute for the model to load before playing audio.
+changeLog:
+  - date: 2026-06-30
+    description: first release
+links:
+  - label: Website
+    url: https://openreader.richardr.dev
+  - label: Github
+    url: https://github.com/richardr1126/openreader
+  - label: Documentation
+    url: https://docs.openreader.richardr.dev
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - kokoroServiceImage
+    - s3ServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openreader-slim
+    appServiceImage:
+      type: string
+      title: OpenReader Image
+      default: ghcr.io/richardr1126/openreader:v4.3.0
+    kokoroServiceImage:
+      type: string
+      title: Kokoro TTS Image
+      default: ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.4
+    s3ServiceImage:
+      type: string
+      title: S3 Storage Image
+      default: minio/minio:RELEASE.2025-09-07T16-13-09Z
+benefits:
+  - title: Fully Local Text-to-Speech
+    description:
+      The slim variant ships with Kokoro-FastAPI on CPU so you get high-quality
+      TTS narration without sending your documents to any external API. Your
+      content stays entirely on your own server.
+  - title: Read-Along Synchronization
+    description:
+      Word-by-word and sentence-level highlighting keeps pace with the audio
+      playback, making it easy to follow along with complex documents at any
+      reading speed.
+  - title: Broad Document Support
+    description:
+      Upload EPUB, PDF, TXT, Markdown, and DOCX files. Layout-aware PDF parsing
+      detects headings, paragraphs, and columns so reading order is always
+      correct.
+features:
+  - title: Kokoro TTS Engine
+    description:
+      Powered by the Kokoro-82M model running via ONNX on CPU, delivering
+      natural-sounding narration without a GPU or cloud subscription.
+  - title: Audiobook Export
+    description:
+      Export any document as an m4b or mp3 audiobook with resumable chapter
+      processing, ready for playback in any podcast or audiobook app.
+  - title: Multi-Provider TTS
+    description:
+      Add cloud TTS providers (OpenAI, ElevenLabs, Deepgram, and more) alongside
+      the local Kokoro engine via the provider settings screen.
+  - title: Device Sync and Library
+    description:
+      Built-in document library with server-side storage and device sync so your
+      reading progress follows you across browsers and devices.
+tags:
+  - Documents
+  - Text-to-Speech
+  - AI
+  - Self-Hosted

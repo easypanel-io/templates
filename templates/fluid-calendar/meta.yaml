@@ -1,0 +1,71 @@
+name: FluidCalendar
+description:
+  FluidCalendar is an open source calendar app that combines scheduling with
+  task management. It syncs two-way with Google Calendar and Outlook,
+  auto-schedules tasks into open slots on your calendar, and offers public
+  booking pages so others can grab time on your calendar without an account.
+  This template runs FluidCalendar against a PostgreSQL database.
+instructions:
+  Go directly to https://your-domain/setup to create the first account — this is
+  a dedicated first-run page, not the sign-in screen, and the account created
+  there automatically becomes the admin. It's only reachable while no users
+  exist yet, so do this before anything else. To enable Google Calendar or
+  Outlook sync, add the corresponding OAuth client credentials under Settings >
+  System once logged in, and set the redirect URI on the provider's side to your
+  app URL (for example https://your-domain/api/auth/callback/google).
+changeLog:
+  - date: 2026-07-13
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/dotnetfactory/fluid-calendar
+  - label: Documentation
+    url: https://github.com/dotnetfactory/fluid-calendar/blob/main/docs/self-hosting-setup-checklist.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fluid-calendar
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eibrahim/fluid-calendar:sha-832a7ba
+benefits:
+  - title: Two-Way Calendar Sync
+    description:
+      Connect Google Calendar or Outlook and changes flow in both directions, so
+      FluidCalendar stays in sync with the calendars you already use.
+  - title: Auto-Scheduling
+    description:
+      Give a task a duration and a deadline and FluidCalendar finds an open slot
+      on your calendar automatically, instead of you scheduling it by hand.
+  - title: Public Booking Pages
+    description:
+      Share a booking link so others can reserve open time on your calendar
+      directly, without needing an account of their own.
+features:
+  - title: Combined Calendar and Tasks
+    description:
+      Tasks and calendar events live side by side, so scheduled work shows up
+      right next to meetings instead of in a separate app.
+  - title: Multiple Calendar Views
+    description:
+      Switch between day, week, month, and agenda views to plan at whatever
+      granularity you need.
+  - title: Focus Mode
+    description:
+      Collapse the interface down to just the task or event you are working on,
+      to cut down on distractions.
+tags:
+  - Calendar
+  - Productivity
+  - Task Management
+  - Self-Hosted

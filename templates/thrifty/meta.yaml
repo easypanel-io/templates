@@ -1,0 +1,90 @@
+name: Thrifty
+description:
+  Thrifty is a simple self-hosted budgeting and expense tracker for households.
+  Track spending across multiple users without accounts or passwords — the app
+  itself has no login system of any kind, so this template puts a Caddy proxy in
+  front of the UI and API and protects it with HTTP Basic Auth instead.
+instructions:
+  Open the app URL and sign in with the HTTP Basic Auth prompt using username
+  admin and the auto-generated password shown as the proxy service's basic auth
+  entry in Easypanel. A Caddy proxy sits in front of the UI and API and is the
+  only service with a public domain, so the API is never reachable without those
+  credentials.
+changeLog:
+  - date: 2026-07-21
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/tiehfood/thrifty
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - uiServiceImage
+    - apiServiceImage
+    - currencyCode
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: thrifty
+    uiServiceImage:
+      type: string
+      title: UI Service Image
+      default: tiehfood/thrifty-ui:1.12.1
+    apiServiceImage:
+      type: string
+      title: API Service Image
+      default: tiehfood/thrifty-api:1.12.1
+    currencyCode:
+      type: string
+      title: Currency
+      oneOf:
+        - enum:
+            - EUR
+          title: Euro
+        - enum:
+            - USD
+          title: US Dollar
+        - enum:
+            - GBP
+          title: British Pound
+        - enum:
+            - CAD
+          title: Canadian Dollar
+        - enum:
+            - AUD
+          title: Australian Dollar
+      default: EUR
+benefits:
+  - title: No Accounts, No Passwords
+    description:
+      Add household members as simple named users with no login of their own, so
+      tracking shared spending doesn't mean managing credentials for everyone.
+  - title: Lightweight, No External Database
+    description:
+      Runs on SQLite with nothing else to provision, so it stays cheap to host
+      for a household budget tracker.
+  - title: Multi-User Household Tracking
+    description:
+      See who spent what across the household in one shared view instead of
+      juggling separate spreadsheets.
+features:
+  - title: Multi-User Support
+    description:
+      Track expenses per household member while keeping everything in one shared
+      budget.
+  - title: Configurable Currency
+    description: Display amounts in your household's own currency.
+  - title: Swagger API Docs
+    description:
+      The API ships with interactive Swagger documentation at
+      /swagger/index.html for anyone who wants to script against it.
+tags:
+  - Budgeting
+  - Personal Finance
+  - Self-Hosted
+  - Household

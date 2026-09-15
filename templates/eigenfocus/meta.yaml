@@ -1,0 +1,74 @@
+name: Eigenfocus
+description:
+  Eigenfocus is a self-hosted project management tool built around boards,
+  issues, and time tracking, without the bloat of larger tools like Jira or
+  Linear. It has no built-in login system by design, since it is meant for a
+  single person or a small trusted team, so this template protects it with HTTP
+  Basic Auth instead. This template runs Eigenfocus against a PostgreSQL
+  database for production-grade reliability.
+instructions:
+  Open the app URL and sign in with the HTTP Basic Auth prompt using username
+  admin and the auto-generated password shown as HTTP_AUTH_PASSWORD in this
+  service's Environment tab in Easypanel. Change or remove
+  HTTP_AUTH_USER/HTTP_AUTH_PASSWORD from the Environment tab at any time;
+  removing both leaves the app fully open, so only do that if it is not
+  reachable from the internet.
+changeLog:
+  - date: 2026-07-15
+    description: first release
+links:
+  - label: Website
+    url: https://eigenfocus.com
+  - label: GitHub
+    url: https://github.com/Eigenfocus/eigenfocus
+  - label: Documentation
+    url: https://eigenfocus.com/use-cases
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: eigenfocus
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eigenfocus/eigenfocus:1.5.1-free
+benefits:
+  - title: Clutter-Free Project Management
+    description:
+      Boards, issues, and time tracking cover the essentials without the
+      configuration overhead of larger project management tools.
+  - title: Built-In Time Tracking
+    description:
+      Track time directly against issues without a separate timer app or browser
+      extension.
+  - title: Markdown Everywhere
+    description:
+      Issues and docs are written in markdown using the built-in Milkdown
+      editor, so content stays portable and easy to read as plain text.
+features:
+  - title: Kanban Boards
+    description:
+      Organize issues into boards and move them through custom stages as work
+      progresses.
+  - title: Time Reports
+    description:
+      Review time logged per issue, project, or period from a dedicated
+      reporting view.
+  - title: Single-Tenant by Design
+    description:
+      No multi-user login system to configure or maintain; access is controlled
+      at the HTTP layer instead, matching its use as a personal or small-team
+      tool.
+tags:
+  - Project Management
+  - Productivity
+  - Self-Hosted
+  - Time Tracking
