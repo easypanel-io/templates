@@ -1,0 +1,78 @@
+name: WeddingShare (Memtly)
+description:
+  WeddingShare has rebranded to Memtly, a simple gallery site that lets guests
+  view and upload photos and videos from a wedding or any other event. Share a
+  link or QR code, guests drop their media into the gallery, and you get a
+  shared collection of everyone's memories without needing an account on either
+  side.
+instructions: >-
+  Uploaded media, thumbnails, and custom resources persist in the "uploads",
+  "thumbnails", and "custom_resources" volumes, and the SQLite database lives in
+  the "config" volume. Log in at the domain below with username "admin" and the
+  admin password set in the form to create your first gallery and get its share
+  link and QR code.
+changeLog:
+  - date: 2026-08-05
+    description: first release
+links:
+  - label: Website
+    url: https://memtly.com
+  - label: GitHub Repo
+    url: https://github.com/Memtly/Memtly.Community
+  - label: Documentation
+    url: https://docs.memtly.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: weddingshare
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: memtly/memtly:1.0.5.2
+    title:
+      type: string
+      title: Site Title
+      default: WeddingShare
+    adminPassword:
+      type: string
+      title: Admin Password
+      description: "Password for the built-in admin account (username: admin)."
+benefits:
+  - title: Guest Photo and Video Sharing
+    description:
+      Guests upload their own photos and videos straight from a shared link or
+      QR code, no account required
+  - title: Gallery Moderation
+    description:
+      Review and approve uploads from the admin panel before they appear in the
+      public gallery
+  - title: Self-Contained Storage
+    description:
+      Runs on SQLite by default, so there is no separate database to manage
+features:
+  - title: Shareable QR Codes
+    description:
+      Each gallery gets a unique link and QR code you can print or send to
+      guests for easy access
+  - title: Slideshow and Presentation Modes
+    description:
+      Display uploaded media as a live slideshow or presentation during the
+      event
+  - title: Multi-Database Support
+    description:
+      Works with SQLite out of the box, or connect MySQL, MariaDB, PostgreSQL or
+      MSSQL for larger deployments
+tags:
+  - Photos
+  - Gallery
+  - Events
+  - Sharing
