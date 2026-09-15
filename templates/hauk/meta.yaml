@@ -1,0 +1,72 @@
+name: Hauk
+description:
+  Hauk is a fully open-source, self-hosted real-time location sharing service.
+  Install the backend, pair it with the companion Android app, and share your
+  live location through short-lived, expiring links, with no third party
+  involved.
+instructions: >-
+  Install the Hauk Android app from F-Droid or Google Play, then enter this
+  server's URL and the password you set below in the app's settings. For
+  security, put this deployment behind HTTPS (Easypanel handles this
+  automatically), since Hauk sends location data over plain HTTP otherwise. The
+  config and any htpasswd files are stored on a persistent volume.
+changeLog:
+  - date: 2026-08-24
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/bilde2910/Hauk
+  - label: Documentation
+    url: https://github.com/bilde2910/Hauk/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - serverPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hauk
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bilde2910/hauk:stable-1.x
+    serverPassword:
+      type: string
+      title: Server Password
+      description: "Shared password required by the app to create sessions"
+benefits:
+  - title: Real Privacy, Not Just a Promise
+    description:
+      You run the server, so there's no third-party company ever seeing where
+      you or your family are
+  - title: Time-Limited Sharing Links
+    description:
+      Location shares expire automatically and are deleted from the server once
+      the session ends
+  - title: Open Source End to End
+    description:
+      Both the server backend and the Android app are fully open source and
+      auditable
+features:
+  - title: Custom Share Links
+    description:
+      Request a memorable custom link ID instead of a random one, optionally
+      reserved for specific users
+  - title: Configurable Map Tiles
+    description:
+      Point the map frontend at OpenStreetMap, Mapbox, Esri, or any other
+      compatible tile provider
+  - title: Multiple Auth Methods
+    description:
+      Authenticate with a shared password, per-user htpasswd credentials, or an
+      LDAP directory
+tags:
+  - Privacy
+  - Location
+  - Self-Hosting
