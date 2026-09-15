@@ -1,0 +1,91 @@
+name: Airpipe
+description:
+  Airpipe is a self-hosted, peer-to-peer encrypted file transfer relay. Files
+  stream directly between devices over WebRTC, encrypted end-to-end using NaCl
+  secretbox (XSalsa20-Poly1305). No accounts or registration required — share
+  files using a memorable passphrase.
+instructions:
+  After deployment, open Airpipe in your browser and share the URL with the
+  recipient. Files are transferred directly between browsers (P2P). In mailbox
+  mode, encrypted files are held on the relay for up to 10 minutes if the
+  recipient is not yet online. Set AIRPIPE_ALLOWED_ORIGINS to your deployment
+  domain (e.g. https://airpipe.example.com) for correct CORS handling. Using *
+  is fine for private instances but is not recommended for public deployments.
+changeLog:
+  - date: 2026-06-10
+    description: First Release
+links:
+  - label: Website
+    url: https://airpipe.sanyamgarg.com
+  - label: Documentation
+    url: https://github.com/Sanyam-G/Airpipe#readme
+  - label: Github
+    url: https://github.com/Sanyam-G/Airpipe
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: airpipe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/sanyam-g/airpipe-relay:v4.1.6
+    allowedOrigins:
+      type: string
+      title: Allowed Origins
+      default: "*"
+      description:
+        Comma-separated CORS origins. Use * for any origin, or specify your
+        domain for production deployments.
+    rateLimitPerMin:
+      type: string
+      title: Rate Limit Per Minute
+      default: "60"
+      description: Maximum requests per IP per minute.
+benefits:
+  - title: Zero-Knowledge Relay
+    description:
+      The relay only handles encrypted signaling — it never sees the actual file
+      bytes. All encryption happens in the browser.
+  - title: No Registration Required
+    description:
+      Transfer files instantly using a memorable passphrase. No accounts, no
+      email, no setup needed for senders or receivers.
+  - title: End-to-End Encrypted
+    description:
+      All transfers use NaCl secretbox (XSalsa20-Poly1305, 256-bit key)
+      encryption applied in the browser before any data touches the relay.
+features:
+  - title: P2P File Transfer
+    description:
+      Files stream directly between devices over WebRTC for maximum speed with
+      no file size limits imposed by the relay.
+  - title: Mailbox Mode
+    description:
+      Encrypted 10-minute mailbox mode allows the relay to temporarily hold
+      files when the recipient is not yet online.
+  - title: Cross-Platform CLI
+    description:
+      Optional CLI binary for Linux and macOS (amd64 and arm64) enables headless
+      or scripted file transfers.
+  - title: Health Endpoint
+    description:
+      Built-in /health endpoint reports version, uptime, active rooms, and
+      stored file counts for monitoring.
+  - title: Rate Limiting
+    description:
+      Per-IP rate limiting protects the relay from abuse with a configurable
+      requests-per-minute threshold.
+tags:
+  - File Transfer
+  - P2P
+  - Encryption
+  - Privacy
