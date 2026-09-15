@@ -17,7 +17,10 @@ description:
   reliable, encrypted, and space-efficient backup solutions without relying on
   proprietary cloud backup services or complex command-line interfaces.
 
-instructions: null
+instructions: |
+  Default login is admin / admin123 — change the password on first use. Archive
+  mounting and SSHFS pull backups require a FUSE device, which this template
+  does not add; backups, browsing, and restores work normally without it.
 
 changeLog:
   - date: 2025-11-25
@@ -28,6 +31,11 @@ changeLog:
     description: Version bumped to 2.0.8
   - date: 2026-09-15
     description: Version bumped to 2.2.6
+  - date: 2026-09-15
+    description:
+      Fixed logo to the correct Borg UI mascot, disabled Redis fallback
+      attempts, added first-login/FUSE instructions, and made the local
+      mount path configurable
 links:
   - label: GitHub Repo
     url: https://github.com/karanhudia/borg-ui
@@ -56,6 +64,11 @@ schema:
       type: string
       title: Timezone
       default: UTC
+    localPath:
+      type: string
+      title: Local Mount Path
+      description: Host path mounted into the container at /local. Defaults to / to expose the whole filesystem; narrow it to limit what the container can see.
+      default: /
 
 benefits:
   - title: User-Friendly Backup Management
