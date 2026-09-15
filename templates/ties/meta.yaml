@@ -1,0 +1,78 @@
+name: Ties
+description:
+  Ties is a federated, self-hosted bookmark manager and link aggregator. Save,
+  organize, annotate, and share bookmarks; follow other users across instances;
+  and search a trusted network of curated links. Built in Rust for a fast,
+  lightweight footprint.
+instructions:
+  Set BASE_URL to your public domain before first run — it becomes part of user
+  handles (e.g. user@your-domain.com) and cannot be changed once a user exists.
+  An admin account is auto-created on startup if ADMIN_USERNAME and
+  ADMIN_PASSWORD are set. Database migrations run automatically.
+changeLog:
+  - date: 2026-06-16
+    description: Initial release
+links:
+  - label: Website
+    url: https://demo.ties.pub
+  - label: Documentation
+    url: https://github.com/raffomania/ties/tree/main/doc
+  - label: GitHub
+    url: https://github.com/raffomania/ties
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ties
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/raffomania/ties:0.2.1
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      default: adminpassword
+benefits:
+  - title: Federated Bookmarking
+    description:
+      Follow users across different Ties instances and search a network of
+      curated links beyond your own collection.
+  - title: Lightweight & Fast
+    description:
+      Written in Rust with a stateless binary and embedded assets — minimal
+      resource usage with no app-side volumes needed.
+  - title: Simple Setup
+    description:
+      Database migrations run automatically on startup. Just set BASE_URL and
+      optionally ADMIN_USERNAME/ADMIN_PASSWORD to be ready immediately.
+features:
+  - title: Bookmark Management
+    description: Save, annotate, tag, and organize links with a clean interface.
+  - title: Federation
+    description:
+      Follow other users across Ties instances for a curated, trusted link
+      network.
+  - title: Full-Text Search
+    description:
+      Search across your own bookmarks and followed users' collections.
+  - title: OIDC Support
+    description:
+      Optional single sign-on via OIDC for enterprise or team deployments.
+tags:
+  - Bookmarks
+  - Self-hosted
+  - Federation
