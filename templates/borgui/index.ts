@@ -18,7 +18,12 @@ export function generate(input: Input): Output {
           port: 8081,
         },
       ],
-      env: [`TZ=${input.timezone || "UTC"}`, "PUID=0", "PGID=0"].join("\n"),
+      env: [
+        `TZ=${input.timezone || "UTC"}`,
+        "PUID=0",
+        "PGID=0",
+        "REDIS_HOST=disabled",
+      ].join("\n"),
       mounts: [
         {
           type: "volume",
@@ -32,7 +37,7 @@ export function generate(input: Input): Output {
         },
         {
           type: "bind",
-          hostPath: "/",
+          hostPath: input.localPath || "/",
           mountPath: "/local",
         },
       ],
