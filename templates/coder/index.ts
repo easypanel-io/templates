@@ -4,29 +4,41 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const httpPort = 7080;
+  const databaseUrl = `postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`;
+
+  const env = [
+    `CODER_ACCESS_URL=https://$(PRIMARY_DOMAIN)`,
+    `CODER_HTTP_ADDRESS=0.0.0.0:${httpPort}`,
+    `CODER_PG_CONNECTION_URL=${databaseUrl}`,
+  ];
+
+  const domains = [
+    { host: "$(EASYPANEL_DOMAIN)", port: httpPort, wildcard: false },
+  ];
+
+  if (input.wildcardDomain) {
+    env.push(`CODER_WILDCARD_ACCESS_URL=https://*.${input.wildcardDomain}`);
+    domains.push({
+      host: input.wildcardDomain,
+      port: httpPort,
+      wildcard: true,
+    });
+  }
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env: [
-        `CODER_ACCESS_URL=https://$(PRIMARY_DOMAIN)`,
-        `CODER_HTTP_ADDRESS=0.0.0.0:80`,
-        `CODER_PG_CONNECTION_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)?sslmode=disable`,
-      ].join("\n"),
+      env: env.join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
       },
       deploy: {
-        groups: ["998", "999"],
+        groups: [input.dockerGroupId],
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
-        },
-      ],
+      domains,
       mounts: [
         {
           type: "bind",
