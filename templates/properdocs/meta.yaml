@@ -1,0 +1,96 @@
+name: ProperDocs
+description:
+  ProperDocs is a fast, simple, and gorgeous static site generator for project
+  documentation, forked from MkDocs. It converts Markdown source files into a
+  fully navigable static HTML site using a single YAML configuration file. The
+  built-in live-reload dev server lets you preview and edit your documentation
+  in the browser as you write. ProperDocs is a drop-in replacement for MkDocs,
+  maintaining full compatibility while adding bug fixes and incremental
+  improvements. This template runs the ProperDocs development server in a
+  container so you can author and browse your docs from any browser, with your
+  content persisted in a volume.
+instructions:
+  After deployment, open your app domain to see the live documentation preview.
+  Your docs are stored in the /docs volume. To add or edit pages, use
+  Easypanel's volume file manager or mount the volume on your host and edit the
+  Markdown files directly. The configuration file is properdocs.yml at the root
+  of the volume. The server auto-reloads on every file change. To change the
+  site name, edit the site_name field in properdocs.yml and the page will
+  refresh automatically.
+changeLog:
+  - date: 2026-06-05
+    description: Initial Template Release (v1.6.7)
+links:
+  - label: GitHub
+    url: https://github.com/ProperDocs/properdocs
+  - label: Website
+    url: https://properdocs.org
+  - label: Documentation
+    url: https://properdocs.org/user-guide/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: properdocs
+    siteName:
+      type: string
+      title: Site Name
+      default: My Documentation
+      description: The name shown in the navigation bar and browser tab.
+benefits:
+  - title: MkDocs-Compatible Drop-In Replacement
+    description:
+      ProperDocs is a direct fork of MkDocs — existing mkdocs.yml projects work
+      unchanged. You get the same simple Markdown-to-HTML workflow with bug
+      fixes and new features on top.
+  - title: Live-Reload Preview Server
+    description:
+      The built-in dev server watches your docs directory and configuration file
+      for changes, reloading the browser automatically so you always see an
+      up-to-date preview.
+  - title: Single YAML Configuration
+    description:
+      One properdocs.yml file controls site name, navigation structure, theme,
+      plugins, and extensions — no complex build tooling or frontend knowledge
+      required.
+  - title: Self-Hosted and Open Source
+    description:
+      Own your documentation stack completely. BSD-2-Clause licensed, no
+      third-party tracking, no rate limits, no account required.
+features:
+  - title: Markdown to HTML Generation
+    description:
+      Write pages in plain Markdown and ProperDocs assembles a fully navigable
+      HTML site with sidebar navigation, search, and breadcrumbs.
+  - title: Theme Support
+    description:
+      Ships with the mkdocs and readthedocs themes. Additional community themes
+      installable via pip; active theme is set in properdocs.yml.
+  - title: Plugin and Extension System
+    description:
+      Extend functionality with plugins for search, redirects, tags, and more.
+      Python-Markdown extensions add tables, admonitions, code highlighting, and
+      other rich content blocks.
+  - title: Navigation Authoring
+    description:
+      Define page order and section grouping explicitly via the nav key in
+      properdocs.yml, or let ProperDocs auto-discover and sort pages from the
+      docs folder.
+  - title: Static Export
+    description:
+      Run properdocs build to produce a portable static site in the site/
+      directory — deploy to any web server, GitHub Pages, or S3 bucket.
+tags:
+  - Documentation
+  - Static Site Generator
+  - Developer Tools
+  - Self-Hosted
+  - Open Source
+  - Python
