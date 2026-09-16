@@ -7,33 +7,16 @@ description:
   control over templates, access, and cost. Paid tiers add security, governance,
   and observability capabilities.
 instructions: |
-  Before deploying, set the Docker Group ID to match your host. Run
-  `getent group docker | cut -d: -f3` over SSH and enter the result. The default
-  of 999 is correct on many hosts, but a mismatch stops Coder from reaching the
-  Docker daemon and every workspace build fails with a permission error that
-  cannot be fixed from the Easypanel UI.
-
-  After the deploy finishes, open the app domain, create the first administrator
-  account, then add a template to start building workspaces.
-
-  Coder itself needs roughly 2 CPU cores and 4 GB of memory before any
-  workspaces exist. Docker workspaces run as sibling containers on the same
-  host, so size the server for Coder plus every workspace you expect to run.
-
-  This template mounts the host Docker socket into the Coder container, which
-  gives it root-equivalent control of the host. That is acceptable for a
-  single-tenant trial. Review it before you invite users you do not trust.
-
-  Workspace containers and volumes are created by Coder, not by Easypanel.
-  Delete your workspaces from the Coder dashboard before you remove this
-  service, otherwise they keep running on the host.
-
-  Subdomain-based workspace apps and port sharing need the optional Wildcard
-  Domain input, plus a wildcard DNS record and a wildcard certificate for that
-  domain. Leave it empty to serve workspace apps on paths instead.
-
-  Coder requires PostgreSQL 13 or newer, which the bundled database service
-  satisfies.
+  Before deploying, set the Docker Group ID to match your host: run
+  `getent group docker | cut -d: -f3` over SSH and enter the result. A mismatch
+  stops Coder from reaching the Docker daemon and every workspace build fails.
+  After the deploy, open the app domain and create the first administrator
+  account. Workspaces run as sibling containers on the same host, so size the
+  server for Coder (roughly 2 CPU cores and 4 GB) plus every workspace you
+  expect, and delete workspaces from the Coder dashboard before removing this
+  service. The mounted Docker socket gives Coder root-equivalent control of the
+  host. The optional Wildcard Domain enables subdomain-based workspace apps and
+  port sharing, and also needs a wildcard DNS record and certificate.
 changeLog:
   - date: 2024-01-23
     description: first release
