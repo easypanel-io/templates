@@ -25,6 +25,9 @@ export function generate(input: Input): Output {
           port: 7377,
         },
       ],
+      env: [
+        `ALLOWED_ORIGINS=https://$(PRIMARY_DOMAIN)`,
+      ].join("\n"),
     },
   });
 
