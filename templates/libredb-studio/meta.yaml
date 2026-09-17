@@ -19,6 +19,8 @@ instructions: |
   querying. Application data is kept on the volume mounted at /app/data,
   so it survives restarts and redeploys.
 changeLog:
+  - date: 2026-09-17
+    description: bump to 0.16.0; the schema sidebar becomes an object tree listing views, sequences, routines and triggers, and their definitions can be read and edited
   - date: 2026-09-14
     description: bump to 0.15.0
   - date: 2026-09-06
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/libredb/libredb-studio:0.15.0
+      default: ghcr.io/libredb/libredb-studio:0.16.0
     adminEmail:
       type: string
       title: Admin Email
