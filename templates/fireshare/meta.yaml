@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to v1.4.3
   - date: 2026-04-29
     description: Version bumped to v1.6.8
+  - date: 2026-09-21
+    description: Fixed invalid image tag (v1.6.8 does not exist on Docker Hub); updated to 1.8.1
 links:
   - label: Website
     url: https://v.fireshare.net
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shaneisrael/fireshare:v1.6.8
+      default: shaneisrael/fireshare:1.8.1
     adminUsername:
       type: string
       title: Username
