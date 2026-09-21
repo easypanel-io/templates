@@ -17,6 +17,8 @@ instructions: >-
 changeLog:
   - date: 2026-07-30
     description: first release
+  - date: 2026-09-16
+    description: Version bumped to 0.55.0
 links:
   - label: Website
     url: https://www.cerbos.dev
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/cerbos/cerbos:0.54.0
+      default: ghcr.io/cerbos/cerbos:0.55.0
 benefits:
   - title: Policy As Code
     description:

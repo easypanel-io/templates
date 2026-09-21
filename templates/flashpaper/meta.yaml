@@ -10,6 +10,8 @@ instructions:
 changeLog:
   - date: 2025-04-10
     description: First Release
+  - date: 2026-09-17
+    description: Version bumped to 2.5.0
 links:
   - label: Github
     url: https://github.com/AndrewPaglusch/FlashPaper
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/andrewpaglusch/flashpaper:2.4.0
+      default: ghcr.io/andrewpaglusch/flashpaper:2.5.0
 benefits:
   - title: Self-Destructing Messages
     description: Messages are automatically destroyed after being viewed once.

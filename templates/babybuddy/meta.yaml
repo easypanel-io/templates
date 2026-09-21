@@ -20,6 +20,8 @@ changeLog:
     description: Version bumped to 2.7.1
   - date: 2026-04-29
     description: Version bumped to 2.8.0  
+  - date: 2026-09-16
+    description: Version bumped to 2.10.1
 links:
   - label: Website
     url: https://babybuddy.app
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/babybuddy:2.8.0
+      default: linuxserver/babybuddy:2.10.1
 benefits:
   - title: Simplified Parenting
     description:

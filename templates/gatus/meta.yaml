@@ -25,6 +25,8 @@ changeLog:
     description: Template Release
   - date: 2026-04-29
     description: Version bumped to v5.35.0
+  - date: 2026-09-18
+    description: Version bumped to v5.36.0
 
 links:
   - label: GitHub
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: twinproduction/gatus:v5.35.0
+      default: twinproduction/gatus:v5.36.0
 
 benefits:
   - title: Automated Health Monitoring

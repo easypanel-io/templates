@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 4.9.1
   - date: 2026-02-20
     description: Version bumped to 4.9.3
+  - date: 2026-09-17
+    description: Version bumped to 4.10.0  
 links:
   - label: Website
     url: https://emby.media/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/emby:4.9.3
+      default: lscr.io/linuxserver/emby:4.10.0
 benefits:
   - title: Easy Access to Personal Media
     description:
