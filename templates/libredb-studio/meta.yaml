@@ -29,6 +29,8 @@ changeLog:
     description: bump to 0.16.0; the schema sidebar becomes an object tree listing views, sequences, routines and triggers, and their definitions can be read and edited
   - date: 2026-09-20
     description: bump to 0.16.1; an inline cell edit is written to the row you edited rather than to a row identified by position, and GET /health and GET /api/health answer beside /api/db/health
+  - date: 2026-09-21
+    description: bump to 0.16.2, a security fix; a connection id supplied in a request could select another session's already authenticated database provider, so a user account could reach a connection restricted to admin (GHSA-3wh2-8x78-jfw4, CVSS 8.8)
 links:
   - label: Website
     url: https://libredb.org/
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/libredb/libredb-studio:0.16.1
+      default: ghcr.io/libredb/libredb-studio:0.16.2
     adminEmail:
       type: string
       title: Admin Email
