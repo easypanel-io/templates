@@ -1,0 +1,103 @@
+name: Notifuse
+description:
+  Notifuse is a self-hosted email marketing and automation platform with a
+  visual MJML email builder, broadcast campaigns, contact segmentation,
+  transactional API, and built-in cookieless web analytics. Connect your own
+  SMTP or provider (Amazon SES, Mailgun, Postmark, SendGrid, SparkPost, Mailjet)
+  and keep contacts, events and analytics in a database you control.
+instructions: >-
+  On first launch, open the app URL and complete the setup wizard to create the
+  root admin account and set the public API endpoint. A bundled MailHog inbox
+  catches outgoing email by default so you can test right away; open its domain
+  to read the setup verification link. Set the SMTP fields below to send real
+  email instead. Do not change the generated SECRET_KEY after setup - it
+  encrypts every workspace integration secret and changing it destroys them
+  permanently.
+changeLog:
+  - date: 2026-09-14
+    description: first release
+  - date: 2026-09-14
+    description:
+      Bundled a MailHog inbox by default for SMTP so the app works
+      out-of-the-box; added optional SMTP fields to use a real provider instead
+links:
+  - label: Website
+    url: https://www.notifuse.com
+  - label: GitHub
+    url: https://github.com/notifuse/notifuse
+  - label: Documentation
+    url: https://docs.notifuse.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: notifuse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: notifuse/notifuse:v40.0
+    smtpFromEmail:
+      type: string
+      title: SMTP From Email
+      default: noreply@yourdomain.com
+    smtpFromName:
+      type: string
+      title: SMTP From Name
+      default: Notifuse
+    smtpHost:
+      type: string
+      title: SMTP Host
+      description:
+        Optional. Leave blank to catch emails in the bundled MailHog inbox
+        instead of sending them for real.
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpUsername:
+      type: string
+      title: SMTP Username
+    smtpPassword:
+      type: string
+      title: SMTP Password
+benefits:
+  - title: Visual Email Builder
+    description:
+      Design broadcast and transactional emails with a drag-and-drop MJML editor
+      and Liquid personalization, no HTML required.
+  - title: Own Your Sending
+    description:
+      Connect your own SMTP or provider (Amazon SES, Mailgun, Postmark,
+      SendGrid, SparkPost, Mailjet) - mail leaves through it at your provider's
+      raw rates.
+  - title: Built-in Web Analytics
+    description:
+      Cookieless first-party web analytics stored alongside contacts and events,
+      with goals and attribution.
+features:
+  - title: Broadcast Campaigns
+    description:
+      Segment filters, A/B testing, automatic UTM tagging, and send-time data
+      feeds.
+  - title: Visual Automations
+    description:
+      Build flows with delays, conditional branches, weighted A/B splits, list
+      membership changes, outbound webhooks, and exit on reply.
+  - title: Transactional API & SMTP Bridge
+    description:
+      Send transactional email via API or through an SMTP bridge so existing
+      applications can send without code changes.
+tags:
+  - Email Marketing
+  - Newsletter
+  - Transactional Email
+  - Automation
+  - Analytics
