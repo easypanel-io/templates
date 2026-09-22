@@ -1,0 +1,68 @@
+name: Workout Tracker
+description:
+  Workout Tracker is a self-hosted fitness tracking app geared towards running
+  and other GPX-based activities. Upload workouts, view them on a map with route
+  segments and elevation, track statistics and personal records, and keep a
+  heatmap of everywhere you've been.
+instructions: >-
+  On first startup, with an empty database, the app automatically creates a
+  default admin account with username "admin" and password "admin" — log in with
+  those and change the password immediately from your profile settings. Upload
+  GPX, TCX, or FIT files from the Workouts page, or connect Strava/other
+  services under your profile settings. New registrations are inactive until an
+  admin approves them, and can be disabled entirely from the admin panel.
+changeLog:
+  - date: 2026-08-31
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/jovandeginste/workout-tracker
+  - label: Documentation
+    url: https://github.com/jovandeginste/workout-tracker#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - workoutTrackerVersion
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: workout-tracker
+    workoutTrackerVersion:
+      type: string
+      title: Workout Tracker Version
+      default: "2.9.0"
+    registrationDisabled:
+      type: boolean
+      title: Disable New Registrations
+      default: false
+benefits:
+  - title: GPX, TCX & FIT Import
+    description:
+      Upload workouts directly, or sync automatically from Strava and other
+      services.
+  - title: Maps & Heatmaps
+    description:
+      Every workout is plotted on a map with elevation and route segments, plus
+      a lifetime heatmap of all your activity.
+  - title: Multi-User
+    description:
+      Invite family or friends — each user gets their own workouts, stats, and
+      records.
+features:
+  - title: Statistics & Records
+    description:
+      Automatic personal records for pace, distance, elevation, and duration per
+      activity type.
+  - title: Equipment Tracking
+    description: Track gear like shoes or bikes and their accumulated distance.
+  - title: Localized UI
+    description: Interface available in multiple languages.
+tags:
+  - Fitness
+  - Self-Hosted
+  - Tracking
