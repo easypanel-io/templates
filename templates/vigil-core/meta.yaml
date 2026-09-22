@@ -1,0 +1,115 @@
+name: Vigil
+description:
+  Vigil is a self-hosted uptime monitoring, incident management, and status page
+  platform with forty check types covering HTTP, TCP/UDP, ping, DNS, TLS/domain
+  expiry, databases, message brokers, and more. It includes adaptive check
+  scheduling, an incident lifecycle with timelines and postmortems, public or
+  password-protected status pages, team roles, an audit trail, and 25+ native
+  notification providers.
+instructions: >-
+  Vigil runs as a web service, a background worker, and Postgres. Postgres runs
+  on version 18, which isn't yet available as an Easypanel managed database, so
+  it's deployed here as a plain app service with its own volume instead.
+  Database migrations run automatically every time the worker service starts,
+  before it begins processing jobs; this is safe to repeat on every restart. On
+  first visit, create your admin account to get started. Set an Anthropic API
+  key if you want AI-assisted incident summaries, and a Resend API key to enable
+  email notifications; other alert channels (Twilio SMS, webhooks, and more) can
+  be configured from inside the app after setup.
+changeLog:
+  - date: 2026-08-29
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/sikurdev/vigil-core
+  - label: Documentation
+    url: https://github.com/sikurdev/vigil-core/blob/main/docs/DEPLOYMENT.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - vigilVersion
+    - emailFrom
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: vigil
+    vigilVersion:
+      type: string
+      title: Vigil Version
+      description:
+        Applied to both the web and worker images — keep these in sync.
+      default: 1.29.0
+    emailFrom:
+      type: string
+      title: Email From Address
+      default: "Vigil <onboarding@resend.dev>"
+    resendApiKey:
+      type: string
+      title: Resend API Key
+      description: Required to send email notifications and invites.
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key
+      description: Optional. Enables AI-assisted incident summaries.
+    allowPrivateMonitorTargets:
+      type: boolean
+      title: Allow Private Monitor Targets
+      description:
+        Allow monitors to target private/internal IP ranges. Only enable this if
+        you trust everyone with access to this instance.
+      default: false
+    demoMode:
+      type: boolean
+      title: Demo Mode
+      default: false
+    twilioAccountSid:
+      type: string
+      title: Twilio Account SID
+      description: Optional. Enables SMS notification channels.
+    twilioAuthToken:
+      type: string
+      title: Twilio Auth Token
+    twilioFromNumber:
+      type: string
+      title: Twilio From Number
+benefits:
+  - title: Forty Check Types
+    description:
+      HTTP, TCP/UDP, ping, DNS, TLS/domain expiry, databases, message brokers,
+      SSH, and more — each type talks the wire protocol directly.
+  - title: Adaptive Scheduling
+    description:
+      A suspicious monitor gets probed harder and a steady one backs off, down
+      to a 500ms minimum interval on the high-frequency plane.
+  - title: Incidents & Status Pages
+    description:
+      Incidents open and resolve automatically with a timeline and postmortem;
+      status pages show 90-day uptime bars and incident history.
+  - title: No Limits
+    description:
+      No license key, no telemetry, no expiry, and no cap on monitors, users, or
+      retention.
+features:
+  - title: Team Roles
+    description:
+      Owner, admin, responder, and viewer roles, enforced server-side.
+  - title: Audit Trail
+    description: Every mutation recorded with actor, target, and metadata.
+  - title: 25+ Notification Providers
+    description:
+      Native alert channels plus Apprise support for anything not on the list,
+      with a delivery ledger and retry history.
+  - title: Uptime Kuma Import
+    description:
+      Import an existing Uptime Kuma database with a dry-run report before
+      applying.
+tags:
+  - Monitoring
+  - Status Page
+  - Incident Management
+  - Self-Hosted
