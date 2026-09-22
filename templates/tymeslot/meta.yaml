@@ -1,0 +1,92 @@
+name: Tymeslot
+description:
+  Tymeslot is an open-source meeting scheduling platform built with
+  Elixir/Phoenix LiveView — a self-hosted alternative to Calendly with booking
+  pages, availability rules, and calendar integrations.
+instructions: >-
+  Sign up on your domain — Tymeslot requires email verification, so by default a
+  bundled MailHog inbox catches that email; open its domain to grab the
+  verification link. Set the SMTP fields below to send real email instead.
+  PostgreSQL runs bundled inside the app container, so no separate database
+  service is needed.
+changeLog:
+  - date: 2026-09-04
+    description: first release
+links:
+  - label: Website
+    url: https://tymeslot.app
+  - label: GitHub
+    url: https://github.com/Tymeslot/tymeslot
+  - label: Documentation
+    url: https://github.com/Tymeslot/tymeslot/blob/main/README-Docker.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tymeslot
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: luka1thb/tymeslot:1.14.0
+    registrationEnabled:
+      type: boolean
+      title: Allow New Registrations
+      default: true
+    emailFromAddress:
+      type: string
+      title: Email From Address
+      default: hello@yourdomain.com
+    smtpHost:
+      type: string
+      title: SMTP Host
+      description:
+        Optional. Leave blank to catch emails in the bundled MailHog inbox
+        instead of sending them for real.
+    smtpPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      description:
+        Required if SMTP Host is set — Tymeslot refuses to start with a blank
+        value, even against relays that don't check it.
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      description:
+        Required if SMTP Host is set — Tymeslot refuses to start with a blank
+        value, even against relays that don't check it.
+benefits:
+  - title: Self-Contained
+    description:
+      PostgreSQL runs bundled in the same container — no separate database
+      service to manage.
+  - title: Calendly Alternative
+    description:
+      Booking pages, availability rules, and calendar sync without a monthly
+      subscription.
+  - title: Open Source
+    description: No seat limits, no paywalled core features.
+features:
+  - title: Availability Rules
+    description: Set working hours, buffers, and booking limits per event type.
+  - title: Calendar Integrations
+    description: Sync with external calendars to avoid double-booking.
+  - title: Data-at-Rest Encryption
+    description:
+      Stored credentials are encrypted with a dedicated key, independent of the
+      session secret.
+tags:
+  - Scheduling
+  - Productivity
+  - Self-Hosted
