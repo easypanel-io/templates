@@ -1,0 +1,65 @@
+name: Ots
+description:
+  Ots (One-Time-Secret) lets you share a password or other sensitive text
+  through a link that can only be opened once — the secret is deleted the moment
+  it's viewed. It's fully open by design (anyone with the link can read it,
+  that's the whole point), so it has no login of its own.
+instructions:
+  Open the app URL, paste the text you want to share, and send the generated
+  one-time link to the recipient. The secret is permanently deleted the first
+  time that link is opened, and unread secrets expire automatically after 7
+  days.
+changeLog:
+  - date: 2026-07-24
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/Luzifer/ots
+  - label: Documentation
+    url: https://github.com/Luzifer/ots/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: ots
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/luzifer/ots:v1.21.8
+benefits:
+  - title: Secrets Never Sit in Chat History
+    description:
+      Once a link is opened, the secret is gone — it can't be re-read later from
+      a chat log or email thread.
+  - title: Self-Hosted, No Third-Party Relay
+    description:
+      Sensitive text never passes through a shared public instance you don't
+      control.
+  - title: Lightweight
+    description:
+      A single small service backed by Redis, with nothing else to provision or
+      maintain.
+features:
+  - title: One-Time Read
+    description:
+      Each link can be opened exactly once — the secret is deleted immediately
+      after.
+  - title: Automatic Expiry
+    description: Unread secrets are automatically purged after a set time.
+  - title: Simple Paste-and-Share Flow
+    description:
+      Paste text, get a link, share it — no account or setup needed on either
+      end.
+tags:
+  - Secret Sharing
+  - Privacy
+  - Self-Hosted
+  - Developer Tools

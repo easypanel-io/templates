@@ -1,0 +1,84 @@
+name: DweebUI
+description:
+  DweebUI is a free, open-source web UI for managing Docker and Podman
+  containers. It provides a dynamically updating dashboard showing real-time
+  CPU, RAM, network, and disk metrics alongside container cards with one-click
+  start, stop, pause, restart, log, and detail controls. It also manages images,
+  volumes, and networks, supports multi-user access with a permission system,
+  includes an app template library compatible with Portainer, and works on
+  Windows, Linux, and macOS. Built with Node.js, Express, HTMX, and EJS, the
+  entire stack runs in a single container connected to the Docker socket.
+instructions:
+  Open the app at your domain. On first visit you will be prompted to register
+  an admin account — use the SECRET value shown in the service environment
+  variables as the registration key. The Docker socket is mounted read-write so
+  DweebUI can manage containers. For Podman, replace /var/run/docker.sock with
+  /run/podman/podman.sock in the bind mount after deployment.
+changeLog:
+  - date: "2026-06-26"
+    description: First Release
+links:
+  - label: Website
+    url: https://www.dweebui.com/
+  - label: GitHub
+    url: https://github.com/lllllllillllllillll/DweebUI
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dweebui
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: lllllllillllllillll/dweebui:v0.60
+benefits:
+  - title: Unified Container Dashboard
+    description:
+      A single-page dashboard shows live CPU, RAM, network, and disk metrics at
+      the top and a card for every container below — with status indicators and
+      action buttons — all updating without a page reload.
+  - title: Multi-User Permission System
+    description:
+      Create multiple user accounts and assign per-container permissions so team
+      members can manage only the containers they are authorised to touch,
+      without sharing admin credentials.
+  - title: Portainer-Compatible App Templates
+    description:
+      Import and deploy apps from a built-in template library that uses the same
+      format as Portainer, making it easy to migrate or share stacks between
+      tools.
+features:
+  - title: Container Lifecycle Controls
+    description:
+      Start, stop, pause, restart, and remove containers from the dashboard.
+      View real-time logs and inspect container details without a terminal.
+  - title: Image, Volume, and Network Management
+    description:
+      Browse and delete Docker images, volumes, and networks from dedicated tabs
+      — no CLI required for routine cleanup tasks.
+  - title: Docker and Podman Support
+    description:
+      Connects to the Docker socket by default; switch to the Podman socket path
+      for rootless Podman environments with no other configuration change.
+  - title: Light and Dark Mode
+    description:
+      Toggle between light and dark themes from the UI; the preference is
+      persisted per user session.
+  - title: Mobile-Friendly Interface
+    description:
+      The responsive layout scales to phone and tablet screens, making it
+      practical to check and control containers from any device.
+tags:
+  - Docker
+  - Container Management
+  - Dashboard
+  - Self-Hosted
+  - DevOps

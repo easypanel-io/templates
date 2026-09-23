@@ -1,0 +1,76 @@
+name: Copyparty
+description:
+  Copyparty turns a server into a file server with resumable uploads and
+  downloads, accessible from any web browser. It supports HTTP(S), WebDAV,
+  FTP(S), SFTP and TFTP in a single lightweight process, with per-folder,
+  per-user permissions, thumbnails, a media player, zip/tar folder downloads,
+  full-text and tag search, a markdown viewer and editor, and RSS/OPDS feeds. It
+  is built for turning almost any device into a capable, self-hosted alternative
+  to cloud file-sharing services.
+instructions: >-
+  Log in with the username and password you set below — read/write/move/
+  delete/admin access is scoped to that account only, so nothing is publicly
+  readable by default. Uploaded files live under the "data" volume, which is
+  shared at the webroot. Add more accounts or volumes later by editing the
+  mounted /cfg/copyparty.conf file and redeploying.
+changeLog:
+  - date: 2026-07-30
+    description: first release
+links:
+  - label: Website
+    url: https://copyparty.eu
+  - label: GitHub
+    url: https://github.com/9001/copyparty
+  - label: Documentation
+    url: https://github.com/9001/copyparty#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUsername
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: copyparty
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: copyparty/ac:1.20.19
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
+    adminPassword:
+      type: string
+      title: Admin Password
+      description:
+        "Auto-generated if left blank — find it in the conf file in the storage
+        section after deployment."
+benefits:
+  - title: Any Protocol
+    description:
+      Serves the same files over HTTP(S), WebDAV, FTP(S), SFTP and TFTP
+  - title: Resumable Transfers
+    description: Uploads and downloads survive interrupted connections
+  - title: Self-Hosted
+    description: Runs as a single lightweight process on your own storage
+features:
+  - title: Per-User Permissions
+    description: Scope read, write, move, delete and admin access per account
+  - title: Media Player and Thumbnails
+    description:
+      Browse with thumbnails and play audio/video straight from the browser
+  - title: Full-Text and Tag Search
+    description: Search by filename, contents, size, date or media tags
+  - title: Markdown Viewer and Editor
+    description: View and edit markdown files directly in the browser
+tags:
+  - File Sharing
+  - File Management
+  - Self-Hosted
+  - Developer Tools

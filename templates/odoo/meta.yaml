@@ -15,12 +15,26 @@ description:
   of developers and business experts. Whether you need a CRM, eCommerce,
   accounting, inventory, project management, or any other business application,
   Odoo has got you covered.
-instructions:
+instructions: >-
+  Odoo automatically creates and initializes its own database (with the base
+  module, no demo data) the first time the service boots, so the home page works
+  immediately without a manual database-manager step. If you deployed before
+  2026-07-27 and are stuck on a 500 "Database ... not initialized" error,
+  redeploy the service to pick up this fix — on restart Odoo will create its own
+  valid database alongside the old broken one, and /web/database/selector will
+  let you pick the new, working one.
 changeLog:
   - date: 2023
     description: first release
   - date: 2025-12-29
     description: Version bumped to 19.0
+  - date: 2026-07-27
+    description:
+      Fixed crash on startup caused by the database user being named "postgres",
+      and Odoo now auto-creates and initializes its own database on first boot
+      (with explicit connection flags, since a custom start command bypasses the
+      image's entrypoint.sh) instead of leaving an empty, un-initialized
+      database that 500s on every request
 links:
   - label: Website
     url: https://www.odoo.com
@@ -47,10 +61,6 @@ schema:
       type: string
       title: App Service Image
       default: odoo:19.0
-    databaseServiceName:
-      type: string
-      title: Database Service Name
-      default: odoo-db
 benefits:
   - title: Integrated Business Management
     description:

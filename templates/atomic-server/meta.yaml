@@ -5,11 +5,18 @@ description:
   for various protocols and formats.
 instructions: null
 changeLog:
+  - date: 2026-09-16
+    description:
+      Bumped image from the abandoned joepmeneer/atomic-server:v0.38.0 to
+      ghcr.io/ontola/atomic-server pinned by digest (upstream only publishes a
+      rolling develop tag, no versioned tags), picking up the v0.40.3 security
+      fixes (SSRF, invite reuse, path traversal, stored XSS); corrected the
+      GitHub link to the active ontola/atomic-server repo
   - date: 2025-04-24
     description: First Release
 links:
   - label: Github
-    url: https://github.com/joepmeneer/atomic-server
+    url: https://github.com/ontola/atomic-server
   - label: Documentation
     url: https://docs.atomicdata.dev
 contributors:
@@ -28,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: joepmeneer/atomic-server:v0.38.0
+      default: ghcr.io/ontola/atomic-server@sha256:c8596aca39731f0b1ee6fa236aac5d60f18efdefa4c1f61054ea65eae7a5683e
 benefits:
   - title: Powerful Data Management
     description:

@@ -1,0 +1,76 @@
+name: Moodist
+description:
+  Moodist is a free, open-source ambient sound mixer for focus and calm. Choose
+  from 84 carefully curated sounds — rain, forests, coffee shops, cities, and
+  more — and layer them into a personalised soundscape. It runs entirely in the
+  browser with no account required, making it an ideal productivity companion
+  for deep work, meditation, or sleep.
+instructions: |
+  After deployment, open your service URL. No login or configuration is needed
+  — select sounds and adjust volumes directly in the browser. All preferences
+  are stored locally in the browser.
+changeLog:
+  - date: 2026-06-23
+    description: Initial release (v2.6.0)
+links:
+  - label: Website
+    url: https://moodist.mvze.net
+  - label: GitHub
+    url: https://github.com/remvze/moodist
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: moodist
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/remvze/moodist:v2.6.0
+benefits:
+  - title: No Account Required
+    description:
+      Open the app and start mixing sounds immediately. No sign-up, no login, no
+      tracking — just focus.
+  - title: 84 Curated Sounds
+    description:
+      From forest rain and thunderstorms to coffee shops, trains, and white
+      noise — every sound is hand-picked for productivity and relaxation.
+  - title: Fully Self-Hosted
+    description:
+      Run your own private instance with a single Docker container. No external
+      dependencies or third-party services needed.
+features:
+  - title: Sound Mixer
+    description:
+      Layer multiple ambient sounds simultaneously and fine-tune the volume of
+      each track to craft your ideal soundscape.
+  - title: Sound Categories
+    description:
+      Browse sounds organised by category — Nature, Weather, Animals, City,
+      Travel, Cafe, and more — for quick discovery.
+  - title: Presets
+    description:
+      Save and reload your favourite sound combinations as named presets so you
+      can switch moods in one click.
+  - title: Timer
+    description:
+      Set a countdown timer to automatically stop playback after a chosen
+      duration — useful for Pomodoro sessions or sleep.
+  - title: Keyboard Shortcuts
+    description:
+      Control playback, volume, and navigation without leaving the keyboard for
+      a distraction-free experience.
+tags:
+  - Productivity
+  - Ambient Sound
+  - Focus
+  - Wellness
+  - Self-hosted
