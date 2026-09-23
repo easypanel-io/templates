@@ -1,9 +1,11 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  // OpenSearch requires 8+ chars with upper/lower/digit/special - randomPassword() alone is lowercase+digits only.
+  const opensearchAdminPassword = `Ea${randomString(16)}!1`;
 
   services.push({
     type: "app",
@@ -18,7 +20,7 @@ export function generate(input: Input): Output {
         `FUSIONAUTH_APP_MEMORY=512M`,
         `FUSIONAUTH_APP_RUNTIME_MODE=production`,
         `FUSIONAUTH_APP_URL=https://$(PRIMARY_DOMAIN)`,
-        `SEARCH_SERVERS=http://$(PROJECT_NAME)-${input.appServiceName}-search:9200`,
+        `SEARCH_SERVERS=http://$(PROJECT_NAME)_${input.appServiceName}-search:9200`,
         `SEARCH_TYPE=elasticsearch`,
       ].join("\n"),
       source: {
@@ -51,6 +53,7 @@ export function generate(input: Input): Output {
         `node.name=opensearch`,
         `plugins.security.disabled=true`,
         `bootstrap.memory_lock=true`,
+        `OPENSEARCH_INITIAL_ADMIN_PASSWORD=${opensearchAdminPassword}`,
         `opensearch_java_opts=-Xms512m -Xmx512m`,
       ].join("\n"),
       source: {
