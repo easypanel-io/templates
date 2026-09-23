@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: "2026-03-31"
     description: "Initial template release"
+  - date: "2026-09-24"
+    description: "Fixed broken default image tag (v0.7.7 does not exist on GHCR; upstream tags without the v prefix), bumped to 0.9.6"
 
 links:
   - label: Website
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/3xpyth0n/ideon:v0.7.7
+      default: ghcr.io/3xpyth0n/ideon:0.9.6
 
 benefits:
   - title: Spatial Project Context
