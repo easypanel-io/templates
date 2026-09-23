@@ -1,0 +1,108 @@
+import { Output, randomPassword, Services } from "~templates-utils";
+import { Input } from "./meta";
+
+export function generate(input: Input): Output {
+  const services: Services = [];
+  const mariadbRootPassword = randomPassword();
+  const mariadbPassword = randomPassword();
+  const redisPassword = randomPassword();
+
+  const initScript = `#!/bin/bash
+
+set -e
+
+BENCH_DIR="/workspace/frappe-bench"
+
+if [ -d "$BENCH_DIR/apps/frappe" ]; then
+    echo "Bench already exists, skipping init"
+    cd "$BENCH_DIR"
+    exec bench start
+else
+    echo "Creating new bench..."
+fi
+
+cd /workspace
+
+bench init --skip-redis-config-generation frappe-bench --version version-16
+
+cd "$BENCH_DIR"
+
+# Use containers instead of localhost
+bench set-mariadb-host $(PROJECT_NAME)_${input.appServiceName}-mariadb
+bench set-redis-cache-host redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379
+bench set-redis-queue-host redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379
+bench set-redis-socketio-host redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379
+
+# Remove redis and watch from Procfile because EasyPanel runs Redis separately.
+sed -i '/redis/d' ./Procfile
+sed -i '/watch/d' ./Procfile
+
+bench get-app erpnext --branch version-16
+
+bench new-site erpnext-v16.localhost \\
+--force \\
+--mariadb-root-password ${mariadbRootPassword} \\
+--admin-password admin \\
+--no-mariadb-socket
+
+bench --site erpnext-v16.localhost install-app erpnext
+bench --site erpnext-v16.localhost set-config developer_mode 1
+bench --site erpnext-v16.localhost set-config mute_emails 1
+bench --site erpnext-v16.localhost clear-cache
+bench use erpnext-v16.localhost
+
+bench start
+  `;
+
+  services.push({
+    type: "mariadb",
+    data: {
+      serviceName: `${input.appServiceName}-mariadb`,
+      rootPassword: mariadbRootPassword,
+      password: mariadbPassword,
+    },
+  });
+
+  services.push({
+    type: "redis",
+    data: {
+      serviceName: `${input.appServiceName}-redis`,
+      password: redisPassword,
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: input.appServiceName,
+      source: {
+        type: "image",
+        image: input.appServiceImage,
+      },
+      domains: [
+        {
+          host: "$(EASYPANEL_DOMAIN)",
+          port: 8000,
+        },
+      ],
+      env: ["SHELL=/bin/bash"].join("\n"),
+      mounts: [
+        {
+          type: "file",
+          content: initScript,
+          mountPath: "/workspace/init.sh",
+        },
+        {
+          type: "volume",
+          name: "workspace",
+          mountPath: "/workspace",
+        },
+      ],
+      deploy: {
+        command: "bash /workspace/init.sh",
+      },
+    },
+  });
+
+  return { services };
+}
