@@ -16,6 +16,8 @@ instructions: >-
 changeLog:
   - date: 2026-07-30
     description: first release
+  - date: 2026-09-21
+    description: Version bumped to 0.18
 links:
   - label: Website
     url: https://many-notes.com
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: brufdev/many-notes:0.16
+      default: brufdev/many-notes:0.18
 benefits:
   - title: Files You Own
     description:

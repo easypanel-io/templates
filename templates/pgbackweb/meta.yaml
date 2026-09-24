@@ -14,6 +14,8 @@ instructions: null
 changeLog:
   - date: 2025-10-22
     description: Initial Template Release
+  - date: 2026-09-22
+    description: Version bumped to 0.5.2
 links:
   - label: GitHub
     url: https://github.com/eduardolat/pgbackweb
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: eduardolat/pgbackweb:0.5.1
+      default: eduardolat/pgbackweb:0.5.2
       description: PgBackWeb Docker image
     connectionString:
       type: string
