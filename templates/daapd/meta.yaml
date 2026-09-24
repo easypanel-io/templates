@@ -8,17 +8,26 @@ description:
   devices. With its powerful backend, Daapd ensures smooth performance, a wide
   range of supported formats, and advanced features like library management and
   transcoding.
-instructions: null
+instructions:
+  AirPlay and Chromecast device discovery rely on mDNS/Bonjour, which does not
+  reach devices outside this container's network. Add streaming devices by IP
+  in Settings if they are not auto-discovered.
 changeLog:
+  - date: 2026-09-16
+    description:
+      Switched from the archived linuxserver/daapd image to the official
+      owntone/owntone:29.3 image (linuxserver/docker-daapd was archived and
+      hadn't been updated since January 2025); corrected the Website/Documentation
+      links, which still pointed at the old ejurgensen/forked-daapd project
   - date: 2024-12-26
     description: First Release
   - date: 2025-01-09
     description: Version bumped to 28.10.20250108
 links:
   - label: Website
-    url: https://github.com/ejurgensen/forked-daapd
+    url: https://github.com/owntone/owntone-server
   - label: Documentation
-    url: https://ejurgensen.github.io/forked-daapd/
+    url: https://owntone.github.io/owntone-server/
   - label: Github
     url: https://github.com/owntone/owntone-server
 contributors:
@@ -37,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/daapd:28.10.20250118
+      default: owntone/owntone:29.3
 benefits:
   - title: Seamless Audio Streaming
     description:
