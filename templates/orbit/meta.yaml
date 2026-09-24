@@ -1,0 +1,46 @@
+name: Orbit by Noveum
+changeLog:
+  - date: 2026-09-24
+    description: Initial Orbit template with realtime collaboration and private file storage
+description:
+  Free, open-source task management for people and AI agents. Issues, projects,
+  sprints, docs and files with realtime collaboration and an OAuth MCP endpoint.
+instructions:
+  "Bind HTTPS domains for the app and storage, then create your account and
+  workspace. Migrations and private storage initialization are automatic.
+  Configure Resend and EMAIL_FROM for invitations and password recovery.
+  Preserve secrets and back up PostgreSQL and MinIO before upgrades. Hosted MCP:
+  https://orbit.noveum.ai/mcp. Self-hosted MCP: your app HTTPS origin plus /mcp."
+links:
+  - label: Website
+    url: https://orbit.noveum.ai
+  - label: Documentation
+    url: https://github.com/Noveum/orbit/blob/containers-2026.09.24/docs/container-catalogs.md
+  - label: GitHub
+    url: https://github.com/Noveum/orbit
+contributors:
+  - name: Noveum
+    url: https://noveum.ai
+schema:
+  type: object
+  required:
+    - serviceName
+    - appDomain
+    - storageDomain
+  properties:
+    serviceName:
+      type: string
+      title: Service name
+      default: orbit
+    appDomain:
+      type: string
+      title: App hostname
+      description: HTTPS hostname without a scheme or path
+    storageDomain:
+      type: string
+      title: Storage hostname
+      description: A different HTTPS hostname for browser file uploads
+tags:
+  - Productivity
+  - Collaboration
+  - Project Management
