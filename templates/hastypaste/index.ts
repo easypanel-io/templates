@@ -1,4 +1,4 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -11,6 +11,9 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `CACHE__REDIS_URI=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.redisServiceName}:6379`,
+        `PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
+        `AUTH_TOKEN_SECRET=${randomString(32)}`,
+        `SESSION_SECRET=${randomString(32)}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -19,7 +22,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 8080,
         },
       ],
       mounts: [

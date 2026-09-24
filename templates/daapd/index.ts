@@ -8,7 +8,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env: [`PUID=1000`, `PGID=1000`, `TZ=Etc/UTC`].join("\n"),
+      env: [`UID=1000`, `GID=1000`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -23,13 +23,18 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "music",
-          mountPath: "/music",
+          name: "media",
+          mountPath: "/srv/media",
         },
         {
           type: "volume",
           name: "config",
-          mountPath: "/config",
+          mountPath: "/etc/owntone",
+        },
+        {
+          type: "volume",
+          name: "cache",
+          mountPath: "/var/cache/owntone",
         },
       ],
     },
