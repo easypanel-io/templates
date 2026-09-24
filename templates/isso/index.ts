@@ -30,15 +30,11 @@ export function generate(input: Input): Output {
           mountPath: "/db",
         },
         {
-          type: "volume",
-          name: "tmp",
-          mountPath: "/tmp",
-        },
-        {
           type: "file",
           content: [
             "[general]",
             `host = https://$(PRIMARY_DOMAIN)`,
+            "dbpath = /db/comments.db",
             "max-age = 15m",
             "notify = stdout",
             "gravatar = true",
