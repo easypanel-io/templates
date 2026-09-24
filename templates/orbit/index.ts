@@ -17,9 +17,9 @@ export function generate(input: Input): Output {
           },
           createDotEnv: true,
           env: [
-            "ORBIT_IMAGE=ghcr.io/noveum/orbit-runtime:sha-7da6cdb83550c4e597800b2788c4ce534d1af669",
-            "ORBIT_GATEWAY_IMAGE=ghcr.io/noveum/orbit-gateway:sha-7da6cdb83550c4e597800b2788c4ce534d1af669",
-            "ORBIT_BUCKET_IMAGE=ghcr.io/noveum/orbit-bucket:sha-e219d286638b9479e7946979b4383ea4e99c5bd6",
+            "ORBIT_IMAGE=ghcr.io/noveum/orbit-runtime:2026.09.24",
+            "ORBIT_GATEWAY_IMAGE=ghcr.io/noveum/orbit-gateway:2026.09.24",
+            "ORBIT_BUCKET_IMAGE=ghcr.io/noveum/orbit-bucket:2026.09.24",
             `ORBIT_APP_URL=https://${input.appDomain}`,
             `ORBIT_STORAGE_URL=https://${input.storageDomain}`,
             `POSTGRES_PASSWORD=${randomString(48)}`,
