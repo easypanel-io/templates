@@ -1,0 +1,106 @@
+name: Kafka
+description:
+  Apache Kafka is a distributed event streaming platform designed for
+  high-throughput, fault-tolerant, and real-time data processing. It enables you
+  to publish and subscribe to streams of records, store streams of records in a
+  fault-tolerant way, and process streams of records as they occur. Kafka is
+  commonly used for building real-time streaming data pipelines and
+  applications. This template deploys a single-node Kafka instance in KRaft mode
+  (no Zookeeper required), with optional Kafka UI for management.
+
+instructions:
+  Once deployed, open Kafka UI by navigating to your configured domain after
+  deployment.
+
+changeLog:
+  - date: 2026-04-23
+    description: Template Release
+
+links:
+  - label: Website
+    url: https://kafka.apache.org/
+  - label: Documentation
+    url: https://kafka.apache.org/documentation/
+  - label: GitHub
+    url: https://github.com/apache/kafka
+
+contributors:
+  - name: lucksjb
+    url: https://github.com/lucksjb
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - appServicePort
+    - controllerPort
+    - clusterId
+    - enableKafkaUI
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kafka
+    appServiceImage:
+      type: string
+      title: Kafka Docker Image
+      default: apache/kafka:4.1.1
+    appServicePort:
+      type: integer
+      title: Kafka Port on Host
+      default: 9092
+    controllerPort:
+      type: integer
+      title: Controller Port
+      default: 9093
+    clusterId:
+      type: string
+      title: Cluster ID
+      default: kafka-cluster-easypanel
+      description: Unique identifier for the Kafka cluster.
+    enableKafkaUI:
+      type: boolean
+      title: Enable Kafka UI
+      default: true
+    kafkaUIImage:
+      type: string
+      title: Kafka UI Docker Image
+      default: provectuslabs/kafka-ui:v0.7.2
+
+benefits:
+  - title: High Throughput
+    description:
+      Kafka can handle millions of messages per second, ideal for high-volume
+      streaming applications.
+  - title: Fault Tolerant
+    description:
+      Built-in replication and partition distribution help ensure durability and
+      availability when nodes fail.
+  - title: Operational Simplicity
+    description:
+      Single-node mode keeps setup and maintenance simple for development and
+      lightweight workloads.
+  - title: KRaft Mode (No Zookeeper)
+    description:
+      Uses Kafka's native consensus protocol without a separate ZooKeeper
+      cluster.
+
+features:
+  - title: Single-Node KRaft
+    description: Deploys one Kafka broker/controller node without ZooKeeper.
+  - title: Kafka UI
+    description:
+      Optional web UI for monitoring topics, consumers, and cluster health.
+  - title: External Access
+    description:
+      Supports externally exposed broker ports for non-internal clients.
+
+tags:
+  - Message Broker
+  - Event Streaming
+  - High Availability
+  - Queue Management
+  - Real-time
