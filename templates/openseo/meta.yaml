@@ -1,0 +1,88 @@
+name: OpenSEO
+description:
+  OpenSEO is an open source SEO platform and self-hostable alternative to Ahrefs
+  and Semrush. It covers keyword research, domain overviews, backlinks, rank
+  tracking, site audits, and AI visibility, powered by pay-as-you-go DataForSEO
+  data instead of a monthly subscription, plus an MCP server so AI agents can
+  run SEO research for you.
+instructions: >-
+  The app runs in single-user no-auth mode, so this template protects it with
+  Easypanel basic auth: the username is admin and the generated password is
+  under the service's Advanced > Basic Auth settings. The first start builds the
+  app and can take a few minutes before the domain responds. SEO data needs
+  DATAFORSEO_API_KEY, which is the base64 of your DataForSEO login:password (run
+  printf 'email:password' | base64), not the dashboard API key. Set
+  OPENROUTER_API_KEY to enable the SAM AI agent.
+changeLog:
+  - date: 2026-09-24
+    description: first release
+links:
+  - label: Website
+    url: https://openseo.so
+  - label: GitHub
+    url: https://github.com/every-app/open-seo
+  - label: Documentation
+    url: https://openseo.so/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openseo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/every-app/open-seo:v0.1.9
+    dataforseoApiKey:
+      type: string
+      title: DataForSEO API Key
+      description:
+        Base64 of your DataForSEO login:password. Can be added later in the
+        service environment.
+    openrouterApiKey:
+      type: string
+      title: OpenRouter API Key
+      description: Optional. Enables SAM, the in-app AI SEO agent.
+    openrouterModel:
+      type: string
+      title: OpenRouter Model
+      description: Optional. Leave blank for the default model.
+benefits:
+  - title: Pay Only For What You Use
+    description:
+      Data comes from your own DataForSEO account at raw API rates, with no
+      monthly SEO tool subscription.
+  - title: Own Your SEO Workspace
+    description:
+      Projects, saved keywords, and audit history live on your server under an
+      MIT license.
+  - title: Built For AI Agents
+    description:
+      A built-in MCP server and the SAM agent let Claude, ChatGPT, and other
+      agents run keyword and competitor research.
+features:
+  - title: Keyword Research
+    description:
+      Search volume, CPC, difficulty, search trends, and SERP analysis for any
+      market.
+  - title: Domain & Backlink Analysis
+    description:
+      Domain overviews, ranked keywords, competitors, and backlink profiles.
+  - title: Rank Tracking & Site Audits
+    description:
+      Track keyword positions over time and crawl sites for technical SEO
+      issues.
+  - title: AI Visibility
+    description: See how your brand shows up in AI search answers.
+tags:
+  - SEO
+  - Marketing
+  - Analytics
+  - AI
