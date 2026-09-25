@@ -1,0 +1,68 @@
+name: Nakama
+description:
+  Nakama is an open-source server for social and real-time games and apps. It
+  provides user accounts, multiplayer, chat, leaderboards, tournaments, and
+  storage APIs, backed by PostgreSQL.
+instructions:
+  After deployment, Nakama is available on your project domain at port 7351. The
+  template provisions a dedicated PostgreSQL service and runs Nakama database
+  migrations automatically before startup.
+changeLog:
+  - date: 2026-04-29
+    description: First release
+links:
+  - label: Website
+    url: https://heroiclabs.com/nakama/
+  - label: Documentation
+    url: https://heroiclabs.com/docs/nakama/
+  - label: GitHub
+    url: https://github.com/heroiclabs/nakama
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: nakama
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: registry.heroiclabs.com/heroiclabs/nakama:3.22.0
+benefits:
+  - title: Game Backend Ready
+    description:
+      Includes core backend primitives such as accounts, sessions, storage,
+      chat, and multiplayer APIs with minimal setup.
+  - title: Built-In Database Provisioning
+    description:
+      Deploys PostgreSQL and Nakama together so you can start with a
+      production-style architecture quickly.
+  - title: Automatic Migration On Start
+    description:
+      Runs Nakama migrations before launching the main server process, reducing
+      manual setup work.
+features:
+  - title: Real-Time Multiplayer Server
+    description:
+      Provides Nakama runtime for game sessions, matchmaking, social features,
+      and RPC endpoints.
+  - title: Persistent PostgreSQL Storage
+    description:
+      Stores data on a dedicated volume so database state survives restarts and
+      redeployments.
+  - title: Public Ports For API and Runtime
+    description:
+      Exposes standard Nakama ports for HTTP API, gRPC, and console-compatible
+      networking workflows.
+tags:
+  - Game Server
+  - Realtime
+  - PostgreSQL
+  - Backend
+  - Multiplayer
