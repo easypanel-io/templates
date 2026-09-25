@@ -13,6 +13,11 @@ changeLog:
     description: Version bumped to 0.30.0
   - date: 2026-05-08
     description: Version bumped to 0.31.0
+  - date: 2026-09-25
+    description:
+      Switched chromeImage default to zenika/alpine-chrome on Docker Hub -
+      the old gcr.io/zenika-hub image now fails to pull due to a GCR billing
+      restriction on the publisher's project
 links:
   - label: Website
     url: https://karakeep.app
@@ -43,7 +48,7 @@ schema:
     chromeImage:
       type: string
       title: Chrome Image
-      default: gcr.io/zenika-hub/alpine-chrome:123
+      default: zenika/alpine-chrome:124
     meilSearchImage:
       type: string
       title: Meilisearch Image
