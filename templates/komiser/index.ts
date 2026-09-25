@@ -4,18 +4,8 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  const configToml = `[[aws]]
-name="staging"
-source="CREDENTIALS_FILE"
-path="/etc/config/credentials.yaml"
-profile="production"
-
-[sqlite]
+  const configToml = `[sqlite]
   file = "komiser.db"
-  `;
-
-  const credentialFile = `
-
   `;
 
   services.push({
@@ -31,11 +21,6 @@ profile="production"
           type: "file",
           content: configToml,
           mountPath: "/etc/config/config.toml",
-        },
-        {
-          type: "file",
-          content: credentialFile,
-          mountPath: "/etc/config/credentials.yaml",
         },
       ],
       domains: [

@@ -6,21 +6,22 @@ description:
   offering insights into resource usage, cost optimization opportunities, and
   security best practices.
 instructions:
-  Once deployed, please provide your credentials in the credentials.yaml file,
-  and then restart the service.
+  Once deployed, edit config.toml in the service console to add your cloud
+  provider credentials, then restart the service.
 
 changeLog:
   - date: "2025-03-26"
     description: Initial template release
   - date: 2026-02-21
     description: Version bumped to 3.1.22
+  - date: 2026-09-25
+    description:
+      Removed a pre-mounted empty credentials.yaml and AWS profile block that
+      crashed the app on first boot; fixed stale links (repo moved from
+      tailwarden to mlabouardy, docs.komiser.io and komiser.io are both down)
 links:
-  - label: Website
-    url: https://komiser.io/
-  - label: Documentation
-    url: https://docs.komiser.io/
   - label: GitHub
-    url: https://github.com/tailwarden/komiser
+    url: https://github.com/mlabouardy/komiser
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
