@@ -22,6 +22,8 @@ changeLog:
     description: first release
   - date: 2025-12-25
     description: Version bumped to 1.15.6
+  - date: 2026-09-25
+    description: Switched to the official humhub/humhub Docker image, version 1.18.6
 links:
   - label: Website
     url: https://www.humhub.com
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mriedmann/humhub:1.15.6
+      default: humhub/humhub:1.18.6
     databaseServiceName:
       type: string
       title: Database Service Name

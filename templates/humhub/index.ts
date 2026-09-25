@@ -14,10 +14,10 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `HUMHUB_DB_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
-        `HUMHUB_DB_NAME=$(PROJECT_NAME)`,
-        `HUMHUB_DB_USER=mariadb`,
-        `HUMHUB_DB_PASSWORD=${dbPassword}`,
+        `SERVER_NAME=http://$(PRIMARY_DOMAIN)`,
+        `HUMHUB_CONFIG__COMPONENTS__DB__DSN=mysql:host=$(PROJECT_NAME)_${input.databaseServiceName};dbname=$(PROJECT_NAME)`,
+        `HUMHUB_CONFIG__COMPONENTS__DB__USERNAME=mariadb`,
+        `HUMHUB_CONFIG__COMPONENTS__DB__PASSWORD=${dbPassword}`,
       ].join("\n"),
       domains: [
         {
@@ -28,18 +28,8 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
-          name: "config",
-          mountPath: "/var/www/localhost/htdocs/protected/config",
-        },
-        {
-          type: "volume",
-          name: "uploads",
-          mountPath: "/var/www/localhost/htdocs/uploads",
-        },
-        {
-          type: "volume",
-          name: "modules",
-          mountPath: "/var/www/localhost/htdocs/protected/modules",
+          name: "data",
+          mountPath: "/data",
         },
       ],
     },
@@ -49,7 +39,6 @@ export function generate(input: Input): Output {
     type: "mariadb",
     data: {
       serviceName: input.databaseServiceName,
-      image: "mariadb:10.2",
       password: dbPassword,
     },
   });
