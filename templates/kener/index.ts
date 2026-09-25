@@ -10,12 +10,13 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const kenerSecret = randomString(32);
   const databasePassword = randomPassword();
+  const redisPassword = randomPassword();
 
   const appEnv = [
     `TZ=${input.timezone}`,
     `KENER_SECRET_KEY=${kenerSecret}`,
     `ORIGIN=https://$(PRIMARY_DOMAIN)`,
-    `REDIS_URL=redis://$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
+    `REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
   ];
 
   if (input.databaseType === "postgres") {
@@ -63,7 +64,7 @@ export function generate(input: Input): Output {
     type: "redis",
     data: {
       serviceName: `${input.appServiceName}-redis`,
-      password: randomPassword(),
+      password: redisPassword,
       image: input.redisServiceImage,
     },
   });
