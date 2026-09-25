@@ -1,3 +1,4 @@
+import { generateKeyPairSync } from "crypto";
 import {
   Output,
   randomPassword,
@@ -14,6 +15,12 @@ export function generate(input: Input): Output {
   const encryptionDeterministicKey = randomString(32);
   const encryptionDerivationSalt = randomString(32);
   const redisPassword = randomPassword();
+  const { privateKey } = generateKeyPairSync("rsa", {
+    modulusLength: 2048,
+    privateKeyEncoding: { type: "pkcs1", format: "pem" },
+    publicKeyEncoding: { type: "pkcs1", format: "pem" },
+  });
+  const rsaPrivateKey = Buffer.from(privateKey).toString("base64");
 
   const common_envs = [
     `DATABASE_URL=postgresql://postgres:${postgresPassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/lago-db`,
@@ -21,7 +28,7 @@ export function generate(input: Input): Output {
     `SECRET_KEY_BASE=${secretKeyBase}`,
     `RAILS_ENV=production`,
     `RAILS_LOG_TO_STDOUT=true`,
-    `LAGO_RSA_PRIVATE_KEY=${input.rsaPrivateKey}`,
+    `LAGO_RSA_PRIVATE_KEY=${rsaPrivateKey}`,
     `LAGO_SIDEKIQ_WEB=true`,
     `LAGO_ENCRYPTION_PRIMARY_KEY=${encryptionPrimaryKey}`,
     `LAGO_ENCRYPTION_DETERMINISTIC_KEY=${encryptionDeterministicKey}`,
