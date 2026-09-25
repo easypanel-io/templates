@@ -1,0 +1,129 @@
+name: WACRM
+description:
+  WACRM is an open source, self-hosted CRM for WhatsApp built on the official
+  WhatsApp Business API. It gives your team a shared inbox, contacts with tags
+  and custom fields, Kanban sales pipelines, template broadcasts, and no-code
+  automations, with no per-seat fees. It runs on Next.js with Supabase for the
+  database, auth, and storage.
+instructions: >-
+  WACRM needs a Supabase project (Supabase Cloud or Easypanel's Supabase
+  template). Before deploying, run the SQL files in supabase/migrations of the
+  GitHub repo in numeric order in the Supabase SQL Editor (or run supabase db
+  push), then copy the project URL, anon key, and service role key into the
+  fields below. In Supabase Authentication > URL Configuration, set the Site URL
+  to this app's domain and add https://your-domain/** as a redirect URL. Signup
+  confirmation emails are sent by Supabase, so configure SMTP there or disable
+  email confirmation, otherwise new accounts cannot sign in. The NEXT_PUBLIC_
+  values are baked in at build time, so redeploy after changing them. Set
+  META_APP_SECRET from your Meta app to receive WhatsApp webhooks, and never
+  change the generated ENCRYPTION_KEY after connecting WhatsApp. For automation
+  Wait steps and flows, schedule GET requests to /api/automations/cron and
+  /api/flows/cron with the AUTOMATION_CRON_SECRET value in the x-cron-secret
+  header.
+changeLog:
+  - date: 2026-09-25
+    description: first release
+links:
+  - label: Website
+    url: https://wacrm.tech
+  - label: GitHub
+    url: https://github.com/ArnasDon/wacrm
+  - label: Documentation
+    url: https://wacrm.tech/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appGitRef
+    - supabaseUrl
+    - supabaseAnonKey
+    - supabaseServiceRoleKey
+    - appLocale
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wacrm
+    appGitRef:
+      type: string
+      title: Git Branch
+      description: Branch of github.com/ArnasDon/wacrm to build.
+      default: main
+    supabaseUrl:
+      type: string
+      title: Supabase URL
+      description: Project URL, e.g. https://your-project.supabase.co
+    supabaseAnonKey:
+      type: string
+      title: Supabase Anon Key
+    supabaseServiceRoleKey:
+      type: string
+      title: Supabase Service Role Key
+    metaAppSecret:
+      type: string
+      title: Meta App Secret
+      description:
+        Verifies inbound WhatsApp webhooks. Can be added later in the service
+        environment.
+    metaAppId:
+      type: string
+      title: Meta App ID
+      description: Optional. Needed for message templates with an image header.
+    appLocale:
+      type: string
+      title: UI Language
+      default: en
+      oneOf:
+        - enum:
+            - en
+          title: English
+        - enum:
+            - es
+          title: Spanish
+        - enum:
+            - pt
+          title: Brazilian Portuguese
+        - enum:
+            - ko
+          title: Korean
+benefits:
+  - title: No Per-Seat Fees
+    description:
+      Staff one WhatsApp number with your whole team on your own server, without
+      paying per agent.
+  - title: Official WhatsApp Business API
+    description:
+      Connects through Meta's Cloud API, so messaging stays compliant and your
+      number stays safe.
+  - title: Built For AI
+    description:
+      Bring-your-own-key AI reply assistant with a knowledge base, plus a public
+      REST API and MCP server for agents like Claude and Cursor.
+features:
+  - title: Shared Inbox
+    description:
+      Multiple agents on one number with per-conversation assignment, status,
+      and notes.
+  - title: Contacts & Pipelines
+    description:
+      Contacts with tags, custom fields, and CSV import, plus Kanban sales
+      pipelines with deals linked to conversations.
+  - title: Broadcasts
+    description:
+      Send Meta-approved template broadcasts with delivery and read tracking and
+      per-recipient variables.
+  - title: No-Code Automations
+    description:
+      Visual builder with triggers on messages, contacts, keywords, or
+      schedules, plus branches, waits, tags, and webhooks.
+  - title: Team Accounts
+    description: Invite teammates with owner, admin, agent, and viewer roles.
+tags:
+  - CRM
+  - WhatsApp
+  - Customer Support
+  - Marketing
+  - Automation
