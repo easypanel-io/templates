@@ -16,6 +16,11 @@ instructions:
 changeLog:
   - date: 2024-01-06
     description: First release
+  - date: 2026-09-25
+    description:
+      Switched all image variants to the official quay.io/jupyter images
+      (jupyter/* on Docker Hub is deprecated and stopped receiving updates in
+      2023)
 links:
   - label: Documentation
     url: https://jupyter-notebook.readthedocs.io/en/stable/
@@ -39,37 +44,37 @@ schema:
       title: App Service Image
       oneOf:
         - enum:
-            - jupyter/docker-stacks-foundation
+            - quay.io/jupyter/docker-stacks-foundation:2026-09-21
           title: Docker Stacks Foundation
         - enum:
-            - jupyter/base-notebook
+            - quay.io/jupyter/base-notebook:2026-09-21
           title: Base Notebook
         - enum:
-            - jupyter/minimal-notebook
+            - quay.io/jupyter/minimal-notebook:2026-09-21
           title: Minimal Notebook
         - enum:
-            - jupyter/r-notebook
+            - quay.io/jupyter/r-notebook:2026-09-21
           title: R Notebook
         - enum:
-            - jupyter/julia-notebook
+            - quay.io/jupyter/julia-notebook:2026-09-21
           title: Julia Notebook
         - enum:
-            - jupyter/scipy-notebook
+            - quay.io/jupyter/scipy-notebook:2026-09-21
           title: SciPy Notebook
         - enum:
-            - jupyter/tensorflow-notebook
+            - quay.io/jupyter/tensorflow-notebook:2026-09-21
           title: TensorFlow Notebook
         - enum:
-            - jupyter/pytorch-notebook
+            - quay.io/jupyter/pytorch-notebook:2026-09-21
           title: PyTorch Notebook
         - enum:
-            - jupyter/datascience-notebook
+            - quay.io/jupyter/datascience-notebook:2026-09-21
           title: Data Science Notebook
         - enum:
-            - jupyter/pyspark-notebook
+            - quay.io/jupyter/pyspark-notebook:2026-09-21
           title: PySpark Notebook
         - enum:
-            - jupyter/all-spark-notebook
+            - quay.io/jupyter/all-spark-notebook:2026-09-21
           title: All Spark Notebook
 benefits:
   - title: Interactive Computing
