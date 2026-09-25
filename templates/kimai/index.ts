@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
         `ADMINMAIL=${input.adminEmail}`,
         `ADMINPASS=${input.adminPassword}`,
         `DATABASE_URL=mysql://mysql:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}/$(PROJECT_NAME)?charset=utf8mb4&serverVersion=8.3.0`,
-        `TRUSTED_HOSTS=nginx,localhost,127.0.0.1,$(PRIMARY_DOMAIN)`,
+        `TRUSTED_HOSTS=nginx|localhost|127.0.0.1|$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       source: {
         type: "image",
