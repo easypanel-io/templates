@@ -3,10 +3,10 @@ description:
   LibreDB Studio is the modern, AI-powered open-source SQL IDE. It lets you
   connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, libSQL,
   DuckDB, MongoDB, Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch,
-  Cassandra, Trino and Druid directly from your browser, with an optional AI assistant to help
-  write and explain queries. It ships as a single container, stores its data in
-  a local SQLite file by default, and creates an initial admin and user account
-  on first start.
+  Cassandra, Trino, Druid, Prometheus and Apache Kafka directly from your
+  browser, with an optional AI assistant to help write and explain queries.
+  It ships as a single container, stores its data in a local SQLite file by
+  default, and creates an initial admin and user account on first start.
 instructions: |
   Once the deployment is running, open the app at its domain.
 
@@ -15,9 +15,23 @@ instructions: |
   ADMIN_PASSWORD value, which you can find under the service's Environment
   tab.
 
+  A second, lower-privilege account is created alongside the admin one, using
+  the User Email you set and the generated USER_PASSWORD, also on the
+  Environment tab.
+
   After signing in you can add your database connections and start
   querying. Application data is kept on the volume mounted at /app/data,
   so it survives restarts and redeploys.
+
+  Do not change JWT_SECRET after you have saved connections. It signs your
+  sessions and encrypts their stored credentials, so changing it leaves those
+  credentials unreadable.
+
+  The AI assistant stays off until a model provider is configured on the
+  Environment tab. LLM_API_KEY alone is enough for the default Gemini provider.
+  Another provider is chosen with LLM_PROVIDER, and a custom or external one
+  also needs LLM_API_URL. LLM_MODEL is optional and overrides the provider's
+  own default.
 changeLog:
   - date: 2026-06-21
     description: first release
@@ -31,6 +45,8 @@ changeLog:
     description: bump to 0.16.1; an inline cell edit is written to the row you edited rather than to a row identified by position, and GET /health and GET /api/health answer beside /api/db/health
   - date: 2026-09-21
     description: bump to 0.16.2, a security fix; a connection id supplied in a request could select another session's already authenticated database provider, so a user account could reach a connection restricted to admin (GHSA-3wh2-8x78-jfw4, CVSS 8.8)
+  - date: 2026-09-27
+    description: bump to 0.17.0; adds read-only Prometheus and Apache Kafka, and an MCP server that stays off unless configured. Delete any Prometheus or Kafka connection before rolling back to 0.16.2, which cannot render them and shows an error screen instead of the workspace
 links:
   - label: Website
     url: https://libredb.org/
@@ -56,7 +72,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/libredb/libredb-studio:0.16.2
+      default: ghcr.io/libredb/libredb-studio:0.17.0
     adminEmail:
       type: string
       title: Admin Email
@@ -68,8 +84,8 @@ schema:
 benefits:
   - title: Multi-Database Support
     description:
-      Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB and Redis
-      from a single, unified browser-based interface.
+      Query PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Prometheus,
+      Apache Kafka and more from a single, unified browser-based interface.
   - title: AI-Powered Queries
     description:
       An optional AI assistant helps you write, optimize and explain SQL
