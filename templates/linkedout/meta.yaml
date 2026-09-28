@@ -8,8 +8,16 @@ description:
   tunneling support for local development and testing, and easy deployment via
   Docker and Easypanel, LinkedOut provides everything needed to automate and
   scale your LinkedIn presence effectively.
-instructions: null
+instructions:
+  If you left the PocketBase Admin Password field empty, find the
+  auto-generated value in the linkedout-pocketbase service's environment
+  variables after deployment.
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the PocketBase admin password defaulting to a weak, hardcoded
+      value (changeme123) shown directly in the form - now auto-generates a
+      random password when left empty
   - date: 2025-07-16
     description: first release
 links:
@@ -30,7 +38,6 @@ schema:
     - ngrokServiceImage
     - ngrokAuthToken
     - pbAdminEmail
-    - pbAdminPassword
   properties:
     appServiceName:
       type: string
@@ -64,7 +71,8 @@ schema:
     pbAdminPassword:
       type: string
       title: PocketBase Admin Password
-      default: changeme123
+      default: ""
+      description: Leave empty to auto-generate a random password
 benefits:
   - title: LinkedIn Automation Platform
     description:
