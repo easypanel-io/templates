@@ -1,15 +1,24 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { randomBytes } from "crypto";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
+  const salt = randomString(64);
+  const encryptionKey = randomBytes(32).toString("hex");
+  const nextAuthSecret = randomString(64);
 
   const common_envs = [
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-    `SALT=mysalt`,
-    `ENCRYPTION_KEY=0000000000000000000000000000000000000000000000000000000000000000`,
+    `SALT=${salt}`,
+    `ENCRYPTION_KEY=${encryptionKey}`,
     `TELEMETRY_ENABLED=true`,
     `LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES=true`,
     `CLICKHOUSE_MIGRATION_URL=clickhouse://$(PROJECT_NAME)_${input.appServiceName}-clickhouse:9000`,
@@ -41,7 +50,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-web`,
       env: [
         `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
-        `NEXTAUTH_SECRET=mysecret`,
+        `NEXTAUTH_SECRET=${nextAuthSecret}`,
         `LANGFUSE_INIT_ORG_ID=`,
         `LANGFUSE_INIT_ORG_NAME=`,
         `LANGFUSE_INIT_PROJECT_ID=`,
@@ -131,8 +140,8 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-minio`,
       env: [
         `MINIO_SERVER_URL=https://$(EASYPANEL_DOMAIN)`,
-        `MINIO_ROOT_USER=admin`,
-        `MINIO_ROOT_PASSWORD=password`,
+        `MINIO_ROOT_USER=${input.minioUser}`,
+        `MINIO_ROOT_PASSWORD=${input.minioPassword}`,
       ].join("\n"),
       source: {
         type: "image",
