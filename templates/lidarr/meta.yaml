@@ -13,6 +13,11 @@ description:
   and others.
 instructions: null
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the pinned image tag (3.1.2) not existing on Docker Hub, causing
+      every deployment to fail with a 404 pulling the image - reverted to the
+      last tag that actually exists (3.1.0)
   - date: 2024-03-18
     description: Template added
   - date: 2024-10-16
@@ -50,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: linuxserver/lidarr:3.1.2
+      default: linuxserver/lidarr:3.1.0
 benefits:
   - title: Automated Music Management
     description:
