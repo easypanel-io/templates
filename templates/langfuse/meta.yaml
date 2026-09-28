@@ -10,6 +10,17 @@ description:
   multi-platform awareness, ensuring compatibility with various architectures.
 instructions: null
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed hardcoded SALT, ENCRYPTION_KEY, and NEXTAUTH_SECRET (every
+      deployment previously shared the same values, which Langfuse uses to
+      hash API keys, encrypt stored credentials, and sign session JWTs); wired
+      MINIO_ROOT_USER/PASSWORD to the form fields instead of a hardcoded
+      admin/password mismatched with the configured S3 credentials; pointed
+      minioImage at quay.io/minio/minio (MinIO's current official reference),
+      since minio/minio on Docker Hub was fully removed - note that quay.io
+      now requires authenticated pulls for this image entirely, so this alone
+      does not fully restore deployability, see tracker notes
   - date: 2026-05-19
     description: Updated to v3.174.1
   - date: 2024-12-23
@@ -62,7 +73,7 @@ schema:
     minioImage:
       type: string
       title: App Service Image
-      default: minio/minio:latest
+      default: quay.io/minio/minio:RELEASE.2025-10-15T17-29-55Z
     clickHouseUser:
       type: string
       title: Click House User
