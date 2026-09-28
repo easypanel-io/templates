@@ -7,6 +7,8 @@ description:
   actionable insights from your data without needing advanced technical skills.
 instructions: Configure the Environmental Variables as per the requirements.
 changeLog:
+  - date: 2026-09-28
+    description: Pinned browserlessImage to a specific tag instead of unpinned latest
   - date: 2025-01-10
     description: Template Release
   - date: 2025-02-28
@@ -45,7 +47,7 @@ schema:
     browserlessImage:
       type: string
       title: Browserless Image
-      default: browserless/chrome
+      default: browserless/chrome:1.61.1-chrome-stable
 benefits:
   - title: Data Exploration Made Simple
     description:
