@@ -1,8 +1,18 @@
 name: Lowcoder
 description:
   Open-source low-code platform to build internal tools with minimal effort.
-instructions: null
+instructions:
+  If you left the Superuser Password field empty, find the auto-generated
+  value in the lowcoder-api-service environment variables after deployment.
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the api-service using the wrong hostname separator to reach
+      MongoDB and the node-service (hyphen instead of underscore), which
+      broke inter-service connectivity on every deployment. Also fixed the
+      Superuser Password defaulting to a hardcoded, predictable value
+      (password) shown directly in the form - now auto-generates a random
+      password when left empty
   - date: 2025-05-26
     description: First release
   - date: 2026-05-08
@@ -25,7 +35,6 @@ schema:
     - nodeServiceImage
     - frontendImage
     - superuserUsername
-    - superuserPassword
     - smtpHost
     - smtpPort
     - smtpUsername
@@ -55,7 +64,8 @@ schema:
     superuserPassword:
       type: string
       title: Superuser Password
-      default: password
+      default: ""
+      description: Leave empty to auto-generate a random password
     smtpHost:
       type: string
       title: SMTP Host
