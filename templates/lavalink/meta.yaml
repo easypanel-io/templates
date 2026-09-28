@@ -11,6 +11,16 @@ description:
   Java 17 LTS or newer, and it follows Semantic Versioning.
 instructions: null
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the app never actually starting - mounting a fresh empty volume
+      over the whole /opt/Lavalink directory wiped the bundled application.yml
+      on every deploy, so the server fell back to Spring Boot's default port
+      8080 instead of the configured port 2333 and ignored the password
+      entirely. Now mounts a generated application.yml file directly and only
+      persists the plugins folder. Also switched to the official
+      ghcr.io/lavalink-devs/lavalink image (fredboat/lavalink is a legacy
+      unofficial mirror, repo renamed from freyacodes/Lavalink)
   - date: 2019-07-24
     description: first release
   - date: 2025-02-28
@@ -19,9 +29,9 @@ changeLog:
     description: Version bumped to c7eb5d3-alpine
 links:
   - label: Documentation
-    url: https://github.com/freyacodes/Lavalink/blob/master/README.md
+    url: https://github.com/lavalink-devs/Lavalink/blob/master/README.md
   - label: Github
-    url: https://github.com/freyacodes/Lavalink
+    url: https://github.com/lavalink-devs/Lavalink
 contributors:
   - name: kaname-png
     url: https://github.com/kaname-png
@@ -41,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fredboat/lavalink:c7eb5d3-alpine
+      default: ghcr.io/lavalink-devs/lavalink:4-alpine
     password:
       type: string
       title: Auth server password
