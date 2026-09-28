@@ -7,8 +7,17 @@ description:
   offering robust features for modern AI chat applications.
 instructions:
   Configure your OpenAI API key and proxy URL to start using the application.
+  If you left the Access Code field empty, find the auto-generated value in
+  the service's environment variables after deployment.
 
 changeLog:
+  - date: 2026-09-28
+    description:
+      Removed the extra Compose Docs link (only Website/GitHub/Documentation
+      links are allowed) and updated the GitHub link (repo renamed lobe-chat
+      -> lobehub). Also fixed the Access Code defaulting to a hardcoded,
+      predictable value (lobe66) - now auto-generates a random code when
+      left empty
   - date: 2024-12-16
     description: First release
   - date: 2025-02-28
@@ -20,12 +29,10 @@ changeLog:
 links:
   - label: Website
     url: https://lobehub.com/
-  - label: Compose Docs
-    url: https://lobehub.com/docs/self-hosting/server-database/docker-compose
   - label: Documentation
     url: https://lobehub.com/docs/usage/start
   - label: Github
-    url: https://github.com/lobehub/lobe-chat
+    url: https://github.com/lobehub/lobehub
 
 contributors:
   - name: Ahson Shaikh
@@ -38,7 +45,6 @@ schema:
     - appServiceImage
     - openAiKey
     - openAiProxy
-    - accessCode
   properties:
     appServiceName:
       type: string
@@ -61,8 +67,10 @@ schema:
     accessCode:
       type: string
       title: Access Code
-      default: lobe66
-      description: Access code for secure authentication to the chat service.
+      default: ""
+      description:
+        Access code for secure authentication to the chat service. Leave
+        empty to auto-generate a random code.
 
 benefits:
   - title: AI-Powered Conversations
