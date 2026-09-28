@@ -1,9 +1,10 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const jwtSecret = randomString(32);
+  const adminPassword = input.adminPassword || randomPassword();
 
   services.push({
     type: "app",
@@ -16,7 +17,7 @@ export function generate(input: Input): Output {
       env: [
         `LLDAP_JWT_SECRET=${jwtSecret}`,
         `LLDAP_LDAP_BASE_DN=dc=example,dc=org`,
-        `LLDAP_LDAP_USER_PASS=${input.adminPassword}`,
+        `LLDAP_LDAP_USER_PASS=${adminPassword}`,
         `LLDAP_HTTP_PORT=17170`,
         `LLDAP_LDAP_PORT=3389`,
         `RUST_LOG=info`,
