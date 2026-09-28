@@ -5,6 +5,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const appPassword = randomPassword();
+  const saltKey = randomPassword();
 
   services.push({
     type: "app",
@@ -14,7 +15,7 @@ export function generate(input: Input): Output {
         `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
         `STORE_MODEL_IN_DB=True`,
         `LITELLM_MASTER_KEY=${appPassword}`,
-        `LITELLM_SALT_KEY=${appPassword}`,
+        `LITELLM_SALT_KEY=${saltKey}`,
       ].join("\n"),
       source: {
         type: "image",
