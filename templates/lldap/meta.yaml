@@ -12,9 +12,17 @@ description:
   solution for identity management in your self-hosted infrastructure.
 
 instructions:
-  Login using the username "admin" and the password you would decide.
+  Login using the username "admin". If you left the Admin Password field
+  empty, find the auto-generated value in the service's environment
+  variables after deployment.
 
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the admin password defaulting to a hardcoded, predictable value
+      (adminPassword) shown directly in the form - now auto-generates a
+      random password when left empty. Also updated the GitHub link (org
+      renamed nitnelave/lldap -> lldap/lldap) and removed the Docker Hub link
   - date: 2025-03-22
     description: Initial template release
   - date: 2025-07-22
@@ -27,9 +35,7 @@ changeLog:
     description: Version bumped to 2026-05-05
 links:
   - label: GitHub
-    url: https://github.com/nitnelave/lldap
-  - label: Docker Hub
-    url: https://hub.docker.com/r/nitnelave/lldap
+    url: https://github.com/lldap/lldap
 
 contributors:
   - name: Ahson Shaikh
@@ -40,7 +46,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - adminPassword
     - exposedPort
   properties:
     appServiceName:
@@ -54,7 +59,8 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
-      default: adminPassword
+      default: ""
+      description: Leave empty to auto-generate a random password
     exposedPort:
       type: string
       title: Exposed Port
