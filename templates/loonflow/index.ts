@@ -25,7 +25,7 @@ export function generate(input: Input): Output {
   });
 
   const backendEnv = [
-    `DB_NAME=${input.postgresDb}`,
+    `DB_NAME=$(PROJECT_NAME)`,
     `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-pg`,
     `DB_USER=postgres`,
     `DB_PASS=${postgresPassword}`,
