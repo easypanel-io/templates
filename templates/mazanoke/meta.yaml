@@ -9,8 +9,6 @@ changeLog:
   - date: 2025-09-12
     description: Template Release (v1.1.5)
 links:
-  - label: Documentation
-    url: https://github.com/civilblur/mazanoke
   - label: Github
     url: https://github.com/civilblur/mazanoke
 contributors:
@@ -40,7 +38,7 @@ schema:
     adminPassword:
       type: string
       title: Admin Password
-      default: admin
+      default: ""
 benefits:
   - title: Privacy-Focused Image Processing
     description:
