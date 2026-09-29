@@ -1,0 +1,141 @@
+{
+  "name": "Grovs Community",
+  "description":
+    "Self-hosted deep linking, attribution and analytics for mobile and web
+    apps.",
+  "instructions":
+    "Requires 4 vCPU / 8 GB RAM. Uploads are stored on the server; fill in the
+    bucket fields only to use private S3-compatible storage instead. Use one
+    replica per service. Configure wildcard routing and TLS before using project
+    links:
+    https://github.com/grovs-io/self-host/blob/main/deploy/catalogs/easypanel/README.md.
+    Read the generated admin password from the web service environment. Preserve
+    secrets and volumes when upgrading; do not regenerate an existing template.",
+  "links":
+    [
+      { "label": "Website", "url": "https://www.grovs.io" },
+      {
+        "label": "Documentation",
+        "url": "https://www.grovs.io/docs/self-hosting/introduction",
+      },
+      { "label": "Github", "url": "https://github.com/grovs-io/backend" },
+    ],
+  "contributors": [{ "name": "Grovs", "url": "https://github.com/grovs-io" }],
+  "changeLog":
+    [{ "date": "2026-09-15", "description": "Initial submission package" }],
+  "schema":
+    {
+      "type": "object",
+      "required":
+        [
+          "servicePrefix",
+          "appDomain",
+          "linksDomain",
+          "testDomain",
+          "adminEmail",
+        ],
+      "properties":
+        {
+          "servicePrefix":
+            {
+              "type": "string",
+              "title": "Service name prefix",
+              "default": "grovs",
+              "pattern": "^[a-z][a-z0-9-]+$",
+            },
+          "appDomain":
+            {
+              "type": "string",
+              "title": "App base domain",
+              "default": "",
+              "description": "Example: grovs.example.com",
+              "pattern": "^[a-z0-9][a-z0-9.-]*\\.[a-z0-9-]+$",
+              "minLength": 1,
+            },
+          "linksDomain":
+            {
+              "type": "string",
+              "title": "Production links domain",
+              "default": "",
+              "description": "Example: links.example.com",
+              "pattern": "^[a-z0-9][a-z0-9.-]*\\.[a-z0-9-]+$",
+              "minLength": 1,
+            },
+          "testDomain":
+            {
+              "type": "string",
+              "title": "Test links domain",
+              "default": "",
+              "description": "Example: test.links.example.com",
+              "pattern": "^[a-z0-9][a-z0-9.-]*\\.[a-z0-9-]+$",
+              "minLength": 1,
+            },
+          "adminEmail":
+            {
+              "type": "string",
+              "title": "Administrator email",
+              "default": "",
+              "description": "Example: admin@example.com",
+              "pattern": "^[^\\r\\n]*$",
+              "minLength": 1,
+            },
+          "s3Key":
+            {
+              "type": "string",
+              "title": "Object storage access key",
+              "default": "",
+              "description": "Object storage access key",
+              "pattern": "^[^\\r\\n]*$",
+            },
+          "s3Secret":
+            {
+              "type": "string",
+              "title": "Object storage secret key",
+              "default": "",
+              "description": "Object storage secret key",
+              "pattern": "^[^\\r\\n]*$",
+            },
+          "s3Region":
+            {
+              "type": "string",
+              "title": "Bucket region",
+              "default": "",
+              "description": "Example: us-east-1",
+              "pattern": "^[^\\r\\n]*$",
+            },
+          "s3Bucket":
+            {
+              "type": "string",
+              "title": "Private bucket name",
+              "default": "",
+              "description": "Private bucket name",
+              "pattern": "^[^\\r\\n]*$",
+            },
+          "s3Endpoint":
+            {
+              "type": "string",
+              "title": "S3-compatible endpoint (optional)",
+              "default": "",
+              "description": "S3-compatible endpoint (optional)",
+              "pattern": "^[^\\r\\n]*$",
+            },
+        },
+    },
+  "benefits":
+    [
+      {
+        "title": "Own your data",
+        "description": "Operate deep links and analytics in your own account.",
+      },
+    ],
+  "features":
+    [
+      {
+        "title": "Deep links and analytics",
+        "description":
+          "Create branded links and measure engagement using the Grovs SDKs and
+          dashboard.",
+      },
+    ],
+  "tags": ["Analytics", "Developer Tools"],
+}
