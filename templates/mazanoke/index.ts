@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `USERNAME=${input.adminUsername}`,
-        `PASSWORD=${input.adminPassword}`,
+        `PASSWORD=${input.adminPassword || randomPassword()}`,
       ].join("\n"),
       source: {
         type: "image",
