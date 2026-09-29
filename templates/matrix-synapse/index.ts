@@ -12,22 +12,14 @@ export function generate(input: Input): Output {
   if (input.databaseType === "postgres") {
     const databasePassword = randomPassword();
     services.push({
-      type: "app",
+      type: "postgres",
       data: {
         serviceName: input.databaseServiceName,
-        source: { type: "image", image: "postgres" },
-        env: [
-          `POSTGRES_USER=synapse`,
-          `POSTGRES_PASSWORD=${databasePassword}`,
-          `POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C`,
-        ].join("\n"),
-        mounts: [
-          {
-            type: "volume",
-            name: "data",
-            mountPath: "/var/lib/postgresql/data",
-          },
-        ],
+        image: "postgres:17",
+        user: "synapse",
+        databaseName: "synapse",
+        password: databasePassword,
+        env: `POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C`,
       },
     });
     appEnv.push(
