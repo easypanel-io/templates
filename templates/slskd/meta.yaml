@@ -21,6 +21,8 @@ changeLog:
       Replaced banner-like screenshot with full upstream web UI screenshot
   - date: 2026-05-05
     description: Version bumped to 0.25.1
+  - date: 2026-09-23
+    description: Version bumped to 0.26.0
 links:
   - label: Website
     url: https://slskd.org
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: slskd/slskd:0.25.1
+      default: slskd/slskd:0.26.0
       description: slskd Docker image
     torrentPort:
       type: string

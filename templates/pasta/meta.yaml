@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2026-07-01
     description: first release
+  - date: 2026-09-22
+    description: Version bumped to 2.2.14
 links:
   - label: Website
     url: https://www.pastatool.com
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cglatot/pasta:2.2.13
+      default: cglatot/pasta:2.2.14
 benefits:
   - title: Bulk Track Management
     description:

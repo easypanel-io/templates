@@ -16,6 +16,8 @@ instructions: >-
 changeLog:
   - date: 2026-07-30
     description: first release
+  - date: 2026-09-17
+    description: Version bumped to 1.20.23
 links:
   - label: Website
     url: https://copyparty.eu
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: copyparty/ac:1.20.19
+      default: copyparty/ac:1.20.23
     adminUsername:
       type: string
       title: Admin Username

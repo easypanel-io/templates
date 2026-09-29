@@ -27,6 +27,8 @@ changeLog:
     description: Version bumped to 1.5.5
   - date: 2026-05-06
     description: Version bumped to 1.5.6
+  - date: 2026-09-16
+    description: Version bumped to 1.6.1
 links:
   - label: Website
     url: https://bazarr.media/
@@ -54,7 +56,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/bazarr:1.5.6
+      default: lscr.io/linuxserver/bazarr:1.6.1
 benefits:
   - title: Automated Subtitle Management
     description:

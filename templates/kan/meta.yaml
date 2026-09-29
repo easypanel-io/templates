@@ -23,6 +23,8 @@ changeLog:
     description:
       Website/docs links, setup instructions, kan-migrate service parity,
       BETTER_AUTH_SECRET via randomBytes, note stateless web (no app volumes)
+  - date: 2026-09-18
+    description: Version bumped to 0.6.0
 
 links:
   - label: Website
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: Web Image
-      default: ghcr.io/kanbn/kan:0.5.6
+      default: ghcr.io/kanbn/kan:0.6.0
       description:
         Kan web application (Next.js). Pin to the same release family as
         migrate.

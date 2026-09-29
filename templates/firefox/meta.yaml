@@ -27,6 +27,8 @@ changeLog:
     description: Version bumped to 1147.0.4
   - date: 2026-04-29
     description: Version bumped to 1150.0.1
+  - date: 2026-09-17
+    description: Version bumped to 1155.0.1
 links:
   - label: Documentation
     url: https://docs.linuxserver.io/images/docker-firefox
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/firefox:1150.0.1
+      default: lscr.io/linuxserver/firefox:1155.0.1
 benefits:
   - title: Open-Source Web Browser
     description:

@@ -18,6 +18,8 @@ instructions: |
 changeLog:
   - date: 2026-06-23
     description: Initial release (v0.31.0)
+  - date: 2026-09-22
+    description: Version bumped to v0.32.0
 links:
   - label: Website
     url: https://mini-qr-code-generator.vercel.app
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/lyqht/mini-qr:v0.31.0
+      default: ghcr.io/lyqht/mini-qr:v0.32.0
 benefits:
   - title: No Account or Backend Required
     description:

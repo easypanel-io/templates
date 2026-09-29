@@ -15,6 +15,8 @@ instructions: >-
 changeLog:
   - date: 2026-07-27
     description: first release
+  - date: 2026-09-16
+    description: Version bumped to 3.1.11
 links:
   - label: Website
     url: https://trycap.dev
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiago2/cap:3.1.8
+      default: tiago2/cap:3.1.11
     adminKey:
       type: string
       title: Admin Key

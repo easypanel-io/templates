@@ -24,6 +24,8 @@ changeLog:
     description: Version bumped to v1.2.50
   - date: 2026-05-04
     description: Version bumped to v1.2.52
+  - date: 2026-09-18
+    description: Version bumped to v1.2.54
 links:
   - label: Website
     url: https://kanboard.org/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: kanboard/kanboard:v1.2.52
+      default: kanboard/kanboard:v1.2.54
 benefits:
   - title: Visualize Your Work
     description:

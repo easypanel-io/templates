@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2026-07-06
     description: First Release (v1.21.0)
+  - date: 2026-09-22
+    description: Version bumped to v1.22.3
 links:
   - label: Docs
     url: https://smp46.github.io/pingvin-share-x/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: smp46/pingvin-share-x:v1.21.0
+      default: smp46/pingvin-share-x:v1.22.3
     trustProxy:
       type: boolean
       title: Trust Proxy

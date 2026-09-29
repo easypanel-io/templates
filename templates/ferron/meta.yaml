@@ -11,6 +11,8 @@ instructions:
 changeLog:
   - date: 2026-04-10
     description: Initial template release
+  - date: 2026-09-17
+    description: Version bumped to 3-debian
 
 links:
   - label: Website
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: Ferron Image
-      default: ferronserver/ferron:2-debian
+      default: ferronserver/ferron:3-debian
 
 benefits:
   - title: Fast Rust web server

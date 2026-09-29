@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to version-r1945
   - date: 2026-05-05
     description: Version bumped to version-r2029
+  - date: 2026-09-22
+    description: Version bumped to version-r2098
 links:
   - label: Website
     url: https://www.projectsend.org/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/projectsend:version-r2029
+      default: lscr.io/linuxserver/projectsend:version-r2098
 benefits:
   - title: Secure File Sharing
     description:
