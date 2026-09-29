@@ -86,7 +86,7 @@ search:
     data: {
       serviceName: input.appServiceName,
       env: [
-        `REDIS_URL=redis://$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
+        `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
         `SEARXNG_URL=http://$(PROJECT_NAME)_${input.appServiceName}-searxng:8080`,
         `OPENAI_API_KEY=${input.openaiApiKey}`,
         `ANTHROPIC_API_KEY=${input.anthropicApiKey}`,
