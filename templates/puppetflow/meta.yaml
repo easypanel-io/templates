@@ -15,7 +15,7 @@ instructions: |
   and `browsers` volumes before moving the installation.
 changeLog:
   - date: 2026-09-27
-    description: Initial template release using Puppetflow v2026.9.31.
+    description: Initial template release using Puppetflow v2026.9.39.
 links:
   - label: Website
     url: https://puppetflow.com
@@ -41,15 +41,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/puppetflow/puppetflow:v2026.9.31
+      default: ghcr.io/puppetflow/puppetflow:v2026.9.39
     streamServiceImage:
       type: string
       title: Browser Stream Service Image
-      default: ghcr.io/puppetflow/puppetflow-stream-server:v2026.9.31
+      default: ghcr.io/puppetflow/puppetflow-stream-server:v2026.9.39
     pinokioServiceImage:
       type: string
       title: Browser Gateway Service Image
-      default: ghcr.io/puppetflow/pinokio:v2026.9.5
+      default: ghcr.io/puppetflow/pinokio:v2026.9.6
 benefits:
   - title: Keep Automation Under Your Control
     description:
