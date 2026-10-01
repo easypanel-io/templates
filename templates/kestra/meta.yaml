@@ -1,0 +1,83 @@
+name: Kestra
+description:
+  Kestra is an open-source, event-driven orchestration platform to build, run
+  and govern data, infrastructure and AI workflows. Workflows are defined
+  declaratively in YAML, from the built-in code editor or the no-code UI, and
+  can be version-controlled with Git. Kestra runs scripts in any language
+  (Python, SQL, Shell, Node.js, R, Go...), ships with a large catalog of plugins
+  for databases, clouds, message brokers and AI providers, and triggers
+  workflows on a schedule, from webhooks or from real-time events such as Kafka
+  messages or new files in S3. This template deploys Kestra in standalone mode
+  with a PostgreSQL backend.
+instructions: >-
+  Log in with the admin email and password you set in the form. The password
+  must be at least 8 characters long and contain an uppercase letter and a
+  number. Script tasks run inside the Kestra container, which includes Python.
+  Set `taskRunner` to `io.kestra.plugin.core.runner.Process` in your script
+  tasks.
+changeLog:
+  - date: 2026-10-01
+    description: first release (Kestra 2.0)
+links:
+  - label: Website
+    url: https://kestra.io
+  - label: Documentation
+    url: https://kestra.io/docs
+  - label: Github
+    url: https://github.com/kestra-io/kestra
+contributors:
+  - name: Kestra
+    url: https://github.com/kestra-io
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kestra
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: kestra/kestra:v2.0
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+    adminPassword:
+      type: string
+      title: Admin Password
+benefits:
+  - title: Workflows as code and from the UI
+    description:
+      Define workflows in declarative YAML with a built-in editor, or build them
+      from the no-code UI. Both stay in sync and can be versioned in Git.
+  - title: Event-driven by design
+    description:
+      Trigger workflows on a schedule, from webhooks, or in real time from
+      message queues, databases and file systems.
+  - title: Any language, any system
+    description:
+      Run Python, SQL, Shell, Node.js or any containerized code, and connect to
+      hundreds of systems with ready-made plugins.
+features:
+  - title: Declarative YAML workflows
+    description:
+      Flows, tasks, inputs, triggers and retries are defined in readable YAML
+      with autocompletion and live validation.
+  - title: Built-in observability
+    description:
+      Follow every execution with real-time logs, Gantt and topology views,
+      outputs and metrics.
+  - title: Blueprints
+    description:
+      Start from hundreds of ready-to-use workflow examples for data, infra and
+      AI use cases.
+tags:
+  - Automation
+  - Developer Tools
+  - Data
