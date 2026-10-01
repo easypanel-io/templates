@@ -1,6 +1,6 @@
 name: farmOS
 description:
-  farmOS is a web-based farm management and record-keeping platform built on
+  farmOS® is a web-based farm management and record-keeping platform built on
   Drupal. It helps track assets, logs, plans, and maps for agricultural
   operations while remaining fully self-hosted and extensible.
 instructions:
@@ -9,9 +9,13 @@ instructions:
   `sites/default/files` so it remains persistent. This template persists the
   farmOS `sites` and `keys` directories for settings, uploaded files, SQLite
   database storage, and key material across upgrades.
+
+  farmOS is a registered trademark of Michel Stenta.
 changeLog:
   - date: 2026-04-13
     description: Initial template release
+  - date: 2026-10-02
+    description: Added trademark notice and link to farmOS hosting docs
 
 links:
   - label: Website
@@ -20,8 +24,6 @@ links:
     url: https://farmos.org/hosting/install/
   - label: Github
     url: https://github.com/farmOS/farmOS
-  - label: Docker Hub
-    url: https://hub.docker.com/r/farmos/farmos
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
