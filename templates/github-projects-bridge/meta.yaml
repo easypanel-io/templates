@@ -1,0 +1,47 @@
+name: GitHub Projects Bridge
+description: Remote MCP server for managing GitHub Projects V2 through the GitHub GraphQL API.
+instructions:
+  Enter a GitHub fine-grained Personal Access Token with Projects read and write permission. The template generates a separate MCP access secret for this installation.
+changeLog:
+  - date: 2026-10-02
+    description: Initial Easypanel template
+links:
+  - label: GitHub repository
+    url: https://github.com/jaison/github-projects-bridge
+  - label: Template source
+    url: https://github.com/jaison/github-projects-bridge-template
+schema:
+  type: object
+  required:
+    - serviceName
+    - githubOwner
+    - githubToken
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: github-projects-bridge
+    githubOwner:
+      type: string
+      title: GitHub User or Organization
+      description: Login that owns the GitHub Projects V2 you want to manage.
+      minLength: 1
+    githubToken:
+      type: string
+      title: GitHub Fine-grained Personal Access Token
+      description: Requires Projects permission set to Read and write.
+      minLength: 1
+benefits:
+  - title: GitHub Projects V2 over MCP
+    description: Manage projects, items, draft issues, and single-select fields through an MCP-compatible client.
+  - title: Per-installation secret
+    description: A new MCP access secret is generated during template creation.
+features:
+  - title: Project discovery
+    description: List Projects V2 and inspect fields and options.
+  - title: Item management
+    description: List items, create draft issues, update single-select fields, and remove project items.
+tags:
+  - Developer Tools
+  - GitHub
+  - MCP
