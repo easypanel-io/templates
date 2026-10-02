@@ -1,13 +1,16 @@
-import { randomBytes } from "node:crypto";
 import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  // Generated once when the template is instantiated.
-  // Easypanel stores the environment value with the service configuration.
-  const oauthSigningSecret = randomBytes(32).toString("hex");
+  // Generate a cryptographically secure secret without importing Node.js modules.
+  // The Easypanel catalog bundles templates with Next.js/Webpack.
+  const secretBytes = new Uint8Array(32);
+  globalThis.crypto.getRandomValues(secretBytes);
+  const oauthSigningSecret = Array.from(secretBytes, byte =>
+    byte.toString(16).padStart(2, "0")
+  ).join("");
 
   services.push({
     type: "app",
