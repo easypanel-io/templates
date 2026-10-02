@@ -1,16 +1,13 @@
+import { randomBytes } from "node:crypto";
 import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  // Generate a cryptographically secure secret without importing node modules.
-  // Templates are bundled by the Easypanel catalog's Next.js application.
-  const secretBytes = new Uint8Array(32);
-  globalThis.crypto.getRandomValues(secretBytes);
-  const mcpAccessToken = Array.from(secretBytes, (byte) =>
-    byte.toString(16).padStart(2, "0"),
-  ).join("");
+  // Generated once when the template is instantiated.
+  // Easypanel stores the environment value with the service configuration.
+  const oauthSigningSecret = randomBytes(32).toString("hex");
 
   services.push({
     type: "app",
@@ -30,17 +27,28 @@ export function generate(input: Input): Output {
       },
       env: [
         `GITHUB_TOKEN=${input.githubToken}`,
-        `MCP_ACCESS_TOKEN=${mcpAccessToken}`,
         `GITHUB_OWNER=${input.githubOwner}`,
-        "PORT=3000",
+        `PUBLIC_URL=https://$(EASYPANEL_DOMAIN)`,
+        `GITHUB_OAUTH_CLIENT_ID=${input.githubOAuthClientId}`,
+        `GITHUB_OAUTH_CLIENT_SECRET=${input.githubOAuthClientSecret}`,
+        `OAUTH_ALLOWED_GITHUB_USERS=${input.oauthAllowedGithubUsers}`,
+        `OAUTH_SIGNING_SECRET=${oauthSigningSecret}`,
+        "OAUTH_DATA_FILE=/data/oauth-state.json",
+        "PORT=80",
       ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 3000,
+          port: 80,
         },
       ],
-      mounts: [],
+      mounts: [
+        {
+          type: "volume",
+          name: "oauth-data",
+          mountPath: "/data",
+        },
+      ],
     },
   });
 
