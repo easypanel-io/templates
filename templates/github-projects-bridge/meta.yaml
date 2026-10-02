@@ -10,6 +10,9 @@ links:
     url: https://github.com/jaison/github-projects-bridge
   - label: Template source
     url: https://github.com/jaison/github-projects-bridge-template
+contributors:
+  - name: Jaison Perazza
+    url: https://github.com/jaison
 schema:
   type: object
   required:
@@ -35,7 +38,7 @@ benefits:
   - title: GitHub Projects V2 over MCP
     description: Manage projects, items, draft issues, and single-select fields through an MCP-compatible client.
   - title: Per-installation secret
-    description: A new MCP access secret is generated during template creation.
+    description: A new MCP access secret is generated for this installation.
 features:
   - title: Project discovery
     description: List Projects V2 and inspect fields and options.
