@@ -1,14 +1,24 @@
 name: GitHub Projects Bridge
-description: Remote MCP server for managing GitHub Projects V2 through the GitHub GraphQL API with OAuth 2.1 and PKCE.
+description: Connect AI agents to GitHub Projects through MCP. Create, read and manage Projects V2, items, draft issues and fields through a secure OAuth 2.1 + PKCE integration.
 instructions: |
   This template deploys the GitHub Projects Bridge with OAuth 2.1 + PKCE.
-  For personal-account Projects V2, create a GitHub Personal Access Token (classic) with the project scope (Full control of projects).
-  Create a GitHub OAuth App and provide its Client ID and Client Secret below.
+  It exists to bridge AI agents and GitHub Projects V2: the bridge exposes project
+  operations through MCP while keeping the GitHub service token server-side.
+  
+  For personal-account Projects V2, create a GitHub Personal Access Token (classic)
+  with the project scope (Full control of projects). Create a GitHub OAuth App and
+  provide its Client ID and Client Secret below.
+  
   After the service is deployed, configure the OAuth App Redirect URI as:
   https://YOUR-EASYPANEL-DOMAIN/oauth/github/callback
-  The template generates the OAuth signing secret automatically and persists OAuth state in /data.
-  The MCP server requests projects:read and projects:write together, so the ChatGPT connection can be authorized once for both read and write operations.
+  
+  The template generates the OAuth signing secret automatically and persists OAuth
+  state in /data. The MCP server requests projects:read and projects:write together,
+  so an MCP client can be authorized once for both read and write operations.
+logo: logo.svg
 changeLog:
+  - date: 2026-10-02
+    description: Add catalog branding and clarify the purpose of the bridge
   - date: 2026-10-02
     description: Align template with current OAuth 2.1 bridge and persistent state
   - date: 2026-10-02
@@ -79,5 +89,7 @@ features:
     description: List items, create draft issues, update single-select fields, and remove project items.
 tags:
   - Developer Tools
+  - AI
   - GitHub
+  - GitHub Projects
   - MCP
