@@ -1,0 +1,144 @@
+name: Louez
+description: >-
+  Louez is an open-source equipment rental platform. Rent out anything —
+  cameras, tools, bikes, party gear, vehicles — from a branded online storefront
+  backed by a complete back office. Customers browse your catalog, see live
+  availability, pick their dates and book; you manage products, reservations,
+  pickups and returns, customers, PDF contracts and revenue statistics from one
+  dashboard. The instance hosts your own store, served at the root of the site,
+  with the dashboard under /dashboard. Everything runs on your server — no
+  subscription, no per-booking commission, no vendor lock-in. The template
+  deploys the app together with its MySQL database and a private object store
+  for product images, and Louez installs its own schema on first boot. Email,
+  Stripe payments, Google sign-in and the optional AI assistant are configured
+  later from environment variables. The interface ships in 8 languages (EN, FR,
+  DE, ES, IT, NL, PL, PT).
+instructions: >-
+  Open the deployed domain and create your account — the first account becomes
+  the store owner. Outgoing email is optional, so without SMTP credentials you
+  sign in with a password and Louez skips sending mail. Product images are
+  stored in the bundled MinIO service and served through the app, so the bucket
+  needs no public domain of its own.
+changeLog:
+  - date: 2026-08-13
+    description: first release (Louez 2.1.0)
+links:
+  - label: Website
+    url: https://louez.io
+  - label: Documentation
+    url: https://github.com/Synapsr/Louez#readme
+  - label: Github
+    url: https://github.com/Synapsr/Louez
+contributors:
+  - name: Synapsr
+    url: https://github.com/Synapsr
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+    - storageServiceName
+    - storageServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: louez
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: synapsr/louez:2.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: louez-db
+    storageServiceName:
+      type: string
+      title: Storage Service Name
+      default: louez-storage
+    storageServiceImage:
+      type: string
+      title: Storage Service Image
+      default: minio/minio:RELEASE.2025-09-07T16-13-09Z
+    smtpServerHost:
+      type: string
+      title: SMTP Server Host (optional)
+      default: ""
+    smtpServerPort:
+      type: string
+      title: SMTP Server Port
+      default: "587"
+    smtpServerSecure:
+      type: string
+      title: SMTP TLS on connect
+      default: "false"
+    smtpServerUsername:
+      type: string
+      title: SMTP Server Username (optional)
+      default: ""
+    smtpServerPassword:
+      type: string
+      title: SMTP Server Password (optional)
+      default: ""
+    smtpFromEmail:
+      type: string
+      title: SMTP From Address (optional)
+      default: ""
+benefits:
+  - title: A rental business, not a website
+    description: >-
+      Louez covers the whole rental loop — catalog and live availability, cart
+      and checkout, reservations, pickups and returns, customers, PDF contracts
+      and revenue statistics — instead of leaving you to bolt booking logic onto
+      a generic CMS or a spreadsheet.
+  - title: No subscription, no commission
+    description: >-
+      Self-hosting gives you the full product, with unlimited products,
+      reservations and staff accounts. You pay for the server, not per booking,
+      and your customer data stays in your own database.
+  - title: Ready on first boot
+    description: >-
+      The template ships the database and the image store alongside the app.
+      Louez installs its schema and generates its auth secret automatically, so
+      the deployment is done when the domain answers.
+  - title: Speaks your customers' language
+    description: >-
+      Storefront and dashboard are translated into 8 languages — English,
+      French, German, Spanish, Italian, Dutch, Polish and Portuguese — with
+      currency and date formats to match.
+features:
+  - title: Storefront with live availability
+    description: >-
+      A branded catalog with your logo, colors and light or dark theme. Visitors
+      filter products, pick their rental dates, see what is actually free and
+      check out with terms acceptance, then follow their bookings from a
+      passwordless customer portal.
+  - title: Reservation dashboard
+    description: >-
+      Bookings with statuses, conflict detection, pickups and returns, plus week
+      and month calendar views across the whole catalog.
+  - title: Inventory and pricing
+    description: >-
+      Products with images, stock and per-unit fleet tracking, and pricing tiers
+      that adjust the rate to the rental duration.
+  - title: Contracts and notifications
+    description: >-
+      Auto-generated PDF rental agreements, plus confirmation, reminder and
+      return emails once SMTP credentials are set.
+  - title: Team accounts
+    description: >-
+      Invite staff with role-based permissions so your team works in the same
+      dashboard without sharing one login.
+  - title: Optional AI assistant
+    description: >-
+      Connect your own AI provider to enable a storefront advisor that
+      recommends gear from your live catalog and checks real availability, and a
+      phone receptionist that answers calls and takes booking requests.
+tags:
+  - Business Apps
+  - E-commerce
+  - Booking
+  - Inventory
+  - Self-Hosted
+  - Open Source
