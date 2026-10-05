@@ -5,12 +5,17 @@ description:
   alternative to Zapier, allowing you to automate your daily tasks or even your
   entire business with just a few clicks on the user interface. With
   Activepieces, you can enjoy the flexibility of using our 3rd party no-code
-  apps to quickly read and write to your favorite apps. Currently, we support 74
-  apps and counting. The tool is self-hosted, ensuring your data remains on your
+  apps to quickly read and write to your favorite apps, with new integrations
+  added regularly. The tool is self-hosted, ensuring your data remains on your
   machine, providing an added layer of security. Activepieces also offers
   infinite flexibility and powerful logging, making it a robust solution for
   business automation without limits.
-instructions: null
+instructions: >-
+  On first launch, open the app URL and sign up to create the platform owner
+  account - the first account created becomes the owner. Activepieces runs its
+  flow steps unsandboxed (AP_EXECUTION_MODE=UNSANDBOXED), which is the
+  documented default for this deployment shape; only connect it to pieces and
+  flows you trust.
 changeLog:
   - date: 2023-2-27
     description: first release
@@ -41,7 +46,9 @@ changeLog:
   - date: 2026-02-18
     description: Version bumped to 0.78.1
   - date: 2026-04-29
-    description: Version bumped to 0.82.1  
+    description: Version bumped to 0.82.1
+  - date: 2026-09-16
+    description: Version bumped to 0.91.0
 links:
   - label: Website
     url: https://activepieces.com
@@ -75,7 +82,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: activepieces/activepieces:0.82.1
+      default: activepieces/activepieces:0.91.0
     databaseServiceName:
       type: string
       title: Database Service Name
@@ -114,11 +121,11 @@ features:
     description:
       The app is self-hosted, meaning you can run it on your own server. This
       gives you complete control over your data and ensures it remains secure.
-  - title: 74 Apps And Counting
+  - title: Growing App Library
     description:
-      The app supports integration with over 74 apps and counting. This allows
-      you to automate tasks across multiple platforms, making your workflow more
-      efficient.
+      The app supports integration with a large and growing library of apps.
+      This allows you to automate tasks across multiple platforms, making your
+      workflow more efficient.
   - title: Open Source Connectors
     description:
       The app features open source connectors, allowing you to easily integrate

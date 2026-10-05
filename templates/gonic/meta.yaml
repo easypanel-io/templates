@@ -11,6 +11,8 @@ changeLog:
     description: Initial template release (v0.18.0)
   - date: 2026-04-29
     description: Version bumped to 4b3721b
+  - date: 2026-09-18
+    description: Version bumped to 277f76f
 links:
   - label: Documentation
     url: https://github.com/sentriz/gonic/wiki
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: sentriz/gonic:4b3721b
+      default: sentriz/gonic:277f76f
 benefits:
   - title: Self-Hosted Music Streaming
     description:

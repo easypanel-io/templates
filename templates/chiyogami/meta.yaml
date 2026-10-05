@@ -15,6 +15,8 @@ instructions:
 changeLog:
   - date: 2026-07-01
     description: first release
+  - date: 2026-09-17
+    description: Version bumped to 1.5.6
 links:
   - label: Website
     url: https://chiyogami.myaddr.dev
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/rhee876527/chiyogami:1.5.5
+      default: ghcr.io/rhee876527/chiyogami:1.5.6
 benefits:
   - title: Client-Side Encryption
     description:

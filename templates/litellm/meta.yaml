@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to main-v1.61.20-nightly
   - date: 2025-12-25
     description: Version bumped to main-v1.80.11.rc.1
+  - date: 2026-09-18
+    description: Version bumped to v1.101.0
 links:
   - label: Documentation
     url: https://docs.litellm.ai/docs/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/berriai/litellm:v1.85.0
+      default: ghcr.io/berriai/litellm:v1.101.0
 benefits:
   - title: Easy Integration
     description:

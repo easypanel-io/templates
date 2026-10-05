@@ -4,9 +4,14 @@ description:
   versatility. It provides secure authentication, authorization, and user
   management with support for single sign-on (SSO), multi-factor authentication
   (MFA), and a modern user interface.
-instructions:
+instructions: >-
   After deployment, open /if/flow/initial-setup/ to create the initial admin
-  user. Allow ~60s for migrations to complete.
+  user. Allow ~60s for migrations to complete. If you already have a running
+  Authentik deployment on a 2026.2.x or earlier image, do not jump straight to
+  2026.8.x by editing the image tag - Authentik requires upgrading through each
+  intermediate release line sequentially (2026.2 -> 2026.5 -> 2026.8), per its
+  own upgrade documentation. This only applies to upgrading an existing
+  instance; fresh deployments can start directly on the current version.
 changeLog:
   - date: 2025-04-23
     description: Initial release
@@ -19,7 +24,9 @@ changeLog:
       Fixed worker - use official server image with ak worker (fixes daphne/404
       setup)
   - date: 2026-04-29
-    description: Version bumped to 2026.2.2   
+    description: Version bumped to 2026.2.2
+  - date: 2026-09-24
+    description: Version bumped to 2026.8.3
 links:
   - label: Website
     url: https://goauthentik.io
@@ -43,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: Authentik Version
-      default: ghcr.io/goauthentik/server:2026.2.2
+      default: ghcr.io/goauthentik/server:2026.8.3
       description: Official image tag from ghcr.io/goauthentik/server
 benefits:
   - title: Centralized Identity Management

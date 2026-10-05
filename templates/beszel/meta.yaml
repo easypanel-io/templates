@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to 0.18
   - date: 2026-05-06
     description: Version bumped to 0.18.7
+  - date: 2026-09-16
+    description: Version bumped to 0.19.0
 links:
   - label: Documentation
     url: https://github.com/henrygd/beszel/blob/main/readme.md
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: henrygd/beszel:0.18.7
+      default: henrygd/beszel:0.19.0
 benefits:
   - title: Comprehensive Monitoring
     description:

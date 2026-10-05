@@ -9,6 +9,8 @@ instructions: null
 changeLog:
   - date: 2025-01-29
     description: Initial Template Release
+  - date: 2026-09-23
+    description: Version bumped to 1.2.7
 links:
   - label: Website
     url: https://self-hosted-metrics.com/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/kolapsis/shm:sha-fd3affa
+      default: ghcr.io/kolapsis/shm:1.2.7
 benefits:
   - title: Privacy-first telemetry
     description:

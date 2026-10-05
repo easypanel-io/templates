@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2026-07-02
     description: first release
+  - date: 2026-09-22
+    description: Version bumped to 7.2.4
 links:
   - label: Website
     url: https://opencloud.eu
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: opencloudeu/opencloud:7.2.0
+      default: opencloudeu/opencloud:7.2.4
     adminPassword:
       type: string
       title: Admin Password

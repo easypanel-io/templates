@@ -24,7 +24,7 @@ changeLog:
   - date: 2025-12-25
     description: Version bumped to v2.48.9
   - date: 2026-04-29
-    description: Version bumped to v2.48.16.ubi
+    description: Version bumped to v2.48.16.ubiv2.50.2
 links:
   - label: Website
     url: https://hasura.io/
@@ -54,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hasura/graphql-engine:v2.48.16.ubi
+      default: hasura/graphql-engine:v2.50.2
     databaseServiceName:
       type: string
       title: Database Service Name

@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2026-07-01
     description: first release
+  - date: 2026-09-16
+    description: Version bumped to 2.10.6  
 links:
   - label: GitHub
     url: https://github.com/Cleanuparr/Cleanuparr
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/cleanuparr/cleanuparr:2.9.14
+      default: ghcr.io/cleanuparr/cleanuparr:2.10.6
 benefits:
   - title: Automated Download Cleanup
     description:

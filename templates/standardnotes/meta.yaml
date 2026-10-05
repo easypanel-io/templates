@@ -13,6 +13,8 @@ changeLog:
     description: Version bumped to ff58de30fb4d8093f5056b5c4789163e81edf632
   - date: 2026-05-07
     description: Version bumped to f4a94811848ea19550703d5dcd2b446091bf9536
+  - date: 2026-09-23
+    description: Version bumped to c8c6202be432a06fab09b0202117550d92bbe880 
 links:
   - label: Documentation
     url: https://docs.standardnotes.com/self-hosting/getting-started
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: Web Service Image
-      default: standardnotes/web:f4a94811848ea19550703d5dcd2b446091bf9536
+      default: standardnotes/web:c8c6202be432a06fab09b0202117550d92bbe880
 
 benefits:
   - title: End-to-End Encryption

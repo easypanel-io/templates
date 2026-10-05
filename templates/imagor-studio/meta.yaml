@@ -28,6 +28,8 @@ changeLog:
     description: Version bumped to 0.12.1
   - date: 2026-05-01
     description: Version bumped to 1.2.2
+  - date: 2026-09-18
+    description: Version bumped to 1.2.4  
 links:
   - label: Website
     url: https://imagor.net/
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shumc/imagor-studio:1.2.2
+      default: shumc/imagor-studio:1.2.4
 
 benefits:
   - title: Non-Destructive Editing

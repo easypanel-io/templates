@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to 3.4.5
   - date: 2026-06-30
     description: Switched to official discourse/discourse image
+  - date: 2026-09-17
+    description: Version bumped to 2026.7.2
 links:
   - label: Website
     url: https://www.discourse.org
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: discourse/discourse:2026.1.4
+      default: discourse/discourse:2026.7.2
     dbServiceImage:
       type: string
       title: Database Service Image

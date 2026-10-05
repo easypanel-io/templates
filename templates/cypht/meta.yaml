@@ -9,6 +9,8 @@ changeLog:
     description: Initial release
   - date: 2026-04-29
     description: Version bumped to 2.7.0
+  - date: 2026-09-17
+    description: Version bumped to 2.12.2
 links:
   - label: Website
     url: https://cypht.org
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: cypht/cypht:2.7.0
+      default: cypht/cypht:2.12.2
     authUsername:
       type: string
       title: Auth Username

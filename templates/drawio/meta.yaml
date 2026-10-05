@@ -21,6 +21,8 @@ changeLog:
     description: Version bumped to 29.3.6
   - date: 2026-04-29
     description: Version bumped to 29.7.9
+  - date: 2026-09-17
+    description: Version bumped to 31.4.6
 links:
   - label: Website
     url: https://drawio-app.com/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jgraph/drawio:29.7.9
+      default: jgraph/drawio:31.4.6
 benefits:
   - title: Intuitive Diagram Creation
     description:

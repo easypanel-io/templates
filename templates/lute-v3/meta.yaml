@@ -18,6 +18,8 @@ instructions:
 changeLog:
   - date: "2026-06-25"
     description: First Release
+  - date: 2026-09-21
+    description: Version bumped to 3.10.3  
 links:
   - label: Website
     url: https://luteorg.github.io/lute-manual/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jzohrab/lute3:3.10.1
+      default: jzohrab/lute3:3.10.3
 benefits:
   - title: Learn Languages Through Real Reading
     description:
