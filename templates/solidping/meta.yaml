@@ -1,0 +1,73 @@
+name: SolidPing
+description:
+  SolidPing monitors HTTP(S) endpoints, TCP/UDP ports, DNS records, SSL
+  certificates, ICMP ping, and databases, plus scriptable browser and JavaScript
+  checks. Alerts over email, Slack, Discord, Telegram, WhatsApp and webhooks,
+  with escalation policies and maintenance windows. Public status pages,
+  multi-user organizations, Uptime Kuma import. Single Go binary, SQLite by
+  default.
+instructions: >-
+  Log in with admin@solidping.io / solidpass. You are asked to change the
+  password on first login. Data is stored in SQLite under /data. The template
+  adds the NET_RAW capability so ICMP ping checks work.
+changeLog:
+  - date: 2026-10-06
+    description: first release
+links:
+  - label: Website
+    url: https://www.solidping.io
+  - label: Documentation
+    url: https://docs.solidping.io
+  - label: Github
+    url: https://github.com/fclairamb/solidping
+contributors:
+  - name: Florent Clairambault
+    url: https://github.com/fclairamb
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: solidping
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: fclairamb/solidping:0.38.0
+benefits:
+  - title: Many check types in one tool
+    description:
+      HTTP(S), TCP/UDP, DNS, SSL certificate, ICMP ping and database checks,
+      plus scriptable browser and JavaScript checks for multi-step flows.
+  - title: Alerts where your team already is
+    description:
+      Email, Slack, Discord, Telegram, WhatsApp and webhooks, with escalation
+      policies and maintenance windows to keep the noise down.
+  - title: Light to run
+    description:
+      A single Go binary with SQLite by default. No external database or extra
+      service is needed.
+features:
+  - title: Public status pages
+    description:
+      Publish status pages with sections, resources and incident updates for
+      your users.
+  - title: Multi-user organizations
+    description:
+      Invite your team into organizations and share checks, integrations and
+      status pages.
+  - title: Uptime Kuma import
+    description:
+      Import your existing monitors from an Uptime Kuma backup to switch without
+      starting over.
+  - title: Escalation policies
+    description:
+      Route incidents through ordered escalation steps and on-call schedules.
+tags:
+  - Monitoring
+  - Self-hosted
+  - Uptime
+  - Status Page
