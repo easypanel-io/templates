@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2025-10-21
     description: Initial Template Release (v5.4.1)
+  - date: 2026-10-06
+    description: Version bumped to 6.3.0
 links:
   - label: GitHub
     url: https://github.com/librespeed/speedtest
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/librespeed:5.4.1
+      default: lscr.io/linuxserver/librespeed:6.3.0
       description: LibreSpeed Docker image from LinuxServer.io
     password:
       type: string

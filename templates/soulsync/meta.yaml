@@ -18,7 +18,11 @@ description:
   for offline listening scenarios while maintaining synchronization with their
   curated playlists.
 
-instructions: null
+instructions: >-
+  After deployment, go to Settings > Downloads in the app and set the Transfer
+  path to /app/Transfer - this is where finished, organized music is moved for
+  your media server to read. The Downloads path is already set correctly to
+  /app/downloads.
 
 changeLog:
   - date: 2025-11-26
@@ -27,11 +31,17 @@ changeLog:
     description: Version bumped to 1.6
   - date: 2026-05-07
     description: Version bumped to 2.4.1
+  - date: 2026-10-06
+    description:
+      Version bumped to 3.5.0; mount layout rebuilt to match upstream's current
+      compose (config, logs, downloads, Transfer, Staging, MusicVideos, scripts)
+      - the previous /app/database and /music paths no longer match where the
+      app stores data
 links:
+  - label: Website
+    url: https://ssync.net/
   - label: GitHub
     url: https://github.com/Nezreka/SoulSync
-  - label: Docker Hub
-    url: https://hub.docker.com/r/boulderbadgedad/soulsync
 
 contributors:
   - name: Ahson Shaikh
@@ -50,7 +60,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: boulderbadgedad/soulsync:2.4.1
+      default: boulderbadgedad/soulsync:3.5.0
     timezone:
       type: string
       title: Timezone

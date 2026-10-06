@@ -10,6 +10,13 @@ export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const lightdashSecert = randomString(32);
+  const crypto = require("crypto");
+  const s3Bucket = "lightdash";
+  const s3AccessKey = `GK${randomString(16)}`;
+  const s3SecretKey = crypto.randomBytes(32).toString("hex");
+  const garageRpcSecret = crypto.randomBytes(32).toString("hex");
+  const garageAdminToken = crypto.randomBytes(32).toString("hex");
+  const garageMetricsToken = crypto.randomBytes(32).toString("hex");
 
   services.push({
     type: "app",
@@ -24,6 +31,15 @@ export function generate(input: Input): Output {
         `SECURE_COOKIES=false`,
         `TRUST_PROXY=false`,
         `LIGHTDASH_SECRET=${lightdashSecert}`,
+        // Required since v2 - the backend refuses to start without an
+        // S3-compatible store for query result caching. Backed by the
+        // bundled Garage service below.
+        `S3_ENDPOINT=http://$(PROJECT_NAME)_${input.appServiceName}-garage:3900`,
+        `S3_BUCKET=${s3Bucket}`,
+        `S3_REGION=garage`,
+        `S3_ACCESS_KEY=${s3AccessKey}`,
+        `S3_SECRET_KEY=${s3SecretKey}`,
+        `S3_FORCE_PATH_STYLE=true`,
         `PORT=8080`,
         `LIGHTDASH_LOG_LEVEL=debug`,
         `LIGHTDASH_INSTALL_ID=`,
@@ -96,6 +112,62 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
+    },
+  });
+
+  // MinIO's Docker images are no longer freely pullable (MinIO moved to a
+  // licensed "AIStor" product). Garage is a genuinely open-source (AGPL),
+  // MinIO-API-compatible object store; --single-node --default-bucket
+  // auto-creates the access key and bucket on first boot.
+  const garageToml = `metadata_dir = "/data/meta"
+data_dir = "/data/data"
+db_engine = "sqlite"
+
+replication_factor = 1
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+rpc_secret = "${garageRpcSecret}"
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.garage.localhost"
+
+[admin]
+api_bind_addr = "[::]:3903"
+admin_token = "${garageAdminToken}"
+metrics_token = "${garageMetricsToken}"`;
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: `${input.appServiceName}-garage`,
+      env: [
+        `GARAGE_CONFIG_FILE=/etc/garage.toml`,
+        `GARAGE_DEFAULT_ACCESS_KEY=${s3AccessKey}`,
+        `GARAGE_DEFAULT_SECRET_KEY=${s3SecretKey}`,
+        `GARAGE_DEFAULT_BUCKET=${s3Bucket}`,
+      ].join("\n"),
+      source: {
+        type: "image",
+        image: input.garageImage,
+      },
+      deploy: {
+        command: "/garage server --single-node --default-bucket",
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "garage-data",
+          mountPath: "/data",
+        },
+        {
+          type: "file",
+          content: garageToml,
+          mountPath: "/etc/garage.toml",
+        },
+      ],
     },
   });
 

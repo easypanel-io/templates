@@ -16,7 +16,9 @@ changeLog:
   - date: "2025-06-30"
     description: "Initial release"
   - date: 2026-04-29
-    description: Version bumped to 2.4.0  
+    description: Version bumped to 2.4.0
+  - date: 2026-10-06
+    description: Version bumped to 3.1.0
 
 links:
   - label: "Website"
@@ -43,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: "App Service Image"
-      default: "ghcr.io/claperco/claper:2.4.0"
+      default: "ghcr.io/claperco/claper:3.1.0"
 
 benefits:
   - title: "Interactive Presentations"

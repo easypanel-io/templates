@@ -17,6 +17,13 @@ changeLog:
     description: Version bumped to 0.2282.1
   - date: 2026-02-21
     description: Version bumped to 0.2503.0
+  - date: 2026-10-06
+    description:
+      Version bumped to 2.436.0. Since v2 the backend refuses to start without
+      S3-compatible storage for query result caching - added a bundled Garage
+      service (open-source MinIO alternative; MinIO's own images are no longer
+      freely pullable) and wired up the S3_* env vars so the template still
+      works with no extra setup.
 links:
   - label: Documentation
     url: https://docs.lightdash.com/
@@ -33,6 +40,7 @@ schema:
     - appServiceName
     - appServiceImage
     - browserlessImage
+    - garageImage
   properties:
     appServiceName:
       type: string
@@ -41,11 +49,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lightdash/lightdash:0.2503.0
+      default: lightdash/lightdash:2.436.0
     browserlessImage:
       type: string
       title: Browserless Image
       default: browserless/chrome
+    garageImage:
+      type: string
+      title: Garage (S3 Storage) Image
+      default: dxflrs/garage:v2.4.1
 benefits:
   - title: Data Exploration Made Simple
     description:

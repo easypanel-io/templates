@@ -8,6 +8,17 @@ instructions:
 changeLog:
   - date: 2025-04-15
     description: First Release
+  - date: 2026-10-06
+    description:
+      Version bumped to v2.25.8 (the latest release with a published image -
+      upstream's newer git tags have no corresponding ghcr.io image yet).
+      Renamed NEXTAUTH_URL/NEXTAUTH_SECRET to NEXT_PUBLIC_BASE_URL/AUTH_SECRET
+      and GOOGLE_ENCRYPT_SECRET/SALT to EMAIL_ENCRYPT_SECRET/SALT to match v2's
+      renamed env vars (the old GOOGLE_ENCRYPT_* names are no longer read at
+      all). Added NEXT_PUBLIC_BYPASS_PREMIUM_CHECKS=true so the self-hosted
+      instance isn't gated behind premium checks. Fixed the web service's
+      DATABASE_URL, which was missing the $(PROJECT_NAME) prefix Easypanel needs
+      to resolve the database hostname.
 links:
   - label: GitHub
     url: https://github.com/elie222/inbox-zero
@@ -32,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/elie222/inbox-zero:v1.10.2
+      default: ghcr.io/elie222/inbox-zero:v2.25.8
     googleClientId:
       type: string
       title: Google Client ID

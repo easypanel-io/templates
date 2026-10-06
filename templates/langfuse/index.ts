@@ -1,15 +1,27 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
+  const crypto = require("crypto");
+  const s3Bucket = "langfuse";
+  const s3AccessKey = `GK${randomString(16)}`;
+  const s3SecretKey = crypto.randomBytes(32).toString("hex");
+  const garageRpcSecret = crypto.randomBytes(32).toString("hex");
+  const garageAdminToken = crypto.randomBytes(32).toString("hex");
+  const garageMetricsToken = crypto.randomBytes(32).toString("hex");
 
   const common_envs = [
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-    `SALT=mysalt`,
-    `ENCRYPTION_KEY=0000000000000000000000000000000000000000000000000000000000000000`,
+    `SALT=${randomString(32)}`,
+    `ENCRYPTION_KEY=${crypto.randomBytes(32).toString("hex")}`,
     `TELEMETRY_ENABLED=true`,
     `LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES=true`,
     `CLICKHOUSE_MIGRATION_URL=clickhouse://$(PROJECT_NAME)_${input.appServiceName}-clickhouse:9000`,
@@ -17,18 +29,18 @@ export function generate(input: Input): Output {
     `CLICKHOUSE_USER=${input.clickHouseUser}`,
     `CLICKHOUSE_PASSWORD=${input.clickHousePassword}`,
     `CLICKHOUSE_CLUSTER_ENABLED=false`,
-    `LANGFUSE_S3_EVENT_UPLOAD_BUCKET=langfuse`,
-    `LANGFUSE_S3_EVENT_UPLOAD_REGION=auto`,
-    `LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID=${input.minioUser}`,
-    `LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY=${input.minioPassword}`,
-    `LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT=http://$(PROJECT_NAME)_${input.appServiceName}-minio:9000`,
+    `LANGFUSE_S3_EVENT_UPLOAD_BUCKET=${s3Bucket}`,
+    `LANGFUSE_S3_EVENT_UPLOAD_REGION=garage`,
+    `LANGFUSE_S3_EVENT_UPLOAD_ACCESS_KEY_ID=${s3AccessKey}`,
+    `LANGFUSE_S3_EVENT_UPLOAD_SECRET_ACCESS_KEY=${s3SecretKey}`,
+    `LANGFUSE_S3_EVENT_UPLOAD_ENDPOINT=http://$(PROJECT_NAME)_${input.appServiceName}-garage:3900`,
     `LANGFUSE_S3_EVENT_UPLOAD_FORCE_PATH_STYLE=true`,
     `LANGFUSE_S3_EVENT_UPLOAD_PREFIX=events/`,
-    `LANGFUSE_S3_MEDIA_UPLOAD_BUCKET=langfuse`,
-    `LANGFUSE_S3_MEDIA_UPLOAD_REGION=auto`,
-    `LANGFUSE_S3_MEDIA_UPLOAD_ACCESS_KEY_ID=${input.minioUser}`,
-    `LANGFUSE_S3_MEDIA_UPLOAD_SECRET_ACCESS_KEY=${input.minioPassword}`,
-    `LANGFUSE_S3_MEDIA_UPLOAD_ENDPOINT=http://$(PROJECT_NAME)_${input.appServiceName}-minio:9000`,
+    `LANGFUSE_S3_MEDIA_UPLOAD_BUCKET=${s3Bucket}`,
+    `LANGFUSE_S3_MEDIA_UPLOAD_REGION=garage`,
+    `LANGFUSE_S3_MEDIA_UPLOAD_ACCESS_KEY_ID=${s3AccessKey}`,
+    `LANGFUSE_S3_MEDIA_UPLOAD_SECRET_ACCESS_KEY=${s3SecretKey}`,
+    `LANGFUSE_S3_MEDIA_UPLOAD_ENDPOINT=http://$(PROJECT_NAME)_${input.appServiceName}-garage:3900`,
     `LANGFUSE_S3_MEDIA_UPLOAD_FORCE_PATH_STYLE=true`,
     `LANGFUSE_S3_MEDIA_UPLOAD_PREFIX=media/`,
     `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
@@ -41,7 +53,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-web`,
       env: [
         `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
-        `NEXTAUTH_SECRET=mysecret`,
+        `NEXTAUTH_SECRET=${randomString(32)}`,
         `LANGFUSE_INIT_ORG_ID=`,
         `LANGFUSE_INIT_ORG_NAME=`,
         `LANGFUSE_INIT_PROJECT_ID=`,
@@ -125,37 +137,57 @@ export function generate(input: Input): Output {
     },
   });
 
+  // MinIO's Docker images are no longer freely pullable (MinIO moved to a
+  // licensed "AIStor" product). Garage is a genuinely open-source (AGPL),
+  // MinIO-API-compatible object store; --single-node --default-bucket
+  // auto-creates the access key and bucket on first boot.
+  const garageToml = `metadata_dir = "/data/meta"
+data_dir = "/data/data"
+db_engine = "sqlite"
+
+replication_factor = 1
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+rpc_secret = "${garageRpcSecret}"
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.garage.localhost"
+
+[admin]
+api_bind_addr = "[::]:3903"
+admin_token = "${garageAdminToken}"
+metrics_token = "${garageMetricsToken}"`;
+
   services.push({
     type: "app",
     data: {
-      serviceName: `${input.appServiceName}-minio`,
+      serviceName: `${input.appServiceName}-garage`,
       env: [
-        `MINIO_SERVER_URL=https://$(EASYPANEL_DOMAIN)`,
-        `MINIO_ROOT_USER=admin`,
-        `MINIO_ROOT_PASSWORD=password`,
+        `GARAGE_CONFIG_FILE=/etc/garage.toml`,
+        `GARAGE_DEFAULT_ACCESS_KEY=${s3AccessKey}`,
+        `GARAGE_DEFAULT_SECRET_KEY=${s3SecretKey}`,
+        `GARAGE_DEFAULT_BUCKET=${s3Bucket}`,
       ].join("\n"),
       source: {
         type: "image",
-        image: input.minioImage,
+        image: input.garageImage,
       },
       deploy: {
-        command: 'minio server /data --console-address ":9001"',
+        command: "/garage server --single-node --default-bucket",
       },
-      domains: [
-        {
-          host: "console-$(EASYPANEL_DOMAIN)",
-          port: 9001,
-        },
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 9000,
-        },
-      ],
       mounts: [
         {
           type: "volume",
-          name: "data",
+          name: "garage-data",
           mountPath: "/data",
+        },
+        {
+          type: "file",
+          content: garageToml,
+          mountPath: "/etc/garage.toml",
         },
       ],
     },

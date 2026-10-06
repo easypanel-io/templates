@@ -12,6 +12,8 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `APP_HOMEPAGE_URL=https://$(PRIMARY_DOMAIN)`,
+        `APP_LISTEN_PORT=8000`,
+        `TRUST_PROXY=true`,
         `SESSION_KEY=${randomKey1}`,
         `FORM_ENCRYPTION_KEY=${randomKey2}`,
         `MONGO_URI=mongodb://$(PROJECT_NAME)_${input.appServiceName}-db:27017/heyform`,

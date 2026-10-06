@@ -32,7 +32,7 @@ export function generate(input: Input): Output {
         `PASSWORD=${input.serpPass}`,
         `SECRET=${appSecret}`,
         `APIKEY=${apiKey}`,
-        `NEXT_PUBLIC_APP_URL=https://localhost:80`,
+        `NEXT_PUBLIC_APP_URL=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
     },
   });

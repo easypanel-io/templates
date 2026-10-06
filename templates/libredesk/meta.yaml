@@ -13,13 +13,15 @@ changeLog:
     description:
       Updated to v1.0.1 and added encryption key generation and auto-generation
       of system user password.
+  - date: 2026-10-06
+    description: Version bumped to v2.8.0
 links:
   - label: Website
     url: https://libredesk.io
   - label: Documentation
     url: https://docs.libredesk.io/introduction
-  - label: DockerHub
-    url: https://hub.docker.com/r/libredesk/libredesk
+  - label: GitHub
+    url: https://github.com/abhinavxd/libredesk
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: libredesk/libredesk:v1.0.1
+      default: libredesk/libredesk:v2.8.0
     systemUserPassword:
       type: string
       title: System User Password

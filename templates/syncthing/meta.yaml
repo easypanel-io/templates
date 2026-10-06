@@ -13,7 +13,12 @@ description:
   require complex configuration or IP addresses, it simply works, over LAN and
   over the Internet. You can synchronize as many folders as you need with
   different people or just between your own devices.
-instructions: null
+instructions: >-
+  Syncthing 2.x migrates its database from LevelDB to SQLite automatically on
+  first launch. For a fresh deployment this is instant; if you are upgrading an
+  existing Syncthing service with data already on the volume, the migration
+  runs on first start and can take a while for large setups - the container
+  will appear to hang during this time, which is expected.
 changeLog:
   - date: 2023-07-10
     description: First Release
@@ -21,6 +26,8 @@ changeLog:
     description: Version bumped to 1.29
   - date: 2025-07-25
     description: Version bumped to 1.30
+  - date: 2026-10-06
+    description: Version bumped to 2.1.5
 links:
   - label: Website
     url: https://syncthing.net
@@ -46,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: syncthing/syncthing:1.30
+      default: syncthing/syncthing:2.1.5
 benefits:
   - title: Continuous File Synchronization
     description:

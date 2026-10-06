@@ -42,6 +42,11 @@ export function generate(input: Input): Output {
       mounts: [
         {
           type: "volume",
+          name: "config",
+          mountPath: "/app/config",
+        },
+        {
+          type: "volume",
           name: "logs",
           mountPath: "/app/logs",
         },
@@ -52,13 +57,23 @@ export function generate(input: Input): Output {
         },
         {
           type: "volume",
-          name: "database",
-          mountPath: "/app/database",
+          name: "transfer",
+          mountPath: "/app/Transfer",
         },
         {
           type: "volume",
-          name: "music",
-          mountPath: "/music",
+          name: "staging",
+          mountPath: "/app/Staging",
+        },
+        {
+          type: "volume",
+          name: "musicvideos",
+          mountPath: "/app/MusicVideos",
+        },
+        {
+          type: "volume",
+          name: "scripts",
+          mountPath: "/app/scripts",
         },
       ],
     },

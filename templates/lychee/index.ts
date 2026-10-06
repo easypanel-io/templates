@@ -3,7 +3,10 @@ import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const appEnv = [];
+  const crypto = require("crypto");
+  const appKey = `base64:${crypto.randomBytes(32).toString("base64")}`;
+
+  const appEnv = [`APP_KEY=${appKey}`];
 
   if (input.databaseType === "sqlite") {
     appEnv.push(`DB_CONNECTION=sqlite`);
@@ -21,7 +24,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 8000,
         },
       ],
       mounts: [

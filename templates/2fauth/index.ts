@@ -17,6 +17,7 @@ export function generate(input: Input): Output {
     `SITE_OWNER=${input.appOwnerMail}`,
     `APP_KEY=${randomString(32)}`,
     `APP_URL=https://$(PRIMARY_DOMAIN)`,
+    `TRUSTED_PROXIES=*`,
     `LOG_CHANNEL=daily`,
     `LOG_LEVEL=notice`,
     `THROTTLE_API=60`,

@@ -15,6 +15,46 @@ export function generate(input: Input): Output {
     `ESPOCRM_SITE_URL=https://$(PRIMARY_DOMAIN)`,
   ];
 
+  // Since v10 the image ships its own app files in the image; mounting the
+  // whole /var/www/html hides them (including the installer). Only these
+  // three directories should be mounted. All three processes (web, daemon,
+  // websocket) share them via matching bind mounts to the same host paths.
+  const sharedMounts = [
+    {
+      type: "volume" as const,
+      name: "espocrm-data",
+      mountPath: "/var/www/html/data",
+    },
+    {
+      type: "volume" as const,
+      name: "espocrm-custom",
+      mountPath: "/var/www/html/custom",
+    },
+    {
+      type: "volume" as const,
+      name: "espocrm-client-custom",
+      mountPath: "/var/www/html/client/custom",
+    },
+  ];
+  const sharedBindMounts = (basePath: string) => [
+    {
+      type: "bind" as const,
+      hostPath: `${basePath}/espocrm-data`,
+      mountPath: "/var/www/html/data",
+    },
+    {
+      type: "bind" as const,
+      hostPath: `${basePath}/espocrm-custom`,
+      mountPath: "/var/www/html/custom",
+    },
+    {
+      type: "bind" as const,
+      hostPath: `${basePath}/espocrm-client-custom`,
+      mountPath: "/var/www/html/client/custom",
+    },
+  ];
+  const volumesBasePath = `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes`;
+
   services.push({
     type: "app",
     data: {
@@ -26,11 +66,8 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
-      mounts: [{ type: "volume", name: "espocrm", mountPath: "/var/www/html" }],
+      mounts: sharedMounts,
       env: appEnv.join("\n"),
-      deploy: {
-        command: `chmod -R 755 /var/www/html && docker-entrypoint.sh apache2-foreground`,
-      },
     },
   });
 
@@ -40,13 +77,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName + "-daemon",
       source: { type: "image", image: input.appServiceImage },
       deploy: { command: "sleep 120; docker-daemon.sh" },
-      mounts: [
-        {
-          type: "bind",
-          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/espocrm`,
-          mountPath: "/var/www/html",
-        },
-      ],
+      mounts: sharedBindMounts(volumesBasePath),
     },
   });
 
@@ -62,13 +93,7 @@ export function generate(input: Input): Output {
           port: 8080,
         },
       ],
-      mounts: [
-        {
-          type: "bind",
-          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/espocrm`,
-          mountPath: "/var/www/html",
-        },
-      ],
+      mounts: sharedBindMounts(volumesBasePath),
       env: [
         `ESPOCRM_CONFIG_USE_WEB_SOCKET=true`,
         `ESPOCRM_CONFIG_WEB_SOCKET_URL=wss://$(PRIMARY_DOMAIN)`,

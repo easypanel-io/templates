@@ -10,6 +10,17 @@ description:
   multi-platform awareness, ensuring compatibility with various architectures.
 instructions: null
 changeLog:
+  - date: 2026-10-06
+    description:
+      Version bumped to 4.50.0 (worker image matched to 4.50.0 - they must stay
+      in lockstep); pinned ClickHouse to 26.9.11.2 (was unpinned to :latest, and
+      v4 requires ClickHouse 25.12+); SALT, ENCRYPTION_KEY, and NEXTAUTH_SECRET
+      are now generated per deployment instead of shared hardcoded values.
+      Replaced MinIO with Garage for S3-compatible storage - MinIO's Docker
+      images are no longer freely pullable (MinIO moved to a licensed "AIStor"
+      product), so this template's S3 backend was broken for any fresh
+      deployment. Garage is genuinely open-source (AGPL) and auto-creates its
+      access key and bucket on first boot.
   - date: 2026-05-19
     description: Updated to v3.174.1
   - date: 2024-12-23
@@ -37,11 +48,9 @@ schema:
     - appServiceImage
     - workerImage
     - clickHouseImage
-    - minioImage
+    - garageImage
     - clickHouseUser
     - clickHousePassword
-    - minioUser
-    - minioPassword
   properties:
     appServiceName:
       type: string
@@ -50,19 +59,19 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: langfuse/langfuse:3.174.1
+      default: langfuse/langfuse:4.50.0
     workerImage:
       type: string
       title: App Service Image
-      default: langfuse/langfuse-worker:3.155
+      default: langfuse/langfuse-worker:4.50.0
     clickHouseImage:
       type: string
       title: App Service Image
-      default: clickhouse/clickhouse-server
-    minioImage:
+      default: clickhouse/clickhouse-server:26.9.11.2
+    garageImage:
       type: string
-      title: App Service Image
-      default: minio/minio:latest
+      title: Garage (S3 Storage) Image
+      default: dxflrs/garage:v2.4.1
     clickHouseUser:
       type: string
       title: Click House User
@@ -71,14 +80,6 @@ schema:
       type: string
       title: ClickHouse Password
       default: clickhouse
-    minioUser:
-      type: string
-      title: Minio User
-      default: admin
-    minioPassword:
-      type: string
-      title: Minio Password
-      default: password
 benefits:
   - title: Streamlined Observability for AI Applications
     description:

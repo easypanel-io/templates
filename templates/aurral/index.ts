@@ -18,7 +18,11 @@ export function generate(input: Input): Output {
           port: 3001,
         },
       ],
-      env: [`DOWNLOAD_FOLDER=/app/downloads`].join("\n"),
+      env: [
+        `DOWNLOAD_FOLDER=/app/downloads`,
+        `AURRAL_PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
+        `TRUST_PROXY=true`,
+      ].join("\n"),
       mounts: [
         {
           type: "volume",
@@ -27,8 +31,8 @@ export function generate(input: Input): Output {
         },
         {
           type: "volume",
-          name: "data",
-          mountPath: "/app/backend/data",
+          name: "config",
+          mountPath: "/config",
         },
       ],
     },

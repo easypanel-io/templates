@@ -16,7 +16,7 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
 
   const common_envs = [
-    `DATABASE_URL=postgresql://postgres:${postgresPassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/lago-db`,
+    `DATABASE_URL=postgresql://lago:${postgresPassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/lago`,
     `REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)-${input.appServiceName}-redis:6379`,
     `SECRET_KEY_BASE=${secretKeyBase}`,
     `RAILS_ENV=production`,
@@ -38,11 +38,31 @@ export function generate(input: Input): Output {
     `LAGO_FRONT_URL=https://$(PROJECT_NAME)-${input.appServiceName}-frontend.$(EASYPANEL_HOST)`,
   ];
 
+  // Lago's schema uses pg_partman (native table partitioning) since v1.42 -
+  // Easypanel's generic managed postgres image doesn't ship that extension,
+  // so the official postgres-partman image is used instead via a plain app
+  // service.
   services.push({
-    type: "postgres",
+    type: "app",
     data: {
       serviceName: `${input.appServiceName}-db`,
-      password: postgresPassword,
+      source: {
+        type: "image",
+        image: input.postgresImage,
+      },
+      env: [
+        `POSTGRES_DB=lago`,
+        `POSTGRES_USER=lago`,
+        `POSTGRES_PASSWORD=${postgresPassword}`,
+        `PGDATA=/data/postgres`,
+      ].join("\n"),
+      mounts: [
+        {
+          type: "volume",
+          name: "postgres-data",
+          mountPath: "/data/postgres",
+        },
+      ],
     },
   });
 

@@ -14,8 +14,10 @@ description:
 instructions: null
 
 changeLog:
-  - date: 2026-01-07 (release)
+  - date: 2026-01-07
     description: Template Release
+  - date: 2026-10-06
+    description: Pinned to v1.14.1 (was tracking the moving release tag)
 
 links:
   - label: GitHub
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/httpjamesm/anonymousoverflow:release
+      default: ghcr.io/httpjamesm/anonymousoverflow:v1.14.1
 
 benefits:
   - title: Anonymous Q&A Platform

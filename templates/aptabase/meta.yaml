@@ -11,6 +11,11 @@ instructions:
 changeLog:
   - date: 2024-04-04
     description: First Release
+  - date: 2026-10-06
+    description:
+      Pinned to a specific image digest instead of the moving :main tag -
+      Aptabase publishes no versioned releases, so a digest is the only way to
+      get a reproducible, pinned deployment
 links:
   - label: Website
     url: https://aptabase.com
@@ -35,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/aptabase/aptabase:main
+      default: ghcr.io/aptabase/aptabase@sha256:57397bab533557b98669fab0dd1b33a09a3815bcc805bb1eeb8e9a63aad7eddd
     clickhouseServiceImage:
       type: string
       title: ClickHouse Service Image

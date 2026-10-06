@@ -22,6 +22,8 @@ changeLog:
     description:
       Fix DATABASE_URL (wrong pgbouncer port), make Supabase fields required,
       bump image to 1.20.2
+  - date: 2026-10-06
+    description: Version bumped to 2.3.0
 links:
   - label: Documentation
     url: https://docs.shelf.nu/
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/shelf-nu/shelf.nu:1.20.2
+      default: ghcr.io/shelf-nu/shelf.nu:2.3.0
       description: Shelf.nu Docker image
     supabaseAnonPublic:
       type: string

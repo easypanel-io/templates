@@ -79,14 +79,15 @@ export function generate(input: Input): Output {
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
     `DIRECT_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
 
-    `NEXTAUTH_SECRET=${randomSecret}`,
-    `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
+    `AUTH_SECRET=${randomSecret}`,
+    `NEXT_PUBLIC_BASE_URL=https://$(PRIMARY_DOMAIN)`,
+    `NEXT_PUBLIC_BYPASS_PREMIUM_CHECKS=true`,
 
     // Gmail
     `GOOGLE_CLIENT_ID=${input.googleClientId || ""}`,
     `GOOGLE_CLIENT_SECRET=${input.googleClientSecret || ""}`,
-    `GOOGLE_ENCRYPT_SECRET=${randomString(32)}`,
-    `GOOGLE_ENCRYPT_SALT=${randomString(16)}`,
+    `EMAIL_ENCRYPT_SECRET=${randomString(32)}`,
+    `EMAIL_ENCRYPT_SALT=${randomString(16)}`,
 
     `GOOGLE_PUBSUB_TOPIC_NAME="projects/abc/topics/xyz"`,
     `GOOGLE_PUBSUB_VERIFICATION_TOKEN=`,
@@ -212,7 +213,7 @@ export function generate(input: Input): Output {
       ],
       env: [
         ...common_envs,
-        `DATABASE_URL=postgresql://postgres:${databasePassword}@${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
+        `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
         `DIRECT_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
         `UPSTASH_REDIS_URL=http://$(PROJECT_NAME)_${input.appServiceName}-redis-http:80`,
         `UPSTASH_REDIS_TOKEN=${redisToken}`,

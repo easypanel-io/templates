@@ -15,6 +15,12 @@ instructions:
   contact Easypanel support if you need help.
 
 changeLog:
+  - date: "2026-10-06"
+    description:
+      Version bumped to v1.53.0 (api/front kept in lockstep); Gotenberg bumped
+      to 8.15. Since v1.42 Lago's schema requires the pg_partman PostgreSQL
+      extension, which Easypanel's generic managed Postgres image doesn't ship -
+      switched the database to the official getlago/postgres-partman image.
   - date: "2025-07-04"
     description: "Initial release"
 
@@ -37,6 +43,7 @@ schema:
     - appServiceImage
     - frontendServiceImage
     - pdfServiceImage
+    - postgresImage
     - rsaPrivateKey
   properties:
     appServiceName:
@@ -46,15 +53,19 @@ schema:
     appServiceImage:
       type: string
       title: "Backend Service Image"
-      default: "getlago/api:v1.31.0"
+      default: "getlago/api:v1.53.0"
     frontendServiceImage:
       type: string
       title: "Frontend Service Image"
-      default: "getlago/front:v1.31.0"
+      default: "getlago/front:v1.53.0"
     pdfServiceImage:
       type: string
       title: "PDF Service Image"
-      default: "getlago/lago-gotenberg:7.8.2"
+      default: "getlago/lago-gotenberg:8.15"
+    postgresImage:
+      type: string
+      title: "Postgres Image"
+      default: "getlago/postgres-partman:15.0-alpine"
     rsaPrivateKey:
       type: string
       title: "RSA Private Key"

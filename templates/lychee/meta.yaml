@@ -12,13 +12,19 @@ description:
   Lychee is designed with a beautiful, intuitive interface and is perfect for
   photographers as it offers unlimited storage, no compression, and no loss in
   data.
-instructions:
+instructions: >-
   Lychee takes a few minutes to get ready. Sit back, relax, and have a coffee!
+  Create the first (admin) account from the web setup wizard on first visit.
 changeLog:
   - date: 2022-10-28
     description: first release
   - date: 2025-12-25
     description: Version bumped to v6.10.4
+  - date: 2026-10-06
+    description:
+      Version bumped to v7.10.0; v7 switched to FrankenPHP/Octane, moving the
+      internal port from 80 to 8000, and now requires an APP_KEY (generated
+      automatically) or the container refuses to start.
 links:
   - label: Website
     url: https://lycheeorg.github.io/
@@ -45,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lycheeorg/lychee:v6.10.4
+      default: lycheeorg/lychee:v7.10.0
     databaseType:
       type: string
       title: Database Type

@@ -21,6 +21,8 @@ changeLog:
     description: updated to version 5.4.1
   - date: 2026-02-18
     description: Version bumped to 5.4.2
+  - date: 2026-10-06
+    description: Version bumped to 6.1.1
 links:
   - label: Website
     url: https://www.adminer.org/
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: adminer:5.4.2
+      default: adminer:6.1.1
 benefits:
   - title: Efficient Database Management
     description:

@@ -23,13 +23,19 @@ changeLog:
     description: Version bumped to 11.3.0
   - date: 2026-05-07
     description: Version bumped to 11.4.4
+  - date: 2026-10-06
+    description:
+      Version bumped to 12.2.0. If upgrading an existing deployment (not a
+      fresh install), check the CHANGELOG for manual database migrations -
+      12.2.0 verifies the schema at startup and refuses to start if required
+      migrations are missing.
 links:
   - label: Website
     url: https://supertokens.com/
   - label: Documentation
     url: https://supertokens.com/docs
-  - label: Github
-    url: https://github.com/supertokens
+  - label: GitHub
+    url: https://github.com/supertokens/supertokens-core
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
@@ -49,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: supertokens/supertokens-postgresql:11.4.4
+      default: supertokens/supertokens-postgresql:12.2.0
     databaseServiceName:
       type: string
       title: Database Service Name

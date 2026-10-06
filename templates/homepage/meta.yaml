@@ -8,7 +8,11 @@ description:
   making it an ideal tool for individuals and teams looking to streamline access
   and management of their infrastructure. Being open-source, Homepage offers
   transparency, flexibility, and control to users.
-instructions: Configure settings.yaml for customization.
+instructions: >-
+  Configure settings.yaml for customization. Set an Auth Password below to
+  require a login before the dashboard loads - recommended since this service is
+  exposed on a public domain by default. Leave it blank to keep the dashboard
+  open, matching previous versions' behavior.
 changeLog:
   - date: 2024-12-22
     description: First Release
@@ -22,6 +26,10 @@ changeLog:
     description: Version bumped to v1.10.1
   - date: 2026-05-08
     description: Version bumped to v1.12.3
+  - date: 2026-10-06
+    description:
+      Version bumped to v2.4.0; added an optional login (v2 introduces a
+      built-in auth gate)
 links:
   - label: Website
     url: https://gethomepage.dev/
@@ -45,7 +53,13 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gethomepage/homepage:v1.12.3
+      default: ghcr.io/gethomepage/homepage:v2.4.0
+    authPassword:
+      type: string
+      title: Auth Password
+      description:
+        Optional. When set, requires this password to view the dashboard. Leave
+        blank for no login.
 benefits:
   - title: Centralized Dashboard
     description:

@@ -15,6 +15,12 @@ changeLog:
     description: First release
   - date: 2025-07-22
     description: Version bumped to v0.1.0
+  - date: 2026-10-06
+    description:
+      Version bumped to v3.0.3. v3 changed its default listen port from 8000 to
+      9157; pinned APP_LISTEN_PORT=8000 to keep matching the domain config, and
+      added TRUST_PROXY=true for correct behavior behind Easypanel's reverse
+      proxy.
 links:
   - label: Website
     url: https://heyform.net/
@@ -40,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: HeyForm Service Image
-      default: heyform/community-edition:v0.1.0
+      default: heyform/community-edition:v3.0.3
     databaseServiceImage:
       type: string
       title: Database Service Image

@@ -7,6 +7,8 @@ instructions: null
 changeLog:
   - date: 2025-04-14
     description: First Release
+  - date: 2026-10-06
+    description: Version bumped to 26.9.1.1
 links:
   - label: Website
     url: https://www.librenms.org
@@ -33,7 +35,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: librenms/librenms:25.3.0
+      default: librenms/librenms:26.9.1.1
     smtpHost:
       type: string
       title: SMTP Host
