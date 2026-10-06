@@ -1,0 +1,93 @@
+name: OmniRoute
+description:
+  OmniRoute is an MIT-licensed, OpenAI-compatible AI gateway that gives you one
+  endpoint for hundreds of providers and models. It auto-routes and falls back
+  across your subscriptions and API keys (Subscription → API Key → Cheap → Free
+  tiers), so coding tools like Claude Code, Cursor, Codex, and Cline keep
+  working even when a provider hits a rate limit or quota. It ships a dashboard
+  for managing providers, keys, and subscription OAuth logins, with live usage
+  analytics, token-compression, and circuit breakers to avoid dead keys. It is
+  not a LiteLLM replacement - LiteLLM is a YAML/model_list config layer, while
+  OmniRoute is a dashboard plus subscription OAuth with automatic multi-tier
+  fallback.
+
+instructions:
+  Open the dashboard at your domain and log in with the admin password shown in
+  this service's environment variables (INITIAL_PASSWORD) - change it
+  immediately under Settings → Security. Then add a provider or connect a
+  subscription via OAuth from the dashboard to start routing requests through
+  http://your-domain/v1.
+
+changeLog:
+  - date: "2026-10-06"
+    description: "Template Release"
+
+links:
+  - label: "Website"
+    url: "https://omniroute.online"
+  - label: "GitHub"
+    url: "https://github.com/diegosouzapw/OmniRoute"
+  - label: "Documentation"
+    url: "https://github.com/diegosouzapw/OmniRoute/blob/main/docs/README.md"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/AhsonShaikh-Easypanel"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "omniroute"
+    appServiceImage:
+      type: string
+      title: "App Service Image"
+      default: "diegosouzapw/omniroute:3.8.51"
+
+benefits:
+  - title: "One Endpoint, Hundreds of Providers"
+    description:
+      Point any OpenAI-compatible tool at a single OmniRoute URL and reach 350+
+      providers and 1200+ models without juggling separate configs.
+  - title: "Never Lose a Session to a Rate Limit"
+    description:
+      Automatic 4-tier fallback (Subscription, API Key, Cheap, Free) keeps
+      requests flowing when one provider throttles, errors, or runs dry.
+  - title: "Self-Hosted, MIT-Licensed"
+    description:
+      Full control over your data, keys, and routing rules, with an open-source
+      core instead of a hosted black box.
+
+features:
+  - title: "Dashboard With Subscription OAuth"
+    description:
+      Connect provider subscriptions and manage API keys through a web
+      dashboard, including device-flow OAuth logins for supported providers.
+  - title: "Smart Routing & Circuit Breakers"
+    description:
+      19 routing strategies, key cooldowns, and circuit breakers route around
+      dead keys and failing providers automatically.
+  - title: "Token Compression"
+    description:
+      Built-in prompt compression can cut token usage by 15-95% on tool-heavy
+      coding-agent traffic.
+  - title: "Live Usage Analytics"
+    description:
+      Track spend, quota consumption, and p95 latency per provider and key from
+      the dashboard.
+  - title: "MCP & A2A Agent Protocols"
+    description:
+      Expose OmniRoute itself to agents over MCP or A2A so they can manage
+      routing, providers, and combos autonomously.
+
+tags:
+  - "AI Gateway"
+  - "LLM Proxy"
+  - "OpenAI Compatible"
+  - "Self-Hosted"
+  - "Open Source"
