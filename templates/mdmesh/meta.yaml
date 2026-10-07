@@ -1,0 +1,93 @@
+name: MDMesh
+description:
+  MDMesh is a modern, self-hosted Android mobile device management (MDM)
+  platform - fleet control, kiosk mode, app delivery, and signed auto-updates
+  for Android devices, with a console built for 2026 rather than 2012. Enroll
+  devices, push apps, lock them into kiosk mode, and manage your whole fleet
+  from a single dashboard.
+
+instructions:
+  Log in at your domain with username admin and the Admin Password set in this
+  template's form (or the auto-generated one, if left blank). Enroll devices by
+  generating an enrollment QR code from the console and scanning it with the
+  MDMesh agent APK on the target Android device (download the agent from the
+  project's GitHub releases). This template does not include the optional
+  auto-update supervisor, since it requires mounting the host Docker socket -
+  update MDMesh by bumping the pinned image versions in this template's settings
+  instead.
+
+changeLog:
+  - date: "2026-10-07"
+    description: "Template Release"
+
+links:
+  - label: "GitHub"
+    url: "https://github.com/MDMesh-app/MDMesh"
+  - label: "Documentation"
+    url: "https://github.com/MDMesh-app/MDMesh/blob/main/DEPLOY.md"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/AhsonShaikh-Easypanel"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - serverServiceImage
+    - webServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "mdmesh"
+    serverServiceImage:
+      type: string
+      title: "Server Service Image"
+      default: "ghcr.io/mdmesh-app/mdmesh-server:0.3.1"
+    webServiceImage:
+      type: string
+      title: "Web Service Image"
+      default: "ghcr.io/mdmesh-app/mdmesh-web:0.3.1"
+    adminPassword:
+      type: string
+      title: "Admin Password"
+      description: "Leave blank to auto-generate a random password."
+
+benefits:
+  - title: "Modern Fleet Control"
+    description:
+      Manage your entire Android device fleet from a single, fast console -
+      enrollment, policies, and status at a glance.
+  - title: "Kiosk Mode"
+    description:
+      Lock devices into a single app or a curated set of apps for dedicated,
+      single-purpose deployments.
+  - title: "Self-Hosted, Open Source"
+    description:
+      Full control over your device fleet and data with an Apache-2.0 licensed,
+      self-hosted MDM.
+
+features:
+  - title: "App Delivery"
+    description:
+      Push apps to enrolled devices remotely without needing the Play Store.
+  - title: "Signed Auto-Updates"
+    description:
+      Devices verify signed update manifests before applying them, keeping your
+      fleet on trusted builds.
+  - title: "Device Enrollment via QR"
+    description:
+      Enroll new devices in seconds by scanning a QR code generated from the
+      console.
+  - title: "Optional SMTP"
+    description:
+      Configure SMTP after deploy to enable password-recovery emails for console
+      accounts.
+
+tags:
+  - "MDM"
+  - "Android"
+  - "Fleet Management"
+  - "Self-Hosted"
+  - "Open Source"
