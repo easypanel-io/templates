@@ -1,0 +1,91 @@
+name: Minetune
+description: >-
+  Minetune is a Minecraft Java server stack with its own web panel in English,
+  Portuguese and Spanish. Pick Paper, Purpur, Fabric, NeoForge or Vanilla and
+  the version from the official lists, manage players, game rules, plugins and
+  mods from Modrinth and multiple worlds, and keep incremental, encrypted
+  backups with restic on local disk, Cloudflare R2 or any S3 storage. On
+  offline-mode servers, every Java player creates a password for their name in a
+  window inside the game, with no plugin or mod, so nobody can join with someone
+  else's name.
+instructions: >-
+  Open TCP port 25565 in your server firewall (and UDP 19132 if you turn on
+  Bedrock crossplay). The panel opens on this service's domain; log in with
+  PANEL_PASSWORD from the Environment tab. Save RESTIC_PASSWORD somewhere safe,
+  outside the server: backups can't be restored without it.
+changeLog:
+  - date: 2026-09-15
+    description: first release (Minetune 0.3.4)
+links:
+  - label: Website
+    url: https://juniorcarlini.github.io/minetune/
+  - label: Documentation
+    url: https://github.com/JuniorCarlini/minetune/blob/main/docs/DEPLOY.md
+  - label: GitHub
+    url: https://github.com/JuniorCarlini/minetune
+contributors:
+  - name: Junior Carlini
+    url: https://github.com/JuniorCarlini
+schema:
+  type: object
+  required:
+    - serviceName
+    - version
+    - memoryLimit
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: minetune
+    version:
+      type: string
+      title: Minetune Version
+      default: "0.3.4"
+    memoryLimit:
+      type: string
+      title: Minecraft Server Memory Limit
+      description: >-
+        Maximum memory for the Minecraft container (for example 4g or 6g). On
+        the first start the server heap is sized to leave about 1 GB of it free,
+        and it can be changed later in the panel.
+      default: 6g
+benefits:
+  - title: Run a Server Without Editing Files
+    description: >-
+      A web panel in plain language handles server type and version, game rules,
+      players, plugins and worlds, with alerts that say what to do next.
+  - title: Nobody Takes Your Name
+    description: >-
+      On offline-mode servers running Minecraft 1.21.6 or newer, every Java
+      player creates a password for their name in a window inside the game, with
+      no plugin or mod. Bedrock players join through Floodgate instead.
+  - title: Backups That Leave the Machine
+    description: >-
+      Incremental, encrypted restic backups to local disk, Cloudflare R2 or any
+      S3 storage, with safe single-world restore.
+features:
+  - title: Paper, Purpur, Fabric, NeoForge and Vanilla
+    description: >-
+      Pick the server software and the version from the official lists, with
+      Java 25 and performance patches included.
+  - title: Plugins and Mods from Modrinth
+    description: Search, add and remove Modrinth projects from the panel.
+  - title: Multiple Worlds
+    description: >-
+      Create, upload, download and switch worlds, each with its own settings,
+      whitelist, operators and bans.
+  - title: In-Game Login Gate
+    description: >-
+      A lightweight gate (about 30 MB of RAM) asks each Java player for their
+      password on offline-mode servers and passes the real player IP to Paper.
+      In online mode, or on versions older than 1.21.6, it just forwards the
+      connection.
+  - title: English, Portuguese and Spanish
+    description:
+      The panel follows the browser language and can be switched anytime.
+tags:
+  - Minecraft
+  - Game Server
+  - Paper
+  - Backup
+  - Gaming
