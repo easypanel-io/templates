@@ -1,0 +1,83 @@
+name: Lemmy
+description:
+  Lemmy is a federated (ActivityPub) link aggregator and discussion platform,
+  similar to Reddit. This template runs the full stack - the Lemmy backend, the
+  official web UI, Postgres, pictrs for image hosting, and an nginx gateway that
+  routes API/federation traffic to the backend and everything else to the UI,
+  matching Lemmy's official deployment architecture.
+instructions:
+  The first account you register becomes the instance admin automatically.
+  Federation requires the domain to be publicly reachable over HTTPS and cannot
+  be changed after launch without breaking federation, so confirm the domain
+  before inviting other users. Uploaded images are stored on a persistent volume
+  via pictrs.
+changeLog:
+  - date: "2026-10-14"
+    description: Initial release
+links:
+  - label: Website
+    url: https://join-lemmy.org
+  - label: Documentation
+    url: https://join-lemmy.org/docs/administration/administration.html
+  - label: GitHub
+    url: https://github.com/LemmyNet/lemmy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - publicDomain
+    - backendImage
+    - uiImage
+    - pictrsImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: lemmy
+    publicDomain:
+      type: string
+      title: Public Domain
+      description:
+        The exact domain this instance will be reachable at (e.g.
+        lemmy.example.com). Federation uses this as the instance's permanent
+        identity and it cannot be changed later without breaking federation, so
+        point your DNS here and set the matching domain on this service after
+        deploying.
+    backendImage:
+      type: string
+      title: Lemmy Backend Image
+      default: dessalines/lemmy:0.19.20
+    uiImage:
+      type: string
+      title: Lemmy UI Image
+      default: dessalines/lemmy-ui:0.19.20
+    pictrsImage:
+      type: string
+      title: pict-rs Image
+      default: asonix/pictrs:0.5
+benefits:
+  - title: Federated
+    description: Connects to the wider Fediverse via ActivityPub
+  - title: Reddit-Style Communities
+    description: Communities, upvotes, nested comments, and moderation tools
+  - title: Lightweight
+    description: Written in Rust, low resource footprint for a social platform
+  - title: Open Source
+    description: Free and open-source, no ads or tracking
+features:
+  - title: Image Hosting
+    description: Built-in pict-rs service for uploaded images and avatars
+  - title: Moderation Tools
+    description: Community and instance-level moderation, reports, and bans
+  - title: Multiple Sort Modes
+    description: Hot, new, top, and active sorting for posts and comments
+  - title: Dark/Light Themes
+    description: Several built-in UI themes
+tags:
+  - Social
+  - Federated
+  - Community
+  - Open Source
