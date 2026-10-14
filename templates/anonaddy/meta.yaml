@@ -1,0 +1,107 @@
+name: AnonAddy
+description:
+  AnonAddy (addy.io) is an open-source email alias and forwarding service that
+  lets you create unlimited email aliases to protect your real address. This
+  template runs the official all-in-one app image (web, queue worker, Postfix
+  SMTP, and Rspamd bundled together) alongside MySQL and Redis.
+instructions:
+  Receiving mail requires your domain's MX records to point at this server and
+  port 25 to be reachable from the internet (many cloud providers block
+  outbound/inbound 25 by default - check with yours first). After deploying,
+  register the first account using the admin username you set below; it becomes
+  the instance admin automatically. DKIM keys can be generated afterwards by
+  running `anonaddy gen-dkim` inside the app container via Easypanel's terminal.
+  By default outgoing mail (verification links, forwarded aliases, invites) is
+  routed to a bundled Mailpit inbox so you can see what the app sends without
+  any mail setup - open the Mailpit domain to view it. For real delivery to real
+  inboxes, set an SMTP Relay Host below (and disable Mailpit if you no longer
+  need it).
+changeLog:
+  - date: "2026-10-14"
+    description: Initial release
+links:
+  - label: Website
+    url: https://addy.io
+  - label: Documentation
+    url: https://github.com/anonaddy/docker
+  - label: GitHub
+    url: https://github.com/anonaddy/anonaddy
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - domain
+    - hostname
+    - adminUsername
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anonaddy
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: anonaddy/anonaddy:1.7.2
+    domain:
+      type: string
+      title: Alias Domain
+      description:
+        The domain aliases will be created under, e.g. example.com (its MX
+        records must point here)
+    hostname:
+      type: string
+      title: Mail Server Hostname
+      description:
+        The reverse-DNS hostname for outgoing mail, e.g. mail.example.com
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: addy
+    enableMailpit:
+      type: boolean
+      title: Bundle Mailpit Test Inbox
+      description:
+        Catches all outgoing mail in a web-viewable inbox instead of delivering
+        it, so you can see verification/invite emails without any mail setup.
+        Used automatically when no SMTP Relay Host is set below.
+      default: true
+    smtpRelayHost:
+      type: string
+      title: SMTP Relay Host (optional)
+      description:
+        Postfix relayhost value for real outbound delivery, e.g.
+        [smtp.mailgun.org]:587. Leave blank to use the bundled Mailpit inbox
+        instead of delivering real mail.
+    smtpRelayUsername:
+      type: string
+      title: SMTP Relay Username (optional)
+    smtpRelayPassword:
+      type: string
+      title: SMTP Relay Password (optional)
+benefits:
+  - title: Unlimited Aliases
+    description: Create as many email aliases as you need, on your own domain
+  - title: Reply & Send From Aliases
+    description: Reply to forwarded emails without revealing your real address
+  - title: Spam Filtering Built In
+    description: Bundled Rspamd filters incoming mail before forwarding
+  - title: Open Source
+    description: Free and open-source, full control over your email privacy
+features:
+  - title: Browser Extension
+    description: Generate aliases on the fly from Chrome, Firefox, and Safari
+  - title: PGP Encryption
+    description: Encrypt forwarded emails with recipient PGP keys
+  - title: Recipient Management
+    description: Forward different aliases to different inboxes
+  - title: Usage Limits & Bandwidth Controls
+    description: Per-user alias and bandwidth limits for multi-user instances
+tags:
+  - Email
+  - Privacy
+  - Self-Hosting
+  - Open Source
