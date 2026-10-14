@@ -1,0 +1,71 @@
+name: GitLab CE
+description:
+  GitLab Community Edition is a complete DevOps platform combining Git
+  repository hosting, CI/CD pipelines, issue tracking, container registry, and
+  more in a single self-hosted application. This template runs the official
+  Omnibus GitLab CE image, which bundles GitLab, Postgres, Redis, and all
+  dependencies into one container.
+instructions:
+  First boot can take several minutes while GitLab runs its initial reconfigure.
+  Log in as `root` using the password you set below (only applied on the very
+  first boot - change it afterwards from the UI). GitLab is resource-heavy; at
+  least 4GB RAM is required for a successful first boot, with 8GB+ recommended
+  for real use. Repository, config, and log data persist across restarts via the
+  mounted volumes.
+changeLog:
+  - date: "2026-10-14"
+    description: Initial release
+links:
+  - label: Website
+    url: https://about.gitlab.com
+  - label: Documentation
+    url: https://docs.gitlab.com/install/docker/
+  - label: GitHub
+    url: https://gitlab.com/gitlab-org/gitlab
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - rootPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: gitlab-ce
+    appServiceImage:
+      type: string
+      title: GitLab CE Image
+      default: gitlab/gitlab-ce:19.4.2-ce.0
+    rootPassword:
+      type: string
+      title: Root Password
+      format: password
+      minLength: 8
+benefits:
+  - title: All-in-One DevOps
+    description: Git hosting, CI/CD, issues, and container registry in one app
+  - title: Self-Hosted
+    description: Full control over your code and infrastructure
+  - title: Built-In CI/CD
+    description: GitLab Runner integrates directly with hosted pipelines
+  - title: Open Source
+    description: Community Edition is free and open-source
+features:
+  - title: Git Repository Hosting
+    description: Unlimited private repositories with merge request workflows
+  - title: CI/CD Pipelines
+    description: Define pipelines in .gitlab-ci.yml, run on connected runners
+  - title: Issue Tracking
+    description: Boards, milestones, and labels for project management
+  - title: Container Registry
+    description: Built-in Docker registry for every project
+tags:
+  - Git
+  - DevOps
+  - CI/CD
+  - Developer Tools
+  - Open Source
