@@ -1,0 +1,47 @@
+name: OpenLivery
+description: >-
+  OpenLivery is an MIT-licensed platform for agencies running WhatsApp AI agents
+  for multiple clients, with a separate workspace, knowledge base and branded
+  portal for each client in one self-hosted installation
+instructions: |-
+  The first registration creates the agency owner and closes public registration
+  Create additional client workspaces from the dashboard
+
+  Add your own AI provider credentials, then configure WhatsApp Cloud API, the QR bridge or the web widget
+  AI providers, WhatsApp and server infrastructure may have separate costs
+
+  This template deploys OpenLivery v0.4.0 with PostgreSQL and persistent file storage
+  The published app images are Linux AMD64, so use an x86-64 server
+  After changing the public domain, update FRONTEND_URL to the same HTTPS origin
+  Keep ENCRYPTION_KEY and WHATSAPP_BRIDGE_TOKEN stable across restarts and upgrades
+  Back up the database, backend-storage volume and generated environment before upgrading
+
+  Client portals work under the main domain by default
+  Custom client domains require additional DNS and reverse proxy configuration described in the self-hosting guide
+changeLog:
+  - date: 2026-09-07
+    description: Add OpenLivery v0.4.0 with persistent multi-client workspaces
+links:
+  - label: Website
+    url: https://www.openlivery.com
+  - label: Documentation
+    url: https://github.com/sarrazola/openlivery/blob/main/docs/en/self-hosting.md
+  - label: GitHub
+    url: https://github.com/sarrazola/openlivery
+contributors:
+  - name: Andrés Sarrazola
+    url: https://github.com/sarrazola
+schema:
+  type: object
+  required:
+    - serviceName
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: openlivery
+      pattern: "^[a-z0-9-]+$"
+tags:
+  - Chat
+  - Customer Support
+  - AI
