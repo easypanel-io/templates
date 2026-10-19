@@ -1,0 +1,64 @@
+name: Sosse
+description:
+  Sosse is an open-source search engine and web crawler built on Python and
+  Django, with Selenium support for crawling JavaScript-heavy sites. It indexes
+  and searches web pages, documents, and private intranets, and can archive
+  pages for offline browsing, all under your own control.
+instructions: |
+  After deploy, open the app and sign in with the default admin credentials
+  (admin / admin), then change the password immediately from the admin panel.
+  Add crawl policies and starting URLs under Admin > Crawl policies to begin
+  indexing.
+changeLog:
+  - date: 2026-10-19
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/biolds/sosse
+  - label: Documentation
+    url: https://sosse.readthedocs.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sosse
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: biolds/sosse:1.14.2
+benefits:
+  - title: Self-hosted search
+    description:
+      Crawl and index your own sites or private intranet without sending data to
+      a third party.
+  - title: JavaScript-aware crawling
+    description:
+      Built-in Selenium support renders JavaScript-heavy pages so crawls capture
+      the full content.
+  - title: Offline archiving
+    description:
+      Pages can be archived for offline browsing, preserving content even if the
+      original site changes or disappears.
+features:
+  - title: Full-text search
+    description: Fast full-text search across all crawled and indexed content.
+  - title: Crawl policies
+    description:
+      Define per-domain crawl rules, depth limits, and scheduling for recurring
+      crawls.
+  - title: Browsable history
+    description:
+      View cached and archived versions of pages as they were when crawled.
+tags:
+  - Search Engine
+  - Web Crawler
+  - Self-Hosted
+  - Developer Tools
