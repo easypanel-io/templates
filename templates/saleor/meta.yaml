@@ -1,0 +1,99 @@
+name: Saleor
+description:
+  Saleor is a headless, GraphQL-first open-source e-commerce platform. It
+  separates the storefront from the backend entirely, giving you a full product,
+  order, and customer API plus an admin Dashboard, so you can build any frontend
+  on top of it.
+instructions: |
+  Point both the API Domain and Dashboard Domain below at this project before
+  deploying. After the first deploy, open the API domain's `/graphql/`
+  endpoint to confirm it responds, then open the Dashboard domain and create
+  the first superuser account by running
+  `python3 manage.py createsuperuser` in the API service's console (under the
+  service's Terminal tab in Easypanel). Database migrations run automatically
+  on deploy via a dedicated migrate service.
+changeLog:
+  - date: 2026-10-20
+    description: First Release
+links:
+  - label: Website
+    url: https://saleor.io
+  - label: GitHub
+    url: https://github.com/saleor/saleor
+  - label: Documentation
+    url: https://docs.saleor.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - apiDomain
+    - dashboardDomain
+    - apiServiceImage
+    - dashboardServiceImage
+    - dbServiceImage
+    - cacheServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: saleor
+    apiDomain:
+      type: string
+      title: API Domain
+      description: The domain the GraphQL API will be reachable at (no https://)
+    dashboardDomain:
+      type: string
+      title: Dashboard Domain
+      description:
+        The domain the admin Dashboard will be reachable at (no https://)
+    apiServiceImage:
+      type: string
+      title: API/Worker Service Image
+      default: ghcr.io/saleor/saleor:3.23
+    dashboardServiceImage:
+      type: string
+      title: Dashboard Service Image
+      default: ghcr.io/saleor/saleor-dashboard:3.23
+    dbServiceImage:
+      type: string
+      title: Database Service Image
+      default: postgres:15-alpine
+    cacheServiceImage:
+      type: string
+      title: Cache Service Image
+      default: valkey/valkey:8.1-alpine
+benefits:
+  - title: Headless and API-first
+    description:
+      A GraphQL API decoupled from any storefront, so you can build any frontend
+      on top of it.
+  - title: Multi-channel and multi-currency
+    description:
+      Sell across channels, currencies, and warehouses from a single instance.
+  - title: Open source
+    description:
+      Free and self-hostable under a BSD-3-Clause license, with no vendor
+      lock-in.
+features:
+  - title: Admin dashboard
+    description:
+      A full-featured React admin UI for products, orders, and customers.
+  - title: Async task processing
+    description:
+      A dedicated Celery worker handles background jobs like emails and
+      webhooks.
+  - title: Product and order management
+    description:
+      Variants, attributes, collections, discounts, and complete order
+      workflows.
+  - title: Plugin and app framework
+    description:
+      Extend checkout, payments, and shipping through webhooks and apps.
+tags:
+  - E-Commerce
+  - GraphQL
+  - Headless
+  - Self-Hosted
