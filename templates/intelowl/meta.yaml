@@ -1,0 +1,86 @@
+name: IntelOwl
+description:
+  IntelOwl is an open-source threat intelligence platform for managing
+  indicators of compromise. It integrates dozens of OSINT analyzers (VirusTotal,
+  AbuseIPDB, MISP, YARA, and many more) behind a single REST API and web
+  dashboard, letting you scan observables and files and pivot across the
+  results.
+instructions: |
+  A dedicated migrate service runs database migrations once on first deploy.
+  Wait for it to finish (its container exits when done) before using the app;
+  if the Daphne, Celery Beat, or Celery Worker services fail to start because
+  the schema isn't ready yet, redeploy them once after migrate completes.
+
+  To log in: open the uwsgi service's Terminal tab in Easypanel and run
+  `python manage.py createsuperuser`, following the prompts for username,
+  email, and password. Then open the app's domain in your browser, click
+  Login, and sign in with those credentials. The public "Register" button on
+  the homepage will not work out of the box since no SMTP server is
+  configured (required to send the email confirmation), so creating the
+  first account via the Terminal is required.
+changeLog:
+  - date: "2026-10-21"
+    description: First Release
+links:
+  - label: Website
+    url: https://intelowlproject.github.io
+  - label: GitHub
+    url: https://github.com/intelowlproject/IntelOwl
+  - label: Documentation
+    url: https://intelowl.readthedocs.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - nginxServiceImage
+    - dbServiceImage
+    - cacheServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: intelowl
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: intelowlproject/intelowl:v6.8.0
+    nginxServiceImage:
+      type: string
+      title: Nginx Service Image
+      default: intelowlproject/intelowl_nginx:v6.8.0
+    dbServiceImage:
+      type: string
+      title: Database Service Image
+      default: postgres:16-alpine
+    cacheServiceImage:
+      type: string
+      title: Cache Service Image
+      default: redis:6.2.7-alpine
+benefits:
+  - title: Unified threat intelligence
+    description: Query dozens of OSINT sources and analyzers from one dashboard.
+  - title: REST API first
+    description: Automate scans and pull results programmatically.
+  - title: Open source
+    description: Free and self-hostable, maintained by The Honeynet Project.
+features:
+  - title: Analyzer and connector plugins
+    description:
+      Run observable/file analyzers and forward results to external tools like
+      MISP or OpenCTI.
+  - title: Playbooks
+    description:
+      Chain multiple analyzers together into a reusable scan workflow.
+  - title: Background job processing
+    description: Celery workers and beat scheduler handle async analysis jobs.
+  - title: Real-time job updates
+    description: Daphne/WebSocket support streams live job status to the UI.
+tags:
+  - Security
+  - Threat Intelligence
+  - OSINT
+  - Self-Hosted
