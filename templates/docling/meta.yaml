@@ -1,0 +1,62 @@
+name: Docling
+description:
+  Docling parses and converts documents (PDF, DOCX, PPTX, HTML, images and more)
+  into structured formats like Markdown and JSON, with advanced PDF
+  understanding (layout, tables, reading order, formulas and code blocks). This
+  template runs Docling Serve, a FastAPI service that exposes Docling's
+  conversion pipeline over a REST API, with an optional web UI for trying
+  conversions interactively.
+instructions:
+  The root path `/` returns a 404 by design; use the `/ui` path for the web UI,
+  or call the REST API directly (interactive docs at `/docs`). No API key is set
+  by default; add a DOCLING_SERVE_API_KEY environment variable yourself if you
+  want to require it.
+changeLog:
+  - date: "2026-10-20"
+    description: Initial release
+links:
+  - label: Website
+    url: https://docling-project.github.io/docling/
+  - label: Documentation
+    url: https://github.com/docling-project/docling-serve/blob/main/docs/configuration.md
+  - label: GitHub
+    url: https://github.com/docling-project/docling-serve
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: docling
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/docling-project/docling-serve-cpu:v1.30.0
+benefits:
+  - title: Advanced PDF Understanding
+    description: Layout, reading order, tables, formulas and code blocks
+  - title: Many Input Formats
+    description: PDF, DOCX, PPTX, HTML, images and more
+  - title: Structured Output
+    description: Convert documents into clean Markdown or JSON
+  - title: Open Source
+    description: Free and open-source, maintained by the Docling project
+features:
+  - title: REST API
+    description: Submit conversions over HTTP, with sync and async endpoints
+  - title: Web UI
+    description: Try conversions interactively in the browser
+  - title: API Documentation
+    description: Interactive Swagger/OpenAPI docs served at /docs
+tags:
+  - Document Processing
+  - PDF
+  - AI
+  - Developer Tools
+  - Open Source
