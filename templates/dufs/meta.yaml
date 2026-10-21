@@ -1,0 +1,82 @@
+name: Dufs
+description:
+  Dufs is a distinctive file server that supports static file serving,
+  uploading, searching, access control, and WebDAV — a fast, single-binary
+  alternative to running a full cloud storage suite when you just need to browse
+  and share a directory.
+instructions: >-
+  Files placed in the "data" volume are served at your domain. By default,
+  uploads and deletes are disabled and browsing is read-only; enable them below
+  if you want visitors to be able to modify files. Set a username and password
+  to require login for write operations, or leave both blank to keep the
+  instance fully open.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/sigoden/dufs
+  - label: Documentation
+    url: https://github.com/sigoden/dufs#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dufs
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: sigoden/dufs:v0.46.0
+    allowUpload:
+      type: boolean
+      title: Allow Upload
+      default: false
+    allowDelete:
+      type: boolean
+      title: Allow Delete
+      default: false
+    allowSearch:
+      type: boolean
+      title: Allow Search
+      default: true
+    allowArchive:
+      type: boolean
+      title: Allow Folder Download as Archive
+      default: false
+    authUsername:
+      type: string
+      title: Auth Username
+      description: Optional. Leave blank along with password to disable auth.
+    authPassword:
+      type: string
+      title: Auth Password
+benefits:
+  - title: Single Static Binary
+    description: A ~6MB Rust binary with no runtime dependencies.
+  - title: Fine-Grained Access Control
+    description:
+      Per-directory read/write rules, with optional username/password
+      protection.
+  - title: WebDAV Support
+    description: Mount your served directory as a network drive over WebDAV.
+features:
+  - title: Upload & Search
+    description:
+      Optionally allow visitors to upload files and search across the served
+      directory.
+  - title: Archive Downloads
+    description: Download entire folders as a zip archive on demand.
+  - title: CORS Support
+    description: Enable CORS for use from browser-based apps.
+tags:
+  - File Sharing
+  - File Server
+  - Self-Hosted
