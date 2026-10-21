@@ -1,0 +1,109 @@
+name: TradeTally
+description:
+  TradeTally is an advanced trade tracking and analytics platform for active
+  traders — a self-hosted alternative to TraderVue with broker auto-sync,
+  behavioral analytics, a trading journal, and public trade sharing.
+instructions: >-
+  Open your domain to reach TradeTally and create the first account, which
+  becomes the instance owner. Set your market data provider API keys (Finnhub,
+  Alpha Vantage, etc.) from Settings once you're in if you want live price
+  enrichment — the app works without them, just with reduced data. Several
+  background schedulers (price monitoring, dividends, earnings, and more) run
+  automatically and can be toggled off individually via advanced fields if you
+  want to reduce resource usage.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: Website
+    url: https://tradetally.io
+  - label: GitHub
+    url: https://github.com/GeneBO98/tradetally
+  - label: Documentation
+    url: https://docs.tradetally.io
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - instanceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: tradetally
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: potentialmidas/tradetally:2.9.2
+    instanceName:
+      type: string
+      title: Instance Name
+      default: TradeTally
+    registrationMode:
+      type: string
+      title: Registration Mode
+      default: open
+      oneOf:
+        - enum:
+            - open
+          title: Open
+        - enum:
+            - disabled
+          title: Disabled
+    finnhubApiKey:
+      type: string
+      title: Finnhub API Key
+      description: Optional. Enables live market data enrichment.
+    alphaVantageApiKey:
+      type: string
+      title: Alpha Vantage API Key
+    emailHost:
+      type: string
+      title: SMTP Host
+      description: Optional. Required to send account/notification emails.
+    emailPort:
+      type: number
+      title: SMTP Port
+      default: 587
+    emailUser:
+      type: string
+      title: SMTP Username
+    emailPassword:
+      type: string
+      title: SMTP Password
+    emailFrom:
+      type: string
+      title: From Address
+      default: noreply@tradetally.io
+benefits:
+  - title: Broker Auto-Sync
+    description:
+      Connect brokers directly and let TradeTally pull in trades automatically
+      instead of manual CSV imports.
+  - title: Behavioral Analytics
+    description:
+      Surfaces win rate, profit factor, and setup performance to find what
+      actually moves your P&L.
+  - title: Trading Journal
+    description:
+      Journal setups alongside your trades, with calendar and dashboard views of
+      performance over time.
+features:
+  - title: Public Trade Sharing
+    description:
+      Optionally share individual trades or a public profile with the community.
+  - title: Gamification & Leaderboards
+    description: Streaks and leaderboards to keep consistent journaling habits.
+  - title: Mobile & OAuth2 Support
+    description:
+      Built-in OAuth2 token issuance and device tracking for companion mobile
+      apps.
+tags:
+  - Finance
+  - Trading
+  - Analytics
+  - Self-Hosted
