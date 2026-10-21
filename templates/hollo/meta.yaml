@@ -1,0 +1,74 @@
+name: Hollo
+description:
+  Hollo is federated, single-user microblogging software that speaks
+  ActivityPub, so it interoperates with Mastodon, Misskey, and the rest of the
+  fediverse. It's headless by design — you post and read through any
+  Mastodon-compatible client app, while Hollo handles federation, storage, and
+  moderation on the server.
+instructions: >-
+  Hollo has no web posting UI of its own — after deploying, open the URL in a
+  browser to create your account, then connect a Mastodon-compatible client
+  (such as Ivory, Elk, Phanpy, or the official Mastodon apps) by pointing it at
+  this instance's domain and logging in. Media uploads are stored on a
+  persistent volume rather than S3-compatible storage, so no separate object
+  storage service is required.
+changeLog:
+  - date: 2026-08-31
+    description: first release
+links:
+  - label: Website
+    url: https://hollo.social
+  - label: GitHub
+    url: https://github.com/fedify-dev/hollo
+  - label: Documentation
+    url: https://docs.hollo.social
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hollo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/fedify-dev/hollo:0.9.17
+    behindProxy:
+      type: boolean
+      title: Behind Reverse Proxy
+      default: true
+benefits:
+  - title: Fediverse Native
+    description:
+      Speaks ActivityPub, so it interoperates with Mastodon, Misskey, Pixelfed,
+      and the rest of the fediverse out of the box.
+  - title: Bring Your Own Client
+    description:
+      No bundled web UI to fight with — use any Mastodon-compatible client app
+      you already like.
+  - title: Single User, Full Control
+    description:
+      Built for one account with full moderation and data export tools, not a
+      shared multi-tenant instance.
+features:
+  - title: Data Portability
+    description:
+      Export follows, lists, mutes, blocks, and bookmarks as CSV from the admin
+      dashboard.
+  - title: Local Media Storage
+    description:
+      Uploaded media is stored on disk by default — no S3-compatible bucket
+      required.
+  - title: Thumbnail Cache Management
+    description:
+      Purge cached remote media thumbnails on demand from the admin dashboard.
+tags:
+  - Fediverse
+  - Social Network
+  - Self-Hosted
