@@ -1,0 +1,65 @@
+name: Rowflare
+description:
+  Rowflare is an open-source (AGPL-3.0) Airtable alternative. Each base is a
+  SQLite database, and the whole team works in it in real time with grid,
+  kanban, calendar, timeline, gallery and form views. It supports links,
+  lookups, rollups and formulas in Airtable syntax, automations, dashboards,
+  AI fields that use your own model key, a REST API modeled on the Airtable
+  Web API and a built-in MCP server for AI clients. The Docker image runs the
+  same code as the Cloudflare Workers deployment, with all data stored under
+  /data.
+instructions:
+  Open the app after deployment and sign up right away. The first account
+  becomes the owner of the instance; everyone else joins by invite.
+changeLog:
+  - date: 2026-10-22
+    description: First release
+links:
+  - label: Website
+    url: https://rowflare.com/
+  - label: Documentation
+    url: https://rowflare.com/docs/self-hosting/
+  - label: Github
+    url: https://github.com/rowflare/rowflare
+contributors:
+  - name: rowflare
+    url: https://github.com/rowflare
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: rowflare
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: rowflare/rowflare:sha-d7a4683
+benefits:
+  - title: No per-seat pricing
+    description:
+      Invite the whole team without paying per user. All data stays on your
+      own server.
+  - title: Move over from Airtable
+    description:
+      Direct import from Airtable copies tables, fields, records, links,
+      lookups, rollups, formulas and attachments.
+features:
+  - title: Views
+    description:
+      Grid with grouping, kanban, calendar, timeline, gallery and public form
+      views over the same records.
+  - title: Formulas and automations
+    description:
+      Airtable-syntax formulas, and automations triggered by record changes,
+      schedules, dates, webhooks or buttons.
+  - title: API and MCP
+    description:
+      A REST API modeled on the Airtable Web API, and an MCP server for Claude,
+      Cursor and other AI clients.
+tags:
+  - No-Code
+  - Databases
