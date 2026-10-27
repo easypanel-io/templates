@@ -1,0 +1,90 @@
+name: Legejo
+description:
+  Legejo is a self-hosted library for your EPUB books. Upload books and they get
+  their covers and details and land on shelves you arrange. Read them in the
+  browser with highlights, notes and read-aloud, sync books, reading positions
+  and highlights with a Kobo, connect reading apps such as KOReader or Thorium
+  over OPDS, and keep KOReader's place in step. Several people can share one
+  Legejo, each with a library of their own, and shelves of free books can be
+  federated over ActivityPub and followed from Mastodon or another Legejo.
+  Legejo also reads PDFs and comics in the browser, and keeps audiobooks. It
+  runs on SQLite in a single container, so no database service is needed.
+instructions:
+  Sign in with the admin username and the password in the service's Environment
+  tab (LEGEJO_ADMIN_PASSWORD). The password is used only on the first start, to
+  create the admin account. Mail, the public address and searching inside the
+  books can be set up on Legejo's Admin page; these and the rest (single
+  sign-on, the MCP server) are also listed in the Environment tab and described
+  in the README.
+changeLog:
+  - date: 2026-10-18
+    description: Template created (v1.33.0)
+links:
+  - label: Website
+    url: https://github.com/jularboolean/legejo
+  - label: Documentation
+    url: https://github.com/jularboolean/legejo#readme
+  - label: Github
+    url: https://github.com/jularboolean/legejo
+contributors:
+  - name: Markus Rådberg
+    url: https://github.com/jularboolean
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminUser
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: legejo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: slurvdjur/legejo:1.33.0
+    adminUser:
+      type: string
+      title: Admin Username
+      default: admin
+benefits:
+  - title: Your Books on Your Server
+    description:
+      The whole library, database included, lives in one volume on your own
+      server. No account elsewhere, no telemetry.
+  - title: Read Anywhere
+    description:
+      Read in the browser, on a Kobo with books, positions and highlights in
+      sync, or in any OPDS reading app such as KOReader or Thorium.
+  - title: Share and Federate
+    description:
+      Share shelves with other users, give a shelf to someone on another Legejo
+      with a private link, or federate shelves of free books over ActivityPub.
+features:
+  - title: Web Reader
+    description:
+      A reader in the browser with highlights, notes, search in the book and
+      read-aloud, that works offline once a book is saved on the device.
+  - title: Kobo Sync
+    description:
+      Books, reading positions and highlights sync between Legejo and a Kobo
+      e-reader.
+  - title: OPDS and KOReader
+    description:
+      Reading apps connect over OPDS with an app password, and KOReader keeps
+      its reading position in step with Legejo.
+  - title: PDFs, Comics and Audiobooks
+    description:
+      Read PDFs and CBZ comics in the browser next to the EPUBs, and listen to
+      audiobooks in the browser or as a podcast feed.
+  - title: Search Inside the Books
+    description:
+      Switch it on on the Admin page to keep the text of the EPUBs in the
+      database and search inside them, with phrases and passages that open the
+      book at the match.
+tags:
+  - eBook Management
+  - Digital Library
+  - Reading
+  - Self-Hosted
