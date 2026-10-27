@@ -5,18 +5,28 @@ description:
   modern, user-friendly interface for creating, sending, and tracking email
   campaigns, newsletters, and transactional emails. Usesend features advanced
   segmentation, email automation, template management, analytics, and subscriber
-  management. Built with Next.js and powered by PostgreSQL, Redis, and MinIO for
-  reliable storage, it offers enterprise-grade features without vendor lock-in
-  or usage-based pricing. Usesend supports GitHub OAuth for authentication and
-  includes API rate limiting and SMTP configuration for sending emails. Perfect
-  for businesses and developers who want full ownership of their email marketing
-  infrastructure.
+  management. Built with Next.js and powered by PostgreSQL, Redis, and RustFS
+  for reliable storage, it offers enterprise-grade features without vendor
+  lock-in or usage-based pricing. Usesend supports GitHub OAuth for
+  authentication and includes API rate limiting and SMTP configuration for
+  sending emails. Perfect for businesses and developers who want full ownership
+  of their email marketing infrastructure.
 
 instructions:
-  After deployment, configure your GitHub OAuth app credentials and AWS Access
-  Key and Secret Key.
+  Usesend has no email/password login, so you must create a GitHub OAuth app
+  first and set its Client ID and Secret below before deploying; its
+  authorization callback URL should be
+  https://your-domain/api/auth/callback/github. After deployment, open your
+  domain and sign in with GitHub to create the first account. Image uploads in
+  the campaign and template editor are backed by a bundled RustFS instance
+  that's wired up automatically — no extra configuration needed.
 
 changeLog:
+  - date: 2026-10-27
+    description:
+      Version bumped to 1.10.0; replaced the MinIO storage service (whose image
+      was removed from Docker Hub) with RustFS, and fixed the storage
+      integration's environment variables so image uploads actually work
   - date: 2025-11-13
     description: Template Release
   - date: 2026-02-24
@@ -40,8 +50,6 @@ schema:
     - appServiceImage
     - githubId
     - githubSecret
-    - awsAccessKey
-    - awsSecretKey
   properties:
     appServiceName:
       type: string
@@ -50,22 +58,17 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: usesend/usesend:v1.8.0
+      default: usesend/usesend:v1.10.0
     githubId:
       type: string
       title: GitHub OAuth App ID
+      description:
+        Required — Usesend has no built-in email/password login. Create a GitHub
+        OAuth app first.
       default: ""
     githubSecret:
       type: string
       title: GitHub OAuth App Secret
-      default: ""
-    awsAccessKey:
-      type: string
-      title: AWS Access Key
-      default: ""
-    awsSecretKey:
-      type: string
-      title: AWS Secret Key
       default: ""
     apiRateLimit:
       type: string

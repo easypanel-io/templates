@@ -29,13 +29,12 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-minio`,
       env: [
-        `MINIO_ROOT_USER=${minioRootUser}`,
-        `MINIO_ROOT_PASSWORD=${minioRootPassword}`,
-        `MINIO_BROWSER=off`,
+        `AWS_ACCESS_KEY_ID=${minioRootUser}`,
+        `AWS_SECRET_ACCESS_KEY=${minioRootPassword}`,
       ].join("\n"),
       source: {
         type: "image",
-        image: input.minioServiceImage,
+        image: "chrislusf/seaweedfs:4.48",
       },
       mounts: [
         {
@@ -45,7 +44,8 @@ export function generate(input: Input): Output {
         },
       ],
       deploy: {
-        command: `minio server /data`,
+        command:
+          "/entrypoint.sh mini -dir=/data -s3.port=9000 -bucket=default -master.telemetry=false -admin.ui=false",
       },
       domains: [
         {

@@ -55,22 +55,17 @@ export default defineConfig(() => {
       serviceName: `${input.appServiceName}-minio`,
       source: {
         type: "image",
-        image: input.minioImage,
+        image: "chrislusf/seaweedfs:4.48",
       },
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
           port: 9000,
         },
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 9001,
-          path: "/console",
-        },
       ],
       env: [
-        `MINIO_ROOT_USER=${minioAccess}`,
-        `MINIO_ROOT_PASSWORD=${minioSecret}`,
+        `AWS_ACCESS_KEY_ID=${minioAccess}`,
+        `AWS_SECRET_ACCESS_KEY=${minioSecret}`,
       ].join("\n"),
       mounts: [
         {
@@ -80,7 +75,8 @@ export default defineConfig(() => {
         },
       ],
       deploy: {
-        command: "minio server /data --console-address :9001",
+        command:
+          "/entrypoint.sh mini -dir=/data -s3.port=9000 -bucket=maxun -master.telemetry=false -admin.ui=false",
       },
     },
   });
