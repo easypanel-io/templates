@@ -7,12 +7,28 @@ description:
   efficiently manage inquiries, automate workflows, and improve customer
   satisfaction.
 instructions:
-  You can configure other Environmental settings in Environment Section.
+  The official osTicket Docker image has been discontinued, so this template
+  runs a community-built image instead (github.com/dtsoden/osticket), which
+  builds from osTicket's own release source and is rebuilt automatically as new
+  versions ship. OSTicket installs itself on the first start, which takes a
+  minute while the database comes up. Sign in to the staff panel at /scp with
+  the admin username you chose. If you left the admin password empty, a random
+  one was generated; find it as ADMIN_PASS in the app's Environment tab. The
+  helpdesk and admin settings are only used for that first install; change them
+  later in the staff panel. SMTP settings are optional and are used for outgoing
+  mail from any email address that has no SMTP account set up inside OSTicket.
 changeLog:
+  - date: 2026-10-27
+    description:
+      Replaced the discontinued official image with a community-maintained image
+      built from osTicket's own releases, generated the install secret instead
+      of hardcoding it, and added timezone and SMTP security as form fields
   - date: 2024-12-16
     description: Template Release
 
 links:
+  - label: Website
+    url: https://osticket.com
   - label: Documentation
     url: https://docs.osticket.com
   - label: Github
@@ -21,23 +37,23 @@ links:
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
+  - name: David Soden
+    url: https://github.com/dtsoden
 
 schema:
   type: object
   required:
     - appServiceName
     - appServiceImage
-    - smtpServerHost
-    - smtpServerPort
-    - smtpFromEmail
-    - smtpFromName
-    - installName
-    - installEmail
+    - helpdeskName
+    - helpdeskEmail
     - adminFirstName
     - adminLastName
     - adminEmail
-    - adminPassword
     - adminUsername
+    - timezone
+    - smtpServerPort
+    - smtpSecurity
   properties:
     appServiceName:
       type: string
@@ -46,39 +62,17 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: tiredofit/osticket:3.6.2
-    smtpServerHost:
+      default: ghcr.io/dtsoden/osticket:1.18.4
+    helpdeskName:
       type: string
-      title: SMTP Server Host
-      default: smtp.example.com
-    smtpServerPort:
-      type: integer
-      title: SMTP Server Port
-      default: 25
-    smtpServerUsername:
+      title: Helpdesk Name
+      default: My Helpdesk
+      description: Name of your helpdesk, shown to customers and in emails.
+    helpdeskEmail:
       type: string
-      title: SMTP Server Username
-    smtpServerPassword:
-      type: string
-      title: SMTP Server Password
-      secret: true
-    smtpFromEmail:
-      type: string
-      title: SMTP From Email
-      default: no-reply@example.com
-    smtpFromName:
-      type: string
-      title: SMTP From Name
-      default: example
-    installName:
-      type: string
-      title: SMTP From Name
-      default: my-company-desk
-      description: Name for your company's desk.
-    installEmail:
-      type: string
-      title: Install Email
-      default: no-reply@example.com
+      title: Helpdesk Email
+      default: support@example.com
+      description: Address customers write to. Must differ from the admin email.
     adminFirstName:
       type: string
       title: Admin First Name
@@ -95,12 +89,54 @@ schema:
       type: string
       title: Admin Username
       default: ostadmin
-      description: Username must be at least 6 characters
+      description:
+        Letters, digits, dots, dashes and underscores. "admin" and "osticket"
+        are not allowed.
     adminPassword:
       type: string
       title: Admin Password
       secret: true
-      description: Password must be at least 6 characters
+      description:
+        6 to 128 characters. Leave empty to generate one (shown as ADMIN_PASS in
+        the Environment tab).
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+      description: A tz database name, for example America/New_York.
+    smtpServerHost:
+      type: string
+      title: SMTP Server Host
+      description: Leave empty to skip outgoing mail setup.
+    smtpServerPort:
+      type: integer
+      title: SMTP Server Port
+      default: 587
+    smtpSecurity:
+      type: string
+      title: SMTP Security
+      default: starttls
+      oneOf:
+        - enum:
+            - starttls
+          title: STARTTLS (usually port 587)
+        - enum:
+            - tls
+          title: TLS (usually port 465)
+        - enum:
+            - none
+          title: None (usually port 25)
+    smtpServerUsername:
+      type: string
+      title: SMTP Server Username
+    smtpServerPassword:
+      type: string
+      title: SMTP Server Password
+      secret: true
+    smtpFromEmail:
+      type: string
+      title: SMTP From Email
+      description: Envelope sender, usually the same as the helpdesk email.
 
 benefits:
   - title: Streamlined Ticket Management
