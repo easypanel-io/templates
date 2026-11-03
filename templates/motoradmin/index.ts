@@ -11,6 +11,17 @@ export function generate(input: Input): Output {
   const dbPassword = randomPassword();
   const secretKey = randomString(64);
 
+  const databaseYml = `production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
+  host: $(PROJECT_NAME)_${input.appServiceName}-db
+  port: 5432
+  database: $(PROJECT_NAME)
+  username: postgres
+  password: ${dbPassword}
+`;
+
   services.push({
     type: "app",
     data: {
@@ -25,15 +36,17 @@ export function generate(input: Input): Output {
           port: 3000,
         },
       ],
-      env: [
-        `SECRET_KEY_BASE=${secretKey}`,
-        `DATABASE_URL=postgresql://postgres:${dbPassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
-      ].join("\n"),
+      env: [`SECRET_KEY_BASE=${secretKey}`].join("\n"),
       mounts: [
         {
           type: "volume",
           name: "app",
           mountPath: "/app",
+        },
+        {
+          type: "file",
+          content: databaseYml,
+          mountPath: "/app/config/database.yml",
         },
       ],
     },
