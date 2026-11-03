@@ -8,6 +8,10 @@ instructions: null
 changeLog:
   - date: 2025-04-16
     description: First Release
+  - date: 2026-11-03
+    description:
+      Fixed database connection failing on boot by mounting database.yml
+      instead of parsing DATABASE_URL
 links:
   - label: Website
     url: https://www.getmotoradmin.com
