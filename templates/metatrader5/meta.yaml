@@ -16,15 +16,15 @@ changeLog:
     description: Update to 2.1
   - date: 2025-12-29
     description: Version bumped to 2.3
+  - date: 2026-11-03
+    description: Fixed hardcoded VNC password default and stale GitHub link
 links:
   - label: Website
     url: https://www.metatrader5.com/en
   - label: Documentation
     url: https://www.metatrader5.com/en/terminal/help
   - label: Github
-    url: https://github.com/gmag11/MetaTrader5-Docker-Image
-  - label: Docker Guide
-    url: https://hub.docker.com/r/gmag11/metatrader5_vnc
+    url: https://github.com/gmag11/MetaTrader5-Docker
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
@@ -51,7 +51,7 @@ schema:
     password:
       type: string
       title: Password
-      default: password
+      default: ""
 benefits:
   - title: Advanced Trading Tools
     description:
