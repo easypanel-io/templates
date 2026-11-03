@@ -112,7 +112,7 @@ base_path = "/api"
 enabled = false
 url = ""
 api_key = ""
-reject_torrents_on_url_error = true
+timeout_seconds = 60
 
 [indexers.jackett]
 enabled = false

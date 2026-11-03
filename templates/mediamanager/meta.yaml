@@ -26,6 +26,8 @@ instructions: |
 changeLog:
   - date: 2025-12-10
     description: Template Release
+  - date: 2026-11-03
+    description: Switched to quay.io image and fixed invalid prowlarr config field
 
 links:
   - label: Website
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/maxdorninger/mediamanager:1.12.3
+      default: quay.io/maxdorninger/mediamanager:1.12.3
 
 benefits:
   - title: Organized Media Library
