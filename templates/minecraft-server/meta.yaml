@@ -19,11 +19,13 @@ changeLog:
     description: Version bumped to 2025.2.1
   - date: 2025-12-29
     description: Version bumped to 2025.12.1
+  - date: 2026-11-04
+    description:
+      Update to 2026.10.1 - the pinned 2025.12.1 image's bundled JRE could not
+      run the latest Minecraft release (UnsupportedClassVersionError)
 links:
   - label: Github
     url: https://github.com/itzg/docker-minecraft-server
-  - label: Docker
-    url: https://hub.docker.com/r/itzg/minecraft-server
 contributors:
   - name: Berk Sümbül
     url: https://berksmbl.com
@@ -42,7 +44,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: itzg/minecraft-server:2025.12.1
+      default: itzg/minecraft-server:2026.10.1
     serverName:
       type: string
       title: Server Name
