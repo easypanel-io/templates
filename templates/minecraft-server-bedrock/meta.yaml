@@ -18,11 +18,13 @@ changeLog:
     description: Update to 2025.5.0
   - date: 2025-12-29
     description: Version bumped to 2025.12.2
+  - date: 2026-11-04
+    description:
+      Fixed server failing to start with Online Mode off (image refuses an
+      allowlist without online auth) by setting ALLOW_LIST=false
 links:
   - label: Github
     url: https://github.com/itzg/docker-minecraft-bedrock-server
-  - label: Docker
-    url: https://hub.docker.com/r/itzg/minecraft-bedrock-server
 contributors:
   - name: Serban Alexandru
     url: https://github.com/serban-alexandru
