@@ -21,6 +21,7 @@ export function generate(input: Input): Output {
     `EULA=${input.eula}`,
     `SERVER_PORT=${input.serverPort || 19132}`,
     `ONLINE_MODE=${input.onlineMode || false}`,
+    `ALLOW_LIST=false`,
   ];
 
   services.push({
