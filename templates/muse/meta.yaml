@@ -21,11 +21,17 @@ changeLog:
     description: Update to 2.11.1
   - date: 2026-05-04
     description: Update to 2.11.4
+  - date: 2026-11-04
+    description:
+      Switched to the canonical ghcr.io/museofficial/muse image and updated
+      the GitHub links - the project moved to the museofficial org and
+      ghcr.io is now the documented registry (codetheweb/muse on Docker Hub
+      is only a compatibility mirror); bumped to 2.12.0
 links:
   - label: Github
-    url: https://github.com/codetheweb/muse
+    url: https://github.com/museofficial/muse
   - label: Documentation
-    url: https://github.com/codetheweb/muse#running
+    url: https://github.com/museofficial/muse#running
 contributors:
   - name: Rubén Robles
     url: https://github.com/D8vjork
@@ -46,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: codetheweb/muse:2.11.4
+      default: ghcr.io/museofficial/muse:2.12.0
     discordToken:
       type: string
       title: Discord Token
