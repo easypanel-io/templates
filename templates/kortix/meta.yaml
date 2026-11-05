@@ -1,0 +1,68 @@
+name: Kortix
+description:
+  "Kortix CompanyOS is the open-source operating system for your company: AI
+  agents that do real work for your whole team, with your own models and tools,
+  on your own server. This template runs the full Kortix stack: the web app,
+  API, LLM gateway and Supabase."
+instructions:
+  "Enter your Platinum API key (agents run in Platinum cloud sandboxes; get one
+  at https://platinum.dev) and the admin email. After the deploy: 1) Open the
+  Kortix app's address and sign up with the admin email right away. 2) Signed in
+  as the admin, open /admin/git and connect GitHub. Install the GitHub App on an
+  organization so Kortix can create project repos. On a personal account, create
+  each repo on GitHub first, then import it. 3) Add your model key in Settings →
+  Model. 4) Create a project and give an agent its first task. 5) To stop others
+  from signing up, set DISABLE_SIGNUP=true and redeploy."
+changeLog:
+  - date: "2026-11-05"
+    description: First release
+links:
+  - label: Website
+    url: https://kortix.com
+  - label: Documentation
+    url: https://kortix.com/docs/developers#self-hosting
+  - label: Kortix on GitHub
+    url: https://github.com/kortix-ai/CompanyOS
+contributors:
+  - name: Kortix
+    url: https://github.com/Kortix-seo
+schema:
+  type: object
+  required:
+    - appServiceName
+    - platinumApiKey
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kortix
+    platinumApiKey:
+      type: string
+      title: Platinum API Key
+      description:
+        Platinum API key. Kortix agents run in Platinum cloud sandboxes; get a
+        key at https://platinum.dev.
+    adminEmail:
+      type: string
+      title: Admin Email
+      description:
+        Email of the first admin. Sign up with this address right after the
+        deploy finishes.
+benefits:
+  - title: Your own AI agents
+    description: Run Kortix agents on your server, with your own model keys.
+  - title: Full stack in one click
+    description: Web app, API, LLM gateway and Supabase, wired together.
+features:
+  - title: Agents that work
+    description:
+      Agents run in Platinum cloud sandboxes and keep working after you close
+      the tab.
+  - title: Bring your own model
+    description:
+      Connect Anthropic, OpenAI, OpenRouter and other keys in Settings.
+tags:
+  - AI
+  - Agents
+  - Automation
