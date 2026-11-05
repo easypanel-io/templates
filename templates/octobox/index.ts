@@ -1,17 +1,20 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, randomPassword, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
+  const secretKeyBase = randomString(64);
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       env: [
-        `RAILS_ENV=development`,
+        `RAILS_ENV=production`,
+        `SECRET_KEY_BASE=${secretKeyBase}`,
+        `RAILS_SERVE_STATIC_FILES=true`,
         `GITHUB_CLIENT_ID=${input.githubClient}`,
         `GITHUB_CLIENT_SECRET=${input.githubSecret}`,
         `OCTOBOX_DATABASE_NAME=$(PROJECT_NAME)`,
