@@ -22,6 +22,13 @@ changeLog:
     description: Update to july-2025
   - date: 2025-12-29
     description: Version bumped to december-2025
+  - date: 2026-11-05
+    description:
+      Fixed the container crash-looping on every deploy - the december-2025
+      image build excludes the development gem group, so RAILS_ENV=development
+      failed to boot (Gem::LoadError on the listen gem). Now runs in
+      production mode with a generated SECRET_KEY_BASE and
+      RAILS_SERVE_STATIC_FILES enabled.
 links:
   - label: Website
     url: https://octobox.io
