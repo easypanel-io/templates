@@ -8,6 +8,11 @@ instructions: null
 changeLog:
   - date: 2025-05-12
     description: Version 1.0.2 (First Release)
+  - date: 2026-11-05
+    description:
+      Fixed the container crash-looping on every deploy - Nexterm requires
+      an ENCRYPTION_KEY env var at startup and the template never set one;
+      now generated automatically.
 links:
   - label: Github
     url: https://github.com/gnmyt/Nexterm
