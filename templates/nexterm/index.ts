@@ -1,3 +1,4 @@
+import { randomBytes } from "crypto";
 import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
@@ -8,6 +9,7 @@ export function generate(input: Input): Output {
     type: "app",
     data: {
       serviceName: input.appServiceName,
+      env: [`ENCRYPTION_KEY=${randomBytes(32).toString("hex")}`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
