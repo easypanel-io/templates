@@ -35,6 +35,8 @@ export function generate(input: Input): Output {
         `JWT_SECRET=${randomString(48)}`,
         `ENCRYPTION_KEY=${randomString(48)}`,
         `CORS_ORIGIN=${appUrl}`,
+        // Links in emails (password reset, shared folders) and the single sign-on callback
+        `APP_URL=${appUrl}`,
         // Easypanel's proxy + the frontend's nginx
         `TRUST_PROXY_HOPS=2`,
         `TRASH_RETENTION_DAYS=30`,
