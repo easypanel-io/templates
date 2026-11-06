@@ -1,0 +1,102 @@
+name: yourdrive
+description:
+  yourdrive is a self-hosted file manager that works like Google Drive, on your
+  own object storage. Upload, organize into folders, preview, search, share and
+  restore files from Trash, with a Media timeline for every photo and video.
+  Files stay in your own bucket on AWS S3, Azure Blob, Cloudflare R2, Wasabi or
+  any S3-compatible server. It also works as a network drive over WebDAV, and
+  supports single sign-on (OIDC) and two-step sign-in. Free for up to 3 users; a
+  Team license covers up to 25 users and adds shared folders, shared link
+  passwords and expiry, upload requests and storage limits per user.
+instructions: >-
+  Open the app domain and register: the first account becomes the admin and is
+  taken to the setup wizard to connect storage. With the bundled storage on,
+  choose "Bundled storage": every field is filled in, so just test and save. To
+  use AWS S3, Cloudflare R2, Wasabi or Azure Blob instead, turn off the bundled
+  storage and enter your own bucket in the wizard. Files up to 10 GB upload by
+  default. To update, back up the database, then set the same new version tag on
+  both the frontend and backend images and redeploy; database migrations run
+  automatically on start.
+changeLog:
+  - date: 2026-11-06
+    description: First release (0.9.0)
+links:
+  - label: Website
+    url: https://yourdriveapp.com
+  - label: Documentation
+    url: https://yourdriveapp.com/docs#easypanel
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - frontendServiceImage
+    - backendServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: yourdrive
+    frontendServiceImage:
+      type: string
+      title: Frontend Image
+      default: yourdriveapp/frontend:0.9.0
+    backendServiceImage:
+      type: string
+      title: Backend Image
+      default: yourdriveapp/backend:0.9.0
+    bundledStorage:
+      type: boolean
+      title: Bundled S3 Storage
+      description:
+        Deploy a private SeaweedFS storage server in this project. Turn it off
+        to use AWS S3, Cloudflare R2, Wasabi or Azure Blob.
+      default: true
+benefits:
+  - title: Your files, your bucket
+    description:
+      Files are stored in your own S3, R2, Wasabi or Azure bucket, never in a
+      third-party service.
+  - title: No per-seat fees
+    description:
+      Free for up to 3 users. A Team license covers up to 25 users on one server
+      for $119 a year.
+  - title: A familiar drive
+    description:
+      Folders, Starred, Trash, search and previews that work the way people
+      already expect.
+features:
+  - title: My Drive folders
+    description:
+      Nested folders for any file type, with drag and drop, bulk actions and
+      search.
+  - title: Media timeline
+    description:
+      Every photo and video in one timeline grouped by month, with thumbnails
+      and video posters.
+  - title: Sharing
+    description:
+      Share files and folders by link; Team adds shared folders with other
+      users, link passwords, expiry dates and upload requests.
+  - title: Network drive (WebDAV)
+    description:
+      Open your files in Finder, Windows Explorer or the Files app, signed in
+      with an app password.
+  - title: Sign-in and security
+    description:
+      Single sign-on with any OIDC provider, two-step sign-in with an
+      authenticator app, and storage credentials encrypted at rest.
+  - title: Admin controls
+    description:
+      User management and email setup, plus storage limits per user and a list
+      of every shared link on Team.
+tags:
+  - File Manager
+  - Cloud Storage
+  - File Sharing
+  - Photos
+  - S3
+  - WebDAV
+  - Google Drive Alternative
