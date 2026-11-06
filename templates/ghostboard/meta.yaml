@@ -16,6 +16,8 @@ instructions:
 changeLog:
   - date: 2026-07-24
     description: first release
+  - date: 2026-11-06
+    description: Version bumped to 3.5.2
 links:
   - label: GitHub
     url: https://github.com/jon6fingrs/ghostboard
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: thehelpfulidiot/ghostboard-server:3.4.3
+      default: thehelpfulidiot/ghostboard-server:3.5.2
 benefits:
   - title: Nothing to Set Up
     description:

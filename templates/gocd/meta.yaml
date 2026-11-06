@@ -16,6 +16,8 @@ changeLog:
     description: First Release
   - date: 2026-04-29
     description: Version bumped to v25.4.0
+  - date: 2026-11-06
+    description: Version bumped to v26.1.0
 links:
   - label: Website
     url: https://www.gocd.org/
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gocd/gocd-server:v25.4.0
+      default: gocd/gocd-server:v26.1.0
 benefits:
   - title: Continuous Delivery
     description:

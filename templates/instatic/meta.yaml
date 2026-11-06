@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: 2026-07-20
     description: first release
+  - date: 2026-11-06
+    description: Version bumped to 0.0.21
 links:
   - label: Website
     url: https://instatic.com
@@ -38,7 +40,7 @@ schema:
       description:
         The published image only targets linux/amd64. On an arm64 host you will
         need to build the image from source instead.
-      default: ghcr.io/corebunch/instatic:0.0.11
+      default: ghcr.io/corebunch/instatic:0.0.21
 benefits:
   - title: One Server, No Stack to Assemble
     description:

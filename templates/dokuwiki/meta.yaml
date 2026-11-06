@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to version-2024-02-06b
   - date: 2025-05-26
     description: Version bumped to 2025-05-14
+  - date: 2026-11-06
+    description: Version bumped to version-2026-07-14c
 links:
   - label: Website
     url: https://dokuwiki.org
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lscr.io/linuxserver/dokuwiki:2025-05-14
+      default: lscr.io/linuxserver/dokuwiki:version-2026-07-14c
 benefits:
   - title: Easy to Use
     description:

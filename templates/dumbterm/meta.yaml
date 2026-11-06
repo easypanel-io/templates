@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-09-26
     description: First release (v1.2.0)
+  - date: 2026-11-06
+    description: Version bumped to 1.3.0
 links:
   - label: Website
     url: https://www.dumbware.io/DumbTerm
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: dumbwareio/dumbterm:1.2.0
+      default: dumbwareio/dumbterm:1.3.0
 benefits:
   - title: Web-Based Terminal
     description:

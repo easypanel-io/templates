@@ -13,6 +13,8 @@ instructions: Get the License Key to access Confluence.
 changeLog:
   - date: 2025-02-13
     description: First Release
+  - date: 2026-11-06
+    description: Version bumped to 8.8
 links:
   - label: Documentation
     url: https://confluence.atlassian.com
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: atlassian/confluence-server:8.6-ubuntu-jdk17
+      default: atlassian/confluence-server:8.8-ubuntu-jdk17
 benefits:
   - title: Centralized Knowledge Base
     description:
