@@ -1,0 +1,176 @@
+name: Evolution CMS
+description:
+  Evolution CMS is an open-source PHP content management system and application
+  framework built on Laravel components. It combines a tree of resources with
+  template variables, chunks, snippets and plugins, and runs on MySQL,
+  PostgreSQL or SQLite. This template keeps the CMS code and everything that
+  belongs to the site on separate volumes, so the core and the plugins can be
+  updated independently.
+instructions: |
+  The first deployment builds the PHP image and installs the CMS, which takes a few minutes. The manager is at /manager/. The login and the generated password are in the EVO_ADMIN and EVO_ADMIN_PASSWORD environment variables of the app service.
+
+  Updating the core: change EVO_VERSION in the environment of the app service to a release (3.5.10), a branch (3.5.x) or a tag (nightly-3.5.x) and deploy. The update runs before the site starts. If it fails the site keeps running on the old code and the deployment log says why. Back up the database first. A branch name is applied once: to follow a branch further, run `php artisan make:site update` from core/ in the service console.
+
+  A site with packages in core/custom/composer.json may refuse an update that would change them, which includes any package installed from a branch. Set EVO_UPDATE_OPTIONS=--update-custom-packages to accept the changes it lists.
+
+  Updating plugins: use the manager as usual. Plugin files live on the plugins, snippets, modules, tvs and custom volumes. A core update replaces only the plugins bundled with the CMS and leaves the others alone.
+
+  Updating PHP: change the version in the FROM line of the Dockerfile in the service source and deploy. The image holds no CMS code.
+
+  Security updates of the web server: a plain deploy reuses the built image, so fixes arrive only when the Dockerfile in the service source changes. Everything is at the end of that file, and the deployment log prints the versions in use. Set SECURITY_UPDATES to a new value and deploy for the current fixes of the system, which is how Apache is updated. Set NGINX_VERSION to a version of nginx.org/packages and deploy for nginx. Change the version in the FROM line and deploy for FrankenPHP. A value that does not exist fails the build and the site keeps running.
+
+  The installer: by default the site is installed from the console, the web server refuses /install/, and an update the manager leaves in install/ is finished from the console and the folder removed. With the Installer option set to Browser, or EVO_WEB_INSTALLER=on and a deploy, /install/ asks for the user install and the password in EVO_INSTALL_KEY. On the installer pages use the DB_USERNAME, DB_PASSWORD and DB_DATABASE values with the host database, or the database name evolution for SQLite. Other values do not work: DB_* wins at run time. A stuck installer session is released by a deploy. The folder is removed a minute after the install ends, whatever its last page says. Set EVO_WEB_INSTALLER=off and deploy when the site is ready.
+
+  Worker mode of FrankenPHP needs a version of the CMS that has it, currently the 3.6.x branch, and serves one origin: EVO_WORKER_ORIGIN must be the exact public address, and other domains get an error until they are listed in EVO_SITE_HOSTNAMES. Workers restart by themselves after an update. Test the installed extras before using it in production.
+
+  If the core volume is lost, deploy again: the code is downloaded anew and the site comes back with its plugins, files and database. If a boot fails the service stays up without a web server, so the log and the console remain available.
+
+  Do not scale the app service above one replica: its volumes are local to the node.
+changeLog:
+  - date: 2026-11-04
+    description: first release
+links:
+  - label: Website
+    url: https://evo.im/
+  - label: Documentation
+    url: https://docs.evo.im/
+  - label: Github
+    url: https://github.com/evolution-cms/evolution
+contributors:
+  - name: Artur Kyryliuk
+    url: https://github.com/elcreator
+schema:
+  type: object
+  required:
+    - appServiceName
+    - evolutionVersion
+    - phpVersion
+    - webServer
+    - workerMode
+    - installer
+    - databaseType
+    - adminUsername
+    - adminEmail
+    - language
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: evolution
+    evolutionVersion:
+      type: string
+      title: Evolution CMS Version
+      description: A release, a branch or a tag of evolution-cms/evolution
+      default: 3.5.9
+    phpVersion:
+      type: string
+      title: PHP Version
+      description: A full version supported by this CMS version
+      default: 8.4.27
+    webServer:
+      type: string
+      title: Web Server
+      default: apache
+      oneOf:
+        - enum:
+            - apache
+          title: Apache
+        - enum:
+            - nginx
+          title: Nginx with PHP-FPM
+        - enum:
+            - frankenphp
+          title: FrankenPHP
+    workerMode:
+      type: string
+      title: Worker Mode
+      description: FrankenPHP only, and only on a CMS version that has it
+      default: "off"
+      oneOf:
+        - enum:
+            - "off"
+          title: "Off"
+        - enum:
+            - worker
+          title: Worker
+        - enum:
+            - keep
+          title: Worker, kept application (experimental)
+    installer:
+      type: string
+      title: Installer
+      description:
+        Console installs at once. Browser opens /install/ behind the key in
+        EVO_INSTALL_KEY
+      default: console
+      oneOf:
+        - enum:
+            - console
+          title: Console
+        - enum:
+            - web
+          title: Browser
+    databaseType:
+      type: string
+      title: Database Type
+      default: mysql
+      oneOf:
+        - enum:
+            - mysql
+          title: MySQL
+        - enum:
+            - postgres
+          title: PostgreSQL
+        - enum:
+            - sqlite
+          title: SQLite
+    adminUsername:
+      type: string
+      title: Manager Username
+      default: admin
+    adminEmail:
+      type: string
+      title: Manager Email
+      default: admin@example.com
+    language:
+      type: string
+      title: Language
+      description: Two letter code of the manager language
+      default: en
+benefits:
+  - title: Independent Updates
+    description:
+      The core, the plugins, the site files and PHP each have their own place
+      and their own update path, so one can move without the others.
+  - title: Your Choice of Web Server
+    description:
+      Apache, Nginx with PHP-FPM, or FrankenPHP with the worker mode of the CMS,
+      each with one line to move it to a new version.
+  - title: Your Choice of Database
+    description:
+      Run on MySQL or PostgreSQL, or on SQLite for a small site with no database
+      service at all.
+  - title: Developer Friendly
+    description:
+      Laravel components, Blade templates, Composer packages and an Artisan
+      console sit next to a classic tree based content manager.
+features:
+  - title: Resource Tree
+    description:
+      Pages are organised in a tree, each with its own template and custom
+      fields.
+  - title: Template Variables
+    description:
+      Attach custom fields to templates and use them with output modifiers.
+  - title: Plugins and Snippets
+    description:
+      Extend the CMS with event driven plugins, snippets, modules and Composer
+      packages.
+  - title: Scheduler Included
+    description:
+      The scheduler for queued manager tasks runs inside the app service.
+tags:
+  - CMS
+  - PHP
+  - Laravel
+  - Open-Source
