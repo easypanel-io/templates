@@ -14,6 +14,10 @@ changeLog:
     description: Version bumped to v1.4.3
   - date: 2026-05-08
     description: Version bumped to sha-ba11a0a
+  - date: 2026-11-09
+    description:
+      Added a persistent volume for /rails/storage (the database and file
+      attachments were lost on every redeploy without it)
 links:
   - label: GitHub
     url: https://github.com/basecamp/once-campfire
