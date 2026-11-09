@@ -15,6 +15,13 @@ changeLog:
     description: Template Release
   - date: 2026-05-04
     description: Version bumped to 0.44.6
+  - date: 2026-11-09
+    description:
+      Version bumped to 0.67.0. Added a persistent volume for photo storage
+      (photos were lost on redeploy without it), fixed the cron service to run
+      all four scheduled jobs instead of just send-reminders, added optional
+      SMTP settings as an alternative to Resend, and removed the Redis service
+      since it's optional for self-hosted instances.
 
 links:
   - label: GitHub
@@ -37,18 +44,34 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/mattogodoy/nametag:0.44.6
+      default: ghcr.io/mattogodoy/nametag:0.67.0
     resendApiKey:
       type: string
       title: Resend API Key
       description:
         "Optional Resend API key for email functionality (password resets and
-        reminders). Sign up at https://resend.com"
+        reminders). Sign up at https://resend.com. SMTP settings below take
+        precedence if both are set."
     emailDomain:
       type: string
       title: Email Domain
       description:
-        "Optional email domain for sending emails (required if using Resend)"
+        "Optional email domain for sending emails (required if using Resend
+        or SMTP)"
+    smtpHost:
+      type: string
+      title: SMTP Host
+      description: "Optional SMTP server hostname, an alternative to Resend"
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUser:
+      type: string
+      title: SMTP Username
+    smtpPass:
+      type: string
+      title: SMTP Password
 
 benefits:
   - title: Personal Relationship Management
