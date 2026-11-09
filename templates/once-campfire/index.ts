@@ -20,6 +20,13 @@ export function generate(input: Input): Output {
         },
       ],
       env: [`SECRET_KEY_BASE=${secretKeyBase}`, `DISABLE_SSL=true`].join("\n"),
+      mounts: [
+        {
+          type: "volume",
+          name: "storage",
+          mountPath: "/rails/storage",
+        },
+      ],
     },
   });
 
