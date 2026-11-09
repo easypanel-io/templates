@@ -22,6 +22,8 @@ instructions:
 changeLog:
   - date: 2026-02-20
     description: Template Release
+  - date: 2026-11-09
+    description: Version bumped to v1.1.0
 links:
   - label: Website
     url: https://stalw.art
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: Stalwart Image
-      default: ghcr.io/stalwartlabs/stalwart:v0.15.5
+      default: ghcr.io/stalwartlabs/stalwart:v1.1.0
     smtpPort:
       type: number
       title: SMTP Port

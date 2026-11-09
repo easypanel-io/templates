@@ -7,6 +7,8 @@ changeLog:
     description: First release
   - date: 2026-05-08
     description: Version bumped to 2.7.6
+  - date: 2026-11-09
+    description: Version bumped to 3.0.0
 links:
   - label: Website
     url: https://lowcoder.org/
@@ -39,15 +41,15 @@ schema:
     apiServiceImage:
       type: string
       title: API Service Image
-      default: lowcoderorg/lowcoder-ce-api-service:2.7.6
+      default: lowcoderorg/lowcoder-ce-api-service:3.0.0
     nodeServiceImage:
       type: string
       title: Node Service Image
-      default: lowcoderorg/lowcoder-ce-node-service:2.7.6
+      default: lowcoderorg/lowcoder-ce-node-service:3.0.0
     frontendImage:
       type: string
       title: Frontend Image
-      default: lowcoderorg/lowcoder-ce-frontend:2.7.6
+      default: lowcoderorg/lowcoder-ce-frontend:3.0.0
     superuserUsername:
       type: string
       title: Superuser Username

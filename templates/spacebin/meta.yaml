@@ -11,6 +11,8 @@ changeLog:
     description: First Release
   - date: 2026-05-07
     description: version bumped to v1.1.1
+  - date: 2026-11-09
+    description: Version bumped to v1.2.0
 links:
   - label: Website
     url: https://spaceb.in/
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: spacebinorg/spirit:v1.1.1
+      default: spacebinorg/spirit:v1.2.0
 benefits:
   - title: Modern & Reliable
     description:

@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2025-04-24
     description: first release
+  - date: 2026-11-09
+    description: Version bumped to 5
 links:
   - label: GitHub
     url: https://github.com/seriousm4x/upsnap
@@ -34,7 +36,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/seriousm4x/upsnap:4
+      default: ghcr.io/seriousm4x/upsnap:5
 benefits:
   - title: Remote Power Management
     description:

@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to 5.0.0
   - date: 2026-05-05
     description: Version bumped to 5.0.2
+  - date: 2026-11-09
+    description: Version bumped to 5.1.8
 links:
   - label: Website
     url: https://shlink.io/
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shlinkio/shlink:5.0.2
+      default: shlinkio/shlink:5.1.8
     geolite2ApiKey:
       type: string
       title: GeoLite2 API Key
