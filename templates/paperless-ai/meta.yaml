@@ -1,0 +1,154 @@
+name: Paperless-AI
+description:
+  Paperless-AI is an AI-powered companion for an existing Paperless-ngx
+  instance. It watches for new documents, then uses OpenAI, Ollama, Azure
+  OpenAI, or any other OpenAI-compatible endpoint to automatically suggest
+  titles, tags, correspondents, and document types. It also adds a RAG-based
+  chat so you can ask natural language questions about your document archive.
+instructions: >-
+  You need an existing Paperless-ngx instance and one of its API tokens before
+  deploying this template. Fill in the Paperless-ngx API URL and API token
+  below, pick an AI provider, and fill in the fields for that provider. The
+  "config" volume stores the app's SQLite database and settings, which persist
+  across restarts. After completing setup in the web interface, restart the
+  service once so it can build its RAG search index.
+changeLog:
+  - date: 2026-08-05
+    description: first release
+links:
+  - label: Website
+    url: https://clusterzx.github.io/paperless-ai/
+  - label: GitHub Repo
+    url: https://github.com/clusterzx/paperless-ai
+  - label: Documentation
+    url: https://github.com/clusterzx/paperless-ai/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - paperlessApiUrl
+    - paperlessApiToken
+    - aiProvider
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: paperless-ai
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: clusterzx/paperless-ai:3.0.9
+    paperlessApiUrl:
+      type: string
+      title: Paperless-ngx API URL
+      description: "Example: https://paperless.example.com/api"
+    paperlessApiToken:
+      type: string
+      title: Paperless-ngx API Token
+    paperlessUsername:
+      type: string
+      title: Paperless-ngx Username
+      description:
+        "Optional. Your Paperless-ngx username, used to identify documents you
+        uploaded yourself."
+    aiProvider:
+      type: string
+      title: AI Provider
+      default: openai
+      oneOf:
+        - enum:
+            - openai
+          title: OpenAI
+        - enum:
+            - ollama
+          title: Ollama
+        - enum:
+            - custom
+          title: Custom (OpenAI-compatible / DeepSeek / OpenRouter / etc.)
+        - enum:
+            - azure
+          title: Azure OpenAI
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      description: "Only used when AI Provider is OpenAI."
+    ollamaApiUrl:
+      type: string
+      title: Ollama API URL
+      description:
+        "Only used when AI Provider is Ollama. Example: http://ollama:11434"
+    ollamaModel:
+      type: string
+      title: Ollama Model
+      description: "Only used when AI Provider is Ollama."
+      default: llama3.2
+    customApiUrl:
+      type: string
+      title: Custom Base URL
+      description:
+        "Only used when AI Provider is Custom. Example:
+        https://api.deepseek.com/v1"
+    customApiKey:
+      type: string
+      title: Custom API Key
+      description: "Only used when AI Provider is Custom."
+    customModel:
+      type: string
+      title: Custom Model
+      description: "Only used when AI Provider is Custom."
+    azureApiKey:
+      type: string
+      title: Azure API Key
+      description: "Only used when AI Provider is Azure OpenAI."
+    azureEndpoint:
+      type: string
+      title: Azure Endpoint
+      description: "Only used when AI Provider is Azure OpenAI."
+    azureDeploymentName:
+      type: string
+      title: Azure Deployment Name
+      description: "Only used when AI Provider is Azure OpenAI."
+    azureApiVersion:
+      type: string
+      title: Azure API Version
+      description: "Only used when AI Provider is Azure OpenAI."
+      default: "2023-05-15"
+    scanInterval:
+      type: string
+      title: Scan Interval (cron expression)
+      default: "*/30 * * * *"
+benefits:
+  - title: Automated Document Tagging
+    description:
+      Watches your Paperless-ngx instance for new documents and suggests titles,
+      tags, correspondents, and document types automatically
+  - title: Multiple AI Providers
+    description:
+      Works with OpenAI, Ollama, Azure OpenAI, or any other OpenAI-compatible
+      endpoint such as DeepSeek or OpenRouter
+  - title: RAG-Based Document Chat
+    description:
+      Ask natural language questions about your archive and get answers grounded
+      in your own documents
+features:
+  - title: Manual Review Mode
+    description:
+      A manual interface lets you review and approve AI suggestions before they
+      are applied to sensitive documents
+  - title: Tagging Rules
+    description:
+      Restrict processing to specific tags and limit the AI to your existing
+      tags, correspondents, and document types
+  - title: Local AI Support
+    description:
+      Runs fully offline against a self-hosted Ollama instance if you prefer not
+      to send documents to a third-party API
+tags:
+  - Documents
+  - AI
+  - Automation
+  - Productivity
