@@ -23,7 +23,8 @@ changeLog:
     description: Template Release
   - date: 2026-05-08
     description: Version bumped to 0.1.0-beta.22
-
+  - date: 2026-11-10
+    description: Version bumped to 0.1.0-beta.26
 links:
   - label: Website
     url: https://journiv.com
@@ -47,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: swalabtech/journiv-app:0.1.0-beta.22
+      default: swalabtech/journiv-app:0.1.0-beta.26
 
 benefits:
   - title: Private Journaling

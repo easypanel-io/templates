@@ -14,6 +14,8 @@ instructions: |
 changeLog:
   - date: 2026-02-16
     description: Template Release (v0.3.4)
+  - date: 2026-11-10
+    description: Version bumped to 0.10.0
 links:
   - label: Github
     url: https://github.com/DioCrafts/OxiCloud
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: OxiCloud Image
-      default: diocrafts/oxicloud:0.5.1
+      default: diocrafts/oxicloud:0.10.0
     databaseImage:
       type: string
       title: PostgreSQL Image

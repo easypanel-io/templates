@@ -29,6 +29,8 @@ changeLog:
     description: Version bumped to 9.3-apache
   - date: 2026-04-29
     description: Version bumped to 9.3.4
+  - date: 2026-11-10
+    description: Version bumped to 10.0.12
 links:
   - label: Website
     url: https://espocrm.com
@@ -67,7 +69,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: espocrm/espocrm:9.3.4
+      default: espocrm/espocrm:10.0.12
     databaseServiceType:
       type: string
       title: Database Service Type

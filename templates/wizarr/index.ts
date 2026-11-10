@@ -10,7 +10,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `APP_URL=https://$(PRIMARY_DOMAIN)`,
-        `TZ=utc`,
+        `TZ=${input.timezone || "Etc/UTC"}`,
         `DISABLE_BUILTIN_AUTH=false`,
       ].join("\n"),
       source: {

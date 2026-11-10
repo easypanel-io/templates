@@ -23,6 +23,8 @@ instructions: >-
 changeLog:
   - date: "2026-06-17"
     description: First Release
+  - date: 2026-11-10
+    description: Version bumped to v2026.9.24
 links:
   - label: Website
     url: https://hermes-agent.nousresearch.com/
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: "nousresearch/hermes-agent:v2026.6.5"
+      default: "nousresearch/hermes-agent:v2026.9.24"
     dashboardUsername:
       type: string
       title: Dashboard Username
@@ -84,7 +86,7 @@ features:
   - title: Browser-Based Admin Dashboard
     description:
       Configure settings, manage credentials, browse the MCP catalog, and chat
-      with the agent directly from a React-based web UI served at port 6432.
+      with the agent directly from a React-based web UI served at port 9119.
   - title: OpenAI-Compatible API Server
     description:
       Port 8642 exposes an OpenAI-compatible gateway so Claude Code, Open WebUI,

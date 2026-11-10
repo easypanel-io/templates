@@ -23,6 +23,8 @@ changeLog:
     description: Version bumped to 5.12.2.3
   - date: 2026-02-24
     description: Version bumped to 5.16.0.0
+  - date: 2026-11-10
+    description: Version bumped to 2026.11.1.0
 links:
   - label: Documentation
     url: https://docs.weblate.org/en/latest/index.html
@@ -52,7 +54,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: weblate/weblate:5.16.0.0
+      default: weblate/weblate:2026.11.1.0
     databaseServiceName:
       type: string
       title: Database Service Name

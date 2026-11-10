@@ -40,9 +40,16 @@ export function generate(input: Input): Output {
         `OXICLOUD_DB_CONNECTION_STRING=${dbConnectionString}`,
         `DATABASE_URL=${dbConnectionString}`,
         `OXICLOUD_JWT_SECRET=${jwtSecret}`,
+        `OXICLOUD_SERVER_HOST=0.0.0.0`,
+        `OXICLOUD_SERVER_PORT=8086`,
+        `OXICLOUD_BASE_URL=https://$(PRIMARY_DOMAIN)`,
         `MIMALLOC_PURGE_DELAY=0`,
         `MIMALLOC_ALLOW_LARGE_OS_PAGES=0`,
       ].join("\n"),
+      deploy: {
+        command:
+          "sed '/^::1/s/localhost//' /etc/hosts > /tmp/hosts && cat /tmp/hosts > /etc/hosts; exec entrypoint.sh oxicloud",
+      },
       mounts: [
         {
           type: "volume",

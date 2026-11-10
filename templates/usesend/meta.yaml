@@ -21,6 +21,8 @@ changeLog:
     description: Template Release
   - date: 2026-02-24
     description: Version bumped to 1.8.0
+  - date: 2026-11-10
+    description: Version bumped to v1.10.2
 links:
   - label: Website
     url: https://usesend.com/
@@ -50,15 +52,13 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: usesend/usesend:v1.8.0
+      default: usesend/usesend:v1.10.2
     githubId:
       type: string
       title: GitHub OAuth App ID
-      default: ""
     githubSecret:
       type: string
       title: GitHub OAuth App Secret
-      default: ""
     awsAccessKey:
       type: string
       title: AWS Access Key

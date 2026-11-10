@@ -50,6 +50,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.apiImage,
       },
+      deploy: {
+        command:
+          "sh ./scripts/migrate.sh && exec sh ./scripts/docker-entrypoint.sh",
+      },
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
@@ -59,7 +63,7 @@ export function generate(input: Input): Output {
       env: [
         `NODE_ENV=production`,
         `PORT=8000`,
-        `LOGCHIMP_API_HOST=$(PRIMARY_DOMAIN)`,
+        `LOGCHIMP_API_HOST=0.0.0.0`,
         `LOGCHIMP_IS_SELF_HOSTED=true`,
         `LOGCHIMP_SECRET_KEY=${secretKey}`,
         `LOGCHIMP_MACHINE_SIGNATURE=${machineSignature}`,

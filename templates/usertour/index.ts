@@ -1,10 +1,17 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const dbPassword = randomPassword();
   const redisPassword = randomPassword();
+  const jwtSecret = randomString(48);
+  const databaseUrl = `postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`;
 
   services.push({
     type: "app",
@@ -15,7 +22,8 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       env: [
-        `DATABASE_URL=postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+        `DATABASE_URL=${databaseUrl}`,
+        `DATABASE_DIRECT_URL=${databaseUrl}`,
         `NEST_SERVER_PORT=3000`,
         `EMAIL_HOST=`,
         `EMAIL_PORT=`,
@@ -31,7 +39,7 @@ export function generate(input: Input): Output {
         `AWS_S3_SECRET_ACCESS_KEY=`,
         `AWS_S3_BUCKET=`,
         `AWS_S3_DOMAIN=`,
-        `JWT_SECRET=test`,
+        `JWT_SECRET=${jwtSecret}`,
         `JWT_EXPIRATION_TIME=1h`,
         `JWT_REFRESH_EXPIRATION_TIME=7d`,
         `EMAIL_AUTH_ENABLED=true`,

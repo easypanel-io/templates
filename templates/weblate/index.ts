@@ -11,7 +11,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `REDIS_HOST=${input.redisServiceName}`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.redisServiceName}`,
         `REDIS_PORT=6379`,
         `REDIS_DB=1`,
         `REDIS_PASSWORD=${redisPassword}`,
@@ -20,7 +20,7 @@ export function generate(input: Input): Output {
         `WEBLATE_EMAIL_HOST_USER=${input.emailUsername}`,
         `WEBLATE_EMAIL_HOST_PASSWORD=${input.emailPassword}`,
         `WEBLATE_SERVER_EMAIL=${input.emailUsername}`,
-        `WEBLATE_SITE_DOMAIN=https://$(PRIMARY_DOMAIN)`,
+        `WEBLATE_SITE_DOMAIN=$(PRIMARY_DOMAIN)`,
         `WEBLATE_ADMIN_PASSWORD=changeme`,
         `WEBLATE_ADMIN_EMAIL=changeme@easypanel.io`,
         `POSTGRES_PASSWORD=${databasePassword}`,

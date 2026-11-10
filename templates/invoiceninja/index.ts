@@ -78,6 +78,11 @@ server {
           name: "public",
           mountPath: "/var/www/app/public",
         },
+        {
+          type: "file",
+          content: "[client]\nssl-verify-server-cert=OFF\n",
+          mountPath: "/etc/my.cnf",
+        },
       ],
     },
   });

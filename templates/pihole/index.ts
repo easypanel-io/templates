@@ -4,7 +4,11 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
-  const appEnv = [`TZ=${input.timezone}`, `WEBPASSWORD=${input.webPassword}`];
+  const appEnv = [
+    `TZ=${input.timezone}`,
+    `FTLCONF_webserver_api_password=${input.webPassword}`,
+    `FTLCONF_dns_listeningMode=ALL`,
+  ];
 
   services.push({
     type: "app",

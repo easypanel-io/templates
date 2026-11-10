@@ -19,6 +19,8 @@ instructions:
 changeLog:
   - date: 2025-11-03
     description: First Release
+  - date: 2026-11-10
+    description: Version bumped to 2026.10.1
 links:
   - label: Website
     url: https://pi-hole.net/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: pihole/pihole:2024.07.0
+      default: pihole/pihole:2026.10.1
     timezone:
       type: string
       title: Timezone

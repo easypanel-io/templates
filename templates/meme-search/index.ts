@@ -50,6 +50,7 @@ production:
     `OPENAI_API_BASE_URL=${input.openaiApiBaseUrl ?? ""}`,
     `OPENAI_API_KEY=${input.openaiApiKey ?? ""}`,
     `OPENAI_VISION_MODEL=${input.openaiVisionModel ?? ""}`,
+    `MEME_SEARCH_ALLOWED_HOSTS=$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
   ];
 
   services.push({
@@ -130,7 +131,7 @@ production:
         },
         env: [
           `APP_PORT=3000`,
-          `GEN_URL=http://$(PROJECT_NAME)_${input.appServiceName}:3000`,
+          `GEN_URL=https://$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`,
         ].join("\n"),
         mounts: [
           {

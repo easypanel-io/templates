@@ -25,7 +25,7 @@ export function generate(input: Input): Output {
   });
 
   const backendEnv = [
-    `DB_NAME=${input.postgresDb}`,
+    `DB_NAME=$(PROJECT_NAME)`,
     `DB_HOST=$(PROJECT_NAME)_${input.appServiceName}-pg`,
     `DB_USER=postgres`,
     `DB_PASS=${postgresPassword}`,
@@ -77,6 +77,25 @@ export function generate(input: Input): Output {
       env: taskEnv.join("\n"),
       deploy: {
         command: `sh -c "cd /app/loonflow && celery -A tasks worker -l info -c 8 -Q loonflow"`,
+      },
+    },
+  });
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: `${input.appServiceName}-mcp`,
+      source: {
+        type: "image",
+        image: input.backendImage,
+      },
+      env: [
+        ...backendEnv,
+        `LOONFLOW_MCP_HOST=0.0.0.0`,
+        `LOONFLOW_MCP_PORT=8002`,
+      ].join("\n"),
+      deploy: {
+        command: `sh -c "cd /app/loonflow && python mcp_ticket_server.py"`,
       },
     },
   });

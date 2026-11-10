@@ -42,6 +42,7 @@ export function generate(input: Input): Output {
     type: "postgres",
     data: {
       serviceName: `${input.appServiceName}-db`,
+      image: "getlago/postgres-partman:15.0-alpine",
       password: postgresPassword,
     },
   });
@@ -127,7 +128,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 8080,
         },
       ],
     },

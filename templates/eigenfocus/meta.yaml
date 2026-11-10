@@ -4,8 +4,7 @@ description:
   issues, and time tracking, without the bloat of larger tools like Jira or
   Linear. It has no built-in login system by design, since it is meant for a
   single person or a small trusted team, so this template protects it with HTTP
-  Basic Auth instead. This template runs Eigenfocus against a PostgreSQL
-  database for production-grade reliability.
+  Basic Auth instead. Data is stored in SQLite on a persistent volume.
 instructions:
   Open the app URL and sign in with the HTTP Basic Auth prompt using username
   admin and the auto-generated password shown as HTTP_AUTH_PASSWORD in this
@@ -16,6 +15,8 @@ instructions:
 changeLog:
   - date: 2026-07-15
     description: first release
+  - date: 2026-11-10
+    description: Version bumped to 1.6.0-free
 links:
   - label: Website
     url: https://eigenfocus.com
@@ -39,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: eigenfocus/eigenfocus:1.5.1-free
+      default: eigenfocus/eigenfocus:1.6.0-free
 benefits:
   - title: Clutter-Free Project Management
     description:

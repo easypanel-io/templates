@@ -17,6 +17,8 @@ instructions: |
 changeLog:
   - date: 2026-07-13
     description: first release
+  - date: 2026-11-10
+    description: Version bumped to v2.3.2
 links:
   - label: Website
     url: https://meme-search.neonwatty.com
@@ -42,11 +44,11 @@ schema:
     webImage:
       type: string
       title: Web/Jobs Image
-      default: ghcr.io/neonwatty/meme_search:v2.2.0
+      default: ghcr.io/neonwatty/meme_search:v2.3.2
     generatorImage:
       type: string
       title: Local Vision Model Image
-      default: ghcr.io/neonwatty/image_to_text_generator:v2.2.0
+      default: ghcr.io/neonwatty/image_to_text_generator:v2.3.2
     imageDescriptionProvider:
       type: string
       title: Image Description Provider

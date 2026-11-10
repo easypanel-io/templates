@@ -15,6 +15,17 @@ export function generate(input: Input): Output {
     `ESPOCRM_SITE_URL=https://$(PRIMARY_DOMAIN)`,
   ];
 
+  const volumesPath = `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes`;
+  const sharedMounts = [
+    ["data", "/var/www/html/data"],
+    ["custom", "/var/www/html/custom"],
+    ["client-custom", "/var/www/html/client/custom"],
+  ].map(([name, mountPath]) => ({
+    type: "bind" as const,
+    hostPath: `${volumesPath}/${name}`,
+    mountPath,
+  }));
+
   services.push({
     type: "app",
     data: {
@@ -26,11 +37,16 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
-      mounts: [{ type: "volume", name: "espocrm", mountPath: "/var/www/html" }],
+      mounts: [
+        { type: "volume", name: "data", mountPath: "/var/www/html/data" },
+        { type: "volume", name: "custom", mountPath: "/var/www/html/custom" },
+        {
+          type: "volume",
+          name: "client-custom",
+          mountPath: "/var/www/html/client/custom",
+        },
+      ],
       env: appEnv.join("\n"),
-      deploy: {
-        command: `chmod -R 755 /var/www/html && docker-entrypoint.sh apache2-foreground`,
-      },
     },
   });
 
@@ -40,13 +56,7 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName + "-daemon",
       source: { type: "image", image: input.appServiceImage },
       deploy: { command: "sleep 120; docker-daemon.sh" },
-      mounts: [
-        {
-          type: "bind",
-          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/espocrm`,
-          mountPath: "/var/www/html",
-        },
-      ],
+      mounts: sharedMounts,
     },
   });
 
@@ -62,13 +72,7 @@ export function generate(input: Input): Output {
           port: 8080,
         },
       ],
-      mounts: [
-        {
-          type: "bind",
-          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}/volumes/espocrm`,
-          mountPath: "/var/www/html",
-        },
-      ],
+      mounts: sharedMounts,
       env: [
         `ESPOCRM_CONFIG_USE_WEB_SOCKET=true`,
         `ESPOCRM_CONFIG_WEB_SOCKET_URL=wss://$(PRIMARY_DOMAIN)`,
