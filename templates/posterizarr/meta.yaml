@@ -13,8 +13,6 @@ changeLog:
     description: Initial template release
   - date: 2026-05-05
     description: Version bumped to 2.2.40
-  - date: 2026-11-11
-    description: Version bumped to 3.3.7
 
 links:
   - label: Website
@@ -43,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: Posterizarr Image
-      default: ghcr.io/fscorrupt/posterizarr:3.3.7
+      default: ghcr.io/fscorrupt/posterizarr:2.2.40
     timezone:
       type: string
       title: Timezone

@@ -11,8 +11,6 @@ export function generate(input: Input): Output {
   const databasePassword = randomPassword();
   const cryptKey = randomString(32);
 
-  const jwtKeys = input.jwtPrivateKey && input.jwtPublicKey;
-
   services.push({
     type: "app",
     data: {
@@ -32,27 +30,7 @@ export function generate(input: Input): Output {
         `CRYPT_KEY=${cryptKey}`,
         `PUBLIC_SCHEME=https`,
         `PUBLIC_PORT=443`,
-        ...(jwtKeys
-          ? [
-              `JWT_PRIVATE_KEY=/app/keys/jwt.key`,
-              `JWT_PUBLIC_KEY=/app/keys/jwt.pub`,
-            ]
-          : []),
       ].join("\n"),
-      mounts: jwtKeys
-        ? [
-            {
-              type: "file",
-              content: atob(input.jwtPrivateKey!),
-              mountPath: "/app/keys/jwt.key",
-            },
-            {
-              type: "file",
-              content: atob(input.jwtPublicKey!),
-              mountPath: "/app/keys/jwt.pub",
-            },
-          ]
-        : [],
     },
   });
 

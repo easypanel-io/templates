@@ -8,10 +8,7 @@ description:
   analytics to optimize space utilization.
 instructions:
   Log in with admin@seatsurfing.local and the default password Sea!surf1ng, then
-  change the password right away. To keep users logged in across restarts,
-  generate a key pair with "openssl genrsa -traditional -out jwt.key 2048 &&
-  openssl rsa -in jwt.key -pubout -out jwt.pub" and paste the output of "base64
-  -w0 jwt.key" and "base64 -w0 jwt.pub" into the JWT key fields.
+  change the password right away.
 changeLog:
   - date: 2025-04-07
     description: First Release
@@ -41,12 +38,6 @@ schema:
       type: string
       title: App Service Image
       default: ghcr.io/seatsurfing/backend:1.140.1
-    jwtPrivateKey:
-      type: string
-      title: JWT Private Key (base64, optional)
-    jwtPublicKey:
-      type: string
-      title: JWT Public Key (base64, optional)
 benefits:
   - title: Workspace Management
     description:
