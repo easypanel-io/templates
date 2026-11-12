@@ -1,0 +1,67 @@
+name: openqr
+description:
+  OpenQR is a free, open-source (AGPL-3.0) QR code generator that runs entirely
+  in the browser, with full styling (colors, gradients, dot and corner shapes,
+  logo embedding, frames) and export to PNG, JPEG, WebP, SVG and PDF, with no
+  sign-up, no watermark and no tracking. The container serves the generator with
+  no database and no environment variables. Dynamic (editable) codes, scan
+  analytics and the REST API/MCP server are the hosted openqr.uk service and are
+  not part of this self-hosted deployment.
+instructions:
+  Open the app URL and use the generator. Everything runs client-side, so codes
+  are generated in the browser and downloaded directly. Payload types include
+  URL, text, email, phone, SMS, WhatsApp, Wi-Fi, vCard and location.
+changeLog:
+  - date: 2026-09-16
+    description: first release
+links:
+  - label: Website
+    url: https://openqr.uk
+  - label: GitHub
+    url: https://github.com/open-qr/openqr
+contributors:
+  - name: Sam Moreton
+    url: https://github.com/sam-moreton
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openqr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/open-qr/openqr:1.0.1
+benefits:
+  - title: No Sign-Up, No Watermark
+    description:
+      Generate and download codes immediately. Nothing to register, no
+      watermark, no size cap on exports.
+  - title: Private by Architecture
+    description:
+      Codes are generated in the browser. No telemetry, no cookies, no database,
+      nothing to back up.
+  - title: True Vector Exports
+    description:
+      SVG and PDF exports alongside PNG, JPEG and WebP, with logos, frames and
+      full styling control.
+features:
+  - title: Full Styling
+    description:
+      Colors, gradients, dot and corner shapes, logo embedding and frames, with
+      a live preview.
+  - title: Batch Mode
+    description: Create sets of codes at once from typed rows or a CSV file.
+  - title: Wide Payload Support
+    description:
+      URL, text, email, phone, SMS, WhatsApp, Wi-Fi, vCard and location payloads
+      built in.
+tags:
+  - Open Source
+  - Productivity
+  - Developer Tools
+  - Privacy
