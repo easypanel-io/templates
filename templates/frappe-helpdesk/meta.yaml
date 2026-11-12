@@ -10,10 +10,15 @@ description:
   tickets and for customers to submit and track their requests. The system
   supports team collaboration, SLA management, and integration with various
   communication channels including email, chat, and social media platforms.
-instructions: null
+instructions:
+  The first start creates the site and takes a few minutes. Open /login and sign
+  in as Administrator with the ADMIN_PASSWORD from the backend service
+  environment. The agent portal is at /helpdesk.
 changeLog:
   - date: 2025-10-08
     description: First Release
+  - date: 2026-11-12
+    description: Version bumped to v16.1.0
 links:
   - label: Website
     url: https://frappe.io/
@@ -37,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: frappe/bench:v5.25.9
+      default: ghcr.io/frappe/helpdesk:v16.1.0
 benefits:
   - title: Comprehensive Ticket Management
     description:
