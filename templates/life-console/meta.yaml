@@ -1,0 +1,79 @@
+name: Life Console
+description:
+  Life Console is an open-source, keyboard-first planner that shows what to do
+  right now. The Command Center shows the current time block with a live
+  countdown, the task to work on, what comes next and the next deadline. Plan
+  the week by moving tasks from a backlog into a daily workload budget and onto
+  the timeline, see every deadline as a live countdown, and link each task to
+  the goal it serves. It supports multiple accounts, works offline and installs
+  on phones with push reminders.
+instructions:
+  Open the app and create your account; the first account becomes the admin.
+  To stop others signing up afterwards, set SIGNUPS=off in the app's
+  environment. If you serve it over HTTPS on your own domain, set APP_URL to
+  that https:// address.
+changeLog:
+  - date: 2026-11-13
+    description: first release (Life Console 0.1.0)
+links:
+  - label: Website
+    url: https://life-console.dev
+  - label: Github
+    url: https://github.com/TJ-coding/life-console
+  - label: Documentation
+    url: https://life-console.dev/docs/self-hosting
+contributors:
+  - name: TJ-coding
+    url: https://github.com/TJ-coding
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: life-console
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/tj-coding/life-console:0.1.0
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: life-console-db
+benefits:
+  - title: Know what to do right now
+    description:
+      The Command Center answers one question all day, with the current block,
+      a live countdown, the next task and the next deadline on one screen.
+  - title: Plan the week in three moves
+    description:
+      Move tasks from a backlog into a daily budget and onto the timeline;
+      Auto time-box fills free gaps by priority.
+  - title: Your data on your server
+    description:
+      Self-hosted with PostgreSQL, multi-user, and licensed AGPL-3.0.
+features:
+  - title: Deadlines as countdowns
+    description:
+      Every deadline is a ticking countdown, grouped by week, with optional
+      personal target dates.
+  - title: Goals linked to tasks
+    description:
+      Strategic plans run from vision to goals to milestones, and each task can
+      link to the goal it serves.
+  - title: Keyboard first
+    description:
+      Command palette, single-key shortcuts and one-line quick-add that parses
+      estimates, due dates, priorities and goal links.
+  - title: Works offline, installs on phones
+    description:
+      An installable web app that keeps working offline, syncs when back
+      online and sends push reminders.
+tags:
+  - Productivity
+  - Planner
+  - Task Management
