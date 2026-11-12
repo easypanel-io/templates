@@ -1,3 +1,4 @@
+import { randomBytes } from "crypto";
 import {
   Output,
   randomPassword,
@@ -12,8 +13,8 @@ export function generate(input: Input): Output {
   const redisPassword = randomPassword();
   const meiliMasterKey = randomString(32);
   const jwtSecret = randomString(64);
-  const encryptionKey = randomString(64);
-  const storageEncryptionKey = randomString(64);
+  const encryptionKey = randomBytes(32).toString("hex");
+  const storageEncryptionKey = randomBytes(32).toString("hex");
 
   const base = `$(PROJECT_NAME)_${input.appServiceName}`;
 
@@ -70,6 +71,7 @@ export function generate(input: Input): Output {
   const appEnv = [
     `NODE_ENV=production`,
     `PORT_FRONTEND=3000`,
+    `PORT_BACKEND=4000`,
     `APP_URL=https://$(PRIMARY_DOMAIN)`,
     `ORIGIN=https://$(PRIMARY_DOMAIN)`,
     `DATABASE_URL=postgresql://postgres:${dbPassword}@${base}-db:5432/$(PROJECT_NAME)?sslmode=disable`,
@@ -85,6 +87,7 @@ export function generate(input: Input): Output {
     `STORAGE_LOCAL_ROOT_PATH=/var/data/open-archiver`,
     `BODY_SIZE_LIMIT=100M`,
     `JWT_SECRET=${jwtSecret}`,
+    `JWT_EXPIRES_IN=7d`,
     `ENCRYPTION_KEY=${encryptionKey}`,
     `STORAGE_ENCRYPTION_KEY=${storageEncryptionKey}`,
   ].join("\n");

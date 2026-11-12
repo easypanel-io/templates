@@ -17,7 +17,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 7574,
+          port: 7575,
         },
       ],
       mounts: [
@@ -30,7 +30,7 @@ export function generate(input: Input): Output {
       env: [
         `SECRET_ENCRYPTION_KEY=${secretKey}`,
         `TZ=${input.timezone}`,
-        `PORT=7574`,
+        `PORT=3000`,
       ].join("\n"),
     },
   });

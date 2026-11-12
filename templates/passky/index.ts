@@ -37,15 +37,15 @@ export function generate(input: Input): Output {
         `CF_TURNSTILE_SECRET_KEY=${turnstileSecretKey}`,
         `DATABASE_ENGINE=mysql`,
         `DATABASE_FILE=passky`,
-        `MYSQL_HOST=$(PROJECT_NAME)-${input.appServiceName}-db`,
+        `MYSQL_HOST=$(PROJECT_NAME)_${input.appServiceName}-db`,
         `MYSQL_PORT=3306`,
         `MYSQL_DATABASE=$(PROJECT_NAME)`,
-        `MYSQL_USER=mysql`,
+        `MYSQL_USER=mariadb`,
         `MYSQL_PASSWORD=${databasePassword}`,
         `MYSQL_SSL=false`,
         `MYSQL_SSL_CA=/etc/ssl/certs/ca-certificates.crt`,
         `MYSQL_CACHE_MODE=0`,
-        `REDIS_HOST=$(PROJECT_NAME)-${input.appServiceName}-redis`,
+        `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `REDIS_PORT=6379`,
         `REDIS_PASSWORD=${redisPassword}`,
         `MAIL_ENABLED=false`,
@@ -89,7 +89,7 @@ export function generate(input: Input): Output {
   });
 
   services.push({
-    type: "mysql",
+    type: "mariadb",
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,

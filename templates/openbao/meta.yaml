@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: 2026-06-23
     description: Initial release (2.5.5)
+  - date: 2026-11-10
+    description: Version bumped to 2.7.2
 links:
   - label: Website
     url: https://openbao.org
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: quay.io/openbao/openbao:2.5.5
+      default: quay.io/openbao/openbao:2.7.2
 benefits:
   - title: Open-Source Vault Alternative
     description:

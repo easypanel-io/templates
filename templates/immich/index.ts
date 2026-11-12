@@ -17,6 +17,7 @@ export function generate(input: Input): Output {
     `REDIS_PASSWORD=${redisPassword}`,
     `UPLOAD_LOCATION=./library`,
     `DB_DATA_LOCATION=./postgres`,
+    `IMMICH_MACHINE_LEARNING_URL=http://$(PROJECT_NAME)_${input.appServiceName}-ml:3003`,
   ].join("\n");
 
   services.push({
@@ -38,7 +39,7 @@ export function generate(input: Input): Output {
         {
           type: "volume",
           name: "upload",
-          mountPath: "/usr/src/app/upload",
+          mountPath: "/data",
         },
       ],
     },
@@ -53,12 +54,6 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.mlServiceImage,
       },
-      domains: [
-        {
-          host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
-        },
-      ],
     },
   });
 
@@ -67,8 +62,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-db`,
       password: databasePassword,
-      image:
-        "docker.io/tensorchord/pgvecto-rs:pg14-v0.2.0@sha256:90724186f0a3517cf6914295b5ab410db9ce23190a2d9d0b9dd6463e3fa298f0",
+      image: "ghcr.io/immich-app/postgres:14-vectorchord0.4.3-pgvectors0.2.0",
     },
   });
 

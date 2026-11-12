@@ -17,6 +17,8 @@ instructions: To create a user, type thelounge add <name> in the console.
 changeLog:
   - date: 2023-07-09
     description: First Release
+  - date: 2026-11-09
+    description: Version bumped to 4.5.2
 links:
   - label: Website
     url: https://thelounge.chat/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/thelounge/thelounge:4.4.3
+      default: ghcr.io/thelounge/thelounge:4.5.2
 benefits:
   - title: Always Connected
     description:

@@ -14,6 +14,8 @@ changeLog:
     description: Updated to v7.4.8
   - date: 2025-07-16
     description: First Release
+  - date: 2026-11-06
+    description: Version bumped to v7.6.1
 links:
   - label: Website
     url: https://hemmelig.app
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: hemmeligapp/hemmelig:v7.4.8
+      default: hemmeligapp/hemmelig:v7.6.1
 benefits:
   - title: Secure Secret Sharing
     description:

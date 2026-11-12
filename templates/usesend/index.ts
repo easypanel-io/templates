@@ -36,7 +36,7 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-storage`,
       source: {
         type: "image",
-        image: "minio/minio:latest",
+        image: "coollabsio/minio:RELEASE.2025-10-15T17-29-55Z",
       },
       env: [
         `MINIO_ROOT_USER=unsend`,

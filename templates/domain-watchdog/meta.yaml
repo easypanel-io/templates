@@ -13,6 +13,8 @@ instructions:
 changeLog:
   - date: 2026-07-17
     description: first release
+  - date: 2026-11-06
+    description: Version bumped to v1.4.6
 links:
   - label: Website
     url: https://domainwatchdog.eu
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: maelgangloff/domain-watchdog:v1.4.5
+      default: maelgangloff/domain-watchdog:v1.4.6
 benefits:
   - title: Expiration Alerts Before It's Too Late
     description:

@@ -22,7 +22,7 @@ export function generate(input: Input): Output {
         `REDIS_PORT=6379`,
         `REDIS_PASSWORD=${redisPassword}`,
         `ACCESS_TOKEN_SALT=${accessTokenSalt}`,
-        `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?connect_timeout=300&sslmode=prefer`,
+        `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?connect_timeout=300&sslmode=disable`,
         `JWT_SECRET_KEY=${jwtSecretKey}`,
       ].join("\n"),
       source: {

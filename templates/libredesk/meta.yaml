@@ -13,6 +13,8 @@ changeLog:
     description:
       Updated to v1.0.1 and added encryption key generation and auto-generation
       of system user password.
+  - date: 2026-11-09
+    description: Version bumped to v2.9.2
 links:
   - label: Website
     url: https://libredesk.io
@@ -36,7 +38,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: libredesk/libredesk:v1.0.1
+      default: libredesk/libredesk:v2.9.2
     systemUserPassword:
       type: string
       title: System User Password

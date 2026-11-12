@@ -26,11 +26,11 @@ export function generate(input: Input): Output {
         {
           host: "$(EASYPANEL_DOMAIN)",
           path: "/admin",
-          port: 80,
+          port: 8080,
         },
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 8080,
         },
       ],
     },

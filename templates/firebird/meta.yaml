@@ -17,6 +17,8 @@ changeLog:
     description: Template Release
   - date: 2025-07-21
     description: Version bumped to 5.0.3
+  - date: 2026-11-06
+    description: Version bumped to 5.0.4
 
 links:
   - label: Documentation
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: firebirdsql/firebird:5.0.3
+      default: firebirdsql/firebird:5.0.4
     rootPassword:
       type: string
       title: Root Password

@@ -32,6 +32,9 @@ export function generate(input: Input): Output {
     `ES_PASS=password`,
     `SECRET_KEY_BASE=${randomString(64)}`,
     `OTP_SECRET=${randomString(64)}`,
+    `ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=${randomString(32)}`,
+    `ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=${randomString(32)}`,
+    `ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=${randomString(32)}`,
     `VAPID_PRIVATE_KEY=${ecdh.getPrivateKey("base64")}`,
     `VAPID_PUBLIC_KEY=${ecdh.getPublicKey("base64")}`,
     `SMTP_SERVER=${input.smtpServer || ""}`,
@@ -97,7 +100,13 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName + "-sidekiq",
       source: { type: "image", image: input.appServiceImage },
-      env: appEnv.join("\n"),
+      env: appEnv
+        .map((line) =>
+          line.startsWith("LOCAL_DOMAIN=")
+            ? `LOCAL_DOMAIN=$(PROJECT_NAME)-${input.appServiceName}-web.$(EASYPANEL_HOST)`
+            : line
+        )
+        .join("\n"),
       deploy: { command: `bundle exec sidekiq` },
       mounts: [
         {

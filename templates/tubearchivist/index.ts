@@ -16,9 +16,7 @@ export function generate(input: Input): Output {
       },
       env: [
         `ES_URL=http://$(PROJECT_NAME)_${input.appServiceName}-es:9200`,
-        `REDIS_HOST=$(PROJECT_NAME)_${input.appServiceName}-redis`,
-        `HOST_UID=1000`,
-        `HOST_GID=1000`,
+        `REDIS_CON=redis://$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
         `TA_HOST=https://$(PRIMARY_DOMAIN)`,
         `TA_USERNAME=${input.username}`,
         `TA_PASSWORD=${input.password}`,

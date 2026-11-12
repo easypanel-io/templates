@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2026-06-12
     description: First release
+  - date: 2026-11-06
+    description: Version bumped to v3.5.0
 links:
   - label: Website
     url: https://grimmory.org
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/grimmory-tools/grimmory:v3.2.0
+      default: ghcr.io/grimmory-tools/grimmory:v3.5.0
 benefits:
   - title: Multi-Format Library
     description:

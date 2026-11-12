@@ -12,10 +12,11 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: ["HOMEPAGE_ALLOWED_HOSTS=$(PRIMARY_DOMAIN)"].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 3000,
         },
       ],
       mounts: [

@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -12,7 +12,10 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [`APP_BASE_URL=https://$(PRIMARY_DOMAIN)`].join("\n"),
+      env: [
+        `APP_BASE_URL=https://$(PRIMARY_DOMAIN)`,
+        `AUTH_SECRET=${randomString(48)}`,
+      ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

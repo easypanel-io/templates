@@ -13,6 +13,8 @@ instructions: |
 changeLog:
   - date: 2026-03-11
     description: First Release
+  - date: 2026-11-09
+    description: Version bumped to v5.16.0
 links:
   - label: Website
     url: https://tyk.io/
@@ -39,7 +41,7 @@ schema:
     gatewayImage:
       type: string
       title: Gateway Image
-      default: docker.tyk.io/tyk-gateway/tyk-gateway:v5.11.0
+      default: docker.tyk.io/tyk-gateway/tyk-gateway:v5.16.0
     redisImage:
       type: string
       title: Redis Image

@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "hermes gateway run",
+        command: "exec /opt/hermes/docker/entrypoint-dispatch.sh gateway run",
       },
       env: [
         `HERMES_DASHBOARD=1`,
@@ -26,7 +26,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 6432,
+          port: 9119,
         },
       ],
       ports: [

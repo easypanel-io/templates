@@ -17,6 +17,8 @@ instructions:
 changeLog:
   - date: 2026-07-01
     description: first release (v2.9.1)
+  - date: 2026-11-09
+    description: Version bumped to v3.4.0
 links:
   - label: Website
     url: https://giuseppe99barchetta.github.io/SuggestArr/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ciuse99/suggestarr:v2.9.1
+      default: ciuse99/suggestarr:v3.4.0
 benefits:
   - title: Automatic Media Suggestions
     description:

@@ -17,6 +17,8 @@ changeLog:
     description: Version bumped to 0.2282.1
   - date: 2026-02-21
     description: Version bumped to 0.2503.0
+  - date: 2026-11-10
+    description: Version bumped to 3.197.0
 links:
   - label: Documentation
     url: https://docs.lightdash.com/
@@ -33,6 +35,7 @@ schema:
     - appServiceName
     - appServiceImage
     - browserlessImage
+    - minioImage
   properties:
     appServiceName:
       type: string
@@ -41,11 +44,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: lightdash/lightdash:0.2503.0
+      default: lightdash/lightdash:3.197.0
     browserlessImage:
       type: string
       title: Browserless Image
       default: browserless/chrome
+    minioImage:
+      type: string
+      title: MinIO Image
+      default: coollabsio/minio:RELEASE.2025-10-15T17-29-55Z
 benefits:
   - title: Data Exploration Made Simple
     description:

@@ -36,6 +36,8 @@ changeLog:
       Fixed logo to the correct Borg UI mascot, disabled Redis fallback
       attempts, added first-login/FUSE instructions, and made the local
       mount path configurable
+  - date: 2026-11-06
+    description: Version bumped to 2.4.7
 links:
   - label: GitHub Repo
     url: https://github.com/karanhudia/borg-ui
@@ -59,7 +61,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ainullcode/borg-ui:2.2.6
+      default: ainullcode/borg-ui:2.4.7
     timezone:
       type: string
       title: Timezone

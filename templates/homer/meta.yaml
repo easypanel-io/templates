@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v25.11.1
   - date: 2026-05-01
     description: Version bumped to v26.4.2
+  - date: 2026-11-06
+    description: Version bumped to v26.08.3
 links:
   - label: Github
     url: https://github.com/bastienwirtz/homer
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: b4bz/homer:v26.4.2
+      default: b4bz/homer:v26.08.3
 benefits:
   - title: Convenience
     description:
