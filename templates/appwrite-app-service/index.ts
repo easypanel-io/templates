@@ -361,6 +361,9 @@ exec sleep 2147483647
         type: "image",
         image: "clickhouse/clickhouse-server:26.4.3-alpine",
       },
+      deploy: {
+        zeroDowntime: false,
+      },
       env: [
         "CLICKHOUSE_DB=appwrite",
         "CLICKHOUSE_USER=appwrite",
@@ -415,6 +418,7 @@ exec sleep 2147483647
       deploy: {
         command:
           "docker-entrypoint.sh postgres -c max_connections=500 -c tcp_keepalives_idle=60 -c tcp_keepalives_interval=30 -c tcp_keepalives_count=5",
+        zeroDowntime: false,
       },
       mounts: [
         {
