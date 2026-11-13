@@ -1,0 +1,57 @@
+name: Baizhi Work (MonkeyAI)
+description: >-
+  百智办公是一款面向团队的开源 AI
+  办公工作台。用自然语言完成办公、编程与设计任务， 制作
+  PPT、文档、表格、代码和视觉作品；支持团队资源共享、权限管理、使用审计及私有化部署。
+instructions: |-
+  本模板使用官方 v26111301 发行包列出的固定版本镜像，部署管理后台、后端、数据库迁移、PostgreSQL 和 RustFS。
+
+  部署后打开分配的 HTTPS 域名，点击“管理后台”。管理员邮箱为创建模板时填写的邮箱；初始随机密码位于 Easypanel 的 Compose 环境变量 MONKEYAI_INITIAL_ADMIN_PASSWORD，请妥善保存并在首次登录后修改。初始管理员仅在数据库为空时创建，首次启动成功后可从环境变量中移除初始邮箱和密码。
+
+  HTTPS 由 Easypanel 提供，容器内 TLS 和 ACME 已关闭。添加自定义域名时，将 MONKEYAI_PUBLIC_URL 同步改为实际 HTTPS 根地址并重新部署。不要公开数据库、后端或 RustFS 控制台端口。
+
+  首次启动会初始化数据卷权限，等待数据库就绪并执行迁移。数据、对象存储、许可证文件及远程执行身份均保存在命名卷中；升级前备份全部持久卷，三个应用镜像应保持同一版本，不要删除卷来处理启动问题。
+
+  从官网下载客户端并连接此服务器，在管理后台配置团队模型与资源。模型调用可能产生外部服务费用，相关内容会发送给所配置的模型或工具。授权与可用席位以官方策略及管理后台提示为准。
+
+  官网标示轻量起步配置为 1 核 CPU、1 GB 内存；实际资源按团队规模和负载调整。独立预览域名等进阶功能请按官方部署文档另行配置。
+changeLog:
+  - date: 2026-11-13
+    description: 首次发布，基于官方 v26111301 发行包适配 Easypanel。
+links:
+  - label: 官网
+    url: https://work.baizhi.cloud/
+  - label: 文档
+    url: https://work.docs.baizhi.cloud/
+  - label: GitHub
+    url: https://github.com/chaitin/monkeycode
+  - label: 部署与运维
+    url: https://github.com/chaitin/monkeycode/blob/main/monkeyai/README.md
+contributors:
+  - name: nghiemphucminh7215-ops
+    url: https://github.com/nghiemphucminh7215-ops
+tags:
+  - ai
+  - productivity
+  - collaboration
+  - office
+schema:
+  type: object
+  required:
+    - serviceName
+    - appVersion
+    - adminEmail
+  properties:
+    serviceName:
+      type: string
+      title: 服务名称
+      default: monkeyai
+    appVersion:
+      type: string
+      title: 应用版本
+      default: v26111301
+    adminEmail:
+      type: string
+      title: 初始管理员邮箱
+      format: email
+      default: admin@baizhi.cloud
