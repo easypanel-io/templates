@@ -1,0 +1,101 @@
+name: Appwrite (App Service)
+description:
+  Appwrite is an open-source backend platform for building web, mobile and AI
+  apps. It bundles authentication, databases, file storage, serverless
+  functions, static and SSR site hosting, realtime subscriptions and messaging
+  behind REST, GraphQL and Realtime APIs, with SDKs for most languages. This
+  template runs every Appwrite component as its own App Service, so each part
+  can be inspected, scaled and restarted on its own.
+instructions:
+  The first start pulls several images and sets up the database, so it can take
+  a few minutes. Open the app domain and create the first account, which becomes
+  the console owner. The appwrite service is a proxy in front of the console,
+  API and realtime services, so a custom domain only needs to be added there.
+  Functions and Sites run containers through the Docker socket. Each function or
+  site gets an address under the functions or sites subdomain of the app domain,
+  and that address must also be added as a domain on the appwrite service before
+  it can be opened from outside.
+changeLog:
+  - date: 2026-11-13
+    description: First release
+links:
+  - label: Website
+    url: https://appwrite.io
+  - label: Documentation
+    url: https://appwrite.io/docs
+  - label: Github
+    url: https://github.com/appwrite/appwrite
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: appwrite
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: appwrite/appwrite:2.7.2
+benefits:
+  - title: Complete Backend In One Place
+    description:
+      Authentication, databases, storage, functions, sites and messaging come
+      from a single self-hosted platform, so there is no need to stitch together
+      separate services for each part of an app.
+  - title: Full Data Ownership
+    description:
+      All users, documents, files and logs stay on your own server, which helps
+      with privacy requirements and avoids vendor lock-in.
+  - title: Faster Development
+    description:
+      Ready-made APIs, SDKs and a web console let teams ship features without
+      writing and maintaining backend boilerplate.
+  - title: Per-Component Control
+    description:
+      Each Appwrite component runs as a separate App Service, so logs, resources
+      and restarts can be managed individually from Easypanel.
+features:
+  - title: Authentication
+    description:
+      Email and password, magic links, phone, anonymous sessions and many OAuth2
+      providers, with teams, roles and fine-grained permissions.
+  - title: Databases
+    description:
+      Structured collections with attributes, indexes, relationships, queries
+      and permission rules, backed by PostgreSQL.
+  - title: Storage
+    description:
+      Buckets for file uploads with permissions, size limits, compression,
+      encryption, antivirus hooks and on-the-fly image previews.
+  - title: Functions
+    description:
+      Serverless functions in many runtimes, deployed from the console, CLI or
+      Git, triggered by HTTP, events or schedules, each with its own address.
+  - title: Sites
+    description:
+      Host static and server-rendered web apps built with popular frameworks,
+      with build logs, previews and an address per site.
+  - title: Realtime
+    description:
+      Subscribe to changes in databases, storage, accounts and functions over
+      WebSockets to keep apps in sync.
+  - title: Messaging
+    description:
+      Send email, SMS and push notifications to users and topics through
+      configurable providers.
+  - title: Console And Usage
+    description:
+      A web console to manage projects, API keys, platforms and webhooks, with
+      usage charts for requests, executions, storage and bandwidth.
+tags:
+  - Backend
+  - Developer Tools
+  - Databases
+  - Authentication
+  - Serverless
