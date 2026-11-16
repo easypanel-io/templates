@@ -8,8 +8,8 @@ description:
 instructions:
   Open the app right after deployment and create the administrator account. The
   first account becomes the SuperAdmin. Keep the ERD_ENCRYPTION_KEY value; it
-  decrypts saved database passwords and AI keys. The image supports amd64
-  (x86_64) servers only.
+  decrypts saved database passwords and AI keys. CORS_ORIGINS must list the
+  address you open the app from. The image supports amd64 (x86_64) servers only.
 changeLog:
   - date: 2026-11-15
     description: first release
