@@ -13,10 +13,16 @@ description:
   such as single sign-on and directory syncing.
 instructions:
   To access the administration interface, please go to /admin on your
-  installation url. The admin token is in your "Environment" tab.
+  installation url. The admin token is in your "Environment" tab. Live sync for
+  desktop, browser and mobile clients uses WebSockets on the same domain, so no
+  extra port or proxy is needed. Sign ups are open so you can create your
+  account; set SIGNUPS_ALLOWED to false in the "Environment" tab afterwards to
+  stop others from registering.
 changeLog:
   - date: 2022-11-19
     description: first release
+  - date: 2026-11-17
+    description: Version bumped to 1.37.5
 links:
   - label: Documentation
     url: https://github.com/dani-garcia/vaultwarden/wiki
@@ -40,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vaultwarden/server:latest
+      default: vaultwarden/server:1.37.5
 benefits:
   - title: Self-hosted deployment
     description:
