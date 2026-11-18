@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: `FLOOD_OPTION_RUNDIR=/data`,
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
