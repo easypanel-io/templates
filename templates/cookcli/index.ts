@@ -12,6 +12,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
+      env: ["COOK_CORS_ORIGIN=https://$(PRIMARY_DOMAIN)"].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

@@ -31,23 +31,25 @@ export function generate(input: Input): Output {
         `DB_DATABASE=$(PROJECT_NAME)`,
         `DB_USERNAME=mariadb`,
         `DB_PASSWORD=${databasePassword}`,
+        `SESSION_DOMAIN=$(PRIMARY_DOMAIN)`,
+        `SANCTUM_STATEFUL_DOMAINS=$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 8080,
         },
       ],
       mounts: [
         {
           type: "volume",
-          name: "data",
-          mountPath: "/data",
+          name: "storage",
+          mountPath: "/var/www/html/storage",
         },
         {
           type: "volume",
-          name: "conf",
-          mountPath: "/conf",
+          name: "modules",
+          mountPath: "/var/www/html/Modules",
         },
       ],
     },

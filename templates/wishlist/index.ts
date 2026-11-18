@@ -21,6 +21,7 @@ export function generate(input: Input): Output {
       env: [
         `ORIGIN=https://$(PRIMARY_DOMAIN)`,
         `TOKEN_TIME=${input.tokenTime || "72"}`,
+        `PORT=3000`,
       ].join("\n"),
       mounts: [
         {

@@ -15,6 +15,8 @@ instructions:
 changeLog:
   - date: 2026-02-09
     description: Initial release
+  - date: 2026-11-09
+    description: Version bumped to v2.6.1
 links:
   - label: Website
     url: https://metaflow.org/
@@ -40,7 +42,7 @@ schema:
     metadataServiceImage:
       type: string
       title: Metadata Service Image
-      default: netflixoss/metaflow_metadata_service:v2.5.0
+      default: netflixoss/metaflow_metadata_service:v2.6.1
       description: Docker image for the Metaflow metadata service
 benefits:
   - title: Human-Centric ML Framework

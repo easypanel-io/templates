@@ -14,7 +14,8 @@ changeLog:
     description: Template Release
   - date: 2026-05-08
     description: Version bumped to 0.9.0
-
+  - date: 2026-11-10
+    description: Version bumped to 0.9.4
 links:
   - label: Website
     url: https://logchimp.codecarrot.net
@@ -41,15 +42,15 @@ schema:
     apiImage:
       type: string
       title: API Image
-      default: ghcr.io/logchimp/logchimp/api:0.9.0
+      default: ghcr.io/logchimp/logchimp/api:0.9.4
     themeImage:
       type: string
       title: Theme Image
-      default: ghcr.io/logchimp/logchimp/theme:0.9.0
+      default: ghcr.io/logchimp/logchimp/theme:0.9.4
     valkeyImage:
       type: string
       title: Valkey Image
-      default: valkey/valkey:9.0.4-alpine3.23
+      default: valkey/valkey:9.1.3-alpine3.24
 
 benefits:
   - title: Unified Feedback & Changelog

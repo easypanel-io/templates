@@ -9,7 +9,7 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
-  const jwtSecretKey = randomString(32);
+  const cryptKey = randomString(32);
 
   services.push({
     type: "app",
@@ -26,35 +26,11 @@ export function generate(input: Input): Output {
         },
       ],
       env: [
-        `POSTGRES_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db/$(PROJECT_NAME)?sslmode=disable`,
-        `JWT_SIGNING_KEY=${jwtSecretKey}`,
-        `BOOKING_UI_BACKEND=$(PROJECT_NAME)_${input.appServiceName}-booking:3001`,
-        `ADMIN_UI_BACKEND=$(PROJECT_NAME)_${input.appServiceName}-admin:3000`,
-        `PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
-        `FRONTEND_URL=https://$(PRIMARY_DOMAIN)`,
+        `POSTGRES_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?sslmode=disable`,
+        `CRYPT_KEY=${cryptKey}`,
+        `PUBLIC_SCHEME=https`,
+        `PUBLIC_PORT=443`,
       ].join("\n"),
-    },
-  });
-
-  services.push({
-    type: "app",
-    data: {
-      serviceName: `${input.appServiceName}-booking`,
-      source: {
-        type: "image",
-        image: input.bookingServiceImage,
-      },
-    },
-  });
-
-  services.push({
-    type: "app",
-    data: {
-      serviceName: `${input.appServiceName}-admin`,
-      source: {
-        type: "image",
-        image: input.adminServiceImage,
-      },
     },
   });
 

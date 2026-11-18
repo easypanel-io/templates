@@ -1,8 +1,9 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const adminPassword = randomPassword();
 
   const masterHost = `$(PROJECT_NAME)_${input.appServiceName}-master`;
   const filerHost = `$(PROJECT_NAME)_${input.appServiceName}-filer`;
@@ -131,8 +132,9 @@ export function generate(input: Input): Output {
         image: input.appServiceImage,
       },
       deploy: {
-        command: `/entrypoint.sh admin -master=${masterHost}:9333`,
+        command: `/entrypoint.sh admin -master=${masterHost}:9333 -port=23646 -adminPassword="$ADMIN_PASSWORD"`,
       },
+      env: `ADMIN_PASSWORD=${adminPassword}`,
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

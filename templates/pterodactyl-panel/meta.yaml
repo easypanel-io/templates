@@ -22,6 +22,8 @@ changeLog:
     description: Version bumped to v1.12.1
   - date: 2026-05-05
     description: Version bumped to v1.12.2
+  - date: 2026-11-09
+    description: Version bumped to v1.15.2
 links:
   - label: Website
     url: https://pterodactyl.io/
@@ -51,7 +53,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/pterodactyl/panel:v1.12.2
+      default: ghcr.io/pterodactyl/panel:v1.15.2
     redisServiceName:
       type: string
       title: Redis Service Name

@@ -16,6 +16,8 @@ instructions: null
 changeLog:
   - date: 2025-11-18
     description: Template Release
+  - date: 2026-11-09
+    description: Version bumped to 6.145.0
 
 links:
   - label: Website
@@ -44,7 +46,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/timothepoznanski/poznote:1.9.0
+      default: ghcr.io/timothepoznanski/poznote:6.145.0
     username:
       type: string
       title: Username
