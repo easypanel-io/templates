@@ -1,0 +1,129 @@
+name: Jitsi Meet
+description:
+  Jitsi Meet is an open-source video conferencing platform that runs entirely in
+  the browser, with no account or download needed to join a meeting. It offers
+  HD audio and video, screen sharing, chat, raised hands, breakout rooms,
+  lobbies, meeting passwords and end-to-end encryption, and has mobile apps for
+  Android and iOS. This template runs the Jitsi web interface, the Prosody XMPP
+  server, the Jicofo conference focus and the Jitsi Videobridge as separate App
+  Services.
+instructions:
+  Open the app domain and enter a meeting name to start a meeting. Audio and
+  video travel over the UDP port of the videobridge, so that port must be
+  allowed for UDP in the server firewall and in any firewall of the cloud
+  provider, otherwise users can join but will not see or hear each other. By
+  default anyone who can open the domain can start a meeting. When recording is
+  enabled, a Jibri service records meetings to MP4 files in its recordings
+  volume. Jibri runs a full browser and needs about 2 GB of memory, and each
+  Jibri records one meeting at a time. When a custom domain is added, update
+  PUBLIC_URL on every Jitsi service to the new address.
+changeLog:
+  - date: 2026-11-17
+    description: First release
+links:
+  - label: Website
+    url: https://jitsi.org/jitsi-meet/
+  - label: Documentation
+    url: https://jitsi.github.io/handbook/
+  - label: Github
+    url: https://github.com/jitsi/docker-jitsi-meet
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - webServiceImage
+    - prosodyServiceImage
+    - jicofoServiceImage
+    - jvbServiceImage
+    - jvbPort
+    - enableRecording
+    - jibriServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: jitsi
+    webServiceImage:
+      type: string
+      title: Web Service Image
+      default: ghcr.io/jitsi/web:stable-11509
+    prosodyServiceImage:
+      type: string
+      title: Prosody Service Image
+      default: ghcr.io/jitsi/prosody:stable-11509
+    jicofoServiceImage:
+      type: string
+      title: Jicofo Service Image
+      default: ghcr.io/jitsi/jicofo:stable-11509
+    jvbServiceImage:
+      type: string
+      title: Videobridge Service Image
+      default: ghcr.io/jitsi/jvb:stable-11509
+    jvbPort:
+      type: integer
+      title: Videobridge UDP Port on Host
+      default: 10000
+    enableRecording:
+      type: boolean
+      title: Enable Recording With Jibri
+      default: false
+    jibriServiceImage:
+      type: string
+      title: Jibri Service Image
+      default: ghcr.io/jitsi/jibri:stable-11509
+benefits:
+  - title: No Accounts Or Downloads
+    description:
+      Participants join from any modern browser with a link, and mobile users
+      can use the Jitsi Meet apps.
+  - title: Full Data Ownership
+    description:
+      Meetings run on your own server, so audio, video and chat never pass
+      through a third-party video service.
+  - title: Free And Unlimited
+    description:
+      No per-user licences, meeting time limits or participant caps beyond what
+      your server can handle.
+  - title: Per-Component Control
+    description:
+      The web, XMPP, focus and videobridge components run as separate App
+      Services with their own logs and restarts.
+features:
+  - title: HD Audio And Video
+    description:
+      Multi-party video calls with simulcast and adaptive quality routed through
+      the Jitsi Videobridge.
+  - title: Screen Sharing
+    description:
+      Share a screen, window or browser tab with every participant in the
+      meeting.
+  - title: Chat, Reactions And Raised Hands
+    description:
+      Text chat, private messages, emoji reactions, polls and a raised hand
+      queue in every meeting.
+  - title: Lobby And Meeting Passwords
+    description:
+      Moderators can protect meetings with a password or a lobby where guests
+      wait to be admitted.
+  - title: Breakout Rooms
+    description:
+      Split a meeting into smaller rooms and bring everyone back together.
+  - title: End-To-End Encryption
+    description:
+      Optional end-to-end encryption for meetings in supported browsers.
+  - title: Recording And Live Streaming
+    description:
+      Optional Jibri service that records meetings to MP4 files or streams them
+      to YouTube and other RTMP services.
+  - title: Mobile Apps
+    description:
+      Join meetings from the Jitsi Meet apps for Android and iOS by pointing
+      them at your server.
+tags:
+  - Video Conferencing
+  - Communication
+  - Collaboration
+  - Meetings
