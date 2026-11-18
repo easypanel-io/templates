@@ -32,7 +32,10 @@ bench set-redis-socketio-host redis://:${redisPassword}@$(PROJECT_NAME)_${input.
 # Remove redis, watch from Procfile
 sed -i '/redis/d' ./Procfile
 sed -i '/watch/d' ./Procfile
+# Bind the web server to all interfaces so the proxy can reach it
+sed -i 's/bench serve /bench serve --host 0.0.0.0 /' ./Procfile
 
+bench get-app payments
 bench get-app lms
 
 bench new-site lms.localhost \
@@ -41,6 +44,7 @@ bench new-site lms.localhost \
 --admin-password admin \
 --no-mariadb-socket
 
+bench --site lms.localhost install-app payments
 bench --site lms.localhost install-app lms
 bench --site lms.localhost set-config developer_mode 1
 bench --site lms.localhost clear-cache

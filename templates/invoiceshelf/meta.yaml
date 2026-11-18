@@ -14,6 +14,8 @@ changeLog:
     description: Version Changed to 2.0.0
   - date: 2025-02-25
     description: Version bumped to 2.1.1
+  - date: 2026-11-10
+    description: Version bumped to 2.4.7
 links:
   - label: Website
     url: https://invoiceshelf.com/
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: invoiceshelf/invoiceshelf:2.3.3
+      default: invoiceshelf/invoiceshelf:2.4.7
     dbServiceImage:
       type: string
       title: Database Service Image

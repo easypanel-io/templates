@@ -38,11 +38,14 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      deploy: {
+        command: `until php -r "exit(@fsockopen(getenv('DB_HOST'), (int) getenv('DB_PORT')) ? 0 : 1);"; do echo "waiting for database"; sleep 2; done; exec /docker-entrypoint.sh`,
+      },
       mounts: [
         {
-          type: "volume",
-          name: "data",
-          mountPath: "/var/www/html",
+          type: "file",
+          content: "[client]\nskip-ssl\n",
+          mountPath: "/etc/my.cnf.d/client-ssl.cnf",
         },
       ],
     },

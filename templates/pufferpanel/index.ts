@@ -41,6 +41,11 @@ export function generate(input: Input): Output {
           name: "config",
           mountPath: "/etc/pufferpanel",
         },
+        {
+          type: "bind",
+          hostPath: "/var/run/docker.sock",
+          mountPath: "/var/run/docker.sock",
+        },
       ],
     },
   });

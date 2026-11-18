@@ -11,6 +11,8 @@ changeLog:
     description: Updated to v2.2.0
   - date: 2025-08-25
     description: First release
+  - date: 2026-11-09
+    description: Version bumped to 2.3.4
 links:
   - label: Website
     url: https://komo.do
@@ -37,11 +39,11 @@ schema:
     appServiceImage:
       type: string
       title: Komodo Core Image
-      default: ghcr.io/moghtech/komodo-core:2.2.0
+      default: ghcr.io/moghtech/komodo-core:2.3.4
     peripheryImage:
       type: string
       title: Komodo Periphery Image
-      default: ghcr.io/moghtech/komodo-periphery:2.2.0
+      default: ghcr.io/moghtech/komodo-periphery:2.3.4
     adminUsername:
       type: string
       title: Admin Username

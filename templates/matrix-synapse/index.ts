@@ -15,7 +15,7 @@ export function generate(input: Input): Output {
       type: "app",
       data: {
         serviceName: input.databaseServiceName,
-        source: { type: "image", image: "postgres" },
+        source: { type: "image", image: "postgres:17" },
         env: [
           `POSTGRES_USER=synapse`,
           `POSTGRES_PASSWORD=${databasePassword}`,

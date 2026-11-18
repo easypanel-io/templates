@@ -23,6 +23,8 @@ changeLog:
     description: first release
   - date: 2025-12-25
     description: Version bumped to 8.4
+  - date: 2026-11-06
+    description: Version bumped to 2026.03
 links:
   - label: Website
     url: https://filerun.com/
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: filerun/filerun:8.4
+      default: filerun/filerun:2026.03
     databaseServiceName:
       type: string
       title: Database Service Name

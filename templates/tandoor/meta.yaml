@@ -19,6 +19,8 @@ changeLog:
     description: Version bumped to 1.5.31
   - date: 2025-07-25
     description: Version bumped to 1.5.35
+  - date: 2026-11-10
+    description: Version bumped to 2.7.2
 links:
   - label: Website
     url: https://tandoor.dev
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vabene1111/recipes:1.5.35
+      default: vabene1111/recipes:2.7.2
     databaseServiceName:
       type: string
       title: Database Service Name

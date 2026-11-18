@@ -1,4 +1,5 @@
-import { Output, randomString, Services } from "~templates-utils";
+import { randomBytes } from "crypto";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -9,8 +10,8 @@ export function generate(input: Input): Output {
     data: {
       serviceName: input.appServiceName,
       env: [
-        `IMGPROXY_KEY=${randomString(18)}`,
-        `IMGPROXY_SALT=${randomString(18)}`,
+        `IMGPROXY_KEY=${randomBytes(32).toString("hex")}`,
+        `IMGPROXY_SALT=${randomBytes(32).toString("hex")}`,
       ].join("\n"),
       source: {
         type: "image",

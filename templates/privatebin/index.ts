@@ -41,8 +41,8 @@ defaultformatter = "plaintext"
 ; size limit per paste or comment in bytes, defaults to 2 Mebibytes
 sizelimit = 4194304
 
-; template to include, default is "bootstrap" (tpl/bootstrap.php)
-template = "bootstrap"
+; template to include, default is "bootstrap5" (tpl/bootstrap5.php)
+template = "bootstrap5"
 
 ; (optional) notice to display
 ; notice = "Note: This is a test service: Data may be deleted anytime. Kittens will die if you abuse this service."
@@ -177,7 +177,7 @@ dir = PATH "data"
         {
           host: "$(EASYPANEL_DOMAIN)",
           path: "/",
-          port: 80,
+          port: 8080,
         },
       ],
       mounts: [

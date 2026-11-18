@@ -22,6 +22,8 @@ changeLog:
     description: first release
   - date: 2025-12-25
     description: Version bumped to 1.15.6
+  - date: 2026-11-06
+    description: Version bumped to 1.17.1
 links:
   - label: Website
     url: https://www.humhub.com
@@ -46,7 +48,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mriedmann/humhub:1.15.6
+      default: mriedmann/humhub:1.17.1
     databaseServiceName:
       type: string
       title: Database Service Name

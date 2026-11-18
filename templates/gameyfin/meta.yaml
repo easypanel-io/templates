@@ -26,6 +26,8 @@ changeLog:
     description:
       Website/docs links, setup instructions, plugindata volume, /library mount,
       Base64 APP_KEY, APP_URL, configurable PUID/PGID (1000), image pin 2.4.0
+  - date: 2026-11-06
+    description: Version bumped to 2.6.0
 
 links:
   - label: Website
@@ -56,7 +58,7 @@ schema:
     appServiceImage:
       type: string
       title: Gameyfin Image
-      default: ghcr.io/gameyfin/gameyfin:2.4.0
+      default: ghcr.io/gameyfin/gameyfin:2.6.0
     puid:
       type: string
       title: PUID

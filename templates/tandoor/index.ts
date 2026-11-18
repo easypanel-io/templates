@@ -17,6 +17,8 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `SECRET_KEY=${secret}`,
+        `ALLOWED_HOSTS=$(PRIMARY_DOMAIN)`,
+        `CSRF_TRUSTED_ORIGINS=https://$(PRIMARY_DOMAIN)`,
         `DB_ENGINE=django.db.backends.postgresql`,
         `POSTGRES_HOST=$(PROJECT_NAME)_${input.databaseServiceName}`,
         `POSTGRES_PORT=5432`,
@@ -34,7 +36,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 8080,
+          port: 80,
         },
       ],
       mounts: [
