@@ -1,0 +1,89 @@
+name: Puppetflow
+description:
+  Puppetflow is a self-hosted browser automation platform for writing, running,
+  scheduling, and monitoring JavaScript workflows. It provides a visual flow
+  builder, live browser streaming, human validation steps, reusable snippets,
+  run history, artifacts, a REST API, and a remote MCP server.
+instructions: |
+  Open the main app domain to create your first account and browser workflow.
+  The template also creates a separate public domain for live browser streaming.
+  Keep both domains enabled. The first startup runs database migrations and may
+  take a few minutes while Pinokio downloads the browser archive.
+
+  Application data, execution artifacts, uploads, and browser downloads are
+  stored in persistent volumes. Back up the `storage`, `execution`, `uploads`,
+  and `browsers` volumes before moving the installation.
+changeLog:
+  - date: 2026-09-27
+    description: Initial template release using Puppetflow v2026.9.39.
+links:
+  - label: Website
+    url: https://puppetflow.com
+  - label: Documentation
+    url: https://docs.puppetflow.com
+  - label: GitHub
+    url: https://github.com/puppetflow/puppetflow
+contributors:
+  - name: Puppetflow
+    url: https://github.com/puppetflow
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - streamServiceImage
+    - pinokioServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: puppetflow
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/puppetflow/puppetflow:v2026.9.39
+    streamServiceImage:
+      type: string
+      title: Browser Stream Service Image
+      default: ghcr.io/puppetflow/puppetflow-stream-server:v2026.9.39
+    pinokioServiceImage:
+      type: string
+      title: Browser Gateway Service Image
+      default: ghcr.io/puppetflow/pinokio:v2026.9.6
+benefits:
+  - title: Keep Automation Under Your Control
+    description:
+      Run browser workflows and keep credentials, sessions, run state, and
+      artifacts on infrastructure you manage.
+  - title: Build and Debug Visually
+    description:
+      Create code or node-based flows, watch browser sessions live, inspect
+      logs, and replay recordings when a run needs investigation.
+  - title: Automate Safely
+    description:
+      Pause a workflow for human validation before a sensitive step, then
+      continue the same browser session after approval.
+features:
+  - title: Browser Workflows
+    description:
+      Write JavaScript workflows or assemble node-based flows for repeatable
+      browser automation.
+  - title: Live Browser Streaming
+    description:
+      Watch active browser sessions and take control when manual interaction is
+      required.
+  - title: Scheduling and Integrations
+    description:
+      Run flows manually, on schedules, through the REST API, from n8n, or from
+      AI clients through the remote MCP server.
+  - title: Run History and Artifacts
+    description:
+      Review logs, outputs, screenshots, downloads, and browser recordings for
+      every execution.
+tags:
+  - Automation
+  - Browser
+  - Workflows
+  - JavaScript
+  - MCP
+  - Self-hosted
