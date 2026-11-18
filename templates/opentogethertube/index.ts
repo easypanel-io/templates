@@ -13,7 +13,7 @@ export function generate(input: Input): Output {
   const redisServiceName = `${input.appServiceName}-redis`;
   const databasePassword = randomPassword();
   const redisPassword = randomPassword();
-  const sessionSecret = randomString(64);
+  const sessionSecret = randomString(80);
   const apiKey = randomString(48);
 
   const productionToml = `docker = true
