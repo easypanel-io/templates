@@ -4,10 +4,10 @@ description:
   Share files, collaborate on code, and manage users without a complex setup — a
   Nextcloud alternative built for people who want something simple and fast.
 instructions: >-
-  On first visit, create the initial admin account through the setup wizard.
-  From there, invite other users, set storage limits per folder, and manage
-  everything from the Explorer, Services, Users, and Logs tabs. All data is
-  stored on the "data" volume, so it persists across restarts and upgrades.
+  Log in as "admin" with the password from the config.yml file in the Mounts
+  tab. That file holds all FolderHost settings, so change the admin password or
+  storage limits there and redeploy. Users, files and the recovery bin are kept
+  on the "data" volume.
 changeLog:
   - date: 2026-09-02
     description: first release
@@ -32,7 +32,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mertjsx/folderhost:v26.8.0
+      default: mertjsx/folderhost:v26.11.0
 benefits:
   - title: Single Binary
     description:
