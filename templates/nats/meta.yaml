@@ -12,6 +12,8 @@ changeLog:
     description: Template Release
   - date: 2026-05-08
     description: Version bumped to 2.14.0
+  - date: 2026-11-09
+    description: Version bumped to 2.15.2
 
 links:
   - label: Documentation
@@ -39,7 +41,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: nats:2.14.0
+      default: nats:2.15.2
     appServicePort:
       type: string
       title: App Service Port

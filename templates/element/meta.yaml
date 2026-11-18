@@ -30,13 +30,15 @@ changeLog:
     description: Version bumped to v1.12.10
   - date: 2026-04-29
     description: Version bumped to v1.12.17
+  - date: 2026-11-06
+    description: Version bumped to v1.12.33
 links:
   - label: Website
     url: https://element.io/
   - label: Documentation
-    url: https://github.com/vector-im/element-web/wiki
+    url: https://github.com/element-hq/element-web/wiki
   - label: Github
-    url: https://github.com/vector-im/element-web
+    url: https://github.com/element-hq/element-web
 contributors:
   - name: Supernova3339
     url: https://github.com/Supernova3339
@@ -55,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: vectorim/element-web:v1.12.17
+      default: vectorim/element-web:v1.12.33
 benefits:
   - title: Secure Communications
     description:

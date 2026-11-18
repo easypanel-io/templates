@@ -50,6 +50,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-redis`,
       password: redisPassword,
+      command: `redis-server --requirepass ${redisPassword} --maxmemory-policy noeviction`,
     },
   });
 

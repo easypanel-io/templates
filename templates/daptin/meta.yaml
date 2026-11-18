@@ -8,6 +8,8 @@ instructions: null
 changeLog:
   - date: 2025-03-28
     description: Initial template release
+  - date: 2026-11-06
+    description: Version bumped to v0.13.45
 links:
   - label: Documentation
     url: https://daptin.github.io/docs/
@@ -31,7 +33,7 @@ schema:
     appServiceImage:
       type: string
       title: Daptin Image
-      default: daptin/daptin:v0.11.3
+      default: daptin/daptin:v0.13.45
 benefits:
   - title: Rapid API Development
     description: Create production-ready JSON APIs in minutes.

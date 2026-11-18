@@ -4,7 +4,11 @@ description:
   you schedule, publish, and analyze content across multiple social networks. It
   provides a unified dashboard for managing posts, tracking engagement, and
   optimizing your social media strategy.
-instructions: You can modify the settings by adding the env variables provided.
+instructions:
+  The first start takes a few minutes while Temporal creates its database schema
+  and Elasticsearch starts; until then Postiz may return 502 errors. At least 4
+  GB of RAM is recommended for the whole stack. You can modify the settings by
+  adding the env variables provided.
 changeLog:
   - date: 2025-04-28
     description: Initial release
@@ -16,6 +20,11 @@ changeLog:
     description: Version bumped to v2.19.0
   - date: 2026-05-05
     description: Version bumped to v2.21.7
+  - date: 2026-11-09
+    description:
+      Version bumped to v2.25.3. Added Temporal (auto-setup, PostgreSQL 16 and
+      Elasticsearch) required since Postiz v2.12, and fixed volumes to persist
+      /uploads and /config.
 links:
   - label: Website
     url: https://postiz.com
@@ -35,6 +44,8 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - temporalServiceImage
+    - temporalElasticsearchServiceImage
   properties:
     appServiceName:
       type: string
@@ -43,7 +54,15 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/gitroomhq/postiz-app:v2.21.7
+      default: ghcr.io/gitroomhq/postiz-app:v2.25.3
+    temporalServiceImage:
+      type: string
+      title: Temporal Service Image
+      default: temporalio/auto-setup:1.28.4
+    temporalElasticsearchServiceImage:
+      type: string
+      title: Temporal Elasticsearch Service Image
+      default: elasticsearch:7.17.28
 benefits:
   - title: Centralized Management
     description: Manage all your social media accounts from a single dashboard

@@ -10,6 +10,10 @@ description:
 instructions: null
 
 changeLog:
+  - date: 2026-09-16
+    description:
+      Set ALLOWED_ORIGINS to the deployed domain - DataLine defaults this to
+      localhost only, which blocks the UI with CORS errors on any real domain
   - date: 2025-03-24
     description: Initial template release
   - date: 2025-07-15

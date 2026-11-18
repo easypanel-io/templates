@@ -19,7 +19,7 @@ export function generate(input: Input): Output {
     data: {
       serviceName: `${input.appServiceName}-web`,
       env: [
-        `APP_URL=http://localhost:3000`,
+        `APP_URL=https://$(PRIMARY_DOMAIN)`,
         `APP_SECRET=${appSecret}`,
         `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
         `REDIS_URL=redis://:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379/0`,

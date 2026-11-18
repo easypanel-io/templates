@@ -10,12 +10,16 @@ instructions:
   After deployment, open DailyTxT from your app domain and create your first
   account (if allow registration is enabled).
 changeLog:
+  - date: 2026-09-17
+    description: Updated to v2.6.3; replaced outdated annotated screenshot
   - date: 2026-05-19
     description: Updated to v2.6.1
   - date: 2025-10-03
     description: First Release
   - date: 2026-03-25
     description: Added logo asset and fixed secret env wiring in template
+  - date: 2026-11-06
+    description: Version bumped to 2.6.4
 links:
   - label: Demo
     url: https://dailytxt.phitux.de
@@ -41,7 +45,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: phitux/dailytxt:2.6.1
+      default: phitux/dailytxt:2.6.4
     allowRegistration:
       type: boolean
       title: Allow Registration

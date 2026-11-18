@@ -22,6 +22,8 @@ changeLog:
     description: Update to v.2025.7.7
   - date: 2026-02-24
     description: Version bumped to v2026.2.0
+  - date: 2026-11-10
+    description: Version bumped to v2026.10.1
 links:
   - label: Documentation
     url: https://docs.wizarr.dev
@@ -45,7 +47,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/wizarrrr/wizarr:v2026.2.0
+      default: ghcr.io/wizarrrr/wizarr:v2026.10.1
     timezone:
       type: string
       title: Timezone

@@ -16,6 +16,8 @@ changeLog:
     description: Version bumped to v2.6.1
   - date: 2026-04-29
     description: Version bumped to v2.9.1
+  - date: 2026-11-06
+    description: Version bumped to v2.21.1
 links:
   - label: Website
     url: https://documenso.com/
@@ -48,7 +50,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: documenso/documenso:v2.9.1
+      default: documenso/documenso:v2.21.1
     smtpHost:
       type: string
       title: SMTP Host

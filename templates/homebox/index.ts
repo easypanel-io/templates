@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -22,6 +22,7 @@ export function generate(input: Input): Output {
         `HBOX_LOG_LEVEL=info`,
         `HBOX_LOG_FORMAT=text`,
         `HBOX_WEB_MAX_UPLOAD_SIZE=10`,
+        `HBOX_AUTH_API_KEY_PEPPER=${randomString(48)}`,
       ].join("\n"),
       mounts: [
         {

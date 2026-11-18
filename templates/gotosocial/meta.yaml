@@ -32,13 +32,15 @@ changeLog:
     description: Version bumped to 0.20.3
   - date: 2026-04-29
     description: Version bumped to 0.21.2
+  - date: 2026-11-06
+    description: Version bumped to 0.22.3
 links:
   - label: Website
     url: https://gotosocial.org/
   - label: Documentation
     url: https://docs.gotosocial.org/en/latest/
-  - label: Github
-    url: https://github.com/superseriousbusiness/gotosocial/
+  - label: Codeberg
+    url: https://codeberg.org/superseriousbusiness/gotosocial
 contributors:
   - name: Michael Kinder
     url: https://github.com/ressonix
@@ -57,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: superseriousbusiness/gotosocial:0.21.2
+      default: superseriousbusiness/gotosocial:0.22.3
 benefits:
   - title: Privacy-Focused
     description:

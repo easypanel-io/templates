@@ -23,6 +23,8 @@ changeLog:
     description:
       Website/docs links, setup instructions, kan-migrate service parity,
       BETTER_AUTH_SECRET via randomBytes, note stateless web (no app volumes)
+  - date: 2026-11-09
+    description: Version bumped to 0.7.0
 
 links:
   - label: Website
@@ -52,14 +54,14 @@ schema:
     appServiceImage:
       type: string
       title: Web Image
-      default: ghcr.io/kanbn/kan:0.5.6
+      default: ghcr.io/kanbn/kan:0.7.0
       description:
         Kan web application (Next.js). Pin to the same release family as
         migrate.
     migrateServiceImage:
       type: string
       title: Migrate Image
-      default: ghcr.io/kanbn/kan-migrate:0.5.6
+      default: ghcr.io/kanbn/kan-migrate:0.7.0
       description:
         One-shot Drizzle migrations; must match your web image version. See
         https://github.com/kanbn/kan/pkgs/container/kan-migrate for tags.

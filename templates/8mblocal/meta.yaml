@@ -14,6 +14,8 @@ changeLog:
     description: Initial Template Release
   - date: 2026-04-29
     description: Version bumped to v137
+  - date: 2026-09-14
+    description: Version bumped to v142
 links:
   - label: Website
     url: https://8mb.campuscal.tech/
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: jms1717/8mblocal:v137
+      default: jms1717/8mblocal:v142
 benefits:
   - title: File Processing
     description:

@@ -28,13 +28,15 @@ changeLog:
     description: Version bumped to 0.12.1
   - date: 2026-05-01
     description: Version bumped to 1.2.2
+  - date: 2026-11-06
+    description: Version bumped to 1.2.4
 links:
   - label: Website
     url: https://imagor.net/
   - label: Documentation
     url: https://docs.studio.imagor.net/
-  - label: Docker Hub
-    url: https://hub.docker.com/r/shumc/imagor-studio
+  - label: GitHub Repo
+    url: https://github.com/cshum/imagor-studio
 
 contributors:
   - name: Ahson Shaikh
@@ -53,7 +55,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: shumc/imagor-studio:1.2.2
+      default: shumc/imagor-studio:1.2.4
 
 benefits:
   - title: Non-Destructive Editing

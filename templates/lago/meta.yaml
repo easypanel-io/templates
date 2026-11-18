@@ -17,7 +17,8 @@ instructions:
 changeLog:
   - date: "2025-07-04"
     description: "Initial release"
-
+  - date: 2026-11-10
+    description: Version bumped to v1.57.0
 links:
   - label: "Github"
     url: "https://github.com/getlago/lago"
@@ -46,11 +47,11 @@ schema:
     appServiceImage:
       type: string
       title: "Backend Service Image"
-      default: "getlago/api:v1.31.0"
+      default: "getlago/api:v1.57.0"
     frontendServiceImage:
       type: string
       title: "Frontend Service Image"
-      default: "getlago/front:v1.31.0"
+      default: "getlago/front:v1.57.0"
     pdfServiceImage:
       type: string
       title: "PDF Service Image"

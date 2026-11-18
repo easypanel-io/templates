@@ -79,25 +79,25 @@ export function generate(input: Input): Output {
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
     `DIRECT_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
 
-    `NEXTAUTH_SECRET=${randomSecret}`,
-    `NEXTAUTH_URL=https://$(PRIMARY_DOMAIN)`,
+    `AUTH_SECRET=${randomSecret}`,
+    `NEXT_PUBLIC_BASE_URL=https://$(PROJECT_NAME)-${input.appServiceName}-web.$(EASYPANEL_HOST)`,
 
     // Gmail
     `GOOGLE_CLIENT_ID=${input.googleClientId || ""}`,
     `GOOGLE_CLIENT_SECRET=${input.googleClientSecret || ""}`,
-    `GOOGLE_ENCRYPT_SECRET=${randomString(32)}`,
-    `GOOGLE_ENCRYPT_SALT=${randomString(16)}`,
+    `EMAIL_ENCRYPT_SECRET=${randomString(32)}`,
+    `EMAIL_ENCRYPT_SALT=${randomString(16)}`,
 
     `GOOGLE_PUBSUB_TOPIC_NAME="projects/abc/topics/xyz"`,
     `GOOGLE_PUBSUB_VERIFICATION_TOKEN=`,
 
     ...getLlmEnvVars(),
 
-    `INTERNAL_API_KEY=`,
-    `API_KEY_SALT=`,
+    `INTERNAL_API_KEY=${randomString(32)}`,
+    `API_KEY_SALT=${randomString(32)}`,
 
-    `UPSTASH_REDIS_URL="http://$(PROJECT_NAME)_${input.appServiceName}-redis-http:80"`,
-    `UPSTASH_REDIS_TOKEN=${redisToken}`,
+    `REDIS_HTTP_URL=http://$(PROJECT_NAME)_${input.appServiceName}-redis-http:80`,
+    `REDIS_HTTP_TOKEN=${redisToken}`,
     `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
     `QSTASH_TOKEN=`,
     `QSTASH_CURRENT_SIGNING_KEY=`,
@@ -210,13 +210,7 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
-      env: [
-        ...common_envs,
-        `DATABASE_URL=postgresql://postgres:${databasePassword}@${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
-        `DIRECT_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)?schema=public`,
-        `UPSTASH_REDIS_URL=http://$(PROJECT_NAME)_${input.appServiceName}-redis-http:80`,
-        `UPSTASH_REDIS_TOKEN=${redisToken}`,
-      ].join("\n"),
+      env: [...common_envs].join("\n"),
     },
   });
 
