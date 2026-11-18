@@ -5,8 +5,10 @@ description:
   and searches web pages, documents, and private intranets, and can archive
   pages for offline browsing, all under your own control.
 instructions: |
-  After deploy, open the app and sign in with the default admin credentials
-  (admin / admin), then change the password immediately from the admin panel.
+  After deploy, open the app and sign in as admin with the ADMIN_PASSWORD from
+  the Environment tab. The password is only set when the admin user is first
+  created, so change it from the admin panel afterwards rather than in the
+  environment.
   Add crawl policies and starting URLs under Admin > Crawl policies to begin
   indexing.
 changeLog:

@@ -5,6 +5,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   const databasePassword = randomPassword();
+  const adminPassword = randomPassword();
   const dbServiceName = `${input.appServiceName}-db`;
 
   services.push({
@@ -21,7 +22,14 @@ export function generate(input: Input): Output {
           port: 80,
         },
       ],
+      deploy: {
+        command: [
+          `sed -i -e 's#^/venv/bin/sosse-admin default_admin$#DJANGO_SUPERUSER_PASSWORD="$ADMIN_PASSWORD" /venv/bin/sosse-admin createsuperuser --noinput --username admin --email admin@example.com || true#' -e '/Default credentials/d' /run.sh`,
+          "exec bash /pg_run.sh",
+        ].join(" && "),
+      },
       env: [
+        `ADMIN_PASSWORD=${adminPassword}`,
         `SOSSE_DB_NAME=$(PROJECT_NAME)`,
         `SOSSE_DB_USER=postgres`,
         `SOSSE_DB_PASS=${databasePassword}`,
