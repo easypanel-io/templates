@@ -5,11 +5,11 @@ description:
   alternative to running a full cloud storage suite when you just need to browse
   and share a directory.
 instructions: >-
-  Files placed in the "data" volume are served at your domain. By default,
-  uploads and deletes are disabled and browsing is read-only; enable them below
-  if you want visitors to be able to modify files. Set a username and password
-  to require login for write operations, or leave both blank to keep the
-  instance fully open.
+  Files placed in the "data" volume are served at your domain. Anyone can browse
+  and download them, while uploads and deletes (when enabled below) need a
+  login. The login is in DUFS_AUTH in the Environment tab, in the form
+  user:password@/:rw, and the password is generated if you leave it blank. Turn
+  on "Require Login To View" to make the whole instance private.
 changeLog:
   - date: 2026-09-02
     description: first release
@@ -54,10 +54,15 @@ schema:
     authUsername:
       type: string
       title: Auth Username
-      description: Optional. Leave blank along with password to disable auth.
+      default: admin
     authPassword:
       type: string
       title: Auth Password
+      description: Leave blank to generate one.
+    requireLoginToView:
+      type: boolean
+      title: Require Login To View
+      default: false
 benefits:
   - title: Single Static Binary
     description: A ~6MB Rust binary with no runtime dependencies.

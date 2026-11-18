@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -13,9 +13,10 @@ export function generate(input: Input): Output {
     `DUFS_ALLOW_SEARCH=${input.allowSearch ? "true" : "false"}`,
     `DUFS_ALLOW_ARCHIVE=${input.allowArchive ? "true" : "false"}`,
   ];
-  if (input.authUsername && input.authPassword) {
-    env.push(`DUFS_AUTH=${input.authUsername}:${input.authPassword}@/:rw`);
-  }
+  const username = input.authUsername?.trim() || "admin";
+  const password = input.authPassword?.trim() || randomPassword();
+  const publicRead = input.requireLoginToView ? "" : "|@/";
+  env.push(`DUFS_AUTH=${username}:${password}@/:rw${publicRead}`);
 
   services.push({
     type: "app",
