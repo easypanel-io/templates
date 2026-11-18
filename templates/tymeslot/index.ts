@@ -6,6 +6,7 @@ export function generate(input: Input): Output {
   const services: Services = [];
 
   const mailhogServiceName = `${input.appServiceName}-mailhog`;
+  const mailhogPassword = randomPassword();
   const postgresPassword = randomPassword();
   const secretKeyBase = randomBytes(64).toString("base64");
   const dataEncryptionKey = randomBytes(48).toString("base64");
@@ -73,6 +74,7 @@ export function generate(input: Input): Output {
         type: "image",
         image: "mailhog/mailhog:v1.0.1",
       },
+      basicAuth: [{ username: "mailhog", password: mailhogPassword }],
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",

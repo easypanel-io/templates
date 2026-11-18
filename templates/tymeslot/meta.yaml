@@ -5,7 +5,8 @@ description:
   pages, availability rules, and calendar integrations.
 instructions: >-
   Sign up on your domain — Tymeslot requires email verification, so by default a
-  bundled MailHog inbox catches that email; open its domain to grab the
+  bundled MailHog inbox catches that email; open its domain and log in with the
+  user and password from the MailHog service's Basic Auth tab to grab the
   verification link. Set the SMTP fields below to send real email instead.
   PostgreSQL runs bundled inside the app container, so no separate database
   service is needed.
