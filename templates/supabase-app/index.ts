@@ -642,8 +642,10 @@ services:
 sources:
   docker_host:
     type: docker_logs
+    include_containers:
+      - "\${PROJECT_NAME}_${name}-"
     exclude_containers:
-      - supabase-vector
+      - "\${PROJECT_NAME}_${name}-vector"
 
 transforms:
   project_logs:
@@ -653,7 +655,8 @@ transforms:
     source: |-
       .project = "default"
       .event_message = del(.message)
-      .appname = del(.container_name)
+      .appname = replace(string!(.label."com.docker.swarm.service.name"), "\${PROJECT_NAME}_", "")
+      del(.container_name)
       del(.container_created_at)
       del(.container_id)
       del(.source_type)
@@ -1286,7 +1289,10 @@ end
     type: "app",
     data: {
       serviceName: `${name}-vector`,
-      env: [`LOGFLARE_PUBLIC_ACCESS_TOKEN=${logflarePublicToken}`].join("\n"),
+      env: [
+        `PROJECT_NAME=$(PROJECT_NAME)`,
+        `LOGFLARE_PUBLIC_ACCESS_TOKEN=${logflarePublicToken}`,
+      ].join("\n"),
       source: { type: "image", image: "timberio/vector:0.53.0-alpine" },
       deploy: {
         command: "/usr/local/bin/vector --config /etc/vector/vector.yml",
