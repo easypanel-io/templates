@@ -331,6 +331,10 @@ proxy:
     },
   });
 
+  const firewallState = `/etc/easypanel/projects/$(PROJECT_NAME)/${name}-sandbox-firewall/volumes/state`;
+  const waitForFirewall = (command: string) =>
+    `until [ -f /firewall/$(cat /etc/hostname) ]; do echo "Waiting for sandbox firewall"; sleep 1; done; exec ${command}`;
+
   const firewallScript = `set -e
 apk add --no-cache -q docker-cli iptables util-linux > /dev/null
 service_ips() {
@@ -344,7 +348,7 @@ protect() {
     pid=$(docker inspect -f '{{.State.Pid}}' "$container")
     ns="nsenter --net=/hostproc/$pid/ns/net"
     state="$container $ips"
-    if [ "$(cat "/tmp/$container" 2>/dev/null)" = "$state" ] && $ns iptables -C SANDBOX_EGRESS -j REJECT 2> /dev/null; then
+    if [ "$(cat "/state/$container" 2>/dev/null)" = "$state" ] && $ns iptables -C SANDBOX_EGRESS -j REJECT 2> /dev/null; then
       continue
     fi
     $ns iptables -N SANDBOX_EGRESS 2> /dev/null || $ns iptables -F SANDBOX_EGRESS
@@ -355,13 +359,19 @@ protect() {
       $ns iptables -A SANDBOX_EGRESS -d "$ip" -p tcp --dport 3128 -j RETURN
     done
     $ns iptables -A SANDBOX_EGRESS -j REJECT
-    echo "$state" > "/tmp/$container"
+    echo "$state" > "/state/$container"
     echo "egress limited to proxy for $1 ($container)"
   done
 }
 while true; do
   protect "$SANDBOX_SERVICE" "$SANDBOX_PROXY_SERVICE" || true
   protect "$AGENT_SANDBOX_SERVICE" "$AGENT_PROXY_SERVICE" || true
+  running=$(docker ps -q)
+  for f in /state/*; do
+    if [ -f "$f" ] && ! echo "$running" | grep -qx "\${f#/state/}"; then
+      rm -f "$f"
+    fi
+  done
   sleep 5
 done
 `;
@@ -399,6 +409,11 @@ done
           type: "file",
           content: firewallScript,
           mountPath: "/scripts/firewall.sh",
+        },
+        {
+          type: "volume",
+          name: "state",
+          mountPath: "/state",
         },
       ],
     },
@@ -594,7 +609,9 @@ done
         "NO_PROXY=localhost,127.0.0.1",
       ].join("\n"),
       deploy: {
-        command: "shellctl serve --listen 0.0.0.0:5004 --require-auth-token",
+        command: waitForFirewall(
+          "shellctl serve --listen 0.0.0.0:5004 --require-auth-token"
+        ),
         zeroDowntime: false,
       },
       mounts: [
@@ -607,6 +624,11 @@ done
           type: "volume",
           name: "workspace",
           mountPath: "/workspace",
+        },
+        {
+          type: "bind",
+          hostPath: firewallState,
+          mountPath: "/firewall",
         },
       ],
     },
@@ -647,6 +669,9 @@ done
         `HTTPS_PROXY=${ssrfProxyUrl}`,
         "SANDBOX_PORT=8194",
       ].join("\n"),
+      deploy: {
+        command: waitForFirewall("/entrypoint.sh"),
+      },
       mounts: [
         {
           type: "file",
@@ -657,6 +682,11 @@ done
           type: "volume",
           name: "dependencies",
           mountPath: "/dependencies",
+        },
+        {
+          type: "bind",
+          hostPath: firewallState,
+          mountPath: "/firewall",
         },
       ],
     },
