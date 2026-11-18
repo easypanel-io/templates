@@ -6,10 +6,9 @@ description:
   dashboard, letting you scan observables and files and pivot across the
   results.
 instructions: |
-  A dedicated migrate service runs database migrations once on first deploy.
-  Wait for it to finish (its container exits when done) before using the app;
-  if the Daphne, Celery Beat, or Celery Worker services fail to start because
-  the schema isn't ready yet, redeploy them once after migrate completes.
+  The uwsgi service runs the database migrations when it starts, and the
+  Daphne and Celery services wait until they are done, so the first start can
+  take a few minutes.
 
   To log in: open the uwsgi service's Terminal tab in Easypanel and run
   `python manage.py createsuperuser`, following the prompts for username,

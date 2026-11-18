@@ -18,7 +18,6 @@ export function generate(input: Input): Output {
   const daphneServiceName = `${input.appServiceName}-daphne`;
   const celeryBeatServiceName = `${input.appServiceName}-celery-beat`;
   const celeryWorkerServiceName = `${input.appServiceName}-celery-worker`;
-  const migrateServiceName = `${input.appServiceName}-migrate`;
   const dbServiceName = `${input.appServiceName}-db`;
   const cacheServiceName = `${input.appServiceName}-cache`;
 
@@ -27,6 +26,10 @@ export function generate(input: Input): Output {
     name: `$(PROJECT_NAME)`,
   };
   const cacheHost = `$(PROJECT_NAME)-${cacheServiceName}`;
+  const uwsgiVolume = (name: string) =>
+    `/etc/easypanel/projects/$(PROJECT_NAME)/${uwsgiServiceName}/volumes/${name}`;
+  const afterMigrations = (command: string) =>
+    `until python manage.py migrate --check > /dev/null 2>&1; do echo "Waiting for migrations"; sleep 5; done; exec ${command}`;
 
   const sharedEnv = [
     `DJANGO_SECRET=${djangoSecret}`,
@@ -51,6 +54,7 @@ export function generate(input: Input): Output {
   ].join("\n");
 
   const uwsgiStartScript = `#!/bin/sh
+set -e
 until cd /opt/deploy/intel_owl
 do
     echo "Waiting for server volume..."
@@ -201,29 +205,6 @@ location /404.json {
   services.push({
     type: "app",
     data: {
-      serviceName: migrateServiceName,
-      source: {
-        type: "image",
-        image: input.appServiceImage,
-      },
-      deploy: {
-        command:
-          'sh -c "python manage.py createcachetable && python manage.py migrate --fake-initial && python manage.py collectstatic --noinput"',
-      },
-      env: sharedEnv,
-      mounts: [
-        {
-          type: "volume",
-          name: "static-content",
-          mountPath: "/opt/deploy/intel_owl/static",
-        },
-      ],
-    },
-  });
-
-  services.push({
-    type: "app",
-    data: {
       serviceName: uwsgiServiceName,
       source: {
         type: "image",
@@ -267,13 +248,13 @@ location /404.json {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "./docker/entrypoints/daphne.sh",
+        command: afterMigrations("./docker/entrypoints/daphne.sh"),
       },
       env: sharedEnv,
       mounts: [
         {
-          type: "volume",
-          name: "shared-files",
+          type: "bind",
+          hostPath: uwsgiVolume("shared-files"),
           mountPath: "/opt/deploy/files_required",
         },
       ],
@@ -289,13 +270,13 @@ location /404.json {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "./docker/entrypoints/celery_beat.sh",
+        command: afterMigrations("./docker/entrypoints/celery_beat.sh"),
       },
       env: sharedEnv,
       mounts: [
         {
-          type: "volume",
-          name: "shared-files",
+          type: "bind",
+          hostPath: uwsgiVolume("shared-files"),
           mountPath: "/opt/deploy/files_required",
         },
       ],
@@ -311,13 +292,13 @@ location /404.json {
         image: input.appServiceImage,
       },
       deploy: {
-        command: "./docker/entrypoints/celery_default.sh",
+        command: afterMigrations("./docker/entrypoints/celery_default.sh"),
       },
       env: sharedEnv,
       mounts: [
         {
-          type: "volume",
-          name: "shared-files",
+          type: "bind",
+          hostPath: uwsgiVolume("shared-files"),
           mountPath: "/opt/deploy/files_required",
         },
       ],
@@ -360,8 +341,8 @@ location /404.json {
           mountPath: "/etc/nginx/errors.conf",
         },
         {
-          type: "volume",
-          name: "static-content",
+          type: "bind",
+          hostPath: uwsgiVolume("static-content"),
           mountPath: "/var/www/static",
         },
       ],
