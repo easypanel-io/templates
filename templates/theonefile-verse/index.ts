@@ -47,8 +47,6 @@ export function generate(input: Input): Output {
     data: {
       serviceName: redisServiceName,
       password: redisPassword,
-      command:
-        "redis-server --maxmemory 200mb --maxmemory-policy volatile-lru --appendonly yes",
     },
   });
 
