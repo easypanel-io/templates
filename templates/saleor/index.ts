@@ -18,11 +18,10 @@ export function generate(input: Input): Output {
   const apiServiceName = `${input.appServiceName}-api`;
   const workerServiceName = `${input.appServiceName}-worker`;
   const dashboardServiceName = `${input.appServiceName}-dashboard`;
-  const migrateServiceName = `${input.appServiceName}-migrate`;
 
   const databaseUrl = `postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${dbServiceName}:5432/$(PROJECT_NAME)`;
-  const cacheUrl = `redis://default:${cachePassword}@$(PROJECT_NAME)-${cacheServiceName}:6379/0`;
-  const celeryBrokerUrl = `redis://default:${cachePassword}@$(PROJECT_NAME)-${cacheServiceName}:6379/1`;
+  const cacheUrl = `redis://default:${cachePassword}@$(PROJECT_NAME)_${cacheServiceName}:6379/0`;
+  const celeryBrokerUrl = `redis://default:${cachePassword}@$(PROJECT_NAME)_${cacheServiceName}:6379/1`;
 
   const sharedEnv = [
     `DATABASE_URL=${databaseUrl}`,
@@ -39,25 +38,14 @@ export function generate(input: Input): Output {
   services.push({
     type: "app",
     data: {
-      serviceName: migrateServiceName,
+      serviceName: apiServiceName,
       source: {
         type: "image",
         image: input.apiServiceImage,
       },
       deploy: {
-        command: "python3 manage.py migrate",
-      },
-      env: `DATABASE_URL=${databaseUrl}`,
-    },
-  });
-
-  services.push({
-    type: "app",
-    data: {
-      serviceName: apiServiceName,
-      source: {
-        type: "image",
-        image: input.apiServiceImage,
+        command:
+          "python3 manage.py migrate && exec uvicorn saleor.asgi:application --host=0.0.0.0 --port=8000 --workers=2 --lifespan=auto --ws=none --no-server-header --no-access-log --timeout-keep-alive=35 --timeout-graceful-shutdown=30",
       },
       env: sharedEnv,
       domains: [
@@ -86,13 +74,13 @@ export function generate(input: Input): Output {
       },
       deploy: {
         command:
-          "celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B",
+          'until python3 manage.py migrate --check > /dev/null 2>&1; do echo "Waiting for migrations"; sleep 5; done; exec celery -A saleor --app=saleor.celeryconf:app worker --loglevel=info -B',
       },
       env: sharedEnv,
       mounts: [
         {
-          type: "volume",
-          name: "media",
+          type: "bind",
+          hostPath: `/etc/easypanel/projects/$(PROJECT_NAME)/${apiServiceName}/volumes/media`,
           mountPath: "/app/media",
         },
       ],

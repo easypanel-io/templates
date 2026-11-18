@@ -10,8 +10,8 @@ instructions: |
   endpoint to confirm it responds, then open the Dashboard domain and create
   the first superuser account by running
   `python3 manage.py createsuperuser` in the API service's console (under the
-  service's Terminal tab in Easypanel). Database migrations run automatically
-  on deploy via a dedicated migrate service.
+  service's Terminal tab in Easypanel). The API service runs the database
+  migrations each time it starts, and the worker waits until they are done.
 changeLog:
   - date: 2026-10-20
     description: First Release
