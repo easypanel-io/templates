@@ -5,7 +5,7 @@ description:
   HRM, ATS (Applicant Tracking), chat, documents, and team collaboration in a
   single platform. Built on a robust framework for business applications, Huly
   offers real-time document collaboration with Y.js CRDT, full-text search via
-  Elasticsearch, S3-compatible file storage with MinIO, and event-driven
+  Elasticsearch, S3-compatible file storage with SeaweedFS, and event-driven
   architecture with Redpanda (Kafka). Requires 2+ vCPUs and 8+ GB RAM minimum.
 instructions:
   After deployment, access Huly via the main service domain. On first visit,
@@ -34,7 +34,6 @@ schema:
     - appServiceName
     - appServiceImage
     - cockroachImage
-    - minioImage
   if:
     properties:
       enableLove:
@@ -60,10 +59,6 @@ schema:
       type: string
       title: CockroachDB Image
       default: "cockroachdb/cockroach:v24.2.10"
-    minioImage:
-      type: string
-      title: MinIO Image
-      default: "minio/minio:RELEASE.2025-09-07T16-13-09Z"
     enableLove:
       type: boolean
       title: Enable Love (Audio & Video Calls)
@@ -100,7 +95,7 @@ benefits:
   - title: Enterprise-Ready Architecture
     description:
       CockroachDB for distributed SQL, Redpanda for event streaming,
-      Elasticsearch for full-text search, MinIO for object storage.
+      Elasticsearch for full-text search, SeaweedFS for object storage.
 features:
   - title: Issue Tracking
     description:

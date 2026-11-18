@@ -3,13 +3,12 @@ description:
   Paaster is a secure and user-friendly pastebin application with end-to-end
   encryption. Content is encrypted locally in your browser—the key never reaches
   the server. Features paste history, delete-after-view, file drag & drop, and
-  API. Supports MinIO, S3, R2, and other S3-compatible storage.
+  API. Supports S3, R2, and other S3-compatible storage.
 instructions: |
   After deployment, access Paaster via the main domain. Pastes are E2EE by
-  default. Uses built-in MinIO for storage. If using MinIO, create the bucket
-  "paaster" in the MinIO console (minio-$(domain):9001) or via mc CLI:
-  mc mb minio_instance/paaster; mc anonymous set none minio_instance/paaster.
-  For external S3/R2, set S3 env vars on the Paaster service.
+  default. Files are stored in a bundled SeaweedFS service, and the "paaster"
+  bucket is created automatically. For external S3/R2, set the S3 env vars on
+  the Paaster service.
 changeLog:
   - date: 2026-03-09
     description: First Release
