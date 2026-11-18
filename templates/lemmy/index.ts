@@ -10,8 +10,11 @@ export function generate(input: Input): Output {
   const uiServiceName = `${input.appServiceName}-ui`;
   const pictrsServiceName = `${input.appServiceName}-pictrs`;
 
-  const databaseUrl = `postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${dbServiceName}:5432/$(PROJECT_NAME)`;
+  const databaseUrl = `postgres://postgres:${dbPassword}@$(PROJECT_NAME)_${dbServiceName}:5432/lemmy`;
   const publicDomain = input.publicDomain || "$(EASYPANEL_DOMAIN)";
+  const lemmyHost =
+    input.publicDomain ||
+    `$(PROJECT_NAME)-${input.appServiceName}.$(EASYPANEL_HOST)`;
   const backendHost = `$(PROJECT_NAME)_${backendServiceName}`;
   const uiHost = `$(PROJECT_NAME)_${uiServiceName}`;
   const pictrsHost = `$(PROJECT_NAME)_${pictrsServiceName}`;
@@ -84,7 +87,7 @@ server {
         {
           type: "file",
           content: `{
-  hostname: ${publicDomain}
+  hostname: ${lemmyHost}
   database: {
     uri: "${databaseUrl}"
   }
@@ -109,7 +112,7 @@ server {
       },
       env: [
         `LEMMY_UI_LEMMY_INTERNAL_HOST=${backendHost}:8536`,
-        `LEMMY_UI_LEMMY_EXTERNAL_HOST=${publicDomain}`,
+        `LEMMY_UI_LEMMY_EXTERNAL_HOST=${lemmyHost}`,
         `LEMMY_UI_HTTPS=true`,
       ].join("\n"),
     },
@@ -138,7 +141,7 @@ server {
     type: "postgres",
     data: {
       serviceName: dbServiceName,
-      databaseName: "$(PROJECT_NAME)",
+      databaseName: "lemmy",
       password: dbPassword,
     },
   });
