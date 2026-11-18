@@ -13,9 +13,10 @@ instructions:
   running `anonaddy gen-dkim` inside the app container via Easypanel's terminal.
   By default outgoing mail (verification links, forwarded aliases, invites) is
   routed to a bundled Mailpit inbox so you can see what the app sends without
-  any mail setup - open the Mailpit domain to view it. For real delivery to real
-  inboxes, set an SMTP Relay Host below (and disable Mailpit if you no longer
-  need it).
+  any mail setup - open the Mailpit domain to view it and log in with the
+  MP_UI_AUTH user and password from the Mailpit service's Environment tab. For
+  real delivery to real inboxes, set an SMTP Relay Host below (and disable
+  Mailpit if you no longer need it).
 changeLog:
   - date: "2026-10-14"
     description: Initial release

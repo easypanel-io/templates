@@ -20,6 +20,7 @@ export function generate(input: Input): Output {
 
   const mailpitServiceName = `${input.appServiceName}-mailpit`;
   const mailpitEnabled = input.enableMailpit !== false;
+  const mailpitPassword = randomPassword();
 
   const relayEnv: string[] = [];
   if (input.smtpRelayHost) {
@@ -63,7 +64,7 @@ export function generate(input: Input): Output {
         `POSTFIX_SMTP_TLS=false`,
         ...relayEnv,
         `DB_HOST=$(PROJECT_NAME)_${dbServiceName}`,
-        `DB_DATABASE=$(PROJECT_NAME)`,
+        `DB_DATABASE=anonaddy`,
         `DB_USERNAME=addy`,
         `DB_PASSWORD=${dbPassword}`,
         `REDIS_HOST=$(PROJECT_NAME)-${redisServiceName}`,
@@ -96,7 +97,7 @@ export function generate(input: Input): Output {
     type: "mysql",
     data: {
       serviceName: dbServiceName,
-      databaseName: "$(PROJECT_NAME)",
+      databaseName: "anonaddy",
       user: "addy",
       password: dbPassword,
     },
@@ -119,6 +120,7 @@ export function generate(input: Input): Output {
           type: "image",
           image: "axllent/mailpit:v1.20",
         },
+        env: `MP_UI_AUTH=mailpit:${mailpitPassword}`,
         domains: [
           {
             host: "$(EASYPANEL_DOMAIN)",
