@@ -35,6 +35,8 @@ if [ ! -f sites/.site-installed ]; then
   bench new-site frontend --force --mariadb-user-host-login-scope='%' --db-root-username=root --db-root-password="$DB_ROOT_PASSWORD" --admin-password="$ADMIN_PASSWORD" --install-app erpnext --install-app hrms --set-default
   bench --site frontend enable-scheduler
   touch sites/.site-installed
+else
+  bench --site frontend migrate
 fi
 exec entrypoint.sh start.sh
 `;
