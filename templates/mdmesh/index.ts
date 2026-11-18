@@ -10,15 +10,15 @@ export function generate(input: Input): Output {
     ? input.adminPassword.trim()
     : randomPassword();
 
-  const md5Upper = crypto
-    .createHash("md5")
-    .update(adminPassword)
-    .digest("hex")
-    .toUpperCase();
-  const adminPasswordHash = crypto
-    .createHash("sha1")
-    .update(`${md5Upper}5YdSYHyg2U`)
-    .digest("hex");
+  const hashPassword = (password: string) => {
+    const md5 = crypto.createHash("md5").update(password).digest("hex");
+    return crypto
+      .createHash("sha1")
+      .update(`${md5.toUpperCase()}5YdSYHyg2U`)
+      .digest("hex");
+  };
+  const adminPasswordHash = hashPassword(adminPassword);
+  const stockAdminHash = hashPassword("admin");
 
   const caddyFile = `{
 	servers {
@@ -84,13 +84,18 @@ export PGPASSWORD="$DB_PASSWORD"
 PSQL="psql -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME -v ON_ERROR_STOP=1 -qAt"
 
 echo "Waiting for the server's first-boot migrations to create the schema..."
-until $PSQL -c "SELECT 1 FROM information_schema.tables WHERE table_name='settings'" 2>/dev/null | grep -q 1; do
+until $PSQL -c "SELECT 1 FROM users WHERE login='admin'" 2>/dev/null | grep -q 1 && $PSQL -c "SELECT 1 FROM information_schema.tables WHERE table_name='settings'" 2>/dev/null | grep -q 1; do
   sleep 5
 done
 
-echo "Applying defaults..."
-$PSQL --single-transaction -f /seed/init.sql
-echo "Done."
+if $PSQL -c "SELECT 1 FROM users WHERE login='admin' AND lower(password)='${stockAdminHash}'" | grep -q 1; then
+  echo "Setting the admin password and defaults..."
+  $PSQL --single-transaction -f /seed/init.sql
+  echo "Done."
+else
+  echo "Admin password was already set, nothing to do."
+fi
+exec tail -f /dev/null
 `;
 
   services.push({
@@ -146,6 +151,7 @@ echo "Done."
         `DB_NAME=mdmesh`,
         `DB_USER=mdmesh`,
         `DB_PASSWORD=${dbPassword}`,
+        `ADMIN_PASSWORD=${adminPassword}`,
       ].join("\n"),
       source: {
         type: "image",

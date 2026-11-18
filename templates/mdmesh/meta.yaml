@@ -8,13 +8,15 @@ description:
 
 instructions:
   Log in at your domain with username admin and the Admin Password set in this
-  template's form (or the auto-generated one, if left blank). Enroll devices by
-  generating an enrollment QR code from the console and scanning it with the
-  MDMesh agent APK on the target Android device (download the agent from the
-  project's GitHub releases). This template does not include the optional
-  auto-update supervisor, since it requires mounting the host Docker socket -
-  update MDMesh by bumping the pinned image versions in this template's settings
-  instead.
+  template's form. If you left it blank, the generated password is
+  ADMIN_PASSWORD in the Environment tab of the init service. It is only applied
+  on the first start, so changing the password later from the console is kept on
+  redeploys. Enroll devices by generating an enrollment QR code from the console
+  and scanning it with the MDMesh agent APK on the target Android device
+  (download the agent from the project's GitHub releases). This template does
+  not include the optional auto-update supervisor, since it requires mounting
+  the host Docker socket - update MDMesh by bumping the pinned image versions in
+  this template's settings instead.
 
 changeLog:
   - date: "2026-10-07"
