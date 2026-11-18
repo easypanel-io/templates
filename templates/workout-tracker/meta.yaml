@@ -5,12 +5,12 @@ description:
   segments and elevation, track statistics and personal records, and keep a
   heatmap of everywhere you've been.
 instructions: >-
-  On first startup, with an empty database, the app automatically creates a
-  default admin account with username "admin" and password "admin" — log in with
-  those and change the password immediately from your profile settings. Upload
-  GPX, TCX, or FIT files from the Workouts page, or connect Strava/other
-  services under your profile settings. New registrations are inactive until an
-  admin approves them, and can be disabled entirely from the admin panel.
+  Log in as admin with the ADMIN_PASSWORD shown in the Environment tab of the
+  init service. The init service swaps the app's default admin password for this
+  one on first start, and leaves it alone once you change it. Upload GPX, TCX,
+  or FIT files from the Workouts page, or connect Strava/other services under
+  your profile settings. New registrations are inactive until an admin approves
+  them, and can be disabled entirely from the admin panel.
 changeLog:
   - date: 2026-08-31
     description: first release
