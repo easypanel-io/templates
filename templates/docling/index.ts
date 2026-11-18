@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -12,11 +12,13 @@ export function generate(input: Input): Output {
         type: "image",
         image: input.appServiceImage,
       },
-      env: [`DOCLING_SERVE_ENABLE_UI=1`].join("\n"),
+      env: [
+        `DOCLING_SERVE_ENABLE_UI=1`,
+        `DOCLING_SERVE_API_KEY=${randomPassword()}`,
+      ].join("\n"),
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          path: "/ui",
           port: 5001,
         },
       ],
