@@ -1,0 +1,95 @@
+name: OpenTodo
+description:
+  OpenTodo is an open-source, self-hosted, local-first task manager. It works
+  offline, syncs every device through one small container with SQLite, and
+  replaces subscription task apps with a server you own.
+instructions:
+  Open the domain of the service. The first visit creates the owner account and
+  asks for the setup token; find it in the service's Environment tab
+  (OPENTODO_SETUP_TOKEN). After that, sign-up is closed and the owner invites
+  people. If you change the domain, set OPENTODO_BASE_URL to the new https
+  address. Your data lives in the "data" volume, mounted at /data.
+changeLog:
+  - date: 2026-10-24
+    description: First Release
+  - date: 2026-10-31
+    description: Update to 0.19.0
+  - date: 2026-11-02
+    description: Update to 0.20.0
+  - date: 2026-11-02
+    description: Update to 0.21.0
+  - date: 2026-11-03
+    description: Update to 0.22.0
+  - date: 2026-11-06
+    description: Update to 0.23.0
+  - date: 2026-11-06
+    description: Update to 0.24.0
+  - date: 2026-11-07
+    description: Update to 1.0.0
+  - date: 2026-11-07
+    description: Update to 1.1.0
+  - date: 2026-11-07
+    description: Update to 1.1.1
+  - date: 2026-11-08
+    description: Update to 1.2.0
+  - date: 2026-11-09
+    description: Update to 1.3.0
+  - date: 2026-11-10
+    description: Update to 1.4.0
+  - date: 2026-11-10
+    description: Update to 1.4.1
+  - date: 2026-11-10
+    description: Update to 1.4.2
+links:
+  - label: Website
+    url: https://open-todo.app/
+  - label: Documentation
+    url: https://open-todo.app/docs/self-hosting/
+  - label: Github
+    url: https://github.com/OpenTodoApp/OpenTodo
+contributors:
+  - name: Raffaele Pizzari
+    url: https://github.com/pixari
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: opentodo
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/opentodoapp/opentodo:1.4.2
+benefits:
+  - title: Your Tasks, Your Server
+    description:
+      Every task, project and comment stays in one SQLite file on your own
+      server. There is no telemetry and no third-party network calls.
+  - title: Works Offline
+    description:
+      The web app keeps a local copy on each device, so you can keep working
+      without a connection and changes sync when you are back online.
+  - title: Small and Simple
+    description:
+      One container, one volume and no required configuration. No database
+      server or cache to run next to it.
+features:
+  - title: Sync Across Devices
+    description:
+      Field-level sync merges edits from every device, so two people changing
+      different fields of the same task never overwrite each other.
+  - title: Installable App
+    description:
+      Install OpenTodo as an app on desktop and phone straight from the browser.
+  - title: Open Formats
+    description:
+      Export everything at any time, and connect calendar apps through CalDAV.
+tags:
+  - Productivity
+  - Task Management
+  - To-Do List
+  - Self-Hosted

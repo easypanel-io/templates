@@ -1,0 +1,124 @@
+name: wacrm
+description:
+  wacrm is an open-source, self-hosted CRM built on the official WhatsApp
+  Business API. It gives a team a shared inbox for one WhatsApp number, contacts
+  with tags and custom fields, Kanban sales pipelines linked to conversations,
+  Meta-approved broadcast campaigns, and a no-code automation builder. A
+  bring-your-own-key AI assistant can draft replies or answer from a knowledge
+  base, and a public REST API plus an MCP server let you build on top of it. All
+  data lives in your own Supabase project, so there is no per-seat fee and no
+  vendor lock-in.
+instructions: |
+  Before the app will start, you need a Supabase project (hosted on
+  supabase.com, or self-hosted) with this repo's `supabase/` migrations
+  applied via the Supabase CLI, plus a Meta for Developers app with the
+  WhatsApp Business API enabled. Fill in the Supabase and Meta fields below
+  with those values, then deploy. After the first deploy, open the app,
+  create your account, and connect your WhatsApp number from Settings.
+  Generate `ENCRYPTION_KEY` once and never rotate it casually — rotating it
+  orphans every WhatsApp token encrypted under the previous key, requiring
+  everyone to reconnect.
+changeLog:
+  - date: 2026-10-16
+    description: First Release
+links:
+  - label: Website
+    url: https://wacrm.tech
+  - label: GitHub
+    url: https://github.com/ArnasDon/wacrm
+  - label: Documentation
+    url: https://wacrm.tech/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - supabaseUrl
+    - supabaseAnonKey
+    - supabaseServiceRoleKey
+    - metaAppSecret
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wacrm
+    supabaseUrl:
+      type: string
+      title: Supabase Project URL
+      description:
+        "Project Settings → API → Project URL, e.g. https://xxxx.supabase.co"
+    supabaseAnonKey:
+      type: string
+      title: Supabase Anon Key
+      description: Project Settings → API → anon public key
+    supabaseServiceRoleKey:
+      type: string
+      title: Supabase Service Role Key
+      description:
+        Project Settings → API → service_role key. Bypasses RLS; kept
+        server-side only.
+    metaAppSecret:
+      type: string
+      title: Meta App Secret
+      description: Meta for Developers → App Settings → Basic → App Secret
+    metaAppId:
+      type: string
+      title: Meta App ID (optional)
+      description:
+        Required only to submit WhatsApp message templates with an image header.
+    appLocale:
+      type: string
+      title: UI Language
+      default: en
+      oneOf:
+        - enum:
+            - en
+          title: English
+        - enum:
+            - ko
+          title: Korean
+        - enum:
+            - pt
+          title: Brazilian Portuguese
+        - enum:
+            - es
+          title: Spanish
+benefits:
+  - title: Own your data
+    description:
+      Everything lives in your own Supabase project on your own domain — no SaaS
+      lock-in and no per-seat pricing.
+  - title: Official WhatsApp Business API
+    description:
+      Built on Meta's Cloud API, not an unofficial bridge, so it stays compliant
+      and reliable.
+  - title: Bring-your-own AI
+    description:
+      Paste your own OpenAI or Anthropic key for AI-drafted replies and
+      knowledge-base answers; no shared AI fee.
+features:
+  - title: Shared team inbox
+    description:
+      Multiple agents work one WhatsApp number with per-conversation assignment,
+      status, and notes.
+  - title: Contacts and pipelines
+    description:
+      Contacts with tags and custom fields, CSV import, and Kanban sales
+      pipelines linked to conversations.
+  - title: Broadcasts and automations
+    description:
+      Meta-approved broadcast templates with delivery tracking, and a visual
+      no-code automation builder for triggers, waits, and webhooks.
+  - title: Public API and MCP server
+    description:
+      Scoped, revocable API keys for the public REST API, plus an MCP server to
+      drive the CRM from Claude, Cursor, and other AI assistants.
+tags:
+  - CRM
+  - WhatsApp
+  - Messaging
+  - Customer Support
+  - Self-Hosted
+  - Sales

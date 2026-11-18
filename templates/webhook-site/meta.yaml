@@ -1,0 +1,66 @@
+name: webhook.site
+description:
+  webhook.site gives you a unique, random URL that collects every HTTP request
+  sent to it (headers, body, query string) and displays them instantly, so you
+  can inspect webhooks, HTTP clients, emails and API requests without writing
+  any code. It's a self-hostable version of the popular webhook.site testing
+  tool.
+instructions: >-
+  Open the app and a unique inspection URL is generated automatically on the
+  home page. Send any HTTP request to it and refresh the page to see it
+  captured. This template runs with no queue worker or database volume, so the
+  request list does not auto-update live (refresh to see new requests) and
+  captured requests are not preserved across redeploys or restarts, since the
+  base image tears itself down if given any custom startup command, which rules
+  out persisting its SQLite database safely. Redis is still required even
+  without live updates, since the app's frontend only avoids a hard crash when
+  Redis is configured as the broadcast driver.
+changeLog:
+  - date: "2026-10-12"
+    description: Initial release
+links:
+  - label: Website
+    url: https://webhook.site
+  - label: Documentation
+    url: https://docs.webhook.site/open-source.html
+  - label: GitHub
+    url: https://github.com/webhooksite/webhook.site
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: webhook-site
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: webhooksite/webhook.site@sha256:079b3d94111779611a5e99bf8270e04adac5a84610bd08156283fa841b9d369f
+benefits:
+  - title: Instant Webhook URLs
+    description:
+      Generates a unique URL that captures any HTTP request sent to it
+  - title: Full Request Inspection
+    description: View headers, body, query string and raw request for every hit
+  - title: Self-Hosted
+    description: Keep sensitive webhook payloads on your own infrastructure
+  - title: Open Source
+    description: Free and open-source, no account or external service required
+features:
+  - title: HTTP Request Capture
+    description: Inspect any HTTP request sent to your generated URL
+  - title: Request History
+    description: Browse past requests captured for each URL
+  - title: Custom Responses
+    description: Configure custom status codes, headers and response bodies
+tags:
+  - Webhooks
+  - API Testing
+  - Developer Tools
+  - Open Source

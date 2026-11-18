@@ -14,6 +14,8 @@ instructions:
 changeLog:
   - date: 2025-04-17
     description: first release
+  - date: 2026-11-06
+    description: Version bumped to 26.10
 links:
   - label: Docker
     url: https://hub.docker.com/r/revenz/fenrus
@@ -35,7 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: revenz/fenrus:23.08
+      default: revenz/fenrus:26.10
     timezone:
       type: string
       title: Timezone

@@ -23,6 +23,8 @@ instructions: >-
 changeLog:
   - date: "2026-06-01"
     description: Initial template release for BamBuddy v0.2.4.4
+  - date: 2026-11-06
+    description: Version bumped to 1.3.0
 
 links:
   - label: Website
@@ -49,7 +51,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/maziggy/bambuddy:0.2.4.4
+      default: ghcr.io/maziggy/bambuddy:1.3.0
     timezone:
       type: string
       title: Timezone

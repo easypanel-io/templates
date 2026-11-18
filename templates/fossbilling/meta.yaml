@@ -21,6 +21,8 @@ changeLog:
     description: Template Release
   - date: 2026-03-24
     description: Fixed instructions and added screenshot.
+  - date: 2026-11-06
+    description: Version bumped to 0.8.9
 
 links:
   - label: Website
@@ -47,7 +49,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: fossbilling/fossbilling:0.7.2
+      default: fossbilling/fossbilling:0.8.9
 
 benefits:
   - title: Complete Billing Automation

@@ -15,6 +15,8 @@ changeLog:
     description: Tempalate Release (v0.1.4)
   - date: 2026-05-04
     description: Version bumped to (v0.1.8)
+  - date: 2026-11-10
+    description: Version bumped to v0.3.2
 links:
   - label: Website
     url: https://koito.io
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: gabehf/koito:v0.1.8
+      default: gabehf/koito:v0.3.2
 
 benefits:
   - title: Music Listening Tracking
@@ -80,10 +82,10 @@ features:
     description:
       Import listening history from Last.fm, Maloja, Spotify, and ListenBrainz
       to build a comprehensive music listening database.
-  - title: PostgreSQL Database
+  - title: SQLite Storage
     description:
-      Reliable PostgreSQL database for persistent storage of listening data and
-      user preferences.
+      Listening data and user preferences are stored in SQLite on a persistent
+      volume, with no separate database service to run.
   - title: Artist Analytics
     description:
       Detailed artist and album metrics, listening trends, and personalized

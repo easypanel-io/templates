@@ -16,10 +16,11 @@ export function generate(input: Input): Output {
     `ENCRYPTION_SECRET=${encryptionSecret}`,
     `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
     `NODE_OPTIONS=--no-node-snapshot`,
+    `HOSTNAME=0.0.0.0`,
     `NEXTAUTH_URL=https://$(PROJECT_NAME)-${input.appServiceName}-builder.$(EASYPANEL_HOST)`,
     `NEXT_PUBLIC_VIEWER_URL=https://$(PROJECT_NAME)-${input.appServiceName}-viewer.$(EASYPANEL_HOST)`,
     `ADMIN_EMAIL=${input.adminEmail}`,
-    `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)-${input.appServiceName}-redis:6379`,
+    `REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)_${input.appServiceName}-redis:6379`,
   ];
 
   if (

@@ -29,6 +29,8 @@ changeLog:
     description:
       Fixed image tag (had an invalid "v" prefix that doesn't exist on Docker
       Hub, causing deployments to fail) and bumped to 25.03.53-LTS
+  - date: 2026-11-06
+    description: Version bumped to 25.03.57-LTS
 links:
   - label: Website
     url: https://count.ly
@@ -55,7 +57,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: countly/countly-server:25.03.53-LTS
+      default: countly/countly-server:25.03.57-LTS
     databaseServiceName:
       type: string
       title: Database Service Name
