@@ -12,6 +12,8 @@ instructions:
 changeLog:
   - date: 2026-04-07
     description: Initial template release
+  - date: 2026-11-09
+    description: Version bumped to v1.3.9
 
 links:
   - label: Documentation
@@ -40,7 +42,7 @@ schema:
     appServiceImage:
       type: string
       title: Rachoon Image
-      default: ghcr.io/ad-on-is/rachoon:v1.3.7
+      default: ghcr.io/ad-on-is/rachoon:v1.3.9
     gotenbergServiceImage:
       type: string
       title: Gotenberg Image

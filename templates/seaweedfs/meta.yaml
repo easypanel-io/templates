@@ -10,12 +10,16 @@ description:
   Features include erasure coding, cloud tiering, cross-datacenter replication,
   AES-256-GCM encryption, automatic compaction, file TTL, and a built-in admin
   UI. Licensed under Apache 2.0 with 30k+ GitHub stars.
-instructions: Open the admin UI.
+instructions:
+  Open the admin UI and log in as "admin" with the ADMIN_PASSWORD from the admin
+  service environment.
 changeLog:
   - date: 2026-02-19
     description: Template Release (4.13)
   - date: 2026-05-05
     description: Version bumped to 4.23
+  - date: 2026-11-10
+    description: Version bumped to 4.53
 links:
   - label: GitHub
     url: https://github.com/seaweedfs/seaweedfs
@@ -39,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: SeaweedFS Image
-      default: chrislusf/seaweedfs:4.23
+      default: chrislusf/seaweedfs:4.53
 benefits:
   - title: Billion-File Scale
     description:

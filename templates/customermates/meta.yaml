@@ -1,0 +1,92 @@
+name: Customermates
+description:
+  Customermates is an open-source CRM for contacts, organizations, deals,
+  services and tasks. Lists, fields and relationships are configurable, and
+  every workspace has a REST API, webhooks and an MCP endpoint for external AI
+  clients. Self-hosted, it runs on PostgreSQL and uses the Starter feature set.
+instructions:
+  Open the app domain, go to /auth/signup, register and choose Create a new
+  workspace; your account becomes Admin. Email goes out only through Resend, so
+  set RESEND_API_KEY and RESEND_OPERATOR_EMAIL (a sender on a domain verified in
+  Resend) in the Environment tab, or new accounts are held after 24 hours until
+  their email is verified. Anyone who can reach the domain can register; limit
+  access at the proxy if the instance should serve one team only. This template
+  runs the Starter feature set, with no connected messaging, calendar sync or
+  hosted assistant. External AI clients connect through MCP at /api/v1/mcp.
+  Trash is only emptied after 30 days if /api/cron/lifecycle is called once a
+  day with CRON_SECRET as a bearer token (see Which scheduled jobs must I run in
+  the self-hosting documentation). The image tag is pinned to a build of the
+  project's main branch; migrations only move forward, so take a database backup
+  before changing the tag.
+changeLog:
+  - date: 2026-10-31
+    description: First release
+links:
+  - label: Website
+    url: https://customermates.com
+  - label: Documentation
+    url: https://customermates.com/docs/self-hosting
+  - label: Github
+    url: https://github.com/customermates/customermates
+contributors:
+  - name: Benjamin Wagner
+    url: https://github.com/benjiwagner
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: customermates
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/customermates/customermates:sha-4f4d61c
+    resendApiKey:
+      type: string
+      title: Resend API Key (optional, needed for email)
+    resendOperatorEmail:
+      type: string
+      title: Resend Sender Email (optional, a domain verified in Resend)
+      default: mail@your-company.com
+benefits:
+  - title: Open Source Core
+    description:
+      The Community Edition is licensed under AGPL-3.0. You run the official
+      image and keep the data in your own PostgreSQL database.
+  - title: Bring Your Own AI
+    description:
+      Connect Claude, ChatGPT, Cursor, Codex or Gemini to your own instance
+      through the MCP endpoint, with your own AI provider.
+  - title: Simple Operations
+    description:
+      One app container and one PostgreSQL database. Migrations run on every
+      start and there is no separate worker or cache service.
+features:
+  - title: Configurable Lists
+    description:
+      Create the lists, fields and relationships your team needs, with table,
+      board and calendar views.
+  - title: REST API, Webhooks and MCP
+    description:
+      Every workspace has an OpenAPI reference, webhooks for record events and
+      an MCP endpoint at /api/v1/mcp.
+  - title: Excel Import and Export
+    description: Move records in and out one list at a time as Excel workbooks.
+  - title: Members, Roles and Activity Log
+    description:
+      Invite teammates, set per role permissions and review changes in the
+      activity log.
+  - title: Several Workspaces per Login
+    description:
+      One instance holds any number of isolated workspaces, each with its own
+      data model, members and API keys.
+tags:
+  - CRM
+  - Business Apps
+  - Productivity
+  - Open Source
+  - Self-Hosted

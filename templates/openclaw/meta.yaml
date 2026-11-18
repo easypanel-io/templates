@@ -22,6 +22,8 @@ changeLog:
       Improved variable descriptions and added agent sandboxing option
   - date: 2026-05-05
     description: Version bumped to 2026.5.3-1
+  - date: 2026-11-09
+    description: Version bumped to 2026.7.1-2
 
 links:
   - label: Website
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: OpenClaw Image
-      default: ghcr.io/openclaw/openclaw:2026.5.3-1
+      default: ghcr.io/openclaw/openclaw:2026.7.1-2
       description: Docker image for OpenClaw
     gatewayToken:
       type: string

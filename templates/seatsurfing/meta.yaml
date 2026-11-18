@@ -6,10 +6,14 @@ description:
   administrators powerful tools to manage spaces, users, and bookings. The
   system includes features like real-time availability, booking management, and
   analytics to optimize space utilization.
-instructions: Login email admin@seatsurfing.local and password 12345678
+instructions:
+  Log in with admin@seatsurfing.local and the default password Sea!surf1ng, then
+  change the password right away.
 changeLog:
   - date: 2025-04-07
     description: First Release
+  - date: 2026-11-10
+    description: Version bumped to 1.140.1
 links:
   - label: Website
     url: https://seatsurfing.app/
@@ -25,8 +29,6 @@ schema:
   required:
     - appServiceName
     - appServiceImage
-    - bookingServiceImage
-    - adminServiceImage
   properties:
     appServiceName:
       type: string
@@ -35,15 +37,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: seatsurfing/backend:1.28.0
-    bookingServiceImage:
-      type: string
-      title: Booking Service Image
-      default: seatsurfing/booking-ui:1.28.0
-    adminServiceImage:
-      type: string
-      title: Admin Service Image
-      default: seatsurfing/admin-ui:1.28.0
+      default: ghcr.io/seatsurfing/backend:1.140.1
 benefits:
   - title: Workspace Management
     description:

@@ -15,6 +15,8 @@ changeLog:
     description: Update to 1.2.5
   - date: 2026-02-24
     description: Update to 1.4.7
+  - date: 2026-11-09
+    description: Version bumped to v1.5.9
 links:
   - label: Website
     url: https://paymenter.org
@@ -38,7 +40,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/paymenter/paymenter:v1.4.7
+      default: ghcr.io/paymenter/paymenter:v1.5.9
 benefits:
   - title: Modern Billing System
     description:

@@ -1,16 +1,19 @@
+import { randomBytes } from "crypto";
 import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const databasePassword = randomPassword();
+  const secretKeyBase = randomBytes(64).toString("hex");
 
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
       env: [
-        `DATABASE_URL=postgres://postgres:${databasePassword}@$(PROJECT_NAME)-${input.appServiceName}-db:5432/$(PROJECT_NAME)`,
+        `DATABASE_URL=postgres:///$(PROJECT_NAME)?host=$(PROJECT_NAME)_${input.appServiceName}-db&port=5432&user=postgres&password=${databasePassword}`,
+        `SECRET_KEY_BASE=${secretKeyBase}`,
       ].join("\n"),
       source: {
         type: "image",
@@ -19,7 +22,7 @@ export function generate(input: Input): Output {
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
-          port: 80,
+          port: 5100,
         },
       ],
     },

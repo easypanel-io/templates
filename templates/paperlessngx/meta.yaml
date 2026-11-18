@@ -26,6 +26,8 @@ changeLog:
     description: Version bumped to 2.20
   - date: 2026-05-05
     description: Version bumped to 2.20.15
+  - date: 2026-11-09
+    description: Version bumped to 3.4.2
 links:
   - label: Documentation
     url: https://paperless-ngx.readthedocs.io/en/latest/
@@ -50,7 +52,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: paperlessngx/paperless-ngx:2.20.15
+      default: paperlessngx/paperless-ngx:3.4.2
     redisServiceName:
       type: string
       title: Redis Service Name

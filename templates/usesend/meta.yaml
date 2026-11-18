@@ -17,20 +17,19 @@ instructions:
   first and set its Client ID and Secret below before deploying; its
   authorization callback URL should be
   https://your-domain/api/auth/callback/github. After deployment, open your
-  domain and sign in with GitHub to create the first account. Image uploads in
-  the campaign and template editor are backed by a bundled RustFS instance
-  that's wired up automatically — no extra configuration needed.
+  domain and sign in with GitHub to create the first account. Sending email
+  needs Amazon SES, so fill in the AWS Access Key and Secret Key of an IAM user
+  with SES access. Image uploads in the campaign and template editor are backed
+  by a bundled RustFS instance that's wired up automatically — no extra
+  configuration needed.
 
 changeLog:
-  - date: 2026-10-27
-    description:
-      Version bumped to 1.10.0; replaced the MinIO storage service (whose image
-      was removed from Docker Hub) with RustFS, and fixed the storage
-      integration's environment variables so image uploads actually work
   - date: 2025-11-13
     description: Template Release
   - date: 2026-02-24
     description: Version bumped to 1.8.0
+  - date: 2026-11-10
+    description: Version bumped to v1.10.2
 links:
   - label: Website
     url: https://usesend.com/
@@ -50,6 +49,8 @@ schema:
     - appServiceImage
     - githubId
     - githubSecret
+    - awsAccessKey
+    - awsSecretKey
   properties:
     appServiceName:
       type: string
@@ -58,7 +59,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: usesend/usesend:v1.10.0
+      default: usesend/usesend:v1.10.2
     githubId:
       type: string
       title: GitHub OAuth App ID
@@ -69,6 +70,14 @@ schema:
     githubSecret:
       type: string
       title: GitHub OAuth App Secret
+      default: ""
+    awsAccessKey:
+      type: string
+      title: AWS Access Key
+      default: ""
+    awsSecretKey:
+      type: string
+      title: AWS Secret Key
       default: ""
     apiRateLimit:
       type: string

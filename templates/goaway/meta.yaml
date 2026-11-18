@@ -14,6 +14,8 @@ changeLog:
     description: Initial release
   - date: 2026-04-19
     description: Square logo; website and documentation links
+  - date: 2026-11-06
+    description: Version bumped to 0.63.17
 links:
   - label: Website
     url: https://pommee.github.io/goaway/
@@ -37,7 +39,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: pommee/goaway:0.57.0
+      default: pommee/goaway:0.63.17
     dnsPort:
       type: string
       title: DNS Port

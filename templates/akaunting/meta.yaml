@@ -14,6 +14,8 @@ changeLog:
     description: First release with Akaunting 3.0.20
   - date: 2026-05-07
     description: Version Bumped to 3.1.21-v
+  - date: 2026-11-06
+    description: Version bumped to 3.3.0
 links:
   - label: Github
     url: https://github.com/akaunting/akaunting
@@ -41,7 +43,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: docker.io/akaunting/akaunting:3.1.21-v
+      default: docker.io/akaunting/akaunting:3.3.0-v
     companyName:
       type: string
       title: Company Name

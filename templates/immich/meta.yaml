@@ -18,6 +18,8 @@ changeLog:
     description: Version bumped to v2.4.1
   - date: 2026-05-08
     description: Version bumped to v2.7.5
+  - date: 2026-11-10
+    description: Version bumped to v3.3.6
 links:
   - label: Documentation
     url: https://immich.app/docs
@@ -42,11 +44,11 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: ghcr.io/immich-app/immich-server:v2.7.5
+      default: ghcr.io/immich-app/immich-server:v3.3.6
     mlServiceImage:
       type: string
       title: ML Service Image
-      default: ghcr.io/immich-app/immich-machine-learning:v2.7.5
+      default: ghcr.io/immich-app/immich-machine-learning:v3.3.6
 
 benefits:
   - title: Secure Media Backup
