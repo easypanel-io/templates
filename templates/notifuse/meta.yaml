@@ -9,8 +9,9 @@ instructions: >-
   On first launch, open the app URL and complete the setup wizard to create the
   root admin account and set the public API endpoint. A bundled MailHog inbox
   catches outgoing email by default so you can test right away; open its domain
-  to read the setup verification link. Set the SMTP fields below to send real
-  email instead. Do not change the generated SECRET_KEY after setup - it
+  and log in with the user and password from the MailHog service's Basic Auth
+  tab to read the setup verification link. Set the SMTP fields below to send
+  real email instead. Do not change the generated SECRET_KEY after setup - it
   encrypts every workspace integration secret and changing it destroys them
   permanently.
 changeLog:
