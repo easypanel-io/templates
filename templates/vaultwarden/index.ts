@@ -11,8 +11,8 @@ export function generate(input: Input): Output {
       serviceName: input.appServiceName,
       env: [
         `DATA_FOLDER=data`,
-        `WEB_VAULT_FOLDER=web-vault/`,
         `WEB_VAULT_ENABLED=true`,
+        `ENABLE_WEBSOCKET=true`,
         `SENDS_ALLOWED=true`,
         `EMERGENCY_ACCESS_ALLOWED=true`,
         `DISABLE_2FA_REMEMBER=false`,
@@ -40,11 +40,6 @@ export function generate(input: Input): Output {
           type: "volume",
           name: "data",
           mountPath: "/data",
-        },
-        {
-          type: "volume",
-          name: "web-vault",
-          mountPath: "/web-vault",
         },
       ],
     },
