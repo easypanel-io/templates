@@ -1,14 +1,9 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-
-  const configYml = `settings:
-  data:
-    database-file: /data/argus.db
-service: {}
-`;
+  const password = randomPassword();
 
   services.push({
     type: "app",
@@ -18,6 +13,17 @@ service: {}
         type: "image",
         image: input.appServiceImage,
       },
+      env: [
+        `ARGUS_WEB_BASIC_AUTH_USERNAME=admin`,
+        `ARGUS_WEB_BASIC_AUTH_PASSWORD=${password}`,
+      ].join("\n"),
+      deploy: {
+        command: [
+          "[ -f /app/data/config.yml ] || printf 'settings:\\n  web:\\n    trusted_proxies:\\n      - 10.0.0.0/8\\nservice: {}\\n' > /app/data/config.yml",
+          "chown 911:911 /app/data/config.yml",
+          "exec /entrypoint.sh -config.file=/app/data/config.yml",
+        ].join(" && "),
+      },
       domains: [
         {
           host: "$(EASYPANEL_DOMAIN)",
@@ -26,17 +32,11 @@ service: {}
       ],
       mounts: [
         {
-          type: "file",
-          content: configYml,
-          mountPath: "/config/config.yml",
-        },
-        {
           type: "volume",
           name: "data",
-          mountPath: "/data",
+          mountPath: "/app/data",
         },
       ],
-      env: [`ARGUS_CONFIG_FILE=/config/config.yml`].join("\n"),
     },
   });
 
