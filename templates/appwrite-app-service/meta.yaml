@@ -8,13 +8,16 @@ description:
   can be inspected, scaled and restarted on its own.
 instructions:
   The first start pulls several images and sets up the database, so it can take
-  a few minutes. Open the app domain and create the first account, which becomes
-  the console owner. The appwrite service is a proxy in front of the console,
-  API and realtime services, so a custom domain only needs to be added there.
-  Functions and Sites run containers through the Docker socket. Each function or
-  site gets an address under the functions or sites subdomain of the app domain,
-  and that address must also be added as a domain on the appwrite service before
-  it can be opened from outside.
+  a few minutes. Open the app domain and create the first account right away,
+  since whoever signs up first becomes the console owner and further sign-ups
+  are closed after that. The appwrite service is a proxy in front of the
+  console, API and realtime services, so a custom domain only needs to be added
+  there. Functions and Sites run containers through the Docker socket, which
+  gives the executor root-level access to the host, so only deploy code you
+  trust and only give console access to people you trust. Each function or site
+  gets an address under the functions or sites subdomain of the app domain, and
+  that address must also be added as a domain on the appwrite service before it
+  can be opened from outside.
 changeLog:
   - date: 2026-11-13
     description: First release
