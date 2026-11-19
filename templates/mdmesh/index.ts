@@ -19,6 +19,7 @@ export function generate(input: Input): Output {
   };
   const adminPasswordHash = hashPassword(adminPassword);
   const stockAdminHash = hashPassword("admin");
+  const seedState = `/etc/easypanel/projects/$(PROJECT_NAME)/${input.appServiceName}-init/volumes/state`;
 
   const caddyFile = `{
 	servers {
@@ -28,6 +29,16 @@ export function generate(input: Input): Output {
 
 :80 {
 	encode gzip
+
+	@pending {
+		not file {
+			root /state
+			try_files /seeded
+		}
+	}
+	handle @pending {
+		respond "MDMesh is still setting up, try again in a minute" 503
+	}
 
 	@backend path /rest/* /files/* /agent/ws/*
 	handle @backend {
@@ -84,7 +95,7 @@ export PGPASSWORD="$DB_PASSWORD"
 PSQL="psql -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME -v ON_ERROR_STOP=1 -qAt"
 
 echo "Waiting for the server's first-boot migrations to create the schema..."
-until $PSQL -c "SELECT 1 FROM users WHERE login='admin'" 2>/dev/null | grep -q 1 && $PSQL -c "SELECT 1 FROM information_schema.tables WHERE table_name='settings'" 2>/dev/null | grep -q 1; do
+until $PSQL -c "SELECT 1 FROM users WHERE login='admin' AND length(password)=40" 2>/dev/null | grep -q 1 && $PSQL -c "SELECT 1 FROM information_schema.tables WHERE table_name='settings'" 2>/dev/null | grep -q 1; do
   sleep 5
 done
 
@@ -95,6 +106,7 @@ if $PSQL -c "SELECT 1 FROM users WHERE login='admin' AND lower(password)='${stoc
 else
   echo "Admin password was already set, nothing to do."
 fi
+touch /state/seeded
 exec tail -f /dev/null
 `;
 
@@ -171,6 +183,11 @@ exec tail -f /dev/null
           content: initScript,
           mountPath: "/seed/run.sh",
         },
+        {
+          type: "volume",
+          name: "state",
+          mountPath: "/state",
+        },
       ],
     },
   });
@@ -197,6 +214,11 @@ exec tail -f /dev/null
           type: "file",
           content: caddyFile,
           mountPath: "/etc/caddy/Caddyfile",
+        },
+        {
+          type: "bind",
+          hostPath: seedState,
+          mountPath: "/state",
         },
       ],
     },
