@@ -1,0 +1,71 @@
+name: Dockwatch
+description:
+  Dockwatch is a UI-driven way to manage updates and notifications for Docker
+  containers. It checks for image updates, applies them, and can notify you
+  through Discord, email, or other channels when containers change.
+instructions: >-
+  Open the app to see and manage containers running on the host. Dockwatch needs
+  access to the Docker socket to inspect and update containers, so it can see
+  and control every container on the host it runs on, not just services in this
+  project; only deploy this if you're comfortable granting that level of access
+  on a shared server. Configuration is stored on a persistent volume.
+changeLog:
+  - date: 2026-08-18
+    description: first release
+links:
+  - label: GitHub Repo
+    url: https://github.com/Notifiarr/dockwatch
+  - label: Documentation
+    url: https://dockwatch.wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dockwatch
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/notifiarr/dockwatch:v0.6.567
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: One-Click Container Updates
+    description:
+      See which containers have image updates available and apply them directly
+      from the web UI
+  - title: Flexible Notifications
+    description:
+      Get notified through Discord, email, or other channels when containers
+      update or change state
+  - title: No Extra Agents
+    description:
+      Manages containers directly through the Docker socket, with no separate
+      agent or exporter to deploy
+features:
+  - title: Update Scheduling
+    description:
+      Automate checks and updates on a schedule instead of manually pulling new
+      images
+  - title: Container Overview
+    description:
+      See status, image, and version info for every container on the host from a
+      single dashboard
+  - title: Beautiful Web UI
+    description:
+      A clean, modern interface for managing containers instead of relying on
+      the CLI
+tags:
+  - DevOps
+  - Monitoring
+  - Utilities
