@@ -1,9 +1,8 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import { Output, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
-  const databasePassword = randomPassword();
 
   services.push({
     type: "app",
@@ -25,15 +24,12 @@ export function generate(input: Input): Output {
           name: "data",
           mountPath: "/var/www/html/",
         },
+        {
+          type: "volume",
+          name: "mysql-data",
+          mountPath: "/var/lib/mysql",
+        },
       ],
-    },
-  });
-
-  services.push({
-    type: "mysql",
-    data: {
-      serviceName: `${input.appServiceName}-db`,
-      password: databasePassword,
     },
   });
 
