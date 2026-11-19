@@ -1,0 +1,107 @@
+name: Odysseus
+description:
+  Odysseus is a self-hosted, local-first AI workspace designed as a
+  privacy-respecting alternative to ChatGPT and Claude. It connects to any
+  OpenAI-compatible backend — vLLM, llama.cpp, Ollama, LM Studio, or OpenRouter
+  — and wraps it in a full-featured workspace with chat, agentic tool use, deep
+  multi-step research, a blind model-comparison tool, a document editor, memory
+  via ChromaDB vector search, email (IMAP/SMTP with AI triage), CalDAV calendar
+  sync, and a hardware-aware cookbook that recommends models based on your
+  available VRAM. All data stays on your infrastructure. This template deploys
+  Odysseus with its required companion including ChromaDB for vector memory and
+  SearXNG for private web search.
+instructions:
+  After deployment, open your app domain. On first start, Odysseus generates a
+  temporary admin password — check the app service logs to find it (look for a
+  line containing the initial password). Log in with username "admin" and that
+  password, then go to Settings to change it and configure your LLM backend.
+  Point the LLM endpoint at a running Ollama, vLLM, or OpenAI endpoint in
+  Settings → Models. SearXNG is wired automatically via the SEARXNG_INSTANCE
+  environment variable.
+changeLog:
+  - date: 2026-06-04
+    description: Initial Template Release
+links:
+  - label: Website
+    url: https://pewdiepie-archdaemon.github.io/odysseus/
+  - label: Documentation
+    url: https://github.com/pewdiepie-archdaemon/odysseus/blob/main/docs/setup.md
+  - label: GitHub
+    url: https://github.com/pewdiepie-archdaemon/odysseus
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: odysseus
+    ollamaBaseUrl:
+      type: string
+      title: Ollama Base URL
+      default: ""
+      description:
+        Optional. Set to your Ollama instance URL (e.g.
+        http://host.docker.internal:11434) to auto-populate the model list on
+        first boot.
+    openaiApiKey:
+      type: string
+      title: OpenAI API Key
+      default: ""
+      description: Optional. Leave blank if using only local models.
+benefits:
+  - title: Private, Local-First AI Workspace
+    description:
+      All conversations, documents, and memory stay on your own server. No
+      telemetry, no account required, no data sent to third-party AI providers
+      unless you explicitly configure an external key.
+  - title: Any LLM Backend
+    description:
+      Connect to Ollama, vLLM, llama.cpp, LM Studio, OpenRouter, or the OpenAI
+      API — swap or combine backends at any time from Settings without
+      redeploying.
+  - title: Full Productivity Suite
+    description:
+      Chat, email triage, CalDAV calendar, markdown/HTML/CSV document editor,
+      notes, tasks, and a deep-research agent in a single cohesive interface.
+  - title: Vector Memory
+    description:
+      ChromaDB powers persistent retrieval-augmented memory so Odysseus
+      remembers facts, documents, and past context across sessions.
+features:
+  - title: Chat and Agentic Tool Use
+    description:
+      Conversational AI with tool-calling support. Agents can search the web via
+      SearXNG, read and write documents, run scripts, and query memory.
+  - title: Deep Research
+    description:
+      Multi-step research pipeline adapted from Alibaba's DeepResearch that
+      breaks complex questions into sub-queries, searches, synthesises sources,
+      and returns a structured report.
+  - title: Blind Model Comparison
+    description:
+      Submit the same prompt to multiple models simultaneously and rate
+      responses without knowing which model produced which answer.
+  - title: ChromaDB Vector Memory
+    description:
+      Persistent vector + keyword retrieval via ChromaDB and fastembed. Upload
+      documents to the Library, then reference them in any conversation.
+  - title: Email with AI Triage
+    description:
+      Connect IMAP/SMTP accounts and let Odysseus tag, summarise, and prioritise
+      incoming mail by urgency automatically.
+  - title: Hardware Cookbook
+    description:
+      Scans your server's VRAM and recommends compatible models with VRAM-aware
+      serving configurations via tmux background processes.
+tags:
+  - AI
+  - LLM
+  - Self-Hosted
+  - Productivity
+  - Open Source
+  - Python
