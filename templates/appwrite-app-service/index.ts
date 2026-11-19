@@ -19,6 +19,8 @@ export function generate(input: Input): Output {
   const geoSecret = randomString(64);
   const jobsSecret = randomString(64);
   const trackingSecret = randomString(64);
+  const adminEmail = input.adminEmail.trim().toLowerCase();
+  const adminPassword = randomPassword();
 
   const domain = `$(PROJECT_NAME)-${name}.$(EASYPANEL_HOST)`;
   const network = "easypanel-$(PROJECT_NAME)";
@@ -57,6 +59,7 @@ export function generate(input: Input): Output {
     "_APP_OPTIONS_ROUTER_PROTECTION=disabled",
     "_APP_ROUTER_AUTO_CERTIFICATES=disabled",
     "_APP_CONSOLE_WHITELIST_ROOT=enabled",
+    `_APP_CONSOLE_WHITELIST_EMAILS=${adminEmail}`,
     `_APP_OPENSSL_KEY_V1=${opensslKey}`,
     `_APP_NOTIFICATIONS_TRACKING_SECRET=${trackingSecret}`,
     `_APP_DOMAIN=${domain}`,
@@ -435,6 +438,52 @@ exec sleep 2147483647
     data: {
       serviceName: `${name}-redis`,
       password: redisPassword,
+    },
+  });
+
+  const initScript = `set -u
+api="http://${name}-api/v1"
+until curl -fsS "$api/health/version" > /dev/null 2>&1; do
+  echo "Waiting for Appwrite API"
+  sleep 3
+done
+body=$(printf '{"userId":"unique()","email":"%s","password":"%s","name":"Admin"}' "$ADMIN_EMAIL" "$ADMIN_PASSWORD")
+while true; do
+  code=$(curl -s -o /tmp/response -w '%{http_code}' -X POST "$api/account" -H "Content-Type: application/json" -H "X-Appwrite-Project: console" -d "$body")
+  case "$code" in
+    201) echo "Console owner created for $ADMIN_EMAIL"; break ;;
+    409|501) echo "Console owner already exists"; break ;;
+    429) ;;
+    4*) echo "Could not create console owner ($code)"; cat /tmp/response; echo; break ;;
+  esac
+  echo "Appwrite not ready yet ($code), retrying"
+  sleep 5
+done
+exec sleep 2147483647
+`;
+
+  services.push({
+    type: "app",
+    data: {
+      serviceName: `${name}-init`,
+      source: {
+        type: "image",
+        image: "curlimages/curl:8.17.0",
+      },
+      env: [
+        `ADMIN_EMAIL=${adminEmail}`,
+        `ADMIN_PASSWORD=${adminPassword}`,
+      ].join("\n"),
+      deploy: {
+        command: "sh /scripts/init.sh",
+      },
+      mounts: [
+        {
+          type: "file",
+          content: initScript,
+          mountPath: "/scripts/init.sh",
+        },
+      ],
     },
   });
 

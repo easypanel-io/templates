@@ -8,16 +8,20 @@ description:
   can be inspected, scaled and restarted on its own.
 instructions:
   The first start pulls several images and sets up the database, so it can take
-  a few minutes. Open the app domain and create the first account right away,
-  since whoever signs up first becomes the console owner and further sign-ups
-  are closed after that. The appwrite service is a proxy in front of the
-  console, API and realtime services, so a custom domain only needs to be added
-  there. Functions and Sites run containers through the Docker socket, which
-  gives the executor root-level access to the host, so only deploy code you
-  trust and only give console access to people you trust. Each function or site
-  gets an address under the functions or sites subdomain of the app domain, and
-  that address must also be added as a domain on the appwrite service before it
-  can be opened from outside.
+  a few minutes. The appwrite-init service creates the console owner with the
+  Admin Email from this form as soon as the API is up, and only that email is
+  allowed to sign up to the console. Log in with that email and the
+  ADMIN_PASSWORD shown in the Environment tab of the appwrite-init service, then
+  change it from your account settings. To let more people use the console,
+  invite them from the console or add their emails to
+  _APP_CONSOLE_WHITELIST_EMAILS on the Appwrite services. The appwrite service
+  is a proxy in front of the console, API and realtime services, so a custom
+  domain only needs to be added there. Functions and Sites run containers
+  through the Docker socket, which gives the executor root-level access to the
+  host, so only deploy code you trust and only give console access to people you
+  trust. Each function or site gets an address under the functions or sites
+  subdomain of the app domain, and that address must also be added as a domain
+  on the appwrite service before it can be opened from outside.
 changeLog:
   - date: 2026-11-13
     description: First release
@@ -36,6 +40,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - adminEmail
   properties:
     appServiceName:
       type: string
@@ -45,6 +50,10 @@ schema:
       type: string
       title: App Service Image
       default: appwrite/appwrite:2.7.2
+    adminEmail:
+      type: string
+      title: Admin Email
+      description: Email of the console owner. Only this email can sign up.
 benefits:
   - title: Complete Backend In One Place
     description:
