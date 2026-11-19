@@ -1,8 +1,9 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomString, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
+  const accessCode = input.accessCode || randomString(12);
 
   services.push({
     type: "app",
@@ -11,7 +12,7 @@ export function generate(input: Input): Output {
       env: [
         `OPENAI_API_KEY=${input.openAiKey}`,
         `OPENAI_PROXY_URL=${input.openAiProxy}`,
-        `ACCESS_CODE=${input.accessCode}`,
+        `ACCESS_CODE=${accessCode}`,
       ].join("\n"),
       source: {
         type: "image",
