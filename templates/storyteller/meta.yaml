@@ -1,0 +1,69 @@
+name: Storyteller
+description:
+  Storyteller is a self-hosted platform for creating and reading ebooks with
+  synced narration. It automatically aligns audiobooks and ebooks you already
+  own, so you can read or listen to the same book with the narration following
+  along in real time.
+instructions: >-
+  Open the app and register the first account, which becomes the admin account.
+  Books, covers, transcriptions, and the SQLite database are stored on the
+  "data" volume and persist across restarts. Note: Storyteller's registry only
+  publishes per-commit image tags rather than semantic versions, so this
+  template tracks the "latest" tag as documented by the project itself.
+changeLog:
+  - date: 2026-08-13
+    description: first release
+links:
+  - label: Website
+    url: https://storyteller-platform.dev
+  - label: GitHub Repo
+    url: https://gitlab.com/storyteller-platform/storyteller
+  - label: Documentation
+    url: https://storyteller-platform.dev/docs/installation/self-hosting
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: storyteller
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: registry.gitlab.com/storyteller-platform/storyteller:latest
+benefits:
+  - title: Synced Audiobook and Ebook Reading
+    description:
+      Automatically aligns audiobooks and ebooks you own so narration follows
+      along in real time as you read
+  - title: Fully Self-Hosted
+    description:
+      Runs as a single container with a built-in SQLite database, so your book
+      collection stays entirely under your control
+  - title: Cross-Platform Access
+    description:
+      Read or listen from the web interface or the official mobile apps, picking
+      up where you left off on any device
+features:
+  - title: Forced Alignment Algorithm
+    description:
+      Uses speech recognition to synchronize ebook text with audiobook narration
+      automatically, without manual timestamping
+  - title: No External Database
+    description:
+      Stores books, covers, transcriptions, and its database directly on a
+      single persistent volume, with no separate database service to manage
+  - title: Web Reader
+    description:
+      Optionally enables an experimental in-browser reader for ebooks alongside
+      the audiobook narration
+tags:
+  - Media
+  - Books
+  - Self-Hosting
