@@ -1,0 +1,74 @@
+name: HymnoScribe
+description:
+  HymnoScribe is a tool for building service song sheets ("Liedblätter") for
+  church services. Drag and drop songs, prayers, readings, and other elements
+  into a session, preview changes in real time, and export a print-ready PDF in
+  several layouts (A5, A4, DIN Lang). It supports multiple institutions,
+  role-based permissions, and reusable templates for recurring service
+  structures.
+instructions: >-
+  After deployment, open your domain and use the super-admin login with the
+  generated SUPER_PASSWORD shown in the app service's environment variables.
+  From there you can create institutions and their first admin users. Uploaded
+  sheet music images persist on a dedicated volume.
+changeLog:
+  - date: 2026-08-27
+    description: first release
+links:
+  - label: Website
+    url: https://hymnoscribe.de
+  - label: GitHub
+    url: https://github.com/Revisor01/HymnoScribe
+  - label: Documentation
+    url: https://github.com/Revisor01/HymnoScribe#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: hymnoscribe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: revisoren/hymnoscribe:latest
+benefits:
+  - title: Drag-and-Drop Sheet Builder
+    description:
+      Assemble service song sheets by dragging songs, prayers, readings, and
+      other elements into place, with a live preview as you build.
+  - title: Print-Ready PDF Export
+    description:
+      Generate PDFs in A5, A4, or DIN Lang (6-panel flyer) layouts, with
+      customizable fonts, sizing, and an optional church logo.
+  - title: Multi-Institution Management
+    description:
+      A super-admin can manage multiple institutions, each with its own admins,
+      users, and content library, isolated from one another.
+features:
+  - title: Session Management
+    description:
+      Save and reload sheet-building sessions so a work-in-progress service
+      sheet can be picked up again later.
+  - title: Reusable Templates
+    description:
+      Save common song sheet structures as templates to reuse across services.
+  - title: Role-Based Permissions
+    description:
+      Superadmin, admin, and user roles control access to institution
+      management, the content library, and session tools.
+  - title: Sheet Music Support
+    description:
+      Upload sheet music images, with or without lyrics, for songs in the
+      content library.
+tags:
+  - Church
+  - PDF
+  - Productivity
+  - Self-Hosted
