@@ -1,0 +1,68 @@
+name: Koillection
+description:
+  Koillection is a self-hosted collection manager for keeping track of physical
+  collections of any kind, like books, DVDs, stamps, or games. It doesn't come
+  with pre-built metadata scraping, but lets you add your own metadata or write
+  a custom HTML scraper.
+instructions: >-
+  Open the app and register the first account. Uploaded images and files are
+  stored on a persistent volume, and Postgres data persists across restarts.
+  Back up your database regularly, especially before updating to a new version.
+changeLog:
+  - date: 2026-08-24
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/benjaminjonard/koillection
+  - label: Documentation
+    url: https://github.com/koillection/koillection/wiki
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: koillection
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: koillection/koillection:1.8.3
+    timezone:
+      type: string
+      title: Timezone
+      description: "Example: America/New_York"
+      default: Etc/UTC
+benefits:
+  - title: Track Any Kind of Collection
+    description:
+      Not limited to a specific category; organize books, games, stamps, or
+      anything else you collect
+  - title: Custom Metadata
+    description:
+      No pre-built metadata download; add your own fields or write a custom HTML
+      scraper to fit your workflow
+  - title: Fully Self-Hosted
+    description:
+      Your collection data, images, and files stay entirely on your own server
+features:
+  - title: Rich Item Organization
+    description:
+      Group items into collections with custom fields, tags, and nested
+      categories
+  - title: Wishlists and Loans
+    description:
+      Track items you want to acquire and keep tabs on items you've lent out
+  - title: Statistics Dashboard
+    description:
+      See an overview of your collections, item counts, and estimated value at a
+      glance
+tags:
+  - Productivity
+  - Collections
+  - Self-Hosting
