@@ -13,6 +13,7 @@ export function generate(input: Input): Output {
   const dbEncryptionPassword = randomString(32);
   const dbEncryptionSalt = randomString(32);
   const apiKeySecret = randomString(32);
+  const superuserPassword = input.superuserPassword || randomPassword();
 
   services.push({
     type: "app",
@@ -26,9 +27,9 @@ export function generate(input: Input): Output {
         `LOWCODER_PUBLIC_URL=https://$(PRIMARY_DOMAIN)`,
         `LOWCODER_PUID=9001`,
         `LOWCODER_PGID=9001`,
-        `LOWCODER_MONGODB_URL=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)-${input.appServiceName}-mongodb:27017/$(PROJECT_NAME)?authSource=admin`,
+        `LOWCODER_MONGODB_URL=mongodb://mongo:${mongoPassword}@$(PROJECT_NAME)_${input.appServiceName}-mongodb:27017/$(PROJECT_NAME)?authSource=admin`,
         `LOWCODER_REDIS_URL=redis://default:${redisPassword}@$(PROJECT_NAME)-${input.appServiceName}-redis:6379`,
-        `LOWCODER_NODE_SERVICE_URL=http://$(PROJECT_NAME)-${input.appServiceName}-node-service:6060`,
+        `LOWCODER_NODE_SERVICE_URL=http://$(PROJECT_NAME)_${input.appServiceName}-node-service:6060`,
         `LOWCODER_MAX_QUERY_TIMEOUT=120`,
         `LOWCODER_MAX_REQUEST_SIZE=20m`,
         `LOWCODER_EMAIL_AUTH_ENABLED=true`,
@@ -57,7 +58,7 @@ export function generate(input: Input): Output {
         `LOWCODER_ADMIN_SMTP_STARTTLS_REQUIRED=true`,
         `LOWCODER_EMAIL_NOTIFICATIONS_SENDER=${input.notificationSender}`,
         `LOWCODER_SUPERUSER_USERNAME=${input.superuserUsername}`,
-        `LOWCODER_SUPERUSER_PASSWORD=${input.superuserPassword}`,
+        `LOWCODER_SUPERUSER_PASSWORD=${superuserPassword}`,
       ].join("\n"),
       mounts: [
         {
