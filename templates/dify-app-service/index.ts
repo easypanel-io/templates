@@ -341,26 +341,35 @@ service_ips() {
   docker service inspect "$1" -f '{{range .Endpoint.VirtualIPs}}{{.Addr}} {{end}}' | tr ' ' '\\n' | cut -d/ -f1
   docker ps -q -f "label=com.docker.swarm.service.name=$1" | xargs -r docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}' | tr ' ' '\\n'
 }
+apply_rules() {
+  ns=$1
+  shift
+  $ns iptables -N SANDBOX_EGRESS 2> /dev/null || $ns iptables -F SANDBOX_EGRESS || return 1
+  $ns iptables -C OUTPUT -j SANDBOX_EGRESS 2> /dev/null || $ns iptables -I OUTPUT -j SANDBOX_EGRESS || return 1
+  $ns iptables -A SANDBOX_EGRESS -o lo -j RETURN || return 1
+  $ns iptables -A SANDBOX_EGRESS -m conntrack --ctstate ESTABLISHED,RELATED -j RETURN || return 1
+  for ip in "$@"; do
+    $ns iptables -A SANDBOX_EGRESS -d "$ip" -p tcp --dport 3128 -j RETURN || return 1
+  done
+  $ns iptables -A SANDBOX_EGRESS -j REJECT || return 1
+}
 protect() {
   ips=$(service_ips "$2" | grep -v '^$' | sort -u | tr '\\n' ' ')
   [ -n "$ips" ] || return 0
   for container in $(docker ps -q -f "label=com.docker.swarm.service.name=$1"); do
-    pid=$(docker inspect -f '{{.State.Pid}}' "$container")
+    pid=$(docker inspect -f '{{.State.Pid}}' "$container") || continue
     ns="nsenter --net=/hostproc/$pid/ns/net"
     state="$container $ips"
     if [ "$(cat "/state/$container" 2>/dev/null)" = "$state" ] && $ns iptables -C SANDBOX_EGRESS -j REJECT 2> /dev/null; then
       continue
     fi
-    $ns iptables -N SANDBOX_EGRESS 2> /dev/null || $ns iptables -F SANDBOX_EGRESS
-    $ns iptables -C OUTPUT -j SANDBOX_EGRESS 2> /dev/null || $ns iptables -I OUTPUT -j SANDBOX_EGRESS
-    $ns iptables -A SANDBOX_EGRESS -o lo -j RETURN
-    $ns iptables -A SANDBOX_EGRESS -m conntrack --ctstate ESTABLISHED,RELATED -j RETURN
-    for ip in $ips; do
-      $ns iptables -A SANDBOX_EGRESS -d "$ip" -p tcp --dport 3128 -j RETURN
-    done
-    $ns iptables -A SANDBOX_EGRESS -j REJECT
-    echo "$state" > "/state/$container"
-    echo "egress limited to proxy for $1 ($container)"
+    rm -f "/state/$container"
+    if apply_rules "$ns" $ips; then
+      echo "$state" > "/state/$container"
+      echo "egress limited to proxy for $1 ($container)"
+    else
+      echo "could not limit egress for $1 ($container), retrying"
+    fi
   done
 }
 while true; do
