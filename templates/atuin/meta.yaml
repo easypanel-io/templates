@@ -1,0 +1,102 @@
+name: Atuin
+description:
+  Atuin is an open-source, self-hosted shell history sync server that replaces
+  your traditional shell history with a SQLite-backed store and synchronises it
+  end-to-end encrypted across all your machines. Every command is recorded with
+  rich metadata — exit code, duration, working directory, hostname, and session
+  — so you can fuzzy-search and filter your entire history from any device. The
+  sync server never sees your plaintext data; all encryption and decryption
+  happens on the client. This template deploys the Atuin sync server backed by
+  PostgreSQL, ready to accept registrations from the Atuin CLI clients on your
+  machines.
+instructions:
+  After deployment, configure the Atuin CLI on each machine by running "atuin
+  register -u <username> -e <email> -p <password> --server
+  https://<your-domain>" (or "atuin login" if you already have an account). The
+  sync server listens on port 8888. ATUIN_OPEN_REGISTRATION is set to true by
+  default — once you have registered all accounts you want to allow, set it to
+  false and redeploy the app service to prevent new signups.
+changeLog:
+  - date: 2026-06-04
+    description: Initial Template Release (v18.16.1)
+links:
+  - label: GitHub
+    url: https://github.com/atuinsh/atuin
+  - label: Website
+    url: https://atuin.sh
+  - label: Documentation
+    url: https://docs.atuin.sh/cli/self-hosting/server-setup/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: atuin
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/atuinsh/atuin:18.16.1
+    openRegistration:
+      type: string
+      title: Open Registration
+      default: "true"
+      description:
+        Allow new users to register on this sync server. Set to "false" after
+        creating your accounts to lock down signups.
+benefits:
+  - title: End-to-End Encrypted Sync
+    description:
+      Shell history is encrypted on the client before it ever leaves your
+      machine. The sync server stores only ciphertext — even the server operator
+      cannot read your commands.
+  - title: Rich Command Metadata
+    description:
+      Every recorded command carries exit code, wall-clock duration, working
+      directory, hostname, and session ID, enabling powerful filtering and
+      statistical analysis beyond what plain text history allows.
+  - title: Multi-Machine History
+    description:
+      Seamlessly share and search your full command history across all your
+      machines. Press Ctrl-R in any registered shell and see results from every
+      device you have ever used.
+  - title: Self-Hosted and Open Source
+    description:
+      Run your own sync server so your data never touches a third-party cloud.
+      The server and client are both MIT-licensed and fully auditable.
+features:
+  - title: Encrypted Sync Server
+    description:
+      Provides the REST API that Atuin CLI clients connect to for syncing
+      history. All payloads are end-to-end encrypted; the server is stateless
+      with respect to plaintext data.
+  - title: PostgreSQL Backend
+    description:
+      Stores encrypted history blobs in PostgreSQL for reliable, concurrent
+      multi-client access with proper transactional guarantees.
+  - title: Open / Closed Registration
+    description:
+      Toggle ATUIN_OPEN_REGISTRATION to allow or block new account creation
+      without redeploying — ideal for personal or small-team setups.
+  - title: Shell Plugin Compatibility
+    description:
+      Works with the Atuin CLI plugins for Bash, Zsh, Fish, and Nushell. Drop-in
+      replacement for Ctrl-R history search with optional sync.
+  - title: Configurable via Environment Variables
+    description:
+      All server settings (host, port, registration, max history length, page
+      size, webhook URL) are controlled via ATUIN_ prefixed environment
+      variables — no config file editing required.
+tags:
+  - Developer Tools
+  - Shell
+  - Productivity
+  - Self-Hosted
+  - Open Source
+  - Rust
