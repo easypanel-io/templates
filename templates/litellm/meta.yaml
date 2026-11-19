@@ -8,6 +8,14 @@ description:
   over your data and configurations.
 instructions: Use the provided master-key as the password for UI login.
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed LITELLM_SALT_KEY reusing the same value as LITELLM_MASTER_KEY -
+      the salt key encrypts stored LLM provider credentials in the database
+      while the master key is the UI login password shown to the user, so
+      sharing them meant exposing the login password also exposed the key
+      that decrypts every stored provider API key. Now generates them
+      separately
   - date: 2026-05-19
     description: Updated to v1.85.0
   - date: 2025-01-06
