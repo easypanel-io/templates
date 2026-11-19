@@ -8,13 +8,15 @@ instructions:
   After installation, access the web interface through the provided domain to
   start configuring your stream recordings.
 changeLog:
+  - date: 2026-09-28
+    description: Fixed a mismatched contributor name/GitHub link
   - date: 2024-04-09
     description: First Release
 links:
   - label: Github
     url: https://github.com/MrBrax/LiveStreamDVR
 contributors:
-  - name: MrBrax
+  - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
 schema:
   type: object
