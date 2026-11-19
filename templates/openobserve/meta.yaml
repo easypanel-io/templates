@@ -1,0 +1,97 @@
+name: OpenObserve
+description:
+  A cloud-native observability platform for logs, metrics, traces, and analytics
+  — a lightweight, high-performance alternative to Elasticsearch and Grafana
+  stacks with a built-in UI, SQL querying, and S3-compatible storage support.
+instructions:
+  Log in with the admin email and password you set during deployment. After
+  first login, the ZO_ROOT_USER_EMAIL and ZO_ROOT_USER_PASSWORD variables are no
+  longer read — use the UI to change credentials. Send logs via the OpenObserve
+  HTTP API on port 5080 or configure your agents (Vector, Fluent Bit,
+  OpenTelemetry) to ship data to your deployment URL.
+changeLog:
+  - date: "2026-05-29"
+    description: Initial release (v0.90.3)
+links:
+  - label: Website
+    url: https://openobserve.ai
+  - label: GitHub
+    url: https://github.com/openobserve/openobserve
+  - label: Documentation
+    url: https://openobserve.ai/docs
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - adminEmail
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openobserve
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: openobserve/openobserve:v0.90.3
+    adminEmail:
+      type: string
+      title: Admin Email
+      default: admin@example.com
+      description: Email address for the root administrator account.
+    adminPassword:
+      type: string
+      title: Admin Password
+      description:
+        Password for the root administrator account. Auto-generated if left
+        blank. Set once at first boot — change via the UI afterwards.
+tags:
+  - observability
+  - logging
+  - metrics
+  - tracing
+  - analytics
+  - monitoring
+benefits:
+  - title: All-in-One Observability
+    description:
+      Ingest, store, and query logs, metrics, traces, and analytics from a
+      single lightweight binary — no separate Elasticsearch, Kibana, or
+      Prometheus needed.
+  - title: Extremely Low Resource Usage
+    description:
+      Uses ~140x less storage than Elasticsearch for the same data and runs
+      comfortably on a single small VM, making it ideal for self-hosted
+      deployments.
+  - title: SQL-Powered Queries
+    description:
+      Query all your telemetry data using familiar SQL syntax through the
+      built-in UI or API — no proprietary query languages to learn.
+  - title: S3-Compatible Storage
+    description:
+      Seamlessly switch from local disk to AWS S3, MinIO, GCS, or Azure Blob for
+      unlimited scalable storage without changing your ingestion pipeline.
+features:
+  - title: Log Management
+    description:
+      Ingest logs from any source via HTTP API, OpenTelemetry, Fluentd, Vector,
+      or Filebeat with full-text search and structured field extraction.
+  - title: Metrics & Dashboards
+    description:
+      Collect Prometheus-compatible metrics and build rich dashboards with
+      time-series visualizations, gauges, and heatmaps.
+  - title: Distributed Tracing
+    description:
+      Receive and visualize OpenTelemetry traces with span timelines, service
+      maps, and latency histograms.
+  - title: Alerting
+    description:
+      Define threshold and anomaly-based alerts with notifications via Slack,
+      PagerDuty, email, and webhooks.
+  - title: Multi-Tenancy
+    description:
+      Organize data into separate organizations with role-based access control
+      and per-organization retention policies.
