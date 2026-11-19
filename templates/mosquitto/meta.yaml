@@ -11,9 +11,11 @@ instructions:
   The username is set in the template form and the password is generated on
   deploy. Both are in the MOSQUITTO_USERNAME and MOSQUITTO_PASSWORD environment
   variables of the service, and changing them takes effect on the next deploy.
-  Devices can connect with plain MQTT on the published port of the server, and
-  browsers or dashboards can connect over secure WebSockets at wss://your-domain
-  on port 443. Make sure the MQTT port is open in the server firewall.
+  Browsers, dashboards and devices that support it can connect over secure
+  WebSockets at wss://your-domain on port 443. Plain MQTT is not published by
+  default because it sends the password unencrypted. Turn on Publish Plain MQTT
+  Port only for devices that can't use WebSockets, ideally on a private network,
+  and make sure that port is open in the server firewall.
 changeLog:
   - date: 2026-11-17
     description: First release
@@ -33,7 +35,6 @@ schema:
     - appServiceName
     - appServiceImage
     - username
-    - mqttPort
   properties:
     appServiceName:
       type: string
@@ -47,6 +48,11 @@ schema:
       type: string
       title: MQTT Username
       default: mosquitto
+    publishMqttPort:
+      type: boolean
+      title: Publish Plain MQTT Port
+      description: Unencrypted MQTT for devices that can't use WebSockets.
+      default: false
     mqttPort:
       type: integer
       title: MQTT Port on Host

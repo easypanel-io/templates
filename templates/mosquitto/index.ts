@@ -48,13 +48,15 @@ export function generate(input: Input): Output {
           port: 9001,
         },
       ],
-      ports: [
-        {
-          published: Number(input.mqttPort),
-          target: 1883,
-          protocol: "tcp",
-        },
-      ],
+      ports: input.publishMqttPort
+        ? [
+            {
+              published: Number(input.mqttPort),
+              target: 1883,
+              protocol: "tcp",
+            },
+          ]
+        : [],
       mounts: [
         {
           type: "file",
