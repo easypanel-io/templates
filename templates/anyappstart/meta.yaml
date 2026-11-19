@@ -1,0 +1,94 @@
+name: AnyAppStart
+description:
+  AnyAppStart is a lightweight control panel for starting, stopping, restarting
+  and viewing the logs of apps running as Docker containers, Systemd services,
+  VMs or anything else controllable through a user script. It has a small Go
+  backend and a React/TypeScript frontend, stores its configuration as plain
+  YAML files instead of a database, and can reach remote machines over SSH. Any
+  app type can be added by the user, so it also works for things like LXC
+  containers or Wake-on-LAN targets.
+instructions: >-
+  AnyAppStart has no built-in authentication, so keep it behind Easypanel's
+  domain access controls or a separate SSO layer before exposing it publicly.
+  After the first deploy, open the app and fill in the Types menu (or copy the
+  example types.yaml from the GitHub repo into the "data" volume) to define what
+  Start/Stop/Restart/Logs should do for each app. The docker.sock mount lets it
+  control other Docker containers directly; remove that mount if you only need
+  Systemd, VM or SSH targets.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/aceberg/AnyAppStart
+  - label: Documentation
+    url: https://github.com/aceberg/AnyAppStart#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - timezone
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: anyappstart
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: aceberg/anyappstart:0.1.6
+    timezone:
+      type: string
+      title: Timezone
+      default: UTC
+    theme:
+      type: string
+      title: Theme
+      description: Any theme name from https://bootswatch.com in lowercase.
+      default: minty
+    color:
+      type: string
+      title: Color Mode
+      default: dark
+      oneOf:
+        - enum:
+            - dark
+          title: Dark
+        - enum:
+            - light
+          title: Light
+benefits:
+  - title: Single Control Panel
+    description:
+      Start, stop, restart and view logs for Docker, Systemd, VMs or custom
+      scripts from one dashboard.
+  - title: No Database
+    description:
+      Configuration lives in plain YAML files, so there is nothing extra to back
+      up or migrate.
+  - title: Remote Control via SSH
+    description:
+      Manage apps on other machines by pointing a type at an SSH connection
+      string.
+features:
+  - title: Custom App Types
+    description:
+      Define any type of controllable target, such as LXC containers or
+      Wake-on-LAN devices, through simple YAML config.
+  - title: Live Logs
+    description:
+      View the logs of any registered app straight from the dashboard.
+  - title: Bootswatch Themes
+    description: Switch between any Bootswatch theme in light or dark mode.
+  - title: Simple API
+    description:
+      Trigger start, stop and restart actions programmatically through a
+      documented HTTP API.
+tags:
+  - Self-Hosted
+  - Server Management
+  - Developer Tools
