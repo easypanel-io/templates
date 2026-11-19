@@ -1,4 +1,4 @@
-import { Output, Services } from "~templates-utils";
+import { Output, randomPassword, Services } from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
@@ -6,7 +6,7 @@ export function generate(input: Input): Output {
 
   let serviceVariables = [
     `MEILI_ENV=${input.meiliEnv}`,
-    `MEILI_MASTER_KEY=${input.meiliMasterKey}`,
+    `MEILI_MASTER_KEY=${input.meiliMasterKey || randomPassword()}`,
   ];
 
   if (input.meiliNoAnalytics) {
