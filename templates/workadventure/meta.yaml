@@ -1,0 +1,89 @@
+name: WorkAdventure
+description:
+  WorkAdventure is a self-hosted virtual office platform where teams meet as
+  animated characters ("Wokas") on a 2D pixel-art map, with proximity-based
+  video, audio, and text chat that activates automatically as avatars walk near
+  each other. It includes a built-in map editor, screen sharing, and
+  integrations for embedding tools like Google Docs, YouTube, and Excalidraw
+  directly into a room.
+instructions: >-
+  WorkAdventure deploys as five services (play, back, uploader, map-storage,
+  icon) plus Redis, each reachable on its own generated subdomain instead of the
+  single-domain path-based routing used in the official Docker Compose setup, so
+  no reverse-proxy path-stripping is required. Open the "play" service's domain
+  to enter the default starter map. The map storage service's basic-auth admin
+  credentials (user "admin") are generated automatically; the password is
+  visible in that service's environment variables if you need to manage maps
+  directly via its API. Video/audio calls use peer-to-peer WebRTC by default;
+  for larger rooms configure a TURN or LiveKit server via the back/play
+  services' environment variables.
+changeLog:
+  - date: 2026-08-28
+    description: first release
+links:
+  - label: Website
+    url: https://workadventu.re
+  - label: GitHub
+    url: https://github.com/workadventure/workadventure
+  - label: Documentation
+    url: https://docs.workadventu.re
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - workadventureVersion
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: workadventure
+    workadventureVersion:
+      type: string
+      title: WorkAdventure Version
+      description:
+        Applied to the play, back, uploader, and map-storage images — keep these
+        in sync.
+      default: v1.33.3
+    startRoomUrl:
+      type: string
+      title: Start Room URL
+      description:
+        Path or full URL of the map to load by default. Leave as-is to use
+        WorkAdventure's public starter office map.
+      default: /_/global/workadventure.github.io/map-starter-kit/office.tmj
+benefits:
+  - title: Proximity-Based Chat
+    description:
+      Video, audio, and text chat activate automatically as avatars walk near
+      each other, just like a real office.
+  - title: Custom Maps
+    description:
+      Build or import your own pixel-art office maps with the built-in map
+      editor, including desks, meeting rooms, and interactive objects.
+  - title: Tool Integrations
+    description:
+      Embed Google Docs, Sheets, Slides, YouTube, Excalidraw, and other tools
+      directly as objects inside a room.
+  - title: Self-Hosted
+    description: Run your own virtual office without relying on a SaaS plan.
+features:
+  - title: Screen Sharing
+    description:
+      Share your screen with nearby colleagues during a proximity chat.
+  - title: Room Chat
+    description:
+      Text chat with online/offline presence, file uploads, and history.
+  - title: OpenID Connect
+    description:
+      Wire up SSO via OpenID Connect for authenticated, non-anonymous access.
+  - title: Room API
+    description:
+      Automate room management remotely via the built-in gRPC Room API.
+tags:
+  - Video Conferencing
+  - Virtual Office
+  - Collaboration
+  - Self-Hosted
