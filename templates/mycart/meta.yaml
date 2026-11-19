@@ -1,0 +1,73 @@
+name: myCart
+description:
+  myCart is an ultra-lightweight, self-hosted e-commerce platform written in
+  Go, distributed as a single binary. It ships with an embedded SQLite
+  database by default (with optional PostgreSQL support), requires no
+  additional software to run, and includes a product catalog, order
+  management, multiple payment options, and an admin panel. myCart was
+  previously published under the name LiteCart before being renamed; it is
+  now a separate, actively developed project from the PHP-based LiteCart.
+instructions: null
+changeLog:
+  - date: 2026-09-29
+    description: First release
+links:
+  - label: GitHub
+    url: https://github.com/shurco/mycart
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mycart
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/shurco/mycart:v0.2.10
+benefits:
+  - title: Single Binary, No Dependencies
+    description:
+      Runs as a single Go binary with an embedded SQLite database by default,
+      with no separate database server required to get started.
+  - title: Lightweight
+    description:
+      Designed to run efficiently on resource-constrained servers without
+      sacrificing core e-commerce functionality.
+  - title: Open Source
+    description:
+      Free and open-source, actively developed as a successor to the
+      PHP-based LiteCart project.
+  - title: Easy Deployment
+    description:
+      Simple Docker deployment with persistent volumes for products,
+      digital downloads, uploads, and site assets.
+features:
+  - title: Product Catalog
+    description:
+      Manage products with detailed information, categories, and inventory
+      tracking through the admin panel.
+  - title: Order Management
+    description:
+      Process orders with payment integration, shipping options, and order
+      status tracking.
+  - title: Multiple Payment Options
+    description:
+      Supports multiple payment gateways for accepting customer payments
+      securely.
+  - title: Optional PostgreSQL Support
+    description:
+      Runs on an embedded SQLite database by default, with the option to
+      switch to PostgreSQL for larger deployments.
+tags:
+  - E-commerce
+  - Online Store
+  - Shopping Cart
+  - Go
+  - Self-Hosted
