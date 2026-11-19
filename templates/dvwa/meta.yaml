@@ -1,0 +1,99 @@
+name: DVWA
+description:
+  Damn Vulnerable Web Application (DVWA) is a PHP/MariaDB web application
+  intentionally built with common security vulnerabilities. Its goal is to help
+  security professionals test their skills and tools in a legal environment, aid
+  web developers in understanding how to secure web applications, and provide
+  students and teachers with a hands-on learning platform for web application
+  security. DVWA covers vulnerabilities such as SQL injection, XSS, CSRF, file
+  inclusion, command injection, brute force, and more — each available at low,
+  medium, high, and impossible difficulty levels.
+
+instructions:
+  After deployment, open the app and navigate to the Setup page to initialise
+  the database. Click "Create / Reset Database" to complete setup. The default
+  login credentials are admin / password. Change the security level from the
+  DVWA Security page to match your training needs.
+
+changeLog:
+  - date: 2026-05-12
+    description: first release
+
+links:
+  - label: Github
+    url: https://github.com/digininja/DVWA
+  - label: Documentation
+    url: https://github.com/digininja/DVWA/blob/master/README.md
+
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dvwa
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/digininja/dvwa:e8fd506
+
+benefits:
+  - title: Hands-On Vulnerability Practice
+    description:
+      Practise exploiting and defending against the most common web
+      vulnerabilities — SQL injection, XSS, CSRF, file inclusion, and more — in
+      a safe, isolated environment with no risk to real systems.
+  - title: Adjustable Difficulty Levels
+    description:
+      Each vulnerability module ships with low, medium, high, and impossible
+      security levels so learners can progress from beginner exploits to
+      hardened defences at their own pace.
+  - title: Self-Hosted and Isolated
+    description:
+      Run DVWA entirely on your own infrastructure, keeping all training
+      activity off the public internet and fully under your control.
+  - title: Broad Curriculum Coverage
+    description:
+      Covers the OWASP Top 10 and beyond, making DVWA suitable for security
+      certifications, university courses, and professional penetration testing
+      practice.
+
+features:
+  - title: SQL Injection
+    description:
+      Classic and blind SQL injection labs that let you extract data, bypass
+      authentication, and understand parameterised query defences.
+  - title: Cross-Site Scripting (XSS)
+    description:
+      Reflected, stored, and DOM-based XSS modules demonstrating how
+      user-supplied input can be weaponised in a browser context.
+  - title: Command Injection
+    description:
+      Inject operating system commands through a vulnerable ping form and learn
+      how input sanitisation prevents arbitrary code execution.
+  - title: CSRF
+    description:
+      Cross-Site Request Forgery labs showing how attackers can trick
+      authenticated users into performing unintended actions.
+  - title: File Inclusion & Upload
+    description:
+      Local and remote file inclusion exercises, plus an unrestricted file
+      upload module that demonstrates server-side upload validation bypasses.
+  - title: Brute Force
+    description:
+      A login form with no rate-limiting or account lockout, ideal for
+      practising credential stuffing and dictionary attack techniques.
+
+tags:
+  - Security
+  - Training
+  - Penetration Testing
+  - Vulnerability
+  - PHP
