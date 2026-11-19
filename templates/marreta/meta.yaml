@@ -1,0 +1,116 @@
+name: Marreta
+description:
+  Marreta is a self-hosted tool that strips paywalls and reading obstructions
+  from news articles. Paste a URL and it fetches the page through a headless
+  browser, removes tracking parameters, blocks known paywall scripts and cookie
+  banners, and returns clean, readable HTML. It ships with an admin panel,
+  browser extensions, a REST API, and bot integrations for Telegram, Bluesky,
+  and Apple Shortcuts.
+instructions: >-
+  Fill in the admin email and password used to log into the Marreta admin panel,
+  then deploy. Marreta runs alongside a headless browser sidecar service that
+  renders pages before cleaning them, so both services must stay running. The
+  "storage" volume holds the SQLite database and page cache and persists across
+  restarts.
+changeLog:
+  - date: 2026-08-12
+    description: first release
+links:
+  - label: Website
+    url: https://marreta.link
+  - label: GitHub Repo
+    url: https://github.com/manualdousuario/marreta
+  - label: Documentation
+    url: https://github.com/manualdousuario/marreta/blob/main/README.en.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - browserServiceImage
+    - adminEmail
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: marreta
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/manualdousuario/marreta:3.0.3
+    browserServiceImage:
+      type: string
+      title: Headless Browser Service Image
+      default: lightpanda/browser:0.3.6
+    appName:
+      type: string
+      title: App Name
+      default: Marreta
+    appDescription:
+      type: string
+      title: App Description
+      default: Chapéu de paywall é marreta!
+    appLocale:
+      type: string
+      title: Language
+      default: pt-br
+      oneOf:
+        - enum:
+            - pt-br
+          title: Portuguese (Brazil)
+        - enum:
+            - en
+          title: English
+        - enum:
+            - es
+          title: Spanish
+        - enum:
+            - de-de
+          title: German
+        - enum:
+            - ru-ru
+          title: Russian
+    adminEmail:
+      type: string
+      title: Admin Email
+    adminPassword:
+      type: string
+      title: Admin Password
+    disableCache:
+      type: boolean
+      title: Disable Page Cache
+      default: false
+benefits:
+  - title: Paywall Removal
+    description:
+      Strips paywall scripts, overlays, and reading obstructions from news
+      articles so the original content is readable
+  - title: Tracking-Free Links
+    description:
+      Cleans tracking parameters and forces HTTPS on every URL you feed through
+      it
+  - title: Multiple Ways to Use It
+    description:
+      Comes with a REST API, browser extensions, and bot integrations for
+      Telegram, Bluesky, and Apple Shortcuts
+features:
+  - title: Admin Panel
+    description:
+      Manage blocked domains, custom rules, and cache settings from a
+      Filament-based admin interface
+  - title: Page Caching
+    description:
+      Caches cleaned pages to speed up repeat requests and reduce load on the
+      headless browser
+  - title: Headless Rendering
+    description:
+      Renders pages through a dedicated headless browser sidecar before
+      stripping paywall elements, so JavaScript-driven paywalls are handled too
+tags:
+  - Productivity
+  - Privacy
+  - Self-Hosting
