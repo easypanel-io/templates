@@ -1,0 +1,107 @@
+name: SoFE
+description:
+  SoFE (Sonarr Anime Filler Excluder) configures Sonarr to monitor only
+  non-filler anime episodes, sourced from Anime Filler List, and creates
+  separate Plex collections for filler and non-filler episodes based on download
+  status.
+instructions: >-
+  Get the anime name from its Anime Filler List URL (e.g. "one-piece" from
+  animefillerlist.com/shows/one-piece) and the series ID from Sonarr's URL when
+  viewing that show. Once deployed, SoFE runs on the port below and applies the
+  filler-episode monitoring rules to the configured Sonarr series; it has no
+  persistent state or web UI beyond its status endpoint.
+changeLog:
+  - date: 2026-08-24
+    description: first release
+links:
+  - label: GitHub Repo
+    url: https://github.com/chkpwd/sofe
+  - label: Anime Filler List
+    url: https://www.animefillerlist.com
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - sonarrUrl
+    - sonarrApiKey
+    - sonarrSeriesId
+    - aflAnimeName
+    - plexUrl
+    - plexToken
+    - plexAnimeLibrary
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: sofe
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/chkpwd/sofe:v1.4.4
+    sonarrUrl:
+      type: string
+      title: Sonarr URL
+      description: "Example: https://sonarr.local"
+    sonarrApiKey:
+      type: string
+      title: Sonarr API Key
+    sonarrSeriesId:
+      type: string
+      title: Sonarr Series ID
+      description: "The series ID from Sonarr's URL for this show"
+    aflAnimeName:
+      type: string
+      title: Anime Filler List Name
+      description: "Example: one-piece"
+    plexUrl:
+      type: string
+      title: Plex URL
+      description: "Example: http://127.0.0.1:32400"
+    plexToken:
+      type: string
+      title: Plex Token
+    plexAnimeLibrary:
+      type: string
+      title: Plex Anime Library Name
+    createPlexCollection:
+      type: boolean
+      title: Create Plex Collections
+      default: true
+    monitorNonFillerEpisodes:
+      type: boolean
+      title: Monitor Non-Filler Episodes in Sonarr
+      default: true
+benefits:
+  - title: Skip the Filler
+    description:
+      Automatically limits Sonarr to grabbing only canon episodes, so filler
+      arcs don't clutter your downloads
+  - title: Organized Plex Library
+    description:
+      Splits filler and non-filler episodes into separate Plex collections based
+      on what's actually downloaded
+  - title: Set and Forget
+    description:
+      Configure once per series and let it keep Sonarr's monitoring rules in
+      sync with Anime Filler List
+features:
+  - title: Anime Filler List Integration
+    description:
+      Pulls filler episode data directly from Anime Filler List for accurate,
+      up-to-date exclusions
+  - title: Sonarr Monitoring Control
+    description:
+      Adjusts which episodes Sonarr monitors for a given series based on filler
+      status
+  - title: Plex Collection Automation
+    description:
+      Creates and maintains Plex collections that reflect filler vs. non-filler
+      download status
+tags:
+  - Media
+  - Automation
+  - Self-Hosting
