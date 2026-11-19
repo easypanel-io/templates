@@ -1,0 +1,134 @@
+name: AliasVault
+description: |
+  AliasVault is a privacy-first, end-to-end encrypted password manager with a
+  built-in email alias server. It lets you generate unique identities, strong
+  passwords, and random email aliases for every website you sign up for, so
+  your real inbox and identity stay private. Vault contents and received
+  emails are fully encrypted client-side, your master password never leaves
+  your device, and the server never has access to your unencrypted data.
+instructions: |
+  Application Domain is optional — leave it blank to use Easypanel's
+  auto-assigned domain and start using AliasVault as a password manager
+  right away, or set it to a domain you own if you also want the private
+  email alias feature, which needs that domain's MX record(s) pointed at
+  this server's public IP and inbound TCP ports 25 and 587 open on your
+  firewall. Open your domain and self-register your first vault account,
+  separate from the admin login below: AliasVault is zero-knowledge and
+  end-to-end encrypted, so your master password never leaves your device
+  and cannot be recovered if lost. The separate admin panel (server
+  administration only, not vault data) lives at /admin — log in with
+  username `admin` and the Admin Panel Password below, which is stored
+  only as a one-way hash, so choose it carefully since it can only be
+  reset via a redeploy.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: Website
+    url: https://www.aliasvault.com/
+  - label: GitHub Repo
+    url: https://github.com/aliasvault/aliasvault
+  - label: Documentation
+    url: https://docs.aliasvault.com/
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - aliasvaultVersion
+    - adminPassword
+  properties:
+    appServiceName:
+      type: string
+      title: Service Name
+      default: aliasvault
+    appDomain:
+      type: string
+      title: Application Domain
+      description:
+        The domain used to reach the AliasVault client, API and admin panel.
+        Leave blank to use the domain Easypanel assigns automatically — fine for
+        trying out the vault, but the private email alias feature needs a real
+        domain you own here instead (see Instructions).
+    aliasvaultVersion:
+      type: string
+      title: AliasVault Version
+      default: "0.30.3"
+    adminPassword:
+      type: string
+      title: Admin Panel Password
+      format: password
+      description:
+        Password for the `admin` user of the /admin management panel. Only a
+        one-way hash of this is stored, so choose it carefully.
+    publicRegistrationEnabled:
+      type: boolean
+      title: Allow Public Registration
+      default: true
+    privateEmailDomains:
+      type: string
+      title: Private Email Domains
+      description:
+        Comma-separated domains (e.g. alias.example.com) you own and have
+        pointed MX records at this server, for the private email alias feature.
+        Leave blank to disable.
+      default: ""
+    smtpAdvertisedHostname:
+      type: string
+      title: SMTP Advertised Hostname
+      description:
+        Hostname announced in the SMTP banner/EHLO. Should match the PTR
+        (reverse DNS) of this server's public IP for best deliverability.
+        Defaults to the application domain.
+      default: ""
+    supportEmail:
+      type: string
+      title: Support Email
+      description:
+        Contact email shown to users for account/password recovery support.
+      default: ""
+benefits:
+  - title: Zero-Knowledge Encryption
+    description: |
+      All vault contents and received emails are encrypted end-to-end on your
+      device. Your master password never leaves your device and the server
+      never has access to your unencrypted data.
+  - title: Built-In Email Alias Server
+    description: |
+      Generate unique, working email aliases for every account you create,
+      backed by a self-hosted SMTP server, so you never have to hand out your
+      real email address again.
+  - title: Fully Self-Hostable
+    description: |
+      Run AliasVault entirely on your own infrastructure with zero
+      third-party dependencies, giving you complete control over your
+      passwords, identities, and email aliases.
+features:
+  - title: Password & Identity Management
+    description: |
+      Create strong passwords and unique identities for every website, all
+      organized in a single encrypted vault.
+  - title: Random Email Aliases
+    description: |
+      Instantly generate working email aliases on your own domain(s) that
+      forward mail into your encrypted vault, reducing spam and tracking.
+  - title: Cross-Platform Access
+    description: |
+      Access your vault from the responsive web app, browser extensions
+      (Chrome, Firefox, Edge, Safari), and native iOS/Android apps.
+  - title: Built-In TOTP Authenticator
+    description: |
+      Store and generate two-factor authentication codes alongside your
+      passwords, without needing a separate authenticator app.
+  - title: Admin Panel
+    description: |
+      A dedicated admin panel for managing users, private email domains, and
+      monitoring server logs, separate from end-user vault access.
+tags:
+  - password manager
+  - email alias
+  - security
+  - privacy
+  - self-hosted
