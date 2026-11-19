@@ -5,13 +5,15 @@ description:
   qBittorrent, Transmission, or Deluge) and serves a clean, modern web UI for
   administering and monitoring torrents.
 instructions: >-
-  Open the app and register the first account right after deploying, since the
-  first account becomes the admin. Flood doesn't bundle a torrent client, so
-  after logging in, go to Settings and add the connection details (host, port,
-  username/password, or RPC credentials) for your existing rTorrent,
-  qBittorrent, Transmission, or Deluge instance. If that client runs elsewhere
-  on your network, make sure this deployment can reach it. Flood's own
-  configuration is stored on a persistent volume.
+  The admin account is created on the first start before Flood is reachable from
+  outside. Log in with the ADMIN_USERNAME and ADMIN_PASSWORD shown in the
+  Environment tab of the service, then change the password from Settings. Flood
+  doesn't bundle a torrent client, so after logging in, go to Settings and
+  replace the placeholder connection with the details (host, port,
+  username/password, or RPC credentials) of your existing rTorrent, qBittorrent,
+  Transmission, or Deluge instance. If that client runs elsewhere on your
+  network, make sure this deployment can reach it. Flood's own configuration is
+  stored on a persistent volume.
 changeLog:
   - date: 2026-10-12
     description: First Release
@@ -30,6 +32,7 @@ schema:
   required:
     - appServiceName
     - appServiceImage
+    - adminUsername
   properties:
     appServiceName:
       type: string
@@ -39,6 +42,10 @@ schema:
       type: string
       title: App Service Image
       default: jesec/flood:4.16.1
+    adminUsername:
+      type: string
+      title: Admin Username
+      default: admin
 benefits:
   - title: Works With Your Existing Client
     description:
