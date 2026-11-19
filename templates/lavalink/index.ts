@@ -4,11 +4,27 @@ import { Input } from "./meta";
 export function generate(input: Input): Output {
   const services: Services = [];
 
+  const applicationYml = `server:
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  server:
+    password: "${input.password}"
+    sources:
+      youtube: false
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      nico: true
+      http: true
+      local: false
+`;
+
   services.push({
     type: "app",
     data: {
       serviceName: input.appServiceName,
-      env: [`LAVALINK_SERVER_PASSWORD=${input.password}`].join("\n"),
       source: {
         type: "image",
         image: input.appServiceImage,
@@ -21,9 +37,14 @@ export function generate(input: Input): Output {
       ],
       mounts: [
         {
+          type: "file",
+          content: applicationYml,
+          mountPath: "/opt/Lavalink/application.yml",
+        },
+        {
           type: "volume",
-          name: "lavalink",
-          mountPath: "/opt/Lavalink",
+          name: "plugins",
+          mountPath: "/opt/Lavalink/plugins",
         },
       ],
     },
