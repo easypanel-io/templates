@@ -9,6 +9,8 @@ instructions: |
   domain to your public URL (e.g. https://lingva.yourdomain.com) for correct
   API links. Use the REST API at /api/v1/:source/:target/:query for translations.
 changeLog:
+  - date: 2026-09-28
+    description: Removed Docker Hub link from links section (only Website/GitHub/Documentation links are allowed)
   - date: 2026-03-17
     description: First Release
 links:
@@ -16,8 +18,6 @@ links:
     url: https://lingva.thedaviddelta.com
   - label: GitHub
     url: https://github.com/TheDavidDelta/lingva-translate
-  - label: Docker Hub
-    url: https://hub.docker.com/r/thedaviddelta/lingva-translate
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
