@@ -7,10 +7,12 @@ description:
 instructions: >-
   Log in as admin with the ADMIN_PASSWORD shown in the Environment tab of the
   init service. The init service swaps the app's default admin password for this
-  one on first start, and leaves it alone once you change it. Upload GPX, TCX,
-  or FIT files from the Workouts page, or connect Strava/other services under
-  your profile settings. New registrations are inactive until an admin approves
-  them, and can be disabled entirely from the admin panel.
+  one on first start, and leaves it alone once you change it. Until that swap is
+  done the app only listens inside its container, so the site comes up a little
+  after the other services. Upload GPX, TCX, or FIT files from the Workouts
+  page, or connect Strava/other services under your profile settings. New
+  registrations are inactive until an admin approves them, and can be disabled
+  entirely from the admin panel.
 changeLog:
   - date: 2026-08-31
     description: first release

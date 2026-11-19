@@ -41,6 +41,30 @@ fi
 exec tail -f /dev/null
 `;
 
+  const startScript = `set -eu
+if [ ! -f /state/ready ]; then
+  WT_BIND=127.0.0.1:8080 /app/workout-tracker &
+  pid=$!
+  until curl -fsS -o /dev/null http://127.0.0.1:8080/user/signin 2> /dev/null; do
+    kill -0 "$pid" 2> /dev/null || exit 1
+    sleep 1
+  done
+  while true; do
+    kill -0 "$pid" 2> /dev/null || exit 1
+    location=$(curl -s -o /dev/null -w '%{redirect_url}' -d 'username=admin&password=admin' http://127.0.0.1:8080/user/signin || true)
+    case "$location" in
+      */user/signin*) break ;;
+    esac
+    echo "Waiting for the init service to replace the default admin password"
+    sleep 2
+  done
+  kill "$pid"
+  wait "$pid" || true
+  touch /state/ready
+fi
+exec /app/workout-tracker
+`;
+
   services.push({
     type: "app",
     data: {
@@ -63,6 +87,21 @@ exec tail -f /dev/null
           input.registrationDisabled ? "true" : "false"
         }`,
       ].join("\n"),
+      deploy: {
+        command: "sh /scripts/start.sh",
+      },
+      mounts: [
+        {
+          type: "volume",
+          name: "state",
+          mountPath: "/state",
+        },
+        {
+          type: "file",
+          content: startScript,
+          mountPath: "/scripts/start.sh",
+        },
+      ],
     },
   });
 
