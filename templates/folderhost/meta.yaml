@@ -1,0 +1,58 @@
+name: FolderHost
+description:
+  FolderHost is a self-hosted private cloud in a single lightweight binary.
+  Share files, collaborate on code, and manage users without a complex setup — a
+  Nextcloud alternative built for people who want something simple and fast.
+instructions: >-
+  On first visit, create the initial admin account through the setup wizard.
+  From there, invite other users, set storage limits per folder, and manage
+  everything from the Explorer, Services, Users, and Logs tabs. All data is
+  stored on the "data" volume, so it persists across restarts and upgrades.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/MertJSX/folderhost
+  - label: Documentation
+    url: https://github.com/MertJSX/folderhost#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: folderhost
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mertjsx/folderhost:v26.8.0
+benefits:
+  - title: Single Binary
+    description:
+      No external dependencies — the whole app is a ~19MB Go binary with an
+      embedded React frontend.
+  - title: Real-Time Collaboration
+    description: Collaborate on files with other users in real time.
+  - title: Lightweight Nextcloud Alternative
+    description:
+      A simpler, faster option for people who just want file sharing and user
+      management without the overhead.
+features:
+  - title: File Explorer
+    description: Browse, upload, and manage files and folders from the web UI.
+  - title: User Management & Recovery Bin
+    description:
+      Manage users and storage limits, with a recovery bin for deleted files.
+  - title: Activity Logs
+    description: Track file and user activity from the Logs tab.
+tags:
+  - File Sharing
+  - Cloud Storage
+  - Self-Hosted
