@@ -12,8 +12,6 @@ changeLog:
     description: first release
 
 links:
-  - label: Docker
-    url: https://hub.docker.com/r/mosswill/isaiah
   - label: GitHub
     url: https://github.com/will-moss/isaiah
 contributors:
@@ -33,7 +31,7 @@ schema:
     appServiceImage:
       type: string
       title: App Service Image
-      default: mosswill/isaiah:latest
+      default: mosswill/isaiah:1.36.9
 
 benefits:
   - title: Container Management
