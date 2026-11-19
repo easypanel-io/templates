@@ -11,6 +11,10 @@ description:
   yet powerful solution for all your music needs.
 instructions: null
 changeLog:
+  - date: 2026-09-28
+    description:
+      Fixed the GitHub link pointing to the linuxserver Docker wrapper repo
+      instead of the actual upstream project (hosted on GNOME's GitLab)
   - date: 2024-12-30
     description: First Release
   - date: 2025-07-22
@@ -22,8 +26,8 @@ links:
     url: https://lollypop.app/
   - label: Documentation
     url: https://lollypop.app/docs/
-  - label: Github
-    url: https://github.com/linuxserver/lollypop
+  - label: GitLab
+    url: https://gitlab.gnome.org/World/lollypop
 contributors:
   - name: Ahson Shaikh
     url: https://github.com/Ahson-Shaikh
