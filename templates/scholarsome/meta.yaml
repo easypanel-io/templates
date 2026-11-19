@@ -1,0 +1,115 @@
+name: Scholarsome
+description:
+  Scholarsome is a free and open-source, self-hosted flashcard studying platform
+  built as a drop-in replacement for subscription-based services. It provides a
+  familiar web-based interface where all data is stored on your own server,
+  removing the need to sync between devices or trust a third-party with your
+  study material. Users can create and edit study sets with rich text and LaTeX
+  math expressions, study in multiple card modes that mimic physical flashcards,
+  take auto-generated quizzes (fill-in-the-blank, true/false, multiple choice),
+  and import or export sets from Anki, Quizlet, and CSV. Built on NestJS,
+  Angular, and Prisma, it backs its data with MariaDB and uses Redis for
+  sessions and caching.
+instructions:
+  After deployment open your app domain to register your first account. If SMTP
+  is not configured, users are verified automatically. To configure email
+  verification add the optional SMTP environment variables to the app service and
+  redeploy. Set STORAGE_TYPE to "local" (default) to store uploads inside the
+  container volume, or to "s3" and fill in the S3_* variables to use an external
+  object store.
+changeLog:
+  - date: 2026-06-03
+    description: Initial Template Release (v1.2.1)
+links:
+  - label: GitHub
+    url: https://github.com/hwgilbert16/scholarsome
+  - label: Website
+    url: https://scholarsome.com
+  - label: Documentation
+    url: https://scholarsome.com/handbook/installation/prerequisites
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: scholarsome
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: hwgilbert16/scholarsome:v1.2.1
+      description: Scholarsome Docker image
+    smtpHost:
+      type: string
+      title: SMTP Host
+      default: ""
+      description:
+        Optional. SMTP hostname for sending verification emails. Leave empty to
+        skip email verification (all new accounts are verified automatically).
+    smtpPort:
+      type: string
+      title: SMTP Port
+      default: "587"
+    smtpUsername:
+      type: string
+      title: SMTP Username
+      default: ""
+    smtpPassword:
+      type: string
+      title: SMTP Password
+      default: ""
+benefits:
+  - title: Free Alternative to Quizlet and Anki
+    description:
+      All core studying features with no paywalls, no subscription, and no
+      data harvested by a third party — your cards stay on your server.
+  - title: Familiar Web-Based Interface
+    description:
+      Edit and study flashcards from any browser without installing an app or
+      worrying about syncing. Everything is stored centrally on your instance.
+  - title: Import and Export Freedom
+    description:
+      Bring your existing study material from Anki, Quizlet, or CSV files, and
+      export to the same formats whenever you want to move elsewhere.
+  - title: Self-Hosted and Open Source
+    description:
+      Full control over your data and infrastructure under the MIT licence. Run
+      it on any server that can run Docker.
+features:
+  - title: Flashcard Study Modes
+    description:
+      Study sets in multiple card-flip modes that replicate the feel of physical
+      flashcards, with front/back flipping, shuffle, and repeat controls.
+  - title: Auto-Generated Quizzes
+    description:
+      Generate fill-in-the-blank, true/false, and multiple choice quizzes
+      directly from any study set without manual question creation.
+  - title: LaTeX Math Support
+    description:
+      Write mathematical expressions in LaTeX directly on card faces, making
+      Scholarsome suitable for science, engineering, and maths subjects.
+  - title: Anki, Quizlet, and CSV Import/Export
+    description:
+      Migrate your entire deck library in or out with first-class support for
+      the most popular flashcard formats.
+  - title: Set Sharing and Visibility
+    description:
+      Control who can see each study set with per-set visibility settings, and
+      share sets with specific users on the same instance.
+  - title: Email Verification via SMTP
+    description:
+      Optionally connect an SMTP server to enforce email verification on new
+      registrations. Without SMTP, accounts are auto-verified.
+tags:
+  - Education
+  - Flashcards
+  - Learning
+  - Self-Hosted
+  - Open Source
+  - TypeScript
