@@ -1,9 +1,15 @@
-import { Output, randomPassword, Services } from "~templates-utils";
+import {
+  Output,
+  randomPassword,
+  randomString,
+  Services,
+} from "~templates-utils";
 import { Input } from "./meta";
 
 export function generate(input: Input): Output {
   const services: Services = [];
   const redisPassword = randomPassword();
+  const authTokenSecret = randomString(32);
 
   services.push({
     type: "app",
@@ -23,6 +29,7 @@ export function generate(input: Input): Output {
         `kuzzle_services__memoryStorage__node__host=$(PROJECT_NAME)_${input.appServiceName}-redis`,
         `kuzzle_services__memoryStorage__node__password=${redisPassword}`,
         `kuzzle_server__protocols__mqtt__enabled=true`,
+        `kuzzle_security__authToken__secret=${authTokenSecret}`,
         `NODE_ENV=production`,
       ].join("\n"),
       ports: [
