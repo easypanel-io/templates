@@ -1,0 +1,67 @@
+name: Pterodactyl Panel - Blueprint Framework
+description:
+  Pterodactyl Panel enhanced with Blueprint Framework, an extension system for
+  themes, add-ons, and panel customizations. Blueprint is an independent project
+  and is not affiliated with the core Pterodactyl project.
+instructions:
+  After deployment, open the app shell and run the script for admin user
+  creation to create your first administrator account. Blueprint extensions can
+  be installed from the Blueprint marketplace or from the command line using
+  Blueprint's installation commands. Review mail settings before production use
+  if you need outbound email.
+changeLog:
+  - date: 2026-04-25
+    description: Template Release (v1.11.11)
+links:
+  - label: Website - Pterodactyl
+    url: https://pterodactyl.io/
+  - label: Documentation - Pterodactyl
+    url: https://pterodactyl.io/project/introduction.html
+  - label: GitHub - Pterodactyl
+    url: https://github.com/pterodactyl/panel
+contributors:
+  - name: Richards0nd
+    url: https://github.com/Richards0nd
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: blueprint
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/blueprintframework/blueprint:v1.11.11
+benefits:
+  - title: Blueprint Extension Ecosystem
+    description:
+      Install panel themes and extensions to customize the user and admin
+      experience.
+  - title: Unified Game Panel Operations
+    description:
+      Manage game server operations and panel administration from one interface.
+  - title: Self-Hosted Control
+    description:
+      Keep infrastructure, data, and operational policies under your own
+      control.
+features:
+  - title: Preconfigured Blueprint Runtime
+    description:
+      Blueprint-ready panel deployment with Redis and MariaDB included.
+  - title: Persistent Storage Layout
+    description:
+      Includes dedicated volumes for app data, extensions, configs, and logs.
+  - title: Production-Oriented Defaults
+    description:
+      Sets app key, queue/cache Redis usage, and telemetry disabled by default.
+tags:
+  - Gaming
+  - Game Server Management
+  - Control Panel
+  - Extensions
