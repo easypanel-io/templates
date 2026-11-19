@@ -1,0 +1,77 @@
+name: Dribdat
+description:
+  Dribdat is a playful, open-source platform for running data-driven hackathons
+  and civic tech sprints. It covers the full event lifecycle, from announcing an
+  event and publishing challenges to forming teams and showcasing results, with
+  a customizable and themeable Bootstrap interface.
+instructions:
+  The first user that registers becomes the site administrator, so register an
+  account immediately after deployment.
+changeLog:
+  - date: 2026-08-03
+    description: first release
+links:
+  - label: Website
+    url: https://dribdat.cc
+  - label: Documentation
+    url: https://docs.dribdat.cc
+  - label: GitHub
+    url: https://github.com/dribdat/dribdat
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dribdat
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dribdat/dribdat:v0.9.4
+    timeZone:
+      type: string
+      title: Time Zone
+      default: UTC
+benefits:
+  - title: Full Event Lifecycle
+    description:
+      From announcing your event and publishing challenges to forming teams and
+      showcasing results, Dribdat covers every stage of a hackathon.
+  - title: Project Curation
+    description:
+      A playful and engaging interface lets participants explore ideas while
+      organizers manage projects with ease.
+  - title: Customizable & Themeable
+    description:
+      Tailor the platform to your event's brand with a customizable frontend and
+      admin-configurable settings.
+  - title: Self-Hosted & Open Source
+    description:
+      Keep full control over your event data with an open-source platform backed
+      by a PostgreSQL database.
+features:
+  - title: Data Aggregation
+    description:
+      Automatically sync project updates from Git, Forgejo, Etherpad, and other
+      sources.
+  - title: Rich Tool Integrations
+    description:
+      Connect with popular platforms like Slack, Mattermost, Discord, and
+      others.
+  - title: Progress Tracking
+    description:
+      Keep a pulse on all projects with real-time progress logs and updates.
+  - title: Alternative Frontends
+    description:
+      Use the standard Bootstrap UI, or connect the Backboard Vue.js frontend
+      for a more modern feel.
+tags:
+  - Events
+  - Collaboration
+  - Project Management
