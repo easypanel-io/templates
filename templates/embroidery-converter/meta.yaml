@@ -1,0 +1,64 @@
+name: Embroidery File Converter
+description:
+  Embroidery File Converter is a browser-only viewer and converter for PES, DST,
+  JEF, EXP and VP3 embroidery files. Files never leave the device, because the
+  container only serves a static page and the conversion runs in the browser.
+  It is a TypeScript port of pystitch, the library Ink/Stitch uses, and it is
+  free and MIT licensed. Made by MavenWright, the team behind StitchKit.
+instructions: Open the app's domain in a browser. Nothing else needs to be configured. Set the SHOW_CREDIT environment variable to false to remove the optional footer link.
+changeLog:
+  - date: 2026-11-20
+    description: first release
+links:
+  - label: Website
+    url: https://mavenwright.com/en/stitchkit/tools/embroidery-file-converter
+  - label: Documentation
+    url: https://github.com/mavenwright/embroidery-converter#readme
+  - label: Github
+    url: https://github.com/mavenwright/embroidery-converter
+contributors:
+  - name: MavenWright
+    url: https://github.com/mavenwright
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: embroidery-converter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mavenwright/embroidery-converter:1.0.0
+benefits:
+  - title: Files stay on your device
+    description:
+      The container serves a static page. Embroidery files are read and
+      converted in the browser and are never uploaded.
+  - title: Tested against pystitch
+    description:
+      The readers and writers are tested against pystitch, the library Ink/Stitch
+      uses for machine files. On a synthetic test corpus the writers produce the same bytes and the readers return the same stitches for the same input, with documented exceptions (stand-in colours for
+      designs that store none).
+  - title: Nothing to maintain
+    description:
+      No database, no volumes and no login. One small nginx image that runs as an
+      unprivileged user on port 8080.
+features:
+  - title: Five formats
+    description:
+      Opens PES, DST, JEF, EXP and VP3 files and converts between them, with a
+      preview and the stitch and colour facts.
+  - title: Credit toggle
+    description:
+      The footer has an optional "Edit in StitchKit" link. Set SHOW_CREDIT to false to remove it.
+  - title: Safety limits
+    description:
+      Files above 1,000,000 stitches or 30 MB are rejected with a clear message.
+tags:
+  - Utilities
+  - Embroidery
+  - Open Source
