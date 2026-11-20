@@ -1,0 +1,83 @@
+name: OpenLMNP
+description:
+  OpenLMNP is a self-hosted accounting application for French furnished rentals
+  taxed under the LMNP regime (Location Meublée Non Professionnelle). It
+  computes the depreciation schedules that make the "régime réel" worth choosing
+  (building components, furniture, renovation works), keeps the books of each
+  fiscal year, and produces what the tax office expects at the end of it — the
+  2031/2033 forms as a PDF and a compliant FEC ledger export. It also imports
+  Airbnb payout CSV files, tracks loans and their deductible interest, and
+  compares the "régime réel" against the flat-rate micro-BIC before you commit
+  to either. Everything runs on SQLite inside your own volumes, and no
+  accounting, personal or tax data ever leaves the server.
+instructions:
+  Open /register right after the deployment — the first account created becomes
+  the administrator, and sign-up then closes by itself. Without an SMTP server
+  the "forgot password" link stays inert; reset a password from the server
+  instead with `php artisan openlmnp:reset-password you@example.com`.
+changeLog:
+  - date: 2026-09-14
+    description: first release
+links:
+  - label: Website
+    url: https://openlmnp.fr
+  - label: Documentation
+    url: https://github.com/manganate006/openlmnp/blob/main/docs/INSTALLATION.md
+  - label: Github
+    url: https://github.com/manganate006/openlmnp
+contributors:
+  - name: Jérémie Bordonaro
+    url: https://github.com/manganate006
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: openlmnp
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: manganate06/openlmnp:1.6.6
+benefits:
+  - title: The real tax regime, without an accountant
+    description:
+      Depreciation is what makes the "régime réel" pay off for a furnished
+      rental, and it is also what makes it hard to do by hand. OpenLMNP splits
+      the property into components, applies each useful life and the
+      personal-use share, and carries the deferred depreciation forward from one
+      year to the next.
+  - title: Forms the tax office accepts
+    description:
+      The fiscal year closes on a ready-to-file 2031/2033 PDF and an FEC ledger
+      export in the format required by article A47 A-1 of the French tax
+      procedure code — the two documents an audit actually asks for.
+  - title: Your data stays on your server
+    description:
+      The whole application runs on a SQLite file in a volume you own. No
+      accounting, personal or tax data is sent anywhere, and the daily anonymous
+      install counter can be switched off with TELEMETRY_ENABLED=false.
+features:
+  - title: Depreciation schedules
+    description:
+      Building components, furniture and renovation works, each with its own
+      useful life, prorated over the first year and capped so that depreciation
+      never creates a deficit, as the law requires.
+  - title: Tax return and FEC export
+    description:
+      The 2031 form and its 2033 annexes as a PDF, plus the FEC ledger export,
+      both generated from the bookkeeping of the closed fiscal year.
+  - title: Airbnb CSV import
+    description:
+      Payout statements are imported straight from the CSV exports of the
+      platform, in French or English, with duplicate detection.
+  - title: Loans and micro-BIC comparison
+    description:
+      Amortisation tables with the deductible share of interest, and a
+      side-by-side comparison of the "régime réel" against the flat-rate
+      micro-BIC before you choose.
+tags:
+  - Finance

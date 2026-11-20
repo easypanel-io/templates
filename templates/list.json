@@ -6585,6 +6585,15 @@
     ]
   },
   {
+    "slug": "openlmnp",
+    "logo": "logo.png",
+    "name": "OpenLMNP",
+    "description": "OpenLMNP is a self-hosted accounting application for French furnished rentals taxed under the LMNP regime (Location Meublée Non Professionnelle). It computes the depreciation schedules that make the \"régime réel\" worth choosing (building components, furniture, renovation works), keeps the books of each fiscal year, and produces what the tax office expects at the end of it — the 2031/2033 forms as a PDF and a compliant FEC ledger export. It also imports Airbnb payout CSV files, tracks loans and their deductible interest, and compares the \"régime réel\" against the flat-rate micro-BIC before you commit to either. Everything runs on SQLite inside your own volumes, and no accounting, personal or tax data ever leaves the server.",
+    "tags": [
+      "Finance"
+    ]
+  },
+  {
     "slug": "openpanel",
     "logo": "logo.png",
     "name": "OpenPanel",
