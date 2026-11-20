@@ -1,0 +1,64 @@
+name: OpenTogetherTube
+description:
+  OpenTogetherTube lets you watch videos with friends in perfectly synchronized
+  playback, with an optional voting system and no sign-up required to join a
+  room. The open-source spiritual successor to TogetherTube.
+instructions: >-
+  Open your domain and click "Create Room" to start watching together — no
+  account is required for viewers. Set a YouTube API key below if you want to
+  add YouTube videos to the queue; without one, other supported sources (direct
+  video links, Vimeo, and more) still work.
+changeLog:
+  - date: 2026-09-02
+    description: first release
+links:
+  - label: Website
+    url: https://opentogethertube.com
+  - label: GitHub
+    url: https://github.com/dyc3/opentogethertube
+  - label: Documentation
+    url: https://github.com/dyc3/opentogethertube/blob/master/docs/how-to-deploy.md
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: opentogethertube
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: dyc3/opentogethertube:v0.15.0
+    youtubeApiKey:
+      type: string
+      title: YouTube API Key
+      description: Optional. Required to queue YouTube videos.
+benefits:
+  - title: No Sign-Up Required
+    description:
+      Anyone with the room link can join and start watching instantly.
+  - title: Synchronized Playback
+    description:
+      Real-time synchronized playback across everyone in the room, with an
+      optional voting system for what plays next.
+  - title: Multi-Source
+    description:
+      Supports YouTube, Vimeo, direct video links, and more in the same queue.
+features:
+  - title: Room Browsing
+    description: Browse currently active public rooms from the homepage.
+  - title: Dark Theme
+    description: A clean dark interface by default.
+  - title: Open Source
+    description:
+      Fully open-source, self-hostable spiritual successor to TogetherTube.
+tags:
+  - Media
+  - Video
+  - Self-Hosted
