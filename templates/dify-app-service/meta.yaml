@@ -1,0 +1,105 @@
+name: Dify (App Service)
+description:
+  Dify is an open-source platform for building and running LLM applications. It
+  combines a visual workflow and chatflow builder, a RAG pipeline for knowledge
+  bases, agents with tools, a plugin marketplace for model providers and tools,
+  and observability for every run, all behind a web console and a
+  backend-as-a-service API. This template runs every Dify component as its own
+  App Service, so each part can be inspected, scaled and restarted on its own.
+instructions:
+  The first start pulls several images and runs the database migrations, so it
+  can take a few minutes. Open the app domain, create the admin account on the
+  install page, then add a model provider from the plugin marketplace under
+  Settings. The dify service is a proxy in front of the web, API, websocket and
+  plugin services, so a custom domain only needs to be added there. When a
+  custom domain is used, also update FILES_URL, TRIGGER_URL,
+  ENDPOINT_URL_TEMPLATE and NEXT_PUBLIC_SOCKET_URL on the services that set
+  them.
+changeLog:
+  - date: 2026-11-13
+    description: First release
+links:
+  - label: Website
+    url: https://dify.ai
+  - label: Documentation
+    url: https://docs.dify.ai
+  - label: Github
+    url: https://github.com/langgenius/dify
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - webServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: dify
+    appServiceImage:
+      type: string
+      title: API Service Image
+      default: langgenius/dify-api:1.19.0
+    webServiceImage:
+      type: string
+      title: Web Service Image
+      default: langgenius/dify-web:1.19.0
+benefits:
+  - title: Build AI Apps Faster
+    description:
+      Design chatbots, agents and multi-step workflows visually and publish them
+      as web apps or APIs without writing backend code.
+  - title: Full Data Ownership
+    description:
+      Prompts, conversations, knowledge bases and logs stay on your own server,
+      which helps with privacy requirements and avoids vendor lock-in.
+  - title: Any Model Provider
+    description:
+      Connect hosted providers such as OpenAI, Anthropic and Gemini or local
+      models through plugins, and switch between them per app.
+  - title: Per-Component Control
+    description:
+      Each Dify component runs as a separate App Service, so logs, resources and
+      restarts can be managed individually from Easypanel.
+features:
+  - title: Workflow And Chatflow Builder
+    description:
+      A visual canvas with LLM, knowledge retrieval, code, HTTP, condition,
+      iteration and loop nodes for building complex AI pipelines.
+  - title: Knowledge Bases And RAG
+    description:
+      Upload documents or sync sources, chunk and embed them, and retrieve them
+      with vector, full-text or hybrid search backed by Weaviate.
+  - title: Agents And Tools
+    description:
+      Build agents that call built-in tools, custom APIs, MCP servers and
+      plugins, with a sandboxed shell workspace for agent runs.
+  - title: Plugin Marketplace
+    description:
+      Install model providers, tools, data sources and extensions from the Dify
+      marketplace through the bundled plugin daemon.
+  - title: Code Sandbox
+    description:
+      Run Python and JavaScript code nodes in an isolated sandbox whose outbound
+      traffic goes through an SSRF-protecting proxy.
+  - title: Real-Time Collaboration
+    description:
+      Edit workflows together with teammates through the dedicated websocket
+      service.
+  - title: Logs And Annotations
+    description:
+      Inspect every run with inputs, outputs, token usage and latency, and
+      improve answers with annotations and feedback.
+  - title: Backend As A Service API
+    description:
+      Every app is available through a REST API with API keys, so it can be
+      embedded into existing products.
+tags:
+  - AI
+  - LLM
+  - Automation
+  - Developer Tools
+  - Workflow
