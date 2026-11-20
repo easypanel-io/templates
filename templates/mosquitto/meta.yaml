@@ -1,0 +1,107 @@
+name: Mosquitto
+description:
+  Eclipse Mosquitto is a lightweight open-source message broker that implements
+  the MQTT protocol versions 5.0, 3.1.1 and 3.1. It is used to connect IoT
+  devices, sensors, home automation systems and backend services through a
+  simple publish and subscribe model, and is small enough to run on anything
+  from a Raspberry Pi to a large server. This template runs Mosquitto with
+  password authentication, persistent message storage, a plain MQTT port and
+  MQTT over secure WebSockets on the app domain.
+instructions:
+  The username is set in the template form and the password is generated on
+  deploy. Both are in the MOSQUITTO_USERNAME and MOSQUITTO_PASSWORD environment
+  variables of the service, and changing them takes effect on the next deploy.
+  Browsers, dashboards and devices that support it can connect over secure
+  WebSockets at wss://your-domain on port 443. Plain MQTT is not published by
+  default because it sends the password unencrypted. Turn on Publish Plain MQTT
+  Port only for devices that can't use WebSockets, ideally on a private network,
+  and make sure that port is open in the server firewall.
+changeLog:
+  - date: 2026-11-17
+    description: First release
+links:
+  - label: Website
+    url: https://mosquitto.org
+  - label: Documentation
+    url: https://mosquitto.org/documentation/
+  - label: Github
+    url: https://github.com/eclipse-mosquitto/mosquitto
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - username
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: mosquitto
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: eclipse-mosquitto:2.1.2-alpine
+    username:
+      type: string
+      title: MQTT Username
+      default: mosquitto
+    publishMqttPort:
+      type: boolean
+      title: Publish Plain MQTT Port
+      description: Unencrypted MQTT for devices that can't use WebSockets.
+      default: false
+    mqttPort:
+      type: integer
+      title: MQTT Port on Host
+      default: 1883
+benefits:
+  - title: Lightweight And Fast
+    description:
+      Mosquitto uses very little memory and CPU, so it can handle thousands of
+      clients on a small server.
+  - title: Standard MQTT Broker
+    description:
+      Works with any MQTT client, library or device, including Home Assistant,
+      Node-RED, Zigbee2MQTT, ESP32 and Tasmota.
+  - title: Secure By Default
+    description:
+      Anonymous access is disabled and clients must sign in with a username and
+      a generated password.
+  - title: Full Data Ownership
+    description:
+      Messages, retained topics and sessions stay on your own server instead of
+      a hosted broker.
+features:
+  - title: MQTT 5.0, 3.1.1 And 3.1
+    description:
+      Supports every current MQTT version, including MQTT 5 features such as
+      shared subscriptions, message expiry and user properties.
+  - title: Publish And Subscribe
+    description:
+      Clients publish to topics and subscribe with wildcards, with QoS 0, 1 and
+      2 delivery guarantees.
+  - title: Retained Messages And Sessions
+    description:
+      Retained messages, queued messages and persistent sessions are written to
+      a SQLite database within seconds, so they survive restarts, redeploys and
+      crashes.
+  - title: MQTT Over WebSockets
+    description:
+      Browsers and web dashboards can connect over secure WebSockets on the app
+      domain with HTTPS handled by Easypanel.
+  - title: Plain MQTT Port
+    description:
+      Devices and services connect directly on the published MQTT port of the
+      server.
+  - title: Password Authentication
+    description:
+      Clients authenticate with a username and password that are stored as a
+      hashed password file.
+tags:
+  - IoT
+  - MQTT
+  - Message Broker
+  - Home Automation
