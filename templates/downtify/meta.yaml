@@ -1,0 +1,60 @@
+name: Downtify
+description:
+  Downtify is a self-hosted music downloader — paste a Spotify link and get a
+  perfectly tagged audio file. It resolves track metadata from Spotify's public
+  pages, finds the best match on YouTube Music, and downloads it with embedded
+  album art and metadata. No Spotify API key or account needed.
+instructions: >-
+  Open your domain, paste a Spotify track, album, or playlist link (or use
+  free-text search), and download. Downloaded files land on the "downloads"
+  volume with album art and metadata embedded; app settings and the playlist
+  monitor database live on the "data" volume.
+changeLog:
+  - date: 2026-09-04
+    description: first release
+links:
+  - label: GitHub
+    url: https://github.com/henriquesebastiao/downtify
+  - label: Documentation
+    url: https://github.com/henriquesebastiao/downtify#readme
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: downtify
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: henriquesebastiao/downtify:2.10.1
+benefits:
+  - title: Zero Credentials
+    description:
+      No Spotify API key, no account, no Premium subscription required.
+  - title: Rich Metadata
+    description:
+      Album art, title, artist, album, and year embedded in every downloaded
+      file.
+  - title: Multiple Formats
+    description: Download as MP3, FLAC, M4A, OGG, or OPUS.
+features:
+  - title: Playlist Monitor
+    description:
+      Watch a playlist and automatically download new songs as they're added.
+  - title: Free-Text Search
+    description: Search YouTube Music directly without needing a Spotify link.
+  - title: Built-In Player
+    description:
+      Play downloaded music straight from the web UI, with shuffle, repeat, and
+      a progress bar.
+tags:
+  - Music
+  - Media
+  - Self-Hosted
