@@ -250,6 +250,18 @@
     ]
   },
   {
+    "slug": "anonaddy",
+    "logo": "logo.png",
+    "name": "AnonAddy",
+    "description": "AnonAddy (addy.io) is an open-source email alias and forwarding service that lets you create unlimited email aliases to protect your real address. This template runs the official all-in-one app image (web, queue worker, Postfix SMTP, and Rspamd bundled together) alongside MySQL and Redis.",
+    "tags": [
+      "Email",
+      "Privacy",
+      "Self-Hosting",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "anonupload",
     "logo": "logo.png",
     "name": "AnonUpload",
@@ -319,6 +331,20 @@
       "Analytics",
       "Dashboard",
       "SQL"
+    ]
+  },
+  {
+    "slug": "appboard",
+    "logo": "logo.png",
+    "name": "AppBoard",
+    "description": "AppBoard is an open-source, self-hostable ASO (App Store Optimization) tool. Manage your App Store and Google Play listings, track keyword rankings day by day, organize screenshots and publish metadata — all from one admin panel. It ships as a Next.js admin panel backed by an Elysia/Bun REST API and a PostgreSQL database. A bootstrap admin account is created on first boot, so you can sign in with email + password without configuring SMTP. Optional SMTP enables email login and rank/report emails, and an OpenRouter key enables AI-assisted research.",
+    "tags": [
+      "ASO",
+      "App Store",
+      "Google Play",
+      "Marketing",
+      "SEO",
+      "Self-Hosted"
     ]
   },
   {
@@ -415,6 +441,17 @@
       "Machine Learning",
       "Data Labeling",
       "AI Tools"
+    ]
+  },
+  {
+    "slug": "argus",
+    "logo": "logo.png",
+    "name": "Argus",
+    "description": "Argus is a lightweight monitor that watches GitHub, Docker Hub, and other sources for new software releases, then notifies you via Gotify, Slack, Discord, and more — or triggers a webhook to auto-deploy the update.",
+    "tags": [
+      "Monitoring",
+      "Notifications",
+      "Self-Hosted"
     ]
   },
   {
@@ -1311,6 +1348,20 @@
     ]
   },
   {
+    "slug": "clerq",
+    "logo": "logo.png",
+    "name": "Clerq",
+    "description": "Clerq is an open-source, self-hostable back office platform that automates the administrative work for freelancers and small development studios, so you can spend less time on busywork and more time on billable work. It connects the whole workflow, from time tracking through invoice generation to payment recording, eliminating manual data transfer between tools. Clerq offers time tracking with a live timer and manual logging, full client management with records and contacts, project management with Kanban and list views, and multi-currency invoicing with automatic exchange rates, VAT handling, and branded PDF invoices. Expense tracking supports receipt uploads and categorization, with optional AI receipt scanning. Built on Next.js, Better Auth, and PostgreSQL, Clerq applies its database migrations automatically on first boot and keeps you in full control of your data.",
+    "tags": [
+      "Invoicing",
+      "Time Tracking",
+      "Freelance",
+      "Self-hosted",
+      "Next.js",
+      "PostgreSQL"
+    ]
+  },
+  {
     "slug": "clickhouse",
     "logo": "logo.png",
     "name": "Clickhouse",
@@ -1381,9 +1432,9 @@
   },
   {
     "slug": "coder",
-    "logo": "logo.png",
+    "logo": "logo.svg",
     "name": "Coder",
-    "description": "Coder is an open source cloud development environment (CDE) that you download and host in your cloud. Deploy a single solution in seconds that provisions the infrastructure, IDE, language, and tools your developers desire. Upgrade to the Enterprise version and add security, governance, and observability capabilities for Platform teams.",
+    "description": "Coder is an open source platform for self-hosted cloud development environments. Developers and their AI coding agents get provisioned, ready-to-code workspaces on infrastructure you own, with the IDEs, language runtimes, and tools your team already uses. Platform teams keep central control over templates, access, and cost. Paid tiers add security, governance, and observability capabilities.",
     "tags": []
   },
   {
@@ -1693,6 +1744,19 @@
     ]
   },
   {
+    "slug": "customermates",
+    "logo": "logo.svg",
+    "name": "Customermates",
+    "description": "Customermates is an open-source CRM for contacts, organizations, deals, services and tasks. Lists, fields and relationships are configurable, and every workspace has a REST API, webhooks and an MCP endpoint for external AI clients. Self-hosted, it runs on PostgreSQL and uses the Starter feature set.",
+    "tags": [
+      "CRM",
+      "Business Apps",
+      "Productivity",
+      "Open Source",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "cyberchef",
     "logo": "logo.png",
     "name": "CyberChef",
@@ -1838,6 +1902,17 @@
     ]
   },
   {
+    "slug": "degoog",
+    "logo": "logo.png",
+    "name": "Degoog",
+    "description": "Degoog is a self-hosted search aggregator that queries Google, DuckDuckGo, Brave Search, Wikipedia, and Reddit in parallel and merges the results into one clean, ad-free, tracker-free page, with an optional AI-generated summary on top.",
+    "tags": [
+      "Search Engine",
+      "Privacy",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "deluge",
     "logo": "logo.png",
     "name": "Deluge",
@@ -1858,6 +1933,13 @@
       "Analytics",
       "Open-Source"
     ]
+  },
+  {
+    "slug": "didacta",
+    "logo": "logo.png",
+    "name": "Didacta",
+    "description": "Didacta is a fair-code, self-hosted learning platform (LMS). It ships multi-tenant isolation enforced at the database level (PostgreSQL RLS), a public course catalog with checkout, enrollment and invitation flows, gamification, certificates, reporting and a module marketplace. The API and the web app run in a single container behind one domain.",
+    "tags": []
   },
   {
     "slug": "dify",
@@ -1995,6 +2077,19 @@
       "Monitoring",
       "DevOps",
       "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "docling",
+    "logo": "logo.png",
+    "name": "Docling",
+    "description": "Docling parses and converts documents (PDF, DOCX, PPTX, HTML, images and more) into structured formats like Markdown and JSON, with advanced PDF understanding (layout, tables, reading order, formulas and code blocks). This template runs Docling Serve, a FastAPI service that exposes Docling's conversion pipeline over a REST API, with an optional web UI for trying conversions interactively.",
+    "tags": [
+      "Document Processing",
+      "PDF",
+      "AI",
+      "Developer Tools",
+      "Open Source"
     ]
   },
   {
@@ -2178,6 +2273,17 @@
     ]
   },
   {
+    "slug": "downtify",
+    "logo": "logo.png",
+    "name": "Downtify",
+    "description": "Downtify is a self-hosted music downloader — paste a Spotify link and get a perfectly tagged audio file. It resolves track metadata from Spotify's public pages, finds the best match on YouTube Music, and downloads it with embedded album art and metadata. No Spotify API key or account needed.",
+    "tags": [
+      "Music",
+      "Media",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "dozzle",
     "logo": "logo.png",
     "name": "Dozzle",
@@ -2287,6 +2393,17 @@
       "Open Source",
       "Enterprise CMS",
       "Modular Architecture"
+    ]
+  },
+  {
+    "slug": "dufs",
+    "logo": "logo.png",
+    "name": "Dufs",
+    "description": "Dufs is a distinctive file server that supports static file serving, uploading, searching, access control, and WebDAV — a fast, single-binary alternative to running a full cloud storage suite when you just need to browse and share a directory.",
+    "tags": [
+      "File Sharing",
+      "File Server",
+      "Self-Hosted"
     ]
   },
   {
@@ -2450,7 +2567,7 @@
     "slug": "eigenfocus",
     "logo": "logo.png",
     "name": "Eigenfocus",
-    "description": "Eigenfocus is a self-hosted project management tool built around boards, issues, and time tracking, without the bloat of larger tools like Jira or Linear. It has no built-in login system by design, since it is meant for a single person or a small trusted team, so this template protects it with HTTP Basic Auth instead. This template runs Eigenfocus against a PostgreSQL database for production-grade reliability.",
+    "description": "Eigenfocus is a self-hosted project management tool built around boards, issues, and time tracking, without the bloat of larger tools like Jira or Linear. It has no built-in login system by design, since it is meant for a single person or a small trusted team, so this template protects it with HTTP Basic Auth instead. Data is stored in SQLite on a persistent volume.",
     "tags": [
       "Project Management",
       "Productivity",
@@ -2706,7 +2823,7 @@
     "slug": "farmos",
     "logo": "logo.png",
     "name": "farmOS",
-    "description": "farmOS is a web-based farm management and record-keeping platform built on Drupal. It helps track assets, logs, plans, and maps for agricultural operations while remaining fully self-hosted and extensible.",
+    "description": "farmOS® is a web-based farm management and record-keeping platform built on Drupal. It helps track assets, logs, plans, and maps for agricultural operations while remaining fully self-hosted and extensible.",
     "tags": [
       "Agriculture",
       "Farm Management",
@@ -3001,6 +3118,21 @@
     ]
   },
   {
+    "slug": "flash-api",
+    "logo": "logo.png",
+    "name": "Flash API",
+    "description": "Flash API is a self-hosted multi-session WhatsApp API platform built on the Baileys library. It lets you connect multiple WhatsApp accounts simultaneously, manage sessions via QR code, and send text, images, video, audio, documents, locations, and polls through a REST API secured by an API key. Features include real-time webhooks and WebSocket support for incoming message events, contact and group management, a built-in web Manager dashboard, and full session persistence in Postgres with Redis-backed caching and queues.",
+    "tags": [
+      "WhatsApp",
+      "Messaging",
+      "API",
+      "Automation",
+      "Self-Hosted",
+      "Node.js",
+      "Chatbot"
+    ]
+  },
+  {
     "slug": "flashpaper",
     "logo": "logo.png",
     "name": "FlashPaper",
@@ -3039,6 +3171,17 @@
     ]
   },
   {
+    "slug": "flood",
+    "logo": "logo.svg",
+    "name": "Flood",
+    "description": "Flood is a monitoring service for various torrent clients. It's a Node.js service that communicates with your existing torrent client (rTorrent, qBittorrent, Transmission, or Deluge) and serves a clean, modern web UI for administering and monitoring torrents.",
+    "tags": [
+      "Media",
+      "Downloads",
+      "Self-Hosting"
+    ]
+  },
+  {
     "slug": "flowise",
     "logo": "logo.png",
     "name": "Flowise",
@@ -3068,6 +3211,17 @@
       "Project Management",
       "Collaboration",
       "Task Management"
+    ]
+  },
+  {
+    "slug": "folderhost",
+    "logo": "logo.png",
+    "name": "FolderHost",
+    "description": "FolderHost is a self-hosted private cloud in a single lightweight binary. Share files, collaborate on code, and manage users without a complex setup — a Nextcloud alternative built for people who want something simple and fast.",
+    "tags": [
+      "File Sharing",
+      "Cloud Storage",
+      "Self-Hosted"
     ]
   },
   {
@@ -3176,6 +3330,19 @@
       "Self-hosted",
       "MariaDB",
       "Redis"
+    ]
+  },
+  {
+    "slug": "frappe-hr",
+    "logo": "logo.png",
+    "name": "Frappe HR",
+    "description": "Frappe HR is an open-source HR and payroll software built on the Frappe framework and ERPNext. It covers the full employee lifecycle, from onboarding, attendance, leave and shift management to expense claims, performance appraisals, recruitment and payroll with salary structures and taxation. It includes a mobile-friendly PWA for employees to check in, apply for leave and submit expense claims.",
+    "tags": [
+      "HR",
+      "Payroll",
+      "Human Resources",
+      "ERP",
+      "Frappe"
     ]
   },
   {
@@ -3353,6 +3520,19 @@
     "description": "Github Desktop is an open-source, Electron-based application that simplifies the way you interact with GitHub. Written in TypeScript and using React, this app provides a user-friendly interface for managing your GitHub repositories. It allows you to access your GitHub account, manage your repositories, make changes, and track updates, all from the convenience of your desktop. The app is accessible via http://yourhost:3000/ or https://yourhost:3001/. It supports multiple architectures and can be easily deployed using Docker. Please note that this app requires specific environment variables and run configurations for optimal functionality.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "gitlab-ce",
+    "logo": "logo.png",
+    "name": "GitLab CE",
+    "description": "GitLab Community Edition is a complete DevOps platform combining Git repository hosting, CI/CD pipelines, issue tracking, container registry, and more in a single self-hosted application. This template runs the official Omnibus GitLab CE image, which bundles GitLab, Postgres, Redis, and all dependencies into one container.",
+    "tags": [
+      "Git",
+      "DevOps",
+      "CI/CD",
+      "Developer Tools",
+      "Open Source"
     ]
   },
   {
@@ -3680,6 +3860,16 @@
     ]
   },
   {
+    "slug": "grovs",
+    "logo": "logo.svg",
+    "name": "Grovs Community",
+    "description": "Self-hosted deep linking, attribution and analytics for mobile and web apps.",
+    "tags": [
+      "Analytics",
+      "Developer Tools"
+    ]
+  },
+  {
     "slug": "habittrove",
     "logo": "logo.png",
     "name": "HabitTrove",
@@ -3893,6 +4083,17 @@
     ]
   },
   {
+    "slug": "hollo",
+    "logo": "logo.svg",
+    "name": "Hollo",
+    "description": "Hollo is federated, single-user microblogging software that speaks ActivityPub, so it interoperates with Mastodon, Misskey, and the rest of the fediverse. It's headless by design — you post and read through any Mastodon-compatible client app, while Hollo handles federation, storage, and moderation on the server.",
+    "tags": [
+      "Fediverse",
+      "Social Network",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "homarr",
     "logo": "logo.png",
     "name": "Homarr",
@@ -4008,7 +4209,7 @@
     "slug": "huly",
     "logo": "logo.png",
     "name": "Huly",
-    "description": "Huly is an all-in-one project management platform and self-hosted alternative to Linear, Jira, Slack, Notion, and Motion. It combines issue tracking, CRM, HRM, ATS (Applicant Tracking), chat, documents, and team collaboration in a single platform. Built on a robust framework for business applications, Huly offers real-time document collaboration with Y.js CRDT, full-text search via Elasticsearch, S3-compatible file storage with MinIO, and event-driven architecture with Redpanda (Kafka). Requires 2+ vCPUs and 8+ GB RAM minimum.",
+    "description": "Huly is an all-in-one project management platform and self-hosted alternative to Linear, Jira, Slack, Notion, and Motion. It combines issue tracking, CRM, HRM, ATS (Applicant Tracking), chat, documents, and team collaboration in a single platform. Built on a robust framework for business applications, Huly offers real-time document collaboration with Y.js CRDT, full-text search via Elasticsearch, S3-compatible file storage with SeaweedFS, and event-driven architecture with Redpanda (Kafka). Requires 2+ vCPUs and 8+ GB RAM minimum.",
     "tags": [
       "Project Management",
       "CRM",
@@ -4176,6 +4377,18 @@
       "Website Builder",
       "Self-Hosted",
       "No-Code"
+    ]
+  },
+  {
+    "slug": "intelowl",
+    "logo": "logo.png",
+    "name": "IntelOwl",
+    "description": "IntelOwl is an open-source threat intelligence platform for managing indicators of compromise. It integrates dozens of OSINT analyzers (VirusTotal, AbuseIPDB, MISP, YARA, and many more) behind a single REST API and web dashboard, letting you scan observables and files and pivot across the results.",
+    "tags": [
+      "Security",
+      "Threat Intelligence",
+      "OSINT",
+      "Self-Hosted"
     ]
   },
   {
@@ -4359,6 +4572,18 @@
     "tags": [
       "File Management",
       "Data Science"
+    ]
+  },
+  {
+    "slug": "jitsi-meet",
+    "logo": "logo.svg",
+    "name": "Jitsi Meet",
+    "description": "Jitsi Meet is an open-source video conferencing platform that runs entirely in the browser, with no account or download needed to join a meeting. It offers HD audio and video, screen sharing, chat, raised hands, breakout rooms, lobbies, meeting passwords and end-to-end encryption, and has mobile apps for Android and iOS. This template runs the Jitsi web interface, the Prosody XMPP server, the Jicofo conference focus and the Jitsi Videobridge as separate App Services.",
+    "tags": [
+      "Video Conferencing",
+      "Communication",
+      "Collaboration",
+      "Meetings"
     ]
   },
   {
@@ -4561,6 +4786,17 @@
       "Monitoring",
       "Incident Management",
       "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "kestra",
+    "logo": "logo.svg",
+    "name": "Kestra",
+    "description": "Kestra is an open-source, event-driven orchestration platform to build, run and govern data, infrastructure and AI workflows. Workflows are defined declaratively in YAML, from the built-in code editor or the no-code UI, and can be version-controlled with Git. Kestra runs scripts in any language (Python, SQL, Shell, Node.js, R, Go...), ships with a large catalog of plugins for databases, clouds, message brokers and AI providers, and triggers workflows on a schedule, from webhooks or from real-time events such as Kafka messages or new files in S3. This template deploys Kestra in standalone mode with a PostgreSQL backend.",
+    "tags": [
+      "Automation",
+      "Developer Tools",
+      "Data"
     ]
   },
   {
@@ -4897,6 +5133,30 @@
     ]
   },
   {
+    "slug": "legejo",
+    "logo": "logo.png",
+    "name": "Legejo",
+    "description": "Legejo is a self-hosted library for your EPUB books. Upload books and they get their covers and details and land on shelves you arrange. Read them in the browser with highlights, notes and read-aloud, sync books, reading positions and highlights with a Kobo, connect reading apps such as KOReader or Thorium over OPDS, and keep KOReader's place in step. Several people can share one Legejo, each with a library of their own, and shelves of free books can be federated over ActivityPub and followed from Mastodon or another Legejo. Legejo also reads PDFs and comics in the browser, and keeps audiobooks. It runs on SQLite in a single container, so no database service is needed.",
+    "tags": [
+      "eBook Management",
+      "Digital Library",
+      "Reading",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "lemmy",
+    "logo": "logo.png",
+    "name": "Lemmy",
+    "description": "Lemmy is a federated (ActivityPub) link aggregator and discussion platform, similar to Reddit. This template runs the full stack - the Lemmy backend, the official web UI, Postgres, pictrs for image hosting, and an nginx gateway that routes API/federation traffic to the backend and everything else to the UI, matching Lemmy's official deployment architecture.",
+    "tags": [
+      "Social",
+      "Federated",
+      "Community",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "lenpaste",
     "logo": null,
     "name": "Lenpaste",
@@ -4923,6 +5183,16 @@
       "Chat Interface",
       "Self-Hosted",
       "Enterprise"
+    ]
+  },
+  {
+    "slug": "libredb-studio",
+    "logo": "logo.svg",
+    "name": "LibreDB Studio",
+    "description": "LibreDB Studio is the modern, AI-powered open-source SQL IDE. It lets you connect to and query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, libSQL, DuckDB, MongoDB, Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino, Druid, Prometheus and Apache Kafka directly from your browser, with an optional AI assistant to help write and explain queries. It ships as a single container, stores its data in a local SQLite file by default, and creates an initial admin and user account on first start.",
+    "tags": [
+      "Databases",
+      "Developer Tools"
     ]
   },
   {
@@ -5376,6 +5646,17 @@
     ]
   },
   {
+    "slug": "mailflow",
+    "logo": "logo.png",
+    "name": "MailFlow",
+    "description": "MailFlow is a self-hosted, unified webmail client that connects to your existing IMAP/SMTP accounts and brings them together into one clean, fast inbox — with theming, unified search, and a modern compose experience.",
+    "tags": [
+      "Email",
+      "Productivity",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "mailhog",
     "logo": "logo.png",
     "name": "Mailhog",
@@ -5404,6 +5685,17 @@
       "Accounting",
       "Business Management",
       "Finance"
+    ]
+  },
+  {
+    "slug": "manifest",
+    "logo": "logo.svg",
+    "name": "Manifest",
+    "description": "Manifest is an open-source model router for AI agents and apps. Connect OpenAI-compatible clients to one endpoint, route requests across your own provider API keys, subscriptions, local models, and custom providers, and keep usage data in your own infrastructure.",
+    "tags": [
+      "AI",
+      "Developer Tools",
+      "Databases"
     ]
   },
   {
@@ -5928,6 +6220,18 @@
     ]
   },
   {
+    "slug": "mosquitto",
+    "logo": "logo.svg",
+    "name": "Mosquitto",
+    "description": "Eclipse Mosquitto is a lightweight open-source message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. It is used to connect IoT devices, sensors, home automation systems and backend services through a simple publish and subscribe model, and is small enough to run on anything from a Raspberry Pi to a large server. This template runs Mosquitto with password authentication, persistent message storage, a plain MQTT port and MQTT over secure WebSockets on the app domain.",
+    "tags": [
+      "IoT",
+      "MQTT",
+      "Message Broker",
+      "Home Automation"
+    ]
+  },
+  {
     "slug": "motoradmin",
     "logo": "logo.png",
     "name": "MotorAdmin",
@@ -6185,6 +6489,17 @@
     ]
   },
   {
+    "slug": "nitter",
+    "logo": "logo.png",
+    "name": "Nitter",
+    "description": "Nitter is a free and open source alternative front-end for Twitter/X, focused on privacy and performance. It renders timelines, profiles, and search results without JavaScript, ads, or tracking, and is on average around 15 times lighter than Twitter, often loading pages 2-4x faster.",
+    "tags": [
+      "Social Network",
+      "Privacy",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "nocobase",
     "logo": "logo.png",
     "name": "Nocobase",
@@ -6239,6 +6554,19 @@
     "description": "Node-RED is a unique programming tool designed for creating event-driven applications in a low-code environment. It allows you to connect hardware devices, APIs, and online services in innovative ways. The app features a browser-based editor that simplifies the process of creating flows using a wide array of nodes available in the palette. These flows can be deployed to its runtime with just a single click. Node-RED also allows you to create JavaScript functions within the editor using a rich text editor and save useful functions, templates, or flows for future use. Built on Node.js, Node-RED is lightweight and can run on low-cost hardware like Raspberry Pi or in the cloud. It also supports the import and export of flows in JSON format for easy sharing.",
     "tags": [
       "Developer Tools"
+    ]
+  },
+  {
+    "slug": "notifuse",
+    "logo": "logo.png",
+    "name": "Notifuse",
+    "description": "Notifuse is a self-hosted email marketing and automation platform with a visual MJML email builder, broadcast campaigns, contact segmentation, transactional API, and built-in cookieless web analytics. Connect your own SMTP or provider (Amazon SES, Mailgun, Postmark, SendGrid, SparkPost, Mailjet) and keep contacts, events and analytics in a database you control.",
+    "tags": [
+      "Email Marketing",
+      "Newsletter",
+      "Transactional Email",
+      "Automation",
+      "Analytics"
     ]
   },
   {
@@ -6395,6 +6723,19 @@
     "name": "Ombi",
     "description": "Ombi allows you to host your own Plex Request and user management system. If you are sharing your Plex server with other users, allow them to request new content using an easy to manage interface! Manage all your requests for Movies and TV with ease, leave notes for the user and get notification when a user requests something. Allow your users to post issues against their requests so you know there is a problem with the audio etc. Even automatically send them weekly newsletters of new content that has been added to your Plex server!",
     "tags": []
+  },
+  {
+    "slug": "omniroute",
+    "logo": "logo.png",
+    "name": "OmniRoute",
+    "description": "OmniRoute is an MIT-licensed, OpenAI-compatible AI gateway that gives you one endpoint for hundreds of providers and models. It auto-routes and falls back across your subscriptions and API keys (Subscription → API Key → Cheap → Free tiers), so coding tools like Claude Code, Cursor, Codex, and Cline keep working even when a provider hits a rate limit or quota. It ships a dashboard for managing providers, keys, and subscription OAuth logins, with live usage analytics, token-compression, and circuit breakers to avoid dead keys. It is not a LiteLLM replacement - LiteLLM is a YAML/model_list config layer, while OmniRoute is a dashboard plus subscription OAuth with automatic multi-tier fallback.",
+    "tags": [
+      "AI Gateway",
+      "LLM Proxy",
+      "OpenAI Compatible",
+      "Self-Hosted",
+      "Open Source"
+    ]
   },
   {
     "slug": "omnitools",
@@ -6617,6 +6958,18 @@
     ]
   },
   {
+    "slug": "openqr",
+    "logo": "logo.svg",
+    "name": "openqr",
+    "description": "OpenQR is a free, open-source (AGPL-3.0) QR code generator that runs entirely in the browser, with full styling (colors, gradients, dot and corner shapes, logo embedding, frames) and export to PNG, JPEG, WebP, SVG and PDF, with no sign-up, no watermark and no tracking. The container serves the generator with no database and no environment variables. Dynamic (editable) codes, scan analytics and the REST API/MCP server are the hosted openqr.uk service and are not part of this self-hosted deployment.",
+    "tags": [
+      "Open Source",
+      "Productivity",
+      "Developer Tools",
+      "Privacy"
+    ]
+  },
+  {
     "slug": "openreader-slim",
     "logo": "logo.svg",
     "name": "OpenReader (Slim)",
@@ -6629,12 +6982,47 @@
     ]
   },
   {
+    "slug": "openseo",
+    "logo": "logo.png",
+    "name": "OpenSEO",
+    "description": "OpenSEO is an open source SEO platform and self-hostable alternative to Ahrefs and Semrush. It covers keyword research, domain overviews, backlinks, rank tracking, site audits, and AI visibility, powered by pay-as-you-go DataForSEO data instead of a monthly subscription, plus an MCP server so AI agents can run SEO research for you.",
+    "tags": [
+      "SEO",
+      "Marketing",
+      "Analytics",
+      "AI"
+    ]
+  },
+  {
     "slug": "openspeedtest",
     "logo": "logo.png",
     "name": "OpenSpeedTest",
     "description": "OpenSpeedTest is a powerful and accurate online bandwidth test application that works on any web browser without the need for Flash or Java. It is designed to replicate your real-world connection speed and is capable of testing any connection, from 1 Kbps to 1 Gbps+. The application uses the latest technology to automatically detect your stable download and upload speed from our servers. It also provides a guide on how to increase your internet speed and get more out of your connection. You can create your own network speed test without any client-side software or plugin. The application can also be embedded to your website or application, allowing your users to test their internet speed without leaving your page. It is also available as a standalone application for home or small office LAN and can be used for large-scale deployments as a self-hosted/on-premise network speed test.",
     "tags": [
       "Network Tools"
+    ]
+  },
+  {
+    "slug": "opentodo",
+    "logo": "logo.svg",
+    "name": "OpenTodo",
+    "description": "OpenTodo is an open-source, self-hosted, local-first task manager. It works offline, syncs every device through one small container with SQLite, and replaces subscription task apps with a server you own.",
+    "tags": [
+      "Productivity",
+      "Task Management",
+      "To-Do List",
+      "Self-Hosted"
+    ]
+  },
+  {
+    "slug": "opentogethertube",
+    "logo": "logo.svg",
+    "name": "OpenTogetherTube",
+    "description": "OpenTogetherTube lets you watch videos with friends in perfectly synchronized playback, with an optional voting system and no sign-up required to join a room. The open-source spiritual successor to TogetherTube.",
+    "tags": [
+      "Media",
+      "Video",
+      "Self-Hosted"
     ]
   },
   {
@@ -6671,6 +7059,17 @@
       "Web Browsers",
       "Internet",
       "Productivity"
+    ]
+  },
+  {
+    "slug": "operately",
+    "logo": "logo.png",
+    "name": "Operately",
+    "description": "Operately is an open-source company operating system for managing goals, projects, and work reviews. It gives every team a shared work map of goals and projects, with structured check-ins and reviews instead of status meetings.",
+    "tags": [
+      "Project Management",
+      "Productivity",
+      "Self-Hosted"
     ]
   },
   {
@@ -6832,7 +7231,7 @@
     "slug": "paaster",
     "logo": "logo.svg",
     "name": "Paaster",
-    "description": "Paaster is a secure and user-friendly pastebin application with end-to-end encryption. Content is encrypted locally in your browser—the key never reaches the server. Features paste history, delete-after-view, file drag & drop, and API. Supports MinIO, S3, R2, and other S3-compatible storage.",
+    "description": "Paaster is a secure and user-friendly pastebin application with end-to-end encryption. Content is encrypted locally in your browser—the key never reaches the server. Features paste history, delete-after-view, file drag & drop, and API. Supports S3, R2, and other S3-compatible storage.",
     "tags": [
       "Pastebin",
       "Privacy",
@@ -7661,6 +8060,20 @@
     ]
   },
   {
+    "slug": "puppetflow",
+    "logo": "logo.png",
+    "name": "Puppetflow",
+    "description": "Puppetflow is a self-hosted browser automation platform for writing, running, scheduling, and monitoring JavaScript workflows. It provides a visual flow builder, live browser streaming, human validation steps, reusable snippets, run history, artifacts, a REST API, and a remote MCP server.",
+    "tags": [
+      "Automation",
+      "Browser",
+      "Workflows",
+      "JavaScript",
+      "MCP",
+      "Self-hosted"
+    ]
+  },
+  {
     "slug": "pwgen",
     "logo": "logo.png",
     "name": "Pwgen",
@@ -8152,6 +8565,18 @@
     ]
   },
   {
+    "slug": "saleor",
+    "logo": "logo.png",
+    "name": "Saleor",
+    "description": "Saleor is a headless, GraphQL-first open-source e-commerce platform. It separates the storefront from the backend entirely, giving you a full product, order, and customer API plus an admin Dashboard, so you can build any frontend on top of it.",
+    "tags": [
+      "E-Commerce",
+      "GraphQL",
+      "Headless",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "saltcorn",
     "logo": "logo.png",
     "name": "Saltcorn",
@@ -8472,6 +8897,17 @@
     ]
   },
   {
+    "slug": "skysend",
+    "logo": "logo.png",
+    "name": "SkySend",
+    "description": "SkySend is a self-hosted, end-to-end encrypted file and note sharing tool. Share files, text snippets, passwords, code, or SSH keys through links with configurable expiry times, download limits, and optional password protection.",
+    "tags": [
+      "File Sharing",
+      "Privacy",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "slash",
     "logo": "logo.svg",
     "name": "Slash",
@@ -8601,6 +9037,18 @@
     ]
   },
   {
+    "slug": "solidping",
+    "logo": "logo.png",
+    "name": "SolidPing",
+    "description": "SolidPing monitors HTTP(S) endpoints, TCP/UDP ports, DNS records, SSL certificates, ICMP ping, and databases, plus scriptable browser and JavaScript checks. Alerts over email, Slack, Discord, Telegram, WhatsApp and webhooks, with escalation policies and maintenance windows. Public status pages, multi-user organizations, Uptime Kuma import. Single Go binary, SQLite by default.",
+    "tags": [
+      "Monitoring",
+      "Self-hosted",
+      "Uptime",
+      "Status Page"
+    ]
+  },
+  {
     "slug": "solr",
     "logo": "logo.png",
     "name": "Apache Solr",
@@ -8661,6 +9109,18 @@
       "Analytics",
       "Self-Hosted",
       "Plex"
+    ]
+  },
+  {
+    "slug": "sosse",
+    "logo": "logo.svg",
+    "name": "Sosse",
+    "description": "Sosse is an open-source search engine and web crawler built on Python and Django, with Selenium support for crawling JavaScript-heavy sites. It indexes and searches web pages, documents, and private intranets, and can archive pages for offline browsing, all under your own control.",
+    "tags": [
+      "Search Engine",
+      "Web Crawler",
+      "Self-Hosted",
+      "Developer Tools"
     ]
   },
   {
@@ -9174,6 +9634,17 @@
     ]
   },
   {
+    "slug": "theonefile-verse",
+    "logo": "logo.png",
+    "name": "TheOneFile_Verse",
+    "description": "TheOneFile_Verse is the real-time collaborative wrapper around The One File — a single-file visual planning tool for network diagrams, smart homes, mind maps, and infrastructure. This edition adds multi-user rooms, live status monitoring, and 10,000+ icons on top of the offline-first single-file editor.",
+    "tags": [
+      "Diagramming",
+      "Collaboration",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "thingsboard",
     "logo": "logo.png",
     "name": "Thingsboard",
@@ -9310,6 +9781,18 @@
       "Real-Time Tracking",
       "Self-Hosted",
       "Asset Monitoring"
+    ]
+  },
+  {
+    "slug": "tradetally",
+    "logo": "logo.png",
+    "name": "TradeTally",
+    "description": "TradeTally is an advanced trade tracking and analytics platform for active traders — a self-hosted alternative to TraderVue with broker auto-sync, behavioral analytics, a trading journal, and public trade sharing.",
+    "tags": [
+      "Finance",
+      "Trading",
+      "Analytics",
+      "Self-Hosted"
     ]
   },
   {
@@ -9521,6 +10004,17 @@
     ]
   },
   {
+    "slug": "tymeslot",
+    "logo": "logo.png",
+    "name": "Tymeslot",
+    "description": "Tymeslot is an open-source meeting scheduling platform built with Elixir/Phoenix LiveView — a self-hosted alternative to Calendly with booking pages, availability rules, and calendar integrations.",
+    "tags": [
+      "Scheduling",
+      "Productivity",
+      "Self-Hosted"
+    ]
+  },
+  {
     "slug": "typebot",
     "logo": "logo.svg",
     "name": "Typebot",
@@ -9712,7 +10206,7 @@
     "slug": "usesend",
     "logo": "logo.png",
     "name": "Usesend",
-    "description": "Usesend is a self-hosted email marketing and transactional email platform that gives you complete control over your email infrastructure. It provides a modern, user-friendly interface for creating, sending, and tracking email campaigns, newsletters, and transactional emails. Usesend features advanced segmentation, email automation, template management, analytics, and subscriber management. Built with Next.js and powered by PostgreSQL, Redis, and MinIO for reliable storage, it offers enterprise-grade features without vendor lock-in or usage-based pricing. Usesend supports GitHub OAuth for authentication and includes API rate limiting and SMTP configuration for sending emails. Perfect for businesses and developers who want full ownership of their email marketing infrastructure.",
+    "description": "Usesend is a self-hosted email marketing and transactional email platform that gives you complete control over your email infrastructure. It provides a modern, user-friendly interface for creating, sending, and tracking email campaigns, newsletters, and transactional emails. Usesend features advanced segmentation, email automation, template management, analytics, and subscriber management. Built with Next.js and powered by PostgreSQL, Redis, and RustFS for reliable storage, it offers enterprise-grade features without vendor lock-in or usage-based pricing. Usesend supports GitHub OAuth for authentication and includes API rate limiting and SMTP configuration for sending emails. Perfect for businesses and developers who want full ownership of their email marketing infrastructure.",
     "tags": [
       "Email Marketing",
       "Newsletter",
@@ -9828,6 +10322,20 @@
     "tags": [
       "Developer Tools",
       "Code Hosting"
+    ]
+  },
+  {
+    "slug": "wacrm",
+    "logo": "logo.svg",
+    "name": "wacrm",
+    "description": "wacrm is an open-source, self-hosted CRM built on the official WhatsApp Business API. It gives a team a shared inbox for one WhatsApp number, contacts with tags and custom fields, Kanban sales pipelines linked to conversations, Meta-approved broadcast campaigns, and a no-code automation builder. A bring-your-own-key AI assistant can draft replies or answer from a knowledge base, and a public REST API plus an MCP server let you build on top of it. All data lives in your own Supabase project, so there is no per-seat fee and no vendor lock-in.",
+    "tags": [
+      "CRM",
+      "WhatsApp",
+      "Messaging",
+      "Customer Support",
+      "Self-Hosted",
+      "Sales"
     ]
   },
   {
@@ -9992,6 +10500,18 @@
     ]
   },
   {
+    "slug": "webhook-site",
+    "logo": "logo.png",
+    "name": "webhook.site",
+    "description": "webhook.site gives you a unique, random URL that collects every HTTP request sent to it (headers, body, query string) and displays them instantly, so you can inspect webhooks, HTTP clients, emails and API requests without writing any code. It's a self-hostable version of the popular webhook.site testing tool.",
+    "tags": [
+      "Webhooks",
+      "API Testing",
+      "Developer Tools",
+      "Open Source"
+    ]
+  },
+  {
     "slug": "weblate",
     "logo": "logo.png",
     "name": "Weblate",
@@ -10148,6 +10668,17 @@
     ]
   },
   {
+    "slug": "workout-tracker",
+    "logo": "logo.png",
+    "name": "Workout Tracker",
+    "description": "Workout Tracker is a self-hosted fitness tracking app geared towards running and other GPX-based activities. Upload workouts, view them on a map with route segments and elevation, track statistics and personal records, and keep a heatmap of everywhere you've been.",
+    "tags": [
+      "Fitness",
+      "Self-Hosted",
+      "Tracking"
+    ]
+  },
+  {
     "slug": "wp-autoflow",
     "logo": "logo.svg",
     "name": "WP AutoFlow",
@@ -10268,6 +10799,21 @@
       "Data Science",
       "ERP",
       "CRM"
+    ]
+  },
+  {
+    "slug": "yourdrive",
+    "logo": "logo.png",
+    "name": "yourdrive",
+    "description": "yourdrive is a self-hosted file manager that works like Google Drive, on your own object storage. Upload, organize into folders, preview, search, share and restore files from Trash, with a Media timeline for every photo and video. Files stay in your own bucket on AWS S3, Azure Blob, Cloudflare R2, Wasabi or any S3-compatible server. It also works as a network drive over WebDAV, and supports single sign-on (OIDC) and two-step sign-in. Free for up to 3 users; a Team license covers up to 25 users and adds shared folders, shared link passwords and expiry, upload requests and storage limits per user.",
+    "tags": [
+      "File Manager",
+      "Cloud Storage",
+      "File Sharing",
+      "Photos",
+      "S3",
+      "WebDAV",
+      "Google Drive Alternative"
     ]
   },
   {
