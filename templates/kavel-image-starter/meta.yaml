@@ -1,0 +1,66 @@
+name: Kavel Image Starter
+description:
+  A one-page text-to-image web app. Type a prompt, pick 1:1, 16:9 or 9:16, and
+  get the picture back in about a minute. One small Node server with no
+  dependencies and no database. It runs on the free tier of the Kavel image API
+  with nothing configured; add a Kavel API key to run on your own account.
+instructions: |
+  Open your domain and type a prompt. Without an API key the app uses Kavel's
+  free anonymous tier (watermarked, a couple of images a day per server IP).
+  To lift that, create a key at https://www.kavel.ai/settings/apikeys and set
+  KAVEL_API_KEY in the service environment.
+changeLog:
+  - date: 2026-10-13
+    description: first release
+links:
+  - label: Website
+    url: https://www.kavel.ai
+  - label: Documentation
+    url: https://kavel.readthedocs.io/
+  - label: Github
+    url: https://github.com/hanshs474/kavel-image-starter
+contributors:
+  - name: Kavel
+    url: https://github.com/hanshs474
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: kavel-image-starter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: san8888/kavel-image-starter:1.1.0
+    kavelApiKey:
+      type: string
+      title: Kavel API Key (optional)
+      default: ""
+benefits:
+  - title: Works With Nothing Configured
+    description:
+      Deploy and generate right away on the free anonymous tier. No account, no
+      key and no database to set up first.
+  - title: Your Own Image Generator
+    description:
+      A private prompt-to-picture page on your own domain, for a team or for
+      testing prompts before writing client code.
+features:
+  - title: Three Aspect Ratios
+    description: Square, landscape (16:9) and portrait (9:16) output.
+  - title: Readable Quota Messages
+    description:
+      When the free credits run out, the page says so in plain words instead of
+      failing silently.
+  - title: Bring Your Own Key
+    description:
+      Set KAVEL_API_KEY to run on your Kavel account with no watermark on a paid
+      plan.
+tags:
+  - AI
+  - Image Generation
+  - Text to Image
