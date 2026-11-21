@@ -22,7 +22,6 @@ export function generate(input: Input): Output {
         `DATABASE_URL=postgresql://postgres:${databasePassword}@$(PROJECT_NAME)_${input.databaseServiceName}:5432/$(PROJECT_NAME)`,
         `ERD_ENCRYPTION_KEY=${randomString(48)}`,
         `ERDBPRO_LICENSE_STATE_FILE=/app/data/.erdbpro/license-state.json`,
-        `CORS_ORIGINS=https://$(PRIMARY_DOMAIN)`,
       ].join("\n"),
       domains: [
         {
