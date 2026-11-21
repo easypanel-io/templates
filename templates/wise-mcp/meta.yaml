@@ -1,0 +1,88 @@
+name: Wise MCP
+description:
+  Wise MCP is a self-hosted MCP server (unofficial, by BlanketByte) that
+  connects Claude and ChatGPT to your Wise account. Ask about balances, Jars,
+  card payments, transfers and recipients across personal and business profiles,
+  with clean merchant names and amounts. It can also prepare transfers, new
+  recipients and cancellations, always two-step - you approve each change in
+  chat, and transfers are created unpaid, so money only moves when you pay in
+  the Wise app. Login is a Wise personal API token pasted on the server's own
+  page, stored AES-256-GCM encrypted, with OAuth 2.1 for the AI clients, an
+  allowlist of Wise user ids and session management. Independent project, not
+  affiliated with Wise.
+instructions:
+  Open your app's domain over HTTPS and add https://YOUR-DOMAIN/mcp as a custom
+  connector in Claude or ChatGPT. On the first login the page shows your Wise
+  user id - set it in ALLOWED_WISE_USERS (Environment) and redeploy, then
+  connect again.
+changeLog:
+  - date: 2026-10-11
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/BlanketByte/wise-mcp
+  - label: Documentation
+    url: https://github.com/BlanketByte/wise-mcp#readme
+  - label: Website
+    url: https://blanketbyte.com
+contributors:
+  - name: BlanketByte
+    url: https://blanketbyte.com
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: wise-mcp
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/blanketbyte/wise-mcp:latest
+    allowedWiseUsers:
+      type: string
+      title: Allowed Wise user ids
+      description:
+        Comma-separated. Leave empty for the first login - the page shows your
+        id.
+      default: ""
+    writesEnabled:
+      type: boolean
+      title: Allow preparing transfers and recipients
+      description:
+        Always two-step, and transfers are paid by you in the Wise app. Turn off
+        for read-only.
+      default: true
+benefits:
+  - title: Ask your AI about your money
+    description:
+      Balances, Jars, card payments, transfers and recipients from every Wise
+      profile, right inside Claude or ChatGPT.
+  - title: Writes you can trust
+    description:
+      Every transfer, recipient or cancellation needs your approval in chat, and
+      transfers are only paid when you pay them in the Wise app.
+  - title: Self-hosted and private
+    description:
+      Your Wise token is stored encrypted on your own server; only Wise user ids
+      you allow can connect.
+features:
+  - title: 14 MCP tools
+    description:
+      Profiles, balances, transactions with clean merchant names, transfers,
+      recipients, exchange rates, quotes and two-step writes.
+  - title: OAuth 2.1 for Claude and ChatGPT
+    description:
+      PKCE, rotating refresh tokens, sessions from 5 days to until revoked, and
+      a page to see and revoke them.
+  - title: Security by default
+    description:
+      AES-256-GCM token encryption, allowlist, rate limiting, audit log and a
+      red warning if the page is ever served over HTTP.
+tags:
+  - Finance
+  - AI
+  - MCP
