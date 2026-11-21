@@ -1,0 +1,49 @@
+name: Movoa AI Video Starter
+description: >-
+  Unlimited AI video generator with sound: on paid plans the tenth take of a
+  shot costs what the first did, and your first clip is free to make right now.
+  Deploy a one-page AI video generator backed by the Movoa HTTP API.
+instructions: |
+  Open your domain, set MOVOA_API_KEY from https://movoa.ai/settings/apikeys in
+  your service environment, and optionally set ACCESS_PASSWORD to gate
+  generation behind a shared password. See plans at https://movoa.ai/pricing
+  and start your first clip free with sound at https://movoa.ai/.
+changeLog:
+  - date: 2026-11-21
+    description: first release
+links:
+  - label: Website
+    url: https://movoa.ai/?utm_source=easypanel&utm_medium=template
+  - label: Documentation
+    url: https://movoa.readthedocs.io/en/latest/
+  - label: Github
+    url: https://github.com/hanshs474/movoa-video-starter
+contributors:
+  - name: Movoa
+    url: https://github.com/hanshs474
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: movoa-video-starter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: san8888/movoa-video-starter:latest
+    movoaApiKey:
+      type: string
+      title: Movoa API Key
+      default: ""
+    accessPassword:
+      type: string
+      title: Access Password
+      default: ""
+tags:
+  - AI
+  - Video
+  - Media
