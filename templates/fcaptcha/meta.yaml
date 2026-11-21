@@ -1,0 +1,46 @@
+name: FCaptcha
+description: >-
+  FCaptcha is an open-source, self-hosted CAPTCHA for web apps. It combines
+  browser signals with server-side verification and serves its own JavaScript
+  widget and interactive demo.
+instructions: |-
+  Open `/demo/` on your service's HTTPS domain to try the widget. The same
+  domain serves `/fcaptcha.js`, `/health`, and the verification endpoints.
+
+  Integrate the widget into an action in your application and verify tokens
+  from your backend using `FCAPTCHA_VERIFY_SECRET` from the app's Environment
+  tab. Keep both generated secrets server-side and retain them when updating
+  the image.
+
+  The template runs one replica with in-memory state. Before production use,
+  review the hardening guide and set `TRUSTED_PROXIES` to the addresses or
+  CIDRs of your actual ingress so per-client limits work behind the proxy.
+changeLog:
+  - date: 2026-11-20
+    description: Initial template with FCaptcha 1.51.1
+links:
+  - label: Website
+    url: https://webdecoy.com/product/fcaptcha-demo/
+  - label: Documentation
+    url: https://docs.webdecoy.com/fcaptcha/quickstart/
+  - label: GitHub
+    url: https://github.com/WebDecoy/FCaptcha
+  - label: Hardening guide
+    url: https://github.com/WebDecoy/FCaptcha/blob/main/HARDENING.md
+contributors:
+  - name: WebDecoy
+    url: https://github.com/WebDecoy
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: fcaptcha
+      pattern: "^[a-z0-9_-]+$"
+tags:
+  - Security
+  - CAPTCHA
+  - Developer Tools
