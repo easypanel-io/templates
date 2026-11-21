@@ -1,0 +1,89 @@
+name: StatsRaven
+description:
+  StatsRaven is self-hosted analytics you can talk to. One binary collects web
+  analytics from a cookieless snippet, server and app logs, OpenTelemetry data
+  and product events, and stores them on your own server. You can ask questions
+  about the data in plain language in the built-in chat, and the built-in MCP
+  server lets Claude and other MCP clients use the same tools. StatsRaven is a
+  commercial product with a free edition that covers one project and seven days
+  of data.
+instructions:
+  After the first deploy, open the service logs and copy the setup token (look
+  for "setup token"), then open the app domain and enter it to create the admin
+  account. Without a license StatsRaven runs as the free edition with one
+  project and seven days of data. Chat needs an Anthropic API key; set it in the
+  form or later as ANTHROPIC_API_KEY in the Environment tab. To receive
+  OpenTelemetry over gRPC from outside the server, turn on Publish OTLP gRPC
+  Port and make sure that port is open in the server firewall. Data is kept in
+  the data volume mounted at /data.
+changeLog:
+  - date: 2026-11-21
+    description: First release
+links:
+  - label: Website
+    url: https://statsraven.com
+  - label: Documentation
+    url: https://statsraven.com/docs/
+contributors:
+  - name: Umut Gokbayrak
+    url: https://github.com/umutgokbayrak
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: statsraven
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/umutgokbayrak/statsraven:0.2.0
+    anthropicApiKey:
+      type: string
+      title: Anthropic API Key (optional, needed for chat)
+      default: ""
+    publishOtlpPort:
+      type: boolean
+      title: Publish OTLP gRPC Port
+      description: Receive OpenTelemetry over gRPC from outside the server.
+      default: false
+    otlpPort:
+      type: integer
+      title: OTLP gRPC Port on Host
+      default: 4317
+benefits:
+  - title: Ask In Plain Language
+    description:
+      The chat answers questions about traffic and logs with a chart and the
+      query behind it.
+  - title: Your Data Stays On Your Server
+    description:
+      Events are stored in the app's volume, not in a third party cloud.
+  - title: One Container
+    description:
+      Web analytics, logs, product events, chat and the MCP server run in a
+      single service with one volume and no separate database.
+features:
+  - title: Web Analytics
+    description:
+      Visitors, sources, pages, funnels and goals from a cookieless snippet.
+  - title: Logs And Bots
+    description:
+      Access logs, OpenTelemetry and Cloudflare Workers logs, with people, bots
+      and API calls told apart.
+  - title: Product Events
+    description:
+      Send events from your app over HTTP and look at them next to page views
+      and logs.
+  - title: MCP Server
+    description:
+      Claude and other MCP clients connect with OAuth and use the same tools as
+      the chat.
+tags:
+  - Analytics
+  - Web Analytics
+  - Logging
+  - Monitoring
