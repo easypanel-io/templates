@@ -1,0 +1,110 @@
+name: ERPNext v16
+description:
+  ERPNext v16 is the version 16 release line of the comprehensive open-source
+  enterprise resource planning platform built on the Frappe framework. It helps
+  organizations manage accounting, sales, purchasing, inventory, manufacturing,
+  projects, CRM, HR, assets, support, website, and point-of-sale workflows from
+  one integrated system. This template pins Frappe and ERPNext to their
+  version-16 branches while keeping the EasyPanel deployment model simple with a
+  single app service, MariaDB, Redis, and a persisted bench workspace.
+instructions:
+  Default login credentials are Administrator/admin. Initial installation can
+  take 5-10 minutes while Frappe v16, ERPNext v16, assets, and the site database
+  are created.
+changeLog:
+  - date: 2026-08-02
+    description: First release
+links:
+  - label: Website
+    url: https://erpnext.com
+  - label: Documentation
+    url: https://docs.erpnext.com
+  - label: GitHub
+    url: https://github.com/frappe/erpnext
+contributors:
+  - name: Yahya
+    url: https://github.com/yahya
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: erpnext-v16
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: frappe/bench:v5.31.0
+benefits:
+  - title: Integrated Business Operations
+    description:
+      Manage accounting, sales, purchasing, inventory, manufacturing, projects,
+      CRM, HR, support, and assets in one connected ERP system.
+  - title: Open Source and Extensible
+    description:
+      Built on the Frappe framework, ERPNext can be customized with custom
+      fields, workflows, reports, scripts, and additional Frappe applications.
+  - title: Strong Financial Management
+    description:
+      Use general ledger, accounts receivable, accounts payable, budgets, tax
+      rules, payment reconciliation, cost centers, and financial reports.
+  - title: Inventory and Manufacturing Control
+    description:
+      Track stock, warehouses, batches, serial numbers, bills of materials, work
+      orders, material requests, purchase receipts, and deliveries.
+  - title: Role-Based Workflows
+    description:
+      Configure roles, permissions, approval workflows, document statuses, and
+      audit trails to match internal business processes.
+  - title: Web-Based Access
+    description:
+      Access ERPNext from modern browsers with a responsive interface suitable
+      for teams working across locations and departments.
+features:
+  - title: Accounting
+    description:
+      Full accounting workflows including chart of accounts, journals,
+      receivables, payables, taxes, budgets, and financial statements.
+  - title: Sales and CRM
+    description:
+      Manage leads, opportunities, quotations, sales orders, customers,
+      invoices, campaigns, and customer communication history.
+  - title: Buying and Inventory
+    description:
+      Handle suppliers, purchase orders, purchase receipts, stock ledgers,
+      warehouse transfers, item pricing, and inventory valuation.
+  - title: Manufacturing
+    description:
+      Plan and track bills of materials, production plans, work orders,
+      operations, job cards, and material consumption.
+  - title: Projects and Tasks
+    description:
+      Organize projects, tasks, timesheets, milestones, costs, and billing for
+      services and internal work.
+  - title: HR and Payroll
+    description:
+      Manage employees, attendance, leave, expenses, appraisals, shifts, and
+      payroll workflows where available for your region.
+  - title: Website and Portal
+    description:
+      Publish web pages, manage a customer or supplier portal, and expose
+      selected business documents securely through the web.
+  - title: Reporting and Dashboards
+    description:
+      Use built-in reports, query reports, dashboards, charts, and custom
+      workspaces to monitor operational and financial performance.
+tags:
+  - ERP
+  - ERPNext v16
+  - Accounting
+  - CRM
+  - Inventory
+  - Manufacturing
+  - Open Source
+  - Web App
+  - Self-hosted
+  - MariaDB
+  - Redis
