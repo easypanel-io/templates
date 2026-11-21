@@ -1,0 +1,92 @@
+name: Supabase (App Services)
+description:
+  Supabase is an open source Firebase alternative, built on top of Postgres.
+  This version deploys the full self-hosted stack - Postgres, Auth, REST,
+  Realtime, Storage, Studio, Edge Functions, Kong, and the Logflare/Vector log
+  pipeline - as individual Easypanel app services instead of one Compose stack,
+  so every service can be inspected, scaled, and redeployed independently.
+
+instructions:
+  Access Studio at your domain, protected by HTTP basic auth with username
+  `supabase` and the Dashboard Password set in this template's form (or the
+  auto-generated one, if left blank). On first deploy, some services (auth,
+  rest, realtime, storage, meta, kong, imgproxy) may start before a dependency
+  is ready and crash - if the dashboard or API calls don't work right away,
+  redeploy those services individually from the Easypanel UI - wait for the db
+  service's logs to show it's ready before redeploying auth/rest/realtime/
+  storage/meta/kong, and wait for the storage service to be running before
+  redeploying imgproxy (it reads storage's uploaded files directly from disk).
+  This template does not include Easypanel's native scheduled-backup feature,
+  since Postgres runs as a custom app service rather than the managed Postgres
+  type - back up the `db` and `storage` services' data by snapshotting their
+  volume directories on the host (`/etc/easypanel/projects/<project>/<service>/
+  volumes/`), or by running `pg_dump` against the `db` service on a schedule.
+
+changeLog:
+  - date: "2026-10-07"
+    description: "Template Release"
+
+links:
+  - label: "Website"
+    url: "https://supabase.com/"
+  - label: "GitHub"
+    url: "https://github.com/supabase/supabase"
+  - label: "Documentation"
+    url: "https://supabase.com/docs/guides/self-hosting/docker"
+
+contributors:
+  - name: "Ahson Shaikh"
+    url: "https://github.com/AhsonShaikh-Easypanel"
+
+schema:
+  type: object
+  required:
+    - appServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: "App Service Name"
+      default: "supabase"
+    dashboardPassword:
+      type: string
+      title: "Dashboard Password"
+      description: "Leave blank to auto-generate a random password."
+
+benefits:
+  - title: "Independently Manageable Services"
+    description:
+      Every Supabase component runs as its own Easypanel app service - inspect
+      logs, resources, and redeploy each one independently.
+  - title: "Full Self-Hosted Stack"
+    description:
+      Postgres, Auth, REST, Realtime, Storage, Studio, Edge Functions, and the
+      Logflare/Vector log pipeline, all included.
+  - title: "Open Source Firebase Alternative"
+    description:
+      Full control over your data with an Apache-2.0 licensed, self-hosted
+      backend platform.
+
+features:
+  - title: "Instant REST & GraphQL APIs"
+    description:
+      PostgREST auto-generates a REST and GraphQL API directly from your
+      Postgres schema.
+  - title: "Authentication"
+    description:
+      Email, phone, and OAuth-based user authentication via GoTrue, with
+      row-level security built on Postgres roles.
+  - title: "Realtime & Storage"
+    description:
+      Listen to database changes over websockets, and store and transform files
+      with built-in image resizing via imgproxy.
+  - title: "Edge Functions & Logs"
+    description:
+      Deploy Deno-based edge functions and view aggregated service logs
+      in-dashboard via Logflare and Vector.
+
+tags:
+  - "Database"
+  - "Backend as a Service"
+  - "Postgres"
+  - "Self-Hosted"
+  - "Open Source"
