@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title>GitHub Projects Bridge</title>
+  <desc>Repository graph connected to a project board through MCP</desc>
+  <rect width="512" height="512" rx="96" fill="#ffffff"/>
+  <rect x="20" y="20" width="472" height="472" rx="78" fill="none" stroke="#d0d7de" stroke-width="4"/>
+
+  <!-- Repository / Git graph -->
+  <circle cx="155" cy="171" r="82" fill="#24292f"/>
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M125 126v90"/>
+    <path d="M125 172l52-46"/>
+  </g>
+  <circle cx="125" cy="117" r="22" fill="#ffffff"/>
+  <circle cx="177" cy="117" r="22" fill="#ffffff"/>
+  <circle cx="125" cy="225" r="22" fill="#ffffff"/>
+
+  <!-- Project board -->
+  <rect x="274" y="88" width="164" height="166" rx="22" fill="#ffffff" stroke="#24292f" stroke-width="10"/>
+  <path d="M329 100v142M384 100v142" stroke="#d0d7de" stroke-width="7"/>
+  <rect x="291" y="111" width="22" height="34" rx="6" fill="#24292f"/>
+  <rect x="291" y="156" width="22" height="34" rx="6" fill="#d0d7de"/>
+  <rect x="291" y="201" width="22" height="30" rx="6" fill="#24292f"/>
+  <rect x="346" y="111" width="22" height="34" rx="6" fill="#d0d7de"/>
+  <rect x="346" y="156" width="22" height="34" rx="6" fill="#24292f"/>
+  <rect x="346" y="201" width="22" height="30" rx="6" fill="#d0d7de"/>
+  <rect x="401" y="111" width="20" height="34" rx="6" fill="#24292f"/>
+  <rect x="401" y="156" width="20" height="34" rx="6" fill="#d0d7de"/>
+  <rect x="401" y="201" width="20" height="30" rx="6" fill="#24292f"/>
+
+  <!-- Bridge -->
+  <path d="M76 296c62 0 78-66 180-66s118 66 180 66" fill="none" stroke="#ffffff" stroke-width="46" stroke-linecap="round"/>
+  <path d="M76 296c62 0 78-66 180-66s118 66 180 66" fill="none" stroke="#24292f" stroke-width="30" stroke-linecap="round"/>
+  <path d="M168 279v-28M206 260v-22M244 244v-15M282 244v-15M320 260v-22M358 279v-28"
+        stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- MCP connector -->
+  <circle cx="76" cy="296" r="15" fill="#24292f"/>
+  <circle cx="436" cy="296" r="15" fill="#24292f"/>
+  <path d="M76 311v29c0 15 12 27 27 27h69" fill="none" stroke="#24292f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M436 311v29c0 15-12 27-27 27h-69" fill="none" stroke="#24292f" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="102" cy="367" r="10" fill="#24292f"/>
+  <circle cx="410" cy="367" r="10" fill="#24292f"/>
+
+  <rect x="168" y="354" width="176" height="78" rx="24" fill="#24292f"/>
+  <text x="256" y="405" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700"
+        text-anchor="middle" letter-spacing="2">MCP</text>
+</svg>

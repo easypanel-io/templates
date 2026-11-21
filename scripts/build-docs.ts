@@ -103,7 +103,7 @@ async function run() {
       lines.push("");
     }
 
-    if (meta?.contributors?.length) {
+    if ("contributors" in meta && meta.contributors?.length) {
       lines.push("## Contributors", "");
       meta.contributors.forEach((entry) => {
         lines.push(`- [${entry.name}](${entry.url})`);

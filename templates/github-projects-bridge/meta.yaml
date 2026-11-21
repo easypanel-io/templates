@@ -1,0 +1,100 @@
+name: GitHub Projects Bridge
+description: Connect AI agents to GitHub Projects through MCP. Create, read and manage Projects V2, items, draft issues and fields through a secure OAuth 2.1 + PKCE integration.
+instructions: |
+  This template deploys the GitHub Projects Bridge with OAuth 2.1 + PKCE.
+  It exists to bridge AI agents and GitHub Projects V2: the bridge exposes project
+  operations through MCP while keeping the GitHub service token server-side.
+  
+  For personal-account Projects V2, create a GitHub Personal Access Token (classic)
+  with the project scope (Full control of projects). Create a GitHub OAuth App and
+  provide its Client ID and Client Secret below.
+  
+  After the service is deployed, configure the OAuth App Redirect URI as:
+  https://YOUR-EASYPANEL-DOMAIN/oauth/github/callback
+  
+  The template generates the OAuth signing secret automatically and persists OAuth
+  state in /data. The MCP server requests projects:read and projects:write together,
+  so an MCP client can be authorized once for both read and write operations.
+logo: logo.svg
+changeLog:
+  - date: 2026-10-02
+    description: Add catalog branding and clarify the purpose of the bridge
+  - date: 2026-10-02
+    description: Align template with current OAuth 2.1 bridge and persistent state
+  - date: 2026-10-02
+    description: Initial Easypanel template
+links:
+  - label: Documentation
+    url: https://github.com/jaison/github-projects-bridge#readme
+  - label: GitHub repository
+    url: https://github.com/jaison/github-projects-bridge
+  - label: Create GitHub token (classic)
+    url: https://github.com/settings/tokens
+  - label: GitHub OAuth Apps
+    url: https://github.com/settings/developers
+  - label: Template source
+    url: https://github.com/jaison/github-projects-bridge-template
+schema:
+  type: object
+  required:
+    - serviceName
+    - githubOwner
+    - githubToken
+    - githubOAuthClientId
+    - githubOAuthClientSecret
+    - oauthAllowedGithubUsers
+  properties:
+    serviceName:
+      type: string
+      title: Service Name
+      default: github-projects-bridge
+    githubOwner:
+      type: string
+      title: GitHub User or Organization
+      description: Login that owns the GitHub Projects V2 you want to manage.
+      minLength: 1
+    githubToken:
+      type: string
+      title: GitHub Personal Access Token (classic)
+      description: Classic token with the project scope (Full control of projects). For personal-account Projects V2.
+      minLength: 1
+    githubOAuthClientId:
+      type: string
+      title: GitHub OAuth App Client ID
+      description: Client ID from your GitHub OAuth App.
+      minLength: 1
+    githubOAuthClientSecret:
+      type: string
+      title: GitHub OAuth App Client Secret
+      description: Client Secret from your GitHub OAuth App.
+      minLength: 1
+    oauthAllowedGithubUsers:
+      type: string
+      title: Allowed GitHub Users
+      description: Comma-separated GitHub logins allowed to use the MCP bridge, for example jaison.
+      minLength: 1
+benefits:
+  - title: GitHub Projects V2 over MCP
+    description: Manage projects, items, draft issues, project metadata, and single-select fields through an MCP-compatible client.
+  - title: OAuth 2.1 + PKCE
+    description: Authenticate MCP clients through the bridge without exposing the GitHub service token to ChatGPT.
+  - title: Persistent OAuth state
+    description: OAuth state is stored in a persistent Easypanel volume mounted at /data.
+  - title: One-time project authorization
+    description: Read and write project scopes are requested together during authorization.
+features:
+  - title: Project discovery
+    description: List Projects V2 and inspect fields and options.
+  - title: Project management
+    description: Create and update Projects V2 and set project metadata.
+  - title: Item management
+    description: List items, create draft issues, update single-select fields, and remove project items.
+contributors:
+  - name: Jaison
+    url: https://github.com/jaison
+tags:
+  - Developer Tools
+  - AI
+  - GitHub
+  - GitHub Projects
+  - MCP
