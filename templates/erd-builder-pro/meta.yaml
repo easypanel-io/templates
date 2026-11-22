@@ -1,0 +1,72 @@
+name: ERD Builder Pro
+description:
+  ERD Builder Pro is a workspace for designing database schemas and documenting
+  how your systems work. Model tables and relationships in an ERD canvas or a
+  DBML editor, export SQL DDL for PostgreSQL and MySQL, and keep flowcharts,
+  rich-text notes, and drawings in the same project. An optional AI assistant
+  drafts SQL, sample data, and flowcharts with your own provider key.
+instructions:
+  Open the app right after deployment and create the administrator account. The
+  first account becomes the SuperAdmin. Keep the ERD_ENCRYPTION_KEY value; it
+  decrypts saved database passwords and AI keys. The image supports amd64
+  (x86_64) servers only.
+changeLog:
+  - date: 2026-11-22
+    description: first release
+links:
+  - label: Website
+    url: https://www.erdbuilderpro.com/
+  - label: Documentation
+    url: https://docs.erdbuilderpro.com/
+  - label: Github
+    url: https://github.com/hadziqmtqn/erd-builder-pro
+contributors:
+  - name: hadziqmtqn
+    url: https://github.com/hadziqmtqn
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+    - databaseServiceName
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: erd-builder-pro
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: bekenweb/erd-builder-pro:3.5.6
+    databaseServiceName:
+      type: string
+      title: Database Service Name
+      default: erd-builder-pro-db
+benefits:
+  - title: Schema and documentation in one place
+    description:
+      Keep ERDs, flowcharts, notes, and drawings together in one project.
+  - title: Visual or code-first
+    description:
+      Edit the same schema on the ERD canvas or in DBML, then export SQL DDL.
+  - title: Self-hosted
+    description:
+      Your diagrams and documents stay in your own PostgreSQL database.
+features:
+  - title: ERD canvas and DBML editor
+    description: null
+  - title: SQL DDL export for PostgreSQL and MySQL
+    description: null
+  - title: Import existing SQL schemas
+    description: null
+  - title: Flowcharts, rich-text notes, and drawings
+    description: null
+  - title: AI assistant with your own provider key
+    description: null
+  - title: Team workspaces with a Self-host Commercial license
+    description: null
+tags:
+  - Database
+  - Diagram
+  - Documentation
+  - Developer Tools
