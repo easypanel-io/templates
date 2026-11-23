@@ -1,6 +1,6 @@
 name: Customermates
 description:
-  Customermates is an open-source CRM for contacts, organizations, deals,
+  Customermates is a CRM for contacts, organizations, deals,
   services and tasks. Lists, fields and relationships are configurable, and
   every workspace has a REST API, webhooks and an MCP endpoint for external AI
   clients. Self-hosted, it runs on PostgreSQL and uses the Starter feature set.
@@ -53,9 +53,9 @@ schema:
       title: Resend Sender Email (optional, a domain verified in Resend)
       default: mail@your-company.com
 benefits:
-  - title: Open Source Core
+  - title: Source-Available Core
     description:
-      The Community Edition is licensed under AGPL-3.0. You run the official
+      The Community Edition is source-available under the Sustainable Use License. You run the official
       image and keep the data in your own PostgreSQL database.
   - title: Bring Your Own AI
     description:
@@ -88,5 +88,4 @@ tags:
   - CRM
   - Business Apps
   - Productivity
-  - Open Source
   - Self-Hosted
