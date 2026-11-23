@@ -1,0 +1,64 @@
+name: AI Birthday Video Generator Starter
+description: >-
+  AI birthday video generator from a single photo: they pop champagne on a park
+  bench, blow out a Scorpio cake, or light a crown cake at the car window.
+  Deploy a self-hostable one-page birthday video web app backed by the
+  aibirthdayvideogenerator.com HTTP API.
+instructions: |
+  Open your domain, set ABVG_API_KEY from
+  https://aibirthdayvideogenerator.com/settings/apikeys in your service
+  environment, and optionally set ACCESS_PASSWORD to gate generation behind a
+  shared password. Video runs use credits from your account at the rates listed
+  on https://aibirthdayvideogenerator.com/pricing.
+changeLog:
+  - date: 2026-11-23
+    description: first release
+links:
+  - label: Website
+    url: https://aibirthdayvideogenerator.com/?utm_source=easypanel&utm_medium=template
+  - label: Documentation
+    url: https://aibirthdayvideogenerator.readthedocs.io/en/latest/
+  - label: Github
+    url: https://github.com/hanshs474/abvg-video-starter
+contributors:
+  - name: AI Birthday Video Generator
+    url: https://github.com/hanshs474
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: abvg-video-starter
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: san8888/abvg-video-starter:1.0.0
+    abvgApiKey:
+      type: string
+      title: AI Birthday Video API Key
+      default: ""
+    accessPassword:
+      type: string
+      title: Access Password (optional)
+      default: ""
+benefits:
+  - title: Ready-to-Deploy Container
+    description:
+      Minimal zero-dependency Node server packaged as
+      san8888/abvg-video-starter:1.0.0 (multi-arch amd64/arm64) with /health built in.
+  - title: 12-Second 720p Vertical Clips
+    description:
+      Generates 12-second 720p 9:16 vertical birthday celebration videos on seedance-2-mini.
+features:
+  - title: Single-Photo or Text Prompt
+    description: Animate a public HTTPS portrait URL or generate directly from a scene prompt.
+  - title: Optional Access Password
+    description: Protect /api/generate with ACCESS_PASSWORD when sharing with family or a team.
+tags:
+  - AI
+  - Video Generation
+  - Image to Video
