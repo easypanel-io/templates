@@ -1,0 +1,94 @@
+name: Flash API
+description:
+  Flash API is a self-hosted multi-session WhatsApp API platform built on the
+  Baileys library. It lets you connect multiple WhatsApp accounts
+  simultaneously, manage sessions via QR code, and send text, images, video,
+  audio, documents, locations, and polls through a REST API secured by an API
+  key. Features include real-time webhooks and WebSocket support for incoming
+  message events, contact and group management, a built-in web Manager
+  dashboard, and full session persistence in Postgres with Redis-backed caching
+  and queues.
+instructions:
+  After deployment, open your domain to log into the Manager panel with username
+  admin and the Manager Password set in this template's form (or the
+  auto-generated one, if left blank). Use the GLOBAL_API_KEY shown in the app
+  environment variables to authenticate API requests directly. Create a session
+  by calling POST /api/session/create_sessao with gerar_qrcode set to true, then
+  scan the returned QR code with WhatsApp on your phone. Database migrations run
+  automatically on every container start, no manual step required.
+changeLog:
+  - date: 2026-10-08
+    description: First Release
+links:
+  - label: GitHub
+    url: https://github.com/clsshbr2/FlashApi
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/AhsonShaikh-Easypanel
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: flash-api
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: flashconect/flash-api:v1.0.6
+    managerPassword:
+      type: string
+      title: Manager Password
+      description: "Leave blank to auto-generate a random password."
+benefits:
+  - title: Multi-Session WhatsApp
+    description:
+      Connect and manage multiple WhatsApp accounts from a single deployment.
+      Each session is isolated, persisted in Postgres, and can be reconnected
+      independently without affecting other sessions.
+  - title: Full REST API
+    description:
+      Send any type of WhatsApp message — text, images, video, audio, documents,
+      locations, stickers, reactions, and polls — via simple HTTP requests
+      authenticated by an API key.
+  - title: Real-Time Events
+    description:
+      Receive incoming message and status events instantly via configurable
+      webhooks and a built-in WebSocket server, enabling real-time integrations
+      with chatbots, CRMs, and automation platforms.
+features:
+  - title: QR Code Authentication
+    description:
+      Authenticate new WhatsApp sessions by generating a Base64 QR code via the
+      API and scanning it with the WhatsApp mobile app — no browser automation
+      required.
+  - title: Contact and Group Management
+    description:
+      Query contact details, check if numbers are registered on WhatsApp, create
+      and manage groups, update descriptions, and add or remove participants
+      through dedicated API endpoints.
+  - title: Manager Dashboard
+    description:
+      A built-in web panel at /manager lets you view and operate sessions —
+      generate QR codes, check connection status, and manage sessions — without
+      calling the API directly.
+  - title: Webhook Support
+    description:
+      Configure per-session or global webhooks to push incoming messages, read
+      receipts, connection status changes, and call events to any HTTP endpoint.
+  - title: Session Lifecycle Control
+    description:
+      Create, reconnect, restart, and delete sessions via API, with configurable
+      auto-deletion of disconnected sessions and automatic cleanup of temporary
+      messages.
+tags:
+  - WhatsApp
+  - Messaging
+  - API
+  - Automation
+  - Self-Hosted
+  - Node.js
+  - Chatbot

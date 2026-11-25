@@ -1,0 +1,75 @@
+name: Frappe HR
+description:
+  Frappe HR is an open-source HR and payroll software built on the Frappe
+  framework and ERPNext. It covers the full employee lifecycle, from onboarding,
+  attendance, leave and shift management to expense claims, performance
+  appraisals, recruitment and payroll with salary structures and taxation. It
+  includes a mobile-friendly PWA for employees to check in, apply for leave and
+  submit expense claims.
+instructions:
+  The first start creates the site and takes a few minutes. Open /login and sign
+  in as Administrator with the ADMIN_PASSWORD from the backend service
+  environment, then complete the setup wizard. The employee app at /hrms only
+  works for users linked to an employee record.
+changeLog:
+  - date: 2026-11-11
+    description: First release
+links:
+  - label: Website
+    url: https://frappe.io/hr
+  - label: Documentation
+    url: https://docs.frappe.io/hr
+  - label: Github
+    url: https://github.com/frappe/hrms
+contributors:
+  - name: Ahson Shaikh
+    url: https://github.com/Ahson-Shaikh
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: frappe-hr
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: ghcr.io/frappe/hrms:v15.64.8
+benefits:
+  - title: Complete HR Suite
+    description:
+      Manage the full employee lifecycle, from hiring and onboarding to exits,
+      in one place.
+  - title: Built-in Payroll
+    description:
+      Run payroll with salary structures, components, taxes and bulk salary
+      slips.
+  - title: Open Source
+    description:
+      Self-host Frappe HR with no per-employee fees and full control over your
+      data.
+features:
+  - title: Leave and Attendance
+    description:
+      Leave policies, holiday lists, shift management and geolocation check-ins.
+  - title: Expense Claims
+    description:
+      Employee advances, expense claims and multi-level approval workflows.
+  - title: Performance
+    description:
+      Appraisal cycles, goals, key result areas and feedback from colleagues.
+  - title: Recruitment
+    description:
+      Job requisitions, openings, applicant tracking and interview scheduling.
+  - title: Mobile App
+    description:
+      A PWA for employees to apply for leave, check in and track expenses.
+tags:
+  - HR
+  - Payroll
+  - Human Resources
+  - ERP
+  - Frappe

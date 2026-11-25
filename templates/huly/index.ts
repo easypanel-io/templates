@@ -7,7 +7,34 @@ import {
 import { Input } from "./meta";
 
 const COCKROACH_IMAGE = "cockroachdb/cockroach:v24.2.10";
-const MINIO_IMAGE = "minio/minio:RELEASE.2025-09-07T16-13-09Z";
+const MINIO_IMAGE = "chrislusf/seaweedfs:4.48";
+
+// CockroachDB and Redpanda take longer to accept connections than the Node
+// services that depend on them. Postgres clients retry forever and recover,
+// but the Kafka client used for QUEUE_CONFIG gives up permanently after 5
+// failed attempts, so services with a queue dependency must wait for both
+// ports to be reachable before starting.
+const WAIT_FOR_SCRIPT = `const net = require("net");
+function waitFor(host, port) {
+  return new Promise((resolve) => {
+    const tryConnect = () => {
+      const socket = net.connect(port, host, () => {
+        socket.end();
+        resolve();
+      });
+      socket.on("error", () => {
+        socket.destroy();
+        setTimeout(tryConnect, 1000);
+      });
+    };
+    tryConnect();
+  });
+}
+const args = process.argv.slice(2);
+const pairs = [];
+for (let i = 0; i < args.length; i += 2) pairs.push([args[i], Number(args[i + 1])]);
+Promise.all(pairs.map(([host, port]) => waitFor(host, port))).then(() => process.exit(0));
+`;
 
 const NGINX_CONFIG = (
   frontHost: string,
@@ -259,8 +286,13 @@ export function generate(input: Input): Output {
       serviceName: `${input.appServiceName}-minio`,
       source: { type: "image", image: MINIO_IMAGE },
       deploy: {
-        command: " minio server /data --address :9000 --console-address :9001",
+        command:
+          "/entrypoint.sh mini -dir=/data -s3.port=9000 -bucket=huly -master.telemetry=false -admin.ui=false",
       },
+      env: [
+        "AWS_ACCESS_KEY_ID=minioadmin",
+        "AWS_SECRET_ACCESS_KEY=minioadmin",
+      ].join("\n"),
       mounts: [{ type: "volume", name: "files", mountPath: "/data" }],
     },
   });
@@ -325,6 +357,12 @@ export function generate(input: Input): Output {
         "LAST_NAME_FIRST=true",
         `QUEUE_CONFIG=${redpandaHost}:9092`,
       ].join("\n"),
+      mounts: [
+        { type: "file", content: WAIT_FOR_SCRIPT, mountPath: "/wait-for.js" },
+      ],
+      deploy: {
+        command: `sh -c "node /wait-for.js ${cockroachHost} 26257 ${redpandaHost} 9092 && exec docker-entrypoint.sh node ./bundle.js"`,
+      },
     },
   });
 
@@ -367,6 +405,12 @@ export function generate(input: Input): Output {
         "ACCOUNT_PORT=3000",
         `QUEUE_CONFIG=${redpandaHost}:9092`,
       ].join("\n"),
+      mounts: [
+        { type: "file", content: WAIT_FOR_SCRIPT, mountPath: "/wait-for.js" },
+      ],
+      deploy: {
+        command: `sh -c "node /wait-for.js ${cockroachHost} 26257 ${redpandaHost} 9092 && exec docker-entrypoint.sh node bundle.js"`,
+      },
     },
   });
 
@@ -412,6 +456,12 @@ export function generate(input: Input): Output {
         `QUEUE_CONFIG=${redpandaHost}:9092`,
         `ACCOUNTS_DB_URL=${crDbUrl}`,
       ].join("\n"),
+      mounts: [
+        { type: "file", content: WAIT_FOR_SCRIPT, mountPath: "/wait-for.js" },
+      ],
+      deploy: {
+        command: `sh -c "node /wait-for.js ${cockroachHost} 26257 ${redpandaHost} 9092 && exec docker-entrypoint.sh node bundle.js"`,
+      },
     },
   });
 
@@ -469,6 +519,12 @@ export function generate(input: Input): Output {
         `STATS_URL=http://${statsHost}:4900`,
         `QUEUE_CONFIG=${redpandaHost}:9092`,
       ].join("\n"),
+      mounts: [
+        { type: "file", content: WAIT_FOR_SCRIPT, mountPath: "/wait-for.js" },
+      ],
+      deploy: {
+        command: `sh -c "node /wait-for.js ${cockroachHost} 26257 ${redpandaHost} 9092 && exec docker-entrypoint.sh node --expose-gc bundle.js"`,
+      },
     },
   });
 
