@@ -378,7 +378,7 @@ lay_release() {
     fi
 }
 
-# A 3.5.9 installer that loses the server asks again and spins on closed stdin.
+# The database may still be starting. Without it the installer fails, and up to 3.5.9 it spins on closed stdin.
 wait_for_database() {
     [ "$DB_TYPE" = sqlite ] && return 0
     attempts=0
@@ -461,7 +461,7 @@ rebuild_core() {
     as_web "cd '$APP/install' && php cli-install.php --typeInstall=2 --removeInstall=y $consent < /dev/null"
     # Only a new install writes this marker, and the CMS will not boot without it.
     date +%s > "$APP/core/.install"
-    # cli-install drops the ref note of version.php, and without it the next rebuild would lay the older release.
+    # The archive of a branch has no ref note in version.php, and without it the next rebuild would lay the older release.
     [ "$ref" = "$(running_ref)" ] || as_web "cd '$APP/core' && php artisan make:site update '$ref' $EVO_UPDATE_OPTIONS < /dev/null"
 }
 
