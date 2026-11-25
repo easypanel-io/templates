@@ -27,7 +27,7 @@ const drives: [name: string, path: string][] = [
 // plain deploy rebuilds nothing: these lines are the switch, kept last in the Dockerfile
 // so that changing one repeats only the last layer.
 const nginxVersion = "1.30.6";
-const frankenphpVersion = "1.13.4";
+const frankenphpVersion = "1.13.6";
 const securityUpdates = "2026-11-04";
 const composerImage = "composer:2.11.1";
 
