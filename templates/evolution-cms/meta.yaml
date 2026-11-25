@@ -9,7 +9,7 @@ description:
 instructions: |
   The first deployment builds the PHP image and installs the CMS, which takes a few minutes. The manager is at /manager/. The login and the generated password are in the EVO_ADMIN and EVO_ADMIN_PASSWORD environment variables of the app service.
 
-  Updating the core: change EVO_VERSION in the environment of the app service to a release (3.5.10), a branch (3.5.x) or a tag (nightly-3.5.x) and deploy. The update runs before the site starts. If it fails the site keeps running on the old code and the deployment log says why. Back up the database first. A branch name is applied once: to follow a branch further, run `php artisan make:site update` from core/ in the service console.
+  Updating the core: back up the database and the volumes of the app service first. Then change EVO_VERSION in the environment of the app service to a release (3.5.10), a branch (3.5.x) or a tag (nightly-3.5.x) and deploy. The update runs before the site starts, and the deployment log says how it went. A failed or interrupted update can leave the code or the database partly updated, and this template does not undo that: restore the backup, set EVO_VERSION back and deploy. A failed migration may go unreported, so afterwards run `php artisan migrate:status` from core/ in the service console. A branch name is applied once: to follow a branch further, run `php artisan make:site update` from core/ in the service console.
 
   A site with packages in core/custom/composer.json may refuse an update that would change them, which includes any package installed from a branch. Set EVO_UPDATE_OPTIONS=--update-custom-packages to accept the changes it lists.
 
@@ -61,7 +61,7 @@ schema:
       type: string
       title: Evolution CMS Version
       description: A release, a branch or a tag of evolution-cms/evolution
-      default: 3.5.9
+      default: 3.5.10
     phpVersion:
       type: string
       title: PHP Version
