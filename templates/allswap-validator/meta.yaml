@@ -1,0 +1,64 @@
+name: AllSwap Address Validator
+description:
+  AllSwap MultiChain Address Validator is an open-source, stateless HTTP and CLI
+  verification microservice for validating cryptocurrency wallet address syntax,
+  cryptographic checksums (EIP-55, Base58Check, Bech32/Bech32m, StrKey),
+  mandatory custodial Memo / Destination Tag routing rules (XRP, XLM, ATOM,
+  TON, HBAR, EOS), and prefix/suffix vanity address-poisoning lookalike
+  detection across 46+ blockchain networks.
+instructions:
+changeLog:
+  - date: 2026-11-27
+    description: First release
+links:
+  - label: Website
+    url: https://allswap.io
+  - label: Documentation
+    url: https://allswap.io/docs
+  - label: Online Tool
+    url: https://allswap.io/tools/address-validator
+  - label: Github
+    url: https://github.com/zhangglnuo-art/multichain-memo-address-validator
+contributors:
+  - name: AllSwap Security Labs
+    url: https://github.com/zhangglnuo-art
+schema:
+  type: object
+  required:
+    - appServiceName
+    - appServiceImage
+  properties:
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: allswap-validator
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: node:22-alpine
+benefits:
+  - title: 46+ Blockchain Validation
+    description:
+      Validate EVM, Bitcoin, Solana, XRP, Stellar, Cosmos, TON, TRON, Sui, and
+      Aptos wallet addresses offline with zero external tracking.
+  - title: Mandatory Memo & Tag Routing
+    description:
+      Enforce required Destination Tags and Memos on shared custodial settlement
+      networks before broadcasting transactions.
+  - title: Vanity Address-Poisoning Defense
+    description:
+      Detect lookalike addresses that mimic the leading and trailing characters
+      of trusted counterparty wallets.
+features:
+  - title: Stateless HTTP API
+    description:
+      Lightweight containerized Node.js verification microservice ready for
+      instant deployment on Easypanel.
+  - title: Open-Source MIT Core
+    description:
+      Built on the open-source MultiChain Memo & Address Validator suite.
+tags:
+  - Security
+  - API
+  - Blockchain
+  - Open Source
